@@ -1,0 +1,41 @@
+{
+  "hullName": "Prow Armor",
+  "hullId": "fed_superkestrel_nosearmor",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_superkestral_nosearmor.png",
+  "style": "FEDERATION",
+  "height": 161,
+  "width": 110,
+  "center": [55, 85],
+  "collisionRadius": 102.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 98.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "always_detaches",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    72, 4.5,
+    64.5, 13,
+    -29.5, 41.5,
+    -40, 53.5,
+    -81.5, 53,
+    -78.5, 43,
+    -57, 42,
+    -36.5, 9,
+    20, 9,
+    20, -9,
+    -36.5, -9,
+    -57, -42,
+    -78.5, -43,
+    -81.5, -53,
+    -40, -53.5,
+    -29.5, -41.5,
+    64.5, -13,
+    72, -4.5
+  ]
+}

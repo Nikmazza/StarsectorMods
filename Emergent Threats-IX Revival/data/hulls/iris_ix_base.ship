@@ -1,0 +1,113 @@
+{
+  "hullName": "Iris",
+  "hullId": "iris_ix_base",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/ix/iconoclast_ix.png",
+  "style": "HIGH_TECH",
+  "height": 119,
+  "width": 112,
+  "center": [56, 51],
+  "collisionRadius": 76.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 76.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "hardened_subsystems"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS ARR",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 60,
+      "angle": 0,
+      "locations": [39, -0]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [2, 17]
+    },
+    {
+      "id": "WS0 002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": -0,
+      "locations": [2, -17]
+    },
+    {
+      "id": "LB 1",
+      "size": "SMALL",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        0, 42,
+        0, 42
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "SMALL",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        0, -42,
+        0, -42
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-49.5, 13.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-49.5, -13.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-50.5, 5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-50.5, -5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -50.5, -37,
+    -16.5, -56,
+    40.5, -35.5,
+    67, -0,
+    40.5, 35.5,
+    -16.5, 56,
+    -50.5, 37
+  ]
+}

@@ -1,0 +1,19 @@
+{
+	
+	#╭─━━━━━━━━━━━━━━━━━━━━━─╮
+	# Foxy powered Mod!
+	#╰─━━━━━━━━━━━━━━━━━━━━━─╯
+	#
+	#  _,-=._              /|_/|
+	#  `-.}   `=._,.-=-._.,  @ @._,
+	#     `._ _,-.   )      _,.-'
+	#        `    G.m-"^m`m'
+	#
+	
+	"id":"scf", # internal id
+	"name":"Super Cool Faction Flags", # displayed to the player
+	"author":"Foxy",
+	"version":" 192.168.0.6",
+	"description":"Faction flags you do not need but I know you want!",
+	"gameVersion":"0.96a-RC10",
+}

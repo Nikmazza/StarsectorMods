@@ -1,0 +1,67 @@
+{
+  "variantId": "fed_legion_shock",
+  "hullId": "fed_legion",
+  "displayName": "Shock",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 39,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "fed_ionprojector",
+        "WS0008": "fed_ionprojector"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "fed_kinetic_missile_med",
+        "WS0002": "fed_kinetic_missile_med",
+        "WS0003": "fed_kinetic_missile_med",
+        "WS0005": "fed_kinetic_missile_med",
+        "WS0006": "fed_kinetic_missile_med"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "fed_duallaser",
+        "WS0010": "fed_duallaser",
+        "WS0011": "fed_singlelaser",
+        "WS0012": "fed_singlelaser",
+        "WS0013": "fed_singlelaser",
+        "WS0014": "fed_singlelaser",
+        "WS0015": "fed_duallaser",
+        "WS0016": "fed_duallaser",
+        "WS0017": "fed_singlelaser",
+        "WS0018": "fed_singlelaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [
+    {
+      "WS0004": "fed_legion_emitter_standard"
+    }
+  ],
+  "wings": [
+    "fed_firestream_wing",
+    "fed_firestream_wing",
+    "fed_firestream_wing",
+    "fed_firestream_wing"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+	#Weapon Sounds
+	"chemdart_fire":
+	[
+            {"file":"data/sounds/chemdart_shot.ogg","pitch":0.90, "volume":0.70},
+],
+	# EARTHSHAKER
+	 "shaker_fire":
+	[
+		{"file":"data/sounds/shaker_fire.ogg","pitch":1.00,"volume":0.85},
+],
+	# RADCANNON
+	 "sa_radburst":
+	[
+		{"file":"data/sounds/sa_radburst.ogg","pitch":1.00,"volume":0.95},
+],
+}
+

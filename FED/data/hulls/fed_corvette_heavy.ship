@@ -1,0 +1,183 @@
+{
+  "bounds": [
+    -14.5,
+    -8.5,
+    -9,
+    -17,
+    -16.5,
+    -27,
+    4.5,
+    -26,
+    14,
+    -9,
+    11,
+    -0,
+    14,
+    9,
+    4.5,
+    26,
+    -16.5,
+    27,
+    -9,
+    17,
+    -14.5,
+    8.5,
+    -5,
+    -0
+  ],
+  "builtInMods": [
+    "automated",
+    "fed_design",
+    "no_weapon_flux",
+    "advancedcore"
+  ],
+  "builtInWeapons": {
+    "WS0001": "irpulse_fighter",
+    "WS0002": "lightac",
+    "WS0003": "swarmer_fighter",
+    "WS0004": "lightmortar",
+    "WS0005": "pdlaser"
+  },
+  "center": [
+    31,
+    19
+  ],
+  "collisionRadius": 39,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 23,
+      "location": [
+        -8,
+        -0
+      ],
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_DRONE",
+      "width": 6
+    },
+    {
+      "angle": -174.5,
+      "contrailSize": 15,
+      "length": 26,
+      "location": [
+        -12,
+        8.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_DRONE",
+      "width": 15
+    },
+    {
+      "angle": 174.5,
+      "contrailSize": 15,
+      "length": 26,
+      "location": [
+        -12,
+        -8.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_DRONE",
+      "width": 15
+    },
+    {
+      "angle": -167.5,
+      "contrailSize": 8.639043,
+      "length": 37.965008,
+      "location": [
+        -13.5,
+        18.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_DRONE",
+      "width": 8.639043
+    },
+    {
+      "angle": 167.5,
+      "contrailSize": 8.639043,
+      "length": 37.965008,
+      "location": [
+        -13.5,
+        -18.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_DRONE",
+      "width": 8.639043
+    }
+  ],
+  "height": 37,
+  "hullId": "fed_corvette_heavy",
+  "hullName": "XA-20",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 37,
+  "spriteName": "graphics/FED/ships/fed_corvette_heavy.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -0,
+      "arc": 20,
+      "id": "WS0001",
+      "locations": [
+        4.5,
+        -9
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": -0,
+      "arc": 20,
+      "id": "WS0002",
+      "locations": [
+        4.5,
+        9
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 20,
+      "id": "WS0003",
+      "locations": [
+        -4.5,
+        -24.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 20,
+      "id": "WS0004",
+      "locations": [
+        -4.5,
+        24.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 30,
+      "id": "WS0005",
+      "locations": [
+        2,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    }
+  ],
+  "width": 62
+}

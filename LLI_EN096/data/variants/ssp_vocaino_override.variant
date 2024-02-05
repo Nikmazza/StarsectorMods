@@ -1,0 +1,45 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 8,
+    "fluxVents": 16,
+    "goalVariant": true,
+    "hullId": "ssp_vocaino",
+    "hullMods": [
+        "ssp_ShortRange",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_vocaino_override",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0009": "ssp_largegravitonluncher"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "ssp_nuke",
+                "WS0006": "ssp_nuke"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_lightheatneedle",
+                "WS0002": "ssp_lightheatneedle"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "pdlaser",
+                "WS0008": "pdlaser"
+            }
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+  "hullName": "Center Module",
+  "hullId": "sgr_center_right",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/Sgriosathar/Sgriosathar_middle_right.png",
+  "style": "BULTACH",
+  "height": 164,
+  "width": 121,
+  "center": [60.5, 82],
+  "collisionRadius": 126.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 122.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "BT_antiNukeHidden",
+    "reduced_explosion",
+    "BT_linkedhull",
+    "targetingunit"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -90,
+      "locations": [-36, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [8, 30.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [30, 30.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [52, 30.5]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    80.5, 55.5,
+    64, 18.5,
+    74.5, -10.5,
+    42.5, -25,
+    -17.5, -31.5,
+    -57.5, -57.5,
+    -71, -44,
+    -79.5, 6,
+    -57.5, 11,
+    -62.5, 47.5,
+    -46, 57.5
+  ]
+}

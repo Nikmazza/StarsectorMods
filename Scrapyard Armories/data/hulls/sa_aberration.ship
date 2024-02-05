@@ -1,0 +1,104 @@
+{
+  "hullName": "Aberration",
+  "hullId": "sa_aberration",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/sa_aberration.png",
+  "style": "HIGH_TECH",
+  "height": 100,
+  "width": 80,
+  "center": [40, 50],
+  "collisionRadius": 80,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 73,
+  "viewOffset": 0,
+  "builtInMods": [
+    "sa_automated_subsystems"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 123.5,
+      "locations": [-27, 20]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 243,
+      "angle": -10,
+      "locations": [-19, -18]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -24.5,
+      "locations": [30, -16]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [39, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-47, 30],
+      "length": 48,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47, -29],
+      "length": 28.5,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-45, -23.5],
+      "length": 14.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-45, 17.5],
+      "length": 25.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -28, 5,
+    -46, 36,
+    -9, 34,
+    -8, 17,
+    7, 31,
+    35, 34.5,
+    47, -11,
+    30, -29,
+    12, -16,
+    -9, -16,
+    -9, -34,
+    -45, -33,
+    -28, -4.5
+  ]
+}

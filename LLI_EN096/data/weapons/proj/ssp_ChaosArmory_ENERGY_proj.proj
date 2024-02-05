@@ -1,0 +1,36 @@
+{
+	"id":"ssp_ChaosArmory_ENERGY_proj",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/missile_harpoon.png",
+	"size":[4,5],	
+	"center":[2,4],
+	"collisionRadius":3,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[100,255,255,150],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":25, # purely visual
+	"engineSpec":{"turnAcc":300,
+				  "turnRate":120,
+				  "acc":1000,
+				  "dec":500},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-5, 0],
+				    #"style":"MISSILE_HIGH_TECH",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[100,255,255,255],
+						"contrailDuration":1,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailColor":[100,165,255,75],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":3.0,
+				    "length":13.0,
+				    "angle":180.0},
+				    ]
+}

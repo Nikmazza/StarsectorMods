@@ -1,0 +1,43 @@
+{
+    "displayName": "Assault",
+	"goalVariant": true,
+	"quality": 1,
+    "fluxCapacitors": 8,
+    "fluxVents": 20,
+    "hullId": "LTA_Hammerhead_Thunderbirds",
+    "hullMods": [
+        "targetingunit",
+        "reinforcedhull",
+        "turretgyros",
+        "armoredweapons"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Hammerhead_Thunderbirds_Assault",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyac",
+                "WS 002": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "lightag",
+                "WS 004": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "pdburst",
+                "WS 006": "pdburst"
+            }
+        }
+    ]
+}

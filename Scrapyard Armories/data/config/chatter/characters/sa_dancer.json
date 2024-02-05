@@ -1,0 +1,69 @@
+{
+	"name":"Stardancer",
+	"personalities":["steady","aggressive"],
+	"gender":["m","f"],
+	"chance":0.3,
+	"talkativeness":1,
+	"categoryTags":["custom"],
+	
+	"lines":{
+		"start":[
+			{"text":"The chorus of war begins once more, wonderful!"},
+			{"text":"Once more we take our places upon the deadly stage of the stars."},
+		],
+		"start_boss":[
+			{"text":"*Glass tapping* A toast, to the beautiful fabric that binds our very world together!"}
+		],		
+		"retreat":[
+			{"text":"Not every dance is elegant, oh well..."}
+		],
+		"out_of_missiles":[
+			{"text":"Our singers tire, let them rest."},
+			{"text":"An instrument has played it's part, and falls silent."}
+		],
+		"engaged":[
+			{"text":"Don't tire now, the dance has only begun, O' Partner Mine!"},
+			{"text":"The drum of ballistics, the hum of energy, and the screams of missiles, it all arranges so pleasantly."},
+			{"text":"The sweet music of the void, do you hear it too, O Listener Mine?"}
+		],
+		"need_help":[
+			{"text":"You dance well, however I prefer a partner I know."},
+			{"text":"Ahh, the rush of tension, what an exciting sensation!"},
+			{"text": "The thunder rumbles, overwhelming, now's the time to turn the tide!"}
+		],
+		"pursuing":[
+			{"text":"Our partner tires, let them rest."},
+			{"text":"Onto the next act of this elegant display."},
+			{"text":"They don't wish to dance?"}
+		],
+		"running":[
+			{"text":"As much as I'd like to, this tune isn't for me."}
+		],
+		"hull_90":[
+			{"text":"A mark upon the masterful design, yet holding strong!"},
+			{"text":"Steady your gaze, their shells grazed, return the chorus of gunfire."}
+		],
+		"hull_50":[
+			{"text":"Alarms ringing, the rush of adrenaline, the squeals of torn metal, how exciting!"},
+			{"text":"Now is no time to pause, we've come so very far!"}
+		],
+		"hull_30":[
+			{"text":"One moment, caught on that fine border between life or death!"},
+			{"text":"Say, do you believe in miracles?"}
+		],
+		"overload":[
+			{"text":"And thus, our dance attains intermission..."},
+			{"text":"Though we cannot reply, the song continues on!"}
+		],
+		"death":[
+			{"text":"My part in the play has come to a close, adieu"},
+			{"text":"It seems we couldn't keep pace with the rhythm of the battle."},
+			{"text":"All this time, and still not enough to see...*static*"},
+		],
+		"victory":[
+			{"text":"And the dance concludes, the stage emptying once more as curtains fall..."},
+			{"text":"You've put on a splendid show since your first steps upon the stars."},
+			{"text":"Ah, the song concludes, a thrilling display as always."}
+		],
+	}
+}

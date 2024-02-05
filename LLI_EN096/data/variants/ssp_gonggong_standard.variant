@@ -1,0 +1,24 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 10,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "ssp_gonggong",
+    "hullMods": [
+        "safetyoverrides",
+        "fluxdistributor",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_gonggong_standard",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS0001": "vulcan",
+            "WS0002": "vulcan",
+            "WS0004": "ssp_vulcan"
+        }
+    }]
+}

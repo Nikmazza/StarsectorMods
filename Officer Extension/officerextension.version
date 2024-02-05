@@ -1,0 +1,12 @@
+{
+  "masterVersionFile": "https://raw.githubusercontent.com/qcwxezda/Starsector-Officer-Extension/main/officerextension.version",
+  "modName": "Officer Extension",
+  "modThreadId": 23928,
+  "modVersion":
+  {
+    "major":0,
+    "minor":5,
+    "patch":0,
+  },
+  "directDownloadURL": "https://github.com/qcwxezda/Starsector-Officer-Extension/releases/download/v0.4.2/Officer.Extension.zip"
+}

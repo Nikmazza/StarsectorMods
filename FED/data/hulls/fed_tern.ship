@@ -1,0 +1,177 @@
+{
+  "hullName": "Tern",
+  "hullId": "fed_tern",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_tern_base.png",
+  "style": "FEDERATION",
+  "height": 151,
+  "width": 122,
+  "center": [60, 68.5],
+  "collisionRadius": 94.5,
+  "shieldCenter": [-4, -0],
+  "shieldRadius": 79.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "fed_energybuiltin",
+    "missile_autoloader"
+  ],
+  "builtInWeapons": {
+    "WS0002": "fed_swarm_emplacement"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-7.5, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [20.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [0, 38]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [0, -38]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [23, -16.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [23, 16.5]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-32.5, -0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": -90,
+      "locations": [-44.5, 29]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": 90,
+      "locations": [-44.5, -29]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-61.5, 37],
+      "length": 78.5,
+      "width": 26,
+      "angle": 180,
+      "contrailSize": 26,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-61.5, -36.5],
+      "length": 78.5,
+      "width": 26,
+      "angle": -180,
+      "contrailSize": 26,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-43, 12.5],
+      "length": 26,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-43, -12.5],
+      "length": 26,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-61.5, 37],
+      "length": 2.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-61.5, -36.5],
+      "length": 2.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    }
+  ],
+  "bounds": [
+    63, 5,
+    -10.5, 28,
+    0.5, 42,
+    -56.5, 42.5,
+    -56, 30.5,
+    -25.5, 17.5,
+    -39, 14.5,
+    -39, -14.5,
+    -25.5, -17.5,
+    -56, -30.5,
+    -56.5, -42.5,
+    0.5, -42,
+    -10.5, -28,
+    63, -5
+  ]
+}

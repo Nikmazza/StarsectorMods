@@ -1,0 +1,8 @@
+{
+    "id": "missingpatherships",
+    "name": "Missing Path Ships",
+    "author": "Scarface, IceFire",
+    "version": "1.0.3",
+    "description": "Adds pather ships, mostly used by Luddic Path faction",
+    "gameVersion": "0.96a-RC10",
+}

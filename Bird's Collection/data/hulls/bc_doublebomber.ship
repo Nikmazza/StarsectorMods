@@ -1,0 +1,59 @@
+{
+  "hullName": "Exarch",
+  "hullId": "bc_doublebomber",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_doublebomber.png",
+  "style": "MIDLINE",
+  "height": 30,
+  "width": 26,
+  "center": [13, 8],
+  "collisionRadius": 33.5,
+  "shieldCenter": [6.5, -0],
+  "shieldRadius": 24.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [7.5, 7.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [7.5, -7.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-7, 3.5],
+      "length": 17,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-7, -3.5],
+      "length": 17,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -7, -5,
+    5.5, -12.5,
+    22, -0,
+    5.5, 12.5,
+    -7, 5
+  ]
+}

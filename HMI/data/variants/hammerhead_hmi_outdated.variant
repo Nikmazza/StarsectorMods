@@ -1,0 +1,52 @@
+{
+  "variantId": "hammerhead_hmi_outdated",
+  "hullId": "hammerhead_hmi",
+  "displayName": "Outdated",
+  "goalVariant": false,
+  "fluxCapacitors": 15,
+  "fluxVents": 10,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "reinforcedhull",
+    "insulatedengine",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "med_frag_mg",
+        "WS0006": "med_frag_mg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "signpost_sml",
+        "WS0004": "signpost_sml"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "sml_fragrifle",
+        "WS0002": "sml_fragrifle"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "vulcan",
+        "WS0008": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

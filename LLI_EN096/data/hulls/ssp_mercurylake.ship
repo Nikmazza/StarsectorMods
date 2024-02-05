@@ -1,0 +1,68 @@
+{
+  "hullName": "ssp_mercurylake",
+  "hullId": "ssp_mercurylake",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/wings/ssp_mercurylake.png",
+  "style": "LLI",
+  "height": 58,
+  "width": 40,
+  "center": [20, 28],
+  "collisionRadius": 39,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 37,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-9.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [18.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-23.5, -0],
+      "length": 20,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-22, -7],
+      "length": 16,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-22, 7],
+      "length": 16,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -22.5, 18,
+    19, 13,
+    28, 6,
+    28, -6,
+    19, -13,
+    -22.5, -18
+  ]
+}

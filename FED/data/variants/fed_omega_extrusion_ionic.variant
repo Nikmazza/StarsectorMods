@@ -1,0 +1,30 @@
+{
+    "displayName": "Disabler Wing",
+    "fluxCapacitors": 0,
+    "fluxVents": 4,
+    "hullId": "fed_omega_extrusion",
+    "hullMods": [
+        "autorepair",
+        "nav_relay",
+        "turretgyros"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "fed_omega_extrusion_ionic",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0006": "realitydisruptor"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "shockrepeater",
+                "WS0002": "shockrepeater",
+                "WS0003": "shockrepeater"
+            }
+        }
+    ]
+}

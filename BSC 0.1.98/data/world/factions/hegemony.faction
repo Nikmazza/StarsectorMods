@@ -1,0 +1,40 @@
+{
+        "knownShips":{
+        "hulls":[
+            "BSC_Terringzean",
+            "BSC_Threave",
+            "BSC_Maraka",
+            "BSC_Baldric",
+            "BSC_Fennec_H",
+            "BSC_Roamer",
+            "BSC_Lockout",
+            "BSC_Buffalo_Mk3_A",
+            "BSC_Brave",
+            "BSC_Tramp",
+        ],
+            },
+            "priorityShips":{
+		"hulls":[
+			"BSC_Terringzean",
+            "BSC_Threave",
+		],
+	},
+        "hullFrequency":{
+        "hulls":{
+            "BSC_Terringzean":0.3, #Shouldn't be common
+            "BSC_Threave":0.4, #Shouldn't be super common
+            "BSC_Maraka": 0.5, #Shouldn't drown out Dominator
+            "BSC_Fennec_H": 0.5, #Shouldn't replace wolf (H)
+            "BSC_Buffalo_Mk3_A": 0.5, #Shouldn't drown out other carriers
+            "BSC_Roamer": 0.4, #Civ Ship shouldn't be super common
+            "BSC_Lockout": 0.4, #Civ Ship shouldn't be super common
+            "BSC_Tramp": 0.5, #Shouldn't drown out better freighters
+            "BSC_Brave": 0.5, #Shouldn't drown out better frigates
+        },
+    },
+                "knownWeapons":{
+        "weapons":[
+            "BSC_Annihilator_MLRS",
+        ],
+    },
+},

@@ -1,0 +1,48 @@
+{
+  "variantId": "fed_station_1_standard",
+  "hullId": "fed_station_1",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [
+    {
+      "WS0006": "fed_gun_module_light"
+    },
+    {
+      "WS0002": "fed_hangar_module_standard"
+    },
+    {
+      "WS0005": "fed_hangar_module_disabler"
+    },
+    {
+      "WS0008": "fed_asb_module_standard"
+    },
+    {
+      "WS0003": "fed_asb_module_standard"
+    },
+    {
+      "WS0001": "fed_asb_module_standard"
+    },
+    {
+      "WS0013": "fed_shield_module_standard"
+    },
+    {
+      "WS0014": "fed_shield_module_standard"
+    },
+    {
+      "WS0016": "module_armour3_Standard"
+    },
+    {
+      "WS0015": "module_armour3_Standard"
+    },
+    {
+      "WS0017": "module_armour3_Standard"
+    }
+  ],
+  "wings": []
+}

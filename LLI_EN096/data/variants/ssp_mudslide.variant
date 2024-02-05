@@ -1,0 +1,29 @@
+{
+  "variantId": "ssp_mudslide",
+  "hullId": "ssp_mudslide",
+  "displayName": "Bomber",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ssp_siege"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ssp_taclaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

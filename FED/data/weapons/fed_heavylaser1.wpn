@@ -1,0 +1,47 @@
+{
+  "id": "fed_heavylaser1",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_heavylaser_shot",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/FED/weapons/fed_heavylaser1.png",
+  "turretGunSprite": "graphics/FED/weapons/fed_heavylaser1_barrel.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_heavylaser1_hardpoint.png",
+  "hardpointGunSprite": "graphics/FED/weapons/fed_heavylaser1_hardpoint_barrel.png",
+  "renderAboveAllWeapons": 0,
+  "visualRecoil": 7,
+  "renderHints": [],
+  "turretOffsets": [
+    25,
+    -4
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    32.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 30,
+    "spread": 20,
+    "particleSizeMin": 10,
+    "particleSizeRange": 10,
+    "particleDuration": 0.5,
+    "particleCount": 15,
+    "particleColor": [
+      105,
+      255,
+      105,
+      255
+    ]
+  },
+  "textureType": ROUGH,
+  "fireSoundTwo": "fed_medlaser_fire"
+}

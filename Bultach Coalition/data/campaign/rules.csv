@@ -1,0 +1,50 @@
+id,trigger,conditions,script,text,options,notes
+greetingOrksFriendly,OpenCommLink,"$faction.id == orks
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Scanned and identified, good to see you $playerName.?""
+OR
+""Greetings friend, you are always welcome in Bultach territory.""",,
+greetingOrksHostileWeaker,OpenCommLink,"$faction.id == orks
+$entity.isHostile
+$entity.relativeStrength < 0","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Local patrols have already been dispatched to this signal, you'd best disengage, scum.""
+OR
+""The Bultach people won't fall under oppression ever again, not to the likes of you or anyone else!""",,
+greetingOrksHostileWeakerDefiant,OpenCommLink,"$faction.id == orks
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""We'll fight to our last just as those before us did.""
+OR
+""We know how you dictator types treat prisoners, you won't be taking any.""",cutCommLink:Cut the comm link,
+greetingOrksHostileStronger,OpenCommLink,"$faction.id == orks
+$entity.isHostile
+$entity.relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""Hostile fleet, we advise you power down weapons and cease transgressions against the Bultach Coalition.""
+OR
+""You're outnumbered, surrender now and Bultach leadership promises fair treatment of any prisoners.""
+OR
+""AIS code acknowledged. It is unwise to show your face in Bultach territory.""",cutCommLink:Cut the comm link,
+greetingOrksNeutral,OpenCommLink,"$faction.id == orks
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Scanned and identified. Safe travels.""
+OR
+""Acknowledging receipt of AIS code. We could use someone like you to stand against Tri-Tach, $playerName.""",,
+,,,,,,
+# turning AI cores in,,,,,,
+aiCores_turnInOptionSelOrks,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == orks",FireAll PopulateCoresTurnInOptions,"""Ah, AI cores? You did well to bring these to us, rather than submit them to Tritachyon for some fast credits. I will see to it that these are properly disposed of- After extracting any useful intel from them, of course. We do also offer a generous reward, and improved standing with the Coalition for your actions, as thanks.""
+OR
+""Any AI cores kept out of Tritachyon's hands is a small victory for the Coalition, and the sector at large. We'll dispose of these in compliance of current AI laws. Your commitment to the safety of the sector shall not go unrewarded, as we offer a significant bounty for any cores turned in.""",,
+aiCores_turnInResponseOrks,AICoresTurnedIn,$faction.id == orks,FireAll PopulateOptions,"$PersonRank $personLastName gives you a quick salute as they finalize the transaction, before promptly returning to other matters.
+OR
+""On behalf of the Bultach Coalition, I thank you."" the $PersonRank gives a pleased smile as they confirm the transaction. ""Please do not hesitate to bring further found cores to us, or the Hegemony."" ",,
+#END turning AI cores in,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,

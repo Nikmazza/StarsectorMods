@@ -1,0 +1,39 @@
+{
+	"id":"fed_largemissile_proj",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/FED/missiles/fed_missile_large.png",
+	"onHitEffect":"data.scripts.weapons.fed_LargeMissileEffect",
+	"size":[16,38],	
+	"center":[8,19],
+	"collisionRadius":35,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,155,25,155],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":100, # purely visual
+	"engineSpec":{"turnAcc":24,
+				  "turnRate":6,
+				  "acc":150,
+				  "dec":10},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-20, 0],
+				    #"style":"MISSILE_LOW_TECH",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,155,25,255],
+						"contrailDuration":2,
+						"contrailWidthMult":2,
+						"contrailWidthAddedFractionAtEnd":4,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":13, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":0.5, # how far away from engine it starts
+						"contrailColor":[140,25,5,115],
+						"glowSizeMult":2,
+						"glowAlternateColor":[255,20,10,235],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":15.0,
+				    "length":100.0,
+				    "angle":180.0}]
+}

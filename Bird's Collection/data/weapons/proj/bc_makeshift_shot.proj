@@ -1,0 +1,17 @@
+{
+	"id":"bc_makeshift_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.BreachOnHitEffect",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":700.0,
+	"width":25.0,
+	"hitGlowRadius":100,
+	"fadeTime":0.25,
+	"fringeColor":[253,221,78,255],
+	"coreColor":[255,255,255,255],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0	
+}

@@ -1,0 +1,58 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 17,
+    "fluxVents": 50,
+    "hullId": "ssp_tronado",
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+        "advancedshieldemitter",
+        "ssp_LongerRange",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_tronado_SIM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0017": "squall",
+                "WS0018": "squall"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0015": "ssp_MedMissle",
+                "WS0016": "ssp_MedMissle"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "gauss",
+                "WS0012": "gauss",
+                "WS0013": "gauss",
+                "WS0014": "gauss"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0009": "ssp_spot"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0010": "dualflak"}
+        }
+    ],
+    "wings": [
+        "claw_wing",
+        "claw_wing"
+    ]
+}

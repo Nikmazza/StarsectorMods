@@ -1,0 +1,60 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 0,
+    "fluxVents": 13,
+    "goalVariant": true,
+    "hullId": "ssp_karni",
+    "hullMods": [
+        "targetingunit",
+        "heavyarmor",
+        "reinforcedhull",
+        "armoredweapons",
+        "ssp_ShortRange",
+        "ssp_modetransform"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_karni_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "ssp_LargeShredder",
+                "WS0008": "ssp_LargeShredder"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "ssp_shredder",
+                "WS0018": "ssp_shredder"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "ssp_spot",
+                "WS0006": "ssp_spot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "phasebeam",
+                "WS0002": "phasebeam",
+                "WS0003": "phasebeam",
+                "WS0004": "phasebeam"
+            }
+        }
+    ],
+    "wings": [
+        "ssp_mercurylake",
+        "ssp_mercurylake",
+        "ssp_heavyfog",
+        "ssp_dustfog"
+    ]
+}

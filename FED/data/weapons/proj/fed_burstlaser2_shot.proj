@@ -1,0 +1,17 @@
+{
+    "id":"fed_burstlaser2_shot",
+    "specClass":"projectile",
+    "spawnType":"BALLISTIC",
+    "collisionClass":"PROJECTILE_FF",
+    "collisionClassByFighter":"PROJECTILE_FIGHTER",
+    "length":35.0,
+    "width":4.5,
+    "fadeTime":0.12,
+    "fringeColor":[185,100,150,245],
+    "coreColor":[200,225,230,235],
+    "glowColor":[175,100,150,85],
+    "glowRadius":40,
+    "textureScrollSpeed":64.0,
+    "pixelsPerTexel":10.0,
+    "bulletSprite":"graphics/missiles/shell_medium.png"
+}

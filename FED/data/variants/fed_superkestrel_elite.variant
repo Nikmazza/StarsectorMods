@@ -1,0 +1,87 @@
+{
+  "variantId": "fed_superkestrel_elite",
+  "hullId": "fed_superkestrel",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 48,
+  "fluxVents": 50,
+  "quality": 2,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "frontshield",
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "fed_flak3",
+        "WS0004": "fed_flak3",
+        "WS0005": "fed_flak3",
+        "WS0006": "fed_flak3"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "heavymauler",
+        "WS0002": "heavymauler",
+        "WS0019": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "fed_flak1",
+        "WS0008": "fed_flak1"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "dualflak",
+        "WS0018": "dualflak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "vulcan",
+        "WS0011": "vulcan",
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0016": "vulcan",
+        "WS0022": "vulcan",
+        "WS0023": "vulcan",
+        "WS0024": "vulcan"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0015": "fed_superkestrel_emitter_standard"
+    },
+    {
+      "WS0012": "fed_superkestrel_nosearmor_standard"
+    }
+  ],
+  "wings": []
+}

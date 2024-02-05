@@ -1,0 +1,33 @@
+{
+  "hullName": "Shield Module",
+  "hullId": "fed_shield_module",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/stations/fed_shield_module.png",
+  "style": "FEDERATION_GREEN",
+  "height": 70,
+  "width": 120,
+  "center": [60, 45],
+  "collisionRadius": 300,
+  "shieldCenter": [-167, 0],
+  "shieldRadius": 279,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -167,
+    0
+  ],
+  "builtInMods": [
+    "anchorrotation",
+    "shield_always_on",
+    "reduced_explosion",
+    "always_detaches",
+    "fluxshunt",
+    "fed_design"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    -26, 47,
+    20.5, 0,
+    -26, -47
+  ]
+}

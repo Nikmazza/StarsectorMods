@@ -1,0 +1,39 @@
+{
+  "variantId": "sa_eradicator_remnant_strike",
+  "hullId": "sa_eradicator_remnant",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 19,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "annihilator",
+        "WS 001": "annihilator",
+        "WS 002": "annihilator_fighter",
+        "WS 003": "annihilator_fighter",
+        "WS 004": "annihilator_fighter",
+        "WS 005": "hveldriver",
+        "WS 006": "hveldriver",
+        "WS 007": "sa_radcannon",
+        "WS 008": "pdlaser",
+        "WS 009": "ioncannon",
+        "WS 010": "pdlaser",
+        "WS 011": "pdlaser",
+        "WS 012": "pdlaser",
+        "WS 013": "pdlaser",
+        "WS 014": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

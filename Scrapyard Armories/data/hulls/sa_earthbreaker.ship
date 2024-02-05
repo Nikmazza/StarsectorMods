@@ -1,0 +1,154 @@
+{
+  "hullName": "Citadel Battery",
+  "hullId": "sa_earthbreaker",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/station/sa_earthbreaker.png",
+  "style": "LOW_TECH",
+  "height": 184,
+  "width": 276,
+  "center": [138, 88],
+  "collisionRadius": 180,
+  "shieldCenter": [-13, 0],
+  "shieldRadius": 160,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -66,
+    0
+  ],
+  "builtInMods": [
+    "supercomputer",
+    "reduced_explosion",
+    "do_not_fire_through",
+    "always_detaches"
+  ],
+  "builtInWeapons": {
+    "WS0001": "sa_earthshaker"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS 000",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 70,
+      "locations": [-39, 92]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 70,
+      "locations": [-28, 119]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 60,
+      "locations": [14, 78]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 40,
+      "locations": [44, 55]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 38,
+      "locations": [77, 48]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -38,
+      "locations": [77, -48]
+    },
+    {
+      "id": "WS 009",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -40,
+      "locations": [44, -54]
+    },
+    {
+      "id": "WS 010",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -60,
+      "locations": [14, -78]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -70,
+      "locations": [-28, -119]
+    },
+    {
+      "id": "WS 013",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -70,
+      "locations": [-39, -91]
+    },
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 0,
+      "locations": [4, -0],
+      "renderOrderMod": 1
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    39, 68,
+    82, 48,
+    82, 12,
+    96, 1,
+    83, -11,
+    82, -50,
+    39, -68,
+    22, -93,
+    -17, -96,
+    -24, -126,
+    -60, -97,
+    -59, -60,
+    -82, -19,
+    -82, -4,
+    -100, 0,
+    -82, 6,
+    -82, 21,
+    -60, 62,
+    -61, 96,
+    -26, 129,
+    -17, 98,
+    24, 96
+  ]
+}

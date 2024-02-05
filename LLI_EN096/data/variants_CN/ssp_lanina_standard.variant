@@ -1,0 +1,55 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 25,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "ssp_lanina",
+    "hullMods": ["safetyoverrides"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_lanina_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "amblaster",
+                "WS0006": "amblaster"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0014": "ssp_lanina_weapon"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0015": "sabot",
+                "WS0016": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "chaingun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "heavymg",
+                "WS0002": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "ssp_FragMachinegun",
+                "WS0012": "ssp_FragMachinegun"
+            }
+        }
+    ]
+}

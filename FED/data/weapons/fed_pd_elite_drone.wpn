@@ -1,0 +1,25 @@
+{
+	"specClass":"projectile",
+	"id":"fed_pd_elite_drone",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/burstpd_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/burstpd_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/burstpd_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/burstpd_hardpoint_glow.png",
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":30.0,
+					   "particleSizeMin":16.0,
+					   "particleSizeRange":18.0,
+					   "particleDuration":0.3,
+					   "particleCount":46,
+					   "particleColor":[35,225,45,225]},
+	"projectileSpecId":"fed_drone_pd_shot",  # projectile that will be fired	
+	"fireSoundTwo":"flak_fire",
+}

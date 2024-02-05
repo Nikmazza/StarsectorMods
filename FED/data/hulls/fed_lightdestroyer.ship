@@ -1,0 +1,210 @@
+{
+  "hullName": "Invader",
+  "hullId": "fed_lightdestroyer",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/FED/ships/fed_lightdestroyer.png",
+  "style": "FEDERATION",
+  "height": 203,
+  "width": 130,
+  "center": [65, 92.5],
+  "collisionRadius": 134.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 109.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "fed_energybuiltin",
+    "missile_autoloader"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [47.5, 23]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [47.5, -23]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 311,
+      "angle": 0,
+      "locations": [67.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [28.5, 45]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [28.5, -45]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 123.5,
+      "locations": [15.5, 16]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -123.5,
+      "locations": [15.5, -16]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-30, 18.5],
+      "length": 30.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "midlineFlare"
+    },
+    {
+      "location": [-30, -18.5],
+      "length": 30.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "midlineFlare"
+    },
+    {
+      "location": [-94, 42],
+      "length": 91.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-94, -42],
+      "length": 91.5,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-30.5, 18.5],
+      "length": 37.5,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-30.5, -18.5],
+      "length": 37.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-94, 50],
+      "length": 72.5,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-94, -50],
+      "length": 72.5,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-93, -36],
+      "length": 49,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-93, 36],
+      "length": 49,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    }
+  ],
+  "bounds": [
+    103, 5,
+    88, 11,
+    52, 11.5,
+    52, 29,
+    12, 40.5,
+    30.5, 40,
+    30.5, 48,
+    10.5, 56.5,
+    -72.5, 56.5,
+    -88, 52,
+    -88, 35.5,
+    -69, 35.5,
+    -46, 43.5,
+    -36, 43.5,
+    -36, 30,
+    -12.5, 6,
+    -12.5, -6,
+    -36, -30,
+    -36, -43.5,
+    -46, -43.5,
+    -69, -35.5,
+    -88, -35.5,
+    -88, -52,
+    -72.5, -56.5,
+    10.5, -56.5,
+    30.5, -48,
+    30.5, -40,
+    12, -40.5,
+    52, -29,
+    52, -11.5,
+    88, -11,
+    103, -5
+  ]
+}

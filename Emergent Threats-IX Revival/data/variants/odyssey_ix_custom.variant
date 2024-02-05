@@ -1,0 +1,62 @@
+{
+    "displayName": "Honor Guard",
+    "fluxCapacitors": 0,
+    "fluxVents": 37,
+    "goalVariant": true,
+    "hullId": "odyssey_ix",
+    "hullMods": [
+        "ix_antecedent",
+        "targetingunit",
+        "ix_reactive_combat_shields",
+        "frontemitter",
+        "ix_terminus_relay"
+    ],
+    "modules": [{"SM 1": "odyssey_drone_bay_ix"}],
+    "permaMods": ["hiressensors"],
+    "sMods": [],
+    "variantId": "odyssey_ix_custom",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "stormlight_graser_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS TORP": "antecedent_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "orthrus_l_ix",
+                "WS 003": "orthrus_l_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "es_projector_ix",
+                "WS 005": "muon_autolance_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "lightbringer_ciws_ix",
+                "WS 007": "muon_streamer_ix",
+                "WS 008": "muon_streamer_ix",
+                "WS 009": "muon_streamer_ix",
+                "WS 010": "muon_streamer_ix",
+                "WS 011": "morningstar_ciws_ix",
+                "WS 014": "morningstar_ciws_ix",
+                "WS 015": "morningstar_ciws_ix",
+                "WS 016": "morningstar_ciws_ix"
+            }
+        }
+    ],
+    "wings": []
+}

@@ -1,0 +1,147 @@
+{
+  "hullName": "Hermitaur",
+  "hullId": "nes_hermitaur",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/nes_hermitaur.png",
+  "style": "LOW_TECH",
+  "height": 98,
+  "width": 182,
+  "center": [91, 43],
+  "collisionRadius": 120,
+  "shieldCenter": [-10, -0],
+  "shieldRadius": 100,
+  "viewOffset": 0,
+  "builtInMods": [
+    "NES_FluxMissiles",
+	"NES_ColorSelector_Herm"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": 20,
+      "locations": [0, 35]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": -20,
+      "locations": [0, -35]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [34, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -20,
+      "locations": [5, -65]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 20,
+      "locations": [5, 65]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": -0,
+      "locations": [41, -42]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": 0,
+      "locations": [41, 42]
+    },
+	{
+      "id": "NES_DECO_COUNTER",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-42, -22],
+      "length": 80,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-42, 22],
+      "length": 80,
+      "width": 32,
+      "angle": -180,
+      "contrailSize": 32,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-37, -14],
+      "length": 70,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-37, 14],
+      "length": 70,
+      "width": 24,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -39.5, 27.5,
+    -24.5, 28.5,
+    -23.5, 37.5,
+    -29.5, 42.5,
+    -19.5, 55.5,
+    -10.5, 87.5,
+    9.5, 81.5,
+    28.5, 65.5,
+    49.5, 18.5,
+    49.5, -18.5,
+    28.5, -65.5,
+    9.5, -81.5,
+    -10.5, -87.5,
+    -19.5, -55.5,
+    -29.5, -42.5,
+    -23.5, -37.5,
+    -24.5, -28.5,
+    -39.5, -26.5,
+    -25, -0
+  ]
+}

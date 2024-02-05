@@ -1,0 +1,30 @@
+{
+  "hullName": "Station Structural Spur",
+  "hullId": "fed_module_blocker1",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/stations/module_blocker1.png",
+  "style": "FEDERATION",
+  "height": 128,
+  "width": 48,
+  "center": [24, 69],
+  "collisionRadius": 59,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 59,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -54,
+    0
+  ],
+  "builtInMods": [
+    "reduced_explosion",
+    "always_detaches",
+    "do_not_fire_through"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    57, 0,
+    -53, 18,
+    -53, -18
+  ]
+}

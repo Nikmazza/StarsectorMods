@@ -1,0 +1,242 @@
+{
+  "hullName": "Tailer",
+  "hullId": "ork_tail",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/ork_tail.png",
+  "style": "BULTACH",
+  "height": 295,
+  "width": 172,
+  "center": [86, 159],
+  "collisionRadius": 172.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 166,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ork_redfasta",
+    "BT_shieldsChanger",
+    "bt_shieldArching"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 45,
+      "locations": [-32, 15]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -45,
+      "locations": [-32, -15]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 300,
+      "angle": 0,
+      "locations": [61, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": 90,
+      "locations": [10, 35.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": -90,
+      "locations": [10, -35.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 132,
+      "locations": [-61, 36.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -132,
+      "locations": [-61, -36.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-26, 45]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-26, -45]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -42,
+      "locations": [47, -47]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 42,
+      "locations": [47, 47]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [117.5, -12]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -0,
+      "locations": [117.5, 12]
+    },
+    {
+      "id": "WS0014",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": 90,
+      "locations": [70, 39.5]
+    },
+    {
+      "id": "WS0015",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": -90,
+      "locations": [70, -39.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-118, -18],
+      "length": 71.5,
+      "width": 25,
+      "angle": 180,
+      "contrailSize": 25,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-118, 18],
+      "length": 71.5,
+      "width": 25,
+      "angle": -180,
+      "contrailSize": 25,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-91.5, -47.5],
+      "length": 47.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-91.5, 47.5],
+      "length": 47.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-92.5, -56.5],
+      "length": 41,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-92.5, 56.5],
+      "length": 41,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    }
+  ],
+  "bounds": [
+    -157, -5.5,
+    -118.5, -11.5,
+    -112, -31.5,
+    -92.5, -39.5,
+    -92.5, -58.5,
+    -83, -66.5,
+    -66.5, -68.5,
+    -48.5, -84.5,
+    -32, -84.5,
+    -10, -60.5,
+    61.5, -58.5,
+    88.5, -40.5,
+    118.5, -23,
+    131, -11.5,
+    131, 11.5,
+    118.5, 23,
+    88.5, 40.5,
+    61.5, 58.5,
+    -10, 60.5,
+    -32, 84.5,
+    -48.5, 84.5,
+    -66.5, 68.5,
+    -83, 66.5,
+    -92.5, 58.5,
+    -92.5, 39.5,
+    -112, 31.5,
+    -118.5, 11.5,
+    -157, 5.5
+  ]
+}

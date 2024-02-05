@@ -1,0 +1,85 @@
+{
+	"name":"Scout",
+	"personalities":["aggressive", "steady"],
+	"gender":["m"],
+	"chance":0.4,
+	"talkativeness":1.5,
+	"categoryTags":["game","othermedia"],
+	
+	"lines":{
+		"start":[
+			{"text":"Let's get 'em!"},
+			{"text":"Eat my dust!"},
+			{"text":"Woohoo!"}
+		],
+		"start_boss":[
+			{"text":"Today ain't yer day, pancakes!"},
+			{"text":"Hey knucklehead, you ain't gonna win."},
+			{"text":"I gotta bucket of chicken and I'm here to kick ass! And I'm all outta chicken...so I lied about the chicken."}
+		],		
+		"retreat":[
+			{"text":"Ok, they got lucky once! Nobody gets lucky twice, though. It's impossible."},
+			{"text":"What da hell's goin' on?"},
+			{"text":"'Kay, this does not look good here, um..."}
+		],
+		"out_of_missiles":[
+			{"text":"Oh no! I knew dis would happen! I foresaw dis!"},
+			{"text":"Ok guys, bad news: we lost that last one. Good news: you still got me."}
+		],
+		"engaged":[
+			{"text":"You're a disgrace to the uniform, pal!"},
+			{"text":"I'm gonna headbutt cha', I'm gonna headbutt cha', I'm gonna headbutt cha'!"},
+			{"text":"Ya got anything smart ta say now?"},
+			{"text":"I am owning you, you fat, bald, fatty fat... fat fat!"},
+			{"text":"Look at me!"},
+			{"text":"Man, it is unfair how good I am!"}
+		],
+		"need_help":[
+			{"text":"Yo, a little help here?"},
+			{"text":"Get on the freakin' point dumbass!"},
+			{"text":"C'mon, c'mon!"},
+			{"text":"Dat ain't da right way, guys!"}
+		],
+		"pursuing":[
+			{"text":"Ooooh yeah, you're real scary!"},
+			{"text":"That fancy scope of yours, betcha got a real good view of me killin' ya!"},
+			{"text":"Here's a schematic for ya: my ass!"}
+		],
+		"running":[
+			{"text":"Gah! Running!"},
+			{"text":"Oh my God! Oh my God! OH MY GOD!"},
+			{"text":"Yeah, dis is how winners run!"}
+		],
+		"hull_90":[
+			{"text":"Ah, crap!"},
+			{"text":"This did not just happen!"}
+		],
+		"hull_50":[
+			{"text":"Ooooh yeah, you're real scary!"},
+			{"text":"Doc! Come on, man!"},
+			{"text":"Is-is anybody even payin' attention ta me?"}
+		],
+		"hull_30":[
+			{"text":"I'm too handsome ta die!"},
+			{"text":"Work, dammit!"},
+			{"text":"Hey, who's on fire now?"},
+			{"text":"You wimps suck!"}
+		],
+		"overload":[
+			{"text":"Oh I'm burnin', I'm-I'm burnin'!"},
+			{"text":"It's startin' to bore me how much you suck."}
+		],
+		"death":[
+			{"text":"Scary Hat! This is all your fault!"},
+			{"text":"MEDIC!"},
+			{"text":"Don't look at me, I'm slightly less handsome!"}
+		],
+		"victory":[
+			{"text":"Alright, yeah, that's- naw, that's a pretty good job."},
+			{"text":"Way ta go, slugger!"},
+			{"text":"Say goodbye to ya kneecaps, chucklehead!"},
+			{"text":"Boink!"},
+			{"text":"Bridge time, everybody!"}
+		]
+	}
+}

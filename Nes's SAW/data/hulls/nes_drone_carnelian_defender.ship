@@ -1,0 +1,49 @@
+{
+  "hullName": "Defender",
+  "hullId": "nes_drone_carnelian_defender",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/drones/nes_drone_carnelian_defender.png",
+  "style": "MIDLINE",
+  "height": 34,
+  "width": 32,
+  "center": [16, 15],
+  "collisionRadius": 25,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 20.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [2, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [0.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-14, -0],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -10.5, 10.5,
+    -10.5, -10.5,
+    14, -0
+  ]
+}

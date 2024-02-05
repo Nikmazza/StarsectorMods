@@ -1,0 +1,82 @@
+{
+  "variantId": "fed_flagship_assault_elite",
+  "hullId": "fed_flagship_assault",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 30,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "fluxbreakers",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "tachyonlance",
+        "WS0010": "tachyonlance"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "squall"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0020": "sabotpod",
+        "WS0023": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "fed_burstlaser2",
+        "WS0004": "fed_burstlaser2"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_singlelaser",
+        "WS0006": "fed_singlelaser",
+        "WS0007": "fed_singlelaser",
+        "WS0011": "fed_singlelaser",
+        "WS0012": "fed_singlelaser",
+        "WS0015": "fed_singlelaser",
+        "WS0016": "fed_singlelaser",
+        "WS0017": "fed_singlelaser",
+        "WS0019": "fed_singlelaser",
+        "WS0021": "fed_singlelaser",
+        "WS0022": "fed_singlelaser",
+        "WS0025": "fed_singlelaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [
+    {
+      "WS0018": "fed_flagship_sideshield_standard"
+    }
+  ],
+  "wings": []
+}

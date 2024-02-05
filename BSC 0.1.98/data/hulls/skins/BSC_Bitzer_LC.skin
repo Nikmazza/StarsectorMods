@@ -1,0 +1,18 @@
+{
+  "baseHullId": "BSC_Bitzer",
+  "baseValueMult": 1.1,
+   "builtInMods": [
+    "blast_doors"
+  ],
+  "descriptionId": "BSC_Bitzer",
+  "descriptionPrefix": "This ship has been given Luddic Church markings and its hull has been reinforced with additonal blast doors.",
+  "fpMod": 0,
+  "hullDesignation": "Patrol Craft",
+  "hullName": "Bitzer (LC)",
+  "manufacturer": "Luddic Church",
+  "restoreToBaseHull": false,
+  "skinHullId": "BSC_Bitzer_LC",
+  "spriteName": "graphics/hulls/BSC_Bitzer_LC.png",
+      "tags":["LC_bp"],
+    "tech":"Luddic Church",
+}

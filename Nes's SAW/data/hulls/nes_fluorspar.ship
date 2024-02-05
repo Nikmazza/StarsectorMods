@@ -1,0 +1,154 @@
+{
+  "hullName": "Fluorspar",
+  "hullId": "nes_fluorspar",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/nes_fluorspar.png",
+  "style": "nes_crystal",
+  "height": 198,
+  "width": 114,
+  "center": [57, 79],
+  "collisionRadius": 140,
+  "shieldCenter": [17, -0],
+  "shieldRadius": 120,
+  "viewOffset": 0,
+  "builtInMods": [
+    "NES_CrystalHull",
+    "NES_ColorSelector",
+    "NES_VolatileShells"
+  ],
+  "builtInWeapons": {
+    "WS0005": "nes_blinker_amber",
+    "WS0006": "nes_blinker_amber",
+    "WS0007": "nes_blinker_amber",
+    "WS0008": "nes_blinker_amber",
+    "WS0009": "nes_fluorspar_deco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [34, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 0,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 90,
+      "locations": [-17, 31]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -90,
+      "locations": [-17, -31]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-7.5, -54.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-7.5, 54.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [54.5, -26.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [54.5, 26.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [23.5, -0]
+    },
+    {
+      "id": "NES_DECO_COUNTER",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-6.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, -27],
+      "length": 75,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "nes_crystal_engine"
+    },
+    {
+      "location": [-50, 27],
+      "length": 75,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "nes_crystal_engine"
+    }
+  ],
+  "bounds": [
+    4, -32,
+    -7.5, -48.5,
+    -47.5, -27.5,
+    -43.5, -22,
+    -73.5, -0,
+    -43.5, 22,
+    -47.5, 27.5,
+    -7.5, 48.5,
+    4, 32,
+    54.5, 22.5,
+    67.5, 13.5,
+    77.5, 13.5,
+    111.5, -0,
+    77.5, -13.5,
+    67.5, -13.5,
+    54.5, -22.5
+  ]
+}

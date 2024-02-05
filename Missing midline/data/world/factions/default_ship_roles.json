@@ -1,0 +1,15 @@
+{
+
+	"combatCapital":{
+		"missp_staple_Brawler":10,
+		"missp_staple_Standard":10,
+		"missp_staple_Type_3":3,
+	},
+	"carrierLarge":{
+		"missp_pelican_Standard":10,
+		"missp_chrysaor_Standard":10,
+		"missp_chrysaor_Strike":2,
+		"missp_chrysaor_Elite":3,
+	},
+	
+}

@@ -1,0 +1,64 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+Federation Construction,fed_design,,,Star Federation,,,1000,,TRUE,,0,0,0,0,data.hullmods.FederationDesign,"Star Federation ships reflect a history of design and deployment by an increasingly Domain-divergent polity. Many of these differences were avoided by Domain bureaucrats due to unreliability, politics, or a combination of both.","Shields lose arc, but weapons fire faster as hard flux increases.",graphics/FED/hullmods/fed_design.png
+ZOLTAN Shield,fed_auxshields,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedAuxShields,"This ship is protected by a secondary shield module near the rear of the craft. The module has %s capacity, %s shield efficiency, and dissipates %s hard flux per second.
+
+When active, the shield prevents nearly all damage from affecting the main ship's hull.
+
+Why the Domain never adopted this type of secondary shield is unclear, but they are intrinsically difficult to incorporate on anything other than large ships, and can disabled by large area-of-effect explosions.",Ship is protected by a weak secondary shield.,graphics/FED/hullmods/fed_auxshields.png
+Drone Targeting,fed_dronetargeting,,,Star Federation,,,1000,,TRUE,,0,0,0,0,data.hullmods.DroneTargeting,Limited drone intelligence reduces the effective operating range of the weapon installed on it.,Reduces weapon range signifigantly,graphics/FED/hullmods/fed_design.png
+Damage Control Teams,StarFederationCommissionedCrews,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.StarFederationCommissionedCrews,"Star Federation crews are well-trained in the art of emergency repairs, and extra damage control teams are assigned throughout the ship. 
+
+If the ship has crew, all weapons and engines repair %s faster. Crew required is also increased by %s.","Weapons and engines repair faster, but crew requirements are increased.",graphics/FED/hullmods/fed_commcrew.png
+Siege Engine,fed_firecontrol,,,Star Federation,,,1000,,TRUE,,0,0,0,0,data.hullmods.FederationFireControl,A suite of advanced targeting facilities increases projectile speed by %s and the base range of all weapons by %s. Extra-heavy mounting points also reduce recoil by %s.,"Slightly increases weapon range and  projectile speed, while reducing recoil.",graphics/FED/hullmods/fed_targeting.png
+Secondary Shield Module,fed_auxshieldeffect,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedSecondaryShieldEffect,"This module projects a sub-shield which %s and dissipates %s hard flux per second. It also takes %s more High Explosive damage.
+
+This auxiliary shield will not protect the main ship from large explosions - a necessary sacrifice of the counter-harmonics between overlapping emitters.",This module projects a weak secondary shield,graphics/FED/hullmods/fed_auxshields.png
+Flowing Conduits,fed_phasedesign,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedPhaseCoils,"High-performance engines and phase resonance directors reduce the turbulence caused by high flux in p-space, causing only %s speed loss at %s flux. 
+
+By default, installing the %s modification will raise the threshold for %s speed to %s hard flux.",This module projects a weak secondary shield.,graphics/FED/hullmods/fed_phase_field.png
+Heavy Burst Capacitors,fed_energymod,,2,Star Federation,offensive,Weapons,10000,,,,3,5,9,15,data.hullmods.FedEnergyMod,"All energy weapons deal %s more damage and have their range increased by %s, but have their rate of fire reduced by %s.
+
+Energy weapon ammo and ammo recharge rates are lowered by %s, and energy projectile speed is also decreased by %s.","Boosts energy weapon damage, but reduces rate of fire, projectile speed and ammo capacity.",graphics/FED/hullmods/fed_heavycapacitors.png
+,,,,,,,,,,,,,,,,,,
+Missile Micro-Replicator,fed_missileforge,,,Star Federation,,,1000,,TRUE,,0,0,0,0,data.hullmods.FedMissileForge,"Replenishes %s or %s of maximum ammo for missile weapons - whichever is greater.
+
+For missiles with a per-shot damage of less than %s, replenishment happens every %s.
+
+For missiles with a per-shot damage between %s, replenishment happens every %s.
+
+Does not affect weapons outside of indicated damage range.",Slowly regenerates smaller missile ammunition.,graphics/hullmods/missile_autofactory.png
+Fleetshield Device,fed_fleetshieldeffect,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedFleetshieldEffect,"Projects a massive shield which %s and is able to %s. It will recede up to %s as module hard flux increases, but also %s. 
+
+It also takes %s more High Explosive damage, and will always overload for at least %s seconds.",Projects a massive shield capable of protecting an entire fleet.,graphics/FED/hullmods/fed_auxshields.png
+Fleetshield Projector,fed_fleetshield_helper,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedFleetShield,"This ship has a module that projects a %s and is able to %s inside of its bounds. This module has %s flux capacity, %s efficiency, and %s base dissipation. 
+
+However, the Fleetshield's radius will shrink by up to %s based on the module's hard flux level, and will also shrink rapidly if it overlaps with other Fleetshields. The Fleetshield takes %s more High-Explosive damage, and will always overload for at least %s seconds.
+
+Unlike other module shields, the Fleetshield projector will only be destroyed if its mothership is destroyed. It also prevents the mothership from raising its own shields while active.
+",Projects a massive shield capable of protecting an entire fleet.,graphics/FED/hullmods/fed_fleetshield.png
+FleetOps Center,fed_fleetship,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedFleetship,"A vast space dedicated to chassis storage means fighter replacement rate does not go down when fighters are lost. Powerful jammers and a navigations relay grant %s ECM and %s Nav rating while in combat.
+
+High-gain communications equipment and trans-orbital ballistic computers allow for the support and coordination of a large force. Increases the effective strength of planetary raids by 500, up to the total number of marines in the fleet.","Maintains 100% fighter replacement rate, and increases Nav and ECM ratings by 5%.",graphics/FED/hullmods/fed_fleetship.png
+Weighted Filaments,fed_biocloak,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedPhaseCoils,"Phase filaments in the hull are anchored to some natural frequency in p-space, granting the vessel a mere %s speed loss at %s flux. 
+
+By default, installing the %s modification will raise the threshold for %s speed to %s hard flux.
+
+Since the vessel lacks the ""deeper"" phase provided by a pure coil design, time dilation in phase is only %s.",A strange phase cloak which reduces the effects of high-flux engine interference.,graphics/FED/hullmods/fed_biocloak.png
+Overgrowth,fed_childmodule,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.FedChildModule,SHELL IMPERFECT : OVERWRITE : ISOLATE : REALIGN,,graphics/icons/intel/investigation.png
+Integrated Burst Capacitors,fed_energybuiltin,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedEnergyBuiltin,"All energy weapons deal %s more damage and have their range increased by %s, but have their rate of fire reduced by %s.
+
+Energy weapon ammo and ammo recharge rates are lowered by %s, and energy projectile speed is also decreased by %s.","Boosts energy weapon damage and range, but reduces rate of fire and projectile speeds.",graphics/FED/hullmods/fed_ultracapacitors.png
+Armored Prow,fed_armoredprow,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedArmoredProw,"An external armor array protecting the ship has %s of the main ship's armor rating, but only %s of the hull.
+
+This applique armor lacks true integration with the hull, so it %s. ",The ship's prow is covered by a separate armor module.,graphics/FED/hullmods/fed_armoredprow.png
+,,,,,,,,,,,,,,,,,,
+Anchor Rotation (Faster),fed_anchorrotationreverse,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.FedAnchorRotationReverse,This structure rotates faster around its anchor attachment point. For station modules only.,,graphics/hullmods/axial_rotation.png
+,,,,,,,,,,,,,,,,,,
+ZOLTAN Shield II,fed_auxshieldssuper,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedAuxShieldsSuper,"This ship is protected by an advanced secondary shield module near the rear of the craft. The module has %s capacity, %s shield efficiency, and dissipates %s hard flux per second.
+
+When active, the shield prevents nearly all damage from affecting the main ship's hull.
+
+Why the Domain never adopted this type of secondary shield is unclear, but they are intrinsically difficult to incorporate on anything other than large ships, and can disabled by large area-of-effect explosions.",Ship is protected by a secondary shield.,graphics/FED/hullmods/fed_auxshields.png
+Armored Prow II,fed_armoredprow2,,,Star Federation,,,,,TRUE,,0,0,0,0,data.hullmods.FedArmoredProw2,"An external armor array protecting the ship has %s armor and %s hull.
+
+This applique armor lacks true integration with the hull, so it %s. ",The ship's prow is covered by a separate armor module.,graphics/FED/hullmods/fed_armoredprow.png

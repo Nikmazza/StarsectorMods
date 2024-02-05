@@ -1,0 +1,43 @@
+{
+  "hullName": "grunder",
+  "hullId": "sa_grunder",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/sa_grunder.png",
+  "style": "HIGH_TECH",
+  "height": 38,
+  "width": 24,
+  "center": [12, 19],
+  "collisionRadius": 20.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 19.5,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0001": "lightmg"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-3, 1]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-17, -0],
+      "length": 18,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -16, -11,
+    -16, 11,
+    15.5, -0
+  ]
+}

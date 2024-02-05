@@ -1,0 +1,65 @@
+{
+  "variantId": "fed_raptor_elite",
+  "hullId": "fed_raptor",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 13,
+  "fluxVents": 26,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_largemissile"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "fed_leto",
+        "WS0007": "fed_leto"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hveldriver",
+        "WS0002": "hveldriver"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavymauler",
+        "WS0004": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "fed_duallaser",
+        "WS0009": "fed_duallaser",
+        "WS0010": "fed_singlelaser",
+        "WS0011": "fed_duallaser2",
+        "WS0012": "fed_singlelaser",
+        "WS0013": "fed_singlelaser",
+        "WS0014": "fed_duallaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0015": "fed_raptor_modshield_standard"
+    }
+  ],
+  "wings": []
+}

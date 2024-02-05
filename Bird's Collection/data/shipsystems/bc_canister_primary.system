@@ -1,0 +1,14 @@
+{
+	"id":"bc_canister_primary",
+	"type":"WEAPON",
+	"weaponDataId":"canister_flak",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.bc_flarePrimaryAI",
+	
+	#"useSound":"system_flare_launcher_active",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}	
+}
+

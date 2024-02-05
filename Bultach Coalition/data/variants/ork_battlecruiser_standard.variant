@@ -1,0 +1,41 @@
+{
+  "variantId": "ork_battlecruiser_standard",
+  "hullId": "ork_battlecruiser",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 46,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_rotary_pd_large",
+        "WS0002": "ork_bigplasma",
+        "WS0003": "ork_plasma",
+        "WS0004": "ork_plasma",
+        "WS0005": "ork_rotary_pd_large",
+        "WS0006": "ork_rotary_pd_small",
+        "WS0007": "ork_noshield_small",
+        "WS0008": "ork_noshield_medium",
+        "WS0009": "ork_noshield_small",
+        "WS0010": "ork_rotary_pd_small",
+        "WS0011": "ork_plasma",
+        "WS0012": "ork_rotary_pd_small",
+        "WS0013": "ork_rotary_pd_small",
+        "WS0014": "ork_noshield_medium",
+        "WS0015": "ork_noshield_small",
+        "WS0016": "ork_noshield_small",
+        "WS0017": "ork_rotary_pd_small",
+        "WS0019": "ork_rotary_pd_small"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

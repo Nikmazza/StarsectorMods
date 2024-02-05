@@ -1,0 +1,57 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 10,
+    "fluxVents": 50,
+    "hullId": "ssp_flood",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange",
+        "frontemitter",
+        "ballistic_rangefinder",
+        "converted_hangar"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_flood_SIM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0019": "hephag",
+                "WS0021": "hephag"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0020": "reaper"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0022": "gauss"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "lightac",
+                "WS0006": "lightac",
+                "WS0007": "lightac",
+                "WS0008": "lightac",
+                "WS0009": "lightac",
+                "WS0010": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "ionbeam",
+                "WS0012": "ionbeam"
+            }
+        }
+    ],
+    "wings": ["xyphos_wing"]
+}

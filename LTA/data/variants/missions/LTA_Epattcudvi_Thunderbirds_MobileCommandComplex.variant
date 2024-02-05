@@ -1,0 +1,82 @@
+{
+    "displayName": "Mobile Command Complex",
+    "fluxCapacitors": 9,
+    "fluxVents": 30,
+    "hullId": "LTA_Epattcudvi_Thunderbirds",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "missleracks",
+        "eccm",
+        "pointdefenseai",
+        "turretgyros"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Epattcudvi_Thunderbirds_MobileCommandComplex",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "LTA_hex"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0006": "LTA_portablebaypiranha"}
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "LTA_talonrail",
+                "WS0002": "LTA_talonrail",
+                "WS0016": "LTA_talonrail",
+                "WS0019": "LTA_talonrail",
+                "WS0020": "LTA_talonrail"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "LTA_annihilatorbuiltinmitigator",
+                "WS0008": "LTA_annihilatorbuiltinmitigator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "hephag",
+                "WS0018": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "lightdualac",
+                "WS0004": "lightdualac",
+                "WS0011": "LTA_nixie",
+                "WS0012": "LTA_nixie",
+                "WS0013": "LTA_nixie",
+                "WS0014": "LTA_nixie"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "vulcan",
+                "WS0010": "vulcan",
+                "WS0015": "vulcan",
+                "WS0021": "flak",
+                "WS0022": "flak"
+            }
+        }
+    ],
+    "wings": [
+        "LTA_DiademTB_Wing",
+        "LTA_GladiusTB_Wing"
+    ]
+}

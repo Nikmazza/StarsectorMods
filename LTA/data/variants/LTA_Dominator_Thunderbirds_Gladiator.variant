@@ -1,0 +1,79 @@
+{
+  "variantId": "LTA_Dominator_Thunderbirds_Gladiator",
+  "hullId": "LTA_Dominator_Thunderbirds",
+  "displayName": "Gladiator",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 29,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "converted_hangar",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 012": "LTA_hex"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 013": "LTA_nixiearray"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 014": "sabotpod",
+        "WS 015": "salamanderpod",
+        "WS 016": "sabotpod",
+        "WS0001": "LTA_annihilator_tube_builtin",
+        "WS0002": "LTA_annihilator_tube_builtin"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "LTA_lightacdrone",
+        "WS 005": "LTA_lightacdrone"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "LTA_nixie",
+        "WS 009": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 010": "dualflak",
+        "WS 011": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "vulcan",
+        "WS 004": "vulcan",
+        "WS 007": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "LTA_Drone_ZC_Thunderbirds"
+  ]
+}

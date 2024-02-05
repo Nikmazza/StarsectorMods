@@ -1,0 +1,15 @@
+{
+"portraits":{
+		"standard_male":[
+			"graphics/portraits/sa_plasmaman.png",
+			"graphics/portraits/sa_syndie.png",
+			"graphics/portraits/sa_sec.png",
+		],
+	},
+	"names":{
+		"SA_NAMES":1,
+	},
+
+}
+
+

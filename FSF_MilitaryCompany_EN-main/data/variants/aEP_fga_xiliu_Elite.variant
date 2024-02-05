@@ -1,0 +1,41 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "aEP_fga_xiliu",
+    "hullMods": [
+        "aEP_BurstDissipate",
+        "fluxbreakers",
+        "aEP_VanguardHull"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "aEP_fga_xiliu_Elite",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "aEP_b_s_h37",
+                "WS0008": "aEP_b_s_h37"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "R01": "railgun",
+                "R02": "railgun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "aEP_vulcan",
+                "WS0009": "aEP_vulcan"
+            }
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{	
+	"ANTIQUE":{
+		"engineColor":[224,142,255,255],
+		"contrailParticleSizeMult":5,
+		"contrailParticleDuration":2,
+		"contrailParticleFinalSizeMult":2,
+		"contrailMaxSpeedMult":0.5,
+		"contrailAngularVelocityMult":0.5,
+		"contrailColor":[224,142,255,10],
+		"contrailCampaignColor":[224,142,255,10],
+		"type":"GLOW",
+		"glowSprite":"graphics/fx/bc_enginefx4.png",
+
+	},
+	"OLD_TECH":{
+		"engineColor":[76,247,239,255],
+		"contrailParticleSizeMult":5,
+		"contrailParticleDuration":2,
+		"contrailParticleFinalSizeMult":2,
+		"contrailMaxSpeedMult":0.5,
+		"contrailAngularVelocityMult":0.5,
+		"contrailColor":[145,217,218,10],
+		"contrailCampaignColor":[145,217,217,10],
+		"type":"GLOW",
+		"glowSprite":"graphics/fx/bc_recoveredengine1.png",
+		"glowOutline":"graphics/fx/bc_recoveredengine2.png",
+		"glowSizeMult":0.7,
+	},
+	"FAYS_CO":{
+		"engineColor":[247,177,76,255],
+		"contrailParticleSizeMult":5,
+		"contrailParticleDuration":2,
+		"contrailParticleFinalSizeMult":2,
+		"contrailMaxSpeedMult":0.5,
+		"contrailAngularVelocityMult":0.5,
+		"contrailColor":[255,113,77,10],
+		"contrailCampaignColor":[255,113,77,10],
+		"omegaMode": false,
+		"type":"GLOW",
+		"glowSprite":"graphics/fx/bc_faysco_engine3_fx.png",
+		"glowOutline":"graphics/fx/bc_faysco_engine1_outline_fx.png",
+		"glowSizeMult":1,
+		"glowAlternateColor":[213,54,12,255]
+	}
+}

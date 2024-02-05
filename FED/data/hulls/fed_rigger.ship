@@ -1,0 +1,184 @@
+{
+  "hullName": "Rigger",
+  "hullId": "fed_rigger",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/FED/ships/fed_rigger2.png",
+  "style": "FEDERATION",
+  "height": 180,
+  "width": 150,
+  "center": [74.5, 84.5],
+  "collisionRadius": 109.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 105.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design"
+  ],
+  "builtInWings": [
+    "fed_kdrone_assault"
+  ],
+  "builtInWeapons": {
+    "WS0001": "fed_singlelaser",
+    "WS0005": "fed_duallaser"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 50,
+      "angle": 0,
+      "locations": [-12.5, 23.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [11.5, 47.5]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 50,
+      "angle": 180,
+      "locations": [-35.5, 15.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [78.5, -56.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [78.5, 56.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": -90,
+      "locations": [-47.5, -44.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 90,
+      "locations": [-47.5, 44.5]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-57, 0.5]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -8, -19,
+        -8, -21.5,
+        -5, -19,
+        -5, -21.5,
+        -1.5, -19,
+        -2, -21.5
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        5.5, -46.5,
+        2.5, -46.5,
+        8.5, -46.5,
+        11.5, -46.5,
+        14.5, -46.5,
+        17.5, -46.5,
+        20, -46.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-77.5, 42],
+      "length": 81,
+      "width": 26,
+      "angle": 180,
+      "contrailSize": 26,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-77.5, -42],
+      "length": 81,
+      "width": 26,
+      "angle": -180,
+      "contrailSize": 26,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-77, -57],
+      "length": 49.619999,
+      "width": 13.270001,
+      "angle": -175,
+      "contrailSize": 13.270001,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-77, 57],
+      "length": 49.619999,
+      "width": 13.270001,
+      "angle": 175,
+      "contrailSize": 13.270001,
+      "style": "FEDERATION_VENT"
+    }
+  ],
+  "bounds": [
+    13.5, 48.5,
+    81.5, 44,
+    75, 58,
+    -65, 61.5,
+    -71, 34.5,
+    -50.5, 24.5,
+    -68.5, 11.5,
+    -68.5, -12.5,
+    -50.5, -25.5,
+    -71, -35.5,
+    -65, -62.5,
+    75, -59,
+    81.5, -45,
+    21.5, -42.5,
+    17.5, 6.5,
+    43, 10.5,
+    46, 30.5
+  ]
+}

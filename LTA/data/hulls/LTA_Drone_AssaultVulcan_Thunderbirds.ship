@@ -1,0 +1,89 @@
+{
+  "hullName": "Assault Drone",
+  "hullId": "LTA_Drone_AssaultVulcan_Thunderbirds",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/LTA/ships/Drones/LTA_Drone_AssaultVulcanTB.png",
+  "style": "LOW_TECH",
+  "height": 14,
+  "width": 14,
+  "center": [7, 6],
+  "collisionRadius": 11.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 11,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0004": "LTA_droneassaltvulcantb_top_deco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-2, 3]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-2, -3]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-1, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [1, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-4, -0],
+      "length": 15,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-4, 4.5],
+      "length": 9,
+      "width": 3,
+      "angle": 167.5,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-4, -4.5],
+      "length": 9,
+      "width": 3,
+      "angle": -167.5,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    3, -3,
+    0, -6,
+    -4, 0,
+    -4, -0,
+    0, 6,
+    3, 3
+  ]
+}

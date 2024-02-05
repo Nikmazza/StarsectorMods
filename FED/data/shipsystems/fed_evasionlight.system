@@ -1,0 +1,26 @@
+{
+	"id":"fed_evasionlight",
+	"type":"ENGINE_MOD",
+	"aiType":"MANEUVERING_JETS",
+	
+	"statsScript":"data.shipsystems.fed_evasionlight",
+	
+	"engineGlowLengthMult":1.5,
+	"engineGlowWidthMult":1.5,
+	"engineGlowGlowMult":2,
+	"engineGlowContrailColor":[255,125,60,45],
+	"engineGlowColor":[255,175,125,255],
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+
+	"useSound":"fed_evasionlight_activate",
+	"loopSound":"burn_drive_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":300,
+		"burstMovementPotential":1,
+		"averageSpeedIncrease":40,
+	}
+}

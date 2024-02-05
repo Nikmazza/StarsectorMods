@@ -1,0 +1,78 @@
+{
+  "variantId": "BSC_Terringzean_Assault",
+  "hullId": "BSC_Terringzean",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 30,
+  "fluxVents": 29,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hurricane",
+        "WS0002": "hurricane"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "mark9",
+        "WS0004": "mark9",
+        "WS0005": "mark9",
+        "WS0027": "lightdualac",
+        "WS0028": "lightdualac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "hephag",
+        "WS0007": "heavymauler",
+        "WS0008": "heavymauler",
+        "WS0009": "heavymauler",
+        "WS0010": "heavymauler",
+        "WS0017": "lightag",
+        "WS0018": "lightag",
+        "WS0019": "lightag",
+        "WS0020": "lightag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "sabotpod",
+        "WS0014": "sabotpod",
+        "WS0015": "sabot",
+        "WS0016": "sabot",
+        "WS0023": "sabot",
+        "WS0024": "sabot",
+        "WS0025": "sabot",
+        "WS0026": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "flak",
+        "WS0012": "flak",
+        "WS0021": "vulcan",
+        "WS0022": "vulcan",
+        "WS0029": "vulcan",
+        "WS0030": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

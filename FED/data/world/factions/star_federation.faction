@@ -1,0 +1,323 @@
+{
+    "id":"star_federation",
+    "color":[255,185,165,255],
+
+    "baseUIColor":[198,191,175,255],
+    "darkUIColor":[238,167,99,175],
+    "gridUIColor":[62,196,35,125],
+    "secondaryUIColor":[240,160,112,255],
+    "secondarySegments":4,
+
+    "displayName":"Star Federation",
+    "displayNameWithArticle":"the Star Federation",
+    "displayNameLong":"Star Federation",
+    "displayNameLongWithArticle":"the Star Federation",
+    "displayNameIsOrAre":"is",
+    "logo":"graphics/FED/factions/fedlogo.png",
+    "crest":"graphics/FED/factions/fedlogo_256.png",
+    "shipNamePrefix":"SFN",
+    "shipNameSources":{
+        "SPACE":1,
+		"BRITISH_NAVY":1,
+		"MERCANTILE":1,
+		"GREEK":1,
+		"JAPANESE":1,
+		"GENERAL":1,
+    },
+    # variantOverrides restricts hulls to listed variants and adjusts their probability
+    "variantOverrides":{
+    },
+    # multiplier for how often hulls show up in the faction's fleets
+    "hullFrequency":{
+        "tags":{
+        },
+        "hulls":{
+            "buffalo2":0,
+            "gremlin":0,
+			"fed_superbuffalo": 2,
+        },
+    },
+    # ships the faction gets access to when importing S&W out-of-faction
+    "shipsWhenImporting":{
+        "tags":["base_bp"],
+        "hulls":[
+		"ox",
+		"fed_superbuffalo",
+        ],
+    },
+    "knownShips":{
+        "tags":["base_bp", "lowtech_bp", "midline_bp", "fed_com", "fed_mil","fed_elite","fed_cap","fed_mid","fed_log"],
+        "hulls":[
+            "prometheus",
+            "valkyrie",
+			"atlas",	
+			"ox",
+        ],
+    },
+    # listing ships here will make the faction mostly use them even if other hulls become available
+    "priorityShips":{
+        "tags":["fed_com","fed_mil","fed_elite","fed_cap","fed_mid","fed_log"],
+        "hulls":[
+            "mudskipper",
+            "nebula",
+            #"starliner",
+            "dram",
+            "phaeton",
+            "tarsus",
+            "buffalo",
+            #"colossus",
+			"fed_heavyfreighter",
+			"fed_medcombtanker",
+			"fed_superbuffalo",
+            "ox",
+        ],
+    },
+    "knownFighters":{
+        "tags":["hightech_bp", "midline_bp"],
+        "fighters":[
+		"fed_firestream_wing",
+		"fed_tsunami_wing",
+        ],
+    },
+    "priorityFighters":{
+        "tags":["midline_bp"],
+        "fighters":[
+			"fed_firestream_wing",
+			"fed_tsunami_wing",
+        ],
+    },
+    "knownWeapons":{
+        "tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "fed_wep"],
+        "weapons":[
+            "lightneedler",
+            "railgun",
+            "dualflak",
+            "heavymauler",
+            "hveldriver",
+            "sabotpod",
+            "phasecl",
+            "cyclone",
+            "squall",
+            "pdburst",
+            "amblaster",
+            "phasebeam",
+            "heavyburst",
+            "ionpulser",
+            "ionbeam",
+        ],
+    },
+    "priorityWeapons":{
+        "tags":["fed_wep"],
+        "weapons":[
+            # Common vanilla weapons that should appear just as often as II
+            "lightmg",
+            "lightdualmg",
+            "lightmortar",
+            "vulcan",
+            "heavymg",
+            "heavymortar",
+            "flak",
+            "arbalest",
+            "heavyac",
+            "chaingun",
+            "reaper",
+            "annihilator",
+            "heatseeker",
+            "sabot",
+            "salamanderpod",
+            "annihilatorpod",
+            "typhoon",
+            "taclaser",
+            "lrpdlaser",
+            "ioncannon",
+            "irpulse",
+            "miningblaster",
+            "gravitonbeam",
+            # Rare vanilla weapons that should appear just as often as II
+            "lightneedler",
+            "railgun",
+            "dualflak",
+            "heavymauler",
+            "hveldriver",
+            "sabotpod",
+            "phasecl",
+            "cyclone",
+            "squall",
+            "pdburst",
+            "amblaster",
+            "phasebeam",
+            "heavyburst",
+            "ionpulser",
+            "ionbeam",
+        ],
+    },
+    "knownHullMods":{
+        "tags":["base_bp", "star_federation"],
+        "hullMods":[
+            "advancedshieldemitter", # accelerated
+            "advancedoptics",
+            "turretgyros",
+            "armoredweapons",
+            "augmentedengines",
+            "autorepair",
+            "eccm",
+            "ecm",
+            "expanded_deck_crew",
+            "magazines",
+            "missleracks",
+            "extendedshieldemitter",
+            "frontemitter",
+            "frontshield",  # makeshift
+            "hardenedshieldemitter",
+            "heavyarmor",
+            "insulatedengine",
+            "pointdefenseai",
+            "targetingunit",
+            "nav_relay",
+            "adaptiveshields", # omni
+            "operations_center",
+            "recovery_shuttles",
+            "fluxbreakers",
+            "stabilizedshieldemitter",
+            "reinforcedhull",
+            "surveying_equipment",
+            "hiressensors",
+            "efficiency_overhaul",
+        ],
+    },
+    "factionDoctrine":{
+        "warships":4,
+        "carriers":2,
+        "phaseShips":1,
+
+        "officerQuality":2,
+        "shipQuality":3,
+        "numShips":3,
+
+        "shipSize":4,
+
+        "aggression":3,
+
+        "combatFreighterProbability":0.75,                   # instead of some portion of the freighters in a fleet
+        "combatFreighterCombatUseFraction":0.1,               # as part of the normal combat lineup
+        "combatFreighterCombatUseFractionWhenPriority":0, # as part of normal combat lineup, when marked as priority ship
+        "autofitRandomizeProbability":0.4,
+
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"fighter_uplink",
+			"carrier_group",
+			"crew_training",
+			"officer_training",
+			"coordinated_maneuvers",
+			"electronic_warfare",
+			"flux_regulation",
+		],
+    },
+    "illegalCommodities":[
+        "drugs",
+        "organs",
+        "hand_weapons",
+		"ai_cores",
+    ],
+    "names":{
+        "old english":1,
+        "world":1,
+        "future":2,
+        "myth":1,
+    },
+    "ranks":{
+        "ranks":{
+            "factionLeader":{"name":"President"},
+
+            "spaceSailor":{"name":"Servicer"},
+            "spaceChief":{"name":"Chief"},
+            "spaceEnsign":{"name":"Ensign"},
+            "spaceLieutenant":{"name":"Lieutenant"},
+            "spaceCommander":{"name":"Commander"},
+            "spaceCaptain":{"name":"Captain"},
+            "spaceAdmiral":{"name":"Admiral"},
+            "spaceMarshal":{"name":"Grand Admiral"},
+        },
+        "posts":{
+            "factionLeader":{"name":"President"},
+
+            "patrolCommander":{"name":"Overwatch"},
+            "fleetCommander":{"name":"Admiral"},
+            "baseCommander":{"name":"Director"},
+            "stationCommander":{"name":"Overcommander"},
+            "outpostCommander":{"name":"Representative"},
+            "portmaster":{"name":"Portmaster"},
+
+            "supplyOfficer":{"name":"Quartermaster"},
+            "supplyManager":{"name":"Supply Officer"},
+            "medicalSupplier":{"name":"Cheif Medical Officer"},
+
+            "trader":{"name":"Tradesman"},
+            "merchant":{"name":"Conveyor"},
+
+            "investigator":{"name":"NavInt Officer"},
+
+            "administrator":{"name":"Administrator"},
+        },
+    },
+    "custom":{
+        "offersCommissions":true,
+        "engagesInHostilities":true,
+        "buysAICores":true,
+        "AICoreValueMult":1.2, # kinda poor
+        "AICoreRepMult":1.6, # but we love ya
+        "buysSurveyData":true,
+        "hostilityImpactOnGrowth":false,
+        "caresAboutAtrocities":true, # don't satbomb!
+        "punitiveExpeditionData":{
+            "vsCompetitors":true,
+            "vsFreePort":false,
+            "canBombard":false,
+            "territorial":false,
+        },
+    },
+    "fleetTypeNames":{
+        "trade":"Trade Convoy",
+        "smallTrader":"Merchant",
+        "patrolSmall":"Outlook",
+        "patrolMedium":"Inspectors",
+        "patrolLarge":"Enforcers",
+        "foodReliefFleet":"Relief Convoy",
+        "mercScout":"Privateer Scout",
+        "mercBountyHunter":"Privateer Hunter",
+        "mercPrivateer":"Privateer",
+        "mercPatrol":"Privateer Patrol",
+        "mercArmada":"Privateer Armada",
+    },
+    "portraits":{
+        "standard_male":[
+            "graphics/portraits/portrait_hegemony08.png",
+            "graphics/portraits/portrait_hegemony06.png",
+            "graphics/portraits/portrait_hegemony07.png",
+            "graphics/portraits/portrait_hegemony09.png",
+            "graphics/portraits/portrait_hegemony13.png",
+            "graphics/portraits/portrait_mercenary03.png",
+            "graphics/portraits/portrait_hegemony02.png",
+			"graphics/portraits/portrait_diktat05.png",
+            "graphics/portraits/portrait26.png",
+            "graphics/portraits/portrait34.png",
+        ],
+        "standard_female":[
+            "graphics/portraits/portrait37.png",
+			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait22.png",
+			"graphics/portraits/portrait_diktat05.png",
+			
+        ],
+    },
+    "music":{
+        "theme":"fed_ef",
+        "market_friendly":"fed_mf",
+        "market_neutral":"fed_mn",
+        "market_hostile":"fed_mh",
+        "encounter_friendly":"fed_ef",
+        "encounter_neutral":"fed_en",
+        "encounter_hostile":"fed_eh",
+    },
+}

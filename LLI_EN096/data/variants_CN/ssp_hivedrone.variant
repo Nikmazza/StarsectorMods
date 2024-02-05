@@ -1,0 +1,24 @@
+{
+  "variantId": "ssp_hivedrone",
+  "hullId": "ssp_hivedrone",
+  "displayName": "防御无人机",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+  "pointdefenseai",
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ssp_taclaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

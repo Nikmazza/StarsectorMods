@@ -1,0 +1,47 @@
+{
+  "id": "ork_hell",
+  "specClass": "projectile",
+  "projectileSpecId": "hell_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "displayArcRadius": 600,
+  "turretSprite": "graphics/weapons/ork_hell_base.png",
+  "turretGunSprite": "graphics/weapons/ork_hell_recoil.png",
+  "hardpointSprite": "graphics/weapons/ork_hell_base.png",
+  "hardpointGunSprite": "graphics/weapons/ork_hell_recoil.png",
+  "visualRecoil": 30,
+  "renderHints": [
+    "RENDER_BARREL_BELOW"
+  ],
+  "turretOffsets": [
+    79,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    99,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 90,
+    "spread": 25,
+    "particleSizeMin": 10,
+    "particleSizeRange": 35,
+    "particleDuration": 0.75,
+    "particleCount": 50,
+    "particleColor": [
+      255,
+      0,
+      255,
+      150
+    ]
+  },
+  "fireSoundTwo": "hell_fire"
+}

@@ -1,0 +1,27 @@
+{
+	"id":"fed_enginebattery",
+	"type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE",
+	
+	"statsScript":"data.shipsystems.engineBatteryStats",
+	
+	"engineGlowLengthMult":2,
+	"engineGlowWidthMult":2,
+	"engineGlowGlowMult":2,
+	"engineGlowContrailColor":[255,165,100,75],
+	"engineGlowColor":[255,175,125,245],
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":false,
+	"alwaysAccelerate":true,
+
+	"useSound":"fed_enginebattery_activate",
+	"loopSound":"burn_drive_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":1200,
+		"averageSpeedIncrease":80,
+	}
+}

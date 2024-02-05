@@ -1,0 +1,417 @@
+1.9ggg
+Carnelian:
+-added "Reef" customizable livery
+-added "Scourge" customizable livery
+-added "Turquoise" customizable livery
+-added "Navy" customizable livery
+
+Hampter:
+-added "Cardinal" customizable livery
+-added "Ivory" customizable livery
+
+Hermitaur: a fraction more durable
+-added "Marauder" customizable livery
+-hull 6000 > 6500
+-armor 900 > 950
+
+Levatein Assault Cannon:
+-removed from the hegemony pool
+
+misc ship rarity tweaks
+
+1.9gg
+Volt: shifting it towards 25dp cruiser bracket
+-hull 10000 > 9000
+-max flux 13000 > 12000
+-flux dissipation 900 > 800
+-top speed 45 > 60
+-maneurability increased slightly
+-shield upkeep 0.4 > 0.5
+-shield efficiency 0.6 > 0.7
+-medium hardpoints universal > missile
+-improved turret assembly no longer affects small beam range
+-dp 30 > 25
+
+Fluorspar: reducing power of what essentially is a flavor effect
+-crystalline construction energy damage resistance 25% > 5%
+-GEMLOCK setting will now affect engine color in combat (this is a buff!)
+
+Carnelian: trimming op just a tad
+-op 95 > 90
+
+Hammerfal:
+-mover drone refit time 8 > 5, will now stay in front of the ship
+-dp 10 > 9
+
+further adjusted ship distribution and rarity in line with 0.96 faction doctrines
+updated variants
+
+1.9g
+Hampter: less combat more carrier
+-shipsystem change ammofeed > reserve deployment
+-flux dissipation 250 > 300
+-op 95 > 85
+-maximum turn rate increased by ~30%
+-will appear mainly in hegemony fleets and markets
+
+Hermitaur: made slightly easier to leverage the built-in hullmod effect
+-hot-loaded missiles max effect at 100% > 90% flux
+-max flux 4000 > 4500
+-flux dissipation 200 > 250
+-dp 9 > 10
+-added "Devout" customizable livery
+-added "Riftborn" customizable livery
+-will appear mainly in church fleets and markets
+
+Hammerfal: loses damage boosting system in favor of burst mobility and more loadout variety
+-shipsystem redline > maneuvering jets
+-weapon mounts ballistic > hybrid/energy
+-added built-in surveying equipment
+-top speed 90 > 75
+-max flux 6000 > 6500
+-flux dissipation 300 > 400
+-shield upkeep 0.3 > 0.4
+-hull 4000 > 5000
+-armor 600 > 650
+-mover drone top speed 150 > 175, refit time 3 > 8
+-sprite updated
+-added "Surveyor" customizable livery
+-added "Rogue" customizable livery
+-added "Infiltrator" customizable livery
+
+Carnelian: more nyoom
+-flux dissipation 450 > 500
+-shield upkeep 0.3 > 0.4
+-stormfeeder array zero-flux speed bonus 50 > 75
+-added visual effect to zero-flux boost for gameplay clarity
+-will appear mainly in PL fleets and markets
+
+Fluorspar: reverting most recent op nerf a touch
+-op 70 > 75
+-dp 14 > 15
+-in addition to the TT, will sometimes appear in the independent fleets and markets
+
+Voltaire: renamed to Volt, yes i am a genius
+-flux dissipation 950 > 900
+-flux capacity 12000 > 13000
+-added "Black Ops" customizable livery
+-updated "Crimson" customizable livery, renamed to "Vermillion"
+
+Deimos: Has no clear gameplay niche, removing this for now.
+-reduced to atoms
+
+ships with customizable liveries will appear in faction markets and fleets with an appropriate pre-selected paintjob
+all ships are now rare_bp, removed from generic blueprint packages
+adjusted ship weights in line with future 0.96 factions uniquification
+added HexShields support
+updated variants
+updated descriptions
+
+1.9f
+Voltaire:
+-added four custom paintjobs
+-now 500% more colorful
+
+Fluorspar:
+-op 80 > 70
+-dp 13 > 14
+
+updated descriptions
+
+1.9e
+Translation support: externalized strings to data/strings/strings.json
+
+Carnelian:
+-Stormfeeder Array flux cost reduction 25% > 33% (this also makes weapon flux output consistent with ui readout)
+
+Fluorspar:
+-shield efficiency 0.6 > 0.7
+
+Deimos:
+-op 140 > 135
+
+Voltaire:
+-op 170 > 165
+
+1.9d
+Fluorspar:
+-armor 300 > 350
+-shield efficiency 0.7 > 0.6
+-flux dissipation 350 > 400
+-shipsystem now increases beam damage
+-shipsystem critical chance increased
+-shipsystem now costs 1(one) flux/second
+-dp 12 > 13
+-updated sprite
+
+Phobos drone: this is a buff
+-damage halved
+-emp halved
+-Deimos/Voltaire +10op
+
+Deimos:
+-shield upkeep 0.3 > 0.4
+
+Voltaire:
+-medium synergy > universal
+-turn rate reduced by ~15%
+
+Hammerfall:
+-op 80 > 85
+
+Levatein Assault Cannon: reverting recent change
+-op 22 > 20
+
+misc tweaks
+updated variants
+
+1.9c
+Fluorspar:
+-shield shunt hotfix
+-shipsystem timeflow will be perceived at a slightly lower pace
+
+1.9b
+-phantom weapon hotfix
+
+1.9a
+Fluorspar:
+-shipsystem duration 2.5s > 3s
+-shield front > omni, arc reduced slightly
+-shield upkeep 0.2 > 0.3
+-shield efficiency 0.8 > 0.7
+-now prevents the use of safety overrides
+-minor text fixes
+-a new color: Cinnabar
+
+1.9
+added Fluorspar: a multihue menace
+
+added portrait: Alice, a long lost twin sister of a certain academician
+
+Hammerfall: adding more glass to glasscannon
+-shield eff 1.0 > 1.2
+-hull 6000 > 4000
+
+Deimos: less base speed for a bigger emphasis on shipsystem mobility
+-speed 90 > 75
+
+Voltaire: lining up the line cruiser
+-shield eff 0.7 > 0.6
+-flux dissipation 900 > 950
+
+Hermitaur: slightly less generous op
+-op: 105 > 100
+
+Levatein Assault Cannon: gentle bonk
+-op 20 > 22
+
+Beacon: removed
+
+removed 1 portrait
+
+1.8b
+Hermitaur:
+-small hardpoints composite > missile
+-armor 1200 > 900
+-hull 6500 > 6000
+-flux cap 3500 > 4000
+-right click damper > front shield
+-rugged construction > hot-loaded missiles
+
+Hammerfall:
+-dp 11 > 10
+-mining drill updated visuals
+
+Hampter:
+-op 90 > 95
+-removed redundant tags
+
+Deimos:
+-shield eff 0.7 > 0.8
+
+updated variants
+
+1.8a
+Carnelian:
+-updated sprite(with Nia's lovely assistance, cheers!)
+-Cymophane drone flak: added limited burst capacity
+
+Levatein:
+-updated animation, now gradually spins down after burst
+
+Hammerfall:
+-Mover drone speed 100 > 150
+-mining drill range 700 > 750, updated visuals
+-dp 12 > 11
+
+Hermitaur:
+-op 100 > 105
+
+cleaned up portrait lists
+minor text fixes
+updated variants
+
+1.8
+added Hermitaur: a mean-tempered museum piece
+
+Voltaire:
+-armor 900 > 1200
+-speed 60 > 45
+updated sprite
+
+Hampter:
+-ppt 360 > 420
+
+1.7
+added Voltaire: float like a brick, sting like a freight train
+(based on a sketch by Luzaitis, cheers!)
+
+Carnelian:
+-armor 350 > 450
+-shield eff 1 > 0.8
+-shield upkeep 0.2 > 0.3
+
+Beacon:
+-ppt 300 > 180
+-shipsystem time mult 3 > 2
+
+Hampter(XIV):
+-op 100 > 95
+
+updated 1 portrait
+added 1 new portrait
+
+1.6a
+Carnelian:
+-new: a duo of Chrysoberyl built-in drones
+Beacon:
+-SPARKLES!
+added 1 new portrait(kudos to Legionesian Gentleman)
+
+1.6
+added Carnelian: angry glasscannon destroyer
+added 3 new portraits
+further tweaks and polish
+
+1.5
+Hammerfall:
+-shield eff 0.8 > 1.0
+
+added Hampter(XIV)
+added Sunderest portrait(thanks Luzaitis!)
+
+1.4b compability update
+added version checker support
+portraits touchups
+Hammerfall:
+-mining drill cooldown 6 > 6.5
+-mining drill efficiency 0.6 > 0.8
+Beacon:
+-shipsystem ammo regen effect stronger
+Hampter:
+-cargo 20 > 40
+-fuel 20 > 40
+
+1.4a
+Beacon: smacked by the nerf bat a tad too hard, some buffs are in order
+-hull 1500 > 2000
+-armor 300 > 400
+-shield efficiency 1.2 > 1.0
+-shield arc 290 > 300
+-shipsystem recharge 15s > 10s
+-flux dissipation 600 > 400
+-resistant flux conduits built-in
+-rear turret: built-in Heavy Vulcan Cannon, arc reduced
+
+Deimos: brings friends
+-new: 2 built-in Phobos drones
+-dp 18 > 20
+
+Hampter:
+-op 85 > 90
+-hull 6000 > 5500
+
+updated variants
+added ships overview mission
+
+1.4
+added Deimos: small cruiser with big dreams
+
+added portraits:
+-Mysterious Stranger
+-Luddic Church Inquisitor
+-Giant Space Hamster
+
+Levatein Assault Cannon: reworked into a medium range burst weapon
+
+Beacon: helping ai aim, removing shot stacking
+-shipsystem:
+	new: grants +50% weapon projectile speed
+	slightly tweaked visuals
+
+1.3b
+Beacon: less tanky, more angry
+-new visual effects (courtesy of Nia's code wizardry <3)
+-hull 3000 > 1500
+-flux cap 9000 > 6000
+-shield efficiency 0.7 > 1.2
+-shield upkeep 0.4 > 0.2
+-shield arc 300 > 290
+-shipsystem reworked:
+	new: grants mobility bonus
+	charges 1 > 2
+	duration 5s > 3s
+	cooldown increased
+	no longer costs flux
+
+Hammerfal: emhpasising limited shield arc
+-shield arc 90 > 70
+
+Hampter: lock some op behind large slot
+-new: heavy ballistic integration
+-op 95 > 85
+-top speed 85 > 80
+-dp 13 > 12
+
+Touched up some descriptions.
+
+1.3a
+Beacon: 
+-adjusted maneurability values for smoother controls
+-burst beam damage is no longer reduced while using shipsystem, fire away!
+-flux cap 10000 > 9000
+-shield efficiency 0.6 > 0.7
+-shield upkeep 0.2 > 0.4
+-deployment cost and maintenance 20 > 15
+
+Hampter: 
+-small mounts hybrid> ballistic
+-armor 500 > 750
+-hull 5000 > 6000
+-shield efficiency 0.8 > 1.0
+-top speed 90 > 85
+
+Hammerfall: 
+-top speed 80 > 90
+-laser drill refire rate 8s > 6s, now has very slight slowing effect
+
+Orion: saturation tweaks and touchups
+
+1.3
+added Hammerfall: midline destroyer with bigline laser
+1.2a
+Levatein: lower arc damage, increased proc chance (kudos to tantananan for the clean code!)
+Beacon: new shipsystem- For a short time accelerates timeflow and boosts weapons fire rate and charge generation while reducing flux costs.
+1.2
+those balance changes are for the better right? ...right?
+added Orion: CEO Artemisia Sun's ever faithful companion! Godiva is no longer alone
+1.1a
+polishing pass, fixes, yadayadawhatever
+TRADEMARK STARSECTOR STYLE LIGHTING FOR CHALCO WOOOOOOOOOO!!!
+1.1
+added Beacon: exotic frigate
+1.0
+added Levatein assault cannon: brrrt large ballistic
+added Hampter: angry lowtech destroyer
+added hellbore sprite refresh
+added Chalco: Chalco!

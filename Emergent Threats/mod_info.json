@@ -1,0 +1,19 @@
+{
+	"id":"EmergentThreats_Vice",
+	"name":"Emergent Threats",
+	"author":"vicegrip",
+	"version":"0.4.0",
+	"description":"Adds various ships, especially [Redacted] and Sindrian Diktat ships and technologies for the player to face against and claim for themselves.",
+	"gameVersion":"0.96a-RC10",
+	"dependencies": [
+		{
+            "id": "MagicLib",
+            "name": "MagicLib",
+		},
+		{
+            "id": "lunalib",
+            "name": "LunaLib",
+		},
+    ],
+	"modPlugin": "data.scripts.vice.ETModPlugin",
+}

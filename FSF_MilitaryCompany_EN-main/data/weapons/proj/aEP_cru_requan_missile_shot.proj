@@ -1,0 +1,48 @@
+{
+	"id":"aEP_cru_requan_missile_shot",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/weapons/aEP_requan/shot.png",
+	"size":[8,26],
+	"center":[4,14],
+	"collisionRadius":12,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[141,80,245,225],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":120, # purely visual
+	#"alwaysAccelerate":true,
+	"noCollisionWhileFading":true,
+  "noDebrisWhenDestroyed": true,
+	"engineSpec":{
+		"turnAcc":200,
+	  "turnRate":60,
+	  "acc":600,
+	  "dec":400
+	},
+	"engineSlots":[
+		{
+			"id":"ES1",
+			"loc":[-14, 0],
+			#"style":"MISSILE_HIGH_TECH",
+			"style":"CUSTOM",
+			"styleSpec":{
+				"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+				"engineColor":[100,165,255,245],
+				"contrailDuration":0.5,
+				"contrailWidthMult":1,
+				"contrailWidthAddedFractionAtEnd":1,  # can be negative. makes trail spread out/narrow at the end
+				"contrailMinSeg":5, # min segment length, in pixels
+				"contrailMaxSpeedMult":0.75f,
+				"contrailAngularVelocityMult":0.75f,
+				"contrailColor":[100,165,255,140],
+				"glowSizeMult":1.25,
+				"glowAlternateColor":[255,162,103,124],
+				"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+			},
+			"width":8.0,
+			"length":64.0,
+			"angle":180.0
+		},
+
+
+	]
+}

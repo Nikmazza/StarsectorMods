@@ -1,0 +1,417 @@
+1.8.11
+Added and adjusted UNGP rules
+Tweaked the two main LLI Protocols
+A round of nerfs to destroyers/frigates due to hullmod buffs
+*NOT THE FINAL NERFS*
+[Ships]
+River:                         Speed 120>100, Dissipation 120>100 (it's a survey ship, shouldn't be that strong in combat anyways)
+Cascade:                       Speed 75>60, Shield eff. 0.8>1.0, Shield upkeep 0.4>0.5, shield arc 180>120, capacity 4750>4000 (too strong for 9 DP destroyer, especially shield)
+Wildfire(formerly Fireburn)    Speed 120>105, Capacity 4500>3500 (capacity was too good for a 7 DP destroyer)
+Wave:                          Speed 60>50
+Wave(M):                       Speed 60>50
+Volcano:                       Speed 80>75
+Heatwave(formerly Warmfront):  Speed 90>85
+Tide:                          Armor 700>500, hull 8000>6500        
+Tide(T):                       Armor 700>500, hull 8000>6500 (flux, maneuverability, and speed are same as the base Tide; other attributes simply match its lower DP)
+Magma:                         Capacity 7000>6000
+Hanba:                         Shield eff. 0.6>0.7
+[Fighters]
+Fog:                           # of fighters 4>3
+[Hullmods]
+Cliff System                   Base mode overall effects increased by 50%; buff to missile speed/maneuver changed into debuff
+LLI Rifleman Protocol          Zero-flux speed boost will be increased by an amount equal to the speed debuff, range boost 75/150/225/300>100/200/300/400
+LLI Commando Protocol          Zero-flux speed boost will be reduced by an amount equal to the speed buff (nobody uses it, anyways)
+
+1.8.10
+Altered the "questline" to allow some limited exchange with the NPC. More will be added in the future
+New UNGP rule: Synergistic Fleet, having multiple copies of the flagship in a fleet will reduce the DP of those ships (including the flagship itself)
+Added some new VFX
+
+[Weapons]
+Lop Nur line:
+	Damage 3000>2500
+	Hull 1000>600
+	Shield 500>400
+	Top Speed 120>100
+Spotter Multibeam:
+	Burst DPS 750>450 (flux efficiency remains 1.0)
+	Ammo capacity 40>20
+	Ammo regenerated 10>20
+	Ammo recovery rate increased by 33%
+Chaos Armament: Damage of each type of munition reduced by 1/3
+
+[Ships]
+Wave(M): No longer spawns in NPC fleets, nor is it a part of the Loulan package: instead is its own special BP. Also added some additional description text
+Seaquake: Top speed 50>60, Flux capacity 10,000>11,000,OPs 145>160
+Gonggong:Ship system replaced with "Splinter Burst", dealing energy damage to the target and pushing both ships away from each other. High-Density Shield conversion efficiency 50%>75%, Flux dissipation 150>200,Shield upkeep ratio 3.0>2.4
+Tornado: DP 55>60
+El Nino: DP 40>45,top speed 60>50
+Flood: DP 45>40, Shield arc 120>150
+Karni:DP 50>55
+Naga: DP 20>22, shield arc 150>120, modular hangar replaced with built-in Mist wing
+
+[Fighters]
+Mercury Lake: 4 Burst PD Lasers removed, instead has a Quad Vulcan (the Transmission Beam is retained)
+Mist: Light Transmission Beam DPS 75>50, range 1000>800 (also applies to Mudslide). Number of fighters 6>5, OP cost 4>6, replacement time 5>8s
+
+[Ship Systems]
+Quantum Recursion: Projectiles are now fired over a period of 2s rather than all at once
+	Fixed the bugs, now you can surely copy special projectiles to your heart's content (though I would still reccomend saving before experimenting)
+Thunder Charge: Duration 4>3s, arc damage 100>80 fragmentation, alteration/optimization text adjusted for clarification
+Eruption Vector: Renamed to "Transient Vector", reworked effect, added new visual effects
+
+
+1.8.9-hotfix3
+Fixed a very edge case bug
+[Ship Systems]
+Catastrophe Beacon no longer applies acceleration, simply rotating the missile(s).
+	Consequently, it is much more likely to actually attract missiles to the target.
+
+1.8.9
+Minor quest content implementation
+New ship, Smolstrom- I mean, Naga
+
+[Weapons]
+Lop Nor line: damage 4000>3000
+	small: OP cost  5>3
+	medium: OP cost 10>12, ammo 2>6
+Plasma Flak Cannon: flux/shot 45>25, recoil reduced by ~25 degrees
+[Ships]
+Tide(T) DP 22>18
+Gyre built-in weapon fire rate reduced by ~45%, ammo restrictions removed
+Doomsayer armor 1100>1200
+[Ship Systems]
+Unstable Energy Focus replaced with Quantum Recursion, recording fired projectiles and firing copies on expiration
+Thunder Charge: no longer targets non-missiles, and now interacts with the Arc Field hullmod, offering further bonuses when altered/optimized
+
+1.8.8
+[Bugfixes and Additions]
+Fixed the Gyre's  system AI sometimes being dumb and constantly switching its ammo type
+Tweaked the composition and variants used by a certain bounty
+Adjusted some sprites
+New fighter: Mudslide, a bomber using an advanced plasma weapon
+[Weapons]
+Lop Nor (small/medium) damage/shot 8000->4000
+Lop Nor Cruise MIRV damage/shot 6000x3->4000x3
+Graviton Plasma Blaster: reduced RoF, DPS 207->130, damage increase effect 2%->1%
+Graviton Plasma Driver: reduced RoF, DPS 300->265, damage increase effect 2%->1%
+[Ships]
+Gonggong: High-Density Shield softflux ratio 75%->50%, shield efficiency 0.2->0.3, shield upkeep 2.0x->3.0x
+
+1.8.7
+Gyre completely reworked, both for the built-in weapon and ship system (which no longer supports optimization/alteration)
+New weapon: Graviton Plasma Blaster - smaller Graviton Plasma Driver
+New colony item: Cloning Facility, obtained via defeating a new bounty fleet (may be a bit weak...)
+Consequently some text changes
+[Weapons]
+Graviton Plasma Driver: Reverted to pure ballistic slot, new special effects; damage/shot 1000->900, flux/shot 1200->1300, new description
+Smart-Flare Pod is now Synergy slot
+[Ships]
+Gyre: system reworked to swap between ammo types for the built-in weapon. Likewise the weapon was redone to increase burst firepower but worse sustained performance
+[Ship Systems]
+(Translation note: Vectored Eruption Drive renamed to Eruption Vectoring)
+Eruption Vectoring: Flux generated per use 500->300
+Thunder Charge: Duration increased by 2s, no longer forces ship to accelerate, reduce frequency of arc generation (meaning the arcs generate more steadily over the duration of the system rather than all at once), adjusted system AI
+
+1.8.6
+Balance adjustments and feature (bug) fixes, code adjustments: 
+Adjusted descriptions of "Phase Splinter" and "Focused Ammo Feeder"
+Adjusted default variants to be better; though considering the random nature of NPC autofit, it's not necessarily an enhancement...
+New weapon - Lop Nor Cruise MIRV
+
+[Ship Systems]
+Catastrophe Beacon: slightly reduced attraction effect (invisible to the naked eye), target damage taken bonus 25%>10% , alteration effect: attractionincrease > damage increase effect from 10% to 20%
+Phase Transfer Field: Attempted to make it so it doesn't damage friendly NPCs, tweaked the code to make the AI treat it more like a Damper Field, fixed the bug where the visual effect would only take effect once.
+                      Arc damage 200>400, EMP 2000>1000
+
+[Weapons]
+Graviton Plasma Driver: is now Hybrid slot, bonus effect when used alongisde Transmission Beam weapons.
+Chaos Armament: number of shots in a burst 12>8, refire delay increased to 18s.
+
+1.8.5
+[Balancing]
+Gonggong redesigned to be a highly durable, aggressive frigate (similar to Vanguard)
+Added Lop Nur Fusion Missile (Double): Medium slot, has 2 ammo
+[Ships]
+Hanba: DP 60>50
+Tornado: now has Arc Field hullmod
+Flood: flux capacity 15,000>17,000, disspation 750>850.
+Karni: armor 1500>1600
+Meteorologist renamed to Doomsayer, no longer has expanded missile racks built-in
+Volcano: all small energy slots become small hybrid.
+Stormsurge: weapon slots adjusted, armor 600>800, flux capacity 3500>4250, dissipation 270>350, DP 12>11.
+Gonggong: completely reworked (see above)
+Fireburn: DP 8>7
+Combustion: DP 6>7
+[Weapons]
+Transmission Lens weapons will always transmit flux when hitting a target (no longer necessary to hit shields)
+S. Invicta swarmer(built-in): all versions of the missile launcher have 20% more life, and damage is increased 50>60.
+E. Burchelli swarmer (built-in): all versions of the missile have 20% more life, and their damage (including EMP) has been increased 80>100.
+Firestorm Needler: significantly improved accuracy
+Light Firestorm Needler: significantly improved accuracy, damage/shot 30>40, flux/shot 35>45, number of shots 12>15.
+Revolver autocannon: much less accurate, flux/shot 95>100
+Lop Nor Fusion Missile: maneuverability increased by 25%, listed range increased by 300 (actual range remains the same), missile lifetime increased by 5 seconds.
+Smart-Flare Pod: simultaneous fire changed to a rapid burst (does not actually affect much)
+[Fighters]
+Mercury Lake: Remove High Scatter Amplifier, change weapon to shipboard version of Burst PD Laser, max speed 170>250, OPs 25>20, replenishment time 20>16, dissipation 90>100.
+Mist: Dissipation 20>40, OPs 8>4
+Sandstorm: Top speed 160>180, Weapon's flux/shot 95>80, OPs 10>9 
+Dense Fog Maximum speed 155>175, Dissipation 60>80.
+[Ship Systems]
+Ammo Feeder Jets: Renamed All-Out Attack, flux generation reduced by 50%.
+Phase Splinter: Method of operation changed, probably won't affect the AI(probably); energy damage 200>300
+Focused Ammo Feeder cooldown 15>12s, duration 14>12s, now determined by the hull's weapon slots instead of the weapons themselves; now disables PD weapons while active, re-enabling PD weapons when the primary weapons are disabled
+[Hullmods]
+Beam Mode Conversion: Maximum ratio of hard flux 50%>80%
+
+
+
+1.8.4
+[Ships]
+Doomsayer Replaced built-in weapon with "Ion Grazer", a beam weapon that deals a great deal of EMP damage.
+Cascade completely reworked: resprited, weapon slots adjusted, all small energy/ballistic slots changed to hybrid, location of weapons changed.
+Warmfront: altered 2 small hybrid mounts to small ballistic
+Gonggong: removed Energy Bolt Coherer
+[Weapons]
+Clearsky Flak Cannon: Range +100, single shot damage 500>300, efficiency 0.8>0.25, adjusted rate of fire to keep dps the same.
+Nether Cannon: No longer PD; Damage 400>600; Flux Generation 560>840; HE damage of sub-projectiles 50%>25%
+Tactical System
+Integrated Loading Charge Rate x 1.5
+Phase Shift Force Field Overloads ship for only 0.5s after damage absorption is depleted.
+Fearless Strike Mode Weapon amplitude energy generation and weapon damage increased by 20%>25%; Polarization: additional 25 speed increase
+Vectored Eruption Drive: Alteration no longer fires flares
+
+1.8.3
+New fighter, Mercury Lake Superheavy Interceptor
+New ship, Tide(T) Missile Cruiser
+Adjusted some autofits to make them more "Loulan"
+New weapon, Lop Nur Fusion Missile: 2-in-1 nuke and shield!
+Loulan fighters installed on Traverser ships get a different coat of paint
+[Ships]
+Seaquake has been resprited but its weapon mounts overall remain the same
+Fighters overall have improved dissipation
+Fog dissipation 40>60
+Sandstorm dissipation 20>40, fighter revolver: damage 50>100, efficiency 1.0>0.95, dps slightly reduced to compensate
+Fireburn hardpoint arc 5>15 degrees, now you can aim missiles placed on it (so you don't need to file edit to make it a turret)
+Meteorologist capacity 9000>10000, dissipation 700>800
+Gonggong removes built-in fighter (actually, that was a bug), speed 65>75
+[Ship systems]
+Swarm Racks reduced by half, now forces built-in weapons to fire while active
+System Reboot renamed to Phase Dampener and reworked with a new ID - so this is not save compatible
+Thunder Charge has new effects
+Thunder Charge optimized AI: alteration effect changed from +300% flux generation to +100%
+Ripple Burstdrive renamed Vectoruption Drive, new visual effects, and function modified: activation generates a number of flares depending on the direction, slightly extended the duration of the boost
+[Weapons]
+Blazing Torus OP cost 20>18
+Cluster Bomber (and Heavy Cluster Bomber) bomb spread 80>60 degrees
+Plasma Flak Cannon reduced magazine size by 1, now fires in a 3-round burst (overall DPS remains unchanged)
+
+
+1.8.2
+Mostly a balance patch
+Adjusted the graphics for the Clearsky Flak Cannon
+[Weapons]
+Chaos Armament max ammo 192>144
+[Ships]
+Karni DP 45>50
+Hanba DP 50>60, dissipation restored 500>600
+Zhurong capacity 6500>5000, dissipation 450>400, top speed 130>95
+[Hullmods]
+LLI Enhancement Protocol max CR added by s-mod 50%>15%
+[Ship Systems]
+Phase Splinter generates 300 hard flux per activation; alteration effect changed to increase charge recovery speed by 50%, but multiplies flux cost of activation by 3x
+Ripple Burstdrive recharge speed slowed by 1/3, alteration effect bonus to recharge speed +100%>+50%
+Catastrophe Beacon no longer works on missiles with special effects (i.e. DEMs), cooldown 15>20s
+
+
+1.8.1
+Stepping into 0.96 without looking back (also added some tips)
+This "Meteorologist" ship looks very familiar...
+The new "Sandstorm" fighter is not the Balans Broadsword
+New weapon: Transmission Beam
+New weapon: Clearsky Flak Cannon - powerful, but incredibly overkill.
+[Hullmods]
+Changed the description of the alteration for unstable energy focus to avoid confusion
+Arc field range reduced by 60, damage 100->50
+Removed many superfluous hullmods such as energy stabilizer (it was just a pre-emptive version of bolt coherer anyways), overload failsafe, etc.
+Cliff System Beam Mode, maximum hard flux proportion 80%>50%
+LLI Enhancement Protocol: s-modding now turns the ship into an Automated Ship while negating 50% of the combat readiness penalty caused by that hullmod
+[Ship systems]
+Fixed some obscure bugs
+Unstable energy focus duration reduced by 1 second
+Fixed a bug that made missiles fly around like they were going to Brazil
+Phase Splinter alteration: no longer affects weapons, increased timeflow rate
+		optimization: damage reduction effect 75%->80%
+[Ships]
+Mist fighter weapon renamed to "Light Transmission Beam (LRPD)", can transfer flux while functioning as a PD laser
+Fog fighter gets a "Light Transmission Beam (SRFD)", only good for transmitting flux
+The Wave's fighters are no longer built-in
+Gonggong 2 medium energy slots changed to synergy, dissipation 400>500
+Stormsurge armor 800>600, dissipation 320>270
+Hanba dissipation 600>500
+Tornado DP 60>55
+Flood built-in Missile Autoloader
+[Weapons]
+Chaos armament: reduced the HP of various missiles, termination warhead damage 1000>900, disruption warhead now only slightly reduces speed rather than nearly complete negation
+Spotter Multibeam now magazine based (think IR Autolance), sustained dps 275>225, efficiency 0.87>1.0
+Ion Projector MRM is now "Ion Projector DEM"
+
+1.8.0
+Optimized code, changed names of some hullmods
+Fixed the bounty variant problem (again), this time there will probably be no strange s-mods... probably...
+New ship! Gonggong-class missile cruiser
+New weapon! Heavy Cluster Bomber, large-slot cluster bomber that fires 2 at once
+New weapon! Smart-Flare Pod, PD weapon that launches guided flares
+Mirage Astropolis now has an industry similar to the Lion's Guard HQ
+【Hullmods】
+Beam mode reworked!!! Now requires a specific "Beam Mode Conversion" hullmod (cost is the same as HSA) to enable.
+Cliff System's Beam Mode has been changed: increases range of beams by up to 100 depending on flux level, increases damage to shields by up to 10% based on flux level, as well as up to 80% of that damage being hard flux
+LLI Guerilla Protocol (formerly known as LLI Berserker Protocol) is no longer compatible with HSA: its effect is no longer limited to non-beam non-missile weapons
+Removed Evolver Subsystems (not actually removed, just hidden)
+Overload Failsafe Damper: cooldown removed but effect halved
+Energy Stabilizer: changed to increase base range (will be removed and swapped to Energy Bolt Coherer once 0.96 releases)
+Maglev Turret Mounts:range effect changed, now just increases range of all energy/ballistic weapons by 10%
+【Systems】
+Phase Splinter: can now be altered/optimized, base # of charges 9->3, increased chargeup and chargedown
+Focused Ammo Feeder: Cooldown 8->15s, base duration 10->14s, and can no longer be interrupted by active venting
+                  Weapons always provide 5 seconds of acceleration time, regardless of size
+                  Can increase fire rate of multiple kinds of weapons (note that only *ballistic* weapons get flux cost reduction)
+                  Alteration: System duration 14->21s, each ballistic weapon provides 1->2s additional acceleration time
+                  Optimization: system duration 14->10s
+1.7.15
+Another hotfix version (hopefully the last one)
+Fixed the bug that the Nether Cannon would cause the game to crash
+Arc field New can dynamically display the description of the arc range (in string.json)
+Weapons
+Revolver GPD Shortened burst interval and adjusted visual effects while keeping other properties unchanged
+
+
+1.7.14
+This is a hot fix version
+Tried again to fix a situation that caused an error
+Theoretically not compatible with the old saves but there is a probability of compatibility (my own is fine)
+Fixed the bounty assembly problem
+[Weapons]
+Ion projector MRM shot interval 12s>15s (25% slower rate of fire)
+Cluster bomb launcher spare 20>15
+[Ships]
+Karni hull 18000>16000, armor 1750>1500, capacity 16000>14000, dissipation 800>700
+Magma Tactical system changed to "unstable energy focus", remove built-in missiles and expanded missile racks, deployment 16>15, mobility slightly improved, the ship's description has also been modified
+[Ship systems]
+Fearless Strike mode 60% increase in dissipation effect, polarization effect on dissipation effect changed from removal to 75% reduction, fixed incorrect text statement (maneuverability increased speed +25 instead of maneuverability and speed +25%)
+
+
+
+1.7.13
+Added 2 new high-intensity MagicBounty bounties, which can be picked up in the Loulan and Perseus alliances at levels greater than 5
+New ship, Zhurong-class Advanced Gunship
+New weapon, charge lance, modular version of multiplex shredderbeam
+Modified the description of the built-in type of charging spear to make it easier to understand
+[Hullmods]
+Cliff system Beam mode shield damage increase 15%->10%, range increase reduced 100/200/300/400>50/100/200/300
+[Ships]
+Magma The arc of the middle slot is increased, deployment 25>24
+Dew Maximum speed 130>155
+[Weapons]
+Nether Cannon: Added new visual effects; slightly increased rate of fire, more focused and more frequent explosion locations, smaller range per explosion, projectile velocity reduction 450>350
+Tactical System
+Calamity lock range 700>800, release distance adjusted back to 3000>2500, optimize the effect to release distance increased by 500
+
+1.7.12
+New ships and several adjustments, not compatible with old saves!!!!!!!!
+[Hullmods]
+Overload Failsafe Damper Added some details, no more added hull
+Cold Fusion Shield Generator increased cooldown on maneuver 10s->20s
+[Weapons]
+Unstable plasma cannon Renamed plasma flak cannon, projectile now very stable
+Gazer Multibeam slightly improve damage and reduce flux generation, dps264>275, efficiency 1.0>0.87
+Blazing Torus, the turn rate is greatly reduced, the rate of fire remains the same
+[Ships ]
+El Niño speed 40>60, maneuverability improved
+La Nina Removed built-in missile launcher, deployment 25>22
+Ball Lightning speed 50>65, deployment 24>25
+Seaquake Dissipation 550>700
+Magma Built in missile clip halved, blood halved, built in extended missile racks
+Vortex: Built-in missile clip halved, blood volume halved, built-in extended missile racks
+Volcano Capacity 7000>6000, Shield 0.8>1.0
+Warmfront Structure 2000>2400
+[Fighters]
+Dense fog decoys to single shot, more visual effects are not good also very card; weapons to 2 ion cannon (warplane version)
+[Tactical System]
+Fearless strike mode Remove the original 50% hard energy dissipation of the outbreak dissipation; polarization effect to remove the outbreak dissipation and enhance the effect 
+Catastrophe beacon range 2500>3000, but as the target is farther from the ship the effect will weaken, modify the code to reduce the overall attraction, duration and cooldown * 1.5, try to replace the ai to more frequently use the system
+swarm racks charging speed greatly reduced, cooling time +2s (apparently no impact), missile damage, blood reinforcement effect reduced by 25%
+Thunder strike Try to fix the bug that hit friendly missiles
+
+
+
+1.7.11
+Optimized the ship map of some ships and adjusted some texts
+[Weapons]
+Graviton plasma driver Single shot flux1700>1200
+【Ships】 
+Wave ai control when the behavior will be like a normal destroyer, deck built-in fog, deployment 10>9
+Multiplex Shredderbeam now does energy damage
+Magma New "Energy Stabilizer" hullmod, speed 75>85, maneuverability improved by about 30%, deployment 17>16
+Gyre ship sprite update, slot changes
+Tactical System
+Integrated loadout redone, but still strengthen the built-in weapons
+【Fighters】
+Fog changed to drone, the number of aircraft 3>4, replacement time 10>12, weapons changed to two shipboard ion cannons, tactical system to launch the number of decoys greatly improved, greatly increased the ability to harass
+
+
+
+
+1.7.10
+[Hullmods]
+Bluff system Beam mode will compensate for some of the lost range
+	Threshold setting removed and effects enhanced
+LLI Suppression Protocol beam mode removed, effect adjusted and moved to "Cliff Systems" hullmod 
+Cold Fusion Energy Module changed to a dedicated built-in plug-in
+Weapons
+Plasma projector renamed ion projector MRM, completely redone but still retains the characteristics of difficult to intercept
+Chaos Armament primary missile life 200>400, micro missile life value 75>80, ammo capacity 30>40, refire delay 12>10
+Cluster bomber's bombs no longer hurt friendly forces, reserve 12>20, firing interval 10>8
+[Ships]
+Hanba Deployment 55>50 
+Lanina Built in weapon improves armor breaking power with basically the same single damage, EMP damage is increased, and stasis time is shortened
+Turbulence Built in weapon redone, changed to charged rifle
+Tactical System
+Focused filler polarization effect changed to: each live weapon provides 1s more acceleration time, tactical system duration extended 4s
+Unstable focus system Tactical system duration extended to 4s, cooldown time reduced to 1s
+
+1.6.8
+Part of the tactical system overhaul, new tactical system, new tactical system polarization and optimization of the word
+[Hullmods]
+Mount buffer: Renamed maglev turret mounts, increased the effect of reducing recoil and increasing steering speed
+Remote Soldier Protocol Increased temporary range reduction rate, increased negative effects (20%>30%) and also reduces the ship's maximum speed
+Stall Energy Conversion Protocol Increased maneuverability and maximum speed 10%>30%
+Ships
+New ship Warmfront, now it's a cold front! A destroyer with explosive output capability
+Conduit renamed Stormsurge, built-in plug-in removed mount buffer, now has arc field, right click changed to damper field
+Wave (M) Built-in "Deep Upgrade Protocol"
+Stormsurge Built in "Deep Upgrade Protocol"
+Hanba Tactical system changed to "Catastrophe Beacon"
+[Weapons
+Molten Rain Single shot power 30>35
+Molten Rainstorm Single shot power 30>45
+Career
+Added some descriptions
+Added 3 new planets to the system
+Made some adjustments to the two existing colonies
+
+
+
+1.6.7
+Fixed some hard to detect bugs and text errors
+Added some ships to the mock battle
+[Ships]
+New ship A cold dew, not a cold stream! A frigate that is on the high tech side.
+Torrent Small universal changed to small missile, a tribute to the canon
+Ball lightning shield efficiency 0.8>0.7
+Tsunami Add "mount buffer" ship plug, while the "mount buffer" ship plug's effect has been enhanced
+[Weapons]
+Nether Cannon Explosive effects damage multiplier 0.75>0.5, and the explosion range is reduced, single shot damage 500>400 (efficiency 1.0>1.4).
+	   Shooting interval +0.7s, assembly 20>22, weapon turning speed reduced by 25%
+Light Firestorm Needler firing interval +1s, single shot projectile number reduced 15>12, single shot damage 35>30
+Heavy Firestorm Needler range increase 750>800, single shot damage 35>40

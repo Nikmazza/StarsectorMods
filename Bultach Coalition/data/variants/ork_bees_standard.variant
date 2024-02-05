@@ -1,0 +1,34 @@
+{
+  "variantId": "ork_bees_standard",
+  "hullId": "ork_bees",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 11,
+  "fluxVents": 18,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_rotary_pd_small",
+        "WS0004": "ork_rotary_pd_small",
+        "WS0005": "ork_rotary_pd_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ork_thumpa",
+        "WS0003": "ork_thumpa"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "ork_heavy_fighter"
+  ]
+}

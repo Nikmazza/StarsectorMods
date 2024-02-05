@@ -1,0 +1,71 @@
+{
+    "displayName": "Highfleet",
+    "fluxCapacitors": 0,
+    "fluxVents": 33,
+    "hullId": "LTA_Epattcudxxix_Thunderbirds",
+    "hullMods": ["targetingunit"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Epattcudxxix_Thunderbirds_Highfleet",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "LTA_portablebaypiranhainfinite",
+                "WS0002": "LTA_portablebaypiranhainfinite"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "typhoon",
+                "WS0004": "typhoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0010": "reaper",
+                "WS0011": "reaper"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "lightag",
+                "WS0009": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "heavyac",
+                "WS0006": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "lightag",
+                "WS0013": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0007": "flak"}
+        }
+    ],
+    "wings": [
+        "LTA_DiademTB_Wing",
+        "LTA_DiademTB_Wing",
+        "LTA_DiademTB_Wing",
+        "LTA_DiademTB_Wing"
+    ]
+}

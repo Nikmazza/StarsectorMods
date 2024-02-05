@@ -1,0 +1,22 @@
+{
+  "variantId": "bc_pd_drone_Defender",
+  "hullId": "bc_pd_drone",
+  "displayName": "Defender Drone",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

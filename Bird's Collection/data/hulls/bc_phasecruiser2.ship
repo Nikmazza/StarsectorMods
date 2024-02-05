@@ -1,0 +1,186 @@
+{
+  "hullName": "Alcott",
+  "hullId": "bc_phasecruiser2",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/phase/bc_phasecruiser2.png",
+  "style": "LOW_TECH",
+  "height": 224,
+  "width": 148,
+  "center": [74, 91],
+  "collisionRadius": 208,
+  "shieldCenter": [21, 0],
+  "shieldRadius": 182,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 145,
+      "angle": -45,
+      "locations": [-4, -44]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 145,
+      "angle": 45,
+      "locations": [-4, 44]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 145,
+      "angle": 90,
+      "locations": [78, 51]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 145,
+      "angle": -90,
+      "locations": [78, -51]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 119.5,
+      "locations": [-63.5, 49.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": -119.5,
+      "locations": [-63.5, -49.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 119.5,
+      "locations": [-40.5, 65]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": -119.5,
+      "locations": [-40.5, -65]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-90.5, 17.5],
+      "length": 73.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-90.5, -17.5],
+      "length": 73.5,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-62.5, 47.5],
+      "length": 30.719999,
+      "width": 9.47,
+      "angle": 128,
+      "contrailSize": 9.47,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-62.5, -47.5],
+      "length": 30.719999,
+      "width": 9.47,
+      "angle": -128,
+      "contrailSize": 9.47,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-39.5, 62.5],
+      "length": 55.889999,
+      "width": 12.85,
+      "angle": 127,
+      "contrailSize": 12.85,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-39.5, -62.5],
+      "length": 55.889999,
+      "width": 12.85,
+      "angle": -127,
+      "contrailSize": 12.85,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -77.5, 12,
+    -88.5, 12.5,
+    -88.5, 22,
+    -82, 24,
+    -79.5, 40,
+    -49, 47,
+    -51.5, 53,
+    -24, 65.5,
+    -18.5, 58,
+    1, 70,
+    23.5, 55.5,
+    61, 54,
+    67.5, 60,
+    80, 60,
+    116.5, 26.5,
+    112.5, 19.5,
+    22, 9.5,
+    22, -9.5,
+    112.5, -19.5,
+    116.5, -26.5,
+    80, -60,
+    67.5, -60,
+    61, -54,
+    23.5, -55.5,
+    1, -70,
+    -18.5, -58,
+    -24, -65.5,
+    -51.5, -53,
+    -49, -47,
+    -79.5, -40,
+    -82, -24,
+    -88.5, -22,
+    -88.5, -12.5,
+    -77.5, -12
+  ]
+}

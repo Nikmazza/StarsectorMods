@@ -1,0 +1,51 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 13,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "ssp_naga",
+    "hullMods": [
+        "targetingunit",
+        "eccm",
+        "missile_autoloader"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_naga_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0012": "ssp_swarm_naga"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0007": "ssp_nuke"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "ssp_blaster",
+                "WS0010": "ssp_blaster",
+                "WS0011": "ssp_blaster"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0008": "flak"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_FragMachinegun",
+                "WS0003": "ssp_FragMachinegun",
+                "WS0005": "ssp_FragMachinegun"
+            }
+        }
+    ],
+    "wings": []
+}

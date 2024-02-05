@@ -1,0 +1,43 @@
+{
+  "variantId": "bc_biglasher_Standard",
+  "hullId": "bc_biglasher",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 27,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymortar",
+        "WS0002": "heavymortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "arbalest",
+        "WS0004": "arbalest",
+        "WS0005": "arbalest"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "harpoonpod",
+        "WS0007": "harpoonpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,67 @@
+{
+  "variantId": "sa_shoggoth_defender",
+  "hullId": "sa_shoggoth",
+  "displayName": "Defender",
+  "goalVariant": false,
+  "fluxCapacitors": 7,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "heatseeker",
+        "WS0018": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "phasebeam",
+        "WS0010": "phasebeam",
+        "WS0013": "hellbore",
+        "WS0014": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "guardian",
+        "WS0006": "guardian"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "ionbeam",
+        "WS0008": "ionbeam",
+        "WS0011": "gravitonbeam",
+        "WS0012": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightmg",
+        "WS0002": "lightmg",
+        "WS0003": "lightmg",
+        "WS0004": "lightmg",
+        "WS0015": "taclaser",
+        "WS0016": "taclaser",
+        "WS0019": "taclaser",
+        "WS0020": "taclaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,68 @@
+{
+  "variantId": "sa_eclipse_support",
+  "hullId": "sa_eclipse",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 34,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "advancedoptics"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "gauss",
+        "WS0010": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "hurricane",
+        "WS0013": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "guardian",
+        "WS0007": "guardian",
+        "WS0011": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "railgun",
+        "WS0005": "railgun",
+        "WS0008": "irpulse",
+        "WS0009": "irpulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "mininglaser",
+        "WS0014": "mininglaser",
+        "WS0015": "mininglaser",
+        "WS0016": "mininglaser",
+        "WS0018": "mininglaser",
+        "WS0019": "mininglaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "wasp_wing",
+    "wasp_wing"
+  ]
+}

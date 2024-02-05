@@ -1,0 +1,61 @@
+{
+  "id": "sa_hypermatter",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/sa_hypermatter_condenser_turret.png",
+  "turretGlowSprite": "graphics/weapons/sa_hypermatter_condenser_turret_glow.png",
+  "hardpointSprite": "graphics/weapons/sa_hypermatter_condenser_hardpoint.png",
+  "hardpointGlowSprite": "graphics/weapons/sa_hypermatter_condenser_hardpoint_glow.png",
+  "glowColor": [
+    251,
+    223,
+    10,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    14,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    32,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "beamFireOnlyOnFullCharge": true,
+  "fringeColor": [
+    231,
+    136,
+    41,
+    155
+  ],
+  "coreColor": [
+    244,
+    215,
+    44,
+    255
+  ],
+  "width": 40,
+  "textureType": [
+    "graphics/fx/slipstream_edge2.png",
+    "graphics/fx/beam_rough2_fringe.png"
+  ],
+  "textureScrollSpeed": 292,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundTwo": "riftbeam_loop"
+}

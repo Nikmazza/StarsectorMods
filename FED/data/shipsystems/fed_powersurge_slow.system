@@ -1,0 +1,30 @@
+{
+	"id":"fed_powersurge_slow",
+    "type": "STAT_MOD",
+    "aiType": "WEAPON_BOOST",
+    "weaponTypes": [ENERGY, BALLISTIC],
+	
+	"statsScript":"data.shipsystems.fed_powersurge",
+	
+	"engineGlowLengthMult":1.5,
+	"engineGlowWidthMult":1.5,
+	"engineGlowGlowMult":2,
+	"engineGlowContrailColor":[255,125,60,45],
+	"engineGlowColor":[255,175,125,255],
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+
+	"useSound":"system_high_energy_focus_activate",
+	"loopSound": "system_high_energy_focus_loop",
+    "deactivateSound":"system_high_energy_focus_deactivate",
+	"outOfUsesSound":"engine_disabled",
+	
+	"weaponGlowColor":[200,100,10,105],
+	
+	"aiHints":{
+		"activeSpeedIncrease":300,
+		"burstMovementPotential":0,
+		"averageSpeedIncrease":40,
+	}
+}

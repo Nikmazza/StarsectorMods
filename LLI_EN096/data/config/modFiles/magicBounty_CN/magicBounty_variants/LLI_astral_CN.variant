@@ -1,0 +1,38 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 32,
+    "fluxVents": 0,
+    "hullId": "astral",
+    "hullMods": ["missleracks","eccm","ecm","nav_relay","expanded_deck_crew"],
+    "permaMods": ["missleracks","eccm","ecm","nav_relay","expanded_deck_crew"],
+    "sMods": ["missleracks","eccm","ecm","nav_relay","expanded_deck_crew"],
+    "variantId": "LLI_astral",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "pdburst",
+                "WS 015": "pdburst",
+                "WS 023": "pdburst",
+                "WS 024": "pdburst"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 011": "squall",
+                "WS 012": "squall"
+            }
+        }
+    ],
+    "wings": [
+        "trident_wing",
+        "trident_wing",
+        "trident_wing",
+        "trident_wing",
+        "trident_wing",
+        "trident_wing"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "variantId": "fed_raptor_modshield_standard",
+  "hullId": "fed_raptor_modshield",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

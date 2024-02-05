@@ -1,0 +1,17 @@
+{
+
+	},
+	"carrierMedium":{
+		"missp_starlinermkii_Standard":10,
+		"missp_starlinermkii_Elite":10,
+	},
+	"carrierLarge":{
+		"missp_atlasmkiii_Standard":5,
+		"missp_atlasmkiii_Nailer":5,
+	},
+	"personnelMedium":{
+		"missp_nebulamkii_Standard":5,
+		"missp_nebulamkii_Brawler":5,
+	},
+	
+}

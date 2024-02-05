@@ -1,0 +1,59 @@
+{
+  "variantId": "sa_pangolin_cudgel",
+  "hullId": "sa_pangolin",
+  "displayName": "Cudgel",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 49,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "sa_erbe",
+        "WS0006": "sa_erbe",
+        "WS0015": "sa_erbe",
+        "WS0016": "sa_erbe"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "sa_radcannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "mark9"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "lightmg",
+        "WS0008": "lightmg",
+        "WS0009": "lightmg",
+        "WS0010": "lightmg",
+        "WS0011": "lightmg",
+        "WS0012": "lightmg",
+        "WS0013": "lightmg",
+        "WS0014": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "perdition_wing",
+    "perdition_wing",
+    "perdition_wing"
+  ]
+}

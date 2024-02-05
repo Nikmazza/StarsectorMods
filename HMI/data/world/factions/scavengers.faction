@@ -1,0 +1,42 @@
+{
+	"portraits":{
+		"standard_male":[
+		"graphics/portraits/portrait_hmi_jason.png",		
+		],
+	},
+	"shipNameSources":{
+		"HAZARD":4,
+	},
+	"hullFrequency":{
+		"tags":{
+			"hmi_bp":0.2,
+			"hmi_techmine_bp":0.05,
+		},
+				"hulls":{
+		"sulemain":0.2,
+		"weaver":0.2,
+		},
+	},
+		"shipsWhenImporting":{
+		"tags":["hmi_bp", "hmi_techmine_bp"],
+	},
+	"knownShips":{
+		"tags":["hmi_bp", "hmi_techmine_bp"],
+		"hulls":[
+		"sulemain",
+		"weaver",
+		],
+	},
+	"knownFighters":{
+		"tags":["hmi_bp"],
+	},		
+	"knownWeapons":{
+		"weapons":[
+		"sml_shotgrun",
+		"rangus_crossbow",
+		"suowang_pulser",
+		"rad_gun",
+		"tpc_hmi",
+		],
+	},
+},	

@@ -1,0 +1,168 @@
+{
+  "hullName": "Bertrand",
+  "hullId": "bc_phasedestroyer2",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/phase/phasedestroyer2.png",
+  "style": "LOW_TECH",
+  "height": 164,
+  "width": 144,
+  "center": [72, 82],
+  "collisionRadius": 104,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 101.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [46, 8]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [30, -25]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [13, 50]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [-16, -51]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [55.5, 40]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [32, -56]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-56, -40],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-50.5, 35],
+      "length": 28,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-52, 21],
+      "length": 38.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-52, 8.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-51, 27],
+      "length": 17.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-51, 15],
+      "length": 17.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-57, -51.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    72.5, 19,
+    63, 41,
+    57, 39,
+    56, 47.5,
+    40, 58.5,
+    35.5, 52,
+    25, 62,
+    10.5, 65,
+    -7, 52,
+    -11.5, 60,
+    -29.5, 51.5,
+    -31, 39,
+    -49, 39,
+    -51.5, 4,
+    -61.5, 3.5,
+    -74, -8.5,
+    -71.5, -25.5,
+    -41, -34.5,
+    -55.5, -38,
+    -55.5, -54,
+    -28, -57,
+    -17.5, -67,
+    -1.5, -60.5,
+    9.5, -70,
+    37, -56,
+    46, -42.5,
+    46, -35,
+    38, -34,
+    37.5, -16,
+    -1.5, -21,
+    -9.5, -11,
+    -5, -0.5,
+    31, -4.5,
+    53.5, -1.5,
+    54, 17.5
+  ]
+}

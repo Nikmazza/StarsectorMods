@@ -1,0 +1,35 @@
+{
+    "hullFrequency":{
+        "hulls":{
+            "TADA_challenger_pather":0.5,
+            "TADA_bully_pather":0.5,
+            "TADA_foray_pather":0.25,
+            "TADA_bonnethead_pather":0.25,
+        },
+    },
+    "shipsWhenImporting":{
+        "hulls":[
+            "TADA_scalper",
+        ],
+    },
+    "knownShips":{
+        "hulls":[
+            "TADA_challenger_pather",
+            "TADA_bully_pather",
+            "TADA_foray_pather",
+            "TADA_bonnethead_pather",
+        ],
+    },
+    "knownWeapons":{
+        "weapons":[
+            "TADA_pike",
+            "TADA_LRA",
+            "TADA_urchin",
+        ],
+    },
+	"knownHullMods":{
+		"hullMods":[
+			"TADA_reactiveArmor",
+		],
+	},
+},

@@ -1,0 +1,220 @@
+{
+	
+	"combatSmall":{
+		"bc_raschel_Assault":10,
+		"bc_raschel_Attack":10,
+		"bc_antiquecarrier_Attack":1,
+		"bc_piratedram_Pirate":10,
+		"bc_ranine_Support":10,
+		"bc_ranine_Attack":10,
+		"bc_oldfrigate_Support":7,
+		"bc_olddestroyer_Attack":4,
+		"bc_skeleton_Scrap":8,
+		"bc_galliard_Overdriven":3,
+		"bc_salvagefrigate_Support":4,
+		"bc_midlinefrigate_Attack":3,
+		"bc_midlinefrigate_Strike":3,
+		"bc_gallize_Attack":6,
+		"bc_gallize_Overdriven":4,
+		"bc_pirate_brawler_Assault": 10,
+		"bc_egg_Escort": 10,
+		"bc_hightech_destroyer_Strike": 4,
+		"bc_hightech_destroyer_Overdriven": 2,
+		"bc_dronedestroyer_Basic": 3,
+		"bc_dronedestroyer_Beam": 4,
+
+		"bc_phasefrigate1_Overdriven": 10,
+		"bc_phasefrigate2_Attack": 10,
+		"bc_phasefrigate2_Strike": 10,
+		"bc_phasefrigate3_Overdriven": 5,
+		"bc_phasefrigate3_Strike": 10,
+		"bc_phasedestroyer2_Strike":5,
+		"bc_phasefrigate4_Overdriven": 4,
+		"bc_phasefrigate4_Assault": 10
+	},
+	"combatMedium":{
+		"bc_raschel_Assault":10,
+		"bc_antiquecarrier_Attack":2,
+		"bc_piratedram_Pirate":10,
+		"bc_piratedram_Pirate2":10,
+		"bc_heavycruiser_Assault":4,
+		"bc_oldfrigate_Support":7,
+		"bc_olddestroyer_Attack":7,
+		"bc_oldcruiser_Support":7,
+		"bc_skeleton_Scrap":8,
+		"bc_egg_Escort":10,
+		"bc_galliard_Standard":8,
+		"bc_galliard_Overdriven":2,
+		"bc_galliard_p_Overdriven":10,
+		"bc_hightech_carrier_Attack":3,
+		"bc_hightech_carrier_Strike":3,
+		"bc_hightech_carrier_Swarm":3,
+		"bc_midlinefrigate_Attack":3,
+		"bc_midlinefrigate_Strike":3,
+		"bc_escapade_Bomber":4,
+		"bc_escapade_Strike":4,
+		"bc_gallize_Attack":4,
+		"bc_gallize_Overdriven":4,
+		"bc_lowtech_cruiser_Standard":6,
+		"bc_pirate_brawler_Assault": 10,
+		"bc_hightech_destroyer_Strike": 6,
+		"bc_hightech_destroyer_Overdriven": 4,
+		"bc_dronedestroyer_Basic": 7,
+		"bc_dronedestroyer_Beam": 7,
+		"bc_lowtech_cruiser_lp_Fanatic": 10,
+		"bc_biglasher_Standard": 5,
+		"bc_hightech_cruiser_Beam": 3,
+		"bc_hightech_cruiser_Support": 3,
+
+
+		"bc_phasefrigate1_Overdriven": 10,
+		"bc_phasefrigate2_Strike": 10,
+		"bc_phasefrigate2_Attack": 10,
+		"bc_phasefrigate3_Overdriven": 5,
+		"bc_phasefrigate3_Strike": 10,
+		"bc_phasedestroyer1_Overdriven": 6,
+		"bc_phasedestroyer2_Strike":6,
+		"bc_phasedestroyer3_Overdriven": 4,
+		"bc_phasedestroyer3_Standard": 4,
+		"bc_phasecruiser1_Standard": 10,
+		"bc_phasecruiser1_Overdriven": 5,
+		"bc_phasecruiser2_Beam": 10,
+		"bc_phasefrigate4_Overdriven": 4,
+		"bc_phasefrigate4_Assault": 8,
+		"bc_phasecruiser3_Strike": 10,
+		"bc_phasecruiser3_Overdriven": 2
+
+	},
+	"combatLarge":{
+		"bc_antiquecarrier_Attack":3,
+		"bc_heavycruiser_Assault":10,
+		"bc_oldfrigate_Support":3,
+		"bc_olddestroyer_Attack":4,
+		"bc_oldcruiser_Support":6,
+		"bc_egg_Escort":10,
+		"bc_galliard_Standard":6,
+		"bc_galliard_Overdriven":4,
+		"bc_galliard_p_Overdriven":10,
+		"bc_hightech_carrier_Attack":3,
+		"bc_hightech_carrier_Strike":3,
+		"bc_hightech_carrier_Swarm":3,
+		"bc_midlinebricc_Assault":10,
+		"bc_escapade_Bomber":6,
+		"bc_escapade_Strike":4,
+		"bc_gallize_Attack":2,
+		"bc_gallize_Overdriven":2,
+		"bc_lowtech_cruiser_Standard":5,
+		"bc_lowtech_cruiser_Overdriven":5,
+		"bc_lowtech_cruiser_lp_Fanatic": 7,
+		"bc_biglasher_Standard": 8,
+		"bc_hightech_cruiser_Beam": 8,
+		"bc_hightech_cruiser_Support": 8,
+
+		"bc_phasefrigate1_Overdriven": 2,
+		"bc_phasefrigate2_Attack": 2,
+		"bc_phasefrigate3_Overdriven": 2,
+		"bc_phasefrigate3_Strike": 2,
+		"bc_phasedestroyer1_Overdriven": 6,
+		"bc_phasedestroyer1_Standard": 6,
+		"bc_phasedestroyer2_Strike":6,
+		"bc_phasedestroyer3_Overdriven": 4,
+		"bc_phasedestroyer3_Standard": 4,
+		"bc_phasecruiser1_Standard": 10,
+		"bc_phasecruiser1_Overdriven": 10,
+		"bc_phasecruiser2_Beam": 10,
+		"bc_phasecruiser2_Overdriven": 10,
+		"bc_phasefrigate4_Overdriven": 2,
+		"bc_phasefrigate4_Assault": 2,
+		"bc_phasecruiser3_Strike": 10,
+		"bc_phasecruiser3_Overdriven": 10
+	},
+	"combatCapital":{
+		"bc_lowtech_battlecarrier_Standard":5,
+		"bc_lowtech_battlecarrier_Support":5,
+		"bc_lowtech_cruiser_lp_Fanatic": 10,
+		"bc_lowtech_battlecarrier_lp_Assault": 2,
+		"bc_orion_capital_Outdated":5,
+		"bc_orion_capital_Attack":5,
+
+		"bc_phasecruiser1_Standard": 8,
+		"bc_phasecruiser1_Overdriven": 8,
+		"bc_phasecruiser2_Beam": 8,
+		"bc_phasecruiser2_Overdriven": 8,
+		"bc_phasecruiser3_Strike": 8,
+		"bc_phasecruiser3_Overdriven": 8,
+		"bc_phaseparagon_Standard":8
+	},
+	"combatFreighterSmall":{
+		"bc_oldtransport_Civilian":10,
+		"bc_salvagefrigate_Support":4,
+		"bc_dronedestroyer_Basic": 5,
+		"bc_dronedestroyer_Beam": 5,
+		"bc_miningdoom_Mining":3
+	},
+	"combatFreighterMedium":{
+		"bc_combatfreighter_Basic":10,
+		"bc_oldtransport_Civilian":10,
+		"bc_miningdoom_Mining": 4
+
+	},
+	"combatFreighterLarge":{
+
+	},
+	"freighterSmall":{
+		"bc_phasehauler_Civilian": 6,
+		"bc_phasefreighter_Based": 10,
+		"bc_phasehauler_p_Civilian": 6,
+		"bc_phasefreighter_p_Basic": 10
+	},
+	"freighterMedium":{
+		"bc_phasehauler_Civilian": 10,
+		"bc_phasefreighter_Based": 10,
+		"bc_phasehauler_p_Civilian": 6,
+		"bc_phasefreighter_p_Basic": 10
+	},
+	"freighterLarge":{
+		"bc_phasehauler_Civilian": 10,
+		"bc_phasefreighter_Based": 5,
+		"bc_phasehauler_p_Civilian": 6,
+		"bc_phasefreighter_p_Basic": 4
+	},
+
+	"tankerSmall":{
+		"bc_phasetanker_Civilian": 10,
+		"bc_combattanker_Attack": 10,
+		"bc_combattanker_Support": 10
+	},
+	"tankerMedium":{
+		"bc_phasetanker_Civilian": 10,
+		"bc_combattanker_Attack": 10,
+		"bc_combattanker_Support": 10
+	},
+	"tankerLarge":{
+		"bc_phasetanker_Civilian": 10
+
+	},
+	
+	"civilianRandom":{
+		"bc_salvager_Basic":10,
+		"bc_salvagefrigate_Support":4,
+		"bc_miningdoom_Mining": 6
+
+	},
+	"carrierSmall":{
+		"bc_antiquecarrier_Attack":1,
+	},
+	"carrierMedium":{
+		"bc_antiquecarrier_Attack":1,
+		"bc_lowtech_carrier_Attack": 10,
+		"bc_lowtech_carrier_Strike": 10,
+		"bc_scrapcarrier_Heavy": 10,
+		"bc_scrapcarrier_Attack": 10
+	},
+	"carrierLarge":{
+		"bc_antiquecarrier_Attack":1,
+		"bc_lowtech_carrier_Attack": 10,
+		"bc_lowtech_carrier_Strike": 10,
+		"bc_scrapcarrier_Heavy": 10,
+		"bc_scrapcarrier_Attack": 10
+	},
+}

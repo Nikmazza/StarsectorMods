@@ -1,0 +1,13 @@
+{
+	"id":"fed_asb",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"data.shipsystems.fed_asb",
+	
+	"weaponGlowColor":[255,40,30,155],
+	"weaponTypes":[ENERGY],
+	
+	"useSound":"system_ammo_feeder",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

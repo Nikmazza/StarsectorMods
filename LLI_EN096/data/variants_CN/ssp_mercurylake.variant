@@ -1,0 +1,29 @@
+{
+  "variantId": "ssp_mercurylake",
+  "hullId": "ssp_mercurylake",
+  "displayName": "超重型截击机",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": ["pointdefenseai"],
+  "weaponGroups": [
+	{
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ssp_DeliverPDLaser"
+      }
+    },
+	{
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ssp_vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

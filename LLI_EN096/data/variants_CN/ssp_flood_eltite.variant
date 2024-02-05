@@ -1,0 +1,56 @@
+{
+    "displayName": "精英",
+    "fluxCapacitors": 23,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "ssp_flood",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange",
+        "frontemitter",
+        "extendedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_flood_eltite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0019": "mjolnir",
+                "WS0021": "mjolnir"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0020": "reaper"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0022": "gauss"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_FragMachinegun",
+                "WS0004": "ssp_FragMachinegun",
+                "WS0015": "ssp_FragMachinegun",
+                "WS0016": "ssp_FragMachinegun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "flak",
+                "WS0012": "flak",
+                "WS0013": "flak",
+                "WS0014": "flak"
+            }
+        }
+    ]
+}

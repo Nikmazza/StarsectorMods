@@ -1,0 +1,12 @@
+{
+    "playableFaction":false,
+    #"startingFaction":true,
+    "corvusCompatible":true,
+    "spawnAsFactionId":"HMI",
+    "rebelFleetSuffix":"Rogues",
+    "startRelationships":{ "HMI":1 },
+    
+    "responseFleetName":"Executive Fleet",
+    
+    "morality":"amoral",
+}

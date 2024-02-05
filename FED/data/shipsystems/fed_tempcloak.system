@@ -1,0 +1,38 @@
+{
+	"id":"fed_tempcloak",
+	"type":"PHASE_CLOAK",
+	"aiType":"PHASE_CLOAK",
+	
+	"statsScript":"com.fs.starfarer.api.impl.combat.PhaseCloakStats",
+	"runScriptWhilePaused":true, # only for the player's ship
+	"runScriptWhileIdle":true,  # this means unapply() never gets called
+	"blockActionsWhileChargingDown":false,
+	
+	"phaseHighlight":"_glow1",
+	"phaseDiffuse":"_glow2",
+	
+	
+	"effectColor1":[155,175,255,50],
+	"effectColor2":[155,175,255,100],
+	
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	
+	"engineGlowColor":[1,10,55,40],
+	"engineGlowContrailColor":[55,75,200,30],
+	"engineGlowLengthMult":0,
+	"engineGlowWidthMult":0,
+	"engineGlowGlowMult":1,
+	
+	"soundFilterType":"LOWPASS",
+	"soundFilterGain":0.8,
+	"soundFilterGainHF":0.25,
+	
+	"shipAlpha":1, # handled in stats script
+	#"shipAlpha":0.25,
+	
+	"useSound":"fed_tempcloak_out_sfx",
+	#"deactivateSound":"system_phase_cloak_deactivate",
+	"deactivateSound":"fed_tempcloak_in_sfx",
+	"outOfUsesSound":"system_phase_cloak_collision",
+}

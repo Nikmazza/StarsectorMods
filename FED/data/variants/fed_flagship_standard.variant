@@ -1,0 +1,92 @@
+{
+  "variantId": "fed_flagship_standard",
+  "hullId": "fed_flagship",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 18,
+  "fluxVents": 18,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "fed_burstlaser3"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_largeasm"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0016": "fed_hull_swarm_small",
+        "WS0021": "fed_hull_swarm_small",
+        "WS0022": "fed_hull_swarm_small",
+        "WS0023": "fed_hull_swarm_small"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "fed_burstlaser1",
+        "WS0012": "fed_burstlaser1",
+        "WS0018": "fed_burstlaser1",
+        "WS0024": "fed_burstlaser1"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "ioncannon",
+        "WS0011": "ioncannon",
+        "WS0017": "ioncannon",
+        "WS0025": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "fed_duallaser2",
+        "WS0014": "fed_duallaser2"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_duallaser",
+        "WS0002": "fed_duallaser",
+        "WS0003": "fed_singlelaser",
+        "WS0004": "fed_singlelaser",
+        "WS0009": "fed_singlelaser",
+        "WS0010": "fed_singlelaser",
+        "WS0019": "fed_duallaser",
+        "WS0020": "fed_duallaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0008": "fed_flagship_sideshield_standard"
+    }
+  ],
+  "wings": [
+    "dagger_wing",
+    "dagger_wing",
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

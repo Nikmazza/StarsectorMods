@@ -1,0 +1,22 @@
+id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
+fed_orbitalstation,Orbital Station - Star Federation,50,90,,3,,fed_battlestation,"station, sub_item, unraidable, structure","{
+radius:50,
+variant:fed_station_1_standard,
+fleetName:Orbital Station,
+}",graphics/icons/industry/orbital_station.png,data.campaign.econ.industries.FED_orbitalStationChecker,"A Star Federation space station featuring numerous sub-modules, fighter support, and a powerful gunnery battery. More vulnerable to torpedoes and large explosions, but has a strong point defense grid and a separate shield for protection.
+
+Must be reduced before invasions or bombardment can be attempted.",4826,
+fed_battlestation,Battlestation - Star Federation,100,120,,4,fed_orbitalstation,fed_starfortress,"station, battlestation, unraidable, structure","{
+radius:60,
+variant:fed_station_2_standard,
+fleetName:Battlestation,
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A Star Federation space station, now featuring two rotating attack arms, two armor modules, and multiple smaller core modules. The arm modules are powerful brawlers with shunts that can dissipate hard flux through shields, but will block the main station modules from firing past them.
+
+Must be reduced before invasions or bombardment can be attempted.",4827,
+fed_starfortress,Star Fortress - Star Federation,200,180,,5,fed_battlestation,,"station, starfortress, unraidable, structure","{
+radius:70,
+variant:fed_station_3_standard,
+fleetName:Star Fortress
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"An improved battlestation with engine-interdictor systems on the attack arms and double the amount of armor modules. Also features Ravelin-class defense drones and a low-tech minefield.
+
+Must be reduced before invasions or bombardment can be attempted.",4828,

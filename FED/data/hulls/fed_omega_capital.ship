@@ -1,0 +1,215 @@
+{
+  "hullName": "",
+  "hullId": "fed_omega_capital",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/FED/ships/omega/fed_omega_body.png",
+  "style": "OMEGA",
+  "height": 319,
+  "width": 178,
+  "center": [90.5, 161.5],
+  "collisionRadius": 243,
+  "shieldCenter": [0, -0.5],
+  "shieldRadius": 232,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "fluxbreakers",
+    "shard_spawner",
+    "targetingunit",
+    "fed_design",
+    "fed_firecontrol",
+    "reduced_explosion",
+    "eccm",
+    "missleracks",
+    "fluxshunt"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -45,
+      "locations": [127.5, -13.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 45,
+      "locations": [126.5, 6.5]
+    },
+    {
+      "id": "WS0013",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-12, 121.5]
+    },
+    {
+      "id": "WS0014",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-2, -133]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -45,
+      "locations": [93.5, -18.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 45,
+      "locations": [91.5, 22.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 30,
+      "angle": 0,
+      "locations": [63, 61.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 80,
+      "angle": 180,
+      "locations": [8.5, 14.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 180,
+      "locations": [-92.5, 2.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [99, -58.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -45,
+      "locations": [32, -62.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 45,
+      "locations": [41, 24.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 135,
+      "locations": [-52, 19.5]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 95,
+      "angle": -135,
+      "locations": [-84.5, -24.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-95, 28],
+      "length": 125.052353,
+      "width": 27.288096,
+      "angle": 178,
+      "contrailSize": 27.288096,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-123, 17.5],
+      "length": 119.038559,
+      "width": 26.707499,
+      "angle": 178,
+      "contrailSize": 26.707499,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-124, -22.5],
+      "length": 88.131996,
+      "width": 24.166246,
+      "angle": 178,
+      "contrailSize": 24.166246,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-61.5, -50.5],
+      "length": 108.364105,
+      "width": 11.570754,
+      "angle": 178,
+      "contrailSize": 11.570754,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-75.5, -42.5],
+      "length": 104.79644,
+      "width": 15.32402,
+      "angle": 178,
+      "contrailSize": 15.32402,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    }
+  ],
+  "bounds": [
+    -162, -1,
+    -41.5, -53.5,
+    -16, -50,
+    63, -83,
+    112.5, -70,
+    106, -66,
+    106, -42.5,
+    130, -36,
+    156, -5,
+    101, 49,
+    78, 87.5,
+    61, 85.5
+  ]
+}

@@ -1,0 +1,40 @@
+{
+
+	"combatSmallForSmallFleet":{
+		"missp_path_wolf_Standard":10,
+		"missp_path_hermes_Standard":10,
+		"missp_path_mercury_Standard":10,
+		"missp_path_mudskipper_Standard":10,
+	},
+	"combatSmall":{
+		"missp_path_wolf_Standard":10,
+		"missp_path_hermes_Standard":10,
+		"missp_path_mercury_Standard":10,
+		"missp_path_mudskipper_Standard":10,
+	},
+	"combatMedium":{
+		"missp_path_nebula_Standard":10,
+		"missp_path_hammerhead_Standard":10,
+		"missp_path_enforcer_Standard":10,
+	},
+	"combatLarge":{
+		"missp_path_venture_Standard":10,
+		"missp_path_dominator_Standard":10,
+		"missp_path_eagle_Standard":10,
+		"missp_path_falcon_Standard":10,
+	},
+	"combatFreighterSmall":{
+		"missp_path_hermes_Standard":10,
+	},
+	"combatFreighterMedium":{
+		"missp_path_tarsus_Standard":10,
+		"missp_path_mule_Standard":10,
+	},
+	"combatFreighterLarge":{
+		"missp_path_venture_Standard":10,
+	},
+	"carrierMedium":{
+		"missp_path_starliner_Standard":10,
+	},
+	
+}

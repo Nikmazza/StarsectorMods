@@ -1,0 +1,41 @@
+{
+  "id": "ork_dakka",
+  "specClass": "projectile",
+  "projectileSpecId": "shell_dakka",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "displayArcRadius": 600,
+  "turretSprite": "graphics/weapons/ork_dakka_turret_base.png",
+  "hardpointSprite": "graphics/weapons/ork_dakka_hardpoint_base.png",
+  "turretOffsets": [
+    29.5,
+    1
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    55,
+    1
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 65,
+    "spread": 20,
+    "particleSizeMin": 10,
+    "particleSizeRange": 35,
+    "particleDuration": 0.75,
+    "particleCount": 50,
+    "particleColor": [
+      255,
+      120,
+      50,
+      245
+    ]
+  },
+  "fireSoundTwo": "dakka_fire"
+}

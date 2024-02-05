@@ -1,0 +1,13 @@
+{
+  "baseHullId": "brawler",
+  "baseValueMult": 1,
+	"builtInMods":["unstable_injector"],
+  "descriptionId": "brawler",
+    "descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+  "hullName": "Brawler (P)",
+  "restoreToBaseHull": false,
+  "skinHullId": "BSC_Brawler_P",
+  "spriteName": "graphics/hulls/BSC_Brawler_P.png",
+  	"tags":["pirate_bp"],
+	"tech":"Pirate",
+}

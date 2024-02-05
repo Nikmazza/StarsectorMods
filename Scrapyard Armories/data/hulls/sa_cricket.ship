@@ -1,0 +1,111 @@
+{
+  "hullName": "Cricket",
+  "hullId": "sa_cricket",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/sa_cricket.png",
+  "style": "LOW_TECH",
+  "height": 62,
+  "width": 76,
+  "center": [38, 30],
+  "collisionRadius": 54,
+  "shieldCenter": [-1, -0],
+  "shieldRadius": 49,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder",
+    "rugged"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": 0,
+      "locations": [10, 19],
+      "renderOrderMod": 1
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": -0,
+      "locations": [10, -19],
+      "renderOrderMod": 1
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [10, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-28, 12],
+      "length": 18,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-28, -12],
+      "length": 18,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, 28],
+      "length": 18,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, -28],
+      "length": 18,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-25, -19],
+      "length": 8.5,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-25, 19],
+      "length": 8.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    13, 8,
+    29, 23,
+    18, 35,
+    0, 35,
+    -26, 15,
+    -26, -15,
+    0, -35,
+    18, -35,
+    29, -23,
+    13, -8
+  ]
+}

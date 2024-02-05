@@ -1,0 +1,52 @@
+{
+	"baseHullId":"brawler",
+	"skinHullId":"LTA_Brawler_Thunderbirds",
+	"hullName":"Brawler (TB)",
+	"descriptionId":"brawler",
+	"descriptionPrefix":"This ship has been heavily modified and upclassed for use in the 'Duinn Thunderbirds', sporting many practical but expensive 'showy improvements' that make it more intimidating in combat over standard variations of the hull.",
+	"tags":["rare_bp", "LTA_DuinnThunderbirds"],
+	"tech":"Duinn Thunderbirds",
+	"fleetPoints":10,
+	"ordnancePoints":53,
+	#"restoreToBaseHull":true,
+	"baseValueMult":1.5,
+	"spriteName":"graphics/LTA/ships/Epattcud/Thunderbirds/LTA_Brawler_Thunderbirds.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+    	"WS 001":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "MEDIUM",
+            "type": "STATION_MODULE"
+		},	
+		"WS 002":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "MEDIUM",
+            #"type": "COMPOSITE"
+        },
+		"WS 003":{
+			"angle": 45,
+            "arc": 180,
+            "mount": "TURRET",
+            #"size": "MEDIUM",
+            #"type": "BUILT_IN"
+		},	
+		"WS 004":{
+			"angle": -45,
+            "arc": 180,
+            "mount": "TURRET",
+            #"size": "MEDIUM",
+            #"type": "BUILT_IN"
+		},	
+	},
+	"builtInMods":["augmentedengines", "thunderbirds"],
+	"builtInWeapons":{
+	#"WS 001": "amblaster"
+    },
+}

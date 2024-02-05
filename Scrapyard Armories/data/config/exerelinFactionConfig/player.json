@@ -1,0 +1,21 @@
+{
+	"startShipsTradeSmall":[
+		["sa_munin_defended", "buffalo_Standard", "hound_Standard"],
+	],
+
+    "startShipsCombatSmall":[
+        ["sa_trocar_rammer", "brawler_Assault", "brawler_Assault"],
+    ],
+
+    "startShipsCombatLarge":[
+      ["sa_elanus_standard", "sa_cricket_standard", "shepherd_Frontier", "sa_scrapship_hauler"],
+      ["sa_splint_assault", "sa_pacemaker_support", "sa_kyresh_escort", "buffalo_Standard"],
+    ], 
+	"startShipsGrandFleet":[
+["eagle_Balanced", "sa_almas_standard", "sa_almas_standard", "phaeton_Standard", "buffalo_Standard"],
+["sa_brace_combat", "sa_splint_assault", "sa_splintXIV_assault", "sa_cricket_standard", "sa_cricket_standard", "sa_scrapship_exploration"],
+],
+    "startSpecialItems":[
+        [["sa_corrupted_bp", ""]],
+    ],
+}

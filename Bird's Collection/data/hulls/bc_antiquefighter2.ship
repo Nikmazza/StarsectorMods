@@ -1,0 +1,90 @@
+{
+  "hullName": "Acolle",
+  "hullId": "bc_antiquefighter2",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_antiquefighter2.png",
+  "style": "ANTIQUE",
+  "height": 40,
+  "width": 40,
+  "center": [20, 20],
+  "collisionRadius": 35,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 30.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 6,
+      "angle": 0,
+      "locations": [17.5, 9.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 6,
+      "angle": -0,
+      "locations": [17.5, -9.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 135,
+      "locations": [-7.5, 13.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -135,
+      "locations": [-7.5, -13.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, 7],
+      "length": 24.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-11, -7],
+      "length": 24.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-9, -0],
+      "length": 17.5,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    }
+  ],
+  "bounds": [
+    -12, -9.5,
+    -4.5, -15.5,
+    16.5, -9.5,
+    10.5, -0,
+    16.5, 9.5,
+    -4.5, 15.5,
+    -12, 9.5
+  ]
+}

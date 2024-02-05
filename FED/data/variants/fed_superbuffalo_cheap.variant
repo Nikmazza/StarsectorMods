@@ -1,0 +1,27 @@
+{
+  "variantId": "fed_superbuffalo_cheap",
+  "hullId": "fed_superbuffalo",
+  "displayName": "Cheap",
+  "goalVariant": false,
+  "fluxCapacitors": 5,
+  "fluxVents": 4,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "insulatedengine",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_duallaser",
+        "WS0002": "fed_duallaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

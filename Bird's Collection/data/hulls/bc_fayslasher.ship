@@ -1,0 +1,141 @@
+{
+  "hullName": "Lasher (FYS)",
+  "hullId": "bc_fayslasher",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/bc_fayslasher.png",
+  "style": "LOW_TECH",
+  "height": 96,
+  "width": 68,
+  "center": [34, 38.5],
+  "collisionRadius": 79,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 75.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 47.5,
+      "locations": [-0.5, 10]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -47.5,
+      "locations": [-0.5, -10]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [5.5, 27]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [5.5, -27]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [19.5, -15]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [19.5, 15]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 270,
+      "angle": -0,
+      "locations": [32.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-38.5, -0],
+      "length": 58.5,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-32.5, 13.5],
+      "length": 29.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-32.5, -13.5],
+      "length": 29.5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-30.5, 19.5],
+      "length": 28,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-30.5, -19.5],
+      "length": 28,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -17.5, 31.5,
+    10, 32.5,
+    10, 20,
+    23.5, 19.5,
+    26, 9.5,
+    34.5, 16.5,
+    53.5, 5.5,
+    53.5, -5.5,
+    34.5, -16.5,
+    26, -9.5,
+    23.5, -19.5,
+    10, -20,
+    10, -32.5,
+    -17.5, -31.5,
+    -38, -0
+  ]
+}

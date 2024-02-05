@@ -1,0 +1,18 @@
+{
+    "id":"MoreMilitaryMissions",
+    "name":"More Military Missions",
+    "author":"LngA7Gw",
+    "utility":"false",
+    "version": {"major":'0', "minor":'1', "patch":'1'},
+    "description":"More Military Missions.",
+    "gameVersion": "0.96a-RC10", 
+    "jars":["jars/MoreMilitaryMissions.jar"],
+    "dependencies": [
+        {
+            "id": "MagicLib",
+            "name": "MagicLib",
+            "version": { "major": '1', "minor": '0', "patch": '1' },
+        }
+    ],
+    "modPlugin": "mmm.MoreMilitaryMissionsModPlugin"
+}

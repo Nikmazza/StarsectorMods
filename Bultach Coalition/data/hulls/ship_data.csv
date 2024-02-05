@@ -1,0 +1,121 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
+#CAPITALS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fregairt,ork_dreadnotv2,Dreadnought,Bultach Coalition,bt_assault_burn,35,25000,1900,20000,15000,950,355,2,28,10,4,3,4,6000,FRONT,,50,0.4,0.9,,,825,1650,350,450,17,26,7,700000,3,20,720,0.15,55,55,,,,,,,,"rare_bp, ork_project_bp",,.5,3,5,,
+Nadhmòr,ork_battlecruiser,Battlecruiser,Bultach Coalition,bt_engine_burn,25,14000,1350,16500,30000,850,245,,60,32,20,16,13,2500,OMNI,,90,0.4,0.9,,,450,850,225,250,12,32,8,600000,3,15,680,0.25,40,40,,,,,,,,ork_project_bp,,0.5,2,4,,503
+Daiche,ork_bigscrap,Battle Carrier,Bultach Coalition,bt_yoinker,24,15500,1600,16000,11250,680,230,2,28,18,10,8,6,2500,FRONT,,100,0.4,0.9,,,400,900,260,300,14,29,7,320000,2,20,720,0.25,36,36,,,,,,,,ork_project_bp,,0.75,3,5,,506.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#CRUISERS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ramala,ork_vencha,Battle Carrier,Bultach Coalition,bt_yoinker,12,10000,1050,6000,6000,275,140,1,33,25,10,12,6,1500,FRONT,,130,0.4,0.9,,,130,225,140,120,4,30,8,80000,5,10,480,0.25,18,18,,,,,,,,"rare_bp, ork_project_bp",,0.4,2,3,,
+Mèinneadh,ork_mining,Cruiser,Bultach Coalition,reservewing,9,5500,600,4500,6000,200,115,2,40,15,10,12,6,1500,OMNI,,120,0.4,1,,,100,150,300,140,3,33,7,70000,5,10,480,0.25,14,14,,,,,,,,"base_bp, merc, ork_project_bp",,0.4,2,3,,402
+Daignich,ork_tail,Cruiser,Bultach Coalition,bt_aegis,17,11000,1150,11000,10000,550,170,,50,25,12,18,14,2250,FRONT,,150,0.4,0.9,,,150,225,150,150,5,33,8,145000,4,12,480,0.25,26,26,,,,,,,,ork_project_bp,,0.4,2,3,,404
+Murtach,ork_murtach,Experimental Phase Cruiser,Bultach Coalition,bt_forcedphase,22,10000,850,11500,4000,785,165,,65,35,25,30,18,2000,OMNI,,70,0.5,.8,,,120,180,90,70,4,27,8,350000,4,12,350,0.25,32,32,,,,,,,,ork_project_bp,,0.5,2,3,,410
+Dhaich,ork_bigracer,Light Cruiser,Bultach Coalition,bt_offensive_overdrive,14,6500,675,7000,8000,360,120,,70,65,45,18,23,650,FRONT,,200,0.4,0.9,,,90,145,120,100,3,33,8,130000,4,12,480,0.25,17,17,,,,,,,,"rare_bp, ork_project_bp",,0.5,2,3,,400
+Plàigh,ork_interdictor,Phase Interdictor,Bultach Coalition,phase_interdict_field,13,8500,850,8000,17000,400,120,,50,35,15,20,14,1200,FRONT,,120,0.4,.9,,,130,150,80,80,4,35,8,100000,3,8,480,0.25,21,21,,,,,,,,"rare_bp, ork_project_bp",,0.6,3,5,,
+Aghaidh,ork_crusher,Heavy Cruiser,Bultach Coalition,rammingdrive,15,14000,1450,10500,10000,450,150,,36,20,10,15,12,2250,FRONT,,150,0.4,.9,,,160,200,145,100,5,30,7,125000,4,12,480,0.25,25,25,,,,,,,,ork_project_bp,,0.4,2,3,,404
+Striopach,ork_faster,Cruiser,Bultach Coalition,bt_engine_burn,13,9000,800,8000,15000,435,130,,55,48,20,40,18,1500,FRONT,,130,0.4,0.9,,,150,200,130,100,4,30,8,90000,3,8,480,0.25,20,20,,,,,,,,"rare_bp, ork_project_bp",,0.4,3,5,,
+Mòran,ork_thrasher,Cruiser,Bultach Coalition,rammingdrive,14,12500,1400,9500,10000,500,135,,45,30,15,20,16,2250,FRONT,,150,0.4,.9,,,150,190,145,100,5,30,8,115000,4,12,480,0.25,22,22,,,,,,,,ork_project_bp,,0.4,2,3,,404
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#DESTROYERS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cruinn,ork_hammah,Destroyer,Bultach Coalition,bt_engine_burn,12,4850,525,6000,15000,475,85,,50,35,7,27,15,1000,FRONT,,150,.4,1,,,80,120,100,60,2,35,8,42000,3,8,380,0.25,11,11,,,,,,,,"rare_bp, ork_project_bp",,0.4,3,5,,
+Smàladair,ork_smasha,Heavy Destroyer,Bultach Coalition,rammingdrive,10,6500,800,7500,1875,625,75,,90,40,10,30,20,1250,FRONT,,110,.7,0.9,,,50,90,90,50,2,30,9,38000,8,10,380,0.25,12,12,8,50,,,,,,"rare_bp, ork_project_bp",0.75,0.4,2,2,,
+Buail,ork_mech,Destroyer,Bultach Coalition,burndrive,12,6000,900,4700,3333,250,90,,60,40,20,30,20,500,PHASE,damper,,,,,,60,100,90,90,3,30,9,38000,5,12,380,0.25,9,9,,,,,,,,ork_project_bp,,0.4,2,3,,303
+Fithea,ork_prong,Destroyer,Bultach Coalition,bt_engine_burn,10,6000,900,4000,3333,200,85,,70,40,20,30,20,500,FRONT,,200,0.4,1,,,60,100,90,90,3,30,9,38000,5,12,380,0.25,9,9,,,,,,,,ork_project_bp,,0.4,2,3,,303
+Snàthad,ork_bees,Battle Carrier,Bultach Coalition,bt_assault_burn,9,4500,250,2700,2833,170,75,1,50,35,15,25,20,400,FRONT,,150,0.4,0.9,,,55,120,90,70,2,35,9,36000,4,8,380,0.25,9,9,28,125,,,,,,ork_project_bp,,0.6,2,3,,305
+Luath,ork_speeder,Light Destroyer,Bultach Coalition,bt_offensive_overdrive,11,5450,425,3750,1875,250,75,,135,60,40,45,30,800,FRONT,,120,.4,.9,,,75,105,120,80,2,30,10,43000,8,8,380,0.25,8,8,8,50,,,,,,"rare_bp, ork_project_bp",0.75,0.4,2,2,,
+Roimhe,ork_old,Destroyer,Low Tech,maneuveringjets,9,5600,775,3250,2500,225,85,,65,40,20,20,15,500,OMNI,,120,0.4,1,,,50,100,100,80,2,40,9,30000,5,10,420,0.25,10,10,36,125,,,,,,"rare_bp, ork_project_bp",,0.5,2,3,,310
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#FRIGATES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Dreach,ork_grot,Heavy Frigate,Bultach Coalition,rammingdrive,6,3100,425,2350,1875,150,65,,100,55,20,35,25,800,FRONT,,90,.7,0.9,,,35,95,50,30,1,35,10,9000,8,8,300,0.25,7,7,8,50,,,,,,"rare_bp, ork_project_bp",0.75,0.4,2,2,,
+Sgoinneil,ork_scrimb,Frigate,Bultach Coalition,ammofeed,5,1750,300,2100,1750,140,55,,130,110,90,60,90,200,FRONT,,210,0.4,1,,,25,50,40,25,1,25,10,8000,8,10,300,0.25,4,4,,,,,,,,ork_project_bp,,0.4,2,2,,204
+Madach,ork_bastard,Carrier,Bultach Coalition,damper,8,1400,200,1100,1875,65,38,1,65,90,100,60,90,300,FRONT,,110,0.4,0.9,,,30,50,50,30,1,30,10,7000,8,10,300,0.25,7,7,8,50,,,,,CARRIER,ork_project_bp,0.75,0.4,2,2,,201.5
+Ghean,ork_racer,Frigate,Bultach Coalition,bt_offensive_overdrive,5,1750,250,1800,1650,140,50,,150,120,100,60,90,300,FRONT,,220,0.4,0.9,,,30,50,50,30,1,30,10,12000,8,10,240,0.25,6,6,8,50,,,,,,ork_project_bp,0.75,0.4,2,2,,201.5
+Gath,ork_skrunkly,Frigate,Bultach Coalition,bt_engine_burn,6,2000,400,2200,1875,150,45,,80,120,100,50,90,300,FRONT,,90,0.4,0.9,,,30,50,50,30,1,30,10,8000,8,10,300,0.25,4,4,8,50,,,,,,ork_project_bp,0.75,0.4,2,2,,201.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#SEMI AUTOMATED,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Feregether,ork_feregether,Dreadnought,Bultach Coalition,temporalvault,45,27500,2000,21500,15000,1300,355,2,36,16,10,8,7,6000,FRONT,,60,0.3,1.2,,,100,350,350,450,17,26,7,1000000,3,20,900,0.15,70,70,,,,,,,HIDE_IN_CODEX,,,.3,3,5,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#CORRUPTED,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Macaillte,ork_feregether_corrupted,Corrupted Dreadnought,Bultach Coalition,advtemporalvault,60,27500,2050,22500,15000,1400,365,2,40,19,12,10,8,6000,OMNI,,90,0.3,0.8,,,0,0,350,450,17,26,7,2000000,3,20,900,0.15,75,75,,,,,,,HIDE_IN_CODEX,,,.3,3,5,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#FIGHTERS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Brònach,ork_light_fighter,,Bultach Coalition,,,550,95,80,,10,0,,190,380,340,85,180,30,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,104
+Seillean,ork_heavy_fighter,,Bultach Coalition,flarelauncher_fighter,,800,150,100,,20,0,,150,360,235,75,170,30,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,104
+Seileach,ork_heavy_fighter_drone,,Bultach Coalition,flux_booster,,725,210,150,,35,0,,165,360,260,75,170,30,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,104
+Chaneil,ork_bomber,,Bultach Coalition,,,650,150,100,,20,0,,175,360,100,75,80,30,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,104
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#SUPERS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Spacehulk,ork_spacehulk,Junkship,Pirate,burndrive,60,40000,1250,33500,10000,1450,250,,20,3,3,3,3,12000,FRONT,,30,.6,1.4,,,1850,2500,2500,1500,40,25,6,2000000,2,15,1500,0.25,100,100,,,,,,,SHIP_WITH_MODULES,rare_bp,,1,3,4,,507
+,left_thruster,Engine Module,,,12,9000,1350,10000,7000,350,70,,22,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,right_thruster,Engine Module,,,12,9000,1350,10000,7000,350,70,,22,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,front_right,Gunner module,,,12,14500,1200,22500,5000,800,130,2,0,0,0,10,10,1500,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2100
+,front_left,Gunner Module,,,12,14500,1200,18500,5000,600,130,2,0,0,0,10,10,1500,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2100
+,stuff_left,Stuff Module,,,12,8000,1000,8000,2500,250,70,,0,0,0,10,10,1000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,,2100
+,stuff_right,Stuff Module,,,12,8000,1000,8000,2500,250,70,,0,0,0,10,10,1000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,,2100
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DòrnDhè,ork_superdread_main,Super Dreadnought,Bultach Coalition,zapstrike,1000,100000,2750,32000,10000,1900,600,,20,3,3,3,3,25000,NONE,,180,.5,1,,,5750,8750,4500,2450,50,25,6,10000000,2,15,950,0.25,120,200,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0.3,4,6,,507
+,ork_superdread_prow_left,Prow Module,,damper,100,14500,1600,10000,7000,650,100,,22,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_superdread_prow_right,Prow Module,,damper,100,14500,1600,10000,7000,650,100,,22,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_superdread_armor_left,Armor Module,,damper,100,23500,1600,12000,5000,600,95,,0,0,0,10,10,500,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,3,,2100
+,ork_superdread_armor_right,Armor Module,,damper,100,23500,1600,12000,5000,600,95,,0,0,0,10,10,5000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,3,,2100
+,ork_superdread_hangar_left,Hangar Module,,damper,100,12000,1600,8000,2500,250,140,3,0,0,0,10,10,1000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2100
+,ork_superdread_hangar_right,Hangar Module,,damper,100,12000,1600,8000,2500,250,140,3,0,0,0,10,10,1000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2100
+,ork_superdread_thruster_left,Thruster Module,,damper,100,12000,1600,8000,2500,250,70,1,1,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2100
+,ork_superdread_thruster_right,Thruster Module,,damper,100,12000,1600,8000,2500,250,70,1,1,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2100
+,ork_shield_module,Shield Module,,,100,20000,2000,26500,2500,1400,0,0,0,0,0,10,10,2000,OMNI,,360,0,.7,,,0,0,0,0,1,0,,75000,,1,720,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2100
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Redemption,ork_redemption_main,Reclaimed Sporeship,Luddic Path,bt_holy_charge,75,75000,2300,20000,10000,1000,225,,20,3,3,3,3,35000,NONE,,0,0,0,,,2500,6250,5000,5000,40,25,6,2000000,2,15,1500,0.25,100,100,,,,,,,SHIP_WITH_MODULES,"rare_bp, LP_bp",,0.8,3,5,,507
+,ork_redemption_thruster_left,Thruster Module,,ammofeed,12,22000,1500,13000,7000,450,110,2,1,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_redemption_thruster_right,Thruster Module,,ammofeed,12,22000,1500,13000,7000,450,110,2,1,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_redemption_ring_left,Ring Module,,ammofeed,12,13000,1300,10000,7000,450,50,,1,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_redemption_ring_right,Ring Module,,ammofeed,12,13000,1300,10000,7000,450,50,,1,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_redemption_prow_left,Prow Module,,damper,12,32000,2100,16000,7000,750,165,,1,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_redemption_prow_right,Prow Module,,damper,12,32000,2100,16000,7000,750,165,,1,0,0,10,10,4000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sathar,ork_sgr_main,Heavy Dreadnought,Bultach Coalition,bt_assault_burn,70,32000,1850,26500,10000,1350,285,,20,3,3,3,3,15000,OMNI,,360,.5,.9,,,1500,3850,1000,900,50,25,7,1500000,2,15,1500,0.25,85,85,,,,,,,SHIP_WITH_MODULES,ork_project_bp,,0.3,4,6,,507
+,sgr_center_left,Center Module,,bt_yoinker,0,8000,1100,8000,7000,350,50,,1,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,sgr_center_right,Center Module,,bt_yoinker,0,8000,1100,8000,7000,350,50,,1,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,sgr_front_left,Prow Module,,ammofeed,0,10000,1150,10000,7000,450,90,,1,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,sgr_front_right,Prow Module,,ammofeed,0,10000,1150,10000,7000,450,90,,1,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,sgr_engine_left,Engine Module,,phase_interdict,0,6500,1000,4000,7000,150,30,,22,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,sgr_engine_right,Engine Module,,phase_interdict,0,6500,1000,4000,7000,150,30,,22,0,0,10,10,2000,NONE,,0,0,0,,,0,0,0,0,1,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2100
+,ork_magnetic_core,Shield Core,,bt_aegis_unique,0,50000,5000,5000,10000,400,0,,1,0,0,10,10,15000,NONE,,0,0,0,,,0,0,0,0,0,0,,75000,,1,1500,0.25,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,507
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#LOGI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Brùth,ork_loota,Heavy Freighter,Bultach Coalition,burndrive,10,9000,750,4250,2000,250,95,,40,20,10,10,10,1500,FRONT,,90,0.5,1,,,80,200,650,120,4,30,7,60000,3,20,480,0.25,14,14,150,225,,,,,"CIVILIAN, FREIGHTER","rare_bp, ork_project_bp",,0.6,2,3,,
+Mèinlùtha,ork_tanka,Tanker,Bultach Coalition,antimatter_dump,10,10000,900,5450,2500,300,110,,50,30,20,25,15,3000,FRONT,,60,0.5,1.2,,,100,160,120,1000,2,30,8,65000,5,20,300,0.25,18,18,,,200,400,,,"CIVILIAN, TANKER","rare_bp, ork_project_bp",,0.75,3,4,,
+Giùlain,ork_logistics,Tanker-Freighter Hybrid,Bultach Coalition,burndrive,20,14500,850,12000,5000,575,120,,20,15,8,7,4,4000,FRONT,,90,0.5,1,,,250,450,1650,1650,6,40,6,135000,2,20,620,0.25,20,20,200,333,,,,,"CIVILIAN, FREIGHTER","rare_bp, ork_project_bp",,0.7,2,4,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#CONVERSIONS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Brùth (P),ork_loota_p,Converted Freighter,Pirate,bt_engine_burn,15,11500,1050,8500,2000,475,110,2,38,18,10,10,10,1500,FRONT,,90,0.5,1.1,,,120,200,100,120,4,30,7,40000,3,20,400,0.25,18,18,150,225,,,,,ALWAYS_PANIC,"rare_bp, pirate_bp",,0.6,2,3,,
+Giùlain (P),ork_logistics_p,Converted Tanker-Freighter,Pirate,bt_engine_burn,23,15000,1250,14850,5000,725,230,,30,18,10,9,6,4000,FRONT,,90,0.5,1.1,,,385,800,200,950,6,67,6,165000,2,20,600,0.25,30,30,200,333,,,,,ALWAYS_PANIC,"rare_bp, pirate_bp",,0.8,3,5,,
+Mèinneadh (P),ork_mining_p,Cruiser,Pirate,burndrive,13,10500,1050,7500,6000,375,125,,35,15,10,12,6,1500,OMNI,,120,0.4,1.1,,,80,300,150,160,3,60,7,55000,5,10,380,0.25,14,14,,,,,,,,"rare_bp, pirate_bp",,0.6,2,3,,402
+Daiche (LP),ork_bigscrap_path,Battlecruiser,Luddic Path,rammingdrive,24,15500,1600,16000,11250,800,200,,50,22,10,11,9,2500,FRONT,,100,.4,.9,,,350,800,200,800,10,80,7,200000,2,20,640,0.25,38,38,,,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",,0.75,3,5,,506.5
+Mule MK3,ork_mule_mk3,Converted Combat Freighter,Luddic Path,maneuveringjets,8,5250,550,4750,2500,275,80,,90,50,25,28,20,500,OMNI,,120,0.5,1.1,,,40,100,100,40,2,40,9,44000,5,10,340,0.25,10,10,36,125,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",,0.5,2,3,,310
+Ramshackle,ork_ramshackle,Holy Cruiser,Luddic Path,rammingdrive,12,9750,925,8750,5000,425,160,1,55,38,16,15,10,4000,OMNI,,100,0.4,1.1,,,225,450,150,120,6,67,7,125000,2,20,370,0.25,23,23,200,333,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",,0.8,3,5,,
+Ramala (LP),ork_vencha_pather,Converted Carrier,Luddic Path,rammingdrive,12,11000,1100,7500,6000,350,125,,65,42,20,18,12,1500,FRONT,,130,0.4,1,,,130,225,140,120,4,30,8,80000,5,10,450,0.25,20,20,,,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",,0.5,2,4,,
+Cruinn (LP),ork_hammah_pather,Destroyer,Luddic Path,bt_engine_burn,10,4850,525,6000,15000,475,75,,60,35,20,27,15,1000,FRONT,,150,.4,1.1,,,80,120,100,60,2,35,8,42000,3,8,300,0.25,11,11,,,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",,0.5,3,5,,
+Gath (LP),ork_skrunkly_lp,Frigate,Luddic Path,bt_engine_burn,6,2200,485,2000,1875,135,35,,125,120,100,50,90,300,FRONT,,90,0.4,1,,,30,50,50,30,1,30,10,8000,8,10,240,0.25,7,7,8,50,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",0.75,0.4,2,2,,201.5
+Goblin ,ork_dangerous,Phase Hackjob,Luddic Path,maneuveringjets,12,7250,675,6500,5000,375,115,,60,38,16,15,10,4000,PHASE,phasecloak,0,0,0,0.06,0.06,225,450,150,120,6,67,7,125000,2,20,500,0.25,23,23,200,333,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",,0.9,3,5,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,42 @@
+{
+  "variantId": "bc_antiquedestroyer_Strike",
+  "hullId": "bc_antiquedestroyer",
+  "displayName": "Strike",
+  "goalVariant": false,
+  "fluxCapacitors": 1,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "bc_antiquecannon_small",
+        "WS0002": "bc_antiquecannon_small",
+        "WS0003": "bc_antiquecannon_small",
+        "WS0004": "bc_antiquecannon_small"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "bc_antiquecannon_med"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "vulcan",
+        "WS0007": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

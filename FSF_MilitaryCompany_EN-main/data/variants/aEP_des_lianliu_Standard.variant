@@ -1,0 +1,42 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 9,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "aEP_des_lianliu",
+    "hullMods": ["aEP_RapidDissipate"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "aEP_des_lianliu_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "miningblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "lightdualac",
+                "WS0005": "lightdualac",
+                "WS0009": "lightdualac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "aEP_b_m_mb32"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "dualflak"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0008": "aEP_b_s_pom"}
+        }
+    ]
+}

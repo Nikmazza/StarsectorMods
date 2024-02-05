@@ -1,0 +1,32 @@
+{
+    "knownShips":{
+		"hulls":[
+			"BSC_Terringzean",
+            "BSC_Stoner",
+            "BSC_Lockout",
+            "BSC_Roamer",
+            "BSC_Baldric",
+            "BSC_Baldricmk2",
+		],
+	},
+    	"priorityShips":{
+		"hulls":[
+			"BSC_Terringzean",
+            "BSC_Stoner",
+		],
+	},
+            "hullFrequency":{
+        "hulls":{
+            "BSC_Terringzean":0.2, #Should be rare
+            "BSC_Baldricmk2": 0.5, #Don't want it to be too common
+            "BSC_Stoner":0.3, #Shouldn't be common
+        },
+    },
+                "knownWeapons":{
+        "weapons":[
+            "BSC_Annihilator_MLRS",
+        ],
+    },
+    
+},
+

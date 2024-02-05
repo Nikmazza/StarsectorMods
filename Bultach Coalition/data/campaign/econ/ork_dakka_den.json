@@ -1,0 +1,111 @@
+{
+  "starSystem":"ork_Dakka_Den",
+  "markets":[
+    {
+      "entities":["dregruk"],
+      "faction":"orks",
+      "size":5,
+      "freePort":true,
+
+      "startingConditions":[
+        "population_5",
+        "ork_wardrive",
+        "no_atmosphere",
+        "hot",
+        "ore_rich",
+        "rare_ore_moderate"
+      ],
+
+      "industries":[
+        "population",
+        "ork_prevent_pather",
+        "spaceport",
+        "mining",
+        "heavybatteries",
+        "militarybase",
+        "starfortress"
+      ]
+    },
+
+    {
+      "entities":["orguk"],
+      "faction":"orks",
+      "size":7,
+      "freePort":true,
+
+      "startingConditions":[
+        "population_7",
+        "ork_wardrive",
+        "habitable",
+        "ore_moderate",
+        "organics_trace",
+        "farmland_rich"
+      ],
+
+      "industries":[
+        "population",
+        "ork_prevent_pather",
+        "megaport",
+        "farming",
+        "lightindustry",
+        "mining",
+        "heavybatteries",
+        "highcommand",
+        "ork_superdread_station"
+      ]
+    },
+
+    {
+      "entities":["bt_siphon_station"],
+      "faction":"orks",
+      "size":4,
+      "freePort":true,
+
+      "startingConditions":[
+        "population_4",
+        "ork_wardrive",
+        "volatiles_abundant"
+      ],
+
+      "industries":[
+        "population",
+        "ork_prevent_pather",
+        "spaceport",
+        "mining",
+        "heavybatteries",
+        "patrolhq",
+        "starfortress",
+        "fuelprod"
+      ]
+    },
+
+    {
+      "entities":["gathrog"],
+      "faction":"orks",
+      "size":6,
+      "freePort":true,
+
+      "startingConditions":[
+        "population_6",
+        "ork_wardrive",
+        "hot",
+        "no_atmosphere",
+        "ore_moderate",
+        "rare_ore_rich",
+        "volatiles_trace"
+      ],
+
+      "industries":[
+        "population",
+        "ork_prevent_pather",
+        "spaceport",
+        "mining",
+        "refining",
+        ["orbitalworks", "pristine_nanoforge"],
+        "heavybatteries",
+        "patrolhq",
+        "starfortress"
+      ]
+    }
+  ]
+}

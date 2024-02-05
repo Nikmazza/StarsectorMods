@@ -1,0 +1,16 @@
+{
+  "variantId": "bc_phasetanker_Civilian",
+  "hullId": "bc_phasetanker",
+  "displayName": "Civilian",
+  "goalVariant": true,
+  "fluxCapacitors": 15,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "auxiliary_fuel_tanks"
+  ],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

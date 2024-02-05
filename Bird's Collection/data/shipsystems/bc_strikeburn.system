@@ -1,0 +1,43 @@
+{
+	"id":"bc_strikeburn",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"data.shipsystems.scripts.BcStrikeBurnStats",
+	
+	"engineGlowColor":[91,177,255,255],
+	#"engineGlowContrailColor":[100,165,255,25],
+	"engineGlowLengthMult":4,
+	"engineGlowWidthMult":2,
+	"engineGlowGlowMult":6,
+	
+	"jitterUnderColor":[91,177,255,115],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":7,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"jitterColor":[91,177,255,35],
+	"jitterCopies":2,
+	"jitterMinRange":0,
+	"jitterRange":5,
+	"jitterRangeRadiusFraction":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+	#"useSound":"system_burn_drive_activate",
+	#"loopSound":"system_burn_drive_loop",
+	#"deactivateSound":"system_burn_drive_deactivate",
+	#"outOfUsesSound":"engine_disabled",
+	
+	"useSound":"system_plasma_burn",
+	"loopSound":"system_plasma_burn_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":600,
+		"burstMovementPotential":400,
+	}
+}

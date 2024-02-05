@@ -1,0 +1,30 @@
+{
+  "hullName": "Station Strut",
+  "hullId": "fed_module_hightech_strut",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/stations/fed_arm_short.png",
+  "style": "FEDERATION",
+  "height": 188,
+  "width": 150,
+  "center": [75, 86.5],
+  "collisionRadius": 110,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 110,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -275	,
+    0
+  ],
+  "builtInMods": [
+    "vastbulk",
+	"fed_anchorrotationreverse",
+    "never_detaches"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    -71, 65.5,
+    -71, -65.5,
+    -55.5, -0
+  ]
+}

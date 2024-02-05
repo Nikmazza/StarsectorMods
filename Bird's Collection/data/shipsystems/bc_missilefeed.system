@@ -1,0 +1,13 @@
+{
+	"id":"bc_missilefeed",
+	"type":"FAST_RELOAD",
+	"aiType":"FAST_RELOAD",
+	
+	"statsScript":"data.shipsystems.scripts.BcMissileFeedStats",
+	
+	"weaponGlowColor":[145,217,218,155],
+	"weaponTypes":[MISSILE],
+	
+	"useSound":"system_ammo_feeder",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

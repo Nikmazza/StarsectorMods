@@ -1,0 +1,284 @@
+{    
+	"LLI_Challenge_Missile": {
+		#"trigger_marketFaction_none": ["LLI"],
+		"trigger_marketFaction_any": ["persean"], # Default: no values. markets of these factions will show the bounty (if other conditions are met).
+        "trigger_marketFaction_alliedWith": true, # Default: false. if true, markets of all factions whose relationship is at least FAVORABLE to ANY ONE of the factions above will show the bounty (if other conditions are met).
+		#"trigger_marketFaction_enemyWith": true, # Default: false. If true, markets of all factions whose relationship is HOSTILE to EVERY ONE (ALL) of the factions above. Beware when using this parameter with multiple excluded factions.
+		"trigger_weight_mult": 0.5,
+		"trigger_player_minLevel": 5,
+		"trigger_min_fleet_size": 10,
+		#"trigger_min_days_elapsed": 120,
+		#"trigger_memKeys_any": {
+		#	"job_memKey_expired": true,
+		#	"job_memKey_succeeded": true,
+		#},
+
+		"job_name": "Dust Bandits",
+		"job_forFaction": "persean",
+		"job_description": "In March, a fleet en route to Olinadu was attacked by an unidentified fleet, resulting in its vital cargo being stolen. However, the tracking device placed on the cargo has allowed Olinadu security forces to pinpoint the attackers, and are now offering a ==$reward== credit reward to retrieve the cargo while avenging the lost fleet.",
+		"job_comm_reply": "Your communications request was denied. The other fleet's ships quickly prepared for battle.",
+		"job_intel_success": "You returned the \"vital cargo\" to Olinadu in accordance with your contract: shortly afterwards, you received the reward money, alongside an official commendation from the Persean League, praising your skill in handling the matter. Interestingly, the account that sent the remittance is not tied to the League...",
+		#"job_intel_failure": ,
+		"job_intel_expired": "You received a notification from the Persean League that your bounty contract has expired, and you are not expected to perform any further investigation into the incident.",
+		"job_deadline": 240,
+		"job_credit_reward": 900000,
+		"job_reward_scaling": 0,
+		"job_item_reward": {
+			"ssp_mantle_bore": 1,
+		},
+		"job_type":"neutralisation",
+		"job_show_type":true,
+		"job_show_captain": false,
+		"job_show_fleet": "none",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "There were no surviving witnesses to the attack, so a proper assessment of the target's strength is impossible.",
+		#"job_memKey": "$LLI_Challenge_Missile",
+
+		"target_rank": "spaceCaptain",
+        "target_post": "specialAgent",
+		"target_level": 5,
+		"target_personality": "steady",
+		####"target_skill_preference": "YES_ENERGY_NO_BALLISTIC_YES_MISSILE_YES_DEFENSE",
+		"target_skills": { # Default: empty. REMOVES ALL RANDOM SKILLS, set level 1 for normal skill, level 2 for elite.
+			##fleet skill
+			"tactical_drills":1,
+			"coordinated_maneuvers":1,
+			"wolfpack_tactics":1,
+			"crew_training":1,
+			"electronic_warfare":1,
+			"flux_regulation":1,
+			"officer_training":1,
+			"officer_management":1,
+			"best_of_the_best":1,
+			"support_doctrine":1,
+			"hull_restoration":1,
+			"fighter_uplink":1,
+			"carrier_group":1,
+			##combat skill
+			"combat_endurance":2,
+			"missile_specialization":2,
+			"target_analysis":2,
+			"field_modulation":2,
+			"helmsmanship":2,
+        },
+
+		"fleet_name": "Armada",
+		"fleet_faction": "LLI",
+		"fleet_flagship_variant": "ssp_hanba_beam",
+		"fleet_flagship_recoverable": true,
+		"fleet_preset_ships": {
+			"ssp_wave_M_standard": 10,
+		},
+		"fleet_transponder": false,
+		"fleet_behavior": "GUARDED",
+		"fleet_min_FP": 550, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "LLI", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 2, # Default: 1, use 2 for no Dmods.
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting_minor",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden",
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+	"LLI_Challenge_zhurong": {
+		#shows up everywhere unfriendly with TT right from the start
+		#"trigger_marketFaction_none": ["LLI"],
+		"trigger_marketFaction_any": ["LLI"], # Default: no values. markets of these factions will show the bounty (if other conditions are met).
+        "trigger_marketFaction_alliedWith": true, # Default: false. if true, markets of all factions whose relationship is at least FAVORABLE to ANY ONE of the factions above will show the bounty (if other conditions are met).
+		#"trigger_marketFaction_enemyWith": true, # Default: false. If true, markets of all factions whose relationship is HOSTILE to EVERY ONE (ALL) of the factions above. Beware when using this parameter with multiple excluded factions.
+		"trigger_weight_mult": 0.5,
+		"trigger_player_minLevel": 5,
+		"trigger_min_fleet_size": 10,
+		#"trigger_min_days_elapsed": 120,
+		#"trigger_memKeys_any": {
+		#	"$LLI_Challenge_Missile_expired": true,
+		#	"$LLI_Challenge_Missile_succeeded": true,
+		#},
+
+		"job_name": "Lost Flames",
+		"job_forFaction": "LLI",
+		"job_description": "An official bounty has been put out by the Loulan Navy. Several of their high-spec frigates have been stolen. Find and destroy these thieves, and you will be paid ==$reward== credits.",
+		"job_comm_reply": "Your communications request was denied. The other fleet's ships quickly prepared for battle.",
+		"job_intel_success": "Shortly after confirmation of the bounty's completion, you were invited to a celebratory banquet. It seems that every captain that accepted the bounty was invited, so it may be a good opportunity to make new friends.",
+		#"job_intel_failure": ,
+		"job_intel_expired": "The Loulan Navy ended up recovering the lost ships on their own. You were even invited to a celebratory banquet, in spite of not having accomplished anything: it seems that every captain who accepted the bounty was invited, so you might make some new friends there.",
+		"job_deadline": 90,
+		"job_credit_reward": 300000,
+		"job_reward_scaling": 0,
+		"job_type":"neutralisation",
+		"job_show_type":true,
+		"job_show_captain": false,
+		"job_show_fleet": "vanilla",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "auto",
+
+		#captain is irrelevant in this instance
+		"target_rank": "spaceCaptain",
+        "target_post": "specialAgent",
+		"target_level": 7,
+		"target_personality": "steady",
+		"target_skills": { # Default: empty. REMOVES ALL RANDOM SKILLS, set level 1 for normal skill, level 2 for elite.
+			##fleet skill
+			"tactical_drills":1,
+			"coordinated_maneuvers":1,
+			"wolfpack_tactics":1,
+			"crew_training":1,
+			"electronic_warfare":1,
+			"flux_regulation":1,
+			"officer_training":1,
+			"officer_management":1,
+			"best_of_the_best":1,
+			"support_doctrine":1,
+			"hull_restoration":1,
+			"fighter_uplink":1,
+			"carrier_group":1,
+			##combat skill
+			"combat_endurance":2,
+			"missile_specialization":2,
+			"target_analysis":2,
+			"field_modulation":2,
+			"helmsmanship":2,
+			"systems_expertise":2,
+			"damage_control":2,
+        },
+
+		"fleet_name": "'Low-Profile' Tri-Tachyon Fleet",
+		"fleet_faction": "tritachyon",
+		"fleet_flagship_variant": "LLI_astral",
+		"fleet_flagship_recoverable": true,
+		"fleet_preset_ships": {
+			"LLI_ssp_zhurong": 4,
+			"LLI_hyperion":4,
+		},
+		"fleet_transponder": false,
+		"fleet_behavior": "GUARDED",
+		"fleet_min_FP": 300, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "tritachyon", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 2, # Default: 1, use 2 for no Dmods.
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting_minor",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden",
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+	"LLI_Challenge_Dumper": {
+		#"trigger_marketFaction_none": ["LLI"],
+		"trigger_marketFaction_any": ["tritachyon"], # Default: no values. markets of these factions will show the bounty (if other conditions are met).
+        "trigger_marketFaction_alliedWith": true, # Default: false. if true, markets of all factions whose relationship is at least FAVORABLE to ANY ONE of the factions above will show the bounty (if other conditions are met).
+		#"trigger_marketFaction_enemyWith": true, # Default: false. If true, markets of all factions whose relationship is HOSTILE to EVERY ONE (ALL) of the factions above. Beware when using this parameter with multiple excluded factions.
+		"trigger_weight_mult": 0.5,
+		"trigger_player_minLevel": 5,
+		"trigger_min_fleet_size": 10,
+		#"trigger_min_days_elapsed": 120,
+		#"trigger_memKeys_any": {
+		#	"$LLI_Challenge_Missile_succeeded": true,
+		#},
+
+		"job_name": "Scavenging License",
+		"job_forFaction": "tritachyon",
+		"job_description": "A bounty has been placed by Tri-Tachyon on one of the Loulan Navy's tech-mining fleets. According to them, the fleet recovered the blueprints for Domain-spec cryopods from an abandoned Tri-Tachyon outpost: the corporation attempted to buy the design back, but were refused.",
+		"job_comm_reply": "Your communications request was denied. The other fleet's ships quickly prepared for battle.",
+		"job_intel_success": "You've successfully claimed the bounty. Time to splurge.",
+		#"job_intel_failure": ,
+		"job_intel_expired": "Someone else got the bounty before you; the \"golden goose\" flew away.",
+		"job_deadline": 90,
+		"job_credit_reward": 1145000,
+		"job_reward_scaling": 0,
+		"job_item_reward": {
+			"ssp_cryosanctum":1,
+		},
+		"job_type":"neutralisation",
+		"job_show_type":true,
+		"job_show_captain": false,
+		"job_show_fleet": "vanilla",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "",
+		#"job_memKey": "$LLI_Challenge_Dumper",
+
+		"target_rank": "spaceCaptain",
+        "target_post": "specialAgent",
+		"target_level": 5,
+		"target_personality": "steady",
+		####"target_skill_preference": "YES_ENERGY_NO_BALLISTIC_YES_MISSILE_YES_DEFENSE",
+		"target_skills": { # Default: empty. REMOVES ALL RANDOM SKILLS, set level 1 for normal skill, level 2 for elite.
+			##fleet skill
+			"tactical_drills":1,
+			"coordinated_maneuvers":1,
+			"wolfpack_tactics":1,
+			"crew_training":1,
+			"electronic_warfare":1,
+			"flux_regulation":1,
+			"officer_training":1,
+			"officer_management":1,
+			"best_of_the_best":1,
+			"support_doctrine":1,
+			"hull_restoration":1,
+			"fighter_uplink":1,
+			"carrier_group":1,
+			##combat skill
+			"combat_endurance":2,
+			"missile_specialization":2,
+			"target_analysis":2,
+			"field_modulation":2,
+			"helmsmanship":2,
+        },
+
+		"fleet_name": "Scavenger Armada",
+		"fleet_faction": "LLI",
+		"fleet_flagship_variant": "LLI_Dumper_ship_0",
+		"fleet_flagship_recoverable": true,
+		"fleet_preset_ships": {
+			"LLI_Dumper_ship_0":2,
+			"LLI_Dumper_ship_4":2,
+			"LLI_Dumper_ship_5":2,
+			"ssp_seaquake_beam":4,
+			"LLI_Dumper_ship_1":4,
+			"LLI_Dumper_ship_3":6,
+			"ssp_gonggong_standard":2,
+			"LLI_Dumper_ship_2":6,
+		},
+		"fleet_transponder": false,
+		"fleet_behavior": "GUARDED",
+		"fleet_min_FP": 400, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "LLI", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 1, # Default: 1, use 2 for no Dmods.
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting_minor",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden",
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+}

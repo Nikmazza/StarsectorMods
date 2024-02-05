@@ -1,0 +1,41 @@
+{
+  "variantId": "LTA_Epattcudxxi_Thunderbirds_Highfleet",
+  "hullId": "LTA_Epattcudxxi_Thunderbirds",
+  "displayName": "Highfleet",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 1,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "eccm",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "sabotpod",
+        "WS0002": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightmg",
+        "WS0004": "lightmg"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0005": "LTA_Epattcudxxi_Thunderbirds_FrontPlate"
+    }
+  ],
+  "wings": [
+    "broadsword_wing"
+  ]
+}

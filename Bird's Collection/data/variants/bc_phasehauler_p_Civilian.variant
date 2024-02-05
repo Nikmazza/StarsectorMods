@@ -1,0 +1,16 @@
+{
+  "variantId": "bc_phasehauler_p_Civilian",
+  "hullId": "bc_phasehauler_p",
+  "displayName": "Civilian",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_cargo_holds"
+  ],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

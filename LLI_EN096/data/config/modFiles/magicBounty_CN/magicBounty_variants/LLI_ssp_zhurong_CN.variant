@@ -1,0 +1,27 @@
+{
+    "displayName": "歼灭",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "hullId": "ssp_zhurong",
+    "hullMods":  ["missleracks","frontemitter","hardened_subsystems","reinforcedhull","auxiliarythrusters","fluxdistributor","ssp_ShortRange"],
+    "permaMods": ["missleracks","frontemitter","hardened_subsystems","reinforcedhull","auxiliarythrusters"],
+    "sMods":     ["missleracks","frontemitter","hardened_subsystems","reinforcedhull","auxiliarythrusters"],
+    "variantId": "LLI_ssp_zhurong",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "plasma"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "phasecl"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "atropos"}
+        }
+    ]
+}

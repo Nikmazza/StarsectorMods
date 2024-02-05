@@ -1,0 +1,56 @@
+{
+  "variantId": "sa_earthbreaker_standard",
+  "hullId": "sa_earthbreaker",
+  "displayName": "Heavy Citadel",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "sa_earthshaker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "heavyac",
+        "WS 010": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "heavymg",
+        "WS 009": "heavymg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "flak",
+        "WS 013": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "vulcan",
+        "WS 007": "vulcan",
+        "WS 008": "vulcan",
+        "WS 012": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

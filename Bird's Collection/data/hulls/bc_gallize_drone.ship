@@ -1,0 +1,50 @@
+{
+  "hullName": "Argil",
+  "hullId": "bc_gallize_drone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_gallize_drone.png",
+  "style": "LOW_TECH",
+  "height": 30,
+  "width": 30,
+  "center": [15, 15],
+  "collisionRadius": 39.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 37.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [7, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, 4.5],
+      "length": 26,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-13, -4.5],
+      "length": 26,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -13, -7.5,
+    0.5, -12,
+    14.5, -0,
+    0.5, 12,
+    -13, 7.5
+  ]
+}

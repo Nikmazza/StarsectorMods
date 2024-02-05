@@ -1,0 +1,19 @@
+{
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+		"bc_lowtech_battlecarrier_lp_Assault":5,
+	},
+	
+	"knownShips":{
+		"tags":["base_bp", "LP_bp", "luddic_path"],
+		"hulls":[
+			"bc_lowtech_battlecarrier_lp",
+		],
+	},
+}
+
+
+
+
+
+

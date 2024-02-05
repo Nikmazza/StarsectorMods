@@ -1,0 +1,7 @@
+id,name,short,desc,cost,isBonus,isGolden,spritePath,effectPlugin,extra1,extra2,source,tags,spriteAuthor
+ssp_UNGP_FleetSynergism,Synergistic Fleet,Reduced DP for identical ships,"If the player's fleet contains ships identical to the flagship, the deployment points of said ships (including the flagship) is reduced by %s times the number of identical ships (rounding down). The maximum reduction is %s.",-3,TRUE,,graphics/icons/ssp_UNGP_FleetSynergism.png,data.ssp_UNGP.ssp_FleetSynergism,,,"""Loulan Naval Doctrine"": published c162, reprinted c204",,
+ssp_UNGP_CRDecay,Decaying Armory,Duplicate weapons reduce damage,"If a ship is fitted with multiple of the same type of weapon (including built-in weapons), each duplicate weapon reduces the damage of all weapons by %s.",4,FALSE,,graphics/icons/ssp_UNGP_CRDecay.png,data.ssp_UNGP.ssp_CRDecay,All weapon damage reduced,,"""Loulan Naval Doctrine"": published c162, reprinted c204",,Loulan Industries
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,

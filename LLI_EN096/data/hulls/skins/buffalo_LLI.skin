@@ -1,0 +1,17 @@
+{
+	"baseHullId":"buffalo",
+	"skinHullId":"buffalo_LLI",
+	"hullName":"Buffalo (LLI)",
+	"descriptionId":"buffalo",  # optional
+	"descriptionPrefix":"This ship has been given L.L.I. markings. Systems modifications are otherwise superficial.",
+	"tags":["ssp_bp"],
+	"tech":"LLI",
+	"spriteName":"graphics/ships/buffalo_LLI.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

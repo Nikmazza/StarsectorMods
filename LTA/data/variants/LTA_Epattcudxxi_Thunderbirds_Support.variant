@@ -1,0 +1,40 @@
+{
+  "variantId": "LTA_Epattcudxxi_Thunderbirds_Support",
+  "hullId": "LTA_Epattcudxxi_Thunderbirds",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 3,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "frontshield"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "pilum",
+        "WS0002": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "vulcan",
+        "WS0004": "vulcan"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0005": "LTA_Epattcudxxi_Thunderbirds_FrontPlate"
+    }
+  ],
+  "wings": [
+    "piranha_wing"
+  ]
+}

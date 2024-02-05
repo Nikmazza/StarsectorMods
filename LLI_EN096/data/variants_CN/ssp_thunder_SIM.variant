@@ -1,0 +1,40 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 5,
+    "fluxVents": 22,
+    "hullId": "ssp_thunder",
+    "hullMods": [
+        "targetingunit",
+        "converted_hangar",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_thunder_SIM",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0011": "tachyonlance"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "pilum",
+                "WS0008": "pilum",
+                "WS0012": "heatseeker",
+                "WS0013": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "hveldriver",
+                "WS0010": "hveldriver"
+            }
+        }
+    ],
+    "wings": ["ssp_heavyfog"]
+}

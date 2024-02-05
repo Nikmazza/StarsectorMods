@@ -1,0 +1,57 @@
+{
+  "hullName": "Craytops",
+  "hullId": "bc_oldfrigate_drone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_oldfrigate_drone.png",
+  "style": "OLD_TECH",
+  "height": 30,
+  "width": 30,
+  "center": [15, 13],
+  "collisionRadius": 17,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 15.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "advancedoptics",
+    "advancedshieldemitter",
+    "magazines",
+    "no_weapon_flux"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [2, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-6, -0],
+      "length": 19,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-7.5, -0],
+      "length": 1.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    }
+  ],
+  "bounds": [
+    0.5, 10,
+    8, -0,
+    0.5, -10,
+    -7.5, -0
+  ]
+}

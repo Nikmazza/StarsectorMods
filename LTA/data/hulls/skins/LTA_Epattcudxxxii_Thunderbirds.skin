@@ -1,0 +1,49 @@
+{
+	"baseHullId":"LTA_Epattcudxxxii",
+	"skinHullId":"LTA_Epattcudxxxii_Thunderbirds",
+	"hullName":"E-XXXII 'Havoc' (TB)",
+	"descriptionId":"LTA_Epattcudxxxii",
+	"descriptionPrefix":"This ship has been heavily modified and upclassed for use in the 'Duinn Thunderbirds', sporting many practical but expensive 'showy improvements' that make it more intimidating in combat over standard variations of the hull.",
+	"tags":["rare_bp", "LTA_DuinnThunderbirds_bp"],
+	"tech":"Duinn Thunderbirds",
+	"fleetPoints":14,
+	"ordnancePoints":85,
+	#"restoreToBaseHull":true,
+	"baseValueMult":1.5,
+	"spriteName":"graphics/LTA/ships/Epattcud/Thunderbirds/Epattcud_32_Class_Scrapship_Thunderbirds.png",
+	"systemId": "burndrive",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["comp_structure"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"removeBuiltInWings":["LTA_DiademP_Wing"],
+	"weaponSlotChanges":{
+    	"WS0001":{
+			#"angle": 0,
+            "arc": 5,
+            #"mount": "HARDPOINT",
+            #"size": "MEDIUM",
+            "type": "COMPOSITE"
+		},	
+    	"WS0003":{
+			#"angle": 0,
+            "arc": 5,
+            #"mount": "HARDPOINT",
+            #"size": "SMALL",
+            "type": "COMPOSITE"
+		},	
+    	"WS0010":{
+			#"angle": 0,
+            #"arc": 5,
+            #"mount": "HARDPOINT",
+            #"size": "LARGE",
+            "type": "BUILT_IN"
+		},	
+	},
+	"builtInMods":["augmentedengines", "thunderbirds", "frontshield"],
+	"builtInWings":["LTA_GladiusTB_Wing"],
+	"builtInWeapons":{
+	"WS0009": "LTA_epattcudxxxii_thunderbirds_overlay",
+	"WS0010": "LTA_hextb"
+    },
+}

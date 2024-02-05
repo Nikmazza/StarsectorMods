@@ -1,0 +1,29 @@
+{
+  "variantId": "bc_hightech_carrier_Attack",
+  "hullId": "bc_hightech_carrier",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 1,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "mininglaser",
+        "WS0002": "mininglaser",
+        "WS0003": "mininglaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "bc_hightechfighter1",
+    "bc_hightechfighter1"
+  ]
+}

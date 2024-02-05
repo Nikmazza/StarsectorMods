@@ -1,0 +1,17 @@
+{
+	"id":"bc_lrm_mirv_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"onHitEffect":"data.weapons.scripts.LrmOnHitEffect",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":1000.0,
+	"width":50.0,
+	"hitGlowRadius":50,
+	"fadeTime":0.25,
+	"fringeColor":[122,235,251,255],
+	"coreColor":[255,255,255,255],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0	
+}

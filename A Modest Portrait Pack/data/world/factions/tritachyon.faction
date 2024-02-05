@@ -1,0 +1,18 @@
+{
+	"portraits":{
+		"standard_male":[
+"graphics/AMPP_14.png",
+"graphics/AMPP_15.png",
+"graphics/AMPP_27.png",
+"graphics/AMPP_31.png",
+"graphics/AMPP_33.png",
+		],
+		"standard_female":[
+"graphics/AMPP_2.png",
+"graphics/AMPP_32.png",
+"graphics/AMPP_38.png",
+"graphics/AMPP_51.png",
+"graphics/AMPP_75.png",
+		],
+	},
+},				

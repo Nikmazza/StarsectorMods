@@ -1,0 +1,169 @@
+{
+  "hullName": "Colubris",
+  "hullId": "fed_colubris",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_superfrig.png",
+  "style": "FEDERATION",
+  "height": 111,
+  "width": 86,
+  "center": [43, 55.5],
+  "collisionRadius": 76,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 59.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "fed_missileforge",
+    "fed_energybuiltin"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 183,
+      "angle": -45,
+      "locations": [21.5, -10]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 183,
+      "angle": 45,
+      "locations": [21.5, 10]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": 90,
+      "locations": [-29.5, 18]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": -90,
+      "locations": [-29.5, -18]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [47.5, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-10.5, 27]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-10.5, -27]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-55, 7.5],
+      "length": 42.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-55, -7.5],
+      "length": 42.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-40.5, -0],
+      "length": 66.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-34.5, 30],
+      "length": 41.542893,
+      "width": 13.775093,
+      "angle": 159.5,
+      "contrailSize": 13.775093,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-34.5, -30],
+      "length": 41.542893,
+      "width": 13.775093,
+      "angle": -159.5,
+      "contrailSize": 13.775093,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [9.5, 22],
+      "length": 30.405592,
+      "width": 5.656854,
+      "angle": 135,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [9.5, -22],
+      "length": 30.405592,
+      "width": 5.656854,
+      "angle": -135,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -51, 11,
+    -34.5, 16.5,
+    -32.5, 29,
+    -18, 41.5,
+    -12.5, 36.5,
+    -19, 26,
+    -1.5, 11.5,
+    8.5, 11,
+    12.5, 20.5,
+    49, 7.5,
+    54, -0,
+    49, -7.5,
+    12.5, -20.5,
+    8.5, -11,
+    -1.5, -11.5,
+    -19, -26,
+    -12.5, -36.5,
+    -18, -41.5,
+    -32.5, -29,
+    -34.5, -16.5,
+    -51, -11,
+    -51.5, -4.5,
+    -39.5, -4.5,
+    -39.5, 4.5,
+    -51.5, 4.5
+  ]
+}

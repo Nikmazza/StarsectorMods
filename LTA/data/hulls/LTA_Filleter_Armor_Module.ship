@@ -1,0 +1,36 @@
+{
+  "hullName": "Armor",
+  "hullId": "LTA_Filleter_Armor_Module",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/LTA/ships/Epattcud/Upcyclers_Sect/LTA_Filleter_Armor_Module.png",
+  "style": "LOW_TECH",
+  "height": 40,
+  "width": 72,
+  "center": [36, 18],
+  "collisionRadius": 68,
+  "shieldCenter": [-10, -0],
+  "shieldRadius": 56,
+  "viewOffset": 0,
+  "builtInMods": [
+    "always_detaches"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    18, -3,
+    15, -5,
+    2, -35,
+    -5, -35,
+    -13, -24.5,
+    -5, -18,
+    -5.5, -2,
+    -11, 2,
+    -6, 4,
+    -9.5, 18.5,
+    -16.5, 22,
+    -5, 35,
+    2, 35,
+    15, 5,
+    18, 3
+  ]
+}

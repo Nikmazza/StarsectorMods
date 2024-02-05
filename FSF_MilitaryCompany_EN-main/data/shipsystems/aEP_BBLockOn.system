@@ -1,0 +1,14 @@
+{
+	"id":"aEP_BBLockOn",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	#"aiScript":"data.shipsystems.scripts.ai.",
+	"statsScript":"data.scripts.shipsystems.aEP_BBLockOn",
+	
+
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_entropy",
+	"loopSound":"system_entropy_loop",
+	"deactivateSound":"system_entropy_off",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

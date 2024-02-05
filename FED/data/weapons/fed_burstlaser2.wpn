@@ -1,0 +1,57 @@
+{
+  "id": "fed_burstlaser2",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_burstlaser2_shot",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/FED/weapons/fed_burstlaser3.png",
+  "turretGlowSprite": "graphics/FED/weapons/fed_burstlaser3_glow.png",
+  "turretGunSprite": "graphics/FED/weapons/fed_burstlaser3_gun.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_burstlaser3_hardpoint.png",
+  "hardpointGlowSprite": "graphics/FED/weapons/fed_burstlaser3_hardpoint_glow.png",
+  "hardpointGunSprite": "graphics/FED/weapons/fed_burstlaser3_hardpoint_gun.png",
+  "renderAboveAllWeapons": 0,
+    "renderHints": [
+    "RENDER_BARREL_BELOW"
+  ],
+  "glowColor": [
+    160,
+    110,
+    140,
+    255
+  ],
+  "visualRecoil": 7,
+  "turretOffsets": [
+    25,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    31,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 40,
+    "spread": 50,
+    "particleSizeMin": 30,
+    "particleSizeRange": 5,
+    "particleDuration": 0.4,
+    "particleCount": 10,
+    "particleColor": [
+      160,
+      110,
+      140,
+      255
+    ]
+  },
+  "textureType": ROUGH,
+  "fireSoundTwo": "fed_medpulser_fire"
+}

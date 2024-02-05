@@ -1,0 +1,17 @@
+{
+
+    "masterVersionFile":"https://raw.githubusercontent.com/briansd9/starsector-fleethistory/master/fleethistory.version",
+    "modName":"Fleet Action History",
+
+    "modThreadId":21929,
+
+    "modVersion":
+    {
+        "major": 1,
+        "minor": 0,
+        "patch": 10
+    },
+
+    "starsectorVersion":"0.96a-RC8"
+
+}

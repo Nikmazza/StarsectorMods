@@ -1,0 +1,43 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+#名字,#id,,,#设计类型,#tag,#装配界面显示的分组,#基础价值,,#是否隐藏,,#护卫装配,#驱逐装配,#巡洋装配,#主力装配,#文件位置,#描述,#简单描述,#内置描述,#图
+断崖系统,ssp_cliff,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_cliff,描述在jar,,,graphics/hullmods/ssp_cliff_hullmod.png
+协同式定位子系统,ssp_bias,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_bias,描述在jar,,,graphics/hullmods/ssp_bias_hullmod.png
+磁悬浮炮塔基座,ssp_vocaino_rangemod,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_vocaino_rangemod,"磁悬浮技术显著的降低了炮台转向时的阻力，同时也使武器更加的稳定。
+·降低所有武器{%s}后坐力，提高所有炮台{%s}的转向速度。
+·增加实弹和能量武器{%s}射程。",,,graphics/hullmods/ssp_vocaino_rangemod.png
+雷铸电场,ssp_SystemUsedTimes,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_SystemUsedTimes,间歇性产生电弧打击近距离内舰船，每次造成{%s}能量伤害。,,,graphics/hullmods/ssp_assault_enhance.png
+冷聚能源模块,ssp_shieldmod,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_shieldmod,描述在jar,,,graphics/hullmods/ssp_shieldmod.png
+航空突击方案,ssp_combatcarrierdeck,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_combatcarrierdeck,"一套独特的作战方案，战机驾驶员使用神经链接控制战机。尽管控制范围受限，但战机可以获得更高的速度与机动性。
+·战机的机动性和最大航速增加{%s}。
+·战机作战距离减少{%s}。
+·人员损失减少{%s}。
+·不会出现飞行甲板相关的D-插件。",,,graphics/hullmods/converted_fighter_bay.png
+致密护盾,ssp_gonggong_shieldmod,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_gonggong_shieldmod,"少见的原型护盾发生器。
+·超高的护盾维持和无可挑剔的护盾效率。
+·将因护盾受损而产生的硬幅能的 %s 转换为软幅能。",,,graphics/hullmods/ssp_shieldmod.png
+私掠方案,ssp_civiliankiller,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_civiliankiller,"一套独特的作战方案，内置一个比海盗还海盗的德尔塔级AI核心。这个AI核心擅长毁灭弱小的敌人，但一旦遇到强大的对手反而会成为负担。
+·对主力舰伤害降低{%s}。
+·对巡洋舰伤害增加{%s}。
+·对驱逐舰伤害增加{%s}。
+·对护卫舰伤害增加{%s}。
+·对拥有{%s}的舰船伤害增加{%s}，无论是否安装了{%s}。",,,graphics/hullmods/ssp_civiliankiller.png
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+光束模式转换,ssp_modetransform,,,楼兰工业,"special, no_build_in",武器,1000,TRUE,,,4,8,12,20,data.hullmods.ssp_modetransform,将断崖系统及其他插件转换至光束模式，不兼容{%s}和{%s}。,,,graphics/hullmods/ssp_modetransform.png
+,,,,,,,,,,,,,,,,,,,
+'协议':升级,ssp_LowerThreshold,,,楼兰工业,special,武器,1000,TRUE,,,4,8,12,20,data.hullmods.ssp_LowerThreshold,"将断崖系统的效果提升{%s}。
+
+协议类船体插件只能安装一个",,同时内置 %s ，并补偿 %s 战备上限。,graphics/hullmods/ssp_LowerThreshold.png
+'协议':游击,ssp_ShortRange,,,楼兰工业,"special, no_build_in",武器,1000,TRUE,,,4,8,12,20,data.hullmods.ssp_ShortRange,描述在jar,,,graphics/hullmods/ssp_EngineBoost.png
+'协议':索敌,ssp_LongerRange,,,楼兰工业,"special, no_build_in",武器,1000,TRUE,,,4,8,12,20,data.hullmods.ssp_LongerRange,描述在jar,,,graphics/hullmods/ssp_LongerRange.png
+,,,,,,,,,,,,,,,,,,,
+导弹护盾专用插件,ssp_Temporaryshield,,,楼兰工业,special,special,,,true,true,0,0,0,0,data.hullmods.ssp_Temporaryshield,,,,
+突袭支援,ssp_SiegeEnginemod,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_SiegeEnginemod,"该舰船拥有支持突袭行动的每个阶段的庞大支援体系。
+·提高 %s 电子战强度。
+·提高 %s 的舰队导航评级，导航评级会提高你所部署舰船的最高航速。
+·提高 %s 突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。
+·仅在消耗了装配点安装了下列插件的的两个或更多时，返还一定装配点：
+%s
+%s
+%s ",,,graphics/hullmods/ssp_SiegeEnginemod.png
+装配返还,ssp_logistics,,,楼兰工业,"special, no_build_in",special,,,true,,-10,-20,-30,-50,com.fs.starfarer.api.combat.BaseHullMod,返还一定数额的装配点。,,,graphics/hullmods/ssp_SiegeEnginemod.png

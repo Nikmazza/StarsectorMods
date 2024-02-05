@@ -1,0 +1,72 @@
+{
+  "variantId": "fed_station_2_standard",
+  "hullId": "fed_station_2",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [
+    {
+      "WS0006": "fed_gun_module_standard"
+    },
+    {
+      "WS0002": "fed_hangar_module_attack"
+    },
+    {
+      "WS0005": "fed_hangar_module_support"
+    },
+    {
+      "WS0008": "fed_asb_module_standard"
+    },
+    {
+      "WS0003": "fed_asb_module_standard"
+    },
+    {
+      "WS0001": "fed_asb_module_standard"
+    },
+    {
+      "WS0013": "fed_shield_module_standard"
+    },
+    {
+      "WS0014": "fed_shield_module_standard"
+    },
+    {
+      "WS0015": "fed_module_longstrut_standard"
+    },
+    {
+      "WS0016": "fed_module_longstrut_standard"
+    },
+    {
+      "WS0018": "fed_module_outer_gun_disabler"
+    },
+    {
+      "WS0017": "fed_module_outer_gun_attack"
+    },
+    {
+      "WS0025": "module_armour3_Standard"
+    },
+    {
+      "WS0023": "module_armour3_Standard"
+    },
+    {
+      "WS0024": "module_armour3_Standard"
+    },
+    {
+      "WS0019": "fed_module_hightech_strut_standard"
+    },
+    {
+      "WS0022": "fed_module_hightech_armour_standard"
+    },
+    {
+      "WS0020": "fed_module_hightech_strut_standard"
+    },
+    {
+      "WS0021": "fed_module_hightech_armour_standard"
+    }
+  ],
+  "wings": []
+}

@@ -1,0 +1,73 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 7,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "ssp_flood",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange",
+        "ballistic_rangefinder"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_flood_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0019": "hellbore",
+                "WS0021": "hellbore"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0020": "reaper"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "ssp_GPD",
+                "WS0006": "ssp_GPD",
+                "WS0007": "ssp_GPD",
+                "WS0008": "ssp_GPD",
+                "WS0009": "ssp_GPD",
+                "WS0010": "ssp_GPD"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "ionbeam",
+                "WS0012": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0022": "devastator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_FragMachinegun",
+                "WS0004": "ssp_FragMachinegun",
+                "WS0015": "ssp_FragMachinegun",
+                "WS0016": "ssp_FragMachinegun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0013": "flak",
+                "WS0014": "flak"
+            }
+        }
+    ]
+}

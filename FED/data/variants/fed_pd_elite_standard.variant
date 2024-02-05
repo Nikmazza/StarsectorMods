@@ -1,0 +1,18 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "hullId": "fed_pd_elite",
+  "hullMods": [],
+  "quality": 0,
+  "variantId": "fed_pd_elite_standard",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_pd_elite_drone"
+      }
+    }
+  ]
+}

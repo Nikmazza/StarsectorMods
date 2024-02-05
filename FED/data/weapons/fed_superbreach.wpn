@@ -1,0 +1,56 @@
+{
+  "id": "fed_superbreach",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_superbreach_proj",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "turretSprite": "graphics/FED/weapons/fed_breach_launcher.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_breach_launcher_hardpoint.png",
+  "turretOffsets": [
+    32.5,
+    11,
+    32.5,
+    -11,
+    36,
+    0
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    35.5,
+    11,
+    35.5,
+    -11,
+    40,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "autocharge": true,
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "cloudParticleCount": 12,
+    "cloudDuration": 1,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 20,
+    "blowbackDuration": 2,
+    "blowbackLength": -40,
+    "blowbackSpread": 10,
+    "particleColor": [
+      175,
+      145,
+      145,
+      105
+    ]
+  },
+  "fireSoundTwo": "fed_hetorp_fire"
+}

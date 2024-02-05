@@ -1,0 +1,297 @@
+THE STAR FEDERATION
+
+VERSION 0.99 by Sleepyfish (and friends)
+CAN BE ADDED MID-SAVE
+
+==========RC5===========
+
+________GENERAL_________
+
+-Added custom relation texts in the campaign
+
+-Shortened planetary descriptions and docking prompts
+
+-Legion (SF) should actually appear as a derelict in new games
+	-Can still be a historian BP drop in saves using RC4
+	-Stoopid fishe
+
+-Federation Construction 
+	-Shield arc losses from 50/60/80/65% -> 45/50/55/60%
+	-Weapon RoF changer no longer affects missiles
+	-Removed debug floating-texts on disabled engines
+
+-Probably some other things I forgot
+
+_________SHIPS__________
+
+-Legion (SF)
+	-Reduced armor from 1550 -> 1400
+	-Increased flux dissipation from 550-> 750
+	-Increased flux capacity to 12000(?) -> 16000
+
+-Accordant-class Battlecruiser
+	-Trying to make it feel more tanky, but still mobile enough
+	-Armor/hull increased to 1400/12500 respectively (about 20%)
+	-Speed reduced from 60 -> 50
+	-Increased shield efficiency from 0.9 -> 0.8
+	-Increased flux capacity to 17000
+	-Interdictor Array base range increased from 1000 to 1200
+
+-Rebellion-class Battleship
+	-Gained Missile Micro-replicator hullmod
+	-Power Surge range increased from 1000 -> 1500
+
+-Mod Rebellion-class Battleship
+	-Large ballistic turrets changed to energy
+	-Lost Heavy Ballistics Integration hullmod
+	-Gained Integrated Burst Capactiors hullmod
+	-Gained Missile Micro-replicator hullmod
+	-Power Surge range increased from 1000 -> 1500
+
+-Kestrel-class Cruiser
+	-4 frontal small energies changed to ballistic
+	-Universal mediums changed to ballistic
+	-Flux dissipation increased from 550 -> 600
+	-Removed Missile Microforge hullmod
+	-Armor increased from 800 -> 1000
+	-Hull increased from 7000 -> 10000
+	-Armored Prow reflects changes to durability
+	-Increased shield efficiency from 1 -> 0.9
+	-Added Missile Autoloader hullmod
+	-Added a rear small hybrid turret
+
+-Nesasio-class Infiltrator
+	-Sprite updated
+	-Added one small energy mount replacing front coil
+	-Changed small hardpoints from universals to missiles
+
+-Cormorant-class Bomber Destroyer
+	-Central ballistic turret is now Composite
+	-Added Missile Micro-replicator hullmod.
+
+________WEAPONS_________
+
+-Red Drum launcher
+	-Fires 3 shots, 1000 damage each
+	-Changed sprite to reflect this
+
+-Barracuda Torpedo Launcher
+	-Damage changed from frag to energy
+	-Torpedo acceleration increased from 25 to 150
+
+-Hull Beam I, II
+	-Decreased flux/damage ratio from ~0.9 -> ~0.4
+
+-Most missiles
+	-Increased HP to ~400
+
+
+==========RC4===========
+
+-Patched for Starsector update 0.96a
+-Complied with MagicLib filename changes
+-Minor stat adjustments here and there, nothing too big
+-Definitely forgot some other minor things
+	
+-Accordant-class Battlecruiser
+	-Sprite updated, mounts mostly the same
+	-Speed actually incrased to 60
+	-Shield efficiency increased from 1.1 -> 0.9
+	-Interdictor system no longer affects fighters
+
+==========RC3===========
+	
+-Accordant-class Battlecruiser
+	-Speed reduced from 70 -> 60
+	-OP reduced from 300 -> 280
+	-Capacity reduced from 20000 to 18000
+-Union-class Battlecruiser
+	-Changed mounts, only small energies are in plenty!
+	-OP reduced from 285 -> 275
+	-Hull/armor increased to 11000/1100
+	-Deja vu?
+-Resolute-class Battleship
+	-Fixed an HE invulnerability bug
+-Calvacade-class Battlecarrier
+	-Speed increased from 45 -> 50
+-Osprey-class Crusier
+	-Shield efficiency reduced from 0.7 -> 0.8
+
+-Hull Beam (all sizes)
+	-Increased HE arc damage by 25%
+-Glaive/Halberd Beam
+	-Damage increased by ~10% all around
+	-EMP component re-added
+-Ion Flooder
+	-Range reduced from 800 -> 750
+	-Flux/shot 700 -> 880
+-Artemis Array
+	-Increased ammo to 32
+	-Reduced cooldown to 6 seconds
+-Artemis Launcher
+	-Cooldown reduced to 12 seconds
+-Pitch/Chisel/Carver
+	-Reduced damage by 25%
+-Light Overcharger
+	-Flux and damage nerfed by 10%
+	-Gains like 5% more ammo/second wow
+
+
+==========RC2===========
+
+-Accordant-class Battlecruiser
+	-Increased speed from 60 -> 70, 
+	-Accel/decel increased from ~25% to ~40% of top speed/sec
+	-Shield upkeep reduced from 0.4->0.3
+	-Increased HP/Armor from 10000/1100 -> 12000/1200
+-Union-class Battlecarrier
+	-Dissipation reduced from 750 -> 700
+	-Shield upkeep reduced from 0.4 -> 0.3
+	-Shield efficiency increased 0.8 -> 0.7
+	-Shield arc changed from 300 Frontal to 180 Omni
+	-Weapon arcs changed to prefer a broadside
+-Resolute-class Battleship
+	-Fixed Auxiliary shield not removing HE resistence debuff
+	-Dissipation increased from 650 -> 700
+-Osprey-class Cruiser
+	-Increased dissipation from 750 -> 800
+	-Increased shield efficiency from 0.8 -> 0.7
+-Jager-class Crusier
+	-Fixed spelling error that prevented ZOLTAN shield effects
+-Nesasio
+	-Added Federation Construction hullmod (oops)
+	-Added Integrated Burst Capacitors
+-Stormwalker
+	-Added Integrated Burst Capacitors
+-Polyp
+	-Added Integrated Burst Capacitors
+
+-Interdictor Device
+	-Added charges, second charge unlocks with System Expertise
+	-Recharge rate slowed to 1 per 20 seconds (previously 1 per 16)
+
+-Volley Fire shipsystem
+	-Uptime reduced from 5 to 1.5 
+	-Cooldown increase from 14 -> 17.5 
+
+-Mooneye MRM missiles
+	-HP reduced to 100/missile
+	-Ammo counts reduced by roughly 20% or more.
+-Dace MRM missiles
+	-HP reduced to 200/missile
+	-Ammo counts reduced by roughly 15% or more.
+-Artemis torpedoes
+	-Reduced ammo by one volley per launcher.
+
+==========RC1===========
+
+-Accordant-class Battlecruiser
+	-Improved with custom Interdictor Device ship system
+		-Custom EMP arcs come from emitters on ship
+		-Should work more consistently than vanilla Interdictor
+		-Fires out 2x2000 and 2x1000 EMP arcs at things that have no engines
+-Jager-class Cruiser
+	-Granted ZOLTAN shield module
+	-Removed ECM hullmod
+	-Added missing turret points on the sprite
+-Additional descriptions fixed
+
+=======PREVIEW 4=========
+
+-Truly resolved the semi-rare "alpha" crash, thanks to SirBucketKicker on discord! 
+
+-MOST SHIPS HAVE FRONTAL SHIELDS
+	-Adjusted many stats all around now that they have "bad" shields
+-Rebellion-class Battleship
+	-Increased projectiles from 180 -> 200 min, 360 -> 400 max
+	-System overload infliction increased from 0 -> 4 sec min, 10 -> 12 sec max
+-Accordant-class Battlecruiser
+	-Speed increased to 60
+	-System is now "Interdictor Array" to help pin down enemy ships
+	-Removed built in Devastator, reverted to additional large energy mount
+-Coordinated Strike system
+	-Allowed zero-flux boost to function during system activation.
+-Micromissile Forge system
+	-Timers now need missing ammo to count down
+	-Each timer only checks ammo counts for the missile damage range it affects
+	-The 20% replenishment effect now uses base ammo, not modified ammo. 
+-Emerillion/Magenillion
+	-Greatly increased recoil stats on the main weapons
+	-Gave ~20% more flux stats overall
+	-DP from 16 -> 18.
+-Description/text changes continued 
+-As always, probably some more stuff slipped by
+
+
+=======PREVIEW 3=========
+
+-Properly redid shield color changes, value precautions are not relied upon.
+-Fixed Jager shipsystem not removing buffs
+-Fixed superbright shields for all Federation ships
+-Nerfed Glaive beam w/ slightly higher flux generation
+-Increased duration of all Hull beams by 0.2 seconds
+-Increased cooldown of Ion Flooder by 0.7 seconds
+-Maybe some other changes, but mostly focused on the shield crash.
+
+
+=======PREVIEW 2=========
+
+-Buffed Union shields from 1.0 to 0.8
+-Fiddled with shield code, hopefully solves the bad RGB thing.
+	-Never happens to me...! :(
+-Now uses JRE7 (icky gross)
+-Maybe some other things I forgot?
+
+========WEAPONS==========
+	
+	-Added several new missile weapons, poor tracking but funny arcing damage.
+		-Mooneye MRM - kinetic missile in S/M/L.
+		-Dace MRM - HE missile with a minor HE arc effect in S/M.
+            -Barracuda - Slow frag torpedo with big shock. BEEG SHOCK FOR MADAME.
+		-Red Drum - HE torp, superheavy Dace kinda?
+		-Swarm Battery got stronger but has limited ammo.
+
+	-Beam changes, nerfs
+		-Hull beams are frag with HE arcs
+		-Glaive/Halberd damage nerfs, now pierce small things
+		-New sounds all around
+	
+	-Removed a lot of itty bitty EMP values floating around various weapons.
+
+=========SHIPS===========
+
+	-Wayyy too many changes overall
+		-Balances, revisions, ect. Some notable ones below.
+	-Resolute got big guns, big armor, big slow.
+	-Accordant got wings clipped
+	-Rebellion got slightly nerfed ship system
+	-Perserverance got huge buff in nearly every department, costs more DP.
+	-Major Jager rework, new missile buffing ship system
+
+	-Fleet and ZOLTAN shields now give ships immunity to most damage
+		-A green glow appears when a ship is "protected"
+
+	-Federation station got more modules overall, variant work done.
+
+	-Hopefully frigates seem better while everything else is moving sideways at most.
+	
+
+========HULLMODS=========
+	
+	-Federation Design got a tooltip fancy overhaul
+		-Provides modest 100 range bonus to energy weapons
+		-Provides Cruise Engines to all ships
+	-Heavy Burst Capacitors/Integrated Burst Capacitors
+		-No longer provides range
+		-Chunky 30% more damage, -30% firerate.
+
+========GENERAL==========
+	
+	-Huge description update in progress 
+		-Many thanks to friendly USC folks like CABLES and Wisp for editing help!
+	-Scaria has a custom sprite, is terran eccentric
+	-New weapon sounds sourced and modified from Muse, as per terms of use.
+	-I probably forgor (skull emoji)
+		
+
+

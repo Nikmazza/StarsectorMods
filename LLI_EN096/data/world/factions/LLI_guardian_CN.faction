@@ -1,0 +1,230 @@
+{
+	id:"LLI_guardian",
+	"color":[255,140,140,255],
+	"logo":"graphics/factions/ssp_LLIfaction_flag.png",
+	"crest":"graphics/factions/ssp_LLIfaction_logo.png",
+	"displayName":"楼兰海军",
+	"displayNameWithArticle":"楼兰海军",
+	"displayNameLongWithArticle":"楼兰海军",
+	"shipNamePrefix":"LLS",
+	"showInIntelTab":false,
+	"shipNameSources":{
+		"BRITISH_NAVY":1, 
+		"ROMAN":1,
+		"GREEK":1,
+		"EGYPTIAN":1,
+		"PERSIAN":1,
+		"SPACE":1,
+	},
+	"names":{
+		"old english":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+	 "tags":["ssp_bp"],
+        "hulls":[
+	"prometheus",
+	"atlas",
+	"phaeton",
+	"buffalo_LLI"
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		"ssp_tide",
+		"ssp_elnino",
+		"ssp_flood",
+		"ssp_tronado",
+		"ssp_hanba",
+		"ssp_karni"
+		],
+	},
+	"knownFighters":{
+		"tags":["ssp_bp"],
+		"fighters":[
+			"thunder_wing",
+			"longbow_wing",
+			"hoplon_wing",
+			"claw_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":[ssp_bp],
+		"weapons":[
+		"irpulse",
+		"flak",
+		"breachpod",
+		"sabotpod",
+		"breach",
+		"sabot",
+		"typhoon",
+		"squall",
+		"amblaster",
+		"ionbeam",
+		"mjolnir",
+		"heavymauler",
+		"hveldriver",
+		"devastator",
+		"phasebeam",
+		"hil",
+		"pdlaser",
+		"taclaser",
+		"gravitonbeam",
+		"vulcan",
+		"ioncannon",
+		"lightac",
+		"gauss",
+		"reaper",
+		"cyclone",
+		"heavymg",
+		"chaingun",
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[],
+	},
+	"knownHullMods":{
+		"tags":["base_bp"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+			"high_scatter_amp"
+		],
+	},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":5,
+		"shipQuality":5,
+		"numShips":3,
+		
+		"shipSize":5,
+		
+		"aggression":3,
+		
+		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+		
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+			"crew_training",
+			"officer_training",
+		],
+	},
+	"illegalCommodities":[],
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_diktat01.png",
+			"graphics/portraits/portrait43.png",
+			"graphics/portraits/portrait_diktat04.png",
+			"graphics/portraits/portrait_diktat07.png",
+
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_diktat02.png",
+			"graphics/portraits/portrait_diktat05.png",
+			"graphics/portraits/portrait_diktat06.png",
+			"graphics/portraits/portrait_diktat08.png",
+		],
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"official":5,
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":10,
+		},
+		"HIGH":{
+			"soldier":5,
+			"official":10,
+			"aristo":3,
+		},
+	},
+	"custom":{
+		"decentralized":true,
+		"allowsTransponderOffTrade":true,
+		"offerMissionsWhenHostile":true,
+		"postsNoBounties":false,
+		"offersCommissions":true,
+		"engagesInHostilities":false,
+		"buysAICores":true,
+		"AICoreValueMult":1.5,
+		"AICoreRepMult":3,
+		"buysSurveyData":false,
+		"hostilityImpactOnGrowth":false,
+		"caresAboutAtrocities":false,
+		"punitiveExpeditionData":{
+			"vsCompetitors":false,
+			"vsFreePort":false,
+			"canBombard":false,
+			"territorial":true,
+		},
+	},	
+	"fleetTypeNames":{
+		"patrolSmall":"无敌舰队 斥候",
+		"patrolMedium":"无敌舰队 戍卫",
+		"patrolLarge":"无敌舰队 军团",
+	},
+
+},

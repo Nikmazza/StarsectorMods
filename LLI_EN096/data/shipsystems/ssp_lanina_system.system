@@ -1,0 +1,27 @@
+{
+	"id":"ssp_lanina_system",
+	"type":"ENGINE_MOD",
+	"aiType":"MANEUVERING_JETS",
+	
+	"statsScript":"data.shipsystems.ssp_lanina_system",
+	
+	
+	"engineGlowColor":[220,0,45,255],
+	"engineGlowLengthMult":2,
+	"engineGlowWidthMult":2,
+	"engineGlowGlowMult":2,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":false,
+	
+	"useSound":"system_plasma_jets",
+	"loopSound":"system_plasma_jets_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+	"activeSpeedIncrease":125,
+	"averageSpeedIncrease":40,
+	}
+}

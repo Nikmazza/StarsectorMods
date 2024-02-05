@@ -1,0 +1,85 @@
+{
+  "variantId": "fed_cargocap_outdated",
+  "hullId": "fed_cargocap",
+  "displayName": "Outdated",
+  "goalVariant": false,
+  "fluxCapacitors": 16,
+  "fluxVents": 50,
+  "quality": 0,
+  "permaMods": [
+    "fragile_subsystems",
+    "defective_manufactory",
+    "augmentedengines"
+  ],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "targetingunit",
+    "auxiliarythrusters",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0011": "hellbore",
+        "WS0012": "hellbore",
+        "WS0033": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightac",
+        "WS0005": "lightac",
+        "WS0007": "lightac",
+        "WS0009": "lightac",
+        "WS0022": "lightac",
+        "WS0024": "lightac",
+        "WS0027": "lightac",
+        "WS0032": "lightac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "lightac",
+        "WS0006": "lightac",
+        "WS0008": "lightac",
+        "WS0010": "lightac",
+        "WS0023": "lightac",
+        "WS0025": "lightac",
+        "WS0028": "lightac",
+        "WS0031": "lightac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0034": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "flak",
+        "WS0002": "flak",
+        "WS0026": "flak",
+        "WS0029": "dualflak",
+        "WS0030": "dualflak"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0013": "fed_cargocap_shieldemitter_standard"
+    }
+  ],
+  "wings": [
+    "fed_firestream_wing"
+  ]
+}

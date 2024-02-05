@@ -1,0 +1,42 @@
+{
+    "displayName": "overrride",
+    "fluxCapacitors": 10,
+    "fluxVents": 0,
+    "hullId": "ssp_tide_T",
+    "hullMods": [
+        "missleracks",
+        "safetyoverrides"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LLI_Dumper_ship_5",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "chaingun",
+                "WS0002": "chaingun"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "gorgonpod",
+                "WS0008": "gorgonpod",
+                "WS0009": "gorgonpod",
+                "WS0010": "gorgonpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "irpulse",
+                "WS0006": "irpulse"
+            }
+        }
+    ],
+    "wings": []
+}

@@ -1,0 +1,39 @@
+{
+
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_cast": "0.48",
+    "sa_perigee": ".60",
+    "hulls": {}
+  },
+  "shipsWhenImporting": {
+    "sa_cast": ".38",
+    "sa_perigee": ".50",
+    "hulls": []
+  },
+  "knownShips": {
+    "hulls":[ 
+    "sa_cast",
+    ]
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+"knownFighters":{
+		"tags":[],
+		"fighters":[
+			"sa_grunder_wing",
+                        "sa_shilage_wing",
+		],
+	},
+"knownWeapons":{
+		"tags":[],
+		"weapons":[
+			"sa_erbe",
+			"sa_hypermatter"
+		],
+	},
+}

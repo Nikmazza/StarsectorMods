@@ -1,0 +1,2 @@
+id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
+ssp_guardian,楼兰海军总部,30,20,,4,,,"military, unraidable, tactical_bombardment, structure",,graphics/icons/industries/ssp_guardian.png,data.campaign.ssp_guardian,楼兰海军总部，大量的部队驻扎在这里，毫不夸张的说整个Adenium Obesum都是为其所服务。总部内停泊着数量巨大的星舰，随时可以发起一场大型战争。楼兰海军引以为傲的研发部门也在此地不间断的开发着新式舰船和武器，海军学院也稳定的输出优秀的军事人才。,2650,

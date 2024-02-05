@@ -1,0 +1,222 @@
+{
+  "hullName": "brace",
+  "hullId": "sa_brace_station",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/station/sa_brace_station.png",
+  "style": "LOW_TECH",
+  "height": 256,
+  "width": 504,
+  "center": [252, 59],
+  "collisionRadius": 295,
+  "shieldCenter": [-98.5, -0.5],
+  "shieldRadius": 336.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "frontemitter",
+    "chassis_storage",
+    "reduced_explosion",
+    "supercomputer"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 119,
+      "angle": 0,
+      "locations": [140, -30]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 119,
+      "angle": -0,
+      "locations": [140, 30]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [180, -45]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 182,
+      "angle": -0,
+      "locations": [180, 45]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 171,
+      "angle": -40,
+      "locations": [139, -106]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 171,
+      "angle": 40,
+      "locations": [141, 107]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [133, -139]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [133, 139]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 92,
+      "angle": 0,
+      "locations": [111, -111]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 92,
+      "angle": -0,
+      "locations": [111, 111]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [97, -71]
+    },
+    {
+      "id": "WS0012",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 119,
+      "angle": -0,
+      "locations": [97, 71]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 71.5,
+      "locations": [82, 209]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -71.5,
+      "locations": [82, -209]
+    },
+    {
+      "id": "WS0015",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [72, 166]
+    },
+    {
+      "id": "WS0016",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [72, -165.5]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        114.5, -76,
+        117.5, -66.5,
+        121, -73,
+        122, -79.5,
+        123, -85.5,
+        123, -89.5
+      ]
+    },
+    {
+      "id": "LB 4",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        113.5, 71.5,
+        121, 82.5,
+        121, 78,
+        121.5, 72.5,
+        121, 67,
+        121.5, 60
+      ]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    187.5, 46,
+    87, 220.5,
+    67.5, 220.5,
+    41.5, 180.5,
+    33, 140.5,
+    -1, 117,
+    46, 77.5,
+    35.5, 20,
+    -12.5, 17.5,
+    -12.5, -17.5,
+    35.5, -20,
+    46, -77.5,
+    -1, -117,
+    33, -140.5,
+    41.5, -180.5,
+    67.5, -216.5,
+    87, -216.5,
+    187.5, -42,
+    177, -33,
+    185, 2,
+    177, 37
+  ]
+}

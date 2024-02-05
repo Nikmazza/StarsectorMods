@@ -1,0 +1,63 @@
+{
+  "id": "ssp_swarm_naga_HE",
+  "specClass": "projectile",
+  "projectileSpecId": "ssp_swarm_HE_proj",
+  "type": "MISSILE",
+  "size": "LARGE",
+  ##"everyFrameEffect": "data.weapon.ssp_EnhancedAmmoEffect",
+  "displayArcRadius": 500,
+  "turretSprite": "",
+  "hardpointSprite": "",
+  "turretOffsets": [
+    10,
+    -4,
+    10,
+    -2,
+    10,
+    2,
+    10,
+    4
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    2,
+    -8,
+    2,
+    -4,
+    2,
+    4,
+    2,
+    8
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 16,
+    "cloudParticleCount": 3,
+    "cloudDuration": 0.9,
+    "cloudRadius": 8,
+    "blowbackParticleCount": 4,
+    "blowbackDuration": 1.1,
+    "blowbackLength": 20,
+    "blowbackSpread": 10,
+    "particleColor": [
+      170,
+      160,
+      150,
+      130
+    ]
+  },
+  "fireSoundTwo": "swarmer_fire"
+}

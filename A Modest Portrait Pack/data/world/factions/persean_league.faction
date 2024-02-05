@@ -1,0 +1,28 @@
+{
+	"portraits":{
+		"standard_male":[
+"graphics/AMPP_6.png",
+"graphics/AMPP_8.png",
+"graphics/AMPP_52.png",
+"graphics/AMPP_58.png",
+"graphics/AMPP_68.png",
+"graphics/AMPP_76.png",
+"graphics/AMPP_77.png",
+"graphics/AMPP_85.png",
+"graphics/AMPP_91.png",
+"graphics/AMPP_105.png",
+		],
+		"standard_female":[
+"graphics/AMPP_7.png",
+"graphics/AMPP_12.png",
+"graphics/AMPP_39.png",
+"graphics/AMPP_53.png",
+"graphics/AMPP_54.png",
+"graphics/AMPP_74.png",
+"graphics/AMPP_86.png",
+"graphics/AMPP_88.png",
+"graphics/AMPP_91.png",
+"graphics/AMPP_96.png",
+		],
+	},
+},				

@@ -1,0 +1,43 @@
+{
+  "hullName": "ssp_hivedrone",
+  "hullId": "ssp_hivedrone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/wings/ssp_hivedrone.png",
+  "style": "MIDLINE",
+  "height": 31,
+  "width": 16,
+  "center": [8, 11],
+  "collisionRadius": 22.5,
+  "shieldCenter": [4.5, -0],
+  "shieldRadius": 17.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 100,
+      "angle": 0,
+      "locations": [12, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-10, -0],
+      "length": 9,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    19, 0,
+    0, 7,
+    -10.5, -0,
+    -10.5, 0,
+    0, -7,
+    19, -0
+  ]
+}

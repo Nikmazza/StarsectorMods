@@ -1,0 +1,30 @@
+{
+  "variantId": "bc_breachbomber_Bomber",
+  "hullId": "bc_breachbomber",
+  "displayName": "Bomber",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "bc_breach_srm_fighter",
+        "WS0002": "bc_breach_srm_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

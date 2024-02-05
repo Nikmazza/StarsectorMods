@@ -1,0 +1,14 @@
+{
+  "variantId": "bc_olddestroyer_drone_Shield",
+  "hullId": "bc_olddestroyer_drone",
+  "displayName": "Shild Drone",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

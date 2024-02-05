@@ -1,0 +1,39 @@
+{
+	"id":"fed_superbreach_proj",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/FED/missiles/fed_missile_breach.png",
+	"onHitEffect":"data.scripts.weapons.fed_SuperbreachEffect",
+	"size":[14,40],	
+	"center":[7,20],
+	"collisionRadius":35,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,225,20,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":225, # purely visual
+	"engineSpec":{"turnAcc":15,
+				  "turnRate":5,
+				  "acc":50,
+				  "dec":0},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-20, 0],
+				    #"style":"MISSILE_LOW_TECH",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,30,20,255],
+						"contrailDuration":1.75,
+						"contrailWidthMult":2,
+						"contrailWidthAddedFractionAtEnd":3,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":13, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":0.5, # how far away from engine it starts
+						"contrailColor":[165,45,0,175],
+						"glowSizeMult":2.5,
+						"glowAlternateColor":[255,105,0,255],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":10.0,
+				    "length":80.0,
+				    "angle":180.0}]
+}

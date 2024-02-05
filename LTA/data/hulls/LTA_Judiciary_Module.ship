@@ -1,0 +1,69 @@
+{
+  "hullName": "Weapons Arm",
+  "hullId": "LTA_Judiciary_Module",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/LTA/ships/Independent/Misc&Modules/LTA_JudiciaryModule.png",
+  "style": "LOW_TECH",
+  "height": 140,
+  "width": 80,
+  "center": [40, 44],
+  "collisionRadius": 300,
+  "shieldCenter": [-70, 0],
+  "shieldRadius": 209,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -70,
+    0
+  ],
+  "builtInMods": [
+	"anchorrotation",
+    "always_detaches",
+    "reduced_explosion"
+  ],
+  "builtInWeapons": {
+    "WS0003": "LTA_judiciarymodule_overlay"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": 0,
+      "locations": [-12, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 0,
+      "locations": [73, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [26, -0],
+      "renderOrderMod": -50
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    90, -8,
+    80, -15,
+    20.5, -22.5,
+    -2, -33,
+    -37, -26.5,
+    -37, 26.5,
+    -2, 33,
+    20.5, 22.5,
+    80, 15,
+    90, 8
+  ]
+}

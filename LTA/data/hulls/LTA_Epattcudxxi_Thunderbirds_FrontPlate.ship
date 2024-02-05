@@ -1,0 +1,73 @@
+{
+  "hullName": "Front Plate",
+  "hullId": "LTA_Epattcudxxi_Thunderbirds_FrontPlate",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/LTA/ships/Epattcud/Thunderbirds/Epattcud_21_Class_Scrapship_Thunderbirds_FrontPlate.png",
+  "style": "LOW_TECH",
+  "height": 90,
+  "width": 220,
+  "center": [110, 45],
+  "collisionRadius": 122,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 110.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "always_detaches",
+    "reduced_explosion"
+  ],
+  "builtInWeapons": {
+    "WS0001": "vulcan",
+    "WS0002": "LTA_annihilator_tube_builtin",
+    "WS0003": "LTA_annihilator_tube_builtin"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [18, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": 0,
+      "locations": [31, 27]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": -0,
+      "locations": [31, -27]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    31, -16,
+    38, -24,
+    38, -75,
+    13.5, -99,
+    -33, -79.5,
+    -32.5, -58.5,
+    11, -76,
+    13, -30,
+    0, -23.5,
+    0, 23.5,
+    13, 30,
+    11, 76,
+    -32.5, 58.5,
+    -33, 79.5,
+    13.5, 99,
+    38, 75,
+    38, 24,
+    31, 16
+  ]
+}

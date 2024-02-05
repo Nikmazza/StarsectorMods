@@ -1,0 +1,191 @@
+{
+  "hullName": "Gunnery Arm",
+  "hullId": "fed_module_outer_gun",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/stations/fed_gun_large.png",
+  "style": "FEDERATION",
+  "height": 160,
+  "width": 398,
+  "center": [199, 58],
+  "collisionRadius": 226,
+  "shieldCenter": [-224, -0],
+  "shieldRadius": 322.5,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -478,
+    0
+  ],
+  "builtInMods": [
+    "fed_design",
+    "fluxbreakers",
+    "reduced_explosion",
+    "supercomputer",
+    "missile_reload",
+    "anchorrotation",
+    "always_detaches",
+    "fluxshunt",
+    "do_not_fire_through",
+    "magazines",
+    "fed_energymod",
+    "turretgyros"
+  ],
+  "builtInWeapons": {
+    "WS0001": "devastator",
+    "WS0002": "devastator",
+    "WS0003": "hellbore",
+    "WS0004": "hellbore"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -20,
+      "locations": [15, -125]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 20,
+      "locations": [15, 125]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -30,
+      "locations": [46, -67]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 30,
+      "locations": [46, 67]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -45,
+      "locations": [20, -164.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 45,
+      "locations": [20, 164.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [56.5, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 20,
+      "locations": [52, 127]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -20,
+      "locations": [52, -127]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -10,
+      "locations": [77, -42]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 10,
+      "locations": [77, 42]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -45,
+      "locations": [19, -186]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 45,
+      "locations": [19, 186]
+    },
+    {
+      "id": "fed_outergun_right_module",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 90,
+      "angle": -122.5,
+      "locations": [-18, -164.5]
+    },
+    {
+      "id": "fed_outergun_left_module",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 90,
+      "angle": 122.5,
+      "locations": [-18, 164.5]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    43.5, 99.5,
+    50, 124,
+    15, 190,
+    -34, 178.5,
+    -48.5, 129,
+    -23.5, -0,
+    -50.5, -123.5,
+    -34, -178.5,
+    15, -190,
+    50, -124,
+    43.5, -99.5,
+    75.5, -37,
+    75.5, 37
+  ]
+}

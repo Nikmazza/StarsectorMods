@@ -1,0 +1,25 @@
+{
+	"designTypeColors":{
+		"Antique":[214,152,224,255],
+		"Recovered":[145,217,218,255],
+		"Fays Co.":[165,139,186,255],
+		"Makeshift":[126,157,5, 255],
+		"...Low Tech?":[209,110,91,255],
+	},
+	"graphics":{
+		"blueprint_packages":{
+			"bc_antique_bp":"graphics/icons/cargo/bc_antique_bp.png",
+			"bc_faysco_bp":"graphics/icons/cargo/bc_faysco_bp.png",
+		},
+		"fx":{
+			"bc_trail_arc":"graphics/fx/bc_trail_arc.png",
+			"bc_trail_double":"graphics/fx/bc_trail_double.png",
+			"bc_trail_smoke":"graphics/fx/bc_trail_smoke.png",
+		},
+		"bc":{
+			"bc_birdscollection_icon":"graphics/icons/bc_birdscollection_icon.png",
+		}
+		
+	}
+}
+

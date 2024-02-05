@@ -1,0 +1,46 @@
+Version 0.1.1 (2023-05-31)
+- fixed issue where enemy fleets from unaccepted missions can take over the local comm relay, etc
+
+
+Version 0.1.0 (2023-05-29)
+- new mission: Repair Mission to reduce the disruption days of station industry; useful when you fail your defense mission
+- Defense Mission:
+  - add settings to scale enemy fleet size by faction and uses it to nerf omega fleets
+  - add option to skip generating enemies from hidden factions (omega, Lion's Guard, etc)
+  - increased reputation penalty for failing missions to match vanilla missions
+  - when you accept a mission in a different system (possible with Stellar Networks), how many days you have to arrive
+    is now determined by your speed and distance instead of being hard coded.
+  - reduces rewards when station is a big part of your fleet and marginally reduced rewards overall
+
+
+Version 0.0.4 (2023-05-26):
+- fixed a crash that can happen on markets without an existing station commander, like on player colonies
+  - more likely with mods that reorders bar events, like More Bar Missions
+
+
+Version 0.0.3 (2023-05-25):
+- fixed a divide by 0 bug when your fleet plus station are too small
+- in mission offer increase fleets to show up to 10.
+
+
+Version 0.0.2 (2023-05-21):
+- adds a workaround for an issue with Stellar Networks; sometimes the player fleet is empty when you call a contact remotely
+- adds more variety to enemy fleets size
+- adds a blacklist in modSettings.json for players and other mods to blacklist factions from enemy fleets generation
+- increased reward by 25%
+- recompiled for 0.96a-RC10
+
+
+Version 0.0.1 (2023-05-18):
+- enemy difficulty should now be more consistent
+  - fixed a bug in fleet generation making it harder to generate fleets with the correct size
+  -  switched to using effective strength instead of fleet point for reward and difficulty computations
+       -increases credit rewards as a side effect
+- removed faction impact on enemy fleet's real faction (almost always the pirates)
+- add some supplies to enemy fleets since they drop very little sometimes
+
+
+Version 0.0.0 (2023-05-17):
+- initial release
+- not tested with faction mods but I don't see why it wouldn't work
+- different factions have different fleet strength per fleet points (omega is especially bad), so the enemy can be much harder then expected

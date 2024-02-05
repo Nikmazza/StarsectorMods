@@ -1,0 +1,34 @@
+{
+  "hullName": "Station Armour",
+  "hullId": "fed_module_hightech_armour",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/stations/fed_armor_module.png",
+  "style": "FEDERATION",
+  "height": 96,
+  "width": 294,
+  "center": [147, 48.5],
+  "collisionRadius": 150,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 150,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -375,
+    0
+  ],
+  "builtInMods": [
+    "reduced_explosion",
+    "always_detaches",
+    "fed_anchorrotationreverse",
+    "do_not_fire_through"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    35.5, 43,
+    -18.5, 142,
+    -34.5, 88,
+    -34.5, -88,
+    -18.5, -142,
+    35.5, -43
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "hullName": "Varact",
+  "hullId": "bc_varact",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/bc_varactor.png",
+  "style": "MIDLINE",
+  "height": 95,
+  "width": 70,
+  "center": [35, 32],
+  "collisionRadius": 87.5,
+  "shieldCenter": [6.5, -0],
+  "shieldRadius": 78.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [16, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [14, 26]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [14, -26]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [51, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-23, 18.5],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-23, -18.5],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-27, 12.5],
+      "length": 26,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-27, -12.5],
+      "length": 26,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-29, -0],
+      "length": 33.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    }
+  ],
+  "bounds": [
+    -28, 15,
+    -7.5, 33,
+    18, 31.5,
+    19.5, 18.5,
+    57, 8.5,
+    57, -8.5,
+    19.5, -18.5,
+    18, -31.5,
+    -7.5, -33,
+    -28, -15
+  ]
+}

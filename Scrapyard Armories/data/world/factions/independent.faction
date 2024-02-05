@@ -1,0 +1,75 @@
+{
+"portraits":{
+		"standard_male":[
+			"graphics/portraits/sa_plasmaman.png",
+			"graphics/portraits/sa_syndie.png",
+			"graphics/portraits/sa_sec.png",
+		],
+		},
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "hulls": {
+	"sa_penumbra": .50,
+    "sa_scrapship": .78,
+    "sa_gorget": .70,
+    "sa_splintXIV": 0.25,
+    "sa_splint": .55,
+    "sa_trocar": .45,
+    "sa_munin": .68,
+    "sa_perigee": .60,
+    "sa_almas": 0.6,
+    "sa_cyclops": 0.7,
+    "sa_ingot":0.8,
+    "sa_ocypote":0.6,
+	}
+  },
+  "shipsWhenImporting": {
+	"tags":["sa_corrupted_bp"],
+
+    "hulls": [
+    "sa_scrapship",
+    "sa_gorget",
+    "sa_splintXIV",
+    "sa_splint",
+    "sa_trocar",
+    "sa_munin",
+    "sa_perigee",
+    "sa_almas",
+    "sa_ocypote",
+]
+  },
+  "knownShips": {
+	"tags":["sa_corrupted_bp"],
+    "hulls": [
+	"sa_cavern",
+    "sa_gorget",
+    "sa_scrapship",
+    "sa_splintXIV",
+    "sa_splint",
+    "sa_trocar",
+    "sa_munin",
+	"sa_almas",
+	"sa_twilight",
+	"sa_cyclops",
+	"sa_ingot",
+    ]
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+"knownFighters":{
+		"tags":[],
+		"fighters":[
+			"sa_grunder_wing",
+		],
+	},
+	"knownWeapons":{
+		"tags":[],
+		"weapons":[
+			"sa_erbe",
+		],
+	},
+}

@@ -1,0 +1,183 @@
+{
+  "hullName": "Kenodoxy",
+  "hullId": "bc_antiquecarrier",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/bc_antiquecarrier.png",
+  "style": "ANTIQUE",
+  "height": 104,
+  "width": 88,
+  "center": [44, 44],
+  "collisionRadius": 94,
+  "shieldCenter": [8, 0],
+  "shieldRadius": 82,
+  "viewOffset": 0,
+  "builtInMods": [
+    "bc_antiqueconstruction"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 90,
+      "locations": [-4, 31]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": -90,
+      "locations": [-4, -31]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [53, 14]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [53, -14]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -21.5, -1,
+        -5.5, -1
+      ]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [23.5, -30.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [23.5, 30.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-42, 7.5],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-42, -7.5],
+      "length": 24,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-44, -0],
+      "length": 29.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-36, 22],
+      "length": 21,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-36, -22],
+      "length": 21,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-36, 19],
+      "length": 21,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-36, -19],
+      "length": 21,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-36, 16],
+      "length": 21,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-36, -16],
+      "length": 21,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    }
+  ],
+  "bounds": [
+    -43.5, 4,
+    -34.5, 24.5,
+    -14, 40,
+    17.5, 39.5,
+    26.5, 24.5,
+    42, 22,
+    59, -0,
+    42, -22,
+    26.5, -24.5,
+    17.5, -39.5,
+    -14, -40,
+    -34.5, -24.5,
+    -43.5, -4
+  ]
+}

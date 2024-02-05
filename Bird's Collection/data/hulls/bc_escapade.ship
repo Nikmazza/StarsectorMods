@@ -1,0 +1,172 @@
+{
+  "hullName": "Escapade",
+  "hullId": "bc_escapade",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/bc_venturecarrier.png",
+  "style": "LOW_TECH",
+  "height": 174,
+  "width": 180,
+  "center": [90, 87],
+  "collisionRadius": 141.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 138.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade",
+    "surveying_equipment"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": 0,
+      "locations": [22, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [68, 52]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [68, -52]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 45,
+      "locations": [33, 54]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -45,
+      "locations": [33, -54]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -8.5, 49,
+        -25, 49
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -9, -49.5,
+        -24.5, -49
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -61, -0.5,
+        -70, -0.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-82, 32],
+      "length": 53,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-82, -32],
+      "length": 53,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47, 68],
+      "length": 39,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47, -68],
+      "length": 39,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47, 60],
+      "length": 39,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47, -60],
+      "length": 39,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -81.5, -39,
+    -45.5, -42,
+    -45.5, -72.5,
+    34.5, -79.5,
+    43.5, -62.5,
+    74, -59,
+    74, -44.5,
+    51.5, -43,
+    79.5, -20,
+    79.5, 20,
+    51.5, 43,
+    74, 44.5,
+    74, 59,
+    43.5, 62.5,
+    34.5, 79.5,
+    -45.5, 72.5,
+    -41.5, 42.5,
+    -81.5, 39,
+    -76, -0
+  ]
+}

@@ -1,0 +1,9 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+楼兰工业蓝图包,ssp_bp,package_bp,,,30000,1000,1,,graphics/icons/cargo/ssp_blueprint.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,ssp_bp,使重工业设施能够制造楼兰工业设计的舰船,290
+荣誉室系列蓝图包,ssp_wave_bp,package_bp,,,2000,1000,1,,graphics/icons/cargo/ssp_wave_bp.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,ssp_wave_bp,使重工业设施能够制造进入荣誉室退环境的舰船,291
+,,,,,,,,,,,,,,,
+全自动地幔钻机(D),ssp_mantle_bore,"no_drop,pather4",天苑四-乌托邦地貌改造集团,,40000,1000,1,HIGH,graphics/icons/cargo/ssp_terraforming_bore.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,"这个全自动地幔钻机存在一些永久性损伤，且维护不当。
+虽然星区中应该已经没有还能正常运作的钻机控制单元了，但这种钻机可以托管独立运作 —— 尽管有时会没法预见它要往哪儿钻。自动模式的保险装置使这台钻机无法在宜居星球上运行。",142
+克隆中心,ssp_cryosanctum,"no_drop,pather4",未知,,40000,1000,1,HIGH,graphics/icons/cargo/ssp_cryosanctum.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"spaceport, megaport,patrolhq, militarybase, highcommand","克隆中心的核心元件，且维护不当。
+只要给足信用点，总会有人'捐献'自己体内可用以克隆的干细胞。通过AI对染色体序列和预植入记忆的调整，每个克隆人的外观，记忆，性格，习惯都是独一无二的，无论是进入军队服役或者社会中都如同正常人一样。",143
+,,,,,,,,,,,,,,,

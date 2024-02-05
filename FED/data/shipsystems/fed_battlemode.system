@@ -1,0 +1,19 @@
+{
+	"id":"fed_battlemode",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"data.shipsystems.fed_battlemode",
+	
+	"useSound":"system_targeting_feed",
+	"loopSound": "system_high_energy_focus_loop",
+    "deactivateSound":"system_high_energy_focus_deactivate",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

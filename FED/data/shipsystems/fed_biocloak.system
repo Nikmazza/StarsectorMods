@@ -1,0 +1,40 @@
+{
+	"id":"fed_biocloak",
+	"type":"PHASE_CLOAK",
+	"aiType":"PHASE_CLOAK",
+	
+	"statsScript":"data.shipsystems.fed_PhaseCloakStatsAlien",
+	"runScriptWhilePaused":true, # only for the player's ship
+	"runScriptWhileIdle":true,  # this means unapply() never gets called
+	"blockActionsWhileChargingDown":false,
+	
+	"canNotCauseOverload":true,
+	
+	"phaseHighlight":"_glow1",
+	"phaseDiffuse":"_glow2",
+	
+	
+	"effectColor1":[125,255,135,255],
+	"effectColor2":[80,255,100,90],
+	
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	
+	"engineGlowColor":[0,40,10,0],
+	"engineGlowContrailColor":[25,95,155,0],
+	"engineGlowLengthMult":0,
+	"engineGlowWidthMult":0,
+	"engineGlowGlowMult":3,
+	
+	"soundFilterType":"LOWPASS",
+	"soundFilterGain":0.7,
+	"soundFilterGainHF":0.25,
+	
+	"shipAlpha":1, # handled in stats script
+	#"shipAlpha":0.25,
+	
+	"useSound":"fed_tempcloak_out_sfx",
+	#"deactivateSound":"system_phase_cloak_deactivate",
+	"deactivateSound":"fed_tempcloak_in_sfx",
+	"outOfUsesSound":"system_phase_cloak_collision",
+}

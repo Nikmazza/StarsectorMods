@@ -1,0 +1,41 @@
+{
+    "hullFrequency":{
+        "hulls":{
+            "buffalo":0,
+
+            "swp_alastor":0.5, # Uncommon because no LG equivalent
+
+            "swp_vulture":0.5, # Uncommon because no LG equivalent
+        },
+    },
+    "knownShips":{
+        "hulls":[
+            "swp_buffalo_diktat",
+
+            "swp_alastor",
+
+            "swp_vulture",
+        ],
+    },
+    "knownWeapons":{
+        "weapons":[
+            "swp_tripleflak",
+
+            "swp_hornet",
+
+            "swp_inferno",
+            "swp_tornado",
+
+            "swp_trebuchet",
+
+            "swp_lightphaselance",
+        ],
+    },
+    "weaponSellFrequency":{
+        "swp_hornet":5,
+
+        "swp_tornado":5,
+
+        "swp_trebuchet":5,
+    },
+},

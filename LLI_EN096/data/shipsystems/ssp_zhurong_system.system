@@ -1,0 +1,36 @@
+{
+	"id":"ssp_zhurong_system",
+	"type":"DISPLACER",
+	###"type":"TELEPORTER",
+	"aiType":"PHASE_DISPLACER",
+	###"aiType":"PHASE_TELEPORTER_2",
+	
+	"statsScript":"data.shipsystems.ssp_zhurong_system",
+	
+	"jitterColor":[255,100,100,150],
+	"jitterCopies":5,
+	"jitterRange":25,
+	"jitterRangeRadiusFraction":0,
+	
+	"engineGlowLengthMult":0,
+	"engineGlowWidthMult":0,
+	"engineGlowGlowMult":0,
+	
+	"range":500,
+	"randomRange":0,
+	
+	"vulnerableChargeup":false,
+	"vulnerableChargedown":false,
+	"renderCopyDuringTeleport":true,
+	
+	"fadeActivationSoundOnChargedown":false,
+	
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":320,
+		"averageSpeedIncrease":120,
+	}
+}

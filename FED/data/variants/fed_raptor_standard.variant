@@ -1,0 +1,71 @@
+{
+  "variantId": "fed_raptor_standard",
+  "hullId": "fed_raptor",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 30,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_hull_swarm",
+        "WS0002": "fed_hull_swarm"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "breach",
+        "WS0007": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "fed_flak2",
+        "WS0004": "fed_flak2"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "fed_duallaser2"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "fed_singlelaser",
+        "WS0009": "fed_singlelaser",
+        "WS0010": "fed_duallaser",
+        "WS0012": "fed_singlelaser",
+        "WS0013": "fed_singlelaser",
+        "WS0014": "fed_singlelaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0015": "fed_raptor_modshield_standard"
+    }
+  ],
+  "wings": []
+}

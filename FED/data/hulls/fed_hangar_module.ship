@@ -1,0 +1,220 @@
+{
+  "hullName": "Hangar Module",
+  "hullId": "fed_hangar_module",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/stations/fed_hangar_module.png",
+  "style": "FEDERATION",
+  "height": 118,
+  "width": 306,
+  "center": [153, 28],
+  "collisionRadius": 185,
+  "shieldCenter": [-184, -0],
+  "shieldRadius": 254,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    -76,
+    1
+  ],
+  "builtInMods": [
+    "supercomputer",
+    "reduced_explosion",
+    "chassis_storage",
+    "fed_design",
+    "always_detaches",
+    "fed_energybuiltin"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -35,
+      "locations": [3, -111]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 35,
+      "locations": [3, 111]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -5,
+      "locations": [32.5, -45]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 5,
+      "locations": [32.5, 45]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -10,
+      "locations": [79, -49.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 10,
+      "locations": [79, 49.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 15,
+      "locations": [33, 109]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -15,
+      "locations": [33, -109]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 40.5,
+      "locations": [8, 140]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -40.5,
+      "locations": [8, -140]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        28.5, 79,
+        27, -80,
+        27, -87,
+        27.5, -72,
+        28, 71,
+        27.5, 88
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        59, -14.5,
+        59, 1.5,
+        59.5, 18,
+        68.5, 18.5,
+        68.5, 2.5,
+        68.5, -14
+      ]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 46,
+      "angle": 19,
+      "locations": [58.5, 102]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 46,
+      "angle": -19,
+      "locations": [58.5, -102]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 46,
+      "angle": -74.5,
+      "locations": [24, -132]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 46,
+      "angle": 74.5,
+      "locations": [24, 132]
+    },
+    {
+      "id": "WS0015",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 46,
+      "angle": -8.5,
+      "locations": [78.5, -6.5]
+    },
+    {
+      "id": "WS0016",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 46,
+      "angle": 8.5,
+      "locations": [78.5, 6.5]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    80, 53,
+    50, 62.5,
+    44, 107.5,
+    4.5, 144.5,
+    -17.5, 78.5,
+    12.5, 25.5,
+    -19, -0,
+    12.5, -25.5,
+    -17.5, -78.5,
+    4.5, -144.5,
+    44, -107.5,
+    50, -62.5,
+    80, -53
+  ]
+}

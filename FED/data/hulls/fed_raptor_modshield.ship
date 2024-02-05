@@ -1,0 +1,35 @@
+{
+  "hullName": "Raptor Shield Core",
+  "hullId": "fed_raptor_modshield",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_superkestrel_shieldemitter.png",
+  "style": "FEDERATION_GREEN",
+  "height": 53,
+  "width": 38,
+  "center": [19, 20.5],
+  "collisionRadius": 185,
+  "shieldCenter": [58, -0],
+  "shieldRadius": 120,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    0,
+    0
+  ],
+  "builtInMods": [
+    "fed_design",
+    "always_detaches",
+    "shield_always_on",
+    "reduced_explosion",
+    "fed_auxshieldeffect"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    26, 5,
+    4, 17,
+    -16, 7,
+    -16, -7,
+    4, -17,
+    26, -5
+  ]
+}

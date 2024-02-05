@@ -1,0 +1,72 @@
+{
+  "variantId": "BSC_Stoner_Support",
+  "hullId": "BSC_Stoner",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 25,
+  "fluxVents": 4,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "devastator",
+        "WS0002": "devastator"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "squall",
+        "WS0004": "squall"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "hveldriver",
+        "WS0016": "lightneedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "pilum",
+        "WS0006": "pilum",
+        "WS0010": "swarmer",
+        "WS0011": "swarmer",
+        "WS0012": "swarmer",
+        "WS0013": "swarmer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "lightmg",
+        "WS0009": "lightmg",
+        "WS0014": "lightag",
+        "WS0015": "lightag",
+        "WS0017": "lightmg",
+        "WS0018": "lightmg",
+        "WS0019": "lightmg",
+        "WS0020": "lightmg",
+        "WS0021": "lightmg",
+        "WS0022": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "thunder_wing",
+    "thunder_wing"
+  ]
+}

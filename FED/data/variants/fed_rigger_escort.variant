@@ -1,0 +1,57 @@
+{
+  "variantId": "fed_rigger_escort",
+  "hullId": "fed_rigger",
+  "displayName": "Escort",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 7,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "expanded_deck_crew",
+    "hardened_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "heatseeker",
+        "WS0006": "heatseeker"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "fed_leto"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_singlelaser",
+        "WS0002": "fed_singlelaser",
+        "WS0005": "fed_duallaser",
+        "WS0007": "fed_singlelaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "fed_tsunami_wing",
+    "fed_tsunami_wing"
+  ]
+}

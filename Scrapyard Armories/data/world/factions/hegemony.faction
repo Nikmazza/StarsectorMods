@@ -1,0 +1,39 @@
+{
+"portraits":{
+		"standard_male":[
+			"graphics/portraits/sa_sec.png",
+		],
+	},
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_brace": ".45",
+    "sa_splintXIV": "0.10",
+    "sa_trocar": ".50",
+    "sa_splint": ".55",
+    "sa_ingot":"0.40",
+      "sa_pangolin":"0.40",
+    "hulls": {}
+  },
+  "shipsWhenImporting": {
+    "sa_brace": ".35",
+    "sa_splintXIV": "0.04",
+    "sa_trocar": ".59",
+    "hulls": []
+  },
+  "knownShips": {
+    "hulls": [
+      "sa_brace",
+      "sa_splintXIV",
+      "sa_splint",
+      "sa_trocar",
+      "sa_ingot",
+      "sa_pangolin",
+    ],
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+}

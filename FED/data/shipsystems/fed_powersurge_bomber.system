@@ -1,0 +1,30 @@
+{
+	"id":"fed_powersurge_bomber",
+    "type": "STAT_MOD",
+    "aiType": "WEAPON_BOOST",
+    "weaponTypes": [MISSILE, BALLISTIC],
+	
+	"statsScript":"data.shipsystems.fed_powersurge_bomber",
+	
+	"engineGlowLengthMult":1.2,
+	"engineGlowWidthMult":1.2,
+	"engineGlowGlowMult":1.5,
+	"engineGlowContrailColor":[255,125,60,45],
+	"engineGlowColor":[255,175,125,255],
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+
+	"useSound":"system_forgevats",
+	"loopSound": "system_high_energy_focus_loop",
+    "deactivateSound":"system_high_energy_focus_deactivate",
+	"outOfUsesSound":"engine_disabled",
+	
+	"weaponGlowColor":[200,100,10,105],
+	
+	"aiHints":{
+		"activeSpeedIncrease":200,
+		"burstMovementPotential":0,
+		"averageSpeedIncrease":40,
+	}
+}

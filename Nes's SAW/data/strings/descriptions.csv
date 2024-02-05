@@ -1,0 +1,39 @@
+id,type,text1,text2,text3,notes
+#Ships,,,,,
+nes_fluorspar,SHIP,"An Expansion Epoch prototype designed to harness innate properties of its hull material, Fluorspar class was built for luxurious comfort and dazzling extravagance. While not originally intended for combat, it nonetheless carries a powerful shield emitter and armament enough to get classified as a small warship.
+
+A project, that would later be known as ""Causality Resonance Research"" came to exist, as such things tend to happen, by sheer power of cosmic chance. A small asteroid mining company operating in the outer reaches of inhabited space mounts a routine expedition and promptly disappears, nowhere to be found. Not the first tragedy and certainly not the last, frontier is not a particularly gentle place and a forgiving one it is even less. After a halfhearted rescue attempt the matter would be closed except three cycles later, prospectors come back. Hitting local headlines faster than stepping off the ships, they deliver a tale of a rich haul and a job timely done, or so they thought, it was just a couple of months, after all. The peculiar story gets the eye of a Tri Tachyon researcher who brings it up with his boss, which after AI analysis, background checks, investigations and corporate maneuvering brings the entire mining company under corporate name in record time. With assets, personnel, and miraculously no longer invalid contracts of presumed missing spacers secured, everything is classified, everyone detained, a new research division established and watchful domain overseers dispatched.
+
+The culprit being a material extracted from returned ship's cargo holds, a type of colorless crystalline solid of unknown properties. What is evident, however, is spending any amount of time in the asteroid field of such crystals causes some kind of time field distortion that nobody but causality physicists could even begin to explain. While scientists engross themselves in research, everyone else just starts calling it the Time Crystals, albeit outside said researcher's hearing range. After extensive, but mostly fruitless research, funds start dwindling, pressure from higher ups grows, and screws of domain authority cautious of any research dabbling in causality, begin to tighten.
+ 
+A decision is made, the division is to create a product, a result that would satisfy CEO's and ensure the future of the project. An executive level yacht made almost entirely from crystalline compound. Despite being mostly automated, it is designed with a sizable crew in mind, for the luxurious interior to be staffed by servants and aids of all kind. The hull itself made grossly over gunned and over shielded for its intended purpose, more so to convince passengers of their safety rather than for an actual combat use. Along with GEMLOCK, a system used to manipulate crystal in a way that would change its visible color at a whim, vessel is intended to serve as a fashion and status statement. A prototype is created and after countless design revisions and a satisfactory maiden voyage by head researchers, the blueprint secured.
+
+The plan worked, or it would have if the gate network did not choose collapse at the most inopportune moment. The research was frozen, forgotten, and then considered lost. Cycles later, a sub-gamma AI gleaned the lab location from old data banks and a salvage team was dispatched. Their sole find, a ship schematic now serves as a pet project for an excentric TriTach executive.",,,
+,,,,,
+nes_hamter,SHIP,"An aggressive destroyer with large emplacement, full-sized fighter bay and struggling flux grid, Hampter is an exercise in greed. Nimble for a lowtech design, with cramped quarters and cargoholds this deadly hull is both adored and despised by its captains and crews.",,,
+,,,,,
+nes_hermitaur,SHIP,"An antiquated design predating the shield emitter technology, Hermitaur is encased in overlapping belts of thick armor forming an impressively tough carapace. Powerful frontal layout delivers concentrated firepower, however the aft section is completely exposed. Left unchecked, an experienced opponent would seize the opportunity to set up a pincer maneuver and attack its weak point for massive damage.",,,
+,,,,,
+nes_hammerfall,SHIP,"An utility vessel fit for combat duty, Hammerfall is fully capable of creating its own salvage opportunities. Stemming its roots from Hammerhead blueprint the hull has been expanded and reinforced to accomodate a fully integrated heavy laser drill which, while being impressively efficient, requires to be linked directly into the main power feed, distrupting and severely limiting shields performance, making ship extremely vulnerable to flanking. A shuttle bay was repurposed to house small utility drones which might serve as distraction during combat.",,,
+,,,,,
+nes_voltaire,SHIP,"A late pre-collapse design of the Domain Navy, Volt is a technologically advanced behemoth of a ship developed with exclusive backing from the Tri-Tachyon corporation. After receiving almost unprecedented amound of funding, the design team came up with heavily armed, well armored hull with an extensive flux grid and powerful engines. All-around automation and use of premium components ensued outstanding performance and ensured exceptional production and maintenance costs. Phobos drone suite was included to protect otherwise vulnerable stern as well as support mothership in the assault, should its captain be daring enough.",,,
+,,,,,
+nes_carnelian,SHIP,"A pre-collapse design from Altair Exotech combines the exceptional speed and versatility in one fragile package. ""Chrysoberyl"" tandem suite allows a pair of heavily specialized drones to join Carnelian in battle.",,,
+#Drones,,,,,
+nes_drone_borer,SHIP,"Mover utility drone is an older Borer model, somewhat more compact but less durable and incapable of venturing far from its mothership.",,,
+,,,,,
+nes_drone_phobos,SHIP,"Advanced drone for point defence and close assault duty. Fabrique Orbitale provided the chassis and system designs, while Tri-Tachyon experts were responsible for the weapons suite.",,,
+,,,,,
+nes_drone_carnelian_attacker,SHIP,Chrysoberyl twins resolute attacker.,,,
+,,,,,
+nes_drone_carnelian_defender,SHIP,Chrysoberyl twins stalwart protector.,,,
+#Weapons,,,,,
+nes_assault_mjolnir,WEAPON,"""...a greatest revolving cannon ever made. Six gravitic shells... More than enough to kill anything that moves.""","- Adam Baker, COMSEC operative",,
+,,,,,
+nes_mining_drill,WEAPON,"Heavyweight laser drill designed for deep-space mining. Limited effective range, civilian design and requirements for complete integration made it obsolete as a tool of war. Nonetheless, having the capacity to slice through most armor with terrifying ease it can be used as an effective weapon and generous safety limits could be temporarily overriden to increase its destructive potential.",,,
+,,,,,
+nes_shock,WEAPON,Commencing shock therapy.,,,
+,,,,,
+nes_flak_drone,WEAPON,Extended range defensive weapon system that fires shrapnel-filled shells equipped with a proximity fuse for maximum effect against fighters and missiles.,,,
+#Shipsystems,,,,,
+nes_crystaltemporalshell,SHIP_SYSTEM,Resonates exotic particles within crystalline structure to accelerate the flow of time on board the ship.,Movement,Briefly accelerates timeflow and disables inertial dampeners. Stores multiple charges.,

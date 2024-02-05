@@ -1,0 +1,92 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    
+    "directoryUseShortName":true,
+    
+    "rebelFleetSuffix":"Splinter Force",
+    
+    "marketSpawnWeight":2,
+
+    "startRelationships":{
+        "hegemony":0.25,
+        "independent":0.1,
+        "tritachyon":-0.25,			
+        "persean": -0.1,		
+        "sindrian_diktat": -0.35
+    },
+    "maxRelationships":{ "remnant":-0.51 },
+	"diplomacyPositiveChance":{ "hegemony":1.5 },
+    "diplomacyNegativeChance":{ 
+        "tritachyon":1.2,
+        "sindrian_diktat":1.2 
+    },
+     
+    "alignments":{
+        "corporate":-0.5,	
+        "technocratic":1,
+        "hierarchial":0,
+        "militarist":1,
+        "diplomatic":0.5,
+        "ideological":-0.5
+    },
+    "diplomacyTraits":["dislikes_ai","irredentist","law_and_order"],
+    
+    "groundBattleSettings":{
+        "moraleDamageTakenMult":0.9
+    },
+	
+	"factionsLiked":[
+        "hegemony"  	
+    ],
+
+    "factionsDisliked":[
+        "luddic_path",
+        "tritachyon"
+    ],	
+    
+    "vengeanceLevelNames":["Pursuit", "Reprisal", "Vendetta"],
+    "vengeanceFleetNames":["Hunter-Killers", "Task Force", "Consortium Fleet"],
+    "vengeanceFleetNamesSingle":["a Hunter-Killer Fleet", "a Task Force", "a Consortium Termination Fleet"],
+    
+    "vengeanceFleetSizeMult":1.25,
+	
+	"invasionSupportFleetName":"Attack Force",
+    "responseFleetName":"Defense Fleet",
+    "defenceFleetName":"Protect Fleet",	
+    
+    "startShipsSolo":[
+        ["aEP_fga_yonglang_Mixed"]
+    ],
+    "startShipsCombatSmall":[
+        ["aEP_fga_xiliu_Standard","aEP_fga_yonglang_Mixed","aEP_fga_raoliu_Standard"],
+    ],
+    "startShipsCarrierLarge":[
+        ["aEP_des_shendu_Strike", "aEP_des_shendu_Standard", "aEP_fga_raoliu_PD"],
+    ],
+   	
+
+   
+   #"customStations":["aEP_station"],
+   #"factionIdForHqResponse":"",
+   
+   #"miningVariantsOrWings":["gonodactylus_assault", "gonodactylus_cc", "gonodactylus_CS", "gonodactylus_elite"],
+   
+    "defenceStations":[
+        {"ids":["orbitalstation_mid", "battlestation_mid", "starfortress_mid"]},
+    ],
+	
+    "industrySeeds":[
+        {"id":"orbitalworks", "mult":0.1},
+        {"id":"fuelprod", "mult":0.1},
+        {"id":"lightindustry", "mult":0.1}
+    ],
+    
+    "bonusSeeds":[
+        {"id":"nanoforge_pristine", "count":1},
+        {"id":"aiCore_station", "count":0, "mult":0},
+        {"id":"aiCore_military", "mult":0},
+        {"id":"aiCore_heavyindustry", "count":0},
+        {"id":"aiCore_any", "mult":0}
+    ]
+}

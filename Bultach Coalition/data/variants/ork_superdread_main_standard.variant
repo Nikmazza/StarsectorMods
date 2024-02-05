@@ -1,0 +1,79 @@
+{
+  "variantId": "ork_superdread_main_standard",
+  "hullId": "ork_superdread_main",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 42,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter",
+    "heavyarmor",
+    "hiressensors",
+    "operations_center",
+    "pointdefenseai",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "devastator",
+        "WS0002": "giga_rail",
+        "WS0003": "ork_bigplasma",
+        "WS0004": "ork_bigplasma",
+        "WS0005": "ork_bigplasma",
+        "WS0006": "ork_big_shotgun",
+        "WS0007": "ork_big_shotgun",
+        "WS0008": "ork_big_shotgun",
+        "WS0009": "ork_plasma",
+        "WS0010": "ork_plasma",
+        "WS0011": "ork_plasma",
+        "WS0012": "ork_plasma",
+        "WS0013": "ork_plasma",
+        "WS0014": "ork_plasma",
+        "WS0015": "dualflak",
+        "WS0016": "ork_sledge_medium",
+        "WS0017": "ork_shotgun",
+        "WS0018": "ork_sledge_medium",
+        "WS0019": "dualflak",
+        "WS0020": "dualflak",
+        "WS0022": "ork_shotgun",
+        "WS0023": "ork_shotgun",
+        "WS0024": "ork_shotgun"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0030": "ork_superdread_thruster_left_standard"
+    },
+    {
+      "WS0031": "ork_superdread_thruster_right_standard"
+    },
+    {
+      "WS0028": "ork_superdread_armor_left_standard"
+    },
+    {
+      "WS0029": "ork_superdread_armor_right_standard"
+    },
+    {
+      "WS0026": "ork_superdread_hangar_right_standard"
+    },
+    {
+      "WS0025": "ork_superdread_hangar_left_standard"
+    },
+    {
+      "WS0021": "ork_superdread_prow_left_standard"
+    },
+    {
+      "WS0027": "ork_superdread_prow_right_standard"
+    },
+    {
+      "WS0032": "ork_shield_module_standard"
+    }
+  ],
+  "wings": []
+}

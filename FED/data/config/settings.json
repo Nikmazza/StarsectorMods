@@ -1,0 +1,47 @@
+{
+	"graphics":{
+        
+		"planets":{
+			"fed_scaria":"graphics/FED/planets/scaria.png",
+		},
+
+		"hab_glows":{
+			"scaria_planet_glow":"graphics/FED/planets/scaria_glow.png",
+		},
+	
+		"illustrations":{
+			"federation_base":"graphics/FED/illustrations/fedbase.png",
+			"fed_HQ":"graphics/FED/illustrations/twin_cities.png",
+			"fed_space_bar":"graphics/FED/illustrations/fed_federation_bar.jpg",
+		},
+		"ui":{
+			"fed_icon_missilereload_small":"graphics/FED/icons/tactical/fed_reloadmissile_icon.png",
+			"fed_icon_missilereload_large":"graphics/FED/icons/tactical/fed_reloadmissilelarge_icon.png",
+		},
+	
+		"blueprint_packages":{
+			"fed_bps_com":"graphics/FED/icons/cargo/fed_com_package.png",
+			"fed_bps_mil":"graphics/FED/icons/cargo/fed_mil_package.png",
+			"fed_bps_wep":"graphics/FED/icons/cargo/fed_wep_package.png",
+			"fed_bps_uti":"graphics/FED/icons/cargo/fed_log_package.png",
+			"fed_bps_eli":"graphics/FED/icons/cargo/fed_mid_package.png",
+			"fed_bps_cap":"graphics/FED/icons/cargo/fed_cap_package.png",
+		},	
+		
+		"fx":{   
+			"fed_warp_wave":"graphics/FED/fx/fed_warp_wave.png",
+			"fed_warp_trail":"graphics/FED/fx/fed_warp_wave.png",
+			"fed_smoke_ring":"graphics/FED/fx/fed_smoke_ring.png",
+		}
+	
+	},
+
+	"designTypeColors":{
+		"Star Federation":[255,185,125,255],
+	},
+
+	"plugins":{
+		"fed_shipDeath":"data.scripts.plugins.fed_shipDeath"
+	}
+	
+}

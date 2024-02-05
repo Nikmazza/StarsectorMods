@@ -1,0 +1,66 @@
+{
+  "id": "fed_siegebeam",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "beamEffect": "com.fs.starfarer.api.impl.combat.TachyonLanceEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/FED/weapons/fed_siegebeam.png",
+  "turretGlowSprite": "graphics/FED/weapons/fed_siegebeam_glow.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_siegebeam.png",
+  "hardpointGlowSprite": "graphics/FED/weapons/fed_siegebeam_glow.png",
+  "renderBelowAllWeapons": true,
+  "renderAboveAllWeapons": 0,
+  "glowColor": [
+    30,
+    20,
+    200,
+    255
+  ],
+  "hitGlowRadius": 200,
+  "renderHints": [
+    "RENDER_ADDITIVE"
+  ],
+  "turretOffsets": [
+    75,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "beamFireOnlyOnFullCharge": true,
+  "fringeColor": [
+    80,
+    50,
+    255,
+    215
+  ],
+  "coreColor": [
+    210,
+    200,
+    255,
+    235
+  ],
+  "width": 44,
+  "textureType": MEDIUM,
+  "textureScrollSpeed": 6000,
+  "pixelsPerTexel": 1,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF,
+    FIGHTER
+  ],
+  #"fireSoundOne": "fed_artbeam_charge",
+  "fireSoundTwo": "fed_artbeam_fire",
+ }

@@ -1,0 +1,116 @@
+{
+  "hullName": "skrunkly",
+  "hullId": "ork_skrunkly",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/skrunkly.png",
+  "style": "BULTACH",
+  "height": 75,
+  "width": 106,
+  "center": [53, 37.5],
+  "collisionRadius": 86,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 81,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ork_redfasta",
+    "Ork_low_Maintenance",
+    "BT_shieldsChanger",
+    "bt_shieldArching"
+  ],
+  "builtInWeapons": {
+    "WS0004": "ork_skrunkly_top"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": -0,
+      "locations": [25, 0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": -0,
+      "locations": [16, 22]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": 0,
+      "locations": [16, -22]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 4,
+      "angle": -0,
+      "locations": [-2, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-8.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-37, 7.5],
+      "length": 45.5,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-37, -7.5],
+      "length": 45.5,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-25, 35],
+      "length": 37.699673,
+      "width": 24.595497,
+      "angle": 158.5,
+      "contrailSize": 24.595497,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-25, -35],
+      "length": 37.699673,
+      "width": 24.595497,
+      "angle": -158.5,
+      "contrailSize": 24.595497,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    }
+  ],
+  "bounds": [
+    -35, -21.5,
+    -19.5, -52,
+    29, -15.5,
+    29, 15.5,
+    -19.5, 52,
+    -35, 21.5
+  ]
+}

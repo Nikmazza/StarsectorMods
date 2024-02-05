@@ -1,0 +1,12 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,number
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fed_kdrone_assault_capital,fed_kdrone_assault,"auto_fighter, no_drop, no_sell, no_dealer, rapid_reform, attack_at_an_angle",3,,8,25,V,4000,500,-400,3,FIGHTER,Attack Drone,5,20000,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fed_kdrone_assault_large,fed_kdrone_assault,"auto_fighter, no_drop, no_sell, no_dealer, rapid_reform, attack_at_an_angle",3,,4,15,BOX,4000,500,-400,2,FIGHTER,Attack Drone,15,12000,,,,,,,,,,,,
+fed_kdrone_assault,fed_kdrone_assault,"auto_fighter, no_drop, no_sell, no_dealer, rapid_reform, attack_at_an_angle",3,,2,10,BOX,4000,500,-400,1,FIGHTER,Attack Drone,15,5000,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fed_kdrone_beamer,fed_kdrone_beamer,"auto_fighter, no_drop, no_sell, no_dealer, rapid_reform, attack_at_an_angle",3,,2,10,V,2000,500,-400,1,FIGHTER,Beam Drone,10,10000,,,,,,,,,,,,
+fed_kdrone_defense,fed_kdrone_defense,"auto_fighter, no_drop, no_sell, no_dealer, rapid_reform, attack_at_an_angle",3,,1,10,V,2000,500,-400,1,SUPPORT,Defense Drone,10,10000,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fed_firestream_wing,fed_firestream_standard,"fighter3, fighter, fed_bps_com, leader_no_swarm, wingmen_no_swarm,match_leader_facing, rapid_reform",2,,6,14,CLAW,2000,400,500,2,BOMBER,Gunbomber,16,12000,,,,,,,,,,,,
+fed_tsunami_wing,fed_tsunami_standard,"fighter6, fighter, fed_bps_mil,merc",3,,5,12,V,4000,550,100,2,FIGHTER,Multirole Fighter,12,9000,,,,,,,,,,,,

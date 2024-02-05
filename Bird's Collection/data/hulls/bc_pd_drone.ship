@@ -1,0 +1,60 @@
+{
+  "hullName": "Blomqvist",
+  "hullId": "bc_pd_drone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_pd_drone.png",
+  "style": "HIGH_TECH",
+  "height": 14,
+  "width": 12,
+  "center": [6, 7],
+  "collisionRadius": 16,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 15.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "vastbulk"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [4, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-2.5, 5.5],
+      "length": 8.14,
+      "width": 3.01,
+      "angle": 125.5,
+      "contrailSize": 3.01,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-2.5, -5.5],
+      "length": 8.14,
+      "width": 3.01,
+      "angle": -125.5,
+      "contrailSize": 3.01,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-7, -0],
+      "length": 8.14,
+      "width": 3.01,
+      "angle": 180,
+      "contrailSize": 3.01,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    6, -3.5,
+    -5.5, -4.5,
+    -5.5, 4.5,
+    6, 3.5
+  ]
+}

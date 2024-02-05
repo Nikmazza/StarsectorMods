@@ -1,0 +1,30 @@
+{
+  "variantId": "bc_hightech_superfighter_Superfighter",
+  "hullId": "bc_hightech_superfighter",
+  "displayName": "Superfighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "phasebeam",
+        "WS0004": "pdburst_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "pdburst_fighter"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

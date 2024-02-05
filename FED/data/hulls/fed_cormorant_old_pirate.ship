@@ -1,0 +1,195 @@
+{
+  "hullName": "Cormorant (P)",
+  "hullId": "fed_cormorant_old_pirate",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/FED/ships/pirate/fed_cormorant_base_old_pirate.png",
+  "style": "FEDERATION",
+  "height": 151,
+  "width": 178,
+  "center": [89, 70.5],
+  "collisionRadius": 111,
+  "shieldCenter": [-6, -0],
+  "shieldRadius": 79,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "missleracks",
+    "safetyoverrides",
+    "increased_maintenance"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 20.5,
+      "locations": [23.5, 37]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -20.5,
+      "locations": [23.5, -37]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [6.5, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -21.5, -0.5,
+        39, -0
+      ]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 45,
+      "locations": [-3, 63.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -45,
+      "locations": [-3, -63.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 310,
+      "angle": -105,
+      "locations": [-16.5, -46]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 310,
+      "angle": 105,
+      "locations": [-16.5, 46]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-68.5, 21],
+      "length": 49,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-68.5, -21],
+      "length": 49,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-71, 32.5],
+      "length": 82.5,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-71, -32.5],
+      "length": 82.5,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-49, 65],
+      "length": 33.74255,
+      "width": 18.186855,
+      "angle": 139,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-49, -65],
+      "length": 33.74255,
+      "width": 18.186855,
+      "angle": -139,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-70, 13.5],
+      "length": 39,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-70, -13.5],
+      "length": 39,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    }
+  ],
+  "bounds": [
+    -35, 14.5,
+    -65.5, 11.5,
+    -64, 41.5,
+    -45, 42,
+    -47, 62,
+    -12.5, 66.5,
+    3, 71,
+    5, 54.5,
+    32.5, 43.5,
+    34.5, 25.5,
+    64.5, 12.5,
+    64.5, -12.5,
+    34.5, -25.5,
+    32.5, -43.5,
+    5, -54.5,
+    3, -71,
+    -12.5, -66.5,
+    -47, -62,
+    -45, -42,
+    -64, -41.5,
+    -65.5, -11.5,
+    -35, -14.5
+  ]
+}

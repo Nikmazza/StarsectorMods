@@ -1,0 +1,58 @@
+{
+  "variantId": "fed_hangar_module_standard",
+  "hullId": "fed_hangar_module",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "fed_mediumasm",
+        "WS0004": "fed_mediumasm"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_pegasus",
+        "WS0002": "fed_pegasus"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "lightneedler",
+        "WS0008": "lightneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_duallaser",
+        "WS0006": "fed_duallaser",
+        "WS0009": "fed_duallaser",
+        "WS0010": "fed_duallaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "fed_tsunami_wing",
+    "fed_tsunami_wing",
+    "fed_tsunami_wing"
+  ]
+}

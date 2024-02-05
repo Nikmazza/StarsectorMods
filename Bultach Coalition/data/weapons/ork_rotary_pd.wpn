@@ -1,0 +1,43 @@
+{
+  "id": "ork_rotary_pd",
+  "specClass": "projectile",
+  "projectileSpecId": "flak_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/rotary_pd/ork_rotary_pd_turret00.png",
+  "hardpointSprite": "graphics/weapons/rotary_pd/ork_rotary_pd_turret00.png",
+  "turretOffsets": [
+    26,
+    -1.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    39.5,
+    -1.5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "numFrames": 6,
+  "frameRate": 30,
+  "muzzleFlashSpec": {
+    "length": 20,
+    "spread": 3,
+    "particleSizeMin": 4,
+    "particleSizeRange": 12,
+    "particleDuration": 0.15,
+    "particleCount": 12,
+    "particleColor": [
+      255,
+      140,
+      125,
+      200
+    ]
+  },
+  "fireSoundOne": "thumper_spinup",
+  "fireSoundTwo": "chaingun_fire"
+}

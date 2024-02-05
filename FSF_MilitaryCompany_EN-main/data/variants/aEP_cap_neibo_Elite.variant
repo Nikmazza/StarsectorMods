@@ -1,0 +1,77 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 7,
+    "fluxVents": 29,
+    "goalVariant": true,
+    "hullId": "aEP_cap_neibo",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "targetingunit"
+    ],
+    "modules": [
+        {"TR_MOD": "aEP_cap_neibo_turret_Standard"},
+        {"ARMOR": "aEP_cap_neibo_armor_Standard"}
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "aEP_cap_neibo_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "lightneedler",
+                "WS0004": "lightneedler",
+                "WS0015": "lightneedler",
+                "WS0022": "lightneedler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0018": "breach",
+                "WS0019": "breach",
+                "WS0020": "breach",
+                "WS0021": "breach"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"COVER_MAIN": "aEP_cap_neibo_main"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "lightneedler",
+                "WS0002": "lightneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0016": "devastator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "aEP_vulcan",
+                "WS0010": "aEP_vulcan",
+                "WS0011": "aEP_vulcan",
+                "WS0012": "aEP_vulcan",
+                "WS0017": "dualflak"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "aEP_e_s_300k",
+                "WS0006": "aEP_e_s_300k"
+            }
+        }
+    ]
+}

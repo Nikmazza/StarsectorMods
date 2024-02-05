@@ -1,0 +1,22 @@
+id
+# NOTES
+# Ship IDs entered here will be allowed for duplication.
+"# This feature is very hard to get working in campaign as a player, and lorewise, allows for duplication of even the most complex hulls."
+"# Please do not go overboard with forbidding stuff here. Hulls that have been duplicated, can no longer be duplicated themselves, and are prone to malfunctions."
+fed_osprey
+fed_kestral
+fed_boss
+fed_cormorant
+fed_cormorant_old
+fed_flagship
+fed_flagship_assault
+fed_heavyfreighter
+fed_lightdestroyer
+fed_medcombtanker
+fed_raptor
+fed_rigger
+fed_rigger_firesupport
+fed_stealth
+fed_talos
+fed_tern
+fed_byte

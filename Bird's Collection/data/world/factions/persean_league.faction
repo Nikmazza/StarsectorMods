@@ -1,0 +1,10 @@
+{
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "persean"],
+		"fighters":[
+			"bc_breachbomber",
+			"bc_midlinefighter2",
+			"bc_doublebomber",
+		],
+	}
+},

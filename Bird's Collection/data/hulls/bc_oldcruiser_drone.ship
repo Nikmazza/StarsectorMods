@@ -1,0 +1,79 @@
+{
+  "hullName": "Stanna",
+  "hullId": "bc_oldcruiser_drone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_oldcruiser_drone.png",
+  "style": "OLD_TECH",
+  "height": 26,
+  "width": 48,
+  "center": [24, 11.5],
+  "collisionRadius": 34.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 31.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missile_reload",
+    "missleracks"
+  ],
+  "builtInWeapons": {
+    "WS0002": "bc_Zvernier",
+    "WS0003": "bc_Zvernier"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [4, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 135,
+      "locations": [-3.5, 22]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -135,
+      "locations": [-3.5, -22]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11.5, -0],
+      "length": 19.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-12.5, -0],
+      "length": 1.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    }
+  ],
+  "bounds": [
+    -8.5, -17.5,
+    0.5, -24,
+    9, -18,
+    9, 18,
+    0.5, 24,
+    -8.5, 17.5
+  ]
+}

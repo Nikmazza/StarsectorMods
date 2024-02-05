@@ -1,0 +1,80 @@
+id,trigger,conditions,script,text,options,notes
+#RULESET_NAME LLI,,,,,,
+,,,,,,
+# ##DOCKTEXT,,,,,,
+MarketMirageCity_transponderOn,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == MirageCity_market score:100
+$player.transponderOn == true","AddText""After verifying your information, the navigation authority arranged for you to dock at the new spaceport. The spaceport is quite orderly: no vendors hawking on the sidewalks, advertisements on the walls, and the various stores are luxuriously decorated without exception. After leaving the spaceport's magnificient reception, you can finally get a glimpse of the \""downtown\"" of the Mirage Astropolis. It's as bustling as Old Earth's cities (as seen in holodocs and games): massive windows spilling starlight evenly on every road, colorful gardens placed between tall buildings, and some carefully pruned trees flanking the road; this is obviously the city's most affluent district.""marketFlavorTextColor",,,
+MarketMirageCity_transponderOff,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == MirageCity_market score:100
+$player.transponderOn == false","AddText""You are guided to dock in an old, ungoverned spaceport; likely due to your lack of identification. The port is all-but vacuum, with vendors swarming out of airtight pods whenever they catch a new ship docking, projecting holographic advertisements and trying in vain to get sound into your ears. This old spaceport sits at the bottom of the astropolis, with a giant elevator capable of taking people to any level: besides the top, that is.""marketFlavorTextColor",,,
+MarketAdeniumobesum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == AdeniumObesum_market score:100","AddText""There are almost no traders in this spaceport: rather, a group of official salesmen managing the trade of locally produced metals and ores. In fact, there are no brokers for trading any other goods besides metal and ores to be found. After some investigation, you learn that all local commerce on Adenium Obesum, besides the metal and ore trade, is concentrated in residential markets: all merchants travel to trade their goods in the residential areas, rather than at the spaceport.""marketFlavorTextColor",,,
+MarketLLI,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI","AddText""The port concourse is filled with small freighters and freelancers down or up on their luck, identifiable by the shine or grime of ship armour and volume of cargo on-loading. A handful of speculators who all seem to know each other crowd offloading ship captains as they arrive while peddlers call out to crew, holding wares and projecting personal ad-holos. A number of brand new monitors have been installed, displaying military propaganda and encouraging all visitors to join the LouLan Navy.""marketFlavorTextColor",,,
+#END DOCKTEXT,,,,,,
+,,,,,,
+# LLINPC0,,,,,,
+LLIdefaultNPC0Greeting,PickGreeting,$id == NPC_0 score:1000,FireAll PopulateOptions,"After a short wait, your communications request is accepted, and you're greeted with the other party playing cards on their TriPad, muttering ""Oh, right, oops, no...""
+
+After a short wait they finally remember that they accepted your comms request.
+
+""Greetings, $PlayerSirOrMadam $playerName, Savior of Galatia. I am Bracks Ao: former Supreme Commander of the Loulan Navy, cooking enthusiast, and currently... unemployed.""",,
+LLIdefaultNPC0AnswerOfFoxOptions,PopulateOptions,"$id == NPC_0
+!$AnswerOfFox
+",,,AnswerOfFoxOptions:Ask about the Traversers' Association,
+LLIdefaultNPC0AnswerOfFox,DialogOptionSelected,$option == AnswerOfFoxOptions,FireAll NPC0AnswerOfFox,"""A few years ago, back when I was still Supreme Commander, Loulan and the Association had a technological exchange: we gave them the blueprints for the Wave-class destroyer - that is, the modified version - and they gave us the blueprints for the Curtain Rain-class destroyer in exchange. The Association didn't modify the Wave very much in producing their Condensation-class, but our eggheads sure went wild when they made the Warmfront-class I'm sure you've seen all over; people didn't even realize it was a modified Curtain Rain until they were told about it! But the Association's Director marveled at how creative we were in so doing.""
+
+""But, by then the Loulan Navy had been completely infiltrated by the Luddics: bypassing my authority, they abruptly ended the technological exchange with the 'blasphemous' Association after the first Warmfront was produced. I heard that President Coldstream has a fluffy fox tail, but due to all the turmoil I missed the opportunity to touch it; one of my biggest regrets.""
+
+""Out of curiosity, would you describe yourself as Luddic?""",,
+LLIdefaultNPC0AnswerOfFox1Options,NPC0AnswerOfFox,$id == NPC_0,,,AnswerOfFox1Options:No,
+LLIdefaultNPC0AnswerOfFox1,DialogOptionSelected,$option == AnswerOfFox1Options,"$AnswerOfFox = true
+$player.AnswerOfFox = true
+AddTextSmall ""Obtained a letter of introduction from the Loulan Navy's ex-Supreme Commander"" highlight
+FireAll PopulateOptions","""Consider this a gift from me to you; I hope the Association will think more highly of you now. And, if you're ever so lucky to meet President Coldstream in person: make sure to touch the tail, or you'll regret it for the rest of your life, just like me.""",,
+LLIdefaultNPC0AnswerOfFox2Options,NPC0AnswerOfFox,$id == NPC_0,,,AnswerOfFox2Options:Yes,
+LLIdefaultNPC0AnswerOfFox2,DialogOptionSelected,$option == AnswerOfFox2Options,"$AnswerOfFox = true
+$player.AnswerOfFox = true
+FireAll PopulateOptions","""Forgive me if I come across as intolerant of your faith, but faith alone is not enough to change the Sector for the better. Most 'faithful' are little more than pawns for the Church: can you imagine what could happen if the Church were to declare a 'crusade'?... I think the people of Mairaath would know. One way or another, allowing the Church to continue to gain power will have disastrous consequences.""",,
+LLIdefaultNPC0AnswerOfALOptions,PopulateOptions,"$id == NPC_0
+!$AnswerOfAL",,,AnswerOfALOptions:Ask where to find the Sector's best cookware,
+LLIdefaultNPC0AnswerOfAL,DialogOptionSelected,$option == AnswerOfALOptions,"$AnswerOfAL = true
+$player.AnswerOfAL = true
+FireAll PopulateOptions","""I don't think there's such a thing as the best cookware: only the best cook. But if what you're after are pots and pans, the best in the Sector come from the Agustin system, a must-have in every high-class restaurant.""",,
+LLIdefaultNPC0MainPreOptions,PopulateOptions,"$id == NPC_0
+!$LLIunlocktrade",,,"NPC0MainPreOptions:""I assume there's more you wanted than just small talk?""",
+LLIdefaultNPC0MainPre,DialogOptionSelected,$option == NPC0MainPreOptions,FireAll PopulateOptions,"""That's right, I've got a big plan brewing.""
+
+""As I'm sure you know, the Domain's Fourteenth Battlegroup arrived in the Sector to later found the Hegemony, in spite of the Gate network's collapse. If we were to reverse that, to travel in the opposite direction from the Fourteenth, could we reach the Domain's heart once more?""
+
+""I've decided to call this plan to return to the Domain 'Project Pilgrimage': we're currently still in the early preparation stage, but you are one of the most promising captains I've met yet. So tell me; what do you think?""",,
+LLITradeOptions,PopulateOptions,"$id == NPC_0
+$LLIunlocktrade",,,"LLITradeOptions_text:""Let's talk business.""",
+LLITradeOptions_text,DialogOptionSelected,"$id == NPC_0
+$option == LLITradeOptions_text","FireAll LLITradeOptions
+AddTextSmall ""You have the following options available"" highlight","""The Loulan Navy retired an entire production lot of brand new Wave(M)-class destroyers: if you want, I can sell you some.""
+
+""The Loulan Navy recently downsized in order to cut costs, forcing many veterans to become mercenaries: I can act as a broker for you to hire some.""
+
+""I have a customer who ended up being ambushed by pirates and fired out of a Hellbore; since there's nobody left to pay for their purchase of metals and transplutonics, I can offer you a bulk deal.""
+
+""This last one is more personal. My daughter has been missing for a long time, but I've recently heard rumors that she's in some Tri-Tachyon fleet: kidnapped, no doubt. I would greatly appreciate if you could help me bring her home.""",,
+LLITradeOptions_waveM,LLITradeOptions,"$id == NPC_0
+",,,"LLITradeOptions_waveM_buy:Purchase a Wave(M) for 40,000 credits",
+LLITradeOptions_waveM1,DialogOptionSelected,$option == LLITradeOptions_waveM_buy,"FireAll LLITradeOptions_waveM2
+","""The Loulan Navy retired an entire production lot of brand new Wave(M)-class destroyers: if you want, I can sell you some.""
+
+""A pristine Wave(M), weapons included, will run you @[40,000] credits.""",,
+LLITradeOptions_waveM2,LLITradeOptions_waveM2,$id == NPC_0,"
+
+",,LLITradeOptions_waveM2b:Confirm purchase,
+LLITradeOptions_waveM2a,LLITradeOptions_waveM2,$id == NPC_0,,,LLITradeOptions_text:Cancel and return,
+LLITradeOptions_waveM2b,DialogOptionSelected,"$id == NPC_0
+$option ==LLITradeOptions_waveM2b",LLICMD_BuyWaveM,,LLITradeOptions_text:Continue,
+LLITradeOptionsLeave,LLITradeOptions,$id == NPC_0,,,cutCommLink:Cut the comm link,
+#END LLINPC0,,,,,,
+,,,,,,

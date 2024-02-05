@@ -1,0 +1,58 @@
+{
+	"id":"ssp_plasmamissile_shot",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/ssp_plasmamissile.png",
+	"size":[12,26],	
+	"center":[6,9],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":75, # purely visual
+	"onFireEffect":"com.fs.starfarer.api.impl.combat.dem.DEMEffect",
+	"behaviorSpec":{"behavior":"CUSTOM",
+		#"circleRadius":[0,50],
+		#"angledApproachDist":[900,1200],
+		"minDelayBeforeTriggering":0,
+		"triggerDistance":[490,510],
+		"preferredMinFireDistance":[490,510],
+		"turnRateBoost":100,
+		#"turnRateMultOnSignal":0.05,
+		"targetingTime":0.1,
+		"firingTime":3.3,
+		"targetingLaserId":"targetinglaser2",
+		"targetingLaserFireOffset":[0, 0],
+		"payloadWeaponId":"ssp_plasmamissile_payload",
+		"targetingLaserRange":0,
+		"targetingLaserArc":10,
+		"bombPumped":false,
+		"snapFacingToTargetIfCloseEnough":true,
+		"fadeOutEngineWhenFiring":false;
+		"destroyMissleWhenDoneFiring":true,
+		"destroyedExplosionColor":[60,55,255,255],
+	},
+	"engineSpec":{"turnAcc":500,
+				  "turnRate":140,
+				  "acc":1000,
+				  "dec":1000},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-14, 0],
+				    "style":"CUSTOM",
+				    "styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[60,55,255,255],
+						"contrailDuration":1,
+						"contrailWidthMult":0.5,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":1, # how far away from engine it starts
+						"contrailColor":[1,1,1,1],
+						"glowSizeMult":0.5,
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":12.0,
+				    "length":60.0,
+				    "angle":180.0}]
+}

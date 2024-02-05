@@ -1,0 +1,83 @@
+{
+	"name":"Complex",
+	"personalities":["aggressive", "reckless"],
+	"gender":["m","f","n"],
+	"chance":1,
+	"talkativeness":1,
+	"categoryTags":["original"],
+	
+	"lines":{
+		"start":[
+			{"text":"A matar cabineros!"},
+			{"text":"Soy el god del dota."},
+			{"text":"Muahahahaha"},
+			{"text":"Petes"},
+		],
+		"start_boss":[
+			{"text":"Esto se va a poner jodido"},
+			{"text":"Siganme los buenos"},
+			{"text":"Vamooooooooooo!"},
+		],		
+		"retreat":[
+			{"text":"Back!"},
+			{"text":Backeeen!"},
+			{"text":"Go back petes!"},
+			{"text":"Nos vemos!!"},
+		],
+		"out_of_missiles":[
+			{"text":"Chau misiles"},
+			{"text":"No tengo mas misiles loco!"},
+			{"text":"RIP mis misiles."},
+		],
+		"engaged":[
+			{"text":"Sale mano a mano peton"},
+			{"text":"Corre o moris"},
+			{"text":"Vas a ser soleado"},
+		],
+		"need_help":[
+			{"text":"Ayuda que me matan!"},
+			{"text":"Ayuden petes"},
+			{"text":"Ayudin!"},
+		],
+		"pursuing":[
+			{"text":"Corran a ese petoncito"},
+			{"text":"Dale que le hacemos First blood."},
+			{"text":"Corre cagon"},
+		],
+		"running":[
+			{"text":"Backeen que me corren"},
+			{"text":"Me siguen todos ayuda!"},
+			{"text":"Vamos a probar como va esta nave para atras"},
+		],
+		"hull_90":[
+		    {"text":"Me estan rompiendo el hull"},
+		    {"text":"No me hacen nada petes!"},
+		    {"text":"Yo tradeo que tengo tangos"},
+		],
+		"hull_50":[
+		    {"text":"Ok me estan dando backeo"},
+			{"text":"No tengo buyback, help"},
+			{"text":"Mano a mano pete"},
+		],
+		"hull_30":[
+		    {"text":"Me queda poca vida!"},
+		    {"text":"Mejor me muevo que mi hull esta bajo"},
+		    {"text":"Ayuden mierdas"},
+		],
+		"overload":[
+			{"text":"Serranos me overlodearon!"},
+			{"text":"Estos cabineros juegan, overloaded!"},
+			{"text":"A rezar que me overloadean"},
+		],
+		"death":[
+		    {"text":"Me muero"},
+		    {"text":"Me cachaste"},
+		    {"text":"Me cachaste maldito"},
+		],
+		"victory":[
+			{"text":"GGeados petes"},
+			{"text":"Easy win easy life like dota"},
+			{"text":"Solados petes."},
+		],
+	}
+}

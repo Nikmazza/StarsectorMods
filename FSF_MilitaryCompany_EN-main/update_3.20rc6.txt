@@ -1,0 +1,246 @@
+/————————/
+3.20rc5
+新增：
+	战役：初次接触
+	战役：清除任务
+	武器：DF-1重型反应装甲
+	武器：RK-107火箭炮 中型破片复合武器
+	武器：H-37反舰炮 小型高爆实弹武器
+	武器：H-88反舰炮 中型高爆实弹武器
+	武器：EB-300k多用途光束 小型高爆光束能量武器
+	联队：长钉重型战机
+	联队：助手支援机
+平衡性：
+	暖池级：
+		宇宙航速6->7
+	标兵级：
+		雷达不再提供10%的额外伤害
+		雷达的射程加成80%->45%
+		内置插件现在提供基础的40%的射程加成
+	分解者级：
+		部署点32->33
+		装配点205->200
+		内置插件：打捞起重机
+		战术系统导致的联队劣化现在除了使伤害减少50%，还会使承受的伤害也增加20%
+		战术系统导致整备值下降15->20
+		战术系统冷却28->25
+		战术系统额外部署时间20->16
+	温跃层级：
+		部署点36->37
+		战术系统最大禁止开火时间10->12秒
+		幅能容量20000->18000
+	内波级：
+		最大速度45->50，机动性也有所上调
+		战术系统瞬间爆发速度上调
+	平定级：
+		部署点30->28
+		修改了主炮动画
+	瀑布级：
+		部署点35->33
+	石珊瑚级：
+		内置了1门锚点ads系统，用于展示战术系统无人机武器的特效
+		战术系统现在可以拦截弹丸，不只是导弹
+		战术系统cd25->20
+		贴图略微修改
+	海量级：
+		部署点31->32
+	中流级：
+		贴图略微修改
+		部署点22->23
+	热泉级：
+		贴图略微修改
+		部署点24->25
+		幅能耗散300->250
+		装配点150->140
+		热泉导弹幅能消耗增加
+    战术系统用于2次充能，但恢复速度是原来的50%
+		导弹槽位变动，3个原先的小导弹槽位改为2个小实弹槽位和1个中导弹槽位
+	深度级：
+		部署点13->14
+	层流级：
+		部署点12->13
+	防浪堤级：
+		结构3000->2750
+		幅能容量4000->3500
+		最大护盾角度120->240
+		战术系统激活时，护盾减伤90%->80%，并使护盾角度下降90度
+	扰流级：
+		幅能容量1600->1800
+	细流级MK.II：
+		装配点60->55
+    战术系统使用次数4->3
+	细流级：
+    幅能容量2400->2750
+  "铅垂"重型战机联队：
+    幅能容量200->250
+    幅能耗散50->60
+	"碎石"飞行坦克联队：
+		幅能容量200->500
+		主炮射程改为固定1100，而非跟随母舰变化
+	"重塑"维修无人机联队：
+		重写ai，提升了维修量
+	插件：烧蚀耗散
+		最大转化率65%->60%
+	武器：剪阔器系列
+		幅能消耗200->100
+		emp250->200
+		小槽备弹20->24
+		中槽备弹40->48
+	武器：巨型爆破锤发射系统
+		单发伤害3900->3600
+	武器：气钉枪导弹：
+		射程2500->3000
+		单发伤害500->400，现在击中护盾造成额外的400动能伤害，但是额外部分只造成软幅能
+	武器：气钉枪发射系统：
+		射程2500->3000
+		单发伤害750->500，现在击中护盾造成额外的500动能伤害，但是额外部分只造成软幅能
+	武器：AM-630近防炮：
+    射击间隔0.1->0.08333
+	武器：AA-40通用炮：
+		最大散布8->10
+		dps不变，幅能效率1.28->1.34
+	武器：DG-3巨型转管炮：
+    最大散布10->16
+		现在结构移除特效只会计算自己的伤害修改，而不计算目标的伤害修改
+	武器：SR-125转膛自动炮：
+		dph75->100
+		幅能效率1.1->1.13
+	武器：闪电扰动机炮：
+		护盾维持增长debuff不再有最大堆叠上限
+		debuff时间8->5秒
+		debuff每秒额外幅能10->16
+		每秒弹药回复8->6
+	武器：古斯塔夫巨炮：
+		现在第二段弹丸在开火产生，而不是击中时
+其他：	
+	修正了发射平台设计不准确的描述
+	在战斗中发射巡航导弹，现在会优先以母舰锁定的目标为目标
+	移除了武器：电击钉矛
+	移除了武器：压制针刺系列
+	移除了武器：创伤炮
+	为发射导弹的实弹武器在安装eccm的情况下增加了补偿，不会再导致实际射程降低
+	发射平台设计不再兼容missile autoloader
+	修正了入场加速会撞击前面队友的问题
+	
+3.20rc5
+Added:
+	Battle: First Contact
+	Battle: Elimination Mission
+	Weapon: DF-1 Heavy Reactive Armor
+	Weapon: RK-107 Rocket Launcher - Medium Fragmentation Composite Weapon
+	Weapon: H-37 Anti-Ship Cannon - Small High Explosive Ballistic Weapon
+	Weapon: H-88 Anti-Ship Cannon - Medium High Explosive Ballistic Weapon
+	Weapon: EB-300k Multi-Purpose Beam - Small High Explosive Beam Energy Weapon
+	Wing: Longspike Heavy Fighter
+	Wing: Assistant Support Craft
+Balance:
+	Warmpool Class:
+	    Burn Level 6 -> 7
+	Javelin Class:
+		Radar no longer provides 10% extra damage
+		Radar range bonus of 80% -> 45%
+		Built-in plug-in now provides a base 40% range bonus
+	Decomposer Class:
+		Deployment points 32->33
+		Ordnance points 205 -> 200
+		Built-in add-on: Salvage crane
+		Shipsystem now increase the damage taken by 20% in addition to reducing the damage by 50%.
+		Shipsystem causes a 15->20 reduction in readiness value
+		Shipsystem cooldown 28->25
+		Shipsystem extra deployment time 20->16
+	Thermocline Class:
+		Deployment point 36->37
+		Tactical system maximum no-fire time 10->12 seconds
+		Flux capacity 20,000->18,000
+	Internalwave Class:
+		Max speed 45->50, manoeuvrability also adjusted upwards
+		Tactical system instantaneous burst speed adjusted upwards
+	Pacifier Class:
+		Deployment points 30->28
+		Modified main gun animation
+	Waterfall Class:
+		Deployment point 35->33
+	Stony Coral Class:
+		1 Anchor ADS System built in to showcase the effects of the tactical system drone weapon
+		Tactical systems can now intercept projectiles, not just missiles
+		Tactical system cd 25->20
+		Slightly modified mapping
+	Seaweight Class:
+		Deployment points 31->32
+	Midstream Class:
+		Slightly modified mapping
+		Deployment point 22->23
+	Hotspring Class:
+		Slightly modified mapping
+		Deployment point 24->25
+		Energy dissipation 300->250
+		Assembly point 150->140
+		Increased energy consumption of Hotspring missiles
+    Tactical system used for 2 recharges, but recovery rate is 50% of the original
+		Missile slot changes, 3 former small missile slots replaced by 2 small live missile slots and 1 medium missile slot
+	Depth Class:
+		Deployment point 13->14
+	Laminar Flow Class:
+		Deployment point 12->13
+	Breakwater Class:
+		Hull 3000->2750
+		Flux Capacity 4000->3500
+		Maximum shield angle 120->240
+		Shield damage reduction 90%->80% and shield angle reduction 90 degrees when Tactical System is active
+	Turbulence Class:
+		Flux capacity 1600->1800
+	Finestream MK.II Class:
+		Assembly points 60->55
+        Shipsystem charges 4 -> 3
+	Finestream class:
+        Flux Capacity 2400->2750
+    "Plumb" Heavy Fighter Wing:
+        Flux Capacity 200->250
+        Flux Dissipation 50->60
+    "Crusher" Flying Tank Wing:
+		Flux Capacity 200->500
+		Main gun range changed to a fixed 1100 instead of following the mothership
+	"Reinvention" Repair Drone Wing:
+		Rewritten ai to increase repair capacity
+	Hullmod Ablative Dissipation
+		Max conversion rate 65% -> 60%
+	Weapon: Scissor series
+		Flux cost 200->100
+		EMP damage 250->200
+		Small version ammo capacity 20->24
+		Medium version ammo capacity 40->48
+	Weapon: Blasting Hammer Large Missile System
+		Single shot damage 3900->3600
+	Weapon: Harpoon Missile:
+		Range 2500->3000
+		Single shot damage 500->400, now hits shields for an additional 400 kinetic damage, but the extra part only deals soft flux
+	Weapon: Harpoon Missile System:
+		Range 2500->3000
+		Single shot damage 750->500, now hits shields for an additional 500 kinetic damage, but the extra part only deals soft flux
+	Weapon: AM-630 CIWS:
+        Shot interval 0.1 -> 0.08333
+	Weapon: AA-40 Universal Cannon:
+		Maximum dispersion 8->10
+		DPS unchanged, flux efficiency 1.28->1.34
+	Weapon: DG-3 Large Rotary Cannon:
+        Maximum dispersion 10->16
+		The structure removal effect now only calculates its own damage modifier and not that of the target
+	Weapon: SR-125 Revolver Autocannon:
+		dph75->100
+		Magnitude efficiency 1.1 -> 1.13
+	Weapon: Lightning Disruptor Cannon
+		Shield maintenance growth debuff no longer has a maximum stacking limit
+		Debuff duration 8->5 seconds
+		debuff has additional energy per second 10->16
+		Ammo return per second 8->6
+	Weapon: Gustav Cannon:
+		Second projectile now spawns on fire, not on hit
+Other:	
+	Fixed inaccurate description of Launch Platform Design
+	Firing cruise missiles in combat now gives priority to targets locked by the mothership
+	Removed Weapon: EMP Pike
+	Removed weapon: Suppression Needle series
+	Removed weapon: Trauma Cannon
+	Compensation has been added for missile-launched live weapons with eccm installed, which no longer results in a reduction in actual range
+	The launch platform design is no longer compatible with the missile autoloader
+	Fixed an issue where entry acceleration would hit a ship in front of you

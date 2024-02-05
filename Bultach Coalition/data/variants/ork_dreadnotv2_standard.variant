@@ -1,0 +1,86 @@
+{
+  "variantId": "ork_dreadnotv2_standard",
+  "hullId": "ork_dreadnotv2",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 45,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hbi",
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_sledge_medium",
+        "WS0002": "ork_rotary_pd",
+        "WS0003": "ork_rotary_pd_small",
+        "WS0004": "ork_rotary_pd_small",
+        "WS0007": "ork_rotary_pd",
+        "WS0009": "ork_noshield_medium",
+        "WS0010": "ork_noshield_medium",
+        "WS0012": "ork_rotary_pd_small",
+        "WS0013": "ork_rotary_pd_small",
+        "WS0017": "ork_noshield_small",
+        "WS0019": "ork_noshield_small",
+        "WS0020": "ork_sledge_medium",
+        "WS0021": "ork_rotary_pd_small",
+        "WS0022": "ork_rotary_pd_small",
+        "WS0023": "ork_rotary_pd_small",
+        "WS0024": "ork_rotary_pd_small",
+        "WS0025": "ork_rotary_pd_small",
+        "WS0026": "ork_rotary_pd_small",
+        "WS0028": "ork_rotary_pd_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "ork_rotary_pd_large",
+        "WS0008": "ork_rotary_pd_large",
+        "WS0029": "dualflak",
+        "WS0030": "dualflak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "ork_thumpa",
+        "WS0011": "ork_thumpa",
+        "WS0018": "ork_thumpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "ork_bigplasma",
+        "WS0015": "ork_bigplasma",
+        "WS0016": "ork_bigplasma"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0031": "ork_sledge"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "ork_light_fighter",
+    "ork_light_fighter"
+  ]
+}

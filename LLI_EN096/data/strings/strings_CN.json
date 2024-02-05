@@ -1,0 +1,134 @@
+{ 
+    "starSystems": {
+      
+	},
+	"shipSystem": {
+		"ssp_AdvanceVenting":"耗散提升",
+		"ssp_AmmoFeed_AFP":"加速剩余：",
+		"ssp_AmmoFeed_HoldFire":"火力受限",
+		"ssp_AmmoFeed_FluxCost":"实弹武器幅能产生 x 50%",
+		"ssp_ammofeedjet0":"机动性增加 最高航速+",
+		"ssp_ammofeedjet1":"武器伤害与幅能产生+",
+		"ssp_HighEnergyFocus":"已记录弹丸:",
+		"ssp_HitMeYouWeekMissile":"目标吸引我方导弹",
+		"ssp_HitMeYouWeekMissile_enemy":"吸引敌方导弹",
+		"ssp_lanina_system":"机动性与最高航速大幅度提升",
+		"ssp_ManeuveringJets0":"机动性提升",
+		"ssp_ManeuveringJets1":"最高航速+",
+		"ssp_microburn":"推进器最大输出",
+		"ssp_microburn_ZeroTurnRate":"转向受限",
+		"ssp_microburn_FastTurnRate":"转向加速",
+		"ssp_missleswarm":"内置武器强化",
+		"ssp_ThunderCharge0":"提高机动性并产生电弧",
+		"ssp_ThunderCharge1":"最大航速+",
+		"ssp_TDS_system": "减免伤害",
+		"ssp_PhaseTransferField_title": "伤害吸收",
+		"ssp_PhaseTransferField": "剩余: %s"
+	} ,
+    "hullMod": {
+	"LLI_ONLY":"只能安装在楼兰工业的舰船上",
+	"ssp_basemode":"基础模式",
+	"ssp_beammode":"光束模式",
+	
+	"ssp_overloadprotection":"过载保护措施",
+	"ssp_overloadprotection_ready":"就绪",
+	"ssp_overloadprotection_CD":"冷却时间剩余：%s",
+	"ssp_overloadprotection_Activeing":"激活紧急阻尼力场",
+
+	"ssp_shieldmod_title":"补偿机动",
+	"ssp_shieldmod_allowactive":"护盾已完全展开，补偿机动就绪 %s",
+	"ssp_shieldmod_activeing":"机动性提升，最大航速+50，剩余时间 %s",
+	"ssp_shieldmod_coldingdown":"补偿机动需要准备，剩余时间 %s",
+	"ssp_shieldmod_tooltip0":"使用护盾发生器形成巨大的冷聚变泡为舰船提供额外能源同时增强护盾。护盾展开速度降低 %s ，转向速度增加 %s 。\n不兼容:%s,%s。",
+	"ssp_shieldmod_SectionHeading1":"护盾增强",
+	"ssp_shieldmod_tooltip1":"护盾基于当前展开的角度和最大角度获得 %s 至 %s 减伤，角度越小效果越强。", 
+	"ssp_shieldmod_SectionHeading2":"补偿机动", 
+	"ssp_shieldmod_tooltip2":"护盾完全展开后关闭护盾可以在 %s 秒内明显增加机动性和航速，这个效果拥有 %s 秒的冷却时间。",  
+	 
+	"ssp_LongerRange":"剩余 %s",
+	"ssp_LongerRange_title":"额外射程",
+	"ssp_LongerRange_tooltip0":"限制舰船推进系统功率减少对火控系统干扰，为舰船提供临时性的射程增益。\n·降低 %s 的机动性和最大航速，但零幅能加速增加航速减少的数值。\n·战术系统获极化。\n·协议类船体插件只能安装一个。",
+	"ssp_LongerRange_SectionHeading1":"详细信息",
+	"ssp_LongerRange_tooltip1":"·根据舰船级别增加 %s 能量、实弹非点防御武器射程。非点防御武器开火时会降低上述射程。\n·上述射程在武器停止开火时会恢复，幅能越低速率越快。\n·强制排幅时恢复速率极大增加。",
+	"ssp_Polarisation":"：极化",
+	"ssp_ammofeedjet_P":"·航速额外增加 %s 。\n·战术系统启动更快，持续更久。\n·爆发耗散效果降低 %s。",
+	"ssp_lanina_system_P":"·战术系统持续时间减少 %s s。\n·航速额外增加 %s 。",
+	"ssp_ManeuveringJets_P":"·战术系统持续时间减少 %s 。\n·效果增强 %s 。",
+	"ssp_ThunderCharge_P":"·每个电弧产生的辐能增加 %s 。\n·电弧数量上限增加 %s 。\n战术系统激活时:\n·雷铸电场的触发频率降低 %s 。\n·雷铸电场的伤害和射程增益改为 %s 。",
+	"ssp_microburn_P":"·最大充能数减少 %s 。\n·充能速率减慢 %s 。\n·不锁定转向，反而提升 %s 转向速度。",
+	"ssp_PhaseTransferField_P":"·伤害吸收减少 %s 。\n·电磁爆炸伤害提升 %s 。",
+	"ssp_AdvanceVenting_P":"·最短冷却时间延长至 %s 秒。\n·舰船时间流速 %s 。",
+	"ssp_HitMeYouWeekMissile_P":"·改为增加 %s 目标受到伤害。\n·持续时间减少 %s 。",
+	"ssp_missleswarm_P":"战术系统不支持极化。 %s ",
+	"ssp_AmmoFeed_P":"·增加 %s 持续时间。\n·每个可搭载实弹武器的槽位提供的加速时间增加 %s 。",
+	"ssp_HighEnergyFocus_P":"·极大缩减弹幕的散布角度。\n·能量武器产生幅能和光束武器伤害增加 %s 。",
+	"ssp_zhurong_system_P":"·充能速率增加 %s 。\n·幅能产生 %s 。",
+	"ssp_TDS_system_P": "·充能速率增加 %s 。\n·最大充能数增加 %s 。\n·幅能产生 %s 。",
+	"ssp_gonggong_system_P": "·电弧的伤害和冲击力效果 %s 。\n·幅能产生 %s 。",
+	
+	"ssp_ShortRange_tooltip0":"显著增强推进器功率，火控系统受到了严重干扰，但也因此为弱点分析系统留下更多的拓展空间。\n·增加 %s 的机动性和最大航速，但零幅能加速减少航速增加的数值。\n·战术系统获优化。\n·协议类船体插件只能安装一个。\n·不兼容:%s。",
+	"ssp_ShortRange_SectionHeading1":"详细信息",
+	"ssp_ShortRange_tooltip1":"·根据舰船级别减少 %s 能量、实弹所有武器射程。\n·命中船体时，命中位置越靠近船体的后方伤害就越高，最多 %s 。\n·命中护盾时，命中位置越靠近护盾的边缘伤害就越高，最多 %s 。",
+	"ssp_Supreme":"：优化",
+	"ssp_ammofeedjet_S":"·战术系统关闭时的爆发耗散可在护盾开启时耗散 %s 硬辐能。",
+	"ssp_lanina_system_S":"·战术系统持续时间增加 %s s。",
+	"ssp_ManeuveringJets_S":"·缩短前摇和后摇，总持续时间不变。",
+	"ssp_ThunderCharge_S":"·电弧不再产生幅能。\n战术系统激活时:\n·雷铸电场的触发频率增加 %s 。",
+	"ssp_microburn_S":"·最大充能数增加 %s 。\n·推进时间延长 %s 。",
+	"ssp_PhaseTransferField_S":"·伤害吸收增加 %s 。",
+	"ssp_AdvanceVenting_S":"·耗散硬辐能时的速率增加 %s 。",
+	"ssp_HitMeYouWeekMissile_S":"·战术系统射程增加 %s 。",
+	"ssp_missleswarm_S":"战术系统不支持优化。 %s",
+	"ssp_AmmoFeed_S":"·减少 %s 持续时间。",
+	"ssp_HighEnergyFocus_S":"·增加 %s 持续时间。",
+	"ssp_zhurong_system_S":"·最大充能数增加 %s 。",
+	"ssp_TDS_system_S": "·免疫所有类型伤害。",
+	"ssp_gonggong_system_S": "·最大充能数增加 %s 。",
+	
+	"ssp_cliff_tooltip0":"一个违背热力学第二定律的火控计算机阵列，基于舰船幅能水平来强化舰船的各项能力。\n·降低 %s 导弹的最大速度和机动性。\n·安装 %s 进入光束模式。",
+	"ssp_cliff_basemode_tooltip":"·根据幅能水平，最高提升 %s 弹丸速度。\n·最高降低最大散布/降低每发增加散布/加快后座恢复 %s 。",
+	"ssp_cliff_beammode_tooltip":"·根据幅能水平，最高提升光束武器 %s 的射程。\n·根据幅能水平，光束武器对护盾伤害最多增加 %s ，每次光束造成的伤害有最高 %s 概率产生硬幅能伤害。\n·禁用非光束武器，不影响实弹槽位上的武器、内置武器、导弹武器。",
+	
+	"ssp_bias_tooltip0":"该子系统对武器射程进行了调整，使不同类型的武器可以更好的协同作战\n安装 %s 进入光束模式。",
+	"ssp_bias_basemode_tooltip":"·增加射弹武器 %s 射程，降低光束武器 %s 射程。\n·不影响点防御武器。",
+	"ssp_bias_beammode_tooltip":"·增加 %s 所有光束武器射程，包括点防御武器。",
+	
+	"ssp_SystemUsedTimes_Description": "·电弧射程随舰船体积调整。当前电弧射程为 %s 。\n·激活战术系统 %s 时，本船体插件的效果将得到调整",
+
+	"ssp_PeakTimeoverride":"步进进程为 %s",
+	
+	"ssp_Temporaryshield_allowon":"临时护盾就绪 %s",
+	"ssp_Temporaryshield_off":"冷却时间 %s"
+	},
+	"industry": {
+		"ssp_cryosanctum": "安装在 %s 增加 %s 单位 %s 产出，安装在 %s 增加 %s 单位 %s 产出",
+		"ssp_mantle_bore": " 的产量增加 %s 单位"
+	},
+    "llistory": {
+		"LLI_continue":"继续",
+		"LLI_leave":"离开",
+		
+		"LLI_MainMission_Part1_0":"酒吧的角落里，一个穿着全套太空服还披着斗篷的怪人似乎正在演讲，吸引了不少人去围观",
+		"LLI_MainMission_Part1_1":"过去凑凑热闹",
+		"LLI_MainMission_Part1_2":"你远远的仔细的打量了这个衣着古怪的人，华丽的斗篷上挂着数十枚勋章，他单向透明的太空头盔让你无法看清他面部，太空服似乎完美的贴合穿着者的动作，显然是专门为此人订制的，独特的花纹让你一眼就认出了这件太空服是楼兰海军的制式装备。",
+		"LLI_MainMission_Part1_3":"过于拥挤的人群使你无法靠近。在一阵掌声中，人群的中心传来阵阵洪亮的男性嗓音，你透过人群的间隙看到演讲者正手舞足蹈的发表自己的演说，很遗憾的是你距离太远了根本听不清他在说什么。",
+		"LLI_MainMission_Part1_4":"大约一刻钟过去了，人群逐渐散开，而这个奇怪的演讲者就从你的视野中消失了。散场后有些人似乎是被鼓舞了一样，也有人直接点了好几瓶酒尝试将自己灌醉，而你则是什么都没听清白白浪费了大约半个小时",
+		"LLI_MainMission_Part1_5":"一名匆忙路过的路人不小心撞到了你，随后加快脚步消失在酒吧的人群中。你感受到了这个陌生人往你身上塞了什么东西。你检查了这个来历不明的物品，这是一张金属制名片。",
+		"LLI_MainMission_Part1_6":"获得了Bracks Ao，楼兰海军前海军司令的联系方式",
+
+		"LLICMD_BuyWaveM_0":"失去 40000 星币",
+		"LLICMD_BuyWaveM_1":"获得 ",
+		"LLICMD_BuyWaveM_2":"星币剩余:",
+		"LLICMD_BuyWaveM_3":"你没有足够的星币"
+	}
+ 
+
+
+
+
+
+
+
+
+
+}

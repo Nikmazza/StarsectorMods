@@ -1,0 +1,83 @@
+name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
+###Standard weapons###,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+##PD Weapon(s)##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Plasma Flak Cannon,ssp_FragMachinegun,0,0.5,700,550,,100,,1,60,7,3,2.5,3,FRAGMENTATION,25,,0,0.2,3,0.2,0,15,15,500,,600,,,100,,,PD,"ssp_bp,pd7",,LLI,,Point Defense,,,,,,,"This weapon's recoil decays rapidly, and the first shot in each burst has perfect accuracy.",,,6086
+Clearsky Flak Cannon,ssp_TriFlak,0,0.5,1200,600,,300,,0,35,12,,,,FRAGMENTATION,75,,0,3.6,1,0,0,0,0,0,,700,,,200,,,PD,"ssp_bp,pd14",,LLI,,Space Cleanser (Area),,,,,,,,,,
+##Energy weapons##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Transmission Beam,ssp_DeliverPDLaser,0,0.5,1100,800,150,,,0,60,11,,,,ENERGY,,120,0.1,0.1,,,,,,,3600,,,,,,,,"ssp_bp,energy6",,LLI,,Special,,,,,"%s: multiple ships firing Transmission Beams on the %s can transfer flux between each other, until each ship has an equal flux level. Each additional weapon with a Transmission Lens increases the rate by %s flux per second: all transferred flux will be converted into soft flux.",Transmission Lens|same ship|100,,,,274
+Thermal Ray,ssp_heatbeam,0,0.5,1000,1000,180,,,0,12,10,,,,HIGH_EXPLOSIVE,,180,0.1,0.1,,,,,,,2400,,,,,,,,"he7,beam8,ssp_bp",,LLI,,Anti Armor,,,,,,,,,,2
+Spotter Multibeam,ssp_spot,0,0.5,1000,1000,450,,,0,15,10,20,4,20,ENERGY,,450,0,0,0.1,0,,,,,1000000,,,,,,,,"energy6,beam6,ssp_bp",,LLI,,General,,,,,The beam can %s.,fire over allied ships,,,,3
+Blazing Torus,ssp_solareclipse,0,0.5,2000,800,,750,,300,4,18,,,,ENERGY,900,,0.75,1.5,,,0,3,1.5,0.6,,1000,,,400,,,,"energy10, LR, ssp_bp",,LLI,,General,,,,,,,,,,4
+Charge Lance,ssp_LargeShredder,0,0.5,3000,1000,600,,,0,4,30,,,,KINETIC,,1500,0.25,0.1,2.1,10,,,,,1000000,,,,,,,,"energy6,beam6, LR, ssp_bp",,LLI,,Anti Shield,,,,,"After firing, launches %s arcs at the beam's target, dealing %s kinetic and EMP damage; the damage of the arcs can be increased by up to %s depending on the firing ship's flux level.",10|100|100%,,,,3.51
+##Ballistic HE weapons##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Firestorm Needler,ssp_heatneedle,0,0.5,1200,800,,40,,1,15,12,,,,HIGH_EXPLOSIVE,45,,0,4.55,30,0.05,0,9,0.8,4,,1200,,,10,,,,"he6,ssp_bp",,LLI,,Specialized Anti Armor,,,,,Deals additional damage to armor equal to %s of the projectile's damage. This damage is %s by armor damage reduction.,50%|not reduced,,,,5.75
+Light Firestorm Needler,ssp_lightheatneedle,0,0.5,800,700,,40,,1,20,8,,,,HIGH_EXPLOSIVE,45,,0,5.3,15,0.05,0,9,0.8,4,,1200,,,10,,,,"he4,ssp_bp",,LLI,,Specialized Anti Armor,,,,,Deals additional damage to armor equal to %s of the projectile's damage. This damage is %s by armor damage reduction.,50%|not reduced,,,,23.6
+Nether Cannon,ssp_shortgun,0,0.5,2200,900,,600,,1,9,22,,,,HIGH_EXPLOSIVE,840,,0.4,2.1,,,0,0,0,0,,350,,,10,,,,"he9,ssp_bp",,LLI,,Anti Armor (Area),,,,,Projectile spawns %s explosions nearby; the explosions' damage is equal to %s of the projectile's damage.,high explosive|25%,,,,
+##Ballistic Kinetic weapons##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Revolver Autocannon,ssp_GPD,0,0.5,600,700,,100,0,1,60,6,,,,KINETIC,100,,0,3.4,6,0.15,4,10,1.5,4,,700,,,10,,,,"kinetic6,ssp_bp",,LLI,,Anti Shield,,,,,,,,,,5178
+Gravity Hammer,ssp_gravitonluncher,0,0.5,1200,800,,200,,1,18,12,,,,KINETIC,320,,0,1.6,,,4,8,1.2,4,,700,,,10,,,,"kinetic8,ssp_bp",,LLI,,Specialized Anti Shield,,,,,Hits on shield increase the target's hard flux level by an amount equal to %s of the projectile's damage.,50%,,,,13.8
+BF-Gravity Hammer ,ssp_largegravitonluncher,0,0.5,2500,900,,200,,1,12,25,,,,KINETIC,320,,0,1.4,2,0.2,2,8,1.2,4,,700,,,10,,,,"kinetic8,ssp_bp",,LLI,,Specialized Anti Shield,,,,,Hits on shield increase the target's hard flux level by an amount equal to %s of the projectile's damage.,50%,,,,13.8
+##Ballistic Energy weapons##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Graviton Plasma Blaster,ssp_blaster,0,0.5,1500,1000,,700,350,300,10,15,,,,ENERGY,1000,,0,5.4,1,, ,0,0,0,,1000,,,10,,,,"ssp_bp,energy9",,LLI,,General(Sustained),,,,,%s: each hit from this weapon makes the target take %s more damage from all %s weapons: this debuff stacks infinitely.,Focus Fire|1%|Focus Fire,,,,4828
+Graviton Plasma Driver,ssp_BigFackingGPD,0,0.5,3000,1000,,900,450,300,6,30,,,,ENERGY,1300,,0,3.4,1,, ,0,0,0,,1000,,,10,,,,"ssp_bp,energy9,LR",,LLI,,General(Sustained),,,,,%s: each hit from this weapon makes the target take %s more damage from all %s weapons: this debuff stacks infinitely.,Focus Fire|1%|Focus Fire,,,,4826
+##Missile weapons##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ion Projector DEM,ssp_plasmamissile,0,0.5,400,2500,,100,0,25,10,4,,,,ENERGY,0,,0,15,1,,0,0,0,0,,300,50,5.2,240,,,DO_NOT_AIM,"ssp_bp,missile7, damage_special, damage_soft_flux",,LLI,,Disabler,,,,,"Fires an ion beam when close to the target, dealing negligible levels of energy damage and %s EMP DPS, over %s seconds. The beam's damage is affected by modifers that affect missile weapons rather than energy ones.
+When the fired beam hits hull or armor, it continually generates arcs which strike weapons and engines, dealing additional energy and EMP damage. When the beam hits shields, an arc is randomly generated through the shields depending on the target's hard flux level.",800|3,,,TRUE,4354
+Ion Projector DEM-Beam,ssp_plasmamissile_payload,1,,0,1000,10,,800,,30,0,,,,ENERGY,0,,0.1,0.25,,,,,,,1000000,,,,,,,SYSTEM,fires_one_burst,,,,,,,,,,,,,,11.91
+Smart-Flare Pod,ssp_FlareMine,0,0.5,800,1500,,100,400,,,8,30,0.3,6,ENERGY,0,,0,9,6,0.05,0,0,0,0,,400,200,10,1,,,"PD,DO_NOT_AIM","ssp_bp,utility8",,LLI,,Point Defense,,,,,Flares will actively seek out and destroy missiles.,,,,,
+Cluster Bomber,ssp_MedMissle,0,0.5,1000,2500,,2000,,50,10,10,15,,,HIGH_EXPLOSIVE,0,,0,8,1,,0,0,0,0,,250,50,9,350,,,"DO_NOT_AIM, CONSERVE_5","ssp_bp,missile18, strike15 ",,LLI,,Finisher,Medium,Good,,,Separates into multiple inertial bombs.,,,,TRUE,1688
+Heavy Cluster Bomber,ssp_LargeMissile,0,0.5,2000,2500,,2000,,50,10,20,36,,,HIGH_EXPLOSIVE,0,,0,13,2,1,0,0,0,0,,250,50,9,350,,,"DO_NOT_AIM, CONSERVE_5","ssp_bp,missile18, strike15 ",,LLI,,Finisher,Medium,Good,,,Separates into multiple interial bombs.,,,,TRUE,1688
+Chaos Armament,ssp_ChaosArmory,0,0.5,2600,2500,,300,,50,10,26,144,,,ENERGY,0,,0,17,8,0.2,0,0,0,0,,300,100,12.5,240,,,"DO_NOT_AIM, CONSERVE_5","ssp_bp,missile12,strike9, damage_special",,LLI,,Multipurpose,Medium,Medium,,,"Each shot in a burst fires one of the following special munitions, each with a %s chance:
+-Pulse: Significantly increased maneuverability and speed. Fires %s missiles, each dealing %s energy and %s EMP damage.
+-Disruption: Unguided after a brief aiming period. Slows the target on hit and deals %s kinetic damage.
+-Termination: Significantly reduced maneuverability and speed. Deals %s fragmentation damage over a %s SU area.
+-Dissolver: A MIRV which splits into %s micro-missiles; each dealing %s high explosive damage while also dealing damage to armor equal to %s of their standard damage: %s.",25%|3|60|200|200|600|100|10|20|50%|this damage is not affected by armor damage reduction,,,TRUE,12
+Lop Nur-class Torpedo,ssp_nuke,0,0.5,500,1800,,2500,2000,1000,5,3,1,,,ENERGY,0,,0,20,1,,0,0,0,0,,100,50,25,600,,,"GUIDED_POOR, STRIKE","ssp_bp,missile18, strike15 ",,LLI,,Finisher,Terrible,Terrible,,,"Has a high health at %s, while possessing a miniature shield which has %s flux capacity and %s efficiency.",700|400|1.0,,,TRUE,629
+Lop Nur Torpedo Launcher,ssp_nukeM,0,0.5,1000,1800,,2500,2000,1000,5,12,6,,,ENERGY,0,,0,20,1,,0,0,0,0,,100,50,25,600,,,"GUIDED_POOR, STRIKE","ssp_bp,missile18, strike15 ",,LLI,,Finisher,Terrible,Terrible,,,"Has a high health at %s, while possessing a miniature shield which has %s flux capacity and %s efficiency.",700|400|1.0,,,TRUE,729
+Lop Nur Cruise MIRV,ssp_nuke_MIRV,0,0.5,2800,4000,,6000,2000,1000,5,28,5,,,ENERGY,0,,0,20,1,,0,0,0,0,,200,50,12,600,,,STRIKE,"ssp_bp,missile18, strike15 ",,LLI,,Finisher,Variable,Variable,,,"Each warhead has %s health, as well as a small shield with %s flux capacity and %s efficiency.",700|400|1.0,,,TRUE,729
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+##Built-in weapons##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Light Transmission Beam (LRPD),ssp_taclaser,,,1,800,50,,,0,20,1000,,,,ENERGY,,0,0.1,0.1,,,,,,,7200,,,,,,,"PD,SYSTEM",,,LLI,,Point Defense (Special),,,,,"%s: multiple ships firing Transmission Beams on the %s can transfer flux between each other, until each ship has an equal flux level. Each additional weapon with a Transmission Lens increases the rate by %s flux per second: all transferred flux will be converted into soft flux.",Transmission Lens|same ship|100,,,,18
+Light Transmission Beam (SRFD),ssp_taclaser_srfd,,,1,400,30,,,0,20,1000,,,,ENERGY,,0,0.1,0.1,,,,,,,7200,,,,,,,SYSTEM,,,LLI,,Special,,,,,"%s: multiple ships firing Transmission Beams on the %s can transfer flux between each other, until each ship has an equal flux level. Each additional weapon with a Transmission Lens increases the rate by %s flux per second: all transferred flux will be converted into soft flux.",Transmission Lens|same ship|100,,,,178
+Revolver Autocannon (Fighter),ssp_GPD_fighter,,,1,500,,100,0,1,60,1000,,,,KINETIC,60,,0,1.2,1,,0,9,1.5,4,,700,,,10,,,SYSTEM,,,LLI,,Anti Shield,,,,,,,,,,5148
+Ion Razor,ssp_TDS_buildinmissile,,,1,1500,,1,,5,30,1000,,,,ENERGY,0,,0,10,1,,0,0,0,0,,150,50,12.5,50,,,SYSTEM,"damage_special, damage_soft_flux",,LLI,,Suppression,Fast,None,,,"The missiles launch in parallel formation and can pass over enemy ships, targeting each other with beams that deal a total of %s EMP damage per second, alongside negligible energy damage.",800x2,,,,12.3
+S. Invicta Swarmer,ssp_swarm,,,1,1000,,210,,5,30,1000,,,,FRAGMENTATION,0,,0,4,8,0.1,5,5,0,0,,400,120,3.0,80,,,"ANTI_FTR,DO_NOT_AIM,CONSERVE_5,SYSTEM",energy6,,LLI,,Multipurpose,,,,,"Ammunition is swapped between the following types using the ship's system:
+
+%s: deals minor area-of-effect damage.
+%s: damage becomes 1/3 the listed value in kinetic damage, travels faster, but is more fragile.
+%s: damage becomes 1/3 the listed value in high explosive damage, travels faster, but is more fragile.
+
+",Fragmentation|Kinetic|High Explosive,,,,16.3
+S. Invicta Array,ssp_swarm_naga,,,1,1500,,210,,5,30,1000,,,,FRAGMENTATION,0,,0,10,20,0.1,5,5,0,0,,400,120,5.0,80,,,"ANTI_FTR,DO_NOT_AIM,CONSERVE_5,SYSTEM",energy6,,LLI,,Multipurpose,,,,,"Ammunition is swapped between the following types using the ship's system:
+
+%s: deals minor area-of-effect damage.
+%s: damage becomes 1/3 the listed value in kinetic damage, travels faster, but is more fragile.
+%s: damage becomes 1/3 the listed value in high explosive damage, travels faster, but is more fragile.
+
+",Fragmentation|Kinetic|High Explosive,,,,16.3
+Multiplex Shredderbeam,ssp_shredder,,,1,1000,600,,,0,30,1000,,,,ENERGY,,600,0.25,0.1,2.1,10,,,,,1000000,,,,,,,SYSTEM,,,LLI,,Suppression,,,,,"After firing, launches %s arcs at the beam's target, dealing %s energy and EMP damage; the damage of the arcs can be increased by up to %s depending on the firing ship's flux level.",10|100|100%,,,,3.51
+Hunter's Spear,ssp_lanina_weapon,,,1,1000,1000,,1000,0,30,1000,,,,ENERGY,,1000,0.1,0.1,1,6,,,,,1000000,,,,,,,SYSTEM,,,LLI,,Special,,,,,"Hits generate damaging arcs, dealing additional energy and EMP damage.
+
+While the ship's system is activated, additional arcs are spawned, as well as reducing the target's mobility.",,,,,20
+Plasma Charge Launcher,ssp_siege,,,1,800,,1000,,100,0,1000,1,,,ENERGY,0,,0.5,1,,,0,30,30,4,,100,400,5,500,,,SYSTEM,,,LLI,,Siege,,,,,,,,,,1.36
+Quad Vulcan Cannon,ssp_vulcan,,,1,600,,50,,1,75,1000,,,,FRAGMENTATION,2,,0,0.05,1,,0,10,0.2,10,,800,,,10,,,"PD,SYSTEM",,,LLI,,Point Defense,,,,,,,,,,149
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+###代码及装饰###,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+S. Invicta Swarmer(Kinetic),ssp_swarm_KINETIC,,,1,1000,,70,,5,30,1000,4,2,8,KINETIC,0,,0,0.2,1,,0,20,0,0,,550,120,3,40,,,SYSTEM,,,,,,,,,,,,,,,16.3
+S. Invicta Swarmer(HE),ssp_swarm_HE,,,1,1000,,70,,5,30,1000,4,2,8,HIGH_EXPLOSIVE,0,,0,0.2,1,,0,20,0,0,,550,120,3,40,,,SYSTEM,,,,,,,,,,,,,,,16.3
+S. Invicta Swarmer(Kinetic),ssp_swarm_naga_KINETIC,,,1,1500,,70,,5,30,1000,4,2,8,KINETIC,0,,0,0.2,1,,0,20,0,0,,550,120,5,40,,,SYSTEM,,,,,,,,,,,,,,,16.3
+S. Invicta Swarmer(HE),ssp_swarm_naga_HE,,,1,1500,,70,,5,30,1000,4,2,8,HIGH_EXPLOSIVE,0,,0,0.2,1,,0,20,0,0,,550,120,5,40,,,SYSTEM,,,,,,,,,,,,,,,16.3
+Tide (T) cover,ssp_tide_T_cover,,,1,0,0,,,0,0,1000,,,,ENERGY,,0,1,1,,,,,,,1000000,,,,,,,SYSTEM,,,,,,,,,,,,,,,35.1
+ssp_flood_deco,ssp_flood_deco,,,1,0,0,,,0,0,1000,,,,ENERGY,,0,1,1,,,,,,,1000000,,,,,,,SYSTEM,,,LLI,,Special,,,,,,,,,,35.1
+Zhurong deco,ssp_zhurong_cover,,,1,0,0,,,0,0,1000,,,,ENERGY,,0,1,1,,,,,,,1000000,,,,,,,SYSTEM,,,LLI,,Special,,,,,,,,,,35.1
+Zhurong system,ssp_zhurong_system_minelayer,0,,1,,,300,,25,,,,,,ENERGY,0,,,,1,,,,,,,0,0,0.5,1000,,,SYSTEM,,,Unknown,,,,,,,,,,,,38.5
+Doomsayer thrusters,ssp_thrusters,,,,1,1,,,,,,,,,,,,,10,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+Chaos Armory(Dissolver),ssp_ChaosArmory_HIGH_EXPLOSIVE,0,,1,2500,,200,,50,10,1,,,,HIGH_EXPLOSIVE,0,,0,10,1,0.1,0,0,0,0,,300,100,10,150,,,SYSTEM,,,,,,,,,,,,,,TRUE,12
+Chaos Armament(Pulse),ssp_ChaosArmory_ENERGY,0,,1,2500,,60,200,50,10,1,,,,ENERGY,0,,0,10,1,0.1,0,0,0,0,,450,100,8.75,60,,,SYSTEM,,,,,,,,,,,,,,TRUE,12
+Chaos Armament(Termination),ssp_ChaosArmory_FRAGMENTATION,0,,1,2500,,600,,50,10,1,,,,FRAGMENTATION,0,,0,10,1,0.1,0,0,0,0,,220,100,18,150,,,SYSTEM,,,,,,,,,,,,,,TRUE,12
+Chaos Armament(Disruption),ssp_ChaosArmory_KINETIC,0,,1,2500,,200,,50,10,1,,,,KINETIC,0,,0,10,1,0.1,0,0,0,0,,600,200,6.5,100,,,SYSTEM,,,,,,,,,,,,,,TRUE,12
+standard_deco_weapon,ssp_interference,,,1,5000,0,,,0,0,1000,,,,ENERGY,,0,0,3,0.1,,,,,,1000000,,,,,,,SYSTEM,,,,,,,,,,,,,,,35.1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,66 @@
+{
+  "id": "fed_pegasus",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_pegasus_proj",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/missile_rack_open_m_4x_turret_base.png",
+  "turretUnderSprite": "graphics/weapons/arbalest_turret_under.png",
+  "hardpointSprite": "graphics/weapons/missile_rack_open_m_4x_hardpoint_base.png",
+  "hardpointUnderSprite": "graphics/weapons/arbalest_hardpoint_under.png",
+  "renderAboveAllWeapons": 0,
+  "turretOffsets": [
+    5.5,
+    -8,
+    5.5,
+    8,
+    5.5,
+    -3,
+    5.5,
+    3
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    8.5,
+    8,
+    8.5,
+    -8,
+    8.5,
+    3,
+    8.5,
+    -3
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "renderHints":[RENDER_LOADED_MISSILES],
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 10,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      110,
+      100,
+      100,
+      215
+    ]
+  },
+  "textureType": ROUGH,
+  "fireSoundTwo": "fed_pegasus_fire"
+}

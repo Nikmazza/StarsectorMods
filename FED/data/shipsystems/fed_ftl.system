@@ -1,0 +1,41 @@
+{
+	"id":"fed_ftl",
+	"type":"TELEPORTER",
+	"aiType":"PHASE_TELEPORTER",
+	
+	#"jitterColor":[100,165,255,150],
+	"jitterColor":[240,255,60,200],
+	"jitterCopies":10,
+	#"jitterRange":25,
+	"jitterRange":30,
+	"jitterRangeRadiusFraction":0.5,
+	
+	#"weaponGlowColor":[100,165,255,0],
+	#"weaponTypes":[ENERGY],
+	
+	#"engineGlowColor":[255,100,225,255],
+	#"engineGlowContrailColor":[200,100,200,25],
+	"engineGlowLengthMult":0,
+	"engineGlowWidthMult":0,
+	"engineGlowGlowMult":0,
+	
+	"range":1500,
+	"randomRange":100,
+	
+	"vulnerableChargeup":true,
+	"vulnerableChargedown":false,
+	"renderCopyDuringTeleport":true,
+	
+	"fadeActivationSoundOnChargedown":true,
+	
+	#"useSound":"system_teleport",
+	"useSound":"fed_ftl_sfx",	
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":1000,
+		"averageSpeedIncrease":750,
+	}
+}

@@ -1,0 +1,72 @@
+{
+  "hullName": "Dangpa",
+  "hullId": "bc_lowtech_trident",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_lowtech_trident.png",
+  "style": "LOW_TECH",
+  "height": 32,
+  "width": 40,
+  "center": [20, 13],
+  "collisionRadius": 30.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 29,
+  "viewOffset": 0,
+  "builtInMods": [
+    "autorepair"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [11, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": -0,
+      "locations": [11, -9]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, 11],
+      "length": 15,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-11, -11],
+      "length": 15,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-13, -0],
+      "length": 19.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -12.5, 11,
+    0.5, 20,
+    9, 4.5,
+    19, -0,
+    9, -4.5,
+    0.5, -20,
+    -12.5, -11
+  ]
+}

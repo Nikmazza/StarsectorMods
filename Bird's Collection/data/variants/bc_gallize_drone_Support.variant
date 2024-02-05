@@ -1,0 +1,22 @@
+{
+  "variantId": "bc_gallize_drone_Support",
+  "hullId": "bc_gallize_drone",
+  "displayName": "Support",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualac"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,19 @@
+{
+        "knownShips":{
+        "hulls":[
+            "BSC_Adventurer",
+            "BSC_Nadir",
+            "BSC_Stoner",
+        ],
+    },
+                "hullFrequency":{
+        "hulls":{
+        "BSC_Mosstrooper": 0.2, #Should be very rare
+        },
+    },
+                "knownWeapons":{
+        "weapons":[
+            "BSC_Annihilator_MLRS",
+        ],
+    },
+},

@@ -1,0 +1,15 @@
+{
+  "baseHullId": "BSC_Brave",
+  "baseValueMult": 1.1,
+	"builtInMods":["unstable_injector"],
+  "descriptionId": "BSC_Brave",
+    "descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+  "hullDesignation": "Frigate",
+  "hullName": "Brave (P)",
+  "manufacturer": "Pirate",
+  "restoreToBaseHull": false,
+  "skinHullId": "BSC_Brave_P",
+  "spriteName": "graphics/hulls/BSC_Brave_P.png",
+  	"tags":["pirate_bp"],
+	"tech":"Pirate",
+}

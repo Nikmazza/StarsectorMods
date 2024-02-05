@@ -1,0 +1,59 @@
+{
+  "id": "fed_beam_halberd",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "beamEffect": "data.scripts.weapons.fed_PierceBeamEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/FED/weapons/fed_medbeam_turret.png",
+  "turretGlowSprite": "graphics/FED/weapons/fed_medbeam_turret_glow.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_medbeam_hardpoint.png",
+  "hardpointGlowSprite": "graphics/FED/weapons/fed_medbeam_hardpoint_glow.png",
+  "glowColor": [
+    255,
+    55,
+    55,
+    255
+  ],
+  "hitGlowRadius": 80,
+  "turretOffsets": [
+    7.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    11.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    30,
+    30,
+    215
+  ],
+  "coreColor": [
+    255,
+    220,
+    220,
+    155
+  ],
+  "width": 30,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 1024,
+  "pixelsPerTexel": 15,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF,
+    FIGHTER
+  ],
+  "fireSoundOne": "fed_halberd_fire_new"
+}

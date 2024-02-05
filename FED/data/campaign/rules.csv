@@ -1,0 +1,160 @@
+id,trigger,conditions,script,text,options,notes
+#RULESET_NAME Federation,,,,,,
+greetingFederationFriendly,OpenCommLink,"$faction.id == star_federation
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Acknowledging contact, noting cycle and time."" states the Federation $personRank, who is seen adjusting the fit of their dress uniform before attending the comms-screen.
+
+""Well, what is it? More pather sightings? Someone stole your Buffalo full of supplies again?""
+OR
+You catch a glimpse of a weary looking $personName before they replace it with a tight-lipped smile. ""Well, look what the scout drone dragged in. Better make this quick, because we both have places to be.""
+OR
+$personName shrugs off the small slouch they'd unwittingly wore in their seat. ""Greetings, $playerName, is there something we need to log for Federation High Command to review?""
+OR
+""Your paint seems a little scuffed, you may want to let the dockmaster know the next time you make port"", advises $personName with a slight nod.
+
+Their blase pose doesn't betray truth or otherwise. There's probably not a fine for unkempt paint anyways.
+OR
+""Acknowledging contact, Affilliate. Do you have anything to report?"" 
+
+",,
+greetingFederationHostileWeaker,OpenCommLink,"$faction.id == star_federation
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"Federation $personRank $personName crackles to life on the viewport, shoulders strong and stance wide. ""You can remind me of the lowly pirates who slaughter in the name of strength and profit. The Federation will see to you brought justice, no matter what happens here today.""
+OR
+""There was an old Earth saying, 'Pick on someone your own size', you know,"" $personName says grimly. ""I look forward to when fate reverses the odds given by this day. For mankind, among the stars.""
+
+The commlink cuts just as your sensor officer reports their EM signatures are blooming to combat outputs.
+OR
+""Star Federation $personRank, $personName, service ID..."" cuts across the audio channel in a manner that's hard to distinguish between wavering or garbled. Impossible to tell really given the interference of stellar emissions.
+
+But the details of $personName are already on your screen, and listening $himOrHer rattle it off on the viewport seems redundant.
+
+",cutCommLink:Cut the comm link,
+greetingFederationHostileWeakerDefiant,OpenCommLink,"$faction.id == star_federation
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""The war wasn't won with an easy engagement, but rest assured the Star Federation is ready to prove its resilience again"" says $personName, a glimmer in their eyes. ""Load weapons!""
+OR
+""Charge weapons, ignite shields. Long live the Federation."" barks $personName. 
+
+Hostile radiation signatures light up across the tactical computer display, though no warnings show up regarding them.
+OR
+""What a twisted pleasure it must be to fire upon fleets smaller than your own. I'll see you in hell, $playerName. Battlestations!""
+
+The bray of the Federal bridge siren is the last thing you hear before commlink is cut by their communications officer.
+OR
+The Federation $personRank stares at you for a few seconds before cutting the connection. ",cutCommLink:Cut the comm link,
+greetingFederationHostileStronger,OpenCommLink,"$faction.id == star_federation
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""You stand accused of countless crimes by charge of the Star Federation's High Command. I shall not give you the satisfaction of reliving them; today in recounting them, or tomorrow in repeating them.""
+
+$personName waves their hand, and the commlink cuts to the red warnings of the tactical computer.
+OR
+""This is the Star Federation commissioned $personRank, $personName. I order you to disable your weapons and spin down your drives. I will fire if you do not comply, as per Order 35, Section 12 of...""
+
+The sounds of your officers sounding general quarters thankfully drowns out $personName before they can read of the rest of the indictment.
+OR
+""I could tell you to stand down, but I'm just a soldier. Charge weapons! "" 
+
+The comm link cuts out in a burst of static.
+OR
+""The future has no place for the likes of you, $playerName,"" $personName sneers, ""On behalf of Federal High Command, I'll see you out the back airlock of your ship"". The transmission ends as their finger blots out the screen, evidently pressing the cut-comms button..",cutCommLink:Cut the comm link,
+greetingFederationNeutral,OpenCommLink,"$faction.id == star_federation
+$faction.neutralToPlayer",,"Your screen fills with the Star Federation's logo, underlaid by text describing the time-of-contact and the rank of $personName.
+ 
+The unhelpful automated placard fades as the commlink self terminates moments later. Perhaps the Federation comms officer is switching shifts?
+OR
+The grainy image of a Federation comms officer fills your screen, evidently routed through an improperly calibrated array.
+
+""Greetings, $playerName, $personRank $personName acknowledges this contact. Please keep safe operational distance protocols in mind. Good travels.""
+OR
+Your info-feed receives a simple textual message:
+
+[Violation logged - neutral IFF confirmed as per Star Federation naval code 11b.C3. Give Federal operators appropriate fleet space in future encounters.]
+
+A microcredit fine arrives on your systems just as the commlink is cut from the other end.
+OR
+The static-distorted image of $personRank $personName appears on your comms screen. 
+
+""Hail, citizen. Please keep to a minimal safe operating distance. Good flying.""
+OR
+The holoscreen crackles to life with pompous music and Fikenhildian-remeniscent holographics.
+
+""The Star Federation needs recruits to bolster the Federal Navy! Protect the honest, the vulnerable, and secure your place in the future of the Federation! Interested applicants should report to the nearest major Federation station for evaluation and recruitment. This message is not a guarantee of selection.""
+OR
+""Hail, spacer. It's a rough sector out there,"" remarks $personName, ""But the Star Federation wishes to see safe travels upon all who seek an living among the stars. Consider joining up if you'd want to serve the same caliber of people - our compensation packages are quite enticing as well.""",cutCommLink:Cut the comm link,
+flavorTextMarketFedHeadquartersStation,TradePanelFlavorText,"$market.id == fed_headquarters_market score:1000
+$id == fed_headquarters_station","AddText ""When docking with Scaria station, you are presented with a comprehensive view several capital ships docked at station arms. A few silhouettes of the infamous Rebellion class dreadnoughts are moored near the ends of each structure, too big for typical starship berths.\n\nOnce past the station airlock proper, the network of clean and polished white hallways feel upscale and corporate, at least until you reach the inner sanctums. Though not exactly grimy as much as it is faded with age, the deeper metal hue of the original orbital platform is certainly pre-Collapse.\n\nUpon reaching the vast metal-glass dome which houses the mercantile district, one of the station’s various automated mag-drones buzzes over to you. It shows you exclusive personalized offers on its mini hologrid before you hear your datapad chime, which has been newly updated with standard commodities prices.\n\nIt seems every transaction above 1000 centicredits comes with a drink voucher, but only for one of the cheaper beverages at the station-run shops."" textGreenColor",,,
+flavorTextMarketFedHeadquartersPlanet,TradePanelFlavorText,"$market.id == fed_headquarters_market score:1000
+$id == fed_headquarters","AddText""Stepping off the shuttle and into the cool air, you notice a slightly acrid sting of smog with each breath. It’s definitely not healthy, as indicated by all the black-suited I-Sec guards wearing heavy filter gear.\n\nA short tram-ride later, you and your escorts arrive at the base of the SPACECom megacomplex. The closer view of the massive building reveals the constant battle to keep sooty particulate off of the ivory exterior panels.\n\nIt clearly looks much better from the distance.\n\nInside the complex is a grand, multitiered space which looks more like a Mega TriShopping complex, displaying its abstract architecture techniques, some natural Scarian plantlife, and probably even the ages-old wealth required to build it.\n\nYou’ve not much time to look before a crisply-uniformed escort flags you down. With a few pleasantries, they escort you down pearlescent hallways, following utilitarian stripes of bold colors on the floor that lead to the merchantile block.\n\nThe escort promptly hands you an analogue looking Tri-Chit which contains recent trade data and the economic authorization token. With but a nod, they leave you surrounded by speculators and appraisers.\n\nIt's probably a twenty minute walk from any good food or drink.""textGreenColor",,,
+flavorTextMarketFedPaleTwinStation,TradePanelFlavorText,"$market.id == fed_paletwin_station_market score:1000
+$id == fed_paletwin_station","AddText""The old-fashioned rolling airlock of Rider Station opens with a squeak and clanking noise, clearly having seen better days. Passing the threshold inside the station hull, the yellow chemlights and rising din of humanity feels you entered a Luddic market-hall.\n\nYou only make it to the second bulkhead before seeing the extent of the bubbling refugee crisis here. Loose crowds of immigrants loiter near their makeshift housing, and very few of those wear Maintenance or Spaceport jumpsuits. Young children gather in the windowed hallways, their faces pressed up against metal-glass as they watch starships taxi in the black. Clearly, they haven't grown bored watching the freighters consort with cargo tugs.\n\nYou're hit with a variety of smells as you move through each humanity-saturated bulkhead section: Some are pleasant exotic spices and cooking food, others the unmistakable reminder that sanitation is still a problem in space.\n\nThe nearer you approach the station's core sections, the more you see proper residential and commercial districts. Here, the more well-off refugees solicit their contracts, usually holding counterfeit training certs or showing the rad-scars presumably gained from years of spacefaring.\n\nThe trade floor itself is in the Command spire, past two checkpointed bulkheads, and bathed in a sterile white light. It's almost too quiet as a Federation requisitions officer greets you, TriPad in hand.""textGreenColor",,,
+flavorTextMarketFedPaleTwinPlanet,TradePanelFlavorText,"$market.id == fed_paletwin_indie_market score:1000
+$id == fed_paletwin","AddText""The dim and vast halls of the Pale Twin's main habitation are constantly shook by the ceaseless travels of ingot-laden railcars, their automated processions carrying them towards one of the many automated launchports. It isn't long before your luddic-weave wearing escort leads you up to the holobannered entrance of the Federation Commercial Hub.\n\nAs you pass the rows of exposed machinery near its mouth, you are blasted by moving wall of cooled air, clearly meant to segregate life and the grit of the rail-halls. Empty corridors here are numerous ever since the majority of the population evacuated to the station above; a reminder that the Erandi-Utopia life support systems were never meant to last for so long without proper service.\n\nThankfully, the trading hall is only past a few low-ceiling passages lined with several aromatic dining booths and buzzing chemlamps. The few diners present still wear their dusty thermal suits as they hunch over meals, totally ignoring your presence.\n\nWhen you finally arrive at the commercial hub, the emptiness is just as lonely as it is unsurprising. After all, the tiresome business concerning megatons of metal is comfortably conducted over commrelay."" textGreenColor",,,
+flavorTextMarketFedCessitocStation,TradePanelFlavorText,"$market.id == fed_cessitoc_indie_station_market score:1000
+$id == fed_cessitoc_station","AddText ""The door to the station airlock slides open silently, leading way to the familiar humming of life support and wash of recycled air. The visitor hallways are as spotlessly clean as they are empty, save for the janitorial drones that scrub floors and apply perfumes. Your walk is at least accompanied by generously long windows, allowing you to see how the advanced design orbital installation is reminiscent of the port of Culann, albeit at a much smaller scale.\n\nYour brief journey ends in a spotless lobby with a few operations associates behind their shiny chrome desk. The TriPad  in your hand interfaces with unseen electronics, automatically updating with fuel prices before you even near only humans in sight, but an attendant nods at you anyways.\n\nA door on the left leads way to the industrial and habitation part of the station, from which you can vaguely hear the thrum of machinery.\n\n."" textGreenColor",,,
+flavorTextMarketFedCessitocPlanet,TradePanelFlavorText,"$market.id == fed_cessitoc_market score:1000
+$id == fed_cessitoc","AddText""Your brightly lit Tri-Tachyon sponsored elevator descends into the sprawling dark cavern-ecology of Cessitoc. Complementing the passive whirr of atmosphere scrubbers, you note to the ridiculous price of the 'provided' drink dispenser on the wall. Stepping off at the bottom, you arrive at the open-air magrail platform and the damp air of the cavern. Each breath is metallic on the tongue like a lungfull of derelict starship air, though you imagine this is as fresh as it gets in the dimness.\n\nEssentially a vast cavern extending into the unseeable dark, the vast supercavern is supported countless floor-to-ceiling pillars which fade into the far darkness. Each support glitters with multicolor lights, presumably hosting the most expensive homes and businesses around. Even with the visible cavern walls plastered with massive holo-ads, these illuminated surfaces barely throw a glow over the partially-lit streets beneath them.\n\n Below those are the miles of urbsprawl, ranging from scattered surface blocs to massive factory megabuildings \n\nJust as you grow tired of watching the tram screen's abstract nature videos and advertisements, the magtrain stops in a brightly lit and exceptionally clean station. The paleness is a sharp contrast to the chemical gloom outside, and thankfully comes with much fresher air.\n\nThe traderoom you enter is humming with quiet corporate energy similary clean, decorated with all the normal extravagant displays of corporate wealth. Both Tri-Tachyon and Federation insignias line the walls as a symbolic declaration of their joint-venture on Cessitoc.\n\nYour TriPad is wirelessly updated with prices and offers, just in time for an attendant to offer you an overpriced beverage.""textGreenColor",,,
+aiCores_turnInResponseFederation,AICoresTurnedIn,$faction.id == star_federation,FireAll PopulateOptions,"$personName smiles while swiping on their TriPad to forward credits. ""Please accept this reward and our deepest gratitude.""
+OR
+""Your assistance with the procurement of this illegal technology is appreciated. Will that be all?""",,
+aiCores_turnInOptionSelFederation,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == star_federation",FireAll PopulateCoresTurnInOptions,"""There are many organizations within this cluster who would see you liberated of such an object on sight. Rest assured, it will be done away with in a manner that benefits all of humanity, and with a reward to boot."" states $personName,  raising a single eyebrow.",,
+CMSNRejectHostileText_star_federation,CMSNTextRejectHostile,$faction.id == star_federation,,"$personName forms a frowning glare quickly. ""Is this some sort of joke? A malcontent such as yourself has no place in our Federation. Prove me wrong."" 
+
+The commlink vid is replaced by simple instructions scrolling across the screen, demanding you to immediately de-power weapons and engines before security arrives.",,
+CMSNTextHasOther_star_federation,CMSNTextHasOther,$faction.id == star_federation,,"""I apologize, but perhaps you overlooked your commission with $theOtherCommissionFaction. You must discuss matters with them before you seek to enlist with the Star Federation.""",,
+CMSNTextUnsuited_star_federation,CMSNTextUnsuited,$faction.id == star_federation,,"""$playerName, I regret to inform you that you do not have sufficient qualifications to join our affiliate program. In these times, I'll admit that we will accept any sufficiently experienced recruit, even without proper paper credentials. Consider doing work abroad to meet the entrance requirements, alright? I hope to see you back here soon.""",,
+CMSNTextSuitedPart1_star_federation,CMSNTextSuitedPart1,$faction.id == star_federation,,"""$playerName, it is my honor as $personRank of the Star Federation to extend an invitation to join our affiliate naval core. We need every diligent and capable officer available to help us maintain Federation interests in peace and prosperity.""",,
+CMSNTextSuitedPart2_star_federation,CMSNTextSuitedPart2,$faction.id == star_federation,,"""I'm going to transmit some confirmational documents. If you could return the favor and submit whatever registration documents you have from your journeys, along with your bio-ID, it would save us a lot of paperwork. Anything else you have to say?"" ",,
+CMSNTextWelcomePart1_star_federation,CMSNTextWelcomePart1,$faction.id == star_federation,,"""Excellent, I formally welcome you to our affiliate program. Remember, you will be encouraged - but ultimately not obligated - to assist our security efforts or otherwise. But as an external affiliate, your own well-being matters before your obligation to us.""
+
+$personName changes their pose to leans forward, looking more deliberate. ""However, $playerName, the more distinctive you are in service to the Federation, the more likely your affiliate contact will be able to advocate in your candidacy for advanced resources. But Naval Intelligence is particular about who receives these gifts, so abusing this program and revoking your commission could cause... suspicions."" ",,
+CMSNTextWelcomePart2_star_federation,CMSNTextWelcomePart2,$faction.id == star_federation,,"$PersonPost $personLastName issues a tiny salute.
+
+""Brighter days ahead, $playerName. Will that be all?""",,
+CMSNTextChangeMind_star_federation,CMSNTextChangeMind,$faction.id == star_federation,,"""... I see. Please, feel free to get back to us if you .""",,
+CMSNResignAskToConfirm_star_federation,CMSNResignAskToConfirm,$faction.id == star_federation,,"""I see,"" returns $personName with a furrowed brow. ""If you really feel that way, we can begin the process of canceling your affiliation. But Naval Intelligence might have... reservations if you walk away with knowledge of our internal processes and otherwise.""",,
+CMSNResignConfirmed_star_federation,CMSNResignConfirmed,$faction.id == star_federation,,"""And, well, here we are with the resignation confirmation. I can't say I'm pleased with this outcome, but I'm sure whatever answer I'd get asking 'why' would not help. Regardless of affiliation, I hope that your intent to see good folk prosper still remains."" 
+
+""But I cannot speak for Naval Intelligence, $playerName, for they have questions that I'd feel uncomfortable reading aloud. You should probably go before I or another less scrupulous rookie patrol officer can start asking too many, if you catch my drift.""",,
+CMSNResignCancelled_star_federation,CMSNResignCancelled,$faction.id == star_federation,,"""Fine, then, I suppose that takes care of that topic. I am reluctant to ask why you felt it necessary to come to us and go through the motions. Still, I'm sure your affiliate contact is bound to be more helpful in that regard. Chin up, $playerName, we're all a little more than tired these days, but it's for a better cause than most.""",,
+bar_descFED,BarPrintDesc,$faction.id == star_federation,ShowImageVisual fed_space_bar,"The bar is alive with Federation rank and file off their duties, drowned in noise and the potent smell of spirits. Many of the uniforms keep to themselves or their gatherings, though a minority of foreign spacefaring sorts can be seen amongst the purple and blue of jumpsuits. Holo-banners only display a promotion for the fluorescent yellow spirit known as ""Warp Fuel"", but the establishment clearly has many kinds of colorful liquors lining its shelves. 
+
+",,
+,,,,,,
+star_federation_nex_NGCPickStartingShips,ExerelinNGCStep3,"$playerFaction == star_federation
+!$star_federation_ChangeMind","AddText ""The Star Federation was never doomed to fall. With upstanding and capable captains like yourselves, the dream of our fairer future is kept alive!""
+SetTextHighlightColors ""242,208,141,255"" 
+SetTextHighlights ""Star Federation""
+AddText ""You know we are not the Corporations, who are too consumed by profits to lift up all peoples. We are not the Hegemony or Church, welded to the past and terrified of change! We are also not the Persean League or Diktat, whose alliance was only ever to themselves!""
+SetTextHighlightColors ""135,206,255,255"" ""245,150,30,255"" ""76,169,20,255"" ""220,185,20,255""
+SetTextHighlights Corporations Hegemony Church ""Persean League""
+AddText ""Whether you will serve by battling foes or forging allies, know that you are the will of our dream. We shall not let the Collapse be our last stand! Long live the Federation!""
+SetTextHighlightColors ""255,185,165,255""
+SetTextHighlights ""For Mankind among the Stars!""
+$star_federation_ChangeMind = true 0",,,
+star_federation_nex_NGCPickStartingShips2,ExerelinNGCStep3,"$playerFaction == star_federation
+EIS_HasStarFed timid_commissioned_hull_mods
+!$star_federation_ChangeMind","AddText ""Commissioned Crews Bonus: In-combat repair speed increased in exchange for slightly higher skeleton crew requirements.""
+SetTextHighlights Commissioned Crews Bonus
+$star_federation_ChangeMind = true 0",,,
+,,,,,,
+relLevelCooperativeStarFederation,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"Your dedication to $theFaction has earned you direct access to fleet admirals and councilors alike. Access to faction resources is bureaucratically expedited, and port authorities ensure their subordinates reserve the best prices and military requisitions. Federation fleets largely ignore your presence, unless some exceptionally dour customs-inspector orders your arraignment by contacting a particularly fiery patrol officer.",,
+relLevelFriendlyStarFederation,RelationshipLevelDesc,"$faction.rel == FRIENDLY
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"Your commitment to $theFaction has been noticed by a few high level officials and dignitaries. These connections earn you privileges beyond the standard militia officer or preferred merchant, so armories know to disburse their advanced equipment, and affiliated firms could agree to non-market prices. Most patrols understand your operations are beneficial to local security, but a suspicious planetside bureaucrat might still convince one to perform an entirely ""routine"" inspection.",,
+relLevelWelcomingStarFederation,RelationshipLevelDesc,"$faction.rel == WELCOMING
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"A history of respectability has seen your case file spread to numerous offices and databases within the Star Federation. Model citizens, such as yourself, are theoretically able to access to standard equipment and receive priority processing in bureaucratic matters. Patrols know to give your drive-sig some leeway, but career inspection officers hardly need an excuse to trigger a stop-and-scan.",,
+relLevelFavorableStarFederation,RelationshipLevelDesc,"$faction.rel == FAVORABLE
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"You're eligible for admittance (on probation) into the Star Federation's militia program, and would therefore be able to collect a minor operations stipend. Like most militia officers and other citizens in good standing, finding pristine military equipment is nearly impossible. Patrols may exhibit slightly less diligence than the procedure calls for.",,
+relLevelNeutralStarFederation,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+$faction.id == star_federation",FireAll RelLevelMoreDescription,You are relatively unknown to the various offices and officers of the $faction.,,
+relLevelSuspiciousStarFederation,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"Your misconduct has caught the attentions of enough low-level bureaucrats and security figures to become a problem. Patrols will take longer to process your fleet IDENT-hash during suspiciously frequent inspections, and port authorities tend to forget about processing your docking codes.",,
+relLevelInhospitableStarFederation,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"A history of ill repute has marked your case file for high-priority distribution among all relevant security offices. There's no shoot-on-sight authorization quite yet, but $faction ports will refuse to trade with you, and all but the most unscrupulous militia patrol will keep a tight-beam scan on your fleet.",,
+relLevelHostileStarFederation,RelationshipLevelDesc,"$faction.rel == HOSTILE
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"Your documented transgressions against the united peoples of the $Faction has resulted in your fleet being designated for impoundment. And, often failing that, destruction. All commissioned fleets are free to engage you on sight, and starports will gladly use their anti-ship batteries to discourage your docking attempts.",,
+relLevelVengefulStarFederation,RelationshipLevelDesc,"$faction.rel == VENGEFUL
+$faction.id == star_federation",FireAll RelLevelMoreDescription,"The fleet admirals of the $Faction know first-hand of your infamy, and an unflattering forensic model of your face will show up on holo-ad security announcements in the farthest backwater settlements. You are fairly sure there is a inspector fleet trailing your movements, even though the Federation navy usually doesn't leave its home-system.",,

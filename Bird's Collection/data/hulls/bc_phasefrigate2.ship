@@ -1,0 +1,168 @@
+{
+  "hullName": "Gunther",
+  "hullId": "bc_phasefrigate2",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/phase/bc_phasefrigate2.png",
+  "style": "LOW_TECH",
+  "height": 118,
+  "width": 60,
+  "center": [30, 59],
+  "collisionRadius": 120.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 115,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 45,
+      "locations": [21, 21]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -45,
+      "locations": [21, -21]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [50, 11]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [50, -11]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 90,
+      "locations": [-15, 19]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -90,
+      "locations": [-15, -19]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-34, 14]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-34, -14]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-56.5, 14],
+      "length": 41,
+      "width": 8,
+      "angle": 175.5,
+      "contrailSize": 8,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-56.5, -14],
+      "length": 41,
+      "width": 8,
+      "angle": -175.5,
+      "contrailSize": 8,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-58, -0],
+      "length": 64,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-24.5, 21],
+      "length": 41,
+      "width": 8,
+      "angle": 148.5,
+      "contrailSize": 128,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-24.5, -21],
+      "length": 41,
+      "width": 8,
+      "angle": -148.5,
+      "contrailSize": 128,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-21, 23.5],
+      "length": 28.700001,
+      "width": 8.25,
+      "angle": 130.5,
+      "contrailSize": 128,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-21, -23.5],
+      "length": 28.700001,
+      "width": 8.25,
+      "angle": -130.5,
+      "contrailSize": 128,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -55.5, -17.5,
+    -27, -18,
+    -16, -26,
+    0, -17,
+    3.5, -26,
+    23.5, -26,
+    27.5, -15.5,
+    56.5, -13.5,
+    56.5, 13.5,
+    27.5, 15.5,
+    23.5, 26,
+    3.5, 26,
+    0, 17,
+    -16, 26,
+    -27, 18,
+    -55.5, 17.5,
+    -58.5, -0
+  ]
+}

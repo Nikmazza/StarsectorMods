@@ -1,0 +1,86 @@
+{
+	"FEDERATION_ENGINE":{
+		"engineColor":[255,125,25,255],
+		"engineCampaignColor":[200,90,70,255],
+		"contrailParticleSizeMult":2,
+		"contrailParticleDuration":3,
+		"contrailParticleFinalSizeMult":2.5,
+		"contrailMaxSpeedMult":0.5,
+		"contrailAngularVelocityMult":0.5,
+		"contrailColor":[60,60,60,70],
+		"contrailCampaignColor":[130,60,60,70],
+		"omegaMode":false,
+		"type":"SMOKE" # GLOW or SMOKE
+		
+	},
+		"FEDERATION_VENT":{
+		"engineColor":[0,0,0,0],
+		"engineCampaignColor":[200,90,70,255],
+		"contrailParticleSizeMult":3.5,
+		"contrailParticleDuration":1.5,
+		"contrailParticleFinalSizeMult":2,
+		"contrailMaxSpeedMult":0.65,
+		"contrailAngularVelocityMult":0.5,
+		"contrailColor":[60,60,60,0],
+		"contrailCampaignColor":[130,60,60,70],
+		"omegaMode":false,
+		"type":"SMOKE" # GLOW or SMOKE
+	},
+		"FED_OMEGA":{
+		"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+		"contrailDuration":1.5,
+		"contrailWidthMult":0.67,
+		"contrailWidthAddedFractionAtEnd":-1f,  # can be negative. makes trail spread out/narrow at the end
+		"contrailMinSeg":5, # min segment length, in pixels
+		"contrailMaxSpeedMult":1f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[50,50,255,75],
+		"type":"GLOW", # GLOW or SMOKE; additive or regular blend mode
+						
+		"glowSprite":"graphics/fx/engineglow32b.png",
+		"glowOutline":"graphics/fx/engineflame32b.png",
+		"omegaMode":true,
+		"glowSizeMult":1,
+		"glowAlternateColor":[50,50,255,255],
+		"engineColor":[150,50,255,255],
+		
+		#"contrailParticleSizeMult":4,
+		#"contrailParticleDuration":1,
+		#"contrailParticleFinalSizeMult":2.5,
+		#"contrailMaxSpeedMult":0.5f,
+		#"contrailAngularVelocityMult":0f,
+		#"contrailColor":[100,165,255,25],
+		#"contrailCampaignColor":[100,165,255,75],
+		#"type":"GLOW" # GLOW or SMOKE
+	},	
+	
+	"FED_FIGHTER":{
+		"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+		"contrailDuration":1.5,
+		"contrailWidthMult":0.67,
+		"contrailWidthAddedFractionAtEnd":-1f,  # can be negative. makes trail spread out/narrow at the end
+		"contrailMinSeg":5, # min segment length, in pixels
+		"contrailMaxSpeedMult":1f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[60,60,60,70],
+		"contrailCampaignColor":[130,60,60,70],
+		"type":"GLOW", # GLOW or SMOKE; additive or regular blend mode
+						
+		"glowSprite":"graphics/fx/engineglow32b.png",
+		"glowOutline":"graphics/fx/engineflame32b.png",
+		"omegaMode":false,
+		"glowSizeMult":1,
+		"glowAlternateColor":[155,50,0,255],
+		"engineColor":[255,150,50,255],
+		
+		#"contrailParticleSizeMult":4,
+		#"contrailParticleDuration":1,
+		#"contrailParticleFinalSizeMult":2.5,
+		#"contrailMaxSpeedMult":0.5f,
+		#"contrailAngularVelocityMult":0f,
+		#"contrailColor":[100,165,255,25],
+		#"contrailCampaignColor":[100,165,255,75],
+		#"type":"GLOW" # GLOW or SMOKE
+	},	
+	
+}

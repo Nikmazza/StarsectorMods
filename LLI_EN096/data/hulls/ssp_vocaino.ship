@@ -1,0 +1,177 @@
+{
+  "hullName": "ssp_vocaino",
+  "hullId": "ssp_vocaino",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/ssp_vocaino.png",
+  "style": "LLI",
+  "height": 195,
+  "width": 116,
+  "center": [58, 101],
+  "collisionRadius": 133.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 123.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ssp_cliff",
+    "ssp_vocaino_rangemod"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [86.5, -26]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [86.5, 26]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -0,
+      "locations": [23, -29]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [23, 29]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 135,
+      "locations": [-63, 41]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -135,
+      "locations": [-63, -41]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [45, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 30,
+      "locations": [-26, 28]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": -30,
+      "locations": [-26, -28]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-78, -38],
+      "length": 24,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-78, 38],
+      "length": 24,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-78, -28],
+      "length": 18,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-78, 28],
+      "length": 18,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-99, -0],
+      "length": 40,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-96, -13.5],
+      "length": 16,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-96, 13.5],
+      "length": 16,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -99, 13.5,
+    -71.5, 50.5,
+    -25.5, 50.5,
+    -8.5, 30.5,
+    12.5, 50.5,
+    91.5, 36,
+    91.5, 13,
+    51.5, 13,
+    51.5, -13,
+    91.5, -13,
+    91.5, -36,
+    12.5, -50.5,
+    -8.5, -30.5,
+    -25.5, -50.5,
+    -71.5, -50.5,
+    -99, -13.5
+  ]
+}

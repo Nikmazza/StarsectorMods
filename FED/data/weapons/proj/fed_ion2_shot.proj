@@ -1,0 +1,19 @@
+{
+	"id":"fed_ion2_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.SabotOnHitEffect",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+    "length":40.0,
+    "width":15.0,
+    "hitGlowRadius":30,
+    "fadeTime":0.2,
+	"fringeColor":[25,25,255,60],
+	"coreColor":[10,230,255,140],
+    "glowColor":[10,120,215,100],
+    "glowRadius":25,
+    "textureScrollSpeed":128.0,
+    "pixelsPerTexel":5.0,
+    "bulletSprite":"graphics/missiles/shell_large_blue.png"
+}

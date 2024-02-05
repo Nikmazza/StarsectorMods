@@ -1,0 +1,33 @@
+{
+    "displayName": "Honor Guard",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "hyperion_ix",
+    "hullMods": [
+        "ix_smod_handler",
+        "advancedoptics",
+        "extendedshieldemitter",
+        "hardenedshieldemitter",
+        "hardened_subsystems",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": ["ix_smod_handler"],
+    "sMods": [],
+    "variantId": "hyperion_ix_custom",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "muon_streamer_ix",
+                "WS 002": "muon_streamer_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "es_projector_ix"}
+        }
+    ]
+}

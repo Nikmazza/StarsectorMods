@@ -1,0 +1,6 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+# blueprints,,,,,,,,,,,,,,,
+Corrupted Blueprint Package,sa_corrupted_bp,package_bp,,0.5,300000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,corrupted_bp,"A barely functional collection of hull specs originating from
+[Thread-3] ERROR com.fs.domainint.data.blueprintparser  - domjav.lang.NullPointerException
+     -""Captain, are you sure about this? The data's incomplete, and setting off all the virus alerts.""
+",200

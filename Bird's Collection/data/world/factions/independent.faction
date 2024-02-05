@@ -1,0 +1,12 @@
+{
+
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"bc_phasefreighter":0.2,
+			"bc_phasehauler":0.2,
+			"bc_phasetanker":0.2,
+		},
+	}
+}

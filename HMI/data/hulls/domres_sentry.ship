@@ -1,0 +1,81 @@
+{
+  "hullName": "Sentry (DomRes)",
+  "hullId": "domres_sentry",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/domain_resurgent/hmidr_sentry.png",
+  "style": "LOW_TECH",
+  "height": 50,
+  "width": 52,
+  "center": [28, 23],
+  "collisionRadius": 34,
+  "shieldCenter": [1, 0],
+  "shieldRadius": 36,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "missleracks",
+    "rugged"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 2,
+      "locations": [16, 19]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 2,
+      "locations": [21, 1]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 2,
+      "locations": [21, -14]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-21, 15],
+      "length": 28,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 36,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21, 1],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 48,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21, -13],
+      "length": 28,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 36,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    7, 27,
+    21, 6,
+    21, -19,
+    -16, -21,
+    -18, 20
+  ]
+}

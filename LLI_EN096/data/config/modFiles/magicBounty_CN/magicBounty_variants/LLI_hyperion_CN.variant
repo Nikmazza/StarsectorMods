@@ -1,0 +1,19 @@
+{
+    "displayName": "歼灭",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "hyperion",
+    "hullMods":  ["extendedshieldemitter","hardened_subsystems","high_scatter_amp","reinforcedhull","auxiliarythrusters","safetyoverrides"],
+    "permaMods": ["extendedshieldemitter","hardened_subsystems","high_scatter_amp","reinforcedhull","auxiliarythrusters"],
+    "sMods":     ["extendedshieldemitter","hardened_subsystems","high_scatter_amp","reinforcedhull","auxiliarythrusters"],
+    "variantId": "LLI_hyperion",
+    "weaponGroups": [{
+        "autofire": false,
+        "mode": "ALTERNATING",
+        "weapons": {
+            "WS 001": "phasebeam",
+            "WS 002": "phasebeam",
+            "WS 003": "phasebeam"
+        }
+    }]
+}

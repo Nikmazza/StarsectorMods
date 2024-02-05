@@ -1,0 +1,19 @@
+{
+	"id":"ssp_plasmamissile_shot1",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.IonCannonOnHitEffect",
+	"length":10.0,
+	"width":10.0,
+	"fadeTime":0.25,
+	"fringeColor":[50,125,255,255],
+	"coreColor":[80,155,255,200],
+	"glowColor":[80,155,255,160],
+	"glowRadius":15,
+	"hitGlowRadius":15,
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

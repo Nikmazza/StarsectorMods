@@ -1,0 +1,24 @@
+{
+        "knownShips":{
+        "hulls":[
+            "BSC_Aghast",
+            "BSC_Preybird",
+            "BSC_Tungustan",
+            "BSC_Baldric",
+            "BSC_Tramp",
+            "BSC_Stern",
+            "BSC_Hartfell",
+            "BSC_Brave",
+            "BSC_Cassina",
+        ],
+    },
+            "hullFrequency":{
+        "hulls":{
+        "BSC_Cassina": 0.6, #Should be less common
+        "BSC_Aghast": 0.5, #Shouldn't be common
+        "BSC_Hartfell": 0.7, #Shouldn't drown out other frigates
+        "BSC_Brave": 0.5, #Shouldn't drown out better frigates
+        "BSC_Stern": 0.8, #Shouldn't drown out Sunder and Hammerhead
+        },
+    },
+},

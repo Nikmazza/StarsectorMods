@@ -1,0 +1,6 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+ssp_mercurylake,ssp_mercurylake,"fighter4, fighter, ssp_bp",1,,12,20,V,4000,500,500,2,INTERCEPTOR,Interceptor Drone,16,5000,,,,,,,,,,,,,
+ssp_hivedrone,ssp_hivedrone,"support3, fighter, ssp_bp",1,,4,6,CLAW,4000,500,,5,SUPPORT,Point Defense Drone,8,1600,,,,,,,,,,,,,1
+ssp_heavyfog,ssp_heavyfog,"fighter2, fighter, ssp_bp,interceptor",1,,14,18,V,4000,500,500,3,FIGHTER,Heavy Fighter Drone,12,3600,,,,,,,,,,,,,1
+ssp_dustfog,ssp_dustfog,"interceptor3, interceptor,ssp_bp",1,,6,9,V,4000,500,500,3,FIGHTER,Fighter Drone,12,2000,,,,,,,,,,,,,
+ssp_mudslide,ssp_mudslide,"bomber4, bomber, high,ssp_bp",1,,6,10,V,4000,2000,750,2,BOMBER,Bomber Drone,16,4600,,,,,,,,,,,,,

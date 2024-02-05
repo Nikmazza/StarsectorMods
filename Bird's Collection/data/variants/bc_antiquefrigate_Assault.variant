@@ -1,0 +1,25 @@
+{
+  "variantId": "bc_antiquefrigate_Assault",
+  "hullId": "bc_antiquefrigate",
+  "displayName": "Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "bc_overfed"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "bc_builtin2",
+        "WS0002": "bc_builtin2_alt"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,32 @@
+{
+  "animationType": "MUZZLE_FLASH",
+  "autocharge": true,
+  "barrelMode": "ALTERNATING",
+  "fireSoundTwo": "hellbore_fire",
+
+  "hardpointGunSprite": "graphics/FED/weapons/fed_flak1_barrel.png",
+  "hardpointOffsets": [
+    31,
+    0
+  ],
+  "hardpointAngleOffsets": [0
+  ],
+  "hardpointSprite": "graphics/FED/weapons/fed_flak1.png",
+  "id": "fed_flak1_scrap_clone",
+  "projectileSpecId": "fed_flak1_scrap_clone_proj",
+  "size": "MEDIUM",
+  "specClass": "projectile",
+  "turretAngleOffsets": [
+    0
+  ],
+  "turretGunSprite": "graphics/FED/weapons/fed_flak1_barrel.png",
+  "turretOffsets": [
+    20.5,
+    0
+  ],
+  "turretSprite": "graphics/FED/weapons/fed_flak1.png",
+  "turretUnderSprite": "graphics/FED/weapons/fed_flak1_barrel.png",
+  "type": "BALLISTIC",
+  "visualRecoil": 8,
+  "renderHints": ["RENDER_BARREL_BELOW"],
+}

@@ -1,0 +1,78 @@
+{
+  "variantId": "fed_flagship_assault_brawler",
+  "hullId": "fed_flagship_assault",
+  "displayName": "Brawler",
+  "goalVariant": true,
+  "fluxCapacitors": 21,
+  "fluxVents": 50,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "magazines",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "autopulse",
+        "WS0010": "autopulse"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "fed_beam_halberd",
+        "WS0004": "fed_beam_halberd"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "fed_superbreach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "fed_pegasus",
+        "WS0023": "fed_pegasus"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0022": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_singlelaser",
+        "WS0006": "fed_singlelaser",
+        "WS0007": "fed_singlelaser",
+        "WS0011": "fed_singlelaser",
+        "WS0012": "fed_singlelaser",
+        "WS0015": "fed_singlelaser",
+        "WS0016": "fed_singlelaser",
+        "WS0017": "fed_singlelaser",
+        "WS0019": "fed_singlelaser",
+        "WS0021": "fed_duallaser",
+        "WS0025": "fed_singlelaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0018": "fed_flagship_sideshield_standard"
+    }
+  ],
+  "wings": []
+}

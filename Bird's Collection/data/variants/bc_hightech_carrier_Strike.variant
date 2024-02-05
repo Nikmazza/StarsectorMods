@@ -1,0 +1,27 @@
+{
+  "variantId": "bc_hightech_carrier_Strike",
+  "hullId": "bc_hightech_carrier",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "taclaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "dagger_wing",
+    "dagger_wing"
+  ]
+}

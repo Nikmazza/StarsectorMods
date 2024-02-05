@@ -1,0 +1,249 @@
+{
+  "hullName": "Nisos",
+  "hullId": "fed_nisos",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/FED/ships/fed_osprey_base_alt.png",
+  "style": "FEDERATION",
+  "height": 284,
+  "width": 162,
+  "center": [81, 123.5],
+  "collisionRadius": 173.5,
+  "shieldCenter": [11, -0],
+  "shieldRadius": 168.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "hbi",
+    "ballistic_rangefinder",
+    
+  ],
+  "builtInWeapons": {
+    "WS0009": "fed_flak4"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 260,
+      "angle": 115,
+      "locations": [-59.5, 61.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 260,
+      "angle": -115,
+      "locations": [-59.5, -61.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": 50,
+      "locations": [111.5, 18]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -50,
+      "locations": [111.5, -18]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [128, 36]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [128, -36]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 30,
+      "angle": 0,
+      "locations": [-14.5, 61]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 30,
+      "angle": -0,
+      "locations": [-14.5, -61]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [108.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-119.5, 60.5],
+      "length": 94.5,
+      "width": 28,
+      "angle": 180,
+      "contrailSize": 28,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-119.5, -60.5],
+      "length": 94.5,
+      "width": 28,
+      "angle": -180,
+      "contrailSize": 28,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-117, 69.5],
+      "length": 55,
+      "width": 11,
+      "angle": 177,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-117, -69.5],
+      "length": 55,
+      "width": 11,
+      "angle": -177,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-117.5, 51],
+      "length": 54.5,
+      "width": 11,
+      "angle": -177,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-117, -51],
+      "length": 54.5,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [78, 36],
+      "length": 27.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [78, -36],
+      "length": 27.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-118, 51],
+      "length": 36.241032,
+      "width": 9.129637,
+      "angle": -169,
+      "contrailSize": 9.129637,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-118, -51],
+      "length": 36.241032,
+      "width": 9.129637,
+      "angle": 169,
+      "contrailSize": 9.129637,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-117.5, 69.5],
+      "length": 38.405239,
+      "width": 10.254285,
+      "angle": 168,
+      "contrailSize": 10.254285,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-117.5, -69.5],
+      "length": 38.405239,
+      "width": 10.254285,
+      "angle": -168,
+      "contrailSize": 10.254285,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-120.5, 60.5],
+      "length": 115,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-120.5, -60.5],
+      "length": 115,
+      "width": 19,
+      "angle": -180,
+      "contrailSize": 19,
+      "style": "FEDERATION_VENT"
+    }
+  ],
+  "bounds": [
+    -70.5, -25.5,
+    -81.5, -48,
+    -109.5, -48,
+    -109.5, -76.5,
+    -2.5, -76.5,
+    -2.5, -48,
+    -42, -48,
+    -30, -34,
+    0.5, -27.5,
+    83, -27,
+    86.5, -43.5,
+    123.5, -43,
+    147.5, -15.5,
+    113.5, 0.5,
+    147.5, 15.5,
+    123.5, 43,
+    86.5, 43.5,
+    83, 27,
+    0.5, 27.5,
+    -30, 34,
+    -42, 48,
+    -2.5, 48,
+    -2.5, 76.5,
+    -109.5, 76.5,
+    -109.5, 48,
+    -81.5, 48,
+    -70.5, 25.5
+  ]
+}

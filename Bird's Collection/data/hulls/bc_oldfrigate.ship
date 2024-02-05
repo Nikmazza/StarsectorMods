@@ -1,0 +1,289 @@
+{
+  "hullName": "Vamplate",
+  "hullId": "bc_oldfrigate",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/bc_oldfrigate.png",
+  "style": "OLD_TECH",
+  "height": 148,
+  "width": 104,
+  "center": [52, 74],
+  "collisionRadius": 106.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 104,
+  "viewOffset": 0,
+  "builtInMods": [
+    "bc_recoveredreactor"
+  ],
+  "builtInWings": [
+    "bc_oldfrigate_drone",
+    "bc_oldfrigate_drone"
+  ],
+  "builtInWeapons": {
+    "WS0009": "bc_Zvernier",
+    "WS0010": "bc_Zvernier",
+    "WS0011": "bc_Zvernier",
+    "WS0012": "bc_Zvernier",
+    "WS0013": "bc_Zvernier",
+    "WS0014": "bc_Zvernier"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [27, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-37, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [4, 28]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [4, -28]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": 0,
+      "locations": [-12, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [66, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        38.5, 9.5,
+        38.5, 16.5
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        38.5, -9.5,
+        38.5, -16.5
+      ]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 90,
+      "locations": [39.5, 9]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -90,
+      "locations": [39.5, -9]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-48.5, 42]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -180,
+      "locations": [-48.5, -42]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [62, 14.5]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [62, -14.5]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 45,
+      "locations": [3, 45.5]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -45,
+      "locations": [3, -45.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-51, 28],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-51, -28],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-51, 21],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-51, -21],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-51, -35.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-51, 35.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-48, 15],
+      "length": 49.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-48, -15],
+      "length": 49.5,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-49.5, 11.5],
+      "length": 49.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-49.5, -11.5],
+      "length": 49.5,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    }
+  ],
+  "bounds": [
+    -61.5, 6.5,
+    -52, 10.5,
+    -49, 48,
+    18, 48,
+    9.5, 23,
+    54.5, 19.5,
+    72.5, 13,
+    72.5, -13,
+    54.5, -19.5,
+    9.5, -23,
+    18, -48,
+    -49, -48,
+    -52, -10.5,
+    -61.5, -6.5
+  ]
+}

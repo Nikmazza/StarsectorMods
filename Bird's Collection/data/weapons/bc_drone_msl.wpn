@@ -1,0 +1,44 @@
+{
+  "id": "bc_drone_msl",
+  "specClass": "projectile",
+  "projectileSpecId": "bc_drone_msl",
+  "type": "MISSILE",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/missile_autoloader_1x_hardpoint_base.png",
+  "hardpointSprite": "graphics/weapons/missile_autoloader_1x_hardpoint_base.png",
+  "renderHints":[RENDER_LOADED_MISSILES],
+  "turretOffsets": [
+    0,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    6.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      138,
+      135,
+      138,
+      170
+    ]
+  },
+  "fireSoundTwo": "harpoon_fire"
+}

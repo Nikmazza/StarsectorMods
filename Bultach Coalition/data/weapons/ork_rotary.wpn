@@ -1,0 +1,50 @@
+{
+  "id": "ork_rotary",
+  "specClass": "projectile",
+  "projectileSpecId": "lightneedler_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/rotary/ork_rotary_hardpoint_base00.png",
+  "hardpointSprite": "graphics/weapons/rotary/ork_rotary_turret_base00.png",
+  "turretOffsets": [
+    17,
+    5.5,
+    17,
+    -4.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    26,
+    5.5,
+    26,
+    -4.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "separateRecoilForLinkedBarrels": true,
+  "animationType": "MUZZLE_FLASH",
+  "numFrames": 4,
+  "frameRate": 30,
+  "muzzleFlashSpec": {
+    "length": 20,
+    "spread": 10,
+    "particleSizeMin": 10,
+    "particleSizeRange": 16,
+    "particleDuration": 0.15,
+    "particleCount": 18,
+    "particleColor": [
+      255,
+      140,
+      125,
+      200
+    ]
+  },
+  "fireSoundOne":"rotary_spinup",
+  "fireSoundTwo": "rotary_fire"
+}

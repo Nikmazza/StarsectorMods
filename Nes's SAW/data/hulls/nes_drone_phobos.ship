@@ -1,0 +1,44 @@
+{
+  "hullName": "Phobos",
+  "hullId": "nes_drone_phobos",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/drones/nes_phobos.png",
+  "style": "HIGH_TECH",
+  "height": 30,
+  "width": 22,
+  "center": [11, 14],
+  "collisionRadius": 20,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 18,
+  "viewOffset": 0,
+  "builtInMods": [
+    "NES_PhobosCore"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [4, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-12, -0],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -2, 8,
+    -11, -0,
+    -2, -8,
+    13, -0
+  ]
+}

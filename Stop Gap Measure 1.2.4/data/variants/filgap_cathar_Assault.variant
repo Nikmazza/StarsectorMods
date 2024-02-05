@@ -1,0 +1,59 @@
+{
+  "variantId": "filgap_cathar_Assault",
+  "hullId": "filgap_cathar",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 15,
+  "fluxVents": 25,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "hephag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0012": "filgap_davidsystem",
+        "WS0013": "filgap_davidsystem"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "heavyac",
+        "WS0008": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "filgap_scattergun",
+        "WS0002": "filgap_scattergun",
+        "WS0003": "vulcan",
+        "WS0004": "vulcan",
+        "WS0005": "flak",
+        "WS0006": "flak",
+        "WS0009": "vulcan",
+        "WS0010": "vulcan"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

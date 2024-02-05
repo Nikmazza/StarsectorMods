@@ -1,0 +1,193 @@
+{
+  "hullName": "Eagle (FYS)",
+  "hullId": "bc_phasecruiser1",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/phase/bc_phasecruiser1.png",
+  "style": "LOW_TECH",
+  "height": 224,
+  "width": 166,
+  "center": [83, 87],
+  "collisionRadius": 173,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 158,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [38, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 74.5,
+      "locations": [57, 33]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -74.5,
+      "locations": [57.5, -33]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [74, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [107, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [123, 24]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [123, -24]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 130,
+      "locations": [-58, 30]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -130,
+      "locations": [-58, -30]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-11, 73]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-11, -73]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-84.5, 19],
+      "length": 76.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-84.5, -19],
+      "length": 76.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-83, -30],
+      "length": 76.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-83, 30],
+      "length": 76.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-83, -40.5],
+      "length": 76.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-83, 40.5],
+      "length": 76.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -48, 10.5,
+    -83, 14.5,
+    -78.5, 49,
+    -39.5, 56,
+    -29, 78.5,
+    -7, 78,
+    -5.5, 63,
+    1.5, 71.5,
+    130.5, 32.5,
+    131, 16.5,
+    115, 12.5,
+    115, -12.5,
+    131, -16.5,
+    130.5, -32.5,
+    1.5, -71.5,
+    -5.5, -63,
+    -7, -78,
+    -29, -78.5,
+    -39.5, -56,
+    -78.5, -49,
+    -83, -14.5,
+    -48, -10.5,
+    -53, -0
+  ]
+}

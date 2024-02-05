@@ -1,0 +1,40 @@
+{
+  "variantId": "fed_polyp_overdriven",
+  "hullId": "fed_polyp",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "fed_minibeam",
+        "WS0003": "fed_minibeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "shockrepeater",
+        "WS0006": "shockrepeater"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

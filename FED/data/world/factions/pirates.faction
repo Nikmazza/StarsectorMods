@@ -1,0 +1,26 @@
+{
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["fed_pirate"],
+		"hulls":[
+			"fed_tern_pirate",
+			"fed_lightdestroyer_p",
+		],
+	},
+			"knownShips":{
+		"tags":[fed_pirate],
+		"hulls":[
+			"fed_tern_pirate",
+			"fed_lightdestroyer_p",
+		],
+	},
+	"hullFrequency":{
+        "tags":{
+		"fed_pirate":2,
+        },
+        "hulls":{
+            "fed_tern_pirate":2,
+			"fed_lightdestroyer_p": 2,
+        },
+    },
+},	

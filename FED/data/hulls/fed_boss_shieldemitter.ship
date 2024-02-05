@@ -1,0 +1,50 @@
+{
+  "hullName": "Rebellion Aux Shield Core",
+  "hullId": "fed_boss_shieldemitter",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_superkestrel_shieldemitter.png",
+  "style": "FEDERATION_GREEN",
+  "height": 53,
+  "width": 38,
+  "center": [19, 27.5],
+  "collisionRadius": 265.5,
+  "shieldCenter": [43, -0],
+  "shieldRadius": 160,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    0,
+    0
+  ],
+  "builtInMods": [
+    "shield_always_on",
+    "reduced_explosion",
+    "always_detaches",
+    "fed_design",
+    "fed_auxshieldeffect"
+  ],
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -119.5, 46,
+        -119.5, -42.5,
+        -121.5, 50,
+        -122, -45.5
+      ]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    25, -9,
+    -0.5, -19.5,
+    -26.5, -8.5,
+    -26.5, 8.5,
+    -0.5, 19.5,
+    25, 9
+  ]
+}

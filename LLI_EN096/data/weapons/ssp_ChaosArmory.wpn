@@ -1,0 +1,51 @@
+{
+  "id": "ssp_ChaosArmory",
+  "specClass": "projectile",
+  "projectileSpecId": "ssp_ChaosArmory_shot",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "everyFrameEffect": "data.weapon.ssp_ChaosArmory_EveryFrameEffect",
+  "displayArcRadius": 500,
+  "turretSprite": "graphics/weapons/ssp_ChaosArmory_turret.png",
+  "hardpointSprite": "graphics/weapons/ssp_ChaosArmory_headpoint.png",
+  "turretOffsets": [
+    13,
+    9,
+    13,
+    -9
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    22,
+    9,
+    22,
+    -9
+  ],
+  "hardpointAngleOffsets": [
+    -2,
+    0
+  ],
+  "barrelMode": "LINKED",### OR  ALTERNATING
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 16,
+    "cloudParticleCount": 3,
+    "cloudDuration": 0.9,
+    "cloudRadius": 8,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 1.1,
+    "blowbackLength": 20,
+    "blowbackSpread": 10,
+    "particleColor": [
+      170,
+      160,
+      150,
+      100
+    ]
+  },
+  "fireSoundTwo": "swarmer_fire"
+}

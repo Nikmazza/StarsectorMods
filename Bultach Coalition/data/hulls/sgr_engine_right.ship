@@ -1,0 +1,88 @@
+{
+  "hullName": "Engine Module",
+  "hullId": "sgr_engine_right",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/Sgriosathar/Sgriosathar_engine_right.png",
+  "style": "BULTACH",
+  "height": 152,
+  "width": 141,
+  "center": [70.5, 76],
+  "collisionRadius": 124.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 116,
+  "viewOffset": 0,
+  "builtInMods": [
+    "BT_antiNukeHidden",
+    "reduced_explosion",
+    "BT_linkedhull",
+    "targetingunit"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -135,
+      "locations": [37, -10.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-52.5, 36],
+      "length": 85,
+      "width": 50,
+      "angle": 180,
+      "contrailSize": 35,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-32.5, -9],
+      "length": 55,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-29, -25.5],
+      "length": 65,
+      "width": 26,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-23, -41],
+      "length": 35,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    }
+  ],
+  "bounds": [
+    73.5, 37.5,
+    73.5, -37.5,
+    22.5, -64,
+    16.5, -70,
+    4.5, -68,
+    -29.5, -58.5,
+    -30.5, -51,
+    -21.5, -46,
+    -31, -6,
+    -55.5, -5,
+    -74.5, 8,
+    -67.5, 18,
+    -48, 22.5,
+    -49.5, 52.5,
+    22, 54.5,
+    23.5, 62.5,
+    66.5, 69.5
+  ]
+}

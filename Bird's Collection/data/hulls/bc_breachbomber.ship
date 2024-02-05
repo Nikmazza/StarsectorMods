@@ -1,0 +1,69 @@
+{
+  "hullName": "Rent",
+  "hullId": "bc_breachbomber",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_breachbomber.png",
+  "style": "LOW_TECH",
+  "height": 30,
+  "width": 26,
+  "center": [13, 15],
+  "collisionRadius": 30,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 28,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [3.5, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [3.5, -9]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [9, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-10, 6],
+      "length": 26.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, -6],
+      "length": 26.5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -6, -12,
+    1, -12,
+    14, -0,
+    1, 12,
+    -6, 12,
+    -13, -0
+  ]
+}

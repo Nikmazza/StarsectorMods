@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3fce4573-cc08-4942-8bd8-b72bfe8d54a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ungp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Changelog_EN.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Changelog_EN.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/campaign/rules.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/campaign/rules.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/campaign/rules_CN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/campaign/rules_CN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/campaign/special_items.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/campaign/special_items.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/campaign/special_items_CN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/campaign/special_items_CN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/config/modFiles/magicTrail_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/config/modFiles/magicTrail_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/config/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/ship_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/ship_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/ship_data_CN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/ship_data_CN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/ssp_TDS.ship" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/ssp_TDS.ship" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/ssp_elnino.ship" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/ssp_elnino.ship" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/ssp_hive.ship" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/ssp_mercurylake.ship" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/ssp_mercurylake.ship" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/ssp_naga.ship" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/ssp_naga.ship" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/wing_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/wing_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/hulls/wing_data_CN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/hulls/wing_data_CN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/shipsystems/ship_systems.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/shipsystems/ship_systems.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/shipsystems/ship_systems_CN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/shipsystems/ship_systems_CN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/strings/descriptions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/strings/descriptions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/strings/descriptions_CN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/strings/descriptions_CN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/strings/strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/strings/strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/strings/strings_CN.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/strings/strings_CN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/strings/tips.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/strings/tips.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/strings/tips_CN.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/strings/tips_CN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_dew_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_dew_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_elnino_SIM.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_elnino_SIM.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_elnino_eltite.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_elnino_eltite.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_elnino_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_elnino_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_hanba_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_hanba_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_mercurylake.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_mercurylake.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_mudslide.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_mudslide.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_naga_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_naga_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_river_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_river_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_seaquake_SIM.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_seaquake_SIM.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_seaquake_beam.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_seaquake_beam.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_seaquake_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_seaquake_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_seaquake_support.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_seaquake_support.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_vocaino_override.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_vocaino_override.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_wasteland_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_wasteland_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_wave_eltite.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_wave_eltite.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_wave_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_wave_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_wave_support.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_wave_support.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_zhurong_beam.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_zhurong_beam.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants/ssp_zhurong_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants/ssp_zhurong_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_dew_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_dew_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_elnino_SIM.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_elnino_SIM.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_elnino_eltite.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_elnino_eltite.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_elnino_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_elnino_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_hanba_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_hanba_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_mercurylake.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_mercurylake.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_naga_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_naga_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_river_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_river_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_SIM.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_SIM.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_beam.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_beam.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_support.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_seaquake_support.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_vocaino_override.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_vocaino_override.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_wasteland_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_wasteland_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_wave_eltite.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_wave_eltite.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_wave_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_wave_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_wave_support.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_wave_support.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_zhurong_beam.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_zhurong_beam.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/variants_CN/ssp_zhurong_standard.variant" beforeDir="false" afterPath="$PROJECT_DIR$/../data/variants_CN/ssp_zhurong_standard.variant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/proj/ssp_BigFackingGPD_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/proj/ssp_BigFackingGPD_shot.proj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/proj/ssp_ChaosArmory_HIGH_EXPLOSIVE_proj.proj" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/proj/ssp_ChaosArmory_HIGH_EXPLOSIVE_proj.proj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/proj/ssp_blaster_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/proj/ssp_blaster_shot.proj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/proj/ssp_nuke_MIRV_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/proj/ssp_nuke_MIRV_shot.proj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/proj/ssp_nuke_MIRV_shot1.proj" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/proj/ssp_nuke_MIRV_shot1.proj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/proj/ssp_zhurong_system_minelayer_mine.proj" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/proj/ssp_zhurong_system_minelayer_mine.proj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/ssp_minelayer.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/ssp_solareclipse.wpn" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/ssp_solareclipse.wpn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/ssp_swarm2.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/ssp_swarm_LongerRangeSystemPolarisation.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/weapon_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/weapon_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/weapons/weapon_data_CN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data/weapons/weapon_data_CN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graphics/missiles/ssp_GPD.png" beforeDir="false" afterPath="$PROJECT_DIR$/../graphics/missiles/ssp_GPD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graphics/ships/ssp_TDS.png" beforeDir="false" afterPath="$PROJECT_DIR$/../graphics/ships/ssp_TDS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graphics/ships/wings/ssp_mercurylake.png" beforeDir="false" afterPath="$PROJECT_DIR$/../graphics/ships/wings/ssp_mercurylake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mod_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod_info_CN.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mod_info_CN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/MagicLib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/MagicLib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLI_EN.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LLI_EN.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SSPCampaignPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/SSPCampaignPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SSPEveryFrameCombatPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/SSPEveryFrameCombatPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SSPMisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/SSPMisc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SSPModPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/SSPModPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/campaign/LLI_MainMission/LLI_MainMission_Creator.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/LLI_MainMission/LLI_MainMission_Creator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/campaign/ssp_ItemEffectsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/campaign/ssp_ItemEffectsRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hullmods/ssp_LongerRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/ssp_LongerRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hullmods/ssp_ShortRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/ssp_ShortRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hullmods/ssp_cliff.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/ssp_cliff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/hullmods/ssp_gonggong_shieldmod.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/ssp_gonggong_shieldmod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/ssp_HighEnergyFocus.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/ssp_HighEnergyFocus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/ssp_HitMeYouWeekMissile.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/ssp_HitMeYouWeekMissile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/ssp_PhaseTransferField.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/ssp_PhaseTransferField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/ssp_TDS_system.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/ssp_TDS_system.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/ssp_ThunderCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/ssp_ThunderCharge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shipsystems/ssp_gonggong_system.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/shipsystems/ssp_gonggong_system.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapon/ssp_shortgunEffect1.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapon/ssp_shortgunEffect1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapon/ssp_shredder_EveryFrameEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapon/ssp_shredder_EveryFrameEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapon/ssp_thrustersEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapon/ssp_thrustersEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapon/ssp_zhurong_system_minelayerExplosion.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapon/ssp_zhurong_system_minelayerExplosion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/world/systems/SSP_Scarborough.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/world/systems/SSP_Scarborough.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../更新内容.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../更新内容.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OL1MkHY4HJBzMi3tzyxyKHSSCy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "S:/Code/LouLan-Industries-Translation/LLI_EN096",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fce4573-cc08-4942-8bd8-b72bfe8d54a4" name="Changes" comment="" />
+      <created>1681325001567</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681325001567</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

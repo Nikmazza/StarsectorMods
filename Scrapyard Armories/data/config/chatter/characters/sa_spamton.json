@@ -1,0 +1,70 @@
+{
+	"name":"Spamton",
+	"personalities":["reckless","aggressive"],
+	"gender":["m"],
+	"chance":0.5,
+	"talkativeness":1,
+	"categoryTags":["game","othermedia"],
+	
+	"lines":{
+		"start":[
+			{"text":"HEY  EVERY  !!IT'S ME!!"},
+			{"text":"[Heaven], are you WATCHING?"},
+		],
+		"start_boss":[
+			{"text":"IT'S TIME TO MAKE A [Very Specil] DEAL!"}
+		],		
+		"retreat":[
+			{"text":"THAT'S NOT VERY [Big Shot] OF YOU [Captain]!"}
+		],
+		"out_of_missiles":[
+			{"text":"[Pipis] ALL SOLD OUT!"},
+			{"text":"WHAT?! ARE YOU SERIOUS?!"}
+		],
+		"engaged":[
+			{"text":"3X THE [Fire]POWER. 2X THE FLYING [Heads]!"},
+			{"text":"WE'LL TURN THOSE [Schmoes] AND [Daves] INTO [Rosen Graves]"},
+			{"text":"THAT'LL BE [19.97] KROMER TO [Die]"}
+		],
+		"need_help":[
+			{"text":"WHAT?! YOU'RE CALLING [Friends]?!"},
+			{"text":"HOLY [Cungadero]!"}
+		],
+		"pursuing":[
+			{"text":"NOW ONTO THE NEXT STEP!"},
+			{"text":"DON'T YOU WANT TO BE A [Big Shot]?!"},
+			{"text":"*Glitched Laughter*"}
+		],
+		"running":[
+			{"text":"[No Deal] YOU [Little Sponge]!"}
+		],
+		"hull_90":[
+			{"text":"[Limited time deal!] on [cleaning up] [your wellbeing is paramount!]"},
+			{"text":"WAS THAT A [Big Shot!] JUST NOW?!"}
+		],
+		"hull_50":[
+			{"text":"[Esteemed customer] I see you are trying to deplete my [Hull points]!"},
+			{"text":"IT'S TIME FOR A LITTLE [Bluegiant Specil]!"}
+		],
+		"hull_30":[
+			{"text":"HERE I GO!!! WATCH ME FLY [MAMA]!!!"},
+			{"text":"YOU MAKE ME [Sick]!"}
+		],
+		"overload":[
+			{"text":"ENJOY THE FIREWORKS, KID!!!!"},
+			{"text":"THIS IS [Victory Smoke]!!"}
+		],
+		"death":[
+			{"text":"...can anyone hear me? Help..."},
+			{"text":"[BreaKing] and [CraKing]..."},
+			{"text":"With a power like that..."},
+		],
+		"victory":[
+			{"text":"NOW THAT'S WHAT I'M TALKING AB04T!"},
+			{"text":"[CONGAT"},
+			{"text":"WE FROZE THEIR [4.99$] Lives"},
+			{"text":"I'M SO [Proud] OF YOU [Captain]"},
+			{"text":"PERFECT FOR [Spacer Livin'"},
+		],
+	}
+}

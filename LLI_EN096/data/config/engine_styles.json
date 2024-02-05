@@ -1,0 +1,25 @@
+{
+	# Reserved engine style ids (can not be used):
+	# "CUSTOM"
+	
+		"LLI_ENGINE":{
+		"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+		"contrailDuration":1,
+		"contrailWidthMult":2,
+		"contrailWidthAddedFractionAtEnd":1f,  # can be negative. makes trail spread out/narrow at the end
+		"contrailMinSeg":5, # min segment length, in pixels
+		"contrailMaxSpeedMult":2f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[255,200,150,20],
+		"contrailCampaignColor":[255,180,50,200],
+		"type":"GLOW", # GLOW or SMOKE; additive or regular blend mode
+						
+		"glowSprite":"graphics/trails/fx/engineglow.png",
+		"glowOutline":"graphics/trails/fx/engineflame.png",
+		"omegaMode":true,
+		"glowSizeMult":1,
+		"glowAlternateColor":[255,180,0,75],
+		"engineColor":[255,180,50,255],
+	},
+}
+

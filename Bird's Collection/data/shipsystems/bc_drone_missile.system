@@ -1,0 +1,38 @@
+{
+	"id":"bc_drone_missile",
+	"type":"DRONE_LAUNCHER",
+	"aiType":"DRONE_LAUNCHER_PD",
+	
+	"droneVariant":"bc_oldcruiser_drone_Missile",
+	
+	"allowFreeRoam":false,
+	
+	"launchSpeed":100,
+	"launchDelay":0.2,
+	"maxDrones":2,
+	"droneBehavior":[
+		{"droneIndex":[0],
+		 "defaultFacing":"MATCH_SHIP_FACING",	# MATCH_DRONE_HEADING, MATCH_SHIP_HEADING, MATCH_SHIP_FACING, AWAY_FROM_SHIP
+		 "faceEnemy":true,
+		 "holdRoamRange":170,
+		 "targetPriority":[SHIP_TARGET], # also SHIP_TARGET to prefer targeting the mothership's target
+		 "initialOrbitAngle":45,
+		 "orbitRadius":60,
+		},
+		{"droneIndex":[1],
+		 "defaultFacing":"MATCH_SHIP_FACING",	# MATCH_DRONE_HEADING, MATCH_SHIP_HEADING, MATCH_SHIP_FACING, AWAY_FROM_SHIP
+		 "faceEnemy":true,
+		 "holdRoamRange":170,
+		 "targetPriority":[SHIP_TARGET], # also SHIP_TARGET to prefer targeting the mothership's target
+		 "initialOrbitAngle":315,
+		 "orbitRadius":60,
+		},
+	],
+	
+	"useSound":"drone_launch",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+
+	}
+}

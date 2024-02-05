@@ -1,0 +1,53 @@
+{
+  "variantId": "ork_murtach_standard",
+  "hullId": "ork_murtach",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 26,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ork_rotary_pd_small",
+        "WS0006": "ork_rotary_pd_small",
+        "WS0007": "ork_rotary_pd_small",
+        "WS0008": "ork_rotary_pd_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_bigplasma",
+        "WS0003": "ork_bigplasma"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "ork_sledge_medium",
+        "WS0005": "ork_sledge_medium"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "ork_noshield_small",
+        "WS0010": "ork_noshield_small",
+        "WS0011": "ork_noshield_small",
+        "WS0012": "ork_noshield_small"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

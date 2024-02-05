@@ -1,0 +1,75 @@
+{
+  "variantId": "fed_boss_standard",
+  "hullId": "fed_boss",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 49,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "stabilizedshieldemitter",
+    "magazines",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_hullbeam_large"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "fed_kinetic_missile_large",
+        "WS0007": "fed_kinetic_missile_med",
+        "WS0008": "fed_kinetic_missile_med"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "fed_ionprojector"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "plasma"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_duallaser2",
+        "WS0002": "fed_duallaser2",
+        "WS0009": "fed_singlelaser",
+        "WS0010": "fed_singlelaser",
+        "WS0011": "fed_singlelaser",
+        "WS0012": "fed_singlelaser",
+        "WS0013": "fed_singlelaser",
+        "WS0014": "fed_singlelaser",
+        "WS0015": "guardian",
+        "WS0017": "fed_singlelaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0018": "fed_boss_wing_left_standard"
+    },
+    {
+      "WS0019": "fed_boss_wing_right_standard"
+    },
+    {
+      "WS0016": "fed_boss_shieldemitter_standard"
+    }
+  ],
+  "wings": []
+}

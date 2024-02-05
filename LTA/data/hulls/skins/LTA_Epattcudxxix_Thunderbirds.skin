@@ -1,0 +1,25 @@
+{
+	"baseHullId":"LTA_Epattcudxxix",
+	"skinHullId":"LTA_Epattcudxxix_Thunderbirds",
+	"hullName":"E-XXIX 'Shoal' (TB)",
+	"descriptionId":"LTA_Epattcudxxix",
+	"descriptionPrefix":"This ship has been heavily modified and upclassed for use in the 'Duinn Thunderbirds', sporting many practical but expensive 'showy improvements' that make it more intimidating in combat over standard variations of the hull.",
+	"tags":["rare_bp", "LTA_DuinnThunderbirds_bp"],
+	"addHints":["COMBAT", "NO_AUTO_ESCORT"],
+	"tech":"Duinn Thunderbirds",
+	"fleetPoints":30,
+	"ordnancePoints":250,
+	#"restoreToBaseHull":true,
+	"baseValueMult":1.5,
+	"spriteName":"graphics/LTA/ships/Epattcud/Thunderbirds/Epattcud_29_Class_Scrapship_Thunderbirds.png",
+	"systemId": "LTA_antimatterfuelflamer",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["comp_structure"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+	},
+	"builtInMods":["augmentedengines", "thunderbirds", "pointdefenseai"],
+	"builtInWeapons":{
+    },
+}

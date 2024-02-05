@@ -1,0 +1,40 @@
+{
+"portraits":{
+		"standard_male":[
+			"graphics/portraits/sa_sec.png",
+		],
+		},
+
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_scalpel": ".75",
+    "sa_gorget": ".70",
+    "sa_elanus": ".0.65",
+    "hulls": {}
+  },
+  "shipsWhenImporting": {
+    "sa_scalpel": ".75",
+    "sa_gorget": ".70",
+    "sa_elanus": ".0.65",
+    "hulls": []
+  },
+  "knownShips": {
+    "hulls":[ 
+    "sa_gorget",
+    "sa_scalpel",
+    "sa_elanus",
+    ]
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+  "knownWeapons":{
+  		"tags":[],
+  		"weapons":[
+  			"sa_hypermatter",
+  		],
+  	},
+}

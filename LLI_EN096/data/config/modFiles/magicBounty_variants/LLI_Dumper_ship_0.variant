@@ -1,0 +1,75 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 17,
+    "goalVariant": true,
+    "hullId": "ssp_karni",
+    "hullMods": [
+        "targetingunit",
+        "heavyarmor",
+        "reinforcedhull",
+        "armoredweapons",
+        "ssp_ShortRange",
+        "defensive_targeting_array",
+        "autorepair"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LLI_Dumper_ship_0",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "gigacannon",
+                "WS0008": "gigacannon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "ssp_shredder",
+                "WS0018": "ssp_shredder"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "heavyneedler",
+                "WS0006": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "gravitonbeam",
+                "WS0004": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ionbeam",
+                "WS0002": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "flak",
+                "WS0010": "flak"
+            }
+        }
+    ],
+    "wings": [
+        "ssp_mudslide",
+        "ssp_mudslide",
+        "ssp_mudslide",
+        "ssp_mudslide"
+    ]
+}

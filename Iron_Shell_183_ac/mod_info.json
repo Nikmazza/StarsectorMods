@@ -1,0 +1,17 @@
+{
+    "id": "timid_xiv",
+    "name": "Iron Shell",
+    "author": "Techpriest & Selkie",
+    "utility": "false",
+    "version": "1.183",
+    "description": "Adds a faction dedicated to the XIV Battlegroup and her legacy. Adds multiple XIV ships!",
+    "gameVersion": "0.96a",
+	"jars":["jars/EternalIronShell.jar"],
+	"dependencies": [
+    {"id": "lw_lazylib", "name": "LazyLib"},
+	{"id": "MagicLib", "name": "MagicLib"},
+	{"id": "nexerelin", "name": "Nexerelin"},
+	#{"id": "shaderLib", "name": "GraphicsLib"}, Now an optional!
+  ],
+	"modPlugin":"data.scripts.eis_modPlugin",
+}

@@ -1,0 +1,291 @@
+{
+  "hullName": "Raptor",
+  "hullId": "fed_raptor",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/FED/ships/fed_raptor.png",
+  "style": "FEDERATION",
+  "height": 230,
+  "width": 224,
+  "center": [112, 120],
+  "collisionRadius": 195.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 145,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "fed_missileforge",
+    "hiressensors",
+    "fed_auxshields"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": -95,
+      "locations": [-17, -35]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 30,
+      "locations": [74, 76]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -30,
+      "locations": [74, -76]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 85,
+      "locations": [-18, 29]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 30,
+      "angle": 0,
+      "locations": [40.5, 25]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [97.5, 68]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [97.5, -68]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 0,
+      "locations": [14.5, -21]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [39, -21]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -90,
+      "locations": [27, -80]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": 90,
+      "locations": [27, 80]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 135,
+      "locations": [-42, 25]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -135,
+      "locations": [-42, -25]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 180,
+      "locations": [-81, -0]
+    },
+    {
+      "id": "WS0015",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-54.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-86, -67.5],
+      "length": 94.5,
+      "width": 28,
+      "angle": -180,
+      "contrailSize": 28,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-86, 67.5],
+      "length": 94.5,
+      "width": 28,
+      "angle": 180,
+      "contrailSize": 28,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-75, -33],
+      "length": 38.85593,
+      "width": 14.624175,
+      "angle": -168.5,
+      "contrailSize": 14.624175,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-75, 33],
+      "length": 38.85593,
+      "width": 14.624175,
+      "angle": 168.5,
+      "contrailSize": 14.624175,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-86.5, -22.5],
+      "length": 48,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-86.5, 22.5],
+      "length": 48,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-79.5, 87],
+      "length": 44.207428,
+      "width": 14.690603,
+      "angle": 178.5,
+      "contrailSize": 14.690603,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-79.5, -87],
+      "length": 44.207428,
+      "width": 14.690603,
+      "angle": -178.5,
+      "contrailSize": 14.690603,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-79.5, 86.5],
+      "length": 57.666721,
+      "width": 16.437676,
+      "angle": 178.5,
+      "contrailSize": 16.437676,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-79.5, -86.5],
+      "length": 57.666721,
+      "width": 16.437676,
+      "angle": -178.5,
+      "contrailSize": 16.437676,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-94.5, 12],
+      "length": 56.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-94.5, -12],
+      "length": 56.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "FEDERATION_ENGINE"
+    }
+  ],
+  "bounds": [
+    49, 44,
+    30, 45,
+    6, 47,
+    22, 65.5,
+    95.5, 66,
+    78, 84.5,
+    -6.5, 94,
+    -70.5, 92.5,
+    -81, 76.5,
+    -80, 58.5,
+    -29, 59.5,
+    -36.5, 39.5,
+    -68, 38.5,
+    -90, 10,
+    -90, -10,
+    -68.5, -37.5,
+    -36.5, -38.5,
+    -29, -58.5,
+    -80, -57.5,
+    -81, -75.5,
+    -70.5, -91.5,
+    -6.5, -93,
+    78, -83.5,
+    95.5, -65,
+    22, -64.5,
+    6, -46,
+    30, -44,
+    56, -43.5,
+    83.5, -29.5,
+    84, -10,
+    57, 3.5,
+    27.5, 7,
+    61, 11,
+    58.5, 31.5
+  ]
+}

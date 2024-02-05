@@ -1,0 +1,18 @@
+{
+    "id":"fed_heavylaser1_shot",
+    "specClass":"projectile",
+    "spawnType":"BALLISTIC",
+    "collisionClass":"PROJECTILE_FF",
+    "collisionClassByFighter":"PROJECTILE_FIGHTER",
+    "length":40.0,
+    "width":8.0,
+    "hitGlowRadius":30,
+    "fadeTime":0.3,
+    "fringeColor":[140,255,100,215],
+    "coreColor":[125,255,185,220],
+    "glowColor":[80,255,90,50],
+    "glowRadius":40,
+    "textureScrollSpeed":64.0,
+    "pixelsPerTexel":20.0,
+    "bulletSprite":"graphics/missiles/shell_large_green.png"
+}

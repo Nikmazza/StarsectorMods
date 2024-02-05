@@ -1,0 +1,25 @@
+{
+  "variantId": "bc_phasedestroyer1_Overdriven",
+  "hullId": "bc_phasedestroyer1",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavymg",
+        "WS0004": "heavymg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

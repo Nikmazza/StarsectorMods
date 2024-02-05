@@ -1,0 +1,13 @@
+{
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/nes_giant_space_hamster.png",	
+						],
+	},
+	
+	"knownShips":{
+        "hulls":[
+			"nes_hermitaur",
+        ],
+    },
+},

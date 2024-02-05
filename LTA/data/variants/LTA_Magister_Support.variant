@@ -1,0 +1,49 @@
+{
+  "variantId": "LTA_Magister_Support",
+  "hullId": "LTA_Magister",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 6,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "LTA_talonrail"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymauler",
+        "WS0002": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "LTA_nixie",
+        "WS0005": "LTA_nixie",
+        "WS0006": "LTA_nixie",
+        "WS0007": "LTA_nixie"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

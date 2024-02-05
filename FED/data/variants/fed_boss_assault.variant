@@ -1,0 +1,75 @@
+{
+  "variantId": "fed_boss_assault",
+  "hullId": "fed_boss",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 47,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "targetingunit",
+    "fluxbreakers"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "fed_hullbeam_large",
+        "WS0006": "fed_hullbeam_large"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "fed_ionprojector",
+        "WS0004": "fed_ionprojector"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "sabotpod",
+        "WS0008": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_heavylaser2",
+        "WS0002": "fed_heavylaser2"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "fed_singlelaser",
+        "WS0010": "fed_singlelaser",
+        "WS0011": "fed_singlelaser",
+        "WS0012": "fed_singlelaser",
+        "WS0013": "fed_singlelaser",
+        "WS0014": "fed_singlelaser",
+        "WS0015": "guardian",
+        "WS0017": "fed_singlelaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0019": "fed_boss_wing_right_standard"
+    },
+    {
+      "WS0018": "fed_boss_wing_left_standard"
+    },
+    {
+      "WS0016": "fed_boss_shieldemitter_standard"
+    }
+  ],
+  "wings": []
+}

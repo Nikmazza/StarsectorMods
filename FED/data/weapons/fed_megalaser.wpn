@@ -1,0 +1,34 @@
+{
+	"id":"fed_megalaser",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"LARGE",
+	"turretSprite": "graphics/FED/weapons/fed_megalaser/fed_megalaser_turret00.png",
+	"hardpointSprite": "graphics/FED/weapons/fed_megalaser/fed_megalaser_turret00.png",
+	"hardpointGlowSprite":"graphics/FED/weapons/fed_megalaser/fed_megalaser_turret_glow.png",
+	"turretGlowSprite":"graphics/FED/weapons/fed_megalaser/fed_megalaser_turret_glow.png",
+	"numFrames":6,
+	"frameRate":45,
+	"turretOffsets":[36, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[36, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":60.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":30.0,
+					   "particleSizeMin":22.0,
+					   "particleSizeRange":22.0,
+					   "particleDuration":0.13,
+					   "particleCount":10,
+					   "particleColor":[100,255,100,255]},
+					   
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"fed_megalaser_shot",  # projectile that will be fired
+	#"fireSoundOne":"thumper_spinup",
+	"fireSoundTwo":"fed_superlaser_fire",
+	"glowColor":[100,255,100,225],
+	#"autocharge":true,
+	#"interruptibleBurst":true,
+}

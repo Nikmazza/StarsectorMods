@@ -1,0 +1,47 @@
+{
+    "center": [
+        2,
+        2
+    ],
+    "collisionRadius": 2,
+    "coversColor": "",
+    "height": 4,
+    "hullId": "ssp_MissileShieldDrone",
+    "hullName": "ssp_MissileShieldDrone",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 30,
+    "spriteName": "graphics/fx/empty.png",
+    "style": "LLI",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": -90,
+            "arc": 0,
+            "id": "WS 000",
+            "locations": [
+                0,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": -90,
+            "arc": 0,
+            "id": "WS 001",
+            "locations": [
+                0,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 4
+}

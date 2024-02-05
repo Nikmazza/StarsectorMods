@@ -1,0 +1,193 @@
+{
+  "hullName": "Penumbra",
+  "hullId": "sa_penumbra",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/sa_penumbra.png",
+  "style": "HIGH_TECH",
+  "height": 120,
+  "width": 190,
+  "center": [95, 52],
+  "collisionRadius": 125,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 120,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ground_support"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 000",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 20,
+      "locations": [34, 47]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -20,
+      "locations": [34, -47]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 130,
+      "locations": [-34, 68]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 230,
+      "locations": [-34, -68]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 40,
+      "locations": [
+        46, 26,
+        36, 26
+      ]
+    },
+    {
+      "id": "WS 005",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": -40,
+      "locations": [
+        47, -26,
+        36, -26
+      ]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [26, 0]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [57, 15]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [57, -15]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -45,
+      "locations": [14, -63]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 45,
+      "locations": [14, 63]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-42, -27],
+      "length": 54,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-42, 27],
+      "length": 54,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-48, -38],
+      "length": 31,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-48, 38],
+      "length": 31,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47.5, -50],
+      "length": 37.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47.5, 50],
+      "length": 37.5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    65, 33,
+    58, 12,
+    25, 8,
+    25, -7,
+    58, -11,
+    65, -29,
+    22, -81,
+    1, -66,
+    -16, -67,
+    -35, -82,
+    -48, -72,
+    -37, 0,
+    -47, 74,
+    -35, 82,
+    -16, 68,
+    1, 66,
+    22, 81
+  ]
+}

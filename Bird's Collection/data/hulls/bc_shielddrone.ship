@@ -1,0 +1,46 @@
+{
+  "hullName": "Sorak",
+  "hullId": "bc_shielddrone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_shielddrone.png",
+  "style": "OLD_TECH",
+  "height": 40,
+  "width": 40,
+  "center": [20, 18],
+  "collisionRadius": 47,
+  "shieldCenter": [-5, -0],
+  "shieldRadius": 39.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fluxshunt",
+    "shield_always_on"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [
+    {
+      "location": [-7, -0],
+      "length": 28,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-10, -0],
+      "length": 2,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    }
+  ],
+  "bounds": [
+    -10, -5,
+    -0.5, -12,
+    12, -0,
+    -0.5, 12,
+    -10, 5
+  ]
+}

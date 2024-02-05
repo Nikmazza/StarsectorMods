@@ -1,0 +1,8 @@
+{
+	"id":"thirstSector", # internal id
+	"name":"ThirstSector Portrait Pack", # displayed to the player
+	"author":"therealzOh",
+	"version":"1.33",
+	"description":"Complete Portrait Replacer",
+	"gameVersion":"0.96",
+}

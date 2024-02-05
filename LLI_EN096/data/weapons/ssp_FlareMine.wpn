@@ -1,0 +1,65 @@
+{
+  "id": "ssp_FlareMine",
+  "specClass": "projectile",
+  "projectileSpecId": "ssp_FlareMine_shot",
+  "type": "MISSILE",
+  "mountTypeOverride":"SYNERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/ssp_FlareMine_turret.png",
+  "hardpointSprite": "graphics/weapons/ssp_FlareMine_hardpoint.png",
+  "turretOffsets": [
+    -2,
+    -7.5,
+    -2,
+    7.5,
+    5,
+    -7.5,
+    5,
+    7.5,
+    12,
+    -7.5,
+    12,
+    7.5
+  ],
+  "turretAngleOffsets": [
+   -45,
+    45,
+    -45,
+    45,
+    -45,
+    45
+  ],
+  "hardpointOffsets": [
+    -2,
+    -7.5,
+    -2,
+    7.5,
+    5,
+    -7.5,
+    5,
+    7.5,
+    12,
+    -7.5,
+    12,
+    7.5
+  ],
+  "hardpointAngleOffsets": [
+    -45,
+    45,
+    -45,
+    45,
+    -45,
+    45
+  ],
+  "barrelMode": "ALTERNATING",  ####ALTERNATING or LINKED or.....
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 20,
+    "spread": 10,
+    "particleSizeMin": 10,
+    "particleSizeRange": 8,
+    "particleDuration": 0.3,
+    "particleCount": 7,
+    "particleColor": [205,70,175,255]
+  },
+}

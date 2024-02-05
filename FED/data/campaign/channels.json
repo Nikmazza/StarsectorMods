@@ -1,0 +1,12 @@
+{
+	"blackrock_internal":{
+		"name":"Federation NavInt",
+		"logo":"graphics/FED/factions/fed_logo.png",
+		"icon":"graphics/FED/factions/fed_logo.png",
+		"image":"graphics/FED/factions/fedlogo_256.png",
+		"sound":"ui_channel_comm_secure",
+		"faction":"star_federation",
+		"type":"Intelligence Report",
+		"shortType":"Intel",
+	},
+}

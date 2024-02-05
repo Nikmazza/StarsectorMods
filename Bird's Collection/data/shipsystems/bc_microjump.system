@@ -1,0 +1,32 @@
+{
+	"id":"bc_microjump",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	
+	
+	"jitterColor":[221,88,0,120],
+	#"jitterColor":[221,88,0,150],
+	"jitterCopies":8,
+	"jitterRange":1,
+	"jitterRangeRadiusFraction":0.5,
+	
+	"weaponGlowColor":[219,85,242,0],
+	"weaponTypes":[BALLISTIC],
+	
+	"engineGlowColor":[120,248,255,125],
+
+	"range":150,
+	"randomRange":30,
+	
+	"renderCopyDuringTeleport":true,
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":300,
+		"averageSpeedIncrease":30,
+	}
+}

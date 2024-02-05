@@ -1,0 +1,50 @@
+{
+  "hullName": "Jerboa",
+  "hullId": "bc_midlineinterceptor",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_midlineinterceptor.png",
+  "style": "MIDLINE",
+  "height": 42,
+  "width": 26,
+  "center": [13, 10],
+  "collisionRadius": 39,
+  "shieldCenter": [5.5, -0],
+  "shieldRadius": 32,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [8, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [8, -9]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, -0],
+      "length": 45.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    1, -12,
+    -9.5, -0,
+    1, 12,
+    31, -0
+  ]
+}

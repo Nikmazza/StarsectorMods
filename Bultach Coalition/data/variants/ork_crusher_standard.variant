@@ -1,0 +1,52 @@
+{
+  "variantId": "ork_crusher_standard",
+  "hullId": "ork_crusher",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_sledge_small",
+        "WS0011": "ork_sledge_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ork_rotary_pd_small",
+        "WS0003": "ork_rotary_pd_small",
+        "WS0004": "ork_rotary_pd",
+        "WS0005": "ork_rotary_pd",
+        "WS0008": "ork_rotary_pd_small",
+        "WS0009": "ork_rotary_pd_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "ork_thumpa",
+        "WS0007": "ork_thumpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "ork_big_shotgun"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

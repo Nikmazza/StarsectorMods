@@ -1,0 +1,61 @@
+{
+  "variantId": "fed_gun_module_standard",
+  "hullId": "fed_gun_module",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_ionprojector",
+        "WS0006": "fed_ionprojector",
+        "WS0007": "fed_ionprojector",
+        "WS0008": "fed_ionprojector"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "amblaster",
+        "WS0011": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymortar",
+        "WS0002": "heavymortar",
+        "WS0003": "heavymortar",
+        "WS0004": "heavymortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "fed_duallaser",
+        "WS0013": "fed_duallaser",
+        "WS0014": "fed_duallaser",
+        "WS0015": "fed_duallaser",
+        "WS0016": "fed_duallaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

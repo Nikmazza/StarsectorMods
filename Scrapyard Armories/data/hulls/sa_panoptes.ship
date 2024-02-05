@@ -1,0 +1,55 @@
+{
+  "hullName": "Panoptes",
+  "hullId": "sa_panoptes",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/sa_mining_bomber.png",
+  "style": "LOW_TECH",
+  "height": 43,
+  "width": 40,
+  "center": [20, 21.5],
+  "collisionRadius": 26,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 24.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0001": "sa_limited_blaster"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [4.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-18, -8],
+      "length": 11.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-18, 8],
+      "length": 11.5,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LOW_TECH_FIGHTER"
+    }
+  ],
+  "bounds": [
+    -18, 18,
+    15.5, 8,
+    15.5, -8,
+    -18, -18
+  ]
+}

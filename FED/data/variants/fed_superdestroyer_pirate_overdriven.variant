@@ -1,0 +1,53 @@
+{
+  "variantId": "fed_superdestroyer_pirate_overdriven",
+  "hullId": "fed_superdestroyer_pirate",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 20,
+  "quality": 2,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "fed_beam_halberd"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ionpulser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "fed_megalaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_singlelaser",
+        "WS0002": "fed_singlelaser",
+        "WS0005": "fed_singlelaser",
+        "WS0006": "fed_singlelaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

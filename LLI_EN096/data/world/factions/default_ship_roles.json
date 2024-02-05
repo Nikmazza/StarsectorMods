@@ -1,0 +1,114 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+		"ssp_gonggong_standard":4,
+		"ssp_zhurong_beam":2,
+		"ssp_zhurong_standard":2,
+		"ssp_vortexing_standard":5,	
+		"ssp_vortexing_beam":5,
+		"ssp_combustion_standard":10,
+		"ssp_river_standard":10,	
+		"ssp_dew_standard":10,
+	},
+	"combatSmall":{
+		"ssp_gonggong_standard":4,
+		"ssp_zhurong_beam":2,
+		"ssp_zhurong_standard":2,
+		"ssp_vortexing_standard":5,
+		"ssp_vortexing_beam":5,
+		"ssp_combustion_standard":6,
+		"ssp_combustion_ecsort":4,
+		"ssp_river_standard":10,
+		"ssp_dew_standard":10,		
+	},
+	"combatMedium":{
+		"ssp_wave_standard":7,	
+		"ssp_wave_eltite":7,	
+		"ssp_wave_support":7,	
+		"ssp_vocaino_standard":2,
+		"ssp_vocaino_eltite":7,
+		"ssp_vocaino_override":1,
+		"ssp_turbulence_standard":5,
+		"ssp_turbulence_beam":5,
+		"ssp_conduit_standard":10,
+		"ssp_wave_M_standard":5,
+		"ssp_wave_M_assault":5,
+		"ssp_flame_standard":5,
+		"ssp_flame_beam":5,
+		"ssp_yu_lian_standard":10,
+		},	
+	"combatLarge":{
+		"ssp_naga_standard":10,
+		"ssp_undergroundfire_standard":10,
+		"ssp_lanina_standard":5,
+		"ssp_lanina_beam":5,
+		"ssp_wasteland_standard":5,
+		"ssp_wasteland_eltite":5,
+		"ssp_seaquake_standard":4,
+		"ssp_seaquake_support":3,
+		"ssp_seaquake_beam":3,
+		"ssp_thunder_standard":5,
+		"ssp_thunder_beam":5,
+		"ssp_TDS_standard":5,
+		"ssp_tide_T_standard":5,
+	},
+	"combatCapital":{
+		
+		"ssp_elnino_standard":5,
+		"ssp_elnino_eltite":5,
+		"ssp_tronado_standard":10,
+		"ssp_flood_standard":10,
+		"ssp_hanba_standard":5,
+		"ssp_hanba_beam":5,
+	},
+	# carriers
+	"carrierSmall":{
+		
+	},
+	"carrierMedium":{	    
+	    "ssp_tide_standard":5,
+	    "ssp_tide_longbow":2.5,
+	    "ssp_tide_khopesh":2.5,
+	},
+	"carrierLarge":{
+		"ssp_karni_standard":10,
+	},
+	# phase ships
+	"phaseSmall":{
+		
+	},
+	"phaseMedium":{
+	},
+	"phaseLarge":{
+	},
+	"phaseCapital":{
+	},
+		# 民用舰等
+		# 货船
+	"freighterSmall":{
+	"buffalo_LLI_Standard":10,
+	},
+	"freighterMedium":{
+	"buffalo_LLI_Standard":10,
+	},
+	"freighterLarge":{
+	
+	},
+	  #油船
+	"tankerSmall":{
+	},
+	"tankerMedium":{
+	},
+	"tankerLarge":{
+
+	},	
+	 #人员运输
+	"linerSmall":{	
+	},
+	"linerMedium":{
+	},
+	"linerLarge":{
+	},
+
+}

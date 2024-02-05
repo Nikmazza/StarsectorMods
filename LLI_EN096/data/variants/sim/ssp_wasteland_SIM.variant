@@ -1,0 +1,46 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 5,
+    "fluxVents": 30,
+    "hullId": "ssp_wasteland",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_wasteland_SIM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "gauss",
+                "WS0002": "gauss"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0010": "heatseeker",
+                "WS0011": "heatseeker",
+                "WS0012": "heatseeker",
+                "WS0013": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "ionbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "flak",
+                "WS0005": "flak"
+            }
+        }
+    ]
+}

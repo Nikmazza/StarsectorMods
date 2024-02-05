@@ -1,0 +1,133 @@
+{
+  "hullName": "Right Thruster",
+  "hullId": "right_thruster",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/spacehulk/thruster_right.png",
+  "style": "LOW_TECH",
+  "height": 234,
+  "width": 107,
+  "center": [53.5, 117],
+  "collisionRadius": 168,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 0,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-53, -6.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-86, -7.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -47,
+      "locations": [-44, -43.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [-20, -36]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [-1, -30]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -45,
+      "locations": [48.5, -23.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-106, 24.5],
+      "length": 44.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-113, 12.5],
+      "length": 59.5,
+      "width": 21,
+      "angle": 180,
+      "contrailSize": 21,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-115.5, -3],
+      "length": 37.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-116, -11.5],
+      "length": 46.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    116.5, 4.5,
+    52, -18,
+    33.5, -31.5,
+    -6.5, -34,
+    -15, -40,
+    -35, -51.5,
+    -61.5, -51,
+    -70, -43.5,
+    -77.5, -43.5,
+    -99.5, -16,
+    -116, -15,
+    -112.5, 24.5,
+    -102.5, 31,
+    -68.5, 32,
+    -67.5, 37,
+    -51, 36.5,
+    -47, 41.5,
+    -30, 46,
+    -28.5, 53,
+    25, 52,
+    38, 39,
+    39.5, 19.5,
+    56, 13,
+    60, 8,
+    74.5, 7.5,
+    88, 29,
+    96, 29
+  ]
+}

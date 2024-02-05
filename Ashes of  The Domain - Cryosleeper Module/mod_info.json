@@ -1,0 +1,13 @@
+{
+	"id":"Cryo_but_better",
+	"name": "AoTD - The Sleeper",
+	"author":"Kaysaar",
+	"utility":"false",
+	"version":"1.2.0",
+	"description":"Ashes of The Domain - The Sleeper: Mod that tweaks Cryosleeper mechanics, independent from other AoTD modules",
+	"gameVersion": "0.96a-RC6",
+	"jars":["jars/Cryos.jar"],
+	"dependencies": [ {"id": "MagicLib","name": "MagicLib"} ],
+	"modPlugin":"data.plugins.AodCryosleeperPLugin"
+
+}

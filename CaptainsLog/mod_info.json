@@ -1,0 +1,20 @@
+{
+	"id":"CaptainsLog",
+	"name":"Captain's Log",
+	"author":"stormbringer951",
+	"version":"0.2.0",
+	"description":"Adds custom notes and automatic intel generation for exploration content. Thanks to Sundog and LazyWizard. Special thanks to MesoTronik and Jaghaimo.",
+	"gameVersion":"0.96a-RC10",
+	"jars":["CaptainsLog.jar"],
+	"modPlugin":"CaptainsLog.CaptainsLogModPlugin",
+	"dependencies": [
+		{
+			"id": "lw_lazylib",
+			"name": "LazyLib"
+		},
+		{
+			"id": "lunalib",
+			"name": "LunaLib"
+		}
+	]
+}

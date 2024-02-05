@@ -1,0 +1,166 @@
+{
+  "hullName": "Carnelian",
+  "hullId": "nes_carnelian",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/nes_carnelian.png",
+  "style": "MIDLINE",
+  "height": 200,
+  "width": 158,
+  "center": [79, 79],
+  "collisionRadius": 137,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 130,
+  "viewOffset": 0,
+  "builtInMods": [
+    "NES_AafArray",
+	"NES_ZeroFluxColor",
+	"NES_ColorSelector_Carn"
+  ],
+  "builtInWings": [
+    "nes_drone_carnelian_attacker_wing",
+    "nes_drone_carnelian_defender_wing"
+  ],
+  "builtInWeapons": {
+    "WS0005": "blinker_green",
+    "WS0006": "blinker_red",
+    "WS0007": "nes_carnelian_deco_cover"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [51, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [18, -49]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [18, 49]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-18, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 12,
+      "angle": 0,
+      "locations": [19, -77.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 12,
+      "angle": -0,
+      "locations": [19, 77.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 12,
+      "angle": 0,
+      "locations": [21, -0]
+    },
+	{
+      "id": "NES_DECO_COUNTER",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-40, -32],
+      "length": 36,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-40, 32],
+      "length": 36,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-70.5, -0],
+      "length": 120,
+      "width": 30,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-70.5, -10.5],
+      "length": 42,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-70.5, 10.5],
+      "length": 42,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    63.5, 19.5,
+    107.5, 22.5,
+    36.5, 23.5,
+    9.5, 38.5,
+    17, 72.5,
+    6.5, 72.5,
+    -15.5, 36.5,
+    -37.5, 34.5,
+    -37.5, 23.5,
+    -69.5, 21.5,
+    -69.5, -21.5,
+    -37.5, -23.5,
+    -37.5, -34.5,
+    -15.5, -36.5,
+    6.5, -72.5,
+    17, -72.5,
+    9.5, -38.5,
+    36.5, -23.5,
+    107.5, -22.5,
+    63.5, -19.5
+  ]
+}

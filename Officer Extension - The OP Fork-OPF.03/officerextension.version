@@ -1,0 +1,13 @@
+{
+  "masterVersionFile": "https://raw.githubusercontent.com/5thYL/Starsector-Officer-Extension/main/officerextension.version",
+  "modName": "Officer Extension - The OP Fork",
+  "modThreadId": 27754,
+  "modVersion":
+  {
+		"major":0,
+		"minor":0,
+        "patch":.OPF.03,
+  },
+  "directDownloadURL": "https://github.com/5thYL/Starsector-Officer-Extension/releases/download/R.03/OfficerExtensionOPFork.zip",
+  "changelogURL": "https://raw.githubusercontent.com/5thYL/Starsector-Officer-Extension/main/officerextension.changelog"
+}

@@ -1,0 +1,39 @@
+{
+  "variantId": "LTA_GladiusTB_Wing",
+  "hullId": "LTA_GladiusTB_Wing",
+  "displayName": "Assault Fighter",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "LTA_vulcansinglenobase",
+        "WS0006": "LTA_vulcansinglenobase"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "LTA_vulcansinglenobase",
+        "WS0003": "LTA_vulcansinglenobase"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "LTA_vulcansinglenobase",
+        "WS0004": "LTA_vulcansinglenobase"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

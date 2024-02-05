@@ -1,0 +1,33 @@
+{
+  "id": "assortment_of_things",
+  "name": "Random Assortment of Things",
+  "author": "Lukas04",
+  "utility": "false",
+  "version": "1.7.4",
+  "description": "A collection of things I create whenever a random idea pops up into my head.",
+  "gameVersion": "0.96a-RC10",
+  "jars": ["jars/RandomAssortmentofThings.jar"],
+  "modPlugin": "assortment_of_things.RATModPlugin",
+  "dependencies": [
+    {
+      "id": "lunalib",
+      "name": "LunaLib"
+    },
+    {
+      "id": "MagicLib",
+      "name": "MagicLib"
+    },
+	{
+      "id": "shaderLib",
+      "name": "GraphicsLib"
+    },
+    {
+      "id": "combatactivators",
+      "name": "Combat Activators"
+    },
+	{
+      "id": "nexerelin",
+      "name": "Nexerelin"
+    },
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "hullName": "Hound (FYS)",
+  "hullId": "bc_fayshound",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/bc_fayshound.png",
+  "style": "LOW_TECH",
+  "height": 72,
+  "width": 62,
+  "center": [31, 36],
+  "collisionRadius": 64,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 62,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 280,
+      "angle": 135,
+      "locations": [-14, 4]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [21, -6]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-29.5, -0.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-37, 21.5],
+      "length": 87.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-37, -21.5],
+      "length": 87.5,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -28, -5.5,
+    -35, -15,
+    -35.5, -27.5,
+    6, -28,
+    8, -13.5,
+    29.5, -15.5,
+    33.5, 11,
+    27, 18.5,
+    8, 13.5,
+    6, 28,
+    -35.5, 27.5,
+    -35, 15,
+    -28, 5.5
+  ]
+}

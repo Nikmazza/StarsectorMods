@@ -1,0 +1,155 @@
+{
+  "hullName": "Dud",
+  "hullId": "bc_pirate_brawler",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/bc_dollarstore_brawler.png",
+  "style": "LOW_TECH",
+  "height": 68,
+  "width": 114,
+  "center": [57, 28.5],
+  "collisionRadius": 72,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 70,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [17.5, -20]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -0,
+      "locations": [17.5, 20]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [12.5, -37]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -0,
+      "locations": [12.5, 37]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-26.5, 13],
+      "length": 33.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-26.5, -13],
+      "length": 33.5,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-20.5, 24.5],
+      "length": 62.5,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-20.5, -24.5],
+      "length": 62.5,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21.5, 31.5],
+      "length": 33.5,
+      "width": 9,
+      "angle": 178,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21.5, -31.5],
+      "length": 33.5,
+      "width": 9,
+      "angle": -178,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-16.5, 43],
+      "length": 55.5,
+      "width": 10,
+      "angle": 167.5,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-16.5, -43],
+      "length": 55.5,
+      "width": 10,
+      "angle": -167.5,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-12, 48.5],
+      "length": 36.349998,
+      "width": 6.05,
+      "angle": 151.5,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-12, -48.5],
+      "length": 36.349998,
+      "width": 6.05,
+      "angle": -151.5,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -25, -16,
+    -20, -17,
+    -20, -28.5,
+    -16, -47,
+    -7.5, -55,
+    16.5, -40,
+    16, -32,
+    25, -27,
+    24.5, -14.5,
+    37.5, -0,
+    24.5, 14.5,
+    25, 27,
+    16, 32,
+    14, 39.5,
+    -7.5, 55,
+    -16, 47,
+    -20, 28.5,
+    -20, 17,
+    -25, 16
+  ]
+}

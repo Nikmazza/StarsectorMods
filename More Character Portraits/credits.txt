@@ -1,0 +1,49 @@
+In addition to vanilla portraits, More Character Portraits uses some images (or parts from images) from the following portrait packs, with credit to their original authors:
+
+
+Battletech Portrait Pack by Chozo (vis-a-vis Harebrained Schemes)
+https://fractalsoftworks.com/forum/index.php?topic=21932.0
+
+bt_m_085.png	bt_m_087.png
+
+
+Immersion Friendly Portrait Pack (Red) by Kwenchin
+https://fractalsoftworks.com/forum/index.php?topic=24243.0
+
+f_01.png	f_06.png	f_08.png	m_09.png
+
+
+Interesting Portrait Pack by Interestio
+https://fractalsoftworks.com/forum/index.php?topic=17066.0
+
+corporate35.png		corporate44.png		hegemony20.png		hegemony22.png
+
+hegemony24.png		luddic40.png		luddic43.png		pirate_05.png
+
+pirate14.png
+
+
+Starsector Portr-Ai-t Pack and Ai Model by Severian Void
+https://fractalsoftworks.com/forum/index.php?topic=25550.0
+
+corp_f_02.png	corp_m_12.png	heg_f_09.png	heg_f_13.png	heg_f_15.png
+
+heg_m_20.png	ind_f_13.png	ind_f_21.png	ind_f_36.png	ind_f_70.png
+
+ind_f_82.png	ind_m_24.png	ind_m_67.png	ind_m_68.png	ind_m_70.png
+
+leag_f_04.png	ludd_m_08.png	ludd_f_05.png	ludd_f_06.png	ludd_f_09.png
+
+ludd_f_11.png	ludd_f_14.png	ludd_f_21.png	ludd_m_04.png	ludd_m_05.png
+
+ludd_m_09.png	ludd_m_17.png	ludd_m_21.png	merc_f_06.png	merc_f_14.png
+
+merc_m_08.png	pir_f_03.png	pir_f_04.png	pir_f_05.png	pir_f_08.png
+
+pir_f_12.png	pir_f_18.png	pir_f_22.png	pir_m_01.png	pir_m_15.png
+
+pir_m_26.png	sind_f_03.png	sind_m_19.png
+
+
+
+Special thanks to Fractal Softworks artist David Baumgart and his cat, Godiva, without whom there would be no portraits to kit-bash or a vanilla style to aim for.

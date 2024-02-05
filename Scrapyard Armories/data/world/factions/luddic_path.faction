@@ -1,0 +1,38 @@
+{
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_scalpel_lp":".50",
+    "sa_brace": ".18",
+    "sa_scrapship": ".50",
+    "sa_pacemaker": ".68",
+    "hulls": {}
+  },
+  "shipsWhenImporting": {
+    "sa_scalpel_lp":".50",
+    "sa_brace": ".18",
+    "sa_scrapship": ".50",
+    "sa_pacemaker": ".68",
+    "hulls": []
+  },
+  "knownShips": {
+    "hulls":[ 
+    "sa_scalpel_lp",
+    "sa_brace",
+    "sa_scrapship",
+    "sa_pacemaker",
+    ],
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+  "knownWeapons":{
+   		"tags":["lp_bp"],
+   		"weapons":[
+   			"sa_radcannon",
+			"sa_erbe",
+   		],
+   	},
+}

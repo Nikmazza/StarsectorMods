@@ -1,0 +1,136 @@
+{
+    "starSystems":{
+      
+    },
+	"shipSystem":{
+		"ssp_AdvanceVenting":"Dissipation improved",
+		"ssp_AmmoFeed_AFP":"Remaining acceleration： ",
+		"ssp_AmmoFeed_HoldFire":"restricted firepower",
+		"ssp_AmmoFeed_FluxCost":"Ballistic weapon flux cost x 50%",
+		"ssp_ammofeedjet0":"Maneuverability increased, top speed +",
+		"ssp_ammofeedjet1":"Weapon damage and flux generation +",
+		"ssp_HighEnergyFocus":"Recorded projectiles: ",
+		"ssp_HitMeYouWeekMissile":"Directing allied missiles to target",
+		"ssp_HitMeYouWeekMissile_enemy":"Attracting enemy missiles",
+		"ssp_lanina_system":"Maneuverability/top speed significantly improved",
+		"ssp_ManeuveringJets0":"Maneuverability improved",
+		"ssp_ManeuveringJets1":"Top speed +",
+		"ssp_microburn":"Engine output maximized",
+		"ssp_microburn_ZeroTurnRate":"Turning disabled",
+		"ssp_microburn_FastTurnRate":"Turning accelerated",
+		"ssp_missleswarm":"Built-in weapons enhanced",
+		"ssp_ThunderCharge0":"Maneuverability improved, generating arcs",
+		"ssp_ThunderCharge1":"Top speed +",
+		"ssp_TDS_system": "Damage reduction ",
+		"ssp_PhaseTransferField_title": "Damage Absorption",
+		"ssp_PhaseTransferField": "%s remaining"
+	},
+	
+    "hullMod":{
+	"LLI_ONLY":"Can only be installed on LLI ships",
+	"ssp_basemode":"Standard Mode",
+	"ssp_beammode":"Beam Mode",
+	
+	"ssp_overloadprotection":"Overload Failsafe",
+	"ssp_overloadprotection_ready":"Ready",
+	"ssp_overloadprotection_CD":"Cooldown remaining:%s",
+	"ssp_overloadprotection_Activeing":"Emergency damper activated",
+
+	"ssp_shieldmod_title":"Compensator Jets",
+	"ssp_shieldmod_allowactive":"Shields fully deployed, compensator ready %s",
+	"ssp_shieldmod_activeing":"Improved maneuverability, top speed +50; %s remaining",
+	"ssp_shieldmod_coldingdown":"Preparing compensator, %s remaining",
+	"ssp_shieldmod_tooltip0":"Alters the shield generators to generate large cold fusion bubbles, providing additional power while strengthening the shields. Shield deployment speed is reduced by %s, and turn rate is increased by %s. Incompatible with %s and %s.",
+	"ssp_shieldmod_SectionHeading1":"Shield Enhancement",
+	"ssp_shieldmod_tooltip1":"The shield takes %s to %s reduced damage, depending on the current and maximum shield arc: the smaller the arc, the stronger the effect.", 
+	"ssp_shieldmod_SectionHeading2":"Compensator Jets", 
+	"ssp_shieldmod_tooltip2":"When the shield is disabled after being fully deployed, significantly increases maneuverability and speed for %s seconds. This effect has a cooldown time of %s seconds.",  
+	 
+	"ssp_LongerRange":"%s remaining",
+	"ssp_LongerRange_title":"Increased range",
+	"ssp_LongerRange_tooltip0":"Protocols for limiting the power of the ship's propulsion which would otherwise cause interference with the fire control system, providing a temporary range enhancement.\n -Reduces maneuverability and top speed by %s: the zero-flux speed boost is increased by the same amount.\n -The ship's system has an altered effect.\nOnly one LLI Protocol hullmod can be installed.",
+	"ssp_LongerRange_SectionHeading1":"Details",
+	"ssp_LongerRange_tooltip1":"Increases the range of non-PD energy and ballistic weapons by %s, depending on the ship's size class. This range is reduced when a non-PD weapon fires. \n -The bonus range is recovered while no weapons are firing; the lower the ship's flux level, the faster the bonus is recovered. \n -The rate of recovery is greatly increased when the ship is actively venting flux.",
+	"ssp_Polarisation":" Alteration",
+	"ssp_ammofeedjet_P":"-Bonus speed increased by an additional %s.\n-The system activates faster and lasts longer.\n-The burst dissipation effect on system expiry is reduced by %s.",
+	"ssp_lanina_system_P":"-System duration is reduced by %s.\n-Top speed is enhanced by an additional %s.",
+	"ssp_ManeuveringJets_P":"-System duration reduced by %s.\n-Effect enhanced by %s.",
+	"ssp_ThunderCharge_P":"-The flux generated per arc is increased by %s.\n-The maximum number of arcs is increased by %s.\n-While the system is activated, the range/damage increase applied to the Arc Field hullmod is reduced by %s.",
+	"ssp_microburn_P":"-Maximum number of charges reduced by %s. \n-Charge regeneration reduced by %s.\n-No longer prevents turning: instead, increases turn rate by %s.",
+	"ssp_PhaseTransferField_P":"-Damage absorption amount reduced by %s.\n-Damage of the EMP blast on system expiration increased by %s.",
+	"ssp_AdvanceVenting_P":"-Minimum cooldown time increased to %s seconds.\n-Increases the ship's timeflow by %s while active.",
+	"ssp_HitMeYouWeekMissile_P":"-Bonus damage taken by target increased to %s.\n-Duration reduced by %s.",
+	"ssp_missleswarm_P":"-This system cannot be altered.",
+	"ssp_AmmoFeed_P":"-Increases duration by %s.\n-Increases the acceleration time provided by each ballistic-capable slot by %s.",
+	"ssp_HighEnergyFocus_P":"-Significantly reduces the spread of the generated projectiles.\n-Energy weapon flux generation and beam damage increased by %s.",
+	"ssp_zhurong_system_P":"-Charge regeneration rate increased by %s.\n-Flux generation %s.",
+	"ssp_TDS_system_P": "-Charge regeneration rate increased by %s.\n-Maximum number of charges increased by %s.\n-Flux generation %s.",
+	"ssp_gonggong_system_P": "-Arc damage and push effect %s.\n-Flux generation %s.",
+	
+	"ssp_ShortRange_tooltip0":"Protocols focused on maximizing thruster power. Fire control systems are seriously disrupted; but this allows for computing resources to be allocated to weakspot exploitation.\n-The ship's top speed and maneuverability are increased by %s: the zero-flux speed boost is decreased by the same amount.\n-The ship's system is optimized.\n-Only one LLI Protocol can be installed.\n-Incompatible with:%s.",
+	"ssp_ShortRange_SectionHeading1":"Details",
+	"ssp_ShortRange_tooltip1":"-Reduces the range of energy and ballistic weapons by %s, depending on the ship's class.\n-Hits on armor or hull closer to the aft gain up to %s bonus damage.\n-Hits on shields closer to the rim of the shield gain up to %s bonus damage.",
+	"ssp_Supreme":" Optimization",
+	"ssp_ammofeedjet_S":"-The burst dissipation when the system is disabled can dissipate %s hard flux while shields are active.",
+	"ssp_lanina_system_S":"-System duration increased by %s seconds.",
+	"ssp_ManeuveringJets_S":"-Reduces the forward and backwards swaying, but the total duration remains the same.",
+	"ssp_ThunderCharge_S":"-Generating arcs no longer generates flux.\n-While the system is activated, the Arc Field hullmod activates %s more frequently.",
+	"ssp_microburn_S":"-The maximum number of charges is increased by %s.\n-The duration of the boost is increased by %s.",
+	"ssp_PhaseTransferField_S":"-The amount of damage absorption is increased by %s.",
+	"ssp_AdvanceVenting_S":"-The rate of hard flux dissipation increases by %s.",
+	"ssp_HitMeYouWeekMissile_S":"-The range at which the system can be activated is increased by %s.",
+	"ssp_missleswarm_S":"-This system cannot be optimized.",
+	"ssp_AmmoFeed_S":"-Reduces the duration by %s.",
+	"ssp_HighEnergyFocus_S":"-Increases the duration of the %s.",
+	"ssp_zhurong_system_S":"-The maximum number of charges is increased by %s.",
+	"ssp_TDS_system_S": "-Immune to all types of damage.",
+	"ssp_gonggong_system_S": "-Maximum number of charges increased by %s.",
+	
+	"ssp_cliff_tooltip0":"A fire control system that defies the second law of thermodynamics, enhancing the ship's capabilities based on its flux level.\n-The top speed and maneuverability of this ship's missiles are reduced by %s.\n-Install %s to activate Beam Mode.",
+	"ssp_cliff_basemode_tooltip":"-Increases projectile velocity by up to %s depending on the ship's flux level.\n-Reduces maximum recoil/generated recoil per shot, and increases recoil recovery by up to %s, depending on the ship's flux level.",
+	"ssp_cliff_beammode_tooltip":"-Increases the range of beam weapons by up to %s, depending on the ship's flux level.\n-Depending on the ship's flux level, beams will deal up to %s additional damage to shields, with an up to %s chance that a given hit will deal hard flux damage.\n-Disables non-beam weapons, except for weapons mounted in ballistic slots, built-in weapons, or missiles.",
+	
+	"ssp_bias_tooltip0":"Specialized subsystems that adjust the targeting computer's priority towards certain weapons, in order to improve synergy between various weapon types.\n Install %s to activate Beam Mode.",
+	"ssp_bias_basemode_tooltip":"-Increases the range of projectile weapons by %s, and reduces the range of beam weapons by %s. Does not affect PD weapons.",
+	"ssp_bias_beammode_tooltip":"-Increases the range of all beam weapons by %s, including PD beams.",
+	
+	
+	"ssp_PeakTimeoverride":"Effect level at %s",
+	
+	"ssp_SystemUsedTimes_Description": "-The range of the arcs is adjusted depending on the ship's volume. This ship's arcs have a range of %s.\n-Activating the %s system will alter the effects of this hullmod.",
+	
+	"ssp_Temporaryshield_allowon":"Burst Shield ready",
+	"ssp_Temporaryshield_off":"Cooling down for %s"
+	},
+    "industry": {
+		"ssp_cryosanctum_1": "When installed in %s, increases the %s output by %s.\nWhen installed in %s, increases the %s output by %s.",
+		"ssp_mantle_bore": " mining yields increased by %s."
+	},
+	"llistory": {
+		"LLI_continue":"Continue",
+		"LLI_leave":"Leave",
+		
+		"LLI_MainMission_Part1_0":"In a corner of the bar, a strange man with a hat and cape seems to be giving some sort of speech; a small crowd has gathered near him.",
+		"LLI_MainMission_Part1_1":"Join the strange man's captive audience",
+		"LLI_MainMission_Part1_2":"You're able to get a better look at the oddly dressed man. Dozens of medals hang from his suit - on closer inspection a Loulan Navy officer's uniform - which, due to the fluidity of his movements, you can only assume was custom-made for him.",
+		"LLI_MainMission_Part1_3":"Unfortunately, the dense crowd keeps you from getting closer. Amidst a round of applause a male voice is raised, and through a gap in the crowd you can glimpse the speaker vigorously gesturing while giving their speech, but you're still too far away to discern what is actually being said.", 
+		"LLI_MainMission_Part1_4":"After about a quarter of an hour, the speech has evidently concluded, as the crowd begins to disperse. Whatever it was that was said, many members of the dispersing crowd look invigorated, while others immediately go to the bar to order strong drinks; you don't learn anything more about what had just occurred.",
+		"LLI_MainMission_Part1_5":"A passing bargoer bumps into you, quickly picking up their pace and vanishing into the crowd. You realize that this stranger must have put something into your pockets. You get a closer look at the item, which seems to be some manner of business card composed of synthetic plastic:",
+		"LLI_MainMission_Part1_6":"Obtained contact information for Bracks Ao, former Supreme Commander of the Loulan Navy",
+		
+		"LLICMD_BuyWaveM_0":"Lost 40,000 credits",
+		"LLICMD_BuyWaveM_1":"Obtained ",
+		"LLICMD_BuyWaveM_2":"Remaining credits:",
+		"LLICMD_BuyWaveM_3":"You don't have enough credits."
+	
+	}
+}
+
+
+
+
+
+
+
+
+

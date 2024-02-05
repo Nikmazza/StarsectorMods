@@ -1,0 +1,352 @@
+{
+  "hullName": "Space Hulk",
+  "hullId": "ork_spacehulk",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/spacehulk/main_module.png",
+  "style": "LOW_TECH",
+  "height": 434,
+  "width": 231,
+  "center": [104, 207],
+  "collisionRadius": 489.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 474,
+  "viewOffset": 0,
+  "builtInMods": [
+    "degradedcore"
+  ],
+  "builtInWeapons": {
+    "WS0001": "ork_hell"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [101, -12]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 60,
+      "locations": [157, 35]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 60,
+      "locations": [110, 69]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [52, -104]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 180,
+      "locations": [-83.5, -16]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [20, -4]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 90,
+      "locations": [-110, 53.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 60,
+      "locations": [-63, 86]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -20.5,
+      "locations": [159, -80]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [202, 19]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 25.5,
+      "locations": [101.5, 89]
+    },
+    {
+      "id": "WS0012t",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -15,
+      "locations": [112, -103]
+    },
+    {
+      "id": "WS0013",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-12.5, 126]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-89.5, -86.5]
+    },
+    {
+      "id": "WS0015",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-16, -124]
+    },
+    {
+      "id": "WS0016",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [197, 93]
+    },
+    {
+      "id": "WS0017",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [201.5, -116.5]
+    },
+    {
+      "id": "WS0018",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [304, -51]
+    },
+    {
+      "id": "WS0019",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [313.5, 58]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-203, 36],
+      "length": 185.5,
+      "width": 63,
+      "angle": 180,
+      "contrailSize": 63,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-197, -0.5],
+      "length": 121.5,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-206, -27.5],
+      "length": 182,
+      "width": 48,
+      "angle": 180,
+      "contrailSize": 48,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-196.5, -55.5],
+      "length": 90.5,
+      "width": 21,
+      "angle": 180,
+      "contrailSize": 21,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-193, -78.5],
+      "length": 130.5,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-178, 74.5],
+      "length": 119,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-178, -74.5],
+      "length": 119,
+      "width": 22,
+      "angle": -180,
+      "contrailSize": 22,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-176.5, 83.5],
+      "length": 93,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-176.5, -83.5],
+      "length": 93,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-176, 92.5],
+      "length": 107,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-176, -92.5],
+      "length": 107,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    }
+  ],
+  "bounds": [
+    225.5, 29,
+    225.5, 16,
+    217, 9.5,
+    209.5, -13,
+    200.5, -14,
+    196.5, -24,
+    183.5, -25,
+    183, -44,
+    177.5, -48.5,
+    177.5, -76,
+    164, -94.5,
+    140.5, -96,
+    140, -114,
+    123.5, -126.5,
+    115, -121,
+    100, -120.5,
+    86, -109,
+    78, -97.5,
+    58, -117,
+    45.5, -117,
+    39.5, -111.5,
+    27, -109.5,
+    22.5, -104,
+    22, -85,
+    11.5, -83,
+    8, -73.5,
+    -43.5, -72.5,
+    -51.5, -83.5,
+    -64, -83,
+    -66.5, -90.5,
+    -121.5, -94,
+    -126.5, -86.5,
+    -165.5, -93.5,
+    -194, -86.5,
+    -195.5, -46.5,
+    -206.5, -41,
+    -206, -13.5,
+    -197.5, -10,
+    -195.5, 11,
+    -203, 22,
+    -203.5, 53,
+    -179, 67,
+    -173.5, 97,
+    -146.5, 103,
+    -120, 79.5,
+    -49, 102.5,
+    -32, 101.5,
+    -30.5, 92.5,
+    91, 90,
+    99.5, 95,
+    113.5, 96.5,
+    121.5, 86,
+    125, 53.5,
+    133, 43.5,
+    177.5, 44.5,
+    195, 35.5
+  ]
+}

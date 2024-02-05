@@ -1,0 +1,121 @@
+{
+  "hullName": "Noble",
+  "hullId": "bc_hightech_carrier",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/bc_hightech_carrier.png",
+  "style": "HIGH_TECH",
+  "height": 148,
+  "width": 116,
+  "center": [58, 52],
+  "collisionRadius": 110,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 107.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [11, 43]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -0,
+      "locations": [11, -43]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [53, 0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        25.5, 16,
+        37, 27.5,
+        58.5, 24.5
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        25.5, -14.5,
+        38, -28.5,
+        58.5, -24.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, 14],
+      "length": 31.5,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-50, -14],
+      "length": 31.5,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-45, 27.5],
+      "length": 46,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-45, -27.5],
+      "length": 46,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -49, 9,
+    -45, 33,
+    15.5, 52.5,
+    21, 39.5,
+    76, 29,
+    86, 17,
+    80, 11,
+    92.5, 0,
+    80, -11,
+    86, -17,
+    76, -29,
+    21, -39.5,
+    15.5, -52.5,
+    -45, -33,
+    -49, -9,
+    -29, 0
+  ]
+}

@@ -1,0 +1,4 @@
+Location: Galatia Academy simulator room
+Date: c+206.??.??
+
+Initializing tactical evaluation sequence.

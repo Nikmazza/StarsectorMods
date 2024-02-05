@@ -1,0 +1,47 @@
+{
+	"id":"bc_thermo_shot",
+	"specClass":"missile",
+	"missileType":"ROCKET",
+	"onFireEffect":"data.weapons.scripts.ThermoblasterEffect",
+	"collisionClass":"MISSILE_NO_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"size":[20,40],
+	"center":[10,20],
+	"collisionRadius":12,
+	"glowRadius":120,
+	"explosionRadius":250,
+	"explosionColor":[227,61,156,160],
+	"fadeTime":0,
+	"fringeColor":[227,61,156,255],
+	"coreColor":[255,255,255,255],
+	"glowColor":[227,61,156,100],
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0,
+	"sprite":"graphics/missiles/bomblet0.png",
+	"engineSpec":{"turnAcc":0,
+    				  "turnRate":0,
+    				  "acc":0,
+    				  "dec":0},
+    "engineSlots":[{"id":"ES1",
+    					"loc":[0, 0],
+    				    "style":"CUSTOM",
+    					"styleSpec":{
+    						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+    						"engineColor":[227,61,156,255],
+    						"glowSizeMult":2,
+    						"contrailDuration":0.5,
+    						"contrailWidthMult":1,
+    						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
+    						"contrailMinSeg":5, # min segment length, in pixels
+    						"contrailMaxSpeedMult":0.5f,
+    						"contrailAngularVelocityMult":0.5f,
+    						#"contrailSpawnDistMult":0f, # how far away from engine it starts
+    						"contrailColor":[227,61,156,100],
+    						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+    					},
+    				    "width":20.0,
+    				    "length":10.0,
+    				    "angle":180.0},
+    				    ],
+    "noEngineGlowTime":0,
+}

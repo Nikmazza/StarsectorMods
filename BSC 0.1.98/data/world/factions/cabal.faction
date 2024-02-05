@@ -1,0 +1,22 @@
+{
+        "knownShips":{
+        "hulls":[
+            "BSC_Drudge",
+            "BSC_Fennec",
+            "BSC_Chrysaor",
+        ],
+    },
+            "knownWeapons":{
+        "weapons":[
+            "BSC_Sabot_MLMS",
+            "BSC_Annihilator_MLRS",
+        ],
+    },
+        "hullFrequency":{
+        "hulls":{
+            "BSC_Fennec": 0.5, #Shouldn't replace wolf
+            "BSC_Chrysaor": 0.4, #Should be fairly rare
+            "BSC_Drudge": 0.3, #Should be rare
+        },
+    },
+},

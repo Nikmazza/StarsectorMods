@@ -1,0 +1,76 @@
+{
+  "variantId": "fed_boss_restored",
+  "hullId": "fed_boss",
+  "displayName": "Restored",
+  "goalVariant": false,
+  "fluxCapacitors": 39,
+  "fluxVents": 39,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "unstable_injector",
+    "auxiliarythrusters",
+    "augmentedengines",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "autopulse",
+        "WS0004": "autopulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "miningblaster",
+        "WS0006": "miningblaster"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "fed_pegasus",
+        "WS0008": "fed_pegasus"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "phasebeam",
+        "WS0002": "phasebeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "mininglaser",
+        "WS0010": "mininglaser",
+        "WS0011": "mininglaser",
+        "WS0012": "mininglaser",
+        "WS0013": "mininglaser",
+        "WS0014": "mininglaser",
+        "WS0015": "guardian",
+        "WS0017": "mininglaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0018": "fed_boss_wing_left_standard"
+    },
+    {
+      "WS0019": "fed_boss_wing_right_standard"
+    },
+	{
+      "WS0016": "fed_boss_shieldemitter_standard"
+    }
+  ],
+  "wings": []
+}

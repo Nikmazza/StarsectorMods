@@ -1,0 +1,66 @@
+{
+  "hullName": "Sakkorsk",
+  "hullId": "bc_olddestroyer_drone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_olddestroyer_drone.png",
+  "style": "OLD_TECH",
+  "height": 22,
+  "width": 48,
+  "center": [24, 10],
+  "collisionRadius": 119,
+  "shieldCenter": [-38, -0],
+  "shieldRadius": 76.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fluxshunt",
+    "shield_always_on"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [
+    {
+      "location": [-9, -0],
+      "length": 24,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-10.5, -0],
+      "length": 1.5,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-3, 22.5],
+      "length": 7.546206,
+      "width": 2.284534,
+      "angle": 157,
+      "contrailSize": 2.284534,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    },
+    {
+      "location": [-3, -22.5],
+      "length": 7.546206,
+      "width": 2.284534,
+      "angle": -157,
+      "contrailSize": 2.284534,
+      "style": "CUSTOM",
+      "styleId": "OLD_TECH"
+    }
+  ],
+  "bounds": [
+    -9.5, 18.5,
+    -0.5, 24.5,
+    9, 19,
+    12, -0,
+    9, -19,
+    -0.5, -24.5,
+    -9.5, -18.5
+  ]
+}

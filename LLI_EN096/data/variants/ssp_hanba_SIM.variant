@@ -1,0 +1,41 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 40,
+    "fluxVents": 50,
+    "hullId": "ssp_hanba",
+    "hullMods": [
+        "targetingunit",
+        "advancedoptics",
+        "auxiliarythrusters",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_hanba_SIM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0017": "tachyonlance"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0013": "ssp_LargeMissile",
+                "WS0014": "ssp_LargeMissile",
+                "WS0015": "ssp_LargeMissile",
+                "WS0016": "ssp_LargeMissile"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_heatbeam",
+                "WS0002": "ssp_heatbeam",
+                "WS0008": "ssp_heatbeam"
+            }
+        }
+    ]
+}

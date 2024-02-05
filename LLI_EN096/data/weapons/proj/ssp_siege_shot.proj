@@ -1,0 +1,43 @@
+{				  
+	"id":"ssp_siege_shot",
+	"specClass":"missile",
+	"missileType":"PHASE_CHARGE",
+	"sprite":"graphics/missiles/ssp_siege.png",
+	"size":[16,16],	
+	"center":[8,8],
+	"collisionRadius":8,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,100,180,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":150, # purely visual
+	"flameoutTime":1, # total time from flameout to full fadeout
+	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
+	"fadeTime":0.5, # fadeout duration	
+	"engineSpec":{"turnAcc":500,
+				  "turnRate":150,
+				  "acc":80,
+				  "dec":80},
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":100,
+					"slowToMaxSpeed":true,
+					"explosionSpec":{"duration":0.12f,
+									 "radius":150,
+									 "coreRadius":100, # full damage within core radius
+									 "collisionClass":PROJECTILE_NO_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":1,
+									 "particleCount":50,
+									 "particleColor":[200, 10, 240, 255],
+									 "explosionColor":[255,100,180,255],
+									 "useDetailedExplosion":true,
+									 "useDetailedExplosionColorAlpha":true,
+									 "detailedExplosionRadius":100,
+									 "detailedExplosionFlashRadius":250,
+									 "detailedExplosionFlashDuration":0.5,
+									 "detailedExplosionFlashColorFringe":[255,100,180,255],
+									 "detailedExplosionFlashColorCore":[200, 10, 240, 255],
+									 "sound":"prox_charge_explosion"},
+					}
+	
+}

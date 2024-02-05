@@ -1,0 +1,41 @@
+{
+  "id": "ssp_blaster",
+  "specClass": "projectile",
+  "projectileSpecId": "ssp_blaster_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/ssp_blaster_turret.png",
+  "hardpointSprite": "graphics/weapons/ssp_blaster_hardpoint.png",
+  "turretOffsets": [
+    -1,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    -1,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 120,
+    "spread": 10,
+    "particleSizeMin": 20,
+    "particleSizeRange": 25,
+    "particleDuration": 0.25,
+    "particleCount": 30,
+    "particleColor": [
+      155,
+      140,
+      255,
+      200
+    ]
+  },
+  "fireSoundTwo": "hellbore_fire"
+}

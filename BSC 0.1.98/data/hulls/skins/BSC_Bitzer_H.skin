@@ -1,0 +1,19 @@
+{
+  "baseHullId": "BSC_Bitzer",
+  "baseValueMult": 1.2,
+  "builtInMods": [
+    "frontshield",
+    "armoredweapons"
+  ],
+  "descriptionId": "BSC_Bitzer",
+  "descriptionPrefix": "This ship has been given Hegemony markings, additional armour and has been upgraded with a shield generator",
+  "fpMod": 0,
+  "hullDesignation": "Patrol Craft",
+  "hullName": "Bitzer (H)",
+  "manufacturer": "Hegemony",
+  "restoreToBaseHull": false,
+  "skinHullId": "BSC_Bitzer_H",
+  "spriteName": "graphics/hulls/BSC_Bitzer_H.png",
+	"tags":["heg_aux_bp"],
+	"tech":"Hegemony",
+}

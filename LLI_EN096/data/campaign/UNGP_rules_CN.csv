@@ -1,0 +1,7 @@
+id,name,short,desc,cost,isBonus,isGolden,spritePath,effectPlugin,extra1,extra2,source,tags,spriteAuthor
+ssp_UNGP_FleetSynergism,单一兵种作战,降低相同舰船的部署点,舰队中重复数量最多的基础船体的部署点降低 %s x 相同舰船数量(向下取整)。最多降低 %s 。 ,-3,TRUE,,graphics/icons/ssp_UNGP_FleetSynergism.png,data.ssp_UNGP.ssp_FleetSynergism,,,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体
+ssp_UNGP_CRDecay,腐朽武备,重复的武器减低进攻性能,如果舰船装配了相同的武器(包括内置武器)，每个重复的武器降低 %s 所有类型武器的伤害。,4,FALSE,,graphics/icons/ssp_UNGP_CRDecay.png,data.ssp_UNGP.ssp_CRDecay,所有武器伤害降低,,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,

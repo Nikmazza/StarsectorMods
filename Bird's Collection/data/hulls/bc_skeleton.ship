@@ -1,0 +1,100 @@
+{
+  "hullName": "Tibia",
+  "hullId": "bc_skeleton",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/bc_skeleton.png",
+  "style": "LOW_TECH",
+  "height": 108,
+  "width": 48,
+  "center": [28, 40],
+  "collisionRadius": 98,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 93,
+  "viewOffset": 0,
+  "builtInMods": [
+    "safetyoverrides"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 45,
+      "locations": [-8, 20]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [52, 13]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [57, -7]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -45,
+      "locations": [3, -12]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-39, -0],
+      "length": 54,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, 11],
+      "length": 42,
+      "width": 9,
+      "angle": 176,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, -10],
+      "length": 38,
+      "width": 9,
+      "angle": -175,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    58.5, -12.5,
+    25.5, -17,
+    10.5, -13.5,
+    2, -18.5,
+    -2, -13,
+    -39.5, -13.5,
+    -39.5, 14,
+    -16.5, 14,
+    -15.5, 27.5,
+    -2.5, 28,
+    4.5, 20.5,
+    37, 22,
+    43.5, 17,
+    57, 19.5,
+    57, 8,
+    51.5, 2.5,
+    62, -2.5
+  ]
+}

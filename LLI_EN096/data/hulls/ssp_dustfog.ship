@@ -1,0 +1,77 @@
+{
+  "hullName": "ssp_duatfog",
+  "hullId": "ssp_dustfog",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/wings/ssp_dustfog.png",
+  "style": "LLI",
+  "height": 39,
+  "width": 32,
+  "center": [16, 19.5],
+  "collisionRadius": 24.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 22,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [17.5, 3.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [17.5, -3.5]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HIDDEN",
+      "arc": 150,
+      "angle": 0,
+      "locations": [13.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-1.5, 12],
+      "length": 9,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-1.5, -12],
+      "length": 9,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-12.5, -0],
+      "length": 16,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -17, 7.5,
+    4.5, 14.5,
+    11.5, 9,
+    11.5, -9,
+    4.5, -14.5,
+    -17, -7.5
+  ]
+}

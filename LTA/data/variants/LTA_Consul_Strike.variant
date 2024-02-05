@@ -1,0 +1,27 @@
+{
+  "variantId": "LTA_Consul_Strike",
+  "hullId": "LTA_Consul",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 2,
+  "fluxVents": 2,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "reaper",
+        "WS0002": "reaper"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "hoplon_wing"
+  ]
+}

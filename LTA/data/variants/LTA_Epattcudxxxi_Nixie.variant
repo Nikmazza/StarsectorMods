@@ -1,0 +1,65 @@
+{
+  "variantId": "LTA_Epattcudxxxi_Nixie",
+  "hullId": "LTA_Epattcudxxxi",
+  "displayName": "Nixie",
+  "goalVariant": true,
+  "fluxCapacitors": 5,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "LTA_nixietri",
+        "WS0002": "LTA_nixietri"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "LTA_nixiemissilesmall",
+        "WS0010": "LTA_nixiemissilemedium"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "LTA_nixie",
+        "WS0004": "LTA_nixie",
+        "WS0005": "LTA_nixie",
+        "WS0006": "LTA_nixie",
+        "WS0007": "LTA_nixie",
+        "WS0008": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

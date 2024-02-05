@@ -1,0 +1,67 @@
+{
+"portraits":{
+		"standard_male":[
+			"graphics/portraits/sa_syndie.png",
+			"graphics/portraits/sa_sec.png",
+		],
+		},
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_brace": ".28",
+    "sa_scrapship": ".78",
+    "sa_splintXIV": "0.25",
+    "sa_splint": ".45",
+    "sa_trocar": ".45",
+    "sa_munin": ".68",
+    "sa_gaia": ".52",
+    "sa_eclipse": "0.20",
+    "sa_candela": "0.35",
+    "sa_twilight": ".25",
+    "hulls": {}
+  },
+  "shipsWhenImporting": {
+    "sa_brace": ".27",
+    "sa_scrapship": ".78",
+    "sa_splintXIV": "0.25",
+    "sa_splint": ".47",
+    "sa_trocar": ".49",
+    "sa_munin": ".68",
+    "sa_gaia": ".52",
+    "sa_eclipse": "0.20",
+    "sa_candela": "0.45",
+    "sa_twilight": ".35",
+    "hulls": []
+  },
+  "knownShips": {
+    "hulls": [
+    "sa_brace",
+    "sa_scrapship",
+    "sa_splintXIV",
+    "sa_splint",
+    "sa_trocar",
+    "sa_munin",
+    "sa_gaia",
+    "sa_eclipse",
+    "sa_candela",
+    "sa_twilight",
+    ],
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+"knownFighters":{
+		"tags":[],
+		"fighters":[
+			"sa_grunder_wing",
+		],
+	},
+"knownWeapons":{
+		"tags":[],
+		"weapons":[
+			"sa_erbe",
+		],
+	},
+}

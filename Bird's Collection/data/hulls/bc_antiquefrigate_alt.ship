@@ -1,0 +1,118 @@
+{
+  "hullName": "Lacustrine",
+  "hullId": "bc_antiquefrigate_alt",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/bc_antiquefrigate_alt.png",
+  "style": "ANTIQUE",
+  "coversColor": "255,255,255,255",
+  "height": 120,
+  "width": 74,
+  "center": [39, 32.5],
+  "collisionRadius": 111.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 109.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "bc_antiqueconstruction"
+  ],
+  "builtInWeapons": {
+    "WS0001": "bc_builtin2"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -1.5,
+      "locations": [38.5, 22]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [27.5, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -45,
+      "locations": [0.5, -15]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-32, 15.5],
+      "length": 58,
+      "width": 26,
+      "angle": 180,
+      "contrailSize": 26,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-32, -15.5],
+      "length": 58,
+      "width": 26,
+      "angle": -180,
+      "contrailSize": 26,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-18.5, 31.5],
+      "length": 53.689999,
+      "width": 4.69,
+      "angle": 134,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-18.5, -31.5],
+      "length": 53.689999,
+      "width": 4.69,
+      "angle": -134,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-26.5, 22.5],
+      "length": 37.75,
+      "width": 5.42,
+      "angle": 137.5,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-26.5, -22.5],
+      "length": 37.75,
+      "width": 5.42,
+      "angle": -137.5,
+      "contrailSize": 128,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    }
+  ],
+  "bounds": [
+    -32, 16.5,
+    -12.5, 35.5,
+    26, 34,
+    36, 6.5,
+    60.5, 5.5,
+    60.5, -5.5,
+    36, -6.5,
+    -12.5, -35.5,
+    -32, -16.5,
+    -29.5, -0
+  ]
+}

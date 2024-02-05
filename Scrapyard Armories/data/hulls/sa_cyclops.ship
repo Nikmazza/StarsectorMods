@@ -1,0 +1,203 @@
+{
+  "hullName": "Cyclops",
+  "hullId": "sa_cyclops",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/sa_cyclops.png",
+  "style": "LOW_TECH",
+  "height": 204,
+  "width": 200,
+  "center": [100, 102],
+  "collisionRadius": 156,
+  "shieldCenter": [-4, -0],
+  "shieldRadius": 146,
+  "viewOffset": 0,
+  "builtInMods": [
+    "surveying_equipment",
+    "sa_automated_subsystems"
+  ],
+  "builtInWings": [
+    "sa_panoptes_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": -90,
+      "locations": [-36, -68]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 90,
+      "locations": [-36, 68]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [47, -59]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [47, 59]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": -63.5,
+      "locations": [27, -32]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": 63.5,
+      "locations": [27, 32]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [78, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [10, -80]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [10, 80]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -55, -0,
+        -55.5, 13.5,
+        -57.5, 20.5,
+        -54.5, -12.5,
+        -56.5, -20.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-95, -63],
+      "length": 49,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-95, -53],
+      "length": 42,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-91, 77],
+      "length": 96,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-91, -77],
+      "length": 96,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-95, 53],
+      "length": 42,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-95, 63],
+      "length": 49,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    }
+  ],
+  "bounds": [
+    -68, 14,
+    -75.5, 27,
+    -36, 34,
+    -36, 42,
+    -91, 49,
+    -91, 84,
+    -83, 95,
+    -21, 95,
+    -15, 87,
+    11, 87,
+    13.5, 70,
+    36.5, 66,
+    92, 13,
+    92, -13,
+    36.5, -66,
+    13.5, -70,
+    11, -87,
+    -15, -87,
+    -21, -95,
+    -83, -95,
+    -91, -84,
+    -91, -49,
+    -36, -42,
+    -36, -34,
+    -75.5, -27,
+    -68, -14
+  ]
+}

@@ -1,0 +1,5 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
+Weapon Overdrive,overdrive,,,,,,,,,,1,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Joust Drive,joust,1,,,,,,,,,1,2,2,6,,,,,,,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/burn_drive.png
+Station EMP Emitter,emp_station,1,,,,,0.2,,,,1,8,1,6,,,,,TRUE,,,,,,,,graphics/icons/hullsys/emp_emitter.png
+Degraded Temporal Shell,temporalshell_degraded,1,,,,,0.25,,,,4,6,3,15,,,,,,,,,,,,,graphics/icons/hullsys/temporal_shell.png

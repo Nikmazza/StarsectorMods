@@ -1,0 +1,32 @@
+{
+
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_brace": ".38",
+    "sa_gaia": ".50",
+    "sa_scrapship": ".50",
+    "sa_pacemaker": ".68",
+    "hulls": {}
+  },
+  "shipsWhenImporting": {
+    "sa_brace": ".28",
+    "sa_gaia": ".50",
+    "sa_scrapship": ".50",
+    "sa_pacemaker": ".68",
+    "hulls": []
+  },
+  "knownShips": {
+    "hulls":[ 
+    "sa_brace",
+    "sa_gaia",
+    "sa_scrapship",
+    "sa_pacemaker",
+    ],
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+}

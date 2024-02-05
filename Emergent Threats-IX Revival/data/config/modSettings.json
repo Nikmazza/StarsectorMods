@@ -1,0 +1,8 @@
+{
+  "TakeNoPrisoners": {
+    "factionsWithConfigs": [
+      "ix_battlegroup",
+	  "ix_core",
+    ]
+  }
+}

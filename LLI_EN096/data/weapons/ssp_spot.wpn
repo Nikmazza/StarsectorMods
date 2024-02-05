@@ -1,0 +1,70 @@
+{
+  "id": "ssp_spot",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "collisionClass": "RAY_FIGHTER",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/ssp_spot.png",
+  "turretGlowSprite": "graphics/weapons/ssp_spot_glow.png",
+  "hardpointSprite": "graphics/weapons/ssp_spot_headpoint.png",
+  "hardpointGlowSprite": "graphics/weapons/ssp_spot_headpoint_glow.png",
+	"fireSoundTwo":"laser_loop",	
+	"skipIdleFrameIfZeroBurstDelay":true,
+  "renderAboveAllWeapons": 0,
+  "glowColor": [
+    125,
+    220,
+    125,
+    255
+  ],
+  "hitGlowRadius": 5,
+  "turretOffsets": [
+    11,
+    0,
+    15,
+    -9,
+    15,
+    9
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    15,
+    0,
+    19,
+    -9,
+    19,
+    9
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "fringeColor": [
+    40,
+    150,
+    40,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    100
+  ],
+  ####"convergeOnPoint": true,
+  "width": 8,
+  "textureType": LASER,
+  "textureScrollSpeed": 292,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER
+  ]
+}

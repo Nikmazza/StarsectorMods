@@ -1,0 +1,122 @@
+{
+  "hullName": "Super Buffalo",
+  "hullId": "fed_superbuffalo",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/FED/ships/fed_superbuffalo.png",
+  "style": "FEDERATION",
+  "height": 150,
+  "width": 100,
+  "center": [50, 75],
+  "collisionRadius": 100,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 86.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "pointdefenseai",
+    
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 100,
+      "locations": [-48, 36]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": -100,
+      "locations": [-48, -36]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-72, 24],
+      "length": 45.5,
+      "width": 8,
+      "angle": 178,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-72, -24],
+      "length": 45.5,
+      "width": 8,
+      "angle": -178,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-73, 15.5],
+      "length": 52.579266,
+      "width": 8.165975,
+      "angle": 179,
+      "contrailSize": 8.165975,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-73, -15.5],
+      "length": 52.579266,
+      "width": 8.165975,
+      "angle": -179,
+      "contrailSize": 8.165975,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-73.5, 6.5],
+      "length": 62.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-73.5, -6.5],
+      "length": 62.5,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-72, 15.5],
+      "length": 64.594894,
+      "width": 9.746812,
+      "angle": 179,
+      "contrailSize": 9.746812,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-72, -15.5],
+      "length": 64.594894,
+      "width": 9.746812,
+      "angle": -179,
+      "contrailSize": 9.746812,
+      "style": "FEDERATION_VENT"
+    }
+  ],
+  "bounds": [
+    -69.5, 26.5,
+    -54.5, 32,
+    -50.5, 41,
+    -40.5, 38,
+    -32.5, 42,
+    41.5, 45.5,
+    60, 32.5,
+    72, -0,
+    60, -32.5,
+    41.5, -45.5,
+    -32.5, -42,
+    -40.5, -38,
+    -50.5, -41,
+    -54.5, -32,
+    -69.5, -26.5
+  ]
+}

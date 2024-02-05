@@ -1,0 +1,31 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
+Engine Burst,bc_antique_traveldrive,200,,,,,,.05,,,0.4,4,2,5,,,,,,,,,TRUE,,,,graphics/icons/hullsys/burn_drive.png
+Flux Engine,bc_microburn,-8000,,,,,,,8,0.1,0.2,0.4,3,5,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+Engine Overdrive,bc_harpy_traveldrive,,,,,,,,2,0.1,0.4,2,1,2,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+Antique Flare Launcher,bc_flarelauncher_active,,,,,,0.1,,,,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
+Antique Jammer Launcher,bc_flarelauncher_fighter,,,,,,0.1,,,,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
+Oscillator,bc_oscillator,170,,,,,,.04,2,0.05,0.25,5,0.25,0,,,,,,,,,TRUE,TRUE,,uses_damper_ai,graphics/icons/hullsys/damper_field.png
+Shield Drone,bc_drone_shield,,,,,,,,3,0.06,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Heavy Shield Drones,bc_drone_heavy_shield,,,,,,,,4,0.06,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+PD Drone Matrix,bc_drone_pd_matrix,,,,,,,,8,0.06,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Missile Drones,bc_drone_missile,,,,,,,,2,0.06,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/missile_racks.png
+Missile Overfeeder,bc_missilefeed,,,,,,,,2,0.1,0,5,0,6,,,,,,,,,,,,,graphics/icons/hullsys/missile_racks.png
+Strike Burn,bc_strikeburn,,,,200,,,,3,0.1,0.2,0.5,1,1,,,,,,TRUE,,,,,,,graphics/icons/hullsys/burn_drive.png
+Phase Spool,bc_displacer,,,,,,,,5,0.2,0.3,,0.1,.5,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Microjump,bc_microjump,,,,,,,,3,0.1,0.3,,0.1,.1,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Argil Drones,bc_gallize_drone,,,,,,,,2,0.1,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+Bludgeon Drive,bc_ramburn,,,,,,,,,,0.2,1.5,1,12,,,,,,TRUE,TRUE,,TRUE,,,,graphics/icons/hullsys/burn_drive.png
+Shift Jets,bc_shiftburn,,,,,,,,,,0.1,1,0.1,4,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+CODE: Njordur,bc_hyperboost,,,,,,,,,,0.5,3,0.3,10,,,,,,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Heavy EMP Emitter,bc_heavy_emp,,,,100,,,,3,0.2,0,0.1,0,0,,,,,,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Fays Cloak,bc_phasecloak,,,,,,,,,,0.6,,0.4,2,TRUE,,TRUE,TRUE,TRUE,,,,TRUE,,TRUE,,graphics/icons/hullsys/phase_cloak.png
+Damper Projector,bc_remotedamper,,,,,,0.5,,,,0.5,12,0.5,8,,,,,,,,,,,,,graphics/icons/hullsys/damper_field.png
+Temporal Burst,bc_behindyou,,,,,,,,,,0.5,3,0.3,10,,,,,TRUE,,,,TRUE,TRUE,,,graphics/icons/hullsys/fortress_shield.png
+Phase Cloak,bc_fighter_phasecloak,,,,,,,,,,0.5,,0.5,2,TRUE,,TRUE,TRUE,TRUE,,,,TRUE,,TRUE,,graphics/icons/hullsys/phase_cloak.png
+Rearguard Drone,bc_drone_explorer,,,,,,,,1,0.06,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Heavy Mines,bc_mine_strike,,,,,,0.1,,5,0.1,0.1,,0.1,0,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
+Defender Drones,bc_drone_pd,,,,,,,,2,0.06,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/missile_racks.png
+Message,bc_boss_microjump,,,,,,,,1,0.2,0.3,,0.1,.1,,,,,,,,,,,,,graphics/icons/hullsys/displacer.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Remote Jammer,bc_jammer,,,,,,0.1,,,,,,,10,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
+Canister Flak,bc_canister_primary,,,,,,,,3,0.05,,,,3,,,,,,,,,,,,,

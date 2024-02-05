@@ -1,0 +1,35 @@
+{
+  "hullName": "Shield Core",
+  "hullId": "fed_flagship_sideshield",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_superkestrel_shieldemitter.png",
+  "style": "FEDERATION_GREEN",
+  "height": 53,
+  "width": 38,
+  "center": [19, 27.5],
+  "collisionRadius": 300.5,
+  "shieldCenter": [65, -0.5],
+  "shieldRadius": 179,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    0,
+    0
+  ],
+  "builtInMods": [
+    "fed_design",
+    "always_detaches",
+    "shield_always_on",
+    "reduced_explosion",
+    "fed_auxshieldeffect"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    19, 5,
+    -3, 17,
+    -23, 7,
+    -23, -7,
+    -3, -17,
+    19, -5
+  ]
+}

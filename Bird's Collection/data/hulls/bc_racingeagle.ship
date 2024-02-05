@@ -1,0 +1,219 @@
+{
+  "hullName": "Harpy Eagle",
+  "hullId": "bc_racingeagle",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/bc_racingeagle.png",
+  "style": "MIDLINE",
+  "height": 220,
+  "width": 170,
+  "center": [85, 86],
+  "collisionRadius": 182,
+  "shieldCenter": [25, -0],
+  "shieldRadius": 155,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 155,
+      "locations": [-60, 30]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 205,
+      "locations": [-60, -30]
+    },
+    {
+      "id": "WS 005",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": 60,
+      "locations": [15, 42]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -60,
+      "locations": [15, -42]
+    },
+    {
+      "id": "WS 007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [121, 26]
+    },
+    {
+      "id": "WS 008",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [121, -25]
+    },
+    {
+      "id": "WS 009",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 0,
+      "locations": [36, 0]
+    },
+    {
+      "id": "WS 010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 65,
+      "locations": [55, 33]
+    },
+    {
+      "id": "WS 011",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [72, 0]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -65,
+      "locations": [55, -33]
+    },
+    {
+      "id": "WS 013",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [112, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-82, 42],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-84, 31],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, 20],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, -20],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-84, -31],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83, -41],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-51, 54],
+      "length": 80,
+      "width": 16,
+      "angle": 152,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-51, -54],
+      "length": 80,
+      "width": 16,
+      "angle": -152,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-46, 64],
+      "length": 80,
+      "width": 16,
+      "angle": 152,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-46, -64],
+      "length": 80,
+      "width": 16,
+      "angle": -152,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -11, 65,
+    4, 68,
+    131, 29,
+    129, 9,
+    118, 7,
+    118, -8,
+    127, -9,
+    129, -28,
+    6, -68,
+    -12, -66,
+    -42, -70.5,
+    -54.5, -49.5,
+    -76, -52,
+    -81, -11,
+    -45, -9,
+    -45, 9,
+    -79, 11,
+    -76, 53,
+    -54.5, 49.5,
+    -42, 70.5
+  ]
+}

@@ -1,0 +1,13 @@
+{
+	"id":"overdrive",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"data.shipsystems.scripts.overdrivestats",
+	
+	"weaponGlowColor":[252,82,3,155],
+	"weaponTypes":[BALLISTIC, ENERGY],
+	
+	"useSound":"system_ammo_feeder",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

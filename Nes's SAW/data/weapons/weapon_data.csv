@@ -1,0 +1,20 @@
+name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
+#Weapons,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Levatein Assault Cannon,nes_assault_mjolnir,2,0.4,6900,800,,400,200,10,15,20,,,,ENERGY,400,,,5.5,6,0.2,0,5,1,10,,900,,,75,,,,"energy18, he17, kinetic17, remnant, rare_bp, hist1t, merc, ind",,,,General,,,,,"Hits on hull or armor have a %s chance to arc to weapons and engines, dealing %s EMP damage.",33% | 200,,,,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#Built-ins,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Heavy Mining Drill,nes_mining_drill,3,,999999,750,2000,,,100,0,9001,,,,ENERGY,,1600,0.5,1,1,4,,,,,3200,,,,,,,"SYSTEM,SHOW_IN_CODEX",,,,,Mining,,,,,,,,,,
+Typhon Discharger,nes_shock,3,,999999,700,,25,100,0,100,9001,,,,ENERGY,25,,0,0.5,1,,,,,,,10000,,,,,25,"PD,SYSTEM",,,,,Point Defense,,,,Perfect,Fires an EMP arc at the nearest target close to the weapon's current facing. The arc always hits.,,,,,
+ER Flak,nes_flak_drone,3,,999999,800,,200,,10,80,9001,3,1,1,FRAGMENTATION,25,,0,0.333333,1,,5,10,2,10,,700,,,30,,,"PD,SYSTEM",,,,,Point Defense (Area),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#Decos,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,nes_carnelian_deco_cover,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+#Fluorspar decos,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+deco blinker,nes_blinker_amber,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,69
+deco sails rigging,nes_fluorspar_deco,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+,nes_fluorspar_deco_counter0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+,nes_fluorspar_deco_counter1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+,nes_fluorspar_deco_counter2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+,nes_fluorspar_deco_counter3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+,nes_fluorspar_deco_counter4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,
+,nes_fluorspar_deco_counter5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,

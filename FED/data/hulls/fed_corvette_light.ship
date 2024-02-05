@@ -1,0 +1,119 @@
+{
+  "bounds": [
+    -3,
+    5.5,
+    -11.5,
+    13.5,
+    -2.5,
+    27,
+    15.5,
+    19.5,
+    7.5,
+    5.5,
+    7.5,
+    -5.5,
+    15.5,
+    -19.5,
+    -2.5,
+    -27,
+    -11.5,
+    -13.5,
+    -3,
+    -5.5,
+    -11.5,
+    -0
+  ],
+  "builtInMods": [
+    "automated",
+    "fed_design",
+    "advancedcore",
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0002": "irpulse_fighter",
+    "WS0003": "lightac",
+    "WS0004": "lrpdlaser"
+  },
+  "center": [
+    30,
+    14
+  ],
+  "collisionRadius": 37.5,
+  "engineSlots": [
+    {
+      "angle": 160.5,
+      "contrailSize": 16.100376,
+      "length": 33.218136,
+      "location": [
+        -8,
+        21.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_DRONE",
+      "width": 16.100376
+    },
+    {
+      "angle": -160.5,
+      "contrailSize": 16.100376,
+      "length": 33.218136,
+      "location": [
+        -8,
+        -21.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_DRONE",
+      "width": 16.100376
+    }
+  ],
+  "height": 34,
+  "hullId": "fed_corvette_light",
+  "hullName": "XA-10",
+  "hullSize": "FIGHTER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 36,
+  "spriteName": "graphics/FED/ships/fed_corvette_light.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 20,
+      "id": "WS0002",
+      "locations": [
+        4.5,
+        8.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 20,
+      "id": "WS0003",
+      "locations": [
+        4.5,
+        -8.5
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 0,
+      "arc": 30,
+      "id": "WS0004",
+      "locations": [
+        -0.5,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "BUILT_IN"
+    }
+  ],
+  "width": 60
+}

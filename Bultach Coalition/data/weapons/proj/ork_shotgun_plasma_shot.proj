@@ -1,0 +1,21 @@
+{
+	"id":"ork_shotgun_plasma_shot",
+	"onFireEffect":"data.scripts.weapons.ork_shotgunfire",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"onHitEffect":"data.scripts.weapons.shotgun_plasma_onhit",
+	"length":3.0,
+	"width":15,
+	"fadeTime":1.75,
+	"fringeColor":[153,255,51,255],
+	"coreColor":[153,255,51,255],
+	"glowColor":[153,255,51,255],
+	"glowRadius":8,
+	"hitGlowRadius":20,	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
+	"bulletSprite":"graphics/missiles/shell_plasma_shot.png"	
+}

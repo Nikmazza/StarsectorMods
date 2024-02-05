@@ -1,0 +1,23 @@
+{
+  "variantId": "bc_hightechfighter1_Seeker",
+  "hullId": "bc_hightechfighter1",
+  "displayName": "Seeker",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "irpulse",
+        "WS0002": "irpulse"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,160 @@
+{
+  "hullName": "Splint XIV",
+  "hullId": "sa_splintXIV",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/sa_splint_XIV.png",
+  "style": "LOW_TECH",
+  "height": 234,
+  "width": 150,
+  "center": [74.5, 135],
+  "collisionRadius": 150,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 141,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder",
+    "Fourteenth_defiled"
+  ],
+  "builtInWeapons": {
+    "WS0008": "tpc"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 0,
+      "locations": [14, -4.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 119,
+      "angle": -59.5,
+      "locations": [-6, -8.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [14, -40.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 50,
+      "locations": [22, 37.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-14, 52.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 45,
+      "locations": [-66.5, 31.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -90,
+      "locations": [-90, -51.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [75, -0.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-128, -48.5],
+      "length": 30,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-124, -13.5],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 24,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-130, 18],
+      "length": 40,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-130, 10],
+      "length": 40,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-126, 32.5],
+      "length": 96,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    90, 0.5,
+    36, 53.5,
+    10, 53.5,
+    1, 42.5,
+    -9, 59.5,
+    -19, 59.5,
+    -24, 47.5,
+    -77, 48.5,
+    -84, 42.5,
+    -121, 46.5,
+    -131, 9.5,
+    -112, -0.5,
+    -124, -3.5,
+    -128, -52,
+    -87, -65.5,
+    -61, -54.5,
+    22, -48.5,
+    22, -31.5,
+    0, -29.5,
+    45, -13.5,
+    53, -24.5
+  ]
+}

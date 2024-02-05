@@ -1,0 +1,28 @@
+{
+	"combatMedium":{
+			"nes_hamter_xiv":10,
+            "nes_hamter_standard":4,
+            "nes_hamter_assault":3,
+			"nes_hamter_outdated":3,
+			
+            "nes_hammerfall_standard":4,
+            "nes_hammerfall_elite":3,
+			"nes_hammerfall_support":3,
+			
+			"nes_carnelian_standard":4,
+			"nes_carnelian_elite":3,
+			"nes_carnelian_beamer":3,
+			
+			"nes_hermitaur_standard":6,
+			"nes_hermitaur_support":4,
+			
+			"nes_fluorspar_standard":2.5,
+			"nes_fluorspar_blaster":2.5,
+			"nes_fluorspar_pulser":2.5,
+			"nes_fluorspar_lancer":2.5,
+	},
+	"combatLarge":{
+			"nes_voltaire_standard":6,
+			"nes_voltaire_strike":4,
+	},
+}

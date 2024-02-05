@@ -1,0 +1,69 @@
+{
+  "variantId": "sa_eclipse_custom",
+  "hullId": "sa_eclipse",
+  "displayName": "Custom",
+  "goalVariant": false,
+  "fluxCapacitors": 26,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "unstable_injector",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "annihilatorpod",
+        "WS0011": "annihilatorpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "locust",
+        "WS0013": "locust"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "hil",
+        "WS0007": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "mininglaser",
+        "WS0004": "lightmg",
+        "WS0005": "lightmg",
+        "WS0008": "mininglaser",
+        "WS0009": "mininglaser",
+        "WS0014": "mininglaser",
+        "WS0015": "mininglaser",
+        "WS0016": "mininglaser",
+        "WS0018": "mininglaser",
+        "WS0019": "mininglaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "piranha_wing",
+    "piranha_wing"
+  ]
+}

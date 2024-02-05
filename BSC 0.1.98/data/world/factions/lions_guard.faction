@@ -1,0 +1,14 @@
+{
+        "hullFrequency":{
+        "hulls":{
+            "BSC_Tramp":0, # Doesn't Fit imo
+            "BSC_Baldricmk2":0, # Doesn't fit
+            "BSC_Buffalo_Mk3":0, # Doesn't fit
+        },
+    },
+                "knownWeapons":{
+        "weapons":[
+            "BSC_Annihilator_MLRS",
+        ],
+    },
+},

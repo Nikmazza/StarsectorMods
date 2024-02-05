@@ -1,0 +1,14 @@
+trail,projectile,sprite,minLength,fadeIn,duration,fadeOut,sizeIn,sizeOut,colorIn,colorOut,opacity,textLength,textScroll,randomTextureOffset,distance,dispersion,drift,fadeOnFadeOut,angleAdjustment,additive,velocityIn,velocityOut,randomVelocity,angle,rotationIn,rotationOut,randomRotation,renderBelowExplosions
+ssp_solareclipse,ssp_solareclipse,ssp_trails2,0,0,0.1,0.4,44,44,"[255,80,30]","[235,95,45]",1.0,40,100,FALSE,27,0,1,TRUE,FALSE,FALSE,0,0,0,0,0,0,true,false
+ssp_heatneedle,ssp_heatneedle_shot,base_trail_fuzzy,0,0,0.1,0.2,12,6,"[255,10,15]","[235,170,175]",1.0,128,100,FALSE,0,2,1,TRUE,FALSE,FALSE,0,15,5,20,0,0,true,false
+ssp_gravitonluncher,ssp_gravitonluncher_shot,ssp_trails3,0.5,0.1,0.1,0.2,30,70,"[255,255,255]","[205,205,205]",1.0,60,100,TRUE,10,0,1,TRUE,FALSE,FALSE,0,0,0,0,0,0,true,false
+ssp_GPD_shot,ssp_GPD_shot,base_trail_smoke,0,0,0.4,0.15,2,1,"[160,160,200]","[95,75,255]",1.00,128,100,FALSE,25,5,2,TRUE,FALSE,FALSE,0,0,0,10,40,40,true,false
+ssp_BFGPD_shot0,ssp_BigFackingGPD_shot,base_trail_smoke,0,0,0.2,0.1,14,14,"[175,175,205]","[45,75,205]",1.00,128,100,FALSE,10,2,1,TRUE,FALSE,FALSE,0,15,15,70,70,70,true,false
+ssp_BFGPD_shot1,ssp_BigFackingGPD_shot,base_trail_smoke,0,0,0.2,0.1,14,14,"[175,175,205]","[45,75,205]",1.00,128,100,FALSE,10,2,1,TRUE,FALSE,FALSE,0,15,15,70,70,70,true,false
+ssp_BFGPD_shot2,ssp_BigFackingGPD_shot,base_trail_fuzzy,0,0,0.25,0.1,8,8,"[255,255,255]","[255,25,200]",1.00,128,100,FALSE,5,2,1,TRUE,TRUE,FALSE,0,0,0,0,0,0,true,false
+ssp_shortgun_shot2,ssp_shortgun_shot,base_trail_smoke,0,0.1,0.15,0.3,12,4,"[255,255,255]","[255,255,255]",1.0,128,100,FALSE,0,0,1,TRUE,FALSE,FALSE,0,0,0,0,0,0,true,false
+ssp_shortgun_shot1,ssp_shortgun_shot,base_trail_smoke,0,0.1,0.12,0.24,7,1,"[255,165,30]","[255,165,30]",1.0,128,100,FALSE,0,0,1,TRUE,FALSE,FALSE,0,0,0,0,0,0,true,false
+ssp_blaster_shot0,ssp_blaster_shot,base_trail_smoke,0,0,0.1,0.1,9,9,"[175,175,205]","[45,75,205]",1.00,128,100,FALSE,8,2,1,TRUE,FALSE,FALSE,0,15,15,70,70,70,true,false
+ssp_blaster_shot1,ssp_blaster_shot,base_trail_smoke,0,0,0.1,0.1,9,9,"[175,175,205]","[45,75,205]",1.00,128,100,FALSE,8,2,1,TRUE,FALSE,FALSE,0,15,15,70,70,70,true,false
+ssp_blaster_shot2,ssp_blaster_shot,base_trail_fuzzy,0,0,0.15,0.1,6,6,"[255,255,255]","[255,25,200]",1.00,128,100,FALSE,4,2,1,TRUE,TRUE,FALSE,0,0,0,0,0,0,true,false
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,

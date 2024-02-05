@@ -1,0 +1,58 @@
+{
+    "displayName": "Attack",
+    "fluxCapacitors": 0,
+    "fluxVents": 47,
+    "goalVariant": true,
+    "hullId": "vice_odyssey_tt",
+    "hullMods": [
+        "advancedoptics",
+        "hardenedshieldemitter",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_odyssey_tt_attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hil",
+                "WS 004": "gravitonbeam",
+                "WS 005": "gravitonbeam",
+                "WS 006": "ionbeam",
+                "WS 007": "taclaser",
+                "WS 008": "taclaser",
+                "WS 009": "taclaser",
+                "WS 010": "taclaser",
+                "WS 011": "taclaser",
+                "WS 014": "taclaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "squall",
+                "WS 003": "squall"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "pdlaser",
+                "WS 013": "pdlaser",
+                "WS 015": "pdlaser",
+                "WS 016": "pdlaser",
+                "WS 017": "pdlaser",
+                "WS 018": "pdlaser"
+            }
+        }
+    ],
+	"modules": [{"SM 1": "vice_odyssey_secondary_drone_bay"}],
+    "wings": [
+        "thunder_wing",
+        "thunder_wing"
+    ]
+}

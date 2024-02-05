@@ -1,0 +1,63 @@
+{
+  "hullName": "Bardiche",
+  "hullId": "bc_midlinefighter1",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/midlinefighter1.png",
+  "style": "MIDLINE",
+  "height": 40,
+  "width": 42,
+  "center": [21, 17],
+  "collisionRadius": 33,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 29.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": 0,
+      "locations": [3.5, 13.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": -0,
+      "locations": [3.5, -13.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-12, -0],
+      "length": 11,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-12, -0],
+      "length": 22,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -11, -9,
+    1.5, -17.5,
+    18, -5.5,
+    18, 5.5,
+    1.5, 17.5,
+    -11, 9
+  ]
+}

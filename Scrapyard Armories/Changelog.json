@@ -1,0 +1,167 @@
+0.0.11a Hotfix
+Fixed Cavern not spawning
+0.0.11 Forgot the changelog again
+Added more Combat Chatter Characters
+Added Cavern Class Converted Droneship
+Added Pangolin Class Carrier
+Added Ocypote Class Augmented Frigate
+Added Elanus LG
+Revised Ebirah modules mounts
+Twilight changed to account for vanilla Brilliant changes
+Nerfed Ebirah's Core OP from 300 to 250
+0.0.10 Luddmas Day Update
+Added Ingot Class Carrier
+Added Murk class Coverted Droneship
+Added Gloam class Converted Droneship
+Added Aberrant Class Frigate
+Added Pillbox Class Modified Freighter
+Gaia
+`Replaced High Resolution Sensors with Advanced Ground Support
+Mobster
+-Medium Ballistics upgraded to Large Ballistics
+Cast
+-Sprite updated
+-Supplies and DP reduced from 50 to 42
+Removed from Diktat spawnlist to account for upcoming vanilla changes
+Scrapship
+-Supplies a month and deployment points reduced from 20 to 15
+Made Aegis hvb more fun
+0.0.9a Hotfixings
+-Fixed overscaled mount on Shoggoth
+-Attempted to fix Linux crashes again
+0.0.9 I Don't Like Code Edition
+Fixed faction files
+(Hopefully) Fixed Linux crashes due to inconsistient capitalization
+Added Polyphemus Class Augmented Cruiser
+Added Panoptes Class Bomber Wing
+Almas
+-Added Automated Subsystems
+-Armor reduced from 950 to 800
+-Hull reduced from 6500 to 6000
+Shoggoth
+-Added Automated Subsystems
+Added Automated Subsystems hullmod, massive help from Harmful Mechanic, Lukas04, Wisp, and Lortus on making it run
+Added Infernium Ejector, a hybrid slot radition cannon utilized by pirates and pathers
+Added Hypermatter Condenser, An extremely energetic crystal used as the focal point of a laser assembly to shred armor
+
+
+0.0.8 I Forgot The Changelog Edition
+-Added Penumbra, a raiding and missile support destroyer
+-Added the Reclaimed Station to the stations tab
+-Sprites for Almas and Shoggoth fully painted
+-Scalpel
+ -DP and supplies a month changed from 15 to 10
+ -Changed missile hardpoints back to synergy hardpoints
+-Erbe
+ -Refire rate adjusted from 15 seconds to 8 seconds
+-Ebirah
+ -Base dissipation reduced from 1000 to 800
+ -Lobster Breeding Tank desc cleaned up
+
+
+0.0.7 Still not on forums edition
+Fixed Grunder and Shilage being incomaptible with automated ships
+Fixed Kilo being compatible with automated ships
+Combat Chatter Interactions
+-Added Spamton
+Nexerelin starts added
+Cricket added, sprite by Sikair
+Brace sprite updated, major help from GMan
+Splint/SplintXIV
+-reworked, major help from MiniDeth and Pyrophage for the new sprites
+Eclipse
+-Sprite Changed
+-Removed builtin Sparks
+-Bay count reduced from 3 to 2
+-Removed 2 Med Ballistics
+Pacemaker
+-Speed changed to 40 from 50
+Aegis
+-Dissapation Reduced from 900 to 700
+-Flux Capacity Reduced from 35000 to 30000
+-Hull Reduced from 30000 to 25000
+Removed a few "tips"
+Removed Onslaught(?)
+0.0.6 [REDACTED] Enhancements
+Added 4 refits to [Redacted] ranks
+Added Perigee class Cruiser
+A new HVB added
+Should be save compatible
+0.0.5 Yet More Pirate Stuff
+Grunder Sprite Updated
+Added Durand Heavy Fighter
+Added Erbe Drone Launcher
+Added Shoggoth Class Augmented Superfreighter
+Added Kyresh Class Patrol Skiff
+Added Almas Class Augmented Destroyer
+Reduced Hugin spawn rate
+Brace
+	DP increased to 35 from 30
+A few ship prices changed
+0.0.4 OSHA Noncompliance Update, and 0.95.1a Compatability
+Added Gaia Class Superbarge
+Added Twilight Class Converted Droneship
+Added a new Capital hvb
+
+Loki
+	Spawn frequency should be fixed now, I am so sorry for the hell I created
+	OP reduced from 13 to 12
+	Damage reduced to 200 from 400
+	EMP lowered from 150 to 100
+Kilo wing
+	Crew per wing increased from 2 to 4
+Lunchbox
+	Given a Deco on the bay
+	Resprite to fix weapon discomfort
+	Hull changed from 5000 to 7500
+Splint
+	Medium mount angles adjusted to no longer fire forwards
+SplintXIV
+	Medium mount angles adjusted to no longer fire forwards
+	DP adjusted to 20 from 10, that was a typo
+	Added to XIV blueprint list
+Trocar
+	Added Rugged Construction
+	Sprite updated
+Onslaught(?)
+	Sprite updated to account for Trocar changes.
+Candela
+	Sprite changed to a resprite provided by Unit9461
+Weapon Overdrive System
+	Fixed it not actually boosting energy weapon fire rates.
+Updated Localization Files
+
+0.0.3 Hoist the Black Flag Lads!
+Autofits now have weapon groups.
+Two portraits added in, player useable
+Independents, Scavengers, and Pirates can now use Grunder wings
+Added Loki Autocannon
+Added Eclipse Class Battlecarrier
+Added Gangster Class Missile Frigate
+Added Lunchbox Class Swarm Carrier
+Added Candela Class Converted Droneship
+Purged ghosts from description csv
+Scrapship nerfs
+Min crew increased to 150 from 125
+Max crew reduced from 900 to 700
+Cargo reduced from 600 to 500
+Fuel increased from 500 to 600
+DP and supplies increased from 8 to 12
+Civillian hull added
+Borrer Drones added
+OP reduced from 110 to 75
+Mobster
+>Hull changed from 2500 to 3500, added to Pirate instead of Low Tech
+Scalpel
+>Outer synergy changed to pure missiles, less flexible but easier to decide on, 6 amb was a kinda wack potential...
+Splint XIV
+>Changed from Burn Drive to Weapon Overdrive
+Trocar
+>Finally been given a ram friendly burn drive
+0.0.2
+>Staros added, Elanus hellbore placeholder removed
+>Ship names added
+>Some tips added
+>Shilage and Grunder removed from high tech blueprint, added to remnant fleets
+>Gorget added
+>Brace sprite touched up some

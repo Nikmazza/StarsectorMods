@@ -1,0 +1,30 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 3,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "ssp_wave_M",
+    "hullMods": [
+        "missleracks",
+        "converted_hangar"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_wave_M_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "ssp_ChaosArmory"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "ssp_MedMissle",
+                "WS0008": "ssp_MedMissle"
+            }
+        }
+    ],
+    "wings": ["ssp_dustfog"]
+}

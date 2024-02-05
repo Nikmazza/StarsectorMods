@@ -1,0 +1,83 @@
+{
+  "variantId": "LTA_Consigliere_Elite",
+  "hullId": "LTA_Consigliere",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 28,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0013": "atropos",
+        "WS0014": "atropos",
+        "WS0015": "atropos",
+        "WS0016": "atropos"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymauler",
+        "WS0002": "heavymauler",
+        "WS0003": "hveldriver",
+        "WS0004": "hveldriver",
+        "WS0005": "heavymauler",
+        "WS0006": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "LTA_talonrailautomatednixie",
+        "WS0010": "LTA_talonrailautomatednixie"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0021": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "LTA_nixie",
+        "WS0018": "LTA_nixie",
+        "WS0019": "LTA_nixie",
+        "WS0020": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "flak",
+        "WS0008": "flak",
+        "WS0011": "flak",
+        "WS0012": "flak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "warthog_wing"
+  ]
+}

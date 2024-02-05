@@ -1,0 +1,201 @@
+{
+  "hullName": "ssp_thunder",
+  "hullId": "ssp_thunder",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/ssp_thunder.png",
+  "style": "LLI",
+  "height": 228,
+  "width": 142,
+  "center": [71, 114],
+  "collisionRadius": 165,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 147.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ssp_cliff",
+    "ssp_SystemUsedTimes"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [90, -40]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -0,
+      "locations": [90, 40]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [-17, -55]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [-17, 55]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -135,
+      "locations": [-68, -55]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 135,
+      "locations": [-68, 55]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [66, 21]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [66, -21]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 30,
+      "locations": [32, 35]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -30,
+      "locations": [32, -35]
+    },
+    {
+      "id": "WS0011",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [-28, -0]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [106, 28]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [106, -28]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-99, 44.5],
+      "length": 28,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-99, -44.5],
+      "length": 28,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-109, 13],
+      "length": 40,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-109, -13],
+      "length": 40,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-83, 58],
+      "length": 15,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-83, -58],
+      "length": 15,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -112.5, 23.5,
+    -77, 70,
+    97.5, 60.5,
+    112.5, 44.5,
+    112.5, 24.5,
+    35.5, 5,
+    35.5, -5,
+    112.5, -24.5,
+    112.5, -44.5,
+    97.5, -60.5,
+    -77, -70,
+    -112.5, -23.5
+  ]
+}

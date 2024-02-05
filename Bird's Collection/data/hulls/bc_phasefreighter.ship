@@ -1,0 +1,104 @@
+{
+  "hullName": "Atticus",
+  "hullId": "bc_phasefreighter",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/phase/bc_phasefreighter.png",
+  "style": "LOW_TECH",
+  "height": 98,
+  "width": 88,
+  "center": [44, 49],
+  "collisionRadius": 82,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 76,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield",
+    "civgrade"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 205,
+      "angle": 180,
+      "locations": [-37, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-21, 24]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-21, -24]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-46, 19],
+      "length": 39.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-46, -19],
+      "length": 39.5,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-46, -12.5],
+      "length": 25.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-46, 12.5],
+      "length": 25.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -38.5, 32.5,
+    -26.5, 34,
+    -14.5, 13.5,
+    -13.5, 35,
+    -6, 42.5,
+    20, 42.5,
+    27.5, 36,
+    28.5, 11,
+    39.5, 23.5,
+    47.5, 17,
+    47.5, -17,
+    39.5, -23.5,
+    28.5, -11,
+    27.5, -36,
+    20, -42.5,
+    -6, -42.5,
+    -13.5, -35,
+    -14.5, -13.5,
+    -26.5, -34,
+    -38.5, -32.5,
+    -49, -0
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "hullName": "Shield Emitter",
+  "hullId": "fed_cargocap_shieldemitter",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_cargo_cap_shield.png",
+  "style": "FEDERATION_GREEN",
+  "height": 50,
+  "width": 30,
+  "center": [15, 26.5],
+  "collisionRadius": 1500,
+  "shieldCenter": [-43.5, -0],
+  "shieldRadius": 1308.5,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    0,
+    0
+  ],
+  "builtInMods": [
+    "shield_always_on",
+    "fed_design",
+    "reduced_explosion",
+    "fed_fleetshieldeffect",
+	"vastbulk"
+  ],
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -2.5, 0.5,
+        -1, 0.5
+      ]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -24, -7.5,
+    -14, -14,
+    8.5, -14,
+    19, -6.5,
+    19, 6.5,
+    8.5, 14,
+    -14, 14,
+    -24, 7.5
+  ]
+}

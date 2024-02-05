@@ -1,0 +1,37 @@
+{
+	"id":"ssp_lasercutter_proj",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"onFireEffect":"data.weapon.ssp_lasercutter",
+	"sprite":"",
+	"size":[1,1],	
+	"center":[1,1],
+	"collisionRadius":1,
+	"collisionClass":"NONE",
+	"explosionColor":[0,0,0,0],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":0, # purely visual
+	"fadeTime":0.05, # fadeout duration
+	"engineSpec":{"turnAcc":0,
+				  "turnRate":0,
+				  "acc":3600,
+				  "dec":1200},
+	"engineSlots":[{"id":"ES1",
+					"loc":[0, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[0,0,0,0],
+						"contrailDuration":0,
+						"contrailWidthMult":0,
+						"contrailWidthAddedFractionAtEnd":0,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":0, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0f,
+						"contrailSpawnDistMult":0, # how far away from engine it starts
+						"contrailColor":[0,0,0,0],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":0,
+				    "length":0,
+				    "angle":0}]
+}

@@ -1,0 +1,168 @@
+{
+  "hullName": "Ocypote",
+  "hullId": "sa_ocypote",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/sa_ocypote.png",
+  "style": "LOW_TECH",
+  "height": 96,
+  "width": 82,
+  "center": [41, 48],
+  "collisionRadius": 61.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 54,
+  "viewOffset": 0,
+  "builtInMods": [
+    "sa_automated_subsystems"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 222,
+      "angle": -125.5,
+      "locations": [-7, -23]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 222,
+      "angle": 125.5,
+      "locations": [-7, 23]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [19, -22]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": -0,
+      "locations": [19, 22]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 115,
+      "angle": 0,
+      "locations": [-6, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-21, 38],
+      "length": 11,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-21, -38],
+      "length": 11,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-23, 35],
+      "length": 11,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-23, -35],
+      "length": 11,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-25, 31],
+      "length": 11,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-25, -31],
+      "length": 11,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-27, -27],
+      "length": 11,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-27, 27],
+      "length": 11,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-25, -20],
+      "length": 40,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    },
+    {
+      "location": [-25, 20],
+      "length": 40,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "Augmented"
+    }
+  ],
+  "bounds": [
+    -26, -27,
+    -21, -39,
+    -3, -39,
+    46, -0,
+    -3, 39,
+    -21, 39,
+    -26, 27,
+    -19, 15,
+    -31, -0,
+    -19, -15
+  ]
+}

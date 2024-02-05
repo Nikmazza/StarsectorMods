@@ -1,0 +1,117 @@
+{
+  "hullName": "Hammah",
+  "hullId": "ork_hammah",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/ork_hammah.png",
+  "style": "BULTACH",
+  "height": 190,
+  "width": 166,
+  "center": [83, 95.5],
+  "collisionRadius": 119,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 115.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ork_redfasta",
+    "Ork_low_Maintenance",
+    "BT_shieldsChanger",
+    "bt_shieldArching"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 180,
+      "locations": [-33.5, -0]
+    },
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 45,
+      "locations": [4.5, 19]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 0,
+      "locations": [43.5, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [73.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-67.5, 25.5],
+      "length": 87.5,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-67.5, -25.5],
+      "length": 87.5,
+      "width": 32,
+      "angle": -180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-45.5, 66],
+      "length": 53.650364,
+      "width": 26.954659,
+      "angle": 158,
+      "contrailSize": 26.954659,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-45.5, -66],
+      "length": 53.650364,
+      "width": 26.954659,
+      "angle": -158,
+      "contrailSize": 26.954659,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    }
+  ],
+  "bounds": [
+    -93.5, -4.5,
+    -67, -15,
+    -67, -35.5,
+    -57.5, -43.5,
+    -34, -81.5,
+    -11, -78.5,
+    53.5, -43.5,
+    57, -27,
+    81, -24,
+    94, -0,
+    81, 24,
+    57, 27,
+    53.5, 43.5,
+    -11, 78.5,
+    -34, 81.5,
+    -57.5, 43.5,
+    -67, 35.5,
+    -67, 15,
+    -93.5, 4.5
+  ]
+}

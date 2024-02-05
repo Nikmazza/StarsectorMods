@@ -1,0 +1,63 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 6,
+    "fluxVents": 48,
+    "goalVariant": true,
+    "hullId": "ssp_elnino",
+    "hullMods": [
+        "ssp_modetransform",
+        "targetingunit",
+        "ssp_LowerThreshold",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_elnino_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0015": "hil",
+                "WS0016": "hil"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS020": "ssp_MedMissle",
+                "WS021": "ssp_MedMissle",
+                "WS022": "ssp_MedMissle",
+                "WS023": "ssp_MedMissle",
+                "WS024": "ssp_MedMissle",
+                "WS025": "ssp_MedMissle"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_spot",
+                "WS0004": "ssp_spot",
+                "WS0009": "ssp_spot",
+                "WS0010": "ssp_spot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "pdlaser",
+                "WS0006": "pdlaser",
+                "WS0007": "pdlaser",
+                "WS0008": "pdlaser",
+                "WS0011": "pdlaser",
+                "WS0012": "pdlaser",
+                "WS0013": "pdlaser",
+                "WS0014": "pdlaser",
+                "WS0019": "pdlaser"
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "playableFaction":false,
+    #"startingFaction":true,
+    "corvusCompatible":true,
+    "spawnAsFactionId":"pirates",
+    "rebelFleetSuffix":"Rogues",
+    "startRelationships":{ "pirates":1 },
+    
+    "responseFleetName":"Guardian Fleet",
+    
+    "morality":"amoral",
+}

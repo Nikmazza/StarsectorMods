@@ -1,0 +1,134 @@
+{
+	# the classpath of the fleet factory to load this fleet json with, the class in this field must
+	# extend variants_lib.data.VariantsLibFleetFactory
+	# DEFAULT: variants_lib.data.VariantsLibFleetFactory
+	"usingFactory":"variants_lib.data.VariantsLibFleetFactory",
+	
+	# mods that need to be enabled for this file to be loaded. Use this to make fleets with content 
+	# from other mods which may not be enabled. Put .variant files with content from other mods in 
+	# data/variants_lib/modded_variants and ensure its file name is the same as its variant id
+	# DEFAULT: no mods. If your mod is enabled the fleet will be loaded
+	"requiredMods":["variants_lib"],
+	
+	# String used to identify this fleet variant. Must be unique
+	"fleetDataId":"example_fleet", 
+	# minimum dp of fleet to be edited to this fleet variant
+	"minDP":70, 
+	# maximum dp of fleet to be edited to this fleet variant
+	"maxDP":400, 
+
+	# If the fp of the fleet being edited is above minDP but below this field, set the DP of the fleet
+	# to the value of this field
+	# DEFAULT: 0, DP is not changed
+	"setDPToAtLeast":100,
+
+	# Whether to allow auto fit on the fleet. The option here takes priority over all other features 
+	# in this mod that affect autofit
+	# DEFAUT: no preference, do what other settings around autofit say
+	"autofit":false,
+
+	# Whether to spawn this fleet json if the faction the fleets is spawning as has no heavy industry
+	# DEFAULT: true
+	"spawnIfNoIndustry":false,
+
+	# Personality unofficered ships in this fleet will have in combat, or "none" to use the faction's doctrine
+	# DEFAULT: none
+	"defaultFleetWidePersonality":"aggressive", 
+
+	# commander skills that will be added to the fleet's captain
+	# DEFAULT: no additional skills
+	"additionalCommanderSkills":["support_doctrine"], 
+
+	# automatically generate freighters for this fleet, with the float being the fraction of dp given to them
+	# DEFAULT: feature is not enabled
+	"autoLogitsticsFreighterDP":0.07,
+
+	# automatically generate tankers for this fleet, with the float being the fraction of dp given to them
+	# DEFAULT: feature is not enabled
+	"autoLogitsticsTankerDP":0.07,
+
+	# automatically generate personnel carriers for this fleet, with the float being the fraction of dp given to them
+	# DEFAULT: feature is not enabled
+	"autoLogitsticsPersonnelDP":0.04,
+
+	# automatically generate civilian liners for this fleet, with the float being the fraction of dp given to them
+	# DEFAULT: feature is not enabled
+	"autoLogitsticsLinerDP":0.04,
+
+	# variants and their amount to always add to fleets of this type
+	# DEFAULT: no additional ships
+	"alwaysInclude":{"ox_Standard":2, "atlas_Standard":1},
+
+	# Specify what portion of the fleet's dp should be dedicated to different groups of ships
+	# Based on how the fleet generation system works, it's best to have ships with similar dp 
+	# in each partition and have the higher average dp partitions before lower dp ones
+	"fleetPartitions":[
+		# a partition
+		{
+			# specifies the fraction of the fleets dp that will be occupied by ships in this partition.
+			# So partitionWeight / sumOfAllPartitionWeights of the fleets dp will be dedicated to ships 
+			# in this partition. Any unused dp is given to be used by the next partition down
+			"partitionWeight":30,
+			# A list of variants in the partition and their respective weights. Each variant has a 
+			# variantWeight / sumOfAllVariantWeightsInThisPartition chance of spawning. Note that 
+			# spawning probabilities can be skewed if some variants can't be spawned with the partitions 
+			# allotted dp
+			"variants":{
+				"onslaught_xiv_Elite":50,
+				"onslaught_Elite":50,
+			}
+		},
+		# another partition
+		{
+			"partitionWeight":40,
+			"variants":{
+				"dominator_AntiCV":13.16,
+				"dominator_Assault":13.16,
+				"dominator_Support":13.16,
+				"dominator_Outdated":13.16,
+				"eagle_Assault":7.89,
+				"eagle_xiv_Elite":18.42,
+				"mora_Assault":10.53,
+				"mora_Strike":10.53,
+			}
+		},
+		{
+			"partitionWeight":20,
+			"variants":{
+				"falcon_xiv_Elite":20,
+				"enforcer_Assault":20,
+			}
+		},
+		{
+			# Maximum amount of the fleet's dp that will be dedicated to ships in this partition.
+			# Useful for capping the amount of certain ships can spawn.
+			# DEFAULT: no limit on dp
+			"maxDPForPartition":12,
+			# Maximum amount of ships that will be dedicated to ships in this partition
+			# Useful for capping the amount of certain ships can spawn.
+			# DEFAULT: no limit on ships spawned
+			"maxShipsForPartition":3,
+			"partitionWeight":2,
+			"variants":{
+				"hound_Standard":100,
+			}
+		},
+		{
+			"partitionWeight":3,
+			"variants":{
+				# ghetto way of spawning logistics of appropriate size
+				"colossus_Standard":10,
+				"atlas_Standard":100,
+				"buffalo_hegemony_Standard":1,
+			}
+		},
+		{
+			"partitionWeight":3,
+			"variants":{
+				"phaeton_Standard":1,
+				"prometheus_Super":100,
+			}
+		},
+	],
+}
+

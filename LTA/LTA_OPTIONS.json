@@ -1,0 +1,25 @@
+{
+	# Moves Tech Duinn to a pre-selected core vanilla system. Useful if you experience lag when Tech Duinn appears on-screen. 
+	# Currently does not move Tech Duinn in previously created saves, sorry. 
+	# ("false" will keep Tech_Duinn spawning where it currently is, "true" will place it in a vanilla Corvus Mode system). 
+		
+#	~	#	~	#	~	#	~	#	~	#
+
+	"enable_TechDuinnIsInSystem":true,
+	
+#	~	#	~	#	~	#	~	#	~	#
+		
+	#If the above is set to "true" Tech Duinn will NOT spawn anywhere when starting a "random sector" start in Nexerelin. 
+	#I will be fixing this in a future patch.
+	
+	
+	
+	### ~Notes~ ###
+	
+	# While the "enable_TechDuinnIsInSystem" config is set to "true" by default, Tech Duinn was designed to be placed in Hyperspace;
+	# as such there may be some unforseen quirks I have not yet found with placing it in a system. 
+	# That said, doing so should be safe, and may improve your FPS if you find it causes it to drop in Hyperspace when you are nearby
+	# the station.
+	
+	### ~~~~~~~ ###	
+}

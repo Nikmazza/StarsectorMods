@@ -1,0 +1,34 @@
+{
+    "hullFrequency":{
+        "hulls":{
+            "TADA_tinnitus":0.1,
+
+            "TADA_scalper":0.25,
+            "TADA_cassicus":0.5,
+
+            "TADA_owl":0.1,
+            "TADA_bonnethead":0.1,
+            "TADA_whirlwind":0.5,
+
+            "TADA_crane":0.1,
+            "TADA_lasherTT":0.5,
+        },
+    },
+    "knownShips":{
+        "hulls":[
+            "TADA_lasherTT",
+            "TADA_cassicus",
+            "TADA_whirlwind",
+        ],
+    },
+    "knownFighters":{
+        "fighters":[
+            "TADA_pinnace_wing",
+        ],
+    },
+	"knownHullMods":{
+		"hullMods":[
+			"TADA_lightArmor",
+		],
+	},
+},

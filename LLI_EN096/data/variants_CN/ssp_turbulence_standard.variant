@@ -1,0 +1,54 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 6,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "ssp_turbulence",
+    "hullMods": [
+        "heavyarmor",
+        "ssp_ShortRange"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_turbulence_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0013": "ssp_shredder"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0009": "breach",
+                "WS0010": "breach",
+                "WS0011": "breach",
+                "WS0012": "breach"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "phasebeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "lightac",
+                "WS0004": "lightac",
+                "WS0007": "lightac",
+                "WS0008": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "vulcan",
+                "WS0006": "vulcan"
+            }
+        }
+    ]
+}

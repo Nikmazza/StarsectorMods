@@ -1,0 +1,44 @@
+{
+    "displayName": "Highfleet",
+	"goalVariant": true,
+	"quality": 1,
+    "fluxCapacitors": 7,
+    "fluxVents": 6,
+    "hullId": "LTA_Hammerhead_Thunderbirds",
+    "hullMods": [
+        "converted_hangar",
+        "safetyoverrides"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Hammerhead_Thunderbirds_Highfleet",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymauler",
+                "WS 002": "heavymauler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "reaper"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "heatseeker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "railgun",
+                "WS 006": "railgun"
+            }
+        }
+    ],
+    "wings": []
+}

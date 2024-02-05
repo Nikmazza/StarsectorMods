@@ -1,0 +1,56 @@
+{
+  "hullName": "Station Energy Platform",
+  "hullId": "sa_energy_battery",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/station/sa_energy_battery.png",
+  "style": "HIGH_TECH",
+  "height": 108,
+  "width": 164,
+  "center": [82, 35],
+  "collisionRadius": 100,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 115,
+  "viewOffset": 0,
+  "builtInMods": [
+    "supercomputer",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 002",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -18,
+      "locations": [30, -18]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 20,
+      "locations": [14, 48]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -10,
+      "locations": [14, -48]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    19, 81,
+    60, 53,
+    60, -53,
+    21, -81,
+    -7, -57,
+    -7, 56
+  ]
+}

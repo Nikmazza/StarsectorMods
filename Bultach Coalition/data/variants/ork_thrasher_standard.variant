@@ -1,0 +1,43 @@
+{
+  "variantId": "ork_thrasher_standard",
+  "hullId": "ork_thrasher",
+  "displayName": "Stadard",
+  "goalVariant": true,
+  "fluxCapacitors": 17,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_rotary_pd_small",
+        "WS0004": "ork_rotary_pd_small",
+        "WS0005": "ork_rotary_pd_small",
+        "WS0006": "ork_rotary_pd_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ork_thumpa",
+        "WS0003": "ork_thumpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "ork_dispenser",
+        "WS0008": "ork_dispenser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

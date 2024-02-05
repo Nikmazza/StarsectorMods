@@ -1,0 +1,31 @@
+{
+  "hullName": "shield_module",
+  "hullId": "ork_shield_module",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/superdread/ork_superdread_shield.png",
+  "style": "BULTACH",
+  "height": 38,
+  "width": 30,
+  "center": [15, -105],
+  "collisionRadius": 644.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 627.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "BT_shieldsChanger",
+    "BT_antiNuke",
+    "bt_shieldArching"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    106, -5,
+    115, -14.5,
+    129, -14.5,
+    140.5, -11.5,
+    140.5, 11.5,
+    129, 14.5,
+    115, 14.5,
+    106, 5
+  ]
+}

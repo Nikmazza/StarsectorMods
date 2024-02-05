@@ -1,0 +1,201 @@
+{
+  "hullName": "Scrapship",
+  "hullId": "sa_scrapship",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/sa_scrapship.png",
+  "style": "LOW_TECH",
+  "height": 300,
+  "width": 140,
+  "center": [67, 145.5],
+  "collisionRadius": 175,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 168,
+  "viewOffset": 0,
+  "builtInMods": [
+    "repair_gantry",
+    "civgrade"
+  ],
+  "builtInWings": [
+    "borer_wing",
+    "borer_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-74.5, 16]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 136,
+      "angle": -90,
+      "locations": [-86.5, -28]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 136,
+      "angle": -45,
+      "locations": [-26.5, -40]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 136,
+      "angle": 90,
+      "locations": [37.5, 22]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 136,
+      "angle": -90,
+      "locations": [37.5, -22]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 199,
+      "angle": -45,
+      "locations": [120.5, -28]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        99, 9,
+        100, 6,
+        102.5, 8,
+        102.5, 11.5
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        98.5, -8,
+        103, -8.5,
+        99.5, -11.5,
+        99, -5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-131, -39.5],
+      "length": 39,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-133.5, -27.5],
+      "length": 10,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-132, -19.5],
+      "length": 21.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-130.5, -10.5],
+      "length": 10,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-131, 0],
+      "length": 24,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-130.5, 11],
+      "length": 10,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-132, 20],
+      "length": 20.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-133, 28.5],
+      "length": 15,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-131, 40.5],
+      "length": 39.5,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    126, -34,
+    121, 29,
+    91, 31,
+    91.5, 53,
+    82.5, 46.5,
+    81, 28.5,
+    37, 28.5,
+    32.5, 42,
+    -21, 46,
+    -49, 60,
+    -125, 59,
+    -131.5, 45.5,
+    -132.5, -45.5,
+    -125.5, -59,
+    -17, -60,
+    -5, -46.5,
+    23, -43,
+    93.5, -46,
+    93, -30
+  ]
+}

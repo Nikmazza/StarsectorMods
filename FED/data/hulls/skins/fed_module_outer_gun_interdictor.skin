@@ -1,0 +1,23 @@
+{
+	"baseHullId":"fed_module_outer_gun",
+	"skinHullId":"fed_module_outer_gun_interdictor",
+	"descriptionPrefix":"Upgraded with an engine disruption system.",
+	"restoreToBaseHull":true,
+	"systemId":"interdictor",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[
+    "autorepair",
+    "magazines",
+    "fluxdistributor",
+    "fluxcoil",
+    "hardenedshieldemitter",
+	"pointdefenseai",
+	"reinforcedhull",
+	"fluxbreakers"
+  ],
+	"builtInWeapons":{
+    },
+}

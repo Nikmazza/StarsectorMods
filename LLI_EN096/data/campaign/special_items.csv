@@ -1,0 +1,11 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+LLI Blueprint Package,ssp_bp,package_bp,,,30000,1000,1,,graphics/icons/cargo/ssp_blueprint.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,ssp_bp,"Enables heavy industry to construct hulls, weapons, and fighter LPCs used by LouLan Industries.",290
+Hall of Fame Blueprint Package,ssp_wave_bp,package_bp,,,2000,1000,1,,graphics/icons/cargo/ssp_wave_bp.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,ssp_wave_bp,Enables heavy industry to manufacture certain retired ship classes.,291
+,,,,,,,,,,,,,,,
+Autonomous Mantle Bore (D),ssp_mantle_bore,"no_drop,pather4",Eridani-Utopia,,40000,1000,1,HIGH,graphics/icons/cargo/ssp_terraforming_bore.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,"While it is believed there are no functional control override units remaining in the Sector, the bore itself is capable of independent - if sometimes unpredictable - operation. Automatic-mode failsafes preclude its use on habitable worlds.
+
+This particular bore has suffered permanent damage at some point in its life, further compounded by poor maintenance.",142
+Cloning Facility,ssp_cryosanctum,"no_drop,pather4",Unknown,,40000,1000,1,HIGH,graphics/icons/cargo/ssp_cryosanctum.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"spaceport, megaport,patrolhq, militarybase, highcommand","The central (albeit poorly-maintained) component of a cloning facility.
+
+Given enough credits, securing a 'donor' for stem cells to use in the cloning process is not difficult. Thanks to AI-assisted alteration of genetic sequences and pre-implanted memories, every clone is unique and are effectively normal human beings - with the same array of civilian and military uses.",143
+,,,,,,,,,,,,,,,

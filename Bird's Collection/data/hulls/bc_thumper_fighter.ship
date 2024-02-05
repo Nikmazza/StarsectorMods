@@ -1,0 +1,50 @@
+{
+  "hullName": "Chark",
+  "hullId": "bc_thumper_fighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_thumperfighter.png",
+  "style": "LOW_TECH",
+  "height": 36,
+  "width": 28,
+  "center": [14, 11],
+  "collisionRadius": 27,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 31.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [12, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-10, 8],
+      "length": 29,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, -8],
+      "length": 29,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -10, 10.5,
+    22, 10,
+    22, -10,
+    -10, -10.5,
+    -7, -0
+  ]
+}

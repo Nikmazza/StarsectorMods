@@ -1,0 +1,13 @@
+Version R.03
+- I promise I have tested the version files this time and it FINALLY WORKS!
+
+Version R.02
+- Officers now has to be at max level before you can increase elite skills cap - mostly for cleaner UI.
+- Fixed a crash due to incorrect version formats.
+
+Version R.01
+- Added the button to increase officer elite skills cap, also at the expense of story points.
+- Removed the arbitrary level cap as I devised a way to dynamically figure out if officers can still level up.
+
+Version R.00
+- Initial release.

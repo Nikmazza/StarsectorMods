@@ -1,0 +1,35 @@
+{
+  "variantId": "LTA_Juror_Hunterkiller",
+  "hullId": "LTA_Juror",
+  "displayName": "Hunter Killer",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightmg",
+        "WS0002": "lightmg",
+        "WS0003": "lightmg",
+        "WS0004": "lightmg",
+        "WS0005": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,23 @@
+{
+	"vice_autopulse_fire":[
+		{"file": "sounds/weapons/vice_autopulse_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_hmc_fire":[
+		{"file": "sounds/weapons/vice_hmc_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_interdictor_fire":[
+		{"file": "sounds/weapons/vice_interdictor_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_ionstreamer_fire":[
+		{"file": "sounds/weapons/vice_ionstreamer_fire.ogg", "pitch": 1, "volume": 0.5}
+	],
+	"vice_x-ray_pulse_fire":[
+		{"file": "sounds/weapons/vice_x-ray_pulse_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_lrburstpd_fire":[
+		{"file": "sounds/weapons/vice_lrburstpd_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_siege_burst_fire":[
+		{"file": "sounds/weapons/vice_siege_burst_fire.ogg", "pitch": 1, "volume": 1}
+	],
+}

@@ -1,0 +1,34 @@
+{
+
+	"combatSmall":{
+		"missp_slasher_standard":10,
+	},
+	"combatMedium":{
+		"missp_nyx_Standard":4,
+		"missp_nyx_Flak":3,
+		"missp_nyx_Elite":3,
+		
+		"missp_tarsus_combat_Standard":4,
+		"missp_tarsus_combat_Flak":6,
+		
+		"missp_nebula_lander_Standard":10,
+	},
+	"combatLarge":{
+		"missp_venture_gamble_Standard":10,
+	},
+	"carrierSmall":{
+		"missp_buffalomkiii_Standard":10,
+	},
+	"carrierMedium":{
+		"missp_starliner_battlecarrier_Standard":7,
+		"missp_starliner_battlecarrier_Swarmer":3,
+	},
+	"personnelMedium":{
+		"missp_nebula_lander_Standard":10,
+	},
+	"personnelLarge":{
+		"missp_starliner_battlecarrier_Standard":7,
+		"missp_starliner_battlecarrier_Swarmer":3,
+	},
+	
+}

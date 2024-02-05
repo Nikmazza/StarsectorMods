@@ -1,0 +1,233 @@
+{
+  "hullName": "Epattcud XXXII",
+  "hullId": "LTA_Epattcudxxxii",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/LTA/ships/Epattcud/Epattcud_32_Class_Scrapship.png",
+  "style": "LOW_TECH",
+  "height": 200,
+  "width": 150,
+  "center": [75, 100],
+  "collisionRadius": 184.5,
+  "shieldCenter": [8, -0],
+  "shieldRadius": 132.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "comp_structure"
+  ],
+  "builtInWings": [
+    "LTA_DiademP_Wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [24, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [3, -0],
+      "renderOrderMod": 50
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [84, -38]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": -45,
+      "locations": [56, -38]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -112.5,
+      "locations": [18, -45]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -135,
+      "locations": [-60, -25]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 135,
+      "locations": [-60, 25]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -12, -0,
+        -20, 12,
+        -20, -12,
+        -34, 8,
+        -34, -8,
+        -26, 6,
+        -26, -5,
+        -21, -0
+      ]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [44, 46]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [41, 40]
+    },
+    {
+      "id": "WS0010",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [46, 40],
+      "renderOrderMod": -100
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-80, 4],
+      "length": 50,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-80, -4],
+      "length": 50,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-52, 42],
+      "length": 60,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-52, -42],
+      "length": 60,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-52, 48],
+      "length": 50,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-52, -48],
+      "length": 50,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-52, 36],
+      "length": 50,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-52, -36],
+      "length": 50,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -6, -50,
+    -29, -57,
+    -52, -52,
+    -50, -28.5,
+    -62.5, -30.5,
+    -67, -23,
+    -88, -16,
+    -79, -9,
+    -79, 9,
+    -88, 16,
+    -67, 23,
+    -62.5, 30.5,
+    -50, 28.5,
+    -52, 52,
+    -29, 57,
+    -6, 50,
+    1, 50,
+    15, 35,
+    39, 32,
+    48, 21,
+    33, 15,
+    29, 10,
+    29, -10,
+    33, -15,
+    39, -15,
+    76, -31,
+    85, -31,
+    85, -44,
+    79, -45,
+    78, -65,
+    45, -62,
+    6, -63,
+    -1, -50
+  ]
+}

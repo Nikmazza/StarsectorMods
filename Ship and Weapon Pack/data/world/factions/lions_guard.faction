@@ -1,0 +1,42 @@
+{
+    "hullFrequency":{
+        "hulls":{
+            "buffalo":0,
+
+            "swp_vigilance_lions_guard":0.25, # Rare because no non-LG equivalent
+
+            "swp_champion_lions_guard":0.25, # Rare because no non-LG equivalent
+
+            "swp_conquest_lions_guard":0.25, # Rare because no non-LG equivalent
+        },
+    },
+    "knownShips":{
+        "hulls":[
+            "swp_buffalo_diktat",
+
+            "swp_vigilance_lions_guard",
+
+            "swp_champion_lions_guard",
+
+            "swp_conquest_lions_guard",
+        ],
+    },
+    "knownWeapons":{
+        "weapons":[
+            "swp_tripleflak",
+
+            "swp_hornet",
+            "swp_iontorpedo",
+
+            "swp_inferno",
+            "swp_tornado",
+
+            "swp_trebuchet",
+
+            "swp_lightphaselance",
+
+            "swp_ionblaster",
+            "swp_lightninggun",
+        ],
+    },
+},

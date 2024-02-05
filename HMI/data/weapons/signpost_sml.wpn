@@ -1,0 +1,67 @@
+{
+  "id": "signpost_sml",
+  "specClass": "projectile",
+  "projectileSpecId": "signpost_proj",
+  "type": "MISSILE",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/signpost_launcher_turret_base.png",
+  "hardpointSprite": "graphics/weapons/signpost_launcher_hardpoint_base.png",
+  "turretOffsets": [
+    6.5,
+    -7,
+    6.5,
+    7,
+    9,
+    0,
+    7.5,
+    -4.5,
+    7.5,
+    4.5
+  ],
+  "turretAngleOffsets": [
+    -7,
+    7,
+    0,
+    -3.5,
+    3.5
+  ],
+  "hardpointOffsets": [
+    6,
+    -7,
+    6,
+    7,
+    9,
+    0,
+    7,
+    -4.5,
+    7,
+    4.5
+  ],
+  "hardpointAngleOffsets": [
+    -7,
+    7,
+    0,
+    -3.5,
+    3.5
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 14,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1.5,
+    "cloudRadius": 12,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 0.45,
+    "blowbackLength": 20,
+    "blowbackSpread": 6,
+    "particleColor": [
+      255,
+      175,
+      95,
+      95
+    ]
+  },
+  "fireSoundTwo": "annihilator_fire"
+}

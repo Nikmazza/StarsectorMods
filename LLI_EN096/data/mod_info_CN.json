@@ -1,0 +1,19 @@
+{
+   "id":"LLI",
+	"name":"楼兰军工综合体",
+	"author": "厉害啊",
+	"version":"1.8.11",
+	"description":"新增楼兰军工综合体势力",
+	"gameVersion":"0.96a-RC9",
+	"jars":["jar/LLI.jar"],
+	"modPlugin": "data.SSPModPlugin",
+	  "dependencies": [ {
+            "id": "lw_lazylib",
+            "name": "LazyLib",
+        },
+		{
+            "id": "MagicLib",
+            "name": "MagicLib",
+        },
+    ],
+}

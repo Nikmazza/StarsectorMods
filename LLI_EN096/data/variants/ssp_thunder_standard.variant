@@ -1,0 +1,49 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 25,
+    "goalVariant": true,
+    "hullId": "ssp_thunder",
+    "hullMods": [
+        "targetingunit",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_thunder_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0011": "hil"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "sabotpod",
+                "WS0008": "sabotpod",
+                "WS0012": "sabot",
+                "WS0013": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "ssp_gravitonluncher",
+                "WS0010": "ssp_gravitonluncher"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_FragMachinegun",
+                "WS0002": "ssp_FragMachinegun",
+                "WS0005": "ssp_FragMachinegun",
+                "WS0006": "ssp_FragMachinegun"
+            }
+        }
+    ]
+}

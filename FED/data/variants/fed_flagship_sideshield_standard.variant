@@ -1,0 +1,14 @@
+{
+  "variantId": "fed_flagship_sideshield_standard",
+  "hullId": "fed_flagship_sideshield",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

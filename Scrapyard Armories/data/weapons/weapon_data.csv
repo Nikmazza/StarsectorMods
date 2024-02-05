@@ -1,0 +1,17 @@
+name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
+cast_deco,sa_cast_decor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,1
+trocar_deco,sa_trocar_decor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,1
+lobster_deco,lobster_deco,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,1
+lunchbox_deco,sa_lunchbox_deco,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,1
+Mounted Cannon (K),sa_durand_kinetic,0,,100,300,,30,,1,50,1,,,,KINETIC,3,,0,0.2,1,,0,15,1,15,,600,,,10,,,"PD, SYSTEM",,,,,Point Defense,,,,,,,,,,0.5
+Mounted Cannon (F),sa_durand_frag,0,,100,300,,25,,1,75,4,,,,FRAGMENTATION,1,,0,0.1,1,,0,15,1,15,,800,,,10,,,"PD, SYSTEM",,,,,Point Defense,,,,,,,,,,1
+Minibeam Node,sa_durand_head,2,,600,250,90,,10,0,100,7,4,0.6,,ENERGY,,90,0.1,0.1,0.8,0.1,,,,,10000,,,,,,,"PD,ANTI_FTR,SYSTEM","pd9, beam6",,,,Point Defense,,,,,,,,,,19.7
+Mono Machine Gun,sa_mono_mg,0,,1200,500,,40,,3,50,10,,,,KINETIC,15,,0,0.2,4,0.1,0,4,1,15,,700,,,30,,,,"no_sell, no_drop, no_drop_salvage",,,,Pressure,,,,,,,,,,3.85
+Light Cannon,lightag_fighter,,,,600,,35,,3,40,1,,,,FRAGMENTATION,40,,0,0.5,5,0,0,5,1,5,,800,,,30,,,SYSTEM,,,,,,,,,,,,,,,3
+Staros,sa_staros,3,,5000,1200,,1500,,300,3,50,,,,HIGH_EXPLOSIVE,2500,,1,7,,,,,,,,1400,,,400,,,SYSTEM,,,,,Strike,,,,,,,,,,6
+Loki Autocannon,sa_loki,2,0.6,3000,800,,200,100,8,20,12,,,,ENERGY,300,,0,0.85,1,,0,4,1,10,,900,,,75,,,,"energy18, he17, kinetic17, remnant, rare_bp, hist1t, merc,",,,,General,,,,,,,,,,7.5
+Earthshaker Cannon,sa_earthshaker,,,,1200,,1750,,400,2,50,,,,HIGH_EXPLOSIVE,2000,,.5,8,2,0.6,4,10,1,4,,600,,,500,,,SYSTEM,,,,,Strike,,,,,,,,,,53
+Erbe Drone Launcher,sa_erbe,1,0.7,1200,2000,,1250,,15,10,10,10,,,HIGH_EXPLOSIVE,0,,0,8,1,0,0,0,0,,,400,100,7,450,,,"CONSERVE_FOR_ANTI_ARMOR, DIRECT_AIM,","rare_bp, remnant, hist1t, missile_bp, merc, missile13",,,,Anti Armor,Medium,Poor,,,,,,,TRUE,12.06
+Delimited Blaster,sa_limited_blaster,0,,1000,250,,800,100,0,0,10,4,,,ENERGY,1200,,0,1,,,,,,,,1000,,,,,,SYSTEM,,,,,Strike,,,,,,,,,,22.125
+Hypermatter Condenser,sa_hypermatter,3,0.5,9000,800,1600,,200,25,8,30,,,,HIGH_EXPLOSIVE,,2000,1,2,1,10,,,,,10000,,,,,,,"FIRE_WHEN_INEFFICIENT, CONSERVE_FOR_ANTI_ARMOR","energy20, beam15, LR, rare_bp, hist1t, merc",,,,Strike,,,,,,,,,,27
+Infernium Ejector,sa_radcannon,1,0.8,8000,900,,2000,750,30,10,24,,,,FRAGMENTATION,1800,,1,6.50,1,1,1,3,1,0.5,,800,,,500,,,FIRE_WHEN_INEFFICIENT,"energy20, LR, pirate_bp, LP_bp",,,,Finisher,,,,,,,,,,232

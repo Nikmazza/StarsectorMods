@@ -1,0 +1,68 @@
+{
+  "variantId": "sa_cast_beamer",
+  "hullId": "sa_cast",
+  "displayName": "Beamer",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "advancedoptics"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "gazerpod",
+        "WS0014": "gazerpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "tachyonlance"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "gravitonbeam",
+        "WS0002": "gravitonbeam",
+        "WS0003": "gravitonbeam",
+        "WS0004": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "pdlaser",
+        "WS0008": "pdlaser",
+        "WS0011": "pdlaser",
+        "WS0012": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "heavyburst",
+        "WS0006": "heavyburst",
+        "WS0009": "heavyburst",
+        "WS0010": "heavyburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "claw_wing",
+    "claw_wing",
+    "wasp_wing",
+    "wasp_wing"
+  ]
+}

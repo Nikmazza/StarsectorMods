@@ -1,0 +1,6 @@
+trail,projectile,sprite,minLength,fadeIn,duration,fadeOut,sizeIn,sizeOut,colorIn,colorOut,opacity,textLength,textScroll,distance,dispersion,drift,fadeOnFadeOut,angleAdjustment,additive,velocityIn,velocityOut,randomVelocity,angle,rotationIn,rotationOut,randomRotation,renderBelowExplosions
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fed_flak_trail1,fed_flak1_scrap_clone,base_trail,70,0.05,0.1,0.15,25,5,"[155,165,125]","[95,95,205]",0.2,400,20,10,5,1,TRUE,TRUE,TRUE,70,10,0.2,0,20,0,TRUE,TRUE
+fed_flak_trail2,fed_flak2_scrap_clone,base_trail,95,0.05,0.15,0.25,25,5,"[155,175,125]","[95,95,225]",0.22,400,20,10,5,1,TRUE,TRUE,TRUE,50,10,0.2,0,20,0,TRUE,TRUE
+fed_flak_trail3,fed_flak3_scrap_clone,base_trail,110,0.05,0.2,0.2,25,5,"[155,185,125]","[95,95,245]",0.24,400,20,10,5,1,TRUE,TRUE,TRUE,30,10,0.2,0,20,0,TRUE,TRUE
+fed_flak_trail4,fed_flak4_scrap_clone,base_trail,125,0.05,0.3,0.3,25,5,"[155,195,125]","[95,95,255]",0.26,400,20,10,5,1,TRUE,TRUE,TRUE,30,20,0.3,0,20,0,TRUE,TRUE

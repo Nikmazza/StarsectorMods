@@ -1,0 +1,9 @@
+{
+# ASSAULT MJOLNIR
+	 "nes_assault_mjolnir_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/mjolnir_fire_03.ogg","pitch":1.05,"volume":0.65},
+		{"file":"sounds/sfx_wpn_guns/mjolnir_fire_04.ogg","pitch":1.03,"volume":0.65},
+		{"file":"sounds/sfx_wpn_guns/mjolnir_fire_05.ogg","pitch":1.01,"volume":0.65},
+	],
+}

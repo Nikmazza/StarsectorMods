@@ -1,0 +1,61 @@
+{
+  "variantId": "fed_gun_module_heavy",
+  "hullId": "fed_gun_module",
+  "displayName": "Heavy",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_burstlaser3",
+        "WS0006": "fed_burstlaser3",
+        "WS0007": "fed_burstlaser3",
+        "WS0008": "fed_burstlaser3"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "shredder",
+        "WS0002": "shredder",
+        "WS0003": "shredder",
+        "WS0004": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "fed_duallaser",
+        "WS0015": "fed_duallaser",
+        "WS0016": "fed_duallaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "fed_singlelaser",
+        "WS0011": "fed_singlelaser",
+        "WS0012": "fed_singlelaser",
+        "WS0013": "fed_singlelaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

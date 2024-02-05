@@ -1,0 +1,15 @@
+{
+	"id":"ssp_missleswarm",
+	"type":"STAT_MOD",
+	###"aiType":"WEAPON_BOOST",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.ssp_missileswarmAI",
+	
+	"statsScript":"data.shipsystems.ssp_missleswarm",
+	
+	"weaponTypes":[MISSILE],
+
+	"useSound":"system_fast_missile_racks",
+	"outOfUsesSound":"gun_out_of_ammo",
+
+}

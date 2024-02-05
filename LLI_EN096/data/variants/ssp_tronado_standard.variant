@@ -1,0 +1,58 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 13,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "ssp_tronado",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange",
+        "heavyarmor",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_tronado_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0017": "ssp_LargeMissile",
+                "WS0018": "ssp_LargeMissile"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0015": "ssp_MedMissle",
+                "WS0016": "ssp_MedMissle"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "gauss",
+                "WS0012": "gauss",
+                "WS0013": "gauss",
+                "WS0014": "gauss"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0009": "ssp_spot"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0010": "ssp_TriFlak"}
+        }
+    ],
+    "wings": [
+        "ssp_mercurylake",
+        "ssp_mercurylake"
+    ]
+}

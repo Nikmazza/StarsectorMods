@@ -1,0 +1,154 @@
+{
+  "hullName": "Polyp",
+  "hullId": "fed_polyp",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/slug/fed_polyp.png",
+  "style": "FEDERATION",
+  "height": 149,
+  "width": 90,
+  "center": [45, 74.5],
+  "collisionRadius": 98,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 90,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "fed_biocloak",
+    "phasefield",
+    "fed_energybuiltin"
+  ],
+  "builtInWeapons": {
+    "WS0005": "shockrepeater",
+    "WS0006": "shockrepeater"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [58.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 72.5,
+      "locations": [21.5, 27]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -72.5,
+      "locations": [21.5, -27]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 180,
+      "locations": [-61, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 180,
+      "locations": [-49.5, 33]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": -180,
+      "locations": [-49.5, -33]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-20, 23.5],
+      "length": 34.5,
+      "width": 5,
+      "angle": -179,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-20, -23.5],
+      "length": 34.5,
+      "width": 5,
+      "angle": 179,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-20.5, -19],
+      "length": 47.062653,
+      "width": 6.358255,
+      "angle": -179,
+      "contrailSize": 6.358255,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-20.5, 19],
+      "length": 47.062653,
+      "width": 6.358255,
+      "angle": 179,
+      "contrailSize": 6.358255,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22, -14],
+      "length": 51.393261,
+      "width": 9.743205,
+      "angle": -176.5,
+      "contrailSize": 9.743205,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22, 14],
+      "length": 51.393261,
+      "width": 9.743205,
+      "angle": 176.5,
+      "contrailSize": 9.743205,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-65, -0],
+      "length": 62.5,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -65.5, 5.5,
+    -22, 8.5,
+    -13.5, 25.5,
+    -46, 32,
+    -5.5, 37,
+    37.5, 23,
+    58, 6,
+    58, -6,
+    37.5, -23,
+    -5.5, -37,
+    -46, -32,
+    -13.5, -25.5,
+    -22, -8.5,
+    -65.5, -5.5
+  ]
+}

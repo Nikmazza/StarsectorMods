@@ -1,0 +1,52 @@
+{
+  "id": "fed_ion2",
+  "onHitEffect":"com.fs.starfarer.api.impl.combat.IonCannonOnHitEffect",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_ion2_shot",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/FED/weapons/fed_ion2_turret.png",
+  "turretGlowSprite": "graphics/FED/weapons/fed_ion2_turret_glow.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_ion2_hardpoint.png",
+  "hardpointGlowSprite": "graphics/FED/weapons/fed_ion2_hardpoint_glow.png",
+  "renderAboveAllWeapons": 0,
+  "glowColor": [
+    25,
+    205,
+    255,
+    200
+  ],
+  "turretOffsets": [
+    9,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    3,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 50,
+    "spread": 30,
+    "particleSizeMin": 15,
+    "particleSizeRange": 10,
+    "particleDuration": 0.05,
+    "particleCount": 25,
+    "particleColor": [
+      25,
+      225,
+      255,
+      200
+    ]
+  },
+  "textureType": ROUGH,
+  "fireSoundTwo": "needler_fire"
+}

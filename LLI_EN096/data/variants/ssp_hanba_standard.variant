@@ -1,0 +1,53 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 12,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "ssp_hanba",
+    "hullMods": [
+        "targetingunit",
+        "advancedoptics",
+        "eccm",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_hanba_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0017": "hil"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0013": "squall",
+                "WS0014": "squall",
+                "WS0015": "squall",
+                "WS0016": "squall"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_heatbeam",
+                "WS0002": "ssp_heatbeam",
+                "WS0005": "ionbeam",
+                "WS0006": "ionbeam",
+                "WS0008": "ssp_heatbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "flak",
+                "WS0004": "flak",
+                "WS0007": "flak"
+            }
+        }
+    ]
+}

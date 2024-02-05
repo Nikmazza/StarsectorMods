@@ -1,0 +1,43 @@
+{
+	"id":"bc_ramburn",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"data.shipsystems.scripts.BcRamBurnStats1",
+	
+	"engineGlowColor":[255,93,35,255],
+	#"engineGlowContrailColor":[255,93,35,25],
+	"engineGlowLengthMult":4,
+	"engineGlowWidthMult":2,
+	"engineGlowGlowMult":1.5,
+	
+	"jitterUnderColor":[255,93,35,115],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":7,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"jitterColor":[255,93,35,35],
+	"jitterCopies":2,
+	"jitterMinRange":0,
+	"jitterRange":5,
+	"jitterRangeRadiusFraction":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+	#"useSound":"system_burn_drive_activate",
+	#"loopSound":"system_burn_drive_loop",
+	#"deactivateSound":"system_burn_drive_deactivate",
+	#"outOfUsesSound":"engine_disabled",
+	
+	"useSound":"system_plasma_burn",
+	"loopSound":"system_plasma_burn_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":600,
+		"burstMovementPotential":400,
+	}
+}

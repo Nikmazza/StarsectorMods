@@ -1,0 +1,96 @@
+id,trigger,conditions,script,text,options,notes
+# Defense Mission,,,,,,
+mmm_dmBlurb,mmm_dm_blurb,,,"""There $mmm_dm_fleet_desc_contact we would like your help in repelling.""",,
+mmm_dmOfferOption,mmm_dm_option,,,,mmm_dm_start:Ask about the invasion fleet.,
+mmm_dmOfferTextContact,DialogOptionSelected,$option == mmm_dm_start,"$missionId = mmm_dm
+ShowPersonVisual
+Highlight $mmm_dm_reward
+Call $mmm_dm_ref showBountyDetail","""You came at just the right time."" $heOrShe replies. ""These are all the reports we got from military intelligence. The reward is $mmm_dm_reward credits, assuming the station can be successfully defended.""","contact_accept:Accept
+contact_decline:Decline",
+mmm_dmBlurbBar,mmm_dm_blurbBar,,,You received an urgent summon from the station commander.,,
+mmm_dmOfferOptionBar,mmm_dm_optionBar,,,,mmm_dm_startBar:Answer the summon of the station commander.,
+mmm_dmOfferTextBar,DialogOptionSelected,$option == mmm_dm_startBar,"$missionId = mmm_dm
+$option = mmm_dm_showOptionsBar 0
+FireBest DialogOptionSelected","""We are being invaded by $mmm_dm_fleet_desc_bar,"" $heOrShe explains. ""We could use some help in our defenses.""",,
+mmm_dmGoBackBarSel,DialogOptionSelected,$option == mmm_dm_showOptionsBar,"# removes map
+ShowPersonVisual",,"mmm_dm_showBountyBar:""How powerful are we looking at?""
+contact_declineBarNoContinue:""You're going to have to find someone else."" (decline)",
+mmm_dmShowBountyBar,DialogOptionSelected,$option == mmm_dm_showBountyBar,"Highlight $mmm_dm_reward
+Call $mmm_dm_ref showBountyDetail","""These are all the reports we got from military intelligence. The reward is $mmm_dm_reward credits, assuming the station can be successfully defended.""","contact_acceptBar:Accept
+contact_declineBarNoContinue:Decline",
+,,,,,,
+# repair mission,,,,,,
+mmm_rmBlurb,mmm_rm_blurb,,,"""We would like you to secure materials for the repair of our $mmm_rm_station_desc.""",,
+mmm_rmOfferOption,mmm_rm_option,,,,mmm_rm_start:Ask about the repair materials.,
+mmm_rmOfferTextContact,DialogOptionSelected,$option == mmm_rm_start,"$missionId = mmm_rm
+ShowPersonVisual
+SetTextHighlights $mmm_rm_supplies $mmm_rm_heavy_machinery $mmm_rm_metals $mmm_rm_rare_metals $mmm_rm_profit_margin $mmm_rm_totalPrice $mmm_rm_time_limit","""Excellent. I need $mmm_rm_supplies supplies, $mmm_rm_heavy_machinery heavy machinery, $mmm_rm_metals metals, and $mmm_rm_rare_metals transplutonics,"" $heOrShe explains. ""You will be paid $mmm_rm_profit_margin above the base price, which amounts to $mmm_rm_totalPrice credits total if you can bring me these commodities in $mmm_rm_time_limit days.""
+
+""I won't ask, and you won't tell me, where you would acquire the materials in such quantities. You interested?""","contact_accept:Accept
+contact_decline:Decline",
+mmm_rmBlurbBar,mmm_rm_blurbBar,,,You noticed that the $mmm_rm_station_desc is in terrible shape.,,
+mmm_rmOfferOptionBar,mmm_rm_optionBar,,,,mmm_rm_startBar:Pay a visit to the station commander.,
+mmm_rmOfferTextBar,DialogOptionSelected,$option == mmm_rm_startBar,$missionId = mmm_rm,"""Yes, our $mmm_rm_station_desc. We are running into some logistical challenges in our restoration efforts,"" $heOrShe grumbles. ""Apparently the higher-ups have better priorities.""
+
+Suddenly, a light bulb went off inside $hisOrHer head. ""You know, a freewheeling captain like you might be exactly who I need. I have the credits, just not the channels to properly spend it. You interested?""","mmm_rm_showDetail:""What do you need?""",
+mmm_rmShowDetail,DialogOptionSelected,$option == mmm_rm_showDetail,"# removes map
+ShowPersonVisual
+SetTextHighlights $mmm_rm_supplies $mmm_rm_heavy_machinery $mmm_rm_metals $mmm_rm_rare_metals $mmm_rm_profit_margin $mmm_rm_totalPrice $mmm_rm_time_limit","""Excellent. I need $mmm_rm_supplies supplies, $mmm_rm_heavy_machinery heavy machinery, $mmm_rm_metals metals, and $mmm_rm_rare_metals transplutonics,"" $heOrShe explains. ""You will be paid $mmm_rm_profit_margin above the base price, which amounts to $mmm_rm_totalPrice credits total if you can bring me these commodities in $mmm_rm_time_limit days.""
+
+""I won't ask, and you won't tell me, where you would acquire the materials in such quantities. Deal?""","contact_acceptBar:""It's a deal.""
+contact_declineBarNoContinue:Decline",
+,,,,,,
+mmm_rmDeliverGreetingNotEnough,PickGreeting,"$mmm_rm_needsCommodity score:20000
+Call $mmm_rm_ref updateData
+!$mmm_rm_playerHasEnough","ShowPersonVisual
+SetTextHighlights $mmm_rm_supplies $mmm_rm_heavy_machinery $mmm_rm_metals $mmm_rm_rare_metals
+FireAll PopulateOptions","""You having difficulty acquiring the materials?"" $heOrShe asks. ""I need $mmm_rm_supplies supplies, $mmm_rm_heavy_machinery heavy machinery, $mmm_rm_metals metals, and $mmm_rm_rare_metals transplutonics.""
+
+""Is there anything else you want to talk about?""",,
+mmm_rmDeliverGreeting,PickGreeting,"$mmm_rm_needsCommodity score:20000
+Call $mmm_rm_ref updateData
+$mmm_rm_playerHasEnough",ShowPersonVisual,"""So you came through, just as I expected,"" $heOrShe nods with approval. ""I'll show you where you can unload the materials.""",mmm_rm_deliver:Unload the materials.,
+mmm_rmDeliverOptionSel,DialogOptionSelected,$option == mmm_rm_deliver,"RemoveCommodity supplies $mmm_rm_supplies
+RemoveCommodity heavy_machinery $mmm_rm_heavy_machinery
+RemoveCommodity metals $mmm_rm_metals
+RemoveCommodity rare_metals $mmm_rm_rare_metals
+$mmm_rm_completed = true
+Call $mmm_rm_ref updateStage
+FireAll PopulateOptions","""Anything else you want to talk about?""",,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,

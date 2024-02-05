@@ -1,0 +1,66 @@
+{
+	"id":"ssp_hivedrone",
+	"type":"DRONE_LAUNCHER",
+	"aiType":"DRONE_LAUNCHER_PD",
+	
+	"droneVariant":"ssp_hivedrone",
+	
+	"allowFreeRoam":true,
+	
+	"launchSpeed":300,
+	"launchDelay":0.5,
+	"maxDrones":4,
+	"droneBehavior":[
+		{"droneIndex":[0],
+		 "defaultFacing":"MATCH_DRONE_HEADING",	# MATCH_DRONE_HEADING, MATCH_SHIP_HEADING, MATCH_SHIP_FACING, AWAY_FROM_SHIP
+		 "faceEnemy":true,
+		 "holdRoamRange":70,
+		 "freeRoamRange":100,
+		 "targetPriority":[MISSILE, FIGHTER, SHIP], # also SHIP_TARGET to prefer targeting the mothership's target
+		 "initialOrbitAngle":-45,
+		 "orbitRadius":40, 				# plus ship radius
+		 "orbitDir":1, 					# -1 or 1
+		 "orbitSpeed":0, 				# pixels/second
+		},
+		{"droneIndex":[1],
+		 "defaultFacing":"MATCH_DRONE_HEADING",
+		 "faceEnemy":true,
+		 "holdRoamRange":70,
+		 "freeRoamRange":100,
+		 "targetPriority":[MISSILE, FIGHTER, SHIP],
+		 "initialOrbitAngle":45,
+		 "orbitRadius":20,
+		 "orbitDir":-1,
+		 "orbitSpeed":0,
+		},
+		{"droneIndex":[2],
+		 "defaultFacing":"MATCH_DRONE_HEADING",	# MATCH_DRONE_HEADING, MATCH_SHIP_HEADING, MATCH_SHIP_FACING, AWAY_FROM_SHIP
+		 "faceEnemy":true,
+		 "holdRoamRange":70,
+		 "freeRoamRange":100,
+		 "targetPriority":[MISSILE, FIGHTER, SHIP], # also SHIP_TARGET to prefer targeting the mothership's target
+		 "initialOrbitAngle":135,
+		 "orbitRadius":40, 				# plus ship radius
+		 "orbitDir":1, 					# -1 or 1
+		 "orbitSpeed":0, 				# pixels/second
+		},
+		{"droneIndex":[3],
+		 "defaultFacing":"MATCH_DRONE_HEADING",	# MATCH_DRONE_HEADING, MATCH_SHIP_HEADING, MATCH_SHIP_FACING, AWAY_FROM_SHIP
+		 "faceEnemy":true,
+		 "holdRoamRange":70,
+		 "freeRoamRange":100,
+		 "targetPriority":[MISSILE, FIGHTER, SHIP], # also SHIP_TARGET to prefer targeting the mothership's target
+		 "initialOrbitAngle":-135,
+		 "orbitRadius":40, 				# plus ship radius
+		 "orbitDir":1, 					# -1 or 1
+		 "orbitSpeed":0, 				# pixels/second
+		},
+	],
+	
+	"useSound":"drone_launch",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"nes": {
+		# strings for translation
+		
+		# hullmods
+		"hullmod_hotloadedmissiles1": "Hot-Loaded Missiles",
+		"hullmod_hotloadedmissiles2": "Rate of Fire +",
+		"hullmod_hotloadedmissiles3": "current flux",
+		"hullmod_volatileshells": "CRITICAL!",
+		
+		# shipsystems
+		"system_crystalresonance": "Volatile Weaponry",
+		
+		# missions
+		"mission_sim1": "You",
+		"mission_sim2": "Them",
+		"mission_sim3": "Burn bright Starfarer."
+	}
+}

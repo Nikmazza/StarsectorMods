@@ -1,0 +1,327 @@
+{
+  "hullName": "Pangolin",
+  "hullId": "sa_pangolin",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/sa_pangolin.png",
+  "style": "LOW_TECH",
+  "height": 406,
+  "width": 168,
+  "center": [84, 211],
+  "collisionRadius": 240,
+  "shieldCenter": [-8, 0],
+  "shieldRadius": 223,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fluxbreakers"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": -90,
+      "locations": [-28, -61]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 90,
+      "locations": [-28, 61]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 129,
+      "angle": -68,
+      "locations": [33, -50]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 129,
+      "angle": 68,
+      "locations": [33, 50]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 173,
+      "angle": -40,
+      "locations": [75, -40]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 173,
+      "angle": 40,
+      "locations": [75, 40]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 151,
+      "angle": -85.5,
+      "locations": [129, -40]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 151,
+      "angle": 85.5,
+      "locations": [129, 40]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 196,
+      "angle": -49,
+      "locations": [160, -29]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 196,
+      "angle": 49,
+      "locations": [160, 29]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 103,
+      "angle": -72.5,
+      "locations": [-141, -58]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 103,
+      "angle": 72.5,
+      "locations": [-141, 58]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": -130,
+      "locations": [-169, -70]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 130,
+      "locations": [-169, 70]
+    },
+    {
+      "id": "WS0015",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 113,
+      "angle": -116.5,
+      "locations": [-72, -49]
+    },
+    {
+      "id": "WS0016",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 113,
+      "angle": 116.5,
+      "locations": [-72, 49]
+    },
+    {
+      "id": "WS0017",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 0,
+      "locations": [54, -0]
+    },
+    {
+      "id": "WS0018",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 260,
+      "angle": 0,
+      "locations": [0, 0],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        89.5, 0.5,
+        89.5, 12.5,
+        89.5, 6.5,
+        89.5, -5.5,
+        89.5, -11.5
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        115.5, 0.5,
+        115.5, 12.5,
+        115.5, 6.5,
+        115.5, -5.5,
+        115.5, -11.5
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        135.5, 0.5,
+        135.5, 12.5,
+        135.5, 6.5,
+        135.5, -5.5,
+        135.5, -11.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-201, -34],
+      "length": 36,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-201, 34],
+      "length": 36,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-206, -48],
+      "length": 48.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-206, 48],
+      "length": 48.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-207, -67],
+      "length": 51,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-207, 67],
+      "length": 51,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-202, -57],
+      "length": 37,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-202, 57],
+      "length": 37,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    170, 19,
+    191, 19,
+    188, 27,
+    140, 56,
+    46, 58,
+    17, 70,
+    -14, 71,
+    -40.5, 77,
+    -47, 71,
+    -142, 73,
+    -158, 82,
+    -207, 72,
+    -201, 29,
+    -173, 30,
+    -173, 13,
+    -187, 8,
+    -187, -8,
+    -173, -13,
+    -173, -30,
+    -201, -29,
+    -207, -72,
+    -158, -82,
+    -142, -73,
+    -47, -71,
+    -40.5, -77,
+    -14, -71,
+    17, -70,
+    46, -58,
+    140, -56,
+    188, -27,
+    191, -19,
+    170, -19
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "variantId": "fed_module_outer_gun_attack",
+  "hullId": "fed_module_outer_gun",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "multineedler",
+        "WS0004": "multineedler",
+        "WS0007": "multineedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "heavymortar",
+        "WS0006": "heavymortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "lightmortar",
+        "WS0009": "lightmortar",
+        "WS0010": "lightmortar",
+        "WS0011": "lightmortar",
+        "WS0012": "lightmortar",
+        "WS0013": "lightmortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "devastator",
+        "WS0002": "devastator"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [
+    {
+      "fed_outergun_left_module": "fed_module_blocker1_standard"
+    },
+    {
+      "fed_outergun_right_module": "fed_module_blocker1_standard"
+    }
+  ],
+  "wings": []
+}

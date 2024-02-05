@@ -1,0 +1,77 @@
+{
+  "hullName": "Right Weapons Arm",
+  "hullId": "LTA_Reckoner_Upcycled_RightArm",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/LTA/ships/Epattcud/Upcyclers_Sect/Upcyclers_Sect_Complex_Modules/LTA_ReckonerRightArm.png",
+  "style": "LOW_TECH",
+  "height": 200,
+  "width": 60,
+  "center": [31, 86],
+  "collisionRadius": 338.5,
+  "shieldCenter": [0, 4],
+  "shieldRadius": 160,
+  "viewOffset": 0,
+  "builtInMods": [
+    "LTA_TargetingComputer",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -135,
+      "locations": [-60, 1]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -67.5,
+      "locations": [31, -8]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 0,
+      "locations": [49, 7]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [97, 4]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -85, 5,
+    -67, 16,
+    -30, 21,
+    -24, 27,
+    -2, 27,
+    -2, 23,
+    57, 22,
+    64, 16,
+    82, 22,
+    107, 21,
+    107, -13,
+    58, -11,
+    58, -19,
+    53, -23,
+    -12, -25,
+    -17, -22,
+    -60, -10,
+    -78, -10
+  ]
+}

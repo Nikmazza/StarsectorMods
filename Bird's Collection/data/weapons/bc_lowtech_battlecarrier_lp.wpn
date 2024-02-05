@@ -1,0 +1,37 @@
+{
+  "id": "bc_lowtech_battlecarrier_lp",
+  "specClass": "beam",
+  "type": "DECORATIVE",
+  "size": "SMALL",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/bc_lowtech_battlecarrier_lp_deco.png",
+  "hardpointSprite": "graphics/weapons/bc_lowtech_battlecarrier_lp_deco.png",
+  "glowColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [],
+  "turretAngleOffsets": [],
+  "hardpointOffsets": [],
+  "hardpointAngleOffsets": [],
+  "fringeColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 10,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 1
+}

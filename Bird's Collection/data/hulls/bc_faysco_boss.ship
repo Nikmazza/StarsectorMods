@@ -1,0 +1,149 @@
+{
+  "hullName": "Erudition",
+  "hullId": "bc_faysco_boss",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/secret (don't look in here!!!)/bc_faysco_abomination.png",
+  "style": "LOW_TECH",
+  "height": 338,
+  "width": 228,
+  "center": [108.5, 127],
+  "collisionRadius": 296,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 262.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [14, -32.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [-27, -49.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [1, 38.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [-26, 55]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-102, -37],
+      "length": 66.959999,
+      "width": 24.040001,
+      "angle": -164,
+      "contrailSize": 24.040001,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-93.5, 45],
+      "length": 39.5,
+      "width": 9,
+      "angle": 119.5,
+      "contrailSize": 9,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-96.5, 38.5],
+      "length": 39.5,
+      "width": 9,
+      "angle": -156,
+      "contrailSize": 9,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-93.5, 43],
+      "length": 19.456791,
+      "width": 15.45099,
+      "angle": 161.5,
+      "contrailSize": 15.45099,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-98.5, 46],
+      "length": 66.959999,
+      "width": 24.040001,
+      "angle": 175.5,
+      "contrailSize": 24.040001,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-100.5, -36.5],
+      "length": 11.185389,
+      "width": 19.93861,
+      "angle": -164,
+      "contrailSize": 19.93861,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-104.5, -31],
+      "length": 50.903992,
+      "width": 8.667993,
+      "angle": 167,
+      "contrailSize": 8.667993,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-99.5, -41],
+      "length": 37.923462,
+      "width": 10.355871,
+      "angle": -115.5,
+      "contrailSize": 10.355871,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-93, 45.5],
+      "length": 16.914764,
+      "width": 6.046741,
+      "angle": 71.5,
+      "contrailSize": 6.046741,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-99.5, -39.5],
+      "length": 18.452202,
+      "width": 4.697346,
+      "angle": -63.5,
+      "contrailSize": 4.697346,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    96.5, 21,
+    145.5, 21.5,
+    -8.5, 85,
+    -123.5, 10.5,
+    -122.5, -9,
+    -69.5, -44.5,
+    -81, -53.5,
+    -1.5, -94,
+    102, -50.5,
+    105, -38,
+    121.5, -42.5,
+    205.5, -7,
+    95.5, -5.5
+  ]
+}

@@ -1,0 +1,43 @@
+{
+    "displayName": "Hammer",
+    "fluxCapacitors": 0,
+    "fluxVents": 4,
+    "hullId": "swp_striker_luddic_church",
+    "hullMods": [
+        "converted_hangar",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "swp_striker_luddic_church_ham",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "lightac",
+                "WS0002": "lightac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "hammer",
+                "WS0004": "hammer",
+                "WS0005": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "lightdualmg",
+                "WS0007": "lightdualmg",
+                "WS0008": "lightdualmg",
+                "WS0009": "lightdualmg"
+            }
+        }
+    ],
+    "wings": ["perdition_wing"]
+}

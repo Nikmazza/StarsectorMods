@@ -1,0 +1,39 @@
+{
+  "id": "ssp_shortgun",
+  "specClass": "projectile",
+  "projectileSpecId": "ssp_shortgun_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "everyFrameEffect":"data.weapon.ssp_shortgunEffect",
+  "turretSprite": "graphics/weapons/ssp_shortgun_turrent_base.png",
+  "turretGunSprite": "graphics/weapons/ssp_shortgun_turrent_recoli.png",
+  "hardpointSprite": "graphics/weapons/ssp_shortgun_hardpoint_base.png",
+  "hardpointGunSprite": "graphics/weapons/ssp_shortgun_hardpoint_recoli.png",
+  "specialWeaponGlowHeight": 30,
+  "specialWeaponGlowWidth": 10,
+  "visualRecoil": 6,
+  "renderHints": ["RENDER_BARREL_BELOW"],
+  "turretOffsets": [32,0],
+  "turretAngleOffsets": [0],
+  "hardpointOffsets": [43,0],
+  "hardpointAngleOffsets": [0],
+  "barrelMode": "ALTERNATING",
+   "separateRecoilForLinkedBarrels":"TRUE",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 30,
+    "spread": 10,
+    "particleSizeMin": 7,
+    "particleSizeRange": 7,
+    "particleDuration": 0.5,
+    "particleCount": 12,
+    "particleColor": [
+      255,
+      55,
+      155,
+      175
+    ]
+  },
+  "autocharge":true,
+  "fireSoundTwo": "hellbore_fire"
+}

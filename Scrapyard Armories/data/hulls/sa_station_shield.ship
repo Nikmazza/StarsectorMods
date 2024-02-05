@@ -1,0 +1,47 @@
+{
+  "hullName": "Station Shield",
+  "hullId": "sa_station_shield",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/station/sa_station_shield.png",
+  "style": "LOW_TECH",
+  "height": 140,
+  "width": 91,
+  "center": [45, 27],
+  "collisionRadius": 400,
+  "shieldCenter": [-101, 2],
+  "shieldRadius": 450,
+  "viewOffset": 0,
+  "builtInMods": [
+    "supercomputer",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 0,
+      "locations": [34, -0]
+    },
+    {
+      "id": "WS 002",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 0,
+      "locations": [87, -0]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    97, 22,
+    58, 33,
+    15.5, 26,
+    15.5, -26,
+    58, -33,
+    97, -22
+  ]
+}

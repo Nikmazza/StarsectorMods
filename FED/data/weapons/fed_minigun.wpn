@@ -1,0 +1,45 @@
+{
+	"id":"fed_minigun",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"SMALL",
+	"displayArcRadius":400,
+	"turretSprite":"graphics/weapons/light_assault_gun_turret_base.png",
+	"turretGunSprite":"graphics/weapons/light_assault_gun_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/light_assault_gun_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/light_assault_gun_hardpoint_recoil.png",	
+	"visualRecoil":5.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"SMOKE",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":2.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":3.0,
+					   "particleSizeMin":9.0,
+					   "particleSizeRange":5.0,
+					   "particleDuration":1,
+					   "particleCount":4,
+					  "particleColor":[205,205,205,255]},
+	"smokeSpec": {
+    "particleSizeMin": 5,
+    "particleSizeRange": 2,
+    "cloudParticleCount": 1,
+    "cloudDuration": 1,
+    "cloudRadius": 8,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 1.5,
+    "blowbackLength":80,
+    "blowbackSpread": 5,
+    "particleColor": [
+      190,
+      180,
+      170,
+      50
+    ]
+  },
+	"projectileSpecId":"fed_minigun_shot",  # projectile that will be fired
+	"fireSoundTwo":"fed_chaingun_loop",	
+}

@@ -1,0 +1,8 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+nes_borer_wing,nes_drone_borer,"stay_in_front_of_ship, no_drop, no_sell, low",0,,4,0,BOX,0,500,,6,INTERCEPTOR,Drone,5,9001,,,,,,,,,,,,,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+nes_phobos_wing,nes_drone_phobos,"no_drop, no_sell, high",3,,6,0,BOX,0,600,,2,SUPPORT,Point Defense,20,9001,,,,,,,,,,,,,2
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+nes_drone_carnelian_defender_wing,nes_drone_carnelian_defender,"no_drop, no_sell, mid",3,,6,0,BOX,0,700,,1,SUPPORT,Point Defense,20,9001,,,,,,,,,,,,,3
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+nes_drone_carnelian_attacker_wing,nes_drone_carnelian_attacker,"no_drop, no_sell, mid",3,,6,0,BOX,0,700,,1,SUPPORT,Point Defense,20,9001,,,,,,,,,,,,,4

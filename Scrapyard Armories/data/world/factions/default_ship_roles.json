@@ -1,0 +1,181 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+	},
+	"combatSmall":{
+	"sa_cricket_standard":10,
+	"sa_kyresh_standard":5,
+	"sa_kyresh_escort":3,
+	"sa_kyresh_strike":2,
+	"sa_gangster_strike":10,
+	"sa_aberration_standard":5,
+	"sa_aberration_overdriven":5,
+	"sa_gloaming_assault":4,
+	"sa_gloaming_support":6,
+	"sa_murk_standard":8,
+	"sa_murk_strike":2,
+	"sa_ocypote_overdriven":4,
+	"sa_ocypote_supressor":6,
+	},
+	"combatMedium":{
+	"sa_almas_standard":5,
+	"sa_almas_support":3,
+	"sa_almas_overdriven":2,
+	"sa_candela_assault":5,
+	"sa_candela_custom":0,
+	"sa_candela_support":5,
+	"sa_scalpel_mining":3,
+	"sa_scalpel_modified":7,
+	"sa_gorget_attack" :3.5,
+	"sa_gorget_escort" :3.5,
+	"sa_gorget_missile" :3,
+	"sa_mobster_shieldbreaker":4,
+	"sa_mobster_assault":6,
+	"sa_trocar_rammer":10,
+	"sa_manticore_remnant_support":10,
+	},
+	"combatLarge":{
+	"sa_cavern_beamer":3,
+	"sa_cavern_overdriven":3,
+	"sa_cavern_hunter":4,
+	"sa_box_attack":7,
+	"sa_box_support":3,
+	"sa_splint_assault":6,
+	"sa_splint_support":4,
+	"sa_splintXIV_assault":10,
+	"sa_twilight_standard":6,
+	"sa_twilight_custom":0,
+	"sa_twilight_assault":4,
+	"sa_elanus_standard":7,
+	"sa_elanus_strike":3,
+	"sa_elanus_lg_standard":6,
+	"sa_elanus_lg_supressor":4,
+	"sa_pacemaker_support":5,
+	"sa_pacemaker_strike":5,
+	"sa_lobster_arm_left_variant":10,
+	"sa_lobster_arm_right_variant":10,
+	"sa_eradicator_remnant_supression":5,
+	"sa_eradicator_remnant_strike":5,
+	"sa_dominator_remnant_assault":5,
+	"sa_dominator_remnant_strike":5,
+	"sa_perigee_standard":5,
+	"sa_perigee_beamer":3,
+	"sa_perigee_mining":2,
+	"sa_cyclops_beam":5,
+	"sa_cyclops_mining":5,
+	"sa_pillbox_assault":1,
+	},
+	"combatCapital":{
+	"sa_shoggoth_standard":6,
+	"sa_shoggoth_support":2,
+	"sa_shoggoth_defender":2,
+	"sa_eclipse_assault":6,
+	"sa_eclipse_custom":0,
+	"sa_eclipse_support":4,
+	"sa_brace_combat":5,
+	"sa_brace_support":5,
+	"sa_cast_support":10,
+	"sa_lobster_royal":10,
+	"sa_gaia_standard":5,
+	"sa_gaia_support":5,
+	"sa_legion_remnant_assault":3,
+	"sa_legion_remnant_support":3,
+	"sa_legion_remnant_supressor":4,
+	"sa_ageis_assault":10,
+	"sa_pangolin_cudgel":4,
+	"sa_pangolin_supression":6,
+	},
+	
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+	},
+	"combatFreighterMedium":{
+	"sa_hugin_defended":10,
+	"sa_munin_defended":10,
+	},
+	"combatFreighterLarge":{
+	},
+	
+	"civilianRandom":{
+	"sa_scrapship_exploration":4,
+	"sa_scrapship_survey":4,
+	"sa_scrapship_hauler":2,
+	},
+
+	# carriers
+	"carrierSmall":{
+
+	},
+	"carrierMedium":{
+	"sa_penumbra_support":6,
+	"sa_penumbra_assault":4,
+	"sa_skua_screen":10,
+	"sa_ingot_strike":6,
+	"sa_ingot_support":4,
+	},
+	"carrierLarge":{
+
+	},
+
+	# phase ships
+	"phaseSmall":{
+	},
+	"phaseMedium":{
+	},
+	"phaseLarge":{
+	},
+	"phaseCapital":{
+	},
+
+	# freighters and such
+	"freighterSmall":{
+	},
+	"freighterMedium":{
+	},
+	"freighterLarge":{
+	},
+	
+	"tankerSmall":{
+	},
+	"tankerMedium":{
+	},
+	"tankerLarge":{
+	},
+	
+	"personnelSmall":{
+	},
+	"personnelMedium":{
+	},
+	"personnelLarge":{
+	},
+	
+	"linerSmall":{
+	},
+	"linerMedium":{
+	},
+	"linerLarge":{
+	},
+	
+	# utility ships
+	"tug":{
+	},
+	"crig":{
+	},
+	"utility":{
+	},
+	
+
+
+	# Old/unused below this line
+	"fastAttack":{
+	},
+
+	"escortSmall":{
+	},
+	"escortMedium":{
+	},
+	
+}
+

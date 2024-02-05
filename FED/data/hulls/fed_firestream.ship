@@ -1,0 +1,77 @@
+{
+  "hullName": "Firestream",
+  "hullId": "fed_firestream",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/FED/ships/fed_gunship.png",
+  "style": "FEDERATION",
+  "height": 44,
+  "width": 44,
+  "center": [22, 22],
+  "collisionRadius": 29.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 28.5,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0001": "fed_minigun",
+    "WS0004": "vulcan"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 20,
+      "angle": 0,
+      "locations": [20.5, 2.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 180,
+      "locations": [-9, 0.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 25,
+      "angle": 0,
+      "locations": [14, 10]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-22, 9],
+      "length": 50.5,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "LOW_TECH"
+    },
+    {
+      "location": [-22, -9],
+      "length": 50.5,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    14.5, 7,
+    -2.5, 18.5,
+    -4, 11,
+    -19, 11,
+    -19, -11,
+    -4, -11,
+    -2.5, -18.5,
+    14.5, -7
+  ]
+}

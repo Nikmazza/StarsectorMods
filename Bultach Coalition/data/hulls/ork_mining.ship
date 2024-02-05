@@ -1,0 +1,220 @@
+{
+  "hullName": "mining",
+  "hullId": "ork_mining",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/ork_mining.png",
+  "style": "LOW_TECH",
+  "height": 255,
+  "width": 126,
+  "center": [63, 127.5],
+  "collisionRadius": 199.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 181.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ork_redfasta"
+  ],
+  "builtInWings": [
+    "mining_drone_wing",
+    "mining_drone_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 0,
+      "locations": [80.5, -4]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 40,
+      "locations": [11.5, 21]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 45,
+      "locations": [-57.5, 52]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 40,
+      "locations": [-6.5, 42]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 40,
+      "locations": [43.5, 36]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 90,
+      "locations": [78.5, 30]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [107.5, 13]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [107, -23]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -90,
+      "locations": [78.5, -40]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -40,
+      "locations": [44.5, -48]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -40,
+      "locations": [-8.5, -52]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -17.5, -38,
+        -22, -38
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -44, -32,
+        -44.5, -35
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-121.5, -5],
+      "length": 70,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 18,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-126.5, 17],
+      "length": 61,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-126.5, 24.5],
+      "length": 61,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-126.5, -28.5],
+      "length": 61,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-126.5, -35.5],
+      "length": 61,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    }
+  ],
+  "bounds": [
+    127, -28.5,
+    127, 18.5,
+    107.5, 35,
+    33, 42.5,
+    9.5, 43,
+    -20.5, 55,
+    -39, 53,
+    -55.5, 62,
+    -66, 62,
+    -90.5, 41.5,
+    -119.5, 39,
+    -127, 28,
+    -121.5, 3,
+    -121.5, -13,
+    -126.5, -25,
+    -118.5, -50.5,
+    -91, -52.5,
+    -81.5, -61.5,
+    -67.5, -61.5,
+    -67, -59,
+    14.5, -57,
+    19, -53,
+    68.5, -52.5,
+    71.5, -48,
+    109.5, -44.5
+  ]
+}

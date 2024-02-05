@@ -1,0 +1,87 @@
+{
+  "variantId": "fed_superkestrel_closesupport",
+  "hullId": "fed_superkestrel",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 23,
+  "fluxVents": 50,
+  "quality": 2,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "fluxdistributor",
+    "armoredweapons",
+    "insulatedengine"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "gauss",
+        "WS0004": "gauss",
+        "WS0005": "gauss",
+        "WS0006": "gauss"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymauler",
+        "WS0002": "heavymauler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "railgun",
+        "WS0008": "railgun",
+        "WS0010": "railgun",
+        "WS0011": "railgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0016": "vulcan",
+        "WS0017": "dualflak",
+        "WS0018": "dualflak",
+        "WS0019": "dualflak",
+        "WS0022": "vulcan",
+        "WS0023": "vulcan",
+        "WS0024": "vulcan"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0015": "fed_superkestrel_emitter_standard"
+    },
+    {
+      "WS0012": "fed_superkestrel_nosearmor_standard"
+    }
+  ],
+  "wings": []
+}

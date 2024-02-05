@@ -1,0 +1,182 @@
+{
+  "hullName": "Shalloch",
+  "hullId": "BSC_Shalloch",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/hulls/BSC_Shalloch.png",
+  "style": "HIGH_TECH",
+  "height": 188,
+  "width": 130,
+  "center": [65, 87],
+  "collisionRadius": 137,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 129,
+  "viewOffset": 0,
+  "builtInMods": [
+    "delicate",
+    "insulatedengine",
+    "solar_shielding"
+  ],
+  "builtInWeapons": {
+    "WS0008": "BSC_shallochdeco",
+    "WS0009": "BSC_shallochdeco2"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [78, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 280,
+      "angle": 0,
+      "locations": [47, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [36, 41]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [36, -41]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": 90,
+      "locations": [-18, 29]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": -90,
+      "locations": [-18, -29]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 180,
+      "locations": [-46, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [82, 11.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [82, -12]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-82, -0],
+      "length": 36,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-80, 7],
+      "length": 35,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-80, -7],
+      "length": 35,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-79, 14],
+      "length": 34,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-79, -14],
+      "length": 34,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-72.5, 22],
+      "length": 34,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-72.5, -22],
+      "length": 34,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -83, -12,
+    -68, -37,
+    -40, -29.5,
+    -4.5, -54,
+    35, -56.5,
+    41.5, -51.5,
+    40, -26,
+    96, -12.5,
+    96, 12.5,
+    40, 26,
+    41.5, 51.5,
+    35, 56.5,
+    -4.5, 54,
+    -40, 29.5,
+    -68, 37,
+    -83.5, 10.5
+  ]
+}

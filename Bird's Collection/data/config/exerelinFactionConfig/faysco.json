@@ -1,0 +1,49 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    
+    "rebelFleetSuffix":"Splinter",
+	
+	"maxRelationships":{"luddic_church":-0.1,
+      "hegemony":0.3
+    },
+
+    "diplomacyPositiveChance":{ "luddic_church":0.25 },
+    "diplomacyNegativeChance":{ "luddic_church":1.5 },
+	"diplomacyTraits":["paranoid", "anarchist", "monopolist", "devious"],
+ 
+    "alignments":{
+        "technocratic":0.5,
+        "militarist":0.25,
+        "corporate": 1,
+        "ideological":-0.5
+    },
+
+    "morality":"amoral",
+    "colonyExpeditionChance":0.1,
+   
+    "vengeanceLevelNames":["Grudge", "Vendetta"],
+    "vengeanceFleetNames":["Enforcers", "Seeker-Fleet"],
+    "vengeanceFleetNamesSingle":["an Enforcer fleet", "a Seeker-Fleet"],
+ 
+    "miningVariantsOrWings":["bc_miningdoom_Mining"],
+
+    "startSpecialItems":[
+        [["bc_faysco_bp", ""]]
+    ],
+ 
+    "startShipsSolo":[["bc_phasefrigate3_Strike"],["bc_phasefrigate2_Attack"]],
+    "startShipsCombatSmall":[["bc_phasedestroyer2_Strike", "bc_phasefrigate1_Overdriven", "bc_phasefrigate2_Attack"]],
+    "startShipsCombatLarge":[["bc_phasecruiser1_Standard", "bc_phasedestroyer1_Standard", "bc_phasefrigate1_Overdriven", "bc_phasefrigate2_Attack"]],
+    "startShipsTradeSmall":[["bc_phasefreighter_Based", "bc_phasefreighter_Based", "bc_phasetanker_Civilian"]],
+    "startShipsTradeLarge":[["bc_phasehauler_Civilian","bc_phasefreighter_Based", "bc_phasefreighter_Based", "bc_phasetanker_Civilian",
+    "bc_phasefrigate2_Attack"]],
+	
+	"defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"]}
+    ],
+
+    "bonusSeeds":[
+        {"id":"nanoforge_corrupted", "count":1}
+    ]
+}

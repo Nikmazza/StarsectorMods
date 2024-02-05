@@ -1,0 +1,7 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+sa_grunder_wing,sa_grunder_wing,"interceptor3, auto_fighter, drone, remnant, ",1,.75,6,5,CLAW,4000,200,700,6,INTERCEPTOR,Swarmer Drone,5,7000,,,,,,,,,,,,,8
+sa_shilage_wing,sa_shilage_wing,"fighter1, auto_fighter, drone, remnant, rare_bp",2,.50,8,8,V,3000,200,600,3,FIGHTER,Combat Drone,7,10000,,,,,,,,,,,,,9
+sa_kilo_wing,sa_kilo_wing,"stay_in_front_of_ship, support0, low, pirate_bp",,,4,3,BOX,500,500,,2,FIGHTER,Defender,8,1500,,,,,,,,,,,,,5
+sa_kilo_attack_wing,sa_kilo_attack_wing,"support0, low, pirate_bp",,.25,4,6,BOX,2000,500,,2,FIGHTER,Fighter,10,2000,,,,,,,,,,,,,6
+sa_durand_wing,sa_durand_wing,"fighter4, fighter, mid, midline_bp, merc",2,.75,6,8,BOX,4000,400,,2,FIGHTER,Heavy Fighter,10,12000,,,,,,,,,,,,,10
+sa_panoptes_wing,sa_panoptes_wing,"bomber, bomber_3, low,merc, corrupted_bp",,,10,18,V,3000,1500,300,2,BOMBER,Bomber Drone,12,9000,,,,,,,,,,,,,12

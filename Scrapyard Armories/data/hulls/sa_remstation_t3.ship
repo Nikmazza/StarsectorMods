@@ -1,0 +1,169 @@
+{
+  "hullName": "Nexus Citadel",
+  "hullId": "sa_remstation_t3",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/station/sa_remstation_t3.png",
+  "style": "HIGH_TECH",
+  "height": 512,
+  "width": 512,
+  "center": [256, 228],
+  "collisionRadius": 425,
+  "shieldCenter": [1, 1],
+  "shieldRadius": 362,
+  "viewOffset": 0,
+  "builtInMods": [
+    "vastbulk",
+    "axialrotation",
+    "supercomputer",
+    "shared_flux_sink"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 03",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 225,
+      "locations": [-121, -268]
+    },
+    {
+      "id": "WS 02",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 135,
+      "locations": [-115, 262]
+    },
+    {
+      "id": "WS 08",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 45,
+      "locations": [197, 68]
+    },
+    {
+      "id": "WS 01",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 180,
+      "locations": [-89, -0],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS 07",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": -60,
+      "locations": [97, -98]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 60,
+      "locations": [97, 98]
+    },
+    {
+      "id": "WS09",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": -45,
+      "locations": [197, -68]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": -75,
+      "locations": [24, -175]
+    },
+    {
+      "id": "WS04",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 75,
+      "locations": [24, 175]
+    },
+    {
+      "id": "WS11",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": -150,
+      "locations": [-247, -127]
+    },
+    {
+      "id": "WS10",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 150,
+      "locations": [-247, 127]
+    },
+    {
+      "id": "WS012",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 8,
+      "angle": 0,
+      "locations": [272, -0]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    240.5, 15,
+    255, -17,
+    211.5, -40,
+    171, -77.5,
+    130.5, -73,
+    82.5, -74.5,
+    64, -115,
+    49, -144.5,
+    2, -131.5,
+    -9.5, -181,
+    -45, -208,
+    -130, -242,
+    -76, -141,
+    -129, -136,
+    -122, -105,
+    -48, -100,
+    -119, -75,
+    -94, -16,
+    -90, 13,
+    -121, 75,
+    -58, 99,
+    -121, 103,
+    -121, 136,
+    -72, 140,
+    -136, 245,
+    -63, 215,
+    -12, 219,
+    11, 196,
+    -25, 170,
+    14, 117,
+    58, 117,
+    127.5, 69,
+    168.5, 81,
+    202, 44,
+    188, 16.5
+  ]
+}

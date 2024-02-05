@@ -1,0 +1,45 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 36,
+    "fluxVents": 50,
+    "hullId": "ssp_elnino",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_elnino_SIM",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "ssp_solareclipse",
+                "WS0012": "ssp_solareclipse"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "hveldriver",
+                "WS0002": "hveldriver",
+                "WS0009": "hveldriver",
+                "WS0010": "hveldriver",
+                "WS0014": "ssp_MedMissle",
+                "WS0015": "ssp_MedMissle",
+                "WS0018": "ssp_MedMissle",
+                "WS0019": "ssp_MedMissle",
+                "WS0024": "ssp_MedMissle",
+                "WS0025": "ssp_MedMissle"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0020": "dualflak"}
+        }
+    ]
+}

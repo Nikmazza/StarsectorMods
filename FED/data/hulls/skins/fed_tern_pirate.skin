@@ -1,0 +1,61 @@
+{
+	"baseHullId":"fed_tern",
+	"skinHullId":"fed_tern_pirate",
+	"hullName":"Bell (P)",
+	"descriptionId":"fed_tern",
+	"descriptionPrefix":"A pirate crew simplified this Bell's internals to better serve rough life on the fringes. Garnished with a brazen coat of paint and tasteless decor, this patrol frigate is well suited to hunting the prey it once escorted.",
+	"tags":["pirate_bp,fed_pirate"],
+	"tech":"Pirate",
+	#"restoreToBaseHull":true,
+	"suppliesToRecover":7,
+	"suppliesPerMonth":7,
+	"baseValueMult":1.25,
+	"ordnancePoints":55,
+	"spriteName":"graphics/FED/ships/pirate/fed_tern_pirate.png",
+	#"removeWeaponSlots":["WS 003","WS 004"], 		# ids
+	#"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[fed_energybuiltin,fed_cruisedrive], 		# hullmod ids
+	#"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+    	"WS0004":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "COMPOSITE"
+		},
+		"WS0005":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "COMPOSITE"
+		},		
+		"WS0003":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},	
+		"WS0006":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},
+		"WS0007":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},
+	},
+	"systemId":"burndrive",
+	#"builtInMods":[],
+	"builtInWeapons":{
+		"WS0002":"phasecl"
+    },
+}

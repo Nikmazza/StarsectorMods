@@ -1,0 +1,72 @@
+{
+  "variantId": "sa_gaia_support",
+  "hullId": "sa_gaia",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 21,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "heavyarmor",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "sa_earthshaker"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "harpoon",
+        "WS0005": "harpoon",
+        "WS0007": "harpoon",
+        "WS0008": "breachpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "tachyonlance",
+        "WS0012": "mark9",
+        "WS0015": "sa_loki"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0016": "railgun",
+        "WS0017": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "vulcan",
+        "WS0002": "flak",
+        "WS0003": "vulcan",
+        "WS0006": "vulcan",
+        "WS0010": "vulcan",
+        "WS0011": "flak",
+        "WS0013": "lightmg",
+        "WS0014": "lightmg",
+        "WS0018": "flak",
+        "WS0019": "guardian"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "talon_wing",
+    "talon_wing"
+  ]
+}

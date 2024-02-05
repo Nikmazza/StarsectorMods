@@ -1,0 +1,14 @@
+{
+	"baseHullId":"fed_asb_module",
+	"skinHullId":"fed_asb_module_ammofeed",
+	"descriptionPrefix":"Upgraded with an rapid ammo feeder.",
+	"restoreToBaseHull":true,
+	"systemId":"ammofeed",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

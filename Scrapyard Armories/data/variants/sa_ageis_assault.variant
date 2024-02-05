@@ -1,0 +1,74 @@
+{
+  "variantId": "sa_ageis_assault",
+  "hullId": "sa_ageis",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "heavyarmor",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "locust",
+        "WS0006": "locust",
+        "WS0013": "annihilatorpod",
+        "WS0014": "annihilatorpod",
+        "WS0015": "annihilatorpod",
+        "WS0016": "annihilatorpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "typhoon",
+        "WS0010": "typhoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "plasma",
+        "WS0008": "plasma",
+        "WS0025": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "arbalest",
+        "WS0012": "arbalest"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "mininglaser",
+        "WS0002": "mininglaser",
+        "WS0003": "flak",
+        "WS0004": "flak",
+        "WS0017": "mininglaser",
+        "WS0018": "mininglaser",
+        "WS0019": "flak",
+        "WS0020": "flak",
+        "WS0021": "flak",
+        "WS0022": "flak",
+        "WS0023": "mininglaser",
+        "WS0024": "mininglaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

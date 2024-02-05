@@ -1,0 +1,75 @@
+{
+  "variantId": "fed_boss_closesupport",
+  "hullId": "fed_boss",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 39,
+  "fluxVents": 39,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "stabilizedshieldemitter",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "tachyonlance",
+        "WS0006": "tachyonlance"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "squall",
+        "WS0004": "squall"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "sabotpod",
+        "WS0008": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_burstlaser2",
+        "WS0002": "fed_burstlaser2"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "pdlaser",
+        "WS0010": "pdlaser",
+        "WS0011": "pdlaser",
+        "WS0012": "pdlaser",
+        "WS0013": "pdlaser",
+        "WS0014": "pdlaser",
+        "WS0015": "guardian",
+        "WS0017": "pdlaser"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0018": "fed_boss_wing_left_standard"
+    },
+    {
+      "WS0019": "fed_boss_wing_right_standard"
+    },
+	{
+      "WS0016": "fed_boss_shieldemitter_standard"
+    }
+  ],
+  "wings": []
+}

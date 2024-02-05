@@ -1,0 +1,50 @@
+{
+	"id":"bc_cluster_warhead",
+	"specClass":"missile",
+	"missileType":"BOMB",
+	#"missileType":"BOMB_WITH_SLOW",
+	#"missileType":"ROCKET",
+	"sprite":"graphics/missiles/bc_cluster_warhead.png",
+	"size":[6,6],	
+	"center":[3,3],
+	"collisionRadius":12,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[247,117,76, 255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":100, # purely visual
+	"armingTime":0.1,	
+	"explosionSpec":{"duration":0.1f, # not visual
+					 "radius":100,
+					 "coreRadius":50, # full damage within core radius
+					 "collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+					 "collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS},				  
+	"engineSpec":{"turnAcc":0,
+				  "turnRate":0,
+				  "acc":20,
+				  "dec":20},
+	
+	"engineSlots":[{"id":"ES1",
+					"loc":[0,0],
+				    #"style":"MISSILE_HIGH_TECH",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						#"engineColor":[255,100,100,255],
+						"engineColor":[255,120,80,255],
+						"contrailDuration":1,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						#"contrailColor":[255,100,100,75],
+						"contrailColor":[255,80,120,0],
+						"glowSizeMult":2.5,
+						#"glowAlternateColor":[255,0,0,255],
+						"glowAlternateColor":[255,0,20,255],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":9.0,
+				    "length":9.0,
+				    "angle":180.0},
+				    ]
+}

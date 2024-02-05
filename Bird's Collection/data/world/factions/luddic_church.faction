@@ -1,0 +1,16 @@
+{
+	"hullFrequency":{
+		"hulls":{
+			"bc_lowtech_cruiser":0.8,
+			"bc_orion_capital":0.6,
+		},
+	},
+	"knownFighters":{
+		"tags":["luddic_church"],
+		"fighters":[
+			"bc_gunship",
+			"bc_acfighter"
+		],
+	}
+},
+

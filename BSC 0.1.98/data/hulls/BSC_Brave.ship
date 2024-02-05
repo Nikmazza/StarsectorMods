@@ -1,0 +1,126 @@
+{
+  "hullName": "Brave",
+  "hullId": "BSC_Brave",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/hulls/BSC_Brave.png",
+  "style": "MIDLINE",
+  "height": 76,
+  "width": 68,
+  "center": [34, 36],
+  "collisionRadius": 87,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 73,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [25, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [34.5, -17]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [34.5, 17]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 180,
+      "locations": [-13, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-35, -9],
+      "length": 46,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-35, 9],
+      "length": 46,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-36, 20.5],
+      "length": 36,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-36, -20.5],
+      "length": 36,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-4, 30],
+      "length": 15.114291,
+      "width": 7.157707,
+      "angle": 136.5,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-4, -30],
+      "length": 15.114291,
+      "width": 7.157707,
+      "angle": -136.5,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -34, 23,
+    -30, 32,
+    -12, 30,
+    -10, 25,
+    -6, 25,
+    1, 32,
+    12, 32,
+    19, 25.5,
+    30, 25,
+    37, 16,
+    27, 7,
+    27, -7,
+    37, -16,
+    30, -25,
+    19, -25.5,
+    12, -32,
+    1, -32,
+    -6, -25,
+    -10, -25,
+    -12, -30,
+    -30, -32,
+    -34, -23
+  ]
+}

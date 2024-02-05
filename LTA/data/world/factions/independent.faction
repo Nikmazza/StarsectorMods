@@ -1,0 +1,51 @@
+{
+"hullFrequency":{
+
+		"hulls":{
+			#"Colatlus":0.5, # it's pretty good, so make it more rare
+			"LTA_Consul":0.6,
+			"LTA_Juror":0.6,
+			"LTA_Authority":0.65,
+			"LTA_Magister":0.5,
+			"LTA_Moderator":0.6,
+			#"LTA_Judiciary":0.4, (Disabled till alex fixes the anchor rotation bug that causes weapon arc issues and AI breakage on modules on ships)
+			"LTA_Consigliere":0.6,
+			"LTA_Sovereign":0.75,
+		},
+	},
+	
+    "knownShips":{
+        "hulls":[
+			"LTA_Consul",
+			"LTA_Juror",
+			"LTA_Authority",
+			"LTA_Magister",
+			"LTA_Moderator",
+			#"LTA_Judiciary", (Disabled till alex fixes the anchor rotation bug that causes weapon arc issues and AI breakage on modules on ships)
+			"LTA_Consigliere",
+			"LTA_Sovereign",
+        ],
+    },
+		"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "independent"],
+		"weapons":[
+			"LTA_nixie",
+			"LTA_nixietri",
+			"LTA_nixiearray",
+			"LTA_nixiemissilesmall",
+			"LTA_nixiemissilemedium",
+			"LTA_nixiemissilelarge",
+			"LTA_hypervelocitycannon",
+			"LTA_hex",
+			"LTA_talonrail",
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "independent"],
+		"fighters":[
+			"LTA_Diadem_Wing",
+			"LTA_ModDiadem_Wing",
+			"LTA_RocketTalon_Wing",
+		],
+	},
+}

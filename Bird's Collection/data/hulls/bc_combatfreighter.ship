@@ -1,0 +1,156 @@
+{
+  "hullName": "Bestia",
+  "hullId": "bc_combatfreighter",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/bc_combatfreighter.png",
+  "style": "LOW_TECH",
+  "height": 120,
+  "width": 120,
+  "center": [60, 40],
+  "collisionRadius": 101.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 86,
+  "viewOffset": 0,
+  "builtInMods": [
+    "rugged",
+    "shielded_holds"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -45,
+      "locations": [7, -28]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 45,
+      "locations": [7, 28]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [55, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [35, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 45,
+      "locations": [-4.5, 45]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -45,
+      "locations": [-4.5, -45]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 135,
+      "locations": [-13.5, 45]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -135,
+      "locations": [-13.5, -45]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-36.5, 19.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-36.5, -19.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-38, 28.5],
+      "length": 37.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-38, -28.5],
+      "length": 37.5,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-38, 37.5],
+      "length": 46.5,
+      "width": 14,
+      "angle": 178.5,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-38, -37.5],
+      "length": 46.5,
+      "width": 14,
+      "angle": -178.5,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -34.5, 15.5,
+    -38, 39.5,
+    -26.5, 48,
+    7.5, 45,
+    21, 32,
+    62.5, 17.5,
+    62.5, -17.5,
+    21, -32,
+    7.5, -45,
+    -26.5, -48,
+    -38, -39.5,
+    -34.5, -15.5
+  ]
+}

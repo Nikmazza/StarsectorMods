@@ -1,0 +1,60 @@
+{
+	"baseHullId":"fed_lightdestroyer",
+	"skinHullId":"fed_lightdestroyer_p",
+	"hullName":"Invader (P)",
+	"descriptionId":"fed_lightdestroyer",
+	"descriptionPrefix":"A garish and tastless coat of paint hides the chaotic internal rework of this piratical Invader. A turbofed ballistic complement allows more power to be routed to the engines, albeit with little consideration for the maintenance chief's saftey and sanity.",
+	"tags":["pirate_bp,fed_pirate"],
+	"tech":"Pirate",
+	#"restoreToBaseHull":true,
+	"suppliesToRecover":12,
+	"suppliesPerMonth":12,
+	"baseValueMult":1.25,
+	"ordnancePoints":80,
+	"spriteName":"graphics/FED/ships/pirate/fed_lightdestroyer_pirate.png",
+	#"removeWeaponSlots":["WS 003","WS 004"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+    	"WS0001":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},	
+		"WS0002":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+        },
+		"WS0003":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},	
+		"WS0006":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},
+		"WS0007":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		},
+	},
+	"systemId":"ammofeed",
+	"builtInMods":["augmentedengines","unstable_injector"],
+	"builtInWeapons":{
+    },
+}

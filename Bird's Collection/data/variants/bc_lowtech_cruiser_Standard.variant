@@ -1,0 +1,41 @@
+{
+  "variantId": "bc_lowtech_cruiser_Standard",
+  "hullId": "bc_lowtech_cruiser",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 29,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "bc_overfed"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "arbalest",
+        "WS0003": "arbalest",
+        "WS0004": "arbalest",
+        "WS0005": "arbalest"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "dualflak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

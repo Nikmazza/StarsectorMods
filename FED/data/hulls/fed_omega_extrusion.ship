@@ -1,0 +1,145 @@
+{
+  "hullName": "",
+  "hullId": "fed_omega_extrusion",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/FED/ships/omega/fed_omega_protrusion.png",
+  "style": "OMEGA",
+  "height": 205,
+  "width": 124,
+  "center": [81.5, 104.5],
+  "collisionRadius": 120,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 114.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "fluxbreakers",
+    "shard_spawner",
+    "always_detaches",
+    "advancedcore",
+    "reduced_explosion",
+	"fed_childmodule",
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 180,
+      "locations": [-60.5, -32.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -63.5,
+      "locations": [-17.5, -24.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -45,
+      "locations": [33.5, -16.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [52.5, 15.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-46, 54.5],
+      "length": 21,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-48.5, 40],
+      "length": 54,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-37, 29.5],
+      "length": 43,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-59.5, 7],
+      "length": 30,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-69.5, 0.5],
+      "length": 61,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-78, -8],
+      "length": 41.5,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-94, -28.5],
+      "length": 30,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    },
+    {
+      "location": [-90.5, -23.5],
+      "length": 30,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "CUSTOM",
+      "styleId": "FED_OMEGA"
+    }
+  ],
+  "bounds": [
+    -21, 80.5,
+    94, 35,
+    50, -29.5,
+    -59, -38.5,
+    -97.5, -35,
+    -41.5, 23,
+    -52, 48.5,
+    -41.5, 66.5
+  ]
+}

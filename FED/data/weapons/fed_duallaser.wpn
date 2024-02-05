@@ -1,0 +1,50 @@
+{
+  "id": "fed_duallaser",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_duallaser_shot",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "turretSprite": "graphics/FED/weapons/fed_duallaser.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_duallaser_hardpoint.png",
+  "renderAboveAllWeapons": 0,
+  "noImpactSounds":true,
+  "convergeOnPoint":true,
+  "turretOffsets": [
+    6.5,
+    5.5,
+    6.5,
+    -5.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    -0
+  ],
+  "hardpointOffsets": [
+    7.5,
+    5.5,
+    7.5,
+    -5.5
+  ],
+  "hardpointAngleOffsets": [
+    -0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 10,
+    "spread": 1,
+    "particleSizeMin": 5,
+    "particleSizeRange": 4,
+    "particleDuration": 0.05,
+    "particleCount": 7,
+    "particleColor": [
+      23,
+      100,
+      25,
+      250
+    ]
+  },
+  "textureType": ROUGH,
+  "fireSoundTwo": "fed_chisel_fire"
+}

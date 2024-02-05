@@ -1,0 +1,42 @@
+{
+  "variantId": "fed_superdestroyer_overdriven",
+  "hullId": "fed_superdestroyer",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "hardened_subsystems",
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0007": "fed_superchain"}
+        },
+		{
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "heavymg",
+                "WS0004": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "vulcan",
+                "WS0002": "vulcan",
+                "WS0005": "fed_singlelaser",
+                "WS0006": "fed_singlelaser"
+            }
+        }
+        
+    ],
+  "modules": [],
+  "wings": []
+}

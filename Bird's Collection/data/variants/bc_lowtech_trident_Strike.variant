@@ -1,0 +1,23 @@
+{
+  "variantId": "bc_lowtech_trident_Strike",
+  "hullId": "bc_lowtech_trident",
+  "displayName": "Torpedo Bomber",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "bc_fighter_hammer_single",
+        "WS0002": "bc_fighter_hammer_single"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

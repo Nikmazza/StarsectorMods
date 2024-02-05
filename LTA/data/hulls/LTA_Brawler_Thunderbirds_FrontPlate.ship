@@ -1,0 +1,37 @@
+{
+  "hullName": "Reinforced Armor Panel",
+  "hullId": "LTA_Brawler_Thunderbirds_FrontPlate",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/LTA/ships/Epattcud/Thunderbirds/LTA_Brawler_Thunderbirds_FrontPlate.png",
+  "style": "LOW_TECH",
+  "height": 80,
+  "width": 180,
+  "center": [90, 40],
+  "collisionRadius": 100,
+  "shieldCenter": [-20, -0],
+  "shieldRadius": 103,
+  "viewOffset": 0,
+  "builtInMods": [
+    "reduced_explosion",
+    "always_detaches",
+    "fluxshunt",
+    "fluxdistributor",
+    "fluxbreakers"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    16.5, -59,
+    8, -49,
+    7, 7,
+    -24, 22,
+    0, 43,
+    1, 63,
+    9, 75,
+    20, 46,
+    31, 35,
+    31, -30,
+    23, -40,
+    23, -59
+  ]
+}

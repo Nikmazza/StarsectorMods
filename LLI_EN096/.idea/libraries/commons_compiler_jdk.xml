@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="commons-compiler-jdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/commons-compiler-jdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/commons-compiler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/fs.common_obf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/fs.sound_obf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/janino.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/jinput.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/jogg-0.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/jorbis-0.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/log4j-1.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/lwjgl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/lwjgl_util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/starfarer.api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/starfarer_obf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/xstream-1.4.10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://fractalsoftworks.com/starfarer.api/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Starsector096Libs/starfarer.api.zip!/" />
+    </SOURCES>
+  </library>
+</component>

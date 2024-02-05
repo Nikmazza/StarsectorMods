@@ -1,0 +1,11 @@
+Location: Somewhere in Mediosolar Expanse
+Date: Unknown
+
+Command a randomly sized vanilla faction fleet and battle a random equally matched fleet from the Star Federation. Factions cannot fight themselves.
+Features an improved battlespace terrain generator and fleet balance.
+
+
+Click on the mission in the list to re-roll. While clicking:
+If you hold Ctrl D: Disable enemy FP advantage.
+If you hold Ctrl S: Allow modded factions and Federation infighting.
+If you hold Ctrl R: Enforces station presence in battles (No indicator otherwise).

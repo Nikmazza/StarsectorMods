@@ -1,0 +1,29 @@
+{
+  "variantId": "sa_tesla_spike_standard",
+  "hullId": "sa_tesla_spike",
+  "displayName": "Tesla Node",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "heavymauler"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

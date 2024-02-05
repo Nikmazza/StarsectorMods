@@ -1,0 +1,151 @@
+{
+  "hullName": "ssp_wave",
+  "hullId": "ssp_wave",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/ssp_wave.png",
+  "style": "LLI",
+  "height": 188,
+  "width": 128,
+  "center": [64, 92],
+  "collisionRadius": 133.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 120.5,
+  "viewOffset": 0,
+  "builtInMods": [
+   "ssp_cliff","ssp_LowerThreshold"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -45,
+      "locations": [-15, -39]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 45,
+      "locations": [-15, 39]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [84, -26]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [84, 26]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 0,
+      "locations": [5, 0]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 180,
+      "locations": [-48, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        29, 4.5,
+        29, -4.5,
+        37, 9,
+        37, -8
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-88, -0],
+      "length": 45,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 18,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-90, 19],
+      "length": 18,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-90, -19],
+      "length": 18,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-74, -44.5],
+      "length": 45,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 18,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-74, 44.5],
+      "length": 45,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 18,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -89.5, 26,
+    -74, 26,
+    -74, 55,
+    -68, 62,
+    -18.5, 62,
+    4, 41,
+    85, 41,
+    94, 32,
+    83.5, 7,
+    47.5, 7,
+    47.5, -7,
+    83.5, -7,
+    94, -32,
+    85, -41,
+    4, -41,
+    -18.5, -62,
+    -68, -62,
+    -74, -55,
+    -74, -26,
+    -89.5, -26
+  ]
+}

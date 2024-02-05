@@ -1,0 +1,72 @@
+{
+  "hullName": "Prow Module",
+  "hullId": "sgr_front_right",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/Sgriosathar/Sgriosathar_front_right.png",
+  "style": "BULTACH",
+  "height": 267,
+  "width": 103,
+  "center": [51.5, 133.5],
+  "collisionRadius": 164,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 155,
+  "viewOffset": 0,
+  "builtInMods": [
+    "BT_antiNukeHidden",
+    "reduced_explosion",
+    "BT_linkedhull",
+    "targetingunit"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [38, 4.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -45,
+      "locations": [-7.5, 10.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -90,
+      "locations": [-77.5, 3.5]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    130.5, 41.5,
+    87, 21,
+    50, 14,
+    51, -5.5,
+    65, -14.5,
+    58.5, -20,
+    18, -22.5,
+    -18, -28,
+    -46, -38,
+    -50.5, -30.5,
+    -76.5, -26.5,
+    -108.5, -35,
+    -120, -51,
+    -132.5, -21.5,
+    -114.5, 17,
+    -101.5, 37.5,
+    -5.5, 48,
+    27, 45.5,
+    50.5, 31,
+    102.5, 46.5
+  ]
+}

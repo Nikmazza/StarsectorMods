@@ -1,0 +1,52 @@
+{
+  "animationType": "MUZZLE_FLASH",
+  "autocharge": true,
+  "barrelMode": "ALTERNATING",
+  "fireSoundTwo": "fed_flaksmall_fire",
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "hardpointGunSprite": "graphics/FED/weapons/fed_flak1_hardpoint_barrel.png",
+  "hardpointOffsets": [
+    28,
+    0
+  ],
+  "hardpointSprite": "graphics/FED/weapons/fed_flak1_hardpoint.png",
+  "id": "fed_flak1",
+  "muzzleFlashSpec": {
+    "length": 30,
+    "particleColor": [
+      50,
+      40,
+      30,
+      255
+    ],
+    "particleCount": 15,
+    "particleDuration": 0.7,
+    "particleSizeMin": 25,
+    "particleSizeRange": 25,
+    "spread": 100
+  },
+  "noImpactSounds": false,
+  "noNonShieldImpactSounds": false,
+  "noShieldImpactSounds": false,
+  "projectileSpecId": "fed_flak1_scrap",
+  "renderAboveAllWeapons": 0,
+  "renderHints": [
+    "RENDER_BARREL_BELOW"
+  ],
+  "size": "MEDIUM",
+  "specClass": "projectile",
+  "textureType": ROUGH,
+  "turretAngleOffsets": [
+    0
+  ],
+  "turretGunSprite": "graphics/FED/weapons/fed_flak1_barrel.png",
+  "turretOffsets": [
+    16.5,
+    0
+  ],
+  "turretSprite": "graphics/FED/weapons/fed_flak1.png",
+  "type": "BALLISTIC",
+  "visualRecoil": 5
+}

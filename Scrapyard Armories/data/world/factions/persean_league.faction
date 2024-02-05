@@ -1,0 +1,33 @@
+{
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_scalpel": ".70",
+    "sa_gorget": ".70",
+    "sa_elanus": ".0.65",
+    "sa_skua": "0.75",
+    "sa_ingot":"0.60",
+    "hulls": {}
+  },
+  "shipsWhenImporting": {
+    "sa_scalpel": ".70",
+    "sa_gorget": ".70",
+    "sa_elanus": ".0.65",
+    "sa_skua": "0.75",
+    "hulls": []
+  },
+  "knownShips": {
+    "hulls":[ 
+    "sa_scalpel",
+    "sa_gorget",
+    "sa_elanus",
+    "sa_skua",
+    "sa_ingot",
+    ],
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+}

@@ -1,0 +1,30 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 2,
+    "fluxVents": 20,
+    "hullId": "ssp_vocaino",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange",
+        "converted_hangar"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_vocaino_SIM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0009": "gauss"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "heatseeker",
+                "WS0006": "heatseeker"
+            }
+        }
+    ],
+    "wings": ["claw_wing"]
+}

@@ -1,0 +1,54 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 4,
+    "fluxVents": 30,
+    "hullId": "ssp_seaquake",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_seaquake_SIM",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "ionbeam"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0012": "heatseeker",
+                "WS0013": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "hveldriver",
+                "WS0008": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_heatbeam",
+                "WS0005": "ssp_heatbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "pdlaser",
+                "WS0007": "pdlaser",
+                "WS0010": "pdlaser",
+                "WS0011": "pdlaser"
+            }
+        }
+    ]
+}

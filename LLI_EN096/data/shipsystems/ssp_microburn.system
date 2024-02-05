@@ -1,0 +1,28 @@
+{
+	"id":"ssp_microburn",
+	"type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE",
+	
+	"statsScript":"data.shipsystems.ssp_microburn",
+	
+	"engineGlowColor":[220,0,45,255],
+	"engineGlowLengthMult":4,
+	"engineGlowWidthMult":1.5,
+	"engineGlowGlowMult":3,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+	"useSound":"system_plasma_burn",
+	"loopSound":"system_plasma_burn_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":210,
+		"averageSpeedIncrease":50,
+	}
+}

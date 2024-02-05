@@ -1,0 +1,90 @@
+{
+  "hullName": "Gunna",
+  "hullId": "stuff_right",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/spacehulk/stuff_right.png",
+  "style": "LOW_TECH",
+  "height": 160,
+  "width": 117,
+  "center": [58.5, 80],
+  "collisionRadius": 141,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 0,
+  "viewOffset": 0,
+  "builtInMods": [
+    "degradedcore"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -50,
+      "locations": [63, 34.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -50,
+      "locations": [-32, 22.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -135,
+      "locations": [27.5, 16.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [8.5, -24.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -135,
+      "locations": [-35, -33.5]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    78.5, -2.5,
+    78, 42,
+    72, 49,
+    31, 51.5,
+    29.5, 58,
+    4.5, 57.5,
+    -11.5, 34,
+    -16.5, 34,
+    -27, 40.5,
+    -38, 23,
+    -60.5, 21.5,
+    -62, 8,
+    -68, -3,
+    -78.5, -9,
+    -67.5, -17,
+    -49.5, -23,
+    -24.5, -46,
+    -4, -47,
+    4, -35,
+    19.5, -35,
+    20.5, -15.5,
+    60.5, -15,
+    69, -10
+  ]
+}

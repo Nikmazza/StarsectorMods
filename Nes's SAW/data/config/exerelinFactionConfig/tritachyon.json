@@ -1,0 +1,9 @@
+{
+    "startShipsCombatLarge":[
+      ["nes_voltaire_standard", "tempest_Attack"],
+      ["nes_deimos_standard", "wolf_CS"],
+    ],
+	"startShipsSuper":[
+      ["nes_fluorspar_standard"],
+    ],
+}

@@ -1,0 +1,44 @@
+{
+  "variantId": "bc_biglasher_Thumper",
+  "hullId": "bc_biglasher",
+  "displayName": "Thumper",
+  "goalVariant": true,
+  "fluxCapacitors": 27,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "heavyarmor",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "shredder",
+        "WS0002": "shredder",
+        "WS0003": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "shredder",
+        "WS0005": "shredder"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "bc_thumperdem_pod",
+        "WS0007": "bc_thumperdem_pod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

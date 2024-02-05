@@ -1,0 +1,63 @@
+{
+  "variantId": "fed_stormwalker_overdriven",
+  "hullId": "fed_stormwalker",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 12,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "amblaster",
+        "WS0007": "amblaster",
+        "WS0008": "amblaster",
+        "WS0009": "amblaster"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "sabotpod",
+        "WS0002": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "phasecl"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "fed_singlelaser",
+        "WS0005": "fed_singlelaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "shockrepeater",
+        "WS0011": "shockrepeater",
+        "WS0012": "shockrepeater",
+        "WS0013": "shockrepeater",
+        "WS0014": "shockrepeater",
+        "WS0015": "shockrepeater"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

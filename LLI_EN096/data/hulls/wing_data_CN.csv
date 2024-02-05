@@ -1,0 +1,6 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+ssp_mercurylake,ssp_mercurylake,"fighter4, fighter, ssp_bp",1,,12,20,V,4000,500,500,2,INTERCEPTOR,截击机,16,8000,,,,,,,,,,,,,
+ssp_hivedrone,ssp_hivedrone,"support3, fighter, ssp_bp",1,,4,6,CLAW,4000,500,,5,SUPPORT,点防御,8,1000,,,,,,,,,,,,,1
+ssp_heavyfog,ssp_heavyfog,"fighter2, fighter, ssp_bp,interceptor",1,,14,18,V,4000,500,500,3,FIGHTER,重型战斗机,12,6000,,,,,,,,,,,,,1
+ssp_dustfog,ssp_dustfog,"interceptor3, interceptor,ssp_bp",1,,6,9,V,4000,500,500,3,FIGHTER,战斗机,12,4000,,,,,,,,,,,,,
+ssp_mudslide,ssp_mudslide,"bomber4, bomber, high,ssp_bp",1,,6,10,V,4000,2000,750,2,BOMBER,轰炸机,16,4600,,,,,,,,,,,,,

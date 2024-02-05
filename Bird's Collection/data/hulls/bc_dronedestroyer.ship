@@ -1,0 +1,127 @@
+{
+  "hullName": "Parcel",
+  "hullId": "bc_dronedestroyer",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/bc_dronedestroyer.png",
+  "style": "HIGH_TECH",
+  "height": 162,
+  "width": 140,
+  "center": [70, 81],
+  "collisionRadius": 104,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 99.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade",
+    "hiressensors",
+    "surveying_equipment"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -90,
+      "locations": [30, -36]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 90,
+      "locations": [30, 36]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 0,
+      "locations": [60, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-26, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-67, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [53, 36]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-12.5, 31],
+      "length": 41,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-12.5, -31],
+      "length": 41,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-12, 37],
+      "length": 41,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-12, -37],
+      "length": 41,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    75, -15.5,
+    63, -27,
+    49, -27.5,
+    30, -46.5,
+    -8, -41,
+    -11.5, -25,
+    -73, -19,
+    -73, 19,
+    -11.5, 25,
+    -8, 41,
+    30, 46.5,
+    55.5, 40,
+    55.5, 31.5,
+    47, 26.5,
+    63, 27,
+    75, 15.5
+  ]
+}

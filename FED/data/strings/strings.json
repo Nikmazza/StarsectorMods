@@ -1,0 +1,23 @@
+{
+	"star_federation":{
+		"fed_scaria_highcommand":"Starbase Scaria", 
+		
+		
+		"fed_design_shield1":"• Steadily loses %s/%s/%s/%s arc as hard flux maxes out",
+		"fed_design_shield2":"• However, the arc cannot go below %s degrees",
+		"fed_design_shield3":"• Installing the %s hullmod will negate %s of the arc reduction effect",
+		
+		"fed_design_engine1":"• Increases zero-flux engine boost by %s",
+		
+		"fed_design_engine3":"• Performs %s jumps in battle",
+		"fed_design_engine4":"• Tends to %s if the ship is disabled",
+		
+		"fed_design_weapon1":"• Weapon rate-of-fire is limited to %s",
+		"fed_design_weapon2":"• Gradually increases RoF to %s",
+		"fed_design_weapon3":"• If Resistant Flux Conduits are installed, RoF maxes out at %s flux",
+		"fed_design_weapon4":"• If Safety Overrrides are installed, RoF maxes out at %s flux",
+		"fed_design_weapon5":"• Weapons generate %s of their flux, regardless of the current rate-of-fire variance",
+		"fed_design_ballistic":"ballistic",
+		"fed_design_energy":"energy",
+	},
+}

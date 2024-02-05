@@ -1,0 +1,16 @@
+{
+	"id":"fed_superchain_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":40.0,
+	"hitGlowRadius":48,
+	"width":7.0,
+	"fadeTime":0.175,
+	"fringeColor":[255,210,50,155],
+	"coreColor":[255,130,170,190],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_hephag.png"
+}

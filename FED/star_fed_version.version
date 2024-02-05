@@ -1,0 +1,11 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/Foxer360/Star_Federation/main/fed_version_checker.version",
+    "modName":"The Star Federation",
+    "modThreadId":19115,
+    "modVersion":
+    {
+        "major":9,
+        "minor":9,
+        "patch":"RC5",
+    },
+}

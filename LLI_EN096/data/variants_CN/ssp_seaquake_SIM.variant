@@ -1,0 +1,55 @@
+{
+    "displayName": "SIM",
+    "fluxCapacitors": 7,
+    "fluxVents": 30,
+    "hullId": "ssp_seaquake",
+    "hullMods": [
+        "targetingunit",
+        "ssp_LongerRange",
+        "missile_autoloader"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_seaquake_SIM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "hveldriver"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0012": "ssp_plasmamissile",
+                "WS0013": "ssp_plasmamissile"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0008": "hveldriver"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_heatbeam",
+                "WS0005": "ssp_heatbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "flak"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "ssp_FragMachinegun",
+                "WS0011": "ssp_FragMachinegun"
+            }
+        }
+    ]
+}

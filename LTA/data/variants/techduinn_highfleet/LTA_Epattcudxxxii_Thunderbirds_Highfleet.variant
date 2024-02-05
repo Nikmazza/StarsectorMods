@@ -1,0 +1,44 @@
+{
+    "displayName": "Highfleet",
+    "fluxCapacitors": 5,
+    "fluxVents": 16,
+    "hullId": "LTA_Epattcudxxxii_Thunderbirds",
+    "hullMods": [
+        "targetingunit",
+        "eccm"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Epattcudxxxii_Thunderbirds_Highfleet",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0010": "LTA_hextb"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "harpoonpod",
+                "WS0003": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "hveldriver"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "LTA_nixie",
+                "WS0005": "LTA_nixie",
+                "WS0006": "LTA_nixie",
+                "WS0007": "LTA_nixie"
+            }
+        }
+    ],
+    "wings": []
+}

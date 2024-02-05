@@ -1,0 +1,21 @@
+{
+   "id":"LLI",
+	"name":"LouLan Industries",
+	"author": "Fractal Softworks Forum id-IMustRegroupMyForces, Discord id-Komeiji Satori_0313",
+	"version":"1.8.11",
+	"description":"Adds a new faction--Loulan Industries",
+	"gameVersion":"0.96a-RC9",
+	"jars":["jar/LLI.jar"],
+	"modPlugin": "data.SSPModPlugin",
+	  "dependencies": [ {
+            "id": "lw_lazylib",
+            "name": "LazyLib",
+
+        },
+		{
+            "id": "MagicLib",
+            "name": "MagicLib",
+
+        },
+    ],
+}

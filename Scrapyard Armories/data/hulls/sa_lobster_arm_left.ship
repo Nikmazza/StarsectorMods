@@ -1,0 +1,126 @@
+{
+  "hullName": "Module, Left Claw",
+  "hullId": "sa_lobster_arm_left",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/lobster/sa_lobster_arm_left.png",
+  "style": "MIDLINE",
+  "height": 280,
+  "width": 116,
+  "center": [58, 140],
+  "collisionRadius": 150.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 141.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "always_detaches",
+    "reduced_explosion",
+    "shared_flux_sink"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [-18, -28]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [-18, 28]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [1, -29]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [1, 29]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -5,
+      "locations": [-44, -38]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-44, 38]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [-110, 5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [-88, 4]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-37, -0]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -52, -52.5,
+    -21, -48.5,
+    -4, -36,
+    23, -38.5,
+    89, -33.5,
+    133, -12,
+    57, -18.5,
+    -44, -17,
+    -43, 14,
+    57, 18.5,
+    133, 12,
+    89, 33.5,
+    23, 38.5,
+    -4, 35.5,
+    -13, 47,
+    -46.5, 52.5,
+    -80.5, 12,
+    -111, 11.5,
+    -132.5, -15,
+    -117.5, -32,
+    -86.5, -48
+  ]
+}

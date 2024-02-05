@@ -1,0 +1,13 @@
+{
+  "baseHullId": "BSC_Fennec",
+  "baseValueMult": 1,
+  "descriptionId": "BSC_Fennec",
+  "descriptionPrefix": "This Ship has been given Hegemony markings and some minor hull adjustment. Actual specifications are the same as the original.",
+  "fpMod": 0,
+  "hullName": "Fennec (H)",
+  "restoreToBaseHull": false,
+  "skinHullId": "BSC_Fennec_H",
+  "spriteName": "graphics/hulls/BSC_Fennec_H.png",
+  	"tags":["rare_bp", "Hegemony",],
+	"tech":"Hegemony",
+}

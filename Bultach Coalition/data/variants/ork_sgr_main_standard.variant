@@ -1,0 +1,83 @@
+{
+  "variantId": "ork_sgr_main_standard",
+  "hullId": "ork_sgr_main",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 25,
+  "fluxVents": 28,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_gigashotgun",
+        "WS0002": "ork_noshield_large",
+        "WS0003": "ork_noshield_large",
+        "WS0011": "ork_rotary_pd_small",
+        "WS0012": "ork_rotary_pd_small",
+        "WS0013": "ork_rotary_pd_small",
+        "WS0014": "ork_rotary_pd_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "ork_rotary_pd",
+        "WS0005": "ork_rotary_pd",
+        "WS0009": "ork_rotary_pd",
+        "WS0010": "ork_rotary_pd"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "ork_dispenser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "ork_bigplasma",
+        "WS0008": "ork_bigplasma"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0016": "sgr_front_left_standard"
+    },
+    {
+      "WS0015": "sgr_center_left_standard"
+    },
+    {
+      "WS0019": "sgr_engine_left_standard"
+    },
+    {
+      "WS0017": "sgr_front_right_standard"
+    },
+    {
+      "WS0018": "sgr_center_right_standard"
+    },
+    {
+      "WS0020": "sgr_engine_right_standard"
+    },
+    {
+      "WS0021": "ork_magnetic_core_standard"
+    }
+  ],
+  "wings": []
+}

@@ -1,0 +1,24 @@
+{
+
+	"combatSmall":{
+		"missp_lasher_heg_standard":10,
+		"missp_slasher_heg_standard":10,
+	},
+	"combatFreighterSmall":{
+		"missp_mudskipper_heg_Standard":10,
+	},
+	"combatFreighterMedium":{
+		"missp_mule_heg_Standard":10,
+	},
+	"combatFreighterLarge":{
+		"missp_venture_heg_Standard":10,
+	},
+	"carrierSmall":{
+		"missp_condor_heg_Standard":10,
+		"missp_condor_heg_Brawler":10,
+	},
+	"freighterMedium":{
+		"missp_colossus_heg_Standard":10,
+	},
+	
+}

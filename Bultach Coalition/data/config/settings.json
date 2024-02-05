@@ -1,0 +1,45 @@
+{
+
+	"designTypeColors":{
+		"orks": [98,141,107,255]
+	},
+	"plugins":{
+		"bt_interdictionPlugin":"data.scripts.plugins.bt_interdictionPlugin",
+	},
+	"graphics":{
+
+		"blueprint_packages":{
+			"ork_project_package":"graphics/icons/cargo/ork_package_bp.png"
+		},
+		"fx":{
+			#"shields_bultach_256":"graphics/fx/shields/bultach_256.png",
+			#"shields_bultach_128":"graphics/fx/shields/bultach_128.png",
+			#"shields_bultach_64":"graphics/fx/shields/bultach_64.png",
+			
+			#"shields_bultach_256ring":"graphics/fx/shields/bultach_256ring.png",
+			#"shields_bultach_128ring":"graphics/fx/shields/bultach_128ring.png",
+			#"shields_bultach_64ring":"graphics/fx/shields/bultach_64ring.png",
+
+			"Trail_Clean":"graphics/fx/trails/clean_trail.png",
+			"Trail_Fuzzy":"graphics/fx/trails/fuzzy_trail.png",
+			"Trail_Zappy":"graphics/fx/trails/zappy_trail.png",
+			"Trail_Doublehelix":"graphics/fx/trails/doublehelix_trail.png",
+			"Trail_Ring":"graphics/fx/trails/ring_trail.png",
+			"Trail_Smooth":"graphics/fx/trails/smooth_trail.png",
+			"Trail_Contrail":"graphics/fx/trails/contrail_trail.png",
+			"Trail_Surge":"graphics/fx/trails/surge_trail.png",
+			"Trail_Core":"graphics/fx/trails/core_trail.png",
+			"bt_phase_interdiction":"graphics/fx/bt_phase_interdiction.png",
+			
+		},
+		"BULTACH_TECH":{
+			"BT_shield_inner":"graphics/fx/shields/bultach_256.png",
+			"BT_shield_outer":"graphics/fx/shields/bultach_256ring.png",
+		},
+		"characters": {
+			"BTuisdean":"graphics/portraits/bt_uisdean.png",
+			"BTliam":"graphics/portraits/bt_liam.png",
+			"BTailis":"graphics/portraits/bt_ailis.png",
+		},
+	}
+}

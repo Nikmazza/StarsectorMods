@@ -1,0 +1,104 @@
+{
+  "hullName": "ssp_gonggong",
+  "hullId": "ssp_gonggong",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/ssp_gonggong.png",
+  "style": "LLI",
+  "height": 116,
+  "width": 112,
+  "center": [56, 55],
+  "collisionRadius": 79.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 73.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ssp_cliff",
+    "ssp_gonggong_shieldmod",
+	"ecm",
+	"nav_relay"
+  ],
+  "builtInWeapons": {
+    "WS0004": "ssp_vulcan"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 90,
+      "locations": [1, 29]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": -90,
+      "locations": [1, -29]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [38.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, 18],
+      "length": 20,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-50.5, -18],
+      "length": 20,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-44, 33],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-44, -33],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-54, 0],
+      "length": 42,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -53.5, 27.5,
+    -25.5, 50.5,
+    30.5, 50.5,
+    59, 16,
+    59, -16,
+    30.5, -50.5,
+    -25.5, -50.5,
+    -53.5, -27.5
+  ]
+}

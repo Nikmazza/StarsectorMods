@@ -1,0 +1,71 @@
+{
+  "variantId": "LTA_Consigliere_Standard",
+  "hullId": "LTA_Consigliere",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 32,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0021": "LTA_hex"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "LTA_talonrailautomatednixie",
+        "WS0010": "LTA_talonrailautomatednixie",
+        "WS0013": "LTA_nixiemissilesmall",
+        "WS0014": "LTA_nixiemissilesmall",
+        "WS0015": "LTA_nixiemissilesmall",
+        "WS0016": "LTA_nixiemissilesmall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyac",
+        "WS0002": "heavyac",
+        "WS0003": "heavyac",
+        "WS0004": "heavyac",
+        "WS0005": "heavyac",
+        "WS0006": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "LTA_nixie",
+        "WS0018": "LTA_nixie",
+        "WS0019": "LTA_nixie",
+        "WS0020": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "dualflak",
+        "WS0008": "dualflak",
+        "WS0011": "dualflak",
+        "WS0012": "dualflak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "warthog_wing"
+  ]
+}

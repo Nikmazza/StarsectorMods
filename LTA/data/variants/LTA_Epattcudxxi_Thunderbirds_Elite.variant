@@ -1,0 +1,40 @@
+{
+  "variantId": "LTA_Epattcudxxi_Thunderbirds_Elite",
+  "hullId": "LTA_Epattcudxxi_Thunderbirds",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "heavymauler",
+        "WS0002": "hveldriver"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightmg",
+        "WS0004": "lightmg"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0005": "LTA_Epattcudxxi_Thunderbirds_FrontPlate"
+    }
+  ],
+  "wings": [
+    "LTA_GladiusTB_Wing"
+  ]
+}

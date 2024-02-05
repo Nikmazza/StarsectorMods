@@ -1,0 +1,57 @@
+{
+  "hullName": "Trice",
+  "hullId": "bc_racingfighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_racingfighter.png",
+  "style": "HIGH_TECH",
+  "height": 35,
+  "width": 20,
+  "center": [10, 8],
+  "collisionRadius": 31.5,
+  "shieldCenter": [7, -0],
+  "shieldRadius": 23.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [15, 4]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-3, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-8, 5.5],
+      "length": 52.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-8, -5.5],
+      "length": 52.5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -6.5, 10,
+    27, -0,
+    -6.5, -10
+  ]
+}

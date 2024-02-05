@@ -1,0 +1,45 @@
+{
+    "displayName": "Hunter Killer",
+	"goalVariant": true,
+	"quality": 1,
+    "fluxCapacitors": 11,
+    "fluxVents": 9,
+    "hullId": "LTA_Hammerhead_Thunderbirds",
+    "hullMods": [
+        "safetyoverrides",
+        "converted_hangar",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Hammerhead_Thunderbirds_Hunterkiller",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "chaingun"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "hammer",
+                "WS 004": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "heavymg"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmg",
+                "WS 006": "lightmg"
+            }
+        }
+    ],
+    "wings": []
+}

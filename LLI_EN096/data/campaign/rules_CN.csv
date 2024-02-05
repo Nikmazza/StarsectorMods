@@ -1,0 +1,84 @@
+id,trigger,conditions,script,text,options,notes
+"#RULESET_NAME LLI",,,,,,
+,,,,,,
+# ##市场文本,,,,,,
+MarketMirageCity_transponderOn,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == MirageCity_market score:100
+$player.transponderOn == true","AddText ""在核验信息过后，航务局安排你在新太空港停泊。太空港内秩序井然，没有任何在在路边叫卖的商贩，墙壁上天花板上挂满了广告，商铺无一例外的装饰豪华。在离开太空港宏伟的接待大厅后终于可以一览Mirage City的城区：如同电影和游戏里的旧地球市中心一样繁华，巨大的透镜阵列将恒星的光照均匀的洒在城市的每一条道路上，高楼之间可以依稀看到五彩斑斓的花园，道路两侧种植了一些精心修剪的树木。显然这里就是城市的顶层，富人们的住处。"" marketFlavorTextColor",,,
+MarketMirageCity_transponderOff,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == MirageCity_market score:100
+$player.transponderOn == false","AddText ""你停泊在了缺乏管理的旧太空港。近乎真空的港区内挤满了各种大小的货船，商贩们每当发现有新的舰船入港便从气闸舱内蜂涌而出，投射着全息广告，并尝试通过固体将声音传入你的耳朵，显然这种努力是徒劳的。旧太空港坐落于城市底端，一部巨型电梯可以带任何人去往除了顶层的不同层级。"" marketFlavorTextColor",,,
+MarketAdeniumobesum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == AdeniumObesum_market score:100","AddText ""太空港内基本没有商贩，反而是一群西装革履的推销员在向你推销本地生产的金属和矿石。太空港周边没有任何能交易除金属和矿石之外的地方，简单的调查后你得知Adenium Obesum当地除了金属矿石交易的商业活动都集中在居民区的市集，所有商人都会带着货物前往远离太空港的居民区进行交易。"" marketFlavorTextColor
+",,,
+MarketLLI,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI","AddText ""港区内充满了小型货船和自由职业者。他们的运气好坏，可以通过他们的船舶装甲的是光鲜还是污秽，以及船上装载的货物的多寡来判断。一小群投机者似乎都相互认识，他们在卸货的船长们到来时总是一起挤过去。而小贩们拿着商品并投射着个人全息广告向船员们叫卖。太空港内安装了不少崭新的屏幕，循环播放着军队的宣传视频，试图吸引每一个来过这个太空港的人加入军队。"" marketFlavorTextColor
+",,,
+"#END ##市场文本",,,,,,
+,,,,,,
+# LLINPC0,,,,,,
+LLIdefaultNPC0Greeting,PickGreeting,"$id == NPC_0 score:1000","FireAll PopulateOptions","对方接通了通讯，你看到了对方似乎正在使用个人终端打牌，同时喃喃自语道：哦对的对的，哎呀不对...
+
+对方短暂的迟疑后，似乎才想起来他刚刚接通了你的通讯
+
+""你好，解决了 Galata 危机的 $playerName $PlayerSirOrMadam。我是Bracks Ao，楼兰海军前任司令，烹饪爱好者， 无业游民。""",,
+LLIdefaultNPC0AnswerOfFoxOptions,PopulateOptions,"$id == NPC_0
+!$AnswerOfFox
+",,,"AnswerOfFoxOptions:我想知道关于穿越者协会的事情",
+LLIdefaultNPC0AnswerOfFox,DialogOptionSelected,"$option == AnswerOfFoxOptions","FireAll NPC0AnswerOfFox","""楼兰海军在几年前我还是海军司令的时候和穿越者协会进行过技术交流，当时我们送出了浪潮级的蓝图，而拿到了雨帘级的蓝图。协会对浪潮级的改造十分的保守，但我们的设计师对雨帘级进行了大刀阔斧的改造，也就是随处可见的热风级，当时根本没有人看出来热风级是雨帘级改造版本，楼兰海军的设计师的创造力让当时来参加技术交流的局长都赞叹不已。""
+
+""但是当时楼兰海军已经被卢德教徒完全渗透了，我的权力也被架空，因此技术交流在热风级的第一艘量产型建造完成后就突然结束了。据说寒流局长的尾巴软软的很温暖，但很可惜当时的麻烦事情太多了，错过了摸尾巴的机会，这是我这一生的遗憾。""
+
+""你是卢德信徒么？""",,
+LLIdefaultNPC0AnswerOfFox1Options,NPC0AnswerOfFox,"$id == NPC_0",,,"AnswerOfFox1Options:不是",
+LLIdefaultNPC0AnswerOfFox1,DialogOptionSelected,"$option == AnswerOfFox1Options","$AnswerOfFox = true
+$player.AnswerOfFox = true
+AddTextSmall ""获得了前楼兰海军司令的信件"" highlight
+FireAll PopulateOptions
+AdjustRep TDB COOPERATIVE 30","""就当作是我的礼物吧，我希望这会让 穿越者协会 对你的看法有所改观。如果你有幸亲眼见到寒流局长，一定要摸一下尾巴，不然你会和我一样后悔终生。""",,
+LLIdefaultNPC0AnswerOfFox2Options,NPC0AnswerOfFox,"$id == NPC_0",,,"AnswerOfFox2Options:是",
+LLIdefaultNPC0AnswerOfFox2,DialogOptionSelected,"$option == AnswerOfFox2Options","$AnswerOfFox = true
+$player.AnswerOfFox = true
+FireAll PopulateOptions","""请原谅我很难和卢德信徒站在同一个角度思考，宗教可不能改变英仙座星区的现状。信徒们完全是被洗脑成教会的工具了。如果教会突然发动什么 '圣战' ，遍布在全星区的教徒会做出什么...我想 Mairaath 的居民会很清楚。放任卢德教会继续发展迟早会毁了我们建立的一切。""",,
+LLIdefaultNPC0AnswerOfALOptions,PopulateOptions,"$id == NPC_0
+!$AnswerOfAL",,,"AnswerOfALOptions:怎么挑选英仙座最好的厨具",
+LLIdefaultNPC0AnswerOfAL,DialogOptionSelected,"$option == AnswerOfALOptions","$AnswerOfAL = true
+$player.AnswerOfAL = true
+FireAll PopulateOptions","""我认为没有最好的厨具只有最好的厨师。不过英仙座星区最好的锅都来自 Agustin 星系，那里生产的锅已经是每个高档餐厅的必备用品了。""",,
+LLIdefaultNPC0MainPreOptions,PopulateOptions,"$id == NPC_0
+!$LLIunlocktrade",,,"NPC0MainPreOptions:你不会是专门找人闲聊的吧",
+LLIdefaultNPC0MainPre,DialogOptionSelected,"$option == NPC0MainPreOptions","$LLIunlocktrade = true
+$player.LLIunlocktrade = true
+FireAll PopulateOptions","""当然不是，$playerName $PlayerSirOrMadam，我认为你有潜力成为英仙座星区中一股不可忽视的力量，所以我们可以谈一谈生意。""
+",,
+LLITradeOptions,PopulateOptions,"$id == NPC_0
+$LLIunlocktrade",,,"LLITradeOptions_text:让我们谈谈生意",
+LLITradeOptions_text,DialogOptionSelected,"$id == NPC_0
+$option == LLITradeOptions_text","FireAll LLITradeOptions
+AddTextSmall ""现在你有下列可选的项目"" highlight","""楼兰海军退役了一批几乎全新的浪潮(M)，如果你感兴趣我可以卖给你几台。""
+
+""楼兰海军开除了一部分老兵，为了生计他们不少都选择去当雇佣兵，我可以作为中间人为你介绍几位。""
+
+""我有个客户被海盗塞进炼狱炮发射出去了，所以他订购的一批金属和稀有金属没人付款了，你可以低价买入这批货。""
+
+""我有个女儿失联很久了，有小道消息说她在某个速子科技的舰队中，很有可能是被绑架了，你可以帮我把她带回家吗。""",,
+LLITradeOptions_waveM,LLITradeOptions,"$id == NPC_0
+",,,"LLITradeOptions_waveM_buy:以40000星币购入浪潮(M)",
+LLITradeOptions_waveM1,DialogOptionSelected,"$option == LLITradeOptions_waveM_buy","FireAll LLITradeOptions_waveM2
+","""楼兰海军退役了一批几乎全新的浪潮(M)，如果你感兴趣我可以卖给你几台。""
+
+""全新的浪潮(M)船体，包含武器，售价40000星币。""
+
+",,
+LLITradeOptions_waveM2,LLITradeOptions_waveM2,"$id == NPC_0","
+
+",,"LLITradeOptions_waveM2b:确认购买",
+LLITradeOptions_waveM2a,LLITradeOptions_waveM2,"$id == NPC_0",,,"LLITradeOptions_text:取消并返回",
+LLITradeOptions_waveM2b,DialogOptionSelected,"$id == NPC_0
+$option ==LLITradeOptions_waveM2b","LLICMD_BuyWaveM",,"LLITradeOptions_text:继续",
+LLITradeOptionsLeave,LLITradeOptions,"$id == NPC_0",,,"cutCommLink:切断通讯链接",
+"#END LLINPC0",,,,,,
+

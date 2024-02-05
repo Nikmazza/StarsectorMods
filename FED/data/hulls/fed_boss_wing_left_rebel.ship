@@ -1,0 +1,55 @@
+{
+  "hullName": "Left Armor Wing",
+  "hullId": "fed_boss_wing_left_rebel",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/rebel/fed_boss_wing_left_rebel.png",
+  "style": "FEDERATION",
+  "height": 143,
+  "width": 52,
+  "center": [26, 71.5],
+  "collisionRadius": 99.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 80,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "always_detaches",
+    "magazines"
+  ],
+  "builtInWeapons": {
+    "WS0001": "vulcan",
+    "WS0002": "vulcan"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 135,
+      "locations": [-40.5, -16.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [55.5, 12]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -40, 23.5,
+    -69.5, -6.5,
+    -70, -17,
+    -64, -22.5,
+    -34, -22.5,
+    -10, 1,
+    61.5, 1,
+    69.5, 11,
+    60, 23
+  ]
+}

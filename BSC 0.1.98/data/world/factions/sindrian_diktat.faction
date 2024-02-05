@@ -1,0 +1,22 @@
+{
+        "knownShips":{
+        "hulls":[
+            "BSC_Aghast",
+            "BSC_Baldric",
+            "BSC_Cassina",
+            "BSC_Brave",
+        ],
+    },
+        "hullFrequency":{
+        "hulls":{
+        "BSC_Aghast": 0.4, #Shouldn't be common
+        "BSC_Cassina": 0.4, #Shouldn't be common
+        "BSC_Brave": 0.5, #Avoid drowning out better frigates
+        },
+    },
+                "knownWeapons":{
+        "weapons":[
+            "BSC_Annihilator_MLRS",
+        ],
+    },
+},

@@ -1,0 +1,52 @@
+{
+  "hullName": "Resolute Aux Shield Core",
+  "hullId": "fed_superkestrel_emitter",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_superkestrel_shieldemitter.png",
+  "style": "FEDERATION_GREEN",
+  "height": 53,
+  "width": 38,
+  "center": [19, 26.5],
+  "collisionRadius": 287,
+  "shieldCenter": [100, -0],
+  "shieldRadius": 185,
+  "viewOffset": 0,
+  "moduleAnchor": [
+    0,
+    0
+  ],
+  "builtInMods": [
+    "fed_design",
+    "always_detaches",
+    "reduced_explosion",
+    "shield_always_on",
+    "fed_auxshieldeffect"
+  ],
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -61, 51.5,
+        -61.5, -44.5,
+        -91.5, 5,
+        -87.5, 5.5,
+        -57, 52,
+        -57.5, -44
+      ]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -22.5, 7.5,
+    -2.5, 14.5,
+    18.5, 6.5,
+    18.5, -6.5,
+    -2.5, -14.5,
+    -22.5, -7.5
+  ]
+}

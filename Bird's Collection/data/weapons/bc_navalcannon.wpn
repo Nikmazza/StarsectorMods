@@ -1,0 +1,52 @@
+{
+  "id": "bc_navalcannon",
+  "specClass": "projectile",
+  "projectileSpecId": "bc_navalcannon_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/bc_heavycannon_base.png",
+  "turretGunSprite": "graphics/weapons/bc_heavycannon_gun.png",
+  "hardpointSprite": "graphics/weapons/bc_heavycannon_base.png",
+  "hardpointGunSprite": "graphics/weapons/bc_heavycannon_gun.png",
+  "visualRecoil": 10,
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "turretOffsets": [
+    18.5,
+    9,
+    18.5,
+    -9
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    37,
+    9,
+    37,
+    -9
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 120,
+    "spread": 0,
+    "particleSizeMin": 20,
+    "particleSizeRange": 10,
+    "particleDuration": 0.3,
+    "particleCount": 60,
+    "particleColor": [
+      200,
+      189,
+      97,
+      255
+    ]
+  },
+  "fireSoundTwo": "mjolnir_fire"
+}

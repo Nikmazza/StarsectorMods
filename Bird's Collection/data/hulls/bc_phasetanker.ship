@@ -1,0 +1,94 @@
+{
+  "hullName": "Visitant",
+  "hullId": "bc_phasetanker",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/phase/bc_phasetanker.png",
+  "style": "HIGH_TECH",
+  "height": 99,
+  "width": 84,
+  "center": [42, 52.5],
+  "collisionRadius": 85,
+  "shieldCenter": [-5.5, -0],
+  "shieldRadius": 73,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield",
+    "civgrade"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -69.5,
+      "locations": [23, -20]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 69.5,
+      "locations": [23, 20]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-42.5, 25],
+      "length": 38.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-42.5, -25],
+      "length": 38.5,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-41.5, 15.5],
+      "length": 50,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-41.5, -15.5],
+      "length": 50,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -52, 4,
+    -41, 9.5,
+    -40.5, 29.5,
+    -30, 29.5,
+    -15, 40,
+    11.5, 40,
+    24, 21.5,
+    34.5, 25.5,
+    42, 9.5,
+    46.5, 9,
+    46.5, -9,
+    42, -9.5,
+    34.5, -25.5,
+    24, -21.5,
+    11.5, -40,
+    -15, -40,
+    -30, -29.5,
+    -40.5, -29.5,
+    -41, -9.5,
+    -52, -4
+  ]
+}

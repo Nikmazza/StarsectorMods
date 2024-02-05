@@ -1,0 +1,21 @@
+{
+
+"designTypeColors":{
+	"Corrupted Design":[200,0,0,255],
+	"Sindrian Diktat":[180,0,120,255],
+	},
+
+"graphics":{
+		"blueprint_packages":{
+			"sa_corrupted_bp":"graphics/icons/cargo/sa_corrupted_bp.png",
+		},
+	    },
+    "sa_lobster_tanks_play_sfx": true,
+    "sa_lobster_tanks_show_notification": true,
+    "sa_lobster_tanks_food_to_lobster_cost": 0.25,
+    "sa_lobster_tanks_growth_rate": 5,
+    "sa_lobster_tanks_spawning_month_from": 4,
+    "sa_lobster_tanks_spawning_month_to": 6,
+    "sa_lobster_tanks_days_to_update": 7,
+	
+}

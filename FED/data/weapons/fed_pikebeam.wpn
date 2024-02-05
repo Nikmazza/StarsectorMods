@@ -1,0 +1,54 @@
+{
+  "id": "fed_pikebeam",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "beamEffect": "data.scripts.weapons.fed_PikeBeamEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/FED/weapons/fed_pikebeam_turret.png",
+  "turretGunSprite": "graphics/FED/weapons/fed_pikebeam_turret_glow.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_pikebeam_hardpoint.png",
+  "hardpointGunSprite": "graphics/FED/weapons/fed_pikebeam_hardpoint_glow.png",
+  "glowColor": [
+    255,
+    80,
+    80,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    10,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    13.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    30,
+    30,
+    255
+  ],
+  "coreColor": [
+    255,
+    205,
+    205,
+    255
+  ],
+  "width": 10,
+  "textureType": [
+    "graphics/fx/beamfringec.png",
+    "graphics/fx/beam_weave_core.png"
+  ],
+  "textureScrollSpeed": 1024,
+  "pixelsPerTexel": 2,
+  "fireSoundTwo": "fed_pike_loop"
+}

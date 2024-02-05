@@ -1,0 +1,23 @@
+{
+  "variantId": "bc_midlinefighter1_Fighter",
+  "hullId": "bc_midlinefighter1",
+  "displayName": "Multipurpose Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "bc_fighter_blaster",
+        "WS0002": "bc_fighter_blaster"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

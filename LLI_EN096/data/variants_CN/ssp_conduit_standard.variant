@@ -1,0 +1,31 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "goalVariant": true,
+    "hullId": "ssp_conduit",
+    "hullMods": [
+        "heavyarmor",
+        "armoredweapons",
+        "reinforcedhull",
+        "ssp_modetransform"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_conduit_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_spot",
+                "WS0004": "ssp_spot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "hil"}
+        }
+    ]
+}

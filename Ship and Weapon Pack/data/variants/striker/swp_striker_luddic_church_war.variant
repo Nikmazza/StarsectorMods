@@ -1,0 +1,46 @@
+{
+    "displayName": "War",
+    "fluxCapacitors": 10,
+    "fluxVents": 11,
+    "hullId": "swp_striker_luddic_church",
+    "hullMods": [
+        "heavyarmor",
+        "ballistic_rangefinder"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "swp_striker_luddic_church_war",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "swp_contender",
+                "WS0002": "swp_contender",
+                "WS0003": "swp_contender",
+                "WS0004": "swp_contender"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "sabot"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "lightdualac",
+                "WS0007": "lightdualac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "vulcan",
+                "WS0009": "vulcan"
+            }
+        }
+    ]
+}

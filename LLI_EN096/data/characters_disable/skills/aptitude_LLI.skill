@@ -1,0 +1,12 @@
+{
+	"id":"aptitude_LLI",
+	"governingAptitude":"aptitude_LLI",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"data.campaign.skills.ssp_AptitudeDesc$Level1"},
+			]
+		},
+	],
+}

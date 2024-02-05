@@ -1,0 +1,93 @@
+{
+  "variantId": "fed_flagship_assault",
+  "hullId": "fed_flagship",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 19,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "advancedoptics",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "autopulse"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0016": "breach",
+        "WS0021": "breach",
+        "WS0022": "breach",
+        "WS0023": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "fed_minibeam",
+        "WS0007": "fed_minibeam",
+        "WS0011": "fed_minibeam",
+        "WS0012": "fed_minibeam",
+        "WS0017": "fed_minibeam",
+        "WS0018": "fed_minibeam",
+        "WS0024": "fed_minibeam",
+        "WS0025": "fed_minibeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "fed_duallaser2",
+        "WS0014": "fed_duallaser2"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fed_singlelaser",
+        "WS0002": "fed_singlelaser",
+        "WS0003": "fed_singlelaser",
+        "WS0004": "fed_singlelaser",
+        "WS0009": "fed_singlelaser",
+        "WS0010": "fed_singlelaser",
+        "WS0019": "fed_singlelaser",
+        "WS0020": "fed_singlelaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [
+    {
+      "WS0008": "fed_flagship_sideshield_standard"
+    }
+  ],
+  "wings": [
+    "warthog_wing",
+    "warthog_wing",
+    "warthog_wing",
+    "warthog_wing"
+  ]
+}

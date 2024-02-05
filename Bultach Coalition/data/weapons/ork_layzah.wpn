@@ -1,0 +1,64 @@
+{
+  "id": "ork_layzah",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/ork_layzah_turret_base.png",
+  "turretGlowSprite": "graphics/weapons/ork_layzah_turret_glow.png",
+  "hardpointSprite": "graphics/weapons/ork_layzah_hardpoint_base.png",
+  "hardpointGlowSprite": "graphics/weapons/ork_layzah_hardpoint_glow.png",
+  "glowColor": [
+    255,
+    30,
+    0,
+    200
+  ],
+  "hitGlowRadius": 45,
+  "turretOffsets": [
+    29.5,
+    10,
+    29.5,
+    -10
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    30,
+    -9.5,
+    30,
+    9.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "beamFireOnlyOnFullCharge": true,
+  "fringeColor": [
+    255,
+    30,
+    0,
+    200
+  ],
+  "coreColor": [
+    255,
+    255,
+    245,
+    255
+  ],
+  "width": 20,
+  "textureType": LASER,
+  "textureScrollSpeed": 250,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundTwo": "beem_loop"
+}

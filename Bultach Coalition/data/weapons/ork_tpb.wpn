@@ -1,0 +1,49 @@
+{
+  "id": "ork_tpb",
+  "specClass": "projectile",
+  "projectileSpecId": "tpc_shot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/ork_blaster.png",
+  "hardpointSprite": "graphics/weapons/ork_blaster.png",
+  "turretGlowSprite": "graphics/weapons/ork_blaster_glow.png",
+  "hardpointGlowSprite": "graphics/weapons/ork_blaster_glow.png",
+  "glowColor": [
+    255,
+    100,
+    100,
+    255
+  ],
+  "turretOffsets": [
+    56,
+    7
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    88.5,
+    7
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 30,
+    "spread": 5,
+    "particleSizeMin": 15,
+    "particleSizeRange": 20,
+    "particleDuration": 0.12,
+    "particleCount": 10,
+    "particleColor": [
+      255,
+      100,
+      100,
+      255
+    ]
+  },
+  "fireSoundTwo": "thermal_pulse_cannon_fire"
+}

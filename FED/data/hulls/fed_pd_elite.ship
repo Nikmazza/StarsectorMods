@@ -1,0 +1,52 @@
+{
+  "hullName": "Defense Drone II",
+  "hullId": "fed_pd_elite",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/FED/ships/fed_drone_laser.png",
+  "style": "FEDERATION",
+  "height": 30,
+  "width": 22,
+  "center": [11, 15],
+  "collisionRadius": 24.5,
+  "shieldCenter": [-0.5, -0],
+  "shieldRadius": 18.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "autorepair",
+    "no_weapon_flux",
+    "insulatedengine"
+  ],
+  "builtInWeapons": {
+    "WS0001": "fed_pd_elite_drone"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-1, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-8, -0],
+      "length": 6.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "CUSTOM",
+      "styleId": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -6.5, 4.5,
+    1.5, 7,
+    6, 5,
+    6, -5,
+    1.5, -7,
+    -6.5, -4.5
+  ]
+}

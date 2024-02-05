@@ -1,0 +1,123 @@
+{
+  "hullName": "Murk",
+  "hullId": "sa_murk",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/sa_murk.png",
+  "style": "HIGH_TECH",
+  "height": 100,
+  "width": 100,
+  "center": [50, 50],
+  "collisionRadius": 69.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 66.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [30, -14]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -20,
+      "locations": [21, -30]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [37, 20]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-37, 23],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-38, 27],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-39, 31],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-40, 35],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-38, -21.5],
+      "length": 29,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-38, -29],
+      "length": 26,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-38, -34.5],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -38, 37,
+    -26, 44,
+    -10, 24.5,
+    3, 34,
+    34, 34,
+    43, 28,
+    43, 12,
+    19, 6,
+    19, -5,
+    33, -5,
+    39, -23,
+    26, -43,
+    17.5, -43,
+    3, -31,
+    -14, -31,
+    -28, -40,
+    -38, -36,
+    -38, -21,
+    -27, -17,
+    -27, 10
+  ]
+}

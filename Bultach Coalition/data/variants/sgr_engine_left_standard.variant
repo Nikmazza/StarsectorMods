@@ -1,0 +1,22 @@
+{
+  "variantId": "sgr_engine_left_standard",
+  "hullId": "sgr_engine_left",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 12,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_rotary_pd"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,146 @@
+{
+  "hullName": "GahaTekkin",
+  "hullId": "LTA_Drone_ZC_Thunderbirds",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/LTA/ships/Drones/LTA_Drone_ToBeConfirmedTB.png",
+  "style": "LOW_TECH",
+  "height": 24,
+  "width": 24,
+  "center": [12, 12],
+  "collisionRadius": 20,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 15.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "axialrotation",
+    "turretgyros",
+    "diademcore"
+  ],
+  "builtInWeapons": {
+    "WS0001": "LTA_vulcansinglenobase",
+    "WS0002": "LTA_vulcansinglenobase",
+    "WS0003": "LTA_vulcansinglenobase",
+    "WS0004": "LTA_annihilator_builtin_slow",
+    "WS0005": "LTA_dronezonecontrolmini_top_deco",
+    "WS0006": "swarmer_fighter",
+    "WS0007": "swarmer_fighter",
+    "WS0008": "blinker_red",
+    "WS0009": "blinker_red",
+    "WS0010": "blinker_red",
+    "WS0011": "blinker_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 120,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -120,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [0, -0],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0, -0],
+      "renderOrderMod": 1000
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": 45,
+      "locations": [3, 3]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": -135,
+      "locations": [-3, -3]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-0.5, 0.5],
+      "renderOrderMod": 2000
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0.5, 0.5],
+      "renderOrderMod": 2000
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-0.5, -0.5],
+      "renderOrderMod": 2000
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0.5, -0.5],
+      "renderOrderMod": 2000
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -8, -0,
+    0, 8,
+    8, -0,
+    0, -8
+  ]
+}

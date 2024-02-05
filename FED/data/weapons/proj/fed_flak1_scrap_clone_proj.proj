@@ -1,0 +1,20 @@
+{
+	"id":"fed_flak1_scrap_clone_proj",
+	"specClass":"projectile",
+	#"onHitEffect":"com.fs.starfarer.api.impl.combat.SabotOnHitEffect",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"glowColor":[205,85,45,25],
+	"glowRadius":12,
+	"length":65.0,
+	"width":9.0,
+	"hitGlowRadius":10.5,
+	"fadeTime":0.15,
+	"fringeColor":[95,95,205,45],
+	"coreColor":[155,165,125,225],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/flechette_med.png",
+}
+}

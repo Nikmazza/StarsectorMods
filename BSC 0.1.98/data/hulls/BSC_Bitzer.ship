@@ -1,0 +1,89 @@
+{
+  "hullName": "Bitzer",
+  "hullId": "BSC_Bitzer",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/hulls/BSC_Bitzer.png",
+  "style": "LOW_TECH",
+  "height": 70,
+  "width": 55,
+  "center": [27, 32],
+  "collisionRadius": 61.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 60,
+  "viewOffset": 0,
+  "builtInMods": [
+    "rugged"
+  ],
+  "builtInWings": [
+    "BSC_Bitzer_Drone_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-5, -17]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [26.5, 6]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 180,
+      "locations": [-25.5, -1]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -3, 16,
+        2, 16
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-32, 9],
+      "length": 34,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-32, -11],
+      "length": 34,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -30, -14,
+    -5.5, -26.5,
+    4.5, -19.5,
+    29.5, -18,
+    24.5, 10.5,
+    7.5, 22.5,
+    -18, 21,
+    -30, 11
+  ]
+}

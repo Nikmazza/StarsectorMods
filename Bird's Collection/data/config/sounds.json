@@ -1,0 +1,18 @@
+{
+			
+			
+			
+			
+			"bc_energycannon_fire":[
+        {"file":"sounds/birdscollection/sfx_wpn_guns/bc_energycannon_fire_01.ogg","pitch":1, "volume":1.5}
+			],
+			"bc_cobblegun_fire":[
+		{"file":"sounds/birdscollection/sfx_wpn_guns/bc_cobblegun_fire_01.ogg","pitch":1, "volume":0.3},
+		{"file":"sounds/birdscollection/sfx_wpn_guns/bc_cobblegun_fire_02.ogg","pitch":1, "volume":0.3},
+		{"file":"sounds/birdscollection/sfx_wpn_guns/bc_cobblegun_fire_03.ogg","pitch":1, "volume":0.3}
+	 ]
+	 
+	 
+	 
+	 
+}

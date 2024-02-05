@@ -1,0 +1,74 @@
+{
+  "variantId": "sa_lobster_royal",
+  "hullId": "sa_lobster",
+  "displayName": "Royal",
+  "goalVariant": true,
+  "fluxCapacitors": 36,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "insulatedengine",
+    "missleracks",
+    "targetingunit",
+    "fluxdistributor",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0031": "locust"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0023": "sabot",
+        "WS0024": "sabot",
+        "WS0025": "sabot",
+        "WS0026": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "lightdualac",
+        "WS0010": "lightdualac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "gravitonbeam",
+        "WS0016": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0019": "vulcan",
+        "WS0020": "vulcan",
+        "WS0021": "vulcan",
+        "WS0022": "vulcan"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0002": "sa_lobster_arm_left_variant"
+    },
+    {
+      "WS0001": "sa_lobster_arm_right_variant"
+    }
+  ],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "variantId": "ork_dreadnotv2_siege",
+  "hullId": "ork_dreadnotv2",
+  "displayName": "Siege",
+  "goalVariant": true,
+  "fluxCapacitors": 14,
+  "fluxVents": 50,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "hbi",
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ork_rotary_pd",
+        "WS0003": "ork_rotary_pd_small",
+        "WS0004": "ork_rotary_pd_small",
+        "WS0005": "ork_rotary_pd_large",
+        "WS0006": "ork_shotgun",
+        "WS0007": "ork_rotary_pd",
+        "WS0008": "ork_rotary_pd_large",
+        "WS0011": "ork_shotgun",
+        "WS0012": "ork_rotary_pd_small",
+        "WS0013": "ork_rotary_pd_small",
+        "WS0021": "ork_rotary_pd_small",
+        "WS0022": "ork_rotary_pd_small",
+        "WS0023": "ork_rotary_pd_small",
+        "WS0024": "ork_rotary_pd_small",
+        "WS0025": "ork_rotary_pd_small",
+        "WS0026": "ork_rotary_pd_small",
+        "WS0028": "ork_rotary_pd_small",
+        "WS0029": "ork_shotgun",
+        "WS0030": "ork_shotgun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "ork_nailer",
+        "WS0015": "ork_nailer",
+        "WS0016": "ork_big_shotgun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "ork_thumpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_sledge_medium",
+        "WS0020": "ork_sledge_medium",
+        "WS0031": "ork_sledge"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "ork_sledge_small",
+        "WS0019": "ork_sledge_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "ork_sledge_medium",
+        "WS0010": "ork_sledge_medium"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "talon_wing",
+    "talon_wing"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+	"id":"ssp_ammofeedjet",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"data.shipsystems.ssp_ammofeedjet",
+	
+	"engineGlowLengthMult":1.2,
+	"engineGlowWidthMult":1.2,
+	"engineGlowGlowMult":1.2,
+	"weaponGlowColor":[255,200,0,155],
+	"weaponTypes":[BALLISTIC,ENERGY],
+
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":false,
+
+	"useSound":"system_ammo_feeder",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{		
+	"activeSpeedIncrease":25,
+	"averageSpeedIncrease":12.5,
+	}
+}

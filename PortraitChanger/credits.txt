@@ -1,0 +1,5 @@
+This is a personal mod commissioned by CY / Milkydromeda and developed by Lukas04, developer of Lunalib.
+
+Initially commissioned with the intention of having improved interactions between the player / streamer and their viewers. At first, it had hard dependency to UAF as well but eventually removed upon CY's request as they both agreed to release it for the public.
+
+// Thank you Lukas04 for the mod, I really love! - CY

@@ -1,0 +1,31 @@
+{
+	"id":"bt_forcedphase",
+	"type":"PHASE_CLOAK",
+	"aiType":"PHASE_CLOAK",
+	
+	"statsScript":"data.scripts.shipsystems.bt_phaseDive",
+
+	"phaseHighlight":"_glow1",
+	"phaseDiffuse":"_glow2",
+
+	#"effectColor1":[255,175,255,255],
+	#"effectColor2":[255,0,255,150],
+		
+	"alwaysAccelerate":false,
+	"clampMaxSpeedAfter":true,
+
+	"soundFilterType":"LOWPASS",
+	"soundFilterGain":0.8,
+	"soundFilterGainHF":0.25,
+	
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"spacial_shunt",
+	"loopSound":"ork_reactor_loop",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":0,
+		"averageSpeedIncrease":0,
+	}
+}

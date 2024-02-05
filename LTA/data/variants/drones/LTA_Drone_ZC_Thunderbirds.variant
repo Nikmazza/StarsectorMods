@@ -1,0 +1,51 @@
+{
+  "variantId": "LTA_Drone_ZC_Thunderbirds",
+  "hullId": "LTA_Drone_ZC_Thunderbirds",
+  "displayName": "Zone Control Pod",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "LTA_annihilator_builtin_slow"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "swarmer_fighter",
+        "WS0007": "swarmer_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "LTA_vulcansinglenobase"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "LTA_vulcansinglenobase"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "LTA_vulcansinglenobase"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

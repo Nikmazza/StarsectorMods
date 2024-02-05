@@ -1,0 +1,30 @@
+{
+	"id":"bt_engine_burn",
+	"type":"ENGINE_MOD",
+	"aiType":"MANEUVERING_JETS",
+	
+	"statsScript":"data.scripts.shipsystems.EngineBurnStats",
+	
+	"engineGlowColor":[205,095,100,155],
+	"engineGlowContrailColor":[155,57,49,59],
+	"engineGlowLengthMult":1.5,
+	"engineGlowWidthMult":1.3,
+	"engineGlowGlowMult":1.3,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+
+
+	
+	"useSound":"ork_engine_burn",
+	#"loopSound":"ork_engine_burn",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":400,
+		"averageSpeedIncrease":50,
+	}
+}

@@ -1,0 +1,193 @@
+{
+  "hullName": "Faster",
+  "hullId": "ork_faster",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/ork_faster.png",
+  "style": "BULTACH",
+  "height": 245,
+  "width": 158,
+  "center": [79, 120],
+  "collisionRadius": 151,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 144.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "BT_shieldsChanger",
+    "Ork_low_Maintenance",
+    "bt_shieldArching",
+    "ork_redfasta"
+  ],
+  "builtInWeapons": {
+    "WS0011": "ork_faster_deco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-37, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [66, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 260,
+      "angle": 0,
+      "locations": [27.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 45,
+      "locations": [-33, 30]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -45,
+      "locations": [-33, -30]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 180,
+      "locations": [-67, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-11.5, 59]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-11.5, -59]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [108.5, 20]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [108.5, -20]
+    },
+    {
+      "id": "WS0011",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-109, -0],
+      "length": 81,
+      "width": 25,
+      "angle": 180,
+      "contrailSize": 25,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-90, -45],
+      "length": 86.345444,
+      "width": 46.150383,
+      "angle": -162.5,
+      "contrailSize": 46.150383,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    },
+    {
+      "location": [-90, 45],
+      "length": 86.345444,
+      "width": 46.150383,
+      "angle": 162.5,
+      "contrailSize": 46.150383,
+      "style": "CUSTOM",
+      "styleId": "ORK_ENGINE"
+    }
+  ],
+  "bounds": [
+    -108, -9,
+    -118.5, -10.5,
+    -110, -22.5,
+    -80.5, -28,
+    -90.5, -36,
+    -82.5, -54.5,
+    -106, -71.5,
+    -103.5, -76.5,
+    -67, -66,
+    -57.5, -73.5,
+    -23, -76,
+    -14, -73,
+    -0.5, -43,
+    33, -37.5,
+    45.5, -46,
+    69, -32.5,
+    100, -27.5,
+    123.5, -5.5,
+    87.5, -5,
+    87.5, 5,
+    123.5, 5.5,
+    100, 27.5,
+    69, 32.5,
+    45.5, 46,
+    33, 37.5,
+    -0.5, 43,
+    -14, 73,
+    -23, 76,
+    -57.5, 73.5,
+    -67, 66,
+    -103.5, 76.5,
+    -106, 71.5,
+    -82.5, 54.5,
+    -90.5, 36,
+    -80.5, 28,
+    -110, 22.5,
+    -118.5, 10.5,
+    -108, 9
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "hullName": "Bitzer (P)",
+  "hullId": "BSC_Bitzer_P",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/hulls/BSC_Bitzer_P.png",
+  "style": "LOW_TECH",
+  "height": 70,
+  "width": 57,
+  "center": [27, 32],
+  "collisionRadius": 63,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 60,
+  "viewOffset": 0,
+  "builtInMods": [
+    "rugged"
+  ],
+  "builtInWeapons": {
+    "WS0004": "swarmer"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-5, -19]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [26.5, 4]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 180,
+      "locations": [-25, -3]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 90,
+      "locations": [-0.5, 17.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-32, 7],
+      "length": 34,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-32, -13],
+      "length": 34,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -28.5, -17.5,
+    -4.5, -28.5,
+    6, -20,
+    31, -20,
+    18, 16,
+    6, 20,
+    -12.5, 20,
+    -28.5, 11.5
+  ]
+}

@@ -1,0 +1,18 @@
+{
+	"id":"ness_saw", # internal id
+	"name":"Nes's ship and weapon", # displayed to the player
+	"author":"Nes",
+	"version":{
+		"major":1, 
+		"minor":9, 
+		"patch":ggg
+	},
+	"description":"It's dangerous to go alone, take this.",
+	"gameVersion":"0.96a-RC10",
+	"jars":["jars/Nes's SAW.jar"],
+	"dependencies": [
+		{"id": "lw_lazylib", "name": "LazyLib"},
+		{"id": "MagicLib", "name": "MagicLib"},
+	],
+    "modPlugin":"data.scripts.NES_ModPlugin",
+}

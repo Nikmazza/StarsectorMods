@@ -1,0 +1,39 @@
+{
+	"baseHullId":"hammerhead",
+	"skinHullId":"LTA_Hammerhead_Thunderbirds",
+	"hullName":"Hammerhead (TB)",
+	"descriptionId":"hammerhead",
+	"descriptionPrefix":"This ship has been heavily modified and upclassed for use in the 'Duinn Thunderbirds', sporting many practical but expensive 'showy improvements' that make it more intimidating in combat over standard variations of the hull. This ship's shuttle bay in particular has been extensively modified to support built-in LPCs if converted into a bay.",
+	"tags":["rare_bp", "LTA_DuinnThunderbirds_bp"],
+	"tech":"Duinn Thunderbirds",
+	"fleetPoints":12,
+	"ordnancePoints":100,
+	#"restoreToBaseHull":true,
+	"baseValueMult":1.5,
+	"spriteName":"graphics/LTA/ships/Epattcud/Thunderbirds/LTA_Hammerhead_Thunderbirds.png",
+	#"systemId": "",
+	"removeWeaponSlots":["WS 007", "WS 008"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+    	"WS 003":{
+			#"angle": 0,
+            #"arc": 5,
+            #"mount": "TURRET",
+            #"size": "MEDIUM",
+            "type": "COMPOSITE"
+		},	
+    	"WS 004":{
+			#"angle": 0,
+            #"arc": 5,
+            #"mount": "TURRET",
+            #"size": "MEDIUM",
+            "type": "COMPOSITE"
+		},	
+	},
+	"builtInMods":["augmentedengines", "thunderbirds", "heavyarmor"],
+	"builtInWings":["LTA_Drone_AssaultVulcan_Thunderbirds"],
+	"builtInWeapons":{
+    },
+}

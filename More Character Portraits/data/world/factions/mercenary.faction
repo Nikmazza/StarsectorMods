@@ -1,0 +1,38 @@
+{
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/mcp/independent_05.png",
+			"graphics/portraits/mcp/independent_13.png",
+			"graphics/portraits/mcp/independent_19.png",
+			"graphics/portraits/mcp/independent_21.png",
+			"graphics/portraits/mcp/independent_33.png",
+			"graphics/portraits/mcp/independent_37.png",
+			"graphics/portraits/mcp/independent_39.png",
+			"graphics/portraits/mcp/independent_41.png",
+			"graphics/portraits/mcp/independent_45.png",
+			"graphics/portraits/mcp/independent_53.png",
+			"graphics/portraits/mcp/independent_57.png",
+
+
+		],
+		"standard_female":[
+			"graphics/portraits/mcp/independent_10.png",
+			"graphics/portraits/mcp/independent_20.png",
+			"graphics/portraits/mcp/independent_24.png",
+			"graphics/portraits/mcp/independent_28.png",
+			"graphics/portraits/mcp/independent_30.png",
+			"graphics/portraits/mcp/independent_36.png",
+			"graphics/portraits/mcp/independent_38.png",
+			"graphics/portraits/mcp/independent_40.png",
+			"graphics/portraits/mcp/independent_42.png",
+			"graphics/portraits/mcp/independent_44.png",
+			"graphics/portraits/mcp/independent_50.png",
+			"graphics/portraits/mcp/independent_54.png",
+		],
+	},
+},
+
+
+
+
+

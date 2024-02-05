@@ -1,0 +1,66 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 5,
+    "fluxVents": 48,
+    "goalVariant": true,
+    "hullId": "ssp_elnino",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "advancedoptics"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_elnino_eltite",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0015": "hil",
+                "WS0016": "hil"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS020": "ssp_MedMissle",
+                "WS021": "ssp_MedMissle",
+                "WS022": "ssp_MedMissle",
+                "WS023": "ssp_MedMissle",
+                "WS024": "ssp_MedMissle",
+                "WS025": "ssp_MedMissle"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_gravitonluncher",
+                "WS0004": "ssp_gravitonluncher",
+                "WS0009": "ssp_gravitonluncher",
+                "WS0010": "ssp_gravitonluncher"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0020": "ssp_TriFlak"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "pdlaser",
+                "WS0006": "pdlaser",
+                "WS0007": "pdlaser",
+                "WS0008": "pdlaser",
+                "WS0011": "pdlaser",
+                "WS0012": "pdlaser",
+                "WS0013": "pdlaser",
+                "WS0014": "pdlaser"
+            }
+        }
+    ]
+}

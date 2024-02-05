@@ -1,0 +1,56 @@
+{
+  "hullName": "Shilage",
+  "hullId": "sa_shilage",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/sa_shilage.png",
+  "style": "HIGH_TECH",
+  "height": 46,
+  "width": 49,
+  "center": [24.5, 22],
+  "collisionRadius": 39,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 33.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0001": "lightag_fighter",
+    "WS0002": "swarmer_fighter"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [16, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [0.5, -0.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, -0],
+      "length": 31,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -18, 20.5,
+    -18, -20.5,
+    19.5, -0
+  ]
+}

@@ -1,0 +1,47 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 3,
+    "fluxVents": 20,
+    "hullId": "LTA_Epattcudxxxii_Thunderbirds",
+	"goalVariant": true,
+	"quality": 1,
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "eccm"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Epattcudxxxii_Thunderbirds_Assault",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0010": "LTA_hextb"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "annihilatorpod",
+                "WS0003": "annihilator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "flak"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "lightmg",
+                "WS0005": "lightmg",
+                "WS0006": "lightmg",
+                "WS0007": "lightmg"
+            }
+        }
+    ],
+    "wings": []
+}

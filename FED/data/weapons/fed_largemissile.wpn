@@ -1,0 +1,50 @@
+{
+  "id": "fed_largemissile",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_largemissile_proj",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "turretSprite": "graphics/FED/weapons/fed_largemissile2_turret.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_largemissile2_hardpoint.png",
+  "turretOffsets": [
+    34,
+    10,
+    34,
+    -10
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    39,
+    10,
+    39,
+    -10
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "autocharge": true,
+  "smokeSpec": {
+    "particleSizeMin": 25,
+    "particleSizeRange": 25,
+    "cloudParticleCount": 15,
+    "cloudDuration": 1,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 20,
+    "blowbackDuration": 2,
+    "blowbackLength": -60,
+    "blowbackSpread": 10,
+    "particleColor": [
+      150,
+      135,
+      105,
+      155
+    ]
+  },
+  "fireSoundTwo": "fed_cruisemissile_fire"
+}

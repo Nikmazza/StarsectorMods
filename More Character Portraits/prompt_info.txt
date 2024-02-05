@@ -1,0 +1,16 @@
+Stable Diffusion checkpoint:		Dreamshaper 7
+LORA:								Starsector Portrait LORA (1.13.0.e8)
+VAE:								vae-ft-mse-840000-ema-pruned
+Method:								img2img
+
+
+Positive: <lora:StarsectorStyle_V13:1.15>, ((solid black background)), ((sabattier effect)), ((brush strokes)), a starsector portrait of a ((Peruvian)) man wearing ((blue and silver power armor)), ((pale blue eyes)), light wrinkles, ((very short crew cut hair))
+
+
+Negative: (worst quality:1.4), (low quality:1.4), (normal quality:1.4), lowres, tattoos, earrings, strange eyes, robot eyes, teenager, child
+
+
+Sampling Method: Euler
+Sampling Steps: 40
+CFG Scale: 7
+Denoising Strength: 4.5

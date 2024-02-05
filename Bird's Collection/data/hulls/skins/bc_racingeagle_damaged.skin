@@ -1,0 +1,18 @@
+{
+  "baseHullId": "bc_racingeagle",
+  "baseValueMult": 0.67,
+  "descriptionId": "bc_racingeagle",
+  "descriptionPrefix": "Ships that would be decommissioned in quieter times now see widespread use throughout the Sector.",
+  "fighterBays": 0,
+  "fleetPoints": 11,
+  "fpMod": 0,
+  "hullDesignation": "Fast Cruiser",
+  "hullName": "Harpy Eagle (D)",
+  "manufacturer": "Midline",
+  "restoreToBaseHull": true,
+  "skinHullId": "bc_racingeagle_damaged",
+  "spriteName": "graphics/ships/bc_racingeagle_damaged.png",
+  "systemId": "bc_harpy_traveldrive",
+  "builtInMods":["comp_armor","faulty_grid"],
+  "tech": ""
+}

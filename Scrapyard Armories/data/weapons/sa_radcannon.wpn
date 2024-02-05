@@ -1,0 +1,35 @@
+{
+  "id": "sa_radcannon",
+  "specClass": "projectile",
+  "projectileSpecId": "sa_wave_shot",
+  "type": "ENERGY",
+  "mountTypeOverride": "HYBRID",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/sa_radcannon_turret.png",
+  "turretGlowSprite": "graphics/weapons/sa_radcannon_turret_glow.png",
+  "hardpointSprite": "graphics/weapons/sa_radcannon_hardpoint.png",
+  "hardpointGlowSprite": "graphics/weapons/sa_radcannon_hardpoint_glow.png",
+  "glowColor": [
+    83,
+    199,
+    25,
+    225
+  ],
+  "turretOffsets": [
+    17,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    23.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW",
+  "fireSoundTwo": "sa_radburst"
+}

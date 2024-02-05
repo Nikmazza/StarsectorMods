@@ -1,0 +1,27 @@
+{
+  "variantId": "right_thruster_standard",
+  "hullId": "right_thruster",
+  "displayName": "Junk",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "vulcan",
+        "WS0002": "vulcan",
+        "WS0003": "vulcan",
+        "WS0004": "heatseeker",
+        "WS0005": "heatseeker",
+        "WS0006": "locust"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

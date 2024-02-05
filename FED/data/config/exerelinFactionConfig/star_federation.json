@@ -1,0 +1,242 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    
+    "directoryUseShortName":true,
+    
+    "rebelFleetSuffix":"Rebel Group",
+    
+    "morality":"good",
+
+	"startRelationships":{
+		# Vanilla factions that should be manually set (IE not "hidden" ones)
+		"independent":0.0,					# Except you scavs, get bent by AI's in deep space
+		"pirates":-0.7,						# Stop painting our ships purple
+		"persean":-0.3,						# They're like us, but kinda assholes
+		"tritachyon":0,						# My tripad makes life easier
+		"hegemony":-0.2,					# They blew up our toys 200 cycles ago, kinda
+
+		# These should be set to the same relationship
+		"lions_guard":-0.35,				# Stay out of our sectors, henchmen
+		"sindrian_diktat":-0.35,			# Space oil is an neccessary evil
+
+		# More vanilla factions that should be manually set
+		"luddic_church":-0.4,				# I just wanna grill fer gods sake
+		"luddic_path":-0.6,					# Good people died beacuse you think you know what's best
+		"remnant":-0.5,						# I'm a simple man, I get shot, I shoot back
+
+		# Mod factions
+		"blackrock_driveyards":0,			# It's just business kiddo
+		"br_consortium":-0.2,				# Hey wait, you don't sell anything
+		"6eme_bureau":0,					# Bureau? Never heard of 'er!
+		"dassault_mikoyan":0.2 ,			# Give me your glowing white ships, all my metal is beige
+		"united_security":0,				# Muscle is good when you have pocket change
+		"blade_breakers":-0.6,				# Space razorblades and goth ship assholes, how edgy
+		"diableavionics":-0.5,				# Get outta here animes
+		"exigency":-0.4,					# Get outta here spacemen
+		"exipirated":-0.6,					# Why do they fly rocks
+		"tiandong":0,						# Hello can I have chickun fry rice a mining rig please
+		"gmda":-0.2,						# Ain't no regulation like my regulation, which is flawless
+		"gmda_patrol":-0.2,					# We can patrol our own space thank you very much
+		"draco":-0.6,						# Ew?
+		"fang":-0.6,						# uwu, but actually no thanks
+		"HMI":-0.35,						# "Legitimate" Pirates that feed the Sector
+		"mess":-0.8,						# AGI was a mistake, gray goo is WORSE
+		"interstellarimperium":-0.3,		# Tyranny never changes
+		"ii_imperial_guard":-0.6,			# Go wash your clothes in the community pisspool you stinky romans
+		"junk_pirates":-0.6,				# Garbo pirates
+		"junk_pirates_hounds":-0.6,			# Highschool dropout vandals
+		"junk_pirates_junkboys":-0.6,		# College dropout vandals
+		"junk_pirates_technicians":-0.6,	# Postgrad flunkout vandals
+		"pack":0.2,							# Not much to offer, nor much to speak about... Enlist today
+		"syndicate_asp":0.25,				# Bezosbucks gets me two day delivery
+		"syndicate_asp_familia":0,			# Bezos's hitsquad? 
+		"al_ars":-0.15,						# Nobody is quite sure what they are up to...
+		"mayorate":0,						# Nice paintjob, was thinking about putting it on the arty cruiser
+		"metelson":0,						# Mining muscle
+		"ORA":0.2,							# Nice fellas, but ultimately a little preachy over slime on rocks
+		"SCY":-0.3,									    # Cutthroats would sell us out for drugs.
+		"shadow_industry":0.3,				# If only more people had nice racks... of food. Good vibes.
+		"the_cartel":-0.6,					# Shiny pirates
+		"nullorder":-0.6,					# Not cool dudes
+		"sylphon":0.2,						# A bit pricy to buy from
+		"templars":-0.6,					# Ding dong your assholery is wrong
+		"Coalition":0.2,					# May we all live another day
+		"cabal":-0.6,						# How can you run a fleet on the doorstop of overdosing
+		#"nomads":0,						# Will let them decide in their code / I don't know!
+		#"approlight":0,					# Will let them decide in their code / I don't know!
+		#"immortallight":0,					# Will let them decide in their code / I don't know!
+		#"lte_boss":0,						# Will let them decide in their code / I don't know!
+		#"Lte":0,							# Will let them decide in their code / I don't know!
+		#"noir":0,							# Will let them decide in their code / I don't know!
+		#"crystanite":0,					# Will let them decide in their code / I don't know!
+		"crystanite_pir":-0.6,				# Piracy is illegal
+		#"exlane":0,						# Will let them decide in their code / I don't know!
+		"infected":-0.6,					# Gross, man
+		#"neutrinocorp":0,					# Will let them decide in their code / I don't know!
+		#"oculus":0,						# Will let them decide in their code / I don't know!
+		#"thulelegacy":0,					# Will let them decide in their code / I don't know!
+		#"corvus_scavengers":0,				# Will let them decide in their code / I don't know!
+		"new_galactic_order":-0.6,			# 4chan in spess
+		"TF7070_D3C4":-0.6,					# The domain was too big for their britches
+		#"mayasura":0,						# Will let them decide in their code / I don't know!
+		#"sad":0,							# Will let them decide in their code / I don't know!
+		"cmc":0.2,							# Help for money, not a bad idea
+		"kadur_remnant":-0.15,				# How'd they cut the brakes on a spaceship
+		#"vesperon":0,						# Will let them decide in their code / I don't know!
+		#"almighty_dollar":0,				# Will let them decide in their code / I don't know!
+		#"communist_clouds":0,				# Will let them decide in their code / I don't know!
+		#"science_fuckers":0,				# Will let them decide in their code / I don't know!
+		#"warhawk_republic":0,				# Will let them decide in their code / I don't know!
+		#"pulseindustry":0,					# Will let them decide in their code / I don't know!
+		#"ae_ixbattlegroup":0,				# Will let them decide in their code / I don't know!
+		#"omicron_faction":0,				# Will let them decide in their code / I don't know!
+		#"fringe_defence_syndicate":0,		# Will let them decide in their code / I don't know!
+		#"gladiator":0,						# Will let them decide in their code / I don't know!
+		#"andorian":0,						# Will let them decide in their code / I don't know!
+		#"united_federation":0,				# Will let them decide in their code / I don't know!
+		#"klingon_empire":0,				# Will let them decide in their code / I don't know!
+		#"romulan_empire":0,				# Will let them decide in their code / I don't know!
+		#"vulcan":0,						# Will let them decide in their code / I don't know!
+		#"borg":0,							# Will let them decide in their code / I don't know!
+		#"tahlan_greathouses":0,			# Will let them decide in their code / I don't know!
+		"tahlan_legioinfernalis":0,			# Piracy but centralized??? How???
+		"OCI":-0.25,						# Who are they?
+		#"prv":0,							# Will let them decide in their code / I don't know!
+		#"rb":0,							# Will let them decide in their code / I don't know!
+		"magellan_protectorate":-0.15,		# Suspicious of outsiders, and so thus are we of them
+		#"sun_ice":0,						# Will let them decide in their code / I don't know!
+		#"sun_ici":0,						# Will let them decide in their code / I don't know!
+		"GKSec":-0.6,						# Competing security contractors, shoot on sight
+		#"hiigaran_descendants":0,			# Will let them decide in their code / I don't know!
+		#"AI":0,							# Will let them decide in their code / I don't know!
+		#"ALIENS":0,						# Will let them decide in their code / I don't know!
+		#"FFS":0,							# Will let them decide in their code / I don't know!
+		#"FTG":0,							# Will let them decide in their code / I don't know!
+		#"ISA":0,							# Will let them decide in their code / I don't know!
+		#"MAR":0,							# Will let them decide in their code / I don't know!
+		#"ROCK":0,							# Will let them decide in their code / I don't know!
+		#"RSF":0,							# Will let them decide in their code / I don't know!
+		#"UIN":0,							# Will let them decide in their code / I don't know!
+		#"VNS":0,							# Will let them decide in their code / I don't know!
+		#"WDW":0,							# Will let them decide in their code / I don't know!
+		#"XLE":0,							# Will let them decide in their code / I don't know!
+		"minor_independent_1":0.6,			# We should flip burgers together someday
+		"minor_independent_2":0.6,			# We should flip burgers together someday
+		"minor_independent_3":0.6,			# We should flip burgers together someday
+		"minor_independent_4":0.6,			# We should flip burgers together someday
+		"minor_independent_5":0.6,			# We should flip burgers together someday
+		"minor_independent_6":0.6,			# We should flip burgers together someday
+		"minor_independent_7":0.6,			# We should flip burgers together someday
+		"minor_independent_8":0.6,			# We should flip burgers together someday
+		"minor_independent_9":0.6,			# We should flip burgers together someday
+		"minor_independent_10":0.6,			# We should flip burgers together someday
+		"minor_independent_11":0.6,			# We should flip burgers together someday
+		"minor_independent_12":0.6,			# We should flip burgers together someday
+		"minor_independent_13":0.6,			# We should flip burgers together someday
+		"minor_independent_14":0.6,			# We should flip burgers together someday
+		"minor_independent_15":0.6,			# We should flip burgers together someday
+		"minor_independent_16":0.6,			# We should flip burgers together someday
+		"minor_independent_17":0.6,			# We should flip burgers together someday
+		"minor_independent_18":0.6,			# We should flip burgers together someday
+		"minor_independent_19":0.6,			# We should flip burgers together someday
+		"minor_independent_20":0.6,			# We should flip burgers together someday
+		"minor_pirate_1":-0.6,				# Piracy is illegal
+		"minor_pirate_2":-0.6,				# Piracy is illegal
+		"minor_pirate_3":-0.6,				# Piracy is illegal
+		"minor_pirate_4":-0.6,				# Piracy is illegal
+		"minor_pirate_5":-0.6,				# Piracy is illegal
+		"minor_pirate_6":-0.6,				# Piracy is illegal
+		"roider":0.15,						# Roidrage
+		#"bsg_cylons":0,					# Will let them decide in their code / I don't know!
+		#"COPS":0,							# Will let them decide in their code / I don't know!
+		#"kingdom_of_terra":0,				# Will let them decide in their code / I don't know!
+	},
+	
+	"colonyExpeditionChance":1,
+    
+    "maxRelationships":{
+    "luddic_church": 0.25,
+    "luddic_path": -0.5,
+	"persean_league": 0.25,
+	"blade_breakers":-0.5,
+	},
+	
+    "alignments":{	
+        "ideological":0.5,
+        "technocratic":0.5,
+        "diplomatic":1.0,
+		"militarist":0.5,
+    },
+	
+	"diplomacyTraits":["weak-willed", "pacifist", "neutralist"],
+    
+    "vengeanceLevelNames":["Pursuance", "Prosecutor", "Vengance"],
+    "vengeanceFleetNames":["Regulators", "Task Force", "Justice Fleet",],
+    "vengeanceFleetNamesSingle":["a Regulator Fleet", "a Task Force", "a Combined Justice Fleet",],
+    
+    "vengeanceFleetSizeMult":1.25,
+	
+	"invasionSupportFleetName":"Strike Taskforce",
+    "responseFleetName":"Vanguard Fleet",
+    "defenceFleetName":"Defense Fleet",	
+    
+    "startShipsSolo":[
+		["fed_tern_standard"],
+		["fed_talos_standard"],
+		["fed_byte_standard"],
+	],
+    "startShipsCombatSmall":[
+		["fed_cormorant_old_standard", "fed_byte_standard", "fed_byte_standard"],
+		["fed_lightdestroyer_standard", "fed_talos_standard","fed_byte_standard"],
+		["fed_rigger_firesupport_standard", "fed_talos_standard","fed_talos_standard"],
+		["fed_superdestroyer_overdriven","fed_superbuffalo_fast"],
+	],
+    "startShipsTradeSmall":[
+		["fed_superbuffalo_cheap", "fed_superbuffalo_cheap", "fed_medcombtanker_dedicated", "fed_tern_standard"]
+	],
+    "startShipsCombatLarge":[
+		["fed_kestral_standard", "fed_cormorant_old_standard", "fed_tern_standard"],
+		["fed_raptor_standard", "fed_rigger_firesupport_standard", "fed_tern_standard"], 
+		["fed_osprey_standard", "fed_cormorant_standard", "fed_tern_standard"],
+	],
+    "startShipsTradeLarge":[
+		["fed_heavyfreighter_fast","fed_medcombtanker_dedicated", "fed_byte_standard"], 
+	],
+    "startShipsCarrierSmall":[
+		["fed_rigger_standard", "fed_tern_standard", "fed_tern_standard"]
+	],
+    "startShipsCarrierLarge":[
+		["fed_cruisercarrier_standard","fed_rigger_escort","fed_byte_standard"]
+	],
+	"startShipsSuper":[ 
+		
+		["fed_superdestroyer_pirate_overdriven","fed_superbuffalo_fast"],
+        ["fed_mantis_cruiser_standard","fed_medcombtanker_dedicated"],
+		["fed_nisos_standard","fed_medcombtanker_dedicated"],
+		["fed_stealth_standard","revenant_Elite","phantom_Elite"],
+		["fed_stormwalker_standard","revenant_Elite","phantom_Elite"],
+		["fed_shivan_standard","fed_medcombtanker_dedicated"],
+		["fed_polyp_deadly","fed_polyp_standard","fed_polyp_overdriven"],
+		["fed_cormorant_old_pirate_standard","fed_lightdestroyer_p_standard","fed_tern_pirate_standard"],
+		["fed_cargocap_outdated"],
+		["fed_boss_rebel_standard","fed_medcombtanker_dedicated"],
+		
+    ],
+   
+   "customStations":["fed_headquarters_station"],
+   
+   "miningVariantsOrWings":["shepherd_Frontier"],
+   
+       "defenceStations":[
+        {"ids":["fed_orbitalstation", "fed_orbitalstation", "fed_starfortress"]},
+    ],
+	
+	"startSpecialItems":[
+		[["fed_bps_com", ""],
+		 ["fed_bps_mil", ""],
+         ["fed_bps_wep", ""],
+		 ["fed_bps_eli", ""],
+		 ["fed_bps_uti", ""],],
+    ],
+}

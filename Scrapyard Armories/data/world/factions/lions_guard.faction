@@ -1,0 +1,29 @@
+{
+"portraits":{
+		"standard_male":[
+			"graphics/portraits/sa_sec.png",
+		],
+		},
+	"names":{
+		"SA_NAMES":1,
+	},
+  "variantOverrides": {},
+  "hullFrequency": {
+    "sa_elanus_lg": ".0.55",
+    "hulls": {}
+  },
+  "knownShips": {
+    "hulls":[ 
+    "sa_elanus_lg",
+    ],
+  },
+  "priorityShips": {
+    "hulls": []
+  },
+  "knownWeapons":{
+  		"tags":[],
+  		"weapons":[
+  			"sa_hypermatter",
+  		],
+  	},
+}

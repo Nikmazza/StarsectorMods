@@ -1,0 +1,194 @@
+{
+  "hullName": "Reckoner",
+  "hullId": "LTA_Reckoner_Upcycled",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/LTA/ships/Epattcud/Upcyclers_Sect/LTA_Reckoner.png",
+  "style": "LOW_TECH",
+  "height": 140,
+  "width": 200,
+  "center": [100, 70],
+  "collisionRadius": 259,
+  "shieldCenter": [-28, -0],
+  "shieldRadius": 228.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "reinforcedhull",
+    "LTA_TargetingComputer"
+  ],
+  "builtInWeapons": {
+    "WS0005": "LTA_reckoner_scriptanchor",
+    "WS_ReckonerLeftArmTargeting": "LTA_reckonertargetingbeamleft",
+    "WS_ReckonerRightArmTargeting": "LTA_reckonertargetingbeamright"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [63, 17]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -0,
+      "locations": [63, -17]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 0,
+      "locations": [35, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-23, -0]
+    },
+    {
+      "id": "WS_ReckonerLeftArm",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 75,
+      "angle": 12.5,
+      "locations": [-1, 75]
+    },
+    {
+      "id": "WS_ReckonerRightArm",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 75,
+      "angle": -12.5,
+      "locations": [-1, -75]
+    },
+    {
+      "id": "WS_ReckonerLeftArmTargeting",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": 12.5,
+      "locations": [-1, 75]
+    },
+    {
+      "id": "WS_ReckonerRightArmTargeting",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": -12.5,
+      "locations": [-1, -75]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 0,
+      "locations": [6, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-60, 22],
+      "length": 70,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-60, -22],
+      "length": 70,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-60, 27.5],
+      "length": 70,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-60, -27.5],
+      "length": 70,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-60, 16.5],
+      "length": 70,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-60, -16.5],
+      "length": 70,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-66, -0],
+      "length": 100,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    53.5, -7.5,
+    59.5, -11,
+    59.5, -23.5,
+    46, -31,
+    45, -42,
+    23, -64,
+    14, -95,
+    -22, -95.5,
+    -36, -67,
+    -15, -49,
+    -16, -40.5,
+    -59.5, -32,
+    -60, -13.5,
+    -66, -10,
+    -66, 10,
+    -60, 13.5,
+    -59.5, 32,
+    -16, 40.5,
+    -15, 49,
+    -36, 67,
+    -22, 95.5,
+    14, 95,
+    23, 64,
+    45, 42,
+    46, 31,
+    59.5, 23.5,
+    59.5, 11,
+    53.5, 7.5
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "hullName": "Heavy Battery",
+  "hullId": "sa_gunnery_battery",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/station/sa_gunnery_battery.png",
+  "style": "LOW_TECH",
+  "height": 102,
+  "width": 134,
+  "center": [67, 29],
+  "collisionRadius": 106.5,
+  "shieldCenter": [0.5, -0],
+  "shieldRadius": 102.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "supercomputer",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -45,
+      "locations": [18, -26]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 45,
+      "locations": [18, 26]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 194,
+      "angle": 0,
+      "locations": [45, -0]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    65.5, 18.5,
+    34, 57,
+    15, 57,
+    -17.5, 1.5,
+    15, -57,
+    34, -57,
+    65.5, -15.5
+  ]
+}

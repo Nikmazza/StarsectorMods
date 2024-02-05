@@ -1,0 +1,30 @@
+{
+    "designTypeColors":{
+        "Crystalline Tech":[90,255,180,255],
+    },
+	    "graphics":{
+        "nes_alt_sprites":{
+            "nes_fluorspar_amber":"graphics/ships/nes_fluorspar_amber.png",
+			"nes_fluorspar_rosequartz":"graphics/ships/nes_fluorspar_rosequartz.png",
+			"nes_fluorspar_aquamarine":"graphics/ships/nes_fluorspar_aquamarine.png",
+			"nes_fluorspar_cinnabar":"graphics/ships/nes_fluorspar_cinnabar.png",
+			"nes_voltaire_crimson":"graphics/ships/nes_voltaire_crimson.png",
+			"nes_voltaire_hazard":"graphics/ships/nes_voltaire_hazard.png",
+			"nes_voltaire_verdant":"graphics/ships/nes_voltaire_verdant.png",
+			"nes_voltaire_sparkle":"graphics/ships/nes_voltaire_sparkle.png",
+			"nes_voltaire_commando":"graphics/ships/nes_voltaire_commando.png",
+			"nes_hammerfall_surveyor":"graphics/ships/nes_hammerfall_surveyor.png",
+			"nes_hammerfall_rogue":"graphics/ships/nes_hammerfall_rogue.png",
+			"nes_hammerfall_infiltrator":"graphics/ships/nes_hammerfall_infiltrator.png",
+			"nes_hermitaur_devout":"graphics/ships/nes_hermitaur_devout.png",
+			"nes_hermitaur_riftborn":"graphics/ships/nes_hermitaur_riftborn.png",
+			"nes_hermitaur_marauder":"graphics/ships/nes_hermitaur_marauder.png",
+			"nes_hamter_cardinal":"graphics/ships/nes_hamter_cardinal.png",
+			"nes_hamter_ivory":"graphics/ships/nes_hamter_ivory.png",
+			"nes_carnelian_reef":"graphics/ships/nes_carnelian_reef.png",
+			"nes_carnelian_toxic":"graphics/ships/nes_carnelian_toxic.png",
+			"nes_carnelian_turquoise":"graphics/ships/nes_carnelian_turquoise.png",
+			"nes_carnelian_persean":"graphics/ships/nes_carnelian_persean.png",	
+        },
+	},
+}

@@ -1,0 +1,63 @@
+{
+  "variantId": "fed_stormwalker_standard",
+  "hullId": "fed_stormwalker",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 0,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "phase_anchor",
+    "fluxbreakers"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "fed_beam_halberd",
+        "WS0002": "fed_beam_halberd"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "fed_mediumasm"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "lightneedler",
+        "WS0007": "lightneedler",
+        "WS0008": "lightneedler",
+        "WS0009": "lightneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "pdlaser",
+        "WS0005": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "shockrepeater",
+        "WS0011": "shockrepeater",
+        "WS0012": "shockrepeater",
+        "WS0013": "shockrepeater",
+        "WS0014": "shockrepeater",
+        "WS0015": "shockrepeater"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,48 @@
+{
+  "id": "bc_thermoblaster",
+  "specClass": "projectile",
+  "projectileSpecId": "bc_thermo_shot",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/bc_thermoblaster_base.png",
+  "turretGlowSprite": "",
+  "hardpointSprite": "",
+  "hardpointGlowSprite": "",
+  "glowColor": [
+    255,
+    221,
+    78,
+    255
+  ],
+  "turretOffsets": [
+    11,
+    -5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    21,
+    -5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "GLOW_AND_FLASH",
+  "muzzleFlashSpec": {
+    "length": 30,
+    "spread": 20,
+    "particleSizeMin": 10,
+    "particleSizeRange": 10,
+    "particleDuration": 0.5,
+    "particleCount": 10,
+    "particleColor": [
+      255,
+      221,
+      78,
+      255
+    ]
+  },
+  "fireSoundTwo": "ion_cannon_fire"
+}

@@ -1,0 +1,116 @@
+{
+  "hullName": "ssp_vortexing",
+  "hullId": "ssp_vortexing",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/ssp_vortexing.png",
+  "style": "LLI",
+  "height": 114,
+  "width": 102,
+  "center": [51, 55],
+  "collisionRadius": 74.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 66,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ssp_cliff",
+    "missleracks"
+  ],
+  "builtInWeapons": {
+    "WS0007": "ssp_swarm"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 90,
+      "locations": [-13, 17]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": -90,
+      "locations": [-13, -17]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 60,
+      "locations": [8, 17]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -60,
+      "locations": [8, -17]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [26, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-52.5, -12],
+      "length": 24,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-52.5, 12],
+      "length": 24,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-29, 38],
+      "length": 16,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-29, -38],
+      "length": 16,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -54, 16,
+    -20.5, 49,
+    -9, 49,
+    7.5, 33,
+    41, 33,
+    57, 16.5,
+    57, -16.5,
+    41, -33,
+    7.5, -33,
+    -9, -49,
+    -20.5, -49,
+    -54, -16
+  ]
+}

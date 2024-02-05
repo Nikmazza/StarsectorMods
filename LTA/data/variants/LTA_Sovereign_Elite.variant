@@ -1,0 +1,95 @@
+{
+  "variantId": "LTA_Sovereign_Elite",
+  "hullId": "LTA_Sovereign",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 33,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "solar_shielding"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0030": "LTA_otamay"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0020": "sabot",
+        "WS0021": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "mjolnir",
+        "WS0002": "mjolnir",
+        "WS0022": "LTA_nixiemissilesmall",
+        "WS0023": "LTA_nixiemissilesmall",
+        "WS0024": "LTA_nixiemissilesmall",
+        "WS0025": "LTA_nixiemissilesmall",
+        "WS0026": "LTA_nixiemissilesmall",
+        "WS0027": "LTA_nixiemissilesmall",
+        "WS0031": "heatseeker",
+        "WS0032": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "hveldriver",
+        "WS0004": "hveldriver",
+        "WS0005": "hveldriver",
+        "WS0006": "hveldriver",
+        "WS0009": "hveldriver",
+        "WS0010": "hveldriver"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "heavyneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "LTA_nixie",
+        "WS0015": "LTA_nixie",
+        "WS0016": "LTA_nixie",
+        "WS0017": "LTA_nixie",
+        "WS0018": "LTA_nixie",
+        "WS0019": "LTA_nixie",
+        "WS0028": "LTA_nixie",
+        "WS0029": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "flak",
+        "WS0008": "flak",
+        "WS0011": "flak",
+        "WS0012": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

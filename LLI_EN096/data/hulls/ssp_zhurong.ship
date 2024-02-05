@@ -1,0 +1,114 @@
+{
+  "hullName": "ssp_zhurong",
+  "hullId": "ssp_zhurong",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/ssp_zhurong.png",
+  "style": "LLI",
+  "height": 116,
+  "width": 82,
+  "center": [41, 58],
+  "collisionRadius": 84.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 75.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ssp_cliff"
+  ],
+  "builtInWeapons": {
+    "WS0005": "ssp_zhurong_cover"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -65,
+      "locations": [6, -21],
+      "renderOrderMod": 10
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [29, 6],
+      "renderOrderMod": 3
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 65,
+      "locations": [1, 27],
+      "renderOrderMod": 10
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 180,
+      "locations": [-33.5, 5]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [26, 6],
+      "renderOrderMod": 2
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-40, 20],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-45, -26],
+      "length": 25,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-56, 4],
+      "length": 15,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-45.5, -10.5],
+      "length": 25,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    55.5, 25.5,
+    7, 38.5,
+    -9.5, 38.5,
+    -56.5, 6.5,
+    -41.5, -35.5,
+    16, -39,
+    55.5, -13
+  ]
+}

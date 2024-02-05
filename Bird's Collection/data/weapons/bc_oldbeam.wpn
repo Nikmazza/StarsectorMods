@@ -1,0 +1,52 @@
+{
+  "id": "bc_oldbeam",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/bc_oldbeam_base.png",
+  "turretGlowSprite": "graphics/weapons/bc_oldbeam_glow.png",
+  "hardpointSprite": "graphics/weapons/bc_oldbeam_base.png",
+  "hardpointGlowSprite": "graphics/weapons/bc_oldbeam_glow.png",
+  "beamEffect":"com.fs.starfarer.api.impl.combat.IonBeamEffect",
+  "glowColor": [
+    147,
+    217,
+    217,
+    255
+  ],
+  "hitGlowRadius": 60,
+  "turretOffsets": [
+    14,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    24,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "beamFireOnlyOnFullCharge": true,
+  "fringeColor": [
+    210,
+	252,
+	253,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 20,
+  "textureType": SMOOTH,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 1,
+  "fireSoundTwo": "ion_beam_loop"
+}

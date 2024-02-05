@@ -1,0 +1,52 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    
+    "directoryUseShortName":true,
+
+    "startRelationships":{ 
+	"persean":-0.5,
+	"pirates": -0.75,
+	"hegemony":0.5,
+	"luddic_church":0.5,
+	"luddic_path":-0.75,
+	"tritachyon":-0.2,
+	"TDB":-0.5
+},
+    
+    "rebelFleetSuffix":"Rebels",
+    "diplomacyPositiveChance":{ "tritachyon":0.75 },
+    "diplomacyNegativeChance":{ "tritachyon":1.5 },
+    "morality":"neutral",
+	
+    "colonyExpeditionChance":1.5,
+
+	"alignments":{
+        "diplomatic":0.5,
+		"corporate":1,
+    },
+    "diplomacyTraits":["neutralist", "hates_ai","lowprofile"],
+    
+    "vengeanceLevelNames":["Punishment", "Exile", "Execution"],
+    "vengeanceFleetNames":["Punishers", "Executors", "Executioners"],
+	 "vengeanceFleetNamesSingle":["Punisher", "Executor", "Executioner"],
+    
+    "startShipsSolo":[["ssp_vortexing_standard"]],
+    "startShipsCombatSmall":[
+      ["ssp_vocaino_standard","ssp_vortexing_standard", "buffalo_LLI_Standard"]
+    ],
+    "startShipsCombatLarge":[
+      ["ssp_wasteland_standard", "ssp_vortexing_standard", "buffalo_LLI_Standard"]
+    ],
+    "startShipsCarrierSmall":[
+      ["ssp_wave_standard", "ssp_wave_standard","buffalo_LLI_Standard"]
+    ],
+    
+    "startSpecialItems":[
+        [["ssp_bp", ""]]
+    ],
+
+    "defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"]},
+    ],
+}

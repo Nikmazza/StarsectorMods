@@ -1,0 +1,29 @@
+{
+  "variantId": "LTA_TalonNixie_Railfed_Interceptor_Wing",
+  "hullId": "LTA_TalonNixie_Railfed_Interceptor_Wing",
+  "displayName": "Assault Interceptor",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "swarmer_fighter"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

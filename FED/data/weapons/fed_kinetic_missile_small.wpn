@@ -1,0 +1,44 @@
+{
+  "id": "fed_kinetic_missile_small",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_kineticmissile_small_proj",
+  "type": "MISSILE",
+  "size": "SMALL",
+  "turretSprite": "graphics/FED/weapons/fed_kmissile_small_turret.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_kmissile_small_hardpoint.png",
+  "turretOffsets": [
+    19.5,
+    0.5
+  ],
+  "turretAngleOffsets": [
+    -0
+  ],
+  "hardpointOffsets": [
+    24.5,
+    0.5
+  ],
+  "hardpointAngleOffsets": [
+    -1
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "autocharge": true,
+  "smokeSpec": {
+    "particleSizeMin": 12,
+    "particleSizeRange": 12,
+    "cloudParticleCount": 8,
+    "cloudDuration": 1,
+    "cloudRadius": 12,
+    "blowbackParticleCount": 8,
+    "blowbackDuration": 2,
+    "blowbackLength": -30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      100,
+      100,
+      150,
+      150
+    ]
+  },
+  "fireSoundTwo": "fed_kmissile_fire"
+}

@@ -1,0 +1,60 @@
+{
+    "displayName": "Beam",
+    "fluxCapacitors": 0,
+    "fluxVents": 40,
+    "goalVariant": true,
+    "hullId": "ssp_hanba",
+    "hullMods": [
+        "targetingunit",
+        "eccm",
+        "missleracks",
+        "ssp_LongerRange",
+        "ssp_modetransform"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_hanba_beam",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0017": "ssp_LargeShredder"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0013": "ssp_LargeMissile",
+                "WS0014": "ssp_LargeMissile",
+                "WS0015": "ssp_LargeMissile",
+                "WS0016": "ssp_LargeMissile"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "gravitonbeam",
+                "WS0002": "gravitonbeam",
+                "WS0008": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "ionbeam",
+                "WS0006": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "flak",
+                "WS0004": "flak",
+                "WS0007": "flak"
+            }
+        }
+    ]
+}

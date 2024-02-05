@@ -1,0 +1,21 @@
+{
+	"id":"sa_wave_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":32.0,
+	"hitGlowRadius":150,
+	"width":32.0,
+	"fadeTime":0.5,
+	"fringeColor":[83,199,25,175],
+	#"coreColor":[255,225,175,225],
+	"coreColor":[255,255,255,200],
+	"glowColor":[83,199,25,225],
+	"glowRadius":60,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
+	"bulletSprite":"graphics/missiles/sa_wave_shot.png"
+	#"bulletSprite":"graphics/missiles/shell_round_lrg.png"
+}

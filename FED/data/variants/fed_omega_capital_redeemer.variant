@@ -1,0 +1,63 @@
+{
+    "displayName": "???",
+    "fluxCapacitors": 6,
+    "fluxVents": 0,
+    "hullId": "fed_omega_capital",
+    "hullMods": [
+        "missleracks",
+        "magazines"
+    ],
+    "modules": [
+        {"WS0013": "fed_omega_protrusion_beamer"},
+        {"WS0014": "fed_omega_extrusion_ionic"}
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "fed_omega_capital_redeemer",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "vpdriver"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0008": "rifttorpedo"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0004": "vpdriver"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "cryoblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "disintegrator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "guardian",
+                "WS0009": "riftbeam",
+                "WS0010": "riftbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "riftlance",
+                "WS0006": "riftlance",
+                "WS0011": "riftlance",
+                "WS0012": "riftlance"
+            }
+        }
+    ]
+}

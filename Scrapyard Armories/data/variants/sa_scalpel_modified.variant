@@ -1,0 +1,57 @@
+{
+  "variantId": "sa_scalpel_modified",
+  "hullId": "sa_scalpel",
+  "displayName": "Modified",
+  "goalVariant": true,
+  "fluxCapacitors": 5,
+  "fluxVents": 3,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "safetyoverrides",
+    "converted_hangar"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "reaper",
+        "WS0008": "reaper",
+        "WS0009": "reaper",
+        "WS0010": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "heavyblaster",
+        "WS0006": "heavyblaster"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "mininglaser",
+        "WS0002": "mininglaser",
+        "WS0003": "mininglaser",
+        "WS0004": "mininglaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

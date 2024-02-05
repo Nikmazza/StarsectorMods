@@ -1,0 +1,130 @@
+{
+  "hullName": "Vanguard (FYS)",
+  "hullId": "bc_phasefrigate3",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/phase/bc_phasefrigate3.png",
+  "style": "LOW_TECH",
+  "height": 112,
+  "width": 104,
+  "center": [52, 56],
+  "collisionRadius": 95,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 90.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [43, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [20, 40]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [20, -40]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [27, 21]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [27, -21]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -32,
+      "locations": [0, -37]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 32,
+      "locations": [0, 37]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, 21],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-50, -21],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-52, -8],
+      "length": 48,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "FAYS_CO"
+    },
+    {
+      "location": [-52, 8],
+      "length": 48,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "FAYS_CO"
+    }
+  ],
+  "bounds": [
+    -48.5, -25,
+    -37, -29.5,
+    -47.5, -34.5,
+    -41.5, -41.5,
+    14.5, -47.5,
+    46, -23.5,
+    46, 23.5,
+    14.5, 47.5,
+    -41.5, 41.5,
+    -47.5, 34.5,
+    -37, 29.5,
+    -48.5, 25
+  ]
+}

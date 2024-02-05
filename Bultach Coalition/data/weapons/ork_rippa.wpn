@@ -1,0 +1,43 @@
+{
+  "id": "ork_rippa",
+  "specClass": "projectile",
+  "projectileSpecId": "rip_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/rotate/rotate_turret00.png",
+  "hardpointSprite": "graphics/weapons/rotate/rotate_turret00.png",
+  "turretOffsets": [
+    41,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    62,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "separateRecoilForLinkedBarrels": true,
+  "animationType": "MUZZLE_FLASH",
+  "numFrames": 23,
+  "frameRate": 23,
+  "muzzleFlashSpec": {
+    "length": 40,
+    "spread": 50,
+    "particleSizeMin": 10,
+    "particleSizeRange": 16,
+    "particleDuration": 0.6,
+    "particleCount": 25,
+    "particleColor": [
+      255,
+      120,
+      50,
+      200
+    ]
+  },
+  "fireSoundTwo": "cannon_fire"
+}

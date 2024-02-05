@@ -1,0 +1,30 @@
+{
+  "variantId": "sa_remstation_t1_standard",
+  "hullId": "sa_remstation_t1",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [
+    {
+      "WS 032": "sa_brace_station_standard"
+    },
+    {
+      "WS 031": "sa_module_battery_standard"
+    },
+    {
+      "WS 007": "sa_tesla_spike_standard"
+    },
+    {
+      "WS 016": "sa_tesla_spike_standard"
+    },
+    {
+      "WS 034": "sa_station_shield_standard"
+    }
+  ],
+  "wings": []
+}

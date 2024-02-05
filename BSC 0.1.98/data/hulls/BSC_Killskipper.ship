@@ -1,0 +1,86 @@
+{
+  "hullName": "Killskipper",
+  "hullId": "BSC_Killskipper",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/hulls/BSC_Killskipper.png",
+  "style": "LOW_TECH",
+  "height": 80,
+  "width": 100,
+  "center": [50, 40],
+  "collisionRadius": 75.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 71.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ill_advised"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [8, 38]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [8, -38]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [31, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-40.5, -0],
+      "length": 40,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 18,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, 12],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, -12],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -31, -25,
+    -15, -27.5,
+    -15, -46.5,
+    1.5, -46.5,
+    3, -23.5,
+    34, -23.5,
+    34, 23.5,
+    3, 23.5,
+    1.5, 46.5,
+    -15, 46.5,
+    -15, 27.5,
+    -31, 25
+  ]
+}

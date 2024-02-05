@@ -1,0 +1,39 @@
+{
+    "displayName": "Beamer Wing",
+    "fluxCapacitors": 6,
+    "fluxVents": 0,
+    "hullId": "fed_omega_protrusion",
+    "hullMods": [
+        "targetingunit",
+        "advancedoptics"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "fed_omega_protrusion_beamer",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "amsrm"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0004": "resonatormrm"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0006": "riftcascade"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "shockrepeater",
+                "WS0002": "shockrepeater",
+                "WS0003": "shockrepeater"
+            }
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+  "variantId": "ork_feregether_corrupted_standard",
+  "hullId": "ork_feregether_corrupted",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 25,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ork_rotary_pd_large",
+        "WS0003": "ork_rotary_pd_large",
+        "WS0005": "ork_nailer",
+        "WS0006": "ork_railgun",
+        "WS0007": "ork_dispenser",
+        "WS0010": "ork_rotary_pd",
+        "WS0012": "ork_rotary_pd",
+        "WS0014": "ork_rotary_pd",
+        "WS0015": "ork_thumpa",
+        "WS0016": "ork_thumpa",
+        "WS0017": "ork_rotary_pd",
+        "WS0018": "ork_rotary_pd_small",
+        "WS0019": "ork_rotary_pd_small",
+        "WS0020": "ork_rotary_pd_small",
+        "WS0021": "ork_rotary_pd_small",
+        "WS0022": "ork_rotary_pd_small",
+        "WS0023": "ork_rotary_pd_small",
+        "WS0024": "ork_rotary_pd_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_bigplasma",
+        "WS0004": "ork_bigplasma"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "ork_sledge",
+        "WS0009": "ork_sledge"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "ork_thumpa",
+        "WS0013": "ork_thumpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,33 @@
+{
+  "variantId": "condor_Bomber",
+  "hullId": "condor",
+  "displayName": "Bomber",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 1,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "annihilatorpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightmortar",
+        "WS 002": "lightmortar"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "bc_lowtech_trident",
+    "broadsword_wing"
+  ]
+}

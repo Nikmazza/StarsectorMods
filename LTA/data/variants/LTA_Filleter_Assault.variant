@@ -1,0 +1,37 @@
+{
+  "variantId": "LTA_Filleter_Assault",
+  "hullId": "LTA_Filleter",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 9,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "turretgyros",
+    "insulatedengine"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "flak"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0003": "LTA_Filleter_Armor_Module"
+    }
+  ],
+  "wings": []
+}

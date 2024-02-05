@@ -1,0 +1,334 @@
+{
+  "hullName": "Pelican",
+  "hullId": "fed_cruisercarrier",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/FED/ships/fed_cruisercarrier.png",
+  "style": "FEDERATION",
+  "height": 259,
+  "width": 228,
+  "center": [114, 119.5],
+  "collisionRadius": 150,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 134.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "recovery_shuttles",
+    "missile_autoloader"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 65,
+      "locations": [43, 39]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -65,
+      "locations": [43, -39]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [74.5, 33]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [74.5, -33]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-16, 80]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-16, -80]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 280,
+      "angle": 0,
+      "locations": [54, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 300,
+      "angle": 0,
+      "locations": [89.5, -0]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 90,
+      "locations": [-24.5, 38]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -90,
+      "locations": [-24.5, -38]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": -105,
+      "locations": [-40.5, -84]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 105,
+      "locations": [-40.5, 84]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -67.5, 44.5,
+        -71.5, 40,
+        -75.5, 35,
+        -83.5, 35,
+        -79, 41,
+        -76, 45,
+        -85, 41
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -76, -34.5,
+        -72.5, -39,
+        -68, -43.5,
+        -74.5, -44,
+        -78.5, -39,
+        -82.5, -34,
+        -85, -39
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -25, 4.5,
+        -25.5, -4,
+        -7, -4,
+        -7, 5,
+        10.5, 5,
+        11.5, -4,
+        -25, 0.5,
+        -6.5, 0.5,
+        11, 0.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-115, 11],
+      "length": 62.625813,
+      "width": 17.579254,
+      "angle": -177,
+      "contrailSize": 17.579254,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-115, -11],
+      "length": 62.625813,
+      "width": 17.579254,
+      "angle": 177,
+      "contrailSize": 17.579254,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-119.5, -0],
+      "length": 83,
+      "width": 30,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, -72.5],
+      "length": 61.247276,
+      "width": 8.66511,
+      "angle": -174.5,
+      "contrailSize": 8.66511,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, 72.5],
+      "length": 61.247276,
+      "width": 8.66511,
+      "angle": 174.5,
+      "contrailSize": 8.66511,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, -83],
+      "length": 74.170967,
+      "width": 11.120671,
+      "angle": 178.5,
+      "contrailSize": 11.120671,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, 83],
+      "length": 74.170967,
+      "width": 11.120671,
+      "angle": -178.5,
+      "contrailSize": 11.120671,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, -78],
+      "length": 74.356674,
+      "width": 12.897282,
+      "angle": -178.5,
+      "contrailSize": 12.897282,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, 78],
+      "length": 74.356674,
+      "width": 12.897282,
+      "angle": 178.5,
+      "contrailSize": 12.897282,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, -89],
+      "length": 60.768864,
+      "width": 8.341544,
+      "angle": 174,
+      "contrailSize": 8.341544,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-91.5, 89],
+      "length": 60.768864,
+      "width": 8.341544,
+      "angle": -174,
+      "contrailSize": 8.341544,
+      "style": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-119.5, -0],
+      "length": 121.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-92.5, 80.5],
+      "length": 95.5,
+      "width": 26,
+      "angle": 180,
+      "contrailSize": 26,
+      "style": "FEDERATION_VENT"
+    },
+    {
+      "location": [-92.5, -80.5],
+      "length": 95.5,
+      "width": 26,
+      "angle": -180,
+      "contrailSize": 26,
+      "style": "FEDERATION_VENT"
+    }
+  ],
+  "bounds": [
+    -99, 10,
+    -70, 23,
+    -111.5, 28.5,
+    -81.5, 53,
+    -54.5, 53,
+    -64.5, 67.5,
+    -90.5, 68.5,
+    -92, 90,
+    -37.5, 93.5,
+    -17.5, 86.5,
+    -17.5, 72.5,
+    -32, 67.5,
+    -17.5, 52.5,
+    30.5, 48.5,
+    75.5, 41.5,
+    77.5, 21.5,
+    121, 15.5,
+    130.5, 7.5,
+    130.5, -7.5,
+    121, -15.5,
+    77.5, -21.5,
+    75.5, -41.5,
+    30.5, -48.5,
+    -17.5, -52.5,
+    -32, -67.5,
+    -17.5, -72.5,
+    -17.5, -86.5,
+    -37.5, -93.5,
+    -92, -90,
+    -90.5, -68.5,
+    -64.5, -67.5,
+    -54.5, -53,
+    -81.5, -53,
+    -111.5, -28.5,
+    -70, -23,
+    -99, -10
+  ]
+}

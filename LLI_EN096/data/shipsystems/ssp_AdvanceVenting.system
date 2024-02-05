@@ -1,0 +1,13 @@
+{
+	"id":"ssp_AdvanceVenting",
+	"type":"STAT_MOD",
+	#####"aiType":"WEAPON_BOOST",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.ssp_AdvanceVentingAI",
+	
+	"statsScript":"data.shipsystems.ssp_AdvanceVenting",
+
+	
+	"useSound":"system_quantumdisruptor",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

@@ -1,0 +1,75 @@
+{
+  "hullName": "Armor Module",
+  "hullId": "ork_superdread_armor_right",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/superdread/ork_superdread_armor_right.png",
+  "style": "LOW_TECH",
+  "height": 287,
+  "width": 121,
+  "center": [60.5, 143.5],
+  "collisionRadius": 169.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 163,
+  "viewOffset": 0,
+  "builtInMods": [
+    "advancedcore",
+    "BT_antiNuke"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [81.5, 35]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [24.5, 21]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-27.5, 4]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    141.5, -3.5,
+    141.5, 27,
+    92, 57.5,
+    74, 58.5,
+    -37.5, 23,
+    -44, 15,
+    -62, 15.5,
+    -99, 1,
+    -100, -11,
+    -117, -19.5,
+    -141.5, -53.5,
+    -120, -60,
+    -108, -49.5,
+    -46.5, -46.5,
+    -4.5, -35,
+    2, -38.5,
+    10, -35,
+    10.5, -30,
+    25, -25.5,
+    36, -37,
+    74, -33,
+    77, -20.5,
+    85.5, -17.5,
+    107, -16,
+    118, -4.5
+  ]
+}

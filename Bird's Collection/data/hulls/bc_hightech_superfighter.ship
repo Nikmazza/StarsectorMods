@@ -1,0 +1,71 @@
+{
+  "hullName": "Hushallsost",
+  "hullId": "bc_hightech_superfighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_hightech_superfighter.png",
+  "style": "HIGH_TECH",
+  "height": 43,
+  "width": 26,
+  "center": [13, 13],
+  "collisionRadius": 40,
+  "shieldCenter": [3.5, -0],
+  "shieldRadius": 35.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [22.5, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 170,
+      "angle": 90,
+      "locations": [3.5, 6.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 170,
+      "angle": -90,
+      "locations": [3.5, -6.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-12, 3.5],
+      "length": 28,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-12, -3.5],
+      "length": 28,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -10, -6,
+    2, -13,
+    28, -0,
+    2, 13,
+    -10, 6
+  ]
+}

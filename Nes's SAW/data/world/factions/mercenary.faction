@@ -1,0 +1,11 @@
+{
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/nes_giant_space_hamster.png",
+						],
+		"standard_female":[
+			"graphics/portraits/nes_powerful.png",
+			"graphics/portraits/nes_alice.png",
+						],
+	},
+},

@@ -1,0 +1,43 @@
+{
+  "id": "bc_cluster_msl",
+  "specClass": "projectile",
+  "projectileSpecId": "bc_cluster_msl",
+  "type": "MISSILE",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/bc_cluster_msl_base.png",
+  "hardpointSprite": "graphics/weapons/bc_cluster_msl_base.png",
+  "turretOffsets": [
+    7,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    10.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "cloudParticleCount": 5,
+    "cloudDuration": 1,
+    "cloudRadius": 5,
+    "blowbackParticleCount": 5,
+    "blowbackDuration": 2,
+    "blowbackLength": 50,
+    "blowbackSpread": 10,
+    "particleColor": [
+      135,
+      135,
+      135,
+      180
+    ]
+  },
+  "fireSoundTwo": "sabot_fire"
+}

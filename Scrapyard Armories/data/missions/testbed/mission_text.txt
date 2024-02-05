@@ -1,0 +1,4 @@
+Location: ERR: Locator scanners timed out
+Date: ERR: Internal lock disconnected
+
+A bunch of warships and a convoy of unfortunate atlas freighters, have fun

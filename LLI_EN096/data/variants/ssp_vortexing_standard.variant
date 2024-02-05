@@ -1,0 +1,39 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 3,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "ssp_vortexing",
+    "hullMods": [
+        "ssp_LowerThreshold",
+        "eccm"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_vortexing_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0004": "ssp_lightheatneedle"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0007": "ssp_swarm"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "ssp_GPD"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ssp_FragMachinegun",
+                "WS0002": "ssp_FragMachinegun"
+            }
+        }
+    ]
+}

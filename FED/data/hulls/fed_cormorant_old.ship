@@ -1,0 +1,193 @@
+{
+  "hullName": "Cormorant",
+  "hullId": "fed_cormorant_old",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/FED/ships/fed_cormorant_base_old.png",
+  "style": "FEDERATION",
+  "height": 151,
+  "width": 178,
+  "center": [89, 70.5],
+  "collisionRadius": 111,
+  "shieldCenter": [-6, -0],
+  "shieldRadius": 79,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "missleracks",
+    "fed_missileforge"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 50,
+      "locations": [23.5, 37],
+      "renderOrderMod": 50
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -50,
+      "locations": [23.5, -37],
+      "renderOrderMod": 50
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [6.5, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -21.5, -0.5,
+        39, -0
+      ]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 50,
+      "locations": [-16.5, 55.5],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -50,
+      "locations": [-16.5, -55.5],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -60,
+      "locations": [36, -16],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 60,
+      "locations": [36, 16],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 180,
+      "locations": [-21.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-69.5, 20.5],
+      "length": 52.25,
+      "width": 12.36,
+      "angle": 176,
+      "contrailSize": 12.36,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-69.5, -20.5],
+      "length": 52.25,
+      "width": 12.36,
+      "angle": -176,
+      "contrailSize": 12.36,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-71.5, 32.5],
+      "length": 72,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-71.5, -32.5],
+      "length": 72,
+      "width": 32,
+      "angle": -180,
+      "contrailSize": 32,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-73, 32.5],
+      "length": 102,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-73, -32.5],
+      "length": 102,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    }
+  ],
+  "bounds": [
+    -35, 14.5,
+    -5, 14.5,
+    -63.5, 15,
+    -69.5, 41,
+    -49, 44,
+    -35.5, 69.5,
+    -12.5, 66.5,
+    3, 71,
+    5, 54.5,
+    41, 44,
+    42, 29,
+    64.5, 12.5,
+    64.5, -12.5,
+    42, -29,
+    41, -44,
+    5, -54.5,
+    3, -71,
+    -12.5, -66.5,
+    -35.5, -69.5,
+    -49, -44,
+    -69.5, -41,
+    -63.5, -15,
+    -5, -14.5,
+    -35, -14.5
+  ]
+}

@@ -1,0 +1,33 @@
+{
+    "designTypeColors":{
+	"楼兰工业":[255,140,140,255],
+	"LLI":[255,140,140,255],
+    },
+  "graphics":{
+    "blueprint_packages":{
+      "ssp_bp":"graphics/icons/cargo/ssp_bp.png",
+    },
+	"fx":{
+			"ssp_trails1":"graphics/trails/fx/ssp_trails1.png",
+			"ssp_trails2":"graphics/trails/fx/ssp_trails2.png",
+			"ssp_trails3":"graphics/trails/fx/ssp_trails3.png",
+			"ssp_HitMeYouWeekMissile":"graphics/trails/fx/ssp_HitMeYouWeekMissile.png",
+		},
+	##"fighterSkinsPlayerOnly":{
+	##		"ssp_mercurylake_TDB_HF":"graphics/ships/wings/ssp_mercurylake_TDB_TECH.png",
+	##		"ssp_hivedrone_TDB_TECH":"graphics/ships/wings/ssp_hivedrone_TDB_TECH.png",
+	##		"ssp_hivedrone_TDB_HF":"graphics/ships/wings/ssp_hivedrone_TDB_TECH.png",
+	##		"ssp_heavyfog_TDB_TECH":"graphics/ships/wings/ssp_heavyfog_TDB_TECH.png",
+	##		"ssp_heavyfog_TDB_HF":"graphics/ships/wings/ssp_heavyfog_TDB_TECH.png",
+	##		"ssp_dustfog_TDB_TECH":"graphics/ships/wings/ssp_dustfog_TDB_TECH.png",
+	##		"ssp_dustfog_TDB_HF":"graphics/ships/wings/ssp_dustfog_TDB_TECH.png",
+	##	},
+  },	
+  "plugins": {
+	  "SSPEveryFrameCombatPlugin":"data.SSPEveryFrameCombatPlugin"
+  },
+  "ruleCommandPackages":["data.campaign.rulecmd",]
+
+
+
+}

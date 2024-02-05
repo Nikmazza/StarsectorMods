@@ -1,0 +1,62 @@
+{
+  "id": "fed_duallaser2",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_duallaser2_shot",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/FED/weapons/fed_duallaser2_turret.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_duallaser2_hardpoint.png",
+  "renderAboveAllWeapons": 0,
+  "convergeOnPoint":true,
+  "turretOffsets": [
+    5,
+    4.5,
+    5,
+    -4.5,
+    0,
+    9.5,
+    0,
+    -9.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    7,
+    3.5,
+    7,
+    -3.5,
+    7,
+    7.5,
+    7,
+    -7.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "noImpactSounds":true,
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 30,
+    "spread": 0,
+    "particleSizeMin": 5,
+    "particleSizeRange": 4,
+    "particleDuration": 0.05,
+    "particleCount": 10,
+    "particleColor": [
+      75,
+      255,
+      75,
+      225
+    ]
+  },
+  "textureType": ROUGH,
+  "fireSoundTwo": "fed_carver_fire"
+}

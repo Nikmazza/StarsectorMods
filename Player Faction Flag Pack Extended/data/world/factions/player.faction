@@ -1,0 +1,18 @@
+{
+	"id":"player",
+
+	"flags":[
+		{
+			"logo":"graphics/factions/custom/player_maple_flag.png",
+			"crest":"graphics/factions/custom/player_maple_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_SCA_flag.png",
+			"crest":"graphics/factions/custom/player_SCA_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_GCI_flag.png",
+			"crest":"graphics/factions/custom/player_GCI_crest.png"
+		},
+	],
+}

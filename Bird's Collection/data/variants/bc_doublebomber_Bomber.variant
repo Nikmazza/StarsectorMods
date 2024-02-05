@@ -1,0 +1,23 @@
+{
+  "variantId": "bc_doublebomber_Bomber",
+  "hullId": "bc_doublebomber",
+  "displayName": "Hybrid Bomber",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "bc_k_missile1",
+        "WS0002": "bc_he_missile1"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,55 @@
+{
+  "hullName": "Right Armor Wing",
+  "hullId": "fed_boss_wing_right",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/FED/ships/fed_boss_wing_right.png",
+  "style": "FEDERATION",
+  "height": 143,
+  "width": 52,
+  "center": [26, 71.5],
+  "collisionRadius": 99.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 80,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "always_detaches",
+    "magazines"
+  ],
+  "builtInWeapons": {
+    "WS0001": "fed_duallaser",
+    "WS0002": "fed_duallaser"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -135,
+      "locations": [-40.5, 17]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [55.5, -10.5]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -65, 24.5,
+    -69.5, 19,
+    -69.5, 6,
+    -41, -23,
+    57.5, -23,
+    69.5, -10,
+    60, 0.5,
+    -12.5, 0.5,
+    -35.5, 24.5
+  ]
+}

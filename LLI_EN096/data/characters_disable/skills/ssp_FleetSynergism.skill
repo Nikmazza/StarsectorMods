@@ -1,0 +1,16 @@
+{
+	"id":"ssp_FleetSynergism",
+	"governingAptitude":"aptitude_LLI",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"与技能持有者相同的舰船",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"data.campaign.skills.ssp_FleetSynergism$Level1"},
+			]
+		},
+	],
+}

@@ -1,0 +1,78 @@
+{
+  "hullName": "Legitimator",
+  "hullId": "bc_acfighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_acfighter.png",
+  "style": "LOW_TECH",
+  "height": 30,
+  "width": 32,
+  "center": [16, 10],
+  "collisionRadius": 40,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 28,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0002": "bc_acfighterdeco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, -0],
+      "renderOrderMod": -100
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-10, 11.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, -11.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-8, 4.5],
+      "length": 18.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-8, -4.5],
+      "length": 18.5,
+      "width": 3,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -10, -17,
+    10.5, -11.5,
+    10.5, 11.5,
+    -10, 17
+  ]
+}

@@ -1,0 +1,32 @@
+{
+	"id":"bc_displacer",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	
+	
+	"jitterColor":[219,85,242,120],
+	#"jitterColor":[219,85,242,150],
+	"jitterCopies":8,
+	"jitterRange":1,
+	"jitterRangeRadiusFraction":0.5,
+	
+	"weaponGlowColor":[219,85,242,0],
+	"weaponTypes":[BALLISTIC],
+	
+	"engineGlowColor":[219,85,242,125],
+
+	"range":120,
+	"randomRange":0,
+	
+	"renderCopyDuringTeleport":false,
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":300,
+		"averageSpeedIncrease":30,
+	}
+}

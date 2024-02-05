@@ -1,0 +1,50 @@
+{
+  "id": "fed_kinetic_missile_med",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_kineticmissile_proj",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/FED/weapons/fed_missile_med_dual_turret.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_missile_med_dual_hardpoint.png",
+  "turretOffsets": [
+    24,
+    7,
+    24,
+    -7
+  ],
+  "turretAngleOffsets": [
+    -0,
+    0
+  ],
+  "hardpointOffsets": [
+    25.5,
+    -5,
+    25.5,
+    5
+  ],
+  "hardpointAngleOffsets": [
+    -1,
+    1
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "autocharge": true,
+  "smokeSpec": {
+    "particleSizeMin": 12,
+    "particleSizeRange": 12,
+    "cloudParticleCount": 8,
+    "cloudDuration": 1,
+    "cloudRadius": 12,
+    "blowbackParticleCount": 8,
+    "blowbackDuration": 2,
+    "blowbackLength": -30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      100,
+      100,
+      150,
+      150
+    ]
+  },
+  "fireSoundTwo": "fed_kmissile_fire"
+}

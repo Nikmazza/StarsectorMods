@@ -1,0 +1,58 @@
+{
+  "variantId": "fed_cormorant_strike",
+  "hullId": "fed_cormorant",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 6,
+  "quality": 2,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "hardened_subsystems",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ionpulser",
+        "WS0002": "ionpulser",
+        "WS0003": "ionpulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "annihilator",
+        "WS0008": "annihilator",
+        "WS0009": "annihilator",
+        "WS0010": "annihilator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "fed_swarm_emplacement"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "fed_duallaser",
+        "WS0006": "fed_duallaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

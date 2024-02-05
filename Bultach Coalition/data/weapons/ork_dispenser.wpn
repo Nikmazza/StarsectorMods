@@ -1,0 +1,55 @@
+{
+  "id": "ork_dispenser",
+  "specClass": "projectile",
+  "projectileSpecId": "dispenser_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/hotslugs/ork_dispenser_turret_base00.png",
+  "hardpointSprite": "graphics/weapons/hotslugs/ork_dispenser_hardpoint_base00.png",
+  "turretOffsets": [
+    39,
+    0,
+    39,
+    -1,
+    39,
+    1
+  ],
+  "turretAngleOffsets": [
+    0,
+    -3.5,
+    3.5
+  ],
+  "hardpointOffsets": [
+    45.5,
+    0,
+    45.5,
+    -1,
+    45.5,
+    1
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    -3.5,
+    3.5
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "numFrames": 3,
+  "frameRate": 30,
+  "muzzleFlashSpec": {
+    "length": 55,
+    "spread": 10,
+    "particleSizeMin": 10,
+    "particleSizeRange": 16,
+    "particleDuration": 0.15,
+    "particleCount": 18,
+    "particleColor": [
+      255,
+      140,
+      125,
+      200
+    ]
+  },
+  "fireSoundOne": "thumper_spinup",
+  "fireSoundTwo": "hephaestus_fire"
+}

@@ -1,0 +1,30 @@
+{
+	# Reserved engine style ids (can not be used):
+	# "CUSTOM"
+
+	"Augmented":{
+		"engineColor":[59,247,182,255],
+		"contrailParticleSizeMult":4,
+		"contrailParticleDuration":2,
+		"contrailParticleFinalSizeMult":2.5,
+		"contrailMaxSpeedMult":0.8f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[59,247,182,25],
+		"glowSizeMult":1,
+		"glowAlternateColor":[59,247,182,255],
+		"type":"GLOW" # GLOW or SMOKE
+	},
+	"Pirate":{
+		"engineColor":[255,100,100,255],
+		"contrailParticleSizeMult":8,
+		"contrailParticleDuration":2,
+		"contrailParticleFinalSizeMult":1,
+		"contrailMaxSpeedMult":0.5f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[255,100,100,25],
+		"glowSizeMult":1,
+		"glowAlternateColor":[255,0,0,255],
+		"type":"GLOW" # GLOW or SMOKE
+	},
+}
+

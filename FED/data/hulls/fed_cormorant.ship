@@ -1,0 +1,222 @@
+{
+  "hullName": "Cormorant Mk.2",
+  "hullId": "fed_cormorant",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/FED/ships/fed_cormorant_base.png",
+  "style": "FEDERATION",
+  "height": 166,
+  "width": 124,
+  "center": [62, 69.5],
+  "collisionRadius": 111,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 94,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fed_design",
+    "fed_energybuiltin"
+  ],
+  "builtInWeapons": {
+    "WS0004": "fed_swarm_emplacement"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-0.5, 44]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-0.5, -44]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 115,
+      "angle": 45,
+      "locations": [24.5, 22]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 115,
+      "angle": -45,
+      "locations": [24.5, -22]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 0,
+      "locations": [57, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-14.5, 0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 110,
+      "locations": [-25.5, 48]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": -110,
+      "locations": [-25.5, -48]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [54.5, 27]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [54.5, -27]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-67.5, 49.5],
+      "length": 32.973373,
+      "width": 6.710177,
+      "angle": 171.5,
+      "contrailSize": 6.710177,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-67.5, -49.5],
+      "length": 32.973373,
+      "width": 6.710177,
+      "angle": -171.5,
+      "contrailSize": 6.710177,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-58, -0],
+      "length": 81.5,
+      "width": 33,
+      "angle": 180,
+      "contrailSize": 33,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-68.5, 42],
+      "length": 75.5,
+      "width": 23,
+      "angle": -180,
+      "contrailSize": 23,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-68.5, -42],
+      "length": 75.5,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_ENGINE"
+    },
+    {
+      "location": [-67.5, 35],
+      "length": 33.728977,
+      "width": 7.837362,
+      "angle": -173,
+      "contrailSize": 7.837362,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-67.5, -35],
+      "length": 33.728977,
+      "width": 7.837362,
+      "angle": 173,
+      "contrailSize": 7.837362,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-57.5, -12.5],
+      "length": 37.881966,
+      "width": 9.840046,
+      "angle": -173,
+      "contrailSize": 9.840046,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    },
+    {
+      "location": [-57.5, 12.5],
+      "length": 37.881966,
+      "width": 9.840046,
+      "angle": 173,
+      "contrailSize": 9.840046,
+      "style": "CUSTOM",
+      "styleId": "FEDERATION_VENT"
+    }
+  ],
+  "bounds": [
+    -54, 11.5,
+    -36, 16.5,
+    -45, 31.5,
+    -62.5, 31.5,
+    -62, 32.5,
+    -64, 51.5,
+    -21, 57,
+    1, 44,
+    -15, 31,
+    -2.5, 23.5,
+    25, 38,
+    88.5, 11,
+    88.5, -11,
+    25, -38,
+    -2.5, -23.5,
+    -15, -31,
+    1, -44,
+    -21, -57,
+    -64, -51.5,
+    -62, -32.5,
+    -62.5, -31.5,
+    -45, -31.5,
+    -36, -16.5,
+    -54, -11.5
+  ]
+}

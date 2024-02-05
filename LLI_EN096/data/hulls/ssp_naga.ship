@@ -1,0 +1,194 @@
+{
+  "hullName": "ssp_naga",
+  "hullId": "ssp_naga",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/ssp_naga.png",
+  "style": "LLI",
+  "height": 382,
+  "width": 101,
+  "center": [37, 191],
+  "collisionRadius": 220.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 207.5,
+  "viewOffset": 0,
+    "builtInWings": ["ssp_hivedrone"],
+    "builtInMods": [
+    "ssp_cliff", "ssp_shieldmod","ssp_civiliankiller"
+  ],
+  "builtInWeapons": {
+    "WS0012": "ssp_swarm_naga"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 0,
+      "locations": [168, -22]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 180,
+      "locations": [-176, 6]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [6, -14]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-13, -14]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 90,
+      "locations": [-76, 15]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 90,
+      "locations": [-95, 15]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-44, 22]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 180,
+      "locations": [-142, 11]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 25,
+      "locations": [117, -0]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -25,
+      "locations": [80, -0]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 25,
+      "locations": [43, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -40, -33,
+        -26.5, -33
+      ]
+    },
+    {
+      "id": "WS0012",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [87, -24.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-177, 21],
+      "length": 40,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-157.5, -35],
+      "length": 45,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-157, -23],
+      "length": 24,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-147, -10],
+      "length": 20,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    189, -15,
+    146, 31,
+    -164, 35.5,
+    -190, 6,
+    -179.5, -5,
+    -147, -5,
+    -163.5, -46,
+    -149.5, -60.5,
+    -72, -60.5,
+    -60.5, -49.5,
+    10, -48.5,
+    26.5, -29,
+    149.5, -28.5,
+    152.5, -37,
+    173, -37
+  ]
+}

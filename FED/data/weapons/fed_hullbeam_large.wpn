@@ -1,0 +1,61 @@
+{
+  "id": "fed_hullbeam_large",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "beamEffect": "data.scripts.weapons.fed_HullBeamEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/FED/weapons/fed_hullbeam_large_turret.png",
+  "turretGlowSprite": "graphics/FED/weapons/fed_hullbeam_large_turret_glow.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_hullbeam_large_hardpoint.png",
+  "hardpointGlowSprite": "graphics/FED/weapons/fed_hullbeam_large_hardpoint_glow.png",
+  "glowColor": [
+    230,
+    100,
+    80,
+    225
+  ],
+  "hitGlowRadius": 30,
+  "turretOffsets": [
+    30.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    34,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    100,
+    0,
+    100,
+    235
+  ],
+  "coreColor": [
+    255,
+    255,
+    100,
+    255
+  ],
+  "width": 26,
+  "textureType": [
+    "graphics/fx/beamfringec.png",
+    "graphics/fx/beam_chunky_core.png"
+  ],
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF,
+  ],
+  "textureScrollSpeed": 512,
+  "pixelsPerTexel": 10,
+  "fireSoundTwo": "fed_hullbeam_large_fire",
+}

@@ -1,0 +1,12 @@
+{
+  "id": "officerExtension",
+  "name": "Officer Extension - The OP Fork",
+  "author": "qcwxezda, fork by 5thYL",
+  "version": "OPF.03",
+  "dependencies": [],
+  "utility": true,
+  "description": "Based on original OE, adds the ability to increase officer level cap for story points.",
+  "gameVersion": "0.96a-RC10",
+  "jars": ["jars/Officer Extension.jar"],
+  "modPlugin": "officerextension.plugin.OfficerExtension"
+}

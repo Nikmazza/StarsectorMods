@@ -1,0 +1,63 @@
+{
+  "variantId": "fed_cruisercarrier_assault",
+  "hullId": "fed_cruisercarrier",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 18,
+  "fluxVents": 21,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "magazines",
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "shredder",
+        "WS0002": "shredder",
+        "WS0003": "shredder",
+        "WS0004": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "breach",
+        "WS0006": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "fed_duallaser",
+        "WS0008": "fed_singlelaser",
+        "WS0009": "fed_duallaser",
+        "WS0010": "fed_duallaser",
+        "WS0011": "fed_singlelaser",
+        "WS0012": "fed_singlelaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "fed_firestream_wing",
+    "fed_firestream_wing"
+  ]
+}

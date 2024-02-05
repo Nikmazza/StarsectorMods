@@ -1,0 +1,22 @@
+{
+	"hullFrequency":{
+		"tags":{
+			"hmi_junk_bp":0.5,
+		},
+		"hulls":{
+			"mulligan":0,
+		},
+	},
+		"shipsWhenImporting":{
+		"tags":["hmi_junk_bp"],
+	},
+	"knownShips":{
+		"tags":["hmi_junk_bp"],
+	},
+		
+	"illegalCommodities":[
+		"red_water",
+		"mess_nano",
+		"hmi_crystal",
+	],
+},

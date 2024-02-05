@@ -1,0 +1,125 @@
+{
+  "hullName": "Gorget",
+  "hullId": "sa_gorget",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/sa_gorget.png",
+  "style": "MIDLINE",
+  "height": 167,
+  "width": 123,
+  "center": [61, 62.5],
+  "collisionRadius": 127.5,
+  "shieldCenter": [26, -1],
+  "shieldRadius": 95.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -45,
+      "locations": [14.5, -32]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 45,
+      "locations": [14.5, 32]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-21.5, -49]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-21.5, 48]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 139,
+      "angle": 45,
+      "locations": [-17.5, 24]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 139,
+      "angle": -45,
+      "locations": [-17.5, -24]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-50.5, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-53, -24.5],
+      "length": 35.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-53, 24.5],
+      "length": 35.5,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-51.5, 36],
+      "length": 38.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-51.5, -36],
+      "length": 38.5,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -27, 56.5,
+    13.5, 36,
+    38, 10.5,
+    100, 0,
+    38, -11.5,
+    13.5, -37,
+    -27, -57.5,
+    -50.5, -37,
+    -56.5, 0,
+    -50.5, 36
+  ]
+}

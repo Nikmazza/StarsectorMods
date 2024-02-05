@@ -1,0 +1,146 @@
+{
+    "combatSmallForSmallFleet":{
+        "fed_talos_standard":5,
+		"fed_tern_overdriven":4,
+		"fed_byte_standard":10,
+		"fed_byte_assault":8,
+		"fed_byte_elite":6,
+		"fed_colubris_standard":2,
+		"fed_tern_pirate_standard":1,
+    },
+    "combatSmall":{
+		"fed_colubris_standard":4,
+		"fed_colubris_elite":5,
+		"fed_colubris_strike":3,
+		
+        "fed_talos_standard":7,
+
+        "fed_tern_standard":4,
+		"fed_tern_assault":5,
+		"fed_tern_overdriven":3,
+
+        "fed_byte_standard":5,
+		"fed_byte_closesupport":2,
+		"fed_byte_assault":3,
+		"fed_byte_elite":5,
+		"fed_tern_pirate_standard":1,
+		"fed_lightdestroyer_p_standard":0.5,
+		
+    },
+    "combatMedium":{
+        "fed_lightdestroyer_standard":8,
+		"fed_lightdestroyer_closesupport":6,
+		"fed_lightdestroyer_overdriven":6,
+		"fed_lightdestroyer_elite":5,
+
+        "fed_cormorant_old_standard":7,
+		"fed_cormorant_old_closesupport":5,
+		"fed_cormorant_old_overdriven":4,
+		"fed_cormorant_old_elite":3,
+
+        "fed_cormorant_standard":8,
+		"fed_cormorant_closesupport":5,
+		"fed_cormorant_strike":5,
+
+        "fed_rigger_firesupport_standard":7,
+		"fed_rigger_firesupport_closesupport":6,
+		"fed_rigger_firesupport_elite":5,
+		
+		"fed_superdestroyer_standard":3,
+		"fed_superdestroyer_overdriven":2,
+		
+		"fed_lightdestroyer_p_standard":1,
+		"fed_cormorant_old_pirate_standard":1,
+		
+    },
+    "combatLarge":{
+        "fed_kestral_standard":10,
+		"fed_kestral_assault":7,
+		"fed_kestral_elite":6,
+		
+        "fed_osprey_standard":6,
+		"fed_osprey_elite":5,
+		"fed_osprey_assault":5,
+		
+        "fed_raptor_standard":7,
+		"fed_raptor_closesupport":6,
+		"fed_raptor_elite":5,
+    },
+    "combatCapital":{
+        "fed_flagship_assault_standard":8,
+		"fed_flagship_assault_brawler":7,
+		"fed_flagship_assault_elite":6,
+		
+		"fed_superkestrel_elite":4,
+		"fed_superkestrel_standard":4,
+		"fed_superkestrel_closesupport":4,
+		
+        "fed_boss_standard":2,
+		"fed_boss_closesupport":2,
+		"fed_boss_assault":2,
+		
+		"fed_cargocap_standard":2,
+		"fed_cargocap_closesupport":2,
+		"fed_cargocap_elite":2,
+    },
+    "combatFreighterMedium":{
+        "fed_medcombtanker_standard":5,	
+    },
+	"combatFreighterLarge":{
+		"fed_cargocap_outdated":10,
+		"fallback":{"combatFreighterMedium":5},
+    },
+    "civilianRandom":{
+        "fed_medcombtanker_dedicated":7,
+        "fed_heavyfreighter_heavy":3,
+		"fed_rigger_civilian":10,
+    },
+    "carrierSmall":{
+        "fed_rigger_standard":3,
+		"fed_rigger_closesupport":2,
+		"fed_rigger_escort":2,
+    },
+    "carrierMedium":{
+        "fed_cruisercarrier_standard":5,
+		"fed_cruisercarrier_assault":2,
+		"fed_cruisercarrier_closesupport":3,
+    },
+    "carrierLarge":{
+        "fed_flagship_standard":5,
+		"fed_flagship_assault":5,
+		"fed_flagship_closesupport":5,
+		"fed_flagship_elite":5,
+    },
+    "phaseSmall":{
+		"afflictor_Strike":1,
+		"shade_Assault":1 
+    },
+    "phaseMedium":{
+        "harbinger_Strike":1,
+    },
+    "phaseLarge":{
+        "fed_stealth_standard":5,
+		"fed_stealth_assault":5,
+		"fed_stealth_strike":5,
+    },
+	"freighterSmall":{
+        "fed_superbuffalo_fast":5,
+    },
+    "freighterMedium":{
+        "fed_superbuffalo_cheap":5,
+		"fed_heavyfreighter_fast":5
+    },
+	"freighterLarge":{
+		"fed_heavyfreighter_heavy":5,
+    },
+    "tankerSmall":{
+        "dram_Light":10,
+    },
+	"tankerMedium":{
+        "fed_medcombtanker_dedicated":10,
+    },
+    "personnelSmall":{
+        "fed_superkite_standard":10,
+		"fed_superkite_overdriven":4,
+    },
+}

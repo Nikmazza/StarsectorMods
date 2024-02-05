@@ -1,0 +1,38 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
+FTL Microjump,fed_microftl,,,,,,0.05,,2,0.04,0.6,0.1,0.1,2,,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/displacer.png
+FTL Jump,fed_ftl,,,,,,0.075,,2,0.03,0.6,0.35,0.25,10,,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/displacer.png
+Emergency FTL Jump,fed_ftl_slow,,,,,,0.1,,,,0.6,0.6,0.5,15,,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/displacer.png
+Cloaking Device,fed_cloak,,,,,,,,,,0.5,,0.5,1.25,TRUE,,TRUE,TRUE,TRUE,,,,TRUE,,TRUE,,graphics/icons/hullsys/phase_cloak.png
+Auxiliary Jets,fed_assaultjets,,,,,,,,2,0.033,0.5,6,1,5,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+Limited Cloak,fed_tempcloak,,0.5,,,,,,1,0.04,0.5,5,0.5,,,,TRUE,,TRUE,,,,TRUE,,TRUE,,graphics/icons/hullsys/phase_cloak.png
+Point Defense Array,fed_drone_pd_boss,,,0.01,,,,,8,0.075,0,,,3,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
+Defense Array MK4,fed_drone_pd_4x,,,0.01,,,,,4,0.06,0,,,3,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
+Antimatter Injector,fed_enginebattery,,,,,,,,3,0.05,0.65,0.275,0.7,2,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+ASB Volley,fed_asb,,,,,,,,,,10,,1,20,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Bomb Teleporter,fed_bomb_teleporter,,,,,,0.2,,,,0.75,,0.25,15,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
+Defense Array MK2,fed_drone_pd_2x,,,0.01,,,,,2,0.05,0,,,3,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
+Heavy Defense Drones,fed_drone_pd_slow_2x,,,0.01,,,,,2,0.05,0,,,3,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
+Overdrive Feeder,fed_weapon_charger,,,,,,,,,,0.25,4,7,7.5,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Engine Redline,fed_evasion,,,,,,,,,,0.5,2,4.5,12,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+Evasive Maneuvers,fed_evasionlight,,,,,,,,,,0.75,1,3.5,15,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+Flare Banks,fed_flarelauncher,,,,,,,,5,0.04,,,,3,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
+Active Flare Salvo,fed_flarelauncher_active,,,,,,0.01,,3,0.125,,,,0.3,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Heavy Maneuvering Jets,fed_heavy_maneuveringjets,,,,,,,,2,0.06,1,2.5,1,2,,,,,,,,,,,,,graphics/icons/hullsys/burn_drive.png
+EMP-Flux Discharger,fed_emp,,,,,,,,,,0.5,4,0.5,15,,,,TRUE,TRUE,,,,,TRUE,,,graphics/icons/hullsys/emp_emitter.png
+Drone Swarm,fed_droneswarm,,,,,,0.4,,,,0.1,,3,50,,,,,,,,,,,,,graphics/icons/hullsys/reserve_deployment.png
+Battery Discharge ,fed_powersurge,,,,,,,,2,0.15,0.25,1.5,0.25,,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Battery Discharge II,fed_powersurge_slow,,,,,,,,1,0.055,0.75,3,0.75,,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Engine Surge,fed_halfburn,,,,,,,,2,0.065,0.5,4,0.2,0,,,,,,,TRUE,TRUE,,,,,graphics/icons/hullsys/burn_drive.png
+Power Surge,fed_powersurge_boss,,,,,,,,,,6.75,0.25,0.25,32.75,,,,,,,,,,TRUE,,,graphics/icons/hullsys/ammo_feeder.png
+Phase Veins,fed_biocloak,,,,,,,,,,0.4,,0.6,1.25,TRUE,,TRUE,TRUE,TRUE,,,,TRUE,,TRUE,,graphics/icons/hullsys/phase_cloak.png
+Light Canister Flak,fed_canister_flak,,,,,,,,2,0.04,,,,6,,,,,,,,,,,,,
+Coordinated Strike,fed_battlemode,,,,,,0.2,,,,0.5,10,0.5,20,,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
+Volley Fire,fed_powersurge_bomber,,,,,,0.3,,,,0.5,1.5,0.5,17.5,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FTL Drive Mk1,fed_traveldrive_frigate,1,,,,,,,,,,7.65,5,0,,,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/burn_drive.png
+FTL Drive Mk2,fed_traveldrive_destroyer,1,,,,,,,,,,7.65,7,0,,,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/burn_drive.png
+FTL Drive Mk3,fed_traveldrive_cruiser,1,,,,,,,,,,7.65,8,0,,,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/burn_drive.png
+FTL Drive Mk4,fed_traveldrive_capital,1,,,,,,,,,,7.65,10,0,,,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/burn_drive.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Interdictor Device,fed_interdictor,,,,,,0.25,,1,0.05,0.5,,0.5,4,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png

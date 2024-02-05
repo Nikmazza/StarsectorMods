@@ -1,0 +1,61 @@
+{
+  "id": "fed_beam_glaive",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "beamEffect": "data.scripts.weapons.fed_PierceBeamEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/FED/weapons/redbeam_large_turret.png",
+  "turretGlowSprite": "graphics/FED/weapons/redbeam_large_turret_glow.png",
+  "turretUnderSprite": "graphics/FED/weapons/redbeam_large_turret_under.png",
+  "hardpointSprite": "graphics/FED/weapons/redbeam_large_hardpoint.png",
+  "hardpointGlowSprite": "graphics/FED/weapons/redbeam_large_hardpoint_glow.png",
+  "hardpointUnderSprite": "graphics/FED/weapons/redbeam_large_hardpoint_under.png",
+  "glowColor": [
+    255,
+    55,
+    55,
+    255
+  ],
+  "hitGlowRadius": 125,
+  "turretOffsets": [
+    46.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    45,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    30,
+    30,
+    215
+  ],
+  "coreColor": [
+    255,
+    230,
+    230,
+    155
+  ],
+  "width": 40,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 1024,
+  "pixelsPerTexel": 15,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF,
+    FIGHTER
+  ],
+  "fireSoundOne": "fed_glaive_fire_new"
+}

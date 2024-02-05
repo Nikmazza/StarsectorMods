@@ -1,0 +1,32 @@
+{
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/nes_giant_space_hamster.png",
+						],
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+    "hullFrequency":{
+        "hulls":{
+			"nes_carnelian":0.4, #somewhat rare
+			"nes_hammerfall":0.4, #somewhat rare
+        },
+    },
+	
+	"knownShips":{
+        "hulls":[
+            "nes_carnelian",
+			"nes_hammerfall",
+        ],
+    },
+	
+    "knownWeapons":{
+        "weapons":[
+            "nes_assault_mjolnir",
+        ],
+    },
+	
+	"weaponSellFrequency":{
+		"nes_assault_mjolnir":10, #same as mjolnir
+	},
+},		

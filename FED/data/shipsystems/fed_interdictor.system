@@ -1,0 +1,20 @@
+{
+	"id":"fed_interdictor",
+	"type":"STAT_MOD",
+	"aiType":"INTERDICTOR",
+	
+	"statsScript":"data.shipsystems.fed_InterdictorArray",
+
+	"runScriptWhileIdle":true, # unapply() never gets called
+		
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_interdictor",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

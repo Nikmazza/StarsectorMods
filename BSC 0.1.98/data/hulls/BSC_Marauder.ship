@@ -1,0 +1,112 @@
+{
+  "hullName": "Marauder",
+  "hullId": "BSC_Marauder",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/hulls/BSC_Marauder.png",
+  "style": "LOW_TECH",
+  "height": 209,
+  "width": 70,
+  "center": [35, 100],
+  "collisionRadius": 169.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 142.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 0,
+      "locations": [57, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 0,
+      "locations": [24, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -70,
+      "locations": [0, -26]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 70,
+      "locations": [0, 26]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-37, 20]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-37, -20]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-100, -0],
+      "length": 52,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-96, 16.5],
+      "length": 34,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-96, -16.5],
+      "length": 34,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -88, -23,
+    -46, -25,
+    -3, -32,
+    35, -19,
+    66, -19,
+    91, -15.5,
+    100, -8.5,
+    100, 8,
+    66, 19,
+    35, 19,
+    -3, 32,
+    -46, 25,
+    -88, 23,
+    -97.5, -0
+  ]
+}

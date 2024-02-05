@@ -1,0 +1,18 @@
+{
+	"id":"bc_fighter_blaster_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":75.0,
+	"width":4,
+	"fadeTime":0.3,
+	"fringeColor":[135,201,236,255],
+	"coreColor":[255,255,255,255],
+	"glowColor":[100,191,239,75],
+	"glowRadius":45,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
+	"bulletSprite":"graphics/missiles/shell_small.png",
+}

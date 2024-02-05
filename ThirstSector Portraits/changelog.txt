@@ -1,0 +1,19 @@
+Version 1.31
+Added luddic balaclava man back
+
+Version 1.3
+Updated for 0.96a
+Various generic portraits rejigged and/or moved
+Reworked Artemisia Sun, Bione Lata, Callisto Ibrahim
+
+Version 1.2
+updated some portraits, moved some portraits to the extra addon, old portraits can be found in the extra addon.
+Version 1.1
+a few changes across the board, some improvements, some replacements
+Version 1.02
+Moved AI Replacers to ThirstSector Extra
+Version 1.01
+Moved DME and Magellan replacers to their own add-on pack
+Version 1.0
+Initial Submission
+

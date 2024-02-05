@@ -1,0 +1,16 @@
+{
+    "knownWeapons":{
+        "weapons":[
+            "TADA_pike",
+            "TADA_LRA",
+            "TADA_urchin",
+        ],
+    },
+	"knownHullMods":{
+		"hullMods":[
+			"TADA_reactiveArmor",
+			#"TADA_lightArmor",
+			#"TADA_minimalPrep",
+		],
+	},
+},

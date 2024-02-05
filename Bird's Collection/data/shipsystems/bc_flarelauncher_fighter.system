@@ -1,0 +1,12 @@
+{
+	"id":"bc_flarelauncher_fighter",
+	"type":"WEAPON",
+	"aiType":"FLARE_JAMMER",
+	"weaponDataId":"bc_flarelauncher_jammer",
+	
+	#"useSound":"system_flare_launcher_active",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}	
+}

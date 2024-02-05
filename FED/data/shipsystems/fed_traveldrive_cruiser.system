@@ -1,0 +1,33 @@
+{
+	"id":"fed_traveldrive_cruiser",
+	"type":"ENGINE_MOD",
+	"aiType":"NONE",
+	
+	"statsScript":"data.shipsystems.fed_TravelDriveStats",
+	
+	"jitterColor":[255,255,52,200],
+	"jitterCopies":3,
+	"jitterRange":10,
+	"jitterRangeRadiusFraction":0.1,
+	
+	"engineActivateHiddenNozzles":true,
+	"engineGlowColor":[10,100,255,255],
+	"engineGlowContrailColor":[0,0,255,0],
+	"engineGlowMaxBlend":0.50,
+	"engineGlowLengthMult":3,
+	"engineGlowWidthMult":3,
+	"engineGlowGlowMult":3,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+	"useSound":"fed_warpout_cruiser_explosion",
+	"outOfUsesSound":"fed_warpout_cruiser_explosion",
+	
+	"aiHints":{
+		"averageSpeedIncrease":600,
+	}
+}

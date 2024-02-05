@@ -1,0 +1,38 @@
+{
+	"id":"ssp_ChaosArmory_HIGH_EXPLOSIVE_proj1",
+	"onHitEffect":"data.weapon.ssp_heatneddleEffect",
+	"specClass":"missile",	
+	"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
+	"sprite":"graphics/missiles/missile_SRM.png",
+	"size":[3,7],	
+	"center":[1,4],
+	"collisionRadius":6,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,105,100,150],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":30, # purely visual
+	"fadeTime":1, # fadeout duration
+	"engineSpec":{"turnAcc":2400,
+				  "turnRate":480,
+				  "maxSpeed":300,
+				  "acc":3600,
+				  "dec":0},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-5, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,105,100,255],
+						"contrailDuration":.5,
+						"contrailWidthMult":2,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":15, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":.5, # how far away from engine it starts
+						"contrailColor":[100,100,100,150],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":3.0,
+				    "length":13.0,
+				    "angle":180.0}]
+}

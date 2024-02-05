@@ -1,0 +1,21 @@
+{
+
+	"combatCapital":{
+		"missp_nagato_Standard":5,
+		"missp_nagato_Brawler":5,
+		"missp_path_ragnarok_Standard":10,
+		"missp_idol_standard":10,
+	},
+	"combatFreighterLarge":{
+		"missp_anchor_Standard":5,
+		"missp_anchor_Miner":5,
+	},
+	"carrierLarge":{
+		"missp_dominion_Standard":5,
+		"missp_dominion_Elite":2.5,
+		"missp_dominion_Brawler":2.5,
+		"missp_pelagornis_Thunder":5,
+		"missp_pelagornis_Dagger":5,
+	},
+	
+}

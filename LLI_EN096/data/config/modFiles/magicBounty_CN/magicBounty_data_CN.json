@@ -1,0 +1,284 @@
+{    
+	"LLI_Challenge_Missile": {
+		#"trigger_marketFaction_none": ["LLI"],
+		"trigger_marketFaction_any": ["persean"], # Default: no values. markets of these factions will show the bounty (if other conditions are met).
+        "trigger_marketFaction_alliedWith": true, # Default: false. if true, markets of all factions whose relationship is at least FAVORABLE to ANY ONE of the factions above will show the bounty (if other conditions are met).
+		#"trigger_marketFaction_enemyWith": true, # Default: false. If true, markets of all factions whose relationship is HOSTILE to EVERY ONE (ALL) of the factions above. Beware when using this parameter with multiple excluded factions.
+		"trigger_weight_mult": 0.5,
+		"trigger_player_minLevel": 5,
+		"trigger_min_fleet_size": 10,
+		#"trigger_min_days_elapsed": 120,
+		#"trigger_memKeys_any": {
+		#	"job_memKey_expired": true,
+		#	"job_memKey_succeeded": true,
+		#},
+
+		"job_name": "沙盗",
+		"job_forFaction": "persean",
+		"job_description": "三月前，一支正在前往 Olinadu 执行任务的舰队被不明舰队袭击，舰队运输的重要货物也被系数掠夺，好在货物内置的追踪器提供了袭击者的位置。Olinadu 当地的安全部队愿意提供 ==$reward== 星币寻回货物并消灭袭击者。",
+		"job_comm_reply": "通讯请求被拒绝，且对方迅速的进入了战备状态。",
+		"job_intel_success": "你按照合约内容将货物寄送到了Olinadu，货物寄出不久后就收到了赏金汇款和英仙座联盟官方的官方文件，文件充分表达了对你找回货物的感激和对你个人能力的赞誉。值得注意的是汇款账户并非来自英仙座联盟。",
+		#"job_intel_failure": ,
+		"job_intel_expired": "你收到了来自英仙座联盟官方的官方文件，文件告知你赏金已经取消，并希望你不要对这次事件进行任何调查。",
+		"job_deadline": 240,
+		"job_credit_reward": 900000,
+		"job_reward_scaling": 0,
+		"job_item_reward": {
+			"ssp_mantle_bore": 1,
+		},
+		"job_type":"neutralisation",
+		"job_show_type":true,
+		"job_show_captain": false,
+		"job_show_fleet": "none",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "由于没有任何幸存的目击者，因此完全无法判断威胁程度",
+		#"job_memKey": "$LLI_Challenge_Missile",
+
+		"target_rank": "spaceCaptain",
+        "target_post": "specialAgent",
+		"target_level": 5,
+		"target_personality": "steady",
+		####"target_skill_preference": "YES_ENERGY_NO_BALLISTIC_YES_MISSILE_YES_DEFENSE",
+		"target_skills": { # Default: empty. REMOVES ALL RANDOM SKILLS, set level 1 for normal skill, level 2 for elite.
+			##fleet skill
+			"tactical_drills":1,
+			"coordinated_maneuvers":1,
+			"wolfpack_tactics":1,
+			"crew_training":1,
+			"electronic_warfare":1,
+			"flux_regulation":1,
+			"officer_training":1,
+			"officer_management":1,
+			"best_of_the_best":1,
+			"support_doctrine":1,
+			"hull_restoration":1,
+			"fighter_uplink":1,
+			"carrier_group":1,
+			##combat skill
+			"combat_endurance":2,
+			"missile_specialization":2,
+			"target_analysis":2,
+			"field_modulation":2,
+			"helmsmanship":2,
+        },
+
+		"fleet_name": "无敌舰队",
+		"fleet_faction": "LLI",
+		"fleet_flagship_variant": "ssp_hanba_beam",
+		"fleet_flagship_recoverable": true,
+		"fleet_preset_ships": {
+			"ssp_wave_M_standard": 10,
+		},
+		"fleet_transponder": false,
+		"fleet_behavior": "GUARDED",
+		"fleet_min_FP": 550, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "LLI", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 2, # Default: 1, use 2 for no Dmods.
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting_minor",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden",
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+	"LLI_Challenge_zhurong": {
+		#shows up everywhere unfriendly with TT right from the start
+		#"trigger_marketFaction_none": ["LLI"],
+		"trigger_marketFaction_any": ["LLI"], # Default: no values. markets of these factions will show the bounty (if other conditions are met).
+        "trigger_marketFaction_alliedWith": true, # Default: false. if true, markets of all factions whose relationship is at least FAVORABLE to ANY ONE of the factions above will show the bounty (if other conditions are met).
+		#"trigger_marketFaction_enemyWith": true, # Default: false. If true, markets of all factions whose relationship is HOSTILE to EVERY ONE (ALL) of the factions above. Beware when using this parameter with multiple excluded factions.
+		"trigger_weight_mult": 0.5,
+		"trigger_player_minLevel": 5,
+		"trigger_min_fleet_size": 10,
+		#"trigger_min_days_elapsed": 120,
+		#"trigger_memKeys_any": {
+		#	"$LLI_Challenge_Missile_expired": true,
+		#	"$LLI_Challenge_Missile_succeeded": true,
+		#},
+
+		"job_name": "失火",
+		"job_forFaction": "LLI",
+		"job_description": "来自楼兰海军官方的悬赏。楼兰海军的数台改良型护卫舰遭到窃取，找到并消灭这些小偷就可以获得 ==$reward== 星币的报酬。",
+		"job_comm_reply": "通讯请求被拒绝，且对方迅速的进入了战备状态。",
+		"job_intel_success": "不久后，你收到了赏金和庆功宴的邀请函。实际上接取了这项任务的人都收到了邀请函，也许你可以通过这场宴会结交一些新朋友。",
+		#"job_intel_failure": ,
+		"job_intel_expired": "楼兰海军不久前夺回了失窃的护卫舰，尽管你什么都没有做但还是收到了庆功宴的邀请函。实际上接取了这项任务的人都收到了邀请函，也许你可以通过这场宴会结交一些新朋友。",
+		"job_deadline": 90,
+		"job_credit_reward": 300000,
+		"job_reward_scaling": 0,
+		"job_type":"neutralisation",
+		"job_show_type":true,
+		"job_show_captain": false,
+		"job_show_fleet": "vanilla",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "auto",
+
+		#captain is irrelevant in this instance
+		"target_rank": "spaceCaptain",
+        "target_post": "specialAgent",
+		"target_level": 7,
+		"target_personality": "steady",
+		"target_skills": { # Default: empty. REMOVES ALL RANDOM SKILLS, set level 1 for normal skill, level 2 for elite.
+			##fleet skill
+			"tactical_drills":1,
+			"coordinated_maneuvers":1,
+			"wolfpack_tactics":1,
+			"crew_training":1,
+			"electronic_warfare":1,
+			"flux_regulation":1,
+			"officer_training":1,
+			"officer_management":1,
+			"best_of_the_best":1,
+			"support_doctrine":1,
+			"hull_restoration":1,
+			"fighter_uplink":1,
+			"carrier_group":1,
+			##combat skill
+			"combat_endurance":2,
+			"missile_specialization":2,
+			"target_analysis":2,
+			"field_modulation":2,
+			"helmsmanship":2,
+			"systems_expertise":2,
+			"damage_control":2,
+        },
+
+		"fleet_name": "'低调'的速子科技舰队",
+		"fleet_faction": "tritachyon",
+		"fleet_flagship_variant": "LLI_astral",
+		"fleet_flagship_recoverable": true,
+		"fleet_preset_ships": {
+			"LLI_ssp_zhurong": 4,
+			"LLI_hyperion":4,
+		},
+		"fleet_transponder": false,
+		"fleet_behavior": "GUARDED",
+		"fleet_min_FP": 300, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "tritachyon", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 2, # Default: 1, use 2 for no Dmods.
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting_minor",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden",
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+	"LLI_Challenge_Dumper": {
+		#"trigger_marketFaction_none": ["LLI"],
+		"trigger_marketFaction_any": ["tritachyon"], # Default: no values. markets of these factions will show the bounty (if other conditions are met).
+        "trigger_marketFaction_alliedWith": true, # Default: false. if true, markets of all factions whose relationship is at least FAVORABLE to ANY ONE of the factions above will show the bounty (if other conditions are met).
+		#"trigger_marketFaction_enemyWith": true, # Default: false. If true, markets of all factions whose relationship is HOSTILE to EVERY ONE (ALL) of the factions above. Beware when using this parameter with multiple excluded factions.
+		"trigger_weight_mult": 0.5,
+		"trigger_player_minLevel": 5,
+		"trigger_min_fleet_size": 10,
+		#"trigger_min_days_elapsed": 120,
+		#"trigger_memKeys_any": {
+		#	"$LLI_Challenge_Missile_succeeded": true,
+		#},
+
+		"job_name": "官方拾荒者",
+		"job_forFaction": "tritachyon",
+		"job_description": "来自 速子科技 的悬赏，目标为 楼兰海军 的勘探舰队。该舰队在边缘星区的一处废弃速子科技设施中回收了人之领用于移民的低温休眠舱的设计图纸，速子科技 尝试买回这份设计图，但遭到了拒绝。",
+		"job_comm_reply": "通讯请求被拒绝，且对方迅速的进入了战备状态。",
+		"job_intel_success": "你成功的拿到了赏金，是时候大肆挥霍一番了。",
+		#"job_intel_failure": ,
+		"job_intel_expired": "有其他人率先完成了悬赏，到嘴的鸭子飞走了。",
+		"job_deadline": 90,
+		"job_credit_reward": 1145000,
+		"job_reward_scaling": 0,
+		"job_item_reward": {
+			"ssp_cryosanctum":1,
+		},
+		"job_type":"neutralisation",
+		"job_show_type":true,
+		"job_show_captain": false,
+		"job_show_fleet": "vanilla",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "",
+		#"job_memKey": "$LLI_Challenge_Dumper",
+
+		"target_rank": "spaceCaptain",
+        "target_post": "specialAgent",
+		"target_level": 5,
+		"target_personality": "steady",
+		####"target_skill_preference": "YES_ENERGY_NO_BALLISTIC_YES_MISSILE_YES_DEFENSE",
+		"target_skills": { # Default: empty. REMOVES ALL RANDOM SKILLS, set level 1 for normal skill, level 2 for elite.
+			##fleet skill
+			"tactical_drills":1,
+			"coordinated_maneuvers":1,
+			"wolfpack_tactics":1,
+			"crew_training":1,
+			"electronic_warfare":1,
+			"flux_regulation":1,
+			"officer_training":1,
+			"officer_management":1,
+			"best_of_the_best":1,
+			"support_doctrine":1,
+			"hull_restoration":1,
+			"fighter_uplink":1,
+			"carrier_group":1,
+			##combat skill
+			"combat_endurance":2,
+			"missile_specialization":2,
+			"target_analysis":2,
+			"field_modulation":2,
+			"helmsmanship":2,
+        },
+
+		"fleet_name": "官方拾荒者",
+		"fleet_faction": "LLI",
+		"fleet_flagship_variant": "LLI_Dumper_ship_0",
+		"fleet_flagship_recoverable": true,
+		"fleet_preset_ships": {
+			"LLI_Dumper_ship_0":2,
+			"LLI_Dumper_ship_4":2,
+			"LLI_Dumper_ship_5":2,
+			"ssp_seaquake_beam":4,
+			"LLI_Dumper_ship_1":4,
+			"LLI_Dumper_ship_3":6,
+			"ssp_gonggong_standard":2,
+			"LLI_Dumper_ship_2":6,
+		},
+		"fleet_transponder": false,
+		"fleet_behavior": "GUARDED",
+		"fleet_min_FP": 400, # Default: no minimum. Minimal total fleet size, set to -1 to ignore.
+        "fleet_composition_faction": "LLI", # Default: bounty fleet faction. Used if the extra ships don't match the fleet's faction. For example a pirate fleet of Hegemony deserters. Required for min FP and player adjustment.
+        "fleet_composition_quality": 1, # Default: 1, use 2 for no Dmods.
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting_minor",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden",
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+}

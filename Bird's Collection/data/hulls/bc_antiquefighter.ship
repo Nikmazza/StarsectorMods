@@ -1,0 +1,76 @@
+{
+  "hullName": "Tantieme",
+  "hullId": "bc_antiquefighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_antiquefighter.png",
+  "style": "ANTIQUE",
+  "height": 28,
+  "width": 19,
+  "center": [9.5, 8],
+  "collisionRadius": 26,
+  "shieldCenter": [3.5, -0],
+  "shieldRadius": 20.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [14, 5.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [14, -5.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 180,
+      "locations": [2, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-6, -0],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-4, 7.5],
+      "length": 10.5,
+      "width": 2,
+      "angle": 147.5,
+      "contrailSize": 2,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    },
+    {
+      "location": [-4, -7.5],
+      "length": 10.5,
+      "width": 2,
+      "angle": -147.5,
+      "contrailSize": 2,
+      "style": "CUSTOM",
+      "styleId": "ANTIQUE"
+    }
+  ],
+  "bounds": []
+}

@@ -1,0 +1,7 @@
+id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
+ork_prevent_pather,Ork stop pather,0,0,,0,,,"unraidable, structure",,,data.campaign.econ.industries.Ork_prevent_pather,,3001,
+ork_superdread_station,DòrnDhè,,120,,5,,,"station, starfortress, unraidable, structure","{
+radius:70,
+variant:ork_superdread_main_standard,
+fleetName:DòrnDhè
+}",graphics/icons/industry/battlestation.png,data.scripts.campaign.ork_dreadnought_industry,"In place of a station, Dhaichaigh instead hosts the DòrnDhè superdreadnought in orbit.",2030,

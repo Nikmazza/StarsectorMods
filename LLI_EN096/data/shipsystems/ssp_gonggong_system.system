@@ -1,0 +1,22 @@
+{
+	"id":"ssp_gonggong_system",
+	"type":"STAT_MOD",
+	###"aiType":"TARGETING_FEED",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.ssp_gonggong_systemAI",
+	
+	"statsScript":"data.shipsystems.ssp_gonggong_system",
+
+	###"runScriptWhileIdle":true, # unapply() never gets called
+		
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_interdictor",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

@@ -1,0 +1,44 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "ssp_tide_T",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "expanded_deck_crew"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_tide_T_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "hveldriver",
+                "WS0002": "hveldriver"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "ssp_MedMissle",
+                "WS0008": "ssp_MedMissle",
+                "WS0009": "ssp_MedMissle",
+                "WS0010": "ssp_MedMissle"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_FragMachinegun",
+                "WS0004": "ssp_FragMachinegun"
+            }
+        }
+    ],
+    "wings": []
+}

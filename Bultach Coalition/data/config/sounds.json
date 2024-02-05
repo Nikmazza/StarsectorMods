@@ -1,0 +1,198 @@
+{
+
+		
+#collapseopen WEAPONS
+
+	# DAKKA
+	"bigkinetic_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/bigkinetic_fire.ogg","pitch":1,"volume":4},
+	],	
+	"bigbore_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/bigbore_fire.ogg","pitch":1,"volume":4},
+	],	
+	"smallbore_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/smallbore_fire.ogg","pitch":1,"volume":4},
+	],	
+	"rotary_spinup":
+	[
+		{"file":"sounds/sfx_wpn_guns/rotary_spinup.ogg","pitch":1,"volume":4},
+	],	
+	"dakka_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/dakka_fire_01.ogg","pitch":1,"volume":4},
+	],	
+
+	"cannon_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/rotate_fire.ogg","pitch":1,"volume":6},
+	],
+
+	"bolta_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/bolta_fire.ogg","pitch":1,"volume":4},
+	],	
+	"rotary_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/rotary_fire.ogg","pitch":1,"volume":1},
+	],	
+	"hell_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/hell_fire.ogg","pitch":1,"volume":4},
+	],	
+	"shotgun_shot":
+	[
+		{"file":"sounds/sfx_wpn_guns/shotgun_shot.ogg","pitch":0.9,"volume":1},
+	],	
+	"slug_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/slug_fire.ogg","pitch":1,"volume":1},
+	],	
+	"beem_charge":
+	[
+	    {"file":"sounds/sfx_wpn_energy/beem_charge.ogg","pitch":1,"volume":10},
+	],
+	"beem_loop":
+	[
+		{"file":"sounds/sfx_wpn_energy/beam_firing.ogg","pitch":1.0,"volume":10},
+	],
+	"megacannon_fire":
+    [
+		{"file":"sounds/sfx_wpn_guns/megacannon_fire.ogg","pitch":1.0,"volume":10},
+	],	
+	"gigashotgun_fire":
+    [
+		{"file":"sounds/sfx_wpn_guns/gigashotgun_fire.ogg","pitch":1.0,"volume":4},
+	],	
+	"beem_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/beem_fire.ogg","pitch":1.0,"volume":20},
+	],
+	"plasma_shot":
+	[
+		{"file":"sounds/sfx_wpn_energy/plasma_shot.ogg","pitch":1.0,"volume":0.70},
+	],
+	"smallplasma_shot":
+	[
+		{"file":"sounds/sfx_wpn_energy/smallplasma_shot.ogg","pitch":1.0,"volume":0.70},
+	],
+	"plasma_shotgun_shot":
+	[
+		{"file":"sounds/sfx_wpn_energy/plasma_shotgun_shot.ogg","pitch":1.0,"volume":0.90},
+	],
+	"fusion_lance_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/fusion_lance_fire.ogg","pitch":1.0,"volume":2.0},
+	],
+	"fusion_lance_ready":
+	[
+		{"file":"sounds/sfx_wpn_energy/fusion_lance_ready.ogg","pitch":1.0,"volume":2.0},
+	],
+	"bigplasma_shot":
+	[
+		{"file":"sounds/sfx_wpn_energy/bigplasma.ogg","pitch":1.0,"volume":2.0},
+	],
+	"gigarail_shot":
+	[
+		{"file":"sounds/sfx_wpn_energy/giga_rail_shot.ogg","pitch":1.0,"volume":4.0},
+	],
+	"gigarail_charge":
+	[
+		{"file":"sounds/sfx_wpn_energy/giga_rail_chargeup.ogg","pitch":1.0,"volume":2.0},
+	],
+	"holy_cleanse":
+	[
+		{"file":"sounds/sfx_wpn_energy/holy_cleanse.ogg","pitch":1.0,"volume":2.0},
+	],
+	"holy_cleanse_loop":
+	[
+		{"file":"sounds/sfx_wpn_energy/holy_cleanse_loop.ogg","pitch":1.0,"volume":1.0},
+	],
+	"melta_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/melta_fire.ogg","pitch":1.0,"volume":10},
+	],
+	"plasma_impact":
+	[
+		{"file":"sounds/sfx_wpn_energy/plasma_impact.ogg","pitch":1.0,"volume":2},
+	],
+	"redemption_charge":
+	[
+		{"file":"sounds/sfx_systems/redemption_charge.ogg","pitch":1.0,"volume":2},
+	],
+	"ork_burner_activate":[ 
+	{"file":"sounds/sfx_systems/ork_burner_activate.ogg","pitch":0.7,"volume":0.85},
+	],
+	"ork_engine_burn":[ 
+	{"file":"sounds/sfx_systems/ork_engine_burn.ogg","pitch":0.7,"volume":1.0},
+	],
+	"ork_burner_loop":[ 
+	{"file":"sounds/sfx_systems/ork_burner_loop.ogg","pitch":0.7,"volume":0.85},
+	],
+	"ork_burner_loop_holy":[ 
+	{"file":"sounds/sfx_systems/ork_burner_loop_holy.ogg","pitch":1.0,"volume":0.90},
+	],
+	"ork_antimatter_dump":[ 
+	{"file":"sounds/sfx_systems/TUBA_CHARGE.ogg","pitch":1.0,"volume":1.0},
+	],
+	"bt_exit_phase":[ 
+	{"file":"sounds/sfx_systems/bt_exit_phase.ogg","pitch":1.0,"volume":1.0},
+	],
+	"ork_no_phase":[ 
+	    {"file":"sounds/sfx_systems/ork_no_phase.ogg","pitch":1,"volume":5},
+	],
+	"reactor_startup":[ 
+	    {"file":"sounds/sfx_systems/reactor_startup.ogg","pitch":1,"volume":4},
+	],
+	"spacial_shunt":[ 
+	    {"file":"sounds/sfx_systems/spacial_shunt.ogg","pitch":1,"volume":4},
+	],
+	"fluxbooster_active":[ 
+	    {"file":"sounds/sfx_systems/fluxbooster_active.ogg","pitch":1,"volume":4},
+	],
+	"engine_loop":{
+		"sounds":[
+			{"file":"sounds/sfx_engines/engine_01_lotek_00_fighter.ogg","pitch":0.67,"volume":1}, # index:  0
+			{"file":"sounds/sfx_engines/engine_01_lotek_01_frigate.ogg","pitch":1,"volume":1},    # index:  1
+			{"file":"sounds/sfx_engines/engine_01_lotek_02_destroyer.ogg","pitch":1,"volume":1},  # index:  2
+			{"file":"sounds/sfx_engines/engine_01_lotek_03_cruiser.ogg","pitch":1,"volume":1},    # index:  3
+			{"file":"sounds/sfx_engines/engine_01_lotek_04_capital.ogg","pitch":1,"volume":1},    # index:  4
+			],
+		"BULTACH":{"sounds":[0,1,2,3,4], "pitch":1, "volume":0.6},
+		},
+
+		"bt_shield_lower":{
+			"sounds":[
+				{"file":"sounds/sfx_shields/bt_shield_down_large.ogg","pitch":1,"volume":0.4},
+				{"file":"sounds/sfx_shields/bt_shield_down_medium.ogg","pitch":1,"volume":0.4},
+				{"file":"sounds/sfx_shields/bt_shield_down_small.ogg","pitch":1,"volume":0.4},
+			],
+			"BULTACH":{"sounds":[0,1,2], "pitch":1, "volume":1},
+			"FIGHTER":{"sounds":[2], "pitch":1, "volume":0.6},
+			"FRIGATE":{"sounds":[1], "pitch":1, "volume":0.9},
+			"DESTROYER":{"sounds":[1], "pitch":1, "volume":1},
+			"CRUISER":{"sounds":[1], "pitch":1, "volume":1},
+			"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+		},
+		"bt_shield_raise":{
+			"sounds":[
+				{"file":"sounds/sfx_shields/bt_shield_up_large.ogg","pitch":1,"volume":1},
+				{"file":"sounds/sfx_shields/bt_shield_up_medium.ogg","pitch":1,"volume":1},
+				{"file":"sounds/sfx_shields/bt_shield_up_small.ogg","pitch":1,"volume":1},
+			],
+			"BULTACH":{"sounds":[0,1,2], "pitch":1, "volume":0.85},
+			"FIGHTER":{"sounds":[2], "pitch":1, "volume":0.5},
+			"FRIGATE":{"sounds":[2], "pitch":1, "volume":0.6},
+			"DESTROYER":{"sounds":[1], "pitch":1, "volume":0.7},
+			"CRUISER":{"sounds":[1], "pitch":1, "volume":0.8},
+			"CAPITAL_SHIP":{"sounds":[0], "pitch":1, "volume":1},
+		},
+	
+}
+
+
+
+
+

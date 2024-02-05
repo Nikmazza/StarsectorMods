@@ -1,0 +1,62 @@
+{
+  "id": "ork_beem",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  #"onHitEffect": "data.scripts.weapons.orklightningonhit",
+  "beamFireOnlyOnFullCharge":true,
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/ork_beem_turret_base.png",
+  "turretGlowSprite": "graphics/weapons/ork_beem_glow.png",
+  "hardpointSprite": "graphics/weapons/ork_beem_turret_base.png",
+  "hardpointGlowSprite": "graphics/weapons/tachyon_lance_hardpoint_glow.png",
+  "glowColor": [
+    255,
+    80,
+    30,
+    135
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    68,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    80,
+    30,
+    135
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 150,
+  "textureType": [
+    "graphics/fx/zappy_fringe.png",
+    "graphics/fx/beam_laser_fringe.png"
+  ],
+  "textureScrollSpeed": 292,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundTwo": "tachyon_lance_fire"
+}

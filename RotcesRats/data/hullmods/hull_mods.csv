@@ -1,0 +1,5 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+PD Sensor Array,rr_pdarray,,,,,,,,TRUE,,0,0,0,0,data.hullmods.rr_PointDefenseArray,"Specialist tracking systems that allow for more precise targeting of fighters, as well as granting a small increase to weapons range.
+
+Damage to fighters is increased by %s and range of all weapons is increased by %s.",Increased damage to fighters; Increased weapon range.,graphics/hullmods/rr_pd_sensor_array.png
+Rapid Forged Missiles,rr_RapidForgedMissiles,,,,,,,,TRUE,,0,0,0,0,data.hullmods.rr_RapidForgedMissiles,"The missiles fired by this vessel are rapidly forged, and as such suffer from %s reduced damage, and %s reduced hitpoints.",Reduced missile hitpoints and damage.,graphics/hullmods/rr_rapid_forge.png

@@ -1,0 +1,11 @@
+{
+	"id":"fed_flarelauncher",
+	"type":"WEAPON",
+	"aiType":"FLARE",
+	
+	"weaponDataId":"fed_flarelauncher1",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	#"weaponGlowColor":[55,200,255,255],
+ 	#"weaponTypes":[SYSTEM],
+}

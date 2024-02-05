@@ -1,0 +1,31 @@
+{
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/nes_giant_space_hamster.png",
+						],
+		"standard_female":[
+			"graphics/portraits/nes_powerful.png",
+			"graphics/portraits/nes_alice.png",
+						],
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+    "hullFrequency":{
+        "hulls":{
+			"nes_carnelian":0.2, #rare
+			"nes_fluorspar":0.2, #rare
+			"nes_voltaire":0.75,
+        },
+    },
+
+	"knownShips":{
+        "hulls":[
+            "nes_carnelian",
+			"nes_fluorspar",
+			"nes_voltaire",
+			"nes_hamter",
+			"nes_hermitaur",
+			"nes_hammerfall",			
+        ],
+    },	
+},

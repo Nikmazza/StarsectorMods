@@ -1,0 +1,67 @@
+{
+  "variantId": "sa_shoggoth_support",
+  "hullId": "sa_shoggoth",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 19,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "atropos",
+        "WS0018": "atropos"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "pilum",
+        "WS0010": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "hil",
+        "WS0006": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "arbalest",
+        "WS0012": "arbalest",
+        "WS0013": "mark9",
+        "WS0014": "mark9"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightmg",
+        "WS0002": "lightmg",
+        "WS0003": "lightmg",
+        "WS0004": "lightmg",
+        "WS0007": "flak",
+        "WS0008": "flak",
+        "WS0015": "pdlaser",
+        "WS0016": "pdlaser",
+        "WS0019": "pdlaser",
+        "WS0020": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

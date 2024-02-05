@@ -1,0 +1,95 @@
+{
+  "variantId": "LTA_Sovereign_Standard",
+  "hullId": "LTA_Sovereign",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 49,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0030": "LTA_otamay"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0013": "annihilatorpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0020": "LTA_nixiemissilesmall",
+        "WS0021": "LTA_nixiemissilesmall",
+        "WS0022": "LTA_nixiemissilesmall",
+        "WS0023": "LTA_nixiemissilesmall",
+        "WS0024": "LTA_nixiemissilesmall",
+        "WS0025": "LTA_nixiemissilesmall",
+        "WS0026": "LTA_nixiemissilesmall",
+        "WS0027": "LTA_nixiemissilesmall",
+        "WS0031": "heatseeker",
+        "WS0032": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hephag",
+        "WS0002": "mark9"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavyac",
+        "WS0004": "heavyac",
+        "WS0005": "heavyac",
+        "WS0006": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "LTA_nixietri",
+        "WS0010": "LTA_nixietri",
+        "WS0028": "LTA_nixie",
+        "WS0029": "LTA_nixie"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "flak",
+        "WS0008": "flak",
+        "WS0011": "flak",
+        "WS0012": "flak",
+        "WS0014": "vulcan",
+        "WS0015": "vulcan",
+        "WS0016": "vulcan",
+        "WS0017": "vulcan",
+        "WS0018": "vulcan",
+        "WS0019": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "LTA_Diadem_Wing",
+    "LTA_RocketTalon_Wing"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "fed_kinetic_missile_large",
+  "specClass": "projectile",
+  "projectileSpecId": "fed_kineticmissile_proj",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "turretSprite": "graphics/FED/weapons/fed_missile_boss_turret.png",
+  "hardpointSprite": "graphics/FED/weapons/fed_missile_boss_hardpoint.png",
+  "turretOffsets": [
+    27,
+    10.5,
+    27,
+    -10.5,
+    33,
+    0
+  ],
+  "turretAngleOffsets": [
+    -0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    33.5,
+    -9,
+    33.5,
+    9,
+    38,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    -1,
+    1,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "autocharge": true,
+  "smokeSpec": {
+    "particleSizeMin": 12,
+    "particleSizeRange": 12,
+    "cloudParticleCount": 8,
+    "cloudDuration": 1,
+    "cloudRadius": 12,
+    "blowbackParticleCount": 8,
+    "blowbackDuration": 2,
+    "blowbackLength": -30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      100,
+      100,
+      150,
+      150
+    ]
+  },
+  "fireSoundTwo": "fed_kmissile_fire"
+}

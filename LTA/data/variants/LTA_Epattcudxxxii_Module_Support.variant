@@ -1,0 +1,33 @@
+{
+  "variantId": "LTA_Epattcudxxxii_Module_Support",
+  "hullId": "LTA_Epattcudxxxii_Module",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "LTA_talonrail",
+        "WS0002": "LTA_talonrail"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

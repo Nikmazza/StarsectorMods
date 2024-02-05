@@ -1,0 +1,35 @@
+{
+	"id":"ork_displacer",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	
+	"jitterColor":[255,80,30,135],
+	#"jitterColor":[255,80,30,135],
+	"jitterCopies":15,
+	"jitterRange":10,
+	"jitterRangeRadiusFraction":0.5,
+
+	"empDamage":100,
+	"damage":25,
+	"damageType":ENERGY,
+	
+	"weaponGlowColor":[255,80,30,135],
+	"weaponTypes":[BALLISTIC],
+	
+	"engineGlowColor":[250,50,0,255],
+
+	"range":400,
+	"randomRange":0,
+	
+	"renderCopyDuringTeleport":true,
+	
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"beem_fire",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":300,
+		"averageSpeedIncrease":30,
+	}
+}

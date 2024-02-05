@@ -1,0 +1,49 @@
+{
+  "id": "LTA_otamay",
+  "specClass": "projectile",
+  "projectileSpecId": "LTA_otamay_shot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "turretSprite": "graphics/LTA/weapons/LTA_Otomay_hardpoint_base.png",
+  "hardpointSprite": "",
+  "hardpointGlowSprite": "graphics/LTA/weapons/LTA_Otomay_hardpoint_glow.png",
+  "glowColor": [
+    255,
+    100,
+    100,
+    255
+  ],
+  "turretOffsets": [
+    25,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    105.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 120,
+    "spread": 45,
+    "particleSizeMin": 20,
+    "particleSizeRange": 60,
+    "particleDuration": 1,
+    "particleCount": 80,
+    "particleColor": [
+      255,
+      100,
+      100,
+      255
+    ]
+  },
+  "fireSoundOne": "otamay_chargeup",
+  "fireSoundTwo": "otamay_fire"
+}

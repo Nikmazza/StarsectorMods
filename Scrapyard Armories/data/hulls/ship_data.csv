@@ -1,0 +1,70 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
+Grunder,sa_grunder,,High Tech,,,100,5,300,,100,0,,400,500,450,180,360,10,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,102
+Shilage,sa_shilage,,High Tech,,,300,15,500,,150,0,,350,400,450,170,340,15,FRONT,,180,.3,.7,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,645
+Kilo,sa_kilo,,Pirate,,,400,25,100,,10,0,,200,100,75,150,75,50,NONE,,,,,,,4,4,,,,,,,,,,,,,,,,,,,,,,0,,,,736
+Durand,sa_durand,,Midline,,,700,225,350,,100,0,,250,300,250,150,280,30,FRONT,,360,.4,.8,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,524
+Panoptes,sa_panoptes,,Corrupted Design,,,500,100,500,,200,0,,150,180,180,90,180,30,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,243
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Kyresh,sa_kyresh,Patrol Skiff,Low Tech,flarelauncher,5,2000,175,1200,1875,125,55,,110,80,75,50,100,200,FRONT,,150,0.4,1,,,10,20,30,20,1,20,11,10000,10,20,180,0.25,5,5,,,,,,,,lowtech_bp,,0.5,2,2,,201
+Gangster,sa_gangster,Missile Frigate,Pirate,flarelauncher_active,8,750,200,1500,1250,100,60,,130,65,45,30,60,200,OMNI,,90,0.5,1,,,15,30,15,100,2,50,8,9000,8,20,180,0.25,6,6,,,150,300,,,,pirate_bp,,0.7,2,4,,209
+Cricket,sa_cricket,Light Frigate,Low Tech,ammofeed,4,2400,150,1300,1200,100,30,,140,70,60,40,35,250,FRONT,,260,0.6,1.1,,,5,10,5,10,1,10,12,5000,5,20,200,0.25,4,4,,,,,,,,"lowtech_bp, merc",,0.4,2,6,,145
+Aberration,sa_aberration,Makeshift Frigate,Corrupted Design,temporalshell_degraded,5,1500,200,1750,1875,250,50,,180,100,75,60,120,300,FRONT,,300,0.5,0.8,,,10,40,70,30,1,30,10,9000,8,10,240,0.25,4,4,25,100,,,,,,"corrupted_bp, merc",,0.3,2,2,,213
+Murk,sa_murk,Converted Droneship,Corrupted Design,displacer_degraded,8,1000,200,1750,2500,200,30,,110,200,140,90,270,150,OMNI,,180,0.4,0.8,,,20,15,30,40,1,40,11,30000,5,10,360,0.25,6,6,,,,,,,,"corrupted_bp, merc",,0.5,2,2,,335
+Gloam,sa_gloaming,Converted Droneship,Corrupted Design,highenergyfocus,8,1400,150,2250,3125,200,45,1,120,200,180,90,270,200,FRONT,,100,0.4,0.8,,,25,40,40,40,1,40,11,30000,5,10,360,0.25,8,8,,,,,,,,"corrupted_bp, merc",,0.5,2,2,,343
+Ocypote,sa_ocypote,Augmented Frigate,Corrupted Design,plasmajets,8,1200,200,2000,1000,180,50,,180,160,75,45,85,220,OMNI,,180,0.4,0.7,,,1,30,40,15,1,15,9,4000,5,20,180,0.25,8,8,,,,,,,,"corrupted_bp, merc",,0.75,2,2,,217
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Munin,sa_munin,Smuggler Runner,Midline,reservewing,8,4500,275,3000,2833,200,75,2,100,50,25,40,30,425,OMNI,,180,0.4,0.8,,,50,120,300,150,2,75,10,36000,4,8,360,0.25,9,9,28,125,,,,,CARRIER,midline_bp,,0.6,2,3,,375
+Hugin,sa_hugin,Smuggler Racer,Pirate,burndrive,8,4500,300,2700,2833,170,75,1,125,55,20,45,35,450,OMNI,,180,0.6,1.2,,,50,120,300,150,2,75,10,36000,4,8,360,0.25,9,9,28,125,,,,,,pirate_bp,,0.6,2,3,,376
+Scalpel,sa_scalpel,Gunship,Midline,maneuveringjets,10,3500,200,6500,8333,700,100,,120,85,65,30,30,350,FRONT,,180,0.5,1.2,,,25,50,40,50,2,25,10,25000,5,10,300,0.25,10,10,,,,,,,,midline_bp,,0.5,2,3,,301
+Scalpel (LP),sa_scalpel_lp,Gunship,Luddic Path,maneuveringjets,15,3500,200,6500,8333,700,100,,120,85,65,30,30,350,FRONT,,180,0.5,1.2,,,25,50,40,50,2,25,10,25000,5,15,300,0.25,15,15,,,,,,,,LP_bp,,0.5,2,3,,302
+Trocar,sa_trocar,Impact Destroyer,Low Tech,joust,10,10000,1000,8000,5000,300,100,,75,45,10,24,12,3500,OMNI,,90,0.8,1.2,,,50,150,200,200,2,100,10,10000,5,10,300,0.25,15,15,,,,,,,,lowtech_bp,,0.5,2,3,,532
+Gorget,sa_gorget,Support Destroyer,Midline,maneuveringjets,10,7000,250,8000,4000,400,80,,90,60,50,45,35,350,OMNI,,90,0.7,1,,,25,50,25,200,2,100,9,20000,6,8,300,0.25,15,15,,,,,,,,midline_bp,,0.5,3,4,,420
+Candela,sa_candela,Converted Droneship,Corrupted Design,overdrive,14,5500,475,5000,3750,300,110,,75,65,40,25,40,500,OMNI,,100,0.3,0.7,,,150,100,80,200,2,30,10,50000,5,15,420,0.25,14,14,,,,,,,,"corrupted_bp, merc",,0.5,2,3,,317
+Almas,sa_almas,Augmented Destroyer,Corrupted Design,microburn,15,6000,800,7000,3333,350,140,,65,45,20,30,20,600,FRONT,,200,0.4,0.8,,,50,100,90,90,3,30,10,50000,5,12,420,0.25,15,15,,,,,,,,"corrupted_bp, merc",,0.4,2,3,,303
+Penumbra,sa_penumbra,Converted Droneship,Corrupted Design,recalldevice,12,4750,325,3600,2100,170,75,1,55,50,20,15,10,500,OMNI,,270,0.4,0.7,,,100,150,40,60,2,30,9,48000,5,15,420,0.25,12,12,,,,,,,CARRIER,"corrupted_bp, merc",,0.6,2,3,,316
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Pacemaker,sa_pacemaker,Missile Cruiser,Low Tech,forgevats,15,10000,750,6000,5000,600,200,1,40,20,10,10,6,3500,FRONT,,180,0.5,1,,,250,600,300,250,4,62,7,150000,6,10,450,0.25,25,25,,,,,,,"CARRIER, COMBAT",lowtech_bp,,0.4,2,3,,424
+Scrapship,sa_scrapship,Cruiser,Low Tech,burndrive,10,5000,600,7000,6000,300,75,2,50,30,25,20,15,1500,OMNI,,120,0.4,1,,,150,700,500,600,5,120,8,110000,5,10,540,0.25,15,15,,,,,,,CIVILIAN,lowtech_bp,,0.4,2,3,,402
+Splint,sa_splint,Makeshift Cruiser,Low Tech,ammofeed,20,9000,1250,10000,6000,500,150,,40,10,5,8,4,3000,PHASE,damper,,,,,,230,550,300,200,4,50,7,150000,6,8,500,0.15,20,20,,,,,,,,lowtech_bp,,0.80,4,6,,492
+Splint-XIV,sa_splintXIV,Makeshift Cruiser,Low Tech,overdrive,20,9000,1250,10000,6000,600,150,,40,10,5,8,4,3000,PHASE,damper,,,,,,230,550,300,200,4,50,7,250000,6,8,500,0.15,20,20,,,,,,,,"rare_bp, XIV_bp",,0.70,2,3,,492
+Elanus,sa_elanus,Railgun Cruiser,Midline,maneuveringjets,15,7000,850,8000,7000,400,125,,65,50,30,20,25,700,FRONT,,270,0.4,0.8,,,100,180,100,100,3,33,9,150000,4,12,480,0.25,20,20,,,,,,,,"midline_bp, merc",,0.5,2,3,,400
+Elanus (LG),sa_elanus_lg,Railgun Cruiser,Lion's Guard,maneuveringjets,15,7000,850,8000,7000,400,125,,65,50,30,20,25,700,FRONT,,270,0.4,0.8,,,100,180,100,100,3,33,9,150000,4,12,480,0.25,20,20,,,,,,,,"LG_bp, no_dealer",,0.5,2,3,,400
+Skua,sa_skua,Light Carrier,Midline,maneuveringjets,15,5500,650,6500,7000,350,125,2,70,50,30,20,25,650,FRONT,,270,0.4,0.8,,,140,200,150,125,3,33,9,140000,4,12,480,0.25,15,15,,,,,,,CARRIER,"midline_bp, merc",,0.5,2,3,,400
+Mobster,sa_mobster,Converted Tanker,Pirate,ammofeed,10,3500,400,10000,2500,350,130,1,50,30,20,40,25,400,OMNI,,90,0.5,1.2,,,15,30,20,200,2,100,8,22000,5,20,300,0.25,15,15,,,,,,,,pirate_bp,,0.75,3,4,,311
+Twilight,sa_twilight,Converted Droneship,Corrupted Design,flarelauncher_active,16,7750,1000,10000,12000,650,150,,50,25,20,15,15,2250,OMNI,,270,0.5,0.8,,,250,500,120,90,3,30,9,150000,5,15,540,0.25,25,25,,,,,,,,"corrupted_bp, merc",,0.5,2,3,,413
+Lunchbox,sa_box,Swarm Carrier,Pirate,ammofeed,17,7500,500,8000,7000,350,80,3,45,25,20,25,15,700,FRONT,,180,0.6,1.3,,,250,600,150,300,4,60,7,90000,7,20,260,0.25,17,17,,,,,,,"CARRIER, COMBAT",pirate_bp,,0.50,2,4,,133
+Perigee,sa_perigee,Cruiser,High Tech,targetingfeed,14,8500,700,10000,9000,800,120,2,65,40,30,20,25,2000,FRONT,,300,0.6,0.6,,,200,600,500,300,2,150,8,180000,3,15,420,0.25,25,25,,,,,,,"CARRIER, COMBAT","rare_bp, merc",,0.6,2,3,,403
+Polyphemus,sa_cyclops,Augmented Cruiser,Corrupted Design,forgevats,15,12000,1500,10000,6000,500,130,1,55,15,10,12,6,1800,OMNI,,200,0.3,0.8,,,60,300,400,180,3,60,7,270000,5,10,540,0.25,25,25,,,,,,,,"corrupted_bp, merc",,0.4,2,3,,402.1
+Pillbox,sa_pillbox,Modified Freighter,Low Tech,overdrive,12,9000,800,4000,3600,300,110,,40,30,15,15,15,1400,FRONT,,100,0.4,1.1,,,120,180,120,60,4,15,7,75000,3,20,480,0.25,15,15,,,,,,,HIDE_IN_CODEX,,,0.5,2,3,,411.11
+Ingot,sa_ingot,Carrier,Midline,reservewing,18,6000,600,5000,6000,300,110,3,60,40,30,20,25,800,FRONT,,300,0.4,0.8,,,175,250,200,60,3,20,8,100000,3,12,360,0.25,18,18,,,,,,,CARRIER,"midline_bp, merc",,0.5,2,3,,407
+Cavern,sa_cavern,Converted Heavy Droneship,Corrupted Design,plasmajets,18,10000,900,11000,11000,450,175,2,45,30,25,11,20,3000,FRONT,,180,0.4,0.8,,,400,600,300,90,3,30,8,165000,5,15,540,0.25,30,30,,,,,,,,"corrupted_bp, merc",,0.7,2,3,,413
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cast,sa_cast,Carrier,High Tech,targetingfeed,42,18000,1200,14000,12000,650,260,4,40,20,10,20,10,3250,OMNI,,280,0.8,0.7,,,500,1250,200,200,10,20,7,400000,3,15,600,0.25,42,42,,,,,,,CARRIER,"hightech_bp, rare_bp, merc",,0.6,2,4,,501
+Brace,sa_brace,Scrapcarrier,Low Tech,damper,30,17000,1350,12000,10000,400,270,4,30,10,5,15,10,3750,FRONT,,80,0.4,1.1,,,600,1300,300,300,15,20,6,250000,3,12,720,0.25,35,35,,,,,,,"CARRIER, COMBAT","lowtech_bp, merc",,0.5,2,4,,463
+Eclipse,sa_eclipse,Battlecarrier,Corrupted Design,displacer_degraded,50,15000,1250,20000,37500,900,320,2,35,20,10,5,6,3500,OMNI,,200,0.5,0.8,,,1750,2000,500,400,10,40,7,450000,5,15,720,0.25,50,50,,,,,,,,"corrupted_bp, merc",,0.4,2,4,,509
+Gaia,sa_gaia,Superbarge,Low Tech,burndrive,20,20000,2000,15000,14000,900,300,3,30,15,10,5,4,4000,PHASE,damper,,,,,,1500,3000,800,600,20,30,6,350000,7,20,600,0.35,50,50,,,,,,,,rare_bp,,0.3,2,5,,243
+Ebirah,sa_lobster,Lobster King,Sindrian Diktat,plasmajets,40,15000,1750,24000,25000,800,250,2,30,20,15,10,5,3500,OMNI,,360,0.5,0.8,,,600,1500,600,600,10,60,8,1000000,6,10,720,0.45,60,60,,,,,,,"HIDE_IN_CODEX, CARRIER, COMBAT, SHIP_WITH_MODULES,",,,0.4,2,5,,420
+Shoggoth,sa_shoggoth,Augmented Superfreighter,Corrupted Design,overdrive,40,11000,1000,20000,8750,600,250,,35,9,4,5,3,4750,OMNI,,90,0.5,0.8,,,300,700,600,400,10,40,8,350000,2,20,720,0.25,40,40,,,,,,,,"corrupted_bp, merc",,0.7,2,4,,502.5
+Aegis,sa_ageis,Battleship,Low Tech,burndrive,28,25000,1750,30000,15000,700,400,,35,20,15,6,7,3500,FRONT,,240,0.4,0.8,,,750,1200,300,400,15,27,7,900000,3,12,720,0.25,40,40,,,,,,,HIDE_IN_CODEX,,,0.4,2,4,,500
+Pangolin,sa_pangolin,Carrier,Low Tech,targetingfeed,38,12000,1000,18000,15000,800,240,3,45,25,20,8,7,3000,OMNI,,90,0.5,1,,,800,1000,300,500,12,41,6,300000,4,15,700,0.25,45,45,,,,,,,CARRIER,"rare_bp, merc",,0.5,3,5,,565
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Left Claw,sa_lobster_arm_left,Left arm,,,1,6000,750,10000,15000,400,150,,0,0,0,0,0,700,NONE,,0,0,0,,,0,0,0,0,1,0,0,0,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,1444
+Right Claw,sa_lobster_arm_right,Right arm,,,1,6000,750,10000,15000,400,150,,0,0,0,0,0,700,NONE,,0,0,0,,,0,0,0,0,1,0,0,0,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,1445
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#remnants,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Dominator(R),sa_dominator_remnant,Heavy Drone Cruiser,Remnant,plasmajets,15,13000,1250,10000,10000,500,250,,35,25,15,14,14,2250,FRONT,,200,0.4,0.8,,,0,0,100,150,3,30,8,125000,4,12,540,0.25,30,30,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.4,2,3,,404
+Legion(R),sa_legion_remnant,Battlecarrier,Remnant,microburn,28,16000,1500,16000,12500,700,320,4,40,20,20,10,10,3600,FRONT,,200,0.3,0.7,,,0,0,200,300,15,20,8,400000,3,12,720,0.25,50,50,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT, UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec
+",,0.4,2,4,,507
+Eradicator(R),sa_eradicator_remnant,Fast Cruiser,Remnant,highenergyfocus,13,7000,1000,11000,12000,500,180,,80,60,60,20,25,1600,OMNI,,150,0.4,0.8,,,0,0,100,120,4,30,9,140000,4,12,540,0.25,25,25,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,4,,404.5
+Manticore(R),sa_manticore_remnant,Destroyer,Remnant,canister_flak,12,4000,550,5000,4167,300,100,,90,80,60,40,50,400,OMNI,,150,0.4,0.8,,,0,0,80,50,2,25,9,75000,5,12,420,0.25,15,15,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.4,2,3,,303.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Orbital Station,sa_remstation_t1,Converted Station,,,100,50000,1600,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,,1,,,0,0,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2201
+Battlestation,sa_remstation_t2,Converted Station,,,200,90000,2000,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,,1,,,0,0,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2201
+Star Fortress,sa_remstation_t3,Converted Sation,,,400,160000,2400,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2201
+,sa_brace_station,Weapons Platform,,forgevats_station,1,19000,1700,12000,10000,1200,1000,2,0,0,0,10,10,3750,FRONT,,50,0.4,1.1,,,0,0,0,0,1,0,0,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.7,2,2,,463.1
+,sa_module_battery,Auxillary Battery,,canister_flak,1,8500,1200,10000,9000,800,1000,,0,0,0,10,10,800,PHASE,damper,,,,,,0,0,0,0,1,0,0,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,454
+,sa_gunnery_battery,Heavy Battery,,canister_flak,1,8500,1200,10000,9000,800,1000,,0,0,0,10,10,800,PHASE,damper,,,,,,0,0,0,0,1,0,0,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,454.1
+,sa_tesla_spike,Spire Node,,emp_station,1,9000,1000,9000,8000,900,1000,,0,0,0,10,10,900,FRONT,,90,0.4,0.9,,,0,0,0,0,1,0,0,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.6,2,2,,535
+,sa_station_shield,Shield Node,,,1,6000,600,18000,20000,800,1000,,0,0,0,10,10,600,FRONT,,90,0.4,0.9,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2334
+,sa_earthbreaker,Heavy Citadel,,forgevats_station,1,20000,2250,30000,43750,1750,1000,,0,0,0,10,10,1000,FRONT,,200,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2066.1
+,sa_energy_battery,Energy Battery,,entropyamplifier,1,5500,1000,10000,18750,750,1000,,0,0,0,10,10,600,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2221.1

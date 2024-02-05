@@ -1,0 +1,92 @@
+{
+  "hullName": "Consul",
+  "hullId": "LTA_Consul",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/LTA/ships/Independent/LTA_Consul.png",
+  "style": "LOW_TECH",
+  "height": 71,
+  "width": 62,
+  "center": [31, 31],
+  "collisionRadius": 70,
+  "shieldCenter": [4.5, 0],
+  "shieldRadius": 49.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "LTA_CrampedComms"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 45,
+      "locations": [18, 18]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -45,
+      "locations": [18, -18]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        7, -0,
+        0, 9,
+        1, -9,
+        3.5, -10.5,
+        4, -8,
+        8, -11.5,
+        7, -7,
+        5, 9.5,
+        5.5, 6.5,
+        8, 10,
+        12, 6,
+        12, -10,
+        11, -4.5,
+        11, 1.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-30, 11],
+      "length": 45,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-30, -11],
+      "length": 45,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    24, -15,
+    30, -24,
+    23, -27,
+    -5, -27,
+    -30, -16,
+    -30, 16,
+    -5, 27,
+    23, 27,
+    30, 24,
+    24, 15,
+    39, -0
+  ]
+}

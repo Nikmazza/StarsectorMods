@@ -1,0 +1,46 @@
+{
+  "id": "LTA_devastatorsingle",
+  "specClass": "projectile",
+  "projectileSpecId": "devastator_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/LTA/weapons/LTA_DevastatorSingle_turret_base.png",
+  "turretGunSprite": "graphics/LTA/weapons/LTA_DevastatorSingle_turret_recoil.png",
+  "hardpointSprite": "graphics/LTA/weapons/LTA_DevastatorSingle_hardpoint_base.png",
+  "hardpointGunSprite": "graphics/LTA/weapons/LTA_DevastatorSingle_hardpoint_recoil.png",
+  "visualRecoil": 8,
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "turretOffsets": [
+    34,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    42,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 45,
+    "spread": 25,
+    "particleSizeMin": 12,
+    "particleSizeRange": 22,
+    "particleDuration": 0.13,
+    "particleCount": 35,
+    "particleColor": [
+      255,
+      225,
+      165,
+      175
+    ]
+  },
+  "fireSoundTwo": "devastator_fire"
+}

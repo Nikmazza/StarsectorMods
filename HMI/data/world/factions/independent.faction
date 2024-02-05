@@ -1,0 +1,22 @@
+{
+	"shipNameSources":{
+		"HAZARD":2,
+	},
+	"illegalCommodities":[
+		"red_water",
+	],
+		"hullFrequency":{
+		"tags":{
+			"hmi_bp":0.25,
+		},
+	},
+		"shipsWhenImporting":{
+		"tags":["hmi_bp"],
+	},
+	"knownShips":{
+		"tags":["hmi_bp"],
+		"hulls":[
+		"mulligan",
+		],
+	},
+},

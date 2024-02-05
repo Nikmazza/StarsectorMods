@@ -1,0 +1,51 @@
+{
+  "variantId": "sa_remstation_t3_standard",
+  "hullId": "sa_remstation_t3",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [
+    {
+      "WS 08": "sa_gunnery_battery_Standard"
+    },
+    {
+      "WS09": "sa_gunnery_battery_Standard"
+    },
+    {
+      "WS0006": "sa_station_shield_standard"
+    },
+    {
+      "WS 07": "sa_station_shield_standard"
+    },
+    {
+      "WS 03": "sa_tesla_spike_standard"
+    },
+    {
+      "WS 02": "sa_tesla_spike_standard"
+    },
+    {
+      "WS10": "module_armour2_Standard"
+    },
+    {
+      "WS11": "module_armour2_Standard"
+    },
+    {
+      "WS012": "sa_earthbreaker_standard"
+    },
+    {
+      "WS0005": "sa_energy_battery_standard"
+    },
+    {
+      "WS04": "sa_energy_battery_standard"
+    },
+    {
+      "WS 01": "sa_brace_station_standard"
+    },
+  ],
+  "wings": []
+}

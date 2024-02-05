@@ -1,0 +1,49 @@
+{
+  "hullName": "Attacker",
+  "hullId": "nes_drone_carnelian_attacker",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/drones/nes_drone_carnelian_attacker.png",
+  "style": "MIDLINE",
+  "height": 42,
+  "width": 38,
+  "center": [19, 21],
+  "collisionRadius": 25,
+  "shieldCenter": [-1.5, -0],
+  "shieldRadius": 23,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-3, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-5.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-20, -0],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -16.5, 7.5,
+    -16.5, -7.5,
+    7.5, -0
+  ]
+}

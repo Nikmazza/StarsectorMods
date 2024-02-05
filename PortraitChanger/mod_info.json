@@ -1,0 +1,17 @@
+{
+    "id":"portrait_changer", # For the convenience of troubleshooters, include your name and the mod name, not just an acronym.
+	"name":"Portrait Changer", # Displayed to the player
+	"author":"CY / Lukas04",
+    "utility":"true",
+	"version":"1.0.1",
+	"description":"Allows you to change your portrait through a new intel window.",
+    "gameVersion": "0.96a-RC10", 
+  	"jars":["jars/PortraitChanger.jar"],
+  	"modPlugin":"portrait_changer.PCModPlugin",
+	  	"dependencies": [
+        {
+            "id": "lunalib",
+            "name": "Lunalib",
+        },
+    ],
+}

@@ -1,0 +1,188 @@
+{
+  "hullName": "Munin",
+  "hullId": "sa_munin",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/sa_syringe.png",
+  "style": "MIDLINE",
+  "height": 200,
+  "width": 182,
+  "center": [91, 101],
+  "collisionRadius": 111.5,
+  "shieldCenter": [-1, 0],
+  "shieldRadius": 104.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "shielded_holds",
+    "insulatedengine"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [18, 36]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [18, -36]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 136.5,
+      "locations": [-27, 28]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -136.5,
+      "locations": [-27, -28]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 0,
+      "locations": [53, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": -90,
+      "locations": [9, -58]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 90,
+      "locations": [9, 58]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -35.5, -0,
+        -20.5, 3.5,
+        -20, -4,
+        -36, 4,
+        -36, -4.5,
+        -52, 4,
+        -52, -5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-81.5, 18.5],
+      "length": 24,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81.5, -18.5],
+      "length": 24,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81.5, 13],
+      "length": 18.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81.5, -13],
+      "length": 18.5,
+      "width": 3,
+      "angle": -180,
+      "contrailSize": 3,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81.5, 9],
+      "length": 18.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81.5, -9],
+      "length": 18.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-67.5, 40],
+      "length": 66.5,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-67.5, -40],
+      "length": 66.5,
+      "width": 31,
+      "angle": -180,
+      "contrailSize": 31,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    84.5, 9.5,
+    35.5, 29,
+    16, 70.5,
+    -15, 59.5,
+    -49.5, 56,
+    -70, 48,
+    -69.5, 22.5,
+    -82, 21.5,
+    -82, 9.5,
+    -75, 5.5,
+    -75, -5.5,
+    -82, -9.5,
+    -82, -21.5,
+    -69.5, -22.5,
+    -70, -48,
+    -49.5, -56,
+    -15, -59.5,
+    16, -70.5,
+    35.5, -29,
+    84.5, -9.5
+  ]
+}

@@ -1,0 +1,54 @@
+{
+    "displayName": "Hunter",
+    "fluxCapacitors": 11,
+    "fluxVents": 3,
+    "hullId": "LTA_Epattcudxxxii_Thunderbirds",
+	"goalVariant": true,
+	"quality": 1,
+    "hullMods": [
+        "safetyoverrides",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Epattcudxxxii_Thunderbirds_Hunter",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "chaingun",
+                "WS0010": "LTA_hextb"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "atropos_single"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "heavymg"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "lightmortar"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0004": "lightmortar"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "lightmg",
+                "WS0007": "lightmg"
+            }
+        }
+    ],
+    "wings": []
+}

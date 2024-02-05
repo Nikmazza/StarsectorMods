@@ -1,0 +1,63 @@
+{
+  "hullName": "Xylia",
+  "hullId": "bc_hightechfighter1",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/bc_hightechfighter1.png",
+  "style": "HIGH_TECH",
+  "height": 37,
+  "width": 30,
+  "center": [15, 18.5],
+  "collisionRadius": 41,
+  "shieldCenter": [-4.5, -0],
+  "shieldRadius": 35.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [10.5, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": -0,
+      "locations": [10.5, -9]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-16.5, 4],
+      "length": 22,
+      "width": 7,
+      "angle": 177,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-16.5, -4],
+      "length": 22,
+      "width": 7,
+      "angle": -177,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -10.5, -14,
+    3.5, -13.5,
+    18, -0,
+    3.5, 13.5,
+    -10.5, 14,
+    -18.5, -0
+  ]
+}

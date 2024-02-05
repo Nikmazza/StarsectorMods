@@ -1,0 +1,21 @@
+{
+	"priorityShips":{
+		"hulls":[
+			"bc_lowtech_battlecarrier",
+			"bc_lowtech_carrier"
+
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hegemony"],
+		"fighters":[
+			"bc_breachbomber",
+			"bc_midlinefighter2",
+		],
+	},
+	"hullFrequency":{
+    	"hulls":{
+    		"bc_battlecarrier":0.8, ##don't want to overshadow the legion/onslaught
+    	},
+    },
+}

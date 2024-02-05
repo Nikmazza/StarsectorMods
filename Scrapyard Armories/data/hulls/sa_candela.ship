@@ -1,0 +1,179 @@
+{
+  "hullName": "Candela",
+  "hullId": "sa_candela",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/sa_candela.png",
+  "style": "LOW_TECH",
+  "height": 190,
+  "width": 160,
+  "center": [80, 95],
+  "collisionRadius": 110,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 100.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "drive_field_stabilizer"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [72, -35]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [72, 35]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [41, -35]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [41, 35]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 35,
+      "angle": 0,
+      "locations": [15, -54]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 35,
+      "angle": -0,
+      "locations": [15, 54]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [-28, -58]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 90,
+      "locations": [-28, 58]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -180,
+      "locations": [-68, 0]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 0,
+      "locations": [39, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-93, -0],
+      "length": 52.5,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81.5, -29.5],
+      "length": 52.5,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81.5, 29.5],
+      "length": 52.5,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-45, -55],
+      "length": 26,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-45, 55],
+      "length": 26,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    91.5, 18.5,
+    71.5, 18.5,
+    70.5, 39.5,
+    25.5, 67.5,
+    9.5, 70,
+    -12.5, 58.5,
+    -18.5, 72.5,
+    -35.5, 73.5,
+    -56.5, 40.5,
+    -76, 41,
+    -81.5, 33.5,
+    -83.5, 12.5,
+    -91.5, 7.5,
+    -91.5, -7.5,
+    -83.5, -12.5,
+    -81.5, -33.5,
+    -76, -41,
+    -56.5, -40.5,
+    -35.5, -73.5,
+    -18.5, -72.5,
+    -12.5, -58.5,
+    9.5, -70,
+    25.5, -67.5,
+    70.5, -39.5,
+    71.5, -18.5,
+    91.5, -18.5
+  ]
+}

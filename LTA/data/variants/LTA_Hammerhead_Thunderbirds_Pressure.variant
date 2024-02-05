@@ -1,0 +1,44 @@
+{
+    "displayName": "Pressure",
+	"goalVariant": true,
+	"quality": 1,
+    "fluxCapacitors": 4,
+    "fluxVents": 20,
+    "hullId": "LTA_Hammerhead_Thunderbirds",
+    "hullMods": [
+        "converted_hangar",
+        "targetingunit",
+        "ballistic_rangefinder",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "LTA_Hammerhead_Thunderbirds_Pressure",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "LTA_nixietri",
+                "WS 002": "LTA_nixietri"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "LTA_nixie",
+                "WS 004": "LTA_nixie"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "LTA_nixie",
+                "WS 006": "LTA_nixie"
+            }
+        }
+    ],
+    "wings": []
+}

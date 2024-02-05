@@ -1,0 +1,8 @@
+{
+  "id":"playerflagpackex", # internal id
+	"name":"Player Faction Flag Pack Extended", # displayed to the player
+	"author":"Maplealvon, Ur_noobie, and Haze",
+	"version":"1.0",
+	"description":"Based off 'Player Faction Flag Pack' by Haze.",
+	"gameVersion":"0.96a-RC10",
+}

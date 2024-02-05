@@ -1,0 +1,14 @@
+{
+  "variantId": "LTA_Filleter_Armor_Module",
+  "hullId": "LTA_Filleter_Armor_Module",
+  "displayName": "Filleter Armor",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}
