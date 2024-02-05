@@ -1,7 +1,7 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 0,
-    "fluxVents": 14,
+    "fluxVents": 22,
     "goalVariant": true,
     "hullId": "ii_barrus",
     "hullMods": [

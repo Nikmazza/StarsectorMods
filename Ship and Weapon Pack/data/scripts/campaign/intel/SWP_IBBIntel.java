@@ -240,7 +240,7 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
 
     @Override
     public void reportFleetDespawnedToListener(CampaignFleetAPI fleet, FleetDespawnReason reason, Object param) {
-        if (isDone()) {
+        if (isDone() || isEnding()) {
             return;
         }
 
@@ -254,7 +254,7 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
 
     @Override
     public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
-        if (isDone()) {
+        if (isDone() || isEnding()) {
             return;
         }
 
@@ -301,15 +301,13 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
     }
 
     public void endMission(boolean expire) {
-        if (ended == null || !ended) {
+        if (!isEnding() && !isEnded()) {
             if (expire) {
                 SWP_IBBTracker.getTracker().reportStageExpired(thisStage);
             } else {
                 SWP_IBBTracker.getTracker().reportStageCompleted(thisStage);
             }
-            setImportant(false);
         }
-        ended = true;
 
         if (fleet != null) {
             fleet.getMemoryWithoutUpdate().set("$stillAlive", false);
@@ -1081,9 +1079,6 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
         FactionDoctrineAPI doctrine = Global.getSector().getFaction(fleetFactionId).getDoctrine().clone();
         switch (thisStage) {
             case STAGE_LUCIFER:
-                doctrine.setWarships(0);
-                doctrine.setCarriers(0);
-                doctrine.setPhaseShips(5);
                 doctrine.setAggression(5);
                 break;
             case STAGE_ZEUS:
@@ -1654,6 +1649,7 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
             }
             case STAGE_SPORESHIP: {
                 params.factionId = Factions.DERELICT;
+                params.maxShipSize = 3;
                 CampaignFleetAPI temp = FleetFactoryV3.createFleet(params);
                 for (FleetMemberAPI member : temp.getFleetData().getMembersListCopy()) {
                     fleet.getFleetData().addFleetMember(member);

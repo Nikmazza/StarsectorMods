@@ -4,6 +4,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import data.scripts.everyframe.II_WeaponScriptPlugin;
 import java.awt.Color;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -25,6 +26,8 @@ public class II_PhotonBlasterEveryFrame implements EveryFrameWeaponEffectPlugin 
         if (engine.isPaused()) {
             return;
         }
+
+        II_WeaponScriptPlugin.createIfNeeded();
 
         float chargeLevel = weapon.getChargeLevel();
         float cooldownRemaining = weapon.getCooldownRemaining();

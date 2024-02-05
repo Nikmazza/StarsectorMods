@@ -5,7 +5,7 @@
   "utility": "true",
   "version": "1.0.10",
   "description": "Persistent battle history. Individually tracked kill counts for your ships and officers, battle logs, and more.",
-  "gameVersion": "0.96a-RC8",
+  "gameVersion": "0.97a",
   "jars": ["jars/fleethistory.jar"],
   "modPlugin": "fleethistory.FleetHistoryModPlugin"
 }

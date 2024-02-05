@@ -33,6 +33,7 @@ import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.Mag
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import data.scripts.campaign.terrain.II_ChargedNebulaTerrainPlugin;
+import static data.scripts.world.imperium.II_Thracia.addMarketplace;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.awt.image.Raster;
@@ -41,8 +42,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import javax.imageio.ImageIO;
 import org.lwjgl.util.vector.Vector2f;
-
-import static data.scripts.world.imperium.II_Thracia.addMarketplace;
 
 public class II_Ex_Vis {
 
@@ -406,7 +405,8 @@ public class II_Ex_Vis {
                         Conditions.FARMLAND_RICH,
                         Conditions.ORGANICS_ABUNDANT,
                         Conditions.ORE_ABUNDANT,
-                        Conditions.RUINS_WIDESPREAD)),
+                        Conditions.RUINS_WIDESPREAD,
+                        Conditions.LUDDIC_MAJORITY)),
                 new ArrayList<>(Arrays.asList(
                         new ArrayList<>(Arrays.asList(Industries.POPULATION)),
                         new ArrayList<>(Arrays.asList(Industries.SPACEPORT)),

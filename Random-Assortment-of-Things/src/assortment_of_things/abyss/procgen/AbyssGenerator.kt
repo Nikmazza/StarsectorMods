@@ -3,8 +3,9 @@ package assortment_of_things.abyss.procgen
 import assortment_of_things.abyss.AbyssDifficulty
 import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.abyss.entities.AbyssalFracture
-import assortment_of_things.abyss.intel.AbyssMap
+import assortment_of_things.abyss.intel.map.AbyssMap
 import assortment_of_things.abyss.procgen.types.DefaultAbyssType
+import assortment_of_things.abyss.procgen.types.FinalAbyssType
 import assortment_of_things.abyss.procgen.types.IonicStormAbyssType
 import assortment_of_things.misc.randomAndRemove
 import com.fs.starfarer.api.EveryFrameScript
@@ -26,27 +27,26 @@ import org.lazywizard.lazylib.MathUtils
 import org.lazywizard.lazylib.ext.plus
 import org.lwjgl.util.vector.Vector2f
 import org.magiclib.kotlin.getSalvageSeed
+import java.awt.geom.GeneralPath
+import java.awt.geom.Path2D
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 class  AbyssGenerator {
 
-    var maxSteps = 4
-    var currentSteps = 0
+    var noBranchTag = "rat_no_branch"
+    var branchTag = "rat_abyss_branch"
+    var finalTag = "rat_abyss_final"
 
-    var reachedFinal = false
+    var systemsOnMainBranch = 8
+    var deepSystemsBeginAt = 4
+    var branches = 2
+
     var totalSystems = 0
-
-    var latestSystems = ArrayList<StarSystemAPI>()
-    var systemsInSameStep: HashMap<Int, MutableList<StarSystemAPI>> = HashMap()
 
     var positionsOnMap = ArrayList<Vector2f>()
 
     var usedNames = ArrayList<String>()
-
-    var lastSystemWasPositiveOnMap = false
-    var generatedExtra = false
 
     var types = listOf<BaseAbyssType>(DefaultAbyssType(), IonicStormAbyssType())
 
@@ -56,7 +56,7 @@ class  AbyssGenerator {
         var abyssData = AbyssData()
         Global.getSector().memoryWithoutUpdate.set(AbyssUtils.ABYSS_DATA_KEY, abyssData)
 
-        var hyperspaceLocation = Vector2f(-20000f, -15000f)
+        var hyperspaceLocation = Vector2f(-25000f, -20000f)
         var orion = Global.getSector().hyperspace.customEntities.find { it.fullName.contains("Orion-Perseus") }
         if (orion != null) {
             hyperspaceLocation = orion.location.plus(Vector2f(0f, -1000f))
@@ -71,14 +71,18 @@ class  AbyssGenerator {
         AbyssProcgen.setupSystem(twilightSystem, 0.35f, AbyssDepth.Shallow)
         var systemData = AbyssUtils.getSystemData(twilightSystem)
         AbyssProcgen.addAbyssParticles(twilightSystem)
-        systemData.mapLocation = Vector2f(0f, 0f)
+
+        systemData.mapLocation = Vector2f(0f, 250f)
+        twilightSystem.addTag(noBranchTag)
 
         //Hyperspace-Abyss Fracture
         var fractures = AbyssProcgen.createFractures(Global.getSector().hyperspace, twilightSystem)
 
+        abyssData.hyperspaceFracture = fractures.fracture1
         fractures.fracture1.location.set(hyperspaceLocation)
         fractures.fracture2.location.set(Vector2f(0f, 0f))
 
+        fractures.fracture1.name = "The Abyssal Depths"
 
         val hyper = Misc.getHyperspaceTerrain().plugin as HyperspaceTerrainPlugin
         val editor = NebulaEditor(hyper)
@@ -95,12 +99,12 @@ class  AbyssGenerator {
         AbyssEntityGenerator.generateMinorEntityWithDefenses(twilightSystem, "rat_abyss_fabrication", 1, 0.9f, 0.7f)
         AbyssEntityGenerator.generateMinorEntity(twilightSystem, "rat_abyss_drone", 3, 0.8f)
 
-        latestSystems.add(twilightSystem)
-
-        var gate = twilightSystem.addCustomEntity("testgate", "Abyssal Gate", "inactive_gate", Factions.NEUTRAL)
+        var gate = twilightSystem.addCustomEntity("rat_abyss_gate", "Abyssal Gate", "inactive_gate", Factions.NEUTRAL)
         var gateLoc = systemData.majorPoints.randomAndRemove()
         gate.location.set(gateLoc)
         gate.addTag("rat_abyss_gate")
+        AbyssProcgen.clearTerrainAround(gate, 350f)
+
 
         //Map Script
         twilightSystem.addScript( object : EveryFrameScript {
@@ -127,7 +131,7 @@ class  AbyssGenerator {
 
 
         //Fake icon system
-        var iconSystem = Global.getSector().createStarSystem("Abyss")
+        var iconSystem = Global.getSector().createStarSystem("Abyssal Depths")
         iconSystem.addTag(Tags.THEME_HIDDEN)
         iconSystem.addTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)
         //iconSystem.initNonStarCenter()
@@ -149,106 +153,196 @@ class  AbyssGenerator {
 
         var entrancePoint = points.find { it.destinations.any { it.destination.containingLocation == iconSystem } }
         entrancePoint!!.radius = 0f
-        entrancePoint.name = "Abyssal Fracture"
+        entrancePoint.name = "The Abyssal Depths"
         entrancePoint.addTag("rat_abyss_entrance")
-        entrancePoint.clearDestinations()
+        //entrancePoint.clearDestinations()
         entrancePoint.memoryWithoutUpdate.set("\$rat_jumpoint_destination_override", fractures.fracture2)
 
         var beacon = Global.getSector().hyperspace.addCustomEntity("", "Warning Beacon", "rat_abyss_warning_beacon", Factions.NEUTRAL)
         beacon.setCircularOrbit(entrancePoint, MathUtils.getRandomNumberInRange(0f, 360f), 320f, 120f)
 
        //Gen
-       generateSystems()
+       generateMainBranch(twilightSystem)
 
-       latestSystems.clear()
    }
 
-   fun generateSystems()
+
+
+   fun generateMainBranch(twilight: StarSystemAPI)
    {
-       if (currentSteps > maxSteps) {
+       /*if (currentSteps > maxSteps) {
            generateAfterChain()
            return
-       }
+       }*/
 
-       var newLatest = ArrayList<StarSystemAPI>()
-       for (latest in latestSystems)
-       {
+       var previous: StarSystemAPI = twilight
 
-           var latestData = AbyssUtils.getSystemData(latest)
-           var count = getAmountOfSystems()
+       for (step in 0 until systemsOnMainBranch) {
+           var previousData = AbyssUtils.getSystemData(previous)
 
-           var step = currentSteps
+           var name = "Sea of " + getName()
 
-           for (i in 0 until count)
-           {
+           var depth = AbyssDepth.Shallow
+           if (step >= deepSystemsBeginAt) depth = AbyssDepth.Deep
 
-               var name = "Sea of " + getName()
+           var picker = WeightedRandomPicker<BaseAbyssType>()
+           for (type in types) {
+               picker.add(type, type.getWeight())
+           }
+           var type = picker.pick()
 
-               var depth = AbyssDepth.Shallow
-               if (currentSteps in 3..10) depth = AbyssDepth.Deep
+           var system = Global.getSector().createStarSystem(name)
+           system.name = name
 
-               var picker = WeightedRandomPicker<BaseAbyssType>()
-               for (type in types) {
-                   picker.add(type, type.getWeight())
-               }
-               var type = picker.pick()
+           var isFinal = false
+          /* if (step == systemsOnMainBranch - 1) {
+               AbyssUtils.getAbyssData().finalSystem = system
+               system.addTag(finalTag)
+               type = FinalAbyssType()
+               isFinal = true
+           }*/
 
-               var system = Global.getSector().createStarSystem(name)
-               system.name = name
-               AbyssProcgen.setupSystem(system, type.getTerrainFraction(), depth)
-               var systemData = AbyssUtils.getSystemData(system)
+           AbyssProcgen.setupSystem(system, type.getTerrainFraction(), depth, isFinal)
+           var systemData = AbyssUtils.getSystemData(system)
 
-               type.pregenerate(systemData)
-
-               var pos1 = latestData.fracturePoints.randomAndRemove()
-               var pos2 = systemData.fracturePoints.randomAndRemove()
-
-               var fractures = AbyssProcgen.createFractures(latest, system)
-
-               latestData.fractures.add(fractures.fracture1.customPlugin as AbyssalFracture)
-               systemData.fractures.add(fractures.fracture2.customPlugin as AbyssalFracture)
-
-               fractures.fracture1.location.set(pos1)
-               fractures.fracture2.location.set(pos2)
-
-               AbyssProcgen.clearTerrainAroundFractures(fractures)
-
-               var latestDepth = latestData.depth
-
-               if (latestDepth == AbyssDepth.Shallow)
-               {
-                   AbyssProcgen.addDefenseFleetManager(fractures.fracture1, 1, latestDepth, 0.6f)
-               }
-               else if (latestDepth == AbyssDepth.Deep)
-               {
-                   AbyssProcgen.addDefenseFleetManager(fractures.fracture1, 1, latestDepth, 0.75f)
-               }
-
-               type.generate(systemData)
-
-
-               systemData.previous = latest
-               setMapLocation(system, i)
-
-               totalSystems += 1
-               newLatest.add(system)
+           if (step == systemsOnMainBranch || step == systemsOnMainBranch - 1 || step == systemsOnMainBranch - 2) {
+               system.addTag(noBranchTag)
            }
 
-           if (currentSteps == maxSteps)
-           {
-               reachedFinal = true
+           type.pregenerate(systemData)
+
+           var pos1 = previousData.fracturePoints.randomAndRemove()
+           var pos2 = systemData.fracturePoints.randomAndRemove()
+
+           var fractures = AbyssProcgen.createFractures(previous, system)
+
+           previousData.fractures.add(fractures.fracture1.customPlugin as AbyssalFracture)
+           systemData.fractures.add(fractures.fracture2.customPlugin as AbyssalFracture)
+
+           fractures.fracture1.location.set(pos1)
+           fractures.fracture2.location.set(pos2)
+           if (isFinal) {
+               fractures.fracture1.addTag("rat_final_fracture")
            }
+
+           AbyssProcgen.clearTerrainAroundFractures(fractures)
+
+           var latestDepth = previousData.depth
+
+           if (latestDepth == AbyssDepth.Shallow)
+           {
+               AbyssProcgen.addDefenseFleetManager(fractures.fracture1, 1, latestDepth, 0.6f)
+           }
+           else if (latestDepth == AbyssDepth.Deep)
+           {
+               AbyssProcgen.addDefenseFleetManager(fractures.fracture1, 1, latestDepth, 0.75f)
+           }
+
+           type.generate(systemData)
+
+
+           systemData.previous = previous
+           setMainBranchMapLocation(system)
+
+           totalSystems += 1
+           previous = system
        }
-       systemsInSameStep.put(currentSteps, newLatest)
-       currentSteps += 1
-       latestSystems = newLatest
-       generateSystems()
+
+       generateBranches()
    }
+
+    fun generateBranches() {
+        var systems = ArrayList(AbyssUtils.getAbyssData().systemsData).filter { !it.system.hasTag(noBranchTag) }.toMutableList()
+
+        var hasDeepBranch = false
+        var hasShallowBranch = false
+
+        for (i in 0 until branches) {
+            var current: AbyssSystemData? = null
+            if (current == null) {
+
+                if (!hasDeepBranch) {
+                    current = systems.filter { it.depth == AbyssDepth.Deep }.toMutableList().random()
+                    systems.remove(current)
+                    hasDeepBranch = true
+                }
+                else if (!hasShallowBranch) {
+                    current = systems.filter { it.depth == AbyssDepth.Shallow }.toMutableList().random()
+                    systems.remove(current)
+                    hasShallowBranch = true
+                }
+                else {
+                    current = systems.randomAndRemove()
+                }
+
+            }
+
+            var length = MathUtils.getRandomNumberInRange(2, 3)
+
+            for (e in 0 until length) {
+                var previousData = AbyssUtils.getSystemData(current!!.system)
+
+                var name = "Sea of " + getName()
+
+                var depth = current.depth
+
+                var picker = WeightedRandomPicker<BaseAbyssType>()
+                for (type in types) {
+                    picker.add(type, type.getWeight())
+                }
+                var type = picker.pick()
+
+                var system = Global.getSector().createStarSystem(name)
+                system.name = name
+                AbyssProcgen.setupSystem(system, type.getTerrainFraction(), depth)
+                var systemData = AbyssUtils.getSystemData(system)
+
+                system.addTag(branchTag)
+
+                type.pregenerate(systemData)
+
+                var pos1 = previousData.fracturePoints.randomAndRemove()
+                var pos2 = systemData.fracturePoints.randomAndRemove()
+
+                var fractures = AbyssProcgen.createFractures(current.system, system)
+
+                previousData.fractures.add(fractures.fracture1.customPlugin as AbyssalFracture)
+                systemData.fractures.add(fractures.fracture2.customPlugin as AbyssalFracture)
+
+                fractures.fracture1.location.set(pos1)
+                fractures.fracture2.location.set(pos2)
+
+                AbyssProcgen.clearTerrainAroundFractures(fractures)
+
+                var latestDepth = previousData.depth
+
+                if (latestDepth == AbyssDepth.Shallow)
+                {
+                    AbyssProcgen.addDefenseFleetManager(fractures.fracture1, 1, latestDepth, 0.6f)
+                }
+                else if (latestDepth == AbyssDepth.Deep)
+                {
+                    AbyssProcgen.addDefenseFleetManager(fractures.fracture1, 1, latestDepth, 0.75f)
+                }
+
+                type.generate(systemData)
+
+
+                systemData.previous = current.system
+                setSubBranchMapLocation(system)
+
+                totalSystems += 1
+                current = systemData
+            }
+        }
+
+        generateAfterChain()
+    }
 
     fun generateAfterChain() {
 
         addLogsToTransmitters()
-        generateRift()
+       // generateRift()
 
         var systems = ArrayList(AbyssUtils.getAbyssData().systemsData.filter { it.minorPoints.isNotEmpty() } )
 
@@ -364,7 +458,7 @@ class  AbyssGenerator {
         for (member in fleet.fleetData.membersListCopy) {
             member.variant.addTag(Tags.TAG_NO_AUTOFIT)
         }
-        AbyssUtils.addAlterationsToFleet(fleet, 0.8f, Random())
+        AbyssUtils.addAlterationsToFleet(fleet, 0.4f, Random())
         AbyssalSeraphSpawner.sortWithSeraphs(fleet)
 
         /*  for (i in 0 until 3) {
@@ -394,117 +488,106 @@ class  AbyssGenerator {
     }
 
 
-   fun getName() : String
-   {
-       var names = AbyssProcgen.SYSTEM_NAMES.filter { !usedNames.contains(it) }
-       var name = names.randomOrNull()
-       if (name == null)
-       {
-           name = "the Abyss"
-       }
-       usedNames.add(name)
-       return name
-   }
-
-   fun getAmountOfSystems() : Int {
-
-       var systems = 1
-
-       when (currentSteps) {
-           0 -> systems = 2
-           1 -> systems = 1
-           2 -> systems = 1
-           3 -> systems = 2
-           /* 4 -> {
-                 if (Random().nextFloat() > 0.5f && !generatedExtra)
-                 {
-                     systems = 2
-                     generatedExtra = true
-                 }
-                 else
-                 {
-                     systems = 1
-                 }
-             }*/
-           4 -> systems = 1
-
-           else -> 1
-       }
-
-       return systems
-   }
-
-   fun setMapLocation(system: StarSystemAPI, currentBranch: Int, lastDistance: Float = 50f)
-   {
-       var data = AbyssUtils.getSystemData(system)
-       var previous = data.previous
-       if (previous == null)
-       {
-           data.mapLocation = Vector2f(0f, 0f)
-
-           positionsOnMap.add(Vector2f(0f, 0f))
-           return
-       }
-
-       var prevLoc = AbyssUtils.getSystemData(data.previous!!).mapLocation
-       /*if (previous.name.contains("Twilight"))
-       {
-           var point = Vector2f(0f, 40f)
-           positionsOnMap.add(point)
-
-           data.mapLocation = point
-
-           return
-       }*/
-
-       var angle = Misc.getAngleInDegrees(Vector2f(0f, 0f), prevLoc)
+    fun getName() : String
+    {
+        var names = AbyssProcgen.SYSTEM_NAMES.filter { !usedNames.contains(it) }
+        var name = names.randomOrNull()
+        if (name == null)
+        {
+            name = "the Abyss"
+        }
+        usedNames.add(name)
+        return name
+    }
 
 
-       var randomDistance = 50f
 
-       var angleAddition = 0f
+    fun setMainBranchMapLocation(system: StarSystemAPI)
+    {
+        var data = AbyssUtils.getSystemData(system)
+        var previous = data.previous
 
-       var wasPositive = false
-
-
-       if (currentBranch == 0)
-       {
-           angleAddition = 60f
-       }
-       if (currentBranch == 1)
-       {
-           angleAddition = -60f
-       }
+        var root = AbyssUtils.getSystemData(AbyssUtils.getAbyssData().rootSystem!!)
+        var prevLoc = AbyssUtils.getSystemData(data.previous!!).mapLocation
 
 
-       var newAngle = angle + angleAddition
+        var angle = MathUtils.getRandomNumberInRange(-65f, 65f)
+        var randomDistance = MathUtils.getRandomNumberInRange(80f, 90f)
+
+      /*  var testPoint = MathUtils.getPointOnCircumference(prevLoc, randomDistance, angle)
+        var angleTowardsStart = Misc.getAngleInDegrees(Vector2f(0f, 0f), testPoint)
+
+        while (angle + 90 in (angleTowardsStart - 40)..(angleTowardsStart + 40)) {
+            if (angle > 0) {
+                angle++
+            }
+            if (angle < 0) {
+                angle--
+            }
+        }*/
+
+        if (previous == root.system) {
+            angle = MathUtils.getRandomNumberInRange(-30f, 30f)
+        }
+
+        angle -= 90
 
 
-       var point = MathUtils.getPointOnCircumference(prevLoc, randomDistance, newAngle)
-       var failed = false
-       for (existingPoint in positionsOnMap)
-       {
-           if (prevLoc == existingPoint) continue
-           var distance = MathUtils.getDistance(point, existingPoint)
-           if (distance < lastDistance)
-           {
-               if (lastDistance > 2)
-               {
-                   failed = true
-                   break
-               }
-               else
-               {
-                   var test = ""
-               }
-           }
-       }
+        var lastDistance = 50f
+        var point = MathUtils.getPointOnCircumference(prevLoc, randomDistance, angle)
 
-       if (failed) setMapLocation(system, currentBranch, lastDistance - 0.5f)
 
-       lastSystemWasPositiveOnMap = wasPositive
-       positionsOnMap.add(point)
-       AbyssUtils.getSystemData(system).mapLocation = point
-   }
+
+
+        positionsOnMap.add(point)
+        AbyssUtils.getSystemData(system).mapLocation = point
+    }
+
+    //Ugly ass Code but hopefully works
+    fun setSubBranchMapLocation(system: StarSystemAPI, circleRadius: Float = 110f) : ArrayList<Vector2f>
+    {
+        var data = AbyssUtils.getSystemData(system)
+        var previous = data.previous
+        var prevLoc = AbyssUtils.getSystemData(data.previous!!).mapLocation
+
+        var allOtherLocations = AbyssUtils.getAbyssData().systemsData.map { it.mapLocation }
+
+        var points = ArrayList<Vector2f>()
+        var pointCount = 100
+        for (point in 0 until pointCount) {
+            var angle = (360f / pointCount) * point
+            var pos = MathUtils.getPoint(prevLoc, MathUtils.getRandomNumberInRange(60f, 90f), angle)
+
+            var inRadius = false
+            for (other in allOtherLocations) {
+                if (other == prevLoc) continue
+                if (prevLoc!!.x == other!!.x && prevLoc.y == other.y) continue
+                if (MathUtils.isPointWithinCircle(pos, other, circleRadius)) {
+                    inRadius = true
+                    break
+                }
+            }
+            if (!inRadius)  {
+                points.add(pos)
+            }
+        }
+
+        if (points.isEmpty()) {
+            if (circleRadius <= 20) {
+                points.add(MathUtils.getRandomPointOnCircumference(prevLoc, 400f))
+            }
+            else {
+                points = setSubBranchMapLocation(system, circleRadius - 10f)
+            }
+        }
+
+        var point = points.random()
+
+
+
+        positionsOnMap.add(point)
+        AbyssUtils.getSystemData(system).mapLocation = point
+        return points
+    }
 
 }

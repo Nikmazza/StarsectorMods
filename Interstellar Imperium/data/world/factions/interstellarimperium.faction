@@ -448,7 +448,7 @@
         "hostilityImpactOnGrowth":true,
         "caresAboutAtrocities":false, # if it's not us, who cares?
         "punitiveExpeditionData":{
-            "vsCompetitors":true,
+            "vsCompetitors":false,
             "vsFreePort":false,
             "canBombard":true,
             "territorial":true,

@@ -8,6 +8,7 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.loading.ProjectileSpawnType;
 import com.fs.starfarer.api.util.IntervalUtil;
+import data.scripts.SWPModPlugin;
 import data.scripts.util.SWP_Util;
 import java.awt.Color;
 import java.util.Iterator;
@@ -1272,7 +1273,19 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
     @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
-        Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
+    }
+
+    public static void createIfNeeded() {
+        if (!SWPModPlugin.hasMagicLib) {
+            return;
+        }
+
+        if (Global.getCombatEngine() != null) {
+            if (!Global.getCombatEngine().getCustomData().containsKey(DATA_KEY)) {
+                Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
+                Global.getCombatEngine().addPlugin(new SWP_Trails());
+            }
+        }
     }
 
     private static final class LocalData {

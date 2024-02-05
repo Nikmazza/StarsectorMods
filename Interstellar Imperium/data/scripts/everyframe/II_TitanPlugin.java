@@ -26,6 +26,7 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
+import com.fs.starfarer.api.util.IntervalUtil;
 import data.scripts.IIModPlugin;
 import data.scripts.hullmods.II_BasePackage;
 import data.scripts.hullmods.II_ElitePackage;
@@ -709,6 +710,8 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
     private CombatEngineAPI engine;
     private boolean setEndCombatFlag = false;
     private FleetMemberAPI dummyMember = null;
+    private boolean activated = false;
+    private final IntervalUtil inactiveInterval = new IntervalUtil(1f, 2f);
 
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
@@ -718,6 +721,13 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
 
         if (engine.isPaused()) {
             return;
+        }
+
+        if (!activated) {
+            inactiveInterval.advance(amount);
+            if (!inactiveInterval.intervalElapsed()) {
+                return;
+            }
         }
 
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
@@ -742,6 +752,8 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
 
             if (projectile.getProjectileSpecId().contentEquals("ii_titan_missile")) {
                 WeaponAPI source = projectile.getWeapon();
+
+                activated = true;
 
                 Vector2f location = new Vector2f(projectile.getLocation());
                 ShipAPI ship = projectile.getSource();
@@ -834,6 +846,8 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
             Map.Entry<String, ExplosionData> entry = iter.next();
             ExplosionData ed = entry.getValue();
             ShipAPI ship = ed.ship;
+
+            activated = true;
 
             ShipAPI source = titanSource.get(ship);
             if (source == null) {
@@ -1057,6 +1071,7 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                                 break;
                             }
                         }
+                        activated = true;
                         break;
                     case "ii_boss_titanx":
                         float effectLevel = ship.getMutableStats().getDynamic().getValue(TITANX_STAT_KEY, 0f);
@@ -1080,6 +1095,7 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                                 setEndCombatFlag = true;
                             }
                         }
+                        activated = true;
                         break;
                     case "ii_titan":
                     case "ii_titan_armor":
@@ -1088,11 +1104,14 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                     case "ii_titan_armor_door":
                     case "ii_titan_targeting_door":
                         ship.setCollisionClass(CollisionClass.SHIP);
+                        activated = true;
                         break;
                     default:
                         break;
                 }
             } else if (II_Util.getNonDHullId(ship.getHullSpec()).contentEquals("ii_olympus")) {
+                activated = true;
+
                 if (ship.getCurrentCR() < II_TitanBombardment.getCRPenalty(ship.getVariant())) {
                     List<WeaponAPI> weapons = ship.getAllWeapons();
                     for (WeaponAPI weapon : weapons) {
@@ -1155,6 +1174,8 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                     }
                 }
             } else if (II_Util.getNonDHullId(ship.getHullSpec()).contentEquals("ii_boss_titanx")) {
+                activated = true;
+
                 if (ship.getHullLevel() <= 1f / 3f) {
                     float defenseLevel = II_Util.lerp(2f, 4f, 1f - (ship.getHullLevel() * 3f));
                     ship.getMutableStats().getHullCombatRepairRatePercentPerSecond().modifyMult(TITANX_STAT_KEY, 0f);
@@ -1210,6 +1231,10 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                         break;
                     default:
                         break;
+                }
+
+                if (nuke || titan) {
+                    activated = true;
                 }
 
                 if (titan && (ship.getOwner() == 0)) {

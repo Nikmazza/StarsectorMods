@@ -63,6 +63,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         p.seed = MathUtils.getRandom().nextLong();
         p.mode = ShipPickMode.PRIORITY_THEN_ALL;
         p.allWeapons = true;
+        p.factionId = PLAYER_FACTION_ID;
 
         DefaultFleetInflater inflater = new DefaultFleetInflater(p);
         inflater.inflate(fleet);

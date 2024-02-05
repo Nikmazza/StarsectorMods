@@ -43,14 +43,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // name, required mod's ID, variant, backup mod's ID, backup variant, fallback variant
         ENEMIES.add(new String[]{"Mozart", null, "hyperion_Strike", null, null, null});
         ENEMIES.add(new String[]{"Tartini", "SEEKER", "SKR_endymion_assault", null, null, "hyperion_Attack"});
-        ENEMIES.add(new String[]{"Beethoven", "istl_dassaultmikoyan", "istlx_alauda_std", "underworld", "uw_venomx_eli", "swp_hyperion_flamer"});
+        ENEMIES.add(new String[]{"Beethoven", "shadow_ships", "ms_shamash_EMP", null, null, "swp_hyperion_flamer"});
         ENEMIES.add(new String[]{"Vivaldi", "blackrock_driveyards", "brdy_imaginos_shock", null, null, "swp_hyperion_shocker"});
-        ENEMIES.add(new String[]{"Mendelssohn", "vic", "vic_nybbas_plasma", "shadow_ships", "ms_shamash_EMP", "swp_hyperion_assault"});
+        ENEMIES.add(new String[]{"Mendelssohn", "vic", "vic_nybbas_plasma", null, null, "swp_hyperion_assault"});
         ENEMIES.add(new String[]{"Paganini", "XhanEmpire", "XHAN_Pharrek_variant_EmperorsScalpel", null, null, "swp_hyperion_blaster"});
         ENEMIES.add(new String[]{"Dvorak", "Imperium", "ii_maximus_str", null, null, "swp_hyperion_nullifier"});
         ENEMIES.add(new String[]{"Saint-Saens", "SCY", "SCY_stymphalianbird_combat", null, null, "swp_hyperion_assassin"});
         ENEMIES.add(new String[]{"Haydn", "diableavionics", "diableavionics_versant_standard", null, null, "swp_hyperion_meltdowner"});
-        ENEMIES.add(new String[]{"Rachmaninoff", "bb_plus", "bbplus_mnemosyne_proto", "istl_dassaultmikoyan", "istlx_braveblade_std", "swp_hyperion_berserker"});
+        ENEMIES.add(new String[]{"Rachmaninoff", "prv", "prv_sinne_assault", null, null, "swp_hyperion_berserker"});
         ENEMIES.add(new String[]{"Debussy", "timid_xiv", "eis_valorous_standard", null, null, "swp_hyperion_stunner"});
 
         /* Default is Level 3 */
@@ -59,9 +59,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         HARD_MODE_OFFICERS.put("diableavionics_versant_standard", 5);
         HARD_MODE_OFFICERS.put("ii_maximus_str", 4);
         HARD_MODE_OFFICERS.put("SCY_stymphalianbird_combat", 4);
-        HARD_MODE_OFFICERS.put("istlx_braveblade_std", 3); // Rachmaninoff buff 2 -> 3
-        HARD_MODE_OFFICERS.put("bbplus_mnemosyne_proto", 2); // Rachmaninoff buff 1 -> 2
-        HARD_MODE_OFFICERS.put("istlx_alauda_std", 2);
+        HARD_MODE_OFFICERS.put("prv_sinne_assault", 4); // Rachmaninoff buff 3 -> 4
         HARD_MODE_OFFICERS.put("XHAN_Pharrek_variant_EmperorsScalpel", 2);
     }
 
@@ -165,7 +163,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         }
 
         if (!campaignMode) {
-            FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, PLAYER_VARIANT, FleetMemberType.SHIP, "TTS Excelsior", true);
+            FleetMemberAPI member = api.addToFleet(FleetSide.PLAYER, PLAYER_VARIANT, FleetMemberType.SHIP, "TTS Aperioris", true);
 
             FactionAPI pirates = Global.getSettings().createBaseFaction(Factions.PIRATES);
             PersonAPI officer = pirates.createRandomPerson(Gender.MALE);
@@ -199,6 +197,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         api.addAsteroidField(0f, 0f, (float) Math.random() * 360f, width, 30f, 200f, 500);
         api.addPlugin(new Plugin());
+        api.getContext().fightToTheLast = true;
     }
 
     public void setCampaignMode(boolean mode) {

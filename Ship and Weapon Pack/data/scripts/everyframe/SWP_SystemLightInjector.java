@@ -6,6 +6,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
+import com.fs.starfarer.api.util.IntervalUtil;
 import data.scripts.util.SWP_Util;
 import java.awt.Color;
 import java.util.Iterator;
@@ -23,6 +24,8 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
     private static final Vector2f ZERO = new Vector2f();
 
     private CombatEngineAPI engine;
+    private boolean activated = false;
+    private final IntervalUtil inactiveInterval = new IntervalUtil(1f, 2f);
 
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
@@ -32,6 +35,13 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
 
         if (engine.isPaused()) {
             return;
+        }
+
+        if (!activated) {
+            inactiveInterval.advance(amount);
+            if (!inactiveInterval.intervalElapsed()) {
+                return;
+            }
         }
 
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
@@ -107,6 +117,7 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     case "swp_victoryjets":
                         if (system.isActive()) {
@@ -164,6 +175,7 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     case "swp_boss_aresdrive":
                         if (system.isActive()) {
@@ -215,6 +227,7 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     case "swp_boss_nikejets":
                         if (system.isActive()) {
@@ -266,6 +279,7 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     case "swp_arcade_forceimpeder":
                         if (system.isActive()) {
@@ -276,7 +290,7 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
 
                                 light.setLocation(location);
                                 light.setColor((float) Math.random() * 0.5f + 0.5f, (float) Math.random() * 0.5f + 0.5f,
-                                               (float) Math.random() * 0.5f + 0.5f);
+                                        (float) Math.random() * 0.5f + 0.5f);
 
                                 if ((system.isActive() && !system.isOn()) || system.isChargedown()) {
                                     if (!light.isFadingOut()) {
@@ -289,13 +303,14 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
                                 light.setIntensity(0.5f);
                                 light.setSize(4000f);
                                 light.setColor((float) Math.random() * 0.5f + 0.5f, (float) Math.random() * 0.5f + 0.5f,
-                                               (float) Math.random() * 0.5f + 0.5f);
+                                        (float) Math.random() * 0.5f + 0.5f);
                                 light.fadeIn(2f);
 
                                 lights.put(ship, light);
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     default:
                         break;

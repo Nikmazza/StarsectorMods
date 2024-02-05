@@ -116,9 +116,6 @@ public class SWP_BuriedTreasure extends HubMissionWithBarEvent implements ShipRe
 
     public static String PRINT_RULES = "swp_print_rules";
 
-    public static String RECOVERED_ZIGGURAT = "$gaPZ_recoveredZiggurat";
-    public static String SCANNED_ZIGGURAT = "$gaPZ_scannedZiggurat";
-
     public static float SCAV_CONTACT_RAID_DIFFICULTY = 100f;
 
     protected PersonAPI captainTannen;
@@ -339,7 +336,7 @@ public class SWP_BuriedTreasure extends HubMissionWithBarEvent implements ShipRe
         if (leeSystem == null) {
             return false;
         }
-        PerShipData shipData = new PerShipData(Global.getSettings().getVariant("swp_excelsior_locked"), ShipCondition.PRISTINE, "TTS Excelsior", Factions.TRITACHYON, 0f);
+        PerShipData shipData = new PerShipData(Global.getSettings().getVariant("swp_excelsior_locked"), ShipCondition.PRISTINE, "TTS Aperioris", Factions.TRITACHYON, 0f);
         shipData.addDmods = false;
         shipData.nameAlwaysKnown = true;
         shipData.pruneWeapons = false;
@@ -390,7 +387,7 @@ public class SWP_BuriedTreasure extends HubMissionWithBarEvent implements ShipRe
             captainTannen.setImportance(PersonImportance.MEDIUM);
             captainTannen.getName().setFirst("Jakk");
             captainTannen.getName().setLast("Tannen");
-            captainTannen.setVoice(Voices.VILLAIN);
+            captainTannen.setVoice(Voices.SPACER);
             captainTannen.setPortraitSprite("graphics/swp/portraits/swp_tannen.png");
             captainTannen.setPersonality("aggressive");
 

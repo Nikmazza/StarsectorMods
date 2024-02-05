@@ -1,0 +1,69 @@
+{
+  "variantId": "astroidships_cerus_Suppression",
+  "hullId": "astroidships_cerus",
+  "displayName": "Suppression",
+  "goalVariant": true,
+  "fluxCapacitors": 18,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "efficiency_overhaul",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "lightmortar",
+        "WS0006": "lightmortar",
+        "WS0008": "lightmortar",
+        "WS0009": "lightmortar",
+        "WS0010": "lightmortar",
+        "WS0014": "lightmortar",
+        "WS0015": "lightmortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hveldriver",
+        "WS0013": "heavyneedler",
+        "WS0016": "heavyneedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "sabot",
+        "WS0005": "sabot",
+        "WS0007": "sabot",
+        "WS0012": "sabot",
+        "WS0018": "harpoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "vulcan",
+        "WS0011": "vulcan",
+        "WS0017": "vulcan",
+        "WS0019": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "orisis_wing"
+  ]
+}

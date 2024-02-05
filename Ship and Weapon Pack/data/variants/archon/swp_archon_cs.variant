@@ -1,7 +1,7 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 10,
-    "fluxVents": 11,
+    "fluxVents": 15,
     "goalVariant": true,
     "hullId": "swp_archon",
     "hullMods": [

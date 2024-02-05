@@ -1,250 +1,189 @@
 {
-  "bounds": [
-    94,
-    8,
-    92.5,
-    24.5,
-    46.5,
-    26.5,
-    46,
-    39,
-    26,
-    46,
-    2,
-    17.5,
-    -33,
-    37,
-    -48.5,
-    30.5,
-    -77.5,
-    34,
-    -76,
-    14,
-    -71.5,
-    0,
-    -76,
-    -14,
-    -77.5,
-    -34,
-    -48.5,
-    -30.5,
-    -33,
-    -37,
-    2,
-    -17.5,
-    26,
-    -46,
-    46,
-    -39,
-    46.5,
-    -26.5,
-    92.5,
-    -24.5,
-    94,
-    -8,
-    55,
-    -6.5,
-    55,
-    6.5
-  ],
-  "center": [
-    47,
-    79
-  ],
-  "collisionRadius": 140.111557,
-  "engineSlots": [
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 64,
-      "location": [
-        -79,
-        29
-      ],
-      "style": "MIDLINE",
-      "width": 16
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 64,
-      "location": [
-        -78,
-        19
-      ],
-      "style": "MIDLINE",
-      "width": 16
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 64,
-      "location": [
-        -78,
-        -19
-      ],
-      "style": "MIDLINE",
-      "width": 16
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 64,
-      "location": [
-        -79,
-        -29
-      ],
-      "style": "MIDLINE",
-      "width": 16
-    },
-    {
-      "angle": 180,
-      "contrailSize": 10,
-      "length": 48,
-      "location": [
-        -74,
-        3.5
-      ],
-      "style": "MIDLINE",
-      "width": 10
-    },
-    {
-      "angle": -180,
-      "contrailSize": 10,
-      "length": 48,
-      "location": [
-        -74,
-        -3.5
-      ],
-      "style": "MIDLINE",
-      "width": 10
-    }
-  ],
-  "height": 177,
-  "hullId": "swp_boss_sunder",
   "hullName": "Fracture",
+  "hullId": "swp_boss_sunder",
   "hullSize": "DESTROYER",
-  "shieldCenter": [
-    11,
-    0
-  ],
-  "shieldRadius": 128,
   "spriteName": "graphics/swp/ships/boss/swp_boss_sunder.png",
   "style": "MIDLINE",
+  "height": 187,
+  "width": 102,
+  "center": [51, 88],
+  "collisionRadius": 140.111557,
+  "shieldCenter": [8.5, -0],
+  "shieldRadius": 128,
   "viewOffset": 100,
   "weaponSlots": [
     {
-      "angle": 0,
-      "arc": 5,
       "id": "WS 001",
-      "locations": [
-        87.5,
-        14.5
-      ],
+      "size": "MEDIUM",
+      "type": "MISSILE",
       "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [91, 13],
       "position": [
         51,
         80
-      ],
-      "size": "MEDIUM",
-      "type": "MISSILE"
+      ]
     },
     {
-      "angle": 0,
-      "arc": 5,
       "id": "WS 002",
-      "locations": [
-        38,
-        32
-      ],
+      "size": "MEDIUM",
+      "type": "SYNERGY",
       "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [35, 33],
       "position": [
         121,
         50
-      ],
-      "size": "MEDIUM",
-      "type": "SYNERGY"
+      ]
     },
     {
-      "angle": 0,
-      "arc": 5,
       "id": "WS 003",
-      "locations": [
-        43,
-        0
-      ],
+      "size": "LARGE",
+      "type": "ENERGY",
       "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [39.5, 0],
       "position": [
         131,
         0
-      ],
-      "size": "LARGE",
-      "type": "ENERGY"
+      ]
     },
     {
-      "angle": 0,
-      "arc": 5,
       "id": "WS 004",
-      "locations": [
-        38,
-        -32
-      ],
+      "size": "MEDIUM",
+      "type": "SYNERGY",
       "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [35, -33],
       "position": [
         121,
         -50
-      ],
-      "size": "MEDIUM",
-      "type": "SYNERGY"
+      ]
     },
     {
-      "angle": 0,
-      "arc": 5,
       "id": "WS 005",
-      "locations": [
-        87.5,
-        -13.5
-      ],
+      "size": "MEDIUM",
+      "type": "MISSILE",
       "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [91, -13],
       "position": [
         51,
         -75
-      ],
-      "size": "MEDIUM",
-      "type": "MISSILE"
+      ]
     },
     {
-      "angle": 125,
-      "arc": 215,
       "id": "WS 006",
-      "locations": [
-        -34,
-        23
-      ],
+      "size": "SMALL",
+      "type": "BALLISTIC",
       "mount": "TURRET",
+      "arc": 215,
+      "angle": 125,
+      "locations": [-37, 27],
       "position": [
         -22,
         65
-      ],
-      "size": "SMALL",
-      "type": "BALLISTIC"
+      ]
     },
     {
-      "angle": -125,
-      "arc": 215,
       "id": "WS 007",
-      "locations": [
-        -34,
-        -23
-      ],
+      "size": "SMALL",
+      "type": "BALLISTIC",
       "mount": "TURRET",
+      "arc": 215,
+      "angle": -125,
+      "locations": [-37, -27],
       "position": [
         -24,
         -65
-      ],
-      "size": "SMALL",
-      "type": "BALLISTIC"
+      ]
     }
   ],
-  "width": 94
+  "engineSlots": [
+    {
+      "location": [-87.5, -27],
+      "length": 54.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-87.5, 27],
+      "length": 54.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, 19],
+      "length": 54.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, -19],
+      "length": 54.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83, 10.5],
+      "length": 30,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83, -10.5],
+      "length": 30,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -65.5, 1.5,
+    -81.5, 9.5,
+    -85.5, 32.5,
+    -60.5, 27.5,
+    -40, 38,
+    -12, 24.5,
+    2.5, 24,
+    18, 47.5,
+    34, 40,
+    42, 27,
+    64, 29.5,
+    77.5, 20.5,
+    87, 18.5,
+    89, 9.5,
+    39, 6,
+    39, -6,
+    89, -9.5,
+    87, -18.5,
+    77.5, -20.5,
+    64, -29.5,
+    42, -27,
+    34, -40,
+    18, -47.5,
+    2.5, -24,
+    -12, -24.5,
+    -40, -38,
+    -60.5, -27.5,
+    -85.5, -32.5,
+    -81.5, -9.5,
+    -65.5, -1.5
+  ]
 }

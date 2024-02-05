@@ -1,0 +1,95 @@
+{
+  "hullName": "boulder",
+  "hullId": "astroidships_boulder",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/astroidships_boulder.png.png",
+  "style": "LOW_TECH",
+  "height": 43,
+  "width": 37,
+  "center": [17, 19],
+  "collisionRadius": 48,
+  "shieldCenter": [0, -0.5],
+  "shieldRadius": 37.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade",
+    "insulatedengine"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [15, -7.5]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 6,
+      "angle": 0,
+      "locations": [7.5, -14.5]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [0.5, -4]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15, -5.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, -15.5],
+      "length": 30,
+      "width": 10,
+      "angle": -143,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-12.5, 11.5],
+      "length": 14.5,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-13.5, 8],
+      "length": 14,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-14, 5],
+      "length": 14,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    25, 7.5,
+    -13.5, 18.5,
+    -15, -17,
+    13.5, -17
+  ]
+}

@@ -1,6 +1,6 @@
 {
     "displayName": "Anti-Fighter",
-    "fluxCapacitors": 12,
+    "fluxCapacitors": 14,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "swp_albatross",

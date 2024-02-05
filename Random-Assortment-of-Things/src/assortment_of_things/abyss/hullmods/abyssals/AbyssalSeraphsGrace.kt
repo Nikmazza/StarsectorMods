@@ -1,21 +1,27 @@
 package assortment_of_things.abyss.hullmods.abyssals
 
 import assortment_of_things.abyss.AbyssUtils
+import assortment_of_things.abyss.hullmods.HullmodTooltipAbyssParticles
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
 import com.fs.starfarer.api.combat.listeners.*
 import com.fs.starfarer.api.impl.campaign.ids.HullMods
+import com.fs.starfarer.api.impl.campaign.ids.Tags
 import com.fs.starfarer.api.ui.Alignment
 import com.fs.starfarer.api.ui.TooltipMakerAPI
 import com.fs.starfarer.api.util.Misc
-import org.lwjgl.util.vector.Vector2f
+import lunalib.lunaExtensions.addLunaElement
 
 class AbyssalSeraphsGrace : BaseHullMod() {
 
 
     override fun applyEffectsBeforeShipCreation(hullSize: ShipAPI.HullSize?, stats: MutableShipStatsAPI?, id: String?) {
 
-        if (!stats!!.variant.hasHullMod("rat_abyssal_conversion") && !stats!!.variant.hasHullMod("rat_chronos_conversion") && !stats!!.variant.hasHullMod("rat_cosmos_conversion") && !stats.variant.hasHullMod(HullMods.AUTOMATED)) {
+        if (Global.getSector().playerFleet?.fleetData?.membersListCopy?.contains(stats!!.fleetMember) == true) {
+            stats!!.variant.removeTag(Tags.SHIP_LIMITED_TOOLTIP)
+        }
+
+        if (!stats!!.variant.hasHullMod("rat_abyssal_conversion") && !stats!!.variant.hasHullMod("rat_chronos_conversion") && !stats!!.variant.hasHullMod("rat_cosmos_conversion") && !stats!!.variant.hasHullMod("rat_seraph_conversion")  && !stats.variant.hasHullMod(HullMods.AUTOMATED)) {
             stats.variant.addPermaMod(HullMods.AUTOMATED)
         }
 
@@ -54,6 +60,13 @@ class AbyssalSeraphsGrace : BaseHullMod() {
     }
 
     override fun addPostDescriptionSection(tooltip: TooltipMakerAPI?, hullSize: ShipAPI.HullSize?, ship: ShipAPI?, width: Float, isForModSpec: Boolean) {
+
+        var initialHeight = tooltip!!.heightSoFar
+        var particleSpawner = HullmodTooltipAbyssParticles(tooltip, initialHeight)
+        var element = tooltip!!.addLunaElement(0f, 0f).apply {
+            advance { particleSpawner.advance(this, it) }
+            render { particleSpawner.renderBelow(this, it) }
+        }
 
         var isInAbyss = false
         if (Global.getSector() != null && Global.getSector().playerFleet != null) {
@@ -149,6 +162,10 @@ class AbyssalSeraphsGrace : BaseHullMod() {
 
         tooltip.addSpacer(5f)
         tooltip.addPara("While in the abyss, whenever a stack dissipates it vents 10 flux with it.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "10")
+
+        tooltip!!.addLunaElement(0f, 0f).apply {
+            render {particleSpawner.renderForeground(element, it)  }
+        }
     }
 
     override fun applyEffectsAfterShipCreation(ship: ShipAPI?, id: String?) {

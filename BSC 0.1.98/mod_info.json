@@ -4,7 +4,7 @@
 	"author":"BigBeans",	
 	"version":"0.1.98",
 	"description":"A Compilation of various ships created by me and a couple taken and edited from Spiral Arms.",
-	"gameVersion":"0.96a-RC10",
+  "gameVersion": "0.97a",
     	"dependencies": [
         {
             "id": "lw_lazylib",

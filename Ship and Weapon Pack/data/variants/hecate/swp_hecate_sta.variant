@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 5,
-    "fluxVents": 4,
+    "fluxCapacitors": 6,
+    "fluxVents": 7,
     "goalVariant": true,
     "hullId": "swp_hecate",
     "hullMods": [

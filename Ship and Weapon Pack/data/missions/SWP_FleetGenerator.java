@@ -4,6 +4,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
+import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
@@ -13,6 +14,8 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
+import data.scripts.SWPModPlugin;
+import data.scripts.campaign.II_IGFleetInflater;
 import java.util.Random;
 import org.lwjgl.util.vector.Vector2f;
 
@@ -37,6 +40,16 @@ public interface SWP_FleetGenerator {
 
         FleetDataAPI generate(MissionDefinitionAPI api, FleetSide side, String faction, float qf, float opBonus, int avgSMods, int maxPts, long seed, boolean autoshit) {
             return gen.generate(api, side, faction, qf, opBonus, avgSMods, maxPts, seed, autoshit);
+        }
+
+        static FleetInflater pickInflater(String factionId, Object p) {
+            FleetInflater inflater;
+            if (SWPModPlugin.imperiumExists && factionId.contentEquals("ii_imperial_guard")) {
+                inflater = new II_IGFleetInflater((DefaultFleetInflaterParams) p);
+            } else {
+                inflater = new DefaultFleetInflater((DefaultFleetInflaterParams) p);
+            }
+            return inflater;
         }
     }
 
@@ -85,8 +98,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }
@@ -135,8 +147,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }
@@ -185,8 +196,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }
@@ -235,8 +245,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }
@@ -285,8 +294,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }
@@ -335,8 +343,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }
@@ -385,8 +392,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }
@@ -435,8 +441,7 @@ public interface SWP_FleetGenerator {
             p.averageSMods = avgSMods;
             p.factionId = faction;
 
-            DefaultFleetInflater inflater = new DefaultFleetInflater(p);
-            inflater.inflate(fleetEntity);
+            GeneratorFleetTypes.pickInflater(faction, p).inflate(fleetEntity);
 
             return SWP_BaseRandomBattle.finishFleet(fleetEntity.getFleetData(), side, faction, api);
         }

@@ -3,6 +3,7 @@ package data.scripts.hullmods;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.BeamAPI;
+import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
@@ -195,7 +196,7 @@ public class SWP_ExcelsiorReactor extends BaseHullMod {
                     targets.remove(ship);
                     int num = (int) Math.round(fluxLevel * 40f);
                     for (int i = 0; i < num; i++) {
-                        if ((targets.size() > 0) && (Math.random() > 0.5)) {
+                        if (!targets.isEmpty() && (Math.random() > 0.5)) {
                             ShipAPI target = targets.get(MathUtils.getRandom().nextInt(targets.size()));
                             if (SWP_Multi.isWithinEmpRange(ship.getLocation(), range * 1.25f, target)) {
                                 Global.getCombatEngine().spawnEmpArcPierceShields(ship, MathUtils.getRandomPointOnCircumference(ship.getLocation(), 30f),
@@ -240,7 +241,7 @@ public class SWP_ExcelsiorReactor extends BaseHullMod {
                 if (Math.random() < (0.3 * Math.sqrt(scale))) {
                     float range = (float) Math.sqrt(ship.getFluxTracker().getCurrFlux()) * (float) Math.sqrt(scale) * 4f;
                     List<ShipAPI> targets = AIUtils.getNearbyEnemies(ship, range);
-                    if (targets.size() > 0) {
+                    if (!targets.isEmpty()) {
                         ShipAPI target = targets.get(MathUtils.getRandom().nextInt(targets.size()));
                         if (SWP_Multi.isWithinEmpRange(ship.getLocation(), range * 1.25f, target)) {
                             Global.getCombatEngine().spawnEmpArc(ship, MathUtils.getRandomPointOnCircumference(ship.getLocation(), 30f),
@@ -339,7 +340,7 @@ public class SWP_ExcelsiorReactor extends BaseHullMod {
             if ((beamDamage <= 0f) && (empDamage <= 0f)) {
                 return null;
             }
-            
+
             if (ship.getFluxTracker().getFluxLevel() >= 0.99f) {
                 return null;
             }
@@ -494,7 +495,7 @@ public class SWP_ExcelsiorReactor extends BaseHullMod {
                         radius = target.getCollisionRadius();
                         if (target instanceof DamagingProjectileAPI) {
                             DamagingProjectileAPI proj = (DamagingProjectileAPI) target;
-                            if (proj.didDamage()) {
+                            if (proj.getBaseDamageAmount() <= 0) {
                                 continue;
                             }
                             if (proj.didDamage()) {
@@ -503,7 +504,13 @@ public class SWP_ExcelsiorReactor extends BaseHullMod {
                             if (proj.getSpawnType() == ProjectileSpawnType.OTHER) {
                                 continue;
                             }
+                            if (proj.getCollisionClass() == CollisionClass.GAS_CLOUD) {
+                                continue;
+                            }
                             if ((proj.getProjectileSpecId() != null) && proj.getProjectileSpecId().startsWith("swp_excelsiorcannon_shot") && (proj.getOwner() == ship.getOwner())) {
+                                continue;
+                            }
+                            if ((proj.getWeapon() != null) && (proj.getWeapon().getSpec() != null) && (proj.getWeapon().getSpec().hasTag("dummy_proj"))) {
                                 continue;
                             }
                             if (proj.getProjectileSpec() != null) {

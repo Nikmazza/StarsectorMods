@@ -1,0 +1,136 @@
+{
+  "hullName": "Kari",
+  "hullId": "astroidships_kari",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/astroidships_kari.png.png",
+  "style": "LOW_TECH",
+  "height": 200,
+  "width": 200,
+  "center": [100, 100],
+  "collisionRadius": 114.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 109.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "insulatedengine"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 219,
+      "angle": -125,
+      "locations": [-70, -52.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 219,
+      "angle": 125,
+      "locations": [-68, 48.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 202,
+      "angle": 0,
+      "locations": [51.5, -17]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 202,
+      "angle": -0,
+      "locations": [51.5, 17]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 90,
+      "locations": [54.5, 68.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -90,
+      "locations": [54.5, -68.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 173,
+      "angle": 0,
+      "locations": [69.5, -0.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-95.5, -30],
+      "length": 36.5,
+      "width": 36,
+      "angle": 180,
+      "contrailSize": 36,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-88, -0],
+      "length": 50,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-96, 27.5],
+      "length": 40,
+      "width": 35,
+      "angle": 180,
+      "contrailSize": 35,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -90, 7,
+    -98.5, 36.5,
+    -82, 59,
+    -72, 63,
+    -52, 55,
+    28, 54.5,
+    30.5, 29,
+    38, 67.5,
+    52, 81.5,
+    67.5, 69.5,
+    75.5, 43.5,
+    71.5, 27.5,
+    78.5, 9.5,
+    78.5, -9.5,
+    71.5, -27.5,
+    75.5, -43.5,
+    67.5, -69.5,
+    52, -81.5,
+    38, -67.5,
+    30.5, -29,
+    28, -54.5,
+    -52, -55,
+    -72, -63,
+    -82, -59,
+    -98.5, -36.5,
+    -90, -7
+  ]
+}

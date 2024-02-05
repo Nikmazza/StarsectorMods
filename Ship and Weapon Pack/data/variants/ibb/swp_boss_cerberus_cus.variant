@@ -1,6 +1,6 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 9,
+    "fluxCapacitors": 8,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "swp_boss_cerberus",
@@ -8,7 +8,8 @@
         "heavyarmor",
         "missleracks",
         "eccm",
-        "unstable_injector"
+        "unstable_injector",
+        "fluxbreakers"
     ],
     "permaMods": [
         "heavyarmor",

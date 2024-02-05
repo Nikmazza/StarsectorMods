@@ -20,6 +20,7 @@
 			"tectonic_disaster":"graphics/aotd_colony_events/tectonic_disaster.png",
 			"food_experiment":"graphics/aotd_colony_events/food_experiment.png",
 			"hivemind_whoopsie":"graphics/aotd_colony_events/hivemind_whoopsie.png",
+			"acot_event_1":"graphics/aotd_colony_events/acot_event_1.png",
 		},
 		"portraits":{
 			"theta_core":"graphics/portraits/theta_core.png"

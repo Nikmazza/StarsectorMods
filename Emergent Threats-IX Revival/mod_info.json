@@ -4,7 +4,7 @@
     "author":"vicegrip (original by Inventor Raccoon)",
     "version":"0.4.0",
     "description":"Adds the 9th Domain Battlegroup high-tech hostile faction from the old Arsenal Expansion mod.",
-    "gameVersion":"0.96a-RC10",
+    "gameVersion": "0.97a",
 	"dependencies": [
 		{
             "id": "MagicLib",

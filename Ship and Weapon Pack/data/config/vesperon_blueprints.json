@@ -2,6 +2,7 @@
   "availableCacheBlueprints": {
     "hullSpecIds": [
       "swp_alastor",
+      "swp_alastor_lions_guard",
       "swp_alastor_xiv",
       "swp_albatross",
       "swp_arachne",
@@ -40,6 +41,7 @@
       "swp_vindicator_o",
       "swp_vortex",
       "swp_vulture",
+      "swp_vulture_lions_guard",
       "swp_vulture_p",
       "swp_wolf_luddic_path",
       "swp_zenith"

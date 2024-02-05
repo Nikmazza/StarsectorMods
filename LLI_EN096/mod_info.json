@@ -4,7 +4,7 @@
 	"author": "Fractal Softworks Forum id-IMustRegroupMyForces, Discord id-Komeiji Satori_0313",
 	"version":"1.8.11",
 	"description":"Adds a new faction--Loulan Industries",
-	"gameVersion":"0.96a-RC9",
+    "gameVersion": "0.97a",
 	"jars":["jar/LLI.jar"],
 	"modPlugin": "data.SSPModPlugin",
 	  "dependencies": [ {

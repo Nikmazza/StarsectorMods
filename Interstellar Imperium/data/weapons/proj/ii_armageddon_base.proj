@@ -2,6 +2,7 @@
     "id":"ii_armageddon_base",
 	"specClass":"missile",
 	"missileType":"MISSILE",
+	"onFireEffect":"data.scripts.weapons.II_TrailWeapon",
 	"sprite":"graphics/missiles/bomblet0.png",
 	"size":[1,1],
 	"center":[0.5,0.5],

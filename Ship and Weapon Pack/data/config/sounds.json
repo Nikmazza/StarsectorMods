@@ -450,10 +450,10 @@
     ],
     "swp_devastator_f_explosion":{
         "sounds":[
-            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_01.ogg","pitch":1.25,"volume":0.55},
-            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_02.ogg","pitch":1.25,"volume":0.55},
-            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_03.ogg","pitch":1.25,"volume":0.55},
-            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_04.ogg","pitch":1.25,"volume":0.55},
+            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_01.ogg","pitch":1.25,"volume":0.7},
+            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_02.ogg","pitch":1.25,"volume":0.7},
+            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_03.ogg","pitch":1.25,"volume":0.7},
+            {"file":"sounds/sfx_wpn_guns/devastator_shell_exp_04.ogg","pitch":1.25,"volume":0.7},
         ],
     },
 

@@ -1,7 +1,7 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 10,
-    "fluxVents": 29,
+    "fluxCapacitors": 13,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "swp_zenith",
     "hullMods": ["targetingunit"],

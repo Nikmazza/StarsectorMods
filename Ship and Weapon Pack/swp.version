@@ -2,11 +2,11 @@
     "masterVersionFile":"https://www.sc2mafia.com/Starsector/version/swp.version",
     "modName":"Ship/Weapon Pack",
     "modThreadId":11018,
-    "directDownloadURL": "https://bitbucket.org/modmafia/ship-weapon-pack/downloads/Ship_and_Weapon_Pack_1.13.1.7z",
+    "directDownloadURL": "https://bitbucket.org/modmafia/ship-weapon-pack/downloads/Ship_and_Weapon_Pack_1.15.1.7z",
     "modVersion":
     {
         "major":1,
-        "minor":14,
-        "patch":0
+        "minor":15,
+        "patch":1
     },
 }

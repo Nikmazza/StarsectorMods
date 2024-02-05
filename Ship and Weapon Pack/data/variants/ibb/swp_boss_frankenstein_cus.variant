@@ -1,6 +1,6 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 22,
+    "fluxCapacitors": 24,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "swp_boss_frankenstein",

@@ -1,0 +1,47 @@
+{
+        "combatSmallForSmallFleet":{
+                "astroidships_boulder_Missile":10,
+
+                "astroidships_stoner_Armour":8,
+     
+                "astroidships_havel_Combat":6,
+        },
+	"combatSmall":{
+		"astroidships_boulder_Missile":10,
+
+                "astroidships_stoner_Armour":8,
+
+                "astroidships_havel_Combat":6,
+	},
+	"combatMedium":{
+                "astroidships_vesta_Combat":8,
+
+                "astroidships_tholen_Fighting":8,
+
+                "astroidships_galileo_Support":7,
+
+                "astroidships_mentis_gladis":7,
+        },
+	"combatLarge":{
+                "astroidships_rock_Pirate":6,
+                "astroidships_rock_Suppression":5,
+
+                "astroidships_cerus_Attack":7,
+                "astroidships_cerus_Suppression":5,
+
+                "astroidships_clanker_Raiding":8,
+        },
+        "combatFreighterMedium":{
+		"astroidships_kari_Combat Freighter":6,
+
+                "astroidships_pasithee_Suppression":5,
+	},
+
+        # carriers
+        "carrierLarge":{
+                "astroidships_pebble_Attack":6,
+
+                "astroidships_fenrir_Battle":3,
+                "astroidships_fenrir_Carrier":3,
+        },
+}

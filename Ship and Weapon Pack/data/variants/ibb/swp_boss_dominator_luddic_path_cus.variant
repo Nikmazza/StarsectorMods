@@ -1,7 +1,7 @@
 {
     "displayName": "Custom",
     "fluxCapacitors": 0,
-    "fluxVents": 17,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_boss_dominator_luddic_path",
     "hullMods": [

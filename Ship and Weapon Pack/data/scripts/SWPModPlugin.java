@@ -29,10 +29,10 @@ import data.scripts.campaign.SWP_IBBFleetEncounterContext;
 import data.scripts.campaign.SWP_IBBInteractionDialogPlugin;
 import data.scripts.campaign.SWP_MarketRiggerScript;
 import data.scripts.campaign.fleets.SWP_TriTachyonFleetPlugin;
-import data.scripts.campaign.intel.bar.events.SWP_IBBBarEvent;
-import data.scripts.campaign.intel.SWP_IBBTracker;
-import data.scripts.campaign.intel.bar.events.SWP_IBBBarEventCreator;
 import data.scripts.campaign.intel.SWP_IBBIntel;
+import data.scripts.campaign.intel.SWP_IBBTracker;
+import data.scripts.campaign.intel.bar.events.SWP_IBBBarEvent;
+import data.scripts.campaign.intel.bar.events.SWP_IBBBarEventCreator;
 import data.scripts.campaign.intel.missions.SWP_BuriedTreasure;
 import data.scripts.everyframe.SWP_BlockedHullmodDisplayScript;
 import data.scripts.shaders.SWP_OmegaDriveShader;
@@ -309,48 +309,44 @@ public class SWPModPlugin extends BaseModPlugin {
     @Override
     public PluginPick<ShipAIPlugin> pickShipAI(FleetMemberAPI member, ShipAPI ship) {
         Set<String> derelicts = new HashSet<>(3);
+        String hullId = ship.getHullSpec().getBaseHullId();
         derelicts.add("swp_wall");
         derelicts.add("swp_wall_left");
         derelicts.add("swp_wall_right");
-
-        String hullId = ship.getHullSpec().getBaseHullId();
-        if (!derelicts.contains(hullId) && !ship.getVariant().hasHullMod(HullMods.AUTOMATED)) {
-            /* Don't mess with tournaments */
-            if (!Global.getSettings().getModManager().isModEnabled("aibattles")) {
-                if (hullId.contentEquals("swp_nightwalker")) {
-                    ShipAIConfig config = new ShipAIConfig();
-                    config.personalityOverride = SWP_Util.getMoreAggressivePersonality(member, ship);
-                    return new PluginPick<>(Global.getSettings().createDefaultShipAI(ship, config), PickPriority.MOD_SET);
-                }
-            }
-            return null;
+        if (derelicts.contains(hullId) && ship.getVariant().hasHullMod(HullMods.AUTOMATED)) {
+            ShipAIConfig config = new ShipAIConfig();
+            config.alwaysStrafeOffensively = true;
+            config.backingOffWhileNotVentingAllowed = false;
+            config.turnToFaceWithUndamagedArmor = false;
+            config.burnDriveIgnoreEnemies = true;
+            config.personalityOverride = Personalities.RECKLESS;
+            return new PluginPick<>(Global.getSettings().createDefaultShipAI(ship, config), PickPriority.MOD_SET);
         }
 
-        ShipAIConfig config = new ShipAIConfig();
-        config.alwaysStrafeOffensively = true;
-        config.backingOffWhileNotVentingAllowed = false;
-        config.turnToFaceWithUndamagedArmor = false;
-        config.burnDriveIgnoreEnemies = true;
-        config.personalityOverride = Personalities.RECKLESS;
-
-        return new PluginPick<>(Global.getSettings().createDefaultShipAI(ship, config), PickPriority.MOD_SET);
+        /* Don't mess with tournaments */
+        if (!Global.getSettings().getModManager().isModEnabled("aibattles")) {
+            if (hullId.contentEquals("swp_nightwalker")) {
+                ShipAIConfig config = new ShipAIConfig();
+                config.personalityOverride = SWP_Util.getMoreAggressivePersonality(member, ship);
+                return new PluginPick<>(Global.getSettings().createDefaultShipAI(ship, config), PickPriority.MOD_SET);
+            }
+        }
+        return null;
     }
 
     @Override
     public PluginPick<AutofireAIPlugin> pickWeaponAutofireAI(WeaponAPI weapon) {
         if (FLAREGUN_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_FlareGunWeaponAI(weapon),
-                    CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<AutofireAIPlugin>(new SWP_FlareGunWeaponAI(weapon), PickPriority.MOD_SET);
         }
         if (FLAREBURST_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_FlareBurstWeaponAI(weapon),
-                    CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<AutofireAIPlugin>(new SWP_FlareBurstWeaponAI(weapon), PickPriority.MOD_SET);
         }
         if (GODMODE_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_GodModeWeaponAI(weapon), CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<AutofireAIPlugin>(new SWP_GodModeWeaponAI(weapon), PickPriority.MOD_SET);
         }
         if (EMPBOMB_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_EMPBombWeaponAI(weapon), CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<AutofireAIPlugin>(new SWP_EMPBombWeaponAI(weapon), PickPriority.MOD_SET);
         }
         return null;
     }

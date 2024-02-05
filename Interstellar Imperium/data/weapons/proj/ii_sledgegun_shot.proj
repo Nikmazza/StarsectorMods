@@ -1,6 +1,7 @@
 {
 	"id":"ii_sledgegun_shot",
 	"specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.II_TrailWeapon",
 	"onHitEffect":"data.scripts.weapons.II_SledgeGunOnHitEffect",
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",

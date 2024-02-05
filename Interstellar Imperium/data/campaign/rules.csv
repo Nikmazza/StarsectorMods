@@ -137,6 +137,9 @@ II_NotNex
 II_TitanStrikeAvailable score:10000",II_TitanStrike showDefenses,,,
 IITitanStrikeMenuSel,DialogOptionSelected,$option == iiTitanStrikeMenu,II_TitanStrike iiTitanStrikeMenu,,,
 IITitanStrikeGoBackSel,DialogOptionSelected,$option == iiTitanStrikeGoBack,II_TitanStrike goBackToDefenses,,,
+IITitanStrikeGoBackSelNex,DialogOptionSelected,"$option == iiTitanStrikeGoBack
+!II_NotNex score:10","$option = mktBombardGoBack
+FireBest DialogOptionSelected",,,
 IITitanStrikeConfirmSel,DialogOptionSelected,$option == iiTitanStrikeConfirm,II_TitanStrike iiTitanStrikeConfirm,,,
 IITitanStrikeResultSelt,DialogOptionSelected,$option == iiTitanStrikeResult,II_TitanStrike iiTitanStrikeResult,,,
 IIMarketHostileRaidGoBackSel,DialogOptionSelected,"$option == mktRaidGoBack

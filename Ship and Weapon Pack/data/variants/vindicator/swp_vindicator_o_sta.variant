@@ -1,7 +1,7 @@
 {
     "displayName": "Artillery",
     "fluxCapacitors": 30,
-    "fluxVents": 14,
+    "fluxVents": 17,
     "goalVariant": true,
     "hullId": "swp_vindicator_o",
     "hullMods": [

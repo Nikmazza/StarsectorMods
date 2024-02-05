@@ -1,6 +1,6 @@
 {
     "displayName": "Outdated",
-    "fluxCapacitors": 17,
+    "fluxCapacitors": 16,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "swp_punisher",
@@ -47,7 +47,8 @@
                 "WS0006": "mininglaser",
                 "WS0007": "mininglaser",
                 "WS0008": "mininglaser",
-                "WS0011": "mininglaser"
+                "WS0011": "mininglaser",
+                "WS0012": "mininglaser"
             }
         }
     ]

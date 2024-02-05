@@ -8,7 +8,7 @@
 		"patch":ggg
 	},
 	"description":"It's dangerous to go alone, take this.",
-	"gameVersion":"0.96a-RC10",
+	"gameVersion": "0.97a",
 	"jars":["jars/Nes's SAW.jar"],
 	"dependencies": [
 		{"id": "lw_lazylib", "name": "LazyLib"},

@@ -557,7 +557,15 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
     @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
-        Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
+    }
+
+    public static void createIfNeeded() {
+        if (Global.getCombatEngine() != null) {
+            if (!Global.getCombatEngine().getCustomData().containsKey(DATA_KEY)) {
+                Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
+                Global.getCombatEngine().addPlugin(new II_WeaponScriptPlugin());
+            }
+        }
     }
 
     private static final class LocalData {

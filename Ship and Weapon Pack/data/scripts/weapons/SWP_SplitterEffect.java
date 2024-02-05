@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import data.scripts.everyframe.SWP_Trails;
 import java.awt.Color;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -61,6 +62,8 @@ public class SWP_SplitterEffect implements EveryFrameWeaponEffectPlugin, OnFireE
         if ((projectile == null) || (weapon == null)) {
             return;
         }
+
+        SWP_Trails.createIfNeeded();
 
         final String DATA_KEY = DATA_KEY_PREFIX + weapon.getShip().getId() + "_" + weapon.getSlot().getId();
         LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);

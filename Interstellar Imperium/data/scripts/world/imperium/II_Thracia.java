@@ -28,8 +28,6 @@ import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.Ast
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams;
 import com.fs.starfarer.api.util.Misc;
-import data.scripts.IIModPlugin;
-import exerelin.campaign.SectorManager;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -427,9 +425,6 @@ public class II_Thracia {
         );
 
         system.addScript(new Demilitarize(babylonMarket));
-        if (IIModPlugin.isExerelin) {
-            SectorManager.NO_MILITARY_MARKET.add(babylonMarket.getId());
-        }
 
         initFactionRelationships(sector);
 

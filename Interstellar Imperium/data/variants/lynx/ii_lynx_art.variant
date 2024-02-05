@@ -1,7 +1,7 @@
 {
     "displayName": "Artillery",
     "fluxCapacitors": 15,
-    "fluxVents": 9,
+    "fluxVents": 17,
     "goalVariant": true,
     "hullId": "ii_lynx",
     "hullMods": [

@@ -9,6 +9,7 @@ import com.fs.starfarer.api.combat.OnHitEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import data.scripts.util.SWP_Util;
+import data.scripts.weapons.SWP_TrebuchetOnHitEffect.EMPBlast;
 import java.awt.Color;
 import java.util.List;
 import org.lazywizard.lazylib.MathUtils;
@@ -17,13 +18,13 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class SWP_IonTorpedoOnHitEffect implements OnHitEffectPlugin {
 
-    private static final float AREA_EFFECT = 300f;
+    private static final float AREA_EFFECT = 350f;
     private static final float AREA_EFFECT_INNER = 150f;
 
-    private static final Color EXPLOSION_COLOR = new Color(150, 175, 255, 155);
+    private static final Color EXPLOSION_COLOR = new Color(125, 200, 255, 155);
     private static final float FLUX_DAMAGE = 1000f;
     private static final float FRIENDLY_FIRE_MULT = 0.25f;
-    private static final Color PARTICLE_COLOR = new Color(175, 200, 255, 255);
+    private static final Color PARTICLE_COLOR = new Color(150, 215, 255, 255);
     private static final Vector2f ZERO = new Vector2f();
 
     @Override
@@ -52,7 +53,7 @@ public class SWP_IonTorpedoOnHitEffect implements OnHitEffectPlugin {
             for (int x = 0; x < 4; x++) {
                 ShipAPI empTarget = ship;
                 engine.spawnEmpArc(projectile.getSource(), point, empTarget, empTarget,
-                        DamageType.FRAGMENTATION, dam, emp, 100000f, null, 20f,
+                        DamageType.ENERGY, dam, emp, 100000f, null, 20f,
                         PARTICLE_COLOR, EXPLOSION_COLOR);
             }
         }
@@ -83,6 +84,9 @@ public class SWP_IonTorpedoOnHitEffect implements OnHitEffectPlugin {
                 }
             }
         }
+
+        EMPBlast empBlast = new EMPBlast(point, 1.25f, AREA_EFFECT * 1.15f, 0.65f, 25f, 0.2f, 0.75f);
+        empBlast.init(Global.getCombatEngine().addLayeredRenderingPlugin(empBlast));
 
         if (shieldHit) {
             Global.getSoundPlayer().playSound("swp_ionblaster_hit", 1.1f, 0.6f, point, ZERO);

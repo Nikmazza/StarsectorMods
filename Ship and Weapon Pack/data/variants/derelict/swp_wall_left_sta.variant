@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 0,
-    "fluxVents": 17,
+    "fluxVents": 21,
     "hullId": "swp_wall_left",
     "hullMods": [
         "missleracks",

@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 10,
-    "fluxVents": 3,
+    "fluxVents": 5,
     "goalVariant": true,
     "hullId": "ii_basileus",
     "hullMods": [

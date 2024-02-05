@@ -1,12 +1,13 @@
 {
     "displayName": "Imperial Elite",
-    "fluxCapacitors": 25,
+    "fluxCapacitors": 20,
     "fluxVents": 30,
     "hullId": "ii_adamas",
     "hullMods": [
         "ii_elite_package",
         "magazines",
-        "fluxdistributor"
+        "fluxdistributor",
+        "fluxbreakers"
     ],
     "permaMods": ["ii_elite_package"],
     "sMods": ["ii_elite_package"],

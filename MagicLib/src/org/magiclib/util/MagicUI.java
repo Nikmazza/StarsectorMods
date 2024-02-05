@@ -4,6 +4,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.loading.WeaponGroupSpec;
 import com.fs.starfarer.api.util.Misc;
+import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.ui.FontException;
 import org.lazywizard.lazylib.ui.LazyFont;
 import org.lazywizard.lazylib.ui.LazyFont.DrawableString;
@@ -34,6 +35,9 @@ public class MagicUI {
     private static final Map<String, StatusBarData> statusBars = new LinkedHashMap<>();
     private static Color lastColor;
     private static float lastUpdate;
+    private static long dialogTime = 0;
+    private static long commandTime = 0;
+    private static long hudTime = 0;
 
     private static final Vector2f SYSTEMBARVEC1 = new Vector2f(0, 0);
     private static final Vector2f SYSTEMBARVEC2 = new Vector2f(29f, 58f);
@@ -91,7 +95,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (!Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -124,7 +128,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (!Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -144,12 +148,10 @@ public class MagicUI {
         // Used to properly interpolate between colors
         final CombatEngineAPI engine = Global.getCombatEngine();
         final float elapsed = engine.getTotalElapsedTime(true);
-        float alpha = 1;
-        if (Global.getCombatEngine().isUIShowingDialog()) {
-            alpha = 0.28f;
-        }
 
-        // Calculate what color to use        
+        float alpha = getUIAlpha();
+
+        // Calculate what color to use
         Color actualColor;
         if (blendTime > 0) {
 
@@ -264,7 +266,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (!Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -289,7 +291,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (!Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -307,12 +309,10 @@ public class MagicUI {
         // Used to properly interpolate between colors
         final CombatEngineAPI engine = Global.getCombatEngine();
         final float elapsed = engine.getTotalElapsedTime(true);
-        float alpha = 1;
-        if (Global.getCombatEngine().isUIShowingDialog()) {
-            alpha = 0.28f;
-        }
 
-        // Calculate what color to use        
+        float alpha = getUIAlpha();
+
+        // Calculate what color to use
         Color actualColor;
         if (blendTime > 0) {
 
@@ -438,7 +438,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI() == null || Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (Global.getCombatEngine().getCombatUI() == null || !Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -466,7 +466,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI() == null || Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (Global.getCombatEngine().getCombatUI() == null || !Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -495,7 +495,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI() == null || Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (Global.getCombatEngine().getCombatUI() == null || !Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -532,7 +532,7 @@ public class MagicUI {
             return;
         }
 
-        if (Global.getCombatEngine().getCombatUI() == null || Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (Global.getCombatEngine().getCombatUI() == null || !Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -599,7 +599,7 @@ public class MagicUI {
         if (ship != Global.getCombatEngine().getPlayerShip()) {
             return;
         }
-        if (Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (!Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
 
@@ -636,7 +636,7 @@ public class MagicUI {
 //    }
 
     /**
-     * Get the UI Element Offset for the Shipsystem bar. (Depends of the group
+     * Get the UI Element Offset for the Shipsystem bar. (Depends if the group
      * layout, or if the player has some wing)
      *
      * @param ship    The player ship.
@@ -657,7 +657,12 @@ public class MagicUI {
      */
     public static Vector2f getInterfaceOffsetFromStatusBars(ShipAPI ship, ShipVariantAPI variant) {
         Vector2f offset = getUIElementOffset(ship, variant, PERCENTBARVEC1, PERCENTBARVEC2);
+
         if (ship.getPhaseCloak() != null && !ship.getHullSpec().isPhase()) {
+            offset = Vector2f.add(new Vector2f(0f, 14f), offset, null);
+        }
+
+        if (Global.getCombatEngine() != null && Global.getCombatEngine().getCombatUI().isStrafeToggledOn()) {
             offset = Vector2f.add(new Vector2f(0f, 14f), offset, null);
         }
 
@@ -736,11 +741,7 @@ public class MagicUI {
             shadowLoc.scale(UIscaling);
         }
 
-        // Used to properly interpolate between colors
-        float alpha = 1;
-        if (Global.getCombatEngine().isUIShowingDialog()) {
-            alpha = 0.28f;
-        }
+        float alpha = getUIAlpha();
 
         Color innerCol = innerColor == null ? GREENCOLOR : innerColor;
         Color borderCol = borderColor == null ? GREENCOLOR : borderColor;
@@ -773,17 +774,15 @@ public class MagicUI {
         if (ship != Global.getCombatEngine().getPlayerShip()) {
             return;
         }
-        if (Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (!Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
         Color borderCol = GREENCOLOR;
         if (!ship.isAlive()) {
             borderCol = BLUCOLOR;
         }
-        float alpha = 1;
-        if (Global.getCombatEngine().isUIShowingDialog()) {
-            alpha = 0.28f;
-        }
+        float alpha = getUIAlpha();
+
         Color shadowcolor = new Color(Color.BLACK.getRed() / 255f, Color.BLACK.getGreen() / 255f, Color.BLACK.getBlue() / 255f,
                 1f - Global.getCombatEngine().getCombatUI().getCommandUIOpacity());
         Color color = new Color(borderCol.getRed() / 255f, borderCol.getGreen() / 255f, borderCol.getBlue() / 255f,
@@ -823,7 +822,7 @@ public class MagicUI {
         if (ship != Global.getCombatEngine().getPlayerShip()) {
             return;
         }
-        if (Global.getCombatEngine().getCombatUI().isShowingCommandUI() || !Global.getCombatEngine().isUIShowingHUD()) {
+        if (!Global.getCombatEngine().isUIShowingHUD()) {
             return;
         }
         int numb = number;
@@ -838,10 +837,8 @@ public class MagicUI {
         if (!ship.isAlive()) {
             borderCol = BLUCOLOR;
         }
-        float alpha = 1;
-        if (Global.getCombatEngine().isUIShowingDialog()) {
-            alpha = 0.28f;
-        }
+        float alpha = getUIAlpha();
+
         Color shadowcolor = new Color(Color.BLACK.getRed() / 255f, Color.BLACK.getGreen() / 255f, Color.BLACK.getBlue() / 255f,
                 1f - Global.getCombatEngine().getCombatUI().getCommandUIOpacity());
         Color color = new Color(borderCol.getRed() / 255f, borderCol.getGreen() / 255f, borderCol.getBlue() / 255f,
@@ -892,11 +889,7 @@ public class MagicUI {
         boxLoc.scale(UIscaling);
         shadowLoc.scale(UIscaling);
 
-        // Used to properly interpolate between colors
-        float alpha = 1f;
-        if (Global.getCombatEngine().isUIShowingDialog()) {
-            return;
-        }
+        float alpha = getUIAlpha();
 
         Color innerCol = innerColor == null ? GREENCOLOR : innerColor;
         Color borderCol = borderColor == null ? GREENCOLOR : borderColor;
@@ -932,10 +925,9 @@ public class MagicUI {
         if (!ship.isAlive()) {
             borderCol = BLUCOLOR;
         }
-        float alpha = 1f;
-        if (Global.getCombatEngine().isUIShowingDialog()) {
-            return;
-        }
+
+        float alpha = getUIAlpha();
+
         Color shadowcolor = new Color(Color.BLACK.getRed() / 255f, Color.BLACK.getGreen() / 255f, Color.BLACK.getBlue() / 255f,
                 1f - Global.getCombatEngine().getCombatUI().getCommandUIOpacity());
         Color color = new Color(borderCol.getRed() / 255f, borderCol.getGreen() / 255f, borderCol.getBlue() / 255f,
@@ -1067,7 +1059,7 @@ public class MagicUI {
     /**
      * GL11 to start, when you want render text of Lazyfont.
      */
-    private static void openGL11ForText() {
+    public static void openGL11ForText() {
         GL11.glPushAttrib(GL11.GL_ENABLE_BIT);
         GL11.glMatrixMode(GL11.GL_PROJECTION);
         GL11.glPushMatrix();
@@ -1081,10 +1073,37 @@ public class MagicUI {
     /**
      * GL11 to close, when you want render text of Lazyfont.
      */
-    private static void closeGL11ForText() {
+    public static void closeGL11ForText() {
         GL11.glDisable(GL11.GL_TEXTURE_2D);
         GL11.glDisable(GL11.GL_BLEND);
         GL11.glPopMatrix();
         GL11.glPopAttrib();
+    }
+
+    private static float getUIAlpha() {
+        final float DIALOG_ALPHA = 0.33f;
+        final float DIALOG_FADE_OUT_TIME = 333f;
+        final float DIALOG_FADE_IN_TIME = 250f;
+        final float COMMAND_FADE_OUT_TIME = 1000f;
+        final float COMMAND_FADE_IN_TIME = 111f;
+
+        // Used to properly interpolate between UI fade colors
+        float alpha;
+        if (Global.getCombatEngine().isUIShowingDialog()) {
+            dialogTime = System.currentTimeMillis();
+            alpha = Misc.interpolate(1f, DIALOG_ALPHA, Math.min((dialogTime - hudTime) / DIALOG_FADE_OUT_TIME, 1f));
+        } else if (Global.getCombatEngine().getCombatUI().isShowingCommandUI()) {
+            commandTime = System.currentTimeMillis();
+            // does not work, MagicRenderPlugin (a BaseEveryFrameCombatPlugin) advance() does not allow drawing into the Command View.
+            // renderInUICoords() is needed to do so, however a bunch of stuff breaks when moved there, so this stays broken for now.
+            alpha = Misc.interpolate(1f, 0f, Math.min((commandTime - hudTime) / COMMAND_FADE_OUT_TIME, 1f));
+        } else if (dialogTime > commandTime) {
+            hudTime = System.currentTimeMillis();
+            alpha = Misc.interpolate(DIALOG_ALPHA, 1f, Math.min((hudTime - dialogTime) / DIALOG_FADE_IN_TIME, 1f));
+        } else {
+            hudTime = System.currentTimeMillis();
+            alpha = Misc.interpolate(0f, 1f, Math.min((hudTime - commandTime) / COMMAND_FADE_IN_TIME, 1f));
+        }
+        return MathUtils.clamp(alpha, 0f, 1f);
     }
 }

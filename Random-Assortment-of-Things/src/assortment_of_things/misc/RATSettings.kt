@@ -15,10 +15,19 @@ object RATSettings : LunaSettingsListener
 
     //Abyss
     var enableAbyss = LunaSettings.getBoolean(modID, "rat_abyssEnabled")
+    var brighterAbyss = LunaSettings.getBoolean(modID, "rat_abyssBrighter")
     var abyssDifficulty = LunaSettings.getString(modID, "rat_abyssDifficulty")
+
+    //Exotech
+    var exoEnabled = LunaSettings.getBoolean(modID, "rat_exotechEnabled")
 
     //Relics
     var relicsEnabled = LunaSettings.getBoolean(modID, "rat_relicsEnabled")
+
+    //Frontiers
+    var enableFrontiers = LunaSettings.getBoolean(modID, "rat_frontiersEnabled")
+    var frontiersIncomeMult = LunaSettings.getFloat(modID, "rat_frontiersIncomeMult")
+    var frontiersCostMult = LunaSettings.getFloat(modID, "rat_frontiersCostMult")
 
     //Backgrounds
     var backgroundsEnabled = LunaSettings.getBoolean(modID, "rat_backgroundsEnabled")
@@ -41,6 +50,11 @@ object RATSettings : LunaSettingsListener
 
 
     //UI
+
+    /*var enableDPS = LunaSettings.getBoolean(modID, "rat_enableDPS")
+    var dpsMeterSeconds = LunaSettings.getInt(modID, "rat_dpsSeconds")*/
+
+
     var enableMinimap = LunaSettings.getBoolean(modID, "rat_enableMinimap")
     var minimapShape = LunaSettings.getString(modID, "rat_minimapShape")
     var minimapStarscape = LunaSettings.getBoolean(modID, "rat_minimapStarscape")
@@ -58,11 +72,21 @@ object RATSettings : LunaSettingsListener
     fun loadSettings()
     {
         enableAbyss = LunaSettings.getBoolean(modID, "rat_abyssEnabled")
+        brighterAbyss = LunaSettings.getBoolean(modID, "rat_abyssBrighter")
         abyssDifficulty = LunaSettings.getString(modID, "rat_abyssDifficulty")
+
+        exoEnabled = LunaSettings.getBoolean(modID, "rat_exotechEnabled")
 
         relicsEnabled = LunaSettings.getBoolean(modID, "rat_relicsEnabled")
 
+        enableFrontiers = LunaSettings.getBoolean(modID, "rat_frontiersEnabled")
+        frontiersIncomeMult = LunaSettings.getFloat(modID, "rat_frontiersIncomeMult")
+        frontiersCostMult = LunaSettings.getFloat(modID, "rat_frontiersCostMult")
+
+
         backgroundsEnabled = LunaSettings.getBoolean(modID, "rat_backgroundsEnabled")
+
+
 
         procgenScaleModifier = LunaSettings.getString(modID, "rat_systemScaleV2")
         procgenHyperspaceCloudMod = LunaSettings.getFloat(modID, "rat_hyperspaceCloudsMod")
@@ -80,6 +104,9 @@ object RATSettings : LunaSettingsListener
         minimapStarscape = LunaSettings.getBoolean(modID, "rat_minimapStarscape")
         minimapFueloverlay = LunaSettings.getBoolean(modID, "rat_minimapFuel")
         MinimapUI.reset = true
+
+       /* enableDPS = LunaSettings.getBoolean(modID, "rat_enableDPS")
+        dpsMeterSeconds = LunaSettings.getInt(modID, "rat_dpsSeconds")*/
 
         LootModifier.modifySpawns()
     }

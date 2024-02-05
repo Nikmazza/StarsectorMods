@@ -1,6 +1,6 @@
 {
     "displayName": "Escort",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 10,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "swp_shimmer",

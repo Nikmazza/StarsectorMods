@@ -4,7 +4,7 @@
 	"author":"Pogre",
 	"version":"1.1.2 release",
 	"description":"Low tech faction with ships, weapons, and a burning hatred for tritachyon.",
-	"gameVersion":"0.96a-RC8",
+	"gameVersion":"0.97a-RC6",
 	"jars":["jars/ORKS.jar"],
 	"dependencies": [
         {

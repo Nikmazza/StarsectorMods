@@ -3,6 +3,7 @@ package data.scripts.campaign.terrain;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -19,6 +20,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import org.lwjgl.util.vector.Vector2f;
@@ -309,5 +311,25 @@ public class II_ChargedNebulaTerrainPlugin extends HyperspaceTerrainPlugin imple
         temp[1] = radius;
 
         return temp;
+    }
+
+    @Override
+    public float getAbyssalDepth(Vector2f loc) {
+        return 0f;
+    }
+
+    @Override
+    public float getAbyssalDepth(SectorEntityToken other) {
+        return 0f;
+    }
+
+    @Override
+    public boolean isInAbyss(SectorEntityToken other) {
+        return false;
+    }
+
+    @Override
+    public List<StarSystemAPI> getAbyssalSystems() {
+        return new ArrayList<>();
     }
 }

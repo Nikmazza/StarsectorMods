@@ -1,7 +1,7 @@
 {
     "displayName": "Legendary",
     "fluxCapacitors": 25,
-    "fluxVents": 35,
+    "fluxVents": 48,
     "hullId": "ii_boss_dominus",
     "hullMods": [
         "augmentedengines",

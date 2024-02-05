@@ -1,6 +1,6 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 9,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "swp_alastor",

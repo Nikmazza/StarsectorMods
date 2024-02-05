@@ -1,11 +1,9 @@
 package data.scripts.campaign.econ;
 
-import java.util.Random;
-
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
-import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
@@ -32,6 +30,7 @@ import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import data.scripts.campaign.II_IGFleetInflater;
+import java.util.Random;
 
 public class II_ImperialGuardHQ extends BaseIndustry implements RouteFleetSpawner, FleetEventListener {
 

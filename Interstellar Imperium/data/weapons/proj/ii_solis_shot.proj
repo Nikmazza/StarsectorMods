@@ -1,6 +1,7 @@
 {
     "id":"ii_solis_shot",
     "specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.II_TrailWeapon",
 	"onHitEffect":"data.scripts.weapons.II_SolisOnHitEffect",
     "spawnType":"BALLISTIC",
     "collisionClass":"PROJECTILE_FF",

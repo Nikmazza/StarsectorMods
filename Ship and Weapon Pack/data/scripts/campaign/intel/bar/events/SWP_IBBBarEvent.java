@@ -1,6 +1,5 @@
 package data.scripts.campaign.intel.bar.events;
 
-import java.awt.Color;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
@@ -23,6 +22,7 @@ import data.scripts.campaign.intel.SWP_IBBIntel;
 import data.scripts.campaign.intel.SWP_IBBIntel.FamousBountyStage;
 import data.scripts.campaign.intel.SWP_IBBTracker;
 import data.scripts.util.SWP_Util;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

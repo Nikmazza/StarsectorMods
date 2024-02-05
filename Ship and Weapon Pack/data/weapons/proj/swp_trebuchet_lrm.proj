@@ -9,7 +9,7 @@
     "collisionRadius":24,
     "collisionClass":"MISSILE_NO_FF",
     "explosionColor":[150,225,255,150],
-    "explosionRadius":200,
+    "explosionRadius":125,
     "engineSpec":{"turnAcc":200,
                   "turnRate":75,
                   "acc":1250,

@@ -5,7 +5,7 @@
 
  "version": {"major":0, "minor":13, "patch":0},
  "description": "A Selection of Ships and Weapons.",
- "gameVersion": "0.96a-RC8",
+ "gameVersion": "0.97a",
 
  "modPlugin":"org.amazigh.foundry.scripts.ASF_ModPlugin",
  "jars":["jars/ASF.jar"],

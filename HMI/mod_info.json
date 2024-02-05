@@ -4,7 +4,7 @@
 	"author": "King Alfonzo",
 	"version":"0.3.5i",
 	"description":"A company created by an enterprising miner, this cut-throat organisation is out to exploit as much of the outer limits of the Sector as possible.",
-    "gameVersion":"0.96a-RC8",
+    "gameVersion": "0.97a",
     "dependencies": [
         {
             "id": "lw_lazylib",

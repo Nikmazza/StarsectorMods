@@ -4,6 +4,7 @@ import assortment_of_things.RATModPlugin
 import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.abyss.entities.AbyssalFracture
 import assortment_of_things.abyss.terrain.AbyssTerrainPlugin
+import assortment_of_things.misc.RATSettings
 import com.fs.starfarer.api.campaign.StarSystemAPI
 import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
@@ -30,17 +31,13 @@ class AbyssSystemData(var system: StarSystemAPI) {
     var fractures = ArrayList<AbyssalFracture>()
 
     fun getColor() : Color {
-        if (RATModPlugin.isHalloween) {
-            return Color.getHSBColor(0.075f, 1f, 1f)
-        }
+        if (RATSettings.brighterAbyss!!) return baseColor.brighter()
 
         return baseColor
     }
 
     fun getDarkColor() : Color {
-        if (RATModPlugin.isHalloween) {
-            return Color.getHSBColor(0.075f, 1f, 0.2f)
-        }
+        if (RATSettings.brighterAbyss!!) return baseDarkColor.brighter()
 
         return baseDarkColor
     }

@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import data.scripts.everyframe.II_Trails;
 import java.awt.Color;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -38,6 +39,8 @@ public class II_TelumCannonEveryFrame implements EveryFrameWeaponEffectPlugin {
         if (engine.isPaused()) {
             return;
         }
+
+        II_Trails.createIfNeeded();
 
         float chargeLevel = weapon.getChargeLevel();
         float cooldownRemaining = weapon.getCooldownRemaining();

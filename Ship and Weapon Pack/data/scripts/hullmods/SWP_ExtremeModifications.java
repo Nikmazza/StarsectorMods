@@ -30,10 +30,10 @@ public class SWP_ExtremeModifications extends BaseHullMod {
         if (ship.getCurrentCR() < 0.4f) {
             ship.getMutableStats().getCriticalMalfunctionChance().modifyFlat("swp_em_critmalfunction",
                     (1f - (0.8f * (ship.getCurrentCR() / 0.4f))) * LOW_CR_CRIT_MALFUNCTION_PROB_MAX);
-            ship.getMutableStats().getEngineMalfunctionChance().modifyFlat("swp_em_critmalfunction", ENGINE_MALFUNCTION_PROB);
+            ship.getMutableStats().getEngineMalfunctionChance().modifyFlat("swp_em_engmalfunction", ENGINE_MALFUNCTION_PROB);
         } else {
             ship.getMutableStats().getCriticalMalfunctionChance().unmodify("swp_em_critmalfunction");
-            ship.getMutableStats().getEngineMalfunctionChance().unmodify("swp_em_critmalfunction");
+            ship.getMutableStats().getEngineMalfunctionChance().unmodify("swp_em_engmalfunction");
         }
     }
 
@@ -75,9 +75,12 @@ public class SWP_ExtremeModifications extends BaseHullMod {
             return "one additional built-in hullmod";
         }
         if (index == 1) {
-            return "" + (int) (REFIT_TIME_PENALTY * 100f) + "%";
+            return "significant chance";
         }
         if (index == 2) {
+            return "" + (int) (REFIT_TIME_PENALTY * 100f) + "%";
+        }
+        if (index == 3) {
             return "40%";
         }
         return null;
@@ -97,7 +100,7 @@ public class SWP_ExtremeModifications extends BaseHullMod {
         if ((ship != null) && !ship.getVariant().hasHullMod(spec.getId())) {
             int maxSMods = Misc.getMaxPermanentMods(ship);
             int currSMods = Misc.getCurrSpecialMods(ship.getVariant());
-            if ((currSMods < maxSMods) || (maxSMods <= 0)) {
+            if ((currSMods != maxSMods) || (maxSMods <= 0)) {
                 return "Ship is not at the built-in hullmod limit";
             }
         }
@@ -118,7 +121,7 @@ public class SWP_ExtremeModifications extends BaseHullMod {
         if ((ship != null) && !ship.getVariant().hasHullMod(spec.getId())) {
             int maxSMods = Misc.getMaxPermanentMods(ship);
             int currSMods = Misc.getCurrSpecialMods(ship.getVariant());
-            if ((currSMods < maxSMods) || (maxSMods <= 0)) {
+            if ((currSMods != maxSMods) || (maxSMods <= 0)) {
                 return false;
             }
         }

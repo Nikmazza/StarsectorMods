@@ -1,6 +1,6 @@
 {
     "displayName": "Escort",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 16,
     "fluxVents": 50,
     "hullId": "swp_liberator",
     "hullMods": [

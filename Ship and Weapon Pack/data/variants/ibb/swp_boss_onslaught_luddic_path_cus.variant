@@ -1,6 +1,6 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 47,
+    "fluxCapacitors": 42,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "swp_boss_onslaught_luddic_path",
@@ -13,7 +13,8 @@
         "fluxdistributor",
         "insulatedengine",
         "fluxbreakers",
-        "magazines"
+        "magazines",
+        "turretgyros"
     ],
     "permaMods": [
         "heavyarmor",

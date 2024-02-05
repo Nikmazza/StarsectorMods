@@ -4,7 +4,7 @@
 	"author":"stormbringer951",
 	"version":"0.2.0",
 	"description":"Adds custom notes and automatic intel generation for exploration content. Thanks to Sundog and LazyWizard. Special thanks to MesoTronik and Jaghaimo.",
-	"gameVersion":"0.96a-RC10",
+	"gameVersion":"0.97a-RC6",
 	"jars":["CaptainsLog.jar"],
 	"modPlugin":"CaptainsLog.CaptainsLogModPlugin",
 	"dependencies": [

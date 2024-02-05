@@ -1,10 +1,13 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 28,
+    "fluxCapacitors": 23,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "ii_adamas",
-    "hullMods": ["ii_elite_package"],
+    "hullMods": [
+        "ii_elite_package",
+        "fluxbreakers"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "ii_adamas_eli",

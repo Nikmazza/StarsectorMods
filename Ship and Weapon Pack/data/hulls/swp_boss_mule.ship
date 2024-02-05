@@ -1,236 +1,169 @@
 {
-  "bounds": [
-    31,
-    29,
-    52.5,
-    38,
-    81,
-    27,
-    97,
-    12,
-    97,
-    -12,
-    81,
-    -27,
-    52.5,
-    -38,
-    31,
-    -29,
-    34,
-    -51,
-    16.5,
-    -49.5,
-    -13.5,
-    -55.5,
-    -20.5,
-    -47,
-    -47.5,
-    -51.5,
-    -80,
-    -33,
-    -73,
-    -0,
-    -80,
-    33,
-    -47.5,
-    51.5,
-    -20.5,
-    47,
-    -13.5,
-    55.5,
-    16.5,
-    49.5,
-    34,
-    51
+  "hullName": "Pony",
+  "hullId": "swp_boss_mule",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/swp/ships/boss/swp_boss_mule.png",
+  "style": "LOW_TECH",
+  "coversColor": "255,170,250,255",
+  "height": 176,
+  "width": 118,
+  "center": [59, 83],
+  "collisionRadius": 128.578766,
+  "shieldCenter": [2, -0],
+  "shieldRadius": 126,
+  "viewOffset": 0,
+  "builtInWings": [
+    "terminator_wing"
   ],
   "builtInWeapons": {
     "WS 003": "tachyonlance"
   },
-  "builtInWings": ["terminator_wing"],
-  "center": [
-    57,
-    82
-  ],
-  "collisionRadius": 128.578766,
-  "coversColor": "255,170,250,255",
-  "engineSlots": [
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 64,
-      "location": [
-        -82,
-        26
-      ],
-      "style": "LOW_TECH",
-      "width": 16
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 48,
-      "location": [
-        -81,
-        18.5
-      ],
-      "style": "LOW_TECH",
-      "width": 12
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 32,
-      "location": [
-        -80,
-        10.5
-      ],
-      "style": "LOW_TECH",
-      "width": 8
-    },
-    {
-      "angle": 180,
-      "contrailSize": 16,
-      "length": 48,
-      "location": [
-        -74,
-        -0
-      ],
-      "style": "LOW_TECH",
-      "width": 16
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 32,
-      "location": [
-        -80,
-        -10.5
-      ],
-      "style": "LOW_TECH",
-      "width": 8
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 48,
-      "location": [
-        -81,
-        -18.5
-      ],
-      "style": "LOW_TECH",
-      "width": 12
-    },
-    {
-      "angle": 180,
-      "contrailSize": 64,
-      "length": 64,
-      "location": [
-        -82,
-        -26
-      ],
-      "style": "LOW_TECH",
-      "width": 16
-    }
-  ],
-  "height": 181,
-  "hullId": "swp_boss_mule",
-  "hullName": "Pony",
-  "hullSize": "DESTROYER",
-  "shieldCenter": [
-    3,
-    0
-  ],
-  "shieldRadius": 125,
-  "spriteName": "graphics/swp/ships/boss/swp_boss_mule.png",
-  "style": "LOW_TECH",
-  "viewOffset": 0,
   "weaponSlots": [
     {
-      "angle": 0,
-      "arc": 5,
       "id": "WS 001",
-      "locations": [
-        26,
-        42
-      ],
-      "mount": "HARDPOINT",
       "size": "MEDIUM",
-      "type": "MISSILE"
-    },
-    {
-      "angle": 0,
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
       "arc": 5,
+      "angle": 0,
+      "locations": [24, 40]
+    },
+    {
       "id": "WS 002",
-      "locations": [
-        26,
-        -42
-      ],
-      "mount": "HARDPOINT",
       "size": "MEDIUM",
-      "type": "MISSILE"
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [24, -40]
     },
     {
-      "angle": 0,
-      "arc": 0,
       "id": "WS 003",
-      "locations": [
-        93,
-        -0
-      ],
-      "mount": "HIDDEN",
       "size": "LARGE",
-      "type": "BUILT_IN"
-    },
-    {
-      "angle": 90,
-      "arc": 210,
-      "id": "WS 004",
-      "locations": [
-        -3,
-        37
-      ],
-      "mount": "TURRET",
-      "size": "SMALL",
-      "type": "BALLISTIC"
-    },
-    {
-      "angle": 180,
-      "arc": 215,
-      "id": "WS 005",
-      "locations": [
-        -54,
-        -0
-      ],
-      "mount": "TURRET",
-      "size": "SMALL",
-      "type": "BALLISTIC"
-    },
-    {
-      "angle": -90,
-      "arc": 210,
-      "id": "WS 006",
-      "locations": [
-        -3,
-        -37
-      ],
-      "mount": "TURRET",
-      "size": "SMALL",
-      "type": "BALLISTIC"
-    },
-    {
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
       "angle": 0,
-      "arc": 360,
+      "locations": [88, -0]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 90,
+      "locations": [-11, 42]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 180,
+      "locations": [-57, -0]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -90,
+      "locations": [-11, -42]
+    },
+    {
       "id": "LB 1",
-      "locations": [
-        -4,
-        -0,
-        2,
-        -0
-      ],
-      "mount": "HIDDEN",
       "size": "LARGE",
-      "type": "LAUNCH_BAY"
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -5, 2,
+        1, 2
+      ]
     }
   ],
-  "width": 114
+  "engineSlots": [
+    {
+      "location": [-82, 29],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-82, 22],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-82, 16.5],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-77, -0],
+      "length": 48,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-82, -16.5],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-82, -22],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-82, -29],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    83.5, -21,
+    54, -36,
+    34.5, -32,
+    31, -46,
+    -3.5, -56.5,
+    -27, -50.5,
+    -44.5, -53,
+    -75.5, -39.5,
+    -81.5, -25,
+    -75, 0,
+    -81.5, 25,
+    -75.5, 39.5,
+    -44.5, 53,
+    -27, 50.5,
+    -3.5, 56.5,
+    31, 46,
+    34.5, 32,
+    54, 36,
+    83.5, 21,
+    92, -0
+  ]
 }

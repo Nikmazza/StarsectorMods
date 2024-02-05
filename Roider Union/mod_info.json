@@ -4,7 +4,7 @@
     "author": "SafariJohn",
     "version": "1.4.6",
     "description": "Adds the Roider Union, an alliance of independent asteroid miners and minor corporations.",
-    "gameVersion": "0.96a-RC8",
+    "gameVersion": "0.97a",
     "jars":["jars/Roider_Union.jar"],
     "dependencies": [
         {

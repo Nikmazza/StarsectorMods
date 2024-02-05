@@ -1,14 +1,15 @@
 package particleengine;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
-import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.Pair;
+import org.jetbrains.annotations.Nullable;
 import org.lwjgl.opengl.*;
 import org.lwjgl.util.vector.Vector2f;
 
+import java.nio.FloatBuffer;
 import java.util.*;
 
 /** Particle system implementation.
@@ -17,13 +18,17 @@ import java.util.*;
  * and generate particles using an emitter with {@link #burst} or {@link #stream}.
  *  */
 @SuppressWarnings("unused")
-public class Particles extends BaseEveryFrameCombatPlugin {
+public class Particles extends BaseEveryFrameCombatPlugin implements CombatLayeredRenderingPlugin {
     /** Total number of floats passed into vertex shader per particle */
     static final int FLOATS_PER_PARTICLE;
     static final int FLOAT_SIZE = 4;
     static final int BYTES_PER_PARTICLE;
     /** Size in number of floats per attribute passed into the vertex shader, in layout order. */
     static final int[] VERTEX_ATTRIB_SIZES = new int[] {
+            1,   // index of emitter in tracker, if tracked
+                 // use for particles that should dynamically
+                 // follow their emitter's movements
+                 // will be -1 if not tracking any emitter
             4,   // position and emitter position
             1,   // emitter forward direction
             4,   // velocity and acceleration
@@ -52,8 +57,11 @@ public class Particles extends BaseEveryFrameCombatPlugin {
     float currentTime;
     static final float minBurstDelay = 1f / 60f;
     private static final String customDataKey = "particleengine_ParticlesPlugin";
-    private final Map<ParticleType, Pair<ParticleAllocator, ParticleRenderer>> particleMap = new HashMap<>();
+    private final Map<CombatEngineLayers, SortedMap<ParticleType, Pair<ParticleAllocator, ParticleRenderer>>> particleMap = new HashMap<>();
     private final Queue<DeferredAction> doLaterQueue = new PriorityQueue<>();
+    private final Set<ParticleStream<? extends IEmitter>> particleStreams = new HashSet<>();
+    private final Map<IEmitter, CombatEntityAPI> anchorPoints = new HashMap<>();
+    private EmitterBufferHandler trackedEmitterHandler;
     static final Set<Integer> usedVAOs = new HashSet<>();
     static final Set<Integer> usedVBOs = new HashSet<>();
     static final Set<String> loadedTextures = new HashSet<>();
@@ -96,7 +104,13 @@ public class Particles extends BaseEveryFrameCombatPlugin {
         instance.doLaterQueue.add(new DeferredAction(action, time));
     }
 
-    static void cleanup() {
+    @Override
+    public void init(CombatEntityAPI entity) {}
+
+    @Override
+    public void cleanup() {}
+
+    static void clearBuffers() {
         // Clear used VAOs and VBOs, in case the last combat ended with particles still on screen
         for (int vao : usedVAOs) {
             GL30.glDeleteVertexArrays(vao);
@@ -112,13 +126,70 @@ public class Particles extends BaseEveryFrameCombatPlugin {
         loadedTextures.clear();
     }
 
+    @Override
+    public boolean isExpired() {
+        return false;
+    }
+
+    @Override
+    public EnumSet<CombatEngineLayers> getActiveLayers() {
+        return EnumSet.allOf(CombatEngineLayers.class);
+    }
+
+    @Override
+    public float getRenderRadius() {
+        return 999999999f;
+    }
+
+
+    @Override
+    public void advance(float amount) {}
+
+    @Override
+    public void render(CombatEngineLayers layer, ViewportAPI viewport) {
+        GL20.glUseProgram(ParticleShader.programId);
+        GL11.glEnable(GL11.GL_BLEND);
+        if (CombatEngineLayers.BELOW_PLANETS.equals(layer)) {
+            trackedEmitterHandler.updateTrackedEmitters(currentTime);
+            fillUniformBuffer();
+        }
+        GL20.glUniformMatrix4(ParticleShader.projectionLoc, true, Utils.getProjectionMatrix(viewport));
+        GL20.glUniform1f(ParticleShader.timeLoc, currentTime);
+        GL15.glBindBuffer(GL31.GL_UNIFORM_BUFFER, trackedEmitterHandler.getUboBufferIndex());
+        if (particleMap.containsKey(layer)) {
+            for (Pair<ParticleAllocator, ParticleRenderer> p : particleMap.get(layer).values()) {
+                if (p.two.layer.equals(layer)) {
+                    p.two.render();
+                }
+            }
+        }
+        GL15.glBindBuffer(GL31.GL_UNIFORM_BUFFER, 0);
+        GL14.glBlendEquation(GL14.GL_FUNC_ADD);
+        GL11.glDisable(GL11.GL_BLEND);
+        GL20.glUseProgram(0);
+    }
+
+    private void fillUniformBuffer() {
+        GL15.glBindBuffer(GL31.GL_UNIFORM_BUFFER, trackedEmitterHandler.getUboBufferIndex());
+        FloatBuffer ubo = trackedEmitterHandler.locationsToFloatBuffer();
+        ubo.limit(4*trackedEmitterHandler.getHighestFilledPosition() + 4);
+        GL15.glBufferSubData(GL31.GL_UNIFORM_BUFFER, 0, ubo);
+        ubo.limit(ubo.capacity());
+        GL15.glBindBuffer(GL31.GL_UNIFORM_BUFFER, 0);
+    }
+
     static void removeType(ParticleType type) {
         Particles instance = getInstance();
         if (instance == null) {
             return;
         }
 
-        Pair<ParticleAllocator, ParticleRenderer> pair = instance.particleMap.get(type);
+        if (!instance.particleMap.containsKey(type.layer)) {
+            return;
+        }
+
+        Map<ParticleType, Pair<ParticleAllocator, ParticleRenderer>> subMap = instance.particleMap.get(type.layer);
+        Pair<ParticleAllocator, ParticleRenderer> pair = subMap.get(type);
         if (pair == null) {
             return;
         }
@@ -128,20 +199,27 @@ public class Particles extends BaseEveryFrameCombatPlugin {
 
         GL15.glDeleteBuffers(allocator.vbo);
         GL30.glDeleteVertexArrays(allocator.vao);
-        renderer.setExpired();
-        instance.engine.removeObject(renderer);
 
-        instance.particleMap.remove(type);
+        subMap.remove(type);
+        if (subMap.isEmpty()) {
+            instance.particleMap.remove(type.layer);
+        }
     }
 
     /** This is done automatically and should not be manually called. */
     @Override
-    public void init(CombatEngineAPI engine) {
+    public void init(final CombatEngineAPI engine) {
+        clearBuffers();
         this.engine = engine;
         currentTime = 0f;
-
+        trackedEmitterHandler = new EmitterBufferHandler();
+        engine.addLayeredRenderingPlugin(this);
         engine.getCustomData().put(customDataKey, this);
-        cleanup();
+    }
+
+    static EmitterBufferHandler getTrackedEmitterHandler() {
+        Particles instance = getInstance();
+        return instance == null ? null : instance.trackedEmitterHandler;
     }
 
     /** This is done automatically and should not be manually called. */
@@ -157,7 +235,57 @@ public class Particles extends BaseEveryFrameCombatPlugin {
             firstItem.action.perform();
         }
 
+        for (Iterator<ParticleStream<? extends IEmitter>> iterator = particleStreams.iterator(); iterator.hasNext(); ) {
+            ParticleStream<? extends IEmitter> particleStream = iterator.next();
+            boolean finished = false;
+            if (particleStream.deathTime != null && particleStream.deathTime <= currentTime) {
+                finished = true;
+            } else if (particleStream.finished) {
+                finished = true;
+            } else {
+                if (anchorPoints.containsKey(particleStream.emitter)) {
+                    CombatEntityAPI entity = anchorPoints.get(particleStream.emitter);
+                    if (!engine.isEntityInPlay(entity) || entity.isExpired()) {
+                        finished = true;
+                    }
+                }
+            }
+            if (finished) {
+                particleStream.finish();
+                iterator.remove();
+            } else {
+                particleStream.advance(amount);
+            }
+        }
+
+        Iterator<Map.Entry<IEmitter, CombatEntityAPI>> itr = anchorPoints.entrySet().iterator();
+        while (itr.hasNext()) {
+            Map.Entry<IEmitter, CombatEntityAPI> entry = itr.next();
+            CombatEntityAPI entity = entry.getValue();
+            entry.getKey().getLocation().set(entity.getLocation());
+            if (!engine.isEntityInPlay(entity) || entity.isExpired()) {
+                itr.remove();
+            }
+        }
+
         currentTime += amount;
+    }
+
+    /**
+     * Anchors an {@code emitter} to a {@link CombatEntityAPI}. Sets the {@code emitter}'s location to the {@code entity}'s
+     * location every frame until the entity is no longer in play. Will also kill any particle streams using an anchored
+     * emitter if that emitter's anchor entity is no longer in play. <br>
+     * By default, particles will only take into account their emitter's location at the time of generation. To change this
+     * behavior so that particles follow their emitter throughout their lifecycle, use {@link IEmitter#enableDynamicAnchoring()}.
+     *
+     * @param emitter Emitter to anchor
+     * @param entity The combat entity to anchor to
+     */
+    public static void anchorEmitter(IEmitter emitter, CombatEntityAPI entity) {
+        Particles instance = getInstance();
+        if (instance == null) return;
+
+        instance.anchorPoints.put(emitter, entity);
     }
 
     /**
@@ -212,8 +340,6 @@ public class Particles extends BaseEveryFrameCombatPlugin {
         emitter.setLocation(copy.location);
         emitter.setLayer(copy.layer);
         emitter.setSyncSize(copy.syncSize);
-        emitter.setSprite(copy.sprite);
-        emitter.setBlendMode(copy.sfactor, copy.dfactor, copy.blendMode);
         emitter.setInactiveBorder(copy.inactiveBorder);
         emitter.life(copy.minLife, copy.maxLife);
         emitter.fadeTime(copy.minFadeIn, copy.maxFadeIn, copy.minFadeOut, copy.maxFadeOut);
@@ -315,8 +441,8 @@ public class Particles extends BaseEveryFrameCombatPlugin {
     static boolean burst(IEmitter emitter, int count, int startIndex) {
         if (count <= 0) return true;
 
-        Particles particleEngine = getInstance();
-        if (particleEngine == null) {
+        Particles instance = getInstance();
+        if (instance == null) {
             return false;
         }
 
@@ -326,7 +452,13 @@ public class Particles extends BaseEveryFrameCombatPlugin {
                 emitter.getBlendDestinationFactor(),
                 emitter.getBlendFunc(),
                 emitter.getLayer());
-        Pair<ParticleAllocator, ParticleRenderer> pair = particleEngine.particleMap.get(type);
+
+        SortedMap<ParticleType, Pair<ParticleAllocator, ParticleRenderer>> subMap = instance.particleMap.get(type.layer);
+        if (subMap == null) {
+            subMap = new TreeMap<>();
+            instance.particleMap.put(type.layer, subMap);
+        }
+        Pair<ParticleAllocator, ParticleRenderer> pair = subMap.get(type);
 
         ParticleAllocator allocator;
         if (pair == null) {
@@ -334,14 +466,13 @@ public class Particles extends BaseEveryFrameCombatPlugin {
             ParticleRenderer renderer = new ParticleRenderer(
                     emitter.getLayer(),
                     allocator,
-                    particleEngine);
-            particleEngine.particleMap.put(type, new Pair<>(allocator, renderer));
-            Global.getCombatEngine().addLayeredRenderingPlugin(renderer);
+                    instance);
+            subMap.put(type, new Pair<>(allocator, renderer));
         } else {
             allocator = pair.one;
         }
 
-        allocator.allocateParticles(emitter, count, startIndex, particleEngine.currentTime, particleEngine.engine.getViewport());
+        allocator.allocateParticles(emitter, count, startIndex, instance.currentTime, instance.engine.getViewport());
         return true;
     }
 
@@ -360,10 +491,35 @@ public class Particles extends BaseEveryFrameCombatPlugin {
      * @param emitter {@link IEmitter} to use.
      * @param particlesPerBurst Number of particles that should be generated at once.
      * @param particlesPerSecond Total number of particles generated per second.
-     * @param duration Amount of time this particle stream should last.
+     * @param duration Amount of time this particle stream should last. If negative, the stream will never expire.
      */
     public static void stream(final IEmitter emitter, int particlesPerBurst, float particlesPerSecond, float duration) {
         stream(emitter, particlesPerBurst, particlesPerSecond, duration, null);
+    }
+
+
+    /**
+     *  Generates a continuous stream of particles.
+     *
+     * @param emitter {@link IEmitter} to use.
+     * @param particlesPerBurst Number of particles that should be generated at once.
+     * @param particlesPerSecond Total number of particles generated per second.
+     * @param maxDuration Maximum amount of time this particle stream should last. If negative, the stream
+     *                    will not naturally expire.
+     * @param doBeforeGenerating Custom function that's called immediately before each particle generation sequence in this stream.
+     *                           Returning {@code false} will end the stream.
+     */
+    public static <T extends IEmitter> void stream(
+            final T emitter,
+            int particlesPerBurst,
+            float particlesPerSecond,
+            float maxDuration,
+            @Nullable StreamAction<T> doBeforeGenerating) {
+        final Particles instance = getInstance();
+        if (instance == null) {
+            return;
+        }
+        stream(emitter, particlesPerBurst, particlesPerSecond, maxDuration, doBeforeGenerating, null);
     }
 
     /**
@@ -372,51 +528,34 @@ public class Particles extends BaseEveryFrameCombatPlugin {
      * @param emitter {@link IEmitter} to use.
      * @param particlesPerBurst Number of particles that should be generated at once.
      * @param particlesPerSecond Total number of particles generated per second.
-     * @param maxDuration Maximum amount of time this particle stream should last.
+     * @param maxDuration Maximum amount of time this particle stream should last. If negative, the stream
+     *                    will not naturally expire.
      * @param doBeforeGenerating Custom function that's called immediately before each particle generation sequence in this stream.
-     *                           Returning {@code false} will end the stream. Can be {@code null}.
+     *                           Returning {@code false} will end the stream.
+     * @param doWhenFinished Custom function that's called when the stream expires, which can occur either naturally, if
+     *                       doBeforeGenerating returns {@code false}, or if the stream's emitter's anchor point is removed from play.
+     *                       The return value is not used.
      */
     public static <T extends IEmitter> void stream(
             final T emitter,
             int particlesPerBurst,
             float particlesPerSecond,
-            final float maxDuration,
-            final StreamAction<T> doBeforeGenerating) {
+            float maxDuration,
+            @Nullable StreamAction<T> doBeforeGenerating,
+            @Nullable StreamAction<T> doWhenFinished) {
         final Particles instance = getInstance();
         if (instance == null) {
             return;
         }
 
-        final int newParticlesPerBurst;
-        final float newBurstDelay;
-
-        float burstDelay = particlesPerBurst / particlesPerSecond;
-        if (burstDelay >= minBurstDelay) {
-            newParticlesPerBurst = particlesPerBurst;
-            newBurstDelay = burstDelay;
-        } else {
-            newParticlesPerBurst = (int) Math.ceil(particlesPerSecond * minBurstDelay);
-            newBurstDelay = (int) Math.floor(particlesPerSecond * minBurstDelay) / particlesPerSecond;
-        }
-
-        final float startTime = instance.currentTime;
-        final int maxParticles = (int) (particlesPerSecond * maxDuration);
-        doAtTime(new Action() {
-            float lastBurstTime = startTime;
-            int index = 0;
-            @Override
-            public void perform() {
-                int burstAmount = Math.min(newParticlesPerBurst, maxParticles - index);
-                if (instance.currentTime <= startTime + maxDuration
-                        && burstAmount > 0
-                        && (doBeforeGenerating == null || doBeforeGenerating.apply(emitter))
-                        && burst(emitter, burstAmount, index)) {
-                    doAtTime(this, lastBurstTime + newBurstDelay);
-                    lastBurstTime += newBurstDelay;
-                    index += burstAmount;
-                }
-            }
-        }, startTime);
+        instance.particleStreams.add(new ParticleStream<>(
+                emitter,
+                particlesPerBurst,
+                particlesPerSecond,
+                maxDuration < 0 ? null : instance.currentTime + maxDuration,
+                doBeforeGenerating,
+                doWhenFinished
+        ));
     }
 
     /**

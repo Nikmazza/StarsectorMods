@@ -6,7 +6,7 @@
     "utility": "true",
     "version": { "major":"1", "minor": "12", "patch": "4" },
     "description": "A mod that allows fine-tuning of autofie. Press J-key in combat or on the campaign map to access.",
-    "gameVersion": "0.96a-RC10",
+    "gameVersion": "0.97a",
     "jars":["jars/agc/AdvancedGunneryControl/1.12.4/AdvancedGunneryControl-1.12.4.jar"],
     "modPlugin":"com.dp.advancedgunnerycontrol.WeaponControlBasePlugin",
     "dependencies": [

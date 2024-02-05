@@ -1,0 +1,125 @@
+{
+  "hullName": "Havel",
+  "hullId": "astroidships_havel",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/astriodships_havel.png.png",
+  "style": "LOW_TECH",
+  "height": 85,
+  "width": 61,
+  "center": [30.5, 42.5],
+  "collisionRadius": 58,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 48.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "insulatedengine"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [16, -22.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": 0,
+      "locations": [20, -10]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": 0,
+      "locations": [32.5, -1.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": 0,
+      "locations": [16, 21.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 208,
+      "angle": 90,
+      "locations": [-4, 19.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 0,
+      "locations": [7.5, 4.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 208,
+      "angle": -90,
+      "locations": [-6, -10]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-25.5, -22.5],
+      "length": 39,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-24.5, 22.5],
+      "length": 39,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-26.5, -10.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-25.5, 9.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    40.5, 7.5,
+    38, -5.5,
+    21, -27.5,
+    -28.5, -28.5,
+    -38, 2,
+    -27, 30,
+    6, 30
+  ]
+}

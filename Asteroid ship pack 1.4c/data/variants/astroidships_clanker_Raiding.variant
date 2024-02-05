@@ -1,0 +1,40 @@
+{
+  "variantId": "astroidships_clanker_Raiding",
+  "hullId": "astroidships_clanker",
+  "displayName": "Raiding",
+  "goalVariant": true,
+  "fluxCapacitors": 2,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "expanded_cargo_holds"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "sabot",
+        "WS0002": "vulcan",
+        "WS0003": "sabot",
+        "WS0004": "lightag",
+        "WS0005": "lightac",
+        "WS0006": "lightac",
+        "WS0007": "railgun",
+        "WS0008": "railgun",
+        "WS0009": "vulcan",
+        "WS0010": "lightac",
+        "WS0011": "heavymauler",
+        "WS0012": "lightag",
+        "WS0013": "lightmortar",
+        "WS0014": "lightac",
+        "WS0015": "vulcan",
+        "WS0016": "harpoon"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

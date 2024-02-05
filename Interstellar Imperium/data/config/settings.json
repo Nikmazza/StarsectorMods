@@ -1,13 +1,12 @@
 {
-	"ruleCommandPackages":[
-		"data.scripts.campaign.iirules",
-	],
+    "ruleCommandPackages":[
+        "data.scripts.campaign.iirules",
+    ],
     "plugins":{
         "II_BlockedHullmodDisplayScript":"data.scripts.everyframe.II_BlockedHullmodDisplayScript",
 
         "II_TitanPlugin":"data.scripts.everyframe.II_TitanPlugin",
         "II_ImperiumLightInjector":"data.scripts.everyframe.II_ImperiumLightInjector",
-        "II_WeaponScriptPlugin":"data.scripts.everyframe.II_WeaponScriptPlugin",
         "II_PluginStarter":"data.scripts.everyframe.II_PluginStarter",
     },
     "designTypeColors":{

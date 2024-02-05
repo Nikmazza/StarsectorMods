@@ -33,6 +33,11 @@ public abstract class BaseIEmitter extends IEmitter {
     }
 
     @Override
+    protected boolean preInitParticles(int start, int count) {
+        return true;
+    }
+
+    @Override
     public int getBlendDestinationFactor() {
         return GL11.GL_ONE;
     }

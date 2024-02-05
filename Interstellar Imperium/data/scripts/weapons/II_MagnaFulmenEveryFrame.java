@@ -7,6 +7,8 @@ import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
+import data.scripts.everyframe.II_Trails;
+import data.scripts.everyframe.II_WeaponScriptPlugin;
 import data.scripts.hullmods.II_BasePackage;
 import data.scripts.shipsystems.II_ArbalestLoaderStats;
 import data.scripts.util.II_Util;
@@ -127,6 +129,9 @@ public class II_MagnaFulmenEveryFrame implements EveryFrameWeaponEffectPlugin {
         if (engine.isPaused()) {
             return;
         }
+
+        II_Trails.createIfNeeded();
+        II_WeaponScriptPlugin.createIfNeeded();
 
         float chargeLevel = weapon.getChargeLevel();
         float cooldownRemaining = weapon.getCooldownRemaining();

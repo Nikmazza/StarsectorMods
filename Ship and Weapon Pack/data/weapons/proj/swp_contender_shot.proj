@@ -1,6 +1,7 @@
 {
     "id":"swp_contender_shot",
     "specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.SWP_TrailWeapon",
     "spawnType":"BALLISTIC",
     "collisionClass":"PROJECTILE_FF",
     "collisionClassByFighter":"PROJECTILE_FIGHTER",

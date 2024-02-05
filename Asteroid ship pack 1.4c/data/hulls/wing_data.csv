@@ -1,0 +1,2 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+orisis_wing,astroidships_orisis_Suppression,"interceptor1,interceptor, low,base_bp",0,,0,1,V,4000,500,0,4,INTERCEPTOR,Interceptor,10,2000,,,,,,,,,,,,,999

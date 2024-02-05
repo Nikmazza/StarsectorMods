@@ -28,4 +28,10 @@ public class II_ModPluginAlt {
         LightData.readLightDataCSV("data/lights/ii_light_data.csv");
         TextureData.readTextureDataCSV("data/lights/ii_texture_data.csv");
     }
+
+    static void adjustExerelin() {
+        if (IIModPlugin.isExerelin) {
+            SectorManager.NO_MILITARY_MARKET.add("ii_byzantium");
+        }
+    }
 }

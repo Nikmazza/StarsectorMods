@@ -2,6 +2,7 @@ package assortment_of_things.abyss.misc
 
 import assortment_of_things.RATCampaignPlugin
 import assortment_of_things.abyss.AbyssUtils
+import assortment_of_things.abyss.procgen.AbyssData
 import assortment_of_things.misc.RATSettings
 import assortment_of_things.misc.baseOrModSpec
 import assortment_of_things.misc.fixVariant
@@ -28,6 +29,7 @@ import exerelin.campaign.PlayerFactionStore
 import exerelin.campaign.customstart.CustomStart
 import exerelin.utilities.StringHelper
 import org.lazywizard.lazylib.MathUtils
+import org.lwjgl.util.vector.Vector2f
 import java.util.*
 
 
@@ -39,6 +41,8 @@ class AbyssStart : CustomStart() {
         val data = memoryMap[MemKeys.LOCAL]!!["\$characterData"] as CharacterCreationData
         var textPanel = dialog.textPanel
         var optionPanel = dialog.optionPanel
+
+        //data.characterData.memoryWithoutUpdate.set("\$rat_started_abyss", true)
 
         if (!RATSettings.enableAbyss!!) {
             textPanel.addPara("This start is only available with the Abyss enabled in the \"Random Assortment of Things\" config.",
@@ -184,7 +188,8 @@ class AbyssStart : CustomStart() {
         dialog.visualPanel.showFleetInfo(StringHelper.getString("exerelin_ngc", "playerFleet", true),
             tempFleet, null, null)
 
-        optionPanel.addOption(StringHelper.getString("done", true), "nex_NGCDone");
+        //optionPanel.addOption(StringHelper.getString("done", true), "nex_NGCDone");
+        optionPanel.addOption(StringHelper.getString("done", true), "rat_NGCDone_Abyss");
         optionPanel.addOption(StringHelper.getString("back", true), "nex_NGCStartBack");
     }
 

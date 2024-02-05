@@ -45,10 +45,6 @@ public class SWP_PluginStarter extends BaseEveryFrameCombatPlugin {
     public void init(CombatEngineAPI engine) {
         checkedOncePerCombat = true;
 
-        if (SWPModPlugin.hasMagicLib) {
-            engine.addPlugin(new SWP_Trails());
-        }
-
         if (engine.isInCampaign() && (Global.getSector() != null)) {
             if (Global.getSector().getMemoryWithoutUpdate().contains("$swpBT_spatialAnomaly")) {
                 boolean anomaly = Global.getSector().getMemoryWithoutUpdate().getBoolean("$swpBT_spatialAnomaly");

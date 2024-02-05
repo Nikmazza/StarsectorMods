@@ -1,7 +1,7 @@
 {
     "displayName": "Support",
     "fluxCapacitors": 5,
-    "fluxVents": 16,
+    "fluxVents": 18,
     "goalVariant": true,
     "hullId": "swp_albatross",
     "hullMods": ["missleracks"],

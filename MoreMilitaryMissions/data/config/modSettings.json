@@ -27,7 +27,7 @@
         # Changes the effective fleet strength of the station for enemy strength calculation. This smaller this ratio,
         # the weaker the enemy is initially. The mod computes the minimum enemy fleet strength as:
         # MIN_ENEMY_FP = YOUR_FP + STATION_FP * DmStationEffectiveFpRatio
-        "DmStationEffectiveFpRatio" : 1.1,
+        "DmStationEffectiveFpRatio" : 1.5,
         # Determines max difficulty, which is this ratio multiplied by the strength of the largest defeated enemy fleets
         # for this missions. The minimum difficulty is determined by the strength of your fleet plus station, and the
         # actually difficulty is randomly chosen between min and max difficulty. At 0 the enemy fleet is always at min

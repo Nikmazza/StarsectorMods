@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import data.scripts.everyframe.SWP_Trails;
 import java.awt.Color;
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
@@ -26,6 +27,8 @@ public class SWP_FluxShuntOnFireEffect implements OnFireEffectPlugin {
         if ((projectile == null) || (weapon == null)) {
             return;
         }
+
+        SWP_Trails.createIfNeeded();
 
         ShipAPI ship = projectile.getSource();
         if (ship.getFluxTracker().getCurrFlux() >= 6000f) {

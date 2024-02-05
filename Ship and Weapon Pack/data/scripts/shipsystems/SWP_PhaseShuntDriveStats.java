@@ -1,6 +1,7 @@
 package data.scripts.shipsystems;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
@@ -76,7 +77,13 @@ public class SWP_PhaseShuntDriveStats extends BaseShipSystemScript {
                         if (proj.getSpawnType() == ProjectileSpawnType.OTHER) {
                             continue;
                         }
+                        if (proj.getCollisionClass() == CollisionClass.GAS_CLOUD) {
+                            continue;
+                        }
                         if ((proj.getProjectileSpecId() != null) && proj.getProjectileSpecId().startsWith("swp_excelsiorcannon_shot") && (proj.getOwner() == ship.getOwner())) {
+                            continue;
+                        }
+                        if ((proj.getWeapon() != null) && (proj.getWeapon().getSpec() != null) && (proj.getWeapon().getSpec().hasTag("dummy_proj"))) {
                             continue;
                         }
 

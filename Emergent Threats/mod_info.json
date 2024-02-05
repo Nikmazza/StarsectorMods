@@ -4,7 +4,7 @@
 	"author":"vicegrip",
 	"version":"0.4.0",
 	"description":"Adds various ships, especially [Redacted] and Sindrian Diktat ships and technologies for the player to face against and claim for themselves.",
-	"gameVersion":"0.96a-RC10",
+    "gameVersion": "0.97a",
 	"dependencies": [
 		{
             "id": "MagicLib",

@@ -5,4 +5,6 @@ Ion Pulse Cannon,supportships_ipc,0,,100,800,,300,500,0,0,,15,0.75,,ENERGY,260,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Aspirant Mask,supportships_aspirant_mask,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,,,,,,,,,,,,,1
+Aspirant Mask,supportships_aspirant_mask,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,"no_sell, hide_in_codex",,,,,,,,,,,,,,1
+supportships_hospice_legal,supportships_hospice_legal,,,,1,1,,,,,,,,,,,,,10,,,,,,,,,,,,,,SYSTEM,"no_sell, hide_in_codex",,,,,,,,,,,This weapon is built-in only.,,TRUE,0
+supportships_hospice_illegal,supportships_hospice_illegal,,,,1,1,,,,,,,,,,,,,10,,,,,,,,,,,,,,SYSTEM,"no_sell, hide_in_codex",,,,,,,,,,,This weapon is built-in only.,,TRUE,1

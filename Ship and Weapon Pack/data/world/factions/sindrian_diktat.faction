@@ -2,10 +2,6 @@
     "hullFrequency":{
         "hulls":{
             "buffalo":0,
-
-            "swp_alastor":0.5, # Uncommon because no LG equivalent
-
-            "swp_vulture":0.5, # Uncommon because no LG equivalent
         },
     },
     "knownShips":{

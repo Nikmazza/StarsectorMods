@@ -4,7 +4,7 @@
 	"author":"Tartiflette",
 	"version":"0.17rc2m",
 	"description":"Vanilla-like content addon",
-    "gameVersion": "0.96a",
+    "gameVersion": "0.97a",
     "dependencies": [
         {
             "id": "lw_lazylib",

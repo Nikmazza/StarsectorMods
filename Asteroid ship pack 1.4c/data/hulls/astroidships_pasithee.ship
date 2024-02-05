@@ -1,0 +1,168 @@
+{
+  "hullName": "Pasithee",
+  "hullId": "astroidships_pasithee",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/astroidships_pasithee.png.png",
+  "style": "LOW_TECH",
+  "height": 234,
+  "width": 200,
+  "center": [100, 117],
+  "collisionRadius": 129.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 133.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [101, 10]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [12, -36.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-99, -3]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 133.5,
+      "locations": [-70, 40]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 68,
+      "angle": 100.5,
+      "locations": [-21.5, 55]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 68,
+      "angle": 72.5,
+      "locations": [35.5, 54]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [14, 34.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 42.5,
+      "locations": [76.5, 41]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-112.5, 33],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-112, 21.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-113.5, 6],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-112.5, -3],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-113, -12],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-113, -27.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-112.5, -39],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    105.5, -35,
+    81, -47.5,
+    22.5, -43.5,
+    -52, -43,
+    -62.5, -61.5,
+    -81.5, -60.5,
+    -111, -51.5,
+    -117.5, -40.5,
+    -117.5, 37,
+    -95, 48.5,
+    -55, 81,
+    -17.5, 81,
+    9.5, 96.5,
+    37, 74.5,
+    57.5, 74.5,
+    97, 44.5,
+    117.5, 4.5
+  ]
+}

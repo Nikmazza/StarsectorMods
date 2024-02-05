@@ -1,5 +1,6 @@
 package assortment_of_things.exotech.hullmods
 
+import assortment_of_things.misc.baseOrModSpec
 import assortment_of_things.misc.getAndLoadSprite
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
@@ -12,8 +13,18 @@ import kotlin.collections.ArrayList
 
 class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
 
-    var systemGlow = Global.getSettings().getAndLoadSprite(ship.hullSpec.spriteName.replace(".png", "") + "_glow1.png")
-    var phaseGlow = Global.getSettings().getAndLoadSprite(ship.hullSpec.spriteName.replace(".png", "") + "_glow2.png")
+    lateinit var systemGlow: SpriteAPI
+    lateinit var phaseGlow: SpriteAPI
+    var hasPhase = false
+
+    init {
+        systemGlow = Global.getSettings().getAndLoadSprite(ship.hullSpec.spriteName.replace(".png", "") + "_glow1.png")
+        hasPhase = ship.baseOrModSpec().hints.contains(ShipHullSpecAPI.ShipTypeHints.PHASE)
+
+        if (hasPhase) {
+            phaseGlow = Global.getSettings().getAndLoadSprite(ship.hullSpec.spriteName.replace(".png", "") + "_glow2.png")
+        }
+    }
 
     var lastSystemJitterLocations = ArrayList<Vector2f>()
     var lastPhaseJitterLocations = ArrayList<Vector2f>()
@@ -27,6 +38,7 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
     }
 
     override fun render(layer: CombatEngineLayers?, viewport: ViewportAPI?) {
+        if (!ship.isAlive) return
 
         var active = false
         var level = ship.system?.effectLevel ?: 0f
@@ -34,7 +46,12 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
         var phaseState = ship.phaseCloak?.state ?: ShipSystemAPI.SystemState.IDLE
         var exogridOverload = ship.variant.hasHullMod("rat_exogrid_overload")
 
-        if (exogridOverload && !ship.fluxTracker.isOverloaded) {
+
+        if (ship.baseOrModSpec().hullId == "rat_apheidas") {
+            renderLeaniraModule()
+        }
+
+        if ((exogridOverload) && !ship.fluxTracker.isOverloaded) {
             renderOverload()
         }
 
@@ -42,7 +59,7 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
             renderSystem()
         }
 
-        if (phaseState == ShipSystemAPI.SystemState.ACTIVE || phaseState == ShipSystemAPI.SystemState.IN || phaseState == ShipSystemAPI.SystemState.OUT) {
+        if (hasPhase && phaseState == ShipSystemAPI.SystemState.ACTIVE || phaseState == ShipSystemAPI.SystemState.IN || phaseState == ShipSystemAPI.SystemState.OUT || phaseState == ShipSystemAPI.SystemState.COOLDOWN) {
             renderPhase()
         }
 
@@ -67,6 +84,11 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
 
 
         var level = ship.system?.effectLevel ?: 0f
+        var levelOverride = ship!!.customData.get("rat_exogrid_level_override") as Float?
+        if (levelOverride != null) {
+            level = levelOverride
+        }
+
         var systemState = ship.system.state
 
         var baseAlpha = 0.2f
@@ -93,7 +115,7 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
         systemGlow.angle = ship.facing - 90
         systemGlow.renderAtCenter(ship.location.x, ship.location.y)
 
-        doJitter(systemGlow, level, lastSystemJitterLocations)
+        doJitter(systemGlow, level, lastSystemJitterLocations, 5, 2f)
 
         endStencil()
     }
@@ -102,6 +124,16 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
         var location = ship.location
 
         var level = ship.phaseCloak.effectLevel
+
+        var outPercent = ship.phaseCloak.chargeDownDur / ship.phaseCloak.cooldown
+        if (ship.phaseCloak.state == ShipSystemAPI.SystemState.OUT) {
+            level = (1 - outPercent) + ship.phaseCloak.effectLevel * outPercent
+        }
+        if (ship.phaseCloak.state == ShipSystemAPI.SystemState.COOLDOWN) {
+            var cooldownLevel = (ship.phaseCloak.cooldownRemaining - 0f) / (ship.phaseCloak.cooldown - 0f)
+            level = cooldownLevel * (1 - outPercent)
+        }
+
         var systemState = ship.phaseCloak.state
 
         phaseGlow.setNormalBlend()
@@ -109,15 +141,15 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
         phaseGlow.angle = ship.facing - 90
         phaseGlow.renderAtCenter(ship.location.x, ship.location.y)
 
-        doJitter(phaseGlow, level, lastPhaseJitterLocations)
+        doJitter(phaseGlow, level, lastPhaseJitterLocations, 5, 2 + (2f * level))
 
     }
 
-    fun doJitter(sprite: SpriteAPI, level: Float, lastLocations: ArrayList<Vector2f>) {
+    fun doJitter(sprite: SpriteAPI, level: Float, lastLocations: ArrayList<Vector2f>, jitterCount: Int, jitterMaxRange: Float) {
 
         var paused = Global.getCombatEngine().isPaused
-        var jitterCount = 5
-        var jitterMaxRange = 2f
+     /*   var jitterCount = 5
+        var jitterMaxRange = 2f*/
         var jitterAlpha = 0.2f
 
 
@@ -153,6 +185,17 @@ class ExogridRenderer(var ship: ShipAPI) : BaseCombatLayeredRenderingPlugin() {
         systemGlow.alphaMult = 1f
         systemGlow.angle = ship.facing - 90
         systemGlow.renderAtCenter(ship.location.x, ship.location.y)
+    }
+
+    fun renderLeaniraModule() {
+        var parent = ship.customData.get("rat_apheidas_parent") as ShipAPI? ?: return
+
+        systemGlow.setNormalBlend()
+        systemGlow.alphaMult = parent.system.effectLevel
+        systemGlow.angle = ship.facing - 90
+        systemGlow.renderAtCenter(ship.location.x, ship.location.y)
+
+        doJitter(systemGlow, parent.system.effectLevel, lastSystemJitterLocations, 4, 2f)
     }
 
     fun startStencilAroundShip(location: Vector2f, radius: Float) {

@@ -5,7 +5,7 @@
   "utility":"false",
   "version":"1.0.0",
   "description":"A utilis mod that tells from what mod which industry is ",
-  "gameVersion": "0.96a",
+  "gameVersion": "0.97a",
   "jars":["jars/WhichInd.jar"],
   "modPlugin":"kaysaar.whichIndustry.WhichIndustryModPlugin"
 }

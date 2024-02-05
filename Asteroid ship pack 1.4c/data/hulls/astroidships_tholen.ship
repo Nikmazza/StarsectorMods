@@ -1,0 +1,160 @@
+{
+  "hullName": "Tholen",
+  "hullId": "astroidships_tholen",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/astroidships_tholen.png.png",
+  "style": "LOW_TECH",
+  "height": 131,
+  "width": 107,
+  "center": [53.5, 65.5],
+  "collisionRadius": 113.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 95,
+  "viewOffset": 0,
+  "builtInMods": [
+    "insulatedengine"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [48, -42]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 22,
+      "angle": 0,
+      "locations": [53, -24.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 22,
+      "angle": 0,
+      "locations": [60, -5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 185,
+      "angle": 43,
+      "locations": [44.5, 40.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 91,
+      "locations": [20.5, 28.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 142,
+      "angle": 0,
+      "locations": [42.5, 13.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [19.5, 2.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 143,
+      "angle": 0,
+      "locations": [36.5, -9.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -90,
+      "locations": [29.5, -28.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-30.5, -42],
+      "length": 42,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-55.5, -12.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-57, -4.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-56.5, 5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-33.5, 31.5],
+      "length": 24.084086,
+      "width": 8.051558,
+      "angle": 142,
+      "contrailSize": 8.051558,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-30.5, 34.5],
+      "length": 23.690079,
+      "width": 8.66722,
+      "angle": 142,
+      "contrailSize": 8.66722,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    66.5, 17,
+    67.5, -10.5,
+    53, -48,
+    -22.5, -51,
+    -56.5, -34,
+    -64.5, 17.5,
+    -26.5, 46,
+    47, 53.5
+  ]
+}

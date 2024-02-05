@@ -174,6 +174,13 @@ public class SWP_LightningGunOnFireEffect implements OnFireEffectPlugin {
         arc.setSingleFlickerMode();
 
         if (target != null) {
+            for (int i = 0; i < 10; i++) {
+                Vector2f vel = new Vector2f(MathUtils.getRandomNumberInRange(300f, 600f), 0f);
+                VectorUtils.rotate(vel, projectile.getFacing() + 180f + MathUtils.getRandomNumberInRange(-90f, 90f));
+                Color sparkColor = new Color(MathUtils.getRandomNumberInRange(100, 140), MathUtils.getRandomNumberInRange(100, 140), 255);
+                engine.addHitParticle(point, vel, 10f, 1f, 0.25f, sparkColor);
+            }
+
             float emp = projectile.getEmpAmount() * atten;
             float dam = projectile.getDamageAmount() * atten;
             projectile.getLocation().set(point);

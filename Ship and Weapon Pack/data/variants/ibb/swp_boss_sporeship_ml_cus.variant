@@ -1,17 +1,27 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 0,
-    "fluxVents": 8,
+    "fluxCapacitors": 6,
+    "fluxVents": 10,
     "goalVariant": true,
     "hullId": "swp_boss_sporeship_ml",
     "hullMods": [
         "eccm",
         "solar_shielding",
         "armoredweapons",
-        "heavyarmor","reinforcedhull","autorepair"
+        "heavyarmor",
+        "reinforcedhull",
+        "autorepair"
     ],
-    "permaMods": ["heavyarmor","reinforcedhull","autorepair"],
-    "sMods": ["heavyarmor","reinforcedhull","autorepair"],
+    "permaMods": [
+        "heavyarmor",
+        "reinforcedhull",
+        "autorepair"
+    ],
+    "sMods": [
+        "heavyarmor",
+        "reinforcedhull",
+        "autorepair"
+    ],
     "variantId": "swp_boss_sporeship_ml_cus",
     "weaponGroups": [
         {

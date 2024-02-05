@@ -6,6 +6,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
+import com.fs.starfarer.api.util.IntervalUtil;
 import data.scripts.IIModPlugin;
 import data.scripts.hullmods.II_BasePackage;
 import data.scripts.shipsystems.II_ImpulseBoosterStats;
@@ -27,6 +28,8 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
     private static final Vector2f ZERO = new Vector2f();
 
     private CombatEngineAPI engine;
+    private boolean activated = false;
+    private final IntervalUtil inactiveInterval = new IntervalUtil(1f, 2f);
 
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
@@ -39,6 +42,13 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
 
         if (engine.isPaused()) {
             return;
+        }
+
+        if (!activated) {
+            inactiveInterval.advance(amount);
+            if (!inactiveInterval.intervalElapsed()) {
+                return;
+            }
         }
 
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
@@ -123,6 +133,7 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     case "ii_celeritydrive":
                         if (system.isActive()) {
@@ -169,6 +180,7 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     case "ii_microforge":
                         if (ship.getVariant().hasHullMod(II_BasePackage.ELITE_PACKAGE)) {
@@ -200,6 +212,7 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
                                 }
                             }
                         }
+                        activated = true;
                         break;
                     case "ii_turbofeeder":
                         if (ship.getVariant().hasHullMod(II_BasePackage.ELITE_PACKAGE)) {
@@ -253,6 +266,7 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
                                 }
                             }
                         }
+                        activated = true;
                         break;
                     case "ii_overdrive":
                         if (system.isActive()) {
@@ -327,6 +341,7 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     case "ii_luxfinis":
                         if (system.isActive()) {
@@ -401,6 +416,7 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
+                        activated = true;
                         break;
                     default:
                         break;

@@ -1,10 +1,10 @@
 {
     "displayName": "Multipurpouse",
-    "fluxCapacitors": 30,
+    "fluxCapacitors": 23,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "supportships_ossifrage",
-    "hullMods": ["targetingunit"],
+    "hullMods": ["targetingunit","armoredweapons"],
     "permaMods": [],
     "sMods": [],
     "variantId": "supportships_ossifrage_Multipurpouse",

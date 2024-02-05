@@ -1,6 +1,7 @@
 {
 	"id":"ii_arcus_shot",
 	"specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.II_TrailWeapon",
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",

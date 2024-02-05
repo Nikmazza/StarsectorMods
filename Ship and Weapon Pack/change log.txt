@@ -1,3 +1,45 @@
+Version 1.15.1 (February 3, 2024)
+- Updated for Starsector 0.97a
+- Added 2 OP to the LG skins for Alastor and Vigilance
+- Light Phase Lance flux cost reduced by 26.67% to align with standard Phase Lance
+- Removed Overdriven variant of the Archon
+- Wall DP increased to 40 from 30
+
+Version 1.15.0 (January 7, 2024)
+- Added a MagicBounty of questionable ship variants
+  * Requires level 8+ and appears after 1 cycle
+- New/updated artwork:
+  * Alastor (LG), Vigilance (LG), Champion (LG), Vulture (LG), Conquest (LG), Pony (IBB Mule), Dawnstar (IBB Aurora), and Carpal (IBB Tarsus) by King Alfonzo
+  * Fracture (IBB Sunder), Phillipshead (IBB Hammerhead), and Lightning Gun by Demto
+  * Zeus (IBB Paragon) by Selkie
+  * Albatross by BigBeans
+- New Lion's Guard skins: Alastor (LG) and Vulture (LG)
+- Carpal (IBB Tarsus) reworked, new layout and LIDAR Array + Damper Field systems
+- Lightning Gun visual enhancement
+- Trebuchet LRM:
+  * Fixed the damage to the target - the extra EMP arc wasn't doing non-EMP damage, now it does proper Energy damage like it's supposed to
+  * Base damage and EMP increased to 1000/1500 from 900/900
+  * Ammo halved to 15 from 30 (reminder: no regen)
+  * Visual enhancement
+- Ion Torpedo:
+  * Increased AOE radius to 350 from 300
+  * Fixed the damage to the target - the extra EMP arcs were doing Fragmentation damage, now it does Energy damage like it's supposed to
+  * Visual enhancement
+- Heavy Ion Blaster:
+  * Now does fragmentation damage, rather than energy damage
+  * Brightened the lights
+- Drake armor increased to 50 from 40, top speed increased to 250 from 225, maneuverability slightly increased
+  * Weapon reworked for more effectiveness: high spread, shorter cooldown, 50% more damage
+  * Now has Decoy Flare Launcher (Single)
+- Excelsior will not absorb projectiles/missiles from weapons with the "dummy_proj" tag, nor GAS_CLOUD projectiles
+- Fixed issue where you could inadvertently install Extreme Modifications on a ship with more than the maximum number of s-mods (e.g., by capturing it), permanently worsening the ship for no benefit
+- El Psi bounty no longer spawns Guardians
+- Duel of the Century mission no longer ends prematurely via retreat order
+  * Updated mod-added frigate replacements
+- Minor description fix for Extreme Modifications
+- Bug fix related to drone fighters/ships AI
+- Slight performance optimization when SWP weapons/ships are not present in a battle
+
 Version 1.14.0 (May 26, 2023)
 - Updated for Starsector 0.96a
 - Ships:

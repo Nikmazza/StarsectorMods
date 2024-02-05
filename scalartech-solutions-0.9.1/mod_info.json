@@ -1,0 +1,20 @@
+{
+	"id":"scalartech", # internal id
+	"name":"ScalarTech Solutions", # displayed to the player
+	"author":"Nia Tahl",
+	"version":"0.9.1",
+	"description":"A small faction at the edge of the core worlds with an iron will to defend their people.",
+	"gameVersion":"0.97a-RC6",
+	"jars":["jars/tahlan-scalartech.jar"],
+	"modPlugin":"org.niatahl.scalartech.ScalarModPlugin",
+	"dependencies": [
+		{
+			"id": "lw_lazylib",
+			"name": "LazyLib",
+		},
+		{
+			"id": "MagicLib",
+			"name": "MagicLib",
+		}
+	]
+}

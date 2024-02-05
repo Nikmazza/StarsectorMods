@@ -5,7 +5,7 @@
 "utility":"false",
 "version":"1.4.8",
 "description":"Adds a collection of ships and weapons to discover on your journeys through the sector.",
-"gameVersion": "0.96a-RC10",
+"gameVersion": "0.97a",
 "jars":["jars/birds.jar"],
 "modPlugin":"birdwanderer.birdscollection.data.scripts.bc_modPlugin",
 "dependencies": [

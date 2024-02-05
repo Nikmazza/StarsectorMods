@@ -2065,7 +2065,7 @@ $swpBT_mouseRepPct > -25",,,"swpBT_UWBarEventMouseAskTannen2:""You seem fond of 
 swpBTUWBarEncounterMouseOptionAskLee,swpBTUWMouseOptions,"!$swpBT_askedLee
 $swpBT_mouseRepPct > -25",,,"swpBT_UWBarEventMouseAskLee:""How did Captain Lee disappear?""",
 swpBTUWBarEncounterMouseOptionJoin,swpBTUWMouseOptions,"$swpBT_askedLee
-$swpBT_mouseRepPct > -25",,,"swpBT_UWBarEventMouseJoin:""You should come with me.""",
+$swpBT_mouseRepPct > -25",,,"swpBT_UWBarEventMouseAskJoin:""You should come with me.""",
 swpBTUWBarEncounterMouseOptionLeave,swpBTUWMouseOptions,"$swpBT_askedLee
 !$swpBT_askedJoin
 $swpBT_mouseRepPct > -25",,,swpBT_UWBarEventMouseLeave:Bid farewell,

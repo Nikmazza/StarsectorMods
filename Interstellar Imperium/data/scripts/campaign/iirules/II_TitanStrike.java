@@ -16,13 +16,13 @@ import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
-import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
@@ -34,7 +34,6 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireAll;
 import com.fs.starfarer.api.impl.campaign.rulecmd.ShowDefaultVisual;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD;
-import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Nex_MarketCMD;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.StatModValueGetter;
@@ -114,11 +113,7 @@ public class II_TitanStrike extends BaseCommandPlugin {
     public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
         if (IIModPlugin.hasStarshipLegends) {
             new SL_ShowMarketDefenses().execute(ruleId, dialog, params, memoryMap);
-        } else if (IIModPlugin.isExerelin) {
-            if (!(new Nex_MarketCMD(dialog.getInteractionTarget()).execute(ruleId, dialog, params, memoryMap))) {
-                return false;
-            }
-        } else {
+        } else if (!IIModPlugin.isExerelin) {
             if (!(new MarketCMD(dialog.getInteractionTarget()).execute(ruleId, dialog, params, memoryMap))) {
                 return false;
             }
@@ -195,15 +190,12 @@ public class II_TitanStrike extends BaseCommandPlugin {
             temp.canTitanStrike = true;
         }
 
-        // Nex could add this option itself but doesn't
-        //if (!IIModPlugin.isExerelin) {
         options.addOption("Consider the eradication of " + market.getName() + " (Titan strike)", "iiTitanStrikeMenu");
 
         if (!temp.canTitanStrike) {
             options.setEnabled("iiTitanStrikeMenu", false);
             options.setTooltip("iiTitanStrikeMenu", "All defenses must be defeated to make eradication possible.");
         }
-        //}
     }
 
     public static float getDefenderStr(MarketAPI market) {

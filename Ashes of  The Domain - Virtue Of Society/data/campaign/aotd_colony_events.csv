@@ -55,3 +55,7 @@ hivemind_discovery,Underground Hivemind,"hive_op1:Try to find a way to use them 
 hive_op2:Start a breeding program to export the eggs.
 hive_op3:I will not let those things infest our planet, destroy them.",true,true,data.colonyevents.events.UndergroundHiveEvent,10000,aod_vos,hivemind_whoopsie,7000	,,,,,
 tectonic_disaster,Tectonic Catastrophy,tec_op1:Fuck....,false,true,data.colonyevents.events.TectonicDisasterEvent,10000,aod_vos,tectonic_disaster,7000	,,,,,
+acot_encounter_encounter,Unexpected Encounter,"acot_op1:Yes, we will help you with returning to your home SOPHIA.
+acot_op2:No, actually you will be better as our test subjest in laboratory. APPREHEND HER.",true,true,data.colonyevents.events.UnexpectedOutsiderEvent,10000,aod_vos,tectonic_disaster,7000	,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,

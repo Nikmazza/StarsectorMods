@@ -353,29 +353,31 @@ public class II_EBaySubmarketPlugin extends MilitarySubmarketPlugin {
             }
         }
 
-        for (int i = 0; i < num; i++) {
-            BlueprintPick pick = bpPicker.pickAndRemove();
-            if (pick == null) {
-                break;
-            }
+        if (bpPicker != null) {
+            for (int i = 0; i < num; i++) {
+                BlueprintPick pick = bpPicker.pickAndRemove();
+                if (pick == null) {
+                    break;
+                }
 
-            String id = pick.specID;
+                String id = pick.specID;
 
-            switch (pick.type) {
-                case FIGHTER:
-                    ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.FIGHTER_BP, id), 1);
-                    break;
-                case WEAPON:
-                    ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.WEAPON_BP, id), 1);
-                    break;
-                case SHIP:
-                    ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.SHIP_BP, id), 1);
-                    break;
-                case INDUSTRY:
-                    ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.INDUSTRY_BP, id), 1);
-                    break;
-                default:
-                    break;
+                switch (pick.type) {
+                    case FIGHTER:
+                        ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.FIGHTER_BP, id), 1);
+                        break;
+                    case WEAPON:
+                        ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.WEAPON_BP, id), 1);
+                        break;
+                    case SHIP:
+                        ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.SHIP_BP, id), 1);
+                        break;
+                    case INDUSTRY:
+                        ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.INDUSTRY_BP, id), 1);
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 

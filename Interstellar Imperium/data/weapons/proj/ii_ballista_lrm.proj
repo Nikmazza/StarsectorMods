@@ -2,6 +2,7 @@
 	"id":"ii_ballista_lrm",
 	"specClass":"missile",
 	"missileType":"MISSILE",
+	"onHitEffect":"data.scripts.weapons.II_BallistaOnHitEffect",
 	"sprite":"graphics/imperium/missiles/ii_ballista_missile.png",
 	"size":[9,20],
 	"center":[4.5,8],

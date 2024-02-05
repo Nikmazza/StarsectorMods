@@ -1,0 +1,70 @@
+{
+  "variantId": "astroidships_cerus_Attack",
+  "hullId": "astroidships_cerus",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 12,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "efficiency_overhaul",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "lightag",
+        "WS0005": "lightag",
+        "WS0007": "lightag",
+        "WS0008": "lightac",
+        "WS0012": "lightag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "lightac",
+        "WS0006": "lightac",
+        "WS0009": "lightac",
+        "WS0010": "lightac",
+        "WS0014": "lightac",
+        "WS0015": "lightac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "harpoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "hveldriver",
+        "WS0016": "heavymauler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymg",
+        "WS0003": "vulcan",
+        "WS0011": "vulcan",
+        "WS0017": "vulcan",
+        "WS0019": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "thunder_wing"
+  ]
+}

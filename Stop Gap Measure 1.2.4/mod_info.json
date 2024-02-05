@@ -4,7 +4,7 @@
 	"author":"MajorTheRed",
 	"version":"v 1.2.4",
 	"description":"Pack of ships to flesh in vanilla campaign",
-	"gameVersion":"0.96a-RC10",
+	"gameVersion": "0.97a",
 	"jars":["jars/Stop Gap Measure.jar"],
 	"modPlugin":"data.scripts.FilgapModPlugin",
 

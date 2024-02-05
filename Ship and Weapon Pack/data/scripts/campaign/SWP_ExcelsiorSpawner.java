@@ -82,7 +82,7 @@ public class SWP_ExcelsiorSpawner {
             placeToSpawn = validPoints.pick();
         }
 
-        PerShipData shipData = new PerShipData(Global.getSettings().getVariant("swp_excelsior_eli"), ShipCondition.WRECKED, "TTS Excelsior", Factions.TRITACHYON, 0f);
+        PerShipData shipData = new PerShipData(Global.getSettings().getVariant("swp_excelsior_eli"), ShipCondition.WRECKED, "TTS Aperioris", Factions.TRITACHYON, 0f);
         shipData.nameAlwaysKnown = true;
         DefenderDataOverride defenders = new DefenderDataOverride(Factions.OMEGA, 1f, 40f, 40f, 2);
         defenders.minDefenderSize = 2;

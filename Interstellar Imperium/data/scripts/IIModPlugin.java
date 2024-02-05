@@ -28,7 +28,6 @@ import com.thoughtworks.xstream.XStream;
 import data.scripts.ai.II_ApocalypseAI1;
 import data.scripts.ai.II_ApocalypseAI2;
 import data.scripts.ai.II_ApocalypseAI3;
-import data.scripts.ai.II_TitanMIRVAI;
 import data.scripts.ai.II_BallistaAI;
 import data.scripts.ai.II_BallistaStage2AI;
 import data.scripts.ai.II_DummyAI;
@@ -38,6 +37,7 @@ import data.scripts.ai.II_JavelinAI;
 import data.scripts.ai.II_OnagerAI;
 import data.scripts.ai.II_PulsarBombAI;
 import data.scripts.ai.II_TitanAI;
+import data.scripts.ai.II_TitanMIRVAI;
 import data.scripts.campaign.II_CampaignPlugin;
 import data.scripts.campaign.II_MarketRiggerScript;
 import data.scripts.campaign.II_MissileKillScript;
@@ -328,6 +328,7 @@ public class IIModPlugin extends BaseModPlugin {
             Global.getSector().addScript(new II_MarketRiggerScript());
         }
         Global.getSector().getListenerManager().addListener(new II_TitanPunisher(), true);
+        II_ModPluginAlt.adjustExerelin();
     }
 
     @Override
@@ -367,6 +368,7 @@ public class IIModPlugin extends BaseModPlugin {
         }
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("interstellarimperium");
         II_ModPluginAlt.initII();
+        II_ModPluginAlt.adjustExerelin();
     }
 
     @Override

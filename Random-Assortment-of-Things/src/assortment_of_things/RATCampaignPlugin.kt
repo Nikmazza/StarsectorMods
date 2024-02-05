@@ -1,5 +1,6 @@
 package assortment_of_things
 
+import assortment_of_things.abyss.boss.GenesisInteraction
 import assortment_of_things.abyss.entities.AbyssalFracture
 import assortment_of_things.abyss.interactions.*
 import assortment_of_things.abyss.misc.AbyssTags
@@ -7,8 +8,10 @@ import assortment_of_things.abyss.items.cores.officer.ChronosCore
 import assortment_of_things.abyss.items.cores.officer.CosmosCore
 import assortment_of_things.abyss.items.cores.officer.PrimordialCore
 import assortment_of_things.abyss.items.cores.officer.SeraphCore
-import assortment_of_things.backgrounds.commander.BaseCommanderStationInteraction
+import assortment_of_things.backgrounds.commander.CommanderStationInteraction
+import assortment_of_things.exotech.interactions.ExoshipWreckageInteraction
 import assortment_of_things.exotech.interactions.exoship.ExoshipInteractions
+import assortment_of_things.exotech.items.ExoProcessor
 import assortment_of_things.relics.RelicsUtils
 import assortment_of_things.relics.interactions.*
 import assortment_of_things.relics.items.cores.NeuroCore
@@ -30,6 +33,12 @@ class RATCampaignPlugin : BaseCampaignPlugin()
         if (interactionTarget is CustomCampaignEntityAPI && interactionTarget.customEntitySpec.id == "rat_exoship") {
             return PluginPick(ExoshipInteractions(), CampaignPlugin.PickPriority.HIGHEST)
         }
+
+        if (interactionTarget is CustomCampaignEntityAPI && interactionTarget.customEntitySpec.id == "rat_exoship_broken") {
+            return PluginPick(ExoshipWreckageInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+        }
+
+
 
 
         //Relics
@@ -58,10 +67,23 @@ class RATCampaignPlugin : BaseCampaignPlugin()
 
 
         //Abyss
+
+        if (interactionTarget is CampaignFleetAPI) {
+            if (interactionTarget.hasTag("rat_genesis_fleet")) {
+                return PluginPick(GenesisInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            }
+        }
+
         var plugin = interactionTarget.customPlugin
         if (plugin is AbyssalFracture)  {
             if (plugin.connectedEntity != null) {
-                Global.getSector().doHyperspaceTransition(Global.getSector().playerFleet, interactionTarget, JumpPointAPI.JumpDestination(plugin.connectedEntity, ""), 0.01f)
+
+                if (interactionTarget.hasTag("rat_final_fracture")) {
+                    return PluginPick(FinalFractureInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+                }
+                else {
+                    Global.getSector().doHyperspaceTransition(Global.getSector().playerFleet, interactionTarget, JumpPointAPI.JumpDestination(plugin.connectedEntity, ""), 0.01f)
+                }
             }
         }
         if (interactionTarget.hasTag("rat_abyss_entrance")) {
@@ -102,7 +124,7 @@ class RATCampaignPlugin : BaseCampaignPlugin()
             var specID = interactionTarget.customEntitySpec.id
 
             when (id) {
-                "rat_station_commander_station" -> return PluginPick(BaseCommanderStationInteraction(),
+                "rat_station_commander_station" -> return PluginPick(CommanderStationInteraction(),
                     CampaignPlugin.PickPriority.HIGHEST)
             }
         }
@@ -124,6 +146,10 @@ class RATCampaignPlugin : BaseCampaignPlugin()
 
         if (commodityId == "rat_neuro_core") {
             return PluginPick(NeuroCore(), CampaignPlugin.PickPriority.HIGHEST)
+        }
+
+        if (commodityId == "rat_exo_processor") {
+            return PluginPick(ExoProcessor(), CampaignPlugin.PickPriority.HIGHEST)
         }
 
         return null

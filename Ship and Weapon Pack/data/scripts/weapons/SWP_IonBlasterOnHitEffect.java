@@ -40,7 +40,7 @@ public class SWP_IonBlasterOnHitEffect implements OnHitEffectPlugin {
                     hitLevel += 1f / 12f;
                     ShipAPI empTarget = ship;
                     engine.spawnEmpArcPierceShields(projectile.getSource(), point, empTarget, empTarget,
-                            DamageType.ENERGY, dam, emp, 100000f, null, 20f, COLOR1, COLOR2);
+                            DamageType.FRAGMENTATION, dam, emp, 100000f, null, 20f, COLOR1, COLOR2);
                 }
             }
 

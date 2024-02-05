@@ -14,15 +14,15 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class II_MicroForgeAI implements ShipSystemAIScript {
 
-    private static final float TRIGGER_FRAC_OF_MAX_VALUE = 0.66f;
-    private static final float TRIGGER_FRAC_OF_MAX_VALUE_HIGH_FLUX = 0.8f;
+    private static final float TRIGGER_FRAC_OF_MAX_VALUE = 0.75f;
+    private static final float TRIGGER_FRAC_OF_MAX_VALUE_HIGH_FLUX = 0.9f;
     private static final float TRIGGER_FRAC_OF_MAX_VALUE_ARMOR = 0.85f;
     private static final float TRIGGER_FRAC_OF_MAX_VALUE_HIGH_FLUX_ARMOR = 0.7f;
     private static final float TRIGGER_FRAC_MOD_INCOMING_DAMAGE_ARMOR = 0.8f;
     private static final float TRIGGER_FRAC_MOD_CRITICAL_DPS_ARMOR = 0.8f;
     private static final float TRIGGER_FRAC_MOD_LOW_HULL_ARMOR = 0.6f;
-    private static final float TRIGGER_FRAC_OF_MAX_VALUE_TARGETING = 0.55f;
-    private static final float TRIGGER_FRAC_OF_MAX_VALUE_HIGH_FLUX_TARGETING = 0.7f;
+    private static final float TRIGGER_FRAC_OF_MAX_VALUE_TARGETING = 0.6f;
+    private static final float TRIGGER_FRAC_OF_MAX_VALUE_HIGH_FLUX_TARGETING = 0.75f;
     private static final float TRIGGER_FRAC_OF_MAX_VALUE_ELITE = 0.9f;
     private static final float TRIGGER_FRAC_OF_MAX_VALUE_HIGH_FLUX_ELITE = 0.7f;
     private static final float TRIGGER_FRAC_OF_MAX_VALUE_VERY_HIGH_FLUX_ELITE = 0.5f;
@@ -96,6 +96,10 @@ public class II_MicroForgeAI implements ShipSystemAIScript {
                         int currAmmo = weapon.getAmmo();
                         int maxAmmo = weapon.getMaxAmmo();
 
+                        if (baseAmmo <= 0) {
+                            continue;
+                        }
+
                         /* Higher-OP weapons with less ammo are more important to replenish... unless they regen quickly */
                         float valueOfOneAmmo = weapon.getSpec().getOrdnancePointCost(null, null) / (float) baseAmmo;
                         if (weapon.getAmmoPerSecond() > 0f) {
@@ -103,7 +107,7 @@ public class II_MicroForgeAI implements ShipSystemAIScript {
                             valueOfOneAmmo /= 1f + fracRegeneratedPerPPT;
                         }
 
-                        int ammoToGain = Math.min(baseAmmo, maxAmmo - currAmmo);
+                        int ammoToGain = Math.max(Math.min(baseAmmo, maxAmmo - currAmmo), 0);
                         valueToGain += (float) ammoToGain * valueOfOneAmmo;
                         maxValueToGain += (float) baseAmmo * valueOfOneAmmo;
                     }

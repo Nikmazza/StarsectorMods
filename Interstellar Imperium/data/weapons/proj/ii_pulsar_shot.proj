@@ -1,6 +1,7 @@
 {
 	"id":"ii_pulsar_shot",
 	"specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.II_TrailWeapon",
 	"onHitEffect":"data.scripts.weapons.II_PulsarOnHitEffect",
 	"spawnType":"PLASMA",
 	"collisionClass":"PROJECTILE_FF",

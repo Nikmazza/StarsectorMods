@@ -1,0 +1,27 @@
+{
+  "variantId": "astroidships_mentis_gladis",
+  "hullId": "astroidships_mentis",
+  "displayName": "New Variant",
+  "goalVariant": true,
+  "fluxCapacitors": 5,
+  "fluxVents": 6,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "vulcan",
+        "WS0002": "vulcan",
+        "WS0003": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "gladius_wing",
+    "gladius_wing"
+  ]
+}

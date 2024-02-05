@@ -4,7 +4,7 @@ PD Assault Conversion,swp_pdconversion,2,0.5,,"offensive, merc, standard","Weapo
 In addition, the range of all formerly-PD weapons is extended by %s, and they deal %s more damage to all targets, plus a further %s hit strength when calculating damage reduction from armor.
 
 Not compatible with Integrated Point Defense AI.","Removes PD behavior from all PD weapons; increases ordnance point cost of all PD weapons; and increases all PD range, damage and hit strength.",Increases all weapon damage by %s.,graphics/swp/hullmods/swp_pdassault.png
-Extreme Modifications,swp_extrememods,3,0.2,,"special, no_build_in, merc, standard",Special,10000,,,,0,0,0,0,data.scripts.hullmods.SWP_ExtremeModifications,"Allows the installation of %s, but causes a significant chance of weapon malfunctions in combat. Fighter autofac glitches increase the refit time of fighter craft by %s.
+Extreme Modifications,swp_extrememods,3,0.2,,"special, no_build_in, merc, standard",Special,10000,,,,0,0,0,0,data.scripts.hullmods.SWP_ExtremeModifications,"Allows the installation of %s, but causes a %s of weapon malfunctions in combat. Fighter autofac glitches increase the refit time of fighter craft by %s.
 
 If combat readiness falls below %s, engine malfunctions and critical malfunctions will occur.
 
@@ -30,7 +30,9 @@ Massive Hull,swp_massivehull,,,,,,,,TRUE,,0,0,0,0,data.scripts.hullmods.SWP_Mass
 Linked Hull,swp_linkedhull,,,,,,,,TRUE,TRUE,0,0,0,0,data.scripts.hullmods.SWP_LinkedHull,Mirrors certain aspects between the parent and child hulls.,,,graphics/hullmods/vast_bulk.png
 Ray Core,swp_ray_core,,,,,,,,TRUE,,0,0,0,0,data.scripts.hullmods.SWP_RayCore,Used by the ray drone.,,,graphics/hullmods/terminator_core.png
 Arcade,swp_arcade,,,,,,,,TRUE,TRUE,0,0,0,0,data.scripts.hullmods.SWP_Arcade,Blocks Safety Overrides.,,,graphics/hullmods/generic_mod.png
-Extreme Modifications,swp_extrememods2,,,,,,,,TRUE,,0,0,0,0,data.scripts.hullmods.SWP_ExtremeModifications2,"Allows the installation of %s additional built-in hullmod, but causes a significant chance of malfunctions in combat. Additional critical malfunctions occur when combat readiness falls below %s. Periodic flight deck malfunctions increase the refit time of fighter craft by %s.
+Extreme Modifications,swp_extrememods2,,,,,,,,TRUE,,0,0,0,0,data.scripts.hullmods.SWP_ExtremeModifications2,"Allows the installation of %s, but causes a %s of weapon malfunctions in combat. Fighter autofac glitches increase the refit time of fighter craft by %s.
+
+If combat readiness falls below %s, engine malfunctions and critical malfunctions will occur.
 
 This condition is now a permanent fixture of this ship's hull.",Increases OP. Causes malfunctions. Increases refit time.,,graphics/swp/hullmods/swp_driveshunt.png
 ,,,,,,,,,,,,,,,,,,,

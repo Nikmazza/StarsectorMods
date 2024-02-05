@@ -11,6 +11,7 @@ import org.lwjgl.util.vector.Vector2f
 class SpatialInstabilityOnHit : OnHitEffectPlugin {
     override fun onHit(projectile: DamagingProjectileAPI?, target: CombatEntityAPI?,  point: Vector2f?, shieldHit: Boolean, damageResult: ApplyDamageResultAPI?, engine: CombatEngineAPI?) {
         if (target !is ShipAPI) return
+        if (shieldHit) return
 
         if (!target.hasListenerOfClass(SpatialInstabilityScript::class.java)) {
             target.addListener(SpatialInstabilityScript(target))

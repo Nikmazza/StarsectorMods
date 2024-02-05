@@ -47,6 +47,10 @@
             "swp_smoothtrail":"graphics/swp/fx/swp_smoothtrail.png",
             "swp_zappytrail":"graphics/swp/fx/swp_zappytrail.png",
         },
+        "swp_blast":{
+            "swp_empblast_core":"graphics/swp/fx/swp_empblast_core.png",
+            "swp_empblast_fringe":"graphics/swp/fx/swp_empblast_fringe.png",
+        },
         "swp_indicators":{
             "swp_excelsiorindicator":"graphics/ui/icons/64x_circle.png"
         },

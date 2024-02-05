@@ -10,7 +10,6 @@ import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
-import data.scripts.IIModPlugin;
 import data.scripts.campaign.terrain.II_ChargedNebulaTerrainPlugin;
 import java.awt.Color;
 import java.util.List;
@@ -24,9 +23,6 @@ public class II_PluginStarter extends BaseEveryFrameCombatPlugin {
 
     @Override
     public void init(CombatEngineAPI engine) {
-        if (IIModPlugin.hasMagicLib) {
-            engine.addPlugin(new II_Trails());
-        }
         if (engine.isInCampaign() && (engine.getContext().getPlayerFleet() != null)) {
             CampaignFleetAPI playerFleet = engine.getContext().getPlayerFleet();
             for (CampaignTerrainAPI terrain : playerFleet.getContainingLocation().getTerrainCopy()) {

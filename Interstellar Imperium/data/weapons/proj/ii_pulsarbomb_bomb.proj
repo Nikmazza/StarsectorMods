@@ -2,6 +2,7 @@
     "id":"ii_pulsarbomb_bomb",
     "specClass":"missile",
     "missileType":"BOMB",
+	"onFireEffect":"data.scripts.weapons.II_TrailWeapon",
     "onHitEffect":"data.scripts.weapons.II_PulsarBombOnHitEffect",
     "sprite":"graphics/imperium/missiles/ii_pulsarbomb.png",
 	"glowSprite":"graphics/imperium/missiles/ii_pulsarbomb_glow.png",

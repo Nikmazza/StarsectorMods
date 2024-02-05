@@ -2,21 +2,21 @@
     "id": "swp",
     "name": "Ship/Weapon Pack",
     "author": "DarkRevenant",
-    "version": "1.14.0",
+    "version": "1.15.1",
     "description": "Adds high-quality ships and weapons that fill missing roles in Starsector. This mod is meant to look and feel like vanilla Starsector, enhancing your experience with the game. This mod also includes the International Bounty Board (IBB), a series of difficult boss-fight bounty missions featuring unique ships to face off against.",
-    "gameVersion": "0.96a-RC10",
+    "gameVersion": "0.97a",
     "jars":["jars/SWP.jar"],
     "modPlugin":"data.scripts.SWPModPlugin",
     "dependencies": [
         {
             "id": "lw_lazylib",
             "name": "LazyLib",
-            "version": "2.8"
+            "version": "2.8b"
         },
         {
             "id": "shaderLib",
             "name": "GraphicsLib",
-            "version": "1.7.0"
+            "version": "1.9.0"
         },
     ],
 }

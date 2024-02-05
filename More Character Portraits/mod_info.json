@@ -4,5 +4,5 @@
 	"author":"Seraphi",	
 	"version":"1.01",
 	"description":"202 new vanilla-friendly character portraits and their associated faction files. Primarily kitbashed from vanilla and then stitched together with Stable Diffusion (AUTOMATIC1111) using the Dreamshaper 7 model checkpoint in combination with the Starsector Portrait LORA by Severian Void.",
-	"gameVersion":"0.96a-RC10",
+	"gameVersion":"0.97a-RC6",
 }

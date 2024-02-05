@@ -1,6 +1,7 @@
 {
     "id":"swp_ionblaster_shot",
     "specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.SWP_TrailWeapon",
     "onHitEffect":"data.scripts.weapons.SWP_IonBlasterOnHitEffect",
     "spawnType":"BALLISTIC_AS_BEAM",
     "collisionClass":"RAY",

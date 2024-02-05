@@ -1,6 +1,6 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 15,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "swp_cathedral_rear",

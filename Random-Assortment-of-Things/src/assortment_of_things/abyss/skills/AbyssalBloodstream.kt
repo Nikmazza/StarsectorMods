@@ -1,10 +1,8 @@
 package assortment_of_things.abyss.skills
 
 import assortment_of_things.abyss.AbyssUtils
-import assortment_of_things.abyss.hullmods.abyssals.AbyssalsCoreHullmod
 import assortment_of_things.abyss.skills.scripts.AbyssalBloodstreamCampaignScript
 import assortment_of_things.campaign.skills.RATBaseShipSkill
-import assortment_of_things.combat.AfterImageRenderer
 import assortment_of_things.misc.GraphicLibEffects
 import assortment_of_things.misc.baseOrModSpec
 import com.fs.starfarer.api.Global
@@ -17,14 +15,11 @@ import com.fs.starfarer.api.impl.campaign.ids.HullMods
 import com.fs.starfarer.api.loading.DamagingExplosionSpec
 import com.fs.starfarer.api.ui.TooltipMakerAPI
 import com.fs.starfarer.api.util.FaderUtil
-import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import org.dark.shaders.post.PostProcessShader
 import org.lazywizard.lazylib.MathUtils
 import org.lazywizard.lazylib.combat.entities.SimpleEntity
-import org.lazywizard.lazylib.ext.plus
 import org.lwjgl.util.vector.Vector2f
-import org.magiclib.kotlin.setAlpha
 import java.awt.Color
 import java.util.*
 
@@ -107,11 +102,29 @@ class AbyssalBloodstream : RATBaseShipSkill() {
 
             if (Global.getCombatEngine().isCombatOver) return false
             if (Global.getCombatEngine().playerShip != ship) return false
+
+            if (triggered && !done) {
+                return true
+            }
+
+            var custom = Global.getCombatEngine().customData
+            if (custom.contains("requirem_triggered") && ship!!.captain == Global.getSector().playerPerson) return false
+            if (custom.contains("requirem_triggered_neuro") && ship!!.captain?.aiCoreId == "rat_neuro_core") return false
+
             if (ship!!.variant.hasHullMod(HullMods.PHASE_ANCHOR)) return false
+
 
             if (ship!!.hitpoints - damageAmount <= 0 && !triggered) {
                 ship.hitpoints = 10f
                 triggered = true
+
+                var custom = Global.getCombatEngine().customData
+                if (ship!!.captain == Global.getSector().playerPerson) {
+                    custom.set("requirem_triggered", true)
+                }
+                if (ship!!.captain?.aiCoreId == "rat_neuro_core") {
+                    custom.set("requirem_triggered_neuro", true)
+                }
 
                 for (i in 0..100) {
                     ship!!.exactBounds.update(ship!!.location, ship!!.facing)
@@ -205,6 +218,7 @@ class AbyssalBloodstream : RATBaseShipSkill() {
                     for (weapon in ship.allWeapons) {
                         weapon.repair()
                     }
+
                     PostProcessShader.resetDefaults()
                 }
             }

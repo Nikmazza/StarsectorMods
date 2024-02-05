@@ -4,7 +4,7 @@
 	"author":"Tartiflette",
 	"version": {"major":'0', "minor":'5', "patch":'6m'},
 	"description":"Space, the ultimate frontier. Embark on a journey to unveil it's most hidden treasures.",
-    "gameVersion": "0.96a-RC10",
+    "gameVersion": "0.97a",
     "dependencies": [
         {
             "id": "lw_lazylib",

@@ -4,7 +4,7 @@
     "author": "Sleepyfish",
     "version": "0.99-RC5",
     "description": "Inspired by FTL, the Star Federation favors larger ships that individually mimic different tech levels. Faction music by Ben Prunty.",
-    "gameVersion": "0.96a-RC10",
+    "gameVersion": "0.97a",
     "jars":["jars/FED.jar"],
 	    "dependencies": [
         {

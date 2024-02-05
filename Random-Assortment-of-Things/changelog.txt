@@ -1,3 +1,229 @@
+RAT Version 2.0.6 Part 1
+Not Save compatible with versions prior to 2.0.0
+
+-> Reverted a change in the code of the tylos shipsystem, maybe fixing a specific crash when viewing the tactical map.
+
+
+RAT Version 2.0.5 Part 1
+Not Save compatible with versions prior to 2.0.0
+
+-> Fixed Starsystems being able to spawn to close to the vanilla abyss
+-> Fixed some other Miscellanious generation issue.
+
+
+
+RAT Version 2.0.4 Part 1
+Not Save compatible with versions prior to 2.0.0
+
+-> Fixed crash when entering sim with 2nd tylos state
+-> Fixed a crash with the arkas shipsystem
+
+
+
+RAT Version 2.0.3 Part 1
+Not Save compatible with versions prior to 2.0.0
+
+-> Fixes a crash that happens when running out of fuel in hyperspace
+
+
+
+RAT Version 2.0.2 Part 1
+Not Save compatible with versions prior to 2.0.0
+
+-> Fixed a Crash on Mac & Linux if you had the minimap enabled
+
+
+
+RAT Version 2.0.1 Part 1
+Not Save compatible with versions prior to 2.0.0
+
+-> Fixed Crash when interacting with some entities.
+
+
+
+Version 2.0.0 Part 1
+Not Save compatible
+
+-> Updated to 0.97a.
+-> Renamed the "Abyss" to the "Abyssal Depths"
+-> Made the abyssal depths smaller.
+-> Reworked Hull-Alterations, they are no longer s-mods and their item is refunded on removal.
+-> Reduced the Droprate of Hull-Alterations in the abyssal depths.
+-> Reworked the Shipsystems of all baseline abyss ships.
+-> All baseline abyss ships have their previous built-in hullmod replaced with "Abyssal Adaptability", which provides buffs depending on which core that is installed.
+-> Reworked the stats of the Morkoth-Class, being now much less tanky and being much more maneuverable.
+-> Reworked the chronos and cosmos core skills.
+-> New Portraits for chronos and cosmos cores (Thanks to Selkie)
+-> Added a new interaction image for Abyss Entities (Thanks to Anulackk)
+-> Reworked the Ceto Fighter
+-> Both the Map and Radar now have more information of abyss enviroments displayed.
+-> Added some visual effects to abyss hullmods tooltips.
+-> Reduced the volume of the starburst launchers fire sound.
+-> Fixed an issue with the Arkas Shipsystem visuals
+-> Made the arkas accelerate & deccelerate a bit faster.
+-> Made the Arkas Phantoms more Aggressive.
+-> Lots of other changes im unable to remember.
+
+
+
+Version 1.9.5
+Save comp with 1.9.0-1.9.4, but not older versions or the 1.9.0 betas.
+
+-> Arkas shipsystem duration now slows down while phased, allowing it to make better use of the system.
+-> Arkas Phantoms now deal 60% less damage rather than 66% less.
+-> Reduced the Repair Time for Exo-Tech fighters.
+-> Both the Arkas and Tylos now destroy their fighters on shipsystem end/activation when they are equiped with converted hangars
+
+
+
+Version 1.9.4
+Save comp with 1.9.0-1.9.3, but not older versions or the 1.9.0 betas.
+
+-> Fixed the Exo-Tech custom start giving 1 less skillpoint than it should.
+-> Fixed an issue where the "Autonomous Bays" alteration can be installed on ships with only built-in fighters.
+-> Fixed a bug where the Arkas wouldnt despawn its phantoms if it exited the fight through phase-anchor.
+-> Fixed an issue that would cause the the tylos to not actually swap to its base state on death.
+-> Fixed an issue that caused the tylos to not be able to receive commands in the 2nd state. This causes another issue of the 2nd state being visible in the deployment window, but whatever.
+
+
+
+Version 1.9.3
+Save comp with 1.9.0-1.9.2, but not older versions or the 1.9.0 betas.
+
+-> Fixed an issue where the tylos was designated as a cruiser and not destroyer (how did i not notice that)
+-> Fixed Exo-Tech trade thinking you dont have enough tokens if the purchasing cost equals the amount of tokens you have.
+-> Settlement Selection & Icon now renders the planets glow-sprite, if it has one.
+-> Fixed a typo in a description.
+
+
+
+Version 1.9.2
+Save comp with 1.9.0 & 1.9.1, but not older versions or the 1.9.0 betas.
+
+-> Added an Exo-Tech custom start.
+-> Increased the flux capacity of the arkas-class.
+-> Fixed issue where the arkas shipsystem would spawn projectiles at a random location on activation.
+-> The tylos now changes back to its base state before dying to avoid issues.
+-> Arkas Phantoms no longer copy its inbuilt weapons as it felt a bit to spam inducing.
+-> The 2nd tylos state combat readiness is now based on the initial combat readiness of the 1st state, instead of always being 100%.
+-> Fixed a certain version of the tylos missing a hullmod.
+-> Fixed the 2nd state of the tylos not sharing the ships dmods.
+-> Another attempt at fixing a crash during procgen.
+-> Fixed an issue that caused lag after the tylos was disabled.
+
+
+
+Version 1.9.1
+Save comp with 1.9.0, but not older versions or the 1.9.0 betas.
+
+-> Fixed crash during procgen.
+-> Fixed an issue where the Dawnblades weapons ranges were mismatched, causing its beam to sometimes not fire.
+-> Fixed some weapons not being able to autofire after using the tylos shipsystem.
+-> The Tylos system AI will no longer switch if the other states CR or PPT is to low.
+
+
+
+Version 1.9.0
+Not save compatible with neither prior versions nor the 1.9.0 beta.
+
+-> Added "Frontiers", a feature allowing players to build a small settlement.
+-> Added a new Exo-Tech ship, the "Tylos", a phase destroyer.
+-> Added 4x Exo-Tech weapons.
+-> Added 3x Exo-Tech fighters.
+-> Added a new exo-tech related procgen encounter.
+-> The Arkas shipsystem has been reworked, and the ship now costs 35DP instead of 30DP to deploy.
+-> Gave the Apheidas-Platform slightly more flux capacity.
+-> Removed the "Exogrid Overload" hullmod. 
+-> Exo-Tech ships can now be recovered from defeated fleets, however their d-mods can not be restored without a partnership with the faction.
+-> Updated Exo-Tech variants to use their new content.
+
+-> Removed the "Commander" Nex-Background, as its concepts clash with what settlements are.
+-> Reworked how the Aftershadows from Thestias shipsystem work, should fix the crash issues with mods like VIC and potentialy other cases.
+-> Exo-Tech should no longer care about the players transponder.
+-> Slightly adjusted how Exoships decide where to go next.
+-> Fixed a crash that occured with the thestia class if another ship forced its shipsystem off.
+-> Fixed rare crash with the Exogrid Hullmod
+
+*Contains some changes & content that beta5 did not have yet
+
+
+
+Version 1.8.4
+Not save compatible :skull_emoji:. Patch isnt the largest, and im mostly releasing it now because i may start working on some larger things afterwards.
+
+-> Modified the Thestia-Class Sprite & Mounts.
+-> The Thestia-Class shipsystem now also works on returning fighters and bombers.
+-> Adjusted the Colors of some Exo-Tech shipsystems.
+-> "Autonomous Bays" Alteration now gives 3 random gamma-core skills instead of the base 3 skills that gammas usually have.
+-> Fixed an issue with VIC fighters and the Thestias shipsystem, there will still be a crash until VIC updates however.
+
+
+
+Version 1.8.3
+Might not be save compatible, not sure to be honest, use at your own risk.
+
+-> Exo-Tech markets and fleets now have their own encounter theme, thanks to haplo!
+-> Added a new Exo-Tech ship.
+-> Added another Exo-Tech trade in reward.
+-> Gave the mod a new icon in the LunaSettings menu.
+-> Removed the "Rename Station" option from the commander start, as it was bugged and the player can rename the station like any other colony anyways.
+-> Fixed an issue that allowed triggering abyssal bloodstreams effect on multiple ships.
+-> Fixed an issue caused by removing the autonomous bays hullmod while a fighter was installed in its slot.
+
+
+
+Version 1.8.2
+Not save compatible with prior versions.
+
+-> Simplified the Commander start and added a location picker for where the station is placed.
+-> Added new effects to some abyss weapons & adjusted their stats.
+-> Improved the Exoship teleport sequence.
+-> Fixed an issue where selecting the abyss start, then selecting another start would still possibly spawn you in the abyss.
+-> Fixed an issue where exo-tech ships in the player fleet could not be recovered.
+-> Fixed an issue with the exo-professors portrait not loading.
+
+
+
+Version 1.8.1
+
+-> Fixed a crash from a missing ressource.
+
+
+
+Version 1.8.0
+Not save compatible with prior versions.
+
+-> Added the "Exo-Tech" faction, a mini-faction that can be found moving through the fringe-sector. 
+-> It is still in beta, and only has 2 useable ships for now. Will get more over the next updates.
+-> The faction can not be started with.
+-> Added the Campaign "Exoships".
+-> Added another Exo-Tech ship. 
+-> Added 5 new items for trade with the faction.
+-> Changed Exocloak to a minimum speed of 60% instead of 75% at high flux.
+-> Increased Arkas Shipsystem cooldown from 10s to 15s
+-> Exocloak now displays the phase glows fade out over cooldown+out duration, instead of just out.
+-> Removed anomalous cache as its contents are now acquireable through other methods.
+
+-> Reworked how the abyss generates the connection between systems. 
+-> Abyss systems now have a big border around them, going over it teleports you out of the abyss.
+-> Abyss map can now be dragged with rightclick.
+-> Added a config to make the abyss brighter for screens where it would otherwise be hardly visible.
+-> Abyss Custom Start now spawns you in the abyss.
+-> Slightly increased abyss fleet sizes.
+-> Removed rift-system for now.
+-> Deep abyss should have more morkoths spawn again.
+-> Improved the performance for the abyss, removing a lot of functions that were called for systems the player wasnt even in.
+-> Fixed outdated description on the seraph core, mentioning that it can not be installed on capitals.
+-> Fixed issue where recovered abyss ships dont have the "no data" tag removed.
+
+-> Restructured the lunalib config window to make more sense with the amount of expansions in the mod.
+-> Expedition Hub no longer looks for planets in hidden systems and no longer ignores fleet quality.
+
+-> Fixed typo on Biomodifications skill
+-> Fixed Auto-Engineer crash.
+-> Potentialy fixed Maintaining-Momentum crash but it was so extremely rare that i dont even know if the mod was at fault.
+
+
 Version 1.7.4
 Not save compatible with prior versions.
 

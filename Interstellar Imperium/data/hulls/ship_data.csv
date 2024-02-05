@@ -3,7 +3,7 @@ Tribunal,ii_tribunal,,Imperium,,,5000,600,6000,,600,0,,200,300,200,50,100,300,FR
 Clypeus,ii_clypeus,,Imperium,ii_flares,,2000,200,4500,,300,0,,200,300,200,100,300,200,FRONT,,100,1,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0.4,2,2,,7
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Flamen,ii_flamen,,Imperium,ii_flamen_flares,,300,30,400,,50,0,,275,350,300,150,450,15,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,7650
-Draconarius,ii_draconarius,,Imperium,,,700,100,1000,,75,0,,300,500,400,150,300,25,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,7651
+Draconarius,ii_draconarius,,Imperium,,,700,100,1000,,75,0,,300,500,400,200,350,25,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,7651
 Vicarius,ii_vicarius,,Imperium,ii_burst_flares,,900,200,1250,,125,0,,200,200,150,60,90,50,NONE,,0,0,0,,,3,3,,,,,,,,,,,,,,,,,,,,,,0,,,,7652
 Scutum,ii_scutum,,Imperium,,,500,100,800,,75,0,,175,300,300,60,120,60,OMNI,,180,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,7653
 Inferna,ii_inferna,,Imperium,,,500,50,300,,50,0,,150,600,250,150,400,40,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,7654
@@ -31,7 +31,7 @@ Adamas,ii_adamas,Phase Cruiser,Imperium,ii_luxfinis,21,9000,1400,10000,12000,600
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Dominus,ii_dominus,Battlecruiser,Imperium,ii_overdrive,26,12000,1100,12000,17500,700,240,2,45,20,15,6,10,2500,OMNI,,150,0.5,1,,,400,500,200,300,10,30,8,350000,4,12,660,0.25,45,45,,,,,,,,"ii_rare_bp, rare_bp, hist3t, merc",,0.5,2,4,,7671
 Caesar,ii_caesar,Battleship,Imperium,ii_shockbuster,28,18000,1600,20000,20000,800,320,,40,15,10,5,5,4000,OMNI,,60,0.25,1,,,650,1300,400,300,15,20,7,420000,3,15,720,0.25,50,50,,,,,,,,"ii_rare_bp, rare_bp, merc",,0.4,2,4,,7672
-Matriarch,ii_matriarch,Battlestar,Imperium,ii_commandcenter,30,25000,1350,18000,16250,650,300,6,30,12,12,4,3,5000,OMNI,,90,0.5,0.8,,,1000,2000,600,400,15,26,7,560000,3,15,720,0.25,60,60,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","ii_rare_bp, rare_bp, merc",,0.4,2,5,,7673
+Matriarch,ii_matriarch,Battlestar,Imperium,ii_commandcenter,32,25000,1350,18000,16250,650,300,6,30,12,12,4,3,5000,OMNI,,90,0.5,0.8,,,1000,2000,600,400,15,26,7,560000,3,15,720,0.25,65,65,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","ii_rare_bp, rare_bp, merc",,0.4,2,5,,7673
 Olympus,ii_olympus,Strike Platform,Imperium,ii_flares,28,9000,900,10000,10000,400,190,,30,7.5,10,3,4,2800,FRONT,,360,0.5,1,,,150,200,150,200,20,10,6,620000,1,5,900,0.25,50,50,,,,,,,,"ii_rare_bp, req_military, no_dealer",0.25,0.6,2,4,,7674
 Barrus,ii_barrus,Heavy Combat Freighter,Imperium,ii_impulsebooster,18,12000,1200,11000,11250,450,190,,40,20,15,6,4,3500,OMNI,,120,0.5,1,,,200,400,1200,400,6,40,7,190000,2,15,600,0.25,25,25,48,200,,,,,,"ii_rare_bp, rare_bp",,0.5,2,4,,7675
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -64,7 +64,7 @@ Stella Castellum,ii_station4,Stella Castellum,Imperium,ii_drone_station2_super,6
 ,ii_module_supercitadel,Heavy Beam Citadel,Imperium,ii_luxfinis,1,15000,1500,26000,31250,1250,1000,,0,0,0,10,10,1000,FRONT,,210,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2066
 ,ii_module_drone,Drone Launcher,Imperium,ii_drone_station,1,5000,1500,0,2500,100,0,,0,0,0,10,10,10,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNDER_PARENT, UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2051
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Yamato,ii_boss_dominus,Mod-Battleship,Unique Imperium,ii_boss_modifiedbooster,31,12000,1100,12000,17500,700,340,,45,20,15,6,10,2500,OMNI,,150,0.5,1,,,400,500,200,300,10,30,8,350000,4,12,660,0.25,54,54,,,,,,,HIDE_IN_CODEX,"no_autofit, no_dealer",,0.5,2,4,,7684
+Yamato,ii_boss_dominus,Mod-Battleship,Unique Imperium,ii_boss_modifiedbooster,31,13000,1250,20000,17500,700,340,,45,20,15,6,10,3000,OMNI,,150,0.4,1,,,400,500,200,300,10,30,8,1050000,4,12,660,0.25,54,54,,,,,,,HIDE_IN_CODEX,"no_autofit, no_dealer",,0.5,2,4,,7684
 ,ii_boss_titanx,Titan-X,Unique Imperium,ii_empburst,35,14000,1400,24000,20000,800,175,,45,30,10,4,4,4000,OMNI,,90,0.4,0.8,,,150,200,200,500,10,50,8,1500000,4,10,600,0.25,75,75,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, restricted, no_dealer",,1,8,16,,7685
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,ii_dummy,,Imperium,,9999999,1000,300,0,,0,0,,100,1,1,10,10,60,NONE,,0,0,0,,,0,0,0,0,0,0,,0,,1,,,9999999,9999999,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",no_dealer,,0.5,1,2,,7686

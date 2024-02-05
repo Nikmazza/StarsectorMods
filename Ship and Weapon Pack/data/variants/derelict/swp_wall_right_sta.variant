@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 10,
-    "fluxVents": 8,
+    "fluxVents": 12,
     "hullId": "swp_wall_right",
     "hullMods": [
         "dedicated_targeting_core",

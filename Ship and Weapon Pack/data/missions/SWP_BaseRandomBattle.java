@@ -214,7 +214,8 @@ public class SWP_BaseRandomBattle implements MissionDefinitionPlugin {
             FACTIONS.add("cabal", 0.5f);
         }
         if (SWPModPlugin.imperiumExists) {
-            FACTIONS.add("interstellarimperium", 1f);
+            FACTIONS.add("interstellarimperium", 0.75f);
+            FACTIONS.add("ii_imperial_guard", 0.25f);
         }
         if (SWPModPlugin.blackrockExists) {
             FACTIONS.add("blackrock_driveyards", 0.75f);

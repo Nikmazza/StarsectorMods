@@ -93,11 +93,11 @@ class AbyssalDefendingFleetManager(source: SectorEntityToken, var depth: AbyssDe
 
             AbyssDepth.Shallow -> {
                 minPoints += 84f
-                maxPoints += 128f
+                maxPoints += 138f
             }
             AbyssDepth.Deep -> {
-                minPoints += 118f
-                maxPoints += 182f
+                minPoints += 148f
+                maxPoints += 192f
             }
         }
 
@@ -198,9 +198,9 @@ class AbyssalDefendingFleetManager(source: SectorEntityToken, var depth: AbyssDe
         addMemKeyApplierScript(fleet)
 
         var alterationChancePerShip = 0.0f
-        if (difficulty == AbyssDifficulty.Hard) alterationChancePerShip += 0.4f
-        if (depth == AbyssDepth.Shallow) alterationChancePerShip += 0.4f
-        if (depth == AbyssDepth.Deep) alterationChancePerShip += 0.5f
+        if (difficulty == AbyssDifficulty.Hard) alterationChancePerShip += 0.2f
+        if (depth == AbyssDepth.Shallow) alterationChancePerShip += 0.2f
+        if (depth == AbyssDepth.Deep) alterationChancePerShip += 0.3f
 
         AbyssUtils.addAlterationsToFleet(fleet, alterationChancePerShip, random)
 

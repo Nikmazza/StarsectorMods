@@ -1,7 +1,7 @@
 {
     "displayName": "Artillery",
     "fluxCapacitors": 10,
-    "fluxVents": 10,
+    "fluxVents": 14,
     "goalVariant": true,
     "hullId": "ii_praetorian",
     "hullMods": [
@@ -9,6 +9,7 @@
         "targetingunit"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "ii_praetorian_art",
     "weaponGroups": [
         {

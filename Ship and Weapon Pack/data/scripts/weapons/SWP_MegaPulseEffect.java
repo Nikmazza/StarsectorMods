@@ -8,6 +8,7 @@ import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import data.scripts.everyframe.SWP_Trails;
 import data.scripts.util.SWP_Util;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -37,6 +38,8 @@ public class SWP_MegaPulseEffect implements EveryFrameWeaponEffectPlugin, OnFire
         if ((projectile == null) || (weapon == null)) {
             return;
         }
+
+        SWP_Trails.createIfNeeded();
 
         final String DATA_KEY = DATA_KEY_PREFIX + weapon.getShip().getId() + "_" + weapon.getSlot().getId();
         LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);

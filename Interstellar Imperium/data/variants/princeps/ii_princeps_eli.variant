@@ -1,7 +1,7 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 5,
-    "fluxVents": 9,
+    "fluxVents": 13,
     "goalVariant": true,
     "hullId": "ii_princeps",
     "hullMods": ["ii_elite_package"],

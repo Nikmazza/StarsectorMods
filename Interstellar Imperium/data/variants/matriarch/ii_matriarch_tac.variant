@@ -1,7 +1,7 @@
 {
     "displayName": "Tactical",
     "fluxCapacitors": 0,
-    "fluxVents": 20,
+    "fluxVents": 26,
     "goalVariant": true,
     "hullId": "ii_matriarch",
     "hullMods": ["ii_targeting_package"],
@@ -27,8 +27,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0006": "ii_telum",
-                "WS0007": "ii_telum"
+                "WS0006": "ii_fundae_m",
+                "WS0007": "ii_fundae_m"
             }
         },
         {

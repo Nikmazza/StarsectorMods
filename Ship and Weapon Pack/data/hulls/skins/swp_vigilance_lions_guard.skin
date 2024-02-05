@@ -13,7 +13,7 @@
     "removeBuiltInMods":[],         # hullmod ids
     "removeBuiltInWeapons":[],      # weapon slot ids
     "systemId":"highenergyfocus",
-    "ordnancePoints":40,
+    "ordnancePoints":42,
     "builtInMods":["andrada_mods","solar_shielding","coherer"],
     "builtInWeapons":{
     },

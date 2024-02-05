@@ -6,7 +6,7 @@
   "dependencies": [],
   "utility": true,
   "description": "Based on original OE, adds the ability to increase officer level cap for story points.",
-  "gameVersion": "0.96a-RC10",
+  "gameVersion": "0.97a",
   "jars": ["jars/Officer Extension.jar"],
   "modPlugin": "officerextension.plugin.OfficerExtension"
 }

@@ -1,5 +1,46 @@
+Version 2.6.4 (February 3, 2024):
+- Updated for Starsector 0.97a
+- No longer sends punitive expeditions; no Colony Crisis support (yet), so colony harassment outside of Nexerelin will be unlikely
+- Onager MIRV Launcher:
+  * Ammo decreased to 14 from 20
+  * Cooldown increased to 15 from 12 seconds
+- Arcus Autocannon flux/shot increased to 90 from 80
+- Sagittarius Autogun flux/shot decreased to 22 from 25
+
+Version 2.6.3 (January 7, 2024):
+- Tweaked Basileus system AI
+- Additional stats adjustments for Yamato
+- Fixed critical issue with Nexerelin integration
+
+Version 2.6.2e (July 10, 2023):
+- Fixed critical issue with Nexerelin integration
+
+Version 2.6.2d (July 5, 2023):
+- Fixed critical issue with Nexerelin integration
+
+Version 2.6.2c (July 1, 2023):
+- Fixed support for player researching & building Stella Castellum via Ashes of the Domain
+- Fixed crash under certain conditions after Byzantium is captured by another faction in Nexerelin
+
+Version 2.6.2b (June 26, 2023):
+- Fixed critical issue with Nexerelin integration
+
+Version 2.6.2 (June 24, 2023):
+- Matriarch DP (supplies/deployment) increased to 65 from 60
+- Draconarius turn rate marginally improved
+- Ballista base damage reduced to 225 HE from 325 HE (was bugged to actually be 350 HE)
+  * Hits on armor now have a 50% chance to do 350 additional HE damage (calculated separately)
+- Prevent Byzantium from having a bugged military market due to bad cross-mod interaction (significant performance improvement in Nex)
+
+Version 2.6.1b (June 22, 2023):
+- Fixed malformed file causing crash on load
+
+Version 2.6.1 (June 22, 2023):
+- Added support for player researching & building Stella Castellum via Ashes of the Domain (contributed by Kaysaar)
+- Slight performance optimization when Imperium weapons/ships are not present in a battle
+
 Version 2.6.0b (June 9, 2023):
-- Removed Ballistic Rangedinder from Sectator
+- Removed Ballistic Rangefinder from Sectator
 - Fixed Imperium fleet/market composition issue
 
 Version 2.6.0 (June 8, 2023):

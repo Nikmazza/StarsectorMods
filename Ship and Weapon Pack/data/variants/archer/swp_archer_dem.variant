@@ -1,7 +1,7 @@
 {
     "displayName": "DEM Support",
     "fluxCapacitors": 0,
-    "fluxVents": 7,
+    "fluxVents": 8,
     "goalVariant": true,
     "hullId": "swp_archer",
     "hullMods": [

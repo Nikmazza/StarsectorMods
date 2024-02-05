@@ -3,9 +3,11 @@
         "hulls":{
             "buffalo":0,
 
+            "swp_alastor_lions_guard":0.75, # Slightly less uncommon to avoid dilution
             "swp_vigilance_lions_guard":0.25, # Rare because no non-LG equivalent
 
             "swp_champion_lions_guard":0.25, # Rare because no non-LG equivalent
+            "swp_vulture_lions_guard":0.75, # Slightly less uncommon to avoid dilution
 
             "swp_conquest_lions_guard":0.25, # Rare because no non-LG equivalent
         },
@@ -14,9 +16,11 @@
         "hulls":[
             "swp_buffalo_diktat",
 
+            "swp_alastor_lions_guard",
             "swp_vigilance_lions_guard",
 
             "swp_champion_lions_guard",
+            "swp_vulture_lions_guard",
 
             "swp_conquest_lions_guard",
         ],

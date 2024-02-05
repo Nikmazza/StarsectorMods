@@ -9,7 +9,7 @@
     "collisionRadius":18,
     "collisionClass":"MISSILE_NO_FF",
     "explosionColor":[150,175,255,255],
-    "explosionRadius":200,
+    "explosionRadius":150,
     "explosionSpec":{"duration":0.1f,
                      "radius":100,
                      "coreRadius":50,

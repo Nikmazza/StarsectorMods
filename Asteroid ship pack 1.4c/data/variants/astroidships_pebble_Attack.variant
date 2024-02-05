@@ -1,0 +1,84 @@
+{
+  "variantId": "astroidships_pebble_Attack",
+  "hullId": "astroidships_pebble",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 46,
+  "fluxVents": 44,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualac",
+        "WS0009": "lightdualac",
+        "WS0010": "heavyac",
+        "WS0014": "lightac",
+        "WS0016": "lightac",
+        "WS0017": "lightac",
+        "WS0018": "lightac",
+        "WS0033": "hephag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "harpoon",
+        "WS0006": "harpoon",
+        "WS0008": "salamanderpod",
+        "WS0011": "hammer",
+        "WS0012": "hammer",
+        "WS0013": "hammer",
+        "WS0015": "salamanderpod",
+        "WS0020": "sabot",
+        "WS0022": "sabot",
+        "WS0023": "sabot_single",
+        "WS0025": "sabot_single"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightneedler",
+        "WS0004": "lightneedler",
+        "WS0019": "lightag",
+        "WS0021": "lightag",
+        "WS0024": "lightag",
+        "WS0026": "lightneedler",
+        "WS0028": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "vulcan",
+        "WS0007": "vulcan",
+        "WS0027": "vulcan",
+        "WS0029": "vulcan",
+        "WS0030": "vulcan",
+        "WS0031": "vulcan",
+        "WS0032": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "piranha_wing",
+    "piranha_wing",
+    "thunder_wing"
+  ]
+}

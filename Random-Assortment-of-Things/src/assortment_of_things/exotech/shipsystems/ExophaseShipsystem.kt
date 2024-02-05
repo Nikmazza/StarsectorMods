@@ -1,6 +1,5 @@
 package assortment_of_things.exotech.shipsystems
 
-import assortment_of_things.abyss.hullmods.abyssals.AbyssalsCoreHullmod
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.MutableShipStatsAPI
 import com.fs.starfarer.api.combat.PhaseCloakSystemAPI
@@ -12,8 +11,6 @@ import com.fs.starfarer.api.impl.combat.BaseShipSystemScript
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript.StatusData
 import com.fs.starfarer.api.util.IntervalUtil
-import org.lwjgl.util.vector.Vector2f
-import org.magiclib.kotlin.setAlpha
 import org.magiclib.plugins.MagicTrailPlugin
 import java.awt.Color
 
@@ -31,7 +28,8 @@ class ExophaseShipsystem : BaseShipSystemScript() {
     var MAX_TIME_MULT = 3f
 
     var FLUX_LEVEL_AFFECTS_SPEED = true
-    var MIN_SPEED_MULT = 0.75f
+    //var MIN_SPEED_MULT = 0.75f
+    var MIN_SPEED_MULT = 0.60f
     var BASE_FLUX_LEVEL_FOR_MIN_SPEED = 0.5f
 
     protected var STATUSKEY1 = Any()
@@ -125,6 +123,7 @@ class ExophaseShipsystem : BaseShipSystemScript() {
             return
         }
 
+        if (ship.variant.hasTag("Arkas-Phantom")) return
 
         if (player) {
             maintainStatus(ship, state, effectLevel)
@@ -151,6 +150,10 @@ class ExophaseShipsystem : BaseShipSystemScript() {
         if (state == ShipSystemStatsScript.State.COOLDOWN || state == ShipSystemStatsScript.State.IDLE) {
             unapply(stats, id)
             return
+        }
+
+        for (weapon in ship.allWeapons.filter { it.isDecorative }) {
+            weapon.sprite.color = Color(255, 255, 255, (254 * (1 - ship.phaseCloak.effectLevel)).toInt())
         }
 
         val speedPercentMod = stats.dynamic.getMod(Stats.PHASE_CLOAK_SPEED_MOD).computeEffective(0f)

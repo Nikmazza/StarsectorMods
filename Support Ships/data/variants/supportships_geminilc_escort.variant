@@ -1,6 +1,6 @@
 {
     "displayName": "Escort",
-    "fluxCapacitors": 9,
+    "fluxCapacitors": 11,
     "fluxVents": 18,
     "hullId": "supportships_geminilc",
     "hullMods": ["militarized_subsystems"],

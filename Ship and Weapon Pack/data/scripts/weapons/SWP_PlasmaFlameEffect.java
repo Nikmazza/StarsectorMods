@@ -11,6 +11,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.util.Misc;
+import data.scripts.everyframe.SWP_Trails;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -141,6 +142,8 @@ public class SWP_PlasmaFlameEffect implements EveryFrameWeaponEffectPlugin, OnHi
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
         String prevKey = "swp_plasmaflame_prev_" + weapon.getShip().getId() + "_" + weapon.getSlot().getId();
         DamagingProjectileAPI prevProj = (DamagingProjectileAPI) engine.getCustomData().get(prevKey);
+
+        SWP_Trails.createIfNeeded();
 
         SWP_PlasmaFlameEffect trail = new SWP_PlasmaFlameEffect(projectile, prevProj);
 

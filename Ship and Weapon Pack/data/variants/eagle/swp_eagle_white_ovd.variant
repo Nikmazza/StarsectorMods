@@ -1,7 +1,7 @@
 {
     "displayName": "Overdriven",
     "fluxCapacitors": 0,
-    "fluxVents": 14,
+    "fluxVents": 18,
     "hullId": "swp_eagle_white",
     "hullMods": ["safetyoverrides"],
     "permaMods": [],

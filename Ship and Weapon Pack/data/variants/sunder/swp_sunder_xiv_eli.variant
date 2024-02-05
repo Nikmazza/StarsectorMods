@@ -1,6 +1,6 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 6,
     "fluxVents": 20,
     "hullId": "swp_sunder_xiv",
     "hullMods": [

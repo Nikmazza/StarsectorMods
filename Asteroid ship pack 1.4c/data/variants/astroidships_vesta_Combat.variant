@@ -1,0 +1,58 @@
+{
+  "variantId": "astroidships_vesta_Combat",
+  "hullId": "astroidships_vesta",
+  "displayName": "Combat",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "advancedshieldemitter",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightneedler",
+        "WS0002": "lightneedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "lightag",
+        "WS0009": "lightag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "lightac",
+        "WS0010": "lightac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "harpoon_single",
+        "WS0004": "sabot_single"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "harpoon_single",
+        "WS0006": "sabot_single"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

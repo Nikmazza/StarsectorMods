@@ -3,6 +3,7 @@
         "swp_alastor_ass":5,
         "swp_alastor_sta":5,
         "swp_alastor_xiv_eli":10,
+        "swp_alastor_lions_guard_eli":10,
 
         "swp_brawler_hegemony_ass":10,
 
@@ -22,6 +23,7 @@
         "swp_alastor_dem":0,
         "swp_alastor_eli":0,
         "swp_alastor_xiv_eli":10,
+        "swp_alastor_lions_guard_eli":10,
 
         "swp_brawler_hegemony_ass":10,
 
@@ -55,7 +57,6 @@
 
         "swp_archon_cs":3,
         "swp_archon_eli":4,
-        "swp_archon_ovd":1,
         "swp_archon_str":3,
 
         "swp_beholder_cs":2,
@@ -114,6 +115,7 @@
         "swp_vulture_sta":5,
         "swp_vulture_dem":0,
         "swp_vulture_esc":0,
+        "swp_vulture_lions_guard_eli":10,
 
         "swp_vulture_p_rai":10,
 
