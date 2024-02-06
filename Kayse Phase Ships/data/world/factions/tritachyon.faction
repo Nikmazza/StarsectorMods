@@ -11,6 +11,7 @@
 			"kayse_wight",
 			"kayse_banshee",
 			"kayse_harbinger_NSO",
+			"kayse_azrael",
 			"kayse_necromancer",
 			"kayse_ghost",
 			"kayse_deathknight",
@@ -35,6 +36,14 @@
 	"priorityFighters":{
 		"tags":[],
 		"fighters":[
+		],
+	},
+	"knownHullMods":{
+		"tags":[],
+		"hullMods":[
+			"kayse_phasetuninglean",
+			"kayse_phasetuningrich",
+			"kayse_armorrepair",
 		],
 	},
 },

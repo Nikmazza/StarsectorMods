@@ -6,7 +6,7 @@
     "descriptionId":"harbinger",  # optional
     "descriptionPrefix":"This ship has been modified for PHASEOPS, modifying the Quantum Disruptor to focus all of its energy into the target's phase coils, disrupting them for a critical few seconds. This puts the modified ship squarely in the Anti-Phase-Ship, Hunter-Killer role.",
    "tags":["no_such_org_bp"],
-   "tech":"No Such Org",
+   "tech":"High Tech",
     "spriteName":"graphics/kayse/ships/harbinger/harbinger_NSO.png",
 #    "ordnancePoints":60,
 #    "baseValueMult":1.5,

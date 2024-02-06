@@ -1,7 +1,4 @@
 {
-	"designTypeColors":{
-            "No Such Org":[70,72,140,255],
-    },
 	"graphics":{
 		"fx":{
 			"kayse_hex":"graphics/kayse/fx/Hexagon_sprite.png",

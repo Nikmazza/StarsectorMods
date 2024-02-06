@@ -1,12 +1,11 @@
 {
-	"id":"kayse_phaseships", # internal id
-	"name":"No Such Organization - Phase ships", # displayed to the player
-	"author":"Kayse",
-	"version":"0.4.0",
-	"description":"Some kitbashed phase ships.",
+	"id":"complex_phaseships", # internal id
+	"name":"PhaseOps", # displayed to the player
+	"author":"Kayse-Complex",
+	"version":"0.1.0",
+	"description":"Some kitbashed phase ships and phase techs for Tri-Tachyon.",
 	"gameVersion": "0.97a",
 	"jars":["jars/Kayse_PhaseShips.jar"],
-	"modPlugin":"data.scripts.NoSuchOrg_ModPlugin",
 	"dependencies": [
 		{
 			"id": "MagicLib",
