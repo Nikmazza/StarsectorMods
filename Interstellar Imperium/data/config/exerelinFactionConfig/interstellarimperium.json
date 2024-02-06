@@ -15,10 +15,10 @@
     "suppressionFleetName":"Poena",
     "stationName":"Castrum",
 
-    "startRelationships":{ "hegemony": -0.8 },
+    "startRelationships":{ "hegemony": -0.8, "persean":0.75 },
     "maxRelationships":{ "hegemony":-0.4, },
-    "diplomacyPositiveChance":{ "hegemony":0.75, },
-    "diplomacyNegativeChance":{ "hegemony":1.5, },
+    "diplomacyPositiveChance":{ "hegemony":0.75, "persean":1.5 },
+    "diplomacyNegativeChance":{ "hegemony":1.5, "persean":0.5 },
     "diplomacyTraits":["helps_allies", "irredentist", "stalwart", "likes_ai", "law_and_order", "neutralist"],
 
     "specialForcesNamerClass":"data.scripts.campaign.specialforces.II_SpecialForcesNamer",
@@ -34,6 +34,10 @@
         "militarist":1,
         "ideological":1,
     },
+	
+	"dispositions":{
+		"persean": 25,
+	},
     
     "startShipsSolo":[
         ["ii_decurion_sta"],

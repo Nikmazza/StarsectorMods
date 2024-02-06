@@ -35,7 +35,7 @@
 		"sindrian_diktat": -0.5,                         #We've experienced life under dictators long enough to know how we should treat these.
         "lions_guard": -0.5,		                     #Loyal hound dogs of a tyrant.
 		"independent": 0.5,                              #Respectable spacers just making a living.
-		"tritachyon": -1,                                #Former oppressors of our people.
+		"tritachyon": -0.6,                                #Former oppressors of our people.
 		"luddic_church":0.3,                             #Citizens of the Bultach Coalition are welcome to practice their luddic faith in our ranks, as long as they do not try to impose it.
 		"luddic_path":-0.4,                              #Fanatics. Useful Fanatics.
         "remnant":-1,                                    #Puppet servants of Tritachyon. Eliminate whenever spotted.
@@ -55,7 +55,7 @@
 	
     "maxRelationships":{
 		# Vanilla Factions	
-		"tritachyon": -1,    
+		"tritachyon": -0.3,    
 		
 		},
 
