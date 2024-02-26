@@ -1,0 +1,24 @@
+{
+	"hullFrequency":{
+		#"tags":{"midline_bp":3, "keruvim_bp":10, "keruvim_pride_bp":1.5},
+		"hulls":{"keruvim_catapult":1.2},
+	},
+	"knownShips":{
+		"tags":["keruvim_bp", "keruvim_pride_bp"],
+		"hulls":[
+			"keruvim_catapult",
+			"keruvim_keg",
+			"keruvim_duchess",
+			"keruvim_bastion",
+			"keruvim_brawler_xiv",
+			"keruvim_empress"],
+	},
+	"knownWeapons":{
+		"tags":["keruvim_bp"],
+		"weapons":["keruvim_tsar"],
+	},
+	"knownFighters":{
+		"tags":["midline_bp", "keruvim_bp", "keruvim_pride_bp"],
+		#"fighters":[],
+	},
+},

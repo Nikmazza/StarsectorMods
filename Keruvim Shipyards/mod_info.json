@@ -4,7 +4,5 @@
 	"author":"Connortron7",
 	"version":"0.6.1",
 	"description":"Adds Keruvim Shipyards",
-	"jars":["jars/anvil.jar"],
-	"modPlugin":"data.scripts.AnvilModPlugin",
 	"gameVersion":"0.97a",
 }
