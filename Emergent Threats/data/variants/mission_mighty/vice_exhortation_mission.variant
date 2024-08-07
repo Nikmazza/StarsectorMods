@@ -1,12 +1,11 @@
 {
     "displayName": "Navy",
-    "fluxCapacitors": 0,
-    "fluxVents": 45,
+    "fluxCapacitors": 10,
+    "fluxVents": 50,
     "hullId": "vice_exhortation",
     "hullMods": [
         "damaged_deck",
         "defective_manufactory",
-        "advancedoptics",
         "fluxdistributor",
         "hardenedshieldemitter",
         "targetingunit",
@@ -20,7 +19,7 @@
     "variantId": "vice_exhortation_mission",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "vice_siege_burst",
@@ -32,9 +31,17 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 002": "gravitonbeam",
-                "WS 004": "hveldriver",
-                "WS 005": "hveldriver",
-                "WS 007": "gravitonbeam",
+                "WS 003": "gravitonbeam",
+                "WS 004": "gravitonbeam",
+                "WS 005": "gravitonbeam",
+                "WS 006": "gravitonbeam",
+                "WS 007": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 014": "vice_ionstreamer",
                 "WS 015": "vice_ionstreamer"
             }
@@ -43,11 +50,15 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "pdburst",
-                "WS 006": "pdburst",
-                "WS 008": "vulcan",
-                "WS 009": "vulcan",
-                "WS 010": "vulcan",
+                "WS 008": "flak",
+                "WS 009": "flak",
+                "WS 010": "flak"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 016": "pdlaser",
                 "WS 017": "pdlaser"
             }

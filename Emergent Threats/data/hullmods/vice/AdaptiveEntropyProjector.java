@@ -34,8 +34,10 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	private static Color GLOW_COLOR_DEGRADED = new Color(70, 225, 225, 100);
 	private static float CHARGE_INTERVAL_DEFAULT = 10f;
 	private static float CHARGE_INTERVAL_CRONOS = 7f;
-	private static float CR_PENALTY = 1f;
-	private static float CR_PENALTY_ODDS = 15f;
+	
+	private static int CHAIN_COUNT = 1; //text only, need to implement if chaining to multiple targets
+	private static float EXTRA_EFFECT_ODDS = 20f;
+	
 	private static float DAMAGE_PER_PULSE = 300f;
 	private static float DAMAGE_PER_PULSE_DEGRADED = 300f;
 	private static float EMP_PER_PULSE = 400f;
@@ -131,7 +133,8 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 		if (timer >= interval) {
 			float pulses = (Float) data.stats.get("pulses");
 			float range = (Float) data.stats.get("range");
-			ShipAPI target = DistanceUtil.getNearestEnemyNotAbyssal(ship, range);
+			//getNearestNotAbyssal also excludes entropy arrester hulls
+			ShipAPI target = DistanceUtil.getNearestNotAbyssal(ship, range, "enemies");
 			if (target != null) {
 				spawnEMP (target, ship, range);
 				pulses++;
@@ -170,10 +173,29 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 						color, // fringe
 						Color.white // core color
 						);
-		//do not apply for non abyssal hulls
-		if (!isDegraded(ship) && Math.random() <= CR_PENALTY_ODDS * 0.01f) {
+		/*
+		if (!isDegraded(ship) && Math.random() <= EXTRA_EFFECT_ODDS * 0.01f) {
 			target.setCurrentCR(target.getCurrentCR() - CR_PENALTY * 0.01f);
 			target.fadeToColor(target, GLOW_COLOR, 0.7f, 0.3f, 0.5f);
+		}
+		*/
+		if (!isDegraded(ship) && Math.random() <= EXTRA_EFFECT_ODDS * 0.01f) {
+			ShipAPI chain = DistanceUtil.getNearestNotAbyssal(target, range, "friends");
+			if (chain != null) {
+				engine.spawnEmpArc(target,
+						target.getLocation(),
+						target,
+						chain,
+						DamageType.ENERGY,
+						damage, // damage
+						emp, // emp damage
+						range + 500f, // extra range due to ship geometry
+						"system_emp_emitter_impact", // sound
+						26f, // thickness
+						color, // fringe
+						Color.white // core color
+						);
+			}
 		}
 	}
 	
@@ -227,8 +249,8 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 		if (index == 2) return pulses;
 		if (index == 3) return damage;
 		if (index == 4) return emp;
-		if (index == 5) return "" + (int) CR_PENALTY_ODDS + "%";
-		if (index == 6) return "" + (int) CR_PENALTY + "%";		
+		if (index == 5) return "" + (int) EXTRA_EFFECT_ODDS + "%";
+		if (index == 6) return "" + (int) ENTROPY_PROJECTOR_ARC_RANGE_DEFAULT;
 		if (index == 7) return "" + (int) CHARGE_INTERVAL_CRONOS;
 		if (index == 8) return "" + (int) ENTROPY_PROJECTOR_ARC_RANGE_COSMOS;
 		if (index == 9) return ABYSSAL_TYPE;

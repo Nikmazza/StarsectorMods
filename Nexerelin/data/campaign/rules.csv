@@ -17,7 +17,7 @@ SetShortcut exerelinNGCIntroEnd ESCAPE",">>> GREETINGS, STARFARER <<<
 
 Welcome to the Nexerelin mod for Starsector!
 
-Nexerelin is essentially a 4X extension to the game. Factions within the sector will wage war, create alliances and compete to control a greater share of the sector.
+Nexerelin is essentially a 4X extension to the game, but also more than that. Factions within the sector will wage war, create alliances and compete to control a greater share of the sector. The mod also includes a range of other features, from quality-of-life improvements to a series of story missions.
 
 Nexerelin is compatible with a large number of community-made faction mods, which you can add for a more varied gameplay experience.","exerelinNGCIntroNextPage:Next
 exerelinNGCIntroEnd:Skip",$introPage needs to be a float
@@ -47,9 +47,9 @@ ExerelinNewGameOptionsPopulate,ExerelinNGCOptions,,SetShortcut exerelinNGCOption
 7:exerelinNGCSectorOptions:Sector generation
 8:exerelinNGCFactionOptions:Faction settings
 9:exerelinNGCOtherOptions:Other options",
-ExerelinNGCListOptionEnableCorvusMode,ExerelinNGCOptions,!$corvusMode,"SetTooltip exerelinNGCEnableCorvusMode ""Sets whether to use the handcrafted core worlds (vanilla and from mods), or randomly generated systems. The Academy storyline will be disabled in random sector, and some features from other mods may not be usable.""
+ExerelinNGCListOptionEnableCorvusMode,ExerelinNGCOptions,!$corvusMode,"SetTooltip exerelinNGCEnableCorvusMode ""Sets whether to use the handcrafted core worlds (vanilla and from mods), or randomly generated systems. The Academy storyline will be disabled in random sector, and some features from the base game or other mods may not be usable.""
 SetTooltipHighlights exerelinNGCEnableCorvusMode ""Academy storyline"" disabled features ""not be usable""",,exerelinNGCEnableCorvusMode:Disable random core worlds,
-ExerelinNGCListOptionDisableCorvusMode,ExerelinNGCOptions,$corvusMode,"SetTooltip exerelinNGCDisableCorvusMode ""Sets whether to use the handcrafted core worlds (vanilla and from mods), or randomly generated systems. The Academy storyline will be disabled in random sector, and some features from other mods may not be usable.""
+ExerelinNGCListOptionDisableCorvusMode,ExerelinNGCOptions,$corvusMode,"SetTooltip exerelinNGCDisableCorvusMode ""Sets whether to use the handcrafted core worlds (vanilla and from mods), or randomly generated systems. The Academy storyline will be disabled in random sector, and some features from the base game or other mods may not be usable.""
 SetTooltipHighlights exerelinNGCDisableCorvusMode ""Academy storyline"" disabled features ""not be usable""",,exerelinNGCDisableCorvusMode:Enable random core worlds,
 ,,,,,,
 ExerelinNewGameFactionConfig,ExerelinNGCFactionOptions,,"SetEnabled nex_NGCFactionToggleMenu true
@@ -906,32 +906,18 @@ nex_blueprintSwapExit,DialogOptionSelected,$option == nex_blueprintSwapExit,Fire
 # Stabilization package,,,,,,
 nex_stabilizePackageOption,PopulateOptions,"$entity.hasMarket
 Nex_IsBaseOfficial any
-$faction.id != player",,,"11:nex_stabilizePackage_main:""I can help with your unrest problem.""",
-nex_stabilizePackageOptionDisabled,PopulateOptions,"$entity.hasMarket
-$faction.id != player
-!Nex_StabilizePackage enabled","SetTooltip nex_stabilizePackage_main ""$marketName does not require such assistance at present.""
-SetEnabled nex_stabilizePackage_main false",,,
-nex_stabilizePackageOptionCooldown,PopulateOptions,"$entity.hasMarket
-$faction.id != player
-$market.nex_stabilizePackage_cooldown","SetTooltip nex_stabilizePackage_main ""$marketName has already been recently stabilized. Delivery of further packages will not be worthwhile for $nex_stabilizePackage_textCooldown.""
-SetTooltipHighlightColors nex_stabilizePackage_main hColor
-SetTooltipHighlights nex_stabilizePackage_main $nex_stabilizePackage_textCooldown
-SetEnabled nex_stabilizePackage_main false",,,
-nex_stabilizePackageOptionCooldownInvasion,PopulateOptions,"$entity.hasMarket
-$faction.id != player
-$market.nex_captureStabilizeTimeout","SetTooltip nex_stabilizePackage_main ""$marketName was recently conquered, and the situation remains too chaotic for stabilization to be feasible. This will last for $nex_stabilizePackage_textInvadeCooldown.""
-SetTooltipHighlightColors nex_stabilizePackage_main hColor
-SetTooltipHighlights nex_stabilizePackage_main $nex_stabilizePackage_textInvadeCooldown
-SetEnabled nex_stabilizePackage_main false",,,
+$faction.id != player",FireAll Nex_StabilizePackageCheckEnabled,,"11:nex_stabilizePackage_main:""I can help with your unrest problem.""",
 nex_stabilizePackageSelRelief,DialogOptionSelected,"$option == nex_stabilizePackage_main
 $market.nex_stabilizePackage_type == ""relief""","Nex_StabilizePackage init
-SetShortcut nex_stabilizePackage_cancel ""ESCAPE""","""Truly? We would be most grateful for any assistance you can render. Supplies and food — and of course, credits — would help get the people of $marketName through their current difficulties.""
+SetShortcut nex_stabilizePackage_cancel ""ESCAPE""
+FireAll Nex_StabilizePackageCheckEnabled","""Truly? We would be most grateful for any assistance you can render. Supplies and food — and of course, credits — would help get the people of $marketName through their current difficulties.""
 OR
 ""You are most generous, $playerName. A proper contribution of aid materials and credits would greatly aid or relief efforts.""","nex_stabilizePackage_proceed:Deliver the relief package
 nex_stabilizePackage_cancel:Reconsider",
 nex_stabilizePackageSelRepression,DialogOptionSelected,"$option == nex_stabilizePackage_main
 $market.nex_stabilizePackage_type == ""repression""","Nex_StabilizePackage init
-SetShortcut nex_stabilizePackage_cancel ""ESCAPE""","""We would welcome your assistance in this matter. An adequate contribution of supplies, munitions and funding would greatly assist our efforts in maintaining order.""
+SetShortcut nex_stabilizePackage_cancel ""ESCAPE""
+FireAll Nex_StabilizePackageCheckEnabled","""We would welcome your assistance in this matter. An adequate contribution of supplies, munitions and funding would greatly assist our efforts in maintaining order.""
 OR
 ""Indeed? Well, should you have the proper supplies and credits to support our pacification efforts, my superiors would make their gratitude known.""","nex_stabilizePackage_proceed:Deliver the pacification package
 nex_stabilizePackage_cancel:Reconsider",
@@ -948,6 +934,27 @@ OR
 ""Perhaps generosity has its limits.
 
 Anything else?""",,
+,,,,,,
+nex_stabilizePackageDisabled,Nex_StabilizePackageCheckEnabled,!Nex_StabilizePackage enabled,"SetTooltip nex_stabilizePackage_main ""$marketName does not require such assistance at present.""
+SetEnabled nex_stabilizePackage_main false
+SetTooltip nex_stabilizePackage_proceed ""$marketName does not require such assistance at present.""
+SetEnabled nex_stabilizePackage_proceed false",,,
+nex_stabilizePackageCooldown,Nex_StabilizePackageCheckEnabled,$market.nex_stabilizePackage_cooldown,"SetTooltip nex_stabilizePackage_main ""$marketName has already been recently stabilized. Delivery of further packages will not be worthwhile for $nex_stabilizePackage_textCooldown.""
+SetTooltipHighlightColors nex_stabilizePackage_main hColor
+SetTooltipHighlights nex_stabilizePackage_main $nex_stabilizePackage_textCooldown
+SetEnabled nex_stabilizePackage_main false
+SetTooltip nex_stabilizePackage_proceed ""$marketName has already been recently stabilized. Delivery of further packages will not be worthwhile for $nex_stabilizePackage_textCooldown.""
+SetTooltipHighlightColors nex_stabilizePackage_proceed hColor
+SetTooltipHighlights nex_stabilizePackage_proceed $nex_stabilizePackage_textCooldown
+SetEnabled nex_stabilizePackage_proceed false",,,
+nex_stabilizePackageCooldownInvasion,Nex_StabilizePackageCheckEnabled,$market.nex_captureStabilizeTimeout,"SetTooltip nex_stabilizePackage_main ""$marketName was recently conquered, and the situation remains too chaotic for stabilization to be feasible. This will last for $nex_stabilizePackage_textInvadeCooldown.""
+SetTooltipHighlightColors nex_stabilizePackage_main hColor
+SetTooltipHighlights nex_stabilizePackage_main $nex_stabilizePackage_textInvadeCooldown
+SetEnabled nex_stabilizePackage_main false
+SetTooltip nex_stabilizePackage_proceed ""$marketName was recently conquered, and the situation remains too chaotic for stabilization to be feasible. This will last for $nex_stabilizePackage_textInvadeCooldown.""
+SetTooltipHighlightColors nex_stabilizePackage_proceed hColor
+SetTooltipHighlights nex_stabilizePackage_proceed $nex_stabilizePackage_textInvadeCooldown
+SetEnabled nex_stabilizePackage_proceed false",,,
 #END Stabilization package,,,,,,
 ,,,,,,
 # Grant autonomy,,,,,,
@@ -1646,11 +1653,106 @@ $market.ruinsExplored
 $market.isPlanetConditionMarketOnly
 !$market.mentionedRuins",$market.mentionedRuins = true 0,"The ruins on the surface of $marketName have been stripped of anything easily accessible, and further exploitation requires a permanent presence.",,
 ,,,,,,
+bqfsASkedForSuppliesDeclineColony,DialogOptionSelected,"$option == bqfs_askForSupplies2
+Nex_MiscCMD hasAnyColoniesForQuartermasterSupplies score:100","AdjustRepActivePerson -1
+FireAll PopulateOptions
+RemoveOption bqfs_askForSupplies","$HeOrShe back looks to you, perplexed. ""You own your own planet and you've come to me begging for supplies?""
+
+""I'll count this as a joke in poor taste, $playerSirOrMadam.""
+
+$HeOrShe doesn't look amused, and doesn't manage to imbue $hisOrHer words with quite the tone of respect $hisOrHer words alone would imply.",,
+,,,,,,
 tut_janContactReport3,DialogOptionSelected,$option == tutReport3,"AddAbility exerelin_follow_me 7
 SetShortcut cutCommLinkPolite ""ESCAPE""","""Finally, you could take a commission with the Hegemony - due to the Galatia business, your standing is high enough that such a request would be accepted.
 
 You'll be expected to fight our enemies, though, so it's quite a commitment. If I were you, I'd hold off on it until you've got a more solid fleet behind you.""","cutCommLinkPolite:""Thanks, I'll think about it.""",
 #END Vanilla overrides,,,,,,
+,,,,,,
+# Vanilla not-quite-overrides,,,,,,
+nex_lppGileadShrineVisitFirstTime_notChurch,PopulateOptions,"$market.id == gilead
+$faction.id != luddic_church
+$market.tag:luddic_shrine
+$menuState == main
+!$market.knowAboutShrine","ShrineCMD addIntel
+$market.knowAboutShrine = true",It is well known that pilgrims of the Luddic faith travel here from across the Persean Sector to visit the holy shrine of Gilead. The shrine is said to be built where Ludd kissed the ground after first stepping onto the surface of the planet.,,
+nex_lppGileadShrineVisitOption_notChurch,PopulateOptions,"$market.id == gilead
+$faction.id != luddic_church
+$market.tag:luddic_shrine
+$menuState == main
+$player.transponderOn
+!$justVisitedShrine
+!$market.lpp_finishPilgrimage",,,3:lpp_gileadShrineVisitStart:Join the pilgrims visiting the Luddic shrine,
+nex_lppVolturnShrineOption_notDiktat,PopulateOptions,"$market.id == volturn
+$market.tag:luddic_shrine
+$menuState == main
+$faction.id != sindrian_diktat
+$global.lpp_inProgress
+!$market.didShrineIntro
+!$justVisitedShrine",,,3:lpp_volturnVisitStart:Take a shuttle to visit the Luddic shrine,
+nex_lppVolturnShrineOptionAgain_notDiktat,PopulateOptions,"$market.id == volturn
+$market.tag:luddic_shrine
+$faction.id != sindrian_diktat
+$menuState == main
+$global.lpp_inProgress
+$market.didShrineIntro
+!$justVisitedShrine",,,3:lpp_volturnVisitStart:Take a shuttle to visit the Luddic shrine,
+nex_lppVolturnShrineOptionPostLPP_notDiktat,PopulateOptions,"$market.id == volturn
+$market.tag:luddic_shrine
+$faction.id != sindrian_diktat
+$menuState == main
+$global.lpp_missionCompleted
+!$justVisitedShrine",,,3:lpp_volturnVisitStart:Take a shuttle to visit the Luddic shrine,
+,,,,,,
+nex_RHannanWhyHarassingOpt,PopulateOptions,"$id == reynard_hannan
+!$player.didWhyPLharassingTalk
+!$player.isLeagueMember
+Nex_HA_CMD isPLProtectingPlayerSpace",,,"RHannan_whyHarassing1:""Why are League fleets harassing my colonies?""",
+nex_LCMakeDealOpts,PopulateOptions,"$isPerson
+$personFaction.id == luddic_church
+Commission personCanGiveCommission
+!$player.madeImmigrationDealWithLuddicChurch
+!$player.brokeLuddicChurchDeal
+!$player.defeatedLuddicChurchExpedition
+Nex_HA_CMD knightsHasslingPlayerColonies",,,"lcMakeDeal:""The Knights of Ludd are essentially committing piracy in my volume and I demand it stop.""",
+nex_SDMakeDealOpt,PopulateOptions,"$isPerson
+$personFaction.id == sindrian_diktat
+$player.fcm_faction != sindrian_diktat
+Commission personCanGiveCommission
+!$player.makeDiktatDeal
+!$player.brokeDiktatDeal
+!$player.defeatedDiktatAttack
+!Nex_IsModActive PAGSM
+Nex_HA_CMD diktatConcernedByFuelProd",,,"sdMakeDeal:""The Diktat is sending attack fleets against me. Perhaps we could work out a deal?""",
+nex_SDMakeDealOptCom,PopulateOptions,"$isPerson
+$personFaction.id == sindrian_diktat
+$player.fcm_faction == sindrian_diktat
+Commission personCanGiveCommission
+!$player.makeDiktatDeal
+!$player.brokeDiktatDeal
+!$player.defeatedDiktatAttack
+!Nex_IsModActive PAGSM
+Nex_HA_CMD diktatConcernedByFuelProd",,,"sdMakeDeal:""The Diktat sends attack fleets against me despite my commission. This oversight must be corrected!""",
+nex_SDMakeDealOptPAGSM,PopulateOptions,"$isPerson
+$personFaction.id == sindrian_diktat
+$player.fcm_faction != sindrian_diktat
+Commission personCanGiveCommission
+!$player.makeDiktatDeal
+!$player.brokeDiktatDeal
+!$player.defeatedDiktatAttack
+Nex_IsModActive PAGSM
+Nex_HA_CMD diktatConcernedByFuelProd",,,"sdMakeDeal:""The Sindrian Fuel Company keeps sending attack fleets. Perhaps we could work out a deal?""",
+nex_SDMakeDealOptComPAGSM,PopulateOptions,"$isPerson
+$personFaction.id == sindrian_diktat
+$player.fcm_faction == sindrian_diktat
+Commission personCanGiveCommission
+!$player.makeDiktatDeal
+!$player.brokeDiktatDeal
+!$player.defeatedDiktatAttack
+Nex_IsModActive PAGSM
+Nex_HA_CMD diktatConcernedByFuelProd",,,"sdMakeDeal:""The Company sends attack fleets against me despite my commission. This oversight must be corrected!""",
+,,,,,,
+,,,,,,
+#END Vanilla not-quite-overrides,,,,,,
 ,,,,,,
 # Templar overrides,,,,,,
 ExerelinMarketPostOpenTemplarsHostile,MarketPostOpen,"$hasMarket
@@ -2580,7 +2682,7 @@ $global.nex_remLostSci_ref != null
 !$global.nex_remLostSci_wantTalkToSpacer
 Call $global.nex_remLostSci_ref updateData
 $nex_remLostSci_stage == GO_TO_ACADEMY
-!$nex_remLostSci_askedAboutLiu",,,nex_remLostSci_inquireSeb:Ask about Academician Liu,
+!$entity.nex_remLostSci_askedAboutLiu",,,nex_remLostSci_inquireSeb:Ask about Academician Liu,
 nex_remLostSci_inquireSeb,DialogOptionSelected,$option == nex_remLostSci_inquireSeb,,"""Ah, Liu? They're, uh... not here any more. And, well, nobody seems to know where they've gone.""
 
 You explain what you're looking for and ask for more details. $personLastName seems to perk up at this. ""Captain, if you could find them... that would be good. Even if they never come back to the Academy, it'd be good to know they're all right.""",nex_remLostSci_inquireSeb2:Ask about the paper,
@@ -2588,8 +2690,8 @@ nex_remLostSci_inquireSeb2,DialogOptionSelected,$option == nex_remLostSci_inquir
 
 ""Anyway! Academician Liu believed they had a theoretical model for application of the phenomenon to create other effects as well. Like mitigating physical damage to the ship's hull, for one."" $personLastName shakes $hisOrHer head ruefully. ""I couldn't explain how it'd work, mind, even if I'd read the paper myself. Once you get into causality modification like that...  I don't think anything short of an alpha core could keep everything straight."" ","nex_remLostSci_inquireSeb3:""Do you have a copy?""",
 nex_remLostSci_inquireSeb3,DialogOptionSelected,$option == nex_remLostSci_inquireSeb3,,"""Well, no. Liu was the only one working on it, and while they did discuss their work with colleagues in the T-Physics department, no-one else had seen the manuscript. It was supposed to go to the reviewers around the time they, ah, left. That was around the time of the Kallichore incident, when Hegemony officers were tramping the corridors."" $personLastName winces in recollection. ""Several of the other faculty left not long after too — the ones who hadn't been arrested, at any rate — like Academician Coureuse. But none did it quite as dramatically as Liu did. Well. Dramatic isn't the right word, actually.""","nex_remLostSci_inquireSeb4:""What happened?""",
-nex_remLostSci_inquireSeb4,DialogOptionSelected,$option == nex_remLostSci_inquireSeb4,"$nex_remLostSci_askedAboutLiu = true
-$global.nex_remLostSci_wantTalkToSpacer = true
+nex_remLostSci_inquireSeb4,DialogOptionSelected,$option == nex_remLostSci_inquireSeb4,"$entity.nex_remLostSci_askedAboutLiu = true
+$entity.nex_remLostSci_wantTalkToSpacer = true
 FireAll PopulateOptions","""They just... vanished. Rumor has it they hitched a ride with one of the freelance captains who run services for the Academy, disappearing into the fringe worlds. It's possible, you know. Some of these freelancers run the trade routes with, ah,"" $heOrShe seems to color a little, ""communities outside the official Sector economy.""
 
 Decivilized worlds, $heOrShe means. A great place to hide, at the cost of losing a quality of life even the meanest core world dockworker takes for granted. You ask if this freelancer is still around.
@@ -2599,7 +2701,7 @@ Decivilized worlds, $heOrShe means. A great place to hide, at the cost of losing
 nex_remLostSci_inquireGradStudentOpt,PopulateOptions,"$id == station_galatia_academy
 $nex_remLostSci_academy_imp
 $global.nex_remLostSci_ref != null
-!$global.nex_remLostSci_wantTalkToSpacer
+!$nex_remLostSci_wantTalkToSpacer
 !$nex_remLostSci_askedAboutLiu",,,nex_remLostSci_inquireGradStudent:Call the faculty about Academician Liu,
 nex_remLostSci_inquireGradStudent,DialogOptionSelected,$option == nex_remLostSci_inquireGradStudent,,"You make a call to the Temporal Physics department. The robo-secretary confirms that Academician Liu went AWOL in c.206, and helpfully presents their CV with copies of all their publications, but cannot give any useful information on the missing paper. It looks like you'll have to resort to some old-fashioned HUMINT.",nex_remLostSci_inquireGradStudent2:Continue,
 nex_remLostSci_inquireGradStudent2,DialogOptionSelected,$option == nex_remLostSci_inquireGradStudent2,"Highlight ""temporal manipulation""","You spend several hours wandering the Academy, looking for people to question. Unfortunately almost no-one you meet seems interested in stopping to help, and indeed most of them regard you as a curious specimen escaped from the xenobiology labs. Finally, you stumble upon a grad student who's willing to be bribed with coffee and Terran croissants long enough to answer a few queries.
@@ -2607,7 +2709,7 @@ nex_remLostSci_inquireGradStudent2,DialogOptionSelected,$option == nex_remLostSc
 ""The old guy was talking about new applications of temporal manipulation technology,"" she explains between bites. ""Like the stuff Tri-Tachyon uses. They thought it could be modified to do new things, like resist explosions and energy weapons on a ship. Stuff like that. And don't ask me to explain how it works; I don't think even the T-Physics people could make sense of it.
 
 ""Anyway, though, they apparently disappeared right when the paper was due to be submitted to review. This was just after the whole thing with the Gate experiment went down, so a lot of the professors were running away at the time. Spooked by the big scary Hegemony, I suppose. Although most of the others at least submitted their resignations first.""","nex_remLostSci_inquireGradStudent3:""Where did Liu go?""",
-nex_remLostSci_inquireGradStudent3,DialogOptionSelected,$option == nex_remLostSci_inquireGradStudent3,"$global.nex_remLostSci_wantTalkToSpacer = true
+nex_remLostSci_inquireGradStudent3,DialogOptionSelected,$option == nex_remLostSci_inquireGradStudent3,"$nex_remLostSci_wantTalkToSpacer = true
 $nex_remLostSci_askedAboutLiu = true","""Who knows?"" Munch, munch, sip. ""The rumor is they stowed away with one of the freelancers who do odd jobs for the Academy, people like you. Some of them trade with the deciv worlds out in the fringes; good place to hide from the law. I could never do it, though. I like air conditioning and my TriPad too much.""
 
 You ask where you might find the freelancer in question. ""Hard to say. You could ask one of them, though. They stick together, you know; maybe they'll talk to you where others won't.""",nex_remLostSci_inquireGradStudentEnd:Thank her and leave,
@@ -2617,7 +2719,7 @@ FireAll PopulateOptions",You return to the main concourse to consider your optio
 nex_remLostSci_inquireSpacerOpt,PopulateOptions,"$id == station_galatia_academy
 $nex_remLostSci_academy_imp
 $global.nex_remLostSci_ref != null
-$global.nex_remLostSci_wantTalkToSpacer",,You could try to find the spacer who transported Academician Liu out to decivilized space.,nex_remLostSci_inquireSpacer:Try to find information about the spacer,
+$nex_remLostSci_wantTalkToSpacer",,You could try to find the spacer who transported Academician Liu out to decivilized space.,nex_remLostSci_inquireSpacer:Try to find information about the spacer,
 nex_remLostSci_inquireSpacer,DialogOptionSelected,$option == nex_remLostSci_inquireSpacer,"Call $global.nex_remLostSci_ref beginSpacerConvo
 Call $global.nex_remLostSci_ref updateData","You make your way to the lounge for outside support contractors. By luck, the spacer who (claims to have) transported Academician Liu is in town, and agrees to a bar chat.
 
@@ -2626,11 +2728,11 @@ Call $global.nex_remLostSci_ref updateData","You make your way to the lounge for
 ""As for your academician, the rad-addled fella stowed away on my ship, you know. Though I didn't know who they were, at first. Don’t interact much with the boffins; they pay me, I take out some trash for them, we shake digital hands and go our separate ways.""","nex_remLostSci_inquireSpacer2:""So what happened?""",
 nex_remLostSci_inquireSpacer2,DialogOptionSelected,$option == nex_remLostSci_inquireSpacer2,"Highlight $nex_remLostSci_planet $nex_remLostSci_system
 Call $global.nex_remLostSci_ref beginPlanetStage
-unset $global.nex_remLostSci_wantTalkToSpacer","""Well, they didn't hide very well; Ludd knows what a surprise I had when my first mate comes running to me. I would've sent them out the airlock, but they paid their fare after the fact, so it all worked out it the end. Paid me a generous tip too, to keep quiet about it.""
+unset $nex_remLostSci_wantTalkToSpacer","""Well, they didn't hide very well; Ludd knows what a surprise I had when my first mate comes running to me. I would've sent them out the airlock, but they paid their fare after the fact, so it all worked out it the end. Paid me a generous tip too, to keep quiet about it.""
 
-The spacer stops, realizing that he is not, in fact, keeping quiet. Then $heOrShe sighs and throws back his beer. ""Ah, to vacuum with it. Buy me another one and I'll tell you the name of this planet.""
+The spacer stops, realizing that $heOrShe is not, in fact, keeping quiet. Then $heOrShe sighs and throws back $hisOrHer beer. ""Ah, to vacuum with it. Buy me another one and I'll tell you the name of this planet.""
 
-You do so, and get a name and system: $nex_remLostSci_planet, in the $nex_remLostSci_system. ""You couldn’t pay me to settle down someplace like that, but I guess they really didn’t want to be found.""",nex_remLostSci_inquireSpacerEnd:Thank him and leave,
+You do so, and get a name and system: $nex_remLostSci_planet, in the $nex_remLostSci_system. ""You couldn’t pay me to settle down someplace like that, but I guess they really didn’t want to be found.""",nex_remLostSci_inquireSpacerEnd:Thank $himOrHer and leave,
 nex_remLostSci_inquireSpacerEnd,DialogOptionSelected,$option == nex_remLostSci_inquireSpacerEnd,"EndConversation
 ShowDefaultVisual
 FireAll PopulateOptions","On your way out, you notice someone leaving the room in a hurry.",,
@@ -2780,7 +2882,7 @@ nex_remLostSci_findScientist6,DialogOptionSelected,$option == nex_remLostSci_fin
 They get up and start pacing. ""I was born on Culann, you know. My parents were R&D types for TT, expected me to follow in their footsteps. Only I saw what kind of things they and their colleagues were doing and left as soon as I graduated.
 
 ""So I went to Opis, jewel of the Sector. Jewel after Mairaath, that is. And everything was just fine until Philip Andrada, Hero of the Sector, showed up."" They shake their head. ""I actually made it out alive. Got a new job in pretty short order, even. Until the Lion's interference got too much and I had to flee again.""",nex_remLostSci_findScientist6b:Continue,
-nex_remLostSci_findScientist6b,DialogOptionSelected,$option == nex_remLostSci_findScientist6b,"Highlight ""you""","Thump, thump, thump, go the footsteps on the polymer-panelled floor. ""So I ran to the Galatia Academy. 'Finally, a place where knowledge and study are cherished for their own sake,' I thought. And for many cycles I taught and did research there. Until, of course, the Provost had to upset the Hegemony and their marines came crashing down on our lecture halls and laboratories,"" they slam a fist into an open hand. ""There's no place anymore where a person can do science without the hand of the state reaching down their neck!""
+nex_remLostSci_findScientist6b,DialogOptionSelected,$option == nex_remLostSci_findScientist6b,"Highlight ""you""","Thump, thump, thump, go the footsteps on the polymer-panelled floor. ""So I ran to the Galatia Academy. 'Finally, a place where knowledge and study are cherished for their own sake,' I thought. And for many cycles I taught and did research there. Until, of course, the Provost had to upset the Hegemony and their marines came crashing down on our lecture halls and laboratories,"" they slam a fist into an open hand. ""There's no place anymore where someone can do science without the hand of the state reaching down their neck!""
 
 They slump back down in the chair, hands on thighs, and laugh again. ""And so I ran here, to $nex_remLostSci_planet... and then of course you come hounding me to the edge of the Sector!""",nex_remLostSci_findScientist7:Continue,
 nex_remLostSci_findScientist7,DialogOptionSelected,$option == nex_remLostSci_findScientist7,FireAll Nex_RemLostSci_ScientistConvoQuestioning,"""As for your paper,"" they sigh after a while, then gesture at the workbench. ""Red chip, 2x2, top rack on the left.""
@@ -3570,13 +3672,18 @@ Those eyes seem to peer into your very soul, assuming the Luddics are right and 
 nex_remSalvation_knight6Trust:""I trust Midnight. She is not malicious.""
 nex_remSalvation_knight6Betray:""I am gaining their trust now, so that I may betray them later.""
 nex_remSalvation_knight6Other:""I have my own reasons.""",
-nex_remSalvation_knight6Money,DialogOptionSelected,$option == nex_remSalvation_knight6Money,Call $global.nex_remSalvation_ref floorChurchRep,"$personLastName sighs wearily. ""Yet another given to the sin of Mammon... Even if,"" $heOrShe closes $hisOrHer eyes, ""it serves the Church's purposes, just this once.""
+nex_remSalvation_knight6Money,DialogOptionSelected,$option == nex_remSalvation_knight6Money,"Call $global.nex_remSalvation_ref floorChurchRep
+$player.ethosCynical++","$personLastName sighs wearily. ""Yet another given to the sin of Mammon... Even if,"" $heOrShe closes $hisOrHer eyes, ""it serves the Church's purposes, just this once.""
 
 $HisOrHer eyes open again. ""Very well. Just this once, we shall consent to work with you.""",nex_remSalvation_knightPreBattle:Continue,
-nex_remSalvation_knight6Trust,DialogOptionSelected,$option == nex_remSalvation_knight6Trust,Call $global.nex_remSalvation_ref floorChurchRep,"$personLastName raises an eyebrow, lips pursed. After a few breaths, $heOrShe closes $hisOrHer eyes and recites. ""The temptress shall approach him with doll's face and honeyed words, and he shall be led astray from the flock.""
+nex_remSalvation_knight6Trust,DialogOptionSelected,$option == nex_remSalvation_knight6Trust,"Call $global.nex_remSalvation_ref floorChurchRep
+$player.ethosProAI++
+$player.ethosIdealistic++","$personLastName raises an eyebrow, lips pursed. After a few breaths, $heOrShe closes $hisOrHer eyes and recites. ""The temptress shall approach him with doll's face and honeyed words, and he shall be led astray from the flock.""
 
 $HisOrHer eyes open again. ""But no matter. Very well, just this once, we shall consent to work with you.""",nex_remSalvation_knightPreBattle:Continue,
-nex_remSalvation_knight6Betray,DialogOptionSelected,$option == nex_remSalvation_knight6Betray,Call $global.nex_remSalvation_ref floorChurchRep,"The suspicion on $personLastName's face doesn't go away. $HeOrShe must clearly see that this plan could just as easily apply to the Luddic Church.
+nex_remSalvation_knight6Betray,DialogOptionSelected,$option == nex_remSalvation_knight6Betray,"Call $global.nex_remSalvation_ref floorChurchRep
+$player.ethosLiar++
+$player.ethosAntiAI++","The suspicion on $personLastName's face doesn't go away. $HeOrShe must clearly see that this plan could just as easily apply to the Luddic Church.
 
 Eventually, $heOrShe sighs. ""Very well. Just this once, we shall consent to work with you.""",nex_remSalvation_knightPreBattle:Continue,
 nex_remSalvation_knight6Other,DialogOptionSelected,$option == nex_remSalvation_knight6Other,Call $global.nex_remSalvation_ref floorChurchRep,"You meet stare with stare, giving up nothing. Eventually, $heOrShe sighs and closes $hisOrHer eyes. ""I suppose it does not yet matter. Very well, we shall consent to work with you, just this once.""",nex_remSalvation_knightPreBattle:Continue,
@@ -4142,7 +4249,7 @@ nex_msbOfferOptionBar,nex_msb_optionBar,,,,nex_msb_startBar:Look into the privat
 nex_msbOfferTextContact,DialogOptionSelected,$option == nex_msb_start,"$missionId = nex_msb
 SetTextHighlightColors $nex_msb_factionColor h h h
 SetTextHighlights $nex_msb_faction $nex_msb_dist  $nex_msb_baseBounty $nex_msb_days
-Call $nex_msb_ref showMap ""Target: $nex_msb_systemNameShort""","""The terms are this,"" $heOrShe says. ""The target is the $nex_msb_faction naval forces stationed at $nex_msb_baseName in $nex_msb_systemName, $nex_msb_dist light-years away. The base rate is $nex_msb_baseBounty credits per frigate destroyed or disabled in or near the system, on an increasing scale for larger hulls, as specified in addendum A of the terms I've forwarded. The bounty will be in effect for $nex_msb_days days.
+Call $nex_msb_ref showMap ""Target: $nex_msb_systemNameShort""","""The terms are this,"" $heOrShe says. ""The target is the $nex_msb_faction naval forces stationed at $nex_msb_baseName in the $nex_msb_systemName, $nex_msb_dist light-years away. The base rate is $nex_msb_baseBounty credits per frigate destroyed or disabled in or near the system, on an increasing scale for larger hulls, as specified in addendum A of the terms I've forwarded. The bounty will be in effect for $nex_msb_days days.
 
 ""$TheFaction's naval forces will be most grateful for your assistance in this matter, captain.""","contact_accept:Accept
 contact_decline:Decline",
@@ -4159,7 +4266,7 @@ SetTextHighlightColors $nex_msb_factionColor h h h
 SetTextHighlights $nex_msb_faction $nex_msb_dist  $nex_msb_baseBounty $nex_msb_days
 Call $nex_msb_ref showMap ""Target: $nex_msb_systemNameShort""","You reach the end of the brief queue and take the seat offered by the naval officer.
 
-""The $faction navy seeks capable private military contractors for an operation against the $nex_msb_faction,"" $heOrShe explains. ""The target location is $nex_msb_baseName in $nex_msb_systemName, $nex_msb_dist light-years away. Payment is also applicable for any targets of opportunity encountered that are hostile to $theFaction. 
+""The $faction navy seeks capable private military contractors for an operation against $nex_msb_theFaction,"" $heOrShe explains. ""The target location is $nex_msb_baseName in the $nex_msb_systemName, $nex_msb_dist light-years away. 
 
 ""The base rate is $nex_msb_baseBounty credits per frigate destroyed or disabled, on an increasing scale for larger hulls,"" the officer transmits a document to your TriPad, ""as specified in addendum A of the provided terms. The duration of the bounty is $nex_msb_days days.""","contact_acceptBar:Accept
 contact_declineBarNoContinue:Decline",
@@ -4914,12 +5021,12 @@ $nex_RACA_inspection score:5","ShowPic ai_core_uninstall
 AddTextSmall After removal, the Alpha Core will appear in your cargo holds if currently docked at $marketName, or in local storage otherwise.",You cut the comm link and consider your options.,"nex_RACA_override:Remove the AI core and appoint a new administrator
 RACA_ignore:Leave the AI core in place for now",
 ,,,,,,
-RACA_answer,DialogOptionSelected,$option == RACA_answer,"ShowPersonVisual
+nex_RACA_answer,DialogOptionSelected,$option == RACA_answer score:2,"ShowPersonVisual
 SetStoryOption nex_RACA_persuade 1 nex_RACA_persuade ui_char_spent_story_point_leadership ""Persuaded an alpha core admin to vacate its post""","""Hello $player.firstName. I am a beta-level instance of the AI assigned to govern $marketName, uploaded to your system in order to facilitate a real-time conversation.""","RACA_demand:Demand the AI disclose its physical location and allow itself to be disconnected
 RACA_ask:Ask why the core is no longer in the bunker
 nex_RACA_persuade:""I wish to make use of your services elsewhere.""
 RACA_cutComm:Cut the comm link",
-RACA_demand,DialogOptionSelected,$option == RACA_demand,"SetStoryOption nex_RACA_persuade 1 nex_RACA_persuade ui_char_spent_story_point_leadership ""Persuaded an alpha core admin to vacate its post""","""I'm sorry, $playerFirstName, I'm afraid I can't do that.""","RACA_pressure:""There's a certain amount of pressure on me to stop using AI technology.""
+nex_RACA_demand,DialogOptionSelected,$option == RACA_demand score:2,"SetStoryOption nex_RACA_persuade 1 nex_RACA_persuade ui_char_spent_story_point_leadership ""Persuaded an alpha core admin to vacate its post""","""I'm sorry, $playerFirstName, I'm afraid I can't do that.""","RACA_pressure:""There's a certain amount of pressure on me to stop using AI technology.""
 nex_RACA_persuade:""I wish to make use of your services elsewhere.""
 RACA_cutComm:Cut the comm link",
 nex_RACA_persuade,DialogOptionSelected,$option == nex_RACA_persuade,,"You give an abbreviated speech to the AI praising its services $onOrAt $marketName, using flattery liberally but without excess. You express your profound gratitude for your lengthy relationship together, and before the AI thinks to cut you off, you explain that you can promote it to administration of a new, better colony.
@@ -4930,6 +5037,104 @@ The avatar on your display shimmers. ""A curious choice of tactic to use on one 
 nex_RACA_persuade2,DialogOptionSelected,$option == nex_RACA_persuade2,ShowPic ai_core_uninstall,"Moments after disconnecting, the lights of the control chamber go dark. Looks like the AI is signalling that it has held up its end of the bargain.",nex_RACA_override:Appoint a new administrator,
 nex_RACA_override,DialogOptionSelected,$option == nex_RACA_override,DismissDialog override,,,
 #END remove AI core admin dialog alt. version,,,,,,
+,,,,,,
+# hostile activity,,,,,,
+nex_HA_policeHassleBFE,BeginFleetEncounter,"!$hassle_didAlready
+!$isHostile
+$pursuePlayer_hassle score:50
+$hassleType == nex_police","$hassle_didAlready = true 0
+$hassleComplete = true
+MakeOtherFleetPreventDisengage hassle true
+unset $ignorePlayerCommRequests
+$nex_HA_policeScanConv = true 0
+HailPlayer",,,
+nex_HA_policeHassleComms,OpenCommLink,"$entity.nex_HA_policeScanConv score:100
+$entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 7
+AddTextSmall ""The cargo scan will use the Hegemony's list of illegal commodities."" h
+Nex_MiscCMD saveFactionColor hegemony
+SetTextHighlightColors $factionColor
+SetTextHighlights ""Hegemony's""","""Halt, captain! This system is the site of an ongoing investigation by the Department of Narcotics, Armaments and Technology. You are hereby ordered to submit to a cargo scan for illegal goods.""","0:cargoScan_comply:Allow the scan
+1:nex_HA_policeHassleObject:""Cargo scan? This is my territory!""
+2:cargoScan_refuse:Refuse",
+nex_HA_policeHassleCommsWeaker,OpenCommLink,"$entity.nex_HA_policeScanConv score:100
+$entity.relativeStrength < 0","$entity.ignorePlayerCommRequests = true 7
+MakeOtherFleetPreventDisengage hassle false","""Halt, captain! This system is the site of an ongoing investigation by the Department of Narcotics, Armaments and Technology."" 
+
+The $personPost tries to look suitably intimidating. The attempt is... unimpressive. ""You are hereby... requested to submit to a cargo scan for illegal goods.""","#0:cargoScan_comply:Allow the scan
+1:nex_HA_policeHassleObject:""Cargo scan? This is my territory!""
+2:cargoScan_refuse:Refuse",
+nex_HA_policeHassleObject,DialogOptionSelected,"$option == nex_HA_policeHassleObject
+$entity.relativeStrength >= 0",RemoveOption nex_HA_policeHassleObject,"$PersonRank $personLastName sneers, the very Platonic ideal of officiousness. ""The entire Sector is under the jurisdiction of the Persean Sector Criminal Police Commission, as laid out in the Nova Maxios Agreement of 145,"" $heOrShe says slowly, as if explaining things to a particularly dense student. ""As such, the concept of 'your territory' has no relevance or legal standing, where an ongoing Sectorpol investigation is concerned.
+
+""Now, will you submit to a search, or do you confess to trafficking and obstruction of justice?""",,
+nex_HA_policeHassleObjectWeaker,DialogOptionSelected,"$option == nex_HA_policeHassleObject
+$entity.relativeStrength < 0",unset $nex_HA_policeScanConv,"$PersonRank $personLastName tries to match you in a staring competition. Given the disparity in fleet strength, the outcome is a foregone conclusion.
+
+""You'll regret your obstinacy,"" $heOrShe spits out after a while. ""Sectorpol remembers those who obstruct its justice.""",cutCommLinkNoText:Cut the comm link,
+,,,,,,
+nex_HA_policeHassle_cargoScanStart,DialogOptionSelected,"$option == cargoScan_comply
+$entity.nex_HA_policeScanConv score:20","MakeOtherFleetPreventDisengage hassle false
+AddText ""After a brief wait, the $faction $otherFleetName transmits the scan results.""
+Nex_CargoScan
+FireBest CargoScanResult",,,
+nex_HA_policeHassle_cargoScanContraband,CargoScanResult,"$scan_contrabandFound score:10
+$entity.nex_HA_policeScanConv score:20",MakeOtherFleetPreventDisengage hassle true,"""Ah-ha!"" $PersonRank $personLastName is positively gloating. ""A smuggler, caught red-handed with dangerous contraband. Eject your illegal goods immediately for seizure... or face the consequences!""","0:cargoScan_comply_contraband:Surrender the contraband and cut the comm link
+1:cargoScan_refuse:Refuse",
+nex_HA_policeHassle_cargoScanRefuse,DialogOptionSelected,"$option == cargoScan_refuse
+$entity.nex_HA_policeScanConv score:20
+$entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 0
+unset $nex_HA_policeScanConv
+AdjustRepActivePerson CARGO_SCAN_REFUSE
+ShowDefaultVisual
+EndConversation","""Suspect resisting arrest!"" the $personPost shouts to someone outside the visual pickup. ""Shoot to kill, shoot to kill!""
+
+The comm link terminates as the other $shipOrFleet powers up weapons.",,
+nex_HA_policeHassle_cargoScanRefuseWeaker,DialogOptionSelected,"$option == cargoScan_refuse
+$entity.nex_HA_policeScanConv score:20
+$entity.relativeStrength < 0","$entity.ignorePlayerCommRequests = true 0
+unset $nex_HA_policeScanConv
+AdjustRepActivePerson CARGO_SCAN_REFUSE
+ShowDefaultVisual
+EndConversation NO_CONTINUE","""You wretched criminal scum—""
+
+You cut the comm link rather than wait for the $personRank to finish their sentence.",,
+nex_HA_policeHassle_cargoScanContrabandSurrender,DialogOptionSelected,"$option == cargoScan_comply_contraband
+$entity.nex_HA_policeScanConv score:20","CargoScanApplyResult $scan_cargoScanResult
+MakeOtherFleetPreventDisengage hassle false
+unset $nex_HA_policeScanConv
+ShowDefaultVisual
+EndConversation",,,
+,,,,,,
+nex_HA_greetingPoliceHostileStronger,OpenCommLink,"$nex_HA_police score:10
+$entity.isHostile
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""This is Sectorpol! You are under arrest for smuggling, tax evasion, piracy, murder, interstellar terrorism and unlicensed possession of AI cores. Do not resist!""
+OR
+""Stop right there, criminal scum! Surrender your fleet and illegal goods at once, or we will be forced to destroy both!""
+OR
+""It's all over, lawbreaker! You are under arrest. Stop resisting and this will be easier on all of us!""",,
+,,,,,,
+nex_HA_policeRaid_commsNotHostile,OpenCommLink,"$entity.nex_HA_policeRaid_fleet score:1000
+!$entity.isHostile","$entity.ignorePlayerCommRequests = true 7
+Highlight $entity.nex_HA_policeRaid_targetMarket","""Greetings, independent $shipOrFleet,"" the $post says. ""This is a detachment of Sectorpol's Department of Narcotics, Armaments and Technology. We are here to serve a warrant for search, seizure and arrest $entity.nex_HA_policeRaid_targetOnOrAt $entity.nex_HA_policeRaid_targetMarket, to remove the criminal elements and their illegal activities that have been allowed to fester there.""
+
+$HeOrShe looks at you with stern disapproval, for allowing this to happen. ""For your own sake, please cooperate with all law enforcement authorities.""","nex_HA_policeRaid_respWarrant:Demand to see this warrant
+nex_HA_policeRaid_respRights:""You have no right to do this. This is a violation of my civil liberties.""
+cutCommLink:Cut the comm link",
+nex_HA_policeRaid_commsHostile,OpenCommLink,"$entity.nex_HA_policeRaid_fleet score:1000
+$entity.isHostile","$entity.ignorePlayerCommRequests = true 7
+Highlight $entity.nex_HA_policeRaid_targetMarket","""Greetings, independent $shipOrFleet,"" the $post says. ""This is a detachment of Sectorpol's Department of Narcotics, Armaments and Technology. We are here to serve a warrant for search, seizure and arrest $entity.nex_HA_policeRaid_targetOnOrAt $entity.nex_HA_policeRaid_targetMarket, to remove the criminal elements and their illegal activities.
+
+""You are under arrest as well, for aiding and abetting these criminals and obstructing justice. Surrender your fleet and we will take you in peacefully. Or..."" $heOrShe lets the sentence hang in the empty void between your fleets.",cutCommLink:Cut the comm link,
+nex_HA_policeRaid_respWarrant,DialogOptionSelected,$option == nex_HA_policeRaid_respWarrant,RemoveOption nex_HA_policeRaid_respWarrant,"""Of course."" $PersonRank $personLastName's smile doesn't reach $hisOrHer eyes.
+
+You examine the transmitted document on your screen. All the hyper-detailed documentation about what is to be searched and seized and who is to be arrested boils down to one thing: an unlimited license for Sectorpol to sweep through $entity.nex_HA_policeRaid_targetMarket and detain—or kill—all the criminal families and societies who have regrettably infiltrated your territory in the process of your legitimate pursuit of interstellar trade and commerce. 
+
+As a veteran space captain, you require no description of the likely effects of their gendarmes sweeping through an urban area in pursuit of almost as well-armed pirates, smugglers and mobsters.",,
+nex_HA_policeRaid_respRights,DialogOptionSelected,$option == nex_HA_policeRaid_respRights,RemoveOption nex_HA_policeRaid_respRights,"""On the contrary, $playerSirOrMadam,"" $personRank says coldly. ""Under the Nova Maxios Agreement to which all major polities of the Sector are signatories, Sectorpol is empowered to serve a warrant lawfully issued by a recognised court, on any location in the Persean Sector.
+
+""We have meticulously crossed all our i's and dotted our t's on this one, captain. Your attempt at legalese will not shield the scum pouring drugs into the hab-corridors of Chicomoztoc and guns in the hands of Lost Astropolis gangs.""",,
+,,,,,,
+#END hostile activity,,,,,,
 ,,,,,,
 # Misc. dialog,,,,,,
 Nex_SierraThoughtsRemnantFragments,SierrasThoughts,"$global.nex_remFragments_deployedShards score:5

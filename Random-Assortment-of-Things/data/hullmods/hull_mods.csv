@@ -6,11 +6,15 @@ Artifact Controller,rat_artifact_controller,0,,,"no_drop_salvage, restricted",,3
 Abyssal Adaptability,rat_abyssal_core,0,,Abyssal,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalsAdaptabilityHullmod,,,,graphics/hullmods/rat_abyssal_core.png
 Abyssal Grid,rat_abyssal_grid,0,,Abyssal,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalGrid,,,,graphics/hullmods/rat_abyssal_grid.png
 Seraphs Grace,rat_seraphs_grace,0,,Seraph,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalSeraphsGrace,,,,graphics/hullmods/rat_seraphs_grace.png
+Raphaels Grace,rat_raphaels_grace,0,,Anomalous Phase-Tech,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalRaphaelsGrace,,,,graphics/hullmods/rat_raphaels_grace.png
 Sarakiels Blessing,rat_sarakiels_blessing,0,,Seraph,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalSarakielsBlessing,,,,graphics/hullmods/rat_sarakiels_blessing.png
+Seraphim Drive,rat_seraphim_drive,0,,Seraph,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalSeraphimDriveHullmod,,,,graphics/hullmods/rat_seraphim_drive.png
+Fighter Configuration,rat_fighter_configuration,0,,Seraph,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalFighterConfiguration,,,,graphics/hullmods/rat_fighter_configuration.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
-Primordial Serpent,rat_charybdis_hullmod,0,,Abyssal,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.CharybdisHullmod,,,,graphics/hullmods/rat_abyssal_core.png
 Beginning and the End,rat_genesis_hullmod,0,,Primordial,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.GenesisHullmod,,,,graphics/hullmods/rat_genesis_hullmod.png
+Primordial Serpent,rat_genesis_serpent_hullmod,0,,Primordial,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.GenesisSerpentHullmod,,,,graphics/hullmods/rat_genesis_serpent_hullmod.png
+Primordial Construct,rat_genesis_construct_hullmod,0,,Primordial,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.GenesisConstructHullmod,,,,graphics/hullmods/rat_genesis_hullmod.png
 Primordial Sea,rat_primordial_sea_hullmod,0,,Primordial,,,3000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.PrimordialSeaHullmod,,,,graphics/hullmods/rat_primordial_sea.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -21,10 +25,12 @@ Ordnance Redistributor,rat_ordnance_redistributor,0,,,,,3000,FALSE,TRUE,FALSE,0,
 #Abyss Installables,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 #Abyss Special Alterations,,,,,,,,,,,,,,,,,,,
-Abyssal Crew Conversion,rat_abyssal_conversion,3,1,Hull Alteration,"rat_alteration, no_build_in, no_drop_salvage, restricted, abyss",Special,10000,FALSE,FALSE,,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalCrewConversion,,,,graphics/hullmods/rat_crew_conversion.png
+Abyssal Crew Conversion,rat_abyssal_conversion,3,0,Hull Alteration,"rat_alteration, rat alteration_no_drop, no_build_in, no_drop_salvage, restricted",Special,10000,FALSE,FALSE,,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.AbyssalCrewConversion,,,,graphics/hullmods/rat_crew_conversion.png
 Abyssal Crew Conversion (Chronos),rat_chronos_conversion,3,0,Hull Alteration,"rat_alteration, rat alteration_no_drop, no_build_in, no_drop_salvage, restricted",Special,10000,FALSE,FALSE,,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.IntegratedChronosCore,,,,graphics/hullmods/rat_chronos_conversion.png
 Abyssal Crew Conversion (Cosmos),rat_cosmos_conversion,3,0,Hull Alteration,"rat_alteration, rat alteration_no_drop, no_build_in, no_drop_salvage, restricted",Special,10000,FALSE,FALSE,,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.IntegratedCosmosCore,,,,graphics/hullmods/rat_chosmos_conversion.png
 Abyssal Crew Conversion (Seraph),rat_seraph_conversion,3,0,Hull Alteration,"rat_alteration, rat alteration_no_drop, no_build_in, no_drop_salvage, restricted",Special,10000,FALSE,FALSE,,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.IntegratedSeraphCore,,,,graphics/hullmods/rat_seraph_conversion.png
+Abyssal Crew Conversion (Primordial),rat_primordial_conversion,3,0,Hull Alteration,"rat_alteration, rat alteration_no_drop, no_build_in, no_drop_salvage, restricted",Special,10000,FALSE,FALSE,,0,0,0,0,assortment_of_things.abyss.hullmods.abyssals.IntegratedPrimordialCore,,,,graphics/hullmods/rat_primordial_conversion.png
+,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 Primordial Stream,rat_primordial_stream,3,0,Hull Alteration,"rat_alteration, rat alteration_no_drop, no_build_in, no_drop_salvage, restricted",Special,50000,FALSE,FALSE,,0,0,0,0,assortment_of_things.abyss.hullmods.basic.PrimordialStreamHullmod,,,,graphics/hullmods/rat_primordial_stream.png
 ,,,,,,,,,,,,,,,,,,,
@@ -62,6 +68,7 @@ Plasmatic Shield,rat_plasmaticShield,3,2.5,Hull Alteration,"rat_alteration, no_d
 Exogrid,rat_exogrid,0,,Exo-Tech,,,10000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.exotech.hullmods.ExogridHullmod,,,,graphics/hullmods/rat_exogrid.png
 #Exogrid Overload,rat_exogrid_overload,0,,Exo-Tech,"offensive, no_build_in, rat_exo",,10000,TRUE,FALSE,FALSE,10,20,30,50,assortment_of_things.exotech.hullmods.ExogridOverloadHullmod,,,,graphics/hullmods/rat_exogrid_overload.png
 Exo Fighter AI,rat_exo_fighter_ai,0,,Exo-Tech,,,10000,FALSE,TRUE,TRUE,0,0,0,0,assortment_of_things.exotech.hullmods.ExoFighterAIHullmod,,,,graphics/hullmods/rat_exogrid.png
+Experimental Design,rat_exo_experimental,0,,Experimental Exo-Tech,,,10000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.exotech.hullmods.ExperimentalDesignHullmod,,,,graphics/hullmods/rat_experimental_design.png
 ,,,,,,,,,,,,,,,,,,,
 Phase Entaglement,rat_tylos_hullmod,0,,Exo-Tech,,,10000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.exotech.hullmods.TylosHullmod,,,,graphics/hullmods/rat_tylos_hullmod.png
 Phase Platform,rat_apheidas_hullmod,0,,Exo-Tech,,,10000,FALSE,TRUE,FALSE,0,0,0,0,assortment_of_things.exotech.hullmods.ApheidasHullmod,,,,graphics/hullmods/rat_apheidas_hullmod.png

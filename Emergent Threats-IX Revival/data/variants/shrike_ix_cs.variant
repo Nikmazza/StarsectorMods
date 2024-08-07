@@ -1,7 +1,7 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 0,
-    "fluxVents": 20,
+    "fluxVents": 19,
     "goalVariant": true,
     "hullId": "shrike_ix",
     "hullMods": [
@@ -30,10 +30,12 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 001": "morningstar_ciws_ix",
-                "WS 003": "lightbringer_ciws_ix"
-            }
+            "weapons": {"WS 001": "plasma_dart_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "lightbringer_ciws_ix"}
         }
     ]
 }

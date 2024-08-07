@@ -1,8 +1,6 @@
 {	
-	"startShipsCombatLarge":[
-	  ["nes_deimos_standard","nes_hamter_elite","nes_hammerfall_standard"]
-	],
 	"startShipsSuper":[
-	  ["nes_carnelian_standard"]
+	  ["nes_carnelian_standard"],
+	  ["nes_fluorspar_standard"],
 	],
 }

@@ -85,7 +85,7 @@ class AbyssalDepthsEventIntel() : BaseEventIntel(), FleetEventListener {
     }
 
     override fun getIntelTags(map: SectorMapAPI?): MutableSet<String> {
-        return mutableSetOf("Abyss", Tags.INTEL_MAJOR_EVENT)
+        return mutableSetOf("Abyssal Depths", Tags.INTEL_MAJOR_EVENT)
     }
 
 
@@ -186,7 +186,7 @@ class AbyssalDepthsEventIntel() : BaseEventIntel(), FleetEventListener {
     }
 
     override fun advanceImpl(amount: Float) {
-        super.advanceImpl(amount)
+        //super.advanceImpl(amount) Causes issues for some reason when the abyss generates after save load? weird stuff
         applyFleetEffects()
     }
 
@@ -210,14 +210,14 @@ class AbyssalDepthsEventIntel() : BaseEventIntel(), FleetEventListener {
 
         if (isStageActive(Stage.IN_THE_DARK)) {
 
-            if (fleet.containingLocation.hasTag(AbyssUtils.SYSTEM_TAG)) {
+            /*if (fleet.containingLocation.hasTag(AbyssUtils.SYSTEM_TAG)) {
                 var plugin = AbyssProcgen.getAbyssDarknessTerrainPlugin(fleet.starSystem)
                 if (plugin != null) {
                     if (plugin.containsPoint(fleet.location, fleet.radius)) {
                         fleet.stats.addTemporaryModMult(0.1f, id,  "In the Dark", 0.90f, fleet.stats.detectedRangeMod)
                     }
                 }
-            }
+            }*/
         }
 
         if (isStageActive(Stage.PERSISTANCE))  {

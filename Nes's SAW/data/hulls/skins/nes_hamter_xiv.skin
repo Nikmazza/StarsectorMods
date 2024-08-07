@@ -4,16 +4,15 @@
 	"hullName":"Hampter (XIV)",
 	"descriptionId":"nes_hamter",
 	"descriptionPrefix":"Built to the specifications of the 14th Domain Battlegroup which founded the Hegemony, this vessel is a prime example of the Domain Navy's 'decisive battle' doctrine, particularly exhibited by a series of radical structural modifications performed using pre-Collapse industrial technology.",
-	"tags":["XIV_bp"], # don't want it available for the Hegemony, it's "lost"
-	#"tags":["hist3t"],
+	"tags":["XIV_bp","hist3t"],
 	"tech":"XIV Battlegroup",
-	"fleetPoints":12,
-	"ordnancePoints":90,
-	"baseValueMult":1.75,
+	"fleetPoints":14,
+	"ordnancePoints":95,
+	"baseValueMult":1.65,
 	"spriteName":"graphics/ships/nes_hamter_xiv.png",
 	"systemId":"damper",
 	"coversColor":[255,255,255,255],
-	"removeWeaponSlots":[], 		# ids
+	"removeWeaponSlots":["NES_DECO_COUNTER"], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":["NES_ColorSelector_Hamter"], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids

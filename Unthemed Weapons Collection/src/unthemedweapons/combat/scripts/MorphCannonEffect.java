@@ -109,12 +109,14 @@ public class MorphCannonEffect extends GlowOnFirePlugin implements DamageDealtMo
 
     @Override
     public String modifyDamageDealt(Object param, CombatEntityAPI target, DamageAPI damage, Vector2f pt, boolean shieldHit) {
-        if (param instanceof DamagingProjectileAPI && projectiles.contains(param)) {
+        if (param instanceof DamagingProjectileAPI) {
             DamagingProjectileAPI proj = (DamagingProjectileAPI) param;
-            // Set the damage to a small number; it will be correctly applied in the onHit function
-            // Don't set it to 0 because shieldHit doesn't register for hits that deal less than 1 damage!
-            proj.setDamageAmount(10f);
-            return modifyKey;
+            if (proj.getCustomData() != null && proj.getCustomData().containsKey(morphDataKey)) {
+                // Set the damage to a small number; it will be correctly applied in the onHit function
+                // Don't set it to 0 because shieldHit doesn't register for hits that deal less than 1 damage!
+                proj.setDamageAmount(5f);
+                return modifyKey;
+            }
         }
         return null;
     }
@@ -135,7 +137,7 @@ public class MorphCannonEffect extends GlowOnFirePlugin implements DamageDealtMo
         // If shield hit, apply kinetic damage equal to K + 0.25*HE
         if (shieldHit) {
             engine.applyDamage(
-                    target,
+                    proj,
                     target,
                     pt,
                     kDamage + 0.25f*hDamage,
@@ -151,7 +153,7 @@ public class MorphCannonEffect extends GlowOnFirePlugin implements DamageDealtMo
         // hull damage is HE + KE
         else {
             engine.applyDamage(
-                    target,
+                    proj,
                     target,
                     pt,
                     hDamage + 0.25f*kDamage,
@@ -162,7 +164,7 @@ public class MorphCannonEffect extends GlowOnFirePlugin implements DamageDealtMo
                     proj.getSource(),
                     true);
             engine.applyDamage(
-                    target,
+                    proj,
                     target,
                     pt,
                     0.75f*kDamage,

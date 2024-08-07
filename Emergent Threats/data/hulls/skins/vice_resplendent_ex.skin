@@ -9,7 +9,7 @@
 	"systemId":"vice_massdeployment",
 	"addHints":["CARRIER", "COMBAT", "NO_AUTO_ESCORT", SHIP_WITH_MODULES],
 	"removeHints":[],
-	"manufacturer":"Tri-Tachyon",
+	"manufacturer":"High Tech",
 	"fighterBays":4,
 	"ordnancePoints":330,
 	"spriteName":"graphics/vice/ships/hidden/resplendent_ex.png",

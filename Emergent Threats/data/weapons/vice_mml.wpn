@@ -2,7 +2,7 @@
 	"id":"vice_mml",
 	"specClass":"projectile",
 	"type":"MISSILE",
-	"size":"MEDIUM",
+	"size":"LARGE",
 	"turretSprite":"graphics/fx/empty.png",
 	"hardpointSprite":"graphics/fx/empty.png",
 	"turretOffsets":[0, 0],

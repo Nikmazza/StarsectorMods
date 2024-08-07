@@ -189,6 +189,10 @@ class AbyssalSeraphsGrace : BaseHullMod() {
         ship!!.addListener(SeraphsGraceListener(ship, isInAbyss))
     }
 
+    override fun getDisplaySortOrder(): Int {
+        return 1
+    }
+
     override fun isApplicableToShip(ship: ShipAPI?): Boolean {
         return false
     }
@@ -216,12 +220,14 @@ class AbyssalSeraphsGrace : BaseHullMod() {
         override fun advance(amount: Float) {
 
             for (stack in ArrayList(stacks)) {
-                stack.duration -= 1 * amount
-                if (stack.duration < 0) {
-                    stacks.remove(stack)
+                if (!ship.isPhased) {
+                    stack.duration -= 1 * amount
+                    if (stack.duration < 0) {
+                        stacks.remove(stack)
 
-                    if (isInAbyss) {
-                        ship.fluxTracker.decreaseFlux(10f)
+                        if (isInAbyss) {
+                            ship.fluxTracker.decreaseFlux(10f)
+                        }
                     }
                 }
             }

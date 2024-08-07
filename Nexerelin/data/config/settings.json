@@ -41,13 +41,14 @@
 	
 	"nex_conquestMissionIntervalRateMult":0.05,
 	"nex_disruptMissionIntervalRateMult":0.125,
-	"nex_pirateRageIncrement":0.04,
+	"nex_pirateRageIncrement":0.02,
 	"nex_expeditionDelayPerExistingColony":15,
 	"nex_colonyExpeditionOnlyAfterGalatia":false,
 	"nex_faction_respawn_cooldown":150,
 	"nex_revengeInvasionPointsToSpawn":125,
 	# if false, other factions will not attack Templars; recommend combining with "canInvade" tag in Templars' faction config to make them not invade others
 	"nex_invade_and_raid_templars":true,
+	"nex_raidToBlockadeConversionFreq":0.2f,
 	"nex_invasionStabilizeTimeoutMult":1,
 	"nex_invasionBaseDefenseMult":1.4,	# legacy invasions only
 	"nex_useGroundBattleIndustryMap":true,	# new invasions only
@@ -128,6 +129,8 @@
 	"nex_sizeFractionForVictory":0.501,	# note: winner must also be twice as big as the next largest party
 	"nex_heavyIndustryFractionForVictory":0.667,
 	
+	"nex_ha_policeMaxFleets":1,
+	
 	"nex_colonyConditionValues":{
 		#"ore_sparse":1,	# worthless
 		"ore_moderate":2,	# 2.5,
@@ -188,12 +191,12 @@
 	
 	# Bonus XP values for most story-point-using actions
 	"bonusXP":{
-		"agentOrderSuccess":0.5,
-		"agentOrderDetection":0.75,
-		"agentOrderBoth":0,
+		"agentOrderSuccess":0.75,
+		"agentOrderDetection":1,
+		"agentOrderBoth":0.5,
 		
 		"nex_hireMerc":0.75,
-		"nex_gb_inspire":0.25,
+		"nex_gb_inspire":0.5,
 		
 		"nex_remFragments_threaten":1,
 		"nex_remBrawl_smoothtalk":0.75,

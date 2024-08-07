@@ -1,17 +1,18 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 0,
-    "fluxVents": 12,
+    "fluxCapacitors": 3,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "flamebreaker_ix",
     "hullMods": [
-        "advancedoptics",
-        "hardenedshieldemitter",
         "targetingunit",
         "frontemitter",
         "stabilizedshieldemitter",
-        "ix_point_defense_medium_handler",
-        "ix_point_defense_medium"
+        "ix_point_defense_small",
+        "ix_point_defense_small_handler",
+        "ix_dawnstar_controller",
+        "ix_dawnstar_electron",
+        "ix_dawnstar_electron_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -20,7 +21,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "conversion_lance_ix"}
+            "weapons": {"WS 002": "thundermark_ix"}
         },
         {
             "autofire": true,
@@ -34,17 +35,31 @@
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS 001": "dawnstar_lcpb_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 001": "lightbringer_ciws_ix",
-                "WS 003": "lightbringer_ciws_ix",
-                "WS 004": "lightbringer_ciws_ix",
-                "WS 005": "morningstar_ciws_ix",
-                "WS 008": "morningstar_ciws_ix"
+                "WS 003": "daythorn_mapb_ix",
+                "WS 004": "daythorn_mapb_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "plasma_dart_ix",
+                "WS 006": "plasma_dart_ix",
+                "WS 007": "plasma_dart_ix",
+                "WS 008": "plasma_dart_ix",
+                "WS 012": "plasma_dart_ix",
+                "WS 013": "plasma_dart_ix"
             }
         }
     ],
     "wings": [
-        "dictum_ix_wing",
-        "dictum_ix_wing"
+        "axiom_ix_wing",
+        "axiom_ix_wing"
     ]
 }

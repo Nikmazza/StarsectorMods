@@ -14,8 +14,7 @@ import org.magiclib.util.MagicLensFlare;
 
 public class StarfallOnHit implements OnHitEffectPlugin {
 	
-	public void onHit(DamagingProjectileAPI proj, CombatEntityAPI target, Vector2f point, boolean shieldHit, 
-						ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
+	public void onHit(DamagingProjectileAPI proj, CombatEntityAPI target, Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
 		MagicLensFlare.createSharpFlare(
         engine,
         proj.getSource(),

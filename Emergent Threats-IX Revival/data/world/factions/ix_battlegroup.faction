@@ -36,13 +36,13 @@
 		"myth":1,
 	},
 	"music":{
-		"theme":"music_hegemony_market_neutral",
-		"market_neutral":"music_hegemony_market_neutral",
-		"market_hostile":"music_hegemony_market_hostile",
-		"market_friendly":"music_hegemony_market_friendly",
-		"encounter_neutral":"music_hegemony_encounter_neutral",
-		"encounter_hostile":"music_hegemony_encounter_hostile",
-		"encounter_friendly":"music_hegemony_encounter_friendly",
+		"theme":"ix_colony_theme",
+		"market_neutral":"ix_colony_theme",
+		"market_hostile":"ix_colony_theme",
+		"market_friendly":"ix_colony_theme",
+		"encounter_neutral":"ix_encounter_theme",
+		"encounter_hostile":"ix_encounter_theme",
+		"encounter_friendly":"ix_encounter_theme",
 	},	
 	"portraits":{
 		"standard_male":[
@@ -62,11 +62,11 @@
 			"graphics/portraits/portrait43.png",
 			"graphics/portraits/portrait47.png",
 			"graphics/portraits/portrait_hegemony02.png",
-			"graphics/portraits/portrait_hegemony06.png",
 			"graphics/portraits/portrait_mercenary03.png",
 			"graphics/portraits/portrait_mercenary04.png",
 		],
 		"standard_female":[
+			"graphics/portraits/portrait14.png",
 			"graphics/portraits/portrait16.png",
 			"graphics/portraits/portrait21.png",
 			"graphics/portraits/portrait22.png",
@@ -79,8 +79,10 @@
 			"graphics/portraits/portrait39.png",
 			"graphics/portraits/portrait41.png",
 			"graphics/portraits/portrait42.png",
+			"graphics/portraits/portrait_hegemony06.png",
 			"graphics/portraits/portrait_hegemony10.png",
 			"graphics/portraits/portrait_league10.png",
+			"graphics/portraits/portrait_mercenary02.png",
 			"graphics/portraits/portrait_mercenary05.png",
 		],
 	},
@@ -104,7 +106,7 @@
 		"temblor_ix_attack":4,
 		"temblor_ix_cs":4,
 		"tigershark_ix_attack":2,
-		"tigershark_ix_cs":2,
+		"tigershark_ix_missile":2,
 		
 		"hyperion_ix_honor":0,
 		"odyssey_ix_honor":0,
@@ -128,7 +130,7 @@
 		],
 	},
 	"knownShips":{
-		"tags":["ixbattlegroup"],
+		"tags":["ixbattlegroup", "ix_auxiliary"],
 		"hulls":["hyperion_ix", "temblor_ix", "tigershark_ix"],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
@@ -139,8 +141,6 @@
 	"knownFighters":{
 		"tags":["ixbattlegroup"],
 		"fighters":[
-			"axiom_ix_wing",
-			"dictum_ix_wing",
 		],
 	},
 	"priorityFighters":{
@@ -151,12 +151,10 @@
 	"knownWeapons":{
 		"tags":["ixbattlegroup"],
 		"weapons":[
-			"taclaser",
-			"hil"
 		],
 	},
 	"knownHullMods":{
-		"tags":["base_bp", "tritachyon", "ixbattlegroup"],
+		"tags":["base_bp", "ixbattlegroup"],
 		"hullMods":[
 			"advancedshieldemitter", # accelerated
 			"advancedoptics",
@@ -182,10 +180,10 @@
 			"hiressensors",
 			"efficiency_overhaul",
 			"ix_ground_invasion_conversion",
-			"ix_laser_collimator",
 			"ix_reactive_combat_shields",
 			"ix_terminus_relay",
-			"ix_antecedent"
+			"ix_antecedent",
+			"ix_vampyr_retrofit"
 		],
 	},
 	"factionDoctrine":{
@@ -247,7 +245,7 @@
 		"makesPirateBases":true,
 		"pirateBaseStationTypes":{
 			"battlestation_high":10,
-			"starfortress_high":2,
+			#"starfortress_high":2,
 		},
 		"punitiveExpeditionData":{
 			"vsCompetitors":false,

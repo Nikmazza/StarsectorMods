@@ -60,6 +60,8 @@ public class RemnantSubsystemsUtil {
 		QUALIFIED_SHIPLIST.add("hmi_limina_default_D");
 		QUALIFIED_SHIPLIST.add("radiant_ix");
 		QUALIFIED_SHIPLIST.add("radiant_ix_default_D");
+		QUALIFIED_SHIPLIST.add("radiant_ix_hvb");
+		QUALIFIED_SHIPLIST.add("radiant_ix_hvb_default_D");
 		QUALIFIED_SHIPLIST.add("tahlan_Nameless");
 		QUALIFIED_SHIPLIST.add("tahlan_Nameless_default_D");
 		QUALIFIED_SHIPLIST.add("tahlan_Timeless");
@@ -74,6 +76,12 @@ public class RemnantSubsystemsUtil {
 	static {
 		BANNED_SHIPLIST.add("guardian");
 		BANNED_SHIPLIST.add("guardian_default_D");
+		BANNED_SHIPLIST.add("zea_boss_ninaya");
+		BANNED_SHIPLIST.add("zea_boss_ninaya_default_D");
+		BANNED_SHIPLIST.add("zea_boss_ninmah");
+		BANNED_SHIPLIST.add("zea_boss_ninmah_default_D");
+		BANNED_SHIPLIST.add("zea_boss_nineveh");
+		BANNED_SHIPLIST.add("zea_boss_nineveh_default_D");
 	}
 
 	//ships made by manufacturer representing end game mod factions that don't need the extra help
@@ -100,6 +108,9 @@ public class RemnantSubsystemsUtil {
 		ABOMINATION_LIST.add("Void");
 		ABOMINATION_LIST.add("Unknown Prototype");
 		ABOMINATION_LIST.add("Project Enigma");
+		ABOMINATION_LIST.add("Elysia");
+		ABOMINATION_LIST.add("Dusk");
+		ABOMINATION_LIST.add("Dawntide");
 		//includes IBB "Unique" ships in isAbomination method
 	}
 

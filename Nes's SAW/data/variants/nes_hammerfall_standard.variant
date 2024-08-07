@@ -3,13 +3,13 @@
   "hullId": "nes_hammerfall",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 17,
+  "fluxCapacitors": 8,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "targetingunit",
-    "defensive_targeting_array"
+    "fluxdistributor",
+    "targetingunit"
   ],
   "weaponGroups": [
     {

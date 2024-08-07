@@ -1,6 +1,6 @@
 {
 	"specClass":"beam",
-	"beamEffect":"data.scripts.ix.weapons.MuonStreamerEffect",
+	"beamEffect":"data.scripts.ix.weapons.MuonOnArmorHitEffect",
 	"id":"muon_streamer_ix",
 	"type":"ENERGY",
 	"size":"SMALL",

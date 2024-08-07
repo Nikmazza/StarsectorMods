@@ -1,0 +1,43 @@
+{
+
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		"tarantula7s":4,
+		},
+	},
+	
+	"knownShips":{
+		"tags":["base_bp", "midline", "hightech_bp", "persean_league,"],
+		"hulls":[
+                "tarantula7s",
+                "wayfarer7s",
+			],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+
+		],
+	},
+	
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+		"Ex7s_wayfarer7s_Assault":30,
+	},
+	
+		"knownWeapons":{
+		"tags":["base_bp",],
+		"weapons":[
+			"breachpod",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+		],
+	},
+},

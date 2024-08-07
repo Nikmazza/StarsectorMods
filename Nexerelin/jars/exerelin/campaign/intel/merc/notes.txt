@@ -1,0 +1,38 @@
+== Hiring rules ==
+1 SP to hire, 25% bonus XP
+365 day hire period, no extensions
+Pay up front retainer + monthly upkeep
+At contract end, pay difference in base price of contracted ships between start and end
+
+
+== Todo ==
+?
+
+== Intel values ==
+Company ID
+Fleet member list
+Saved fleet member values
+Leader ID
+
+=== Intel display ===
+Name
+Logo
+Leader (if any)
+Up front payment
+Monthly payment
+Contract time remaining
+Current ships
+Payment for difference in ship price
+
+
+=== Companies ===
+-Steiner Life Guards (Hegemony, heavy duty)
+-Fikenhild King's Own (Persean League, carrier?)
+-TriGun Services (Tri-Tachyon, randomized fleet?)
+-Pilgrim's Grace (Luddic Church, support)
+Way of Ruin (Luddic Path, low-cost angryfleet?)
+-Men From Volturn (Sindrian Diktat, ?)
+-Dora's Surveyor Corps (independent, Apogee with escorts)
+-The Jokers (independent, randomized fleet)
+-Sons of Dicker (pirates, advanced pirate gear, requires UW)
+-The Endbringer (Omega destroyer)

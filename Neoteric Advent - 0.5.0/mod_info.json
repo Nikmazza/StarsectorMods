@@ -1,0 +1,19 @@
+{
+  "id":"advent_seven",
+  "name":"Neoteric Advent",
+  "author":"Rav0n",
+  "version":"0.5.0",
+  "description":"After Domain era, technology shall evolve, and Domainers remain forgotten.",
+  "gameVersion":"0.97a-RC8",
+  
+  
+ "modPlugin":"data.scripts.ModPlugin_sevens",
+ "jars":["jars/neoteric.jar"],
+
+ "totalConversion": "false",
+ "utility": "false",
+ "dependencies": [
+  {"id": "lw_lazylib", "name": "LazyLib"},
+  {"id": "MagicLib", "name": "MagicLib"}
+ ],
+}

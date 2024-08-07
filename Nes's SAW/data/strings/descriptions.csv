@@ -14,14 +14,14 @@ nes_hamter,SHIP,"An aggressive destroyer with large emplacement, full-sized figh
 ,,,,,
 nes_hermitaur,SHIP,"An antiquated design predating the shield emitter technology, Hermitaur is encased in overlapping belts of thick armor forming an impressively tough carapace. Powerful frontal layout delivers concentrated firepower, however the aft section is completely exposed. Left unchecked, an experienced opponent would seize the opportunity to set up a pincer maneuver and attack its weak point for massive damage.",,,
 ,,,,,
-nes_hammerfall,SHIP,"An utility vessel fit for combat duty, Hammerfall is fully capable of creating its own salvage opportunities. Stemming its roots from Hammerhead blueprint the hull has been expanded and reinforced to accomodate a fully integrated heavy laser drill which, while being impressively efficient, requires to be linked directly into the main power feed, distrupting and severely limiting shields performance, making ship extremely vulnerable to flanking. A shuttle bay was repurposed to house small utility drones which might serve as distraction during combat.",,,
+nes_hammerfall,SHIP,"An utility vessel fit for combat duty, Hammerfall is fully capable of creating its own salvage opportunities.
+
+Stemming its roots from Hammerhead blueprint the hull has been expanded and reinforced to accomodate a fully integrated heavy laser drill which, while being impressively efficient, requires to be linked directly into the main power feed, distrupting and severely limiting shields performance, making ship extremely vulnerable to flanking.",,,
 ,,,,,
 nes_voltaire,SHIP,"A late pre-collapse design of the Domain Navy, Volt is a technologically advanced behemoth of a ship developed with exclusive backing from the Tri-Tachyon corporation. After receiving almost unprecedented amound of funding, the design team came up with heavily armed, well armored hull with an extensive flux grid and powerful engines. All-around automation and use of premium components ensued outstanding performance and ensured exceptional production and maintenance costs. Phobos drone suite was included to protect otherwise vulnerable stern as well as support mothership in the assault, should its captain be daring enough.",,,
 ,,,,,
 nes_carnelian,SHIP,"A pre-collapse design from Altair Exotech combines the exceptional speed and versatility in one fragile package. ""Chrysoberyl"" tandem suite allows a pair of heavily specialized drones to join Carnelian in battle.",,,
 #Drones,,,,,
-nes_drone_borer,SHIP,"Mover utility drone is an older Borer model, somewhat more compact but less durable and incapable of venturing far from its mothership.",,,
-,,,,,
 nes_drone_phobos,SHIP,"Advanced drone for point defence and close assault duty. Fabrique Orbitale provided the chassis and system designs, while Tri-Tachyon experts were responsible for the weapons suite.",,,
 ,,,,,
 nes_drone_carnelian_attacker,SHIP,Chrysoberyl twins resolute attacker.,,,

@@ -12,7 +12,7 @@
   "shieldRadius": 1,
   "viewOffset": 0,
   "builtInWings": [],
-  "builtInMods": ["never_detaches"],
+  "builtInMods": ["never_detaches", "vastbulk"],
   "weaponSlots": [
       {
       "id": "SYSTEM 1",

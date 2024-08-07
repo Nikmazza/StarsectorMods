@@ -1,6 +1,6 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 10,
     "fluxVents": 50,
     "hullId": "radiant_ix",
     "hullMods": [
@@ -34,26 +34,20 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "starfall_mlrs_ix",
-                "WS 004": "starfall_mlrs_ix"
+                "WS 002": "bereaver_dem_launcher_ix",
+                "WS 004": "bereaver_dem_launcher_ix",
+                "WS 005": "bereaver_dem_pod_ix",
+                "WS 006": "bereaver_dem_pod_ix",
+                "WS 007": "bereaver_dem_pod_ix",
+                "WS 008": "bereaver_dem_pod_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "stormlight_graser_ix",
-                "WS 001": "stormlight_graser_ix"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "orthrus_m_ix",
-                "WS 006": "orthrus_m_ix",
-                "WS 007": "orthrus_m_ix",
-                "WS 008": "orthrus_m_ix"
+                "WS 000": "conversion_lance_ix",
+                "WS 001": "conversion_lance_ix"
             }
         },
         {

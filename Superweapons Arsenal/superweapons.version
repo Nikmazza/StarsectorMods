@@ -1,0 +1,10 @@
+{
+    "masterVersionFile":"https://gitgud.io/KindaStrange/superweapons-arsenal/-/raw/master/superweapons.version",
+    "modName":"Superweapons Arsenal",
+    "modVersion":
+    {
+        "major":"2",
+        "minor":"5b",
+        "patch":"0-KS003"
+    },
+}

@@ -34,14 +34,13 @@ public class NES_ColorSelector_Herm extends BaseHullMod {
     {
         SWITCH.put(0,"NES_Standard");
         SWITCH.put(1,"NES_Devout");
-        SWITCH.put(2,"NES_Riftborn");
-        SWITCH.put(3,"NES_Marauder");
+        SWITCH.put(2,"NES_Marauder");
+        SWITCH.put(3,"NES_Riftborn");
     }
 
     private final String decocounterID = "NES_DECO_COUNTER";
 
     //faction specific paintjob selector for Hermitaur
-    //this is dumb and silly, too bad!
     private static int PAINTJOB_Herm;
 
     @Override
@@ -60,7 +59,7 @@ public class NES_ColorSelector_Herm extends BaseHullMod {
 
         else if (member.getFleetData() != null && member.getFleetData().getFleet() != null && !member.getFleetCommander().isPlayer()
                 && member.getFleetCommander().getFaction().getId().contains("pirates")){
-            PAINTJOB_Herm = 3;//Marauder red
+            PAINTJOB_Herm = 2;//Marauder red
             return;
         }
 

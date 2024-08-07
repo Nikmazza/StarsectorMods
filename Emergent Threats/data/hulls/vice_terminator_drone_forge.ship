@@ -12,7 +12,7 @@
   "shieldRadius": 1,
   "viewOffset": 0,
   "builtInWings": ["terminator_wing"],
-  "builtInMods": ["vice_drone_autoforge", "never_detaches"],
+  "builtInMods": ["vice_drone_autoforge", "never_detaches", "vastbulk"],
   "weaponSlots": [
       {
       "id": "LB 1",

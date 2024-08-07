@@ -20,6 +20,7 @@ public class NES_ColorSelector extends BaseHullMod {
         DECO_COUNTER.put(2, "nes_fluorspar_deco_counter2");
         DECO_COUNTER.put(3, "nes_fluorspar_deco_counter3");
         DECO_COUNTER.put(4, "nes_fluorspar_deco_counter4");
+        DECO_COUNTER.put(5, "nes_fluorspar_deco_counter5");
     }
 
     private final Map<String, Integer> SWITCH_TO = new HashMap<>();
@@ -28,7 +29,8 @@ public class NES_ColorSelector extends BaseHullMod {
         SWITCH_TO.put("nes_fluorspar_deco_counter1",2);
         SWITCH_TO.put("nes_fluorspar_deco_counter2",3);
         SWITCH_TO.put("nes_fluorspar_deco_counter3",4);
-        SWITCH_TO.put("nes_fluorspar_deco_counter4",0);
+        SWITCH_TO.put("nes_fluorspar_deco_counter4",5);
+        SWITCH_TO.put("nes_fluorspar_deco_counter5",0);
     }
 
     private final Map<Integer,String> SWITCH = new HashMap<>();
@@ -38,6 +40,7 @@ public class NES_ColorSelector extends BaseHullMod {
         SWITCH.put(2,"NES_Amber");
         SWITCH.put(3,"NES_RoseQuartz");
         SWITCH.put(4,"NES_Cinnabar");
+        SWITCH.put(5,"NES_Iridescent");
     }
 
     private final String decocounterID = "NES_DECO_COUNTER";

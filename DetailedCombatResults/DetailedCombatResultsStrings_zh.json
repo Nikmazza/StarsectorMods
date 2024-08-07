@@ -70,6 +70,15 @@
     "AssistDesc": "协助击杀: 当一艘舰对目标的装甲和结构造成了超过 %s%% 的伤害, 并且不是独立击杀时",
     "ProRataDpDesc": "部署点/相对部署点击杀: 对于根据对以摧毁的舰船所造成的装甲和结构伤害百分比部署点的统计",
     "DamageDesc": "舰船伤害指标叠加的大小基于对目标造成的装甲和结构伤害。 (更大 = 更多)",
+    "StandardPerformance": "Weapon Standard Performance Font Color",
+    "UnderPerformance": "Weapon Under Performing Damage as a % of OP Font Color",
+    "OverPerformance": "Weapon Over Performing Damage as a % of OP Font Color",
+
+    #Weapon Tooltip Mouse Over
+    "WeaponCount":   "Weapon Count: %s",
+    "WeaponOpTotal": "Weapon OP Total: %s",
+    "WeaponOpAsPct": "Weapon OP as pct: %s",
+    "KillingBlows":  "Killing Blows: %s",
 
     #PlayerFleetGoal
     "PlayerGoalPursuit": "逃离了敌人 ",

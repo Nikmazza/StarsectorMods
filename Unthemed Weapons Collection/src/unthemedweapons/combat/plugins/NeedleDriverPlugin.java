@@ -14,12 +14,14 @@ import java.util.List;
 
 @SuppressWarnings("unused")
 public class NeedleDriverPlugin extends BaseEveryFrameCombatPlugin {
-    static final float lingerTime = 12f;
+    static final float lingerTime = 15f;
 
-    static final float maxExplosionRadius = 100f;
-    static final float explosionRadiusPer = 10f;
+    static final float maxExplosionRadius = 140f;
+    static final float explosionRadiusPer = 7f;
     static final float maxExplosionDamage = 500;
-    static final float explosionDamagePer = 50f;
+    static final float explosionDamagePer = 25f;
+    static final int maxAttachments = 20;
+
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
 
@@ -51,7 +53,11 @@ public class NeedleDriverPlugin extends BaseEveryFrameCombatPlugin {
                 data.proj.getTailEnd().set(newTailLoc);
             }
 
-            if (!attachments.isEmpty() && (attachments.getFirst().proj.getElapsed() >= lingerTime || ship.isPhased() || !ship.isAlive())) {
+            if (!attachments.isEmpty() &&
+                    (attachments.getFirst().proj.getElapsed() >= lingerTime ||
+                            attachments.size() >= maxAttachments ||
+                            ship.isPhased() ||
+                            !ship.isAlive())) {
 
                 int numAttached = attachments.size();
 
@@ -68,7 +74,7 @@ public class NeedleDriverPlugin extends BaseEveryFrameCombatPlugin {
 
                     engine.spawnExplosion(explosionLoc, ship.getVelocity(), new Color(255, 200, 255, 192), explosionRadius, 1f);
                     if (!ship.isPhased()) {
-                        engine.applyDamage(ship, ship, explosionLoc, explosionDamage, DamageType.ENERGY, 0f, true, false, data.proj.getSource(), true);
+                        engine.applyDamage(data.proj, ship, explosionLoc, explosionDamage, DamageType.ENERGY, explosionDamage, true, false, data.proj.getSource(), true);
 //                        Global.getSoundPlayer().playSound(
 //                                explosionDamage < maxExplosionDamage ?
 //                                        "hit_solid_energy" :

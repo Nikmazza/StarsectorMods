@@ -14,6 +14,7 @@ public abstract class NES_Carn_color_base_hullmod extends BaseHullMod {
     public static final String TOXIC = "NES_Toxic";
     public static final String TURQUOISE = "NES_Turquoise";
     public static final String PERSEAN = "NES_Persean";
+    public static final String AGENT = "NES_Agent";
 
 
     private static final String ALT_SPRITES = "nes_alt_sprites";

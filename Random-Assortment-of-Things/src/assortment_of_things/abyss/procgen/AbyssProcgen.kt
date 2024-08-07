@@ -8,6 +8,8 @@ import assortment_of_things.abyss.misc.AbyssBackgroundWarper
 import assortment_of_things.abyss.scripts.AbyssalDefendingFleetManager
 import assortment_of_things.abyss.terrain.AbyssTerrainPlugin
 import assortment_of_things.abyss.terrain.AbyssalDarknessTerrainPlugin
+import assortment_of_things.abyss.terrain.terrain_copy.OldBaseTiledTerrain
+import assortment_of_things.abyss.terrain.terrain_copy.OldNebulaEditor
 import assortment_of_things.misc.randomAndRemove
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI
 import com.fs.starfarer.api.campaign.LocationAPI
@@ -16,8 +18,6 @@ import com.fs.starfarer.api.campaign.StarSystemAPI
 import com.fs.starfarer.api.impl.MusicPlayerPluginImpl
 import com.fs.starfarer.api.impl.campaign.ids.Factions
 import com.fs.starfarer.api.impl.campaign.ids.Tags
-import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor
-import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain
 import com.fs.starfarer.api.util.Misc
 import org.lazywizard.lazylib.MathUtils
 import org.lwjgl.util.vector.Vector2f
@@ -33,7 +33,7 @@ object AbyssProcgen {
 
 
     //Sets up important tags, like "HIDDEN" to prevent the systems from being used by other mods.
-    fun setupSystem(system: StarSystemAPI, fraction: Float, depth: AbyssDepth, final: Boolean = false)
+    fun setupSystem(system: StarSystemAPI, type: BaseAbyssType, depth: AbyssDepth, final: Boolean = false)
     {
         var data = AbyssUtils.getSystemData(system)
         data.depth = depth
@@ -62,7 +62,9 @@ object AbyssProcgen {
         system.addCustomEntity("${system.name}", "", "rat_abyss_border", Factions.NEUTRAL)
 
 
-        var color = generateAbyssColor(system, depth)
+        type.setupColor(data)
+        system.lightColor = data.getDarkColor()
+
         if (!final) {
             var warper = AbyssBackgroundWarper(system, 8, 0.33f)
             warper.overwriteColor = data.getDarkColor()
@@ -70,7 +72,7 @@ object AbyssProcgen {
 
 
 
-        AbyssProcgen.generateAbyssTerrain(system, fraction)
+        AbyssProcgen.generateAbyssTerrain(system, type.getTerrainFraction())
         AbyssProcgen.generateAbyssDarkness(system)
 
         if (final) {
@@ -105,6 +107,10 @@ object AbyssProcgen {
         if (!system1.isHyperspace) {
             var plugin1 = addLightsource(fracture1, 10000f)
             plugin1.color = AbyssUtils.getSystemData(system1 as StarSystemAPI).getColor().setAlpha(50)
+        }
+        else {
+            var plugin1 = addLightsource(fracture1, 15000f)
+            plugin1.color = AbyssUtils.ABYSS_COLOR.setAlpha(40)
         }
         var plugin2 = addLightsource(fracture2, 10000f)
         plugin2.color = AbyssUtils.getSystemData(system2 as StarSystemAPI).getColor().setAlpha(50)
@@ -148,12 +154,20 @@ object AbyssProcgen {
         //var textureChoice = MathUtils.getRandomNumberInRange(1, 2)
         system.backgroundTextureFilename = "graphics/backgrounds/abyss/Abyss2.jpg"
 
-        val nebula = system.addTerrain("rat_depths", BaseTiledTerrain.TileParams(string.toString(), w, h, "rat_terrain", "depths1", 4, 4, null))
+        val nebula = system.addTerrain("rat_depths",
+            OldBaseTiledTerrain.TileParams(string.toString(),
+                w,
+                h,
+                "rat_terrain",
+                "depths1",
+                4,
+                4,
+                null))
         nebula.id = "rat_depths_${Misc.genUID()}"
         nebula.location[0f] = 0f
 
         val nebulaPlugin = (nebula as CampaignTerrainAPI).plugin as AbyssTerrainPlugin
-        val editor = NebulaEditor(nebulaPlugin)
+        val editor = OldNebulaEditor(nebulaPlugin)
         editor.regenNoise()
         editor.noisePrune(fraction)
         editor.regenNoise()
@@ -180,7 +194,7 @@ object AbyssProcgen {
     fun clearTerrainAround(entity: SectorEntityToken, radius: Float)
     {
         var nebulaPlugin = getAbyssTerrainPlugin(entity.starSystem)
-        val editor = NebulaEditor(nebulaPlugin)
+        val editor = OldNebulaEditor(nebulaPlugin)
 
         editor.clearArc(entity.location.x, entity.location.y, 0f, radius, 0f, 360f)
         editor.clearArc(entity.location.x, entity.location.y, 0f, radius, 0f, 360f, 0.25f)
@@ -189,7 +203,7 @@ object AbyssProcgen {
     fun clearTerrainAround(system: LocationAPI, location: Vector2f, radius: Float)
     {
         var nebulaPlugin = getAbyssTerrainPlugin(system)
-        val editor = NebulaEditor(nebulaPlugin)
+        val editor = OldNebulaEditor(nebulaPlugin)
 
         editor.clearArc(location.x, location.y, 0f, radius, 0f, 360f)
         editor.clearArc(location.x, location.y, 0f, radius, 0f, 360f, 0.25f)
@@ -213,45 +227,6 @@ object AbyssProcgen {
         plugin.radius = radius
         plugin.color = color
         return plugin
-    }
-
-    fun generateAbyssColor(system: StarSystemAPI, depth: AbyssDepth){
-
-        var data = AbyssUtils.getSystemData(system)
-
-
-
-
-
-        var h = MathUtils.getRandomNumberInRange(0.925f, 1f)
-        if (Random().nextFloat() > 0.5f) h = MathUtils.getRandomNumberInRange(0.0f, 0.035f)
-        //var h = MathUtils.getRandomNumberInRange(0.935f, 1f)
-       // if (Random().nextFloat() > 0.75f) h = MathUtils.getRandomNumberInRange(0.0f, 0.025f)
-
-        var lightColor = Color.WHITE
-
-        var s = 1f
-        var b = 1f
-        when (depth) {
-            AbyssDepth.Shallow -> {
-                lightColor = Color.gray
-                b = 0.3f
-            }
-            AbyssDepth.Deep -> {
-                lightColor = Color.DARK_GRAY
-                b = 0.2f
-            }
-        }
-
-        system.lightColor = lightColor
-
-        var color = Color.getHSBColor(h, 1f, 1f)
-        data.baseColor = color
-
-        var darkColor = Color.getHSBColor(h, s, b)
-        data.baseDarkColor = darkColor
-
-        system.lightColor = darkColor
     }
 
     fun generateCircularPoints(system: StarSystemAPI) {

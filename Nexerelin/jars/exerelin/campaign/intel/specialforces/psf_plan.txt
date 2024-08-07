@@ -1,0 +1,34 @@
+Limit creation
+- Only one SF fleet by default
+- Support Doctrine gives +1?
+
+Economy update: deduct costs
+	- use AI mode with regenerating supplies/fuel? nah
+- Upkeep to track:
+	- Commander fee
+	- Officer salaries
+	- Crew salaries (skeleton * 1.25f)
+	- Maintenance cost * 1.2f
+	- Fuel costs: how?
+		- In advance(), if fleet is in hyper, compare its hyper pos to the last one and apply fuel use based on distance
+		- Then on economy update, convert fuel use to cost
+
+== Reconfig dialog ==
+Commander training
+- Learn up to 2 fleetwide skills by spending story points
+
+== Give orders ==
+Need dialog
+
+Player SF commands:
+- Patrol system
+- Orbit loc
+- Follow player
+- Assist raid
+- Defend vs. raid
+
+-- Resupply at loc
+
+
+== AI ==
+-- Resupply at appropriate location if needed

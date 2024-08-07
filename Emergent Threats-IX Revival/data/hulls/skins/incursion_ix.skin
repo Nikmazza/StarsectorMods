@@ -1,9 +1,11 @@
 {
 	"baseHullId":"incursion_ix_base",
 	"skinHullId":"incursion_ix",
-	"hullName":"Incursion (IX)",
+	"hullName":"Intrepid (IX)",
+	"incompatibleWithBaseHull":true,
 	"hullDesignation":"Battleship",
 	"descriptionId":"incursion_ix",
+	"coversColor":[120,130,120,255],
 	"descriptionPrefix":"This ship is a survivor of a 9th Domain Battlegroup task force stranded in the Persean Sector. Specialized in the Domain Navy's \"lightning strike\" doctrine, it has received extensive upgrades (performed with pre-Collapse industrial methods) to its engines and shield emitters.",
 	"fleetPoints":35,
 	"ordnancePoints":320,

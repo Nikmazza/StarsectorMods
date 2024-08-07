@@ -1,6 +1,6 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 2,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "hyperion_ix",
@@ -8,7 +8,10 @@
         "missleracks",
         "extendedshieldemitter",
         "hardenedshieldemitter",
-        "hardened_subsystems"
+        "hardened_subsystems",
+        "ix_dawnstar_controller",
+        "ix_dawnstar_neutron",
+        "ix_dawnstar_neutron_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -18,8 +21,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "lightbringer_ciws_ix",
-                "WS 002": "lightbringer_ciws_ix"
+                "WS 001": "dawnstar_lcpb_ix",
+                "WS 002": "dawnstar_lcpb_ix"
             }
         },
         {

@@ -110,6 +110,7 @@
 			"modspec vice_adaptive_temporal_shell":1,
 			"modspec vice_interdiction_array":1,
 			"ship_bp vice_mutilator":1,
+			"vice_signal_masker_device":1,
 		},
 		"job_show_type": true,
 		"job_show_captain": false,
@@ -346,7 +347,7 @@
 		
 		"job_comm_reply": "You encounter a fleet of Diktat warships making a rendezvous with a single sleek Tri-Tachyon militarized Odyssey. Scans of the battlecruiser reveal signs of advanced technology you've never seen before. Compared to it, the Diktat fleet is in far rougher shape, a likely sign that they're from the Diktat Navy, rather than the better equipped Lion's Guard. \n\nA pale blonde woman in a haute couture dress appears on your screen. She is addressing you from a fancy stateroom, surrounded by uniformed Diktat officers, rather than on a bridge. Her violet gene tweaked eyes flash with anger. \n\n\"Really? I was just about to close this deal, right before you showed up. I suppose I'll have to kill you now. How boring!\"\n\nThe Diktat fleet soon begins to maneuver with commendable precision, while the Odyssey is making a straight line for your flagship. You have a fight on your hands.",
 		
-		"job_intel_success": "With a big payday on the horizon, you forego salvaging the Sublime Exuberance intact. A thorough examination of the wreck nonetheless sheds light on many of its upgraded components. With a bit of trial and error, you soon learn how to perform the drone upgrade procedure on other Tri-Tachyon Odyssey hulls. \nThe destroyed Diktat fleet also tells an interesting tale. It's an open secret that the Diktat Navy is starved for credits, with so much of the military budged being swallowed up by the Lion's Guard. Navy captains have increasingly resorted to \"creative\" methods of resupply in the face of such budget constraints. Now that its rogue operative is out of the way, the Tri-Tacyhon Corporation stands to profit from a lucrative weapons trade that is thoroughly back under its control, and they have you to thank for it.",
+		"job_intel_success": "With a big payday on the horizon, you forego salvaging the Sublime Exuberance intact. A thorough examination of the wreck nonetheless sheds light on many of its upgraded components. With a bit of trial and error, you soon learn how to perform the drone upgrade procedure on other Tri-Tachyon Odyssey hulls. \nThe destroyed Diktat fleet also tells an interesting tale. It's an open secret that the Diktat Navy is starved for credits, with so much of the military budget being swallowed up by the Lion's Guard. Navy captains have increasingly resorted to \"creative\" methods of resupply in the face of such budget constraints. Now that its rogue operative is out of the way, the Tri-Tacyhon Corporation stands to profit from a lucrative weapons trade that is thoroughly back under its control, and they have you to thank for it.",
 		
 		"job_intel_failure": "You could not resist the allure of claiming the Sublime Exuberance for yourself. As expected, the ship is well built, and your salvage crews soon restore emergency power. Working out all the engineering procedures that went into its drone upgrades takes far longer, but with the intact ship as a template, you are eventually able to reverse engineer the process. The Diktat ships were also upgraded with smuggled Tri-Tachyon tech, which is now yours to claim. \nMeanwhile, the man who hired you is less than pleased. He threatens you with everything from a painful death to lawsuits for breach of contract, but his impotent complaints fall on deaf ears. He can keep his money. After all, you have his ship.",
 		
@@ -361,6 +362,7 @@
 			"modspec vice_apotheosis_protocol":1,
 			"modspec vice_attuned_emitter_diodes":1,
 			"modspec vice_convert_shuttle":1,
+			"vice_signal_masker_device":1,
 		},
 		"job_show_type": true,
 		"job_show_captain": true,
@@ -465,8 +467,8 @@
 			"weapon_bp gigacannon":1,
 		},
 		"job_show_type": true,
-		"job_show_captain": false,
-		"job_show_fleet": "vanilla",
+		"job_show_captain": true,
+		"job_show_fleet": "flagship",
 		"job_show_distance": "exact",
 		"job_difficultyDescription": "The LGS Invincible Fortress is guarded by the very best of the Lion's Guard. You will have to be prepared to strike hard and fast. The ship has tremendous frontal firepower and range, but is weaker in the flanks and rear. Approach with utmost caution.",
 		"job_pick_option": "Confront the LGS Invincible Fortress",
@@ -501,7 +503,7 @@
 		"fleet_flagship_recoverable": true,
 		"fleet_flagship_autofit": false,
 		"fleet_preset_ships": {
-			"vice_exhortation_elite": 1,
+			"vice_onslaught_lg_boss": 1,
 			"executor_Elite": 2,
 			"vice_unifier_elite": 2,
 			"eagle_LG_Assault": 3,

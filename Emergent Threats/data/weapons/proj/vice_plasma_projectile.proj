@@ -1,5 +1,5 @@
 {
-	"id":"vice_plasma_projectile",
+	"id":"vice_plasma_projectile", #fighter plasma catapult
 	"specClass":"missile",	
 	"missileType":"PHASE_CHARGE",
 	"sprite":"graphics/missiles/phase_charge_base.png",
@@ -48,5 +48,3 @@
 									 "sound":"prox_charge_explosion"},
 					}
 }
-
-

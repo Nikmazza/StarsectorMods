@@ -40,6 +40,7 @@ public class InterdictionArray extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getVariant().addPermaMod(HANDLER_HULLMOD);
 		if (isSMod(stats)) stats.getMaxBurnLevel().modifyFlat(id, SMOD_BURN_BONUS);
+		if (stats.getVariant().hasHullMod("fed_energymod")) stats.getEnergyAmmoBonus().modifyMult(id, 1.1765f);
 	}
 	
 	@Override

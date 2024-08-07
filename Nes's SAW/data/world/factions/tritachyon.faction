@@ -1,14 +1,6 @@
 {
-	# multiplier for how often hulls show up in the faction's fleets
-    "hullFrequency":{
-        "hulls":{
-			"nes_fluorspar":0.2, #rare
-        },
-    },
-
 	"knownShips":{
         "hulls":[
-			"nes_fluorspar",
 			"nes_voltaire",	
         ],
     },

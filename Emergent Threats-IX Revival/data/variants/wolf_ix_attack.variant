@@ -1,12 +1,15 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 0,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "wolf_ix",
     "hullMods": [
+        "ix_dawnstar_controller",
         "advancedoptics",
-        "extendedshieldemitter"
+        "extendedshieldemitter",
+        "ix_dawnstar_proton",
+        "ix_dawnstar_proton_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,28 +18,24 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "twin_tactical_laser_ix"}
+            "weapons": {"WS 004": "dawnstar_lcpb_ix"}
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "orthrus_s_ix",
-                "WS 006": "orthrus_s_ix"
+                "WS 005": "spatial_charge_launcher_ix",
+                "WS 006": "spatial_charge_launcher_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "taclaser",
-                "WS 003": "taclaser"
+                "WS 001": "morningstar_ciws_ix",
+                "WS 002": "morningstar_ciws_ix",
+                "WS 003": "morningstar_ciws_ix"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "morningstar_ciws_ix"}
         }
     ]
 }

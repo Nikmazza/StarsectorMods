@@ -10,11 +10,17 @@ import com.fs.starfarer.api.impl.combat.NegativeExplosionVisual;
 import com.fs.starfarer.api.impl.combat.NegativeExplosionVisual.NEParams;
 import com.fs.starfarer.api.util.Misc;
 
-//for creating Dragonfire muzzle smoke and Rift Torpedo explosion visuals
+//for creating vampyr/orthrus plumes and sbe rifts
 public class ShapedExplosionUtil {
 
-	//for Soliton Burst Emitter (large) and Orthrus (small), has different preset values compared to ET core mod
+	//SBE (large), IFC (medium), Orthrus (small), has different preset values compared to ET core mod
+	//overload for old methods instead of refactoring for IFC
 	public static void spawnShapedExplosion(Vector2f loc, float angle, float shipSpeed, Color pc, boolean isSmall) {
+		String type = isSmall ? "small" : "large";
+		spawnShapedExplosion(loc, angle, shipSpeed, pc, type);
+	}
+	
+	public static void spawnShapedExplosion(Vector2f loc, float angle, float shipSpeed, Color pc, String type) {
 		if (Global.getCombatEngine().getViewport().isNearViewport(loc, 800f)) {
 			
 			int numParticles = 200;
@@ -32,15 +38,40 @@ public class ShapedExplosionUtil {
 			float endSizeMin = 1f;
 			float endSizeMax = 2f;
 			
-			if (isSmall) {
-			numParticles = 100;
-			minSize = 15;
-			maxSize = 20;
+			if (type.equals("small")) {
+				numParticles = 100;
+				minSize = 15;
+				maxSize = 20;
 			
-			arc = 30;
-			scatter = 50f;
-			minDur = 0.3f;
-			maxDur = 0.6f;
+				arc = 30;
+				scatter = 50f;
+				minDur = 0.3f;
+				maxDur = 0.6f;
+			}
+			
+			else if (type.equals("medium")) {
+				numParticles = 150;
+				minSize = 15;
+				maxSize = 20;
+			
+				arc = 60;
+				scatter = 75f;
+				minDur = 0.7f;
+				maxDur = 1.2f;
+			}
+			
+			else if (type.equals("thundermark")) {
+				numParticles = 50;
+				minSize = 10f;
+				maxSize = 15f;
+				
+				minDur = 0.4f;
+				maxDur = 0.7f;
+			
+				arc = 120f;
+				scatter = 20f;
+				minVel = 10f + shipSpeed;
+				maxVel = 30f + shipSpeed;
 			}
 			
 			Vector2f spawnPoint = new Vector2f(loc);
@@ -55,8 +86,8 @@ public class ShapedExplosionUtil {
 				angleOffset *= arc/2f;
 				float theta = (float) Math.toRadians(angle + angleOffset);
 				float r = (float) (Math.random() * Math.random() * scatter);
-				float x = (float)Math.cos(theta) * r;
-				float y = (float)Math.sin(theta) * r;
+				float x = (float) Math.cos(theta) * r;
+				float y = (float) Math.sin(theta) * r;
 				Vector2f pLoc = new Vector2f(spawnPoint.x + x, spawnPoint.y + y);
 				
 				float speed = minVel + (maxVel - minVel) * (float) Math.random();

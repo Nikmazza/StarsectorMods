@@ -21,6 +21,7 @@ public class NES_ColorSelector_Carn extends BaseHullMod {
         DECO_COUNTER.put(2, "nes_fluorspar_deco_counter2");
         DECO_COUNTER.put(3, "nes_fluorspar_deco_counter3");
         DECO_COUNTER.put(4, "nes_fluorspar_deco_counter4");
+        DECO_COUNTER.put(5, "nes_fluorspar_deco_counter5");
     }
 
     private final Map<String, Integer> SWITCH_TO = new HashMap<>();
@@ -29,7 +30,8 @@ public class NES_ColorSelector_Carn extends BaseHullMod {
         SWITCH_TO.put("nes_fluorspar_deco_counter1",2);
         SWITCH_TO.put("nes_fluorspar_deco_counter2",3);
         SWITCH_TO.put("nes_fluorspar_deco_counter3",4);
-        SWITCH_TO.put("nes_fluorspar_deco_counter4",0);
+        SWITCH_TO.put("nes_fluorspar_deco_counter4",5);
+        SWITCH_TO.put("nes_fluorspar_deco_counter5",0);
     }
 
     private final Map<Integer,String> SWITCH = new HashMap<>();
@@ -39,12 +41,12 @@ public class NES_ColorSelector_Carn extends BaseHullMod {
         SWITCH.put(2,"NES_Toxic");
         SWITCH.put(3,"NES_Turquoise");
         SWITCH.put(4,"NES_Persean");
+        SWITCH.put(5,"NES_Agent");
     }
 
     private final String decocounterID = "NES_DECO_COUNTER";
 
     //faction specific paintjob selector for Carnelian
-    //this is dumb and silly, too bad!
     private static int PAINTJOB_Carn;
 
     @Override
@@ -56,12 +58,20 @@ public class NES_ColorSelector_Carn extends BaseHullMod {
         }
 
         else if (member.getFleetData() != null && member.getFleetData().getFleet() != null && !member.getFleetCommander().isPlayer()
-                && member.getFleetCommander().getFaction().getId().contains("persean")){
+                && member.getFleetCommander().getFaction().getId().contains("persean")
+                || member.getFleetCommander().getFaction().getId().contains("pirates")){
             PAINTJOB_Carn = 4;//Persean yellow
             return;
         }
 
-        else PAINTJOB_Carn = 0;//Standard midline
+        else if (member.getFleetData() != null && member.getFleetData().getFleet() != null && !member.getFleetCommander().isPlayer()
+                && member.getFleetCommander().getFaction().getId().contains("mercenary")
+                || member.getFleetCommander().getFaction().getId().contains("tritachyon")){
+            PAINTJOB_Carn = 5;//Agent white
+            return;
+        }
+
+        else PAINTJOB_Carn = 0;//Vintage midline
         return;
     }
 

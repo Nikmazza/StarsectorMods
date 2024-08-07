@@ -23,6 +23,8 @@ object RATSettings : LunaSettingsListener
 
     //Relics
     var relicsEnabled = LunaSettings.getBoolean(modID, "rat_relicsEnabled")
+    var relicsEnabledStations = LunaSettings.getBoolean(modID, "rat_enableRelicsStations")
+    var relicsEnabledConditions = LunaSettings.getBoolean(modID, "rat_enableRelicsConditions")
 
     //Frontiers
     var enableFrontiers = LunaSettings.getBoolean(modID, "rat_frontiersEnabled")
@@ -31,6 +33,7 @@ object RATSettings : LunaSettingsListener
 
     //Backgrounds
     var backgroundsEnabled = LunaSettings.getBoolean(modID, "rat_backgroundsEnabled")
+    var backgroundsAbilityKeybind = LunaSettings.getInt(modID, "rat_backgroundSpecialHotkey")
 
     //Procgen
     @JvmStatic
@@ -50,10 +53,6 @@ object RATSettings : LunaSettingsListener
 
 
     //UI
-
-    /*var enableDPS = LunaSettings.getBoolean(modID, "rat_enableDPS")
-    var dpsMeterSeconds = LunaSettings.getInt(modID, "rat_dpsSeconds")*/
-
 
     var enableMinimap = LunaSettings.getBoolean(modID, "rat_enableMinimap")
     var minimapShape = LunaSettings.getString(modID, "rat_minimapShape")
@@ -78,15 +77,15 @@ object RATSettings : LunaSettingsListener
         exoEnabled = LunaSettings.getBoolean(modID, "rat_exotechEnabled")
 
         relicsEnabled = LunaSettings.getBoolean(modID, "rat_relicsEnabled")
+        relicsEnabledStations = LunaSettings.getBoolean(modID, "rat_enableRelicsStations")
+        relicsEnabledConditions = LunaSettings.getBoolean(modID, "rat_enableRelicsConditions")
 
         enableFrontiers = LunaSettings.getBoolean(modID, "rat_frontiersEnabled")
         frontiersIncomeMult = LunaSettings.getFloat(modID, "rat_frontiersIncomeMult")
         frontiersCostMult = LunaSettings.getFloat(modID, "rat_frontiersCostMult")
 
-
         backgroundsEnabled = LunaSettings.getBoolean(modID, "rat_backgroundsEnabled")
-
-
+        backgroundsAbilityKeybind = LunaSettings.getInt(modID, "rat_backgroundSpecialHotkey")
 
         procgenScaleModifier = LunaSettings.getString(modID, "rat_systemScaleV2")
         procgenHyperspaceCloudMod = LunaSettings.getFloat(modID, "rat_hyperspaceCloudsMod")
@@ -104,9 +103,6 @@ object RATSettings : LunaSettingsListener
         minimapStarscape = LunaSettings.getBoolean(modID, "rat_minimapStarscape")
         minimapFueloverlay = LunaSettings.getBoolean(modID, "rat_minimapFuel")
         MinimapUI.reset = true
-
-       /* enableDPS = LunaSettings.getBoolean(modID, "rat_enableDPS")
-        dpsMeterSeconds = LunaSettings.getInt(modID, "rat_dpsSeconds")*/
 
         LootModifier.modifySpawns()
     }

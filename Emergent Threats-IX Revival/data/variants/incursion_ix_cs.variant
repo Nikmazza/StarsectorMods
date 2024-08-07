@@ -1,12 +1,11 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 0,
-    "fluxVents": 48,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "incursion_ix",
     "hullMods": [
         "extendedshieldemitter",
-        "magazines",
         "targetingunit",
         "ix_reactive_combat_shields",
         "stabilizedshieldemitter"
@@ -47,25 +46,27 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 009": "es_projector_ix",
-                "WS 012": "muon_streamer_ix",
-                "WS 013": "muon_streamer_ix"
+                "WS 016": "muon_siege_lance_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 016": "conversion_lance_ix"}
+            "weapons": {
+                "WS 001": "plasma_dart_ix",
+                "WS 002": "plasma_dart_ix",
+                "WS 010": "plasma_dart_ix",
+                "WS 011": "plasma_dart_ix",
+                "WS 012": "plasma_dart_ix",
+                "WS 013": "plasma_dart_ix"
+            }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "morningstar_ciws_ix",
-                "WS 002": "morningstar_ciws_ix",
                 "WS 003": "lightbringer_ciws_ix",
                 "WS 004": "lightbringer_ciws_ix",
-                "WS 010": "morningstar_ciws_ix",
-                "WS 011": "morningstar_ciws_ix",
                 "WS 014": "morningstar_ciws_ix",
                 "WS 015": "morningstar_ciws_ix"
             }

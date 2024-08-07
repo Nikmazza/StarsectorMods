@@ -21,10 +21,12 @@ import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 
 import data.scripts.ix.DistanceUtil;
 import org.lazywizard.lazylib.CollisionUtils;
+import org.magiclib.util.MagicRender;
 
 public class AntecedentEffect implements OnFireEffectPlugin, OnHitEffectPlugin {
 
 	//proximity range set in behaviorSpec splitRange
+	private static Color EXPLOSION_COLOR = new Color(50,150,50,255);
 	private static float EXPLOSION_RADIUS = 400f;
 	private static float EXPLOSION_DAMAGE = 4000f; //x2, modified by onFire
 	private static String WARHEAD_ID = "antecedent_warhead";
@@ -40,16 +42,17 @@ public class AntecedentEffect implements OnFireEffectPlugin, OnHitEffectPlugin {
 			float missileDamageMult = thisShip.getMutableStats().getMissileWeaponDamageMult().getMult();
 			float damage = EXPLOSION_DAMAGE * missileDamageMult;
 			spawnExplosions(proj, proj.getLocation(), damage, engine);
-			engine.applyDamage(proj, proj.getLocation(), 10000f, DamageType.ENERGY, 0, false, false, proj);
+			renderShockwave(proj.getLocation());
+			engine.removeEntity(proj);
 		}
 	}
 	
-	public void onHit(DamagingProjectileAPI proj, CombatEntityAPI target, Vector2f point, boolean shieldHit, 
-						ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
+	public void onHit(DamagingProjectileAPI proj, CombatEntityAPI target, Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
 		ShipAPI thisShip = proj.getSource();
 		float missileDamageMult = thisShip.getMutableStats().getMissileWeaponDamageMult().getMult();
 		float damage = EXPLOSION_DAMAGE * missileDamageMult;
 		spawnExplosions(proj, point, damage, engine);
+		renderShockwave(point);
 	}
 	
 	private void spawnExplosions(DamagingProjectileAPI proj, Vector2f point, float damage, CombatEngineAPI engine) {
@@ -70,10 +73,10 @@ public class AntecedentEffect implements OnFireEffectPlugin, OnHitEffectPlugin {
 					0,
 					new Color(0,0,0,0),
 					new Color(0,0,0,0));
-					 
+		
 		engine.spawnDamagingExplosion(spec, thisShip, point);
 		engine.spawnDamagingExplosion(spec, thisShip, point);
-		engine.spawnExplosion(point, new Vector2f(), new Color(50,150,50,255), EXPLOSION_RADIUS * 3f, 2f);
+		engine.spawnExplosion(point, new Vector2f(), EXPLOSION_COLOR, EXPLOSION_RADIUS * 3f, 0.7f);
         engine.addHitParticle(point, new Vector2f(), EXPLOSION_RADIUS * 5f, 2f, 1f, Color.red);
 		Global.getSoundPlayer().playSound("antecedent_ix_explode", 1f, 1f, point, new Vector2f());
 
@@ -93,5 +96,35 @@ public class AntecedentEffect implements OnFireEffectPlugin, OnHitEffectPlugin {
 				engine.applyDamage(ship, impactSite, damage * 0.5f, damageType, 0, false, false, proj);
 			}
 		}
+	}
+	
+	private void renderShockwave(Vector2f point) {
+		MagicRender.battlespace(
+			Global.getSettings().getSprite("fx", "ix_antecedent_explosion"), //sprite
+			point,					 	//loc
+			new Vector2f(), 			//vel
+			new Vector2f(500,500),		//size
+			new Vector2f(900,900),		//growth
+			0f, 						//angle
+			0f,							//spin
+			Color.red, 					//color
+			true,						//additive
+			0.0f,						//fadein
+			0.3f,						//full
+			0.3f);						//fadeout
+			
+		MagicRender.battlespace(
+			Global.getSettings().getSprite("fx", "ix_antecedent_explosion"), //sprite
+			point,					 	//loc
+			new Vector2f(), 			//vel
+			new Vector2f(500,500),		//size
+			new Vector2f(900,900),		//growth
+			0f, 						//angle
+			0f,							//spin
+			EXPLOSION_COLOR,			//color
+			true,						//additive
+			0.0f,						//fadein
+			0.5f,						//full
+			0.4f);						//fadeout
 	}
 }

@@ -1,0 +1,34 @@
+TO DO FOR STARSECTOR 0.97
+
+Files to check on Starsector update, because they significantly modify vanilla code that could change under us.
+Partial list.
+
+- ExerelinNewGameSetup
+    - VanillaSystemsGenerator
+-  rules.csv "vanilla overrides"
+-  NexCoreLifecyclePlugin
+- NexFleetInteractionDialogPluginImpl
+- NexFleetEncounterContext
+- Nex_PunitiveExpeditionManager
+- Nex_MarketCMD
+- Nex_SustainedBurnAbilityAI
+- Nex_AICores
+- SSP_BattleCreationPluginImpl
+- InvasionFleetManager.getPatrolCombatFP
+- Submarket plugins
+- Colony manager: getFreePortGrowthBonus()
+- Everything that uses Industries.TAG_UNRAIDABLE
+- Objective entity plugins
+- CreateFleetPlugin if I make one
+
+0.96 notes:
+
+Do on future SS release:
+- Use "player colonized" and deciv listeners
+	- Deciv listener applications:
+		- Sector manager (faction elimination): useless, we don't know who the previous owner was
+			- Just use it to run the live faction check
+		- We do have a pre-deciv checker that works
+	- Player colonized listener applications:
+		- Faction setup nag script
+	- But on the other hand the periodic check we already have works fine, don't fix what ain't broke

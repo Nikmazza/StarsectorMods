@@ -3,12 +3,11 @@
   "hullId": "nes_hamter",
   "displayName": "Outdated",
   "goalVariant": true,
-  "fluxCapacitors": 1,
+  "fluxCapacitors": 6,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "ballistic_rangefinder",
     "targetingunit",
     "armoredweapons"
   ],
@@ -32,9 +31,15 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0002": "arbalest",
-        "WS0004": "lightdualac",
-        "WS0006": "lightdualac"
+        "WS0002": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "vulcan",
+        "WS0006": "vulcan"
       }
     }
   ],

@@ -1,13 +1,12 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 4,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "wolf_ix",
     "hullMods": [
-        "advancedoptics",
         "extendedshieldemitter",
-        "pointdefenseai"
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -16,23 +15,24 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "muon_autolance_ix"}
+            "weapons": {
+                "WS 002": "plasma_dart_ix",
+                "WS 003": "plasma_dart_ix",
+                "WS 004": "plasma_dart_ix"
+            }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "orthrus_s_ix",
-                "WS 006": "orthrus_s_ix"
+                "WS 005": "spatial_charge_launcher_ix",
+                "WS 006": "spatial_charge_launcher_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 002": "morningstar_ciws_ix",
-                "WS 003": "morningstar_ciws_ix"
-            }
+            "weapons": {"WS 001": "morningstar_ciws_ix"}
         }
     ]
 }

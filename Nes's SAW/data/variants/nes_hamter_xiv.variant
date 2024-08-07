@@ -3,15 +3,12 @@
   "hullId": "nes_hamter_xiv",
   "displayName": "Elite",
   "goalVariant": true,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 4,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-	"heavyarmor",
-	"targetingunit",
-	"defensive_targeting_array"
-	
+	"targetingunit"
   ],
   "weaponGroups": [
     {
@@ -62,6 +59,6 @@
   ],
   "modules": [],
   "wings": [
-    "talon_wing"
+    "hoplon_wing"
   ]
 }

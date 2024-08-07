@@ -19,13 +19,15 @@ public class NES_ColorSelector_Hamter extends BaseHullMod {
         DECO_COUNTER.put(0, "nes_fluorspar_deco_counter0");
         DECO_COUNTER.put(1, "nes_fluorspar_deco_counter1");
         DECO_COUNTER.put(2, "nes_fluorspar_deco_counter2");
+        DECO_COUNTER.put(3, "nes_fluorspar_deco_counter3");
     }
 
     private final Map<String, Integer> SWITCH_TO = new HashMap<>();
     {
         SWITCH_TO.put("nes_fluorspar_deco_counter0",1);
         SWITCH_TO.put("nes_fluorspar_deco_counter1",2);
-        SWITCH_TO.put("nes_fluorspar_deco_counter2",0);
+        SWITCH_TO.put("nes_fluorspar_deco_counter2",3);
+        SWITCH_TO.put("nes_fluorspar_deco_counter3",0);
     }
 
     private final Map<Integer,String> SWITCH = new HashMap<>();
@@ -33,12 +35,12 @@ public class NES_ColorSelector_Hamter extends BaseHullMod {
         SWITCH.put(0,"NES_Austere");
         SWITCH.put(1,"NES_Cardinal");
         SWITCH.put(2,"NES_Ivory");
+        SWITCH.put(3,"NES_Starling");
     }
 
     private final String decocounterID = "NES_DECO_COUNTER";
 
     //faction specific paintjob selector for Ham(p)ter
-    //this is dumb and silly, too bad!
     private static int PAINTJOB_Hamter;
 
     @Override

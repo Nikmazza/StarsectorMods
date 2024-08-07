@@ -10,7 +10,6 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 
-
 import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
 
 public class ModuleHandler extends BaseHullMod {

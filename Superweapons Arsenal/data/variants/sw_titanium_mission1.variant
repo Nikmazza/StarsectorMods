@@ -1,0 +1,90 @@
+{
+  "variantId": "sw_titanium_mission1",
+  "hullId": "sw_titanium",
+  "displayName": "Advanced",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 47,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "eccm",
+    "targetingunit",
+    "pointdefenseai",
+    "fluxdistributor",
+    "fluxbreakers",
+    "reinforcedhull",
+    "armoredweapons",
+    "magazines",
+    "solar_shielding"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "sw_terror"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "resonatormrm",
+        "WS0003": "resonatormrm",
+        "WS0016": "sabot_single",
+        "WS0017": "sabot_single"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "sw_hyperpulse",
+        "WS0013": "sw_hyperpulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "heavyblaster",
+        "WS0005": "heavyblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "riftlance",
+        "WS0015": "riftlance",
+        "WS0024": "phasebeam",
+        "WS0025": "phasebeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0022": "phasebeam",
+        "WS0023": "phasebeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "shockrepeater",
+        "WS0007": "shockrepeater",
+        "WS0008": "shockrepeater",
+        "WS0009": "shockrepeater",
+        "WS0010": "shockrepeater",
+        "WS0011": "shockrepeater",
+        "WS0018": "shockrepeater",
+        "WS0019": "shockrepeater"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

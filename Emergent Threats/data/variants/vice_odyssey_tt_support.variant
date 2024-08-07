@@ -1,6 +1,6 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 5,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "vice_odyssey_tt",
@@ -9,6 +9,7 @@
         "missleracks",
         "targetingunit"
     ],
+    "modules": [{"SM 1": "vice_odyssey_secondary_drone_bay"}],
     "permaMods": [],
     "sMods": [],
     "variantId": "vice_odyssey_tt_support",
@@ -19,7 +20,7 @@
             "weapons": {
                 "WS 004": "gravitonbeam",
                 "WS 005": "gravitonbeam",
-                "WS 006": "gravitonbeam"
+                "WS 006": "ionbeam"
             }
         },
         {
@@ -44,13 +45,10 @@
                 "WS 013": "pdlaser",
                 "WS 014": "pdlaser",
                 "WS 015": "pdlaser",
-                "WS 016": "pdlaser",
-                "WS 017": "pdlaser",
-                "WS 018": "pdlaser"
+                "WS 016": "pdlaser"
             }
         }
     ],
-	"modules": [{"SM 1": "vice_odyssey_secondary_drone_bay"}],
     "wings": [
         "trident_wing",
         "trident_wing"

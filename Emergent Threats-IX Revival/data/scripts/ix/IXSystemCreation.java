@@ -3,8 +3,10 @@ package data.scripts.ix;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
+import lunalib.lunaSettings.LunaSettings;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
@@ -18,12 +20,16 @@ import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
+
+import data.scripts.util.MagicCampaign;
 
 public class IXSystemCreation {
 
@@ -163,60 +169,95 @@ public class IXSystemCreation {
 
         planet2.setMarket(market2);
         Global.getSector().getEconomy().addMarket(market2, true);
-
-		//new pirate world
-		PlanetAPI planet3 = system.addPlanet("ix_zorya_scorn", star, "Scorn", "tundra", 140, 165, 8200, 180);
-        planet3.setFaction("pirates");
-		planet3.setCustomDescriptionId("ix_zorya_scorn");
-		planet3.setInteractionImage("illustrations", "ix_scorn_illus");
 		
-        MarketAPI market3 = Global.getFactory().createMarket("ix_scorn_market", planet3.getName(), 3);
-        market3.setFactionId("pirates");
-        market3.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
-        market3.setPrimaryEntity(planet3);
+		//lawless pirate world Scorn
+		if (!LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_marzanna_enabled")) {
+			PlanetAPI planet3 = system.addPlanet("ix_zorya_scorn", star, "Scorn", "tundra", 140, 165, 8200, 180);
+			planet3.setFaction("pirates");
+			planet3.setCustomDescriptionId("ix_zorya_scorn");
+			planet3.setInteractionImage("illustrations", "ix_scorn_illus");
+			
+			MarketAPI market3 = Global.getFactory().createMarket("ix_scorn_market", planet3.getName(), 3);
+			market3.setFactionId("pirates");
+			market3.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+			market3.setPrimaryEntity(planet3);
 
-		market3.addCondition(Conditions.ORE_MODERATE);
-		market3.addCondition(Conditions.ORGANICS_COMMON);
-		market3.addCondition(Conditions.COLD);
-        market3.addCondition(Conditions.IRRADIATED);
-        market3.addCondition(Conditions.RUINS_VAST);
-		market3.addCondition(Conditions.DECIVILIZED);
-		market3.addCondition("ix_killsats");
-        market3.addCondition(Conditions.POPULATION_3);
+			market3.addCondition(Conditions.ORE_MODERATE);
+			market3.addCondition(Conditions.ORGANICS_COMMON);
+			market3.addCondition(Conditions.COLD);
+			market3.addCondition(Conditions.IRRADIATED);
+			market3.addCondition(Conditions.RUINS_VAST);
+			market3.addCondition(Conditions.DECIVILIZED);
+			market3.addCondition("ix_killsats");
+			market3.addCondition(Conditions.POPULATION_3);
 
-        market3.addIndustry(Industries.POPULATION);
-        market3.addIndustry(Industries.SPACEPORT);
-		try { 
-			market3.addIndustry("BOGGLED_DOMAIN_ARCHAEOLOGY");
+			market3.addIndustry(Industries.POPULATION);
+			market3.addIndustry(Industries.SPACEPORT);
+			try { 
+				market3.addIndustry("BOGGLED_DOMAIN_ARCHAEOLOGY");
+			}
+			catch (Exception e) {
+				market3.addIndustry(Industries.TECHMINING);
+			} 
+		
+			market3.setFreePort(true);
+		
+			market3.addSubmarket(Submarkets.SUBMARKET_OPEN);
+			market3.addSubmarket(Submarkets.SUBMARKET_BLACK);
+			market3.addSubmarket(Submarkets.SUBMARKET_STORAGE);
+			market3.getTariff().modifyFlat("default_tariff", market3.getFaction().getTariffFraction());
+
+			planet3.setMarket(market3);
+			Global.getSector().getEconomy().addMarket(market3, true);
 		}
-		catch (Exception e) {
-			market3.addIndustry(Industries.TECHMINING);
-		} 
 		
-		market3.setFreePort(true);
-		
-        market3.addSubmarket(Submarkets.SUBMARKET_OPEN);
-        market3.addSubmarket(Submarkets.SUBMARKET_BLACK);
-        market3.addSubmarket(Submarkets.SUBMARKET_STORAGE);
-        market3.getTariff().modifyFlat("default_tariff", market3.getFaction().getTariffFraction());
+		//conquered IX world Marzanna
+		else {
+			PlanetAPI planet3 = system.addPlanet("ix_zorya_marzanna", star, "Marzanna", "tundra", 140, 165, 8200, 180);
+			planet3.setFaction("ix_marzanna");
+			planet3.setCustomDescriptionId("ix_zorya_marzanna");
+			planet3.setInteractionImage("illustrations", "ix_marzanna_illus");
+			
+			MarketAPI market3 = Global.getFactory().createMarket("ix_marzanna_market", planet3.getName(), 5);
+			market3.setFactionId("ix_battlegroup");
+			market3.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+			market3.setPrimaryEntity(planet3);
 
-        planet3.setMarket(market3);
-        Global.getSector().getEconomy().addMarket(market3, true);
+			market3.addCondition(Conditions.ORE_MODERATE);
+			market3.addCondition(Conditions.ORGANICS_COMMON);
+			market3.addCondition(Conditions.COLD);
+			market3.addCondition(Conditions.POLLUTION);
+			market3.addCondition(Conditions.FARMLAND_POOR);
+			market3.addCondition(Conditions.POPULATION_5);
+			market3.addCondition("ix_cartel_activity");
+
+			market3.addIndustry(Industries.POPULATION);
+			market3.addIndustry(Industries.SPACEPORT);
+			
+			market3.addIndustry(Industries.FARMING);
+			market3.addIndustry(Industries.HEAVYINDUSTRY, new ArrayList<Items>(Arrays.asList(Items.CORRUPTED_NANOFORGE)));
+			market3.addIndustry(Industries.GROUNDDEFENSES);
+			market3.addIndustry("ix_marzanna_base");
+			market3.addIndustry(Industries.BATTLESTATION_HIGH);
+			
+			market3.addSubmarket(Submarkets.SUBMARKET_OPEN);
+			market3.addSubmarket(Submarkets.SUBMARKET_BLACK);
+			market3.addSubmarket(Submarkets.SUBMARKET_STORAGE);
+			market3.getTariff().modifyFlat("default_tariff", market_starbase.getFaction().getTariffFraction());
+
+			planet3.setMarket(market3);
+			Global.getSector().getEconomy().addMarket(market3, true);
+		}
 		
-        // add rings
-        system.addAsteroidBelt(star, 50, 5200, 100, 30, 40, Terrain.ASTEROID_BELT, null);
+        //add rings
         system.addRingBand(star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 4500, 305f, null, null);
         system.addRingBand(planet1, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 500, 305f, null, null);
         system.addRingBand(star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 4600, 295f, null, null);
-
-        system.addAsteroidBelt(star, 40, 4600, 100, 30, 40, Terrain.ASTEROID_BELT, null);
-
-        //autogenerate jump points
-        system.autogenerateHyperspaceJumpPoints(true, true);
+		system.addAsteroidBelt(star, 40, 4600, 100, 30, 40, Terrain.ASTEROID_BELT, "The White Wall");
 
         //fill rest of system with random planetary bodies
         float radiusAfter = StarSystemGenerator.addOrbitingEntities(system, star, StarAge.AVERAGE,
-                3, 3, // min/max entities to add
+                2, 4, // min/max entities to add
                 9500, // radius to start adding at
                 3, // name offset - next planet will be <system name> <roman numeral of this parameter + 1>
                 true); // whether to use custom or system-name based names
@@ -224,12 +265,37 @@ public class IXSystemCreation {
         StarSystemGenerator.addSystemwideNebula(system, StarAge.AVERAGE);
 
         SectorEntityToken loc1 = system.addCustomEntity(null,null, "comm_relay",Factions.NEUTRAL);
-        loc1.setCircularOrbitPointingDown(star, 50 + 60, 4000, 135);
+        loc1.setCircularOrbitPointingDown(star, 50 + 60, 4000, 320);
 
         SectorEntityToken loc2 = system.addCustomEntity(null,null, "sensor_array",Factions.NEUTRAL);
         loc2.setCircularOrbitPointingDown(star, 50 + 130, 7000, 175);
 
         SectorEntityToken loc3 = system.addCustomEntity(null,null, "nav_buoy",Factions.NEUTRAL);
         loc3.setCircularOrbitPointingDown(star, 50 + 90, 5500, 155);
+		
+		//jeff's memorial
+		SectorEntityToken jeff = MagicCampaign.createDerelict(
+					"scarab_ix_custom",
+					ShipRecoverySpecial.ShipCondition.PRISTINE,
+					true,
+					1000,
+					true,
+					star,
+					70,                 
+					4600,                 
+					180);
+		jeff.addTag(Tags.NEUTRINO_LOW);
+		jeff.setCustomDescriptionId("ix_scarab_wreck");
+		jeff.setSensorProfile(25f);
+		
+        //autogenerate jump points
+        system.autogenerateHyperspaceJumpPoints(true, true);
+		int node = system.getAutogeneratedJumpPointsInHyper().size() - 1;
+		SectorEntityToken anchor = (SectorEntityToken) system.getAutogeneratedJumpPointsInHyper().get(node);
+        CustomCampaignEntityAPI beacon = Global.getSector().getHyperspace().addCustomEntity("ix_zorya_beacon", null, "ix_warning_beacon", "ix_battlegroup");
+        beacon.setCircularOrbitPointingDown(anchor, 180, 150, 365f);
+		Color color1 = new Color(255,255,255,255);
+		Color color2 = new Color(0,255,0,255);
+        Misc.setWarningBeaconColors(beacon, color1, color2);
     }
 }

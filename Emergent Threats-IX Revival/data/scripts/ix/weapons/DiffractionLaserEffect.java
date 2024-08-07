@@ -18,6 +18,7 @@ public class DiffractionLaserEffect implements BeamEffectPlugin {
 	public static float EFFECT_DUR = 1f;
 	public static float DAMAGE_PERCENT_ONE = 7f;
 	public static float DAMAGE_PERCENT_TWO = 10f;
+	public static float DAMAGE_PERCENT_THREE = 15f;
 	protected boolean wasZero = true;
 	
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
@@ -65,6 +66,7 @@ public class DiffractionLaserEffect implements BeamEffectPlugin {
 			float bonus = 0;
 			if (beams == 1)	bonus = DAMAGE_PERCENT_ONE;
 			else if (beams == 2) bonus = DAMAGE_PERCENT_TWO;
+			else if (beams > 2) bonus = DAMAGE_PERCENT_THREE;
 			
 			if (bonus > 0) {
 				ship.getMutableStats().getShieldDamageTakenMult().modifyMult(DAMAGE_MOD_ID, 1f + bonus * 0.01f);

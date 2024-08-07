@@ -3,7 +3,7 @@
 	"id":"vice_deco_laser",
 	"type":"ENERGY",
 	"size":"SMALL",
-	"displayArcRadius":500,
+	"beamEffect":"data.scripts.vice.weapons.DecoBeamOnFire",
 	"turretSprite":"graphics/fx/empty.png",
 	"turretGlowSprite":"graphics/fx/empty.png",
 	"hardpointSprite":"graphics/fx/empty.png",

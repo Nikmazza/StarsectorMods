@@ -17,6 +17,9 @@ public class GroundInvasionConversion extends BaseLogisticsHullMod {
 	private static float GROUND_ATTACK_BONUS_LARGE = 150f;
 	private static String BUFFALO = "buffalo_ix";
 	private static String BANTENG = "banteng_ix";
+	private static String BUFFALO_D = "buffalo_ix_default_D";
+	private static String BANTENG_D = "banteng_ix_default_D";
+	
 	private static String CONFLICT_MOD = "vice_ground_attack_conversion";
 	
 	@Override
@@ -35,13 +38,13 @@ public class GroundInvasionConversion extends BaseLogisticsHullMod {
     public boolean isApplicableToShip(ShipAPI ship) {
 		if (ship.getVariant().hasHullMod(CONFLICT_MOD)) return false;
 		String id = ship.getVariant().getHullSpec().getHullId();
-		if (id.equals(BUFFALO) || id.equals(BANTENG)) return true;
+		if (isValidHull(id)) return true;
 		return false;
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		String id = ship.getVariant().getHullSpec().getHullId();
-		if (!id.equals(BUFFALO) && !id.equals(BANTENG)) return "Incompatible hull";
+		if (!isValidHull(id)) return "Incompatible hull";
 		if (ship.getVariant().hasHullMod(CONFLICT_MOD)) return "Ship is already modified for ground attack";
 		return null;
 	}
@@ -54,5 +57,12 @@ public class GroundInvasionConversion extends BaseLogisticsHullMod {
 		if (index == 4) return "" + (int) GROUND_ATTACK_BONUS_LARGE;
 		
 		return null;
+	}
+	
+	private boolean isValidHull(String id) {
+		return (id.equals(BUFFALO) 
+				|| id.equals(BUFFALO_D)
+				|| id.equals(BANTENG)
+				|| id.equals(BANTENG_D));
 	}
 }

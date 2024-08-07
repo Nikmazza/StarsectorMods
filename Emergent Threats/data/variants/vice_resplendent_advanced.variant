@@ -1,12 +1,10 @@
 {
     "displayName": "Advanced",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 3,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_resplendent",
     "hullMods": [
-        "ecm",
-        "fluxdistributor",
         "hardenedshieldemitter",
         "targetingunit",
         "stabilizedshieldemitter",
@@ -51,11 +49,11 @@
         }
     ],
     "wings": [
-        "lux_wing",
-        "lux_wing",
-        "lux_wing",
-        "lux_wing",
-        "lux_wing",
-        "lux_wing"
+        "vice_sundog_wing",
+        "vice_sundog_wing",
+        "vice_sundog_wing",
+        "vice_sundog_wing",
+        "vice_sundog_wing",
+        "vice_sundog_wing"
     ]
 }

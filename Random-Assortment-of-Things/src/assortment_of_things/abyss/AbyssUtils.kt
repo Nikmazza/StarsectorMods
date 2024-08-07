@@ -10,6 +10,7 @@ import com.fs.starfarer.api.campaign.LocationAPI
 import com.fs.starfarer.api.campaign.SectorEntityToken
 import com.fs.starfarer.api.campaign.StarSystemAPI
 import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI
+import com.fs.starfarer.api.combat.ShipAPI
 import com.fs.starfarer.api.combat.ShipHullSpecAPI
 import com.fs.starfarer.api.combat.WeaponAPI
 import com.fs.starfarer.api.impl.MusicPlayerPluginImpl
@@ -37,6 +38,7 @@ object AbyssUtils {
 
     var ABYSS_COLOR = Color(255, 0, 50)
     var GENESIS_COLOR = Color(140, 0, 250)
+    var SIERRA_COLOR = Color(205,155,255,255)
     var FACTION_ID = "rat_abyssals"
 
     var SYSTEM_TAG = "rat_abyss_system"

@@ -1,24 +1,30 @@
 package assortment_of_things.abyss.procgen
 
-import assortment_of_things.abyss.AbyssDifficulty
 import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.abyss.entities.AbyssalFracture
+import assortment_of_things.abyss.entities.AbyssalPhotosphere
+import assortment_of_things.abyss.intel.event.DiscoveredPhotosphere
 import assortment_of_things.abyss.intel.map.AbyssMap
-import assortment_of_things.abyss.procgen.types.DefaultAbyssType
-import assortment_of_things.abyss.procgen.types.FinalAbyssType
-import assortment_of_things.abyss.procgen.types.IonicStormAbyssType
+import assortment_of_things.abyss.procgen.types.*
+import assortment_of_things.abyss.terrain.AbyssTerrainInHyperspacePlugin
+import assortment_of_things.abyss.terrain.AbyssTerrainPlugin
+import assortment_of_things.abyss.terrain.terrain_copy.OldBaseTiledTerrain
+import assortment_of_things.abyss.terrain.terrain_copy.OldNebulaEditor
 import assortment_of_things.misc.randomAndRemove
 import com.fs.starfarer.api.EveryFrameScript
 import com.fs.starfarer.api.Global
+import com.fs.starfarer.api.campaign.CampaignTerrainAPI
+import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI
 import com.fs.starfarer.api.campaign.JumpPointAPI
-import com.fs.starfarer.api.campaign.SectorEntityToken
 import com.fs.starfarer.api.campaign.StarSystemAPI
-import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3
-import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3
+import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin
+import com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhost
+import com.fs.starfarer.api.impl.campaign.ghosts.GBDartAround
+import com.fs.starfarer.api.impl.campaign.ids.Entities
 import com.fs.starfarer.api.impl.campaign.ids.Factions
-import com.fs.starfarer.api.impl.campaign.ids.FleetTypes
 import com.fs.starfarer.api.impl.campaign.ids.Tags
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor
+import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin
 import com.fs.starfarer.api.loading.Description
 import com.fs.starfarer.api.util.Misc
@@ -26,21 +32,20 @@ import com.fs.starfarer.api.util.WeightedRandomPicker
 import org.lazywizard.lazylib.MathUtils
 import org.lazywizard.lazylib.ext.plus
 import org.lwjgl.util.vector.Vector2f
-import org.magiclib.kotlin.getSalvageSeed
-import java.awt.geom.GeneralPath
-import java.awt.geom.Path2D
 import java.util.*
-import kotlin.collections.ArrayList
 
 class  AbyssGenerator {
 
-    var noBranchTag = "rat_no_branch"
-    var branchTag = "rat_abyss_branch"
-    var finalTag = "rat_abyss_final"
+    companion object {
+        var noBranchTag = "rat_no_branch"
+        var branchTag = "rat_abyss_branch"
+        var finalTag = "rat_abyss_final"
 
-    var systemsOnMainBranch = 8
-    var deepSystemsBeginAt = 4
-    var branches = 2
+        var systemsOnMainBranch = 8
+        var deepSystemsBeginAt = 4
+        var branches = 2
+    }
+
 
     var totalSystems = 0
 
@@ -48,7 +53,7 @@ class  AbyssGenerator {
 
     var usedNames = ArrayList<String>()
 
-    var types = listOf<BaseAbyssType>(DefaultAbyssType(), IonicStormAbyssType())
+    var types = listOf<BaseAbyssType>(DefaultAbyssType(), IonicStormAbyssType(), DarkAbyssType(), ColossalPhotosphereType())
 
     fun beginGeneration() {
 
@@ -56,7 +61,7 @@ class  AbyssGenerator {
         var abyssData = AbyssData()
         Global.getSector().memoryWithoutUpdate.set(AbyssUtils.ABYSS_DATA_KEY, abyssData)
 
-        var hyperspaceLocation = Vector2f(-25000f, -20000f)
+        var hyperspaceLocation = Vector2f(-30000f, -25000f)
         var orion = Global.getSector().hyperspace.customEntities.find { it.fullName.contains("Orion-Perseus") }
         if (orion != null) {
             hyperspaceLocation = orion.location.plus(Vector2f(0f, -1000f))
@@ -68,7 +73,7 @@ class  AbyssGenerator {
         var twilightSystem = Global.getSector().createStarSystem("Sea of Twilight")
         twilightSystem.name = "Sea of Twilight"
         abyssData.rootSystem = twilightSystem
-        AbyssProcgen.setupSystem(twilightSystem, 0.35f, AbyssDepth.Shallow)
+        AbyssProcgen.setupSystem(twilightSystem, DefaultAbyssType(), AbyssDepth.Shallow)
         var systemData = AbyssUtils.getSystemData(twilightSystem)
         AbyssProcgen.addAbyssParticles(twilightSystem)
 
@@ -89,21 +94,24 @@ class  AbyssGenerator {
         editor.clearArc(hyperspaceLocation.x, hyperspaceLocation.y, 0f, 500f, 0f, 360f)
         editor.clearArc(hyperspaceLocation.x,hyperspaceLocation.y, 0f, 500f, 0f, 360f, 0.25f)
 
+        //Generates terrain around hyperspace
+        generateAbyssTerrainInHyperspace(hyperspaceLocation)
+
         AbyssProcgen.clearTerrainAround(fractures.fracture2, 500f)
 
         //Generate Slots for the twilight system.
         AbyssProcgen.generateCircularPoints(twilightSystem)
         AbyssProcgen.generateMinorPoints(twilightSystem)
-        AbyssEntityGenerator.generatePhotospheres(twilightSystem, 1, 1f)
+        AbyssEntityGenerator.generateMajorLightsource(twilightSystem, 1, 1f)
         AbyssEntityGenerator.generateMinorEntity(twilightSystem, "rat_abyss_transmitter", 1, 1f)
         AbyssEntityGenerator.generateMinorEntityWithDefenses(twilightSystem, "rat_abyss_fabrication", 1, 0.9f, 0.7f)
         AbyssEntityGenerator.generateMinorEntity(twilightSystem, "rat_abyss_drone", 3, 0.8f)
 
-        var gate = twilightSystem.addCustomEntity("rat_abyss_gate", "Abyssal Gate", "inactive_gate", Factions.NEUTRAL)
+        /*var gate = twilightSystem.addCustomEntity("rat_abyss_gate", "Abyssal Gate", "inactive_gate", Factions.NEUTRAL)
         var gateLoc = systemData.majorPoints.randomAndRemove()
         gate.location.set(gateLoc)
         gate.addTag("rat_abyss_gate")
-        AbyssProcgen.clearTerrainAround(gate, 350f)
+        AbyssProcgen.clearTerrainAround(gate, 350f)*/
 
 
         //Map Script
@@ -166,6 +174,58 @@ class  AbyssGenerator {
 
    }
 
+    fun generateAbyssTerrainInHyperspace(location: Vector2f) {
+        var hyper = Global.getSector().hyperspace
+
+        val w = 200
+        val h = 200
+
+        val string = StringBuilder()
+        for (y in h - 1 downTo 0) {
+            for (x in 0 until w) {
+                string.append("x")
+            }
+        }
+
+
+        val nebula = hyper.addTerrain("rat_depths_in_hyper",
+            OldBaseTiledTerrain.TileParams(string.toString(),
+                w,
+                h,
+                "rat_terrain",
+                "depths1",
+                4,
+                4,
+                null))
+        nebula.id = "rat_depths_in_hyper_${Misc.genUID()}"
+        nebula.location.set(location)
+
+        val nebulaPlugin = (nebula as CampaignTerrainAPI).plugin as AbyssTerrainInHyperspacePlugin
+        val editor = OldNebulaEditor(nebulaPlugin)
+        editor.regenNoise()
+        editor.noisePrune(0.70f)
+        editor.regenNoise()
+
+        //Clear all but a part on the right to make it less even
+        editor.clearArc(location.x, location.y, nebulaPlugin.range * 0.70f, 100000f, 165f, 225f)
+        editor.clearArc(location.x, location.y, nebulaPlugin.range * 0.85f, 100000f, 50f, 350f)
+        editor.clearArc(location.x, location.y, nebulaPlugin.range, 100000f, 0f, 360f)
+        editor.clearArc(location.x, location.y, 0f, nebulaPlugin.centerClearRadius, 0f, 360f)
+
+        var gate = hyper.addCustomEntity("rat_abyss_gate", "Abyssal Gate", "rat_abyss_gate", Factions.NEUTRAL)
+        var gateLoc = location.plus(Vector2f(700f, -300f))
+        gate.location.set(gateLoc)
+        gate.addTag("rat_abyss_gate")
+
+        editor.clearArc(gateLoc.x, gateLoc.y, 0f, 300f, 0f, 360f)
+
+        var clearLeft = Vector2f(-700f, 250f)
+        editor.clearArc(clearLeft.x, clearLeft.y, 0f, 200f, 0f, 360f)
+
+        var particleManager = hyper.addCustomEntity("rat_abyss_particle_manager_hyper_${Misc.genUID()}", "", "rat_abyss_in_hyper_particle_spawner", Factions.NEUTRAL)
+        particleManager.location.set(location)
+    }
+
 
 
    fun generateMainBranch(twilight: StarSystemAPI)
@@ -195,15 +255,16 @@ class  AbyssGenerator {
            system.name = name
 
            var isFinal = false
-          /* if (step == systemsOnMainBranch - 1) {
+           if (step == systemsOnMainBranch - 1) {
                AbyssUtils.getAbyssData().finalSystem = system
                system.addTag(finalTag)
                type = FinalAbyssType()
                isFinal = true
-           }*/
+           }
 
-           AbyssProcgen.setupSystem(system, type.getTerrainFraction(), depth, isFinal)
+           AbyssProcgen.setupSystem(system, type, depth, isFinal)
            var systemData = AbyssUtils.getSystemData(system)
+           systemData.step = step
 
            if (step == systemsOnMainBranch || step == systemsOnMainBranch - 1 || step == systemsOnMainBranch - 2) {
                system.addTag(noBranchTag)
@@ -294,8 +355,9 @@ class  AbyssGenerator {
 
                 var system = Global.getSector().createStarSystem(name)
                 system.name = name
-                AbyssProcgen.setupSystem(system, type.getTerrainFraction(), depth)
+                AbyssProcgen.setupSystem(system, type, depth)
                 var systemData = AbyssUtils.getSystemData(system)
+                systemData.step = current.step
 
                 system.addTag(branchTag)
 
@@ -346,12 +408,12 @@ class  AbyssGenerator {
 
         var systems = ArrayList(AbyssUtils.getAbyssData().systemsData.filter { it.minorPoints.isNotEmpty() } )
 
-        var labSystems = systems.filter { it.depth == AbyssDepth.Deep }
+        /*var labSystems = systems.filter { it.depth == AbyssDepth.Deep }
         if (labSystems.isNotEmpty()) {
             var system = labSystems.random()
             systems.remove(system)
             AbyssEntityGenerator.generateMinorEntityWithDefenses(system.system, "rat_abyss_unknown_lab", 1, 1f, 1f)
-        }
+        }*/
 
         var milOutpostSystems = systems.filter { it.depth == AbyssDepth.Deep }
         if (milOutpostSystems.isNotEmpty()) {
@@ -363,6 +425,67 @@ class  AbyssGenerator {
         for (i in 0 until 2) {
             var system = systems.randomAndRemove()
             AbyssEntityGenerator.generateMinorEntityWithDefenses(system.system, "rat_abyss_research", 1, 1f, 1f)
+        }
+
+        var majorLightSourceInDeep = systems.filter { it.depth == AbyssDepth.Deep }.flatMap { it.system.customEntities.filter { it.hasTag("rat_abyss_major_lightsource") } }.toMutableList()
+        if (majorLightSourceInDeep.isNotEmpty()) {
+            var majorLightsource = majorLightSourceInDeep.random()
+            majorLightSourceInDeep.remove(majorLightsource)
+
+            var entity = AbyssEntityGenerator.spawnMinorEntity(majorLightsource.starSystem, "rat_sariel_outpost")
+            entity.setCircularOrbit(majorLightsource, MathUtils.getRandomNumberInRange(0f, 360f), MathUtils.getRandomNumberInRange(600f, 700f), 120f)
+        }
+
+        if (Global.getSettings().modManager.isModEnabled("secretsofthefrontier")) {
+            var systemsWithUniquePoints = systems.filter { it.system != AbyssUtils.getAbyssData().rootSystem && it.uniquePoints.isNotEmpty() && it.system.customEntities.any { it.customPlugin is AbyssalPhotosphere }}
+
+            if (systemsWithUniquePoints.isNotEmpty()) {
+
+                var system = systemsWithUniquePoints.random()
+                var pos = system.uniquePoints.randomAndRemove()
+
+                var photosphere = system.system.addCustomEntity("rat_abyss_photosphere_sierra_${Misc.genUID()}", "Photosphere", "rat_abyss_photosphere_sierra", Factions.NEUTRAL)
+                photosphere.setLocation(pos.x, pos.y)
+                photosphere.radius = 100f
+                photosphere.addScript(DiscoveredPhotosphere(10, photosphere))
+
+                var plugin = photosphere.customPlugin as AbyssalPhotosphere
+                // plugin.radius = 15000f
+                plugin.radius = MathUtils.getRandomNumberInRange(12500f, 15000f)
+                plugin.color = AbyssUtils.SIERRA_COLOR
+
+
+                photosphere.memoryWithoutUpdate.set("\$rat_photosphere_color_overwrite", AbyssUtils.SIERRA_COLOR)
+                photosphere.addTag("rat_abyss_sierra")
+
+                // sensor ghosts
+                for (i in 0 until 3) {
+                    val g = BaseSensorGhost(null, 0)
+                    g.initEntity(g.genMediumSensorProfile(), g.genSmallRadius(), 0, system.system)
+                    g.addBehavior(GBDartAround(photosphere,
+                        9999f,
+                        8 + Misc.random.nextInt(4),
+                        photosphere.radius + 200f,
+                        2500f))
+                    g.despawnRange = -1f
+                    g.entity.addTag("sotf_AMDancingGhost")
+                    g.setLoc(Misc.getPointAtRadius(photosphere.location, 1200f))
+                    //g.placeNearEntity(tia.getHyperspaceAnchor(), 800, 3200);
+                    system.system.addScript(g)
+                }
+
+                val params = DerelictShipEntityPlugin.createVariant("rat_raphael_Hull", Random(), DerelictShipEntityPlugin.getDefaultSModProb())
+                val raphael = BaseThemeGenerator.addSalvageEntity(Random(), system.system, Entities.WRECK, Factions.NEUTRAL, params) as CustomCampaignEntityAPI
+                raphael.setDiscoverable(true)
+
+                raphael.setCircularOrbit(photosphere, MathUtils.getRandomNumberInRange(0f, 360f), 280f, 90f)
+
+                raphael.addTag("rat_abyss_sierra_raphael")
+
+                var drone = AbyssEntityGenerator.spawnMinorEntity(system.system, "rat_abyss_drone")
+                drone.setCircularOrbit(photosphere, MathUtils.getRandomNumberInRange(0f, 360f), 550f, 120f)
+            }
+
         }
 
 
@@ -398,94 +521,6 @@ class  AbyssGenerator {
     }
 
 
-    fun generateRift() {
-        var systems = AbyssUtils.getAbyssData().systemsData
-        var filtered = systems.filter { it.depth == AbyssDepth.Deep && it.uniquePoints.isNotEmpty() }
-
-        if (filtered.isEmpty()) return
-
-        var pick = filtered.random()
-        var location = pick.uniquePoints.randomAndRemove()
-
-        var riftSystem = RiftCreator.createRift(pick.system, location)
-        var station = riftSystem.addCustomEntity("rift_station${Misc.genUID()}", "Rift Station", "rat_abyss_rift_station", "rat_abyssals")
-        station.setLocation(0f, 0f)
-        station.getSalvageSeed()
-
-        addWormBoss(station)
-
-        /* var playerFleet = Global.getSector().playerFleet
-         var currentLocation = playerFleet.containingLocation
-
-         currentLocation.removeEntity(playerFleet)
-         riftSystem.addEntity(playerFleet)
-         Global.getSector().setCurrentLocation(riftSystem)
-         playerFleet.location.set(Vector2f(0f, 0f))*/
-    }
-
-    fun addWormBoss(station: SectorEntityToken) {
-
-
-        var points = 300f
-        if (AbyssUtils.getDifficulty() == AbyssDifficulty.Hard) {
-            points += 50f
-        }
-
-        val params = FleetParamsV3(null,
-            station.containingLocation.location,
-            AbyssUtils.FACTION_ID,
-            5f,
-            FleetTypes.PATROL_MEDIUM,
-            points,  // combatPts
-            0f,  // freighterPts
-            0f,  // tankerPts
-            0f,  // transportPts
-            0f,  // linerPts
-            0f,  // utilityPts
-            5f // qualityMod
-        )
-        params.withOfficers = false
-
-        val fleet = FleetFactoryV3.createFleet(params)
-        fleet.addTag("rat_boss_fleet")
-
-        var seraphs = 5
-        if (AbyssUtils.getDifficulty() == AbyssDifficulty.Hard) seraphs += 2
-
-        AbyssalSeraphSpawner.addSeraphsToFleet(fleet, Random(), seraphs ,seraphs)
-
-
-        for (member in fleet.fleetData.membersListCopy) {
-            member.variant.addTag(Tags.TAG_NO_AUTOFIT)
-        }
-        AbyssUtils.addAlterationsToFleet(fleet, 0.4f, Random())
-        AbyssalSeraphSpawner.sortWithSeraphs(fleet)
-
-        /*  for (i in 0 until 3) {
-              var member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "rat_charybdis_head_standard")
-
-              var core = PrimordialCore().createPerson("rat_primordial_core", AbyssUtils.FACTION_ID, Random())
-              member.captain = core
-
-              member.repairTracker.cr = member.repairTracker.maxCR
-              fleet.fleetData.addFleetMember(member)
-          }
-
-          fleet.fleetData.sort()
-
-          var member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "rat_charybdis_head_standard")
-
-          var core = PrimordialCore().createPerson("rat_primordial_core", AbyssUtils.FACTION_ID, Random())
-          member.captain = core
-
-          member.repairTracker.cr = member.repairTracker.maxCR
-          station.memoryWithoutUpdate.set("\$rewardShip", member)*/
-
-
-
-        station.memoryWithoutUpdate.set("\$defenderFleet", fleet)
-        fleet.inflateIfNeeded()
-    }
 
 
     fun getName() : String

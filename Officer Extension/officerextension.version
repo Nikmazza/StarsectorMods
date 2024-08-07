@@ -5,8 +5,9 @@
   "modVersion":
   {
     "major":0,
-    "minor":5,
-    "patch":0,
+    "minor":6,
+    "patch":7,
   },
-  "directDownloadURL": "https://github.com/qcwxezda/Starsector-Officer-Extension/releases/download/v0.4.2/Officer.Extension.zip"
+  "directDownloadURL": "https://github.com/qcwxezda/Starsector-Officer-Extension/releases/latest/download/Officer.Extension.zip",
+  "changelogURL":"https://raw.githubusercontent.com/qcwxezda/Starsector-Officer-Extension/main/changelog.txt"
 }

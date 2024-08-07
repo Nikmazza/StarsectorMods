@@ -15,32 +15,31 @@ import com.fs.starfarer.api.util.Misc;
 
 public class SiegeBurstBeamEffect implements BeamEffectPlugin {
 
-	private static float LARGE_SHIELD_DAMAGE = 50f;
-	private static float MEDIUM_SHIELD_DAMAGE = 15f;
-	
+	private static float LARGE_BONUS_DAMAGE = 50f;
+	private static float MEDIUM_BONUS_DAMAGE = 15f;
 	private boolean applied = false;
 	
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
 		if (applied) return;
 		
 		CombatEntityAPI target = beam.getDamageTarget();
+
 		if (target instanceof ShipAPI && beam.getBrightness() >= 1f) {
 			boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+			Vector2f point = beam.getRayEndPrevFrame();
+			WeaponSize size = beam.getWeapon().getSize();
+			float hitSize = size == WeaponSize.LARGE ? 150f : 100f;
+			float smoothSize = size == WeaponSize.LARGE ? 250f : 150f;
+			engine.addHitParticle(point, new Vector2f(), hitSize, 1f, 0.25f, Color.white);
+			engine.addSmoothParticle(point, new Vector2f(), smoothSize, 2f, 0.4f, Color.red);
 			if (!hitShield) {
-				float bonusDamage = beam.getWeapon().getSize() == WeaponSize.LARGE ? LARGE_SHIELD_DAMAGE : MEDIUM_SHIELD_DAMAGE;
-				Vector2f point = beam.getTo();
+				float bonusDamage = size == WeaponSize.LARGE ? LARGE_BONUS_DAMAGE : MEDIUM_BONUS_DAMAGE;
 				dealArmorDamage(beam, (ShipAPI) target, point, bonusDamage);
-				//removed due to visual bug with adaptive temporal shell
-				/**
-				if (bonusDamage == LARGE_SHIELD_DAMAGE) {
-					engine.addHitParticle(point, new Vector2f(), 150, 0.1f, 1f, Color.red);
-					engine.addSmoothParticle(point, new Vector2f(), 250, 2f, 0.25f, Color.white);
-				}
-				**/
-				applied = true;
 			}
+			applied = true;
 		}
 	}
+	
 	public static void dealArmorDamage(BeamAPI beam, ShipAPI target, Vector2f point, float bonusDamage) {
 		CombatEngineAPI engine = Global.getCombatEngine();
 
@@ -81,10 +80,8 @@ public class SiegeBurstBeamEffect implements BeamEffectPlugin {
 		}
 		
 		if (damageDealt > 0) {
-			engine.addFloatingDamageText(point, bonusDamage, Misc.FLOATY_ARMOR_DAMAGE_COLOR, target, beam.getSource());
+			engine.addFloatingDamageText(point, bonusDamage, Misc.MOUNT_BALLISTIC, target, beam.getSource());
 			target.syncWithArmorGridState();
 		}
 	}
 }
-
-

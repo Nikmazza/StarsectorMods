@@ -9,9 +9,10 @@
         "hardenedshieldemitter",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_temporal_shell"
+        "vice_adaptive_temporal_shell",
+        "vice_module_handler"
     ],
-    "permaMods": [],
+    "permaMods": ["vice_module_handler"],
     "sMods": [],
     "variantId": "vice_incandescent_elite",
     "weaponGroups": [
@@ -44,8 +45,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS01": "pdlaser",
-                "WS02": "pdlaser",
+                "WS01": "heavyburst",
+                "WS02": "heavyburst",
                 "WS03": "heavyburst",
                 "WS04": "heavyburst",
                 "WS09": "heavyburst",

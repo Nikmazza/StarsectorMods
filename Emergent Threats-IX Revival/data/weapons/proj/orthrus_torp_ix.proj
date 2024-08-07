@@ -11,12 +11,12 @@
 		"targetingTime":3,
 		"firingTime":0,
 		"targetingLaserId":"orthrus_payload_ix",
-		"payloadWeaponId":"deco_laser_ix",
+		"payloadWeaponId":"orthrus_deco_laser_ix",
 		"targetingLaserRange":600,
-		"targetingLaserArc":30,
+		"targetingLaserArc":15,
 		"bombPumped":true,
 		"fadeOutEngineWhenFiring":false;
-		"destroyMissleWhenDoneFiring":false,
+		"destroyMissleWhenDoneFiring":true,
 		"snapFacingToTargetIfCloseEnough":false,
 		"withShapedExplosion":false,
 	},
@@ -24,7 +24,7 @@
 	"size":[12,21],	
 	"center":[6,10],
 	"collisionRadius":14,
-	"collisionClass":"MISSILE_FF",
+	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[100,100,255,255],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":150, # purely visual
 	"explosionSpec":{"duration":0.1f, # not visual

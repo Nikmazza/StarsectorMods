@@ -19,8 +19,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class EnergyTorpedoEffect implements OnHitEffectPlugin, OnFireEffectPlugin {
 
-    int numSpawns = 5, empResistance = 10, particlesPerSecond = 100;
-    float minSpawnDistance = 60f, maxSpawnDistance = 120f, minDelay = 0.67f, maxDelay = 1.33f, angleDeviation = 20f, particleScale = 10f;
+    int numSpawns = 5, empResistance = 10, particlesPerSecond = 150;
+    float minSpawnDistance = 60f, maxSpawnDistance = 120f, minDelay = 0.67f, maxDelay = 1.33f, angleDeviation = 20f, particleScale = 12f;
     static final Color empCore = new Color(180, 200, 255);
     static final Color empFringe = new Color(100, 120, 255);
 
@@ -80,8 +80,8 @@ public class EnergyTorpedoEffect implements OnHitEffectPlugin, OnFireEffectPlugi
     @Override
     public void onFire(DamagingProjectileAPI proj, WeaponAPI weapon, CombatEngineAPI engine) {
         if (ModPlugin.particleEngineEnabled) {
-            BloomTrail.makeTrail(proj, particleScale, particlesPerSecond);
-            ((MissileAPI) proj).setEmpResistance(empResistance);
+            BloomTrail.makeTrail((MissileAPI) proj, particleScale, particlesPerSecond);
         }
+        ((MissileAPI) proj).setEmpResistance(empResistance);
     }
 }

@@ -1,10 +1,188 @@
-RAT Version 2.0.6 Part 1
+Version 2.3.1
+Save compatible
+
+-> Added special battle-entry burn drives for some ships.
+-> Added more detailed & individual descriptions for every abyss ship.
+-> Gave Exotech hullmods tooltips a simple background effect.
+-> Reduced the Gabriels Sensor Profile from 45 to 0.
+-> The Frigates spawned by the Genesis system should no longer be as focused on fighters as before.
+
+
+
+Version 2.3.0
+Not Save compatible
+
+-> Added the "Gabriel-Class" seraph phase cruiser to the abyssal depths.
+-> Reworked the generator for abyss fleets to provide a little more variety and makes difficulty more gradual.
+-> Improved the aesthetic of the area surrounding the abyssal depths entrance.
+-> Added a unique battle objective that appears in the abyss.
+-> A special abyss title screen is now displayed rarely on game launch or if you exit to title while in the abyssal depths.
+-> Nebula in abyss combat now actually share the correct texture and color as the campaign terrain.
+-> Asteroids no longer spawn in abyss combat.
+-> Added some tips.
+-> Moved the Abyss gate towards the hyperspace entrance.
+-> The Aboleth (F) should now be more aggressive.
+-> Fixed the Raphael missing its flux cost for entering phase.
+-> The "Maintaing Momentum" skill should no longer apply if the player switches to the officers ship in combat.
+-> The Primordial cores skill no longer actives if the ship is piloted by an officer with the Maintaining Momentum skill.
+
+
+
+Version 2.2.0
+Not Save compatible
+
+-> Added four weapons for the abyss boss that can also be acquired by the player by beating it.
+-> Fixed the "Personal Army" Background stat reseting its changes on save reload and other cases.
+-> Potentialy fixed, or atleast reduced, cases of Java23 freezing on the phase 2 transition of the abyss boss.
+-> Fixed a crash between the neuro core and neural shard background.
+
+
+
+Version 2.1.8
+Save compatible
+
+-> The zero day exploits background ability can now be canceled by pressing the key twice.
+-> Added a config for changing the keybind for Background abilities.
+-> Fixed a crash with the "Zero Day Exploit" Background
+-> Fixed the Bio skill reducing armor by 10%
+
+
+
+Version 2.1.7
+Save compatible
+
+-> Fixed odd issue with the Neural Shard Background when fighting together with allied fleets.
+-> Fixed being able to select modules from automated ships with the neural shard background.
+-> Neural Shard can now let you control Arkas-Phantoms.
+-> Fixed rare crash with abyssal ships.
+
+
+
+Version 2.1.6
+Save compatible
+
+-> Made ships fire seadragons more aggressively.
+-> Fixed bug where the tylos could be permanently captured with the zero day background.
+-> Controlled ships can no longer be commanded to retreat.
+
+
+
+Version 2.1.5
+Save compatible
+
+-> Fixed a crash with the "Zero Day Exploit" background.
+
+
+
+Version 2.1.4
+Maybe save compatible
+
+-> Added the "Personal Army" Background.
+-> Added the "Neural Shard" Background.
+-> Added the "Zero Day Exploit" Background.
+-> made Logistic Stats for large ships on the "Force in numbers" background worse.
+
+
+
+Version 2.1.3
+Likely not save compatible this time.
+
+-> Made the "High Value Target" background harsher.
+-> The "High Value Target" background can now spawn bounties even if you have zero hostilities.
+-> DEMs fired by Arkas clones are no longer unaffected by the damage reduction.
+-> Raphaels Grace stacks no longer reduce while phased.
+-> The "Force in numbers" background now also debuffs the fuel useage of large craft.
+
+
+
+Version 2.1.2
+Save compatible with 2.1.1
+
+-> Potentialy fixed an issue that caused weird behaviour with the tylos and leanira, but since i cant replicate it myself anyhow im not so sure.
+
+
+
+Version 2.1.1
+Save compatible with 2.1.0
+
+-> Added 3 new nexerelin backgrounds.
+-> Removed the exotech start and replaced it with a background.
+-> Fixed Artifacts and some skills not applying to modules on moduled ships.
+
+
+
+Version 2.1.0
+NOT SAVE COMPATIBLE WITH PRIOR VERSIONS
+
+-> Added a boss to the the end of the abyss.
+-> Added more variety to abyss terrain.
+-> Added a new variation of an abyss ship if you have "Secrets of the Frontiers" installed.
+-> Transverse Jump can no longer be used within the abyssal depths. You now need to leave it by flying outwards instead.
+-> The abyssal depths now let you re-enter them from where you last left.
+-> Unique AI Cores now have much more descriptive inventory tooltips.
+
+-> The "Abyssal Requiem" Skill has been changed to be rewarded from somewhere else.
+-> The "Abyssal Crew Conversion" is now a unique reward instead of a random drop.
+-> The Darkness terrain is now more gradual in applying its stat changes, rather than going from 0 to 25/50% immidiately.
+-> Added a small abyss related bar event.
+-> Added two magiclib achivements.
+-> Abyss Fleets now have fewer alterations on them than before.
+-> Added configs that allow enabling or disabling the spawning of "Relics of the Past" Stations or Conditions.
+-> Reduced the exo-tech partnership deed price from 5000 to 1000 tokens.
+-> The Exo-Processor is no longer available to buy.
+-> Arkas Phantoms now deal 50% less damage rather than 60%.
+-> Increased Arkas speed from 70 to 75.
+-> Increased Leanira Deployment cost from 26 to 30 and gave it another fighter bay.
+-> Increased Leaniras speed from 60 to 70.
+-> Leaniras Apheidas Platform now has stronger mounts & can move slightly.
+-> Reduced Tylos DP cost from 16 to 14.
+-> Reduced Thestia DP cost from 14 to 12.
+-> Increased thestia speed from 70 to 80.
+-> Increased the Dawnblades weapon, the "Dawnlance" from 200 to 250 dps.
+-> Other AI cores no longer have the 50% system cooldown debuff on abyssal ships.
+-> Performance improvement in Hyperspace and Abyss systems.
+-> Fixed Unstopable Force giving effects of Autonomous bays
+-> Fixed the Abyssal Doctrine Report being outdated.
+
+-> Bunch of other stuff & fixes i probably forgot.
+
+
+
+Version 2.0.9 Part 1
+
+-> Replaced every usage of Combat Activators with the new Magiclib Subsystems. 
+-> Requires the latest version of MagicLib.
+
+Version 2.0.8 Part 1
+NOT SAVE COMPATIBLE WITH PRIOR VERSIONS
+
+-> Fixed storms not appearing in the abyss.
+-> Opponent Ship AI should no longer focus on the Arkas Phantoms
+-> Slightly buffed the Protostars weapon.
+-> Reduced the DPS of the beam on the ceto
+-> Arkas Phantoms now render the ships phase-glow.
+-> Fixed two issues related to the autonomous bays hmod.
+-> Fixed an issue with the deployment speed of arkas phantoms if the game is paused right after activating the shipsystem
+
+
+
+Version 2.0.7 Part 1
+Not Save compatible with versions prior to 2.0.0
+
+-> Fixed the Abyssal Depths having the wrong background colors in combat.
+-> Fixed the damaged cryosleeper being visible without discovering it first on the map.
+-> Fixed the abyss custom start giving its starting ship an alteration as an smod.
+
+
+
+Version 2.0.6 Part 1
 Not Save compatible with versions prior to 2.0.0
 
 -> Reverted a change in the code of the tylos shipsystem, maybe fixing a specific crash when viewing the tactical map.
 
 
-RAT Version 2.0.5 Part 1
+
+Version 2.0.5 Part 1
 Not Save compatible with versions prior to 2.0.0
 
 -> Fixed Starsystems being able to spawn to close to the vanilla abyss
@@ -12,7 +190,7 @@ Not Save compatible with versions prior to 2.0.0
 
 
 
-RAT Version 2.0.4 Part 1
+Version 2.0.4 Part 1
 Not Save compatible with versions prior to 2.0.0
 
 -> Fixed crash when entering sim with 2nd tylos state
@@ -20,21 +198,21 @@ Not Save compatible with versions prior to 2.0.0
 
 
 
-RAT Version 2.0.3 Part 1
+Version 2.0.3 Part 1
 Not Save compatible with versions prior to 2.0.0
 
 -> Fixes a crash that happens when running out of fuel in hyperspace
 
 
 
-RAT Version 2.0.2 Part 1
+Version 2.0.2 Part 1
 Not Save compatible with versions prior to 2.0.0
 
 -> Fixed a Crash on Mac & Linux if you had the minimap enabled
 
 
 
-RAT Version 2.0.1 Part 1
+Version 2.0.1 Part 1
 Not Save compatible with versions prior to 2.0.0
 
 -> Fixed Crash when interacting with some entities.

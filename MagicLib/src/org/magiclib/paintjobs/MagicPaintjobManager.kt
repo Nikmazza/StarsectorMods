@@ -19,12 +19,13 @@ import org.magiclib.util.MagicVariables
 
 object MagicPaintjobManager {
     private val logger = Global.getLogger(MagicPaintjobManager::class.java)
-    private const val commonFilename = "magic_paintjobs.json"
     const val specsFilename = "data/config/magic_paintjobs.csv"
+    private const val commonFilename = "magic_paintjobs.json"
+    private const val isIntelImportantMemKey = "\$magiclib_isPaintjobIntelImportant"
     private val jsonObjectKey = "unlockedPaintjobs"
+
     private val unlockedPaintjobsInner = mutableSetOf<String>()
     private val paintjobsInner = mutableListOf<MagicPaintjobSpec>()
-    private const val isIntelImportantMemKey = "\$magiclib_isPaintjobIntelImportant"
     private val completedPaintjobIdsThatUserHasBeenNotifiedFor = mutableListOf<String>()
 
     const val PJTAG_PERMA_PJ = "MagicLib_PermanentPJ"
@@ -84,6 +85,7 @@ object MagicPaintjobManager {
             })
         }
 
+        paintjobsInner.clear()
         paintjobsInner.addAll(loadPaintjobs().values)
     }
 
@@ -156,17 +158,20 @@ object MagicPaintjobManager {
                         // Just a blank row, no need to warn.
 //                        logger.warn("Paintjob #$i in ${mod.id} by '${mod.author}' has no id, skipping.")
                         skip = true
-                    }
-                    if (hullIds.isEmpty()) {
-                        logger.warn("Paintjob #$i in ${mod.id} by '${mod.author}' has no hullIds, skipping.")
+                    } else if (hullIds.isEmpty()) {
+                        logger.warn("Paintjob $id in ${mod.id} by '${mod.author}' has no hullIds, skipping.")
                         skip = true
-                    }
-                    if (name.isBlank()) {
-                        logger.warn("Paintjob #$i in ${mod.id} by '${mod.author}' has no name, skipping.")
+                    } else if (name.isBlank()) {
+                        logger.warn("Paintjob $id in ${mod.id} by '${mod.author}' has no name, skipping.")
                         skip = true
-                    }
-                    if (spriteId.isBlank()) {
-                        logger.warn("Paintjob #$i in ${mod.id} by '${mod.author}' has no spriteId, skipping.")
+                    } else if (spriteId.isBlank()) {
+                        logger.warn("Paintjob $id in ${mod.id} by '${mod.author}' has no spriteId, skipping.")
+                        skip = true
+                    } else if (hullIds.none {
+                            kotlin.runCatching { Global.getSettings().getHullSpec(it) }
+                                .getOrNull() != null
+                        }) {
+                        logger.warn("Paintjob $id in ${mod.id} by '${mod.author}' has no valid hullIds, skipping.")
                         skip = true
                     }
 
@@ -187,7 +192,7 @@ object MagicPaintjobManager {
                             )
                                 .also {
                                     if (unlockedAutomatically && it.isUnlockable)
-                                        unlockPaintjob(it.id)
+                                        unlockedPaintjobsInner.add(it.id)
                                 }
                         )
                     }
@@ -246,7 +251,7 @@ object MagicPaintjobManager {
                 val result = JSONObject(Global.getSettings().readTextFileFromCommon(commonFilename))
                 if (result.length() > 0) result
                 else return // If there's no valid paintjob file, bail out.
-            }.recover { JSONObject() }
+            }.recover { JSONObject().apply { put(jsonObjectKey, JSONArray()) } }
                 .getOrThrow()
 
             unlockedPaintjobsInner.addAll(unlockedPJsObj.getJSONArray(jsonObjectKey).toStringList())

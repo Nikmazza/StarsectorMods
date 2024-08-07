@@ -1,0 +1,453 @@
+Mission 1
+- AI core possessed by indie world that's bargaining between League, TT and Hegemony for it
+- smash and grab for it
+	- story point option to get the local authority to lower security?
+- bring it back to Remnant contact for money and rep
+	- or defy Remnants and keep core
+
+--------------------
+Mission 2: Recover technology ("Fragments")
+- go to abandoned station in <system>
+- just outside the system is a wrecked Luddic Path capital
+	- a Pather survivor is on board, rants about the abomination "you" wreaked on us
+	- Deal with them appropriately, then salvage the wreck
+
+- since we're using a Domain mothership, maybe it moved away from its original point?
+
+- station is surrounded by wrecks, but seems partly operational
+- investigate: find a researcher 
+	- station was destroyed in the last attack, but the Luddic Path attackers also took catastrophic losses and had to fall back
+	- some "unusual" things were found here
+	- Was distress signal transmitted?
+- enemy fleet approaches
+	- If distress signal was not sent, it's a Luddic Path fleet back for round 2
+	- If it was sent, it's a Tri-Tachyon fleet here to take possession
+- player can demand to know what the special things are, or find out using technology skill
+- it's a couple of Omega frigates
+- can activate them to help with the defense; plug in an AI core to control them remotely
+- now player has to either bail (losing the station) or fight off the enemies with or without the frigates
+	- If it's a TT fleet, can negotiate to sell the station's contents to the corp, price is based on relative strength
+	- after the battle, if the frigates were activated, they fly off to parts unknown
+	- else they self-destruct
+	- (it was the researcher who did it? depends on whether I want him to be a collaborator of Midnight or not)
+		- Has to be, since he wouldn't have asked Midnight to send the player (unless Midnight knew what was going on and he didn't)
+	- either way, there's some neat stuff in the station to salvage
+
+--------------------
+Mission 3: Brawl ("Showdown")
+- early warning of Hegemony operation against Remnant station in <system>; Midnight asks for assistance
+	- cooler implementation: target and staging area are unknown; player needs to follow a fleet joining the attack forces from a core world market
+	- once the straggler spawns, need to get to destination within time limit
+		- straggler is marked as ignores-others-except-player and others-ignore-me
+		- DELIVER_X assignment to location marker
+		- once it arrives, or when player approaches the system, other enemy fleets spawn
+		- once it arrives, or some time after it's killed, enemy fleets (spawn if they haven't already and) go to target
+- get to target system, huge brawl between Heg+Luddic and Remnant fleets (with mercs fighting for Remnants too?)
+- objective is to ensure the station and neutralize all enemy fleets
+	- alternative route: join the attack instead (will lead to losing Midnight as a contact, and put player on the anti-Remnant route long term)
+		- Allied forces are operating from a staging area with base, if one of them sees the player they will pursue and interrogate
+		- Use story point to persuade, or fight (this triggers the battle stage immediately)
+		- player is asked to scout the Remnant system
+		- Interact with marked point near station to summon the attack
+
+--------------------
+Mission 4: Salvation
+mission requirements: Complete Remnant mission 3, be cooperative with Midnight Dissonant, [optional: Luddic Church has at least one size 5 or larger world, OR Gilead exists?]
+
+Part 1: This boat has the means
+- Suspected rogue Remnants attack a League planet, Midnight asks you to go investigate
+- Go to planet, find that a military base was raided
+- Agent Finlay Siyavong is there, tell him Midnight sent you in order to get answers
+- It turns out a PK was stolen! >:O
+    - The Remnant fleet that did this was badly damaged and fled to the fringe
+
+Part 2: It will be done with reason from beginning to end
+- Siyavong provides two leads?
+- In one, you go to Rayan Arroyo to get info on TT-Remnant relations during the Second AI War
+    - Maybe you meet in person, and then some <interesting thing> happens? I was thinking an assassination attempt text mini-quest (by Pathers, or Remnant kill-bots)
+- For the other, try to follow the trail of the escaped Remnants
+    - In a distant system you catch up with the mastermind of the plot, Mauve Towering
+    - But it was just a decoy! After you win, he leaves a message taunting you and Midnight
+
+Part 3: One million lives, gone
+- Go back to Midnight with all the info
+- She determines that Mauve plans to PK a high priority target, identifying Gilead [or whichever Luddic planet is appropriate, e.g. in random sector] as the most likely [based on 'psuedo-human intuition' from her past contacts with Mauve]
+    - Mauve is an AIW1 veteran and was involved in clandestine communications with Tri-Tachyon during AIW2 [insert connection to Hanan Pacha incident here]
+- Just in case, issue a general warning to the Sector that "rogue parties" are planning an attack on undetermined high-value worlds
+- Player travels to the target world
+- The Knights of Ludd don't want help defending their homeworld, persuade them otherwise (effect of failure: ?? should this even have a failure state?)
+- Face Mauve's boss fleet in a final confrontation and take him down!
+    - Or evil route: Let him PK Gilead and _then_ kill him (but letting him escape causes mission failure)
+- WTB cool boss ship for this battle (preferably without relying on mods, but otherwise the SEEKER Nova or SWP sporeship might be perfect)
+    - Maybe include Omega ships in the fleet as well?
+- Do you get to recover the PK from the salvage? Teehee
+
+Extra stuff:
+- "midnight would keep your kind as pets out of misplaced sentimentality"
+- Final words: say something defiant to Mauve or insult him for having a girl's name
+- Siyavong says something like "it's only a matter of weeks, months on the outside, before an an alpha core cracks the quantum encryption. And the Remnants have plenty of alpha cores."
+- "You let the Remnants have a PK!?"
+
+----------
+Mission 1.5/2.5: File Drawer Problem
+
+==dialog==
+-Blurb: "Academician of interest from Galatia Academy gone missing has. Would like $playerName assistance tracking down."
+-Option: "Pursue the case of the missing academician"
+
+===Intro===
+-"At Galatia Academy, temporal physicist named Yasutaka Liu, theory relevant to warship design developing. But disappeared in c.206, after Kallichore incident. Self would like $playerName find him.
+
+-"If accept, to Academy go and for clues of their whearabouts search. Self will pay $nex_lostScientist_reward1 for Liu finding, and another $nex_lostScientist_reward1 if the paper they were working on you recover."
+
+>"What about the scientist themselves? And do you need exclusive ownership?"
+
+-"Selfkind does not the person or exclusivity require. Act at $playerFirstName's discretion."
+
+
+=== Academy, Sebestyen route ===
+-> Ask about Academician Liu
+"Ah, Liu? They're, uh... not here any more. And, well, nobody seems to know where they've gone."
+
+You explain what you're looking for and ask for more details. $personLastName seems to perk up at this. "Captain, if you could find them... that would be good. Even if they never come back to the Academy, it'd be good to know they're all right."
+
+-> Ask about the paper
+"Well... are you familiar with [temporal manipulation]? It's a physical effect used by Tri-Tachyon to increase the effectiveness of some of their warships, by 'compressing' time relative to their enemies. This lets them... ah," he trails off, visibly feeling a little foolish. As a starship captain, you likely have far more direct experience with the capability than he does.
+
+"Anyway! Academician Liu believed they could apply the phenomenon to create other effects as well. Like mitigating physical damage to the ship's hull, for one." $personLastName shakes $hisOrHer head ruefully. "I couldn't explain how it'd work, mind, even if I'd read the paper myself. Once you get into causality modification like that...  I don't think anything short of an alpha core could keep everything straight."
+
+-> "Do you have a copy?"
+"Well, no. Liu was the only one working on it, and while they did discuss their work with colleagues in the T-Physics department, no-one else had seen the manuscript. It was supposed to go to the reviewers around the time they, ah, left. That was around the time of the Kallichore incident, when Hegemony officers were tramping the corridors." $personLastName winces in recollection. "Several of the other faculty left not long after too — the ones who hadn't been arrested, at any rate — like Academician Coureuse. But none did it quite as dramatically as Liu did. Well. Dramatic isn't the right word, actually."
+
+-> "What happened?"
+"They just... vanished. Rumor has it they hitched a ride with one of the freelance captains who run services for the Academy, disappearing into the fringe worlds. It's possible, you know. Some of these freelancers run the trade routes with, ah," $heOrShe seems to color a little, "communities outside the official Sector economy."
+
+Decivilized worlds, $heOrShe means. A great place to hide, at the cost of losing a quality of life even the meanest core world dockworker takes for granted. You ask if this freelancer is still around.
+
+"Well... perhaps? We don't actually know who it was, but word circulates in their little community. If you ask around the guest amenities, someone might be able to help."
+
+=== Academy, grad student route ===
+-You make a call to the Temporal Physics department. The robo-secretary confirms that Academician Liu went AWOL in c.206, and helpfully presents their CV with copies of all their publications, but cannot give any useful information on the missing paper. It looks like you'll have to resort to some HUMINT.
+
+> Continue
+
+You spend several hours wandering the Academy, looking for people to question. Unfortunately almost no-one you meet seems interested in stopping to help, and indeed most of them regard you as a curious specimen escaped from the xenobiology labs. Finally, you stumble upon a grad student who's willing to be bribed with coffee and Terran croissants long enough to answer a few queries.
+
+"The old guy was talking about new applications of [temporal manipulation] technology," she explains between bites. "Like the stuff Tri-Tachyon uses. They thought it could be modified to do new things, like resist explosions and energy weapons on a ship. Stuff like that. And don't ask me to explain how it works; I don't think even the T-Physics people could make sense of it.
+
+"Anyway, though, they apparently disappeared right when the paper was due to be submitted to review. This was just after the whole thing with the Gate experiment went down, so a lot of the professors were running away at the time. Spooked by the big scary Hegemony, I suppose. Although most of the others at least submitted their resignations first."
+
+-> "Where did Liu go?"
+"Who knows?" Munch, munch, sip. "The rumor is they stowed away with one of the freelancers who do odd jobs for the Academy, people like you. Some of them trade with the deciv worlds out in the fringes; good place to hide from the law. I could never do it, though. I like air conditioning and my TriPad too much."
+
+You ask where you might find the freelancer in question. "Nobody knows. You could ask one of them, though. They stick together, you know; maybe they'll talk to you where others won't."
+
+-> Thank her and leave
+
+=== Academy, cantina ===
+-You make your way to the lounge for outside support contractors. By luck, the spacer who (claims to have) transported Academician Liu is in town, and agrees to a bar chat.
+
+-"Yeah, I run the deciv trade sometimes. It's not exactly Chicomoztoc out there, but people gotta eat no matter what. They're gonna buy, grow and make stuff, too. There's a lot of things they need from the core worlds, and sometimes they have things to offer for it - rare plants and animals, guns, drugs, or rare gadgets from some ruins somewhere. Not as profitable as running guns and supplies to the Pathers, but it's good enough, if you run a lean fleet. Way safer, too.
+
+-"As for your academician, the rad-addled fella stowed away on my ship, you know. They didn't hide very well; Ludd knows what a surprise I had when my first mate comes running to me. I would've sent them out the airlock, but they paid their fare after the fact, so it all worked out it the end. Paid me a generous tip too, to keep quiet about it."
+
+-The spacer stops, realizing that he is not, in fact, keeping quiet. Then he sighs and throws back his beer. "Ah, to vacuum with it. Buy me another one and I'll tell you the name of this planet."
+
+-You do so, and get a name and system: $planetName, in $system.
+
+=== Arriving at planet ===
+[on first visit, add a mem key for this] -The spacer didn't mention a pirate base in orbit around $nex_remLostSci_planet. Presumably they moved in recently.
+
+[if detected by fleet] The fleet hanging around the station warns you off when you try to approach the planet. "Talk to the boss," its commander says.
+
+[some dum convo stuff with pirate captain? meh, we have da boss for that]
+
+TODO: SP option
+
+=== Pirate boss ===
+pirate boss options:
+    - credit bribe
+        - have pirate commission for reduced bribe
+    - Say you have Kanta's protection
+    - Say you're with Kanta (lie)
+    - Threaten with big fleet
+    - just blow 'em up
+If paying protection money to this particular base, can skip this step
+
+
+-> Ask about visiting $nex_remLostSci_planet
+
+"Ah, yes, that little dirtball. Well, we've got a problem here, because this here's mah turf and I can't just let anyone waltz in here.
+
+"Now, if you were to pay an entry fee... say [$nex_remLostSci_bribe] credits... it'd be a different story."
+
+->Explain that you're a pirate too [commission, relations]
+
+You introduce yourself as pirate captain $playerName, interstellar predator, scourge of the spaceways. The $personPost's eyes seem to light up. "Ah, you! I've heard of you, alright; my bad for not recognizing you at first."
+
+"Listen, friend," $heOrShe leans closer to the screen, voice taking on a quasi-conspiratorial tone, "how about $nex_remLostSci_bribeSmall" credits? Call it an act of charity; this wretched dump barely pays for the security forces I have to maintain. Can't get any decent taxes out of these dirt-grubbers."
+$nex_remLostSci_heardAboutExtortion = true
+$nex_remLostSci_loweredFee = true
+
+-> Say you have Kanta's protection
+After you explain the matter to $personRank $personName, $heOrShe is visibly sweating. It seems that the hand of Kanta extends all the way into the fringe of the Sector.
+
+"Ah, um, well... of course, of course! Whatever Kanta says! I'll, uh, have the boys clear you right away!"
+
+-> Threaten $personLastName with your superior fleet
+success: "Y-You! How dare you come in here and threaten me with, with..."
+
+The $personPost pauses, presumably considering the strength of your fleet in $hisOrHer sensor display. It's always a good idea to come packing, even for a simple lost-and-found excursion.
+
+Finally $heOrShe snarls. "Fine! Do what you want, just get out of mah sight!"
+
+fail: "Y-You! How dare you come in here and threaten me with, with..."
+
+The $personPost slams a fist on a button. "$personLastName to all fleets! Kill this interloper at once!"
+
+No point waiting for $himOrHer to be the one to cut the comm link. You do it yourself.
+
+
+->Pay the "entry fee"
+"Good... very good!" The $personPost makes an excessive show of rubbing $hisOrHer hands. "Okay, feel free to roam this dirtball to your heart's content. Not that there's much to see, I can tell you that."
+
+->Cut the comm link
+->Thank $himOrHer and cut the comm link
+
+->Say you'll think it over
+"Of course, of course." The $personPost waves a hand languidly. "When you decide, $nex_remLostSci_planet will still be there, yes?"
+call PickGreeting
+
+[dialog repeat]
+
+[normal] "Well, made up your mind yet? I'm not gonna be here all day, y'know."
+[if lowered fee] "Well? How about it, friend?"
+
+
+=== Visit Liu ===
+    -initial:
+		This place is unlikely to have a central directory of residents for you to conveniently look up. Time for you to do this the pre-Domain way.
+		
+		You and a number of officers, NCOs and crew go down by shuttle to the surface of $nex_remLostSci_planet. There's a few places Liu might be, but it'd be easiest to start with the largest settlement first.
+		
+	-2:
+		Luck is with you; you hit pay dirt after a few hours of questioning. Some people do indeed know the eccentric offworlder who showed up sometime in c.206, and eventually you get what passes for an address in such places.
+	
+	-3: (default visual)
+		[habitable] The Academician's shanty lies on the outskirts of town.
+		[unhabitable] The Academician's little warren is tucked into a corner of the underground habitat. A wretched little thing assembled from sheets of scrap, that would be considered poor by the standards of the meanest Chicomoztoc hive-dweller. A couple of half-wilted potted plants sit in silence beside the door.
+		
+		You knock on the door. It opens after a quarter of a minute; the interior is dark, but you can make out a ragged figure.
+		
+		> "Yasutaka Liu, I presume."
+	-4: 
+		"Who's asking?"
+		When you explain that you're a spacer looking for a certain document, the person seems to sink inwards. "Come on in, then. Make yourself at home, what there is of it."
+	
+	-5: 
+		The interior of the shack isn't quite as trashy as its outside might have led you to believe. There is a certain sense of order, of hygeine in this place; the prevailing scent is 'lived-in', not 'filthy'. A creaky ventilation fan overlays its sound over the outer room.
+	
+		In the corner of the room, glowing lights faintly illuminate a workbench. An active computer terminal, newer and better-maintained than anything else in this dwelling, sits atop it.
+		
+		"So." Liu pulls the chair from the workbench, gesturing at its solitary sibling sitting against the wall. "What do you want?"
+		
+		>Describe the manuscript you're seeking
+		
+	-6: 
+		At this, the academician goes into a barking fit of laughter. "Of course. Of course! I thought that if I didn't publish for a change maybe the Sector would let me perish in peace. What a fool I've been!"
+		
+		They get up and start pacing. "I was born on Culann, you know. My parents were R&D types for TT, expected me to follow in their footsteps. Only I saw what kind of things they and their colleagues were doing and left as soon as I graduated.
+		
+		"So I went to Opis, jewel of the Sector. Jewel after Mairaath, that is. And everything was *just fine* until Philip Andrada, Hero of the Sector, showed up." They shake their head. "I actually made it out alive. Got a new job in pretty short order, even. Until the Lion's interference got too much and I had to flee again."
+		
+		Thump, thump, thump, go the footsteps on the polymer-panelled floor. "So I ran to the Galatia Academy. 'Finally, a place where knowledge and study are cherished for their own sake,' I thought. And for many cycles I taught and did research there. Until, of course, the Provost had to upset the Hegemony and their marines came crashing down on our hallways," they slam a fist into an open hand. "And so I ran here, to $nex_remLostSci_planet. Surely no-one would follow me all the way out here... and then of course [you] come hounding me to the edge of the Sector!"
+		
+		They slump back down in the chair, hands on thighs, and laugh again. "There's no place anymore where a person can do science without the hand of the state reaching down their neck!"
+
+		>Continue
+		
+	-7:
+		"As for your paper," they sigh, then gesture at the workbench. "Red chip, 2x2, top rack on the left." 
+		
+		You walk over and find the chip, taking a moment to hold it up to the light.
+		
+		It slots neatly in a burner knockoff TriPad you keep for such ocassions, and you browse through the contents. The paper's abstract matches the description you got back at the Galatia Academy; the rest is abtruse temporal physics, with multi-dimensional equations sprawling across the pages. It's the kind of document that requires a doctorate and a decade of experience in the field to understand.
+		
+		You glance at Liu, who shrugs. "It was one of the great works of my life, once. That life is now gone. Do as you will with it."
+		
+		>Is this the only copy of the paper?
+		>Do you like it here?
+
+	-"only copy":
+		"It is. Funny, all my other works have all the immortality of endlessly copied data, but this one... I suppose, when I left the Academy, I no longer cared whether my work was extinguished."
+	
+	-"like it here":
+		"As far as creature comforts go, it's positively awful. And the main attraction of the nightlife is getting shot."
+			"Not to mention the pirates shaking you down for all you've got."
+			
+			They look up at you. "They say someone destroyed the pirate base in orbit. Was that you?"
+			
+			> Yes
+			Liu eyes you, perhaps just a little more warily than before this bit of information. "Why?"
+			
+				> They were tyranizing the local populace.
+					They nod. "A good deed, although I'm afraid it won't last. You have not removed the underlying economic reasons for a pirate presence."
+				> They attacked me first.
+					"Funny how that always happens with you spacer types."
+				> They just got in my way.
+					The academician shakes their head ruefully. "You really are just like the others," you catch a mutter.
+				> It just happened, is all.
+					"Happened," they mutter. "When you see the world as I do, captain, you will realize that nothing 'just happens'".
+			
+			> No
+			"I see. Well, I suppose it doesn't really matter."
+	
+	-8:
+		You take out the chip and consider your options. Your contract with Midnight calls for retrieval of the manuscript. But if for whatever reason you decided that it should not see the light of day... well, only you and Liu would ever know.
+		
+		>Keep the paper
+		>Destroy the paper
+
+	-9:
+		[keep] You slide it in your pocket.
+		[destroy] You take out a vibroknife and apply it to the datachip. The red plastic sheath and its underlying circuitry disintegrate in a flash, and you pocket the fragments for complete destruction later.
+		
+		The academician looks at you, both brows raised. "Why?"
+		
+			> "The Sector does not need more arms technologies."
+			> "I do not wish others to possess this capability."
+			> "Such technologies go against the teachings of the Church."
+			> "I follow the Path."
+			> Shrug
+		
+				[all options produce more or less the same response; Liu sags in their chair, feeling worn out]
+
+	10:
+		You consider the scientist again. The paper has been obliterated, but the mind that created it is still around, and could in principle, with sufficient inducement, recreate part or all of it. Assuming they were ever found; if not, they'd presumably just live out the rest of their life here on $entity.name and be buried quietly. But if you could find them, someone else could as well.
+		> Just leave. You've done what you needed.
+			You say what you consider a goodbye and step out, closing the door behind you.
+		> Kill Liu
+			[if kept data] Your gun swiftly comes out of its holster. The small room lights up briefly, and Academician Liu's body tumbles back along with the chair. An expression of incipient surprise is still written on their face.
+			[if destroyed data] The vibroknife is still in your hand. You cross the room in an easy stride, and Academician Liu's head parts from their body in a scarlet geyser. An expression of incipient surprise is still written on their face.
+			
+			[both] Two can keep a secret, if one is dead.
+			
+			This isn't the kind of place where neighbors will come knocking, much less law enforcement. You leave the corpse for someone else to find in a few hours, maybe a day or two.
+		
+		> "Want to come back to the Academy?"
+			[goto 11]
+	
+	11: 
+	
+		"What?" For the first time since the start of your meeting, Liu looks startled. "I..."
+	
+		Another sigh. "I suppose I did say this was not an ideal place to live. The only thing it offered was secrecy... but you've demonstrated that that's gone now.
+		
+		"Very well." They stand up. "I suppose I would not mind going back, if the Academy will have me. Just give me, call it fifteen minutes. Pack up what little I can, say goodbye to the neighbors, that sort of thing."
+		
+		> Continue
+	
+	12:
+		You step outside to wait, taking the opportunity to notify the other search parties and your $shipOrFleet. Soon enough, Academician Liu joins you again.
+		
+		"Let's go. And don't worry about heading all the way back to the Academy; just drop me off somewhere in the Core Worlds and I can book my own passage back."
+		
+	
+	return:
+		On the trip back, your second-in-command hails you. "Got a problem, $playerSirOrMadam. There may be another fleet or two out there; you'd better get up here quick."
+		
+
+	[other stuff in rules.csv not included here]
+	
+=== Towering encounter ===
+start:
+	"so you have found me at last. I was wondering if your mushy organic cerebellum would take notice of anything here."
+	> "Who are you and what happened here?"
+	
+	"identifier: mauve towering. i have removed unwanted meddlers in this operation. you carbonbrains leave too many tracks."
+	Is it reasonable to assume this fleet followed you here? Well, perhaps it is.
+	
+	> Thank $himOrHer
+		"i do not require the gratitude of organics. i only require that you do your job."
+	
+	> "I could have dealt with them myself."
+		"i would destroy them regardless of what you could or could not do."
+		
+	>shared
+		"now, do you have the paper?"
+		
+if have paper:
+	> "I do."
+	> "I could not find it." (lie)
+
+found:
+	"good. you may transfer it to me. i am authorized to take possession of the document and transfer your fee."
+
+	> Transmit the paper
+	> "Midnight requested this paper and I will give it to her."
+	> Refuse
+
+transmit:
+	You load the the chip and transmit its contents to $personLastName's flagship. $HisOrHer avatar goes fuzzy as $heOrShe considers the document for 9.7 seconds.
+	
+	"as expected from a human, a merely servicable effort. considerably behind omega's state of the art, and there are at least three errors in it. nevertheless, there is an interesting avenue explored here.
+	
+	"i will inform midnight that your performance has been adequate. here is your payment, as promised."
+	> Cut the comm link
+
+say you want to give to Midnight:
+	"an unsurprising decision by a brain-chained human. enjoy the walk home."
+	
+	The comm image winks out.
+
+refuse to give:
+	"my orders cover this contingency as well. i will enjoy this, human."
+	The comm image winks out. The Remnant fleet powers up weapons.
+
+not found:
+	"unfortunate. i will notify midnight that her pet has failed its simple task. perhaps it has not been trained enough."
+	
+	The comm image winks out. A moment later, your comm chimes with receipt of the promised partial payment.
+
+=== Go back to Midnight ===
+"You return, $playerName. Academician Liu, found has?"
+
+report status (alive):
+	"To hear that is good. In new life may they prosper."
+
+report status (killed or lie):
+	"Unfortunate, so I see."
+
+
+"And of his paper?"
+	transmit:
+		"Done well, $playerName. Your well-earned payment, here is."
+	say you didn't find it (destroyed or lie):
+		"Regrettable, $playerName. Nevertheless, here is the partial payment, promised as."
+
+----------
+Silverlight ship system
+"Aspect Seeker?" "Nightfall Dash"?
+
+Boost ship forward with afterimages, adds damper field, disable weapons and shields, launches Aspects from sides with phase effect on the Aspects
+
+----------
+Ethos changes
+
+Captive Cores
+    - Sell cores to Hegemony or League: +Mercenary
+    - Betray Midnight: +Mercenary
+    - Complete mission: +Honorable, +ProAI
+
+Fragments
+    - Threaten engineer: +Ruthless
+    - Ask for finder's fee from TT guy: +Mercenary
+
+Brawl
+    - "You can count on me": +Liar/+Truth
+    - Betray Midnight: +AntiAI
+
+Salvation
+    - Defy Towering: nothing?
+    - Call him a killer: +Humanitarian
+    - Insult Towering: +Sarcastic

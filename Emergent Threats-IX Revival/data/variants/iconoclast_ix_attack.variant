@@ -1,14 +1,12 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 9,
-    "fluxVents": 10,
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
     "goalVariant": true,
     "hullId": "iconoclast_ix",
     "hullMods": [
-        "advancedoptics",
         "hardenedshieldemitter",
-        "targetingunit",
-        "stabilizedshieldemitter"
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],
@@ -23,13 +21,13 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "taclaser",
-                "WS0 002": "taclaser"
+                "WS 001": "morningstar_ciws_ix",
+                "WS0 002": "morningstar_ciws_ix"
             }
         }
     ],
     "wings": [
-        "axiom_ix_wing",
-        "axiom_ix_wing"
+        "maxim_ix_wing",
+        "maxim_ix_wing"
     ]
 }

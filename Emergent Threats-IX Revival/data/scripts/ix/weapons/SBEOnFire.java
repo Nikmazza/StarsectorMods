@@ -35,11 +35,8 @@ public class SBEOnFire implements BeamEffectPlugin {
 		if (beam.getBrightness() >= 0f && !appliedSmoke) {
 			Vector2f origin = beam.getFrom();
 			float beamAngle = Misc.getAngleInDegrees(origin, beam.getTo());
-			Vector2f shipVector = beam.getSource().getVelocity();
-			float shipAngle = Misc.getAngleInDegrees(shipVector);
-			float angleDiff = shipAngle - beamAngle;
-			double magnitude = Math.sqrt((shipVector.getX() * shipVector.getX()) + (shipVector.getY() * shipVector.getY()));
-			float shipSpeed = (float) (magnitude * Math.cos((double) angleDiff));
+			Vector2f shipVelocity = beam.getSource().getVelocity();
+			float shipSpeed = (float) Math.sqrt(shipVelocity.lengthSquared());
 			ShapedExplosionUtil.spawnShapedExplosion(origin, beamAngle, shipSpeed, pc, false);
 			appliedSmoke = true;
 		}

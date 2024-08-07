@@ -6,10 +6,10 @@
   "style": "HIGH_TECH",
   "height": 291,
   "width": 196,
-  "center": [98, 145.5],
-  "collisionRadius": 190,
-  "shieldCenter": [0, 0],
-  "shieldRadius": 169,
+  "center": [97, 145],
+  "collisionRadius": 170,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 170,
   "viewOffset": 0,
   "weaponSlots": [
     {
@@ -19,16 +19,16 @@
       "mount": "TURRET",
       "arc": 120,
       "angle": 35,
-      "locations": [26, 37]
+      "locations": [27, 36]
     },
     {
       "id": "WS 002",
       "size": "MEDIUM",
       "type": "SYNERGY",
       "mount": "TURRET",
-      "arc": 130,
-      "angle": -40,
-      "locations": [26, -35]
+      "arc": 120,
+      "angle": -35,
+      "locations": [27, -36]
     },
     {
       "id": "WS 003",
@@ -37,16 +37,16 @@
       "mount": "TURRET",
       "arc": 360,
       "angle": 0,
-      "locations": [-46, 10]
+      "locations": [-46, 9]
     },
     {
       "id": "WS 004",
       "size": "LARGE",
-      "type": "UNIVERSAL",
+      "type": "SYNERGY",
       "mount": "HARDPOINT",
-      "arc": 10,
+      "arc": 5,
       "angle": 0,
-      "locations": [110, 1]
+      "locations": [110, -0]
     },
     {
       "id": "WS 005",
@@ -55,7 +55,7 @@
       "mount": "TURRET",
       "arc": 130,
       "angle": -90,
-      "locations": [-4, -39]
+      "locations": [-4, -40]
     },
     {
       "id": "WS 006",
@@ -64,7 +64,7 @@
       "mount": "TURRET",
       "arc": 130,
       "angle": 90,
-      "locations": [-4, 41]
+      "locations": [-4, 40]
     },
     {
       "id": "WS 007",
@@ -73,7 +73,7 @@
       "mount": "TURRET",
       "arc": 130,
       "angle": 110,
-      "locations": [-57, 34]
+      "locations": [-57, 32]
     },
     {
       "id": "WS 008",
@@ -82,7 +82,7 @@
       "mount": "TURRET",
       "arc": 130,
       "angle": -110,
-      "locations": [-57, -31]
+      "locations": [-57, -32]
     },
     {
       "id": "WS 009",
@@ -91,12 +91,12 @@
       "mount": "TURRET",
       "arc": 235,
       "angle": 180,
-      "locations": [-106, 1]
-    }
+      "locations": [-106, -0]
+    },
   ],
   "engineSlots": [
     {
-      "location": [-78, 48],
+      "location": [-78, 47],
       "length": 30,
       "width": 10,
       "angle": 180,
@@ -104,7 +104,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-78, -46],
+      "location": [-78, -47],
       "length": 30,
       "width": 10,
       "angle": 180,
@@ -112,7 +112,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-70, -57],
+      "location": [-70, -59],
       "length": 37,
       "width": 13,
       "angle": -170,
@@ -120,7 +120,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-69.5, 60],
+      "location": [-70, 59],
       "length": 37,
       "width": 13,
       "angle": 170,
@@ -128,7 +128,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-129, 1],
+      "location": [-129, 0],
       "length": 52,
       "width": 24,
       "angle": 180,
@@ -137,15 +137,13 @@
     }
   ],
   "bounds": [
-    -124.5, 13,
-    -79, 45,
-    -71.5, 75.5,
-    -15.5, 67.5,
-    122, 25,
-    122, -25,
-    -15.5, -67.5,
-    -71.5, -75.5,
-    -79, -45,
-    -124.5, -13
+    -126, 14,
+    -78, 46,
+    -68, 78,
+    120, 29,
+    120, -29,
+    -68, -78,
+    -78, -46,
+    -126, -14
   ]
 }

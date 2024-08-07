@@ -1,0 +1,16 @@
+== Concept ==
+Each raid-type event has an intel rating
+
+As intel rating increases, more information about rating becomes visible
+- Perhaps each item should be unlocked using points (see below)
+
+Intel rating increases slowly over time, but grows faster with comm sniffer or agent in faction territory, especially if same system/market as raid origin
+
+Start with increased initial intel if faction (attacker, but also target to a degree) is friendly or cooperative, max instantly if attacker is own faction or allied
+
+Details to hide:
+- Existence of event itself (unhide when reaching X intel points)
+- Source market (show faction in meantime)
+- Target market (show faction in meantime)
+- Size ("small/medium/large number" in meantime)
+-

@@ -3,22 +3,29 @@
   "hullId": "nes_hermitaur",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 6,
+  "fluxCapacitors": 5,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "missleracks",
-    "targetingunit"
+    "targetingunit",
+	"fluxdistributor"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "hammerrack",
-        "WS0006": "annihilator",
-        "WS0007": "annihilator"
+        "WS0003": "locust"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "breach",
+        "WS0007": "breach"
       }
     },
     {
@@ -33,8 +40,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0004": "lightmg",
-        "WS0005": "lightmg"
+        "WS0004": "vulcan",
+        "WS0005": "vulcan"
       }
     }
   ],

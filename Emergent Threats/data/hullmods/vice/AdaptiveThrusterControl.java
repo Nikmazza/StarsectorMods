@@ -34,7 +34,8 @@ public class AdaptiveThrusterControl extends BaseHullMod {
 	}
 	
 	private boolean hasThrusterModOverlap(ShipAPI ship) {
-		return (ship.getVariant().getHullMods().contains("auxiliarythrusters") || ship.getVariant().getHullMods().contains("unstable_injector"));
+		return (ship.getVariant().hasHullMod("auxiliarythrusters") 
+				|| ship.getVariant().hasHullMod("unstable_injector"));
 	}
 	
 	@Override

@@ -40,14 +40,13 @@ public class NES_ColorSelector_Volt extends BaseHullMod {
         SWITCH.put(1,"NES_Hazard");
         SWITCH.put(2,"NES_Verdant");
         SWITCH.put(3,"NES_Crimson");
-        SWITCH.put(4,"NES_Sparkle");
-        SWITCH.put(5,"NES_Commando");
+        SWITCH.put(4,"NES_Commando");
+        SWITCH.put(5,"NES_Sparkle");
     }
 
     private final String decocounterID = "NES_DECO_COUNTER";
 
     //faction specific paintjob selector for Volt
-    //this is dumb and silly, too bad!
     private static int PAINTJOB_VOLT;
 
     @Override
@@ -73,15 +72,9 @@ public class NES_ColorSelector_Volt extends BaseHullMod {
         }
 
         else if (member.getFleetData() != null && member.getFleetData().getFleet() != null && !member.getFleetCommander().isPlayer()
-                && member.getFleetCommander().getFaction().getId().contains("pirates")){
-            PAINTJOB_VOLT = 3;//Crimson red, yarr harr~
-            return;
-        }
-
-        else if (member.getFleetData() != null && member.getFleetData().getFleet() != null && !member.getFleetCommander().isPlayer()
                 && member.getFleetCommander().getFaction().getId().contains("mercenary")
                 || member.getFleetCommander().getFaction().getId().contains("independent")){
-            PAINTJOB_VOLT = 5;//Commando urban
+            PAINTJOB_VOLT = 4;//Commando urban
             return;
         }
 

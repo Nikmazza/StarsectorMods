@@ -21,6 +21,8 @@
 			"food_experiment":"graphics/aotd_colony_events/food_experiment.png",
 			"hivemind_whoopsie":"graphics/aotd_colony_events/hivemind_whoopsie.png",
 			"acot_event_1":"graphics/aotd_colony_events/acot_event_1.png",
+			"crime_rampant":"graphics/aotd_colony_events/crime_begining.png",
+			"crime_resolve":"graphics/aotd_colony_events/crime_resolve.png",
 		},
 		"portraits":{
 			"theta_core":"graphics/portraits/theta_core.png"

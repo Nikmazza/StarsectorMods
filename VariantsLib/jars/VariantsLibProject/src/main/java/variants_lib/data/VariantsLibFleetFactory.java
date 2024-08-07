@@ -29,6 +29,8 @@ import variants_lib.scripts.HasHeavyIndustryTracker;
 
 import java.util.*;
 
+// TODO: fix officer skills
+
 /**
  * Generates fleets specified by fleet jsons. Contains both the fields from the fleet json and the logic for creating fleets
  */
@@ -718,7 +720,8 @@ public class VariantsLibFleetFactory  {
         }
         for(final FleetMemberAPI ship : fleet.getMembersWithFightersCopy()) {
             if(!ship.isFighterWing() && !ship.isStation() && !ship.isCivilian()) {
-                final int numSmodsToAdd = (int) Math.round(params.averageSMods + (rand.nextFloat() - 0.5));
+                int numSmodsToAdd = (int) Math.round(params.averageSMods + (rand.nextFloat() - 0.5));
+                numSmodsToAdd = numSmodsToAdd - ship.getVariant().getSMods().size();
                 if(numSmodsToAdd > 0) {
                     final String variantId = VariantData.isRegisteredVariant(ship);
                     VariantData.VariantDataMember variantData = null;

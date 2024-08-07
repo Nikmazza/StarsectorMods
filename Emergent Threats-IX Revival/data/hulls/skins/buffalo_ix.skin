@@ -12,6 +12,7 @@
 	"tags":["ixbattlegroup"],
 	"tech":"IX Battlegroup",
 	"builtInMods":["militarized_subsystems", "ix_dmod_handler"],
+	"removeHints":["HIDE_IN_CODEX"],
     "engineSlotChanges":{
 		"0":{"style":"HIGH_TECH"},
 		"1":{"style":"HIGH_TECH"},

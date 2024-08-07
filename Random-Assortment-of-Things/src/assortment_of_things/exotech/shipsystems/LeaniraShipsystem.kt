@@ -5,12 +5,14 @@ import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
 import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState
 import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags
+import com.fs.starfarer.api.combat.listeners.AdvanceableListener
 import com.fs.starfarer.api.combat.listeners.HullDamageAboutToBeTakenListener
 import com.fs.starfarer.api.fleet.FleetMemberType
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript
 import com.fs.starfarer.api.impl.combat.MineStrikeStats
 import com.fs.starfarer.api.loading.DamagingExplosionSpec
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript
+import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import com.fs.starfarer.api.util.WeightedRandomPicker
 import org.lazywizard.lazylib.MathUtils
@@ -30,6 +32,8 @@ class LeaniraShipsystem : BaseShipSystemScript() {
 
     var activated = false
 
+    var moduleDespawnInterval = IntervalUtil(0.1f, 0.1f)
+
     companion object {
         var range = 600f
     }
@@ -44,7 +48,7 @@ class LeaniraShipsystem : BaseShipSystemScript() {
         if (platform != null) {
             var level = (platform!!.hitpoints - 0f) / (platform!!.maxHitpoints - 0f)
             level = 1 - level
-            var mult = 1 + (2 * level)
+            var mult = 1 + (1 * level)
 
             ship!!.system.cooldown = ship!!.system.specAPI.getCooldown(ship!!.mutableStats) * mult
 
@@ -68,10 +72,55 @@ class LeaniraShipsystem : BaseShipSystemScript() {
 
 
         for (module in ship!!.childModulesCopy) {
-            if (!module.isAlive) continue
+
+            module.alphaMult = 0f
+            module.collisionClass = CollisionClass.NONE
+
+            module.shipAI = null
+            module.location.set(Vector2f(100000f + ship!!.location.x, 100000f + ship!!.location.y))
+            module.extraAlphaMult = 0f
+            module.extraAlphaMult2 = 0f
+            module.spriteAPI.color = Color(0, 0, 0,0)
+            module.mutableStats.hullDamageTakenMult.modifyMult("rat_module_to_be_despawned", 0f)
+            module.mutableStats.armorDamageTakenMult.modifyMult("rat_module_to_be_despawned", 0f)
+
+            module.isPhased = true
+            module.isHoldFireOneFrame = true
+
+            for (weapon in module.allWeapons) {
+                weapon.sprite?.color = Color(0, 0, 0, 0)
+                weapon.barrelSpriteAPI?.color = Color(0, 0, 0, 0)
+                weapon.glowSpriteAPI?.color = Color(0, 0, 0, 0)
+                weapon.underSpriteAPI?.color = Color(0, 0, 0, 0)
+            }
+
+            for (engine in module.engineController.shipEngines) {
+                engine.engineSlot.color = Color(0, 0, 0, 0)
+                engine.engineSlot.contrailColor = Color(0, 0, 0, 0)
+                engine.engineSlot.glowAlternateColor = Color(0, 0, 0, 0)
+            }
+
+            if (!Global.getCombatEngine().combatUI.isShowingCommandUI) {
+                moduleDespawnInterval.advance(Global.getCombatEngine().elapsedInLastFrame)
+            }
+
+            if (module.hasTag("copied_variant")) continue
+            if (!moduleDespawnInterval.intervalElapsed()) continue
+
+            module.addTag("copied_variant")
+
+            module.addListener(object: AdvanceableListener {
+                override fun advance(amount: Float) {
+                    for (weapon in module.allWeapons) {
+                        weapon.setRemainingCooldownTo(999f)
+                        //module.location.set(ship!!.location)
+                    }
+                }
+            })
+
             variant = module.variant
-            Global.getCombatEngine().removeEntity(module)
-            module.hitpoints = 0f
+            /*Global.getCombatEngine().removeEntity(module)
+            module.hitpoints = 0f*/
             Global.getCombatEngine().getFleetManager(ship!!.owner).isSuppressDeploymentMessages = true
             platform = spawnShipOrWingDirectly(variant, FleetMemberType.SHIP, ship!!.owner, 1f, Vector2f(), ship!!.facing)
             Global.getCombatEngine().getFleetManager(ship!!.owner).isSuppressDeploymentMessages = false
@@ -79,7 +128,8 @@ class LeaniraShipsystem : BaseShipSystemScript() {
             platform!!.setCustomData("rat_apheidas_parent", ship)
             ship!!.setCustomData("rat_leanira_children", platform)
 
-            Global.getCombatEngine().removeEntity(platform)
+            Global.getCombatEngine().getFleetManager(ship!!.owner).removeDeployed(platform, true)
+            //Global.getCombatEngine().removeEntity(platform)
            // Global.getCombatEngine().getFleetManager(ship!!.owner).addToReserves(platform!!.fleetMember)
 
         }

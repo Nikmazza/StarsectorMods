@@ -112,7 +112,7 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 			return str;
 		}
 	}
-
+	
 	@Override
 	public String getTooltipAppendix(CoreUIAPI ui) {
 		RepLevel level = this.submarket.getFaction().getRelationshipLevel(Global.getSector().getFaction("player"));
@@ -123,7 +123,7 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 			return "Materiel transfers from the Honor Guard must be submitted on the record"; 
 		return super.getTooltipAppendix(ui);
 	}
-  
+	
 	@Override
 	public boolean isEnabled(CoreUIAPI ui) {
 		if (!Global.getSector().getPlayerFleet().isTransponderOn()) return false; 
@@ -166,6 +166,11 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 			
 			addShips("ix_core", 50.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.0f, 
 					FactionAPI.ShipPickMode.PRIORITY_THEN_ALL, doctrineOverride);
+			
+			//25% chance per inventory update cycle to have a core for sale if none are present
+			if (getCargo().getCommodityQuantity("ix_panopticon_core") < 1) {
+				if (Math.random() <= 0.25f) getCargo().addCommodity("ix_panopticon_core", 1);
+			}
 		}
 		getCargo().sort();
 	}

@@ -1,6 +1,5 @@
 package assortment_of_things.abyss.hullmods.abyssals
 
-import activators.ActivatorManager
 import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.abyss.activators.PerseveranceActivator
 import assortment_of_things.abyss.boss.GenesisBossScript
@@ -23,6 +22,7 @@ import lunalib.lunaExtensions.addLunaElement
 import org.lazywizard.lazylib.ext.plus
 import org.lwjgl.util.vector.Vector2f
 import org.magiclib.kotlin.setAlpha
+import org.magiclib.subsystems.MagicSubsystemsManager
 
 class PrimordialSeaHullmod : BaseHullMod() {
 
@@ -39,9 +39,7 @@ class PrimordialSeaHullmod : BaseHullMod() {
     override fun applyEffectsAfterShipCreation(ship: ShipAPI?, id: String?) {
         super.applyEffectsAfterShipCreation(ship, id)
         if (ship == null) return
-        ActivatorManager.addActivator(ship, PrimordialSeaActivator(ship))
-
-        //Global.getCombatEngine().addLayeredRenderingPlugin(GenesisBossScript(ship))
+        MagicSubsystemsManager.addSubsystemToShip(ship, PrimordialSeaActivator(ship))
     }
     override fun addPostDescriptionSection(tooltip: TooltipMakerAPI?, hullSize: ShipAPI.HullSize?, ship: ShipAPI?,  width: Float, isForModSpec: Boolean) {
 
@@ -59,15 +57,9 @@ class PrimordialSeaHullmod : BaseHullMod() {
                 "This dimension is home to exotic matter that the ship is able to freely shape in to small formations, spawning an infinite amount of frigates within. " +
                 "This matter however is unable to exist within real space, and as such the ships are unable to operate outside of the overwriten reality." +
                 "\n\n" +
-                "Those frigates are controlled by the same core as the ship.",
+                "Those frigates are controlled by the same core as the ships.",
             0f, Misc.getTextColor(), Misc.getHighlightColor(),
             "Primordial Sea", "infinite", "frigates", "unable to operate", "controlled by the same core")
-
-
-        tooltip.addSpacer(10f)
-        tooltip.addSectionHeading("Ordnance", Alignment.MID, 0f)
-        tooltip.addSpacer(10f)
-
 
         tooltip!!.addLunaElement(0f, 0f).apply {
             render {particleSpawner.renderForeground(element, it)  }

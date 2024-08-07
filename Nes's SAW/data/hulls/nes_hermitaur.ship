@@ -13,7 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "NES_FluxMissiles",
-	"NES_ColorSelector_Herm"
+    "NES_ColorSelector_Herm"
   ],
   "weaponSlots": [
     {
@@ -79,7 +79,7 @@
       "angle": 0,
       "locations": [41, 42]
     },
-	{
+    {
       "id": "NES_DECO_COUNTER",
       "size": "SMALL",
       "type": "DECORATIVE",
@@ -87,6 +87,15 @@
       "arc": 0,
       "angle": 0,
       "locations": [0, 0]
+    },
+    {
+      "id": "WS0033",
+      "size": "MEDIUM",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [39, -0]
     }
   ],
   "engineSlots": [
@@ -104,6 +113,54 @@
       "width": 32,
       "angle": -180,
       "contrailSize": 32,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-23, 54],
+      "length": 32,
+      "width": 8,
+      "angle": 170,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-23, -54],
+      "length": 32,
+      "width": 8,
+      "angle": -170,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21, 58],
+      "length": 28,
+      "width": 8,
+      "angle": 165,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21, -58],
+      "length": 28,
+      "width": 8,
+      "angle": -165,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-19, 62],
+      "length": 24,
+      "width": 8,
+      "angle": 160,
+      "contrailSize": 128,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-19, -62],
+      "length": 24,
+      "width": 8,
+      "angle": -160,
+      "contrailSize": 128,
       "style": "LOW_TECH"
     },
     {

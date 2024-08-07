@@ -2,6 +2,15 @@
 	"combatSmall":{
 		"vice_glimmer_overclocked":3,
 		"vice_lumen_pulse":4,
+		
+		"vice_hyperion_ex_attack":3,
+		"vice_hyperion_ex_strike":3,
+		
+		"vice_candor_attack":3,
+		"vice_candor_strike":3,
+		
+		"vice_candor_emp_assault":3,
+		"vice_candor_emp_support":3,
 	},
 	"combatMedium":{
 		"vice_effulgent_assault":4,
@@ -9,6 +18,11 @@
 		"vice_effulgent_torpedo":4,
 		"vice_fulgent_overclocked":3,
 		"vice_preceptor_standard":5,# makes ship show up despite Diktat anti-carrier doctrine
+		
+		"vice_iris_ex_escort":5,
+		"vice_mandrake_ex_assault":4,
+		"vice_mandrake_ex_overdriven":3,
+		"vice_mandrake_ex_strike":4,
 	},
 	
 	"combatLarge":{
@@ -21,6 +35,12 @@
 		"vice_jubilant_standard":5,
 		"vice_unifier_elite":5,		# makes ship show up despite Diktat anti-carrier doctrine
 		"vice_unifier_standard":5,	# makes ship show up despite Diktat anti-carrier doctrine
+		
+		"vice_flamebreaker_ex_assault":5,
+		"vice_flamebreaker_ex_strike":5,
+		"vice_tigershark_ex_assault":3,
+		"vice_tigershark_ex_ballistic":2,
+		"vice_tigershark_ex_strike":3,
 	},
 	
 	"combatCapital":{
@@ -31,9 +51,22 @@
 		"vice_incandescent_elite":5,
 		"vice_radiant_suppression":5,
 		"vice_hellfire_pirate":5,
+		
+		"vice_aquilon_assault":3,
+		"vice_aquilon_beam":3,
+		"vice_aquilon_strike":3,
+		"vice_equalizer_ex_assault":4,
+		"vice_equalizer_ex_strike":4,
+		"vice_incursion_ex_assault":4,
+		"vice_incursion_ex_strike":4,
+		
+		"vice_proteus_assault":1, # makes ship show up despite Persean anti-carrier doctrine
+		"vice_proteus_command":1, # makes ship show up despite Persean anti-carrier doctrine
 	},
 	
 	"carrierSmall":{
+		"vice_maquech_standard":4,
+		"vice_maquech_long_range":3,
 		"vice_scintilla_torpedo":5,
 		"vice_preceptor_standard":5, # for Nex random picker
 	},
@@ -51,6 +84,8 @@
 		"vice_resplendent_heavy":5,
 		"vice_odyssey_tt_attack":10,
 		"vice_odyssey_tt_support":8,
+		"vice_proteus_assault":2,		# for Nex random picker
+		"vice_proteus_command":2,		# for Nex random picker
 		"vice_exhortation_standard":2,	# for Nex random picker
 		"vice_exhortation_elite":2,		# for Nex random picker
 	},

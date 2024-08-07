@@ -10,6 +10,7 @@
 	"ordnancePoints":68,
 	"baseValueMult":1.5,
 	"spriteName":"graphics/ships/ix/hyperion_ix.png",
+	"removeHints":["HIDE_IN_CODEX"],
 	"tags":["no_autofit", "ix_core_guard", "ix_core_bp"],
 	"tech":"IX Battlegroup",
 	"builtInMods":["ix_ninth"],

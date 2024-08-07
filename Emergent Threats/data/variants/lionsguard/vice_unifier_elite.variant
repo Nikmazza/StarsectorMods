@@ -1,7 +1,7 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 0,
-    "fluxVents": 22,
+    "fluxVents": 18,
     "goalVariant": true,
     "hullId": "vice_unifier",
     "hullMods": [
@@ -16,8 +16,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "breach",
-                "WS 002": "breach",
+                "WS 001": "vice_fragbomb",
+                "WS 002": "vice_fragbomb",
                 "WS 007": "heavyac",
                 "WS 008": "heavyac"
             }

@@ -12,9 +12,13 @@ import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
+import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI;
+import com.fs.starfarer.api.util.IntervalUtil;
+
+import data.scripts.ix.DistanceUtil;
 
 public class InterdictorOnHit implements BeamEffectPlugin {
 
@@ -25,14 +29,16 @@ public class InterdictorOnHit implements BeamEffectPlugin {
 	private static int INTERVAL_MAX_COUNT = 6;
 	private float TIMER = 0.2f;
 	private int INTERVAL_COUNT = 0;
+	private IntervalUtil tracker = new IntervalUtil(1.2f, 1.2f);
 	
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
-		
 		if (IS_APPLIED && IS_APPLIED_DECO) return;
+
+		boolean isIconoclast = beam.getSource().getVariant().hasHullMod("ix_point_defense_iris");
+		if (!isIconoclast) tracker.advance(amount);
 		TIMER += amount;
 		
 		//Iconoclast built-in weapon on fire effect
-		boolean isIconoclast = beam.getSource().getVariant().hasHullMod("ix_point_defense_iris");
 		if (isIconoclast && beam.getBrightness() >= 0f && !IS_APPLIED_DECO) {
 			if (TIMER >= INTERVAL_TIME && INTERVAL_COUNT < INTERVAL_MAX_COUNT) {
 				TIMER = 0f;
@@ -44,6 +50,7 @@ public class InterdictorOnHit implements BeamEffectPlugin {
 			}
 			else if (INTERVAL_COUNT == INTERVAL_MAX_COUNT) IS_APPLIED_DECO = true;
 		}
+		else if (!isIconoclast) IS_APPLIED_DECO = true;
 		
 		if (IS_APPLIED) return;
 		CombatEntityAPI target = beam.getDamageTarget();

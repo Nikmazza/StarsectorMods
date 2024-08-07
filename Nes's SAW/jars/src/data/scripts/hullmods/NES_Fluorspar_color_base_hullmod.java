@@ -14,6 +14,7 @@ public abstract class NES_Fluorspar_color_base_hullmod extends BaseHullMod {
     public static final String ROSEQUARTZ = "NES_RoseQuartz";
     public static final String PHOSPHOPHYLLITE = "NES_Phosphophyllite";
     public static final String CINNABAR = "NES_Cinnabar";
+    public static final String IRIDESCENT = "NES_Iridescent";
 
 
     private static final String ALT_SPRITES = "nes_alt_sprites";

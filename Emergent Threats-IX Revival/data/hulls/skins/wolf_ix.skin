@@ -10,6 +10,7 @@
 	"ordnancePoints":58,
 	"baseValueMult":1.5,
 	"spriteName":"graphics/ships/ix/wolf_ix.png",
+	"removeHints":["HIDE_IN_CODEX"],
 	"tags":["ixbattlegroup"],
 	"tech":"IX Battlegroup",
 	"builtInMods":["ix_ninth"],

@@ -30,6 +30,7 @@ public class InterdictionArray extends BaseHullMod {
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getMaxBurnLevel().modifyFlat(id, BURN_BONUS);
+		if (stats.getVariant().hasHullMod("fed_energymod")) stats.getEnergyAmmoBonus().modifyMult(id, 1.1765f);
 	}
 	
 	public static class ParagonIXData {

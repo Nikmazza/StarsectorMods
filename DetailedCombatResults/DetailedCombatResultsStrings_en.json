@@ -69,7 +69,16 @@
     "SoloDesc": "Solo Kill: When a firing ship does more than %s%% of the total armor & hull damage done to a target",
     "AssistDesc": "Kill Assist: When a firing ship does more than %s%% of the total armor & hull damage done to a target, and is not a solo kill",
     "ProRataDpDesc": "DP/Pro Rata DP: The amount of deployment points destroyed based on fraction of armor and hull damage inflicted on destroyed ships",
-    "DamageDesc": "Ship damage indicator overlay size is based on the amount of armor & hull damage done to a target (larger = more)\"",
+    "DamageDesc": "Ship damage indicator overlay size is based on the amount of armor & hull damage done to a target (larger = more)",
+    "StandardPerformance": "Weapon Standard Performance Font Color",
+    "UnderPerformance": "Weapon Under Performing Damage as a % of OP Font Color",
+    "OverPerformance": "Weapon Over Performing Damage as a % of OP Font Color",
+
+    #Weapon Tooltip Mouse Over
+    "WeaponCount":   "Weapon Count: %s",
+    "WeaponOpTotal": "Weapon OP Total: %s",
+    "WeaponOpAsPct": "Weapon OP as pct: %s",
+    "KillingBlows":  "Killing Blows: %s",
 
     #PlayerFleetGoal
     "PlayerGoalPursuit": "fled from the enemy ",

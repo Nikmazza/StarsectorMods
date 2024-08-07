@@ -1,19 +1,25 @@
 package assortment_of_things.combat
 
+import assortment_of_things.RATModPlugin
 import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.abyss.entities.AbyssalPhotosphere
 import assortment_of_things.abyss.procgen.AbyssDepth
 import assortment_of_things.abyss.procgen.AbyssProcgen
 import assortment_of_things.abyss.procgen.types.IonicStormAbyssType
 import assortment_of_things.abyss.scripts.AbyssCombatHueApplier
+import assortment_of_things.abyss.scripts.ChangeMainMenuColorScript
 import assortment_of_things.abyss.scripts.ResetBackgroundScript
+import assortment_of_things.backgrounds.neural.NeuralShardScript
+import assortment_of_things.backgrounds.zero_day.ZeroDayScript
 import assortment_of_things.misc.RATSettings
+import assortment_of_things.misc.getAndLoadSprite
 import com.fs.starfarer.api.GameState
 import com.fs.starfarer.api.Global
+import com.fs.starfarer.api.campaign.PlanetAPI
 import com.fs.starfarer.api.campaign.SectorEntityToken
 import com.fs.starfarer.api.combat.*
 import com.fs.starfarer.api.input.InputEventAPI
-import com.fs.starfarer.combat.CombatEngine
+import exerelin.campaign.backgrounds.CharacterBackgroundUtils
 import org.lazywizard.lazylib.MathUtils
 
 
@@ -23,6 +29,19 @@ class CombatHandler : EveryFrameCombatPlugin
 
     override fun init(engine: CombatEngineAPI)  {
 
+
+        if (RATSettings.enableAbyss!! && Global.getCurrentState() == GameState.TITLE) {
+            if (RATModPlugin.gameStartedForTitleScene) {
+                RATModPlugin.gameStartedForTitleScene = false
+
+                var random = MathUtils.getRandomNumberInRange(1, 100)
+
+                if (random == 1) {
+                    engine.addPlugin(AbyssTitleScreen())
+                }
+
+            }
+        }
 
        /* engine!!.addPlugin(object : BaseEveryFrameCombatPlugin() {
             var played = false
@@ -43,9 +62,30 @@ class CombatHandler : EveryFrameCombatPlugin
             engine.addPlugin(DPSMeter())
         }*/
 
+        if (ChangeMainMenuColorScript.isInAbyss && Global.getCurrentState() == GameState.TITLE) {
+            //Global.getCombatEngine().backgroundColor = ChangeMainMenuColorScript.lastAbyssColor
+            engine.addPlugin(AbyssTitleScreen())
+            ChangeMainMenuColorScript.isInAbyss = false
+
+        }
+
+
+
+     //   Global.getCombatEngine().setPlayerShipExternal(ship)
 
         if (Global.getCurrentState() != GameState.TITLE && Global.getSector() != null)
         {
+
+            if (Global.getSettings().modManager.isModEnabled("nexerelin")) {
+                if (CharacterBackgroundUtils.isBackgroundActive("rat_neural_shard")) {
+                    engine.addPlugin(NeuralShardScript())
+                }
+
+                if (CharacterBackgroundUtils.isBackgroundActive("rat_zero_day")) {
+                    engine.addPlugin(ZeroDayScript())
+                }
+            }
+
             var system = Global.getSector()?.playerFleet?.starSystem ?: return
             if (system.hasTag(AbyssUtils.SYSTEM_TAG) && Global.getCombatEngine().missionId == null)
             {
@@ -58,14 +98,27 @@ class CombatHandler : EveryFrameCombatPlugin
 
                 Global.getCombatEngine().addLayeredRenderingPlugin(AbyssCombatHueApplier(color, depth, darkness!!))
 
+                if (data.system.hasTag(IonicStormAbyssType.STORM_TAG)) {
+                    Global.getCombatEngine().addLayeredRenderingPlugin(IonicStormCombatRenderer())
+                }
+
                 ResetBackgroundScript.resetBackground = true
 
-                if (darkness!!.containsEntity(Global.getSector().playerFleet)) {
+               /* if (darkness!!.containsEntity(Global.getSector().playerFleet)) {
                     CombatEngine.getBackground().color = color.darker()
                 }
                 else {
                     if (depth == AbyssDepth.Shallow) CombatEngine.getBackground().color = color.brighter()
                     if (depth == AbyssDepth.Deep) CombatEngine.getBackground().color = color.brighter().brighter().brighter()
+                }*/
+
+               // Global.getCombatEngine().isRenderStarfield = false
+                if (darkness!!.containsEntity(Global.getSector().playerFleet)) {
+                    Global.getCombatEngine().backgroundColor = color.darker()
+                }
+                else {
+                    if (depth == AbyssDepth.Shallow)  Global.getCombatEngine().backgroundColor = color.brighter()
+                    if (depth == AbyssDepth.Deep)  Global.getCombatEngine().backgroundColor = color.brighter().brighter().brighter()
                 }
 
                 var withinPhotosphere = false
@@ -88,6 +141,13 @@ class CombatHandler : EveryFrameCombatPlugin
                     engine!!.addLayeredRenderingPlugin(CombatPhotosphereRenderer(150f, photosphere))
                 }
 
+                var collosal = system.planets.find { it.spec.planetType == "rat_colossal_photosphere" }
+                if (collosal != null) {
+                    if (MathUtils.getDistance(collosal, Global.getSector().playerFleet.location) <= 9000) {
+                        engine!!.addLayeredRenderingPlugin(CombatColossalPhotosphereRenderer(350f, collosal as PlanetAPI))
+
+                    }
+                }
 
 
 
@@ -97,7 +157,6 @@ class CombatHandler : EveryFrameCombatPlugin
 
     override fun processInputPreCoreControls(amount: Float, events: MutableList<InputEventAPI>?) {
     }
-
 
     override fun advance(amount: Float, events: MutableList<InputEventAPI>?)
     {
@@ -115,7 +174,6 @@ class CombatHandler : EveryFrameCombatPlugin
         }*/
 
 
-
         if (Global.getCurrentState() != GameState.TITLE && Global.getSector() != null)
         {
             var system = Global.getSector()?.playerFleet?.starSystem ?: return
@@ -129,11 +187,11 @@ class CombatHandler : EveryFrameCombatPlugin
 
                 if (darkness != null) {
 
-                    if (darkness.containsEntity(Global.getSector().playerFleet))
+                    if (darkness.getDarknessMult() >= 0.9)
                     {
 
                         var path = "graphics/icons/hullsys/high_energy_focus.png"
-                        Global.getSettings().loadTexture(path)
+                        Global.getSettings().getAndLoadSprite(path)
 
                         if (depth == AbyssDepth.Shallow) {
                             Global.getCombatEngine().maintainStatusForPlayerShip("rat_darkness",

@@ -26,6 +26,31 @@
 		"pluginClass":"assortment_of_things.abyss.entities.AbyssalFracture",
 	},
 	
+	"rat_abyss_fracture_small":{
+		"defaultName":"Fracture", # used if name=null in addCustomEntity()
+		"defaultRadius":100, # used if radius<0 in addCustomEntity()
+		"nameInText":"Abyssal Fracture",
+		"shortName":"fracture",
+		"customDescriptionId":"rat_abyss_fracture_small",
+		"icon":"graphics/icons/icon_portal.png",
+		"iconWidth":40,
+		"iconHeight":40,
+		"iconColor":[250,50,50,255],
+		"nameColor":[250,50,50,255],
+		"nameShadowColor":[0,0,0,255],
+		"renderShadow":false,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":false,
+		"showNameOnMap":false,
+		"interactable":true,
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":false,
+		"tags":[],
+		"layers":[TERRAIN_SLIPSTREAM], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"assortment_of_things.abyss.entities.AbyssalFractureSmall",
+	},
+	
 	
 	
 	"rat_abyss_fabrication":{
@@ -154,6 +179,37 @@
 		"pluginClass":"assortment_of_things.abyss.entities.AbyssTransmitter",
 	},
 	
+	"rat_genesis_memorial":{
+		"defaultName":"Probe", # used if name=null in addCustomEntity()
+		"nameInText":"probe",
+		"shortName":"probe",
+		"aOrAn":"a",
+		"isOrAre":"is",
+		"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":500,		
+		"defaultRadius":25, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"rat_genesis_memorial",
+		"interactionImage":"graphics/illustrations/generic_probe.jpg",
+		"icon":"graphics/icons/generic_probe_icon.png",
+		"iconWidth":16,
+		"iconHeight":16,
+		"sprite":"graphics/stations/probe.png",
+		"spriteWidth":36,
+		"spriteHeight":36,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog", "neutrino"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true,
+	},	
+	
 	"rat_abyss_unknown_lab":{
 		"defaultName":"Unknown Lab", # used if name=null in addCustomEntity()
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
@@ -208,6 +264,62 @@
 		"layers":[TERRAIN_7A], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	
+	"rat_sariel_outpost":{
+		"defaultName":"Abyssal Outpost", # used if name=null in addCustomEntity()
+		"defaultRadius":35, # used if radius<0 in addCustomEntity()
+		"nameInText":"station",
+		"shortName":"station",
+		"customDescriptionId":"rat_sariel_outpost",
+		"interactionImage":"graphics/illustrations/rat_abyss_wreckage.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/rat_abyss_sariel_outpost.png",
+		"spriteWidth":30,
+		"spriteHeight":30,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"detectionRange":2500, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":500,
+		"tags":["has_interaction_dialog", "neutrino"],
+		"layers":[TERRAIN_7A], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	
+	"rat_abyss_beacon":{
+		"defaultName":"Abyssal Beacon", # used if name=null in addCustomEntity()
+		"defaultRadius":70, # used if radius<0 in addCustomEntity()
+		"nameInText":"beacon",
+		"shortName":"station",
+		"customDescriptionId":"rat_abyss_beacon",
+		"interactionImage":"graphics/illustrations/rat_abyss_wreckage.jpg",
+		"icon":"graphics/icons/nav_buoy.png",
+		"iconWidth":40,
+		"iconHeight":40,
+		"iconColor":[250,50,50,255],
+		"nameColor":[250,50,50,255],
+		"nameShadowColor":[0,0,0,255],
+		"sprite":"graphics/stations/rat_abyss_beacon.png",
+		"spriteWidth":180,
+		"spriteHeight":180,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"pluginClass":"assortment_of_things.abyss.entities.AbyssalBeacon",
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":false,
+		"tags":[],
+		"layers":[TERRAIN_7A, ABOVE], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
 	
 	"rat_abyss_warning_beacon":{
 		"defaultName":"Warning Beacon", # used if name=null in addCustomEntity()
@@ -273,6 +385,17 @@
 		"renderCircleIndicatorSelectionFlash":false,
 	},
 	
+	"rat_abyss_hyperspace_background":{
+		"defaultName":"", # used if name=null in addCustomEntity()
+		"defaultRadius":0, # used if radius<0 in addCustomEntity()
+		"showInCampaign":true,
+		"showIconOnMap":false,
+		"scaleIconWithZoom":true,
+		"tags":[],
+		"layers":[TERRAIN_4], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"assortment_of_things.abyss.entities.AbyssHyperspaceEnviromentRenderer",
+	},
+	
 	"rat_abyss_particle_spawner":{
 		"defaultName":"", # used if name=null in addCustomEntity()
 		"defaultRadius":0, # used if radius<0 in addCustomEntity()
@@ -282,6 +405,17 @@
 		"tags":[],
 		"layers":[ABOVE], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"pluginClass":"assortment_of_things.abyss.entities.AbyssalParticleManager",
+	},
+	
+	"rat_abyss_in_hyper_particle_spawner":{
+		"defaultName":"", # used if name=null in addCustomEntity()
+		"defaultRadius":0, # used if radius<0 in addCustomEntity()
+		"showInCampaign":true,
+		"showIconOnMap":false,
+		"scaleIconWithZoom":true,
+		"tags":[],
+		"layers":[ABOVE], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"assortment_of_things.abyss.entities.AbyssalHyperspaceParticleManager",
 	},
 
 	
@@ -305,6 +439,31 @@
 		"interactionImage":"graphics/illustrations/rat_abyss_entity.jpg",
 		"icon":"graphics/planets/sun_halo.png",
 		"iconColor":[250,0, 100,255],
+		"iconWidth":64,
+		"iconHeight":64,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":true,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":[],
+		"layers":[TERRAIN_7A, ABOVE], 
+		"pluginClass":"assortment_of_things.abyss.entities.AbyssalPhotosphere",
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":false,
+	},
+	
+	"rat_abyss_photosphere_sierra":{
+		"defaultName":"Photosphere", # used if name=null in addCustomEntity()
+		"defaultRadius":100, # used if radius<0 in addCustomEntity()
+		"nameInText":"photosphere",
+		"shortName":"photosphere",
+		"customDescriptionId":"rat_abyss_photosphere",
+		"interactionImage":"graphics/illustrations/rat_abyss_entity.jpg",
+		"icon":"graphics/planets/sun_halo.png",
+		"iconColor":[205,155,255,255],
 		"iconWidth":64,
 		"iconHeight":64,
 		"renderShadow":true,
@@ -734,6 +893,38 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	
+	"rat_abyss_gate":{
+		"defaultName":"Inactive Gate", # used if name=null in addCustomEntity()
+		"nameInText":"inactive gate",
+		"aOrAn":"an",
+		"defaultRadius":120, # used if radius<0 in addCustomEntity()
+		"interactionImage":"graphics/illustrations/dead_gate.jpg",
+		"icon":"graphics/icons/gate0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/gate.png",
+		"spriteWidth":192,
+		"spriteHeight":192,
+		#"sprite":"graphics/ships/com_relay.png",
+		#"spriteWidth":178,
+		#"spriteHeight":96,
+		"renderShadow":false,
+		"useLightColor":false,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":true,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"nameColor":[70,200,255,255],
+		"nameShadowColor":[0,0,0,255],
+		#"renderCircleIndicator":false,
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":true,
+		"customDescriptionId":"rat_abyss_gate",
+		"tags":["gate", "neutrino"],
+		"layers":[STATIONS, BELOW_STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"com.fs.starfarer.api.impl.campaign.GateEntityPlugin",
+	},
 	
 	
 	"rat_event_generator":{
@@ -783,6 +974,9 @@
 		"showNameOnMap":false,
 		"scaleNameWithZoom":false,
 		"scaleIconWithZoom":true,
+		"detectionRange":5000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":500,
 		"tags":["has_interaction_dialog", "neutrino_high"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"renderCircleIndicator":true,
@@ -817,7 +1011,7 @@
 		"nameInText":"station",
 		"shortName":"station",
 		"customDescriptionId":"rat_exoship",
-		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
+		"interactionImage":"graphics/illustrations/rat_exoship.jpg",
 		"icon":"graphics/icons/station0.png",
 		"iconWidth":20,
 		"iconHeight":20,
@@ -832,7 +1026,7 @@
 		"scaleNameWithZoom":false,
 		"scaleIconWithZoom":true,
 		"tags":["has_interaction_dialog"],
-		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"layers":[STATIONS, BELOW_STATIONS, ], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"pluginClass":"assortment_of_things.exotech.entities.ExoshipEntity",
 	},
 	
@@ -864,8 +1058,41 @@
 		#"pluginClass":"assortment_of_things.exotech.entities.ExoshipEntity",
 	},
 	
+	"rat_hypernavigational_beacon":{
+		"defaultName":"Hyper-Nav Beacon", # used if name=null in addCustomEntity()
+		"defaultRadius":40, # used if radius<0 in addCustomEntity()
+		"detectionRange":1000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":500,
+		"icon":"graphics/icons/warning_beacon.png",
+		"iconColor":[255,100,0,255],
+		"iconWidth":24,
+		"iconHeight":24,
+		"spriteWidth":64,
+		"spriteHeight":64,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"scaleIconWithZoom":true,
+		"customDescriptionId":"rat_hypernavigational_beacon",
+		"interactionImage":"graphics/illustrations/comm_relay.jpg",
+		"tags":["has_interaction_dialog", "neutrino_high", "hypernav_beacon"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"assortment_of_things.exotech.entities.HyperNavBeaconEntity",
+	},
 
 	
+	"rat_exo_lightsource":{
+		"defaultName":"", # used if name=null in addCustomEntity()
+		"defaultRadius":0, # used if radius<0 in addCustomEntity()
+		"showInCampaign":true,
+		"showIconOnMap":false,
+		"scaleIconWithZoom":true,
+		"tags":[],
+		"layers":[ABOVE], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"assortment_of_things.exotech.entities.ExoLightsource",
+	},
+
+
 
 
 	"rat_frontiers_settlement":{

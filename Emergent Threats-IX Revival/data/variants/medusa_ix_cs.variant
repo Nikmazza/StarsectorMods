@@ -1,14 +1,13 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 1,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "medusa_ix",
     "hullMods": [
         "extendedshieldemitter",
         "hardenedshieldemitter",
-        "frontemitter",
-        "stabilizedshieldemitter"
+        "frontemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -18,8 +17,10 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "muon_streamer_ix",
-                "WS 003": "muon_streamer_ix"
+                "WS 001": "plasma_dart_ix",
+                "WS 002": "plasma_dart_ix",
+                "WS 003": "plasma_dart_ix",
+                "WS 004": "plasma_dart_ix"
             }
         },
         {
@@ -34,6 +35,7 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 005": "morningstar_ciws_ix",
                 "WS 006": "lightbringer_ciws_ix",
                 "WS 007": "lightbringer_ciws_ix"
             }

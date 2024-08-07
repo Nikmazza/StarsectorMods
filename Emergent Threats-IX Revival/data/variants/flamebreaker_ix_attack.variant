@@ -1,17 +1,18 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 0,
-    "fluxVents": 29,
+    "fluxCapacitors": 2,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "flamebreaker_ix",
     "hullMods": [
-        "hardenedshieldemitter",
         "targetingunit",
-        "ix_laser_collimator",
         "frontemitter",
         "stabilizedshieldemitter",
-        "ix_point_defense_small",
-        "ix_point_defense_small_handler"
+        "ix_point_defense_medium_handler",
+        "ix_point_defense_medium",
+        "ix_dawnstar_controller",
+        "ix_dawnstar_neutron",
+        "ix_dawnstar_neutron_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -20,39 +21,43 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "hil"}
+            "weapons": {"WS 002": "photon_hammer_ix"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "orthrus_s_ix",
-                "WS 010": "orthrus_s_ix",
-                "WS 011": "orthrus_s_ix"
+                "WS 009": "spatial_charge_launcher_ix",
+                "WS 010": "spatial_charge_launcher_ix",
+                "WS 011": "spatial_charge_launcher_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "dawnstar_lcpb_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "daythorn_mapb_ix",
+                "WS 013": "daythorn_mapb_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "twin_tactical_laser_ix",
-                "WS 003": "twin_tactical_laser_ix",
-                "WS 004": "twin_tactical_laser_ix"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "taclaser",
-                "WS 008": "taclaser",
-                "WS 012": "taclaser",
-                "WS 013": "taclaser"
+                "WS 003": "lightbringer_ciws_ix",
+                "WS 004": "lightbringer_ciws_ix",
+                "WS 005": "morningstar_ciws_ix",
+                "WS 008": "morningstar_ciws_ix"
             }
         }
     ],
     "wings": [
-        "axiom_ix_wing",
-        "axiom_ix_wing"
+        "dictum_ix_wing",
+        "dictum_ix_wing"
     ]
 }

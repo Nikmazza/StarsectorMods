@@ -6,6 +6,7 @@ import assortment_of_things.misc.ReflectionUtils
 import assortment_of_things.misc.baseOrModSpec
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
+import com.fs.starfarer.api.combat.listeners.AdvanceableListener
 import com.fs.starfarer.api.combat.listeners.HullDamageAboutToBeTakenListener
 import com.fs.starfarer.api.fleet.FleetMemberType
 import com.fs.starfarer.api.impl.campaign.ids.Tags
@@ -44,6 +45,7 @@ class TylosShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
 
     var killedOther = false
 
+    var moduleDespawnInterval = IntervalUtil(0.1f, 0.1f)
 
     override fun apply(stats: MutableShipStatsAPI, id: String?, state: ShipSystemStatsScript.State, effectLevel: Float) {
         ship = stats.entity as ShipAPI? ?: return
@@ -55,7 +57,57 @@ class TylosShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
         }
 
         for (module in ship!!.childModulesCopy) {
-            if (!module.isAlive) continue
+            module.alphaMult = 0f
+            module.collisionClass = CollisionClass.NONE
+
+            module.shipAI = null
+            //module.location.set(ship!!.location)
+            module.location.set(Vector2f(100000f + ship!!.location.x, 100000f + ship!!.location.y))
+            module.extraAlphaMult = 0f
+            module.extraAlphaMult2 = 0f
+            module.spriteAPI.color = Color(0, 0, 0,0)
+            module.mutableStats.hullDamageTakenMult.modifyMult("rat_module_to_be_despawned", 0f)
+            module.mutableStats.armorDamageTakenMult.modifyMult("rat_module_to_be_despawned", 0f)
+            module.addTag("rat_module_to_be_despawned")
+
+
+            //module.isPhased = true
+            module.isHoldFireOneFrame = true
+
+            for (weapon in module.allWeapons) {
+                weapon.sprite?.color = Color(0, 0, 0, 0)
+                weapon.barrelSpriteAPI?.color = Color(0, 0, 0, 0)
+                weapon.glowSpriteAPI?.color = Color(0, 0, 0, 0)
+                weapon.underSpriteAPI?.color = Color(0, 0, 0, 0)
+
+                weapon.setRemainingCooldownTo(999f)
+            }
+
+            for (engine in module.engineController.shipEngines) {
+                engine.engineSlot.color = Color(0, 0, 0, 0)
+                engine.engineSlot.contrailColor = Color(0, 0, 0, 0)
+                engine.engineSlot.glowAlternateColor = Color(0, 0, 0, 0)
+            }
+
+            if (!Global.getCombatEngine().combatUI.isShowingCommandUI) {
+                moduleDespawnInterval.advance(Global.getCombatEngine().elapsedInLastFrame)
+            }
+
+
+            if (module.hasTag("copied_variant")) continue
+            if (!moduleDespawnInterval.intervalElapsed()) continue
+
+            module.addTag("copied_variant")
+
+            module.addListener(object: AdvanceableListener {
+                override fun advance(amount: Float) {
+                    for (weapon in module.allWeapons) {
+                        weapon.setRemainingCooldownTo(999f)
+                        //module.location.set(ship!!.location)
+                    }
+                }
+            })
+
             var variant = module.variant.clone()
             variant.addTag("tylos_no_refit_sprite")
             variant.addTag(Tags.UNRECOVERABLE)
@@ -65,7 +117,7 @@ class TylosShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
             //var manager = Global.getCombatEngine().getFleetManager(ship!!.owner)
            /* var obfManager = manager as CombatFleetManager
             obfManager.removeDeployed(module as Ship, true)*/
-            Global.getCombatEngine().removeEntity(module)
+           // Global.getCombatEngine().removeEntity(module)
           /*  module.isPhased = true
             module.isHoldFire = true
             module.alphaMult = 0f
@@ -85,6 +137,8 @@ class TylosShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
             Global.getCombatEngine().removeEntity(newModule)
             //obfManager.removeDeployed(newModule as Ship, true)
         }
+
+        if (ship!!.hasTag("rat_module_to_be_despawned")) return
 
         var parent = ship!!.customData.get("rat_tylos_parent") as ShipAPI?
 
@@ -122,13 +176,14 @@ class TylosShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
         stats.maxTurnRate.modifyFlat(id, 15f * effectLevel)
         stats.maxTurnRate.modifyPercent(id, 100f * effectLevel)
 
-        ship!!.engineController.fadeToOtherColor(this, color, Color(0, 0, 0, 0), effectLevel, 0.67f)
+
+        //ship!!.engineController.fadeToOtherColor(this, color, Color(0, 0, 0, 0), effectLevel, 0.67f)
         ship!!.engineController.extendFlame(this, 1f * effectLevel, 1f * effectLevel, 0f * effectLevel)
+
 
         if (ship!!.hitpoints <= 0f && module != null) {
             var manager = Global.getCombatEngine().getFleetManager(module!!.owner)
-            var obfManager = manager as CombatFleetManager
-            obfManager.removeDeployed(module, true)
+            manager.removeDeployed(module, true)
             module = null
         }
 
@@ -138,8 +193,7 @@ class TylosShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
             ship!!.isDefenseDisabled = true
 
             var manager = Global.getCombatEngine().getFleetManager(module!!.owner)
-            var obfManager = manager as CombatFleetManager
-            obfManager.removeDeployed(module, true)
+            manager.removeDeployed(module, true)
             module = null
 
           /*  Global.getCombatEngine().getFleetManager(ship!!.owner).isSuppressDeploymentMessages = true

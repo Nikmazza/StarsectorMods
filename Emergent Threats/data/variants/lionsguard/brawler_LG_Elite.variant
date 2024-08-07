@@ -1,12 +1,12 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 0,
-    "fluxVents": 10,
+    "fluxVents": 9,
     "goalVariant": true,
     "hullId": "brawler_LG",
     "hullMods": [
-        "hardenedshieldemitter",
-        "targetingunit"
+        "vice_attuned_emitter_diodes",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,18 +15,20 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 001": "pulselaser",
-                "WS 002": "pulselaser"
-            }
+            "weapons": {"WS 002": "ionbeam"}
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "atropos",
                 "WS 004": "atropos"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "gravitonbeam"}
         }
     ]
 }

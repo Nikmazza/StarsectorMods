@@ -13,7 +13,7 @@ public class IncandescentRemnant extends BaseHullMod {
 	private static float SPEED_BONUS = 5f;
 	private static float MAX_BURN_BONUS = 1f;
 	private static float FLUX_DISSIPATION_BONUS = 150f;
-	private static float CR_INCREASE = 9.1f;
+	private static float CR_INCREASE = 10f;
 	
     private static String BUILT_IN_WEAPONS = "Hydromagnetic Cannons";
 	private static String SHIELD_BONUS_TEXT = "20%"; //+20% reduction from base value of 1

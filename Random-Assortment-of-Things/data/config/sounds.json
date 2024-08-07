@@ -42,11 +42,11 @@
 		],
 		
 		"rat_abyss_genesis1":[
-			{"file":"GenesisBossPhase1.ogg","source":"sounds/rat/music","volume":1},
+			{"file":"Genesis.ogg","source":"sounds/rat/music","volume":1.2},
 		],
 		
 		"rat_abyss_genesis2":[
-			{"file":"GenesisBossPhase2.ogg","source":"sounds/rat/music","volume":1},
+			{"file":"PrimordialWaters.ogg","source":"sounds/rat/music","volume":1.2},
 		],
 		
 		"rat_exo_market":[
@@ -74,6 +74,24 @@
 # collapseclose
 	},
 
+	"rat_raguel_system_concordshift_fire":[
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_01.ogg","pitch":0.9,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_01.ogg","pitch":1.1,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_01.ogg","pitch":1.0,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_02.ogg","pitch":0.9,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_02.ogg","pitch":1.1,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_02.ogg","pitch":1.0,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":0.9,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":1.1,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":1.0,"volume":0.8},
+                
+		#{"file":"sounds/sfx_wpn_energy/rift_explosion_01.ogg","pitch":1,"volume":1.0},
+		#{"file":"sounds/sfx_wpn_energy/rift_explosion_02.ogg","pitch":1,"volume":1.0},
+		#{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":1,"volume":1.0},
+		#{"file":"sounds/sfx_wpn_energy/rift_explosion_04.ogg","pitch":1,"volume":1.0},
+		#{"file":"sounds/sfx_wpn_energy/rift_explosion_05.ogg","pitch":1,"volume":1.0},
+	],
+
 	"rat_abyss_ambient_sounds":[
 		{"file":"sounds/sfx_abyss/rat_abyss_sound_1.ogg","pitch":1.0,"volume":1},
 		{"file":"sounds/sfx_abyss/rat_abyss_sound_2.ogg","pitch":1.0,"volume":1},
@@ -86,6 +104,14 @@
 		{"file":"sounds/sfx_abyss/rat_abyss_sound_9.ogg","pitch":1.0,"volume":1},
 		{"file":"sounds/sfx_abyss/rat_abyss_sound_10.ogg","pitch":1.0,"volume":1},
 	],
+
+	"rat_temporal_prison_activate":[
+            {"file":"sounds/rat/systems/time_lock.ogg","pitch":1,"volume":0.9},
+    ],
+	
+	"rat_temporal_prison_loop":[
+            {"file":"sounds/rat/systems/time_lock_loop.ogg","pitch":1,"volume":0.4},
+    ],
 
 	"rat_genesis_system_sound":[
             {"file":"sounds/sfx_systems/mote_attractor_targeted_ship_01.ogg","pitch":0.8,"volume":0.6},
@@ -106,6 +132,16 @@
 	"abyss_humpback":[
 		{"file":"sounds/sfx_wpn_energy/antimatter_blaster_fire_01.ogg","pitch":0.8,"volume":0.75},
 	],
+	
+	"rat_azazels_blade":[
+		{"file":"sounds/sfx_wpn_energy/antimatter_blaster_fire_01.ogg","pitch":0.7,"volume":0.50},
+	],
+	
+	"rat_apollyons_end":
+    [
+            {"file":"sounds/sfx_wpn_energy/kinetic_blaster_01.ogg","pitch":0.6,"volume":0.4},
+            {"file":"sounds/sfx_wpn_energy/kinetic_blaster_02.ogg","pitch":0.6,"volume":0.4},
+    ],
 	
 	"abyss_lusca":[
 		{"file":"sounds/sfx_wpn_energy/antimatter_blaster_fire_01.ogg","pitch":0.9,"volume":0.45},
@@ -134,6 +170,24 @@
 		{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":1.0,"volume":0.8},
 	],
 	
+	"rat_abyss_genesis_large1":[
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_01.ogg","pitch":0.7,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_01.ogg","pitch":0.8,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_01.ogg","pitch":0.7,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_02.ogg","pitch":0.9,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_02.ogg","pitch":0.8,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_02.ogg","pitch":0.7,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":0.7,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":0.9,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/rift_explosion_03.ogg","pitch":0.7,"volume":0.8},
+	],
+	
+	"rat_abyss_genesis_large1_explosion":[
+		
+		{"file":"sounds/sfx_impacts/explosion_secondary_02.ogg","pitch":0.9,"volume":1},
+	],
+	
+	
 	 "seadragon_payload_fire":
     [
             {"file":"sounds/sfx_wpn_missiles/dragonfire_dem_payload_01.ogg","pitch":1.0,"volume":0.3},
@@ -150,4 +204,14 @@
             {"file":"sounds/sfx_wpn_missiles/harpoon_fire_01.ogg","pitch":1.1,"volume":0.5},
     ],
 
+
+	"exoship_warp_chargeup":
+    [
+            {"file":"sounds/rat/campaign/exoship_warp_chargeup.ogg","pitch":1,"volume":2},
+    ],
+
+	"exoship_warp":
+    [
+            {"file":"sounds/rat/campaign/exoship_warp.ogg","pitch":1,"volume":3},
+    ],
 }

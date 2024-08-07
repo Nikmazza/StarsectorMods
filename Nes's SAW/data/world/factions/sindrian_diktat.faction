@@ -2,14 +2,12 @@
 	# multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
         "hulls":{
-			"nes_carnelian":0.2, #rare
 			"nes_hammerfall":0.4, #somewhat rare
         },
     },	
 	
 	"knownShips":{
         "hulls":[
-            "nes_carnelian",
 			"nes_hammerfall",			
         ],
     },

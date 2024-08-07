@@ -24,6 +24,7 @@ public class Settings {
     public static final String OFFICER_IS_SUSPENDED_KEY = "$officerextension_IsSuspended";
     public static final String SUSPENDED_OFFICERS_NODE = "node_id_suspended_officers";
     public static final String OFFICER_TAGS_DATA_KEY = "$officerextension_OfficerTags";
+    public static final String SKILL_TAG_UNREMOVABLE = "officerextension_unremovable";
 
     public static void load() {
         try {
@@ -45,4 +46,5 @@ public class Settings {
             Global.getLogger(Settings.class).error("Failure to load \"Officer Extension/officerextension_settings.json\"", e);
         }
     }
+
 }

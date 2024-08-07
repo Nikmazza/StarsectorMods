@@ -25,8 +25,7 @@ import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.util.FaderUtil;
 import com.fs.starfarer.api.util.Misc;
 
-public class ElectrostaticProjectorEffect extends BaseCombatLayeredRenderingPlugin implements OnFireEffectPlugin,
-																				   OnHitEffectPlugin {
+public class ElectrostaticProjectorEffect extends BaseCombatLayeredRenderingPlugin implements OnFireEffectPlugin, OnHitEffectPlugin {
 	
 	protected DamagingProjectileAPI proj;
 	protected Vector2f projVel;

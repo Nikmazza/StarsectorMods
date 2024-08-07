@@ -1,60 +1,53 @@
 package assortment_of_things
 
-import ParallelConstruction
+import assortment_of_things.abyss.AbyssCampaignListener
+import assortment_of_things.scripts.ParallelConstruction
 import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.abyss.entities.AbyssalFracture
 import assortment_of_things.abyss.procgen.AbyssGenerator
 import assortment_of_things.abyss.procgen.AbyssProcgen
-import assortment_of_things.abyss.procgen.AbyssalFleetInflationListener
+import assortment_of_things.abyss.rework.AbyssGeneratorV2
 import assortment_of_things.abyss.scripts.*
-import assortment_of_things.abyss.skills.scripts.AbyssalBloodstreamCampaignScript
+import assortment_of_things.abyss.terrain.AbyssTerrainInHyperspacePlugin
 import assortment_of_things.artifacts.AddArtifactHullmod
 import assortment_of_things.artifacts.ArtifactUtils
 import assortment_of_things.campaign.procgen.LootModifier
+import assortment_of_things.campaign.scripts.AICoreDropReplacerScript
 import assortment_of_things.campaign.scripts.ApplyRATControllerToPlayerFleet
 import assortment_of_things.campaign.ui.*
 import assortment_of_things.exotech.ExoUtils
-import assortment_of_things.exotech.ExoshipGenerator
-import assortment_of_things.exotech.items.ExoProcessor
 import assortment_of_things.exotech.scripts.ChangeExoIntelState
 import assortment_of_things.frontiers.FrontiersUtils
 import assortment_of_things.misc.RATSettings
-import assortment_of_things.misc.baseOrModSpec
 import assortment_of_things.relics.RelicsGenerator
 import assortment_of_things.scripts.AtMarketListener
 import assortment_of_things.snippets.DropgroupTestSnippet
 import assortment_of_things.snippets.ProcgenDebugSnippet
-import assortment_of_things.strings.RATItems
 import com.fs.starfarer.api.BaseModPlugin
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.JumpPointAPI
-import com.fs.starfarer.api.characters.FullName
-import com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl
-import com.fs.starfarer.api.impl.campaign.ids.Commodities
-import com.fs.starfarer.api.impl.campaign.ids.Factions
-import com.fs.starfarer.api.impl.campaign.ids.HullMods
-import com.fs.starfarer.api.impl.campaign.ids.MemFlags
-import com.fs.starfarer.api.impl.campaign.ids.Tags
-import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator
-import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.EntityLocation
-import com.fs.starfarer.api.ui.Fonts
 import com.fs.starfarer.api.util.Misc
 import com.fs.starfarer.campaign.CampaignEngine
-import com.fs.starfarer.campaign.JumpPoint
 import lunalib.lunaDebug.LunaDebug
 import lunalib.lunaRefit.LunaRefitManager
 import lunalib.lunaSettings.LunaSettings
 import org.dark.shaders.light.LightData
 import org.dark.shaders.util.ShaderLib
 import org.dark.shaders.util.TextureData
-import org.lazywizard.lazylib.MathUtils
-import org.lwjgl.opengl.GL11
-import org.lwjgl.opengl.GL20
-import org.lwjgl.util.vector.Vector2f
-import java.lang.Exception
-import java.lang.NullPointerException
+import assortment_of_things.campaign.scripts.AICoreReplacerScript
+import assortment_of_things.campaign.scripts.render.RATCampaignRenderer
+import assortment_of_things.exotech.ExotechGenerator
+import assortment_of_things.exotech.terrain.ExotechHyperNebula
+import assortment_of_things.misc.ReflectionUtils
+import assortment_of_things.misc.getChildrenCopy
+import assortment_of_things.misc.getParent
+import com.fs.starfarer.api.EveryFrameScript
+import com.fs.starfarer.api.ui.UIPanelAPI
+import com.fs.starfarer.campaign.CampaignState
+import com.fs.state.AppDriver
+import com.thoughtworks.xstream.XStream
+import lunalib.lunaUtil.campaign.LunaCampaignRenderer
 import java.util.*
-import javax.swing.text.html.HTML.Tag
 
 
 class RATModPlugin : BaseModPlugin() {
@@ -62,11 +55,14 @@ class RATModPlugin : BaseModPlugin() {
     companion object {
         var added = false
 
+        var gameStartedForTitleScene = false
 
     }
 
     override fun onApplicationLoad() {
         super.onApplicationLoad()
+
+        gameStartedForTitleScene = true
 
        /* Global.getSettings().loadFont("graphics/fonts/monocraft24.fnt")
         Fonts.DEFAULT_SMALL = "graphics/fonts/monocraft24.fnt"*/
@@ -89,6 +85,7 @@ class RATModPlugin : BaseModPlugin() {
         LunaRefitManager.addRefitButton(CrewConversionChronosRefitButton())
         LunaRefitManager.addRefitButton(CrewConversionCosmosRefitButton())
         LunaRefitManager.addRefitButton(CrewConversionSeraphRefitButton())
+        LunaRefitManager.addRefitButton(CrewConversionPrimordialRefitButton())
         LunaRefitManager.addRefitButton(CrewConversionRemoveIntegratedRefitButton())
 
         LunaRefitManager.addRefitButton(DeltaAIRefitButton())
@@ -117,23 +114,30 @@ class RATModPlugin : BaseModPlugin() {
 
 
 
+    override fun configureXStream(x: XStream?) {
+        super.configureXStream(x)
+    }
+
     override fun onGameLoad(newGame: Boolean) {
         super.onGameLoad(newGame)
 
+        //TestFactor(1)
+
+        /*if (!LunaCampaignRenderer.hasRendererOfClass(RATCampaignRenderer::class.java)) {
+            LunaCampaignRenderer.addRenderer(RATCampaignRenderer())
+        }*/
+
+        Global.getSector().addTransientScript(ChangeMainMenuColorScript())
+        Global.getSector().addTransientScript(AICoreReplacerScript())
+        Global.getSector().addTransientListener(AICoreDropReplacerScript())
         Global.getSector().addTransientScript(ApplyRATControllerToPlayerFleet())
 
         initFrontiers()
 
-        //Fixes a dumb crash in 0.97 for non-new saves
-        for (jumppoint in Global.getSector().hyperspace.jumpPoints) {
-            if (jumppoint.hasTag("rat_abyss_entrance") && jumppoint is JumpPointAPI && jumppoint.destinations.isEmpty()) {
-                var system = AbyssUtils.getAbyssData().rootSystem
 
-                var fracture = system!!.customEntities.find { it.customPlugin is AbyssalFracture }
-
-                jumppoint.addDestination(JumpPointAPI.JumpDestination(fracture, "Failsafe"))
-            }
-        }
+       /* if (!Global.getSector().characterData.abilities.contains("rat_exoship_management")) {
+            Global.getSector().characterData.addAbility("rat_exoship_management")
+        }*/
 
         //Global.getSector().intelManager.addIntel(DoctrineReportAbyssal())
 
@@ -161,35 +165,34 @@ class RATModPlugin : BaseModPlugin() {
 
       //  Global.getSector().playerFleet.fleetData.officersCopy.random().person.stats.setSkillLevel("rat_auto_engineer", 1f)*/
 
-
+        Global.getSector().addTransientScript(DisableTransverseScript())
         Global.getSector().addTransientScript(AbyssAmbientSoundPlayer())
         Global.getSector().addTransientListener(AbyssDoctrineListener(false))
-        Global.getSector().listenerManager.addListener(AbyssalFleetInflationListener(), true)
+        //Global.getSector().listenerManager.addListener(AbyssalFleetInflationListener(), true)
 
         generateAbyss()
 
         if (RATSettings.relicsEnabled!! && Global.getSector().memoryWithoutUpdate.get("\$rat_relics_generated") == null) {
             var generator = RelicsGenerator()
-            generator.generateStations()
-            generator.generateConditions()
+
+            if (RATSettings.relicsEnabledStations!!) {
+                generator.generateStations()
+            }
+            if (RATSettings.relicsEnabledConditions!!) {
+                generator.generateConditions()
+            }
         }
 
-        Global.getSector().addTransientScript(ChangeExoIntelState())
+        //Global.getSector().addTransientScript(ChangeExoIntelState())
         generateExo()
 
-        var bloodstreamScript = Global.getSector().scripts.find { it::class.java == AbyssalBloodstreamCampaignScript::class.java } as AbyssalBloodstreamCampaignScript?
-        var skill = Global.getSettings().getSkillSpec("rat_abyssal_bloodstream")
-        if (bloodstreamScript == null || !bloodstreamScript.shownFirstDialog)  {
-            skill!!.name = "Abyssal Bloodstream"
-        }
-        else {
-            skill!!.name = "Abyssal Requiem"
-        }
 
-        Global.getSector().addTransientScript(ResetBackgroundScript())
+
+      //  Global.getSector().addTransientScript(ResetBackgroundScript())
 
         Global.getSector().addTransientScript(ForceNegAbyssalRep())
         Global.getSector().addTransientListener(HullmodRemoverListener())
+        Global.getSector().addTransientListener(AbyssCampaignListener())
 
         Global.getSector().addTransientScript(AddArtifactHullmod())
 
@@ -232,6 +235,8 @@ class RATModPlugin : BaseModPlugin() {
 
                 AbyssGenerator().beginGeneration()
             }
+
+          //AbyssGeneratorV2.generate()
         }
     }
 
@@ -242,7 +247,7 @@ class RATModPlugin : BaseModPlugin() {
 
             var data = ExoUtils.getExoData()
 
-            var person = Global.getSector().getFaction("rat_exotech").createRandomPerson(FullName.Gender.FEMALE)
+           /* var person = Global.getSector().getFaction("rat_exotech").createRandomPerson(FullName.Gender.FEMALE)
             person.portraitSprite = "graphics/portraits/rat_exo_comm.png"
 
            // person.name = FullName("Janssen", "", FullName.Gender.FEMALE)
@@ -259,21 +264,23 @@ class RATModPlugin : BaseModPlugin() {
                 data.exoships.add(exoship)
             }
 
-            generateBrokenExoship()
+            generateBrokenExoship()*/
+
+            ExotechGenerator.setup()
 
             Global.getSector().memoryWithoutUpdate.set("\$rat_exo_generated", true)
         }
     }
 
-    fun generateBrokenExoship() {
+   /* fun generateBrokenExoship() {
         var location = findBrokenLocation()
         var system = location.orbit.focus.starSystem
 
         var exoshipEntity = system.addCustomEntity("exoship_${Misc.genUID()}", "Exoship Remains", "rat_exoship_broken", Factions.NEUTRAL)
         exoshipEntity.orbit = location.orbit
-    }
+    }*/
 
-    fun findBrokenLocation() : EntityLocation {
+   /* fun findBrokenLocation() : EntityLocation {
         var systems = Global.getSector().starSystems.filter { it.planets.filter { !it.isStar }.isNotEmpty() && it.hasBlackHole() && (it.hasTag(Tags.THEME_RUINS) || it.hasTag(Tags.THEME_MISC)) }
         if (systems.isEmpty()) {
             systems = Global.getSector().starSystems.filter { it.planets.filter { !it.isStar }.isNotEmpty() && (it.hasTag(Tags.THEME_RUINS) || it.hasTag(Tags.THEME_MISC)) }
@@ -291,7 +298,7 @@ class RATModPlugin : BaseModPlugin() {
         }
 
         return location
-    }
+    }*/
 
     fun initFrontiers() {
 
@@ -346,7 +353,19 @@ class RATModPlugin : BaseModPlugin() {
                 abyssPlugin.save()
             }
         }
+        var hyperTerrain = Global.getSector().hyperspace.terrainCopy.find { it.plugin is AbyssTerrainInHyperspacePlugin }
+        if (hyperTerrain != null) {
+            (hyperTerrain.plugin as AbyssTerrainInHyperspacePlugin ).save()
+        }
+
+        var hyperExoTerrain = Global.getSector().hyperspace.terrainCopy.find { it.plugin is ExotechHyperNebula }
+        if (hyperExoTerrain != null) {
+            (hyperExoTerrain.plugin as ExotechHyperNebula ).save()
+        }
+
     }
+
+
 
     override fun onNewGameAfterTimePass() {
         super.onNewGameAfterTimePass()

@@ -23,12 +23,8 @@ public class HellfireOnFire implements BeamEffectPlugin {
 		if (beam.getBrightness() >= 0f) {
 			Vector2f origin = beam.getFrom();
 			float beamAngle = Misc.getAngleInDegrees(origin, beam.getTo());
-			Vector2f shipVector = beam.getSource().getVelocity();
-			float shipAngle = Misc.getAngleInDegrees(shipVector);
-			float angleDiff = shipAngle - beamAngle;
-			if (angleDiff < 0) angleDiff += 360f;
-			double magnitude = Math.sqrt((shipVector.getX() * shipVector.getX()) + (shipVector.getY() * shipVector.getY()));
-			float shipSpeed = (float) (magnitude * Math.cos((double) angleDiff));
+			Vector2f shipVelocity = beam.getSource().getVelocity();
+			float shipSpeed = (float) Math.sqrt(shipVelocity.lengthSquared());
 			engine.addSmoothParticle(origin, new Vector2f(), 120f, 1.0f, 1.2f, pc);
 			ShapedExplosionUtil.spawnShapedExplosion(origin, beamAngle, shipSpeed, pc, false);
 			applied = true; //apply once on firing

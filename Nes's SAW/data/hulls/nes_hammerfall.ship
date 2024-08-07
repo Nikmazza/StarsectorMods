@@ -13,11 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "repair_gantry",
-    "surveying_equipment",
     "NES_ColorSelector_HF"
-  ],
-  "builtInWings": [
-    "nes_borer_wing"
   ],
   "builtInWeapons": {
     "WS0007": "nes_mining_drill"
@@ -77,8 +73,8 @@
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "TURRET",
-      "arc": 230,
-      "angle": -110,
+      "arc": 205,
+      "angle": -120,
       "locations": [-17, -39]
     },
     {
@@ -86,8 +82,8 @@
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "TURRET",
-      "arc": 230,
-      "angle": 110,
+      "arc": 205,
+      "angle": 120,
       "locations": [-17, 39]
     },
     {

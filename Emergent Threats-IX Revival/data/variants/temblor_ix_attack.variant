@@ -1,15 +1,17 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 4,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "temblor_ix",
     "hullMods": [
+        "ix_dawnstar_controller",
+        "advancedoptics",
         "extendedshieldemitter",
-        "ix_laser_collimator",
-        "nav_relay",
         "ix_reactive_combat_shields",
-        "frontemitter"
+        "frontemitter",
+        "ix_dawnstar_neutron",
+        "ix_dawnstar_neutron_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -18,15 +20,17 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 001": "twin_tactical_laser_ix",
-                "WS 002": "taclaser"
-            }
+            "weapons": {"WS 001": "dawnstar_lcpb_ix"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS DIF": "diffraction_laser_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "plasma_dart_ix"}
         }
     ],
     "wings": []

@@ -1,13 +1,12 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 5,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "temblor_ix",
     "hullMods": [
         "magazines",
         "extendedshieldemitter",
-        "targetingunit",
         "ix_reactive_combat_shields",
         "frontemitter"
     ],
@@ -28,7 +27,7 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 001": "lightbringer_ciws_ix"}
+            "weapons": {"WS 001": "es_projector_ix"}
         }
     ],
     "wings": []

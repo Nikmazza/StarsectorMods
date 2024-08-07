@@ -4,11 +4,11 @@
 	"author":"Nes",
 	"version":{
 		"major":1, 
-		"minor":9, 
-		"patch":ggg
+		"minor":13, 
+		"patch":"SSS"
 	},
-	"description":"It's dangerous to go alone, take this.",
-	"gameVersion": "0.97a",
+	"description":"Ships with cosmetic skins. Splendid!",
+	"gameVersion":"0.97a-RC11",
 	"jars":["jars/Nes's SAW.jar"],
 	"dependencies": [
 		{"id": "lw_lazylib", "name": "LazyLib"},

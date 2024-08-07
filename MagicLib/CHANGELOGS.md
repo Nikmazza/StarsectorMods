@@ -1,3 +1,85 @@
+Version 1.4.5
+
+**MagicBounty**
+- May now use "target_importantPersonId" for bounties to use a specific captain (Important Person id) instead of generating one (requested by multiple).
+
+Version 1.4.4
+
+**MagicSubsystems**
+- Fixed crash when a subsystem has the same hotkey that another mod is using.
+- Added a check for empty drone list in `HoveringFormation` and `SpinningCircleFormation` (reported by Genir).
+- Changed result of `SpinningCircleFormation` division to get an angle to a float instead of int (reported by Genir).
+
+**MagicAchievements**
+- Added a TextPanel overload to `completeAchievement`, so completing an achievement will display a message there (requested by Lukas04).
+
+**MagicBounty**
+- Bounty board no longer resets scroll position when a bounty is accepted (requested by SteelSirokos).
+
+**Other**
+- Changed MagicLib license to MIT from CC BY-NC-SA 4.0, basically removing any restrictions.
+
+Version 1.4.3
+
+**MagicSubsystems**
+- Fixed accidental breaking change in MagicSubsystems 1.4.2. Caused a crash in KoL. Reported by persocom01.
+
+Version 1.4.2
+
+**MagicPaintjobs**
+- Fixed all possible paintjobs being shown as applied on the hullmod (reported by NITEGHXST).
+
+**MagicBounty**
+- Fixed bounty board job cell all grey when portrait is invalid (reported by mrmagolor, others).
+
+**Misc**
+- Moved `PIDController` from `org.magiclib.subsystems.drones` to `org.magiclib.util` (non-breaking change, old one is marked deprecated).
+
+Version 1.4.1
+
+**MagicSubsystems**
+- UI is no longer shown if all subsystems were removed during combat (President Matt Damon).
+- Distortion no longer affects subsystem text (President Matt Damon)
+- Info text now scales based on screen size and fades in/out (President Matt Damon).
+
+**MagicPaintjobs**
+- Paintjobs popup is four wide instead of two (reported by NITEGHXST).
+
+**MagicAchievements**
+- Memory is now saved during combat as well, which fixes the Revisionist achievement (reported by Fuzzatron)
+
+Version 1.4.0
+
+**New: MagicSubsystems**
+- tldr; Combat Activators + CMUtils.
+- Add additional "ship systems" to ships, each triggered with a hotkey.
+- Add drones with formations and charges.
+- All displayed in a vanilla-like UI.
+- Contributed by **President Matt Damon**. UI code contributed by **tomatopaste**.
+- See examples in `org.magiclib.subsystems.examples`.
+- See MagicLib README.md for migration guide from Combat Activators.
+
+Version 1.3.11
+
+**MagicBounty**
+- Fixed a crash when a bounty has no flagship (reported by Dostya).
+
+**MagicPaintjobs**
+- Fixed paintjobs duplicating in the selector every save load (reported by Galaga Galaxian).
+
+Version 1.3.10
+
+**MagicBounty**
+- Fixes Bounty Board to respect `mb_distance` flags (contributed by President Matt Damon).
+
+**MagicAchievements**
+- Added `completeAchievement` methods to `MagicAchievementManager` (before, you needed an instance of `MagicAchievement` to complete one).
+
+**MagicPaintjobs**
+- Fixed automatically unlocked paintjobs not being automatically unlocked (reported by Galaga Galaxian).
+- No longer loads paintjobs for ships that don't exist (e.g. from a mod that's not installed).
+- Cleaned up some logging that reported an error on first run and added pj ids to pjs that fail to load.
+
 Version 1.3.9
 
 - Quick 0.97a update (mod_info.json change)
@@ -10,7 +92,7 @@ Version 1.3.8
 - Added `MagicCampaign.createDerelict` overload that lets you mark a derelict as unrecoverable.
 
 **MagicUI**
-- Fade interpolation fix by Starficz.
+- Fade interpolation fix (contributed by Starficz).
 
 **MagicAchievements**
 - Made it clearer when a crash is from using devmode.

@@ -14,7 +14,8 @@
 		},
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 002":"vice_fragbomb_fighter",
+		 			#"WS 002":"vice_fragbomb_fighter",
+					"WS 002":"vice_spatial_charge",
 		 		   },
 		},
 	],

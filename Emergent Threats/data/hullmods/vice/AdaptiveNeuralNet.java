@@ -25,7 +25,7 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 		float bonus = CR_BONUS;
 		String coreId = null;
 		
-		if (stats.getFleetMember() != null)	coreId = stats.getFleetMember().getCaptain().getAICoreId();
+		if (stats.getFleetMember() != null) coreId = stats.getFleetMember().getCaptain().getAICoreId();
 		
 		if ((Commodities.GAMMA_CORE).equals(coreId)) bonus = CR_BONUS + AI_BONUS * 1f;
 		else if ((Commodities.BETA_CORE).equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
@@ -53,6 +53,8 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 		else if (("rat_exo_processor").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 		
 		else if (("volantian_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
+		
+		else if (("ix_panopticon_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		
 		if (util.isModuleCheck(stats)) bonus = CR_BONUS + AI_BONUS * 0f;
 		

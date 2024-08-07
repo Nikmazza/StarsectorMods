@@ -2,6 +2,7 @@ package data.scripts.ix.industries;
 
 import java.util.List;
 import java.util.Random;
+import lunalib.lunaSettings.LunaSettings;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
@@ -43,13 +44,14 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 public class IXPanopticonCore extends BaseIndustry implements RouteFleetSpawner, FleetEventListener {
 	
 	private static float DEFAULT_PATHER_INTEREST = 10f;
-	private static float DEFENSE_BONUS_CORE = 2f;
+	private static float DEFENSE_BONUS_CORE = 1f;
 	private static int STABILITY_BONUS = 5; //display only
 	private static String IX_CORE = "ix_core";
 	private static String IX_FACTION = "ix_battlegroup";
 	private static String PANOPTICON = "ix_panopticon";
 	private static String NODE = "ix_panopticon_node";
 	private static String MONITORED = "ix_monitored";
+	private static String CARTEL = "ix_cartel_activity";
 	private static String FLEET_COMMAND = Industries.HIGHCOMMAND;
 	private static String FLEET_COMMAND_STATION = "ix_zorya_vertex";
 	private static String HONOR_GUARD_SUBMARKET = "IX_honor_guard_market";
@@ -113,11 +115,9 @@ public class IXPanopticonCore extends BaseIndustry implements RouteFleetSpawner,
 	@Override
 	public void advance(float amount) {
 		super.advance(amount);
-		
 		if (Global.getSector().getEconomy().isSimMode()) return;
-
 		if (!isFunctional()) return;
-		
+
 		float days = Global.getSector().getClock().convertToDays(amount);
 		
 		float spawnRate = 1f;
@@ -127,7 +127,7 @@ public class IXPanopticonCore extends BaseIndustry implements RouteFleetSpawner,
 		
 		float extraTime = 0f;
 		if (returningPatrolValue > 0) {
-			// apply "returned patrols" to spawn rate, at a maximum rate of 1 interval per day
+			//apply "returned patrols" to spawn rate, at a maximum rate of 1 interval per day
 			float interval = tracker.getIntervalDuration();
 			extraTime = interval * days;
 			returningPatrolValue -= days;
@@ -342,10 +342,12 @@ public class IXPanopticonCore extends BaseIndustry implements RouteFleetSpawner,
 	
 	private void applySurveillance() {
 		List<MarketAPI> markets = Global.getSector().getEconomy().getMarketsCopy();
+		boolean isMonitorEnabled = LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_monitor_enabled");
 		for (MarketAPI m : markets) {
-			if (m.getFactionId().equals(IX_FACTION)) {
+			if (m.getFactionId().equals(IX_FACTION) && (!m.hasCondition(CARTEL))) {
 				if (!m.hasIndustry(NODE) && !m.hasIndustry(PANOPTICON)) m.addIndustry(NODE);
-				m.removeSubmarket(Submarkets.SUBMARKET_BLACK);
+				if (isMonitorEnabled) m.removeSubmarket(Submarkets.SUBMARKET_BLACK);
+				else if (!m.hasSubmarket(Submarkets.SUBMARKET_BLACK)) m.addSubmarket(Submarkets.SUBMARKET_BLACK);
 				m.addCondition(MONITORED);
 			}
 		}
@@ -355,7 +357,7 @@ public class IXPanopticonCore extends BaseIndustry implements RouteFleetSpawner,
 		List<MarketAPI> markets = Global.getSector().getEconomy().getMarketsCopy();
 		for (MarketAPI m : markets) {
 			if (m.getFactionId().equals("ix_battlegroup")) {
-				m.addSubmarket(Submarkets.SUBMARKET_BLACK);
+				if (!m.hasSubmarket(Submarkets.SUBMARKET_BLACK)) m.addSubmarket(Submarkets.SUBMARKET_BLACK);
 				m.removeCondition(MONITORED);
 			}
 		}

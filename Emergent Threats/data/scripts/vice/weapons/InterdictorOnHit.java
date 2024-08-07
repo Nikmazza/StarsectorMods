@@ -10,15 +10,21 @@ import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
+import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI;
+import com.fs.starfarer.api.util.IntervalUtil;
+
+import data.scripts.vice.DistanceUtil;
 
 public class InterdictorOnHit implements BeamEffectPlugin {
 
 	private boolean applied = false;
+	private IntervalUtil tracker = new IntervalUtil(1.2f, 1.2f);
 	
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
+		tracker.advance(amount);
 		if (applied) return;
 		CombatEntityAPI target = beam.getDamageTarget();
 		if (target == null) return;

@@ -1,6 +1,6 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 0,
     "fluxVents": 50,
     "hullId": "vice_invictus_lg",
     "hullMods": [

@@ -1,17 +1,20 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 0,
-    "fluxVents": 47,
+    "fluxCapacitors": 10,
+    "fluxVents": 50,
     "hullId": "odyssey_ix",
     "hullMods": [
         "ix_antecedent",
         "ix_reactive_combat_shields",
         "ix_terminus_relay",
         "ix_smod_handler",
-        "advancedoptics",
+        "ix_dawnstar_controller",
+        "fluxdistributor",
         "targetingunit",
         "frontemitter",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "ix_dawnstar_neutron",
+        "ix_dawnstar_neutron_handler"
     ],
     "modules": [{"SM 1": "odyssey_drone_bay_ix"}],
     "permaMods": [
@@ -30,7 +33,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "stormlight_graser_ix"}
+            "weapons": {"WS 001": "conversion_lance_ix"}
         },
         {
             "autofire": true,
@@ -41,16 +44,26 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "orthrus_l_ix",
-                "WS 003": "orthrus_l_ix"
+                "WS 002": "bereaver_dem_launcher_ix",
+                "WS 003": "bereaver_dem_launcher_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "es_projector_ix",
-                "WS 005": "muon_autolance_ix"
+                "WS 004": "dawnstar_lcpb_ix",
+                "WS 005": "dawnstar_lcpb_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "plasma_dart_ix",
+                "WS 012": "plasma_dart_ix",
+                "WS 013": "plasma_dart_ix",
+                "WS 014": "plasma_dart_ix"
             }
         },
         {
@@ -58,12 +71,10 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 006": "lightbringer_ciws_ix",
-                "WS 007": "muon_streamer_ix",
-                "WS 008": "muon_streamer_ix",
-                "WS 009": "muon_streamer_ix",
-                "WS 010": "muon_streamer_ix",
-                "WS 011": "morningstar_ciws_ix",
-                "WS 014": "morningstar_ciws_ix",
+                "WS 007": "daythorn_mapb_ix",
+                "WS 008": "daythorn_mapb_ix",
+                "WS 009": "daythorn_mapb_ix",
+                "WS 010": "daythorn_mapb_ix",
                 "WS 015": "morningstar_ciws_ix",
                 "WS 016": "morningstar_ciws_ix"
             }

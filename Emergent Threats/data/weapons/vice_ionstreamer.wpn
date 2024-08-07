@@ -21,7 +21,7 @@
 	#"textureType":["graphics/fx/beam_chunky_fringe.png","graphics/fx/beam_chunky_core.png"],
 	"textureScrollSpeed":72.0,
 	"pixelsPerTexel":5.0,
-	"pierceSet":[PROJECTILE_FF,PROJECTILE_NO_FF,PROJECTILE_FIGHTER,MISSILE_FF,MISSILE_NO_FF],
+	"pierceSet":[PROJECTILE_FF,PROJECTILE_NO_FF,PROJECTILE_FIGHTER],
 	"fireSoundOne":"vice_ionstreamer_fire",
 	#"fireSoundTwo":"laser_loop",
 }

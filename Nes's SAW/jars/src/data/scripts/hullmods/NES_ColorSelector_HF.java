@@ -42,7 +42,6 @@ public class NES_ColorSelector_HF extends BaseHullMod {
     private final String decocounterID = "NES_DECO_COUNTER";
 
     //faction specific paintjob selector for Hammerfall
-    //this is dumb and silly, too bad!
     private static int PAINTJOB_HF;
 
     @Override

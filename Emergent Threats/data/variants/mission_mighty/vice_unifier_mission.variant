@@ -1,7 +1,7 @@
 {
     "displayName": "Navy",
     "fluxCapacitors": 0,
-    "fluxVents": 22,
+    "fluxVents": 18,
     "hullId": "vice_unifier",
     "hullMods": [
         "malfunctioning_comms",
@@ -20,8 +20,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "breach",
-                "WS 002": "breach",
+                "WS 001": "vice_fragbomb",
+                "WS 002": "vice_fragbomb",
                 "WS 007": "vice_lrburstpd",
                 "WS 008": "vice_lrburstpd"
             }

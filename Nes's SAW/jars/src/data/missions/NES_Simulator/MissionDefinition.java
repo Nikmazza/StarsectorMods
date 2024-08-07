@@ -34,23 +34,49 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters
-		api.addToFleet(FleetSide.PLAYER, "nes_fluorspar_standard", FleetMemberType.SHIP, "Fluorspar", false);
-		api.addToFleet(FleetSide.PLAYER, "nes_hamter_standard", FleetMemberType.SHIP, "Hampter", false);
-		api.addToFleet(FleetSide.PLAYER, "nes_hamter_xiv", FleetMemberType.SHIP, "Hampter XIV", false);
-		api.addToFleet(FleetSide.PLAYER, "nes_hermitaur_standard", FleetMemberType.SHIP, "Hermitaur", false);
-		api.addToFleet(FleetSide.PLAYER, "nes_hammerfall_standard", FleetMemberType.SHIP, "Hammerfall", false);
-		api.addToFleet(FleetSide.PLAYER, "nes_carnelian_standard", FleetMemberType.SHIP, "Carnelian", false);
-		api.addToFleet(FleetSide.PLAYER, "nes_voltaire_standard", FleetMemberType.SHIP, "Volt", false);
+		api.addToFleet(FleetSide.PLAYER, "nes_fluorspar_blaster", FleetMemberType.SHIP, true);
+		api.addToFleet(FleetSide.PLAYER, "nes_hamter_assault", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_hamter_xiv", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_hermitaur_standard", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_hermitaur_path", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_hammerfall_standard", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_carnelian_standard", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_voltaire_standard", FleetMemberType.SHIP, false);
 		
 		// Set up the enemy fleet.
-		api.addToFleet(FleetSide.ENEMY, "buffalo_d_Standard", FleetMemberType.SHIP, "Rugged Buffalo", false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo_hegemony_Standard", FleetMemberType.SHIP, "Mighty Buffalo", false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo_luddic_church_Standard", FleetMemberType.SHIP, "Pious Buffalo", false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo_pirates_Standard", FleetMemberType.SHIP, "Devious Buffalo", false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo_Standard", FleetMemberType.SHIP, "Classic Buffalo", false);
-		api.addToFleet(FleetSide.ENEMY, "buffalo_tritachyon_Standard", FleetMemberType.SHIP, "Smug Buffalo", false);
+		//thirty buffalos :>
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
 		
-		api.defeatOnShipLoss("Diamond is Unbreakable");
+		api.defeatOnShipLoss("King Crimson");
 		
 		// Set up the map.
 		float width = 12000f;

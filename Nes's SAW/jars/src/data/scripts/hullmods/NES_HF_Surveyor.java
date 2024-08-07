@@ -1,18 +1,23 @@
 package data.scripts.hullmods;
 
 import com.fs.starfarer.api.combat.ShipAPI;
+import java.awt.*;
 
 public class NES_HF_Surveyor extends NES_HF_color_base_hullmod {
-/*
+
+    private Color color = new Color(100,165,255,255);
+    private Color color2 = new Color(100,165,255,10);
+
     @Override
     public void advanceInCombat(ShipAPI ship, float amount) {
-        if (ship.getShield() != null) {
-            ship.getShield().setInnerColor(new Color(255, 190, 115, 75));
+        if (!ship.isAlive()) return;
+
+        //check for safety ovverides to prevent incorrect color blending
+        if (!ship.getVariant().getHullMods().contains("safetyoverrides")) {
+            ship.getEngineController().fadeToOtherColor(this, color, color2, 1, 1f);
         }
-            ship.setVentFringeColor(new Color(240, 150, 50, 255));
-            ship.setVentCoreColor(new Color(255, 80, 10, 125));
     }
-*/
+
     @Override
     public int getDisplaySortOrder() {
         return 2000;

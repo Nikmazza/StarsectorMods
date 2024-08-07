@@ -17,21 +17,14 @@ import java.util.Set;
 public class NES_CrystalHull extends BaseHullMod {
 
     public static final float VENT_RATE_BONUS = 25f;
-    public static final float CORONA_EFFECT_REDUCTION = 0.05f;
-    public static final float ENERGY_DAMAGE_REDUCTION = 0.95f;
-
     private static final float MAX_SPARKLE_CHANCE_PER_SECOND_PER_CELL = 0.75f; //0.75f default
     private static final Color SPARK_COLOR = new Color(245, 245, 195, 200);
     private static final float SPARK_DURATION = 0.2f; //0.2f default
     private static final float SPARK_RADIUS = 4f; //4f default
-
     private static final float RANGE_THRESHOLD = 700f; //range cutoff limit
     private static final float RANGE_MULT = 0.25f; //range reduction multiplier above limit
-
-
     private static final Set<String> BLOCKED_HULLMODS = new HashSet<>(4);
     static {
-        BLOCKED_HULLMODS.add("solar_shielding");
         BLOCKED_HULLMODS.add("safetyoverrides");
     }
 
@@ -63,22 +56,15 @@ public class NES_CrystalHull extends BaseHullMod {
 
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getVentRateMult().modifyPercent(id, VENT_RATE_BONUS);
-        stats.getDynamic().getStat(Stats.CORONA_EFFECT_MULT).modifyMult(id, CORONA_EFFECT_REDUCTION);
-
-        stats.getEnergyDamageTakenMult().modifyMult(id, ENERGY_DAMAGE_REDUCTION);
-        stats.getEnergyShieldDamageTakenMult().modifyMult(id, ENERGY_DAMAGE_REDUCTION);
 
         stats.getWeaponRangeThreshold().modifyFlat(id, RANGE_THRESHOLD);
         stats.getWeaponRangeMultPastThreshold().modifyMult(id, RANGE_MULT);
     }
 
     public String getDescriptionParam(int index, HullSize hullSize) {
-        if (index == 0) return "" + (int) VENT_RATE_BONUS + "%";
-        if (index == 1) return "" + (int) Math.round((1f - CORONA_EFFECT_REDUCTION) * 100f) + "%";
-        if (index == 2) return "" + (int) Math.round((1f - ENERGY_DAMAGE_REDUCTION) * 100f) + "%";
-        if (index == 3) return Misc.getRoundedValue(RANGE_THRESHOLD); //range cutoff
-        if (index == 4) return Global.getSettings().getHullModSpec("solar_shielding").getDisplayName();
-        if (index == 5) return Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName();
+        if (index == 0) return Misc.getRoundedValue(RANGE_THRESHOLD); //range cutoff
+        if (index == 1) return "" + (int) VENT_RATE_BONUS + "%";
+        if (index == 2) return Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName();
         return null;
     }
 

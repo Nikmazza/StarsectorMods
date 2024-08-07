@@ -13,7 +13,7 @@ Maunder (P),supportships_maunderp,Frigate,Pirate,fastmissileracks,6,1800,350,350
 Maunder (S),supportships_maunders,Transport,Midline,flarelauncher,3,1000,200,2500,1,100,25,,100,90,70,60,90,150,FRONT,,240,0.4,0.8,,,10,150,30,30,1,30,10,100000,8,20,180,0.25,2,2,,,,,,,"CIVILIAN, LINER",rare_bp,,0.5,2,2,,500
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Apsis,supportships_apsis,Destroyer,High Tech,flarelauncher_active,10,4500,350,6000,1,350,80,1,100,90,75,35,80,500,FRONT,,360,0.3,0.6,,,50,100,125,60,2,30,9,43000,5,12,360,0.25,11,11,,,,,,,,"hightech_bp, merc",,0.7,2,3,,500
-Gemini (LC),supportships_geminilc,Combat Freighter,Low Tech,reservewing,9,4500,250,2700,1,170,75,2,50,35,15,25,20,400,OMNI,,150,0.4,0.8,,,55,120,200,70,2,35,9,36000,4,8,360,0.25,9,9,,,,,,,"CIVILIAN, CARRIER",LC_bp,,0.6,2,3,,500
+Gemini (LC),supportships_geminilc,Combat Freighter,Midline,reservewing,9,4500,250,2700,1,170,85,2,60,35,15,25,20,400,OMNI,,150,0.4,0.8,,,55,120,200,70,2,35,9,36000,4,8,360,0.25,9,9,,,,,,,"CIVILIAN, CARRIER",LC_bp,,0.6,2,3,,500
 Lammergeier,supportships_lammergeier,Destroyer,Midline,supportships_combatvent,11,6000,550,8000,1,350,105,,90,70,50,30,60,500,FRONT,,150,0.4,1,,,50,100,125,60,2,30,9,43000,5,12,360,0.25,12,12,,,,,,,,"midline_bp, merc",,0.5,2,3,,500
 Lammergeier (LG),supportships_lammergeierlg,Destroyer,Lion's Guard,supportships_combatvent,11,6000,550,8000,1,350,99,,90,70,50,30,60,500,FRONT,,150,0.4,1,,,50,100,125,60,2,30,9,43000,5,12,360,0.25,12,12,,,,,,,,"LG_bp,no_dealer",,0.5,2,3,,500
 Nebulae,supportships_nebulae,Converted Transport,Midline,supportships_combatvent,7,3000,175,5000,1,160,70,,50,30,20,20,12,450,FRONT,,150,0.5,1,,,35,50,80,80,2,40,8,25000,5,20,360,0.25,7,7,,,,,,,,"base_bp, merc",,0.75,2,3,,500
@@ -21,8 +21,8 @@ Sidebar,supportships_sidebar,Escort Destroyer,High Tech,fortressshield,10,3000,3
 Tercio,supportships_tercio,Destroyer,Low Tech,burndrive,8,5000,1000,2000,1,200,80,,90,70,60,40,50,400,NONE,,0,0,0,,,70,150,100,60,2,30,9,35000,5,12,360,0.25,8,8,,,,,,,SHIP_WITH_MODULES,"lowtech_bp, merc",,0.5,2,2,,500
 Tercio (XIV),supportships_tercio_xiv,Destroyer,XIV Battlegroup,burndrive,8,5000,1000,2000,1,200,80,,90,70,60,40,50,400,NONE,,0,0,0,,,70,150,100,60,2,30,9,35000,5,12,360,0.25,8,8,,,,,,,SHIP_WITH_MODULES,XIV_bp,,0.5,2,2,,500
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Aspirant,supportships_aspirant,Fire Support Cruiser,Low Tech,flarelauncher,12,6000,800,7000,1,400,110,,40,20,10,15,20,1000,FRONT,,180,0.4,0.8,,,125,200,120,100,3,33,7,110000,4,12,480,0.25,14,14,,,,,,,,"lowtech_bp,merc",,0.5,2,3,,500
-Ossifrage,supportships_ossifrage,Cruiser,Midline,reservewing,15,13000,1000,8000,1,650,175,1,50,40,30,30,40,2500,OMNI,,200,0.4,0.8,,,200,300,150,150,4,38,8,150000,5,12,420,0.25,25,25,,,,,,,"CARRIER, COMBAT","midline_bp, merc",,0.9,3,5,,500
+Aspirant,supportships_aspirant,Fire Support Cruiser,Low Tech,flarelauncher,12,6000,1100,7000,1,400,110,,50,20,10,15,20,1000,FRONT,,180,0.4,0.8,,,125,200,120,100,3,33,7,110000,4,12,480,0.25,14,14,,,,,,,,"lowtech_bp,merc",,0.5,2,3,,500
+Ossifrage,supportships_ossifrage,Cruiser,Midline,reservewing,15,13000,1000,8000,1,650,165,1,50,40,30,30,40,2500,OMNI,,200,0.4,0.8,,,200,300,150,150,4,38,8,150000,5,12,420,0.25,25,25,,,,,,,"CARRIER, COMBAT","midline_bp, merc",,0.9,3,5,,500
 Parabola,supportships_parabola,Carrier,High Tech,plasmajets,15,10000,800,8000,1,400,135,3,50,40,30,20,25,2250,OMNI,,150,0.4,0.8,,,200,300,100,120,4,30,9,130000,4,12,420,0.25,22,22,,,,,,,"CARRIER, COMBAT","hightech_bp, merc",,0.7,2,3,,500
 Hospice,supportships_hospice,Hospital Ship,Midline,recalldevice,12,8000,750,3250,0,180,120,3,75,50,40,15,20,1500,OMNI,,170,0.4,0.8,,,150,400,250,150,3,50,8,100000,4,12,480,0.25,14,14,,,,,,,"CIVILIAN,CARRIER","rare_bp,merc,ind",,0.5,2,3,,500
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

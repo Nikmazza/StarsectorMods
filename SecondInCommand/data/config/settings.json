@@ -1,0 +1,23 @@
+ {
+	 
+	 "plugins":{		
+		#"SCSkillPanelReplacerTitle":"second_in_command.scripts.SkillPanelReplacerScriptTitlescreen",
+	},	
+	
+	
+	"ruleCommandPackages":[
+		"second_in_command.interactions.rules",
+	],
+
+	"officerMaxEliteSkills":2,
+	 
+	"graphics":{
+		"sc_ui":{
+			"skillBorderInactive":"graphics/secondInCommand/skillBorderInactive.png",
+			"skillBorderActive":"graphics/secondInCommand/skillBorderActive.png",
+			"no_officer":"graphics/secondInCommand/no_officer.png",
+			"seperator":"graphics/secondInCommand/seperator.png",
+			"arrow":"graphics/secondInCommand/arrow.png",
+		},
+ 	}
+ }

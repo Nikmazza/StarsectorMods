@@ -107,7 +107,7 @@ class ArkasShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
                 AfterImageRenderer.addAfterimage(phantom, color.setAlpha((30 * stateLevel).toInt()), Color(130,4,189, 0), 2f, 0f, Vector2f(phantom.location), false)
             }
 
-            if (state == ShipSystemStatsScript.State.IN && timer <= actualIn) {
+            if (state == ShipSystemStatsScript.State.IN && timer <= actualIn && !Global.getCombatEngine().isPaused) {
                 for (weapon in ship!!.allWeapons) {
                     weapon.setForceNoFireOneFrame(true)
                 }
@@ -119,17 +119,17 @@ class ArkasShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
                 phantom.velocity.set(phantom.velocity.plus(Vector2f(velocity.x * lastFrame / timeMod, velocity.y * lastFrame / timeMod)))
             }
 
-            if (state == ShipSystemStatsScript.State.IN && timer > actualIn) {
+            if (state == ShipSystemStatsScript.State.IN && timer > actualIn && !Global.getCombatEngine().isPaused) {
                 var distance = MathUtils.getDistance(phantom.location, ship!!.location)
                 phantom.setCustomData("rat_phantom_distance", distance)
 
-                if (phantom!!.shipAI == null) {
+                if (phantom!!.shipAI == null && phantom != Global.getCombatEngine().playerShip) {
                     phantom.shipAI = Global.getSettings().createDefaultShipAI(phantom, ShipAIConfig())
                     phantom.shipAI.forceCircumstanceEvaluation()
                 }
             }
 
-            if (state == ShipSystemStatsScript.State.OUT && ship!!.isAlive) {
+            if (state == ShipSystemStatsScript.State.OUT && ship!!.isAlive && !Global.getCombatEngine().isPaused) {
                 phantom.isHoldFireOneFrame = true
                 phantom.velocity.set(Vector2f())
                 phantom.shipAI = null
@@ -182,18 +182,21 @@ class ArkasShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
         Global.getCombatEngine().getFleetManager(ship!!.owner).isSuppressDeploymentMessages = false
 
         var manager = Global.getCombatEngine().getFleetManager(phantom!!.owner)
-        var obfManager = manager as CombatFleetManager
-        obfManager.removeDeployed(phantom, true)
+        manager.removeDeployed(phantom, true)
 
         Global.getCombatEngine().addEntity(phantom)
         phantom.shipAI = null
 
         var stats = phantom.mutableStats
-        stats.damageToCapital.modifyMult("rat_phantom", 0.40f)
-        stats.damageToCruisers.modifyMult("rat_phantom", 0.40f)
-        stats.damageToDestroyers.modifyMult("rat_phantom", 0.40f)
-        stats.damageToFrigates.modifyMult("rat_phantom", 0.40f)
-        stats.damageToFighters.modifyMult("rat_phantom", 0.40f)
+       /* stats.damageToCapital.modifyMult("rat_phantom", 0.50f)
+        stats.damageToCruisers.modifyMult("rat_phantom", 0.50f)
+        stats.damageToDestroyers.modifyMult("rat_phantom", 0.50f)
+        stats.damageToFrigates.modifyMult("rat_phantom", 0.50f)
+        stats.damageToFighters.modifyMult("rat_phantom", 0.50f)*/
+
+        stats.ballisticWeaponDamageMult.modifyMult("rat_phantom", 0.5f)
+        stats.energyWeaponDamageMult.modifyMult("rat_phantom", 0.5f)
+        stats.missileWeaponDamageMult.modifyMult("rat_phantom", 0.5f)
 
         stats.ballisticWeaponRangeBonus.modifyFlat("rat_phantom", 50f)
         stats.energyWeaponRangeBonus.modifyFlat("rat_phantom", 50f)
@@ -206,6 +209,9 @@ class ArkasShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
         stats.turnAcceleration.modifyFlat("rat_phantom", 30f)
 
         stats.timeMult.modifyMult("rat_phantom", 1.1f)
+
+        //Should make AI ignore it
+        stats.hullDamageTakenMult.modifyMult("rat_phantom", 0f)
 
         for (i in 0 until ship!!.allWeapons.size) {
             var original = ship!!.allWeapons.getOrNull(i) ?: continue
@@ -221,6 +227,8 @@ class ArkasShipsystem : BaseShipSystemScript(), HullDamageAboutToBeTakenListener
             weapon.spec.aiHints.add(WeaponAPI.AIHints.DO_NOT_CONSERVE)
             weapon.spec.aiHints.remove(WeaponAPI.AIHints.USE_LESS_VS_SHIELDS)
         }
+
+        phantom.setCustomData("rat_phantom_parent", ship)
 
         phantoms.add(phantom!!)
         return phantom

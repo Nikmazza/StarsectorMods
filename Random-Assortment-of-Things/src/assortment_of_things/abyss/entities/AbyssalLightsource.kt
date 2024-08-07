@@ -3,21 +3,15 @@ package assortment_of_things.abyss.entities
 import assortment_of_things.abyss.AbyssUtils
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.CampaignEngineLayers
-import com.fs.starfarer.api.campaign.SectorEntityToken
-import com.fs.starfarer.api.campaign.StarSystemAPI
 import com.fs.starfarer.api.combat.ViewportAPI
 import com.fs.starfarer.api.graphics.SpriteAPI
 import com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin
-import com.fs.starfarer.api.ui.TooltipMakerAPI
-import com.fs.starfarer.api.util.FaderUtil
-import com.fs.starfarer.api.util.Misc
 import org.magiclib.kotlin.setAlpha
-import java.awt.Color
 
-class AbyssalLightsource : BaseCustomEntityPlugin() {
+class AbyssalLightsource : BaseCustomEntityPlugin(), AbyssalLight {
 
-    var radius = 2000f
-    var color = AbyssUtils.ABYSS_COLOR.setAlpha(50)
+    override var radius = 2000f
+    override var color = AbyssUtils.ABYSS_COLOR.setAlpha(50)
 
     @Transient
     var halo: SpriteAPI? = null
@@ -31,7 +25,9 @@ class AbyssalLightsource : BaseCustomEntityPlugin() {
     fun initSpritesIfNull()
     {
         if (halo == null) {
-            color = AbyssUtils.getSystemData(entity.starSystem).getColor().setAlpha(50)
+            if (entity.starSystem != null) {
+                color = AbyssUtils.getSystemData(entity.starSystem).getColor().setAlpha(50)
+            }
             halo = Global.getSettings().getSprite("rat_terrain", "halo")
         }
     }

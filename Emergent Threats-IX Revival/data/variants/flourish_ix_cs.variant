@@ -1,6 +1,6 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 6,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "flourish_ix",
@@ -10,7 +10,7 @@
         "frontemitter",
         "stabilizedshieldemitter"
     ],
-    "modules": [{"WS 010": "flourish_undershield"}],
+    "modules": [{"WS 010": "flourish_ix_undershield"}],
     "permaMods": [],
     "sMods": [],
     "variantId": "flourish_ix_cs",
@@ -19,8 +19,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "muon_streamer_ix",
-                "WS 003": "muon_streamer_ix"
+                "WS 002": "daythorn_mapb_ix",
+                "WS 003": "daythorn_mapb_ix"
             }
         },
         {

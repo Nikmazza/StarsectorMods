@@ -12,8 +12,8 @@
   "shieldRadius": 101,
   "viewOffset": 0,
   "builtInMods": [
-    "hbi",
-	"NES_ColorSelector_Hamter"
+    "NES_TriedAndTested",
+    "NES_ColorSelector_Hamter"
   ],
   "weaponSlots": [
     {
@@ -21,7 +21,7 @@
       "size": "LARGE",
       "type": "BALLISTIC",
       "mount": "HARDPOINT",
-      "arc": 12,
+      "arc": 10,
       "angle": 0,
       "locations": [31, 37]
     },
@@ -58,7 +58,7 @@
       "type": "BALLISTIC",
       "mount": "TURRET",
       "arc": 225,
-      "angle": 90,
+      "angle": 125,
       "locations": [-9, 50],
       "renderOrderMod": 400
     },
@@ -68,7 +68,7 @@
       "type": "BALLISTIC",
       "mount": "TURRET",
       "arc": 225,
-      "angle": -90,
+      "angle": -125,
       "locations": [-9, -50],
       "renderOrderMod": 400
     },
@@ -86,15 +86,6 @@
       ]
     },
     {
-      "id": "WS0007",
-      "size": "LARGE",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 0,
-      "locations": [19, 33]
-    },
-	{
       "id": "NES_DECO_COUNTER",
       "size": "SMALL",
       "type": "DECORATIVE",

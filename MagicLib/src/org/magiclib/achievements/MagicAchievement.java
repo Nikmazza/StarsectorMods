@@ -1,8 +1,11 @@
 package org.magiclib.achievements;
 
 import com.fs.starfarer.api.EveryFrameScript;
+import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
@@ -29,7 +32,8 @@ import java.util.*;
 public class MagicAchievement {
     // Note to self: don't use directly, call getLogger().
     private Logger logger;
-    @NotNull MagicAchievementSpec spec;
+    @NotNull
+    MagicAchievementSpec spec;
 
     @Nullable
     private Float progress = null;
@@ -124,6 +128,18 @@ public class MagicAchievement {
      * @param completedByPlayer The player's character who completed the achievement, if applicable.
      */
     public void completeAchievement(@Nullable PersonAPI completedByPlayer) {
+        completeAchievement(completedByPlayer, null);
+    }
+
+    /**
+     * Call when the achievement is completed.
+     * Sets the date completed and the player who completed it.
+     * Does nothing if already completed; uncomplete first, if you want to re-complete it for some reason.
+     *
+     * @param completedByPlayer The player's character who completed the achievement, if applicable.
+     * @param textPanel         The text panel to send an update to, if applicable, so the player sees the update during a dialog.
+     */
+    public void completeAchievement(@Nullable PersonAPI completedByPlayer, @Nullable TextPanelAPI textPanel) {
         if (isComplete()) return;
 
         this.dateCompleted = new Date();
@@ -131,6 +147,11 @@ public class MagicAchievement {
         if (completedByPlayer != null) {
             this.completedByUserId = completedByPlayer.getId();
             this.completedByUserName = completedByPlayer.getName().getFullName();
+        }
+
+//        Global.getSector().getCampaignUI().getCurrentInteractionDialog().getTextPanel()
+        if (textPanel != null && MagicAchievementManager.getInstance().getIntel() != null) {
+            MagicAchievementManager.getInstance().getIntel().sendUpdate(null, textPanel);
         }
 
         saveChangesWithoutLogging();
@@ -535,6 +556,16 @@ public class MagicAchievement {
     /**
      * A map for storing arbitrary data. Works like the vanilla MemoryAPI, except it is saved outside of save files.
      */
+    public @NotNull Map<String, Object> getAchievementMemory() {
+        return memory;
+    }
+
+    /**
+     * A map for storing arbitrary data. Works like the vanilla MemoryAPI, except it is saved outside of save files.
+     *
+     * @deprecated Use {@link #getAchievementMemory()} instead.
+     * The method has been renamed to avoid confusion with the vanilla MemoryAPI, which is not persisted outside of saves.
+     */
     public @NotNull Map<String, Object> getMemory() {
         if (Global.getSector() == null) return memory;
 
@@ -546,6 +577,13 @@ public class MagicAchievement {
         }
 
         saveAfterOneTickScript.saveNextTick = true;
+
+        // Save in combat, too.
+        if (Global.getCurrentState() == GameState.COMBAT && Global.getCombatEngine() != null) {
+            SaveAfterOneTickCombatScript combatScript = new SaveAfterOneTickCombatScript();
+            Global.getCombatEngine().addPlugin(combatScript);
+            combatScript.saveNextTick = true;
+        }
 
         return memory;
     }
@@ -578,6 +616,22 @@ public class MagicAchievement {
 
             saveChangesWithoutLogging();
             saveNextTick = false;
+        }
+    }
+
+    private class SaveAfterOneTickCombatScript extends BaseEveryFrameCombatPlugin {
+        public boolean saveNextTick;
+
+        @Override
+        public void advance(float amount, List<InputEventAPI> events) {
+            if (!saveNextTick) return;
+
+            saveChangesWithoutLogging();
+            saveNextTick = false;
+
+            if (Global.getCombatEngine() != null) {
+                Global.getCombatEngine().removePlugin(this);
+            }
         }
     }
 }

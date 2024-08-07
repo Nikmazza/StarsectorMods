@@ -5,12 +5,15 @@ import java.util.List;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 
 import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
 
@@ -51,6 +54,18 @@ public class AbominationInterface extends BaseHullMod {
 		if (Global.getSector() == null || Global.getSector().getPlayerFleet() == null) return interfaceCount;
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
 		List<FleetMemberAPI> fleetList = fleet.getMembersWithFightersCopy();
+
+		List<MarketAPI> marketList = Global.getSector().getEconomy().getMarketsCopy();
+		for (MarketAPI market : marketList) {
+			if (market.getSubmarket(Submarkets.SUBMARKET_STORAGE) != null) {
+				CargoAPI storage = market.getSubmarket(Submarkets.SUBMARKET_STORAGE).getCargo();
+				List<FleetMemberAPI> storageList = storage.getMothballedShips().getMembersListCopy();
+				if (!storageList.isEmpty()) {
+					for (FleetMemberAPI ship : storageList) fleetList.add(ship);
+				}
+			}
+		}
+
 		for (FleetMemberAPI member : fleetList) {
 			if (member.getVariant().hasHullMod(THIS_MOD) && !member.getVariant().hasHullMod(EXEMPTION_MOD)) interfaceCount++;
 			LinkedHashSet<String> sMods = member.getVariant().getSMods();

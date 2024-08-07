@@ -15,7 +15,7 @@ import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 public class LevateinCannonOnHitEffect implements OnHitEffectPlugin {
 
     //bless tantananan for this readable code
-	private static final float arcChancePercent = 33f;				//Chance for the arc to trigger. default is 25.
+	private static final float arcChancePercent = 66f;				//Chance for the arc to trigger. default is 25.
 	private static final float arcEMPPercent = 100f;				//Percentage of weapon EMP damage that will be used for arc EMP. the default value of 100 will give a final arc emp that's the same as weapon emp.
 	private static final float arcDamagePercent = 0f;				//Percentage of weapon damage that will be used for arc damage. the default value of 100 will give a final arc damage that's the same as weapon damage.
 

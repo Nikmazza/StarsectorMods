@@ -1,26 +1,29 @@
 package assortment_of_things.abyss.shipsystem.activators
 
-import activators.CombatActivator
 import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.misc.GraphicLibEffects
 import assortment_of_things.misc.getAndLoadSprite
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
+import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags
 import com.fs.starfarer.api.fleet.FleetMemberType
+import com.fs.starfarer.api.graphics.SpriteAPI
+import com.fs.starfarer.api.impl.campaign.ids.Personalities
 import com.fs.starfarer.api.impl.combat.MineStrikeStats
+import com.fs.starfarer.api.util.FaderUtil
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import com.fs.starfarer.api.util.WeightedRandomPicker
-import com.fs.starfarer.combat.CombatFleetManager
-import com.fs.starfarer.combat.entities.Ship
 import org.lazywizard.lazylib.MathUtils
+import org.lazywizard.lazylib.combat.CombatUtils
 import org.lwjgl.opengl.GL11
 import org.lwjgl.util.vector.Vector2f
+import org.magiclib.subsystems.MagicSubsystem
 import java.awt.Color
 import java.util.*
 import kotlin.collections.ArrayList
 
-class PrimordialSeaActivator(var ship: ShipAPI) : CombatActivator(ship) {
+class PrimordialSeaActivator(var ship: ShipAPI) : MagicSubsystem(ship) {
 
 
     var deactivated = false
@@ -61,7 +64,7 @@ class PrimordialSeaActivator(var ship: ShipAPI) : CombatActivator(ship) {
 
     override fun shouldActivateAI(amount: Float): Boolean {
         var targetsInRange = false
-        var iterator = Global.getCombatEngine().shipGrid.getCheckIterator(ship.location, 2000f, 2000f)
+        var iterator = Global.getCombatEngine().shipGrid.getCheckIterator(ship.location, 4000f, 4000f)
         for (other in iterator) {
             if (other !is ShipAPI) continue
             if (other == ship) continue
@@ -108,6 +111,8 @@ class PrimordialSeaActivator(var ship: ShipAPI) : CombatActivator(ship) {
     }
 
     override fun onActivate() {
+        if (!ship.isAlive) return
+
         deactivated = false
 
         Global.getSoundPlayer().playSound("rat_genesis_system_sound", 0.7f, 1f, ship.location, ship.velocity)
@@ -115,11 +120,45 @@ class PrimordialSeaActivator(var ship: ShipAPI) : CombatActivator(ship) {
         GraphicLibEffects.CustomRippleDistortion(ship!!.location, Vector2f(), ship.collisionRadius + 500, 75f, true, ship!!.facing, 360f, 1f
             ,0.5f, 3f, 1f, 1f, 1f)
 
-        for (i in 0 until 6) {
-            var apparation = spawnApparation()
-            apparations.add(apparation)
-        }
 
+        var variants = mutableListOf<String>()
+
+        var extra = 0
+        if (ship.variant.hasTag("rat_challenge_mode")) extra+=2
+
+        /*if (ship.mutableStats?.fleetMember?.fleetData?.fleet?.faction?.id == "rat_abyssals_primordials") {
+            extra += 1
+        }*/
+
+        variants += generateSequence { "rat_genesis_frigate_support_Standard" }.take(4+extra)
+        variants += generateSequence { "rat_genesis_frigate_attack_Standard" }.take(4+extra)
+
+        var takenTargets = ArrayList<ShipAPI>()
+
+        for (variant in variants) {
+
+            var targetShips = CombatUtils.getShipsWithinRange(ship.location, maxRange - 500).filter { !takenTargets.contains(it) && !it.isFighter}
+            var loc = MathUtils.getRandomPointOnCircumference(ship.location, MathUtils.getRandomNumberInRange(600f, 2000f))
+            var facing: Float? = null
+
+            if (takenTargets.size < 3) {
+                var target = targetShips.randomOrNull()
+                if (target != null) {
+                    takenTargets.add(target)
+                    loc = MathUtils.getRandomPointOnCircumference(target.location, target.collisionRadius + MathUtils.getRandomNumberInRange(400f, 600f))
+                    facing = Misc.getAngleInDegrees(loc, target.location)
+                }
+            }
+
+            var apparation = spawnApparation(variant, loc)
+            if (apparation != null) {
+                apparations.add(apparation)
+                if (facing != null) {
+                    apparation.facing = facing
+
+                }
+            }
+        }
     }
 
 
@@ -133,7 +172,12 @@ class PrimordialSeaActivator(var ship: ShipAPI) : CombatActivator(ship) {
         apparations.clear()
     }
 
-    override fun advance(amount: Float) {
+    override fun getAdvancesWhileDead(): Boolean {
+        return true
+    }
+
+    override fun advance(amount: Float, isPaused: Boolean) {
+
 
         var range = getCurrentRange()
         for (apparation in apparations) {
@@ -141,14 +185,43 @@ class PrimordialSeaActivator(var ship: ShipAPI) : CombatActivator(ship) {
            // ReflectionUtils.set("visible", apparation, false)
           //  apparation.addTag("fx_drone")
 
-            if (MathUtils.getDistance(apparation.location, ship.location) <= range - apparation.collisionRadius) {
+            for (engine in apparation.engineController.shipEngines) {
+
+                if (MathUtils.getDistance(engine.location, ship.location) <= range && apparation.isAlive) {
+                    //engine.repair()
+                    engine.engineSlot.color = Color(178, 36, 69, 255)
+                    engine.engineSlot.glowAlternateColor = Color(178, 36, 69,255)
+                    engine.engineSlot.glowSizeMult = 0.8f
+
+                }
+                else {
+                    engine.engineSlot.color = Color(0, 0, 0, 0)
+                    engine.engineSlot.glowAlternateColor = Color(0, 0, 0, 0)
+                    engine.engineSlot.glowSizeMult = 0f
+                    //engine.disable()
+                }
+
+            }
+
+            //Hides that square that appears around opposing ships
+            apparation.isForceHideFFOverlay = true
+
+            if (MathUtils.getDistance(apparation.location, ship.location) <= range - apparation.collisionRadius && state != State.OUT ) {
                 apparation.isPhased = false
-                apparation.setShipSystemDisabled(false)
+                apparation.isHoldFire = false
+                apparation.mutableStats.hullDamageTakenMult.modifyMult("rat_construct", 1f)
+                apparation.alphaMult = 1f
             }
             else {
                 apparation.isPhased = true
                 apparation.isHoldFireOneFrame = true
-                apparation.setShipSystemDisabled(true)
+                apparation.allWeapons.forEach { it.stopFiring() }
+                apparation.mutableStats.hullDamageTakenMult.modifyMult("rat_construct", 0f)
+
+                for (weapon in apparation.allWeapons) {
+                    weapon.stopFiring()
+                    weapon.setRemainingCooldownTo(0.5f)
+                }
             }
         }
 
@@ -175,35 +248,64 @@ class PrimordialSeaActivator(var ship: ShipAPI) : CombatActivator(ship) {
         return maxRange * effectLevel * effectLevel
     }
 
-    fun spawnApparation() : ShipAPI{
-        var variant = Global.getSettings().getVariant("rat_makara_Strike")
+    fun spawnApparation(variantId: String, targetLoc: Vector2f) : ShipAPI?{
+        var variant = Global.getSettings().getVariant(variantId)
         var manager = Global.getCombatEngine().getFleetManager(ship!!.owner)
-        var obfManager = manager as CombatFleetManager
 
         Global.getCombatEngine().getFleetManager(ship!!.owner).isSuppressDeploymentMessages = true
-        var apparation = spawnShipOrWingDirectly(variant, FleetMemberType.SHIP, ship!!.owner, ship!!.currentCR, Vector2f(100000f, 100000f), ship!!.facing)
+        var apparation = spawnShipOrWingDirectly(variant, FleetMemberType.SHIP, ship!!.owner, ship!!.currentCR, Vector2f(100000f, 100000f), ship!!.facing) ?: return null
+        apparation!!.fleetMember.id = Misc.genUID()
         Global.getCombatEngine().getFleetManager(ship!!.owner).isSuppressDeploymentMessages = false
 
         apparation!!.captain = ship.captain
 
-        if (apparation is Ship) {
-            obfManager.removeDeployed(apparation as Ship, true)
-        }
+      /*  apparation.isPhased = true
+        apparation.isHoldFireOneFrame = true
+        apparation.isHoldFire = true
 
-        apparation.isPhased = true
-        apparation.alphaMult = 0f
+        for (weapon in apparation.allWeapons) {
+            weapon.stopFiring()
+            weapon.setForceNoFireOneFrame(true)
+            weapon.setRemainingCooldownTo(0.3f)
+        }
+*/
+        manager.removeDeployed(apparation, true)
+
+        //apparation.alphaMult = 0f
+       // apparation.spriteAPI.alphaMult = 0f
+        apparation.spriteAPI.color = Color(0, 0 ,0 ,0)
+     /*   apparation.extraAlphaMult = 0f
+        apparation.setApplyExtraAlphaToEngines(false) //Disable to make engines not get way to small*/
         //apparation.addTag("module_no_status_bar")
         //Might be needed to hide bars on fighters, not sure
         //apparation.mutableStats.hullDamageTakenMult.modifyMult("rat_prim_sea", 0f)
 
-        var loc = MathUtils.getRandomPointOnCircumference(ship.location, MathUtils.getRandomNumberInRange(600f, 1600f))
-        loc = findClearLocation(apparation, loc)
-        apparation.location.set(loc)
-
         Global.getCombatEngine().addEntity(apparation)
 
-        apparation.shipAI = Global.getSettings().createDefaultShipAI(apparation, ShipAIConfig())
+        /*var loc = MathUtils.getRandomPointOnCircumference(ship.location, MathUtils.getRandomNumberInRange(600f, 1600f))*/
+        var loc = findClearLocation(apparation, targetLoc)
+        apparation.location.set(loc)
+        var closest = CombatUtils.getShipsWithinRange(loc, 600f).filter { it != apparation }.randomOrNull()
+        if (closest != null) {
+            var angle = Misc.getAngleInDegrees(apparation.location, closest.location)
+            apparation.facing = angle
+        }
+        else {
+            apparation.facing = ship.facing
+        }
+
+        apparation.captain.setPersonality(Personalities.RECKLESS)
+        apparation.shipAI = Global.getSettings().createDefaultShipAI(apparation, ShipAIConfig().apply { alwaysStrafeOffensively = true })
         apparation.shipAI.forceCircumstanceEvaluation()
+        apparation.captain.setPersonality(Personalities.RECKLESS)
+
+        //Randomise range a little so that constructs dont all orbit on the same radius as eachother.
+        var rangeMod = MathUtils.getRandomNumberInRange(0.85f, 1.15f)
+        apparation.mutableStats.energyWeaponRangeBonus.modifyMult("apparation_range", rangeMod)
+        apparation.mutableStats.ballisticWeaponRangeBonus.modifyMult("apparation_range", rangeMod)
+        apparation.mutableStats.missileWeaponRangeBonus.modifyMult("apparation_range", rangeMod)
+
+
 
         return apparation
     }
@@ -283,6 +385,12 @@ class PrimordialSeaRenderer(var ship: ShipAPI, var activator: PrimordialSeaActiv
     var wormhole = Global.getSettings().getAndLoadSprite("graphics/fx/wormhole.png")
     var wormhole2 = Global.getSettings().getAndLoadSprite("graphics/fx/wormhole.png")
 
+    var systemGlow: SpriteAPI = Global.getSettings().getAndLoadSprite(ship.hullSpec.spriteName.replace(".png", "") + "_glow.png")
+    var systemGlow2: SpriteAPI = Global.getSettings().getAndLoadSprite(ship.hullSpec.spriteName.replace(".png", "") + "_glow_secondary.png")
+    var fader = FaderUtil(1f, 2f, 1.5f, false, false)
+    var lastJitterLocations = ArrayList<Vector2f>()
+    var lastSecondJitterLocations = ArrayList<Vector2f>()
+
     override fun init(entity: CombatEntityAPI?) {
 
     }
@@ -296,11 +404,19 @@ class PrimordialSeaRenderer(var ship: ShipAPI, var activator: PrimordialSeaActiv
     }
 
     override fun advance(amount: Float) {
-
+        fader.advance(amount)
+        if (fader.brightness >= 1)
+        {
+            fader.fadeOut()
+        }
+        else if (fader.brightness <= 0)
+        {
+            fader.fadeIn()
+        }
     }
 
     override fun getActiveLayers(): EnumSet<CombatEngineLayers> {
-        return EnumSet.of(CombatEngineLayers.BELOW_PLANETS, CombatEngineLayers.ABOVE_SHIPS_LAYER)
+        return EnumSet.of(CombatEngineLayers.BELOW_PLANETS, CombatEngineLayers.ABOVE_SHIPS_LAYER, CombatEngineLayers.UNDER_SHIPS_LAYER)
     }
 
     override fun getRenderRadius(): Float {
@@ -319,7 +435,34 @@ class PrimordialSeaRenderer(var ship: ShipAPI, var activator: PrimordialSeaActiv
         var radius = activator.getCurrentRange()
         var segments = 100
 
+        if (layer == CombatEngineLayers.ABOVE_SHIPS_LAYER) {
+            systemGlow2.setNormalBlend()
+            systemGlow2.alphaMult = (0.8f + (0.2f * fader.brightness))
+            systemGlow2.angle = ship.facing - 90
+            systemGlow2.renderAtCenter(ship.location.x, ship.location.y)
+
+            systemGlow2.setNormalBlend()
+            systemGlow2.alphaMult = ((0.5f * fader.brightness))
+            systemGlow2.angle = ship.facing - 90
+            systemGlow2.renderAtCenter(ship.location.x, ship.location.y)
+        }
+
         startStencil(ship!!, radius, segments)
+
+        if (layer == CombatEngineLayers.ABOVE_SHIPS_LAYER) {
+            systemGlow.setAdditiveBlend()
+            systemGlow.alphaMult = (0.8f + (0.2f * fader.brightness))
+            systemGlow.angle = ship.facing - 90
+            systemGlow.renderAtCenter(ship.location.x, ship.location.y)
+
+            systemGlow.setAdditiveBlend()
+            systemGlow.alphaMult = ((0.5f * fader.brightness))
+            systemGlow.angle = ship.facing - 90
+            systemGlow.renderAtCenter(ship.location.x, ship.location.y)
+
+            doJitter(ship, systemGlow, 0.5f, lastJitterLocations, 5, 2f)
+            doJitter(ship, systemGlow, 0.3f, lastSecondJitterLocations, 5, 12f)
+        }
 
         if (layer == CombatEngineLayers.BELOW_PLANETS) {
 
@@ -343,10 +486,13 @@ class PrimordialSeaRenderer(var ship: ShipAPI, var activator: PrimordialSeaActiv
             wormhole2.renderAtCenter(x + width / 2, y + height / 2)
         }
 
-        if (layer == CombatEngineLayers.ABOVE_SHIPS_LAYER) {
+        if (layer == CombatEngineLayers.UNDER_SHIPS_LAYER) {
             renderShips()
         }
 
+        if (layer == CombatEngineLayers.ABOVE_SHIPS_LAYER) {
+            renderApparationGlow()
+        }
 
         endStencil()
 
@@ -357,14 +503,107 @@ class PrimordialSeaRenderer(var ship: ShipAPI, var activator: PrimordialSeaActiv
     }
 
     fun renderShips() {
-        for (apparation in apparations) {
-            apparation.spriteAPI.alphaMult = 1f
-            apparation.spriteAPI.renderAtCenter(apparation.location.x, apparation.location.y)
 
-            for (weapon in apparation.allWeapons) {
+        var range = activator.getCurrentRange()
+        for (apparation in apparations ) {
+
+            if (!apparation.isAlive) continue
+
+            var inRange = MathUtils.getDistance(apparation.location, ship.location) <= range - apparation.collisionRadius
+
+            if (inRange) {
+                apparation.spriteAPI.color = Color(255, 255, 255, 255)
+            }
+            else {
+                apparation.spriteAPI.color = Color(255, 255, 255, 255)
+                apparation.spriteAPI.renderAtCenter(apparation.location.x, apparation.location.y)
+                apparation.spriteAPI.color = Color(0, 0 ,0 ,0)
+            }
+
+
+
+
+
+            /*for (weapon in apparation.allWeapons) {
                 weapon.sprite?.alphaMult = 1f
                 weapon.sprite?.renderAtCenter(weapon.location.x, weapon.location.y)
+                weapon.sprite?.alphaMult = 0f
+            }*/
+        }
+    }
+
+    fun renderApparationGlow() {
+
+        var range = activator.getCurrentRange()
+
+        for (apparation in apparations ) {
+
+            if (!apparation.isAlive) continue
+
+            var inRange = MathUtils.getDistance(apparation.location, ship.location) <= range - apparation.collisionRadius
+
+            apparation.spriteAPI.color = Color(255, 255, 255, 255)
+
+            var apparationGlow = apparation.customData.get("rat_ship_glow") as SpriteAPI?
+            if (apparationGlow == null) {
+                apparationGlow = Global.getSettings().getAndLoadSprite(apparation.hullSpec.spriteName.replace(".png", "") + "_glow.png")
+                apparation.setCustomData("rat_ship_glow", apparationGlow)
             }
+
+            var lastLocation = apparation.customData.get("rat_apparation_glow_locations") as ArrayList<Vector2f>?
+            if (lastLocation == null) {
+                lastLocation = ArrayList<Vector2f>()
+                apparation.setCustomData("rat_apparation_glow_locations", lastLocation)
+            }
+
+            apparationGlow.setAdditiveBlend()
+            apparationGlow.alphaMult = (0.8f + (0.2f * fader.brightness))
+            apparationGlow.angle = apparation.facing - 90
+            apparationGlow.renderAtCenter(apparation.location.x, apparation.location.y)
+
+            apparationGlow.setAdditiveBlend()
+            apparationGlow.alphaMult = ((0.5f * fader.brightness))
+            apparationGlow.angle = apparation.facing - 90
+            apparationGlow.renderAtCenter(apparation.location.x, apparation.location.y)
+
+            doJitter(apparation, apparationGlow, 0.5f, lastLocation, 5, 3f)
+
+            if (!inRange) {
+                apparation.spriteAPI.color = Color(0, 0, 0, 0)
+            }
+        }
+    }
+
+    fun doJitter(ship: ShipAPI, sprite: SpriteAPI, level: Float, lastLocations: ArrayList<Vector2f>, jitterCount: Int, jitterMaxRange: Float) {
+
+        var paused = Global.getCombatEngine().isPaused
+        var jitterAlpha = 0.2f
+
+
+        if (!paused) {
+            lastLocations.clear()
+        }
+
+        for (i in 0 until jitterCount) {
+
+            var jitterLoc = Vector2f()
+
+            if (!paused) {
+                var x = MathUtils.getRandomNumberInRange(-jitterMaxRange, jitterMaxRange)
+                var y = MathUtils.getRandomNumberInRange(-jitterMaxRange, jitterMaxRange)
+
+                jitterLoc = Vector2f(x, y)
+                lastLocations.add(jitterLoc)
+            }
+            else {
+                jitterLoc = lastLocations.getOrElse(i) {
+                    Vector2f()
+                }
+            }
+
+            sprite.setAdditiveBlend()
+            sprite.alphaMult = level * jitterAlpha
+            sprite.renderAtCenter(ship.location.x + jitterLoc.x, ship.location.y + jitterLoc.y)
         }
     }
 

@@ -9,5 +9,5 @@ vice_kite_lg_wing,vice_kite_defender,"support6, fighter, mid, no_drop, no_drop_s
 vice_spatha_wing,vice_spatha_fighter,"fighter5, fighter, mid, no_drop_salvage, LG_bp",2,,7,15,V,4000,500,300,3,FIGHTER,Heavy Fighter,20,10000,,,,,,,,,,,,,3.1
 vice_terminator_triple_wing,drone_terminator,"no_drop, no_drop_salvage, no_sell, high, restricted",3,,9,0,CLAW,0,200,,3,SUPPORT,Point Defense,20,6000,,,,,,,,,,,,,19.1
 vice_disruptor_drone_wing,vice_emp_disruptor_drone,"stay_in_front_of_ship, fighter8, fighter, no_drop, no_drop_salvage, no_sell, high, restricted, vice_emp",3,,7,20,BOX,4000,1000,700,1,FIGHTER,Disruptor Drone,20,10000,,,,,,,,,,,,,19.2
-vice_wasp_wing,wasp_Interceptor,"interceptor3, interceptor, no_drop, no_drop_salvage, no_sell, high, restricted",1,,5,5,CLAW,4000,200,700,6,INTERCEPTOR,Interceptor Drone,5,6000,,,,,,,,,,,,,7
+vice_wasp_wing,wasp_Interceptor,"interceptor3, interceptor, no_drop, no_drop_salvage, no_sell, high, restricted",1,,5,0,CLAW,4000,200,700,6,INTERCEPTOR,Interceptor Drone,5,6000,,,,,,,,,,,,,7
 vice_spark_wing,spark_Interceptor,"interceptor, interceptor5, auto_fighter, no_drop, no_drop_salvage, no_sell, restricted",3,,4,8,CLAW,4000,200,750,5,INTERCEPTOR,Interceptor Drone,10,5000,,,,,,,,,,,,,22

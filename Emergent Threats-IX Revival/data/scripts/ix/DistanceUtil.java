@@ -38,7 +38,31 @@ public class DistanceUtil {
         return result;
     }
 	
-	//includes fighters but not phased ships
+	public static ShipAPI getNearestEnemy(CombatEntityAPI ship, float range, boolean isTargetingFighters) {
+		List<ShipAPI> enemies = getAllShipsInRange(ship, range, "enemies");
+		ShipAPI result = null;
+		for (ShipAPI e : enemies) {
+			if (!e.isHulk() && !e.isPhased()) {
+				if (result == null) result = e;
+				else if (getDistance(ship, e) < getDistance(ship, result)) result = e;
+			}
+		}
+        return result;
+	}
+	
+	public static ShipAPI getNearestPhaseEnemy(CombatEntityAPI ship, float range) {
+		List<ShipAPI> enemies = getAllShipsInRange(ship, range, "p_enemies");		
+		ShipAPI result = null;
+		for (ShipAPI e : enemies) {
+			if (e.isPhased()) {
+				if (result == null) result = e;
+				else if (getDistance(ship, e) < getDistance(ship, result)) result = e;
+			}
+		}
+        return result;
+    }
+	
+	//includes fighters but not phased ships except for p_enemies iff
 	public static List<ShipAPI> getAllShipsInRange(CombatEntityAPI e, float range, String iff) {
 		List<ShipAPI> shipList = new ArrayList<ShipAPI>();
 		List<ShipAPI> ships = Global.getCombatEngine().getShips();
@@ -46,6 +70,12 @@ public class DistanceUtil {
 			for (ShipAPI s : ships) {
 				if (getDistance(e, s) < (range + s.getCollisionRadius()) 
 						&& (s.getOwner() != e.getOwner()) && !s.isPhased()) shipList.add(s);
+			}
+		}
+		else if (iff.equals("p_enemies")) {
+			for (ShipAPI s : ships) {
+				if (getDistance(e, s) < (range + s.getCollisionRadius()) 
+						&& (s.getOwner() != e.getOwner()) && s.isPhased()) shipList.add(s);
 			}
 		}
 		else if (iff.equals("friends")) {
@@ -61,6 +91,15 @@ public class DistanceUtil {
 		}
 		return shipList;
 	}
+	
+	public static MissileAPI getNearestMissile(CombatEntityAPI ship, float range) {
+		List<MissileAPI> missiles = getAllMissilesInRange(ship, range);		
+		MissileAPI result = null;
+		for (MissileAPI m : missiles) {
+			if (getDistance(ship, m) < getDistance(ship, result)) result = m;
+		}
+        return result;
+    }
 	
 	public static List<MissileAPI> getAllMissilesInRange(CombatEntityAPI e, float range) {
 		List<MissileAPI> missileList = new ArrayList<MissileAPI>();

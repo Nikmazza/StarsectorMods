@@ -25,8 +25,7 @@ public class VampyrEffect implements OnFireEffectPlugin, OnHitEffectPlugin {
 		proj.setDamageAmount(0); //damage dealt from bolts only
 	}
 	
-	public void onHit(DamagingProjectileAPI proj, CombatEntityAPI target, Vector2f point, boolean shieldHit, 
-						ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
+	public void onHit(DamagingProjectileAPI proj, CombatEntityAPI target, Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
 		
 		ShipAPI thisShip = proj.getSource();
 		float missileDamageMult = thisShip.getMutableStats().getMissileWeaponDamageMult().getMult();
@@ -34,8 +33,8 @@ public class VampyrEffect implements OnFireEffectPlugin, OnHitEffectPlugin {
 		float empDamage = BOLT_BASE_EMP * missileDamageMult;
 		
 		//initialize all shield pierces as false if shield hit then determine odds for each hit
-		boolean[] isPierce = { false, false, false, false };
-		if (!shieldHit) isPierce = new boolean[] { true, true, true, true };
+		boolean[] isPierce = { false, false, false };
+		if (!shieldHit) isPierce = new boolean[] { true, true, true };
 		else if (target instanceof ShipAPI && shieldHit) {
 			ShipAPI hitShip = (ShipAPI) target;
 			float pierceChance = hitShip.getHardFluxLevel() - 0.1f;

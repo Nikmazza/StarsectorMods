@@ -1,0 +1,42 @@
+{
+
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		        "hound7s":6,
+				"trampler7s":4,
+		},
+	},
+	
+	"knownShips":{
+		"tags":["base_bp", "lowtech_bp"],
+		"hulls":[
+		        "hound7s",
+				"trampler7s",
+
+			],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+
+		],
+	},
+
+"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "missile_bp", "luddic_church"],
+		"weapons":[
+			#"breachpod",
+			#"sabotpod",
+			#"phasecl",
+			#"cyclone",
+			#"hurricane",
+			#"squall",
+			#"locust",		
+			]
+	},
+
+},
+

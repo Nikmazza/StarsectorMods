@@ -1,6 +1,7 @@
 package data.scripts.vice;
 
 import java.util.List;
+import lunalib.lunaRefit.LunaRefitManager;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
@@ -12,6 +13,8 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 
 import data.scripts.vice.hullmods.EnemyEncounterListener;
+import data.scripts.vice.luna.SignalMaskerInstallButton;
+import data.scripts.vice.luna.SignalMaskerRemoveButton;
 
 public class ETModPlugin extends BaseModPlugin {
 	
@@ -80,5 +83,11 @@ public class ETModPlugin extends BaseModPlugin {
 		vice_diktat_navy.setRelationship("vice_diktat_navy", 1f);
 		vice_lions_guard.setRelationship("vice_lions_guard", 1f);
 		vice_lions_guard.setRelationship("vantage_group", RepLevel.NEUTRAL); //prevents both bounties killing each other
+	}
+	
+	@Override
+	public void onApplicationLoad() {
+		LunaRefitManager.addRefitButton(new SignalMaskerInstallButton());
+		LunaRefitManager.addRefitButton(new SignalMaskerRemoveButton());
 	}
 }

@@ -12,7 +12,7 @@
 		"targetingTime":1.5,
 		"firingTime":0.1,
 		"targetingLaserId":"vice_interdictor_payload",
-		"payloadWeaponId":"targetinglaser1",
+		"payloadWeaponId":"vice_deco_laser",
 		"targetingLaserRange":2500,
 		"targetingLaserArc":360,
 		"bombPumped":false,		# big firing explosion can't be tuned, for directional smoke see dragon_torp
@@ -46,28 +46,7 @@
 				  "turnRate":0,
 				  "acc":0,
 				  "dec":0},
-	"engineSlots":[{"id":"ES1",
-					"loc":[0, 0],
-				    "style":"CUSTOM",
-					"styleSpec":{
-						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
-						#"engineColor":[100,255,100,255],
-						"engineColor":[0,100,255,100],
-						"contrailDuration":0,
-						"contrailWidthMult":1.5,
-						"contrailWidthAddedFractionAtEnd":1,  # can be negative. makes trail spread out/narrow at the end
-						"contrailMinSeg":5, # min segment length, in pixels
-						"contrailMaxSpeedMult":0f,
-						"contrailAngularVelocityMult":0.5f,
-						"contrailSpawnDistMult":0f, # how far away from engine it starts
-						#"contrailColor":[100,255,100,50],
-						"contrailColor":[0,100,255,50],
-						"glowSizeMult":4,
-						#"glowAlternateColor":[0,255,0,255],
-						"glowAlternateColor":[0,50,155,200],
-						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
-					},
-				    "width":10.0,
-				    "length":1.0,
-				    "angle":180.0}]
+				  "width":0,
+				  "length":0,
+				  "angle":180}]
 }

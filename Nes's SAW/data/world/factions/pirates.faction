@@ -2,21 +2,23 @@
 	"portraits":{
 		"standard_female":[
 			"graphics/portraits/nes_powerful.png",
-		],
+						  ],
 	},
 	
 	# multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
         "hulls":{
-			"nes_voltaire":0.4, #rarely, pirates get their hands on the truly top shelf stuff, only to paint it in the most garish colors!
+			"nes_hamter":0.75,
+			"nes_hermitaur":0.75,
+			"nes_hammerfall":0.75,
         },
     },
-
+	
 	"knownShips":{
         "hulls":[
-			"nes_voltaire",
 			"nes_hammerfall",
 			"nes_hermitaur",
+			"nes_hamter",
         ],
     },
 },

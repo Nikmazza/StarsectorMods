@@ -1,16 +1,18 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 0,
-    "fluxVents": 44,
+    "fluxCapacitors": 8,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "odyssey_ix",
     "hullMods": [
+        "ix_dawnstar_controller",
+        "hardenedshieldemitter",
         "targetingunit",
-        "ix_laser_collimator",
-        "ix_reactive_combat_shields",
         "frontemitter",
         "stabilizedshieldemitter",
-        "ix_terminus_relay"
+        "ix_terminus_relay",
+        "ix_dawnstar_proton",
+        "ix_dawnstar_proton_handler"
     ],
     "modules": [{"SM 1": "odyssey_drone_bay_ix"}],
     "permaMods": ["hiressensors"],
@@ -21,10 +23,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "hil",
-                "WS 004": "twin_tactical_laser_ix",
-                "WS 005": "twin_tactical_laser_ix",
-                "WS 006": "twin_tactical_laser_ix"
+                "WS 001": "dawnstar_hcpb_ix",
+                "WS 005": "dawnstar_lcpb_ix"
             }
         },
         {
@@ -43,19 +43,20 @@
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS 004": "es_projector_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 007": "taclaser",
-                "WS 008": "taclaser",
-                "WS 009": "taclaser",
-                "WS 010": "taclaser",
-                "WS 011": "taclaser",
-                "WS 012": "taclaser",
-                "WS 013": "taclaser",
-                "WS 014": "taclaser",
-                "WS 015": "taclaser",
-                "WS 016": "taclaser",
-                "WS 017": "taclaser",
-                "WS 018": "taclaser"
+                "WS 006": "lightbringer_ciws_ix",
+                "WS 007": "morningstar_ciws_ix",
+                "WS 008": "morningstar_ciws_ix",
+                "WS 009": "morningstar_ciws_ix",
+                "WS 010": "morningstar_ciws_ix",
+                "WS 011": "morningstar_ciws_ix",
+                "WS 013": "morningstar_ciws_ix",
+                "WS 014": "morningstar_ciws_ix"
             }
         }
     ],

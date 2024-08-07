@@ -26,6 +26,9 @@ public class AdaptiveFluxDissipator extends BaseHullMod {
     public boolean isApplicableToShip(ShipAPI ship) {
 		if (util.isModuleCheck(ship)) return false;
 		if (ship.getShield() == null) return false;
+		if (ship.getVariant().hasHullMod("automated") 
+				&& ship.getVariant().hasHullMod("ix_plasma_ramjet") 
+				&& util.isOnlyRemnantMod(ship)) return true;
 		return (util.isApplicable(ship) && util.isOnlyRemnantMod(ship));
 	}
 	

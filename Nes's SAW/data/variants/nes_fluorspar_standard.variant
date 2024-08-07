@@ -1,7 +1,7 @@
 {
   "variantId": "nes_fluorspar_standard",
   "hullId": "nes_fluorspar",
-  "displayName": "Standard",
+  "displayName": "Gunner",
   "goalVariant": true,
   "fluxCapacitors": 11,
   "fluxVents": 20,

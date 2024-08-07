@@ -12,6 +12,7 @@ public abstract class NES_Hamter_color_base_hullmod extends BaseHullMod {
     public static final String AUSTERE = "NES_Austere";
     public static final String CARDINAL = "NES_Cardinal";
     public static final String IVORY = "NES_Ivory";
+    public static final String STARLING = "NES_Starling";
 
 
     private static final String ALT_SPRITES = "nes_alt_sprites";

@@ -20,14 +20,17 @@ class BountyBoardIntelPlugin : MagicRefreshableBaseIntelPlugin() {
     @Transient
     private var lastHeight: Float = 0f
 
-//    @Transient
+    //    @Transient
     private var bountiesThatUserHasBeenNotifiedFor = mutableSetOf<String>()
+
     @Transient
     private var interval: IntervalUtil = IntervalUtil(1f, 1f)
+
     @Transient
     private var tempBountyInfo: BountyInfo? = null
+
     @Transient
-    private var selectedItem: BountyInfo? = null
+    private var scrollPos: Float? = null
 
     init {
         // Add this as a transient script if it's not already there.
@@ -99,12 +102,13 @@ class BountyBoardIntelPlugin : MagicRefreshableBaseIntelPlugin() {
                 }
         }
     }
-//
 
     fun layoutPanel(panel: CustomPanelAPI, width: Float = lastWidth, height: Float = lastHeight) {
         val bountyList = BountyListPanelPlugin(panel)
         bountyList.panelWidth = 300f
         bountyList.panelHeight = height - 8f
+        doBeforeRefresh { scrollPos = bountyList.scroller?.yOffset }
+        doAfterRefresh { bountyList.scroller?.yOffset = scrollPos ?: 0f }
 
         val availableBounties: MutableList<BountyInfo> = PROVIDERS
             .flatMap { it.getBounties() }
@@ -130,6 +134,7 @@ class BountyBoardIntelPlugin : MagicRefreshableBaseIntelPlugin() {
         bountyList.addListener { bountyInfo ->
             panel.removeComponent(textPanel)
 
+            lastSelectedBountyId = bountyInfo.getBountyId()
             textPanel = panel.createCustomPanel(textPanelWidth, textPanelHeight, null)
             descriptionTooltip = textPanel.createUIElement(textPanelWidth, textPanelHeight, false)
 
@@ -139,10 +144,10 @@ class BountyBoardIntelPlugin : MagicRefreshableBaseIntelPlugin() {
             panel.addComponent(textPanel).rightOfTop(bountyListPanel, 4f)
         }
 
-        selectedItem?.let { desiredItem ->
+        lastSelectedBountyId?.let { desiredItem ->
             //find matching item in available bounties and pick it
             availableBounties
-                .firstOrNull { desiredItem.getBountyId() == it.getBountyId() }
+                .firstOrNull { desiredItem == it.getBountyId() }
                 ?.let {
                     bountyList.itemClicked(it)
                 }
@@ -167,6 +172,7 @@ class BountyBoardIntelPlugin : MagicRefreshableBaseIntelPlugin() {
     }
 
     companion object {
+        var lastSelectedBountyId: String? = null
         const val NOTIFIED_BOUNTY_KEY = "ml_notifiedBountyKeys"
         val PROVIDERS = mutableListOf<BountyBoardProvider>()
 
@@ -175,8 +181,8 @@ class BountyBoardIntelPlugin : MagicRefreshableBaseIntelPlugin() {
         }
 
         fun refreshPanel(desiredItem: BountyInfo) {
+            lastSelectedBountyId = desiredItem.getBountyId()
             (Global.getSector().intelManager.getFirstIntel(BountyBoardIntelPlugin::class.java) as BountyBoardIntelPlugin).apply {
-                this.selectedItem = desiredItem
                 refreshPanel()
             }
         }

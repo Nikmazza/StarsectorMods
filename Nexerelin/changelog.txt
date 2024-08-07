@@ -1,3 +1,129 @@
+Version 0.11.2c
+
+* Add option for player faction to automatically resist the police colony crisis
+* Fix some dialog options for vanilla colony crises being removed
+    * This bug made the negotiation options for Luddic Church and Sindrian Diktat crises inaccessible
+* Fix strategic AI not being able to form new alliances
+* Fix multiple player special task groups sharing the same financial report node until next game load
+* NPC operatives don't try to sabotage non-disruptable industries
+* Lost scientist mission should work if retried
+* Diktat colony crisis shows appropriate texts if PAGSM mod is running
+* GroundBattleLog supports custom message types
+
+
+Version 0.11.2b
+
+* Blockade nerfs
+    * When strategic AI is off, conversion ratio from raids 0.3 -> 0.2, further halved if invasions are disabled in config
+        * Conversion ratio is configurable as nex_raidToBlockadeConversionFreq value in settings.json
+    * When strategic AI is on, blockade action has 50% chance to not be considered as an action for any given concern
+    * Remove 35% invasion point discount for blockades
+    * Blockade period 180 -> 120 days
+* Fix a concurrent modification exception when bulk reviving ships in special task groups
+* Prevent a crash with UNGP's John Wick rule
+* Fix a dialog interaction in police colony crisis
+
+
+Version 0.11.2
+
+### Changes from beta 0.11.1x ###
+* Can't weaken rebellions by buying more goods on the black market than were sold into it
+* Player special task groups will use a gate if both they and the task target are in gate systems
+* 'No invade story-critical markets' and 'no invade starting markets' settings won't affect raids or blockades
+* Fix free port crisis crash when no eligible factions
+* Fix crash on start when using ApproLight in random sector
+* Fix strategic AI ignoring 'invasions only after player colony' setting and a bug in fleet event targeting
+* Fix random sector memkey being set only after new game time pass
+* Fix blockades always being replaced by invasions with strategic AI off
+* Alliance offer intel includes relevant strategic AI info and link button if applicable
+* Don't double stack defenses on Agreus when Ko Combine mod is running
+
+### Gameplay ###
+* Alliance fixes/improvements
+    * NPCs joining or merging an alliance requires player consent if player is a member
+    * Fix strategic AI spamming player with invites to an existing alliance 
+    * Alliance offer cooldown is short if player accepts, long if rejected or expires
+    * Strategic AI can request an alliance merger
+    * When using strategic AI, don't ally outside of AI actions
+    * Pirate factions won't spontaneously join alliances
+* NPC factions can launch blockades
+    * Unlike the League colony crisis blockade, these are smaller but don't have command or supply fleets to snipe
+    * Blockade has chance to replace raid if strategic AI is disabled (sat bomb now replaces invasion instead of raid)
+* Colony crisis stuff
+    * Crises that originate from a specific market (League, Church and Diktat ones) will be properly suppressed if the origin (Kazeron, Hesperus or Sindria) is captured by another faction
+    * Add a pseudo-Independents colony crisis involving free ports (can be disabled in config)
+    * Remnant contact will now negate Remnant colony crisis points
+* Remnant mission 'Salvation' improvements
+    * Knight fleet will use ships from Knights of Ludd mod if available
+    * Boss shard launch behavior closer to what was intended
+    * Fix some irregularities in special merc's immortality
+* Invasion etc. adjustments
+    * Player colonies below size 4 won't be targeted for military actions (except in Starfarer mode)
+    * Autoresolve for Nex military events will take into account allied factions in the system
+    * Base strike missions and colony expeditions consume invasion points
+    * 'Revenge' invasions will not spawn if invasion points too low
+* Ground units fighting won't cause industry disruption any more
+* Strategy AI can have captured markets returned to the original owner if sufficiently friendly
+* Luddic shrines can be visited even if the markets are captured
+* Having an outpost won't block supplies request from quartermaster
+* Derelict Empire also takes over pirate-type factions' markets at start, if pirate invasions are enabled
+* Luddic Church ground battle bonus is squared on worlds with Luddic Majority
+    * Previously it was squared for being militia
+* Increase bonus XP for agent action SP use and ground battle Inspire
+* NPC special task groups 1/13th smaller, respawn delay 30 -> 60
+* Proxy raids launched by strategic AI won't be hostile to sponsor faction
+* Base strike missions should happen half as often or less
+
+### UI ###
+* Boolean settings to disable invasions/raids/sat bombs and colony expeditions
+* Faction directory won't display factions that only have hidden markets
+
+### Text ###
+* Clarify intel text when tribute is cancelled by external factors
+* Fix inconsistent captain's pronouns in 'File Drawer Problem' mission
+* Market desc changer handles player colonize/abandon
+
+### Bugfixes ###
+* Fix undersupplied market concern crashing on update() if no producers left
+* Fix an unusual crash with player special task group on game load
+* Fix NPC factions not invading if their invasion point capacity has reached the minimum allowed
+* Fix strategic AI general warfare concern causing sabotage of unrelated factions' industries
+* Fix joining a ground battle sometimes not forcing relations to hostile when it should
+* Fix stabilize package option being available when it shouldn't if a dialog option is removed
+* Fix player saturation bombardments not being tracked in some places
+* Buy ship rule should now work properly with S-modded built-in hullmods
+* Fix invasion point refund for cancelled actions not taking stage into account
+* Don't generate conquest mission if the reward is zero
+* Fix repeat relations action allowing free reuse of story point effect
+* Fix recruit operative action not showing on own markets
+* Maybe fix prices not updating sufficiently after delivering commodities to suppress rebellion
+* NPC ground units shouldn't be able to deploy if their fleet is destroyed (if fleets were not abstracted on battle start)
+
+### Modding ###
+* Ground battle stuff
+    * Add some config options for ground battle attacker and defender strengths
+    * Fixes/improvements in support for custom ground unit types and Crew Replacer mod
+    * Market conditions can generate ground battle troops
+    * Add handling for HMI Fang and Draco market conditions, AotD Planetary Defense Bureau industry
+* Add some relevant getters/setters for insurance intel
+
+### Misc ###
+* End vanilla faction hostilities on loading Nex into existing save
+* Update Silverlight variants for new OP costs
+
+
+Version 0.11.1b
+
+* Compatibility with Starsector 0.97
+* Fix some logic in faction respawn
+    * Previously eliminated non-playable factions will no longer be marked as 'alive' if they get a market again
+    * Factions that shouldn't have strategic AI will no longer get one when respawning
+    * Avoid potential cases of double counting respawn attempts
+* Vengeance fleets no longer spawn from hidden markets
+* Fix NPC heavy units in ground battles not having their fleet set
+* Log an error and continue instead of CTD if ground battle tries to load a plugin that doesn't exist
+* Diplomacy events should no longer happen in new game time pass
+
 Version 0.11.1
 
 ### Changes from beta 0.11.0x ###
@@ -23,8 +149,8 @@ Version 0.11.1
     * Fix transmitting update when a rebellion suppression fleet is defeated
     * Fix 'alliance offer to own commissionee' bug
     * Fix logic for when lower relations action chooses to show min relations
-	* Fix a rare crash with strategic AI raids
-	* Try to prevent cases of covert actions targeting self or friendly
+    * Fix a rare crash with strategic AI raids
+    * Try to prevent cases of covert actions targeting self or friendly
 * Salvation mission points player more directly to Arroyo
 * Wiping out independents no longer removes them from market transfer list
 * Show daily invasion point increments in diplomacy profile and strategic AI intel
@@ -162,10 +288,10 @@ Does not include changes in beta 0.10.6y-z
     * Available at cooperative relations with contact after starting mission 3
 * Hostile activity integration
     * Operatives disrupting a cell will reduce activity by -20
-	* Special task groups anywhere, and requested defense fleets in a player system, contribute to hostile activity reduction
-	    * Only largest defense fleet event counts; all STGs count but with diminishing returns from the sum of their strength
-	* Talk to an AIM representative to buy an anti-piracy patrol package (reduction equal to 15% of current hostile activity progress for 3 months)
-	* Operatives' internal security mode will find pirate bases involved in Hostile Activity
+    * Special task groups anywhere, and requested defense fleets in a player system, contribute to hostile activity reduction
+        * Only largest defense fleet event counts; all STGs count but with diminishing returns from the sum of their strength
+    * Talk to an AIM representative to buy an anti-piracy patrol package (reduction equal to 15% of current hostile activity progress for 3 months)
+    * Operatives' internal security mode will find pirate bases involved in Hostile Activity
 * Player can choose to defy the outcome of an alliance vote (ignore the vote if it passes, at a cost to relations with allies)
 * Patrols won't care about player transponder if player is system owner
 * Respawn invasion events have a 1000x revanchism mult when picking targets
@@ -205,8 +331,8 @@ Does not include changes in beta 0.10.6y-z
 * Fix various issues where ground battle unit defs were still relying on old hardcoded system
 * AIM mercenary fleets improvements
     * Merc ships can now have names specified
-	* Merc officers can have personality set
-	* Free skeleton crew is based on ship's actual min crew, not the hull spec's
+    * Merc officers can have personality set
+    * Free skeleton crew is based on ship's actual min crew, not the hull spec's
 
 ### Misc ###
 * Add a couple of Scythe of Orion interactions when player has relations with Remnants

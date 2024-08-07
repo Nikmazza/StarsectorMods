@@ -42,11 +42,11 @@ class AbyssalChargeShipsystem : BaseShipSystemScript() {
 
         if (ship!!.system.isActive)
         {
-            AbyssalsAdaptabilityHullmod.getRenderer(ship!!).enableBlink()
+            AbyssalsAdaptabilityHullmod.getRenderer(ship!!)?.enableBlink()
         }
         else
         {
-            AbyssalsAdaptabilityHullmod.getRenderer(ship!!).disableBlink()
+            AbyssalsAdaptabilityHullmod.getRenderer(ship!!)?.disableBlink()
         }
 
         var emitters = ship.allWeapons.filter { it.spec?.weaponId == "rat_morkoth_coils_location" }
@@ -60,10 +60,10 @@ class AbyssalChargeShipsystem : BaseShipSystemScript() {
                 if (!ally.isAlive) continue
                 ally.removeListenerOfClass(AbyssalChargeBuffListener::class.java)
                 ally.addListener(AbyssalChargeBuffListener(ally, color, secondaryColor))
-                Global.getSoundPlayer().playSound("system_emp_emitter_impact", 0.9f, 1.5f, ally.location, ally.velocity)
+                Global.getSoundPlayer().playSound("system_emp_emitter_impact", 0.9f, 1.1f, ally.location, ally.velocity)
             }
 
-            Global.getSoundPlayer().playSound("disabled_large_crit", 0.9f, 1.3f, ship.location, ship.velocity)
+            Global.getSoundPlayer().playSound("disabled_large_crit", 0.9f, 0.9f, ship.location, ship.velocity)
 
         }
 
@@ -139,7 +139,7 @@ class AbyssalChargeShipsystem : BaseShipSystemScript() {
         var ship = stats!!.entity as ShipAPI
 
         if (ship != null) {
-            AbyssalsAdaptabilityHullmod.getRenderer(ship!!).disableBlink()
+            AbyssalsAdaptabilityHullmod.getRenderer(ship!!)?.disableBlink()
         }
 
         activated = false

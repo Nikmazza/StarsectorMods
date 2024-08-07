@@ -23,7 +23,7 @@
 				 "blowbackLength":20.0,
 				 "blowbackSpread":10.0,
 				 "particleColor":[100,100,150,100]},
-	"projectileSpecId":"starfall_rocket",
+	"projectileSpecId":"starfall_rocket_ix",
 	"noImpactSounds":true,
 	"fireSoundTwo":"swarmer_fire",
 }

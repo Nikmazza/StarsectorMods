@@ -1,16 +1,27 @@
 package assortment_of_things
 
+import assortment_of_things.abyss.AbyssBattleCreationPlugin
+import assortment_of_things.abyss.AbyssUtils
 import assortment_of_things.abyss.boss.GenesisInteraction
+import assortment_of_things.abyss.boss.GenesisReencounterInteractionPlugin
 import assortment_of_things.abyss.entities.AbyssalFracture
+import assortment_of_things.abyss.entities.AbyssalFractureSmall
 import assortment_of_things.abyss.interactions.*
 import assortment_of_things.abyss.misc.AbyssTags
 import assortment_of_things.abyss.items.cores.officer.ChronosCore
 import assortment_of_things.abyss.items.cores.officer.CosmosCore
 import assortment_of_things.abyss.items.cores.officer.PrimordialCore
 import assortment_of_things.abyss.items.cores.officer.SeraphCore
-import assortment_of_things.backgrounds.commander.CommanderStationInteraction
-import assortment_of_things.exotech.interactions.ExoshipWreckageInteraction
-import assortment_of_things.exotech.interactions.exoship.ExoshipInteractions
+import assortment_of_things.exotech.ExoUtils
+import assortment_of_things.exotech.entities.ExoshipEntity
+import assortment_of_things.exotech.interactions.ExoshipLockedOutInteraction
+import assortment_of_things.exotech.interactions.ExoshipRemainsInteraction
+import assortment_of_things.exotech.interactions.HyperNavBeaconInteraction
+import assortment_of_things.exotech.interactions.exoship.NPCExoshipInteraction
+import assortment_of_things.exotech.interactions.exoship.PlayerExoshipInteraction
+import assortment_of_things.exotech.interactions.questBeginning.BeginningAtExoshipInteraction
+import assortment_of_things.exotech.interactions.questBeginning.BeginningQuestEndInteraction
+import assortment_of_things.exotech.interactions.warpCatalystMission.ExotechHideoutInteraction
 import assortment_of_things.exotech.items.ExoProcessor
 import assortment_of_things.relics.RelicsUtils
 import assortment_of_things.relics.interactions.*
@@ -27,15 +38,47 @@ class RATCampaignPlugin : BaseCampaignPlugin()
         return true
     }
 
+    override fun pickBattleCreationPlugin(opponent: SectorEntityToken?): PluginPick<BattleCreationPlugin>? {
+
+        if (opponent?.containingLocation?.hasTag(AbyssUtils.SYSTEM_TAG) == true) {
+            return PluginPick<BattleCreationPlugin>(AbyssBattleCreationPlugin(), CampaignPlugin.PickPriority.HIGHEST)
+        }
+
+        return super.pickBattleCreationPlugin(opponent)
+    }
+
     override fun pickInteractionDialogPlugin(interactionTarget: SectorEntityToken?): PluginPick<InteractionDialogPlugin>? {
         if (interactionTarget == null) return null
 
+        var exoData = ExoUtils.getExoData()
+
+        if (interactionTarget.hasTag("hypernav_beacon")) {
+            return PluginPick(HyperNavBeaconInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+        }
+
         if (interactionTarget is CustomCampaignEntityAPI && interactionTarget.customEntitySpec.id == "rat_exoship") {
-            return PluginPick(ExoshipInteractions(), CampaignPlugin.PickPriority.HIGHEST)
+            var plugin = interactionTarget.customPlugin as ExoshipEntity
+
+            if (exoData.lockedOutOfQuest) {
+                return PluginPick(ExoshipLockedOutInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            }
+            else if (exoData.foundExoshipRemains && exoData.QuestBeginning_Active && !exoData.QuestBeginning_Done) {
+                return PluginPick(BeginningQuestEndInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            }
+            else if (!exoData.QuestBeginning_StartedFromRemains && !exoData.QuestBeginning_Done) {
+                return PluginPick(BeginningAtExoshipInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            }
+            else if (plugin.playerModule.isPlayerOwned) {
+                return PluginPick(PlayerExoshipInteraction(false), CampaignPlugin.PickPriority.HIGHEST)
+            }
+            else {
+                return PluginPick(NPCExoshipInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            }
         }
 
         if (interactionTarget is CustomCampaignEntityAPI && interactionTarget.customEntitySpec.id == "rat_exoship_broken") {
-            return PluginPick(ExoshipWreckageInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            return PluginPick(ExoshipRemainsInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            //return PluginPick(ExoshipWreckageInteraction(), CampaignPlugin.PickPriority.HIGHEST)
         }
 
 
@@ -74,6 +117,10 @@ class RATCampaignPlugin : BaseCampaignPlugin()
             }
         }
 
+        if (interactionTarget.hasTag("rat_genesis_refight")) {
+            return PluginPick(GenesisReencounterInteractionPlugin(), CampaignPlugin.PickPriority.HIGHEST)
+        }
+
         var plugin = interactionTarget.customPlugin
         if (plugin is AbyssalFracture)  {
             if (plugin.connectedEntity != null) {
@@ -85,6 +132,14 @@ class RATCampaignPlugin : BaseCampaignPlugin()
                     Global.getSector().doHyperspaceTransition(Global.getSector().playerFleet, interactionTarget, JumpPointAPI.JumpDestination(plugin.connectedEntity, ""), 0.01f)
                 }
             }
+        }
+        if (plugin is AbyssalFractureSmall)  {
+
+            var system = AbyssUtils.getAbyssData().lastExitFractureSystem
+            var token = system!!.createToken(AbyssUtils.getAbyssData().lastExitFractureDestination)
+
+            Global.getSector().doHyperspaceTransition(Global.getSector().playerFleet, interactionTarget, JumpPointAPI.JumpDestination(token, ""), 0.01f)
+
         }
         if (interactionTarget.hasTag("rat_abyss_entrance")) {
 
@@ -99,9 +154,18 @@ class RATCampaignPlugin : BaseCampaignPlugin()
 
             var id = interactionTarget.customEntitySpec.id
 
+            if (interactionTarget.hasTag("rat_abyss_sierra_raphael")) {
+                return PluginPick(AbyssalRaphaelInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            }
+
             if (interactionTarget.hasTag(AbyssTags.ABYSS_WRECK)) {
                 return PluginPick(AbyssalWreckInteraction(), CampaignPlugin.PickPriority.HIGHEST)
             }
+
+            if (interactionTarget.hasTag("rat_exo_hideout")) {
+                return PluginPick(ExotechHideoutInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+            }
+
 
             when (id) {
                 "rat_abyss_rift_station" -> return PluginPick(RiftStationInteraction(), CampaignPlugin.PickPriority.HIGHEST)
@@ -112,6 +176,7 @@ class RATCampaignPlugin : BaseCampaignPlugin()
                 "rat_abyss_research" -> return PluginPick(AbyssalResearchStationInteraction(), CampaignPlugin.PickPriority.HIGHEST)
                 "rat_abyss_unknown_lab" -> return PluginPick(AbyssalUnknownLabInteraction(), CampaignPlugin.PickPriority.HIGHEST)
                 "rat_military_outpost" -> return PluginPick(AbyssalMilitaryOutpostInteraction(), CampaignPlugin.PickPriority.HIGHEST)
+                "rat_sariel_outpost" -> return PluginPick(AbyssSarielOutpostInteraction(), CampaignPlugin.PickPriority.HIGHEST)
             }
         }
 
@@ -123,14 +188,12 @@ class RATCampaignPlugin : BaseCampaignPlugin()
             var id = interactionTarget.id
             var specID = interactionTarget.customEntitySpec.id
 
-            when (id) {
-                "rat_station_commander_station" -> return PluginPick(CommanderStationInteraction(),
-                    CampaignPlugin.PickPriority.HIGHEST)
-            }
+
         }
 
         return null
     }
+
 
    /* override fun pickAICoreAdminPlugin(commodityId: String?): PluginPick<AICoreAdminPlugin>? {
         if (commodityId == RATItems.JEFF) return PluginPick(JeffCoreAdmin(), CampaignPlugin.PickPriority.HIGHEST)
@@ -139,17 +202,17 @@ class RATCampaignPlugin : BaseCampaignPlugin()
 
     override fun pickAICoreOfficerPlugin(commodityId: String?): PluginPick<AICoreOfficerPlugin>? {
 
-        if (commodityId == RATItems.COSMOS_CORE) return PluginPick(CosmosCore(), CampaignPlugin.PickPriority.HIGHEST)
-        if (commodityId == RATItems.CHRONOS_CORE) return PluginPick(ChronosCore(), CampaignPlugin.PickPriority.HIGHEST)
-        if (commodityId == RATItems.SERAPH_CORE) return PluginPick(SeraphCore(), CampaignPlugin.PickPriority.HIGHEST)
-        if (commodityId == RATItems.PRIMORDIAL) return PluginPick(PrimordialCore(), CampaignPlugin.PickPriority.HIGHEST)
+        if (commodityId == RATItems.COSMOS_CORE) return PluginPick(CosmosCore(), CampaignPlugin.PickPriority.MOD_SPECIFIC)
+        if (commodityId == RATItems.CHRONOS_CORE) return PluginPick(ChronosCore(), CampaignPlugin.PickPriority.MOD_SPECIFIC)
+        if (commodityId == RATItems.SERAPH_CORE) return PluginPick(SeraphCore(), CampaignPlugin.PickPriority.MOD_SPECIFIC)
+        if (commodityId == RATItems.PRIMORDIAL) return PluginPick(PrimordialCore(), CampaignPlugin.PickPriority.MOD_SPECIFIC)
 
         if (commodityId == "rat_neuro_core") {
-            return PluginPick(NeuroCore(), CampaignPlugin.PickPriority.HIGHEST)
+            return PluginPick(NeuroCore(), CampaignPlugin.PickPriority.MOD_SPECIFIC)
         }
 
         if (commodityId == "rat_exo_processor") {
-            return PluginPick(ExoProcessor(), CampaignPlugin.PickPriority.HIGHEST)
+            return PluginPick(ExoProcessor(), CampaignPlugin.PickPriority.MOD_SPECIFIC)
         }
 
         return null

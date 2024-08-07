@@ -1,6 +1,7 @@
 package assortment_of_things.misc
 
 import com.fs.starfarer.api.Global
+import com.fs.starfarer.api.InteractionDialogImageVisual
 import com.fs.starfarer.api.campaign.*
 import com.fs.starfarer.api.campaign.rules.MemoryAPI
 import com.fs.starfarer.api.characters.FullName
@@ -63,7 +64,12 @@ abstract class RATInteractionPlugin() : InteractionDialogPlugin
 
         if (dialog.interactionTarget.customInteractionDialogImageVisual != null)
         {
-            visualPanel.showImageVisual(dialog.interactionTarget.customInteractionDialogImageVisual)
+            var path = dialog.interactionTarget.customInteractionDialogImageVisual.spriteName
+            var sprite = Global.getSettings().getAndLoadSprite(path)
+            var interactionImage = InteractionDialogImageVisual(path, sprite.width, sprite.height)
+            visualPanel.showImageVisual(interactionImage)
+
+            //visualPanel.showImageVisual(dialog.interactionTarget.customInteractionDialogImageVisual)
         }
         init()
     }
@@ -261,6 +267,7 @@ abstract class RATInteractionPlugin() : InteractionDialogPlugin
 
         dialog.plugin = plugin
         plugin.init(dialog)
+
 
     }
 
@@ -496,6 +503,7 @@ class FIDOverride(defenders: CampaignFleetAPI, dialog: InteractionDialogAPI, plu
     var plugin = plugin
     var originalPlugin = originalPlugin
 
+
     override fun notifyLeave(dialog: InteractionDialogAPI) {
         // nothing in there we care about keeping; clearing to reduce savefile size
         val entity = dialog.interactionTarget
@@ -506,6 +514,8 @@ class FIDOverride(defenders: CampaignFleetAPI, dialog: InteractionDialogAPI, plu
         var memory = dialog.interactionTarget.memoryWithoutUpdate
         dialog.plugin = originalPlugin
         dialog.interactionTarget = entity
+
+
 
         //Global.getSector().getCampaignUI().clearMessages();
         if (plugin.getContext() is FleetEncounterContext) {
@@ -537,11 +547,11 @@ class FIDOverride(defenders: CampaignFleetAPI, dialog: InteractionDialogAPI, plu
                 }
                 if (persistDefenders) {
                     if (!entity.hasScriptOfClass(FleetAdvanceScript::class.java)) {
-                        defenders.setDoNotAdvanceAI(true)
+                     /*   defenders.setDoNotAdvanceAI(true)
                         defenders.setContainingLocation(entity.getContainingLocation())
                         // somewhere far off where it's not going to be in terrain or whatever
                         defenders.setLocation(1000000f, 1000000f)
-                        entity.addScript(FleetAdvanceScript(defenders))
+                        entity.addScript(FleetAdvanceScript(defenders))*/
                     }
                     memory.expire("\$defenderFleet", 10f) // defenders may have gotten damaged; persist them for a bit
                 }

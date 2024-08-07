@@ -22,6 +22,7 @@ public class ReactiveCombatShields extends BaseHullMod {
 	private static Color SHIELD_INNER_LOW_TECH = new Color(255,125,125,75);
 	private static Color SHIELD_INNER_HIGH_TECH = new Color(125,125,255,75);
 	
+	private static String EQUALIZER_MOD = "ix_entropy_arrestor";
 	private static String CONFLICT_MOD = "hardenedshieldemitter";
 	private String THIS_MOD = "ix_reactive_combat_shields";
 	
@@ -34,7 +35,7 @@ public class ReactiveCombatShields extends BaseHullMod {
     public void advanceInCombat(ShipAPI ship, float amount) {
 		float threshold = isSMod(ship.getMutableStats()) ? FLUX_THRESHOLD_SMOD : FLUX_THRESHOLD;
 		
-        if (!ship.isAlive()) return;
+        if (!ship.isAlive() || ship.getShield() == null) return;
 		boolean isActive = ship.getMutableStats().getShieldDamageTakenMult().getMultStatMod(THIS_MOD) != null; 
 		if (!isActive && (getShieldEfficiency(ship) <= SHIELD_EFFICIENCY_THRESHOLD)) return;
 		else if (ship.getFluxLevel() >= threshold * 0.01f) {
@@ -71,14 +72,16 @@ public class ReactiveCombatShields extends BaseHullMod {
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
 		if (ship.getShield() == null) return false;
+		if (ship.getVariant().getHullMods().contains(EQUALIZER_MOD)) return false;
 		return (!ship.getVariant().getHullMods().contains(CONFLICT_MOD));
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship.getShield() == null) return "Ship has no shields";
+		if (ship.getVariant().getHullMods().contains(EQUALIZER_MOD)) return "Incompatible with Immanence Engine";
 		if (ship.getVariant().getHullMods().contains(CONFLICT_MOD)) return "Incompatible shield modification present";
 		return null;
-	}	
+	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int) DAMAGE_REDUCTION + "%";

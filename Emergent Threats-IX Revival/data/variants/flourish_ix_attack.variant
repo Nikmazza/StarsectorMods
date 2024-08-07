@@ -1,17 +1,15 @@
 {
     "displayName": "Fast Attack",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 3,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "flourish_ix",
     "hullMods": [
         "extendedshieldemitter",
-        "hardenedshieldemitter",
-        "ix_laser_collimator",
         "frontemitter",
         "stabilizedshieldemitter"
     ],
-    "modules": [{"WS 010": "flourish_undershield"}],
+    "modules": [{"WS 010": "flourish_ix_undershield"}],
     "permaMods": [],
     "sMods": [],
     "variantId": "flourish_ix_attack",
@@ -20,8 +18,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "taclaser",
-                "WS 003": "taclaser"
+                "WS 002": "plasma_dart_ix",
+                "WS 003": "plasma_dart_ix",
+                "WS 007": "plasma_dart_ix"
             }
         },
         {
@@ -36,14 +35,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "taclaser",
-                "WS 006": "taclaser"
+                "WS 005": "morningstar_ciws_ix",
+                "WS 006": "morningstar_ciws_ix"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 007": "morningstar_ciws_ix"}
         }
     ]
 }

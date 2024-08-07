@@ -1,14 +1,14 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 20,
-    "fluxVents": 20,
+    "fluxCapacitors": 0,
+    "fluxVents": 27,
     "goalVariant": true,
     "hullId": "tigershark_ix",
     "hullMods": [
         "magazines",
         "extendedshieldemitter",
+        "hardenedshieldemitter",
         "targetingunit",
-        "ix_reactive_combat_shields",
         "frontemitter",
         "stabilizedshieldemitter"
     ],
@@ -19,14 +19,22 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "conversion_lance_ix"}
+            "weapons": {"WS 004": "muon_siege_lance_ix"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "orthrus_m_ix",
-                "WS 002": "orthrus_m_ix"
+                "WS 001": "starfall_rocket_ix",
+                "WS 002": "starfall_rocket_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "plasma_dart_ix",
+                "WS 006": "plasma_dart_ix"
             }
         },
         {
@@ -34,8 +42,6 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "lightbringer_ciws_ix",
-                "WS 005": "morningstar_ciws_ix",
-                "WS 006": "morningstar_ciws_ix",
                 "WS 009": "morningstar_ciws_ix"
             }
         }

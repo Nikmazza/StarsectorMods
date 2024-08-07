@@ -23,7 +23,7 @@ public class BalefireOnFire implements BeamEffectPlugin {
 		if (beam.getBrightness() >= 0f) {
 			Vector2f origin = beam.getFrom();
 			float beamAngle = Misc.getAngleInDegrees(origin, beam.getTo());
-			float shipSpeed = 180;
+			float shipSpeed = 0f;
 			engine.addSmoothParticle(origin, new Vector2f(), 220, 1.0f, 1.3f, pc);
 			ShapedExplosionUtil.spawnShapedExplosion(origin, beamAngle, shipSpeed, pc, true);
 			applied = true; //apply once on firing

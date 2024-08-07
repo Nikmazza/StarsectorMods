@@ -228,7 +228,6 @@ public class RefitTabListenerAndScript implements CoreUITabListener, EveryFrameS
     }
 
     private void updateWeaponPickerRanges(WeaponSlotAPI slot) {
-        System.out.println("Updating weapon picker ranges!");
         // Look for all children and sub-children that are buttons
         List<ButtonAPI> buttons = new ArrayList<>();
         Object innerPanel = ReflectionUtils.invokeMethod(wpd, "getInnerPanel");
@@ -781,7 +780,8 @@ public class RefitTabListenerAndScript implements CoreUITabListener, EveryFrameS
             valueLabel.setHighlightColors(highlightColor);
         }
         // Special case: the limited ammo (x) text should also be replaced, this has no name
-        else if (valueLabel.getText().contains("imited ammo (")) {
+        else if (valueLabel.getText().contains("imited ammo (")
+                || valueLabel.getText().contains("imited charges (")) {
             int actualAmmo = (int) stats.maxAmmo();
             int baseAmmo = spec.getMaxAmmo();
             if (actualAmmo != baseAmmo) {

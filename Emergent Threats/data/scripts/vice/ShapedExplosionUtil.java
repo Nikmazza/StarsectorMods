@@ -8,14 +8,18 @@ import com.fs.starfarer.api.util.Misc;
 
 public class ShapedExplosionUtil {
 
-	//for Hellfire SDEM (large) Balefire Emitter (small)
+	//for Hellfire SDEM (large), Balefire Emitter (small), deadeye plasma seeker (deadeye)
 	public static void spawnShapedExplosion(Vector2f loc, float angle, float shipSpeed, Color pc, boolean isSmall) {
-		
+		String type = isSmall ? "small" : "large";
+		spawnShapedExplosion(loc, angle, shipSpeed, pc, type);
+	}
+	
+	public static void spawnShapedExplosion(Vector2f loc, float angle, float shipSpeed, Color pc, String type) {		
 		if (Global.getCombatEngine().getViewport().isNearViewport(loc, 800f)) {
 			
 			int numParticles = 200;
-			float minSize = 20;
-			float maxSize = 30;
+			float minSize = 20f;
+			float maxSize = 30f;
 			
 			float minDur = 0.6f;
 			float maxDur = 1.2f;
@@ -28,13 +32,27 @@ public class ShapedExplosionUtil {
 			float endSizeMin = 1f;
 			float endSizeMax = 2f;
 			
-			if (isSmall) {
-			numParticles = 100;
-			minSize = 15;
-			maxSize = 20;
+			if (type.equals("small")) {
+				numParticles = 100;
+				minSize = 15f;
+				maxSize = 20f;
 			
-			arc = 30;
-			scatter = 50f;
+				arc = 30f;
+				scatter = 50f;
+			}
+			
+			else if (type.equals("deadeye")) {
+				numParticles = 50;
+				minSize = 10f;
+				maxSize = 15f;
+				
+				minDur = 0.4f;
+				maxDur = 0.7f;
+			
+				arc = 120f;
+				scatter = 20f;
+				minVel = 10f + shipSpeed;
+				maxVel = 30f + shipSpeed;
 			}
 			
 			Vector2f spawnPoint = new Vector2f(loc);
@@ -49,8 +67,8 @@ public class ShapedExplosionUtil {
 				angleOffset *= arc/2f;
 				float theta = (float) Math.toRadians(angle + angleOffset);
 				float r = (float) (Math.random() * Math.random() * scatter);
-				float x = (float)Math.cos(theta) * r;
-				float y = (float)Math.sin(theta) * r;
+				float x = (float) Math.cos(theta) * r;
+				float y = (float) Math.sin(theta) * r;
 				Vector2f pLoc = new Vector2f(spawnPoint.x + x, spawnPoint.y + y);
 				
 				float speed = minVel + (maxVel - minVel) * (float) Math.random();

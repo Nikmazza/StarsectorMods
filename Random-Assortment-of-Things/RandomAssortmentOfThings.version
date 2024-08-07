@@ -5,8 +5,8 @@
     "modVersion":
     {
         "major":2,
-        "minor":0,
-        "patch":6-Part1 # Can be a number, character or string (1, 2, a, b, "-RC2", etc)
+        "minor":4,
+        "patch":0Beta4 # Can be a number, character or string (1, 2, a, b, "-RC2", etc)
     },
 	
 	#Link towards a direct download, fetched from the online version file
@@ -15,4 +15,6 @@
 	#Link towards a directly accessible text file, which can be used to display a changelog ingame, is fetched from the online version file.
 	"changelogURL":"https://raw.githubusercontent.com/Lukas22041/Random-Assortment-of-Things/main/changelog.txt",
 
+
+	
 }

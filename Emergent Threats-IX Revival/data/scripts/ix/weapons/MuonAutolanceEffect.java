@@ -13,7 +13,7 @@ import com.fs.starfarer.api.util.IntervalUtil;
 
 public class MuonAutolanceEffect implements BeamEffectPlugin {
 
-	private IntervalUtil fireInterval = new IntervalUtil(0.25f, 1.75f);
+	private IntervalUtil fireInterval = new IntervalUtil(0.7f, 1.0f);
 	private boolean wasZero = true;
 	
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
@@ -27,8 +27,8 @@ public class MuonAutolanceEffect implements BeamEffectPlugin {
 			
 			if (fireInterval.intervalElapsed()) {
 				Vector2f point = beam.getRayEndPrevFrame();
-				float emp = beam.getDamage().getFluxComponent() * 1f;
-				float dam = beam.getDamage().getDamage() * 1f;
+				float emp = beam.getDamage().getFluxComponent() * 0.5f;
+				float dam = beam.getDamage().getDamage() * 0.5f;
 				engine.spawnEmpArc(beam.getSource(), point, beam.getDamageTarget(), beam.getDamageTarget(),DamageType.ENERGY, dam, emp, 100000f, "tachyon_lance_emp_impact", beam.getWidth(), beam.getFringeColor(), beam.getCoreColor());
 			}
 		}

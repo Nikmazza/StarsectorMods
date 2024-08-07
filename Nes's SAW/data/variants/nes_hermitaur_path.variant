@@ -1,0 +1,49 @@
+{
+  "variantId": "nes_hermitaur_path",
+  "hullId": "nes_hermitaur_path",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "insulatedengine",
+	"armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0033": "chaingun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "jackhammer",
+        "WS0002": "jackhammer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "lightdualac",
+        "WS0007": "lightdualac"
+      }
+    },
+	{
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "lightdualmg",
+        "WS0005": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

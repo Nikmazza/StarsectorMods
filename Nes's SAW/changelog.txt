@@ -1,3 +1,171 @@
+1.13SSS
+added Hermitaur (LP):
+-reversed mount layout
+-SO & ammo feed combo
+-cheaper to deploy
+-very ill-advised
+
+Hammerfall:
+-op 85 > 80
+
+Hampter(XIV):
+-now blueprint can be found with the help of a well funded historian
+
+1.12SSS
+Hermitaur:
+-Hot Loaded Missiles: reworked, now gives passive bonus, removed large missile op reduction
+-op 100 > 105
+-flux 3500 > 4000
+-dissipation 175 > 200
+-dp 11 > 12
+
+Hammerfall:
+-Mining Drill: now has limited charges
+-flux 6000 > 5000
+-dissipation 350 > 300
+-armor 550 > 600
+-dp 8 > 7
+
+Carnelian:
+-flux 8500 > 6500
+-dissipation 500 > 400
+-Cymophane drone flak cannon sustained dps halved
+-dp 20 > 18
+
+Fluorspar:
+-Crystalline Construction: removed solar corona damage reduction effect, lifted solar shielding restricion
+-dissipation 400 > 350
+-shield upkeep 0.3 > 0.4
+-dp 20 > 18
+
+Laevatein Assault Cannon:
+-increased rarity
+
+updated main menu showcase mission
+added an icon
+
+1.11SSS
+Hampter:
+-removed Heavy Ballistic Integration
+-added Tried and Tested
+-op 85 > 90
+
+Volt:
+-will no longer appear in pirate fleets
+
+Hermitaur:
+-op 95 > 100
+-dp 12 > 11
+
+Magic Paintjobs: vanilla ships cosmetics, manage them in "Personal" intel tab
+-added "Ivory Bastion" Champion
+-added "Ivory Bastion" Heron
+-added "Ivory Bastion" Gryphon
+-added "Ivory Bastion" Eagle
+-added "Ivory Bastion" Falcon
+-added "Ivory Bastion" Sunder
+-added "Ivory Bastion" Hammerhead
+-added "Ivory Bastion" Drover
+
+1.10SSS
+Hampter:
+-small ballistic turret arcs adjusted to no longer converge forward
+-shipsystem reserve deployment > ammofeed
+-flux 5000 > 4000
+-dissipation 250 > 200
+-hull 5500 > 5000
+-armor 750 > 700
+
+Hammerfall:
+-small energy turret arcs adjusted to no longer converge forward
+-flux 6500 > 6000
+-dissipation 400 > 350
+-shield efficiency 1.2 > 1
+-hull 5500 > 5000
+-armor 650 > 550
+-ppt 360 > 300
+-market price reduced
+
+Fluorspar:
+-dp 16 > 20
+-ppt 300 > 240
+-updated "Bornite" livery
+
+Hermitaur:
+-shipsystem burn drive > maneuvering jets
+-top speed 65 > 60
+-dp 9 > 12
+-ppt 420 > 360
+-updated "Antique" livery
+-updated "Devout" livery
+
+Carnelian:
+-dp 18 > 20
+-ppt 300 > 240
+
+Volt:
+-updated "Black Ops" livery
+
+fleet points adjustment pass for all ships, overall a (slight) buff in autoresolve battles
+updated variants
+
+1.9h
+Hammerfall: removing unnecessary clutter and opening up ch options
+-built-in drones removed
+-surveying equipment removed
+-hull 5000 > 5500
+-op 80 > 85
+-dp 9 > 8
+-updated "Rogue" customizable livery
+
+Hermitaur: trimming stats across the board while making some of the more expensive large missiles easier to fit
+-flux 4500 > 3500
+-flux dissipation 250 > 175
+-hull 6500 > 6000
+-armor 950 > 900
+-op 100 > 95
+-op cost of installed large missile weapons reduced by 10
+-dp 10 > 9
+-updated "Devout" customizable livery
+-updated "Marauder" customizable livery
+
+Hampter:
+-flux dissipation 300 > 250
+
+Carnelian:
+-dp 16 > 18
+-added "Recon" customizable livery
+
+Fluorspar:
+-added "Bornite" customizable livery
+
+Volt:
+-updated "Starlight" customizable livery
+-updated "Vermillion" customizable livery
+
+
+
+1.9ggggggg
+fixes, minor balance tweaks, an extra hampter livery
+
+1.9gggggg
+Hermitaur:
+-hot-loaded missiles max effect at 90% > 70% flux
+-updated "Marauder" customizable livery
+-updated variants
+
+added a listener to keep "system" tag weapons from showing up in the cargo hold for good, thanks Dragn!
+
+1.9ggggg
+Laevatein assault cannon:
+-range 800 > 900
+-updated hardpoint sprite
+
+fixed an elusive memory leak
+
+1.9gggg
+-removed 1 portait
+
 1.9ggg
 Carnelian:
 -added "Reef" customizable livery

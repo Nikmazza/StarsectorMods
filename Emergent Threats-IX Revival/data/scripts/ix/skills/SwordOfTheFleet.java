@@ -42,7 +42,7 @@ public class SwordOfTheFleet {
 			boolean isRegenAlreadyBoosted = false;
 			if (stats != null) {
 				isIX = (stats.getVariant().getHullSpec().getManufacturer().equals("IX Battlegroup") 
-						|| stats.getVariant().hasHullMod("IX_HULLMOD"));
+						|| stats.getVariant().hasHullMod(IX_HULLMOD));
 				isRegenAlreadyBoosted = (!stats.getEnergyAmmoRegenMult().isUnmodified() 
 						&& !stats.getEnergyAmmoRegenMult().isNegative());
 			}

@@ -1,8 +1,17 @@
-Changes:
-
-- Now throws a runtime exception if Particle Engine is enabled but out of date (requires at least version 0.5, if enabled).
-
-Fixes:
-
-- Fixed a bug where currently mounted weapon's updated range wasn't showing if no other weapons were available
-- Fixed weapons with custom glow effects crashing if combat engine hasn't been initialized and player immediately enters refit screen upon loading a save
+0.6.5:
+- Fixed unintentional hard dependency on Particle Engine
+0.6.4:
+- Updated some sprites
+- Updated some visuals
+- All bolt weapons: lowered volume, reduced projectile size
+- Boltgun: DPS 70 -> 80
+- Bolt Repeater: Ammo 20 -> 30
+- Light Mining Blaster: each bolt now does 50 scripted damage to armor
+- Needle Driver:
+linger time 12s -> 15s,
+fire rate 2s -> 1.8s,
+max damage 400 -> 500, max attachments 16 -> 20
+- Ultra Blaster: fire rate 1/5s -> 1/6s
+- Ion Storm GMLRS: added 250 EMP damage on hit, EMP arc damage 500 -> 1000,
+now only has a chance to spawn an arc on hull/armor hits depending on number of previous hits within 3 seconds,
+fire rate 1/25s -> 1/20s

@@ -17,7 +17,7 @@ import com.fs.starfarer.api.util.Misc;
 public class IXPanopticonNode extends BaseIndustry {
 
 	private static float DEFAULT_PATHER_INTEREST = 4f;
-	private static float DEFENSE_BONUS_NODE = 1f;
+	private static float DEFENSE_BONUS_NODE = 0.5f;
 	private static int STABILITY_BONUS = 5; //display only
 	private static String IX_FACTION = "ix_battlegroup";
 	private static String CORE = "ix_panopticon";

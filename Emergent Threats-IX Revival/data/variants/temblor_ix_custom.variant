@@ -1,6 +1,6 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 2,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "temblor_ix",
@@ -18,15 +18,17 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 001": "muon_autolance_ix",
-                "WS 002": "morningstar_ciws_ix"
-            }
+            "weapons": {"WS 001": "muon_autolance_ix"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS DIF": "diffraction_laser_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "plasma_dart_ix"}
         }
     ],
     "wings": []

@@ -1,28 +1,26 @@
 {
-  "hullName": "Iris",
+  "hullName": "Iris (IX)",
   "hullId": "iris_ix_base",
   "hullSize": "DESTROYER",
-  "spriteName": "graphics/ships/ix/iconoclast_ix.png",
+  "spriteName": "graphics/ships/ix/iris_ix.png",
   "style": "HIGH_TECH",
   "height": 119,
   "width": 112,
   "center": [56, 51],
-  "collisionRadius": 76.5,
-  "shieldCenter": [0, -0],
-  "shieldRadius": 76.5,
+  "collisionRadius": 87,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 87,
   "viewOffset": 0,
-  "builtInMods": [
-    "hardened_subsystems"
-  ],
+  "builtInMods": [],
   "weaponSlots": [
     {
       "id": "WS ARR",
-      "size": "LARGE",
+      "size": "MEDIUM",
       "type": "BUILT_IN",
-      "mount": "HIDDEN",
-      "arc": 60,
+      "mount": "TURRET",
+      "arc": 360,
       "angle": 0,
-      "locations": [39, -0]
+      "locations": [35, 0]
     },
     {
       "id": "WS 001",
@@ -34,7 +32,7 @@
       "locations": [2, 17]
     },
     {
-      "id": "WS0 002",
+      "id": "WS 002",
       "size": "SMALL",
       "type": "ENERGY",
       "mount": "TURRET",
@@ -43,33 +41,45 @@
       "locations": [2, -17]
     },
     {
-      "id": "LB 1",
+      "id": "WS 003",
       "size": "SMALL",
-      "type": "LAUNCH_BAY",
-      "mount": "HIDDEN",
-      "arc": 360,
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
       "angle": 0,
-      "locations": [
-        0, 42,
-        0, 42
-      ]
+      "locations": [8, 44]
     },
     {
-      "id": "LB 2",
+      "id": "WS 004",
       "size": "SMALL",
-      "type": "LAUNCH_BAY",
-      "mount": "HIDDEN",
-      "arc": 360,
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
       "angle": 0,
-      "locations": [
-        0, -42,
-        0, -42
-      ]
+      "locations": [8, -44]
+    },
+    {
+      "id": "WS F01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -30,
+      "locations": [62, 0]
+    },
+    {
+      "id": "WS F02",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 30,
+      "locations": [62, 0]
     }
   ],
   "engineSlots": [
     {
-      "location": [-49.5, 13.5],
+      "location": [-50, 13],
       "length": 30,
       "width": 10,
       "angle": 180,
@@ -77,7 +87,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-49.5, -13.5],
+      "location": [-50, -13],
       "length": 30,
       "width": 10,
       "angle": -180,
@@ -85,7 +95,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-50.5, 5],
+      "location": [-50, 5],
       "length": 30,
       "width": 10,
       "angle": 180,
@@ -93,7 +103,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-50.5, -5],
+      "location": [-50, -5],
       "length": 30,
       "width": 10,
       "angle": -180,
@@ -102,12 +112,12 @@
     }
   ],
   "bounds": [
-    -50.5, -37,
-    -16.5, -56,
-    40.5, -35.5,
-    67, -0,
-    40.5, 35.5,
-    -16.5, 56,
-    -50.5, 37
+    -51, -36,
+    -14, -56,
+    40, -36,
+    63, 0,
+    40, 36,
+    -14, 56,
+    -51, 36
   ]
 }

@@ -1,15 +1,17 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 9,
+    "fluxCapacitors": 3,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "aurora_ix",
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",
-        "ix_laser_collimator",
         "frontemitter",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "ix_dawnstar_controller",
+        "ix_dawnstar_proton",
+        "ix_dawnstar_proton_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -19,8 +21,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "twin_tactical_laser_ix",
-                "WS 008": "twin_tactical_laser_ix"
+                "WS 007": "dawnstar_lcpb_ix",
+                "WS 008": "dawnstar_lcpb_ix"
             }
         },
         {
@@ -35,11 +37,16 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 010": "taclaser",
-                "WS 011": "taclaser",
-                "WS 012": "taclaser",
-                "WS 013": "taclaser"
+                "WS 010": "spatial_charge_launcher_ix",
+                "WS 011": "spatial_charge_launcher_ix",
+                "WS 012": "spatial_charge_launcher_ix",
+                "WS 013": "spatial_charge_launcher_ix"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "daythorn_tapb_ix"}
         },
         {
             "autofire": true,
@@ -48,7 +55,6 @@
                 "WS 001": "morningstar_ciws_ix",
                 "WS 002": "morningstar_ciws_ix",
                 "WS 003": "morningstar_ciws_ix",
-                "WS 004": "morningstar_ciws_ix",
                 "WS 005": "morningstar_ciws_ix"
             }
         }

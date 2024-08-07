@@ -1,5 +1,6 @@
 package assortment_of_things.exotech.shipsystems
 
+import assortment_of_things.misc.baseOrModSpec
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.MutableShipStatsAPI
 import com.fs.starfarer.api.combat.PhaseCloakSystemAPI
@@ -16,10 +17,12 @@ import java.awt.Color
 
 class ExophaseShipsystem : BaseShipSystemScript() {
 
-    var JITTER_COLOR = Color(255, 175, 255, 255)
-    var JITTER_FADE_TIME = 0.5f
+    companion object {
+        var SHIP_ALPHA_MULT = 0.25f
+        var MAX_TIME_MULT = 3f
+        var ENGINE_COLOR = Color(255, 177, 127, 200)
+    }
 
-    var SHIP_ALPHA_MULT = 0.25f
 
     var VULNERABLE_FRACTION = 0f
     var INCOMING_DAMAGE_MULT = 0.25f
@@ -123,6 +126,8 @@ class ExophaseShipsystem : BaseShipSystemScript() {
             return
         }
 
+        if (ship.travelDrive.isActive) return
+
         if (ship.variant.hasTag("Arkas-Phantom")) return
 
         if (player) {
@@ -153,7 +158,7 @@ class ExophaseShipsystem : BaseShipSystemScript() {
         }
 
         for (weapon in ship.allWeapons.filter { it.isDecorative }) {
-            weapon.sprite.color = Color(255, 255, 255, (254 * (1 - ship.phaseCloak.effectLevel)).toInt())
+            weapon.sprite.color = Color(255, 255, 255, (254 * (1 - (ship.phaseCloak.effectLevel * 0.5f))).toInt())
         }
 
         val speedPercentMod = stats.dynamic.getMod(Stats.PHASE_CLOAK_SPEED_MOD).computeEffective(0f)
@@ -182,7 +187,7 @@ class ExophaseShipsystem : BaseShipSystemScript() {
         ship.extraAlphaMult = 1f - (1f - SHIP_ALPHA_MULT) * levelForAlpha
         ship.setApplyExtraAlphaToEngines(false) //Disable to make engines not get way to small
 
-        ship.engineController.fadeToOtherColor(this, Color(255, 177, 127, 200), Color(255, 177, 127, 200), 1f * effectLevel, 1f)
+        ship.engineController.fadeToOtherColor(this, ENGINE_COLOR, ENGINE_COLOR, 1f * effectLevel, 1f)
         ship.engineController.extendFlame(this, -0.1f * effectLevel, -0.1f * effectLevel, 0f)
 
         /*var thrusterID = 1000
@@ -239,6 +244,25 @@ class ExophaseShipsystem : BaseShipSystemScript() {
     override fun getStatusData(index: Int, state: ShipSystemStatsScript.State?, effectLevel: Float): StatusData? {
 
         return null
+    }
+
+    override fun isUsable(system: ShipSystemAPI?, ship: ShipAPI?): Boolean {
+
+        var disallowPhaseTimer = ship!!.customData.get("rat_dont_allow_phase") as Float?
+
+        if (disallowPhaseTimer != null) {
+            if (disallowPhaseTimer > 0f) {
+                return false
+            }
+        }
+
+        /*if (ship!!.baseOrModSpec().hullId == "rat_gilgamesh") {
+            if (ship.system.state == ShipSystemAPI.SystemState.IN || ship.system.state == ShipSystemAPI.SystemState.ACTIVE) {
+                return false
+            }
+        }*/
+
+        return super.isUsable(system, ship)
     }
 
 

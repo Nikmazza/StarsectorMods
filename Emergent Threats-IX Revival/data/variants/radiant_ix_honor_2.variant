@@ -1,51 +1,60 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 0,
-    "fluxVents": 42,
+    "fluxCapacitors": 4,
+    "fluxVents": 50,
     "hullId": "radiant_ix",
     "hullMods": [
-        "ix_reactive_combat_shields",
-        "missleracks",
+        "advancedoptics",
         "eccm",
+        "ix_reactive_combat_shields",
+        "targetingunit",
         "ix_smod_handler",
         "magazines",
-        "high_scatter_amp",
-        "targetingunit",
         "frontemitter",
         "stabilizedshieldemitter"
     ],
     "permaMods": [
-        "ix_reactive_combat_shields",
-        "missleracks",
         "eccm",
+        "ix_reactive_combat_shields",
+        "targetingunit",
         "ix_smod_handler"
     ],
     "sMods": [
+        "eccm",
         "ix_reactive_combat_shields",
-        "missleracks",
-        "eccm"
+        "targetingunit"
     ],
     "variantId": "radiant_ix_honor_2",
     "weaponGroups": [
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS SBE": "sbe_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 000": "conversion_lance_ix",
-                "WS 001": "conversion_lance_ix",
-                "WS SBE": "sbe_ix"
+                "WS 002": "starfall_mlrs_ix",
+                "WS 004": "starfall_mlrs_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "orthrus_l_ix",
-                "WS 004": "orthrus_l_ix",
                 "WS 005": "orthrus_m_ix",
                 "WS 006": "orthrus_m_ix",
                 "WS 007": "orthrus_m_ix",
                 "WS 008": "orthrus_m_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "stormlight_graser_ix",
+                "WS 001": "stormlight_graser_ix"
             }
         },
         {

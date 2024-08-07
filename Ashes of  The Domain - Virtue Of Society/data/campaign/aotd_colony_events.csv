@@ -32,7 +32,7 @@ hh_op3:Decline the deal using some official statement of wanting to stay neutral
 eternal_slumber,Eternal Slumber,"es_op1:Seal entrance to this crypt.
 es_op2:Use this crypt to harvest organs.
 es_op3:Awaken all people, that have been put into cryosleep.",true,false,data.colonyevents.events.EternalSlumberEvent,720,aod_vos,awakening,5000,,,,,
-safety_concerns,Safety Concerns,"qa_op1:Increase safetry measures in factories!
+safety_concerns,Safety Concerns,"qa_op1:Increase safety measures in factories!
 qa_op2:Ignore people's demands.",false,false,data.colonyevents.events.SafetyConcernsEvent,720,aod_vos,safety_conditions,5000,,,,,
 uaf_bakery_event,Baker's Diplomacy,"bd_op1:Sign the contract under your name
 bd_op2:Shoot them and give the exact contract to the UAF 
@@ -57,5 +57,6 @@ hive_op3:I will not let those things infest our planet, destroy them.",true,true
 tectonic_disaster,Tectonic Catastrophy,tec_op1:Fuck....,false,true,data.colonyevents.events.TectonicDisasterEvent,10000,aod_vos,tectonic_disaster,7000	,,,,,
 acot_encounter_encounter,Unexpected Encounter,"acot_op1:Yes, we will help you with returning to your home SOPHIA.
 acot_op2:No, actually you will be better as our test subjest in laboratory. APPREHEND HER.",true,true,data.colonyevents.events.UnexpectedOutsiderEvent,10000,aod_vos,tectonic_disaster,7000	,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
+crime_syndicate_beginning,Rampant Crime,crime_beginning: WE MUST DO SOMETHING!,false,true,data.colonyevents.events.CrimeSyndicateEvent,1200,aod_vos,crime_rampant,7000,,,,,
+crime_syndicate_resolve,Question of Internal Stability,"crime_syndicate_deal:We need to strike deal with crime lord for stability.
+crime_syndicate_rampage:Order marines full purge.",false,true,data.colonyevents.events.CrimeSyndicateEvent,200,aod_vos,crime_resolve,7000,,,,,

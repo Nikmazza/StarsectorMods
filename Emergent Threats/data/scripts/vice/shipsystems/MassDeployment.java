@@ -18,6 +18,7 @@ public class MassDeployment extends BaseShipSystemScript {
 		
 		if (effectLevel == 1) {
 			for (FighterLaunchBayAPI bay : ship.getLaunchBaysCopy()) {
+				if (bay.getWing() == null) continue;
 				bay.setFastReplacements(bay.getWing().getSpec().getNumFighters());
 			}
 		}

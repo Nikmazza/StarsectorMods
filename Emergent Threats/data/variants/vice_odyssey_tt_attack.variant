@@ -1,14 +1,15 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 0,
-    "fluxVents": 47,
+    "fluxCapacitors": 13,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_odyssey_tt",
     "hullMods": [
-        "advancedoptics",
-        "hardenedshieldemitter",
-        "targetingunit"
+        "vice_advanced_terminator_core",
+        "targetingunit",
+        "stabilizedshieldemitter"
     ],
+    "modules": [{"SM 1": "vice_odyssey_secondary_drone_bay"}],
     "permaMods": [],
     "sMods": [],
     "variantId": "vice_odyssey_tt_attack",
@@ -17,20 +18,16 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "hil",
-                "WS 004": "gravitonbeam",
-                "WS 005": "gravitonbeam",
-                "WS 006": "ionbeam",
-                "WS 007": "taclaser",
-                "WS 008": "taclaser",
-                "WS 009": "taclaser",
-                "WS 010": "taclaser",
-                "WS 011": "taclaser",
-                "WS 014": "taclaser"
+                "WS 001": "vice_siege_burst",
+                "WS 006": "gravitonbeam",
+                "WS 007": "vice_ionstreamer",
+                "WS 008": "vice_ionstreamer",
+                "WS 009": "vice_ionstreamer",
+                "WS 010": "vice_ionstreamer"
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
                 "WS 002": "squall",
@@ -41,8 +38,12 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 004": "heavyburst",
+                "WS 005": "heavyburst",
+                "WS 011": "pdlaser",
                 "WS 012": "pdlaser",
                 "WS 013": "pdlaser",
+                "WS 014": "pdlaser",
                 "WS 015": "pdlaser",
                 "WS 016": "pdlaser",
                 "WS 017": "pdlaser",
@@ -50,9 +51,8 @@
             }
         }
     ],
-	"modules": [{"SM 1": "vice_odyssey_secondary_drone_bay"}],
     "wings": [
-        "thunder_wing",
-        "thunder_wing"
+        "claw_wing",
+        "claw_wing"
     ]
 }

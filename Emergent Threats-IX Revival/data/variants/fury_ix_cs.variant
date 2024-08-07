@@ -1,6 +1,6 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 12,
+    "fluxCapacitors": 0,
     "fluxVents": 25,
     "goalVariant": true,
     "hullId": "fury_ix",
@@ -29,6 +29,14 @@
             "weapons": {
                 "WS 001": "starfall_rocket_ix",
                 "WS 002": "starfall_rocket_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "plasma_dart_ix",
+                "WS 006": "plasma_dart_ix"
             }
         },
         {
