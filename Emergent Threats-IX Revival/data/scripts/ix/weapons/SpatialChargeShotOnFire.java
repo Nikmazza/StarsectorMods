@@ -12,7 +12,7 @@ import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 
-import data.scripts.ix.DistanceUtil;
+import data.scripts.ix.util.DistanceUtil;
 import org.magiclib.util.MagicLensFlare;
 
 public class SpatialChargeShotOnFire implements OnFireEffectPlugin {

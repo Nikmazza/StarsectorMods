@@ -9,9 +9,9 @@ import com.fs.starfarer.api.campaign.listeners.FleetEventListener
 import com.fs.starfarer.api.loading.VariantSource
 import com.fs.starfarer.api.util.Misc
 import second_in_command.misc.NPCOfficerGenerator
+import second_in_command.skills.PlayerLevelEffects
 import second_in_command.specs.SCBaseSkillPlugin
 import second_in_command.specs.SCOfficer
-import second_in_command.specs.SCSpecStore
 
 //Per Fleet Data
 class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener {
@@ -63,17 +63,20 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
         }
         else {
 
-            //Condition here to check for which fleets not to spawn officers for, i.e ziggurat or other boss ships
+            clearCommanderSkills()
 
+            if (!fleet.hasTag("sc_do_not_generate_skills")) {
+                generateNPCOfficers()
+            }
 
-
-            generateNPCOfficers()
         }
 
 
         //Moved here, away from the inflator, in case this class only got created on interaction
         applyControllerHullmod()
     }
+
+
 
     fun getActiveOfficers() = activeOfficers.filterNotNull()
 
@@ -121,6 +124,11 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
     }
 
     fun removeOfficerFromFleet(officer: SCOfficer) {
+
+        if (officer.isAssigned()) {
+            setOfficerInSlot(getOfficersAssignedSlot(officer)!!, null)
+        }
+
         officer.data = null
         officers.remove(officer)
     }
@@ -151,7 +159,22 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
         }
     }
 
+    fun hasAptitudeInFleet(aptitudeId: String) : Boolean {
+        return getOfficersInFleet().any { it.aptitudeId == aptitudeId }
+    }
+
     fun setOfficerInEmptySlotIfAvailable(officer: SCOfficer) {
+
+        //Check for incompatibilities
+        var categories = officer.getAptitudePlugin().categories
+        for (other in getActiveOfficers()) {
+            var otherCategories = other.getAptitudePlugin().categories
+
+            if (categories.any { otherCategories.contains(it) }) {
+                return
+            }
+        }
+
         if (getOfficerInSlot(0) == null) {
             setOfficerInSlot(0, officer)
         }
@@ -177,6 +200,16 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
         return getAssignedOfficers().filter { it != null }.flatMap { it!!.getActiveSkillPlugins().map { it.getId() } }.contains(skillId)
     }
 
+    fun getOfficersAssignedSlot(officer: SCOfficer) : Int? {
+        if (!officer.isAssigned()) return null
+
+        if (getOfficerInSlot(0) == officer) return 0
+        if (getOfficerInSlot(1) == officer) return 1
+        if (getOfficerInSlot(2) == officer) return 2
+
+        return null
+    }
+
 
     override fun isDone(): Boolean {
         return false
@@ -192,6 +225,10 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
 
         for (skill in getAllActiveSkillsPlugins()) {
             skill.advance(this, amount)
+        }
+
+        if (isPlayer) {
+            PlayerLevelEffects.advance(this, amount)
         }
 
     }
@@ -232,6 +269,39 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
                     var module = member.variant.getModuleVariant(slot)
                     module.addMod("sc_skill_controller")
                 }*/
+            }
+        }
+    }
+
+    var blacklist = listOf(
+        "tactical_drills",
+        "coordinated_maneuvers",
+        "wolfpack_tactics",
+        "crew_training",
+        "fighter_uplink",
+        "carrier_group",
+        "officer_training",
+        "officer_management",
+        "best_of_the_best",
+        "support_doctrine",
+        "electronic_warfare",
+        "flux_regulation",
+        "cybernetic_augmentation",
+        "phase_corps",
+        "derelict_contingent",
+    )
+
+    //Remove vanilla admiral skills from existing NPC fleets, mostly in case some mod overwrites the settings.json configs
+    fun clearCommanderSkills() {
+
+
+        var skills = commander.stats.skillsCopy.filter { it.level >= 0.1f }.filterNotNull()
+
+        for (skill in ArrayList(skills)) {
+            var id = skill.skill?.id ?: "skill_not_found"
+            if (blacklist.contains(id)) {
+                skill.level = 0f
+                commander.stats.decreaseSkill(skill.skill.id)
             }
         }
     }

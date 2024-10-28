@@ -1,17 +1,11 @@
 package data.hullmods.vice;
 
-import java.awt.Color;
-import java.util.HashMap;
-import java.util.Map;
-import org.lwjgl.util.vector.Vector2f;
-
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import org.magiclib.util.MagicLensFlare;
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveMalfunction extends BaseHullMod {
 

@@ -25,23 +25,23 @@ class AptitudePiracy : SCBaseAptitudePlugin() {
         section1.addSkill("sc_piracy_outmanoeuvred")
         section1.addSkill("sc_piracy_ambush")
         section1.addSkill("sc_piracy_stockpile")
-        section1.addSkill("sc_piracy_improvised_raids")
+        //section1.addSkill("sc_piracy_improvised_raids")
         section1.addSkill("sc_piracy_hunting_grounds")
         section1.addSkill("sc_piracy_all_out")
         section1.addSkill("sc_piracy_steadfast")
         addSection(section1)
 
         var section2 = SCAptitudeSection(true, 3, "technology2")
+        section2.addSkill("sc_piracy_bounty_board")
         section2.addSkill("sc_piracy_provisional_replacements")
         addSection(section2)
-
-
 
     }
 
     override fun getMarketSpawnweight(market: MarketAPI): Float {
         var weight = spec.spawnWeight
-        if (market.faction.isPirateFaction()) weight += 2f
+        if (market.faction.id == Factions.PIRATES) weight *= 3f
+        else if (market.faction.isPirateFaction()) weight *= 2f
         return weight
     }
 

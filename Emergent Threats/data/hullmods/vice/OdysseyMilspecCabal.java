@@ -9,7 +9,6 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 
 public class OdysseyMilspecCabal extends BaseHullMod {
@@ -30,7 +29,6 @@ public class OdysseyMilspecCabal extends BaseHullMod {
 	@Override	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		ShipVariantAPI var = stats.getVariant();
-		ShipHullSpecAPI spec = var.getHullSpec();
 		
 		var.getHullMods().remove(SENSORS);
 		var.addPermaMod(DRONE_MOD, false);

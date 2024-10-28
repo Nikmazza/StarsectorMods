@@ -49,6 +49,15 @@
       "locations": [152, 0]
     },
     {
+      "id": "WS DIF",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [136, 0]
+    },
+    {
       "id": "WS 004",
       "size": "LARGE",
       "type": "SYNERGY",
@@ -182,7 +191,20 @@
       "arc": 150,
       "angle": 200,
       "locations": [-87, -46]
-    }
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [
+        180, -14,
+        180, 0,
+		180, 14,
+      ]
+    },
   ],
   "engineSlots": [
     {

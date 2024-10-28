@@ -13,7 +13,7 @@ import com.fs.starfarer.api.combat.ShipwideAIFlags;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.ix.DistanceUtil;
+import data.scripts.ix.util.DistanceUtil;
 
 public class SpatialChargesAI implements ShipSystemAIScript {
     

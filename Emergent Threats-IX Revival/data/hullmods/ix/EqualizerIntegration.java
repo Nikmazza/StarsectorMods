@@ -7,9 +7,9 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class EqualizerIntegration extends BaseHullMod {
 
-	public static float COST_REDUCTION_S  = 1;
-	public static float COST_REDUCTION_M  = 3;
-	public static float COST_REDUCTION_L  = 5;
+	private static float COST_REDUCTION_S  = 1;
+	private static float COST_REDUCTION_M  = 3;
+	private static float COST_REDUCTION_L  = 5;
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

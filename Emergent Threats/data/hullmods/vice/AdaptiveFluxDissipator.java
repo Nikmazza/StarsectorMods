@@ -5,7 +5,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveFluxDissipator extends BaseHullMod {
 
@@ -20,6 +20,14 @@ public class AdaptiveFluxDissipator extends BaseHullMod {
 		util.applyShipwideHullMod(stats.getVariant(), id, true);
 		util.addModuleHandler(stats);
 		stats.getHardFluxDissipationFraction().modifyMult(id, 1f + FLUX_DISSIPATION * 0.01f);
+	}
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		//self clear if invalid player hull, but do not clear on modules since they can be added by handler
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0 && !util.isModuleCheck(ship)) {
+			ship.getVariant().getHullMods().remove(id);
+		}
 	}
 	
 	@Override

@@ -1,5 +1,5 @@
 {
-  "hullName": "Iris (IX)",
+  "hullName": "Iris",
   "hullId": "iris_ix_base",
   "hullSize": "DESTROYER",
   "spriteName": "graphics/ships/ix/iris_ix.png",
@@ -11,7 +11,6 @@
   "shieldCenter": [0, 0],
   "shieldRadius": 87,
   "viewOffset": 0,
-  "builtInMods": [],
   "weaponSlots": [
     {
       "id": "WS ARR",

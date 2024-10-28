@@ -25,17 +25,19 @@
 	},
 	"knownWeapons":{
 		"weapons":[
-			"vice_ionstreamer",
 			"vice_x-ray_pulse",
 			"vice_lrburstpd",
 			"vice_siege_burst",
+			"vice_atropos_mirv",
+			"vice_ionstreamer",
+			"vice_fragbomb",
 		]
 	},
 	"knownHullMods":{
-		"hullMods":["vice_attuned_emitter_diodes", "vice_convert_shuttle"],
+		
 	},
 	"knownShips":{
-		"tags":["LG_bp"],
+		"tags":["LG_bp", "sindrian_diktat"],
 	},
 	"knownFighters":{
 		"tags":["sindrian_diktat", "lions_guard"],

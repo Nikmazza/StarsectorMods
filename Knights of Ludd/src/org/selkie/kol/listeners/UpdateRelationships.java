@@ -5,20 +5,19 @@ import com.fs.starfarer.api.campaign.BaseCampaignEventListener;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
-import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionResult;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionState;
 import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
-import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Nex_MarketCMD;
 import com.fs.starfarer.api.util.Misc;
 import exerelin.campaign.SectorManager;
+import org.selkie.kol.helpers.KolStaticStrings;
 import org.selkie.kol.plugins.KOL_ModPlugin;
 
 import java.util.List;
 
-import static org.selkie.kol.world.Crusaders.MEMKEY_KOL_SCHISMED;
+import static org.selkie.kol.helpers.KolStaticStrings.MEMKEY_KOL_SCHISMED;
 
 public class UpdateRelationships extends BaseCampaignEventListener {
     public UpdateRelationships(boolean permaRegister) {
@@ -32,8 +31,8 @@ public class UpdateRelationships extends BaseCampaignEventListener {
 			return;
 		}
     	if (factionId.equals(Factions.LUDDIC_CHURCH)) {
-			Global.getSector().getFaction(KOL_ModPlugin.kolID).adjustRelationship("player", delta);
-    		if (Misc.getCommissionFactionId() != null && Misc.getCommissionFactionId().equals(KOL_ModPlugin.kolID)) {
+			Global.getSector().getFaction(KolStaticStrings.kolFactionID).adjustRelationship(Factions.PLAYER, delta);
+    		if (Misc.getCommissionFactionId() != null && Misc.getCommissionFactionId().equals(KolStaticStrings.kolFactionID)) {
     			if (Global.getSector().getFaction(Factions.LUDDIC_CHURCH).getRelToPlayer().getRepInt() <= -50) {
     				List<IntelInfoPlugin> intels =  Global.getSector().getIntelManager().getIntel(FactionCommissionIntel.class);
     				for (IntelInfoPlugin intel : intels) {
@@ -43,17 +42,17 @@ public class UpdateRelationships extends BaseCampaignEventListener {
     						intelTemp.setMissionState(MissionState.COMPLETED);
     						intelTemp.endMission();
     						intelTemp.sendUpdateIfPlayerHasIntel(null, false);
-    						Global.getSector().getFaction(Factions.LUDDIC_CHURCH).adjustRelationship("player", delta, RepLevel.HOSTILE);
-    						Global.getSector().getFaction(KOL_ModPlugin.kolID).adjustRelationship("player", delta, RepLevel.HOSTILE);
+    						Global.getSector().getFaction(Factions.LUDDIC_CHURCH).adjustRelationship(Factions.PLAYER, delta, RepLevel.HOSTILE);
+    						Global.getSector().getFaction(KolStaticStrings.kolFactionID).adjustRelationship(Factions.PLAYER, delta, RepLevel.HOSTILE);
     					}
     				}
     			}
             }
         }
-		if (factionId.equals(KOL_ModPlugin.kolID)) {
-			Global.getSector().getFaction(Factions.LUDDIC_CHURCH).adjustRelationship("player", delta);
+		if (factionId.equals(KolStaticStrings.kolFactionID)) {
+			Global.getSector().getFaction(Factions.LUDDIC_CHURCH).adjustRelationship(Factions.PLAYER, delta);
 			if (Misc.getCommissionFactionId() != null && Misc.getCommissionFactionId().equals(Factions.LUDDIC_CHURCH)) {
-				if (Global.getSector().getFaction(KOL_ModPlugin.kolID).getRelToPlayer().getRepInt() <= -50) {
+				if (Global.getSector().getFaction(KolStaticStrings.kolFactionID).getRelToPlayer().getRepInt() <= -50) {
 					List<IntelInfoPlugin> intels =  Global.getSector().getIntelManager().getIntel(FactionCommissionIntel.class);
 					for (IntelInfoPlugin intel : intels) {
 						FactionCommissionIntel intelTemp = (FactionCommissionIntel) intel;
@@ -62,8 +61,8 @@ public class UpdateRelationships extends BaseCampaignEventListener {
 							intelTemp.setMissionState(MissionState.COMPLETED);
 							intelTemp.endMission();
 							intelTemp.sendUpdateIfPlayerHasIntel(null, false);
-							Global.getSector().getFaction(Factions.LUDDIC_CHURCH).adjustRelationship("player", delta, RepLevel.HOSTILE);
-							Global.getSector().getFaction(KOL_ModPlugin.kolID).adjustRelationship("player", delta, RepLevel.HOSTILE);
+							Global.getSector().getFaction(Factions.LUDDIC_CHURCH).adjustRelationship(Factions.PLAYER, delta, RepLevel.HOSTILE);
+							Global.getSector().getFaction(KolStaticStrings.kolFactionID).adjustRelationship(Factions.PLAYER, delta, RepLevel.HOSTILE);
 						}
 					}
 				}
@@ -75,9 +74,9 @@ public class UpdateRelationships extends BaseCampaignEventListener {
 	//The Knights inherit relationships from the church, but not vice versa
 	@Override
 	public void reportEconomyTick (int iterIndex) {
-		if (Global.getSector().getFaction(Factions.LUDDIC_CHURCH) != null && Global.getSector().getFaction(KOL_ModPlugin.kolID) != null) {
+		if (Global.getSector().getFaction(Factions.LUDDIC_CHURCH) != null && Global.getSector().getFaction(KolStaticStrings.kolFactionID) != null) {
 			FactionAPI church = Global.getSector().getFaction(Factions.LUDDIC_CHURCH);
-			FactionAPI knights = Global.getSector().getFaction(KOL_ModPlugin.kolID);
+			FactionAPI knights = Global.getSector().getFaction(KolStaticStrings.kolFactionID);
 			for(FactionAPI faction:Global.getSector().getAllFactions()) {
 				knights.setRelationship(faction.getId(), church.getRelationship(faction.getId()));
 			}
@@ -87,23 +86,23 @@ public class UpdateRelationships extends BaseCampaignEventListener {
 	public void returnKOLMarkets() {
 		if (Global.getSector().getEconomy() == null) return;
 		boolean nex = KOL_ModPlugin.haveNex;
-		if (Global.getSector().getEconomy().getMarket("kol_cygnus") != null) {
-			MarketAPI cygnus = Global.getSector().getEconomy().getMarket("kol_cygnus");
+		if (Global.getSector().getEconomy().getMarket(KolStaticStrings.KOL_CYGNUS) != null) {
+			MarketAPI cygnus = Global.getSector().getEconomy().getMarket(KolStaticStrings.KOL_CYGNUS);
 			if (cygnus.getFactionId().equals(Factions.LUDDIC_CHURCH)) {
 				if (nex) {
-					SectorManager.transferMarket(cygnus, Global.getSector().getFaction(KOL_ModPlugin.kolID), Global.getSector().getFaction(Factions.LUDDIC_CHURCH), false, false, null, 0, false);
+					SectorManager.transferMarket(cygnus, Global.getSector().getFaction(KolStaticStrings.kolFactionID), Global.getSector().getFaction(Factions.LUDDIC_CHURCH), false, false, null, 0, false);
 				} else {
-					cygnus.setFactionId(KOL_ModPlugin.kolID);
+					cygnus.setFactionId(KolStaticStrings.kolFactionID);
 				}
 			}
 		}
-		if (Global.getSector().getEconomy().getMarket("kol_lyra") != null) {
-			MarketAPI lyra = Global.getSector().getEconomy().getMarket("kol_lyra");
+		if (Global.getSector().getEconomy().getMarket(KolStaticStrings.KOL_LYRA) != null) {
+			MarketAPI lyra = Global.getSector().getEconomy().getMarket(KolStaticStrings.KOL_LYRA);
 			if (lyra.getFactionId().equals(Factions.LUDDIC_CHURCH)) {
 				if (nex) {
-					SectorManager.transferMarket(lyra, Global.getSector().getFaction(KOL_ModPlugin.kolID), Global.getSector().getFaction(Factions.LUDDIC_CHURCH), false, false, null, 0, false);
+					SectorManager.transferMarket(lyra, Global.getSector().getFaction(KolStaticStrings.kolFactionID), Global.getSector().getFaction(Factions.LUDDIC_CHURCH), false, false, null, 0, false);
 				} else {
-					lyra.setFactionId(KOL_ModPlugin.kolID);
+					lyra.setFactionId(KolStaticStrings.kolFactionID);
 				}
 			}
 		}

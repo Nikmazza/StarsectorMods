@@ -1,7 +1,5 @@
 package data.hullmods.vice;
 
-import java.util.Collection;
-
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -42,12 +40,13 @@ public class ResplendentPrototype extends BaseHullMod {
 		
 		stats.getMaxCrewMod().modifyMult(id, 1f -MAX_CREW_MULT);
 		
-		stats.getVariant().getHullSpec().setShipSystemId(BASE_SYSTEM);
-		Collection<String> mods = stats.getVariant().getNonBuiltInHullmods();
-		for (String s : mods) {
-			if (s.equals(GRAV_HULLMOD)) stats.getVariant().getHullSpec().setShipSystemId(GRAV_SYSTEM);
-			else if (s.equals(AFC_HULLMOD)) stats.getVariant().getHullSpec().setShipSystemId(AFC_SYSTEM);
+		if (stats.getVariant().getNonBuiltInHullmods().contains(GRAV_HULLMOD)) {
+			stats.getVariant().getHullSpec().setShipSystemId(GRAV_SYSTEM);
 		}
+		else if (stats.getVariant().getNonBuiltInHullmods().contains(AFC_HULLMOD)) {
+			stats.getVariant().getHullSpec().setShipSystemId(AFC_SYSTEM);
+		}
+		else stats.getVariant().getHullSpec().setShipSystemId(BASE_SYSTEM);
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {

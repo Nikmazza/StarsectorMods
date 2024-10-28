@@ -2,7 +2,7 @@
   "hullName": "Qilin",
   "hullId": "zea_dawn_qilin",
   "hullSize": "CAPITAL_SHIP",
-  "spriteName": "data/strings/com/fs/starfarer/api/impl/campaign/you can hear it cant you/our whispers through the void/our song/graphics/ships/zea_dawn_qilin.png",
+  "spriteName": "graphics/zea/ships/zea_dawn_qilin.png",
   "style": "ZEA_DAWN_TECH",
   "height": 401,
   "width": 240,
@@ -13,11 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "automated",
-    "zea_cascade_targeting",
-    "solar_shielding",
-    "kol_ea_shields1",
-    "kol_throttle",
-    "zea_dawn_simple_shield_drones"
+    "zea_dawn_builtin",
+    "zea_dawn_shield_style",
+    "zea_recovery_limiter",
   ],
   "weaponSlots": [
     {

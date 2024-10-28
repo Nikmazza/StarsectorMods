@@ -13,7 +13,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 
-import data.scripts.ix.ParticleBeamOnHitUtil;
+import data.scripts.ix.util.ParticleBeamOnHitUtil;
 import data.scripts.util.MagicRender;
 
 public class DaythornBeamEffect implements BeamEffectPlugin {

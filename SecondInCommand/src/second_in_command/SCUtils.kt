@@ -7,6 +7,7 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI
 import com.fs.starfarer.api.combat.ShipVariantAPI
 import com.fs.starfarer.api.ui.CustomPanelAPI
 import com.fs.starfarer.api.ui.TooltipMakerAPI
+import exerelin.campaign.backgrounds.CharacterBackgroundUtils
 import lunalib.lunaExtensions.addLunaElement
 import second_in_command.specs.SCBaseSkillPlugin
 import second_in_command.specs.SCOfficer
@@ -34,18 +35,57 @@ object SCUtils {
 
     @JvmStatic
     fun getPlayerData() : SCData {
-        var data = Global.getSector().playerFleet.memoryWithoutUpdate.get(FLEET_DATA_KEY) as SCData?
+        /*var data = Global.getSector().playerFleet.memoryWithoutUpdate.get(FLEET_DATA_KEY) as SCData?
+
+        if (data == null) {
+            data = Global.getSector().playerPerson.memoryWithoutUpdate.get(FLEET_DATA_KEY) as SCData?
+            Global.getSector().playerFleet.memoryWithoutUpdate.set(FLEET_DATA_KEY, data)
+        }
+
         if (data == null) {
             data = SCData(Global.getSector().playerFleet)
             Global.getSector().playerFleet.memoryWithoutUpdate.set(FLEET_DATA_KEY, data)
+            Global.getSector().playerPerson.memoryWithoutUpdate.set(FLEET_DATA_KEY, data) //To avoid executive officers being lost on player fleet destruction
             data!!.init()
         }
-        return data
+
+        return data*/
+
+        /*if (Global.getSector().playerFleet == null) {
+            return SCData(Global.getFactory().createEmptyFleet("player", "", false))
+        }*/
+
+        return getFleetData(Global.getSector().playerFleet)
     }
 
     @JvmStatic
     fun getFleetData(fleet: CampaignFleetAPI) : SCData{
         var data = fleet.memoryWithoutUpdate.get(FLEET_DATA_KEY) as SCData?
+
+        //Playerfleet data should always be grabbed from tbe player person instead, and its data should always be updated to match
+        if (/*data == null && */fleet.isPlayerFleet) {
+            data = Global.getSector().playerPerson.memoryWithoutUpdate.get(FLEET_DATA_KEY) as SCData?
+            fleet.memoryWithoutUpdate.set(FLEET_DATA_KEY, data)
+            if (data != null) {
+                data.fleet = fleet //Otherwise it would continue targeting the old fleet
+
+                if (!fleet.eventListeners.any { it is SCData }) {
+                    fleet.addEventListener(data)
+
+                    //Experimental, but should help in some cases
+                    var skills = data.getAllActiveSkillsPlugins()
+                    for (skill in skills) {
+                        skill.onActivation(data)
+                    }
+                }
+                if (!fleet.hasScriptOfClass(SCData::class.java)) {
+                    fleet.addScript(data)
+                }
+
+
+            }
+        }
+
         if (data == null) {
             data = SCData(fleet)
 
@@ -53,6 +93,11 @@ object SCUtils {
             if (fleet.fleetData == null) return data
 
             fleet.memoryWithoutUpdate.set(FLEET_DATA_KEY, data)
+
+            if (fleet.isPlayerFleet) {
+                Global.getSector().playerPerson.memoryWithoutUpdate.set(FLEET_DATA_KEY, data) //To avoid executive officers being lost on player fleet destruction
+            }
+
             data!!.init() //Move init to after the data has been assigned to the fleet key, otherwise it can cause some infinite loops
         }
         return data
@@ -144,6 +189,10 @@ object SCUtils {
         return bonus
     }
 
+    fun isAssociatesBackgroundActive() : Boolean {
+        if (!Global.getSettings().modManager.isModEnabled("nexerelin")) return false
+        return CharacterBackgroundUtils.isBackgroundActive("sc_associates")
+    }
 
     @JvmStatic
     fun showSkillOverview(dialog: InteractionDialogAPI, officer: SCOfficer) {

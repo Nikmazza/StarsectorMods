@@ -19,8 +19,8 @@ public class Undershield extends BaseHullMod {
 	//since modules can't check the hubship's stats and module variant can't access its MutableShipStatsAPI
 	//this hullmod applies a copy of itself onto flourish_ix module, and when on the module, adds shield arc
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		//if IX skin
-		if (stats.getVariant().hasHullMod("ix_ninth")) {
+		//if IX/TW skin
+		if (stats.getVariant().hasHullMod("ix_ninth") || stats.getVariant().hasHullMod("tw_trinity_retrofit")) {
 			isNinth = true;
 			if (stats.getVariant().getModuleVariant("WS 010") != null) {
 				stats.getVariant().getModuleVariant("WS 010").addMod(id);

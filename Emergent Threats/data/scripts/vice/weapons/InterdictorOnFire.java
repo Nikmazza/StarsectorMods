@@ -14,7 +14,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.impl.combat.dem.DEMScript;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.vice.DistanceUtil;
+import data.scripts.vice.util.DistanceUtil;
 
 public class InterdictorOnFire implements OnFireEffectPlugin {
 

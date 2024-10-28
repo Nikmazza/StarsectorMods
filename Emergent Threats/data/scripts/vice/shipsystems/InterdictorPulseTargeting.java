@@ -13,7 +13,7 @@ import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
-import data.scripts.vice.DistanceUtil;
+import data.scripts.vice.util.DistanceUtil;
 
 public class InterdictorPulseTargeting extends BaseShipSystemScript {
 	

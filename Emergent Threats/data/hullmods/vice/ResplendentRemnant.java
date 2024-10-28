@@ -19,6 +19,7 @@ public class ResplendentRemnant extends BaseHullMod {
 	private static String AFC_HULLMOD_DISPLAY = "Adaptive Flight Command";
 	private static String AFC_SYSTEM = "vice_targetingsweep";
 	private static String GRAV_HULLMOD = "vice_adaptive_gravity_drive";
+	private static String GRAV_HULLMOD_DISPLAY = "Adaptive Gravity Drive";
 	private static String GRAV_SYSTEM = "vice_fleetjump";
 	private static String BASE_SYSTEM = "vice_massdeployment";
 	
@@ -51,6 +52,7 @@ public class ResplendentRemnant extends BaseHullMod {
 		if (index == 3) return "" + (int) REACTOR_PENALTY + "%";
 		if (index == 4) return "" + (int) FITTING_PENALTY;
 		if (index == 5) return AFC_HULLMOD_DISPLAY;
+		if (index == 6) return GRAV_HULLMOD_DISPLAY;
 		return null;
 	}
 }

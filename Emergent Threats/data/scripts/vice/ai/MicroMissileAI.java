@@ -10,7 +10,7 @@ import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState;
 import com.fs.starfarer.api.combat.ShipwideAIFlags;
 
-import data.scripts.vice.DistanceUtil;
+import data.scripts.vice.util.DistanceUtil;
 
 public class MicroMissileAI implements ShipSystemAIScript {
     

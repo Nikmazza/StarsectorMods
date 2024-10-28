@@ -16,7 +16,7 @@ import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.ix.ParticleBeamOnHitUtil;
+import data.scripts.ix.util.ParticleBeamOnHitUtil;
 import data.scripts.util.MagicRender;
 
 public class DawnstarBeamEffect implements BeamEffectPlugin {

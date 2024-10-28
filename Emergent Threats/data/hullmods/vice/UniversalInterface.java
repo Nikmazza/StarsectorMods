@@ -16,6 +16,7 @@ public class UniversalInterface extends BaseHullMod {
 
 	private static float FLUX_PER_OP = 5f;
 	private static float BALLISTIC_ROF_PENALTY = 25f;
+	private static String THIS_MOD = "vice_universal_interface";
 
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -74,10 +75,10 @@ public class UniversalInterface extends BaseHullMod {
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
 		if (ship == null) return;
 		MutableShipStatsAPI stats = ship.getMutableStats();
-		float flux = stats.getFluxDissipation().getFlatStatMod("vice_universal_interface") == null 
-			? 0f : stats.getFluxDissipation().getFlatStatMod("vice_universal_interface").getValue();
-		float rof = stats.getBallisticRoFMult().getPercentStatMod("vice_universal_interface") == null 
-			? 0f : stats.getBallisticRoFMult().getPercentStatMod("vice_universal_interface").getValue();
+		float flux = stats.getFluxDissipation().getFlatStatMod(THIS_MOD) == null 
+			? 0f : stats.getFluxDissipation().getFlatStatMod(THIS_MOD).getValue();
+		float rof = stats.getBallisticRoFMult().getPercentStatMod(THIS_MOD) == null 
+			? 0f : stats.getBallisticRoFMult().getPercentStatMod(THIS_MOD).getValue();
 		
 		String missilePenaltyBase = "-" + (int) FLUX_PER_OP;
 		String missilePenaltyActual = flux != 0f ? "" + (int) flux + " total flux dissipation" : "inactive";

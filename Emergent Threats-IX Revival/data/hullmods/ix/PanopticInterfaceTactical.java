@@ -13,7 +13,7 @@ import com.fs.starfarer.api.combat.listeners.WeaponBaseRangeModifier;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.ix.PanopticInterfaceUtil;
+import data.scripts.ix.util.PanopticInterfaceUtil;
 
 public class PanopticInterfaceTactical extends BaseHullMod {
 	

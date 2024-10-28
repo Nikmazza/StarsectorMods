@@ -9,3 +9,5 @@ Rapid Assembly,ix_rapid_assembly,,,,,,0.4,,,,0.5,,0.1,90,,,,,,,,,,,,,graphics/ic
 Spatial Charges,ix_spatial_charges,,,,,,,,,,,,,10,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 Starfall Rocket Swarm,ix_starfall_rockets,,,,,,,,,,,,,10,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 Terminus Relay,ix_terminus_relay,,,,600,,,,,,0,0.001,0,10,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Ultracapacitors,ix_capacitors,1,,,,,,,,,0.25,10,0.25,15,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Pulse Accelerator,ix_pulse_accelerator,,,,,,,,,,1,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png

@@ -31,6 +31,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// "Tactical Objectives" on the mission detail screen
                 //api.addBriefingItem("Note: Test using vanilla weapons and wings only, weapons not properly implimented yet.");
 		api.addBriefingItem(txt("mission_sim3"));
+		api.addBriefingItem(txt("mission_sim4"));
+		api.addBriefingItem(txt("mission_sim5"));
 		
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters
@@ -44,7 +46,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.addToFleet(FleetSide.PLAYER, "nes_voltaire_standard", FleetMemberType.SHIP, false);
 		
 		// Set up the enemy fleet.
-		//thirty buffalos :>
+		// Thirty buffalos :>
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);

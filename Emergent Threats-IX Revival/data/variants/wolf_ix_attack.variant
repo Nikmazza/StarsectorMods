@@ -5,11 +5,9 @@
     "goalVariant": true,
     "hullId": "wolf_ix",
     "hullMods": [
-        "ix_dawnstar_controller",
         "advancedoptics",
         "extendedshieldemitter",
-        "ix_dawnstar_proton",
-        "ix_dawnstar_proton_handler"
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -18,12 +16,13 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "dawnstar_lcpb_ix"}
+            "weapons": {"WS 004": "daythorn_tapb_ix"}
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 001": "morningstar_ciws_ix",
                 "WS 005": "spatial_charge_launcher_ix",
                 "WS 006": "spatial_charge_launcher_ix"
             }
@@ -32,9 +31,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "morningstar_ciws_ix",
-                "WS 002": "morningstar_ciws_ix",
-                "WS 003": "morningstar_ciws_ix"
+                "WS 002": "daythorn_mapb_ix",
+                "WS 003": "daythorn_mapb_ix"
             }
         }
     ]

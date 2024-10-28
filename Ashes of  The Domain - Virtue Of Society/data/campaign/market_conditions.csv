@@ -20,9 +20,9 @@ Rampant Crime,crime_syndicate_beginning,false,true,data.colonyevents.conditions.
 Deal with the Devil,crime_syndicate_resolve_deal,false,true,data.colonyevents.conditions.CrimeSyndicateApplier,"We made a deal with crime lord, we allowed them to operate, in return for peace on this planet",graphics/icons/markets/urbanized_polity.png,1000
 Martial Law,crime_syndicate_resolve_violence,false,true,data.colonyevents.conditions.CrimeSyndicateApplier,We won't make a deals with someone who descend so low in society. We will purge this disease from this planet,graphics/icons/markets/mercenaries.png,1000
 Stronghold of Justice,crime_syndicate_stabilize,false,true,data.colonyevents.conditions.CrimeSyndicateApplier,"We have quickly stabilized our market, which enabled us to eliminate crime organizations across planet. ",graphics/icons/markets/underground_arcology.png,1000
-,,,,,,,
-,,,,,,,
-,,,,,,,
+Ancient Guardians,aotd_derelict_factory_fleet,false,true,data.colonyevents.conditions.AncientFactoryApplier,"We have quickly stabilized our market, which enabled us to eliminate crime organizations across planet. ",graphics/icons/markets/underground_arcology.png,1000
+miracle_seed_food_apply,miracle_seed_food_apply,false,true,data.colonyevents.conditions.MiracleSeedApplier,"We have quickly stabilized our market, which enabled us to eliminate crime organizations across planet. ",graphics/icons/markets/underground_arcology.png,1000
+miracle_seed_food_penalty,miracle_seed_food_penalty,false,true,data.colonyevents.conditions.MiracleSeedFoodPenalty,"We have quickly stabilized our market, which enabled us to eliminate crime organizations across planet. ",graphics/icons/markets/underground_arcology.png,1000
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,

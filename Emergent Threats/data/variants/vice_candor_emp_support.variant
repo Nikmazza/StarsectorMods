@@ -1,7 +1,7 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 0,
-    "fluxVents": 9,
+    "fluxCapacitors": 4,
+    "fluxVents": 10,
     "goalVariant": true,
     "hullId": "vice_candor_emp",
     "hullMods": [

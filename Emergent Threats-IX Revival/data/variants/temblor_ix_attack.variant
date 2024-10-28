@@ -8,7 +8,7 @@
         "ix_dawnstar_controller",
         "advancedoptics",
         "extendedshieldemitter",
-        "ix_reactive_combat_shields",
+        "hardenedshieldemitter",
         "frontemitter",
         "ix_dawnstar_neutron",
         "ix_dawnstar_neutron_handler"
@@ -30,7 +30,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "plasma_dart_ix"}
+            "weapons": {"WS 002": "daythorn_mapb_ix"}
         }
     ],
     "wings": []

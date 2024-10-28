@@ -2,6 +2,7 @@ package data.hullmods.ix;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.DamageAPI;
@@ -14,8 +15,9 @@ import com.fs.starfarer.api.util.Misc;
 public class ReactiveCombatShields extends BaseHullMod {
 
 	private static float DAMAGE_REDUCTION = 40f;
+	private static float DAMAGE_REDUCTION_SYNTHESIS = 50f;
 	private static float EMP_RESIST = 50f;
-	private static float FLUX_THRESHOLD = 70f;
+	private static float FLUX_THRESHOLD = 60f;
 	private static float FLUX_THRESHOLD_SMOD = 50f;
 	private static float SHIELD_EFFICIENCY_THRESHOLD = 0.6f;
 	private static Color SHIELD_INNER_COLOR_ACTIVE = new Color(100,225,100,75);
@@ -24,7 +26,8 @@ public class ReactiveCombatShields extends BaseHullMod {
 	
 	private static String EQUALIZER_MOD = "ix_entropy_arrestor";
 	private static String CONFLICT_MOD = "hardenedshieldemitter";
-	private String THIS_MOD = "ix_reactive_combat_shields";
+	private static String THIS_MOD = "ix_reactive_combat_shields";
+	private static String SYNTHESIS_CHECKER_MOD = "ix_reactive_checker";
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -32,15 +35,20 @@ public class ReactiveCombatShields extends BaseHullMod {
 	}
 	
 	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (ship.getOwner() == 0) ship.getVariant().getHullMods().remove(SYNTHESIS_CHECKER_MOD);
+	}
+	
+	@Override
     public void advanceInCombat(ShipAPI ship, float amount) {
-		float threshold = isSMod(ship.getMutableStats()) ? FLUX_THRESHOLD_SMOD : FLUX_THRESHOLD;
-		
         if (!ship.isAlive() || ship.getShield() == null) return;
+		float threshold = isSMod(ship.getMutableStats()) ? FLUX_THRESHOLD_SMOD : FLUX_THRESHOLD;
 		boolean isActive = ship.getMutableStats().getShieldDamageTakenMult().getMultStatMod(THIS_MOD) != null; 
 		if (!isActive && (getShieldEfficiency(ship) <= SHIELD_EFFICIENCY_THRESHOLD)) return;
 		else if (ship.getFluxLevel() >= threshold * 0.01f) {
+			float damageReduction = isSynthesisActive(ship) ? DAMAGE_REDUCTION_SYNTHESIS : DAMAGE_REDUCTION;
 			ship.getShield().setInnerColor(SHIELD_INNER_COLOR_ACTIVE);
-			ship.getMutableStats().getShieldDamageTakenMult().modifyMult(THIS_MOD, 1f - DAMAGE_REDUCTION * 0.01f);
+			ship.getMutableStats().getShieldDamageTakenMult().modifyMult(THIS_MOD, 1f - damageReduction * 0.01f);
 			ship.getMutableStats().getDynamic().getStat(Stats.SHIELD_PIERCED_MULT).modifyMult(THIS_MOD, EMP_RESIST * 0.01f);
 		}
 		else {
@@ -64,6 +72,21 @@ public class ReactiveCombatShields extends BaseHullMod {
 		}
 	}
 	
+	//player fleet uses memflag checker, NPC fleets use hullmod checker which is always removed in player fleets
+	private boolean isSynthesisActive(ShipAPI ship) {
+		if (Global.getSector().getMemoryWithoutUpdate().is("$xo_dynamic_shields_is_active", true) && ship.getOwner() == 0) {
+			return true;
+		}
+		else if (ship.getVariant().hasHullMod(SYNTHESIS_CHECKER_MOD) && ship.getOwner() != 0) return true;
+		return false;
+		
+	}
+	
+	//for text display only
+	private boolean isSynthesisActive() {
+		return Global.getSector().getMemoryWithoutUpdate().is("$xo_dynamic_shields_is_active", true);
+	}
+	
 	private float getShieldEfficiency(ShipAPI ship) {
 		float e = ship.getShield().getFluxPerPointOfDamage() * ship.getMutableStats().getShieldDamageTakenMult().getModifiedValue();
 		return e;
@@ -84,7 +107,10 @@ public class ReactiveCombatShields extends BaseHullMod {
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) DAMAGE_REDUCTION + "%";
+		String s = "" + (int) DAMAGE_REDUCTION + "%";
+		if (isSynthesisActive()) s = "" + (int) DAMAGE_REDUCTION_SYNTHESIS + "% (Dynamic Shields)";
+		
+		if (index == 0) return s;
 		if (index == 1) return "" + (int) FLUX_THRESHOLD + "%";
 		if (index == 2) return "" + SHIELD_EFFICIENCY_THRESHOLD;
 		return null;

@@ -133,6 +133,42 @@
       "locations": [143, 0]
     },
     {
+      "id": "WS 014",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -115,
+      "locations": [-44, -59]
+    },
+    {
+      "id": "WS 015",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 115,
+      "locations": [-44, 59]
+    },
+    {
+      "id": "WS 016",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 135,
+      "locations": [-69, 97]
+    },
+    {
+      "id": "WS 017",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": -135,
+      "locations": [-69, -97]
+    },
+    {
       "id": "LIGHT 001",
       "size": "SMALL",
       "type": "DECORATIVE",

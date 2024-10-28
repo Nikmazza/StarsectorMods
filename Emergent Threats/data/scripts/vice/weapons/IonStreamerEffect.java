@@ -32,8 +32,8 @@ public class IonStreamerEffect implements BeamEffectPlugin {
 		boolean piercedShield = (float) Math.random() < pierceChance;
 		if (!hitShield || piercedShield) {
 			Vector2f point = beam.getRayEndPrevFrame();
+			float dam = beam.getDamage().getDamage() * 0.5f;
 			float emp = beam.getDamage().getFluxComponent() * 1f;
-			float dam = beam.getDamage().getDamage() * 1f;
 			engine.spawnEmpArcPierceShields(beam.getSource(), point, beam.getDamageTarget(), beam.getDamageTarget(),
 					DamageType.ENERGY, dam, emp, 100000f, "tachyon_lance_emp_impact", beam.getWidth() + 9f, 
 					beam.getFringeColor(), beam.getCoreColor());

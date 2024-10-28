@@ -8,10 +8,8 @@ import com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import org.lazywizard.lazylib.MathUtils;
-import org.selkie.kol.fleets.KnightsExpeditionAssignmentAI;
-import org.selkie.kol.impl.world.PrepareAbyss;
-import org.selkie.kol.plugins.KOL_ModPlugin;
-import org.selkie.kol.world.GenerateKnights;
+import org.selkie.kol.helpers.KolStaticStrings;
+import org.selkie.zea.helpers.ZeaStaticStrings.ZeaStarTypes;
 
 import java.util.Random;
 
@@ -72,11 +70,11 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
     }
 
     public String pickFleetType(Random random) {
-        WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
-        picker.add(GenerateKnights.KnightsFleetTypes.WARRIORS, 20f);
-        picker.add(GenerateKnights.KnightsFleetTypes.SCOUT, 5f);
-        picker.add(GenerateKnights.KnightsFleetTypes.PATROL, 10f);
-        picker.add(GenerateKnights.KnightsFleetTypes.ARMADA, 6f);
+        WeightedRandomPicker<String> picker = new WeightedRandomPicker<>(random);
+        picker.add(KolStaticStrings.KnightsFleetTypes.WARRIORS, 20f);
+        picker.add(KolStaticStrings.KnightsFleetTypes.SCOUT, 5f);
+        picker.add(KolStaticStrings.KnightsFleetTypes.PATROL, 10f);
+        picker.add(KolStaticStrings.KnightsFleetTypes.ARMADA, 6f);
         return picker.pick();
     }
 
@@ -89,19 +87,19 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
         float tanker = 0f;
         float freighter = 0f;
         switch (type) {
-            case GenerateKnights.KnightsFleetTypes.SCOUT:
+            case KolStaticStrings.KnightsFleetTypes.SCOUT:
                 combat = Math.round(4f + random.nextFloat() * 2f);
                 tanker = Math.round(random.nextFloat()) * 5f;
                 break;
-            case GenerateKnights.KnightsFleetTypes.WARRIORS:
+            case KolStaticStrings.KnightsFleetTypes.WARRIORS:
                 combat = Math.round(10f + random.nextFloat() * 10f);
                 tanker = Math.round(random.nextFloat()) * 8f;
                 break;
-            case GenerateKnights.KnightsFleetTypes.PATROL:
+            case KolStaticStrings.KnightsFleetTypes.PATROL:
                 combat = Math.round(8f + random.nextFloat() * 8f);
                 tanker = Math.round(random.nextFloat()) * 8f;
                 break;
-            case GenerateKnights.KnightsFleetTypes.ARMADA:
+            case KolStaticStrings.KnightsFleetTypes.ARMADA:
                 combat = Math.round(16f + random.nextFloat() * 12f);
                 tanker = Math.round(random.nextFloat()) * 10f;
                 freighter = Math.round(random.nextFloat()) * 16f;
@@ -113,7 +111,7 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
         FleetParamsV3 params = new FleetParamsV3(
                 route.getMarket(),
                 null,
-                KOL_ModPlugin.kolID,
+                KolStaticStrings.kolFactionID,
                 route.getQualityOverride() + 0.2f,
                 type,
                 combat, // combatPts
@@ -146,7 +144,7 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
     protected int getMaxFleets() {
         int count = baseKnightExpeditions;
         for(MarketAPI m : Global.getSector().getEconomy().getMarketsCopy()) {
-            if (m.getFactionId().equals(KOL_ModPlugin.kolID)) count += 1;
+            if (m.getFactionId().equals(KolStaticStrings.kolFactionID)) count += 1;
             if (m.getFactionId().equals("kol")) count += 1;
         }
         return count;
@@ -171,13 +169,13 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
 
     public static MarketAPI getSourceMarket() {
         MarketAPI startMarket = null;
-        if(goodSourceMarket(Global.getSector().getEntityById("kol_lyra")) && Global.getSector().getEntityById("kol_lyra").getFaction() == Global.getSector().getFaction(KOL_ModPlugin.kolID)) {
-            startMarket = Global.getSector().getEntityById("kol_lyra").getMarket();
-        } else if (Math.random() < 0.33f && goodSourceMarket(Global.getSector().getEntityById("kol_cygnus")) && Global.getSector().getEntityById("kol_cygnus").getFaction() == Global.getSector().getFaction(KOL_ModPlugin.kolID)) {
-            startMarket = Global.getSector().getEntityById("kol_cygnus").getMarket();
+        if(goodSourceMarket(Global.getSector().getEntityById(KolStaticStrings.KOL_LYRA)) && Global.getSector().getEntityById(KolStaticStrings.KOL_LYRA).getFaction() == Global.getSector().getFaction(KolStaticStrings.kolFactionID)) {
+            startMarket = Global.getSector().getEntityById(KolStaticStrings.KOL_LYRA).getMarket();
+        } else if (Math.random() < 0.33f && goodSourceMarket(Global.getSector().getEntityById(KolStaticStrings.KOL_CYGNUS)) && Global.getSector().getEntityById(KolStaticStrings.KOL_CYGNUS).getFaction() == Global.getSector().getFaction(KolStaticStrings.kolFactionID)) {
+            startMarket = Global.getSector().getEntityById(KolStaticStrings.KOL_CYGNUS).getMarket();
         } else {
             for(MarketAPI markets : Global.getSector().getEconomy().getMarketsCopy()) {
-                if(markets.getFaction().getId().equals(KOL_ModPlugin.kolID)) {
+                if(markets.getFaction().getId().equals(KolStaticStrings.kolFactionID)) {
                     if(startMarket==null ||
                             (markets.hasSubmarket(Submarkets.GENERIC_MILITARY)
                                     && goodSourceMarket(markets.getPrimaryEntity())
@@ -192,8 +190,8 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
     }
 
     public SectorEntityToken getTargetToken(Random random) {
-        WeightedRandomPicker<SectorEntityToken> pickerTo = new WeightedRandomPicker<SectorEntityToken>(random);
-        WeightedRandomPicker<String> pickerS = new WeightedRandomPicker<String>(random);
+        WeightedRandomPicker<SectorEntityToken> pickerTo = new WeightedRandomPicker<>(random);
+        WeightedRandomPicker<String> pickerS = new WeightedRandomPicker<>(random);
 
         pickerS.add(getTargetRemnant(random), 2);
         pickerS.add(getTargetBH(random), 3);
@@ -238,9 +236,8 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
         if (marketEnt == null) return false;
         if (marketEnt.getMarket() == null) return false;
         MarketAPI market = marketEnt.getMarket();
-        boolean valid = true;
+        boolean valid = !market.isHidden();
 
-        if (market.isHidden()) valid = false;
         if (!market.hasSpaceport()) valid = false; // markets w/o spaceports don't launch fleets
         if (market.getContainingLocation().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) valid = false;
 
@@ -268,7 +265,7 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
 
     public static String getTargetRemnant(Random random) {
         String result = null;
-        WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+        WeightedRandomPicker<String> picker = new WeightedRandomPicker<>(random);
 
         for(StarSystemAPI system : Global.getSector().getStarSystems()) {
             if (system.hasTag(Tags.THEME_REMNANT)) {
@@ -300,13 +297,13 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
 
     public static String getTargetBH(Random random) {
         String result = null;
-        WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+        WeightedRandomPicker<String> picker = new WeightedRandomPicker<>(random);
 
         for(StarSystemAPI system : Global.getSector().getStarSystems()) {
             if (system.getStar() != null
                     && (system.getStar().getTypeId().equals(StarTypes.BLACK_HOLE)
-                    || system.getStar().getTypeId().equals("zea_white_hole")
-                    || system.getStar().getTypeId().equals("zea_star_black_neutron"))) {
+                    || system.getStar().getTypeId().equals(ZeaStarTypes.ZEA_WHITE_HOLE)
+                    || system.getStar().getTypeId().equals(ZeaStarTypes.ZEA_STAR_BLACK_NEUTRON))) {
                 if (!system.hasTag(Tags.THEME_HIDDEN) && !system.hasTag(Tags.THEME_SPECIAL)) {
                     if (system.hasTag(Tags.THEME_UNSAFE)) {
                         picker.add(system.getId(), 5);
@@ -314,7 +311,7 @@ public class KnightsExpeditionsManager extends BaseRouteFleetManager {
                         picker.add(system.getId(), 2);
                     }
                 }
-                if (system.getStar().getTypeId().equals("zea_star_black_neutron")) {
+                if (system.getStar().getTypeId().equals(ZeaStarTypes.ZEA_STAR_BLACK_NEUTRON)) {
                     picker.add(system.getId(), 14);
                 }
             }

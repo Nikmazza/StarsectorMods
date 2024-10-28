@@ -465,6 +465,7 @@
 			"weapon_bp vice_siege_burst":1,
 			"weapon_bp kineticblaster":1,
 			"weapon_bp gigacannon":1,
+			"LG_bp_package":1,
 		},
 		"job_show_type": true,
 		"job_show_captain": true,

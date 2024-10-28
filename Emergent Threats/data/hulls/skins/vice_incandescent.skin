@@ -1,5 +1,5 @@
 {
-	"baseHullId":"vice_incursion_base",
+	"baseHullId":"vice_intrepid_base",
 	"skinHullId":"vice_incandescent",
 	"hullName":"Incandescent",
 	"hullDesignation":"Drone Battleship",
@@ -13,7 +13,7 @@
 	"spriteName":"graphics/vice/ships/hidden/incandescent.png",
 	"builtInMods":["automated", "vice_incandescent_remnant"],
 	"builtInWeapons": {
-        "WS20": "vice_hmc",
-        "WS21": "vice_hmc"
+        "WS 020": "vice_hmc",
+        "WS 021": "vice_hmc",
     },
 }

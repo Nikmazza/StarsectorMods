@@ -11,6 +11,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker
 import org.lazywizard.lazylib.MathUtils
 import org.magiclib.kotlin.getSalvageSpecial
 import org.magiclib.kotlin.setSalvageSpecial
+import second_in_command.SCUtils
 import second_in_command.interactions.ExecutiveOfficerRescueSpecial
 import second_in_command.specs.SCAptitudeSpec
 import second_in_command.specs.SCOfficer
@@ -21,11 +22,13 @@ class ExecutiveOfficerSalvageSpecialGenerator {
 
     fun generate() {
 
+        if (SCUtils.isAssociatesBackgroundActive()) return //Don't add executives when this background is active
+
         var entitiesInSector = Global.getSector().starSystems.flatMap { it.customEntities }
 
         var entitiesWithPods = entitiesInSector.filter { isSalvagePod(it) }
 
-        var maximum = (entitiesWithPods.count() * 0.65f).toInt()
+        var maximum = (entitiesWithPods.count() * 0.4f).toInt()
 
         var suitableEntities = entitiesInSector.filter { entity -> isSuitable(entity) }
         suitableEntities = suitableEntities.shuffled()
@@ -37,7 +40,6 @@ class ExecutiveOfficerSalvageSpecialGenerator {
         for (entity in suitableEntities) {
             count+=1
             if (count >= maximum) break
-
 
             var aptitudes = SCSpecStore.getAptitudeSpecs()
             var picker = WeightedRandomPicker<SCAptitudeSpec>()

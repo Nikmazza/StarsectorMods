@@ -90,6 +90,7 @@
 			"spaceCommander":{"name":"Cartel Lieutenant"},
 			"spaceCaptain":{"name":"Cartel Overseer"},
 			"groundCaptain":{"name":"Cartel Overseer"},
+			"spaceAdmiral":{"name":"Cartel Leader"},
 		},
 		"posts":{
 			"patrolCommander":{"name":"Enforcer"},
@@ -110,7 +111,7 @@
 		"tags":{
 		},
 		"hulls":{
-
+			
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
@@ -126,7 +127,7 @@
 	},
 	
 	"priorityShips":{
-		"tags":[],
+		"tags":["ix_auxiliary"],
 		"hulls":[],
 	},
 	"knownFighters":{
@@ -179,15 +180,15 @@
 		],
 	},
 	"factionDoctrine":{
-		"warships":2,
-		"carriers":4,
+		"warships":3,
+		"carriers":3,
 		"phaseShips":0,
 		
 		"officerQuality":3,
 		"shipQuality":3,
 		"numShips":1,
 		
-		"shipSize":2,
+		"shipSize":3,
 		
 		"aggression":3,
 		

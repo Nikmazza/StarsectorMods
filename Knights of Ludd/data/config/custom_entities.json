@@ -11,7 +11,7 @@
 		"icon":"graphics/icons/abyssal_light.png",
 		"iconWidth":20,
 		"iconHeight":20,
-		"sprite":"graphics/battlestars/kol_battlestar_libra.png",
+		"sprite":"graphics/kol/battlestars/kol_battlestar_libra.png",
 		"spriteWidth":75,
 		"spriteHeight":100,
 		"renderShadow":true,
@@ -25,6 +25,28 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"renderCircleIndicator":true,
 		"renderCircleIndicatorSelectionFlash":true,
+	},
+
+	"mga_station_nomios":{
+		"defaultName":"Nomios Rapid Autofab", # used if name=null in addCustomEntity()
+		"defaultRadius":50, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"mga_station_nomios",
+		"interactionImage":"graphics/illustrations/corporate_lobby.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/station_galatia.png",
+		"spriteWidth":80,
+		"spriteHeight":80,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	
 	"zea_cache_low":{
@@ -123,12 +145,12 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	
-	"zea_boss_station_dusk_1":{
+	"zea_null_station_dusk":{
 		"defaultName":"Research Station", # used if name=null in addCustomEntity()
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
-		"nameInText":"research station",
+		"nameInText":"duskborne station",
 		"shortName":"station",
-		"customDescriptionId":"zea_boss_station_dusk_1_desc",
+		"customDescriptionId":"zea_null_station_dusk",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
 		"icon":"graphics/icons/station0.png",
 		"iconWidth":20,
@@ -155,7 +177,7 @@
 		"isOrAre":"is",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"coronal_tap",
-		"interactionImage":"data/strings/com/fs/starfarer/api/impl/campaign/you can hear it cant you/our whispers through the void/our song/graphics/illustrations/zea_edf_hypershunt.png",
+		"interactionImage":"graphics/zea/illustrations/zea_edf_hypershunt.png",
 		"icon":"graphics/icons/coronal_shunt.png",
 		"iconWidth":32,
 		"iconHeight":32,

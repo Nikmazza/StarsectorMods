@@ -1,6 +1,7 @@
 package assortment_of_things.exotech.submarkets
 
 import assortment_of_things.exotech.ExoUtils
+import assortment_of_things.exotech.intel.event.ExotechEventIntel
 import com.fs.starfarer.api.EveryFrameScript
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.*
@@ -87,9 +88,19 @@ class ExotechSubmarketPlugin : BaseSubmarketPlugin(), EveryFrameScript {
         }
     }
 
+    override fun getTariff(): Float {
+
+        if (ExotechEventIntel.get() != null) {
+            if (ExotechEventIntel.get()!!.isStageActive(ExotechEventIntel.Stage.INDEBTED)) {
+                return 0.1f
+            }
+        }
+        return 0.3f
+    }
+
     fun addEquipment() {
 
-        var count = MathUtils.getRandomNumberInRange(20, 30)
+        var count = MathUtils.getRandomNumberInRange(30, 50)
 
         var weights = WeightedRandomPicker<Any>()
 
@@ -99,6 +110,10 @@ class ExotechSubmarketPlugin : BaseSubmarketPlugin(), EveryFrameScript {
 
         weights.add(Global.getSettings().getWeaponSpec("rat_hyper_dart"), 1f)
         weights.add(Global.getSettings().getWeaponSpec("rat_hyper_javelin"), 0.5f)
+
+        weights.add(Global.getSettings().getWeaponSpec("rat_moonlight_lance"), 0.7f)
+        weights.add(Global.getSettings().getWeaponSpec("rat_stardust_lance"), 0.75f)
+
         weights.add(Global.getSettings().getWeaponSpec("rat_p_wave_launcher"), 1f)
         weights.add(Global.getSettings().getWeaponSpec("rat_starburst"), 1f)
 
@@ -121,7 +136,7 @@ class ExotechSubmarketPlugin : BaseSubmarketPlugin(), EveryFrameScript {
             "rat_exotech",
             5f,
             FleetTypes.PATROL_MEDIUM,
-            140f,  // combatPts
+            200f,  // combatPts
             0f,  // freighterPts
             0f,  // tankerPts
             0f,  // transportPts
@@ -185,7 +200,7 @@ class ExotechSubmarketPlugin : BaseSubmarketPlugin(), EveryFrameScript {
         return RepLevel.VENGEFUL
     }
 
-
+    
 
     //Lock Ships
     override fun isIllegalOnSubmarket(member: FleetMemberAPI, action: SubmarketPlugin.TransferAction): Boolean {

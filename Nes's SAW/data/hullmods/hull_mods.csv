@@ -13,27 +13,27 @@ Drastically reduces weapon ranges past %s units,
 
 Incompatible with %s.",brrrt,graphics/hullmods/nes_aafarray.png
 Carnelian Color Selector,NES_ColorSelector_Carn,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Carn,The Last Hero,,
-Hull Livery: Vintage,NES_Midline,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Midline,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Vintage,NES_Midline,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Midline,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_midline.png
-Hull Livery: Reef,NES_Reef,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Reef,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Reef,NES_Reef,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Reef,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_reef.png
-Hull Livery: Scourge,NES_Toxic,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Toxic,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Scourge,NES_Toxic,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Toxic,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_toxic.png
-Hull Livery: Turquoise,NES_Turquoise,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Turquoise,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Turquoise,NES_Turquoise,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Turquoise,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_turquoise.png
-Hull Livery: Navy,NES_Persean,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Persean,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Navy,NES_Persean,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Persean,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_persean.png
-Hull Livery: Recon,NES_Agent,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Agent,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Recon,NES_Agent,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Agent,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_agent.png
@@ -81,46 +81,50 @@ Improved Turret Assembly,NES_StabilizedTurrets,,,,,,,TRUE,,,0,0,0,0,data.scripts
 ""Replacing key components with exotic alloys does wonders indeed! The cost? Well, you see...""
   - Huey Randolph, chief engineer",Increases small weapon range,graphics/hullmods/nes_stabilizedturrets.png
 Volt Color Selector,NES_ColorSelector_Volt,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Volt,The Light Fantastic,,
-Hull Livery: Classic,NES_Default,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Default,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Classic,NES_Default,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Default,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Standard.png
-Hull Livery: Vermillion,NES_Crimson,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Crimson,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Vermillion,NES_Crimson,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Crimson,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Crimson.png
-Hull Livery: Hazard,NES_Hazard,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Hazard,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Hazard,NES_Hazard,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Hazard,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Hazard.png
-Hull Livery: Verdant,NES_Verdant,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Verdant,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Verdant,NES_Verdant,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Verdant,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Verdant.png
-Hull Livery: Starlight,NES_Sparkle,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Sparkle,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Starlight,NES_Sparkle,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Sparkle,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Sparkle.png
-Hull Livery: Black Ops,NES_Commando,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Commando,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Black Ops,NES_Commando,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Commando,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Commando.png
+Hull Livery: Dusk,NES_Dusk,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Dusk,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+
+""Engravings... give you no tactical advantage whatsoever.""
+  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Dusk.png
 ,,,,,,,,,,,,,,,,,,
 #Hammerfall,,,,,,,,,,,,,,,,,,
 HF Color Selector,NES_ColorSelector_HF,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_HF,A Hat Full of Sky,,
-Hull Livery: Explorer,NES_Explorer,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Explorer,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Explorer,NES_Explorer,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Explorer,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_standard.png
-Hull Livery: Surveyor,NES_Surveyor,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Surveyor,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Surveyor,NES_Surveyor,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Surveyor,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_surveyor.png
-Hull Livery: Rogue,NES_Rogue,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Rogue,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Rogue,NES_Rogue,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Rogue,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_rogue.png
-Hull Livery: Infiltrator,NES_Infiltrator,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Infiltrator,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Infiltrator,NES_Infiltrator,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Infiltrator,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_infiltrator.png
@@ -128,42 +132,52 @@ Hull Livery: Infiltrator,NES_Infiltrator,,,"req_spaceport, no_build_in",,,,TRUE,
 #Hermitaur,,,,,,,,,,,,,,,,,,
 Hot Loaded Missiles,NES_FluxMissiles,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_FluxMissiles,"Arming warheads and activating guidance systems inside the racks increases rate of fire, ammo/charge regeneration rate and reduces flux use for all missile weapons by %s.",missile knows where it is,graphics/hullmods/nes_fluxmissiles.png
 Herm Color Selector,NES_ColorSelector_Herm,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Herm,Soul Music,,
-Hull Livery: Antique,NES_Standard,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Standard,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Antique,NES_Standard,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Standard,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_standard.png
-Hull Livery: Devout,NES_Devout,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Devout,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Devout,NES_Devout,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Devout,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_devout.png
-Hull Livery: Riftborn,NES_Riftborn,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Riftborn,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Riftborn,NES_Riftborn,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Riftborn,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_riftborn.png
-Hull Livery: Marauder,NES_Marauder,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Marauder,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Marauder,NES_Marauder,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Marauder,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_marauder.png
+Hull Livery: Albion,NES_Herm_Albion,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Albion,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+
+""Engravings... give you no tactical advantage whatsoever.""
+  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_albion.png
 ,,,,,,,,,,,,,,,,,,
 #Hampter,,,,,,,,,,,,,,,,,,
-Tried and Tested,NES_TriedAndTested,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_TriedAndTested,"Able to build %s more permanent hullmod into this ship.
+Tried and Tested,NES_TriedAndTested,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_TriedAndTested,"Able to build %s more permanent hullmod into this ship,
+
+In addition, the supply cost to recover from deployment - and to effect repairs if the ship is disabled - is reduced by %s.
 
 ""Made of Sterner Stuff.""
   - Huey Randolph, chief engineer",ol' reliable,graphics/hullmods/nes_triedandtested.png
 Hamter Color Selector,NES_ColorSelector_Hamter,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Hamter,Sourcery,,
-Hull Livery: Standard,NES_Austere,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Austere,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Standard,NES_Austere,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Austere,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_austere.png
-Hull Livery: Cardinal,NES_Cardinal,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Cardinal,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Cardinal,NES_Cardinal,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Cardinal,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_cardinal.png
-Hull Livery: Ivory,NES_Ivory,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Ivory,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Ivory,NES_Ivory,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Ivory,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_ivory.png
-Hull Livery: Starling,NES_Starling,,,"req_spaceport, no_build_in",,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Starling,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hull Livery: Starling,NES_Starling,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Starling,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
 
 ""Engravings... give you no tactical advantage whatsoever.""
   - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_starling.png
+Hull Livery: Albion,NES_Hamter_Albion,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Albion,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+
+""Engravings... give you no tactical advantage whatsoever.""
+  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_albion.png

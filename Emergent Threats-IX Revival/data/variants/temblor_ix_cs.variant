@@ -1,13 +1,13 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 4,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "temblor_ix",
     "hullMods": [
         "magazines",
         "extendedshieldemitter",
-        "ix_reactive_combat_shields",
+        "hardenedshieldemitter",
         "frontemitter"
     ],
     "permaMods": [],

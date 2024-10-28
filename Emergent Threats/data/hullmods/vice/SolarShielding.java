@@ -1,7 +1,6 @@
 package data.hullmods.vice;
 
 import java.util.HashMap;
-import java.util.LinkedHashSet;
 import java.util.Map;
 
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -38,10 +37,7 @@ public class SolarShielding extends BaseLogisticsHullMod {
 			mult = SMOD_CORONA_EFFECT_MULT;
 			boolean apply = false;
 			String manufacturer = variant.getHullSpec().getManufacturer();
-			LinkedHashSet<String> sModBuiltIns = variant.getSModdedBuiltIns();
-			for (String mod : sModBuiltIns) {
-				if (mod.equals("solar_shielding")) apply = true;
-			}
+			if (variant.getSModdedBuiltIns().contains("solar_shielding")) apply = true;
 			if (!manufacturer.equals("Lion's Guard") && !manufacturer.equals("Sindrian Diktat")) apply = false;
 			if (apply) variant.addMod(OP_REVERTER_MOD);
 		}

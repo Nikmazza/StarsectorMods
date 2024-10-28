@@ -13,6 +13,7 @@ public abstract class NES_Herm_color_base_hullmod extends BaseHullMod {
     public static final String DEVOUT = "NES_Devout";
     public static final String RIFTBORN = "NES_Riftborn";
     public static final String MARAUDER = "NES_Marauder";
+    public static final String ALBION = "NES_Herm_Albion";
 
 
     private static final String ALT_SPRITES = "nes_alt_sprites";

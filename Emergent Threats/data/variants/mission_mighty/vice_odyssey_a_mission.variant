@@ -1,6 +1,6 @@
 {
     "displayName": "Modified",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 16,
     "fluxVents": 50,
     "hullId": "vice_odyssey_ai",
     "hullMods": [
@@ -10,13 +10,15 @@
         "magazines",
         "frontemitter",
         "stabilizedshieldemitter",
-        "vice_adaptive_pulse_resonator"
+        "vice_adaptive_pulse_resonator",
+        "vice_shipwide_integration_checker"
     ],
     "modules": [{"SM 1": "vice_odyssey_secondary_drone_bay"}],
     "permaMods": [
         "vice_advanced_terminator_core",
         "hardenedshieldemitter",
-        "targetingunit"
+        "targetingunit",
+        "vice_shipwide_integration_checker"
     ],
     "sMods": [
         "vice_advanced_terminator_core",

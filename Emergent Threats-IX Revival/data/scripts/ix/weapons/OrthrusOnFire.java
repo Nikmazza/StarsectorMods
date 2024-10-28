@@ -9,7 +9,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.ix.ShapedExplosionUtil;
+import data.scripts.ix.util.ShapedExplosionUtil;
 
 public class OrthrusOnFire implements BeamEffectPlugin {
 

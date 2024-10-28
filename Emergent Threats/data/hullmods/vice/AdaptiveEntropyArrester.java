@@ -5,13 +5,14 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveEntropyArrester extends BaseHullMod {
 
-	private static float HEAL_HULL_AMOUNT = 1f; //+1% per second
+	private static float HEAL_HULL_AMOUNT = 0.5f; //+1% per second
 	private static float REPAIR_BONUS = 50f;
 	private static String CONFLICT_MOD = "autorepair";
+	private static String DUPLICATE_MOD = "ix_entropy_arrester";
 	private static String THIS_MOD = "vice_adaptive_entropy_arrester";
 	//Utility variables
 	private RemnantSubsystemsUtil util = new RemnantSubsystemsUtil();
@@ -23,6 +24,14 @@ public class AdaptiveEntropyArrester extends BaseHullMod {
 		stats.getCombatWeaponRepairTimeMult().modifyMult(id, 1f - REPAIR_BONUS * 0.01f);
 		util.applyShipwideHullMod(stats.getVariant(), id, true);
 		util.addModuleHandler(stats);
+	}
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		//self clear if invalid player hull, but do not clear on modules since they can be added by handler
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0 && !util.isModuleCheck(ship)) {
+			ship.getVariant().getHullMods().remove(id);
+		}
 	}
 	
 	@Override
@@ -40,6 +49,7 @@ public class AdaptiveEntropyArrester extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(DUPLICATE_MOD)) return false;
 		if (ship.getVariant().hasHullMod(CONFLICT_MOD)) return false;
 		if (util.isModuleCheck(ship)) return false;
 		if (ship.getVariant().hasHullMod("automated") 
@@ -49,6 +59,7 @@ public class AdaptiveEntropyArrester extends BaseHullMod {
 	}
 
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(DUPLICATE_MOD)) return "Already present on ship";
 		if (ship.getVariant().hasHullMod("vice_shipwide_integration") && (ship.getVariant().hasHullMod(THIS_MOD))) return null;
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("hub");
 		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");
@@ -58,7 +69,7 @@ public class AdaptiveEntropyArrester extends BaseHullMod {
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) HEAL_HULL_AMOUNT + "%";
+		if (index == 0) return "" + HEAL_HULL_AMOUNT + "%";
 		if (index == 1) return "" + (int) REPAIR_BONUS + "%";
 		return null;
 	}

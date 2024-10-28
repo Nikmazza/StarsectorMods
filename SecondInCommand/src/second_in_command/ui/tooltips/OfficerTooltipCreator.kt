@@ -1,19 +1,21 @@
 package second_in_command.ui.tooltips
 
+import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.ui.BaseTooltipCreator
 import com.fs.starfarer.api.ui.TooltipMakerAPI
 import com.fs.starfarer.api.util.Misc
+import second_in_command.SCUtils
 import second_in_command.specs.SCOfficer
 import second_in_command.ui.SCSkillMenuPanel
 import second_in_command.ui.elements.OfficerXPBar
 
-class OfficerTooltipCreator(var officer: SCOfficer?, var isAtColony: Boolean) : BaseTooltipCreator() {
+class OfficerTooltipCreator(var officer: SCOfficer?, var isAtColony: Boolean, var openedFromPicker: Boolean) : BaseTooltipCreator() {
 
 
 
 
     override fun getTooltipWidth(tooltipParam: Any?): Float {
-        return 350f
+        return 400f
     }
 
     override fun createTooltip(tooltip: TooltipMakerAPI?, expanded: Boolean, tooltipParam: Any?) {
@@ -35,7 +37,10 @@ class OfficerTooltipCreator(var officer: SCOfficer?, var isAtColony: Boolean) : 
             tooltip.addSpacer(10f)
 
             tooltip!!.addPara("Left-click to select an executive officer to assign. Right-click to un-assign officers.",
-                0f, Misc.getTextColor(), Misc.getHighlightColor(), "Left-click", "Right-click")
+                    0f, Misc.getTextColor(), Misc.getHighlightColor(), "Left-click", "Right-click")
+
+
+
 
 
             return
@@ -64,7 +69,7 @@ class OfficerTooltipCreator(var officer: SCOfficer?, var isAtColony: Boolean) : 
 
         var inactiveGain = (SCOfficer.inactiveXPMult * 100).toInt()
 
-        var firstPara = tooltip.addPara("${officer!!.person.nameString} has experience within the ${plugin.getName()} aptitude. This aptitude has a maximum level of ${officer!!.getMaxLevel()}.", 0f,
+        var firstPara = tooltip.addPara("${officer!!.person.nameString} has experience within the ${plugin.getName()} aptitude. All officers have a maximum level of ${officer!!.getMaxLevel()}.", 0f,
         Misc.getTextColor(), Misc.getHighlightColor(), "")
         firstPara.position.inTL(5f, 60f)
 
@@ -90,14 +95,45 @@ class OfficerTooltipCreator(var officer: SCOfficer?, var isAtColony: Boolean) : 
         tooltip.addPara("All officers gain experience from battles. Inactive officers also earn experience, but at $inactiveGain%% of the normal rate.", 0f, Misc.getTextColor(), Misc.getHighlightColor(),
             "gain experience from battles" ,"$inactiveGain%")
 
-        tooltip.addSpacer(10f)
 
-        addCRWarning(tooltip)
+        if (!SCUtils.isAssociatesBackgroundActive())  {
+            tooltip.addSpacer(10f)
+            addCRWarning(tooltip)
+        }
 
         /* if (officer!!.getAptitudePlugin().getRequiresDock()) {
              tooltip.addSpacer(10f)
              tooltip.addPara("This officer can only be assigned and un-assigned while the fleet is docked to a colony due to the preparations required for ${officer!!.person.hisOrHer} field of work.", 0f, Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor())
          }*/
+
+
+        if (!openedFromPicker) {
+
+            tooltip.addSpacer(10f)
+            var extra = ""
+            if (Global.getSector().playerPerson.stats.storyPoints <= 3) {
+                extra = "You do not have enough story points do so right now."
+            }
+
+            var label = tooltip!!.addPara("You can refund all skills by pressing \"R\" while hovering over this officer. This costs 4 story points to do. Can not be done while the skill selection is being edited. $extra", 0f,
+                Misc.getTextColor(), Misc.getHighlightColor(), "")
+
+            label.setHighlight("R", "4 story points", extra)
+            label.setHighlightColors(Misc.getHighlightColor(), Misc.getStoryOptionColor(), Misc.getNegativeHighlightColor())
+
+            tooltip.addSpacer(10f)
+
+
+            if (!SCUtils.isAssociatesBackgroundActive()) {
+                tooltip!!.addPara("Left-click to select an executive officer to assign. Right-click to un-assign officers.",
+                    0f, Misc.getTextColor(), Misc.getHighlightColor(), "Left-click", "Right-click")
+            } else {
+                tooltip!!.addPara("Due to the background you have chosen, this officer can not be removed or replaced. Instead clicking on their portrait will allow you to change their name and portrait.",
+                    0f, Misc.getTextColor(), Misc.getHighlightColor(), "this officer can not be removed or replaced","name", "portrait")
+            }
+
+
+        }
 
         tooltip.addSpacer(30f)
 

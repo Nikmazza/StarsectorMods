@@ -3,7 +3,7 @@
   "hullId": "nes_hermitaur",
   "displayName": "Elite",
   "goalVariant": true,
-  "fluxCapacitors": 9,
+  "fluxCapacitors": 13,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
@@ -22,16 +22,16 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0006": "sabot",
-        "WS0007": "sabot"
+        "WS0006": "swarmer",
+        "WS0007": "swarmer"
       }
     },
     {
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0004": "lightneedler",
-        "WS0005": "lightneedler"
+        "WS0004": "railgun",
+        "WS0005": "railgun"
       }
     },
     {

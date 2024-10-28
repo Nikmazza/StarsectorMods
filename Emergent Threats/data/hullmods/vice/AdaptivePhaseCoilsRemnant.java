@@ -8,7 +8,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptivePhaseCoilsRemnant extends BaseHullMod {
 
@@ -25,12 +25,17 @@ public class AdaptivePhaseCoilsRemnant extends BaseHullMod {
 	//Utility variables
 	private RemnantSubsystemsUtil util = new RemnantSubsystemsUtil();
 	
+	private boolean isPhaseShip(MutableShipStatsAPI stats) {
+		if (stats.getVariant().hasHullMod("phasefield") || stats.getVariant().getHullSpec().isPhase()) return true;
+		return false;
+	}
+	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		util.applyShipwideHullMod(stats.getVariant(), id, true);
 		util.addModuleHandler(stats);
 		
-		if (stats.getVariant().hasHullMod("phasefield")) {
+		if (isPhaseShip(stats)) {
 			stats.getDynamic().getMod(Stats.PHASE_CLOAK_FLUX_LEVEL_FOR_MIN_SPEED_MOD).modifyPercent(id, FLUX_THRESHOLD_BONUS);
 		}
 		else {
@@ -40,7 +45,15 @@ public class AdaptivePhaseCoilsRemnant extends BaseHullMod {
 			stats.getHullDamageTakenMult().modifyMult(id, 1f - DAMAGE_REDUCTION * 0.01f);
 		}
 	}
-
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		//self clear if invalid player hull, but do not clear on modules since they can be added by handler
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0 && !util.isModuleCheck(ship)) {
+			ship.getVariant().getHullMods().remove(id);
+		}
+	}
+	
 	@Override
     public void advanceInCombat(ShipAPI ship, float amount) {
         if (!ship.isAlive() || ship.isPhased()) return;

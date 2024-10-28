@@ -23,6 +23,13 @@
 			"acot_event_1":"graphics/aotd_colony_events/acot_event_1.png",
 			"crime_rampant":"graphics/aotd_colony_events/crime_begining.png",
 			"crime_resolve":"graphics/aotd_colony_events/crime_resolve.png",
+			"ancient_factory":"graphics/aotd_colony_events/ancient_factory.png",
+			"miracle_seed_beginning":"graphics/aotd_colony_events/miracle_seed_beginning.png",
+			"miracle_seed_quarantee":"graphics/aotd_colony_events/miracle_seed_quarantee.png",
+			"miracle_seed_spores":"graphics/aotd_colony_events/miracle_seed_spores.png",
+			"miracle_seed_research":"graphics/aotd_colony_events/miracle_seed_research.png",
+			"miracle_seed_fixed":"graphics/aotd_colony_events/miracle_seed_fixed.png",
+
 		},
 		"portraits":{
 			"theta_core":"graphics/portraits/theta_core.png"

@@ -1,17 +1,18 @@
 package data.scripts;
 
 import com.fs.starfarer.api.BaseModPlugin;
-
-//import com.fs.starfarer.api.PluginPick;
-//import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-//import com.fs.starfarer.api.campaign.CampaignPlugin;
-//import com.fs.starfarer.api.campaign.SectorEntityToken;
-//import com.fs.starfarer.api.campaign.StarSystemAPI;
-//import com.fs.starfarer.api.combat.MissileAIPlugin;
-//import com.fs.starfarer.api.combat.MissileAPI;
-//import com.fs.starfarer.api.combat.ShipAPI;
-//import com.fs.starfarer.api.fleet.FleetMemberAPI;
-//import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.characters.FullName;
 
 public class NES_ModPlugin extends BaseModPlugin {
+    //this code makes selected portraits unique to the player
+    @Override
+    public void onGameLoad(boolean newGame) {
+        Global.getSector().getPlayerFaction().getPortraits(FullName.Gender.MALE).remove("graphics/portraits/nes_mysterios_stranger.png");
+        Global.getSector().getPlayerFaction().getPortraits(FullName.Gender.MALE).remove("graphics/portraits/nes_Chalco VI.png");
+        Global.getSector().getPlayerFaction().getPortraits(FullName.Gender.MALE).remove("graphics/portraits/nes_Orion.png");
+        Global.getSector().getPlayerFaction().getPortraits(FullName.Gender.MALE).remove("graphics/portraits/nes_legionesian_demoncore.png");
+        Global.getSector().getPlayerFaction().getPortraits(FullName.Gender.FEMALE).remove("graphics/portraits/nes_luzaitis_sunderest.png");
+        Global.getSector().getPlayerFaction().getPortraits(FullName.Gender.FEMALE).remove("graphics/portraits/nes_cille.png");
+    }
 }

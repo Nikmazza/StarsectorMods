@@ -7,10 +7,9 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
-import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
-import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
@@ -19,29 +18,25 @@ public class IXPanopticonNode extends BaseIndustry {
 	private static float DEFAULT_PATHER_INTEREST = 4f;
 	private static float DEFENSE_BONUS_NODE = 0.5f;
 	private static int STABILITY_BONUS = 5; //display only
-	private static String IX_FACTION = "ix_battlegroup";
+	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String CORE = "ix_panopticon";
 	private static String NODE = "ix_panopticon_node";
-	private static String FLEET_COMMAND = Industries.HIGHCOMMAND;
+	private static String PLAYER_CORE = "ix_panopticon_player_core";
+	private static String PLAYER_NODE = "ix_panopticon_player_node";
+	private static String IX_PLAYER_CORE_ID = "ix_panopticon_instance";
+	private static String MONITORED_VERTEX = "ix_monitored";
+	private static String FLEET_COMMAND_STATION = "ix_zorya_vertex";
+	private static String FCOMM = "ix_fleet_command";
 	
 	public void apply() {
 		super.apply(false);
-		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD)
+		if (isFunctional()) {
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD)
 						.modifyMult(getModId(), 1f + DEFENSE_BONUS_NODE, getNameForModifier());
-		market.suppressCondition(Conditions.PIRATE_ACTIVITY);
-		if (!isFunctional()) {
-			unapply();
+			market.suppressCondition(Conditions.PIRATE_ACTIVITY);
+			market.addCondition(MONITORED_VERTEX);
 		}
-	}
-
-	@Override
-	public boolean isHidden() {
-		return !market.getFactionId().equals(IX_FACTION);
-	}
-	
-	@Override
-	public boolean isFunctional() {
-		return panopticonIsActiveCheck();
+		else unapply();
 	}
 	
 	@Override
@@ -49,14 +44,37 @@ public class IXPanopticonNode extends BaseIndustry {
 		super.unapply();
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
 		market.unsuppressCondition(Conditions.PIRATE_ACTIVITY);
+		market.removeCondition(MONITORED_VERTEX);
+	}
+	
+	@Override
+	public boolean isHidden() {
+		boolean hidden = false;
+		if (!market.getFactionId().equals(IX_FAC_ID) || !isFunctional()) {
+			hidden = true;
+			market.removeCondition(MONITORED_VERTEX);
+		}
+		return hidden;
+	}
+	
+	@Override
+	public boolean isFunctional() {
+		return panopticonIsActiveCheck();
 	}
 
 	@Override
 	public float getPatherInterest() {
 		float interest = DEFAULT_PATHER_INTEREST;
+		boolean hasIndEvo = Global.getSettings().getModManager().isModEnabled("IndEvo");
+		if (market.hasIndustry("BOGGLED_CHAMELEON") 
+					&& (Commodities.ALPHA_CORE).equals(market.getIndustry("BOGGLED_CHAMELEON").getAICoreId())) return 0f;
 		if (panopticonIsActiveCheck()) {
 			for (Industry industry : market.getIndustries()) {
+				if (hasIndEvo && industry.getCurrentName().equals("Monastic Order")) return 0f;
 				if (industry.getId().equals(NODE)) interest -= (int) DEFAULT_PATHER_INTEREST;
+				else if (industry.getId().equals(CORE)
+							|| industry.getId().equals(PLAYER_CORE)
+							|| industry.getId().equals(PLAYER_NODE)) interest += 0;
 				else interest -= (int) industry.getPatherInterest();
 			}
 		}
@@ -64,10 +82,10 @@ public class IXPanopticonNode extends BaseIndustry {
 	}
 
 	private boolean panopticonIsActiveCheck () {
-		MarketAPI m = Global.getSector().getEntityById("ix_zorya_vertex").getMarket();
+		MarketAPI m = Global.getSector().getEntityById(FLEET_COMMAND_STATION).getMarket();
 		boolean isMonitored = true;
-		if (isHidden() || m == null || !m.hasIndustry(CORE)) isMonitored = false;
-		else isMonitored = m.getIndustry(CORE).isFunctional();
+		if (m == null || m.getFactionId() == null || !m.getFactionId().equals(IX_FAC_ID) || !m.hasIndustry(FCOMM)) isMonitored = false;
+		else isMonitored = m.getIndustry(FCOMM).isFunctional() && IX_PLAYER_CORE_ID.equals(m.getIndustry(FCOMM).getAICoreId());
 		return isMonitored;
 	}
 	
@@ -78,8 +96,9 @@ public class IXPanopticonNode extends BaseIndustry {
 	@Override
 	public void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
 		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
-			String s = "Stability bonus: %s";
-			tooltip.addPara(s, 10f, Misc.getHighlightColor(), "+" + STABILITY_BONUS);
+			float opad = 10f;
+			tooltip.addPara("Eliminates Pather cells", opad);
+			tooltip.addPara("Stability bonus: %s", opad, Misc.getHighlightColor(), "+" + STABILITY_BONUS);
 			addGroundDefensesImpactSection(tooltip, DEFENSE_BONUS_NODE, (String[])null);
 		}
 	}

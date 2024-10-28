@@ -1,7 +1,5 @@
 package data.hullmods.vice;
 
-import java.util.LinkedHashSet;
-
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;

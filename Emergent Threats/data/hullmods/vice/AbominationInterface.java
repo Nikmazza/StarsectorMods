@@ -15,7 +15,7 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AbominationInterface extends BaseHullMod {
 	
@@ -24,6 +24,7 @@ public class AbominationInterface extends BaseHullMod {
 	private static String EXEMPTION_MOD = "vice_self_evolving_hull";
 	private static String INTERFACE_PENALTY_MOD = "vice_abomination_interface_penalty";
 	private static String SHIPWIDE_INTEGRATION_CHECKER = "vice_shipwide_integration_checker";
+	private static String EXCLSION_MOD = "ix_semi_automated";
 	
 	//Utility variables
 	private RemnantSubsystemsUtil util = new RemnantSubsystemsUtil();
@@ -68,23 +69,21 @@ public class AbominationInterface extends BaseHullMod {
 
 		for (FleetMemberAPI member : fleetList) {
 			if (member.getVariant().hasHullMod(THIS_MOD) && !member.getVariant().hasHullMod(EXEMPTION_MOD)) interfaceCount++;
-			LinkedHashSet<String> sMods = member.getVariant().getSMods();
-			if (sMods.size() == 0) continue;
-			for (String mod : sMods) {
-				if (mod.equals(THIS_MOD)) interfaceCount--;
-			}
+			if (member.getVariant().getSMods().contains(THIS_MOD)) interfaceCount--;
 		}
 		return interfaceCount;
 	}
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(EXCLSION_MOD)) return false;
 		if (getInterfaceCount(ship.getMutableStats()) >= 1 && !ship.getVariant().hasHullMod(THIS_MOD)) return false;
 		if (util.isModuleCheck(ship)) return false;
 		return (util.isAbomination(ship));
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(EXCLSION_MOD)) return "Ship is already compatible with Adaptive Subsystems";
 		if (getInterfaceCount(ship.getMutableStats()) >= 1) return "Interface is installed elsewhere in the fleet";
 		if (util.isModuleCheck(ship)) return "Interfacing is performed on the central hub";
 		if (!util.isAbomination(ship)) return "This ship is unsuitable for the Abomination Interface. Upgrade with AI Subsystem Integration instead";

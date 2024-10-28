@@ -9,7 +9,7 @@
 	"spriteName":"graphics/vice/ships/candor.png",
 	"weaponSlotChanges":{
 		"SM 1":{
-			"type": "ENERGY",
+			"type": "BUILT_IN",
 			"mount": "HARDPOINT",
         },
 	},

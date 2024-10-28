@@ -42,9 +42,8 @@ public class MimesisHull extends BaseHullMod {
 		module.setVariantDisplayName("Active");
 		
 		stats.getVariant().getHullSpec().setShipSystemId(BASE_SYSTEM);
-		Collection<String> mods = stats.getVariant().getNonBuiltInHullmods();
-		for (String s : mods) {
-			if (s.equals(ATC_HULLMOD)) stats.getVariant().getHullSpec().setShipSystemId(ATC_SYSTEM);
+		if (stats.getVariant().getNonBuiltInHullmods().contains(ATC_HULLMOD)) {
+			stats.getVariant().getHullSpec().setShipSystemId(ATC_SYSTEM);
 		}
 	}
 	

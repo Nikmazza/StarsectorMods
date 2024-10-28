@@ -12,6 +12,7 @@ import com.fs.starfarer.api.util.Misc;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
+import org.selkie.zea.helpers.ZeaStaticStrings;
 
 import java.awt.*;
 
@@ -95,6 +96,7 @@ public class Utils {
     private static long dialogTime = 0;
     private static long commandTime = 0;
     private static long hudTime = 0;
+    @SuppressWarnings("DataFlowIssue")
     public static float getUIAlpha(boolean inUIRenderMethod) {
         final float DIALOG_ALPHA = 0.33f;
         final float DIALOG_FADE_OUT_TIME = 333f;
@@ -141,7 +143,9 @@ public class Utils {
             this.G = G;
             this.B = B;
         }
-        public float R, G, B;
+        public final float R;
+        public final float G;
+        public final float B;
     }
 
     public static class OKLab {
@@ -150,7 +154,9 @@ public class Utils {
             this.a = a;
             this.b = b;
         }
-        public float L, a, b;
+        public final float L;
+        public final float a;
+        public final float b;
     }
 
     public static Color OKLabInterpolateColor(Color from, Color to, float progress){
@@ -189,7 +195,7 @@ public class Utils {
         float s = s_*s_*s_;
 
         return new LinearSRBG(
-            +4.0767416621f * l - 3.3077115913f * m + 0.2309699292f * s,
+            4.0767416621f * l - 3.3077115913f * m + 0.2309699292f * s,
             -1.2684380046f * l + 2.6097574011f * m - 0.3413193965f * s,
             -0.0041960863f * l - 0.7034186147f * m + 1.7076147010f * s
         );
@@ -223,26 +229,78 @@ public class Utils {
         return minOut + (input - minIn) * (maxOut - minOut) / (maxIn - minIn);
     }
 
-    private static final String DRONE_SHIELD_TARGET_KEY = "droneShieldTargetKey";
+
 
     public static ShipAPI getDroneShieldTarget(ShipAPI drone) {
-        return drone.getCustomData().containsKey(DRONE_SHIELD_TARGET_KEY) ? (ShipAPI) drone.getCustomData().get(DRONE_SHIELD_TARGET_KEY) : null;
+        return drone.getCustomData().containsKey(ZeaStaticStrings.DRONE_SHIELD_TARGET_KEY) ? (ShipAPI) drone.getCustomData().get(ZeaStaticStrings.DRONE_SHIELD_TARGET_KEY) : null;
     }
 
     public static void setDroneShieldTarget(ShipAPI drone, ShipAPI target) {
         if (target == null) {
-            drone.getCustomData().remove(DRONE_SHIELD_TARGET_KEY);
+            drone.getCustomData().remove(ZeaStaticStrings.DRONE_SHIELD_TARGET_KEY);
         } else {
-            drone.setCustomData(DRONE_SHIELD_TARGET_KEY, target);
+            drone.setCustomData(ZeaStaticStrings.DRONE_SHIELD_TARGET_KEY, target);
         }
     }
 
     public static boolean anyDronesShieldingShip(ShipAPI target) {
         for (ShipAPI drone : AIUtils.getAlliesOnMap(target)) {
-            if (drone.getCustomData().containsKey(DRONE_SHIELD_TARGET_KEY) && drone.getCustomData().get(DRONE_SHIELD_TARGET_KEY) == target) {
+            if (drone.getCustomData().containsKey(ZeaStaticStrings.DRONE_SHIELD_TARGET_KEY) && drone.getCustomData().get(ZeaStaticStrings.DRONE_SHIELD_TARGET_KEY) == target) {
                 return true;
             }
         }
         return false;
+    }
+
+    private static final double FACTOR = 0.7;
+
+    /**
+     * Creates a new <code>Color</code> that is a brighter version of this
+     * <code>Color</code>.
+     * <p>
+     * This method applies an arbitrary scale factor to each of the three RGB
+     * components of this <code>Color</code> to create a brighter version
+     * of this <code>Color</code>.
+     * The {@code alpha} value is preserved.
+     * Although <code>brighter</code> and
+     * <code>darker</code> are inverse operations, the results of a
+     * series of invocations of these two methods might be inconsistent
+     * because of rounding errors.
+     * @return     a new <code>Color</code> object that is
+     *                 a brighter version of this <code>Color</code>
+     *                 with the same {@code alpha} value.
+     * @see        java.awt.Color#darker
+     * @since      JDK1.0
+     */
+    public static Color brighter(Color color, float factor) {
+        int r = color.getRed();
+        int g = color.getGreen();
+        int b = color.getBlue();
+        int alpha = color.getAlpha();
+
+        /* From 2D group:
+         * 1. black.brighter() should return grey
+         * 2. applying brighter to blue will always return blue, brighter
+         * 3. non pure color (non zero rgb) will eventually return white
+         */
+        int i = (int)(1.0/(1.0-factor));
+        if ( r == 0 && g == 0 && b == 0) {
+            return new Color(i, i, i, alpha);
+        }
+        if ( r > 0 && r < i ) r = i;
+        if ( g > 0 && g < i ) g = i;
+        if ( b > 0 && b < i ) b = i;
+
+        return new Color(Math.min((int)(r/factor), 255),
+                Math.min((int)(g/factor), 255),
+                Math.min((int)(b/factor), 255),
+                alpha);
+    }
+
+    public static Color darker(Color color, float factor) {
+        return new Color(Math.max((int)(color.getRed()  *factor), 0),
+                Math.max((int)(color.getGreen()*factor), 0),
+                Math.max((int)(color.getBlue() *factor), 0),
+                color.getAlpha());
     }
 }

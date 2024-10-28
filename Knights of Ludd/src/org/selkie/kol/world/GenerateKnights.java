@@ -1,10 +1,5 @@
 package org.selkie.kol.world;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Random;
-
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -15,7 +10,6 @@ import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
-import com.fs.starfarer.campaign.econ.Market;
 import exerelin.campaign.AllianceManager;
 import exerelin.campaign.DiplomacyManager;
 import exerelin.campaign.PlayerFactionStore;
@@ -24,28 +18,34 @@ import exerelin.campaign.alliances.Alliance;
 import exerelin.utilities.NexConfig;
 import exerelin.utilities.NexFactionConfig;
 import org.apache.log4j.Logger;
-import org.lazywizard.lazylib.MathUtils;
 import org.magiclib.util.MagicCampaign;
 import org.selkie.kol.fleets.KnightsExpeditionsManager;
 import org.selkie.kol.fleets.SpawnInvictus;
 import org.selkie.kol.fleets.SpawnRetribution;
+import org.selkie.kol.helpers.KolStaticStrings;
 import org.selkie.kol.helpers.MarketHelpers;
-import org.selkie.kol.impl.helpers.ZeaUtils;
-import org.selkie.kol.impl.intel.ZeaMechanicIntel;
-import org.selkie.kol.impl.world.PrepareAbyss;
+import org.selkie.zea.helpers.ZeaStaticStrings;
+import org.selkie.zea.helpers.ZeaStaticStrings.GfxCat;
+import org.selkie.zea.intel.ZeaMechanicIntel;
+import org.selkie.zea.world.PrepareAbyss;
 import org.selkie.kol.plugins.KOL_ModPlugin;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Random;
 
 public class GenerateKnights {
 
-	public static Logger log = Global.getLogger(GenerateKnights.class);
+	public static final Logger log = Global.getLogger(GenerateKnights.class);
 
-	public static int baseKnightExpeditions = 2;
+	public static final int baseKnightExpeditions = 2;
 	
 	public static void genCorvus() {
-		Global.getSector().getStarSystem("Eos Exodus").setBackgroundTextureFilename("graphics/backgrounds/kol_bg_1.jpg");
-		Global.getSector().getStarSystem("Kumari Kandam").setBackgroundTextureFilename("graphics/backgrounds/kol_bg_2.jpg");
-		Global.getSector().getStarSystem("Canaan").setBackgroundTextureFilename("graphics/backgrounds/kol_bg_3.jpg");
-		Global.getSector().getStarSystem("Al Gebbar").setBackgroundTextureFilename("graphics/backgrounds/kol_bg_4.jpg");
+		Global.getSector().getStarSystem(ZeaStaticStrings.EOS_EXODUS).setBackgroundTextureFilename("graphics/kol/backgrounds/kol_bg_1.jpg");
+		Global.getSector().getStarSystem(ZeaStaticStrings.KUMARI_KANDAM).setBackgroundTextureFilename("graphics/kol/backgrounds/kol_bg_2.jpg");
+		Global.getSector().getStarSystem(ZeaStaticStrings.CANAAN).setBackgroundTextureFilename("graphics/kol/backgrounds/kol_bg_3.jpg");
+		Global.getSector().getStarSystem(ZeaStaticStrings.AL_GEBBAR).setBackgroundTextureFilename("graphics/kol/backgrounds/kol_bg_4.jpg");
 		genKnightsBattlestation();
 		genKnightsStarfortress();
 	}
@@ -61,9 +61,9 @@ public class GenerateKnights {
 	}
 
 	public static void startupRelations() {
-		if (Global.getSector().getFaction(Factions.LUDDIC_CHURCH) != null && Global.getSector().getFaction(KOL_ModPlugin.kolID) != null) {
+		if (Global.getSector().getFaction(Factions.LUDDIC_CHURCH) != null && Global.getSector().getFaction(KolStaticStrings.kolFactionID) != null) {
 			FactionAPI church = Global.getSector().getFaction(Factions.LUDDIC_CHURCH);
-			FactionAPI knights = Global.getSector().getFaction(KOL_ModPlugin.kolID);
+			FactionAPI knights = Global.getSector().getFaction(KolStaticStrings.kolFactionID);
 
 			if(church.getRelToPlayer().isAtWorst(RepLevel.SUSPICIOUS)) {
 				church.getRelToPlayer().setRel(Math.max(church.getRelToPlayer().getRel(), knights.getRelToPlayer().getRel()));
@@ -73,7 +73,7 @@ public class GenerateKnights {
 			for(FactionAPI faction:Global.getSector().getAllFactions()) {
 				knights.setRelationship(faction.getId(), church.getRelationship(faction.getId()));
 			}
-			if (Misc.getCommissionFactionId() != null && Misc.getCommissionFactionId().equals(KOL_ModPlugin.kolID)) {
+			if (Misc.getCommissionFactionId() != null && Misc.getCommissionFactionId().equals(KolStaticStrings.kolFactionID)) {
 				FactionAPI player = Global.getSector().getPlayerFaction();
 				for(FactionAPI faction:Global.getSector().getAllFactions()) {
 					player.setRelationship(faction.getId(), knights.getRelationship(faction.getId()));
@@ -84,15 +84,15 @@ public class GenerateKnights {
 			if (KOL_ModPlugin.haveNex) {
 				knights.setRelationship(Factions.LUDDIC_CHURCH, 1.00f);
 				if (true || Global.getSettings().getBoolean("foundCOGH")) {
-					Alliance COGH = AllianceManager.createAlliance(KOL_ModPlugin.kolID, Factions.LUDDIC_CHURCH, AllianceManager.getBestAlignment(KOL_ModPlugin.kolID, Factions.LUDDIC_CHURCH));
-					COGH.addPermaMember(KOL_ModPlugin.kolID);
+					Alliance COGH = AllianceManager.createAlliance(KolStaticStrings.kolFactionID, Factions.LUDDIC_CHURCH, AllianceManager.getBestAlignment(KolStaticStrings.kolFactionID, Factions.LUDDIC_CHURCH));
+					COGH.addPermaMember(KolStaticStrings.kolFactionID);
 					COGH.addPermaMember(Factions.LUDDIC_CHURCH);
 					COGH.setName(Global.getSettings().getString("knights_of_ludd", "ChurchOfGalacticRedemption"));
 				}
 
-				NexFactionConfig factionConfig = NexConfig.getFactionConfig(KOL_ModPlugin.kolID);
+				NexFactionConfig factionConfig = NexConfig.getFactionConfig(KolStaticStrings.kolFactionID);
 				if (!DiplomacyManager.isRandomFactionRelationships()) {factionConfig.minRelationships.clear();factionConfig.minRelationships.put(Factions.LUDDIC_CHURCH, 0.251f);}
-				if (KOL_ModPlugin.kolID.equals(PlayerFactionStore.getPlayerFactionIdNGC()) || Factions.LUDDIC_CHURCH.equals(PlayerFactionStore.getPlayerFactionIdNGC())) {
+				if (KolStaticStrings.kolFactionID.equals(PlayerFactionStore.getPlayerFactionIdNGC()) || Factions.LUDDIC_CHURCH.equals(PlayerFactionStore.getPlayerFactionIdNGC())) {
 					knights.setRelationship(Factions.LUDDIC_CHURCH, 0.75f); //Prevents you from instantly gaining 1 story point repping up to 100...
 				}
 			}
@@ -101,32 +101,31 @@ public class GenerateKnights {
 
 	public static void addKoLIntel() {
 		if (Global.getSector() == null) return;
-		while (ZeaMechanicIntel.unknownMechanics(KOL_ModPlugin.kolID) > 0) {
-			Global.getSector().getIntelManager().addIntel(ZeaMechanicIntel.getNextMechanicIntel(KOL_ModPlugin.kolID));
+		while (ZeaMechanicIntel.unknownMechanics(KolStaticStrings.kolFactionID) > 0) {
+			Global.getSector().getIntelManager().addIntel(ZeaMechanicIntel.getNextMechanicIntel(KolStaticStrings.kolFactionID));
 		}
 	}
 
 	public static void genKnightsBattlestation() {
-		String entID = "kol_cygnus";
-		StarSystemAPI Canaan = Global.getSector().getStarSystem("Canaan");
-        SectorEntityToken cygnus = Canaan.addCustomEntity(entID, "Battlestation Cygnus", "station_lowtech2", "knights_of_selkie");
+		StarSystemAPI Canaan = Global.getSector().getStarSystem(ZeaStaticStrings.CANAAN);
+        SectorEntityToken cygnus = Canaan.addCustomEntity(KolStaticStrings.KOL_CYGNUS, "Battlestation Cygnus", "station_lowtech2", KolStaticStrings.kolFactionID);
         cygnus.setCircularOrbitPointingDown(Canaan.getEntityById("canaan_gate"), 33, 475, 99);
         cygnus.setCustomDescriptionId("kol_cygnus_desc");
 		//cygnus.getMemoryWithoutUpdate().set(MusicPlayerPluginImpl.KEEP_PLAYING_LOCATION_MUSIC_DURING_ENCOUNTER_MEM_KEY, true);
         
-        MarketHelpers.addMarketplace("knights_of_selkie", cygnus, null, "Battlestation Cygnus", 4,
-        		new ArrayList<String>(Arrays.asList(Conditions.OUTPOST,
+        MarketHelpers.addMarketplace(KolStaticStrings.kolFactionID, cygnus, null, "Battlestation Cygnus", 4,
+                new ArrayList<>(Arrays.asList(Conditions.OUTPOST,
                         Conditions.POPULATION_4)),
-        		new ArrayList<String>(Arrays.asList(
+                new ArrayList<>(Arrays.asList(
                         Industries.POPULATION,
                         Industries.SPACEPORT,
-						"kol_garden",
-						Industries.PATROLHQ,
+                        "kol_garden",
+                        Industries.PATROLHQ,
                         Industries.LIGHTINDUSTRY,
                         Industries.GROUNDDEFENSES,
                         Industries.BATTLESTATION)),
-        		new ArrayList<String>(Arrays.asList(
-        				Submarkets.SUBMARKET_STORAGE,
+                new ArrayList<>(Arrays.asList(
+                        Submarkets.SUBMARKET_STORAGE,
                         Submarkets.GENERIC_MILITARY,
                         Submarkets.SUBMARKET_BLACK,
                         Submarkets.SUBMARKET_OPEN)),
@@ -136,16 +135,16 @@ public class GenerateKnights {
 		cygnus.getMarket().removeSubmarket(Submarkets.SUBMARKET_BLACK);
 		if (KOL_ModPlugin.haveNex) SectorManager.NO_BLACK_MARKET.add(cygnus.getMarket().getId());
 
-		cygnus.setInteractionImage("illustrations", "kol_tree_canaan_large");
+		cygnus.setInteractionImage(GfxCat.ILLUSTRATIONS, "kol_tree_canaan_large");
 
 		MarketHelpers.addMarketPeople(cygnus.getMarket());
 
 		PersonAPI master = MagicCampaign.addCustomPerson(cygnus.getMarket(), "Master", "Helensis", "kol_chaptermaster",
-				FullName.Gender.FEMALE, KOL_ModPlugin.kolID, Ranks.ELDER, Ranks.POST_MILITARY_ADMINISTRATOR,
+				FullName.Gender.FEMALE, KolStaticStrings.kolFactionID, Ranks.ELDER, Ranks.POST_MILITARY_ADMINISTRATOR,
 				false, 1, 1);
 
 		PersonAPI lackey1 = MagicCampaign.addCustomPerson(cygnus.getMarket(), "Brother", "Enarms", "kol_agent_m",
-				FullName.Gender.MALE, KOL_ModPlugin.kolID, Ranks.KNIGHT_CAPTAIN, Ranks.POST_GUARD_LEADER,
+				FullName.Gender.MALE, KolStaticStrings.kolFactionID, Ranks.KNIGHT_CAPTAIN, Ranks.POST_GUARD_LEADER,
 				false, 0, 0);
 
 		master.setId("kol_chaptermaster");
@@ -160,34 +159,34 @@ public class GenerateKnights {
 	
 	public static void genKnightsStarfortress() {
 		String entID = "kol_lyra";
-		StarSystemAPI Eos = Global.getSector().getStarSystem("Eos Exodus");
-        SectorEntityToken lyra = Eos.addCustomEntity(entID, "Star Keep Lyra", "station_lowtech3", "knights_of_selkie");
+		StarSystemAPI Eos = Global.getSector().getStarSystem(ZeaStaticStrings.EOS_EXODUS);
+        SectorEntityToken lyra = Eos.addCustomEntity(entID, "Star Keep Lyra", "station_lowtech3", KolStaticStrings.kolFactionID);
         lyra.setCircularOrbitPointingDown(Eos.getEntityById("eos_exodus_gate"), 33, 475, 99);
         lyra.setCustomDescriptionId("kol_lyra_desc");
 		//yra.getMemoryWithoutUpdate().set(MusicPlayerPluginImpl.KEEP_PLAYING_LOCATION_MUSIC_DURING_ENCOUNTER_MEM_KEY, true);
 
-		MarketHelpers.addMarketplace("knights_of_selkie", lyra, null, "Star Keep Lyra", 5,
-        		new ArrayList<String>(Arrays.asList(Conditions.OUTPOST,
+		MarketHelpers.addMarketplace(KolStaticStrings.kolFactionID, lyra, null, "Star Keep Lyra", 5,
+                new ArrayList<>(Arrays.asList(Conditions.OUTPOST,
                         Conditions.POPULATION_5)),
-        		new ArrayList<String>(Arrays.asList(
+                new ArrayList<>(Arrays.asList(
                         Industries.POPULATION,
                         Industries.SPACEPORT,
-						"kol_garden",
+                        "kol_garden",
                         Industries.MILITARYBASE,
                         Industries.ORBITALWORKS,
                         Industries.FUELPROD,
                         Industries.HEAVYBATTERIES,
                         Industries.STARFORTRESS,
                         Industries.WAYSTATION)),
-        		new ArrayList<String>(Arrays.asList(
-        				Submarkets.SUBMARKET_STORAGE,
+                new ArrayList<>(Arrays.asList(
+                        Submarkets.SUBMARKET_STORAGE,
                         Submarkets.GENERIC_MILITARY,
                         Submarkets.SUBMARKET_BLACK,
                         Submarkets.SUBMARKET_OPEN)),
         		0.3f
         );
 
-		lyra.setInteractionImage("illustrations", "kol_citadel_large");
+		lyra.setInteractionImage(GfxCat.ILLUSTRATIONS, "kol_citadel_large");
 
 		lyra.getMarket().removeSubmarket(Submarkets.SUBMARKET_BLACK);
 		if (KOL_ModPlugin.haveNex) SectorManager.NO_BLACK_MARKET.add(lyra.getMarket().getId());
@@ -195,11 +194,11 @@ public class GenerateKnights {
 		MarketHelpers.addMarketPeople(lyra.getMarket());
 
 		PersonAPI grandmaster = MagicCampaign.addCustomPerson(lyra.getMarket(), "Grandmaster", "Lyon", "kol_grandmaster",
-				FullName.Gender.MALE, KOL_ModPlugin.kolID, Ranks.FACTION_LEADER, Ranks.POST_FACTION_LEADER,
+				FullName.Gender.MALE, KolStaticStrings.kolFactionID, Ranks.FACTION_LEADER, Ranks.POST_FACTION_LEADER,
 				false, 0, 1);
 
 		PersonAPI lackey2 = MagicCampaign.addCustomPerson(lyra.getMarket(), "Rebecca", "Greenflight", "kol_agent_f",
-				FullName.Gender.FEMALE, KOL_ModPlugin.kolID, Ranks.SISTER, Ranks.POST_INTELLIGENCE_DIRECTOR,
+				FullName.Gender.FEMALE, KolStaticStrings.kolFactionID, Ranks.SISTER, Ranks.POST_INTELLIGENCE_DIRECTOR,
 				false, 0, 0);
 
 		grandmaster.setId("kol_grandmaster");
@@ -213,16 +212,15 @@ public class GenerateKnights {
 	}
 
 	public static void genBattlestarLibra() {
-		String entID = "kol_libra";
 		StarSystemAPI home = getLibraHome(Long.parseLong(Global.getSector().getSeedString().substring(3)));
-		if (home == null) {;
-			log.error(String.format("KOL: Could not find a system for Libra"));
+		if (home == null) {
+			log.error("KOL: Could not find a system for Libra");
 			return;
 		}
-		//SectorEntityToken libra = home.addCustomEntity(entID, "Battlestar Libra", "kol_battlestar_libra_entity", "knights_of_selkie");
+		//SectorEntityToken libra = home.addCustomEntity(entID, "Battlestar Libra", "kol_battlestar_libra_entity", ZeaStaticStrings.kolID);
 		//libra.setCircularOrbitPointingDown(home.getStar(), (float)Math.random()*360f, 4750, 199);
 
-		LinkedHashMap<BaseThemeGenerator.LocationType, Float> weights = new LinkedHashMap<BaseThemeGenerator.LocationType, Float>();
+		LinkedHashMap<BaseThemeGenerator.LocationType, Float> weights = new LinkedHashMap<>();
 		weights.put(BaseThemeGenerator.LocationType.IN_ASTEROID_BELT, 2f);
 		weights.put(BaseThemeGenerator.LocationType.IN_ASTEROID_FIELD, 10f);
 		weights.put(BaseThemeGenerator.LocationType.IN_RING, 5f);
@@ -234,12 +232,12 @@ public class GenerateKnights {
 		WeightedRandomPicker<BaseThemeGenerator.EntityLocation> locs = BaseThemeGenerator.getLocations(null, home, null, 100f, weights);
 		BaseThemeGenerator.EntityLocation loc = locs.pick();
 
-		if (loc == null) {;
+		if (loc == null) {
 			log.error(String.format("KOL: Could not find a location for Libra in %s", home.getId()));
 			return;
 		}
 
-		home.getMemoryWithoutUpdate().set("$kol_libra_start_system", true);
+		home.getMemoryWithoutUpdate().set(KolStaticStrings.KolMemKeys.KOL_LIBRA_START_SYSTEM, true);
 		// Debug
 		/*
 		runcode org.selkie.kol.world.GenerateKnights.genBattlestarLibra();
@@ -252,30 +250,30 @@ public class GenerateKnights {
 
 		String name = "Battlestar Libra";
 
-		BaseThemeGenerator.AddedEntity added = BaseThemeGenerator.addNonSalvageEntity(home, loc, "kol_battlestar_libra_entity", KOL_ModPlugin.kolID);
+		BaseThemeGenerator.AddedEntity added = BaseThemeGenerator.addNonSalvageEntity(home, loc, "kol_battlestar_libra_entity", KolStaticStrings.kolFactionID);
 		SectorEntityToken libra = added.entity;
 
-		MarketAPI market = MarketHelpers.addMarketplace("knights_of_selkie", libra, null, name, 3,
-				new ArrayList<String>(Arrays.asList(Conditions.OUTPOST,
-						Conditions.POPULATION_3)),
-				new ArrayList<String>(Arrays.asList(
-						Industries.POPULATION,
-						Industries.SPACEPORT,
-						"kol_garden",
-						Industries.HIGHCOMMAND,
-						Industries.HEAVYBATTERIES,
-						"kol_battlestation_libra",
-						Industries.WAYSTATION)),
-				new ArrayList<String>(Arrays.asList(
-						Submarkets.SUBMARKET_STORAGE,
-						Submarkets.GENERIC_MILITARY,
-						Submarkets.SUBMARKET_BLACK)),
+		MarketAPI market = MarketHelpers.addMarketplace(KolStaticStrings.kolFactionID, libra, null, name, 3,
+                new ArrayList<>(Arrays.asList(Conditions.OUTPOST,
+                        Conditions.POPULATION_3)),
+                new ArrayList<>(Arrays.asList(
+                        Industries.POPULATION,
+                        Industries.SPACEPORT,
+                        "kol_garden",
+                        Industries.HIGHCOMMAND,
+                        Industries.HEAVYBATTERIES,
+                        "kol_battlestation_libra",
+                        Industries.WAYSTATION)),
+                new ArrayList<>(Arrays.asList(
+                        Submarkets.SUBMARKET_STORAGE,
+                        Submarkets.GENERIC_MILITARY,
+                        Submarkets.SUBMARKET_BLACK)),
 				1f
 		);
 
 		libra.setName(name);
 		libra.setCustomDescriptionId("kol_libra_port_desc");
-		libra.setInteractionImage("illustrations", "kol_garden_large");
+		libra.setInteractionImage(GfxCat.ILLUSTRATIONS, "kol_garden_large");
 		libra.setDiscoverable(true);
 		libra.setSensorProfile(1f);
 		libra.getDetectedRangeMod().modifyFlat("gen", 5000f);
@@ -283,7 +281,7 @@ public class GenerateKnights {
 
 		market.setHidden(true);
 		market.setSurveyLevel(MarketAPI.SurveyLevel.NONE);
-		market.getMemoryWithoutUpdate().set("$kol_market_libra", true);
+		market.getMemoryWithoutUpdate().set(KolStaticStrings.KolMemKeys.KOL_MARKET_LIBRA, true);
 		market.getMemoryWithoutUpdate().set(MemFlags.HIDDEN_BASE_MEM_FLAG, true);
 		market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
 		market.setEconGroup(market.getId());
@@ -313,7 +311,7 @@ public class GenerateKnights {
 		//if (KOL_ModPlugin.haveNex) SectorManager.NO_BLACK_MARKET.add(lyra.getMarket().getId());
 
 		PersonAPI elder = MagicCampaign.addCustomPerson(market, "Knightmaster", "Martins", "kol_grandmaster",
-				FullName.Gender.MALE, KOL_ModPlugin.kolID, Ranks.ELDER, Ranks.POST_STATION_COMMANDER,
+				FullName.Gender.MALE, KolStaticStrings.kolFactionID, Ranks.ELDER, Ranks.POST_STATION_COMMANDER,
 				true, 1, 0);
 
 		elder.setId("kol_libramaster");
@@ -357,8 +355,8 @@ public class GenerateKnights {
 			if (system.getLocation().getX() <= width/-2 + 20000) w *= 5f; //West bias
 			if (system.getLocation().getX() <= width/-2 + 35000) w *= 5f; //West bias
 			if (system.hasSystemwideNebula()) w *= 2f;
-			if (Misc.getNumStableLocations(system) < 1) w *= 0.1;
-			if (Misc.getNumStableLocations(system) < 2) w *= 0.5;
+			if (Misc.getNumStableLocations(system) < 1) w *= 0.1F;
+			if (Misc.getNumStableLocations(system) < 2) w *= 0.5F;
 
 			picker.add(system, w);
 		}
@@ -368,8 +366,8 @@ public class GenerateKnights {
 
 	public static void genKnightsExpeditions() {
 		org.selkie.kol.fleets.KnightsExpeditionsManager expeditions = new KnightsExpeditionsManager();
-		if (Global.getSector().getStarSystem("Eos Exodus") != null) {
-			Global.getSector().getStarSystem("Eos Exodus").addScript(expeditions);
+		if (Global.getSector().getStarSystem(ZeaStaticStrings.EOS_EXODUS) != null) {
+			Global.getSector().getStarSystem(ZeaStaticStrings.EOS_EXODUS).addScript(expeditions);
 		} else {
 			//Random sector
 			WeightedRandomPicker<StarSystemAPI> picker = new WeightedRandomPicker<>();
@@ -378,7 +376,7 @@ public class GenerateKnights {
 				if (market.getFactionId().equals(Factions.LUDDIC_CHURCH)) {
 					picker.add((StarSystemAPI) market.getContainingLocation(), 1f);
 				}
-				if (market.getFactionId().equals(KOL_ModPlugin.kolID)) {
+				if (market.getFactionId().equals(KolStaticStrings.kolFactionID)) {
 					picker.add((StarSystemAPI) market.getContainingLocation(), 100f);
 				}
 			}
@@ -389,16 +387,16 @@ public class GenerateKnights {
 	public static void copyChurchEquipment() {
 		// The knights don't want the misc modiverse ships
 		// Unless they have no other choice
-		FactionAPI KOL = Global.getSector().getFaction(KOL_ModPlugin.kolID);
+		FactionAPI KOL = Global.getSector().getFaction(KolStaticStrings.kolFactionID);
 	    for (String ship : Global.getSector().getFaction(Factions.LUDDIC_CHURCH).getKnownShips()) {
             if (!KOL.knowsShip(ship)
 					&& !KOL.getAlwaysKnownShips().contains(ship)) {
-                Global.getSector().getFaction(KOL_ModPlugin.kolID).addUseWhenImportingShip(ship);
+                Global.getSector().getFaction(KolStaticStrings.kolFactionID).addUseWhenImportingShip(ship);
             }
         }
         //for (String baseShip : Global.getSector().getFaction(Factions.LUDDIC_CHURCH).getAlwaysKnownShips()) {
-        //    if (!Global.getSector().getFaction(KOL_ModPlugin.kolID).useWhenImportingShip(baseShip)) {
-        //        Global.getSector().getFaction(KOL_ModPlugin.kolID).addUseWhenImportingShip(baseShip);
+        //    if (!Global.getSector().getFaction(ZeaStaticStrings.kolID).useWhenImportingShip(baseShip)) {
+        //        Global.getSector().getFaction(ZeaStaticStrings.kolID).addUseWhenImportingShip(baseShip);
         //    }
         //}
 		for (String entry : Global.getSector().getFaction(Factions.LUDDIC_CHURCH).getKnownWeapons()) {
@@ -418,13 +416,5 @@ public class GenerateKnights {
 		}
 	}
 
-	public static class KnightsFleetTypes {
-
-		public static final String SCOUT = "kolScout";
-		public static final String HEADHUNTER = "kolHeadHunter";
-		public static final String WARRIORS = "kolHolyWarriors";
-		public static final String PATROL = "kolPatrol";
-		public static final String ARMADA = "kolArmada";
-	}
 }
 

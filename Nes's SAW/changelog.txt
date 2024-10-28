@@ -1,3 +1,43 @@
+1.15SSS
+Magic Paintjobs: vanilla ships cosmetics, manage them in "Personal" intel tab
+-added "Automata" Paragon
+-added "Automata" Astral
+-added "Automata" Aurora
+-added "Automata" Fury
+-added "Automata" Shrike
+-added "Automata" Medusa
+-added "Automata" Scarab
+-added "Automata" Hyperion
+-added "Automata" Omen
+
+1.14SSS
+Hampter:
+-Tried and Tested: now also reduces supply recovery and repair costs, updated hullmod icon
+-added Albion skin
+
+Hampter(XIV):
+-medium turret missile > universal
+
+Hammerfall:
+-Mining Drill: now has unlimited charges
+
+Volt:
+-added Dusk skin
+-Starling skin minor update
+
+Hermitaur:
+-added Albion skin
+-Devout skin minor update
+
+Hermitaur (LP):
+-minor sprite update
+
+Carnelian:
+-Scourge skin minor update
+
+hull livery: removed docked requirement
+made certain portraits unique to the player, they will not be used by npc and can only be chosen during character creation
+
 1.13SSS
 added Hermitaur (LP):
 -reversed mount layout

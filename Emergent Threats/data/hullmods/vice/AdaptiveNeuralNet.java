@@ -8,7 +8,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveNeuralNet extends BaseHullMod {
 
@@ -41,9 +41,13 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 		else if (("sotf_ichip_nightingale").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		else if (("sotf_ichip_barrow_d").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 1f;
 		else if (("sotf_ichip_barrow").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
+		else if (("sotf_ichip_seraph").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 		
 		else if (("sotf_ichip_sliver").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 1f;
+		else if (("sotf_ichip_sliver1").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 1f;
+		else if (("sotf_ichip_sliver2").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 1f;
 		else if (("sotf_ichip_echo").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
+		else if (("sotf_ichip_echo1").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		else if (("sotf_ichip_annex").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 
 		else if (("rat_chronos_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
@@ -55,14 +59,23 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 		else if (("volantian_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		
 		else if (("ix_panopticon_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
+		else if (("ix_panopticon_instance").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 		
 		if (util.isModuleCheck(stats)) bonus = CR_BONUS + AI_BONUS * 0f;
 		
 		TOTAL_BONUS = bonus;
-		stats.getMaxCombatReadiness().modifyFlat(id, bonus * 0.01f, "Adaptive Neural Net");
+		stats.getMaxCombatReadiness().modifyFlat(id, bonus * 0.01f, "Adaptive neural net");
 		
 		util.applyShipwideHullMod(stats.getVariant(), id, true);
 		util.addModuleHandler(stats);
+	}
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		//self clear if invalid player hull, but do not clear on modules since they can be added by handler
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0 && !util.isModuleCheck(ship)) {
+			ship.getVariant().getHullMods().remove(id);
+		}
 	}
 	
 	@Override

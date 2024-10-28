@@ -18,9 +18,11 @@ import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.util.vector.Vector2f;
 import org.magiclib.util.MagicIncompatibleHullmods;
+import org.selkie.kol.Utils;
 import org.selkie.kol.combat.ShipExplosionListener;
 import org.selkie.kol.combat.StarficzAIUtils;
-import org.selkie.kol.helpers.KOLStaticStrings;
+import org.selkie.kol.helpers.KolStaticStrings;
+import org.selkie.zea.helpers.ZeaStaticStrings.GfxCat;
 
 import java.awt.*;
 import java.util.List;
@@ -51,20 +53,20 @@ import java.util.regex.Pattern;
  - When a module is destroyed, the corresponding deco cover on the main hull is hidden
     */
 
+@SuppressWarnings("ConstantValue")
 public class KnightRefit extends BaseHullMod {
 
     public static final int FLUX_CAP_PER_OP = 25;
     public static final int FLUX_DISS_PER_OP = 5;
     public static final float SPEED_BONUS = 0.25f;
-    protected Object SPEED_STATUS_KEY = new Object();
-    public static final String KNIGHT_REFIT_STATMOD_ID = "knightRefit";
+    protected final Object SPEED_STATUS_KEY = new Object();
 
     @Override
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
-        if (ship.getVariant().hasHullMod(HullMods.ACCELERATED_SHIELDS)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ACCELERATED_SHIELDS, KOLStaticStrings.KNIGHT_REFIT);
-        if (ship.getVariant().hasHullMod(HullMods.OMNI_SHIELD_CONVERSION)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OMNI_SHIELD_CONVERSION, KOLStaticStrings.KNIGHT_REFIT);
-        if (ship.getVariant().hasHullMod(HullMods.FRONT_SHIELD_CONVERSION)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.FRONT_SHIELD_CONVERSION, KOLStaticStrings.KNIGHT_REFIT);
-        if (ship.getVariant().hasHullMod(HullMods.EXTENDED_SHIELDS)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EXTENDED_SHIELDS, KOLStaticStrings.KNIGHT_REFIT);
+        if (ship.getVariant().hasHullMod(HullMods.ACCELERATED_SHIELDS)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.ACCELERATED_SHIELDS, KolStaticStrings.KNIGHT_REFIT);
+        if (ship.getVariant().hasHullMod(HullMods.OMNI_SHIELD_CONVERSION)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.OMNI_SHIELD_CONVERSION, KolStaticStrings.KNIGHT_REFIT);
+        if (ship.getVariant().hasHullMod(HullMods.FRONT_SHIELD_CONVERSION)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.FRONT_SHIELD_CONVERSION, KolStaticStrings.KNIGHT_REFIT);
+        if (ship.getVariant().hasHullMod(HullMods.EXTENDED_SHIELDS)) MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), HullMods.EXTENDED_SHIELDS, KolStaticStrings.KNIGHT_REFIT);
 
         PersonAPI captain = ship.getOriginalCaptain();
         MutableCharacterStatsAPI stats = captain == null ? null : captain.getFleetCommanderStats();
@@ -90,9 +92,9 @@ public class KnightRefit extends BaseHullMod {
         public boolean notifyAboutToTakeHullDamage(Object param, ShipAPI ship, Vector2f point, float damageAmount) {
             if(ship.getHitpoints() <= damageAmount) {
                 for(ShipAPI module: ship.getChildModulesCopy()){
-                    if(!module.hasTag(KnightModule.KOL_MODULE_DEAD)){
+                    if(!module.hasTag(KolStaticStrings.KOL_MODULE_DEAD)){
                         module.setHulk(false);
-                        module.addTag(KnightModule.KOL_MODULE_DEAD);
+                        module.addTag(KolStaticStrings.KOL_MODULE_DEAD);
                     }
                 }
             }
@@ -261,21 +263,24 @@ public class KnightRefit extends BaseHullMod {
     public void addPostDescriptionSection(TooltipMakerAPI tooltip, ShipAPI.HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
         float HEIGHT = 64f;
         float headingPad = 20f;
-        float underHeadingPad = 5f;
+        float underHeadingPad = 10f;
         float listPad = 3f;
-
 
         Color activeTextColor = Misc.getTextColor();
         Color activePositiveColor = Misc.getPositiveHighlightColor();
         Color activeNegativeColor = Misc.getNegativeHighlightColor();
         Color activeHeaderBannerColor = Misc.getDarkPlayerColor();
+        Color activeHeaderTextColor = Utils.brighter(Misc.getButtonTextColor(), 0.8f);
         Color activeHighlightColor = Misc.getHighlightColor();
 
         Color inactiveTextColor = Misc.getGrayColor().darker();
         Color inactivePositiveColor = Misc.getGrayColor().darker();
         Color inactiveNegativeColor = Misc.getGrayColor().darker();
         Color inactiveHeaderBannerColor = Misc.getDarkPlayerColor().darker().darker();
+        Color inactiveHeaderTextColor = Misc.getGrayColor().darker();
         Color inactiveHighlightColor = Misc.getGrayColor().darker();
+
+        new HullmodBackgroundElement(tooltip,  Global.getSettings().getSprite(GfxCat.UI, "kol_refit_hmod"), 0.6f);
 
         boolean hasComposite = false;
         for(WeaponSlotAPI slot : ship.getVariant().getHullSpec().getAllWeaponSlotsCopy()){
@@ -284,9 +289,9 @@ public class KnightRefit extends BaseHullMod {
                 break;
             }
         }
-        tooltip.addSectionHeading("Integrated Ballistics", hasComposite ? activeHighlightColor : inactiveHighlightColor,
+        tooltip.addSectionHeading("Integrated Ballistics", hasComposite ? activeHeaderTextColor : inactiveHeaderTextColor,
                 hasComposite ? activeHeaderBannerColor : inactiveHeaderBannerColor, Alignment.MID, headingPad);
-        TooltipMakerAPI integratedBallistics = tooltip.beginImageWithText(Global.getSettings().getSpriteName("icons", hasComposite ? "kol_composite" : "kol_composite_grey"), HEIGHT);
+        TooltipMakerAPI integratedBallistics = tooltip.beginImageWithText(Global.getSettings().getSpriteName(GfxCat.ICONS, hasComposite ? "kol_composite" : "kol_composite_grey"), HEIGHT);
         integratedBallistics.setBulletedListMode("•");
         integratedBallistics.setBulletWidth(15f);
         integratedBallistics.addPara("Every ordnance point spent on ballistic weapons installed into composite slots increases Flux Capacity by %s, and Flux Dissipation by %s.",
@@ -295,30 +300,24 @@ public class KnightRefit extends BaseHullMod {
 
 
         boolean hasShield = ship.getShield() != null;
-        tooltip.addSectionHeading("Primitive Capacitor Shields", hasShield ? activeHighlightColor : inactiveHighlightColor,
+        tooltip.addSectionHeading("Primitive Capacitor Shields", hasShield ? activeHeaderTextColor : inactiveHeaderTextColor,
                 hasShield ? activeHeaderBannerColor : inactiveHeaderBannerColor, Alignment.MID, headingPad);
-        TooltipMakerAPI capacitorShields = tooltip.beginImageWithText(Global.getSettings().getSpriteName("icons", hasShield ? "kol_primshield" : "kol_primshield_grey"), HEIGHT);
+        TooltipMakerAPI capacitorShields = tooltip.beginImageWithText(Global.getSettings().getSpriteName(GfxCat.ICONS, hasShield ? "kol_primshield" : "kol_primshield_grey"), HEIGHT);
         capacitorShields.setBulletedListMode("•");
         capacitorShields.setBulletWidth(15f);
         capacitorShields.addPara("Shields rely on a charge and can only stay online for a max of %s at a time.",
                 listPad, hasShield ? activeTextColor : inactiveTextColor, hasShield ? activePositiveColor: inactivePositiveColor, "10 seconds");
         capacitorShields.addPara("Shield charge regenerates while shields are offline.", hasShield ? activeTextColor : inactiveTextColor, listPad);
-        if(hasShield){
-            capacitorShields.addPara("Shield emitters undergo a forced shutdown when charge reaches %s, and can only be reactivated once recharged to %s.",
-                    listPad, new Color[] {activeNegativeColor, activePositiveColor}, "0%", "100%");
-        } else{
-            capacitorShields.addPara("Shield emitters undergo a forced shutdown when charge reaches %s, and can only be reactivated once recharged to %s.",
-                    listPad, inactiveTextColor, inactivePositiveColor, "0%", "100%");
-        }
-
+        capacitorShields.addPara("Shield emitters undergo a forced shutdown when charge reaches %s, and can only be reactivated once recharged to %s.",
+                listPad, hasShield ? activeNegativeColor : inactiveTextColor, hasShield ? activeHighlightColor : inactiveHighlightColor, "0%", "100%");
         tooltip.addImageWithText(underHeadingPad);
 
 
         ShipVariantAPI variant = Global.getSettings().getVariant(ship.getHullSpec().getBaseHullId() + "_Blank");
         boolean hasModules = variant != null && !variant.getStationModules().isEmpty();
-        tooltip.addSectionHeading("Modular Armor", hasModules ? activeHighlightColor : inactiveHighlightColor,
+        tooltip.addSectionHeading("Modular Armor", hasModules ? activeHeaderTextColor : inactiveHeaderTextColor,
                 hasModules ? activeHeaderBannerColor : inactiveHeaderBannerColor, Alignment.MID, headingPad);
-        TooltipMakerAPI modularArmor = tooltip.beginImageWithText(Global.getSettings().getSpriteName("icons", hasModules ? "kol_modules" : "kol_modules_grey"), HEIGHT);
+        TooltipMakerAPI modularArmor = tooltip.beginImageWithText(Global.getSettings().getSpriteName(GfxCat.ICONS, hasModules ? "kol_modules" : "kol_modules_grey"), HEIGHT);
         modularArmor.setBulletedListMode("•");
         modularArmor.setBulletWidth(15f);
         modularArmor.addPara("Increases top speed and maneuverability by up to %s as armor panels are destroyed.",
@@ -426,27 +425,28 @@ public class KnightRefit extends BaseHullMod {
     }
 
     private void removeStats(ShipAPI ship) {
-        ship.getMutableStats().getMaxSpeed().unmodify(KNIGHT_REFIT_STATMOD_ID);
-        ship.getMutableStats().getAcceleration().unmodify(KNIGHT_REFIT_STATMOD_ID);
-        ship.getMutableStats().getDeceleration().unmodify(KNIGHT_REFIT_STATMOD_ID);
-        ship.getMutableStats().getMaxTurnRate().unmodify(KNIGHT_REFIT_STATMOD_ID);
-        ship.getMutableStats().getTurnAcceleration().unmodify(KNIGHT_REFIT_STATMOD_ID);
+        ship.getMutableStats().getMaxSpeed().unmodify(KolStaticStrings.KNIGHT_REFIT_MODIFIER);
+        ship.getMutableStats().getAcceleration().unmodify(KolStaticStrings.KNIGHT_REFIT_MODIFIER);
+        ship.getMutableStats().getDeceleration().unmodify(KolStaticStrings.KNIGHT_REFIT_MODIFIER);
+        ship.getMutableStats().getMaxTurnRate().unmodify(KolStaticStrings.KNIGHT_REFIT_MODIFIER);
+        ship.getMutableStats().getTurnAcceleration().unmodify(KolStaticStrings.KNIGHT_REFIT_MODIFIER);
     }
 
     private void applyStats(float speedRatio, ShipAPI ship) {
-        ship.getMutableStats().getMaxSpeed().modifyMult(KNIGHT_REFIT_STATMOD_ID, (1 + (speedRatio * SPEED_BONUS)));
-        ship.getMutableStats().getAcceleration().modifyMult(KNIGHT_REFIT_STATMOD_ID, (1 + (speedRatio * SPEED_BONUS)));
-        ship.getMutableStats().getDeceleration().modifyMult(KNIGHT_REFIT_STATMOD_ID, (1 + (speedRatio * SPEED_BONUS)));
-        ship.getMutableStats().getMaxTurnRate().modifyMult(KNIGHT_REFIT_STATMOD_ID, (1 + (speedRatio * SPEED_BONUS)));
-        ship.getMutableStats().getTurnAcceleration().modifyMult(KNIGHT_REFIT_STATMOD_ID, (1 + (speedRatio * SPEED_BONUS)));
+        ship.getMutableStats().getMaxSpeed().modifyMult(KolStaticStrings.KNIGHT_REFIT_MODIFIER, (1 + (speedRatio * SPEED_BONUS)));
+        ship.getMutableStats().getAcceleration().modifyMult(KolStaticStrings.KNIGHT_REFIT_MODIFIER, (1 + (speedRatio * SPEED_BONUS)));
+        ship.getMutableStats().getDeceleration().modifyMult(KolStaticStrings.KNIGHT_REFIT_MODIFIER, (1 + (speedRatio * SPEED_BONUS)));
+        ship.getMutableStats().getMaxTurnRate().modifyMult(KolStaticStrings.KNIGHT_REFIT_MODIFIER, (1 + (speedRatio * SPEED_BONUS)));
+        ship.getMutableStats().getTurnAcceleration().modifyMult(KolStaticStrings.KNIGHT_REFIT_MODIFIER, (1 + (speedRatio * SPEED_BONUS)));
 
         CombatEngineAPI engine = Global.getCombatEngine();
         if(engine.getPlayerShip() == ship && speedRatio > 0.01f){
-            String modularIcon = Global.getSettings().getSpriteName("icons", "kol_modules");
+            String modularIcon = Global.getSettings().getSpriteName(GfxCat.ICONS, "kol_modules");
             engine.maintainStatusForPlayerShip(SPEED_STATUS_KEY, modularIcon, "Damaged Modular Armor", "+" + Math.round((speedRatio * SPEED_BONUS * 100)) + " top speed" , false);
         }
     }
 
+    @SuppressWarnings("DataFlowIssue")
     public float getTotalArmorMult(ShipVariantAPI variant, float baseArmor){
         if(variant == null) return 1f;
         Map<String, ArmorEffect> effects = HULLMOD_EFFECTS.get(variant.getHullSize());
@@ -512,9 +512,17 @@ public class KnightRefit extends BaseHullMod {
     }
 
     public static class ArmorEffect {
-        public float armorFlat, armorPercent, hullFlat, hullPercent;
+        public final float armorFlat;
+        public final float armorPercent;
+        public final float hullFlat;
+        public final float hullPercent;
         ArmorEffect(float aF, float aP, float hF, float hP){
             armorFlat = aF; armorPercent = aP; hullFlat = hF; hullPercent = hP;
         }
+    }
+
+    @Override
+    public int getDisplaySortOrder() {
+        return 0;
     }
 }

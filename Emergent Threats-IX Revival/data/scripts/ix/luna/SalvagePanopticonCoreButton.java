@@ -14,7 +14,7 @@ import lunalib.lunaRefit.BaseRefitButton;
 
 public class SalvagePanopticonCoreButton extends BaseRefitButton {
 
-	private static float SUCCESS_ODDS = 0.35f;
+	private static float SUCCESS_ODDS = 1f;
 	private static String CORE_ID = "ix_panopticon_core";	
 	private static String MOD_ID_0 = "ix_panoptic_automated";
 	private static String MOD_ID_1 = "ix_panoptic_tactical";
@@ -46,7 +46,7 @@ public class SalvagePanopticonCoreButton extends BaseRefitButton {
 		tooltip.addPara("Salvage Panopticon Core", 0f, Misc.getBasePlayerColor(), Misc.getBasePlayerColor());
 		tooltip.addSpacer(5f);
 
-		tooltip.addPara("Attempt to extract a Panopticon Core from this ship. The extraction process will remove the Panopticon Interface hullmod and have a 35% chance of recovering the core intact.", 0f);
+		tooltip.addPara("Extract the Panopticon Core from this ship. You will remove the Panoptic Interface hullmod and recover the core intact.", 0f);
 
 		if ((!hasInterface(variant) || variant.hasHullMod(MOD_ID_0)) && !isCaptainPCore(member)) {
 			tooltip.addSpacer(10f);

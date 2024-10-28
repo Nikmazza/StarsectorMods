@@ -2,3 +2,4 @@ id,group,rank,order,hazard,reqSurvey,xpMult,requiresAll,requiresAny,requiresNotA
 ix_algae,special,,35,0.25,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,
 ix_killsats,decivilized,,15,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,
 ix_monitored,special,,0,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,
+ix_monitored_player,special,,0,,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,

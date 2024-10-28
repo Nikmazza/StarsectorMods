@@ -5,8 +5,11 @@ import java.util.Random;
 
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 import data.hullmods.ix.DModHandler;
 
@@ -17,6 +20,7 @@ public class NinthHullmod extends BaseHullMod {
 	private static float ACCELERATION_BONUS = 15f;
 	private static float CR_PENALTY = 25f;
 	private static String DUPLICATE = "ae_ninth";
+	private static String HAS_RESET_HULLMOD = "ix_smod_handler";
 	
 	private static String SENTINEL_S = "ix_point_defense_small";
 	private static String SENTINEL_SH = "ix_point_defense_small_handler";
@@ -80,6 +84,20 @@ public class NinthHullmod extends BaseHullMod {
 				var.addMod(DAWNSTAR_EH);
 			}
 			var.addMod(DAWNSTAR_CONTROLLER);
+		}
+	}
+	
+	@Override
+	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
+		return true;
+	}
+	
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {		
+		if (isForModSpec || ship == null) return;
+		if (ship.getVariant().hasHullMod(HAS_RESET_HULLMOD)) {
+			String s = "This ship can remove its s-mods one time. Activate by applying the %s hullmod.";
+			tooltip.addPara(s, 10f, Misc.getHighlightColor(), "System Reset");
 		}
 	}
 	

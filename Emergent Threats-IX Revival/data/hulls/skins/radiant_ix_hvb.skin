@@ -16,5 +16,6 @@
 	"builtInMods":["automated", "ix_ninth"],
 	"builtInWeapons": {
         "WS SBE": "sbe_ix",
+		"WS DIF": "diffraction_laser_ix",
     },
 }

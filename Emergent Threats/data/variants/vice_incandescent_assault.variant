@@ -18,51 +18,51 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS20": "vice_hmc",
-                "WS21": "vice_hmc"
+                "WS 020": "vice_hmc",
+                "WS 021": "vice_hmc"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS18": "cyclone",
-                "WS19": "cyclone"
+                "WS 018": "cyclone",
+                "WS 019": "cyclone"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS05": "annihilatorpod",
-                "WS06": "annihilatorpod",
-                "WS07": "annihilatorpod",
-                "WS08": "annihilatorpod"
+                "WS 005": "annihilatorpod",
+                "WS 006": "annihilatorpod",
+                "WS 007": "annihilatorpod",
+                "WS 008": "annihilatorpod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS03": "ionpulser",
-                "WS04": "ionpulser",
-                "WS09": "ionpulser"
+                "WS 003": "ionpulser",
+                "WS 004": "ionpulser",
+                "WS 009": "ionpulser"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS01": "heavyburst",
-                "WS02": "heavyburst",
-                "WS10": "pdlaser",
-                "WS11": "pdlaser",
-                "WS12": "pdlaser",
-                "WS13": "pdlaser",
-                "WS14": "pdlaser",
-                "WS15": "pdlaser",
-                "WS16": "pdlaser",
-                "WS17": "guardian"
+                "WS 001": "heavyburst",
+                "WS 002": "heavyburst",
+                "WS 010": "pdlaser",
+                "WS 011": "pdlaser",
+                "WS 012": "pdlaser",
+                "WS 013": "pdlaser",
+                "WS 014": "pdlaser",
+                "WS 015": "pdlaser",
+                "WS 016": "pdlaser",
+                "WS 017": "guardian"
             }
         }
     ]

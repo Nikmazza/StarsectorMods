@@ -6,7 +6,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveMetastaticGrowth extends BaseHullMod {
 
@@ -24,10 +24,18 @@ public class AdaptiveMetastaticGrowth extends BaseHullMod {
 		util.addModuleHandler(stats);
 		
 		stats.getHullBonus().modifyPercent(id, HULL_BONUS);
-		stats.getMissileHealthBonus().modifyMult(id, 1f + MISSILE_HULL_BONUS * 0.01f);
-		stats.getMissileWeaponDamageMult().modifyMult(id, 1f + MISSILE_DAMAGE_BONUS * 0.01f);
+		stats.getMissileHealthBonus().modifyPercent(id, MISSILE_HULL_BONUS);
+		stats.getMissileWeaponDamageMult().modifyPercent(id, MISSILE_DAMAGE_BONUS);
 	}
-
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		//self clear if invalid player hull, but do not clear on modules since they can be added by handler
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0 && !util.isModuleCheck(ship)) {
+			ship.getVariant().getHullMods().remove(id);
+		}
+	}
+	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
 		if (util.isModuleCheck(ship)) return false;

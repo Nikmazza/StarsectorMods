@@ -41,13 +41,28 @@ public class StarficzAIUtils {
             if (!(next instanceof DamagingProjectileAPI)) continue;
             DamagingProjectileAPI threat = (DamagingProjectileAPI) next;
             if(threat.isFading()) continue;
-            if(threat.getOwner() == ship.getOwner()) continue;
+            if(threat.getOwner() == ship.getOwner() && !(threat instanceof MissileAPI && ((MissileAPI) threat).isMine())) continue;
 
             float shipRadius = Misc.getTargetingRadius(threat.getLocation(), ship, false);
-            // Guided missiles get dealt with here
+            // Guided missiles and mines get dealt with here
             if (threat instanceof MissileAPI){
                 MissileAPI missile = (MissileAPI) threat;
                 if (missile.isFlare()) continue; // ignore flares
+
+                if (missile.isMine()){
+                    if(MathUtils.isPointWithinCircle(testPoint, missile.getLocation(),shipRadius + missile.getMineExplosionRange() * 1.1f )) {
+                        futurehit.timeToHit = missile.getUntilMineExplosion() - 0.1f;
+                        futurehit.angle = VectorUtils.getAngle(testPoint, missile.getLocation());
+                        futurehit.damageType = missile.getDamageType();
+                        futurehit.softFlux = missile.getDamage().isSoftFlux();
+                        float damage = calculateTrueDamage(ship, missile.getDamageAmount(), missile.getWeapon(), missile.getSource().getMutableStats());
+                        futurehit.hitStrength = damage;
+                        futurehit.damage = damage * Math.max(missile.getMirvNumWarheads(), 1);
+                        futureHits.add(futurehit);
+                    }
+                    continue; // skip to next object if not hit, this point should be a complete filter of mines
+                }
+
                 if (missile.isGuided() && (missile.getWeapon() == null || !(missile.getWeapon().getId().equals("squall") && missile.getFlightTime() > 1f))){ // special case the squall
                     boolean hit = false;
                     float travelTime = 0f;
@@ -215,7 +230,7 @@ public class StarficzAIUtils {
                 if (occlusion == enemy) continue;
                 if (occlusion.getParentStation() == enemy) continue;
                 Vector2f closestPoint = MathUtils.getNearestPointOnLine(occlusion.getLocation(), ship.getLocation(), enemy.getLocation());
-                if (MathUtils.getDistance(closestPoint, occlusion.getLocation()) < Misc.getTargetingRadius(closestPoint, occlusion, occlusion.getShield() == null ? false : occlusion.getShield().isOn())){
+                if (MathUtils.getDistance(closestPoint, occlusion.getLocation()) < Misc.getTargetingRadius(closestPoint, occlusion, occlusion.getShield() != null && occlusion.getShield().isOn())){
                     occluded = true;
                 }
             }
@@ -517,6 +532,7 @@ public class StarficzAIUtils {
         return futureHits;
     }
 
+    @SuppressWarnings("ForLoopReplaceableByForEach")
     public static float getCurrentArmorRating(ShipAPI ship){
         if (ship == null || !Global.getCombatEngine().isEntityInPlay(ship)) {
             return 0f;
@@ -720,10 +736,7 @@ public class StarficzAIUtils {
             public boolean accept(Vector2f point) {
                 if(point.getX() > (Global.getCombatEngine().getMapWidth()/2 - 200f) || point.getX() < (200f - Global.getCombatEngine().getMapWidth()/2))
                     return false;
-                else if(point.getY() > (Global.getCombatEngine().getMapHeight()/2 - 200f) || point.getY() < (200f - Global.getCombatEngine().getMapHeight()/2))
-                    return false;
-                else
-                    return true;
+                else return !(point.getY() > (Global.getCombatEngine().getMapHeight() / 2 - 200f)) && !(point.getY() < (200f - Global.getCombatEngine().getMapHeight() / 2));
             }
         };
 
@@ -939,8 +952,17 @@ public class StarficzAIUtils {
     public static void turnToPoint(ShipAPI ship, Vector2f turnPoint){
         float turnAngle = VectorUtils.getAngle(ship.getLocation(), turnPoint);
         float rotAngle = MathUtils.getShortestRotation(ship.getFacing(), turnAngle);
+        ship.getTurnAcceleration();
+        ship.getAngularVelocity();
 
-        if (rotAngle > 0) {
+        boolean decel = false;
+        if (ship.getAngularVelocity() * rotAngle > 0){ // make sure velocity and angle have the same sign, (only slow down if it makes sense)
+            if (Math.pow(ship.getAngularVelocity(), 2) / (2 * ship.getTurnAcceleration()) > Math.abs(rotAngle)){ // basic kinematic solution
+                decel = true;
+            }
+        }
+
+        if ((rotAngle > 0) ^ decel) {
             ship.giveCommand(ShipCommand.TURN_LEFT, null, 0);
             ship.blockCommandForOneFrame(ShipCommand.TURN_RIGHT);
         } else{

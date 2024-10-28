@@ -6,6 +6,7 @@
     "hullId": "vice_candor",
     "hullMods": [
         "advancedoptics",
+        "hardenedshieldemitter",
         "stabilizedshieldemitter"
     ],
     "permaMods": [],

@@ -1,8 +1,5 @@
 package data.hullmods.vice;
 
-import java.util.Collection;
-import java.util.LinkedHashSet;
-
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
@@ -36,11 +33,10 @@ public class LampetiaRemnant extends BaseHullMod {
 		ShipVariantAPI module = stats.getVariant().getModuleVariant("SM 1");
 		if (stats.getVariant().hasHullMod("vice_advanced_terminator_core")) {
 			module.removeMod("vice_system_inhibitor");
-			module.setWingId(0, "terminator_wing");
-			LinkedHashSet<String> sMods = stats.getVariant().getSMods();
-			for (String s : sMods) {
-				if (s.equals("vice_advanced_terminator_core")) module.setWingId(0, "vice_terminator_triple_wing");
+			if (stats.getVariant().getSMods().contains("vice_advanced_terminator_core")) {
+				module.setWingId(0, "vice_terminator_triple_wing");
 			}
+			else module.setWingId(0, "terminator_wing");
 		}
 		else {
 			module.setWingId(0, "vice_spark_wing");
@@ -48,9 +44,8 @@ public class LampetiaRemnant extends BaseHullMod {
 		}
 		
 		stats.getVariant().getHullSpec().setShipSystemId(BASE_SYSTEM);
-		Collection<String> mods = stats.getVariant().getNonBuiltInHullmods();
-		for (String s : mods) {
-			if (s.equals(GRAV_HULLMOD)) stats.getVariant().getHullSpec().setShipSystemId(GRAV_SYSTEM);
+		if (stats.getVariant().getNonBuiltInHullmods().contains(GRAV_HULLMOD)) {
+			stats.getVariant().getHullSpec().setShipSystemId(GRAV_SYSTEM);
 		}
 	}
 	

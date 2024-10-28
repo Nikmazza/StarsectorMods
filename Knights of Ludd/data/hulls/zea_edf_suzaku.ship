@@ -2,7 +2,7 @@
   "hullName": "Suzaku",
   "hullId": "zea_edf_suzaku",
   "hullSize": "DESTROYER",
-  "spriteName": "data/strings/com/fs/starfarer/api/impl/campaign/you can hear it cant you/our whispers through the void/our song/graphics/ships/zea_edf_suzaku.png",
+  "spriteName": "graphics/zea/ships/zea_edf_suzaku.png",
   "style": "ZEA_ELYSIAN_TECH",
   "height": 188,
   "width": 156,
@@ -12,11 +12,10 @@
   "shieldRadius": 106.5,
   "viewOffset": 0,
   "builtInMods": [
-    "zea_edf_coronal_capacitor",
-    "zea_edf_pd_drones",
+    "zea_edf_builtin",
     "automated",
-    "kol_ea_shields3",
-    "kol_throttle"
+    "zea_edf_shield_style",
+    "zea_recovery_limiter"
   ],
   "builtInWeapons": {
     "WS0003": "zea_edf_harpoon_single",

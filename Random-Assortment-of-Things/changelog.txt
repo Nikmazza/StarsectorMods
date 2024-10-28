@@ -1,3 +1,104 @@
+Version 2.4.8
+Save compatible with 2.4.x
+
+-> The Abyssal Executive Officer can now be found on a random lightsource in the main-branch of the abyss (path connected to the final system).
+-> Made the Arkas AI a bit more willing to use its shipsystem if its main weapons are missiles.
+-> Ships with the "Forgotten Pact" skill are forced to vent at high flux and receive some damage resistance while venting.
+-> Fixed two or more Gabriels being able to target the same opponent as the same time.
+-> Fixed an issue that caused the "Angelic Presence" skill to not apply all its bonuses.
+-> Fixed an issue that made certain types of abyssal fleets hostile to eachother for a few seconds
+-> Fixed a misleading tooltip on the abyssal crew conversion hullmod.
+-> Fixed a crash with the Abyss Bosses Core.
+
+
+
+Version 2.4.7
+Save compatible with 2.4.x
+
+-> Gave some abyssal ships new damage textures.
+-> Another small change to potentialy avoid a freeze after the boss fight returns to the interaction screen.
+
+
+
+Version 2.4.6
+Save compatible with 2.4.x
+
+-> Made the "Abyssal Symphony" skill require 5 PPT per CR recovered instead of 4.
+-> Tried another thing that may help prevent the freeze during the abyss boss (again (again))
+
+
+
+Version 2.4.5
+Save compatible with 2.4.x
+
+-> The Exoship can now recharge at most 25% of its fuel per month instead of 20% (only on new saves)
+-> Performance improvement for the ai core cargo items, not sure if that entirely fixes the issues people had though.
+-> Made a few other performance adjustments.
+
+
+
+Version 2.4.4
+Save compatible with 2.4.x
+
+-> Fixed an issue where if the Hypatias shipsystem got canceled from an external source it would disable its AI.
+-> Fixed a performance issue with the Unique AI cores when viewed in the inventory.
+
+
+
+Version 2.4.3
+Save compatible with 2.4.x
+
+-> Re-Added the Exotech Background, which nows starts you off with the Questline completed.
+  - The Questline needs to have been done once to be unlocked, it should count it if you already did so before this update.
+-> Added Achievement for finising the Exotech Questline
+
+
+
+Version 2.4.2
+Save compatible with 2.4.x
+
+-> Fixed a crash that could occur on save load.
+
+
+
+Version 2.4.1
+Save compatible with 2.4.x
+
+-> Added the "Abyssal" Aptitude, which can be found near the end of the abyss when the "Second-in-command" mod is enabled.
+   - Second-in-Command needs to be updated to version 1.1.6 or newer.
+   - Requires a new save to spawn.
+
+-> Increased amount of weapons & ships available at a time in the exotech submarket.
+-> Fixed a bug that caused the current course to be cleared whenever an exoship warped.
+-> Fixed the Supernovas bounty being able to drop the fighter multiple times.
+-> Fixed a bug that made parts of the exotech questline dependent on nex.
+
+
+
+Version 2.4.0 - Exotech Overhaul
+Not Save compatible
+
+-> Reworked the Exotech Faction.
+-> Added a short questline and quest board to the Exotech Faction.
+-> Added the "Gilgamesh-class" Phase Superdestroyer.
+-> Added the "Hypatia-class" Frigate.
+-> Added the "Supernova-class" Superfighter. 
+-> Added the "Stardust Lance" and "Moonlight Lance" weapons.
+-> Added an Exoship Illustration (Credit: ANU)
+-> Removed the Exotech Background for now, will likely return in a new form later.
+-> The "Zero Day Exploit" background now require "CTRL" to be held in addition to the keybind.
+-> The Abyss boss ability now summons two more frigates, and the frigates hull and armor has been increased.
+-> The Gabriel no longer spawns with phase anchor.
+-> Fighters with shields will now have them temporarily disabled after the Gabriel phases.
+-> Most ships in the mod can now be reverse-engineered through industrial evolution.
+-> The Abyss Boss should no longer have combat chatter.
+-> Fixed Abyss fleets getting auto-fitted. This prevented aboleths from spawning with fighters.
+-> Implemented a bunch of grammatical fixes (Credit to BladedQueen & Nissa)
+-> Remade the mods normal maps, and removed the surface and material maps.
+-> Fixed an issue that made abyssal ships not recoverable with the "Second-in-Command" mod
+
+
+
 Version 2.3.1
 Save compatible
 

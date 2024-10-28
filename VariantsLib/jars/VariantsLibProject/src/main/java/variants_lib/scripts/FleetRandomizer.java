@@ -2,9 +2,13 @@ package variants_lib.scripts;
 
 import com.fs.starfarer.api.Global;
 
+import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import org.apache.log4j.Level;
@@ -26,9 +30,15 @@ public class FleetRandomizer {
     }};
 
     private static boolean allowFleetModification(CampaignFleetAPI fleet) {
-        if(!SettingsData.fleetEditingEnabled()) {
+        if(!SettingsData.getInstance().fleetEditingEnabled()) {
             return false;
         }
+
+        String s = "";
+        for(String key : fleet.getMemoryWithoutUpdate().getKeys()) {
+            s = s + key + " ";
+        }
+        log.debug(s);
 
         if(fleet.getMemoryWithoutUpdate().contains(CommonStrings.FLEET_EDITED_MEMKEY)) {
             log.debug(CommonStrings.MOD_ID + ": fleet not edited, has " + CommonStrings.FLEET_EDITED_MEMKEY + " memkey");
@@ -36,7 +46,7 @@ public class FleetRandomizer {
         }
 
         // don't modify fleets from unregistered factions
-        if(!FactionData.FACTION_DATA.containsKey(fleet.getFaction().getId())) {
+        if(!FactionData.FACTION_DATA.containsKey(fleet.getFaction().getId()) && !SettingsData.getInstance().universalNoAutofitEnabled()) {
             log.debug("refused to modify fleet because faction is not registered");
             return false;
         }
@@ -68,34 +78,123 @@ public class FleetRandomizer {
         }
         fleetMemory.set(CommonStrings.FLEET_EDITED_MEMKEY, true);
 
+        // randomly edit to custom fleet type
         final VariantsLibFleetParams params = new VariantsLibFleetParams(fleet);
-        final VariantsLibFleetFactory useToEdit = VariantsLibFleetFactory.pickFleetFactory(params);
-
-        // get correct special fleet spawn rate
-        double specialFleetSpawnRate = 0.0;
-        final FactionData.FactionConfig config = FactionData.FACTION_DATA.get(params.faction);
-        if(config.specialFleetSpawnRateOverrides.containsKey(params.fleetType)) {
-            specialFleetSpawnRate = config.specialFleetSpawnRateOverrides.get(params.fleetType);
-        } else {
-            specialFleetSpawnRate = config.specialFleetSpawnRate;
-        }
-
         final Random rand = new Random(params.seed);
-        if(useToEdit != null && rand.nextDouble() < specialFleetSpawnRate) {
-            log.debug("editing fleet to " + useToEdit.id);
-            useToEdit.editFleet(fleet, params);
-            fleetMemory.set(CommonStrings.FLEET_VARIANT_KEY, useToEdit.id);
-            log.debug("fleet edited to " + useToEdit.id);
-        } else if(SettingsData.noAutofitFeaturesEnabled()){
-            if(FactionData.FACTION_DATA.get(params.faction).hasTag(CommonStrings.NO_AUTOFIT_TAG)) {
-                log.debug("applying no autofit features");
-                fleet.setInflated(true);
-                FleetBuildingUtils.addDMods(fleet, rand, params.quality);
-                FleetBuildingUtils.addSMods(fleet, rand, params.averageSMods);
-                fleetMemory.set(CommonStrings.NO_AUTOFIT_APPLIED, true);
-                log.debug("finished applying");
+        boolean fleetEdited = false;
+        final boolean factionRegistered = FactionData.FACTION_DATA.get(params.faction) != null;
+        if(factionRegistered) {
+            final VariantsLibFleetFactory useToEdit = VariantsLibFleetFactory.pickFleetFactory(params);
+
+            // get correct special fleet spawn rate
+            double specialFleetSpawnRate = 0.0;
+            final FactionData.FactionConfig config = FactionData.FACTION_DATA.get(params.faction);
+            if(config.specialFleetSpawnRateOverrides.containsKey(params.fleetType)) {
+                specialFleetSpawnRate = config.specialFleetSpawnRateOverrides.get(params.fleetType) * SettingsData.getInstance().getSpecialFleetSpawnMult();
+            } else {
+                specialFleetSpawnRate = config.specialFleetSpawnRate * SettingsData.getInstance().getSpecialFleetSpawnMult();
+            }
+
+//            final Random rand = new Random(params.seed);
+            if(useToEdit != null && rand.nextDouble() < specialFleetSpawnRate) {
+                log.debug("editing fleet to " + useToEdit.id);
+                useToEdit.editFleet(fleet, params);
+                fleetMemory.set(CommonStrings.FLEET_VARIANT_KEY, useToEdit.id);
+                log.debug("fleet edited to " + useToEdit.id);
+                fleetEdited = true;
             }
         }
+
+        // apply no autofit, variant based officers
+        // ie when universal no autofit is not on
+        final boolean noAutofitRegularly = SettingsData.getInstance().noAutofitFeaturesEnabled()
+                && factionRegistered
+                && FactionData.FACTION_DATA.get(params.faction).hasTag(CommonStrings.NO_AUTOFIT_TAG);
+        if(!fleetEdited
+                && (noAutofitRegularly || SettingsData.getInstance().universalNoAutofitEnabled())) {
+
+            log.debug("applying no autofit features");
+
+            // edit officers
+            final String faction = fleet.getFaction().getId();
+            final OfficerFactory officerFactory = new OfficerFactory();
+            for(final FleetMemberAPI memberAPI : fleet.getMembersWithFightersCopy()) {
+                final ShipVariantAPI originalVariant = ModdedVariantsData.getVariant(memberAPI.getVariant().getHullVariantId());
+                if(originalVariant != null) {
+                    memberAPI.setVariant(originalVariant.clone(), false, true);
+                }
+
+                final PersonAPI officer = memberAPI.getCaptain();
+                if(Util.isOfficer(officer)) {
+                    final String variant = memberAPI.getVariant().getOriginalVariant();
+                    final OfficerFactoryParams officerFactoryParams = new OfficerFactoryParams(
+                            variant,
+                            faction,
+                            rand,
+                            5
+                    );
+
+                    if(originalVariant != null) {
+                        VariantData.VariantDataMember variantData = VariantData.VARIANT_DATA.get(originalVariant.getHullVariantId());
+                        if(variantData != null) {
+                            officerFactoryParams.skillsToAdd.addAll(variantData.getSkills());
+                            officerFactoryParams.level = officer.getStats().getLevel();
+                            officerFactory.editOfficer(officer, officerFactoryParams);
+                        }
+                    }
+//                    officerFactoryParams.level = officer.getStats().getLevel();
+//                    officerFactory.editOfficer(officer, officerFactoryParams);
+                }
+            }
+
+            // add an inflater that just adds smods and dmods
+            final VariantsLibFleetInflater inflater = createInflater(fleet, rand.nextLong());
+            if(inflater != null) {
+                fleet.setInflater(inflater);
+                inflater.inflate(fleet);
+                fleet.setInflated(true);
+            } else {
+                log.info("inflater not created");
+            }
+
+            fleetMemory.set(CommonStrings.NO_AUTOFIT_APPLIED, true);
+            log.debug("finished applying");
+        }
+    }
+
+    private static VariantsLibFleetInflater createInflater(CampaignFleetAPI fleet, long seed) {
+        final FleetInflater unknownFleetInflater = fleet.getInflater();
+        if(unknownFleetInflater instanceof DefaultFleetInflater) {
+            DefaultFleetInflater inflater = (DefaultFleetInflater) unknownFleetInflater;
+            int averageSMods = 0;
+            try {
+                DefaultFleetInflaterParams inflaterParams = (DefaultFleetInflaterParams)inflater.getParams();
+                averageSMods = inflaterParams.averageSMods;
+            } catch(Exception e) {
+                log.info("could not get average smods defaulting to none");
+            }
+
+            float quality = inflater.getQuality();
+
+            DefaultFleetInflaterParams inflaterParams = null;
+            final Object tempInflaterParams = inflater.getParams();
+            if(tempInflaterParams instanceof DefaultFleetInflaterParams) {
+                inflaterParams = (DefaultFleetInflaterParams) tempInflaterParams;
+            } else {
+                inflaterParams = new DefaultFleetInflaterParams();
+                inflaterParams.factionId = fleet.getFaction().getId();
+                inflaterParams.seed = seed;
+            }
+            log.info("" + quality + " " + averageSMods);
+            return new VariantsLibFleetInflater(inflaterParams, quality, averageSMods);
+        } else if(unknownFleetInflater == null) {
+            final DefaultFleetInflaterParams inflaterParams = new DefaultFleetInflaterParams();
+            inflaterParams.factionId = fleet.getFaction().getId();
+            inflaterParams.seed = seed;
+            fleet.setInflater(new VariantsLibFleetInflater(inflaterParams, 1.0f, 0.0f));
+            log.info("inflater null");
+        }
+        return null;
     }
 
     private FleetRandomizer() {}

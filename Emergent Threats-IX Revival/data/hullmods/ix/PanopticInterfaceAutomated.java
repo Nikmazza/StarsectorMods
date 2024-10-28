@@ -6,15 +6,16 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import data.scripts.ix.PanopticInterfaceUtil;
+import data.scripts.ix.util.PanopticInterfaceUtil;
 
 public class PanopticInterfaceAutomated extends BaseHullMod {
 	
 	private static String PANOPTICON_CORE_ID = "ix_panopticon_core";
+	private static String PANOPTICON_INSTANCE_ID = "ix_panopticon_instance";
 	private static float P_CORE_MULT = 2f;
 	
 	@Override
-	//reduces automated ship points multiplier from x3.5 to x2 when piloted by a Panopticon Core
+	//reduces automated ship points multiplier from x3.5 (or instance x4) to x2 when piloted by a Panopticon Core
 	//also reduces fleet wide interface cr penalty, handled by PanopticInterfaceUtil.getReadinessPenalty
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		if (Global.getSettings().getModManager().isModEnabled("TrulyAutomatedShips")) return;
@@ -23,7 +24,7 @@ public class PanopticInterfaceAutomated extends BaseHullMod {
 				|| !stats.getFleetMember().getCaptain().isAICore()) return;
 		PersonAPI p = stats.getFleetMember().getCaptain();
 		String coreId = p.getAICoreId();
-		if (PANOPTICON_CORE_ID.equals(coreId)) p.getMemoryWithoutUpdate().set("$autoPointsMult", P_CORE_MULT);
+		if (PANOPTICON_CORE_ID.equals(coreId) || PANOPTICON_INSTANCE_ID.equals(coreId)) p.getMemoryWithoutUpdate().set("$autoPointsMult", P_CORE_MULT);
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {

@@ -33,11 +33,10 @@ public class OdysseyMilspec extends BaseHullMod {
 		module.setVariantDisplayName("Secondary");
 		if (variant.hasHullMod("vice_advanced_terminator_core")) {
 			module.removeMod("vice_system_inhibitor");
-			module.setWingId(0, "terminator_wing");
-			LinkedHashSet<String> sMods = stats.getVariant().getSMods();
-			for (String s : sMods) {
-				if (s.equals("vice_advanced_terminator_core")) module.setWingId(0, "vice_terminator_triple_wing");
+			if (stats.getVariant().getSMods().contains("vice_advanced_terminator_core")) {
+				module.setWingId(0, "vice_terminator_triple_wing");
 			}
+			else module.setWingId(0, "terminator_wing");
 		}
 		else {
 			module.setWingId(0, "vice_wasp_wing");

@@ -1,19 +1,11 @@
 package data.scripts.ix.shipsystems;
 
-//import org.lwjgl.util.vector.Vector2f;
-
-//import com.fs.starfarer.api.Global;
-//import com.fs.starfarer.api.combat.CombatEngineAPI;
-//import com.fs.starfarer.api.combat.MissileAPI;
-//import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-//import com.fs.starfarer.api.combat.ShipAPI.HullSize;
-//import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
-import data.scripts.ix.DistanceUtil;
+import data.scripts.ix.util.DistanceUtil;
 
 public class InterdictorPulseTargeting extends BaseShipSystemScript {
 	

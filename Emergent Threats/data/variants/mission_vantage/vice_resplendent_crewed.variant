@@ -1,6 +1,6 @@
 {
     "displayName": "Experimental",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 17,
     "fluxVents": 50,
     "hullId": "vice_resplendent_ex",
     "hullMods": [
@@ -10,7 +10,8 @@
         "hardenedshieldemitter",
         "insulatedengine",
         "stabilizedshieldemitter",
-        "vice_adaptive_gravity_drive"
+        "vice_adaptive_gravity_drive",
+        "vice_shipwide_integration_checker"
     ],
     "modules": [
         {"SM 1": "vice_resplendent_drone_forge"},
@@ -18,7 +19,8 @@
     ],
     "permaMods": [
         "targetingunit",
-        "fluxdistributor"
+        "fluxdistributor",
+        "vice_shipwide_integration_checker"
     ],
     "sMods": [
         "targetingunit",

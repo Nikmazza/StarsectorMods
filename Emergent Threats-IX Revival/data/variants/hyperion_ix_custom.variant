@@ -1,15 +1,15 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 5,
-    "fluxVents": 10,
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
     "goalVariant": true,
     "hullId": "hyperion_ix",
     "hullMods": [
         "ix_smod_handler",
-        "magazines",
         "extendedshieldemitter",
-        "hardenedshieldemitter",
-        "stabilizedshieldemitter"
+        "hardened_subsystems",
+        "ix_reactive_combat_shields",
+        "safetyoverrides"
     ],
     "permaMods": ["ix_smod_handler"],
     "sMods": [],

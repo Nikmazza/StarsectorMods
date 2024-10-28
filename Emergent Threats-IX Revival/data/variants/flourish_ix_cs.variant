@@ -1,12 +1,12 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 6,
-    "fluxVents": 10,
+    "fluxCapacitors": 0,
+    "fluxVents": 9,
     "goalVariant": true,
     "hullId": "flourish_ix",
     "hullMods": [
-        "advancedoptics",
         "extendedshieldemitter",
+        "hardenedshieldemitter",
         "frontemitter",
         "stabilizedshieldemitter"
     ],
@@ -19,8 +19,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "daythorn_mapb_ix",
-                "WS 003": "daythorn_mapb_ix"
+                "WS 002": "plasma_dart_ix",
+                "WS 003": "plasma_dart_ix"
             }
         },
         {
@@ -35,9 +35,14 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "morningstar_ciws_ix",
-                "WS 006": "morningstar_ciws_ix"
+                "WS 005": "daythorn_mapb_ix",
+                "WS 006": "daythorn_mapb_ix"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "morningstar_ciws_ix"}
         }
     ]
 }

@@ -9,7 +9,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.vice.ShapedExplosionUtil;
+import data.scripts.vice.util.ShapedExplosionUtil;
 
 public class BalefireOnFire implements BeamEffectPlugin {
 

@@ -8,7 +8,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveThrusterControl extends BaseHullMod {
 
@@ -31,6 +31,11 @@ public class AdaptiveThrusterControl extends BaseHullMod {
 		stats.getDeceleration().modifyMult(id, 1f + bonus);
 		stats.getTurnAcceleration().modifyMult(id, 1f + bonus);
 		stats.getMaxTurnRate().modifyMult(id, 1f + bonus);
+	}
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(id);
 	}
 	
 	private boolean hasThrusterModOverlap(ShipAPI ship) {

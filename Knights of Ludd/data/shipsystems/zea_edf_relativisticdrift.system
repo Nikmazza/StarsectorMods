@@ -1,9 +1,9 @@
 {
-	"id":"zea_edf_relativisticdrift",
+	"id":"zea_boss_relativisticdrift",
     "type":"ENGINE_MOD",
     "aiType":"MANEUVERING_JETS",
 
-	"statsScript":"org.selkie.kol.impl.shipsystems.RelativisticDriftStats",
+	"statsScript":"org.selkie.zea.shipsystems.RelativisticDriftStats",
 
     "engineGlowLengthMult":1.5,
 

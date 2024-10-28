@@ -23,19 +23,19 @@
     "variantId": "temblor_ix_honor",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {"WS 001": "muon_autolance_ix"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "plasma_dart_ix"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS DIF": "diffraction_laser_ix"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 002": "plasma_dart_ix"}
         }
     ],
     "wings": []

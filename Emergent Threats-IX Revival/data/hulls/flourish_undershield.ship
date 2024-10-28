@@ -14,6 +14,7 @@
   "builtInMods": [
     "advancedshieldemitter",
     "vastbulk",
+	"never_detaches",
     "ix_microfluxshunt",
     "ix_noventing"
   ],

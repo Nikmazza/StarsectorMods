@@ -54,7 +54,7 @@
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "brightburn_ciws_ix",

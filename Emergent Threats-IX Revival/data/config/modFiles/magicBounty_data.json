@@ -42,10 +42,9 @@
 		"target_personality": "aggressive",
 		"target_isAI": true,
 		"target_aiCoreId": "ix_panopticon_core",
-		"target_level": 7,
-		"target_elite_skills": 7,
+		"target_level": 6,
+		"target_elite_skills": 6,
 		"target_skills": {
-			"energy_weapon_mastery":2,
 			"systems_expertise":2,
 			"field_modulation":2,
 			"missile_specialization":2,
@@ -75,6 +74,7 @@
 		
 		#LOCATION
 		"location_entitiesID": [
+		
         ],
 		"location_distance": "FAR",
 		"location_marketFactions": [

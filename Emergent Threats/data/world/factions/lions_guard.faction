@@ -20,10 +20,12 @@
 	},
 	"knownWeapons":{
 		"weapons":[
-			"vice_ionstreamer",
 			"vice_x-ray_pulse",
 			"vice_lrburstpd",
 			"vice_siege_burst",
+			"vice_atropos_mirv",
+			"vice_ionstreamer",
+			"vice_fragbomb",
 		]
 	},
 	"knownHullMods":{

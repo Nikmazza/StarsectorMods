@@ -3,6 +3,7 @@ package assortment_of_things.exotech.interactions.exoship
 import assortment_of_things.exotech.ExoUtils
 import assortment_of_things.exotech.intel.event.MissionCompletedFactor
 import assortment_of_things.exotech.intel.missions.ProjectGilgameshIntel
+import assortment_of_things.exotech.intel.missions.RapidResponseIntel
 import assortment_of_things.exotech.intel.missions.WarpCatalystMissionIntel
 import assortment_of_things.exotech.interactions.questBeginning.ExoshipRemainsIntel
 import assortment_of_things.misc.RATInteractionPlugin
@@ -30,11 +31,11 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
         data.talkedWithXanderOnce = true
         visualPanel.showPersonInfo(data.xander)
 
-        textPanel.addPara("\"Hey - Amelie already informed me. I'm the head of her fleets intelligence sector. I will relay anything relevant to her goals to you.")
+        textPanel.addPara("\"Hey - Amelie already informed me. I'm the head of her fleet's intelligence sector. I will relay anything relevant to her goals to you.")
 
-        textPanel.addPara("We've got some jobs that our fleet doesnt have the time to handle, or some that Amelie herself can not be risked to be assosciated with, and some information the higher ups are not aware of yet. All to say is, we have lots of work left to do.")
+        textPanel.addPara("We've got some jobs that our fleet doesn't have the time to handle, or some that Amelie herself can not be risked to be associated with, and some information the higher ups are not aware of yet. All to say is, we have lots of work left to do.")
 
-        textPanel.addPara("In the meanwhile, i will keep on the look out for the oppertunity to acquire a \"Warp Catalyst\". They arent easy to get a grab of, so it may take a while.\"", Misc.getTextColor(), Misc.getHighlightColor(), "Warp Catalyst")
+        textPanel.addPara("In the meanwhile, I will keep on the look out for the opportunity to acquire a \"Warp Catalyst\". They aren't easy to get a hold of, so it may take a while.\"", Misc.getTextColor(), Misc.getHighlightColor(), "Warp Catalyst")
 
         populateXanderDialog()
 
@@ -63,6 +64,13 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
                     data.finishedGilgameshMissionEntirely = true
                     gilgameshMissionEnd()
                 }
+
+                else if (data.finishedRapidMission) {
+                    data.finishedRapidMission = false
+                    data.finishedRapidMissionEntirely = true
+                    rapidMissionEnd()
+                }
+
                 else if (data.finishedWarpCatalystMission) {
                     data.finishedWarpCatalystMission = false
                     data.finishedWarpCatalystMissionEntirely = true
@@ -107,6 +115,11 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
         if (!data.finishedGilgameshMissionEntirely) {
             anyMissionAvailable = true
             gilgameshMissionStart()
+        }
+
+        if (!data.finishedRapidMissionEntirely) {
+            anyMissionAvailable = true
+            rapidMissionStart()
         }
 
         if (data.reachedLeadershipGoal) {
@@ -163,8 +176,8 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
                     "But we got our hands full in other places already, so we require your assistance. However, there is good reason for you to assist.")
 
             textPanel.addPara("A defector has withdrawn from the faction, but hasn't done so empty handed. " +
-                    "His entire Armada followed suit, escaping with a fleets worth of cargo. Here comes the important aspect. " +
-                    "Part of the stolen cargo was a \"Warp Catalyst\". It may be the best oppertunity we will ever geet to acquire one.\"",
+                    "His entire Armada followed suit, escaping with a fleet's worth of cargo. Here comes the important aspect. " +
+                    "Part of the stolen cargo was a \"Warp Catalyst\". It may be the best opportunity we will ever get to acquire one.\"",
                 Misc.getTextColor(), Misc.getHighlightColor(), "Warp Catalyst")
 
             createOption("Ask for the specifics of the assignment") {
@@ -227,10 +240,10 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
         createOption("Continue") {
             clearOptions()
 
-            textPanel.addPara("She continues \"Xander and myself already discussed on how we should continue, the faction would like the catalyst returned, we rather keep it for our own plan.\" " +
-                    "Xander intervenes \"We have decided to report the catalyst as unrecoverable, found scattered in to thousand pieces within the remains of the defectors fleet. The higher ups wont like this result, but its the best we got.\"")
+            textPanel.addPara("She continues \"Xander and I already discussed on how we should continue; the faction would like the catalyst returned, but we would rather keep it for our own plan.\" " +
+                    "Xander intervenes \"We have decided to report the catalyst as unrecoverable, found scattered into thousand pieces amidst the remains of the defector's fleet. The higher-ups won't like this result, but it's the best we've got.\"")
 
-            textPanel.addPara("Amelie continues \"So, make your way towards the damaged exoship, and use the catalyst to boot up the repair protocols. " +
+            textPanel.addPara("Amelie continues \"So, make your way towards the damaged Exoship, and use the catalyst to boot up the repair protocols. " +
                     "We analysed your data of its wreck, and the autonomous drones within the ship should do the work. Meanwhile both of us will stay here to prepare for what comes after\".")
 
             data.readyToRepairExoship = true
@@ -255,10 +268,10 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
         createOption("About a stolen prototype ship") {
             clearOptions()
 
-            textPanel.addPara("\"One of the factions fleets got ambushed while performing trial deployments of a new destroyer we've got in the works. We identified the perpetrators as pirates, and discovered someone providing them with information from within, but i will spare you the details.")
+            textPanel.addPara("\"One of the faction's fleets got ambushed while performing trial deployments of a new destroyer we've got in the works. We identified the perpetrators as pirates, and discovered someone providing them with information from within, but I will spare you the details.")
 
-            textPanel.addPara("Point is, there is a bounty on taking out the fleet and preventing the destroyer from being transfered over to a buyer. We have been instructed that the destruction of the target is acceptible if the situation calls for it. " +
-                    "Perhaps the destroyer will simply dissappear after you have done your work, if you catch my drift. \"")
+            textPanel.addPara("Point is, there is a bounty on taking out the fleet and preventing the destroyer from being transferred over to a buyer. We have been instructed that the destruction of the target is acceptable if the situation calls for it. " +
+                    "Perhaps the destroyer will simply disappear after you have done your work, if you catch my drift. \"")
 
             createOption("Accept this mission") {
                 clearOptions()
@@ -284,7 +297,7 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
                     previewList.add(member)
                 }
 
-                textPanel.addPara("\"Good. Remember, everything goes aslong as the pirates lose their access to the Gilgamesh-class. " +
+                textPanel.addPara("\"Good. Remember, everything goes as long as the pirates lose their access to the Gilgamesh-class. " +
                         "We have some information about their fleet, but they likely have many more ships than those listed.\"",
                     Misc.getTextColor(), Misc.getHighlightColor(), "Gilgamesh-class")
 
@@ -293,7 +306,7 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
                 textPanel.addTooltip()
 
                 var locDescription = intel.getOrbitLocationDescription()
-                textPanel.addPara("\"The target appears to be in the ${intel.fleet.starSystem.nameWithNoType} system. $locDescription. We've transfered the necessary intel to complete the mission.\"",
+                textPanel.addPara("\"The target appears to be in the ${intel.fleet.starSystem.nameWithNoType} system. $locDescription. We've transferred the necessary intel to complete the mission.\"",
                     Misc.getTextColor(), Misc.getHighlightColor(), "${intel.fleet.starSystem.nameWithNoType}")
 
                 Global.getSector().intelManager.addIntelToTextPanel(intel, textPanel)
@@ -309,10 +322,10 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
     }
 
     fun gilgameshMissionEnd() {
-        textPanel.addPara("\"Good work. Dont worry about bringing back the prototypes remains. If you have salvaged it for yourself, keep it. " +
+        textPanel.addPara("\"Good work. Don't worry about bringing back the prototypes remains. If you have salvaged it for yourself, keep it. " +
                 "Take it as a reward for helping us. We can fake the records of it's guaranteed destruction. ")
 
-        textPanel.addPara("I have also reported the traitor that leaked the original fleets flight plans, im sure the higher ups will be quite pleased.\"")
+        textPanel.addPara("I have also reported the traitor that leaked the original fleet's flight plans, im sure the higher ups will be quite pleased.\"")
 
         Global.getSoundPlayer().playUISound(Sounds.STORY_POINT_SPEND, 1f, 1f)
 
@@ -322,6 +335,83 @@ class ExoshipXanderInteraction(var original: ExoshipInteractionPlugin) : RATInte
         MissionCompletedFactor(200, dialog, "Project Gilgamesh")
 
         var intel = Global.getSector().intelManager.getFirstIntel(ProjectGilgameshIntel::class.java) as ProjectGilgameshIntel
+        intel.endImmediately()
+
+        addBackOptionForXanderDialog()
+    }
+
+
+
+
+
+
+
+    //Rapid Response
+    fun rapidMissionStart() {
+        createOption("About a rogue autonomous fleet") {
+            clearOptions()
+
+            textPanel.addPara("\"An autonomous fleet that the faction deployed to experiment with the concept of an in-system rapid response unit went rogue, and we've been tasked with eliminating it.")
+
+            textPanel.addPara("The fleet uses a different doctrine than usual within the faction, it has no phase ships within it, and instead fields a bunch of Hypatia-class destroyers. " +
+                    "Most importantly, a new prototype of an autonomous fighter has been integrated in this fleet, and its capabilities should not be underestimated.\"")
+
+            createOption("Accept this mission") {
+                clearOptions()
+
+                data.hasActiveMission = true
+
+                var intel = RapidResponseIntel()
+                Global.getSector().intelManager.addIntel(intel)
+
+                visualPanel.showMapMarker(intel.fleet.starSystem.center, "Destination: ${intel.fleet.starSystem.name}", Misc.getBasePlayerColor(), false,
+                    "graphics/icons/intel/discovered_entity.png", null, setOf())
+                //visualPanel.showFleetInfo("Target Fleet", intel.fleet, null, null)
+
+
+                var shipsInList = 999
+                var shipListCount = 0
+                var previewList = ArrayList<FleetMemberAPI>()
+                for (member in intel.fleet.fleetData.membersListCopy) {
+                    if (shipListCount >= shipsInList) break
+                    shipListCount += 1
+
+                    previewList.add(member)
+                }
+
+                textPanel.addPara("\"Alright. Make sure to get rid of the entire fleet. Having any ships remain may pose issues to others, or worse fall in to the hands of those they should not. " +
+                        "I went and listed the composition of the fleet for you below. \"",
+                    Misc.getTextColor(), Misc.getHighlightColor(), "")
+
+                var tooltip = textPanel.beginTooltip()
+
+                tooltip.addShipList(7, 2, 64f, Misc.getBasePlayerColor(), previewList, 0f)
+
+                textPanel.addTooltip()
+
+                var locDescription = intel.getOrbitLocationDescription()
+                textPanel.addPara("\"The target appears to be in the ${intel.fleet.starSystem.nameWithNoType} system. $locDescription. We've transferred the necessary intel to complete the mission.\"",
+                    Misc.getTextColor(), Misc.getHighlightColor(), "${intel.fleet.starSystem.nameWithNoType}")
+
+                Global.getSector().intelManager.addIntelToTextPanel(intel, textPanel)
+
+                addBackOptionForXanderDialog()
+            }
+        }
+    }
+
+    fun rapidMissionEnd() {
+        textPanel.addPara("\"Good work. Now theres no longer any reason to worry about that mess. I'l spare you the details of how this situation came to be.\n\n" +
+                "In case you recovered anything of note, keep it for your own fleet, it should be of more use to yourself than those that lost the equipment in the first place.\"")
+
+        Global.getSoundPlayer().playUISound(Sounds.STORY_POINT_SPEND, 1f, 1f)
+
+        Misc.adjustRep(data.xander, 0.1f, textPanel)
+        Misc.adjustRep(data.amelie, 0.07f, textPanel)
+
+        MissionCompletedFactor(200, dialog, "Rapid Response")
+
+        var intel = Global.getSector().intelManager.getFirstIntel(RapidResponseIntel::class.java) as RapidResponseIntel
         intel.endImmediately()
 
         addBackOptionForXanderDialog()

@@ -12,15 +12,26 @@ object SCSpecStore {
     var logger = Global.getLogger(this::class.java).apply { level = Level.ALL }
 
     private var aptitudeSpecs = ArrayList<SCAptitudeSpec>()
+    @JvmStatic
     fun getAptitudeSpecs() = aptitudeSpecs
+    @JvmStatic
     fun getAptitudeSpec(specId: String) = aptitudeSpecs.find { it.id == specId }
 
     private var skillSpecs = ArrayList<SCSkillSpec>()
+    @JvmStatic
     fun getSkillSpecs() = skillSpecs
+    @JvmStatic
     fun getSkillSpec(specId: String) = skillSpecs.find { it.id == specId }
 
-    fun loadAptitudeSpecsFromCSV() {
-        var CSV = Global.getSettings().getMergedSpreadsheetDataForMod("id", "data/config/secondInCommand/SCAptitudes.csv", SCUtils.MOD_ID)
+
+    private var categorySpecs = ArrayList<SCCategorySpec>()
+    @JvmStatic
+    fun getCategorySpecs() = categorySpecs
+    fun getCategorySpec(specId: String) = categorySpecs.find { it.id == specId }
+
+
+    fun loadCategoriesFromCSV() {
+        var CSV = Global.getSettings().getMergedSpreadsheetDataForMod("id", "data/config/secondInCommand/SCCategories.csv", SCUtils.MOD_ID)
 
         for (index in 0 until  CSV.length())
         {
@@ -29,12 +40,47 @@ object SCSpecStore {
             val id = row.getString("id")
             if (id.startsWith("#") || id == "") continue
             val name = row.getString("name")
-            val category = row.getString("category")
+            //val category = row.getString("category")
+
+            val colorString = row.getString("color")
+            val cs = colorString.split(",").map { it.trim().toInt() }
+            val color = Color(cs[0], cs[1], cs[2], cs[3])
+
+            var spec = SCCategorySpec(id, name, color)
+            categorySpecs.add(spec)
+        }
+
+        logger.debug("Second in Command: Loaded ${categorySpecs.count()} Category Specs.")
+    }
+
+    fun loadAptitudeSpecsFromCSV() {
+        var CSV = Global.getSettings().getMergedSpreadsheetDataForMod("id", "data/config/secondInCommand/SCAptitudes.csv", SCUtils.MOD_ID)
+
+        var order = 0
+        for (index in 0 until  CSV.length())
+        {
+            order++
+            val row = CSV.getJSONObject(index)
+
+            val id = row.getString("id")
+            if (id.startsWith("#") || id == "") continue
+            val name = row.getString("name")
+            //val category = row.getString("category")
+
+            var categories = mutableListOf<SCCategorySpec>()
+            val categoriesString = row.getString("categories").trim()
+            if (categoriesString != "") {
+                var list = categoriesString.split(",").map { it.trim() }
+                for (entry in list) {
+                    var spec = getCategorySpec(entry)
+                    categories.add(spec!!)
+                }
+            }
 
 
             val spawnWeight = row.getFloat("spawnWeight")
 
-
+            var specsOrder = row.optInt("order", order)
 
             val colorString = row.getString("color")
             val cs = colorString.split(",").map { it.trim().toInt() }
@@ -42,9 +88,11 @@ object SCSpecStore {
 
             var tags = row.getString("tags").split(",").map { it.trim() }
 
+            var modName = filterModPath(row.getString("fs_rowSource"))
+
             val pluginPath = row.getString("plugin")
 
-            var spec = SCAptitudeSpec(id, name, category, spawnWeight, color, tags, pluginPath)
+            var spec = SCAptitudeSpec(id, name, categories, spawnWeight, color, tags, specsOrder, modName, pluginPath)
             aptitudeSpecs.add(spec)
         }
 
@@ -70,11 +118,11 @@ object SCSpecStore {
             var npcSpawnWeight = 0f
             if (npcSpawnWeightString != "") npcSpawnWeight = npcSpawnWeightString.toFloat()
 
-
+            var modName = filterModPath(row.getString("fs_rowSource"))
 
             val pluginPath = row.getString("plugin")
 
-            var spec = SCSkillSpec(id, name, iconPath, npcSpawnWeight, order, pluginPath)
+            var spec = SCSkillSpec(id, name, iconPath, npcSpawnWeight, order, modName, pluginPath)
             skillSpecs.add(spec)
         }
 
@@ -83,7 +131,15 @@ object SCSpecStore {
 
 
 
-
+    //From Console Commands by LazyWizard
+    private fun filterModPath(fullPath: String): String {
+        var modPath = fullPath.replace("/", "\\")
+        modPath = modPath.substring(modPath.lastIndexOf("\\mods\\"))
+        modPath = modPath.substring(0, modPath.indexOf('\\', 6)) + "\\"
+        modPath = modPath.replace("\\mods\\", "")
+        modPath = modPath.replace("\\", "")
+        return modPath
+    }
 
 
 }

@@ -1,10 +1,4 @@
 {
-	"portraits":{
-		"standard_male":[
-			"graphics/portraits/nes_Chalco VI.png", #the belovedst one
-						],
-	},
-	
 	# multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
         "hulls":{

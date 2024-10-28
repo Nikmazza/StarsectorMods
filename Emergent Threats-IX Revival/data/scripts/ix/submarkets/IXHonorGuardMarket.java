@@ -36,6 +36,24 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 	}
 	
 	@Override
+	public boolean showInFleetScreen() {
+		if (market.getFactionId() != null) {
+			String id = market.getFactionId();
+			if (id.equals("ix_battlegroup") || id.equals("ix_trinity")) return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean showInCargoScreen() {
+		if (market.getFactionId() != null) {
+			String id = market.getFactionId();
+			if (id.equals("ix_battlegroup") || id.equals("ix_trinity")) return true;
+		}
+		return false;
+	}
+	
+	@Override
 	public boolean shouldHaveCommodity(CommodityOnMarketAPI com) {
 		return false;
 	}
@@ -86,9 +104,8 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 		RepLevel level = submarket.getFaction().getRelationshipLevel(Global.getSector().getFaction("player"));
 		
 		boolean legal = level.isAtWorst(req);
-		if (requiresCommission(req)) {
-			legal &= hasCommission();
-		}
+		
+		//if (requiresCommission(req)) legal &= hasCommission();
 		
 		return !legal;
 	}
@@ -105,10 +122,12 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 			if (!level.isAtWorst(req)) {
 				str += "Req: " + submarket.getFaction().getDisplayName() + " - " + req.getDisplayName().toLowerCase();				
 			}
+			/**
 			if (requiresCommission(req) && !hasCommission()) {
 				if (!str.isEmpty()) str += "\n";
 				str += "Req: " + submarket.getFaction().getDisplayName() + " - " + "commission";
 			}
+			**/
 			return str;
 		}
 	}
@@ -152,7 +171,7 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 			pruneWeapons(0f);
 			
 			int weapons = 7 + Math.max(0, market.getSize() - 1) * 2;
-			addWeapons(weapons, weapons + 2, 3, submarket.getFaction().getId());
+			addWeapons(weapons, weapons + 2, 3, "ix_core");
 			addFighters(4, 4, 3, submarket.getFaction().getId());
 			addHullMods(4, 2 + itemGenRandom.nextInt(4), submarket.getFaction().getId());
 			
@@ -170,6 +189,10 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 			//25% chance per inventory update cycle to have a core for sale if none are present
 			if (getCargo().getCommodityQuantity("ix_panopticon_core") < 1) {
 				if (Math.random() <= 0.25f) getCargo().addCommodity("ix_panopticon_core", 1);
+			}
+			//25% chance per inventory update cycle to have an Antimatter Stabilizer for sale if none are present
+			if (getCargo().getCommodityQuantity("ix_antimatter_stabilizer") < 1) {
+				if (Math.random() <= 0.25f) getCargo().addCommodity("ix_antimatter_stabilizer", 1);
 			}
 		}
 		getCargo().sort();

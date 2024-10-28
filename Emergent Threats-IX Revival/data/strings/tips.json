@@ -1,5 +1,6 @@
 {
 	tips:[
+		"[ET: IX Revival] This mod can be used without Nexerelin, follow nexerelin_dependency_readme.txt in the mod directory for instructions",
 		"[ET: IX Revival] IX Battlegroup weapons are generally strong against shields but weak against armor. Their ships are similar in having strong shields but weak armor. Plan accordingly.",
 		"[ET: IX Revival] Taking a commission with the IX Battlegroup will turn the rest of the Sector hostile, aside from pirates and independents. Use their ports as way stations in the Core Worlds.",
 		"[ET: IX Revival] Taking the Sword of the Fleet background as an independent pilot in Nexerelin (v0.11.0x+) character creation will let you start the game with friendly relations to the IX Battlegroup and extra bonuses.",

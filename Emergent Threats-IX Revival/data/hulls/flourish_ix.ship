@@ -11,6 +11,7 @@
   "shieldCenter": [0, -0],
   "shieldRadius": 80,
   "viewOffset": 0,
+  "coversColor": "120,130,120,255",
   "builtInMods":["ix_ninth", "ix_undershield_fleet"],
   "weaponSlots": [
     {

@@ -141,7 +141,7 @@ class ExotechEventIntel() : BaseEventIntel() {
                     Stage.SUPPLY_ACCESS -> tooltip!!.addTitle("Supply Access")
                     Stage.EXPANDED_SUPPLY -> tooltip!!.addTitle("Expanded Supply")
                     Stage.LEADERSHIP -> tooltip!!.addTitle("Leadership")
-                    Stage.INDEBTED -> tooltip!!.addTitle("Indepted")
+                    Stage.INDEBTED -> tooltip!!.addTitle("indebted")
                 }
 
                 addStageDesc(tooltip!!, stageId, 10f, true)
@@ -157,8 +157,8 @@ class ExotechEventIntel() : BaseEventIntel() {
         if (stageId == Stage.CONTACT)
         {
             info.addPara("You entered a contract with Amelie. You plan to increase her influence in the faction, resulting in her being able to offer you more access to the factions unique equipment." +
-                    "You can increase her influence by donating domain-grade artifacts or completing missions offered by Xander.",
-                0f, Misc.getTextColor(), Misc.getHighlightColor(), "Amelie", "domain-grade artifacts", "completing missions offered by Xander")
+                    "You can increase her influence by donating Domain-grade artifacts or completing missions offered by Xander.",
+                0f, Misc.getTextColor(), Misc.getHighlightColor(), "Amelie", "Domain-grade artifacts", "completing missions offered by Xander")
         }
         if (stageId == Stage.SUPPLY_ACCESS)
         {
@@ -177,8 +177,8 @@ class ExotechEventIntel() : BaseEventIntel() {
         }
         if (stageId == Stage.INDEBTED)
         {
-            info.addPara("Many within the faction are indebted to Amelie for her work. She will be able to from now on get better deals on equipment. (Currently Uninplemented)", 0f,
-                Misc.getTextColor(), Misc.getHighlightColor(), "Xander will now have more missions available.")
+            info.addPara("Many within the faction are indebted to Amelie for her work. She will be able to from now on get better deals on equipment. The tariff when trading with Amelie is reduced to 10%%.", 0f,
+                Misc.getTextColor(), Misc.getHighlightColor(), "10%")
         }
     }
 

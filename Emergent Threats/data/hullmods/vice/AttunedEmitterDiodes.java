@@ -11,8 +11,8 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.listeners.DamageDealtModifier;
-
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 public class AttunedEmitterDiodes extends BaseHullMod {
 
@@ -21,6 +21,7 @@ public class AttunedEmitterDiodes extends BaseHullMod {
 	private static float BEAM_DAMAGE_PENALTY_SMOD = 10f;
 	private static String FIRST_BONUS_TEXT = "hard flux";
 	private static String COHERER = "coherer";
+	private static String COHERER_2 = "vice_modular_bolt_coherer";
 	private static String CONFLICT_MOD_1 = "advancedoptics";
 	private static String CONFLICT_MOD_2 = "high_scatter_amp";
 	private static String CONFLICT_MOD_3 = "ix_laser_collimator";
@@ -40,6 +41,7 @@ public class AttunedEmitterDiodes extends BaseHullMod {
 	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (!ship.getVariant().hasHullMod(COHERER) && !ship.getVariant().hasHullMod(COHERER_2)) return;
 		ship.addListener(new AttunedHardFlux(ship));
 	}
 	
@@ -68,13 +70,28 @@ public class AttunedEmitterDiodes extends BaseHullMod {
 	}
 	
 	@Override
+	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
+		return true;
+	}
+	
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (isForModSpec || ship == null) return;
+		if (!ship.getVariant().hasHullMod(COHERER) && !ship.getVariant().hasHullMod(COHERER_2)) {
+			tooltip.addPara("System offline due to mission Modular Bolt Coherer", 10f, Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
+		}
+	}
+	
+	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
-		if (!ship.getVariant().getHullMods().contains(COHERER)) return false;
+		if (!ship.getVariant().getHullMods().contains(COHERER) && !ship.getVariant().getHullMods().contains(COHERER_2)) return false;
 		return (!hasEmitterModOverlap(ship));
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		if (!ship.getVariant().getHullMods().contains(COHERER)) return "Requires Energy Bolt Coherer";
+		if (!ship.getVariant().getHullMods().contains(COHERER) && !ship.getVariant().getHullMods().contains(COHERER_2)) {
+			return "Requires Energy or Modular Bolt Coherer";
+		}
 		if (hasEmitterModOverlap(ship)) return "Incompatible emitter modification present";
 		return null;
 	}	
@@ -85,6 +102,7 @@ public class AttunedEmitterDiodes extends BaseHullMod {
 		if (index == 2) return FIRST_BONUS_TEXT;
 		return null;
 	}
+
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int) BEAM_DAMAGE_PENALTY_SMOD + "%";
 		return null;

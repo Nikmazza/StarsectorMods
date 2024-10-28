@@ -52,7 +52,7 @@ public class PanopticCommandRefitButton extends BaseRefitButton {
 		tooltip.addPara("Spend a Story Point to integrate a Panopticon Core command module into this ship. It will lead the crew in the absence of a captain.", 0f);
 
 		tooltip.addSpacer(5f);
-		tooltip.addPara("The Panopticon Core will only activate with the non-elite %s, %s, %s, and %s skills due to not being in direct control of the ship.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Field Modulation", "Gunnery Implants", "Tactical Analysis", "Sword of the Fleet");
+		tooltip.addPara("The Panopticon Core will only activate with the elite %s, %s, %s, and %s skills due to not being in direct control of the ship.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Field Modulation", "Gunnery Implants", "Tactical Analysis", "Sword of the Fleet");
 		
 		tooltip.addSpacer(5f);
 		tooltip.addPara("Panoptic Interfaces will form an increasingly complex mesh network that strains standard crew operations, causing a %s for all interfaced ships in the fleet that scales based on each ship's size.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "cumulative combat readiness reduction");

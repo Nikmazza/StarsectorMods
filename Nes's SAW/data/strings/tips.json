@@ -1,8 +1,7 @@
 {
 	tips:
 	[
-	{"freq":0.5, "tip":"Fashion is the better part of valour."},
-	"You are wonderful.",
-	"I love you.",
+	{"freq":0.1, "tip":"You are wonderful."},
+	{"freq":0.1, "tip":"I love you."},
 	],
 }

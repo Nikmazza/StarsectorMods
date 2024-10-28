@@ -3,7 +3,7 @@
   "hullId": "nes_hammerfall",
   "displayName": "Elite",
   "goalVariant": true,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 3,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
@@ -30,8 +30,14 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ionbeam",
         "WS0002": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "gravitonbeam"
       }
     },
     {

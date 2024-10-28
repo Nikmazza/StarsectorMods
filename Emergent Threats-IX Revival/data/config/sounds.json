@@ -1,4 +1,7 @@
 {
+	"abolisher_tw_fire":[
+		{"file": "sounds/weapons/abolisher_tw_fire.ogg", "pitch": 1, "volume": 1}
+	],
 	"antecedent_ix_explode":[
 		{"file": "sounds/weapons/antecedent_ix_explode.ogg", "pitch": 1, "volume": 0.6}
 	],
@@ -13,6 +16,18 @@
 	],
 	"conversion_lance_ix_hit":[
 		{"file": "sounds/weapons/conversion_lance_ix_hit.ogg", "pitch": 1, "volume": 1.5}
+	],
+	"cte_tw_fire":[
+		{"file": "sounds/weapons/cte_tw_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"cte_tw_hit":[
+		{"file": "sounds/weapons/cte_tw_hit.ogg", "pitch": 1, "volume": 1}
+	],
+	"cte_tw_pulse":[
+		{"file": "sounds/weapons/cte_tw_pulse.ogg", "pitch": 1, "volume": 1}
+	],
+	"cte_tw_spinup":[
+		{"file": "sounds/weapons/cte_tw_spinup.ogg", "pitch": 1, "volume": 1}
 	],
 	"cutting_beam_ix_loop":[
 		{"file": "sounds/weapons/cutting_beam_ix_loop.ogg", "pitch": 1, "volume": 1}
@@ -52,6 +67,9 @@
 	"immanence_engine_ix_activate":[
 		{"file": "sounds/systems/immanence_engine_ix_activate.ogg", "pitch": 1, "volume": 1}
 	],
+	"interceptor_pd_tw_fire":[
+		{"file": "sounds/weapons/interceptor_pd_tw_fire.ogg", "pitch": 1, "volume": 1}
+	],
 	"interdictor_ix_fire":[
 		{"file": "sounds/weapons/interdictor_ix_fire.ogg", "pitch": 1, "volume": 1}
 	],
@@ -84,6 +102,9 @@
 	],
 	"sbe_ix_rift":[
 		{"file": "sounds/weapons/sbe_ix_rift.ogg", "pitch": 1, "volume": 1.8}
+	],
+	"spearwall_tw_fire":[
+		{"file": "sounds/weapons/spearwall_tw_fire.ogg", "pitch": 1, "volume": 0.3}
 	],
 	"starfall_mlrs_ix_fire":[
 		{"file": "sounds/weapons/starfall_mlrs_ix_fire.ogg", "pitch": 1, "volume": 1}

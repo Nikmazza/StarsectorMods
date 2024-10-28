@@ -15,7 +15,7 @@ import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
-import data.scripts.ix.DistanceUtil;
+import data.scripts.ix.util.DistanceUtil;
 
 public class TerminusRelayStats extends BaseShipSystemScript {
 	

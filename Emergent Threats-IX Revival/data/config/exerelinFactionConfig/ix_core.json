@@ -7,11 +7,11 @@
 	
 	"patrolSizeMult": 1.2,
 	"noRandomizeRelations":true,
-
-    "startRelationships":{ "default":-0.50, "pirates":0, "independent":0, "ix_battlegroup":1, "ix_marzanna":1,
-						"rat_exotech":0 },
-	"maxRelationships":{ "default":-0.50, "player": 1, "pirates":1, "independent":0, "ix_battlegroup":1,
-						"ix_marzanna":1, "rat_exotech":0, "tahlan_legioelite":1, "brighton":0 },
+	
+	"hostileToAll":2,
+	
+    "startRelationships":{ "pirates":0, "independent":0, "magellan_theherd":0, "ix_battlegroup":1, "ix_marzanna":1,	"rat_exotech":0, "ix_trinity":1 },
+	"maxRelationships":{ "player": 1, "pirates":1, "independent":0, "magellan_theherd":0, "ix_battlegroup":1, "ix_marzanna":1, "rat_exotech":0, "tahlan_legioelite":1, "brighton":0, "ix_trinity":1 },
 	"diplomacyPositiveChance":{ "default":0 },
     "diplomacyNegativeChance":{ "default":0 },
 	"morality":"amoral",

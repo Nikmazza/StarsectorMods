@@ -19,7 +19,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 
-import data.scripts.ix.DistanceUtil;
+import data.scripts.ix.util.DistanceUtil;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.magiclib.util.MagicRender;
 

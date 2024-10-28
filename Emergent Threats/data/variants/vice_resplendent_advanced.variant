@@ -1,10 +1,11 @@
 {
     "displayName": "Advanced",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 5,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_resplendent",
     "hullMods": [
+        "turretgyros",
         "hardenedshieldemitter",
         "targetingunit",
         "stabilizedshieldemitter",
@@ -49,11 +50,11 @@
         }
     ],
     "wings": [
-        "vice_sundog_wing",
-        "vice_sundog_wing",
-        "vice_sundog_wing",
-        "vice_sundog_wing",
-        "vice_sundog_wing",
-        "vice_sundog_wing"
+        "vice_nimbus_wing",
+        "vice_nimbus_wing",
+        "vice_nimbus_wing",
+        "vice_nimbus_wing",
+        "vice_nimbus_wing",
+        "vice_nimbus_wing"
     ]
 }

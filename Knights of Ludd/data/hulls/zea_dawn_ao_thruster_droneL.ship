@@ -3,7 +3,7 @@
     "hullId": "zea_dawn_ao_thruster_droneL",
     "hullSize": "FIGHTER",
     "style": "ZEA_DAWN_TECH",
-    "spriteName": "data/strings/com/fs/starfarer/api/impl/campaign/you can hear it cant you/our whispers through the void/our song/graphics/ships/zea_dawn_ao_engL.png",
+    "spriteName": "graphics/zea/ships/zea_dawn_ao_engL.png",
     "height": 66,
     "width": 62,
     "center": [
@@ -22,9 +22,29 @@
     "engineSlots": [
         {
             "location": [
-                -27, 12
+                -28, 12
             ],
-            "length": 49,
+            "length": 60,
+            "width": 25,
+            "angle": 180,
+            "contrailSize": 30,
+            "style": "KOL_ENG"
+        },
+        {
+            "location": [
+                -28, -12
+            ],
+            "length": 60,
+            "width": 25,
+            "angle": 180,
+            "contrailSize": 30,
+            "style": "KOL_ENG"
+        },
+        {
+            "location": [
+                -34.5, 12
+            ],
+            "length": 60,
             "width": 17,
             "angle": 180,
             "contrailSize": 30,
@@ -32,9 +52,9 @@
         },
         {
             "location": [
-                -27, -12
+                -34.5, -12
             ],
-            "length": 49,
+            "length": 60,
             "width": 17,
             "angle": 180,
             "contrailSize": 30,

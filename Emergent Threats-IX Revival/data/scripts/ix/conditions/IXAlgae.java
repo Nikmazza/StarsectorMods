@@ -10,7 +10,7 @@ import com.fs.starfarer.api.util.Misc;
 public class IXAlgae extends BaseHazardCondition{
 
     private static int DRUG_BONUS = 2;
-	private static int FOOD_PENALTY = -3;
+	private static int FOOD_PENALTY = -2;
     
     public void apply(String id) {
 		super.apply(id);

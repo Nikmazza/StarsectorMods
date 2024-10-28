@@ -1,7 +1,7 @@
 {
     "displayName": "Anomalous",
-    "fluxCapacitors": 0,
-    "fluxVents": 48,
+    "fluxCapacitors": 6,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_lampetia",
     "hullMods": [

@@ -15,6 +15,7 @@ public abstract class NES_Volt_color_base_hullmod extends BaseHullMod {
     public static final String VERDANT = "NES_Verdant";
     public static final String SPARKLE = "NES_Sparkle";
     public static final String COMMANDO = "NES_Commando";
+    public static final String DUSK = "NES_Dusk";
 
 
     private static final String ALT_SPRITES = "nes_alt_sprites";

@@ -23,12 +23,12 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS DIF": "diffraction_laser_ix"}
+            "weapons": {"WS 002": "plasma_dart_ix"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "plasma_dart_ix"}
+            "weapons": {"WS DIF": "diffraction_laser_ix"}
         }
     ],
     "wings": []

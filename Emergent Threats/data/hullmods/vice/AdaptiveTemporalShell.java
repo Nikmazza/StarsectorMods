@@ -7,7 +7,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveTemporalShell extends BaseHullMod {
 
@@ -23,13 +23,16 @@ public class AdaptiveTemporalShell extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		util.applyShipwideHullMod(stats.getVariant(), id, true);
 		util.addModuleHandler(stats);
-		
 		stats.getShieldDamageTakenMult().modifyMult(id, 1f + SHIELD_PENALTY * 0.01f);
 	}
 	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
-		ship.getMutableStats().getTimeMult().modifyMult(id, 1f + TIME_ACCELERATION_BONUS * 0.01f);
+		//self clear if invalid player hull, but do not clear on modules since they can be added by handler
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0 && !util.isModuleCheck(ship)) {
+			ship.getVariant().getHullMods().remove(id);
+		}
+		else ship.getMutableStats().getTimeMult().modifyMult(id, 1f + TIME_ACCELERATION_BONUS * 0.01f);
 	}
 	
     @Override

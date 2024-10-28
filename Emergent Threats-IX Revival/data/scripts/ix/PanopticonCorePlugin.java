@@ -23,8 +23,10 @@ public class PanopticonCorePlugin extends BaseAICoreOfficerPluginImpl implements
 	
 	private static String IX_SKILL_ID = "ix_sword_of_the_fleet";
 	private static String PANOPTICON_CORE_ID = "ix_panopticon_core";
+	private static String PANOPTICON_INSTANCE_ID = "ix_panopticon_instance";
 	private static String COMMAND_CORE_ID = "ix_command_core";
 	private static float P_CORE_MULT = 3.5f;
+	private static float P_INST_MULT = 4f;
 	
 	public PersonAPI createPerson(String aiCoreId, String factionId, Random random) {
 		if (random == null) random = new Random();
@@ -33,6 +35,7 @@ public class PanopticonCorePlugin extends BaseAICoreOfficerPluginImpl implements
 		person.setAICoreId(aiCoreId);
 		CommoditySpecAPI spec = Global.getSettings().getCommoditySpec(aiCoreId);
 		boolean isPanopticonCore = PANOPTICON_CORE_ID.equals(aiCoreId);
+		boolean isPanopticonInstance = PANOPTICON_INSTANCE_ID.equals(aiCoreId);
 		boolean isCommandCore = COMMAND_CORE_ID.equals(aiCoreId);
 		person.getStats().setSkipRefresh(true);
 		float mult = 1f;
@@ -49,14 +52,28 @@ public class PanopticonCorePlugin extends BaseAICoreOfficerPluginImpl implements
 			person.setRankId(Ranks.SPACE_CAPTAIN);
 			if (!Global.getSettings().getModManager().isModEnabled("TrulyAutomatedShips")) mult = P_CORE_MULT;
 		}
+		else if (isPanopticonInstance) {
+			person.setName(new FullName(spec.getName(), "", Gender.ANY));
+			person.setPortraitSprite("graphics/portraits/ix_panopticon_instance.png");
+			person.getStats().setLevel(7);
+			person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);
+			person.getStats().setSkillLevel(Skills.SYSTEMS_EXPERTISE, 2);
+			person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);
+			person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);
+			person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);
+			person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 2);
+			person.getStats().setSkillLevel(IX_SKILL_ID, 2);
+			person.setRankId(Ranks.SPACE_CAPTAIN);
+			if (!Global.getSettings().getModManager().isModEnabled("TrulyAutomatedShips")) mult = P_INST_MULT;
+		}
 		else if (isCommandCore) {
 			person.setName(new FullName("Panopticon Core (Command)", "", Gender.ANY));
 			person.setPortraitSprite("graphics/portraits/ix_panopticon_core.png");
 			person.getStats().setLevel(4);
-			person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 1);
-			person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
-			person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 1);
-			person.getStats().setSkillLevel(IX_SKILL_ID, 1);
+			person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);
+			person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);
+			person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);
+			person.getStats().setSkillLevel(IX_SKILL_ID, 2);
 			person.setRankId(Ranks.SPACE_LIEUTENANT);
 			mult = 0f;
 		}

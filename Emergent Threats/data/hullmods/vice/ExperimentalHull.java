@@ -13,37 +13,44 @@ public class ExperimentalHull extends BaseHullMod {
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		
-		if (ship.getHullSpec().getHullId().equals("vice_equalizer_ex")) {
+		if (ship.getHullSpec().getHullId().equals("vice_equalizer_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_equalizer_ex_default_D")) {
 			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "equalizer_ex_classic");
 			else applySkin(ship, "equalizer_ex");
 		}
 		
-		else if (ship.getHullSpec().getHullId().equals("vice_flamebreaker_ex")) {
+		else if (ship.getHullSpec().getHullId().equals("vice_flamebreaker_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_flamebreaker_ex_default_D")) {
 			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "flamebreaker_ex_classic");
 			else applySkin(ship, "flamebreaker_ex");
 		}
-
-		else if (ship.getHullSpec().getHullId().equals("vice_hyperion_ex")) {
+		
+		else if (ship.getHullSpec().getHullId().equals("vice_hyperion_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_hyperion_ex_default_D")) {
 			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "hyperion_ex_classic");
 			else applySkin(ship, "hyperion_ex");
 		}
 		
-		else if (ship.getHullSpec().getHullId().equals("vice_incursion_ex")) {
-			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "incursion_ex_classic");
-			else applySkin(ship, "incursion_ex");
+		else if (ship.getHullSpec().getHullId().equals("vice_intrepid_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_intrepid_ex_default_D")) {
+			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "intrepid_ex_classic");
+			else applySkin(ship, "intrepid_ex");
 		}
 	
-		else if (ship.getHullSpec().getHullId().equals("vice_iris_ex")) {
+		else if (ship.getHullSpec().getHullId().equals("vice_iris_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_iris_ex_default_D")) {
 			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "iris_ex_classic");
 			else applySkin(ship, "iris_ex");
 		}
 	
-		else if (ship.getHullSpec().getHullId().equals("vice_mandrake_ex")) {
+		else if (ship.getHullSpec().getHullId().equals("vice_mandrake_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_mandrake_ex_default_D")) {
 			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "mandrake_ex_classic");
 			else applySkin(ship, "mandrake_ex");
 		}
-	
-		else if (ship.getHullSpec().getHullId().equals("vice_tigershark_ex")) {
+		
+		else if (ship.getHullSpec().getHullId().equals("vice_tigershark_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_tigershark_ex_default_D")) {	
 			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "tigershark_ex_classic");
 			else applySkin(ship, "tigershark_ex");
 		}

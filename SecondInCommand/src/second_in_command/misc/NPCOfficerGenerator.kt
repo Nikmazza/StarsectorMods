@@ -52,8 +52,25 @@ object NPCOfficerGenerator {
         if (isAutomated) combatFP += 20f
         //if (isStation) combatFP += 40f
 
+        var minSkills = 11
+        var maxSkills = 14
+
+        if (SCSettings.difficulty == "Hard") {
+            minSkills = 15
+            maxSkills = 15
+
+            combatFP *= 1.33f
+            combatFP += 60
+        }
+        else if (SCSettings.difficulty == "Easy") {
+            minSkills = 8
+            maxSkills = 12
+
+            combatFP *= 0.666f
+        }
+
         var divide = MathUtils.getRandomNumberInRange(20f, 22f)
-        var maxSkillCount = MathUtils.getRandomNumberInRange(11, 14)
+        var maxSkillCount = MathUtils.getRandomNumberInRange(minSkills, maxSkills)
 
         var skillCount = (combatFP / divide).toInt()
         skillCount = MathUtils.clamp(skillCount, 1, maxSkillCount) //Minimum of atleast 1 skill per fleet
@@ -79,14 +96,59 @@ object NPCOfficerGenerator {
         }
 
 
+
         var aptitudePicker = WeightedRandomPicker<SCBaseAptitudePlugin>()
-        for (aptitude in SCSpecStore.getAptitudeSpecs().map { it.getPlugin() }) {
+        var aptitudes = ArrayList<SCBaseAptitudePlugin>()
+
+
+        var availableAptitudes = SCSpecStore.getAptitudeSpecs().map { it.getPlugin() }.toMutableList()
+
+        var priority = availableAptitudes.filter { it.guaranteePick(fleet) }.toMutableList()
+
+
+        while (priority.isNotEmpty() && aptitudeCount >= 1) {
+
+            var aptitude = priority.first()
+
+            aptitudes.add(aptitude)
+            priority.remove(aptitude)
+
+            aptitudeCount -= 1
+
+            var categories = aptitude.categories
+            for (other in ArrayList(availableAptitudes)) {
+                var otherCategories = other.categories
+
+                if (categories.any { otherCategories.contains(it) }) {
+                    availableAptitudes.remove(other)
+                    priority.remove(other)
+                }
+            }
+
+        }
+
+
+        var noPriority = availableAptitudes.filter { !it.guaranteePick(fleet) }.toMutableList()
+        for (aptitude in noPriority) {
             aptitudePicker.add(aptitude, aptitude.getNPCFleetSpawnWeight(data, fleet))
         }
 
-        var aptitudes = ArrayList<SCBaseAptitudePlugin>()
         for (i in 0 until aptitudeCount) {
-            aptitudes.add(aptitudePicker.pickAndRemove())
+            if (aptitudeCount <= 0) break
+            if (aptitudePicker.isEmpty) break
+
+            var pick = aptitudePicker.pickAndRemove()
+            aptitudes.add(pick)
+
+            var categories = pick.categories
+            for (other in ArrayList(noPriority)) {
+                var otherCategories = other.categories
+
+                if (categories.any { otherCategories.contains(it) }) {
+                    noPriority.remove(other)
+                    aptitudePicker.remove(other)
+                }
+            }
         }
 
         var officers = ArrayList<SCOfficer>()

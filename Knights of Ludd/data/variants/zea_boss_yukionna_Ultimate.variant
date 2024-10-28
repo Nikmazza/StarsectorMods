@@ -1,6 +1,6 @@
 {
     "displayName": "Ultimate",
-    "fluxCapacitors": 32,
+    "fluxCapacitors": 50,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "zea_boss_yukionna",

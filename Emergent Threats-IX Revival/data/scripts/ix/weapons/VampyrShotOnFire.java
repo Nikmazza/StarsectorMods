@@ -13,8 +13,8 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
-import data.scripts.ix.DistanceUtil;
-import data.scripts.ix.ShapedExplosionUtil;
+import data.scripts.ix.util.DistanceUtil;
+import data.scripts.ix.util.ShapedExplosionUtil;
 
 public class VampyrShotOnFire implements OnFireEffectPlugin {
 

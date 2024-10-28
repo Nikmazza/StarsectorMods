@@ -1,17 +1,18 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 0,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "hyperion_ix",
     "hullMods": [
+        "ix_dawnstar_controller",
+        "advancedoptics",
         "missleracks",
         "extendedshieldemitter",
-        "hardenedshieldemitter",
-        "hardened_subsystems",
-        "ix_dawnstar_controller",
-        "ix_dawnstar_neutron",
-        "ix_dawnstar_neutron_handler"
+        "ix_reactive_combat_shields",
+        "stabilizedshieldemitter",
+        "ix_dawnstar_electron",
+        "ix_dawnstar_electron_handler"
     ],
     "permaMods": [],
     "sMods": [],

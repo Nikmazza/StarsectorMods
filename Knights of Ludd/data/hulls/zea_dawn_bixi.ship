@@ -2,7 +2,7 @@
   "hullName": "Bixi",
   "hullId": "zea_dawn_bixi",
   "hullSize": "CRUISER",
-  "spriteName": "data/strings/com/fs/starfarer/api/impl/campaign/you can hear it cant you/our whispers through the void/our song/graphics/ships/zea_dawn_bixi.png",
+  "spriteName": "graphics/zea/ships/zea_dawn_bixi.png",
   "style": "ZEA_DAWN_TECH",
   "height": 224,
   "width": 184,
@@ -13,11 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "automated",
-    "zea_cascade_targeting",
-    "solar_shielding",
-    "kol_ea_shields1",
-    "kol_throttle",
-    "zea_dawn_simple_shield_drones"
+    "zea_dawn_builtin",
+    "zea_dawn_shield_style",
+    "zea_recovery_limiter"
   ],
   "weaponSlots": [
     {
@@ -189,6 +187,30 @@
       "contrailSize": 32,
       "style": "CUSTOM",
       "styleId": "zea_DAWN_ENG"
+    },
+    {
+      "location": [-84, 41],
+      "length": 60,
+      "width": 42,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-84, -41],
+      "length": 60,
+      "width": 42,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-72.5, -0],
+      "length": 70,
+      "width": 63,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "MIDLINE"
     }
   ],
   "bounds": [

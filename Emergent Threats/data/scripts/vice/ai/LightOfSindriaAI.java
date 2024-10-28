@@ -17,7 +17,7 @@ public class LightOfSindriaAI implements ShipSystemAIScript {
 	private CombatEngineAPI engine;
     private ShipAPI ship;
     private ShipSystemAPI system;
-    private IntervalUtil timer = new IntervalUtil (5f, 6f);
+    private IntervalUtil timer = new IntervalUtil (5f, 5f);
 	private static String LG_FIGHTER_WING = "vice_gladius_lg_wing";
 	
     @Override

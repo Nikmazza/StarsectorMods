@@ -18,7 +18,7 @@ import com.fs.starfarer.api.combat.ShipEngineControllerAPI;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 
-import data.scripts.ix.DistanceUtil;
+import data.scripts.ix.util.DistanceUtil;
 
 public class InterdictorOnHit implements BeamEffectPlugin {
 

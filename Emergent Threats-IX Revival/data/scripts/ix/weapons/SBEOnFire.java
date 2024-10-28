@@ -17,7 +17,7 @@ import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.ix.ShapedExplosionUtil;
+import data.scripts.ix.util.ShapedExplosionUtil;
 
 public class SBEOnFire implements BeamEffectPlugin {
 

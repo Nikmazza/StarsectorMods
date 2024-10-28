@@ -11,12 +11,14 @@ import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
+import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.ix.NameListUtil;
+import data.scripts.ix.util.NameListUtil;
 import lunalib.lunaSettings.LunaSettings;
 
 //gives chance to add Panoptic Interface to encountered IX Battlegroup ships
@@ -28,10 +30,12 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 	private static String STRATEGIC_MOD_ID = "ix_panoptic_strategic";
 	private static String TACTICAL_MOD_ID = "ix_panoptic_tactical";
 
+	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String IX_MOD_ID = "ix_ninth";
 	private static String IX_ELITE_MOD_ID = "ix_smod_handler";
 	private static String IX_BOSS_MOD_ID = "ix_hvb_handler";
-	private static String CHECKER_MOD_ID = "ix_panoptic_checker";	
+	private static String CHECKER_MOD_ID = "ix_panoptic_checker";
+	private static String CANDOR_MOD_ID = "ix_semi_automated";
 	
 	private static float ODDS_REGULAR = 0.1f;
 	private static float ODDS_LEADER = 0.3f;
@@ -54,9 +58,18 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 	
 	@Override
 	public void reportShownInteractionDialog(InteractionDialogAPI dialog) {
+		//gives Dawnstar Reactor to nearest station when initiating battle from "consider your military options"
+		if (dialog.getInteractionTarget() == null) return;
+		MarketAPI market = null;
+		if (dialog.getInteractionTarget().getMarket() != null) {
+			market = dialog.getInteractionTarget().getMarket();
+			CampaignFleetAPI stationFleet = Misc.getStationFleet(market);
+			if (stationFleet != null) equipComponentsToFleet(stationFleet);
+		}
+		
 		CampaignFleetAPI otherFleet = null;
 		CampaignFleetAPI allFleet = null;
-		boolean isValidFleet = true;	
+		boolean isValidFleet = true;
 		try { 
 			otherFleet = (CampaignFleetAPI) dialog.getInteractionTarget();
 			if (otherFleet.isPlayerFleet()) isValidFleet = false;
@@ -66,13 +79,41 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 		} 
 		finally {
 			if (isValidFleet) {
-				otherFleet = (CampaignFleetAPI) dialog.getInteractionTarget();
 				if (otherFleet.getBattle() != null) allFleet = otherFleet.getBattle().getNonPlayerCombined();
 				else allFleet = otherFleet;
 				equipComponentsToFleet(allFleet);
 			}
 		}
 	}	
+	
+	//type -1 adds random reactor type
+	private void equipDawnstarToVariant (ShipVariantAPI variant, int type) {
+		boolean hasDawnstar = false;
+		Collection<String> weaponSlotList = variant.getFittedWeaponSlots();
+		for (String slot : weaponSlotList) {
+			String weaponId = variant.getWeaponSpec(slot).getWeaponId();
+			if (CPB_L_ID.equals(weaponId) || CPB_H_ID.equals(weaponId)) hasDawnstar = true;
+		}
+		if (hasDawnstar && !variant.hasHullMod(DAWNSTAR_CONTROLLER)) {
+			if (type == -1) {
+				Random rand = new Random();
+				type = rand.nextInt(3);
+			}
+			if (type == 0) {
+				variant.addMod(DAWNSTAR_P);
+				variant.addMod(DAWNSTAR_PH);
+			}
+			else if (type == 1) {
+				variant.addMod(DAWNSTAR_N);
+				variant.addMod(DAWNSTAR_NH);
+			}
+			else {
+				variant.addMod(DAWNSTAR_E);
+				variant.addMod(DAWNSTAR_EH);
+			}
+			variant.addMod(DAWNSTAR_CONTROLLER);
+		}
+	}
 	
 	private void equipComponentsToFleet (CampaignFleetAPI fleet) {
 		if (fleet == null) return;
@@ -83,36 +124,41 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 			isInterfaceEnabled = LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_interface_enabled");
 		}
 		boolean isFirstRename = true;
+
+		//add dawnstar reactor
+		Random rand = new Random();
+		int type = rand.nextInt(3);
 		List<FleetMemberAPI> fleetList = fleet.getMembersWithFightersCopy();
 		for (FleetMemberAPI member : fleetList) {
 			ShipVariantAPI var = member.getVariant();
 			
-			/**
-			//add Dawnstar Reactor CPB equipped ships without a reactor
-			boolean hasDawnstar = false;
-			Collection<String> weaponSlotList = var.getFittedWeaponSlots();
-			for (String slot : weaponSlotList) {
-				String weaponId = var.getWeaponSpec(slot).getWeaponId();
-				if (CPB_L_ID.equals(weaponId) || CPB_H_ID.equals(weaponId)) hasDawnstar = true;
+			//check station modules, adds the same reactor type to all modules
+			if (var.isStation()) {
+				for (String slot : var.getModuleSlots()) {
+					if (var.getModuleVariant(slot) != null) {
+						ShipVariantAPI module = var.getModuleVariant(slot);
+						equipDawnstarToVariant(module, type);
+					}
+				}
+				//add Antimatter Stabilizer to IX stations
+				if (member.getFleetCommander().getFaction().getId().equals(IX_FAC_ID)) {
+					String item = "ix_antimatter_stabilizer";
+					CargoAPI cargo = Global.getFactory().createCargo(true);
+					SectorEntityToken carrier = (SectorEntityToken) fleet;
+					if (BaseSalvageSpecial.getCombinedExtraSalvage(carrier).getCommodityQuantity(item) < 1f) {
+						cargo.addCommodity(item, 1f);
+						BaseSalvageSpecial.addExtraSalvage(carrier, cargo);
+					}
+					else if (BaseSalvageSpecial.getCombinedExtraSalvage(carrier).getCommodityQuantity(item) > 1f) {
+						BaseSalvageSpecial.clearExtraSalvage(carrier);
+						cargo.addCommodity(item, 1f);
+						BaseSalvageSpecial.addExtraSalvage(carrier, cargo);
+					}
+				}
 			}
-			if (hasDawnstar && !var.hasHullMod(DAWNSTAR_CONTROLLER)) {
-				Random rand = new Random();
-				int mod = rand.nextInt(3);
-				if (mod == 0) {
-					var.addMod(DAWNSTAR_P);
-					var.addMod(DAWNSTAR_PH);
-				}
-				else if (mod == 1) {
-					var.addMod(DAWNSTAR_N);
-					var.addMod(DAWNSTAR_NH);
-				}
-				else {
-					var.addMod(DAWNSTAR_E);
-					var.addMod(DAWNSTAR_EH);
-				}
-				var.addMod(DAWNSTAR_CONTROLLER);
-			}
-			**/
+
+			//add random Dawnstar Reactor to CPB equipped ships without a reactor 
+			else equipDawnstarToVariant(var, -1);
 			
 			//add special loot to HVB mission
 			if (var.hasHullMod(IX_BOSS_MOD_ID)) {
@@ -163,8 +209,8 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 					if (var.hasHullMod(IX_ELITE_MOD_ID)) odds += ODDS_ELITE_BONUS;
 					if (Math.random() < odds) {
 						String mod = "";
-						//only one command interface max per encounter
-						if (isWithoutCaptain && isOnlyCore) {
+						//only one command interface max per encounter, never on Candor IX
+						if (isWithoutCaptain && isOnlyCore && !var.hasHullMod(CANDOR_MOD_ID)) {
 							mod = COMMAND_MOD_ID;
 							isOnlyCore = false;
 						}

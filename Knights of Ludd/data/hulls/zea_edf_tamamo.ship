@@ -2,7 +2,7 @@
   "hullName": "Tamamo",
   "hullId": "zea_edf_tamamo",
   "hullSize": "FRIGATE",
-  "spriteName": "data/strings/com/fs/starfarer/api/impl/campaign/you can hear it cant you/our whispers through the void/our song/graphics/ships/zea_edf_tamamo.png",
+  "spriteName": "graphics/zea/ships/zea_edf_tamamo.png",
   "style": "ZEA_ELYSIAN_TECH",
   "coversColor": "200,200,200,255",
   "height": 148,
@@ -13,10 +13,10 @@
   "shieldRadius": 97,
   "viewOffset": 0,
   "builtInMods": [
-    "zea_edf_coronal_capacitor",
-    "kol_ea_shields3",
+    "zea_edf_builtin",
+    "zea_edf_shield_style",
     "automated",
-	"kol_throttle"
+	"zea_recovery_limiter"
   ],
   "builtInWings": [
   ],

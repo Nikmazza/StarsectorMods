@@ -5,7 +5,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveReactorChamber extends BaseHullMod {
 
@@ -18,6 +18,11 @@ public class AdaptiveReactorChamber extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getFluxCapacity().modifyMult(id, 1f + REACTOR_BONUS * 0.01f);
 		stats.getFluxDissipation().modifyMult(id, 1f + REACTOR_BONUS * 0.01f);
+	}
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(id);
 	}
 	
 	@Override

@@ -17,7 +17,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
-import data.scripts.ix.ShapedExplosionUtil;
+import data.scripts.ix.util.ShapedExplosionUtil;
 
 public class ThundermarkOnHit implements OnFireEffectPlugin, OnHitEffectPlugin {
 	

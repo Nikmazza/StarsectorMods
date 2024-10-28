@@ -9,7 +9,7 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.WeaponAPI;
 
-import data.scripts.vice.ShapedExplosionUtil;
+import data.scripts.vice.util.ShapedExplosionUtil;
 
 public class DeadeyeFlareEffect implements OnFireEffectPlugin {
 

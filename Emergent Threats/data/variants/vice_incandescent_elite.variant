@@ -20,43 +20,43 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS05": "breachpod",
-                "WS06": "breachpod",
-                "WS07": "breachpod",
-                "WS08": "breachpod",
-                "WS20": "vice_hmc",
-                "WS21": "vice_hmc"
+                "WS 005": "breachpod",
+                "WS 006": "breachpod",
+                "WS 007": "breachpod",
+                "WS 008": "breachpod",
+                "WS 020": "vice_hmc",
+                "WS 021": "vice_hmc"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS18": "locust",
-                "WS19": "locust"
+                "WS 018": "locust",
+                "WS 019": "locust"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS17": "tachyonlance"}
+            "weapons": {"WS 017": "tachyonlance"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS01": "heavyburst",
-                "WS02": "heavyburst",
-                "WS03": "heavyburst",
-                "WS04": "heavyburst",
-                "WS09": "heavyburst",
-                "WS10": "pdlaser",
-                "WS11": "pdlaser",
-                "WS12": "pdlaser",
-                "WS13": "pdlaser",
-                "WS14": "pdlaser",
-                "WS15": "pdlaser",
-                "WS16": "pdlaser"
+                "WS 001": "heavyburst",
+                "WS 002": "heavyburst",
+                "WS 003": "heavyburst",
+                "WS 004": "heavyburst",
+                "WS 009": "heavyburst",
+                "WS 010": "pdlaser",
+                "WS 011": "pdlaser",
+                "WS 012": "pdlaser",
+                "WS 013": "pdlaser",
+                "WS 014": "pdlaser",
+                "WS 015": "pdlaser",
+                "WS 016": "pdlaser"
             }
         }
     ]

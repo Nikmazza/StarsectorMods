@@ -8,7 +8,7 @@
 	"tech":"XIV Battlegroup",
 	"fleetPoints":14,
 	"ordnancePoints":95,
-	"baseValueMult":1.65,
+	"baseValueMult":1.75,
 	"spriteName":"graphics/ships/nes_hamter_xiv.png",
 	"systemId":"damper",
 	"coversColor":[255,255,255,255],
@@ -19,7 +19,7 @@
 	"builtInMods":["fourteenth"],
     "weaponSlotChanges":{
 	   "WS0002":{
-		  "type": "MISSILE"
+		  "type": "UNIVERSAL"
 	   },
     },
 }

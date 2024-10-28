@@ -16,19 +16,17 @@ import java.util.Comparator;
 import java.util.List;
 
 public class LidarStats_smol extends BaseShipSystemScript {
-
-	public static String LIDAR_WINDUP = "lidar_windup";
 	
-	public static Color WEAPON_GLOW = new Color(255,50,50,155);
+	public static final Color WEAPON_GLOW = new Color(255,50,50,155);
 	
-	public static float RANGE_BONUS = 100f;
+	public static final float RANGE_BONUS = 100f;
 	public static float PASSIVE_RANGE_BONUS = 0f;
-	public static float ROF_BONUS = 2f;
-	public static float RECOIL_BONUS = 75f;
-	public static float PROJECTILE_SPEED_BONUS = 50f;
+	public static final float ROF_BONUS = 2f;
+	public static final float RECOIL_BONUS = 75f;
+	public static final float PROJECTILE_SPEED_BONUS = 50f;
 	
-	public static float SPEED_PENALTY = -50f;
-	public static float WEAPON_TURN_PENALTY = -50f;
+	public static final float SPEED_PENALTY = -50f;
+	public static final float WEAPON_TURN_PENALTY = -50f;
 	
 	public static String SYSID = "unset";
 	
@@ -42,7 +40,7 @@ public class LidarStats_smol extends BaseShipSystemScript {
 		public WeaponAPI w;
 	}
 	
-	protected List<LidarDishData> dishData = new ArrayList<LidarStats_smol.LidarDishData>();
+	protected final List<LidarDishData> dishData = new ArrayList<>();
 	protected boolean needsUnapply = false;
 	protected boolean playedWindup = false;
 	
@@ -61,7 +59,7 @@ public class LidarStats_smol extends BaseShipSystemScript {
 				count++;
 			}
 		}
-		List<WeaponAPI> lidar = new ArrayList<WeaponAPI>();
+		List<WeaponAPI> lidar = new ArrayList<>();
 		for (WeaponAPI w : ship.getAllWeapons()) {
 			if (w.isDecorative() && w.getSpec().hasTag(Tags.LIDAR)) {
 				lidar.add(w);
@@ -111,7 +109,7 @@ public class LidarStats_smol extends BaseShipSystemScript {
 				data.angle = 0f;
 			} else {
 				data.angle += delta;
-				data.phase += 1f * amount;
+				data.phase += amount;
 				if (arc < 360f) {
 					if (data.angle > arc/2f && data.turnDir > 0f) {
 						data.angle = arc/2f;
@@ -139,7 +137,8 @@ public class LidarStats_smol extends BaseShipSystemScript {
 	
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		ShipAPI ship = (ShipAPI)stats.getEntity();
-		if (ship == null || ship.isHulk()) {
+		if(ship == null) return;
+		if (ship.isHulk()) {
 			if (needsUnapply) {
 				unmodify(id, stats);
 				for (WeaponAPI w : ship.getAllWeapons()) {
@@ -195,7 +194,7 @@ public class LidarStats_smol extends BaseShipSystemScript {
 				}
 			}
 			lidarRange += 100f;
-			stats.getBeamWeaponRangeBonus().modifyFlat("lidararray", lidarRange/(1+(RANGE_BONUS/100)));
+			stats.getBeamWeaponRangeBonus().modifyFlat("lidararray", lidarRange);
 		} else{
 			stats.getBeamWeaponRangeBonus().unmodify("lidararray");
 		}
@@ -238,7 +237,7 @@ public class LidarStats_smol extends BaseShipSystemScript {
 		}
 		
 		if (((state == State.IN && effectLevel > 0.67f) || state == State.ACTIVE) && !playedWindup) {
-			Global.getSoundPlayer().playSound(LIDAR_WINDUP, 1f, 1f, ship.getLocation(), ship.getVelocity());
+			Global.getSoundPlayer().playSound("lidar_windup", 1f, 1f, ship.getLocation(), ship.getVelocity());
 			playedWindup = true;
 		}
 	}

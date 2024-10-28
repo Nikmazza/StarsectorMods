@@ -8,6 +8,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Tags
 import com.fs.starfarer.api.util.DelayedActionScript
 import com.fs.starfarer.api.util.Misc
 import lunalib.lunaUtil.LunaCommons
+import org.magiclib.achievements.MagicAchievementManager
 
 class ExoshipRecoveryContactInteraction : RATInteractionPlugin() {
 
@@ -67,7 +68,7 @@ class ExoshipRecoveryContactInteraction : RATInteractionPlugin() {
                         tooltip.addImageWithText(0f)
 
                         if (!Global.getSector().playerFleet.hasAbility("fracture_jump")) {
-                            textPanel.addPara("\"Oh, it appears that your fleet has no way to leave this location. I will send over some instructions that should help you move in to hyperspace.\"")
+                            textPanel.addPara("\"Oh, it appears that your fleet has no way to leave this location. I will send over some instructions that should help you move into hyperspace.\"")
 
                             var img = tooltip.beginImageWithText(Global.getSettings().getAbilitySpec("fracture_jump").iconName, 48f)
                             img.addPara("Acquired the \"Transverse Jump\" Ability. \n" +
@@ -106,6 +107,7 @@ class ExoshipRecoveryContactInteraction : RATInteractionPlugin() {
                             ExoUtils.getExoData().getExoshipPlugin().warpModule.warp(system!!, false, false)
                             ExoUtils.getExoData().getExoshipPlugin().npcModule.currentWarp = null
 
+                            MagicAchievementManager.getInstance().completeAchievement("rat_beatExotechQuestline")
 
                             closeDialog()
                         }

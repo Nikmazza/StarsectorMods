@@ -12,7 +12,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.listeners.DamageDealtModifier;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveEmitterDiodes extends BaseHullMod {
 
@@ -35,7 +35,8 @@ public class AdaptiveEmitterDiodes extends BaseHullMod {
 	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
-		ship.addListener(new AdaptiveHardFlux(ship));
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(id);
+		else ship.addListener(new AdaptiveHardFlux(ship));
 	}
 	
 	public static class AdaptiveHardFlux implements DamageDealtModifier {

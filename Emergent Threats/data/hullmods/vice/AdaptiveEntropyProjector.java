@@ -13,9 +13,12 @@ import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
-import data.scripts.vice.DistanceUtil;
+import data.scripts.vice.util.DistanceUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
+import org.lazywizard.lazylib.MathUtils;
 
 public class AdaptiveEntropyProjector extends BaseHullMod {
 
@@ -33,6 +36,7 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	private static Color GLOW_COLOR = new Color(255, 0, 100, 155);
 	private static Color GLOW_COLOR_DEGRADED = new Color(70, 225, 225, 100);
 	private static float CHARGE_INTERVAL_DEFAULT = 10f;
+	private static float CHARGE_INTERVAL_SYNTHESIS = 8f;
 	private static float CHARGE_INTERVAL_CRONOS = 7f;
 	
 	private static int CHAIN_COUNT = 1; //text only, need to implement if chaining to multiple targets
@@ -43,6 +47,7 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	private static float EMP_PER_PULSE = 400f;
 	private static float EMP_PER_PULSE_DEGRADED = 400f;
 	private static float ENTROPY_PROJECTOR_ARC_RANGE_DEFAULT = 1000f;
+	private static float ENTROPY_PROJECTOR_ARC_RANGE_SYNTHESIS = 1200f;
 	private static float ENTROPY_PROJECTOR_ARC_RANGE_COSMOS = 1400f;
 	private static float INTERVAL_DECORATIVE_DURATION = 0.5f;
 	
@@ -61,6 +66,7 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		IS_DEGRADED = (isDegraded(stats)) ? true : false; //used for display text only, okay for static
+		
 		if (isDegraded(stats)) {
 			stats.getVariant().getHullMods().remove(HULLMOD_ABYSSAL);
 			stats.getVariant().getHullMods().add(HULLMOD_STANDARD);
@@ -69,6 +75,22 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 			stats.getVariant().getHullMods().remove(HULLMOD_STANDARD);
 			stats.getVariant().getHullMods().add(HULLMOD_ABYSSAL);
 		}
+	}
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(HULLMOD_STANDARD);
+	}
+	
+	//xo bonuses should only apply to friendly ships
+	private boolean isSpacetimeAnalyticsActive(ShipAPI ship) {
+		if (ship.getFleetMember() == null || ship.getFleetMember().getOwner() != 0) return false;
+		return Global.getSector().getMemoryWithoutUpdate().is("$xo_spacetime_analytics_is_active", true);
+	}
+	
+	//for hullmod text changes only
+	private boolean isSpacetimeAnalyticsActive() {
+		return Global.getSector().getMemoryWithoutUpdate().is("$xo_spacetime_analytics_is_active", true);
 	}
 	
 	private boolean isDegraded(MutableShipStatsAPI stats) {
@@ -118,6 +140,10 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 				data.stats.put("interval", CHARGE_INTERVAL_DEFAULT);
 				data.stats.put("range", ENTROPY_PROJECTOR_ARC_RANGE_COSMOS);
 			}
+			else if (coreType.equals ("degraded") && isSpacetimeAnalyticsActive(ship)) {
+				data.stats.put("interval", CHARGE_INTERVAL_SYNTHESIS);
+				data.stats.put("range", ENTROPY_PROJECTOR_ARC_RANGE_SYNTHESIS);
+			}
 			else {
 				data.stats.put("interval", CHARGE_INTERVAL_DEFAULT);
 				data.stats.put("range", ENTROPY_PROJECTOR_ARC_RANGE_DEFAULT);
@@ -157,11 +183,16 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 		boolean degraded = isDegraded(ship);
 		Color color = degraded ? GLOW_COLOR_DEGRADED : GLOW_COLOR;
 		float damage = degraded ? DAMAGE_PER_PULSE_DEGRADED : DAMAGE_PER_PULSE;
-		float emp = degraded ? EMP_PER_PULSE_DEGRADED : EMP_PER_PULSE;
+		float emp = degraded ? EMP_PER_PULSE_DEGRADED : EMP_PER_PULSE;		
+		
+		Vector2f shipLoc = ship.getLocation();
+		if (ship.getVariant().getHullSpec().getHullId().startsWith("ionos_tw")) {
+			shipLoc = MathUtils.getPoint(ship.getLocation(), 26f, ship.getFacing() - 180f);
+		}
 		
 		CombatEngineAPI engine = Global.getCombatEngine();
 		engine.spawnEmpArc(ship,
-						ship.getLocation(),
+						shipLoc,
 						ship,
 						target,
 						DamageType.ENERGY,
@@ -173,13 +204,11 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 						color, // fringe
 						Color.white // core color
 						);
-		/*
-		if (!isDegraded(ship) && Math.random() <= EXTRA_EFFECT_ODDS * 0.01f) {
-			target.setCurrentCR(target.getCurrentCR() - CR_PENALTY * 0.01f);
-			target.fadeToColor(target, GLOW_COLOR, 0.7f, 0.3f, 0.5f);
-		}
-		*/
-		if (!isDegraded(ship) && Math.random() <= EXTRA_EFFECT_ODDS * 0.01f) {
+		
+		float odds = EXTRA_EFFECT_ODDS;
+		if (isSpacetimeAnalyticsActive(ship)) odds = 100f;
+		
+		if (!isDegraded(ship) && Math.random() <= odds * 0.01f) {
 			ShipAPI chain = DistanceUtil.getNearestNotAbyssal(target, range, "friends");
 			if (chain != null) {
 				engine.spawnEmpArc(target,
@@ -202,10 +231,15 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	private void spawnEMP(ShipAPI target, ShipAPI ship, boolean decorative) {
 		boolean degraded = isDegraded(ship);
 		Color color = degraded ? GLOW_COLOR_DEGRADED : GLOW_COLOR;
-		
 		CombatEngineAPI engine = Global.getCombatEngine();
+		
+		Vector2f shipLoc = ship.getLocation();
+		if (ship.getVariant().getHullSpec().getHullId().startsWith("ionos_tw")) {
+			shipLoc = MathUtils.getPoint(ship.getLocation(), 26f, ship.getFacing() - 180f);
+		}
+		
 		engine.spawnEmpArcPierceShields(ship,
-						ship.getLocation(),
+						shipLoc,
 						ship,
 						target,
 						DamageType.ENERGY,
@@ -236,6 +270,19 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 		return null;
 	}
 	
+	@Override
+	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
+		return true;
+	}
+	
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (isForModSpec || ship == null || !isSpacetimeAnalyticsActive()) return;
+		String s = "%s is enhancing subsystem performance";
+		String h = "Spacetime Analytics";
+		tooltip.addPara(s, 10f, Misc.getHighlightColor(), h);
+	}
+	
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		String pulses = "" + (Integer) MAX_PULSES.get(HullSize.FRIGATE) + "/"
 					+ (Integer) MAX_PULSES.get(HullSize.DESTROYER) + "/"
@@ -244,12 +291,21 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 		String damage = IS_DEGRADED ? ("" + (int) DAMAGE_PER_PULSE_DEGRADED) : ("" + (int) DAMAGE_PER_PULSE);
 		String emp = IS_DEGRADED ? ("" + (int) EMP_PER_PULSE_DEGRADED) : ("" + (int) EMP_PER_PULSE);
 		
-		if (index == 0) return "" + (int) CHARGE_INTERVAL_DEFAULT;
-		if (index == 1) return "" + (int) ENTROPY_PROJECTOR_ARC_RANGE_DEFAULT;
+		float interval = CHARGE_INTERVAL_DEFAULT;
+		if (IS_DEGRADED && isSpacetimeAnalyticsActive()) interval = CHARGE_INTERVAL_SYNTHESIS;
+
+		float range = ENTROPY_PROJECTOR_ARC_RANGE_DEFAULT;
+		if (IS_DEGRADED && isSpacetimeAnalyticsActive()) range = ENTROPY_PROJECTOR_ARC_RANGE_SYNTHESIS;
+		
+		float odds = EXTRA_EFFECT_ODDS;
+		if (isSpacetimeAnalyticsActive()) odds = 100f;
+		
+		if (index == 0) return "" + (int) interval;
+		if (index == 1) return "" + (int) range;
 		if (index == 2) return pulses;
 		if (index == 3) return damage;
 		if (index == 4) return emp;
-		if (index == 5) return "" + (int) EXTRA_EFFECT_ODDS + "%";
+		if (index == 5) return "" + (int) odds + "%";
 		if (index == 6) return "" + (int) ENTROPY_PROJECTOR_ARC_RANGE_DEFAULT;
 		if (index == 7) return "" + (int) CHARGE_INTERVAL_CRONOS;
 		if (index == 8) return "" + (int) ENTROPY_PROJECTOR_ARC_RANGE_COSMOS;

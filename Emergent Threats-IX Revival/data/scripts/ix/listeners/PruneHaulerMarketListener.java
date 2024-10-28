@@ -9,12 +9,14 @@ import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 
-//reduces Banteng (IX) and Buffalo (IX) to no more than 4 per market
-//also adds Panopticon Interface checker to IX warships so players won't randomly spawn interfaces if they buy IX hulls then split off the ships into their own fleets or put them into task groups
+//reduces Banteng (IX/TW) and Buffalo (IX/TW) to no more than 4 per market
+//adds Panopticon Interface checker to IX warships so players won't randomly spawn interfaces if they buy IX hulls then split off the ships into their own fleets or put them into task groups
 public class PruneHaulerMarketListener extends BaseCampaignEventListener {
 	
-	private static String BANTENG_ID = "banteng_ix";
-	private static String BUFFALO_ID = "buffalo_ix";
+	private static String BANTENG_IX = "banteng_ix";
+	private static String BANTENG_TW = "banteng_tw";
+	private static String BUFFALO_IX = "buffalo_ix";
+	private static String BUFFALO_TW = "buffalo_tw";
 	private static int MAX_SHIP_COUNT = 4;
 	
 	private static String IX_MOD_ID = "ix_ninth";
@@ -25,6 +27,7 @@ public class PruneHaulerMarketListener extends BaseCampaignEventListener {
 	}	
 	
 	public static void pruneMarket(MarketAPI market) {
+		if (market == null || market.getSubmarketsCopy() == null) return;
 		List<SubmarketAPI> submarkets = market.getSubmarketsCopy();
 		for (SubmarketAPI s : submarkets) {
 			int shipCountBant = 0;
@@ -36,11 +39,13 @@ public class PruneHaulerMarketListener extends BaseCampaignEventListener {
 				//add panoptic interface checker
 				if (ship.getVariant().hasHullMod(IX_MOD_ID)) ship.getVariant().addPermaMod(CHECKER_ID);
 				//prune extra haulers
-				if (ship.getHullSpec().getHullId().equals(BANTENG_ID)) {
+				if (ship.getHullSpec().getHullId().equals(BANTENG_IX)
+							|| ship.getHullSpec().getHullId().equals(BANTENG_TW)) {
 					if (shipCountBant < MAX_SHIP_COUNT) shipCountBant++;
 					else shipsToDelete.add(ship);
 				}
-				else if (ship.getHullSpec().getHullId().equals(BUFFALO_ID)) {
+				else if (ship.getHullSpec().getHullId().equals(BUFFALO_IX)
+							|| ship.getHullSpec().getHullId().equals(BUFFALO_TW)) {
 					if (shipCountBuff < MAX_SHIP_COUNT) shipCountBuff++;
 					else shipsToDelete.add(ship);
 				}

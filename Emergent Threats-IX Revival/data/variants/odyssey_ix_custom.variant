@@ -12,8 +12,8 @@
         "ix_terminus_relay",
         "ix_smod_handler",
         "ix_dawnstar_controller",
-        "ix_dawnstar_neutron",
-        "ix_dawnstar_neutron_handler"
+        "ix_dawnstar_electron",
+        "ix_dawnstar_electron_handler"
     ],
     "modules": [{"SM 1": "odyssey_drone_bay_ix"}],
     "permaMods": [

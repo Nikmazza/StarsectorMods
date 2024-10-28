@@ -18,7 +18,6 @@ import assortment_of_things.campaign.ui.*
 import assortment_of_things.exotech.ExoUtils
 import assortment_of_things.exotech.scripts.ChangeExoIntelState
 import assortment_of_things.frontiers.FrontiersUtils
-import assortment_of_things.misc.RATSettings
 import assortment_of_things.relics.RelicsGenerator
 import assortment_of_things.scripts.AtMarketListener
 import assortment_of_things.snippets.DropgroupTestSnippet
@@ -36,11 +35,10 @@ import org.dark.shaders.util.ShaderLib
 import org.dark.shaders.util.TextureData
 import assortment_of_things.campaign.scripts.AICoreReplacerScript
 import assortment_of_things.campaign.scripts.render.RATCampaignRenderer
+import assortment_of_things.exotech.ExoCampaignListener
 import assortment_of_things.exotech.ExotechGenerator
 import assortment_of_things.exotech.terrain.ExotechHyperNebula
-import assortment_of_things.misc.ReflectionUtils
-import assortment_of_things.misc.getChildrenCopy
-import assortment_of_things.misc.getParent
+import assortment_of_things.misc.*
 import com.fs.starfarer.api.EveryFrameScript
 import com.fs.starfarer.api.ui.UIPanelAPI
 import com.fs.starfarer.campaign.CampaignState
@@ -57,12 +55,22 @@ class RATModPlugin : BaseModPlugin() {
 
         var gameStartedForTitleScene = false
 
+        var isHalloween = false
+
     }
 
     override fun onApplicationLoad() {
         super.onApplicationLoad()
 
         gameStartedForTitleScene = true
+
+        val currentDate = Date()
+        //var currentDate = Date(1698530401L * 1000)
+        val startDate = Date(1730329200L * 1000)
+        val endDate = Date(1730437200L * 1000)
+        if (startDate.before(currentDate) && endDate.after(currentDate)) {
+            isHalloween = true
+        }
 
        /* Global.getSettings().loadFont("graphics/fonts/monocraft24.fnt")
         Fonts.DEFAULT_SMALL = "graphics/fonts/monocraft24.fnt"*/
@@ -126,6 +134,12 @@ class RATModPlugin : BaseModPlugin() {
         /*if (!LunaCampaignRenderer.hasRendererOfClass(RATCampaignRenderer::class.java)) {
             LunaCampaignRenderer.addRenderer(RATCampaignRenderer())
         }*/
+
+        //LunaCampaignRenderer.addTransientRenderer(ShaderTestRenderer())
+
+        if (!Global.getSector().hasScript(ConstantTimeIncreaseScript::class.java)) {
+            Global.getSector().addScript(ConstantTimeIncreaseScript())
+        }
 
         Global.getSector().addTransientScript(ChangeMainMenuColorScript())
         Global.getSector().addTransientScript(AICoreReplacerScript())
@@ -193,6 +207,7 @@ class RATModPlugin : BaseModPlugin() {
         Global.getSector().addTransientScript(ForceNegAbyssalRep())
         Global.getSector().addTransientListener(HullmodRemoverListener())
         Global.getSector().addTransientListener(AbyssCampaignListener())
+        Global.getSector().addTransientListener(ExoCampaignListener())
 
         Global.getSector().addTransientScript(AddArtifactHullmod())
 

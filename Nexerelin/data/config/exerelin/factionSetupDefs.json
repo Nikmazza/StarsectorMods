@@ -40,6 +40,18 @@
 			"className":"exerelin.world.factionsetup.AddOrUpgradeIndustry",
 			"sortOrder":3,
 		},
+		"commerce":{
+			"name":"Commerce",
+			"desc":"Adds a %s to your starting planet.",
+			"cost":30,
+			"params": {
+				"upgrade":"commerce",
+				"upgradeTo":"commerce",
+				"add":"commerce",
+			},
+			"className":"exerelin.world.factionsetup.AddOrUpgradeIndustry",
+			"sortOrder":3,
+		},
 		"resource_farming":{
 			"name":"Soil Fertilization",
 			"desc":"Upgrades the %s resource level on your starting planet by one. If none exists, will add %s for a %s higher cost. Does nothing on water-surface worlds that rely on aquaculture.",

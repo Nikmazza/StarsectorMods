@@ -2,7 +2,6 @@
 	"combatSmall":{
 		"vice_glimmer_overclocked":3,
 		"vice_lumen_pulse":4,
-		
 		"vice_hyperion_ex_attack":3,
 		"vice_hyperion_ex_strike":3,
 		
@@ -13,16 +12,16 @@
 		"vice_candor_emp_support":3,
 	},
 	"combatMedium":{
-		"vice_effulgent_assault":4,
-		"vice_effulgent_elite":3,
-		"vice_effulgent_torpedo":4,
-		"vice_fulgent_overclocked":3,
+		"vice_effulgent_assault":3,
+		"vice_effulgent_elite":2,
+		"vice_effulgent_torpedo":3,
+		"vice_fulgent_overclocked":2,
 		"vice_preceptor_standard":5,# makes ship show up despite Diktat anti-carrier doctrine
 		
 		"vice_iris_ex_escort":5,
-		"vice_mandrake_ex_assault":4,
-		"vice_mandrake_ex_overdriven":3,
-		"vice_mandrake_ex_strike":4,
+		"vice_mandrake_ex_assault":3,
+		"vice_mandrake_ex_overdriven":2,
+		"vice_mandrake_ex_strike":3,
 	},
 	
 	"combatLarge":{
@@ -56,10 +55,10 @@
 		"vice_aquilon_beam":3,
 		"vice_aquilon_strike":3,
 		"vice_equalizer_ex_assault":4,
-		"vice_equalizer_ex_strike":4,
-		"vice_incursion_ex_assault":4,
-		"vice_incursion_ex_strike":4,
-		
+		"vice_equalizer_ex_strike":3,
+		"vice_intrepid_ex_assault":4,
+		"vice_intrepid_ex_strike":3,
+
 		"vice_proteus_assault":1, # makes ship show up despite Persean anti-carrier doctrine
 		"vice_proteus_command":1, # makes ship show up despite Persean anti-carrier doctrine
 	},
@@ -82,8 +81,8 @@
 		"vice_resplendent_advanced":5,
 		"vice_resplendent_elite":4,
 		"vice_resplendent_heavy":5,
-		"vice_odyssey_tt_attack":10,
-		"vice_odyssey_tt_support":8,
+		"vice_odyssey_tt_attack":5,
+		"vice_odyssey_tt_support":5,
 		"vice_proteus_assault":2,		# for Nex random picker
 		"vice_proteus_command":2,		# for Nex random picker
 		"vice_exhortation_standard":2,	# for Nex random picker
@@ -91,6 +90,7 @@
 	},
 	"freighterMedium":{
 		"vice_banteng_standard":10,
+		"vice_banteng_sd_standard":10,
 		"vice_banteng_tt_standard":10,
 	},
 	"personnelSmall":{
@@ -101,10 +101,12 @@
 	},
 	"personnelMedium":{
 		"vice_banteng_converted":10,
+		"vice_banteng_sd_converted":10,
 		"vice_banteng_tt_converted":10,
 	},
 	"tankerMedium":{
 		"vice_banteng_standard":10,
+		"vice_banteng_sd_standard":10,
 		"vice_banteng_tt_standard":10,
 	},
 }

@@ -6,12 +6,14 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveGravityDrive extends BaseHullMod {
 	
 	private static String FLEET_JUMP = "fleet jump";
 	private static String LAMPETIA_HULLMOD = "vice_lampetia_remnant";
+	private static String RADIANT_TW_HULLMOD_1 = "ix_converted_hull";
+	private static String RADIANT_TW_HULLMOD_2 = "tw_enhanced_control_node";
 	private static String RESPLENDENT_HULLMOD = "vice_resplendent_remnant";
 	private static String RESPLENDENT_PROTOTYPE_MOD = "vice_resplendent_prototype";
 	private static String SHIP_1 = "Lampetia";
@@ -26,6 +28,7 @@ public class AdaptiveGravityDrive extends BaseHullMod {
 	//dummy hullmod, system switch handled by built-in hullmods
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(id);
 		if (ship.getHullSpec().getHullId().equals("vice_resplendent") && !ship.getVariant().hasHullMod(GRAPHICS_OVERRIDE_MOD)) {
 			float x = ship.getSpriteAPI().getCenterX();
 			float y = ship.getSpriteAPI().getCenterY();
@@ -46,6 +49,8 @@ public class AdaptiveGravityDrive extends BaseHullMod {
 	}
 	
 	private boolean isValidShip(ShipAPI ship) {
+		if (ship.getVariant().getHullMods().contains(RADIANT_TW_HULLMOD_1) 
+				&& ship.getVariant().getHullMods().contains(RADIANT_TW_HULLMOD_2)) return true;
 		return (ship.getVariant().getHullMods().contains(LAMPETIA_HULLMOD) 
 				|| ship.getVariant().getHullMods().contains(RESPLENDENT_HULLMOD)
 				|| ship.getVariant().getHullMods().contains(RESPLENDENT_PROTOTYPE_MOD));

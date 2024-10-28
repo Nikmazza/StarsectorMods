@@ -8,14 +8,14 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveFlightCommand extends BaseHullMod {
 
-	private float FIGHTER_BAY_COUNT_PENALTY = 50f;
-	private float FIGHTER_SPEED_BONUS = 25f;
-	private float FIGHTER_REPLACEMENT_BONUS = 50f;
-	private int STANDARD_FIGHTER_BAYS_TO_COUNT_AS_CARRIER = 2;
+	private static float FIGHTER_BAY_COUNT_PENALTY = 50f;
+	private static float FIGHTER_SPEED_BONUS = 25f;
+	private static float FIGHTER_REPLACEMENT_BONUS = 50f;
+	private static int STANDARD_FIGHTER_BAYS_TO_COUNT_AS_CARRIER = 2;
 	
 	private static String ADAPTIVE_DRONE_BAY = "vice_adaptive_drone_bay";
 	private static String GRAPHICS_OVERRIDE_MOD = "vice_converted_bridge";
@@ -40,6 +40,7 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(id);
 		if (ship.getHullSpec().getHullId().equals("vice_resplendent") && !ship.getVariant().hasHullMod(GRAPHICS_OVERRIDE_MOD)) {
 			float x = ship.getSpriteAPI().getCenterX();
 			float y = ship.getSpriteAPI().getCenterY();
@@ -65,14 +66,36 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 	
 	//checks if the fighter bays to be deleted are unequipped, as "hidden" bays with equipped fighters do not refund Ordance Points
 	private boolean baysToDeleteAreEmpty(ShipAPI ship) {
-		int totalFighterBays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue();
+		int modBayCount = 0;
+		if (ship.getVariant().hasHullMod("rat_autonomous_bays")) modBayCount++;
+		if (ship.getVariant().hasHullMod("specialsphmod_combatdronereplicator_upgrades")) modBayCount++;
+		int totalFighterBays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue() + modBayCount;
 		int builtInFighterBays = ship.getHullSpec().getBuiltInWings().size();
 		int clearFightersFromIndex = (int) Math.ceil((totalFighterBays + builtInFighterBays - 1) * FIGHTER_BAY_COUNT_PENALTY * 0.01f);
 		boolean baysAreEmpty = false;
-		for (int i = clearFightersFromIndex; i < totalFighterBays; i++) {
-			baysAreEmpty = (ship.getVariant().getWingId(i) == null);
-			if (!baysAreEmpty) break;
+		
+		String RADIANT_WING = "nimbus_tw_wing_r";
+		String RMOD_1 = "ix_converted_hull";
+		String RMOD_2 = "tw_enhanced_control_node";
+		boolean isRadiantCarrier = ship.getVariant().hasHullMod(RMOD_1) && ship.getVariant().hasHullMod(RMOD_2);
+		
+		if (isRadiantCarrier) {
+			for (int i = clearFightersFromIndex; i < totalFighterBays; i++) {
+				if (i == 2 || i == 3) {
+					if (ship.getVariant().getWingId(i) == null 
+							|| ship.getVariant().getWingId(i).equals(RADIANT_WING)) baysAreEmpty = true;
+				}
+				else baysAreEmpty = (ship.getVariant().getWingId(i) == null);
+				if (!baysAreEmpty) break;
+			}
+		} 
+		else {
+			for (int i = clearFightersFromIndex; i < totalFighterBays; i++) {
+				baysAreEmpty = (ship.getVariant().getWingId(i) == null);
+				if (!baysAreEmpty) break;
+			}
 		}
+		
 		return baysAreEmpty;
 	}
 	

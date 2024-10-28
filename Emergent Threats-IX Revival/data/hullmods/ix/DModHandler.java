@@ -5,6 +5,7 @@ import java.util.List;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 
@@ -28,5 +29,19 @@ public class DModHandler extends BaseHullMod {
 			}
 			catch (Exception e) {}
 		}
+	}
+	
+	//clears d-mods from IX ships spawned by Fleet Embassy/Cloudburst Academy
+	public static void clearDModsFromFleetMember(FleetMemberAPI member) {
+		if (member.getVariant().hasDMods()) {
+			try {
+				List<HullModSpecAPI> dMods = DModManager.getModsWithTags("dmod");
+				for (HullModSpecAPI mod : dMods) {
+					member.getVariant().getHullMods().remove(mod.getId());
+				}
+			}
+			catch (Exception e) {}
+		}
+		member.updateStats();
 	}
 }

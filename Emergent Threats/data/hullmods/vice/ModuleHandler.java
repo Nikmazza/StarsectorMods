@@ -10,27 +10,30 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class ModuleHandler extends BaseHullMod {
 
 	private static String DRONE_BAY = "vice_adaptive_drone_bay";
 	private static String EMITTER_DIODES = "vice_adaptive_emitter_diodes";
+	private static String ENTROPY_ARRESTER = "vice_adaptive_entropy_arrester";
+	private static String ENTROPY_PROJECTOR = "vice_adaptive_entropy_projector";
 	private static String FLIGHT_COMMAND = "vice_adaptive_flight_command";
 	private static String FLUX_DISSIPATOR = "vice_adaptive_flux_dissipator";
 	private static String GRAVITY_DRIVE = "vice_adaptive_gravity_drive";
-	private static String PULSE_RESONATOR = "vice_adaptive_pulse_resonator";
-	private static String REACTOR_CHAMBER = "vice_adaptive_reactor_chamber";
-	
 	private static String METASTATIC_GROWTH = "vice_adaptive_metastatic_growth";
 	private static String NEURAL_NET = "vice_adaptive_neural_net";
 	private static String PHASE_COILS = "vice_adaptive_phase_coils";
+	private static String PULSE_RESONATOR = "vice_adaptive_pulse_resonator";
+	private static String REACTOR_CHAMBER = "vice_adaptive_reactor_chamber";
 	private static String TACTICAL_CORE = "vice_adaptive_tactical_core";
 	private static String TEMPORAL_SHELL = "vice_adaptive_temporal_shell";
+	
 	private static String STRIP_FITTING_FIXER = "vice_strip_fixer";
 	
 	private static List<String> MULTI_MODULE_HULLMODS = new ArrayList<String>();
 	static {
+		MULTI_MODULE_HULLMODS.add(ENTROPY_ARRESTER);
 		MULTI_MODULE_HULLMODS.add(FLUX_DISSIPATOR);
 		MULTI_MODULE_HULLMODS.add(METASTATIC_GROWTH);
 		MULTI_MODULE_HULLMODS.add(NEURAL_NET);
@@ -43,17 +46,18 @@ public class ModuleHandler extends BaseHullMod {
 	static {
 		ADAPTIVE_HULLMODS.add(DRONE_BAY);
 		ADAPTIVE_HULLMODS.add(EMITTER_DIODES);
+		ADAPTIVE_HULLMODS.add(ENTROPY_ARRESTER);
+		ADAPTIVE_HULLMODS.add(ENTROPY_PROJECTOR);
 		ADAPTIVE_HULLMODS.add(FLIGHT_COMMAND);
-		ADAPTIVE_HULLMODS.add(GRAVITY_DRIVE);
-		ADAPTIVE_HULLMODS.add(PULSE_RESONATOR);
-		ADAPTIVE_HULLMODS.add(REACTOR_CHAMBER);
-
 		ADAPTIVE_HULLMODS.add(FLUX_DISSIPATOR);
+		ADAPTIVE_HULLMODS.add(GRAVITY_DRIVE);
 		ADAPTIVE_HULLMODS.add(METASTATIC_GROWTH);
 		ADAPTIVE_HULLMODS.add(NEURAL_NET);
 		ADAPTIVE_HULLMODS.add(PHASE_COILS);
+		ADAPTIVE_HULLMODS.add(PULSE_RESONATOR);
+		ADAPTIVE_HULLMODS.add(REACTOR_CHAMBER);
 		ADAPTIVE_HULLMODS.add(TACTICAL_CORE);
-		ADAPTIVE_HULLMODS.add(TEMPORAL_SHELL);
+		ADAPTIVE_HULLMODS.add(TEMPORAL_SHELL);		
 	}
 	
 	//Utility variables
@@ -99,8 +103,5 @@ public class ModuleHandler extends BaseHullMod {
 				variant.removePermaMod(STRIP_FITTING_FIXER);
 			}
 		}
-		
-		//done here since captains are added after applyEffectsBeforeShipCreation
-		if (!util.isWithoutCaptain(ship.getMutableStats())) variant.getHullMods().remove(TACTICAL_CORE);
 	}
 }

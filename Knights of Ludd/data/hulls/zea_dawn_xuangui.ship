@@ -2,7 +2,7 @@
   "hullName": "Xuangui",
   "hullId": "zea_dawn_xuangui",
   "hullSize": "DESTROYER",
-  "spriteName": "data/strings/com/fs/starfarer/api/impl/campaign/you can hear it cant you/our whispers through the void/our song/graphics/ships/zea_dawn_xuangui.png",
+  "spriteName": "graphics/zea/ships/zea_dawn_xuangui.png",
   "style": "ZEA_DAWN_TECH",
   "height": 170,
   "width": 120,
@@ -13,10 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "automated",
-    "zea_cascade_targeting",
-    "solar_shielding",
-    "kol_ea_shields1",
-    "kol_throttle"
+    "zea_dawn_builtin",
+    "zea_dawn_shield_style",
+    "zea_recovery_limiter"
   ],
   "builtInWeapons": {
     "WS0005": "zea_dawn_targeting_beam_wpn"

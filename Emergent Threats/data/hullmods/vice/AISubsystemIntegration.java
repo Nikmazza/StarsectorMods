@@ -9,19 +9,21 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
+import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 
-import data.scripts.vice.hullmods.RemnantSubsystemsUtil;
+import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AISubsystemIntegration extends BaseLogisticsHullMod {
 	
 	private static float NO_MIN_CREW_BONUS = 0f;
 	private static float CREWED_SQUADRON_SPEED_PENALTY = 20f;
 	private static String ADAPTIVE_SUBSYSTEMS = "adaptive subsystems";
-	private static String FIGHTER_AUTOMATION = "fighters are automated";
-	
+	private static String FIGHTER_AUTOMATION = "Built-in fighters";
+
 	private static String REPLACEMENT_S_MOD = "vice_abomination_interface";
 	private static String SHIPWIDE_INTEGRATION_CHECKER = "vice_shipwide_integration_checker";
-	
+	private static String ERROR_MOD_ID = "vice_drone_bay_malfunction";
+
 	//Utility variables
 	private RemnantSubsystemsUtil util = new RemnantSubsystemsUtil();
 	
@@ -35,38 +37,27 @@ public class AISubsystemIntegration extends BaseLogisticsHullMod {
 			stats.getDynamic().getStat(Stats.FIGHTER_CREW_LOSS_MULT).modifyMult(id, NO_MIN_CREW_BONUS);
 			util.applyShipwideIntegration(variant);
 		}
-	}
-	
-	@Override
-	//backwards compatability for people who built AI Integration into ships that no longer qualify
-	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
-		if (isSMod(ship) && util.isAbomination(ship)) {
-			ShipVariantAPI variant = ship.getVariant();
-			variant.addPermaMod(REPLACEMENT_S_MOD, true);
-			variant.getSMods().remove(id);
-			variant.getPermaMods().remove(id);
-			variant.getHullMods().remove(id);
+		else return;
+		
+		boolean isAllValidDrones = true;
+		int builtInOffset = stats.getVariant().getFittedWings().size() - stats.getVariant().getNonBuiltInWings().size();
+		int fighterBays = stats.getNumFighterBays().getModifiedInt();
+		for (int i = 0; i < fighterBays; i++) {
+			if (i < builtInOffset) continue;
+			FighterWingSpecAPI spec = stats.getVariant().getWing(i);
+			if (spec == null) continue;
+			if (spec.getVariant().getHullSpec().getMinCrew() != 0) isAllValidDrones = false;
 		}
+		if (stats.getVariant().hasHullMod("SKR_remote")) isAllValidDrones = true;
+		if (!isAllValidDrones) stats.getVariant().getHullMods().add(ERROR_MOD_ID);
+		else stats.getVariant().getHullMods().remove(ERROR_MOD_ID);
 	}
 	
 	//needed due to bounty ships with non-smod built-in versions
 	private boolean isBuiltInMod(ShipVariantAPI variant, String id) {
 		if (variant.getHullSpec().isBuiltInMod(id)) return true;
-		LinkedHashSet<String> sMods = variant.getSMods();
-		for (String mod : sMods) {
-			if (mod.equals(id)) return true;
-		}
+		if (variant.getSMods().contains(id)) return true;
 		return false;
-	}
-	
-	@Override
-	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
-		ShipVariantAPI variant = ship.getVariant();
-		if (!isBuiltInMod(variant, id)) return;
-		if (fighter.getHullSpec().getMinCrew() != 0) {
-			MutableShipStatsAPI stats = fighter.getMutableStats();
-			stats.getMaxSpeed().modifyMult(id, 1f - CREWED_SQUADRON_SPEED_PENALTY * 0.01f);		
-		}
 	}
 	
 	@Override
@@ -87,7 +78,7 @@ public class AISubsystemIntegration extends BaseLogisticsHullMod {
 		if (index == 0) return ADAPTIVE_SUBSYSTEMS;
 		if (index == 1) return "" + (int) NO_MIN_CREW_BONUS;
 		if (index == 2) return FIGHTER_AUTOMATION;
-		if (index == 3) return "" + (int) CREWED_SQUADRON_SPEED_PENALTY + "%";
+		if (index == 3) return "";
 		
 		return null;
 	}

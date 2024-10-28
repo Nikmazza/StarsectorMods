@@ -22,6 +22,7 @@ class SCModPlugin : BaseModPlugin() {
         LunaDebug.addSnippet(AddAllOfficersSnippet())
         LunaDebug.addSnippet(AddXPToOfficersSnippet())
 
+        SCSpecStore.loadCategoriesFromCSV()
         SCSpecStore.loadAptitudeSpecsFromCSV()
         SCSpecStore.loadSkillSpecsFromCSV()
 
@@ -66,10 +67,22 @@ class SCModPlugin : BaseModPlugin() {
     }
 
     override fun onGameLoad(newGame: Boolean) {
+
+        if (!Global.getSector().playerPerson.stats.hasSkill("sc_utility_skill")) {
+            Global.getSector().playerPerson.stats.setSkillLevel("sc_utility_skill", 2f)
+        }
+
+        Global.getSettings().setFloat("xpGainMult", SCSettings.playerXPMult)
+
+        if (!Global.getSector().listenerManager.hasListenerOfClass(ExecutiveOfficerCommAdder::class.java)) {
+            Global.getSector().listenerManager.addListener(ExecutiveOfficerCommAdder(), false)
+        }
+
         Global.getSector().addTransientScript(SkillPanelReplacerScript())
         Global.getSector().addTransientScript(ControllerHullmodAdderScript())
         Global.getSector().addTransientScript(SCNeuralJunctionScript())
         Global.getSector().addTransientScript(VanillaSkillsDisabler())
+        Global.getSector().addTransientScript(AutomatedShipsManager())
         Global.getSector().listenerManager.addListener(NPCFleetInflater(), true)
 
         Global.getSector().addTransientListener(SCCampaignEventListener())
@@ -77,12 +90,16 @@ class SCModPlugin : BaseModPlugin() {
         Global.getSector().registerPlugin(SCCampaignPlugin())
 
         //Add Abilities that no longer have a skill
-        if (!Global.getSector().characterData.abilities.contains(Abilities.TRANSVERSE_JUMP)) {
+        if (SCSettings.spawnWithTransverse && !Global.getSector().characterData.abilities.contains(Abilities.TRANSVERSE_JUMP)) {
             Global.getSector().characterData.addAbility(Abilities.TRANSVERSE_JUMP)
         }
 
-        if (!Global.getSector().characterData.abilities.contains(Abilities.GRAVITIC_SCAN)) {
+        if (SCSettings.spawnWithNeutrino && !Global.getSector().characterData.abilities.contains(Abilities.GRAVITIC_SCAN)) {
             Global.getSector().characterData.addAbility(Abilities.GRAVITIC_SCAN)
+        }
+
+        if (SCSettings.spawnWithRemoteSurvey && !Global.getSector().characterData.abilities.contains(Abilities.REMOTE_SURVEY)) {
+            Global.getSector().characterData.addAbility(Abilities.REMOTE_SURVEY)
         }
     }
 
