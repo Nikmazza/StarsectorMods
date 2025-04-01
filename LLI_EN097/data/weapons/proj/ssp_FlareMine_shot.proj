@@ -1,0 +1,37 @@
+{
+	"id":"ssp_FlareMine_shot",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.IonCannonOnHitEffect",
+	"sprite":"graphics/missiles/bomblet0.png",
+	"size":[4,4],	
+	"center":[2,2],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[25,100,155,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":40, # purely visual
+	"flameoutTime":1, # total time from flameout to full fadeout
+	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
+	"fadeTime":1, # fadeout duration
+	"engineSpec":{"turnAcc":600,
+				  "turnRate":200,
+				  "acc":250,
+				  "dec":250},
+	"engineSlots":[
+					{"id":"ES1",
+					"loc":[0, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"engineColor":[25,100,155,255],
+						"contrailParticleSizeMult":1,
+						"contrailParticleDuration":5,
+						"contrailMaxSpeedMult":-0.1,
+						"contrailAngularVelocityMult":0f,
+						"contrailColor":[25,100,155,35],
+						"type":"GLOW" # GLOW or SMOKE
+					},
+				    "width":5.0,
+				    "length":15.0,
+				    "angle":180.0},
+				   ]
+}

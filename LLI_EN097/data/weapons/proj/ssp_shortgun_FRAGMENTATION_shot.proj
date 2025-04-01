@@ -1,0 +1,21 @@
+{
+	"id":"ssp_shortgun_FRAGMENTATION_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":15.0,
+	"hitGlowRadius":10,
+	"width":3.0,
+	"fadeTime":2,
+	"fringeColor":[255,165,90,175],
+	"coreColor":[255,255,255,200],
+	"glowColor":[255,165,90,105],
+	"glowRadius":10,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	#"passThroughMissiles":true,
+	"bulletSprite":"graphics/missiles/shell_hellbore.png"
+	#"bulletSprite":"graphics/missiles/shell_round_lrg.png"
+}
+			

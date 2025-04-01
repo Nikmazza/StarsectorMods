@@ -1,8 +1,8 @@
 package assortment_of_things.exotech.shipsystems.ai
 
+import assortment_of_things.exotech.hullmods.PhaseshiftShield
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
-import com.fs.starfarer.api.util.IntervalUtil
 import org.lazywizard.lazylib.MathUtils
 import org.lwjgl.util.vector.Vector2f
 
@@ -12,6 +12,8 @@ class GilgameshSystemAI : ShipSystemAIScript {
     var maxCountdown = 1.5f
     var countdown = maxCountdown
 
+    var shieldRechargeCooldown = 0f
+
     override fun init(ship: ShipAPI?, system: ShipSystemAPI?, flags: ShipwideAIFlags?, engine: CombatEngineAPI?) {
         this.ship = ship
     }
@@ -19,8 +21,43 @@ class GilgameshSystemAI : ShipSystemAIScript {
     override fun advance(amount: Float, missileDangerDir: Vector2f?, collisionDangerDir: Vector2f?, target: ShipAPI?) {
         if (ship == null) return
 
+        var phaseshiftShieldListener = ship!!.getListeners(PhaseshiftShield.PhaseshiftShieldListener::class.java).firstOrNull()
+
+        //Force in to phase to regen shield outside of combat encounters
+        if (phaseshiftShieldListener != null && target == null || MathUtils.getDistance(ship, target) >= 2000) {
+
+            if (phaseshiftShieldListener!!.shieldHP / PhaseshiftShield.PhaseshiftShieldListener.maxShieldHP < 1f && ship!!.fluxLevel <= 0.3f) {
+
+                if (shieldRechargeCooldown <= 0 && !ship!!.phaseCloak.isActive && !ship!!.system.isCoolingDown && !ship!!.fluxTracker.isOverloadedOrVenting) {
+                    ship!!.phaseCloak.forceState(ShipSystemAPI.SystemState.IN, 0f)
+                    shieldRechargeCooldown = 3f
+                }
+
+                shieldRechargeCooldown -= 1 * amount
+                shieldRechargeCooldown = MathUtils.clamp(shieldRechargeCooldown, -1f, 10f)
+
+                if (ship!!.phaseCloak.isActive) {
+                    ship!!.aiFlags.setFlag(ShipwideAIFlags.AIFlags.STAY_PHASED, 0.5f)
+                    ship!!.aiFlags.setFlag(ShipwideAIFlags.AIFlags.DO_NOT_VENT, 5f)
+                }
+            }
+        }
+
+        //Stay phased for longer if it has the flux to spare to regen shield
+        if (phaseshiftShieldListener != null) {
+            if (phaseshiftShieldListener!!.shieldHP / PhaseshiftShield.PhaseshiftShieldListener.maxShieldHP < 1f && ship!!.fluxLevel <= 0.25f) {
+                if (ship?.phaseCloak!!.isActive) {
+                    ship!!.aiFlags.setFlag(ShipwideAIFlags.AIFlags.STAY_PHASED, 0.25f)
+                }
+            }
+        }
+
+        var shieldLevel = 0f
+        if (phaseshiftShieldListener != null) shieldLevel = MathUtils.clamp(phaseshiftShieldListener.shieldHP / PhaseshiftShield.PhaseshiftShieldListener.maxShieldHP, 0f, 1f)
+        var shieldCapable = shieldLevel >= 0.5 && ship!!.fluxLevel <= 0.6f
+
         //Allow phase use if the ship would otherwise get it while the system is active
-        if (hasNearbyDanger(amount, missileDangerDir, collisionDangerDir, target, 100f)) {
+        if (!shieldCapable && hasNearbyDanger(amount, missileDangerDir, collisionDangerDir, target, 100f)) {
             ship!!.setCustomData("rat_dont_allow_phase", -1f)
             return
         }
@@ -30,7 +67,7 @@ class GilgameshSystemAI : ShipSystemAIScript {
 
         if (target == null) return
 
-        if (hasNearbyDanger(amount, missileDangerDir, collisionDangerDir, target, 500f)) {
+        if (!shieldCapable && hasNearbyDanger(amount, missileDangerDir, collisionDangerDir, target, 250f)) {
             countdown = maxCountdown
             return
         }
@@ -68,9 +105,12 @@ class GilgameshSystemAI : ShipSystemAIScript {
     fun getFurthestWeaponRange(ship: ShipAPI) : Float {
         var range = 0f
         for (weapon in ship.allWeapons.filter { it.slot.id == "WS0004" || it.slot.id == "WS0005"} ) {
-            if (weapon.range > range)
+            var weaponRange = weapon.range * 1.10f
+            if (weapon.type == WeaponAPI.WeaponType.MISSILE) weaponRange *= 0.9f //Adjust for reduction of missile ranges
+
+            if (weaponRange > range)
             {
-                range = weapon.range
+                range = weaponRange
             }
         }
         return range
@@ -86,6 +126,7 @@ class GilgameshSystemAI : ShipSystemAIScript {
             if (consideredProjectiles.contains(projectile))  continue
 
             if (projectile is DamagingProjectileAPI) {
+                if (projectile.owner == ship!!.owner) continue
                 consideredProjectiles.add(projectile)
                 if (projectile.isExpired) continue
                 incomingMissileDamage += projectile.baseDamageAmount
@@ -93,6 +134,7 @@ class GilgameshSystemAI : ShipSystemAIScript {
             }
 
             if (projectile is MissileAPI) {
+                if (projectile.owner == ship!!.owner) continue
                 consideredProjectiles.add(projectile)
                 if (projectile.isExpired) continue
                 incomingMissileDamage += projectile.baseDamageAmount

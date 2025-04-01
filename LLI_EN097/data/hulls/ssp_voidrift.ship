@@ -1,0 +1,55 @@
+{
+  "hullName": "ssp_voidrift",
+  "hullId": "ssp_voidrift",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/stations/gate.png",
+  "style": "OMEGA",
+  "height": 256,
+  "width": 256,
+  "center": [128, 128],
+  "collisionRadius": 144.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 138,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ssp_voidrift_hullmod"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [
+    {
+      "location": [0, -0],
+      "length": 0,
+      "width": 0,
+      "angle": 180,
+      "contrailSize": 0,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -119.5, 36.5,
+    -102, 74,
+    -54.5, 112.5,
+    3.5, 125.5,
+    55, 111,
+    93.5, 83.5,
+    120, 34.5,
+    120, -34.5,
+    93.5, -83.5,
+    55, -111,
+    3.5, -125.5,
+    -54.5, -112.5,
+    -102, -74,
+    -121, -28.5,
+    -119.5, 36.5,
+    -95, 30.5,
+    -58.5, 86.5,
+    15.5, 100.5,
+    76.5, 74,
+    102, 3.5,
+    86, -56.5,
+    22.5, -100.5,
+    -53, -88.5,
+    -89, -46.5,
+    -95, 30.5
+  ]
+}

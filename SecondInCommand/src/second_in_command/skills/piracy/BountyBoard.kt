@@ -4,12 +4,14 @@ import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.BattleAPI
 import com.fs.starfarer.api.campaign.CampaignEventListener
 import com.fs.starfarer.api.campaign.CampaignFleetAPI
+import com.fs.starfarer.api.campaign.FactionAPI
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener
 import com.fs.starfarer.api.combat.MutableShipStatsAPI
 import com.fs.starfarer.api.combat.ShipAPI
 import com.fs.starfarer.api.combat.ShipVariantAPI
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin
+import com.fs.starfarer.api.ui.SectorMapAPI
 import com.fs.starfarer.api.ui.TooltipMakerAPI
 import com.fs.starfarer.api.util.Misc
 import second_in_command.SCData
@@ -25,7 +27,7 @@ class BountyBoard : SCBaseSkillPlugin() {
 
     override fun addTooltip(data: SCData, tooltip: TooltipMakerAPI) {
 
-        var creditsString = Misc.getDGSCredits(500f)
+        var creditsString = Misc.getDGSCredits(600f)
         tooltip.addPara("You receive $creditsString credits per opposing ship destroyed or disabled in combat", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
         tooltip.addPara("   - This is multiplied by 1x/2x/3x/10x based on the hullsize of each destroyed ship", 0f, Misc.getTextColor(), Misc.getHighlightColor(),
         "1x", "2x", "3x", "10x")
@@ -66,7 +68,7 @@ class BountyBoard : SCBaseSkillPlugin() {
 
 class BountyBoardSkillListener() : FleetEventListener {
 
-    var base = 500f
+    var base = 600f
 
     override fun reportFleetDespawnedToListener(fleet: CampaignFleetAPI?, reason: CampaignEventListener.FleetDespawnReason?,  param: Any?) {
     }
@@ -98,7 +100,45 @@ class BountyBoardSkillListener() : FleetEventListener {
         }
 
         Global.getSector().playerFleet.cargo.credits.add(payment)
-        Global.getSector().campaignUI.addMessage(object : BaseIntelPlugin() {
+
+        var intel = object : BaseIntelPlugin() {
+
+            init {
+                endAfterDelay(30f)
+            }
+
+            override fun getName(): String {
+                return "Skill - Privateering"
+            }
+
+            override fun getIcon(): String {
+                return "graphics/secondInCommand/piracy/bounty_board.png"
+            }
+
+            override fun hasSmallDescription(): Boolean {
+                return false
+            }
+
+            override fun addBulletPoints(info: TooltipMakerAPI?, mode: IntelInfoPlugin.ListInfoMode?, isUpdate: Boolean, tc: Color?, initPad: Float) {
+
+                var paymentString = Misc.getDGSCredits(payment)
+                info!!.addPara("Gained $paymentString credits from the recent encounter.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "$paymentString")
+            }
+
+            override fun getTitleColor(mode: IntelInfoPlugin.ListInfoMode?): Color {
+                return Misc.getBasePlayerColor()
+            }
+
+            override fun getIntelTags(map: SectorMapAPI?): MutableSet<String> {
+                var tags = super.getIntelTags(map)
+                tags.add("Skills")
+                return tags
+            }
+        }
+
+        Global.getSector().intelManager.addIntel(intel)
+
+        /*Global.getSector().campaignUI.addMessage(object : BaseIntelPlugin() {
             override fun getName(): String {
                 return "Skill - Privateering"
             }
@@ -113,7 +153,7 @@ class BountyBoardSkillListener() : FleetEventListener {
                 info!!.addPara("Gained $paymentString credits from the recent encounter.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "$paymentString")
 
             }
-        })
+        })*/
     }
 
 }

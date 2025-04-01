@@ -1,0 +1,73 @@
+id,trigger,conditions,script,text,options,notes
+#RULESET_NAME LLI,,,,,,
+,,,,,,
+# ##DOCKTEXT,,,,,,
+MarketMirageCity_transponderOn,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == MirageCity_market score:100
+$player.transponderOn == true","AddText""After verifying your information, the navigation authority arranged for you to dock at the new spaceport. The spaceport is quite orderly: no vendors hawking on the sidewalks, advertisements on the walls, and the various stores are luxuriously decorated without exception. After leaving the spaceport's magnificent reception, you can finally get a glimpse of the \""downtown\"" of the Mirage Astropolis. It's as bustling as Old Earth's cities (as seen in holodocs and games): massive windows spilling starlight evenly on every road, colorful gardens placed between tall buildings, and some carefully pruned trees flanking the road; this is obviously the city's most affluent district.""marketFlavorTextColor",,,
+MarketMirageCity_transponderOff,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == MirageCity_market score:100
+$player.transponderOn == false","AddText""You are guided to dock in an old, ungoverned spaceport; likely due to your lack of identification. The port is all-but vacuum, with vendors swarming out of airtight pods whenever they catch a new ship docking, projecting holographic advertisements and trying in vain to get sound into your ears. This old spaceport sits at the bottom of the astropolis, with a giant elevator capable of taking people to any level: besides the top, that is.""marketFlavorTextColor",,,
+MarketAdeniumobesum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI
+$market.id == AdeniumObesum_market score:100","AddText""There are almost no traders in this spaceport: rather, a group of official salesmen managing the trade of locally produced metals and ores. In fact, there are no brokers for trading any other goods besides metal and ores to be found. After some investigation, you learn that all local commerce on Adenium Obesum, besides the metal and ore trade, is concentrated in residential markets: all merchants travel to trade their goods in the residential areas, rather than at the spaceport.""marketFlavorTextColor",,,
+MarketLLI,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == LLI","AddText""The port concourse is filled with small freighters and freelancers down or up on their luck, identifiable by the shine or grime of ship armour and volume of cargo on-loading. A handful of speculators who all seem to know each other crowd offloading ship captains as they arrive while peddlers call out to crew, holding wares and projecting personal ad-holos. A number of brand new monitors have been installed, displaying military propaganda and encouraging all visitors to join the LouLan Navy.""marketFlavorTextColor",,,
+#END DOCKTEXT,,,,,,
+,,,,,,
+# LLINPC0,,,,,,
+LLIdefaultNPC0Greeting,PickGreeting,$id == NPC_0 score:1000,FireAll PopulateOptions,"After a short wait, your communications request is accepted, and you're greeted with the other party playing cards on their TriPad, muttering ""Oh, right, oops, no...""
+
+After a short wait they finally remember that they accepted your comms request.
+
+""Greetings, $PlayerSirOrMadam $playerName, Savior of Galatia. I am Bracks Ao: former Supreme Commander of the Loulan Navy, cooking enthusiast, and currently... unemployed.""",,
+LLIdefaultNPC0AnswerOfFoxOptions,PopulateOptions,"$id == NPC_0
+!$AnswerOfFox
+",,,AnswerOfFoxOptions:Ask about the Traversers' Association,
+LLIdefaultNPC0AnswerOfFox,DialogOptionSelected,$option == AnswerOfFoxOptions,FireAll NPC0AnswerOfFox,"""A few years ago, back when I was still Supreme Commander, Loulan and the Association had a technological exchange: we gave them the blueprints for the Wave-class destroyer - that is, the modified version - and they gave us the blueprints for the Curtain Rain-class destroyer in exchange. The Association didn't modify the Wave very much in producing their Condensation-class, but our eggheads sure went wild when they made the Heatwave-class I'm sure you've seen all over; people didn't even realize it was a modified Curtain Rain until they were told about it! But the Association's Director marveled at how creative we were in so doing.""
+
+""But, by then the Loulan Navy had been completely infiltrated by the Luddics: bypassing my authority, they abruptly ended the technological exchange with the 'blasphemous' Association after the first Warmfront was produced. I heard that President Coldstream has a fluffy fox tail, but due to all the turmoil I missed the opportunity to touch it; one of my biggest regrets.""
+
+""Out of curiosity... would you describe yourself as Luddic?""",,
+LLIdefaultNPC0AnswerOfFox1Options,NPC0AnswerOfFox,$id == NPC_0,,,AnswerOfFox1Options:No,
+LLIdefaultNPC0AnswerOfFox1,DialogOptionSelected,$option == AnswerOfFox1Options,"$AnswerOfFox = true
+$player.AnswerOfFox = true
+AddTextSmall ""obtained a letter of introduction from the former Supreme Commander of the Loulan Navy"" highlight
+FireAll PopulateOptions
+AdjustRep TDB COOPERATIVE 30","""Consider this a gift from me to you; I hope the Association will think more highly of you now. And, if you're ever so lucky to meet President Coldstream in person: make sure to touch the tail, or you'll regret it for the rest of your life, just like me.""",,
+LLIdefaultNPC0AnswerOfFox2Options,NPC0AnswerOfFox,$id == NPC_0,,,AnswerOfFox2Options:Yes,
+LLIdefaultNPC0AnswerOfFox2,DialogOptionSelected,$option == AnswerOfFox2Options,"$AnswerOfFox = true
+$player.AnswerOfFox = true
+FireAll PopulateOptions","""Forgive me if I come across as intolerant of your faith, but faith alone is not enough to change the Sector for the better. Most 'faithful' are little more than pawns for the Church: can you imagine what could happen if the Church were to declare a 'crusade'?... I think the people of Mairaath would know. One way or another, allowing the Church to continue to gain power will have disastrous consequences.""",,
+LLIdefaultNPC0AnswerOfALOptions,PopulateOptions,"$id == NPC_0
+!$AnswerOfAL",,,AnswerOfALOptions:Ask where to find the Sector's best cookware,
+LLIdefaultNPC0AnswerOfAL,DialogOptionSelected,$option == AnswerOfALOptions,"$AnswerOfAL = true
+$player.AnswerOfAL = true
+FireAll PopulateOptions","""I don't think there's such a thing as the best cookware: only the best cook. But if what you're after are pots and pans, the best in the Sector come from the Agustin system, a must-have in every high-class restaurant.""",,
+LLIdefaultNPC0MainPreOptions,PopulateOptions,"$id == NPC_0
+!$LLIunlocktrade",,,"NPC0MainPreOptions:""I assume there's more you wanted than just small talk?""",
+LLIdefaultNPC0MainPre,DialogOptionSelected,$option == NPC0MainPreOptions,"$LLIunlocktrade = true
+$player.LLIunlocktrade = true
+FireAll PopulateOptions","""Alright then, $playerSirOrMadam: I can tell you've got the potential to be one of the Sector's rising stars, so let's get down to business.""",,
+LLITradeOptions,PopulateOptions,"$id == NPC_0
+$LLIunlocktrade",,,"LLITradeOptions_text:""Let's talk business.""",
+LLITradeOptions_text,DialogOptionSelected,"$id == NPC_0
+$option == LLITradeOptions_text","FireAll LLITradeOptions
+AddTextSmall ""The following items are available:"" highlight","""I have some rare ships for sale; you won't see them anywhere else.""",,
+LLITradeOptions_waveM,LLITradeOptions,"$id == NPC_0
+!$hasbroghtwaveM",,,"LLITradeOptions_waveM_buy:Purchase the unique Mirage-class superdestroyer for 1,000,000 credits",
+LLITradeOptions_waveM1,DialogOptionSelected,$option == LLITradeOptions_waveM_buy,"FireAll LLITradeOptions_waveM2
+","""A state-of-the-art, one-of-a-kind ship: the Mirage-class superdestroyer! And it can be yours, for a mere 1,000,000 credits. Fair warning though, I only have the one.""",,
+LLITradeOptions_waveM2,LLITradeOptions_waveM2,$id == NPC_0,"
+
+",,"LLITradeOptions_waveM2b:Purchase for 1,000,000 credits",
+LLITradeOptions_waveM2a,LLITradeOptions_waveM2,$id == NPC_0,,,LLITradeOptions_text:Cancel and return to previous menu,
+LLITradeOptions_waveM2b,DialogOptionSelected,"$id == NPC_0
+$option ==LLITradeOptions_waveM2b","LLICMD_BuyWaveM
+$hasbroghtwaveM = true
+$player.hasbroghtwaveM = true",,LLITradeOptions_text:Continue,
+LLITradeOptionsLeave,LLITradeOptions,$id == NPC_0,,,cutCommLink:Cut the comm link,
+#END LLINPC0,,,,,,
+,,,,,,

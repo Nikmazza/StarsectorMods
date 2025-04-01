@@ -1,8 +1,104 @@
+Version 1.2.14
+Save Compatible
+
+- The name of an officers aptitude is now colored in the Comm Directory.
+- Added the "Domain sector registry" intel, which displays the sectors seed as SiC removes the relevant UI element from the skill screen.
+- The "Neural Junction" skill now makes the player count as an 0.5 automated points mult instead of a 2x mult.
+
+
+
+Version 1.2.13
+Save Compatible
+
+- Best of the Best now provides a 30% ship mastery bonus instead if the Ship Mastery System mod is installed. 
+- Potentialy fixed an issue that caused the "Ad Astra" skill to make slow-burn not avoid hyperspace storms.
+- Fixed an issue that rarely prevented the save from loading because ???
+- Fixed Polarized Armor missing a part of its tooltip.
+
+
+
+Version 1.2.12
+Save Compatible
+
+- Added a config that enables reducing the visual impact of dmods, if the ship has less than 2 dmods and does not have Structural Damage.
+  - As peoples opinion on this was relatively split, it is disabled by default.
+- Fixed effects that modified the chance for dmods only using the stat of one of the skills if you have multiple (Mending/Continuous Repairs)
+- Fixed Starmapping not correctly displaying its stat change when hovering over the sensor details.
+- Fixed the ESC Shortcut missing for in the hiring dialog option.
+
+
+
+Version 1.2.11
+Save Compatible
+
+- Re-added & Improved the Automated Points widget in the fleet screen.
+- "Together as One" and "Trapped Prey" will no longer count modules for their conditions.
+- Added the "sic_fleet_encounter2" fleet tag that lets a mod delay the displaying of officers to "BeginFleetEncounter2".
+- Fixed "Countermeasures" missing the additional context about ECM.
+
+
+
+Version 1.2.10
+Save Compatible
+
+- Added the "Unrestricted Associates" config to the Lunalib settings, which enables the background to pick any aptitude.
+- Reduced "Wide-Range-Transmission" from 4 to 3 skills.
+- Nerfed the "Electronic Warfare" skill and made its tooltip more clearly mention the effect.
+- Slightly decreased the amount of skills on average for NPC fleets.
+- Remnants get slightly less additional skills than before.
+- Fixed an issue that made unequiping "Limit Breaker" reduce Sierras level.
+
+
+
+Version 1.2.9
+Save Compatible
+
+- "Derelict Fortifications" now provides +10 effective armor per dmod.
+- "Continuous Repairs" chance to avoid dmods has been decreased to 60/60/40/30 (from 70/70/50/40)
+- Reduced "Ad Astra"'s fuel & hazard damage reduction from 30% to 25%.
+- Reduced "Recovery Efforts" repair rate boost from 50% to 40%
+- Reduced "Expedition"'s cargo & fuel capacity buffs from 25% to 20%
+- "Generous Donation" now provides +1 burn speed at which the fleet is considered to be moving slowly.
+- "Low-grade Deployment" now improves the chance for ships to be recoverable.
+- "Stockpile" now reduces fuel and supply consumption by 5%.
+- "Privateering" now has a base bounty of 600 instead of 500.
+- "Provisional Replacements" no longer provides an increased chance to recover ships.
+- "Provisional Replacements" now repairs 30% hull and armor damage after combat at no cost.
+- Some grammar corrections for the loading screen tips, thanks to shmone-else.
+- Fixed defense fleets like derelict defenses regenerating with different skills when closing the interaction & interacting with them again.
+- Fixed "Trapped Prey" counting nearby fighters as allies for the target ship.
+
+
+
+Version 1.2.8
+Save Compatible
+
+- Skills like Continuous Repairs and Privateering now keep intel of their effects under the "Skills" category for 30 days.
+- The "Reconfiguration" Skill no longer negates the deployment point penalty on ships with less than 7 deployment points.
+- "Deep Dive" now provides 20% increased peak performance time for phase ships.
+- Increased both of "Well Organised" Bonuses from 25% to 33%.
+- "Command and Conquer" now provides a 5% increase to the minimum deployment points from objectives in battles.
+- Slightly increased the dmod avoidance chance from "Continuous Repairs" for frigates and destroyers.
+- Fixed "Limit Breaker" affecting Sierra, though it did not actually give her more skills.
+- Fixed yet another rare on game load crash.
+
+
+
+Version 1.2.7
+Save Compatible
+
+- The "Synchronisation" skill now applies some of its effects to nearby fighters when piloting one.
+- The "Synchronisation" skill now moves you to another nearby fighter if the piloted fighter is destroyed, but only if they are close enough.
+- Added a bunch of loading/title screen tips.
+- Added some minor vfx to the icons of a specific aptitude.
+
+
+
 Version 1.2.6
 Save Compatible
 
 - Fixed an issue which made "Increases/Reduces chance for dmods" effects not work.
-- Slightly reduced the dmod reduction from "Continious Repairs"
+- Slightly reduced the dmod reduction from "Continuous Repairs"
 - Fixed "Point Defense" no longer mentioning its boost to fighters deployed from the ship.
 
 

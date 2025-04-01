@@ -63,10 +63,11 @@ class TrappedPreyScript(var owner: Int) : BaseEveryFrameCombatPlugin() {
                 var target = entry as ShipAPI
 
                 if (!target.isAlive) continue
+                if (target.parentStation != null) continue
 
                 //Check for nearby allies
                 if (target.owner == ship.owner && target != ship) {
-                    if (MathUtils.getDistance(ship, target) <= 1200f) {
+                    if (MathUtils.getDistance(ship, target) <= 1200f && !target.isFighter) {
                         count = 0
                         break
                     }

@@ -1,0 +1,30 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 20,
+    "fluxVents": 8,
+    "goalVariant": true,
+    "hullId": "ssp_conduit",
+    "hullMods": [
+        "ssp_T_beam",
+        "ssp_CLIFF_lifesteal",
+        "phase_anchor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_conduit_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "hil"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_spot",
+                "WS0004": "ssp_spot"
+            }
+        }
+    ]
+}

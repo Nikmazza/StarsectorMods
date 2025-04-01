@@ -7,7 +7,7 @@ uniform vec3 colorMult;
 uniform float iTime;
 uniform float alphaMult;
 
-float RATE = 0.00050;
+float RATE = 0.0000200;
 vec2 texCoord = gl_TexCoord[0].xy;
 
 
@@ -26,9 +26,9 @@ void main() {
 
   	vec4 color = texture(tex, uv);
  
-  	color.r = texture(tex, uv + vec2(offset(128.0, uv) * 0.03, 0.0)).r;
-  	color.g = texture(tex, uv + vec2(offset(128.0, uv) * 0.03 * 0.16666666, 0.0)).g;
-  	color.b = texture(tex, uv + vec2(offset(128.0, uv) * 0.03, 0.0)).b;
+  	color.r = texture(tex, uv + vec2(offset(64.0, uv) * 0.03, 0.0)).r;
+  	color.g = texture(tex, uv + vec2(offset(64.0, uv) * 0.03 * 0.0, 0.0)).g;
+  	color.b = texture(tex, uv + vec2(offset(64.0, uv) * 0.03, 0.0)).b;
 
 	color.r *= colorMult.r;
 	color.g *= colorMult.g;

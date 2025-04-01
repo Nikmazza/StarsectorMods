@@ -18,14 +18,14 @@ class AdAstra : SCBaseSkillPlugin() {
     override fun addTooltip(data: SCData, tooltip: TooltipMakerAPI) {
 
         tooltip.addPara("+2 burn speed in hyperspace", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
-        tooltip.addPara("-30%% fuel usage", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
-        tooltip.addPara("-30%% damage from hazards such as hyperspace storms and solar flares", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
+        tooltip.addPara("-25%% fuel usage", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
+        tooltip.addPara("-25%% damage from hazards such as hyperspace storms and solar flares", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
 
     }
 
     override fun applyEffectsBeforeShipCreation(data: SCData, stats: MutableShipStatsAPI?, variant: ShipVariantAPI, hullSize: ShipAPI.HullSize?, id: String?) {
-        stats!!.fuelUseMod.modifyMult(id, 0.7f)
-        stats.dynamic.getStat(Stats.CORONA_EFFECT_MULT).modifyMult(id, 0.7f)
+        stats!!.fuelUseMod.modifyMult(id, 0.75f)
+        stats.dynamic.getStat(Stats.CORONA_EFFECT_MULT).modifyMult(id, 0.75f)
     }
 
     override fun applyEffectsAfterShipCreation(data: SCData, ship: ShipAPI?, variant: ShipVariantAPI, id: String?) {
@@ -34,7 +34,10 @@ class AdAstra : SCBaseSkillPlugin() {
 
     override fun advance(data: SCData, amount: Float) {
         if (data.fleet.isInHyperspace) {
-            data.fleet.stats.addTemporaryModFlat(0.1f, "sc_ad_astra", "Ad Astra", 2f, data.fleet.stats.fleetwideMaxBurnMod)
+            data.fleet.stats.fleetwideMaxBurnMod.modifyFlat("sc_ad_astra",2f, "Ad Astra")
+        }
+        else {
+            data.fleet.stats.fleetwideMaxBurnMod.unmodifyFlat("sc_ad_astra")
         }
     }
 

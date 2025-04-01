@@ -1,0 +1,67 @@
+{
+	# Reserved engine style ids (can not be used):
+	# "CUSTOM"
+	
+	"LLI_ENGINE":{
+		"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+		"contrailDuration":1,
+		"contrailWidthMult":2,
+		"contrailWidthAddedFractionAtEnd":1f,  # can be negative. makes trail spread out/narrow at the end
+		"contrailMinSeg":5, # min segment length, in pixels
+		"contrailMaxSpeedMult":2f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[255,200,150,20],
+		"contrailCampaignColor":[255,180,50,200],
+		"type":"GLOW", # GLOW or SMOKE; additive or regular blend mode
+						
+		"glowSprite":"graphics/trails/fx/ssp_engineglow.png",
+		"glowOutline":"graphics/trails/fx/ssp_engineflame.png",
+		"omegaMode":true,
+		"glowSizeMult":1,
+		"glowAlternateColor":[255,180,0,75],
+		"engineColor":[255,180,50,255],
+	},
+	
+	"LENGINE_LLI":{
+		#####"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+		"contrailParticleSizeMult":8,
+		"contrailParticleDuration":2,
+		"contrailDuration":1,
+		"contrailWidthMult":2,
+		"contrailWidthAddedFractionAtEnd":1f,  # can be negative. makes trail spread out/narrow at the end
+		"contrailMinSeg":5, # min segment length, in pixels
+		"contrailMaxSpeedMult":2f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[250,100,250,20],
+		"contrailCampaignColor":[255,180,50,200],
+		"type":"GLOW", # GLOW or SMOKE; additive or regular blend mode
+						
+		"glowSprite":"graphics/llifx/Lengineglow.png",
+		"glowOutline":"graphics/llifx/engineflame.png",
+		"omegaMode":false,
+		"glowSizeMult":1,
+		"glowAlternateColor":[255,80,200,175],
+		"engineColor":[255,10,250,255],
+	},
+	
+	"RENGINE_LLI":{
+		"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+		"contrailDuration":1,
+		"contrailWidthMult":2,
+		"contrailWidthAddedFractionAtEnd":1f,  # can be negative. makes trail spread out/narrow at the end
+		"contrailMinSeg":5, # min segment length, in pixels
+		"contrailMaxSpeedMult":2f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[2,200,15,20],
+		"contrailCampaignColor":[255,180,50,200],
+		"type":"GLOW", # GLOW or SMOKE; additive or regular blend mode
+						
+		"glowSprite":"graphics/llifx/Rengineglow.png",
+		"glowOutline":"graphics/llifx/engineflame.png",
+		"omegaMode":false,
+		"glowSizeMult":1,
+		"glowAlternateColor":[255,180,0,75],
+		"engineColor":[255,180,50,255],
+	},
+}
+

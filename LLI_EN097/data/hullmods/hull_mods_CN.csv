@@ -1,0 +1,56 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+#名字,#id,,,#设计类型,#tag,#装配界面显示的分组,#基础价值,,#是否隐藏,,#护卫装配,#驱逐装配,#巡洋装配,#主力装配,#文件位置,#描述,#简单描述,#内置描述,#图
+断崖系统,ssp_cliff,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_cliff,string.json,,,graphics/hullmods/ssp_cliff_hullmod.png
+协同式定位子系统,ssp_bias,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_bias,string.json,,,graphics/hullmods/ssp_bias_hullmod.png
+磁悬浮炮塔基座,ssp_vocaino_rangemod,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_vocaino_rangemod,"磁悬浮技术显著的降低了炮台转向时的阻力，同时也使武器更加的稳定。
+·降低所有武器{%s}后坐力，提高所有炮台{%s}的转向速度。
+·增加实弹和能量武器{%s}射程。",,,graphics/hullmods/ssp_vocaino_rangemod.png
+雷铸电场,ssp_SystemUsedTimes,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_ArcField,间歇性产生电弧打击近距离内舰船，每次造成{%s}能量伤害。,,,graphics/hullmods/ssp_assault_enhance.png
+冷聚能源模块,ssp_shieldmod,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_shieldmod,string.json,,,graphics/hullmods/ssp_shieldmod.png
+航空突击方案,ssp_combatcarrierdeck,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_combatcarrierdeck,"一套独特的作战方案，战机驾驶员使用神经链接控制战机。尽管控制范围受限，但战机可以获得更高的速度与机动性。
+·战机的机动性和最大航速增加{%s}。
+·战机作战距离减少{%s}。
+·人员损失减少{%s}。
+·不会出现飞行甲板相关的D-插件。",,,graphics/hullmods/ssp_combatcarrierdeck.png
+致密护盾,ssp_gonggong_shieldmod,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_gonggong_shieldmod,"少见的原型护盾发生器。
+·超高的护盾维持和无可挑剔的护盾效率。
+·将因护盾受损而产生的硬幅能的 %s 转换为软幅能。",,,graphics/hullmods/ssp_shieldmod.png
+私掠方案,ssp_civiliankiller,,,楼兰工业,special,special,,,true,,0,0,0,0,data.hullmods.ssp_civiliankiller,"一套独特的作战方案，内置一个比海盗还海盗的德尔塔级AI核心。这个AI核心擅长毁灭弱小的敌人，但一旦遇到强大的对手反而会成为负担。
+·对主力舰伤害降低{%s}。
+·对巡洋舰伤害增加{%s}。
+·对驱逐舰伤害增加{%s}。
+·对护卫舰伤害增加{%s}。
+·对拥有{%s}的舰船伤害增加{%s}，无论是否安装了{%s}。",,,graphics/hullmods/ssp_civiliankiller.png
+导弹护盾专用插件,ssp_Temporaryshield,,,楼兰工业,special,special,,,true,true,0,0,0,0,data.hullmods.ssp_Temporaryshield,,,,
+虚空裂隙,ssp_voidrift_hullmod,,,,special,special,,,true,true,0,0,0,0,data.hullmods.ssp_voidrift_hullmod,每隔一段时间，刷新与玩家敌对的无人机,,,
+永不过载,ssp_overloadprotection,,,,special,special,,,true,true,0,0,0,0,data.hullmods.ssp_overloadprotection,,,,
+#定位协议3选1,,,,,,,,,,,,,,,,,,,
+定位协议:光学,ssp_T_beam,,,楼兰工业,"offensive,standard","武器,楼兰工业:定位协议",1000,TRUE,,,4,6,9,15,data.hullmods.ssp_T_beam,"一组违背热力学第二定律的火控计算机，为光束武器提供强大的支持。
+·根据幅能水平，最高提升光束武器 %s 的射程。
+·根据幅能水平，光束武器对护盾伤害最多增加 %s ，每次光束造成的伤害有最高 %s 概率产生硬幅能伤害。
+·禁用非光束武器，不影响实弹槽位上的武器、内置武器、导弹武器。
+·不兼容: %s , %s 。",,,graphics/hullmods/ssp_T_beam.png
+定位协议:破绽,ssp_T_shortrange,,,楼兰工业,"offensive,standard","武器,楼兰工业:定位协议",1000,TRUE,,,4,6,9,15,data.hullmods.ssp_T_shortrange,"显著增强推进器功率，火控系统受到了严重干扰，但也因此为弱点分析系统留下更多的拓展空间。
+·根据舰船级别减少 %s 能量、实弹武器射程。
+·增加 %s 的机动性和最大航速。
+·命中船体时，命中位置越靠近船体的后方伤害就越高，最多 %s 。
+·命中护盾时，命中位置越靠近护盾的边缘伤害就越高，最多 %s 。
+·不兼容: %s 。",,,graphics/hullmods/ssp_T_shortrange.png
+定位协议:增强,ssp_T_longrange,,,楼兰工业,"offensive,standard","武器,楼兰工业:定位协议",1000,TRUE,,,4,6,9,15,data.hullmods.ssp_T_longrange,"限制舰船推进系统功率减少对火控系统干扰，为舰船提供临时性的射程增益。
+·降低 %s 的机动性和最大航速，但零幅能加速增加航速减少的数值。
+·根据舰船级别增加 %s 能量、实弹非点防御武器射程。非点防御武器开火时会降低上述射程。
+·上述射程在武器停止开火时会恢复，幅能越低速率越快。
+·强制排幅时恢复速率极大增加。",,,graphics/hullmods/ssp_T_longrange.png
+#系统改装3选1,,,,,,,,,,,,,,,,,,,
+系统改装:极化,ssp_SYS_p,,,楼兰工业,"special, no_build_in","特殊,楼兰工业:系统改装",1000,,true,,2,4,6,10,data.hullmods.ssp_SYS_p,string.json,,,graphics/hullmods/ssp_SYS_p.png
+系统改装:优化,ssp_SYS_s,,,楼兰工业,"special, no_build_in","特殊,楼兰工业:系统改装",1000,,true,,2,4,6,10,data.hullmods.ssp_SYS_s,string.json,,,graphics/hullmods/ssp_SYS_s.png
+系统改装:核心,ssp_SYS_c,,,楼兰工业,"special, no_build_in","特殊,楼兰工业:系统改装",1000,,true,,2,4,6,10,data.hullmods.ssp_SYS_c,断崖系统的效果翻倍。,,,graphics/hullmods/ssp_SYS_c.png
+#断崖系统5选2,,,,,,,,,,,,,,,,,,,
+战术方针:狂热,ssp_CLIFF_fluxdepression,,,楼兰工业,"special, no_build_in,ssp_CLIFF_basehullmod","特殊,楼兰工业:战术方针",1000,TRUE,,,3,6,9,15,data.hullmods.ssp_CLIFF_fluxdepression,string.json,,,graphics/hullmods/ssp_CLIFF_fluxdepression.png
+战术方针:末路,ssp_CLIFF_safetyoverride,,,楼兰工业,"special, no_build_in,ssp_CLIFF_basehullmod","特殊,楼兰工业:战术方针",1000,TRUE,,,10,25,40,60,data.hullmods.ssp_CLIFF_safetyoverride,string.json,,,graphics/hullmods/ssp_CLIFF_safetyoverride.png
+战术方针:递送,ssp_CLIFF_deliver,,,楼兰工业,"special, no_build_in,ssp_CLIFF_basehullmod","特殊,楼兰工业:战术方针",1000,TRUE,,,2,4,6,10,data.hullmods.ssp_CLIFF_deliver,string.json,,,graphics/hullmods/ssp_CLIFF_deliver.png
+战术方针:坚毅,ssp_CLIFF_morehp,,,楼兰工业,"special, no_build_in,ssp_CLIFF_basehullmod","特殊,楼兰工业:战术方针",1000,TRUE,,,2,4,6,10,data.hullmods.ssp_CLIFF_morehp,"·消耗结构的战术方针效果 %s 消耗。
+·获取结构的战术方针效果和 %s ， %s 获取。
+·断崖系统的数值 %s 。",,,graphics/hullmods/ssp_CLIFF_morehp.png
+战术方针:劫掠,ssp_CLIFF_lifesteal,,,楼兰工业,"special, no_build_in,ssp_CLIFF_basehullmod","特殊,楼兰工业:战术方针",1000,TRUE,,,3,6,9,15,data.hullmods.ssp_CLIFF_lifesteal,string.json,,,graphics/hullmods/ssp_CLIFF_lifesteal.png
+,,,,,,,,,,,,,,,,,,,

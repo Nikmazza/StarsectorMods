@@ -9,9 +9,12 @@ import com.fs.starfarer.api.campaign.listeners.FleetEventListener
 import com.fs.starfarer.api.loading.VariantSource
 import com.fs.starfarer.api.util.Misc
 import second_in_command.misc.NPCOfficerGenerator
+import second_in_command.misc.baseOrModSpec
+import second_in_command.misc.logger
 import second_in_command.skills.PlayerLevelEffects
 import second_in_command.specs.SCBaseSkillPlugin
 import second_in_command.specs.SCOfficer
+import java.lang.Exception
 
 //Per Fleet Data
 class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener {
@@ -147,7 +150,7 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
             for (skill in skills) {
                 skill.onDeactivation(this)
             }
-            fleet.fleetData.membersListCopy.forEach { it.updateStats() }
+            if (fleet.fleetData != null) fleet.fleetData.membersListCopy.forEach { it.updateStats() } //Calling it with FleetData null may cause issues
         }
 
         if (officer != null) {
@@ -155,7 +158,7 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
             for (skill in skills) {
                 skill.onActivation(this)
             }
-            fleet.fleetData.membersListCopy.forEach { it.updateStats() }
+            if (fleet.fleetData != null) fleet.fleetData.membersListCopy.forEach { it.updateStats() } //Calling it with FleetData null may cause issues
         }
     }
 
@@ -168,6 +171,9 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
         //Check for incompatibilities
         var categories = officer.getAptitudePlugin().categories
         for (other in getActiveOfficers()) {
+
+            if (other.aptitudeId == officer.aptitudeId) return //Dont allow multiple XOs of the same aptitude
+
             var otherCategories = other.getAptitudePlugin().categories
 
             if (categories.any { otherCategories.contains(it) }) {
@@ -187,6 +193,9 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
     }
 
     fun getAssignedOfficers() : ArrayList<SCOfficer?> {
+        if (activeOfficers == null) {
+            return ArrayList()
+        }
         return ArrayList(activeOfficers)
     }
 

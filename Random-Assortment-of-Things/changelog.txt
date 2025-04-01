@@ -1,14 +1,167 @@
+Version 2.5.11
+Save compatible with 2.4.x
+
+-> Increased the cost of the Starburst Microlauncher weapon from 12 to 14 OP.
+-> Fixed an issue that caused parts of the gilgamesh to potentialy render at the center of the combat map.
+-> Fixed an issue with the gilgamesh that caused it to repeatetly phase & unphase when not targeting any ship.
+-> Potentialy fixed an issue with the gilgamesh and some onHit weapon effects crashing (specificly one from Approlight)
+-> Fixed the Exotech Faction entry being displayed in saves where Exotech is disabled.
+
+
+
+Version 2.5.10
+Save compatible with 2.4.x
+
+-> More visual improvements on the Gilgamesh.
+-> Headquarters should now always be buildable on settlements.
+
+
+
+Version 2.5.9
+Save compatible with 2.4.x
+
+-> Severaly changed the stats of the Gilgamesh, it is now more agile, with better flux stats, but worse armor.
+-> Strenthened the Phaseshift shield in a bunch of ways.
+-> Improved how the AI uses the Gilgamesh a bit.
+-> Neural Shard officers are now always level 3, even if only geting 2 skills.
+-> Fixed ships that have been assigned a shard not updating their fleet stats immediately.
+
+
+
+Version 2.5.8
+Save compatible with 2.4.x
+
+-> The Gilgamesh now has a weak shield with limited hitpoints that it can charge by phasing.
+  -> Not entirely sure about this change yet, if il keep it probably depends on the feedback it gets.
+-> The Gilgamesh no longer comes with Phase Anchor built in.
+-> Neural Shard officers are now applied within the campaign, enabling them to trigger skills and hullmods that require an officer present.
+-> Fixed a crash with the Phase Drift skill.
+
+
+
+Version 2.5.7
+Save compatible with 2.4.x
+
+-> Exotech Alterations no longer restock.
+-> Re-Added the "Advanced Asteroid Mining" industry blueprint.
+-> Slightly improved the visuals of the genesis shipsystem.
+-> The Gilgameshes Gates should now match the ships timeflow at all times.
+-> The Expedition Hub Industry should now be buildable even if the planet you own isnt your factions planet.
+-> Fixed a rare crash with the Supernova.
+-> Slight performance improvement to the execution of the system handling hullmod.
+
+
+
+Version 2.5.6
+Save compatible with 2.4.x
+If you are using Nexerelin, requires the latest version of Nexerelin (v0.11.3) or later.
+
+-> Experimental Change that may fix the issue some people have where they take Abyssal Storm damage despite moving slowly.
+  -> Please tell me if this patch fixes that issue for you if you previously had it.
+-> Slightly increased the drop chance for seraph cores.
+-> Fixed an issue that made saves not compatible cross-platform and threw crashes if the settings.json devmode was active.
+-> Fixed the Azazel being able to take Storm/Solar Corona damage
+-> Fixed an issue that caused a nullpointer when entering Nexerelins Custom Start menu with Magiclib Achievements disabled.
+-> Fixed an issue with the Boss Core Integration that caused the ship to be seen as an automated ship.
+
+
+
+Version 2.5.5
+Save compatible with 2.4.x
+If you are using Nexerelin, requires the latest version of Nexerelin (v0.11.3) or later.
+
+-> The Abyss start now requires beating the abyss boss to be unlocked.
+-> Increased the PPT cost of the Abyssal Symphony skill.
+-> Fixed the Abyss custom start providing you with 1 less skill point than you are supposed to.
+
+
+
+Version 2.5.4
+Save compatible with 2.4.x
+If you use Second-in-Command, requires v1.2.6 or above, or it will likely crash
+
+-> The player-owned exoship now requires 1 Fuel/LY instead of 1.2 Fuel/LY. (New Save Only)
+-> Exoship Storage should be unlocked by default now, not requiring the 5000 credits payment.
+-> The Exotech Background now puts the Automated Arkas in to the Exoships storage.
+-> The Exotech Background now spawns you with an Exo-Processor.
+-> The Exotech Background now automaticly gives you the Second-in-Command executive officer.
+-> Slightly changed the theme of the abyssal custom start. Also no longer provides an additional crew conversion.
+-> The abyss start now provides you with an Abyssal officer instead of an Automation once when using Second-in-Command.
+-> The abyss start should no longer start you with low CR when using Second-in-Command.
+-> The abyss start now starts you at level 3.
+-> The abyss start now spawns you with a buffalo.
+-> Fixed the Primordial Sea Subsystem being able to overwrite the piloting officers personality.
+
+
+
+Version 2.5.3
+Save compatible with 2.4.x
+If you use Second-in-Command, requires v1.2.6 or above, or it will likely crash
+
+-> The "Standardised" skill can now only apply at most a 300 unit range increase.
+-> The Abaddons secondary effect should no longer effect normal projectiles.
+-> Fixed the Gabriel not having any preset variants in refit.
+
+
+
+Version 2.5.2
+Save compatible with 2.4.x
+If you use Second-in-Command, requires v1.2.6 or above, or it will likely crash
+
+-> Replaced the Abaddon's Lance Secondary Effect and improved its vfx
+-> Apollyon's End is now more flux efficient and has improved vfx. 
+-> Azazel's Blade is now more flux efficient and has 100 more range.
+-> Fixed an issue with the Gilgmesh that made missiles sometimes not target the right ship.
+
+
+
+Version 2.5.1
+Save compatible with 2.4.x
+If you use Second-in-Command, requires v1.2.6 or above, or it will likely crash
+
+-> The Gilgamesh now has Synergy Mounts instead of Energy, but missile weapons face harsher downsides on it.
+-> Made the Gilgamesh AI a bit less afraid to use its shipsystem.
+-> Made the "Dimensional Chain" skill base on the Wings base number of active fighters, rather than on how many are active.
+-> Moved the "Angelic Presence" skill down a tier, as it kind of competed with skills that you would always pick.
+-> Fixed a bug with the Gilgamesh shipsystem AI that made it consider allied missiles as important danger.
+
+
+
+Version 2.5.0
+Save compatible with 2.4.x
+If you use Second-in-Command, requires v1.2.6 or above, or it will likely crash
+
+-> Added the "Exotech" Second-in-Command Aptitude.
+  --> Acquire its officer by talking to Amelie.
+
+-> Fixed the "Mending" skill not working correctly.
+-> Fixed a few weapons not correctly reporting the source of their damage.
+-> Fixed some descriptions for unidentified abyssal ships being wrong.
+
+
+
+Version 2.4.9
+Save compatible with 2.4.x
+
+-> The "Abyssal Ships" skill now receives the same 10% min DP increase that the "Automated Ships" skill has aswell.
+-> Slightly reduced the size of abyssal fleets.
+-> Made Exotech Fighters AI disabled if controlled through the Synchronisation skill in Second-in-Command
+-> Fixed a rare crash with the "Forgotten Pact" skill.
+-> Fixed a crash when entering simulations from the missions screen.
+
+
+
 Version 2.4.8
 Save compatible with 2.4.x
 
 -> The Abyssal Executive Officer can now be found on a random lightsource in the main-branch of the abyss (path connected to the final system).
 -> Made the Arkas AI a bit more willing to use its shipsystem if its main weapons are missiles.
 -> Ships with the "Forgotten Pact" skill are forced to vent at high flux and receive some damage resistance while venting.
--> Fixed two or more Gabriels being able to target the same opponent as the same time.
+-> Fixed two or more Gabriels being able to target the same opponent at the same time.
 -> Fixed an issue that caused the "Angelic Presence" skill to not apply all its bonuses.
 -> Fixed an issue that made certain types of abyssal fleets hostile to eachother for a few seconds
 -> Fixed a misleading tooltip on the abyssal crew conversion hullmod.
--> Fixed a crash with the Abyss Bosses Core.
+-> Fixed a crash with the Abyss Boss Core.
 
 
 

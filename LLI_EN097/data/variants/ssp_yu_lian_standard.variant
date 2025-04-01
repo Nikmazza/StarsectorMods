@@ -1,0 +1,33 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "ssp_yu_lian",
+    "hullMods": [
+        "ssp_CLIFF_fluxdepression",
+        "ssp_CLIFF_morehp",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_yu_lian_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_blaster",
+                "WS0004": "ssp_blaster"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "pdlaser",
+                "WS0006": "pdlaser"
+            }
+        }
+    ]
+}

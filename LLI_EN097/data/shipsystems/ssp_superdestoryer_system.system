@@ -1,0 +1,23 @@
+{
+	"id":"ssp_superdestoryer_system",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.ai.ssp_AdvanceVentingAI",
+	
+	"statsScript":"data.shipsystems.ssp_superdestoryer_system",
+	
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_interdictor",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	"threatRange":1500,
+		"threatAmount":10,
+		"threatAngle":0,
+		"threatArc":360,
+	}
+}
+
+
+
+

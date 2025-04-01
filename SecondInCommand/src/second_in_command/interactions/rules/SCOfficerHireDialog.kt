@@ -4,6 +4,7 @@ import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.InteractionDialogAPI
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin
 import com.fs.starfarer.api.campaign.RuleBasedDialog
+import com.fs.starfarer.api.campaign.rules.MemKeys
 import com.fs.starfarer.api.campaign.rules.MemoryAPI
 import com.fs.starfarer.api.characters.PersonAPI
 import com.fs.starfarer.api.combat.EngagementResultAPI
@@ -14,6 +15,7 @@ import com.fs.starfarer.api.ui.CustomPanelAPI
 import com.fs.starfarer.api.ui.TooltipMakerAPI
 import com.fs.starfarer.api.util.Misc
 import lunalib.lunaExtensions.addLunaElement
+import org.lwjgl.input.Keyboard
 import second_in_command.SCUtils
 import second_in_command.specs.SCBaseSkillPlugin
 import second_in_command.specs.SCOfficer
@@ -49,6 +51,7 @@ class SCOfficerHireDialogDelegate(var original: InteractionDialogPlugin, var per
         dialog.optionPanel.addOption("\"Depends. What can you do?\"", "sc_convo_question")
 
         dialog.optionPanel.addOption("End the conversation", "sc_convo_end")
+        dialog.optionPanel.setShortcut("sc_convo_end", Keyboard.KEY_ESCAPE, false, false, false, true)
     }
 
     fun returnToPrevious() {
@@ -104,6 +107,7 @@ class SCOfficerHireDialogDelegate(var original: InteractionDialogPlugin, var per
             }
 
             dialog.optionPanel.addOption("End the conversation", "sc_convo_end")
+            dialog.optionPanel.setShortcut("sc_convo_end", Keyboard.KEY_ESCAPE, false, false, false, true)
         }
 
         if (optionData == "sc_convo_hire") {

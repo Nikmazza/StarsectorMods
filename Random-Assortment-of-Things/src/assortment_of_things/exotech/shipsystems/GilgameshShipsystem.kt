@@ -1,26 +1,23 @@
 package assortment_of_things.exotech.shipsystems
 
 import assortment_of_things.exotech.ExoUtils
+import assortment_of_things.exotech.hullmods.PhaseshiftShield
 import assortment_of_things.misc.baseOrModSpec
 import assortment_of_things.misc.getAndLoadSprite
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
 import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags
 import com.fs.starfarer.api.combat.listeners.AdvanceableListener
-import com.fs.starfarer.api.fleet.FleetMemberType
 import com.fs.starfarer.api.graphics.SpriteAPI
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript
 import com.fs.starfarer.api.loading.BeamWeaponSpecAPI
-import com.fs.starfarer.api.loading.MissileSpecAPI
 import com.fs.starfarer.api.loading.ProjectileSpecAPI
 import com.fs.starfarer.api.loading.WeaponGroupSpec
 import com.fs.starfarer.api.loading.WeaponGroupType
-import com.fs.starfarer.api.mission.FleetSide
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
 import org.lazywizard.lazylib.MathUtils
-import org.lazywizard.lazylib.combat.CombatUtils
 import org.lwjgl.util.vector.Vector2f
 import java.util.*
 import kotlin.collections.ArrayList
@@ -44,6 +41,8 @@ class GilgameshShipsystem : BaseShipSystemScript(), CombatLayeredRenderingPlugin
 
     var noLongerTeleportDrones = false
 
+    var addedListener = false
+
 
     override fun apply(stats: MutableShipStatsAPI?, id: String?, state: ShipSystemStatsScript.State?, effectLevel: Float) {
         super.apply(stats, id, state, effectLevel)
@@ -51,6 +50,12 @@ class GilgameshShipsystem : BaseShipSystemScript(), CombatLayeredRenderingPlugin
 
         if (!ship!!.hasListenerOfClass(CollissionSpecConverter::class.java)) {
             ship!!.addListener(CollissionSpecConverter())
+        }
+
+        if (!addedListener) {
+            addedListener = true
+            /*ship!!.addListener(GilgameshDamageConverter())
+            ship!!.addListener(GilgameshDamageModifier())*/
         }
 
         if (ship!!.fleetMember?.fleetData?.fleet?.isPlayerFleet == false) {
@@ -90,6 +95,13 @@ class GilgameshShipsystem : BaseShipSystemScript(), CombatLayeredRenderingPlugin
 
         if (!activated && system.state == ShipSystemAPI.SystemState.IN) {
             activated = true
+
+            var phaseshiftShieldListener = ship!!.getListeners(PhaseshiftShield.PhaseshiftShieldListener::class.java).firstOrNull()
+            if (phaseshiftShieldListener != null) {
+                phaseshiftShieldListener.shieldHP += PhaseshiftShield.PhaseshiftShieldListener.maxShieldHP * PhaseshiftShield.PhaseshiftShieldListener.regenPerSystemUse
+                phaseshiftShieldListener.shieldHP = MathUtils.clamp(phaseshiftShieldListener.shieldHP, 0f, PhaseshiftShield.PhaseshiftShieldListener.maxShieldHP)
+            }
+
 
             target = findTarget()
 
@@ -163,6 +175,8 @@ class GilgameshShipsystem : BaseShipSystemScript(), CombatLayeredRenderingPlugin
         if (target != null) {
             for (drone in drones) {
 
+                drone.mutableStats.timeMult.applyMods(ship!!.mutableStats.timeMult) //Match Drones Timemult to ship, otherwise increases their time flow when you activate it when exiting phase
+
                 updateDroneEntryLevel(drone)
                 var droneLevel = getDroneLevel(drone)
 
@@ -220,11 +234,17 @@ class GilgameshShipsystem : BaseShipSystemScript(), CombatLayeredRenderingPlugin
                     }
                 }
 
+                drone.shipTarget = target
 
                 val shipAngleToTarget = Misc.getAngleInDegrees(drone.location, target!!.location)
                 var isEnemyInShipArc = Misc.isInArc(ship!!.facing, 40f, shipAngleToTarget)
 
 
+                //This hopefully fixes some aiming issues, i think since the drones dont have velocity, its not considered in the innitial speed boost for weapons
+              /*  var currentSpeed = Vector2f(drone.velocity)
+                drone.velocity.set(Vector2f(ship!!.velocity))*/
+
+                //drone.velocity.set(Vector2f(ship!!.velocity)) //May potentialy fix issues where weapons are misaimed, i think before it got messed up since the drones have no velocity, which ofc isnt true when firing.
 
                 var predictedPoint = Global.getCombatEngine().getAimPointWithLeadForAutofire(drone, 1f, target, projSpeed)
                 turnTowardsPointV2(drone, predictedPoint, 0f)
@@ -450,13 +470,14 @@ class GilgameshShipsystem : BaseShipSystemScript(), CombatLayeredRenderingPlugin
 
         //Damage reduction
         drone.getMutableStats().getEnergyWeaponDamageMult().modifyMult("rat_gilgamesh_drone", 0.4f)
-        drone.getMutableStats().getMissileWeaponDamageMult().modifyMult("rat_gilgamesh_drone", 0.4f)
         drone.getMutableStats().getBallisticWeaponDamageMult().modifyMult("rat_gilgamesh_drone", 0.4f)
+        drone.getMutableStats().getMissileWeaponDamageMult().modifyMult("rat_gilgamesh_drone", 0.3f)
 
+        drone.mutableStats.missileWeaponRangeBonus.modifyMult("rat_gilgamesh_drone", 0.75f)
 
-        drone.getMutableStats().ballisticWeaponRangeBonus.modifyFlat("rat_gilgamesh_drone", 300f)
-        drone.getMutableStats().energyWeaponRangeBonus.modifyFlat("rat_gilgamesh_drone", 300f)
-        drone.getMutableStats().missileWeaponRangeBonus.modifyFlat("rat_gilgamesh_drone", 300f)
+        drone.getMutableStats().ballisticWeaponRangeBonus.modifyFlat("rat_gilgamesh_drone", 350f)
+        drone.getMutableStats().energyWeaponRangeBonus.modifyFlat("rat_gilgamesh_drone", 350f)
+        drone.getMutableStats().missileWeaponRangeBonus.modifyFlat("rat_gilgamesh_drone", 350f)
 
 
         drone.setCollisionClass(CollisionClass.NONE)

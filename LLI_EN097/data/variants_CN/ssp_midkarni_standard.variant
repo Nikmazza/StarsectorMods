@@ -1,0 +1,60 @@
+{
+    "displayName": "standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "ssp_midkarni",
+    "hullMods": [
+        "heavyarmor",
+        "reinforcedhull",
+        "targetingunit",
+        "ssp_CLIFF_lifesteal",
+        "ssp_T_shortrange",
+        "ssp_CLIFF_deliver"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_midkarni_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "ssp_solareclipse"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "ssp_gravitonluncher",
+                "WS0007": "ssp_gravitonluncher"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "lightac",
+                "WS0009": "lightac",
+                "WS0010": "lightac",
+                "WS0011": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "phasebeam",
+                "WS0002": "phasebeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0014": "flak"}
+        }
+    ],
+    "wings": [
+        "ssp_mudslide",
+        "ssp_mudslide"
+    ]
+}

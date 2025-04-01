@@ -1,0 +1,67 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 5,
+    "fluxVents": 50,
+    "hullId": "ssp_karni",
+    "hullMods": [
+        "ssp_T_shortrange",
+        "ssp_CLIFF_lifesteal",
+        "ssp_CLIFF_fluxdepression",
+        "targetingunit",
+        "heavyarmor",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_karni_M1",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "gigacannon",
+                "WS0008": "gigacannon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "ssp_shredder",
+                "WS0018": "ssp_shredder"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "ssp_gravitonluncher",
+                "WS0006": "ssp_gravitonluncher"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "phasebeam",
+                "WS0002": "phasebeam",
+                "WS0003": "phasebeam",
+                "WS0004": "phasebeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "flak",
+                "WS0010": "flak"
+            }
+        }
+    ],
+    "wings": [
+        "ssp_mudslide",
+        "ssp_mudslide",
+        "ssp_mudslide",
+        "ssp_mudslide"
+    ]
+}

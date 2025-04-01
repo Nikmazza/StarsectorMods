@@ -1,0 +1,7 @@
+id,name,short,desc,cost,isBonus,isGolden,spritePath,effectPlugin,extra1,extra2,source,tags,spriteAuthor
+ssp_UNGP_FleetSynergism,克隆军团,降低相同舰船的部署点,舰队中重复数量最多的基础船体的部署点降低 %s x 相同舰船数量(向下取整)。最多降低 %s 。 ,-3,TRUE,TRUE,graphics/icons/ssp_UNGP_FleetSynergism.png,data.ssp_UNGP.ssp_FleetSynergism,生效船体:,,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体
+ssp_UNGP_CRDecay,腐朽武备,武器产生更多幅能,如果舰船装配了相同的武器(不包括内置武器)，每个重复的武器增加所有武器幅能产生 %s 。,3,FALSE,,graphics/icons/ssp_UNGP_CRDecay.png,data.ssp_UNGP.ssp_CRDecay,幅能产生增加,,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体
+ssp_OddEven,月相诅咒,舰船易伤或虚弱,奇数月时，所有我方舰船武器伤害 %s 。偶数月时，所有我方舰船受到所有伤害 %s 。,4,FALSE,,graphics/icons/ssp_UNGP_oddeven.png,data.ssp_UNGP.ssp_OddEven,奇数,偶数,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体
+ssp_HyperspaceTopography,勘探者的遗产,提供超空间地形进度,当该规则被选取时，增加 %s 点'超空间地形'进度。,-1,TRUE,,graphics/icons/ssp_UNGP_hyperspacetopography.png,data.ssp_UNGP.ssp_HyperspaceTopography,站在巨人的肩膀上,,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体
+ssp_VoidRift,黑暗之门,开拓者无人机增援敌方,战斗开始时，生成一个黑暗之门，黑暗之门每间隔 %s 秒就会生成随机的开拓者舰船，甚至有可能出现强大的守护者。,4,FALSE,,graphics/icons/ssp_UNGP_VoidRift.png,data.ssp_UNGP.ssp_VoidRift,,,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体
+ssp_reaperrain,毁灭之雨,横跨战场的鱼雷攻击,每间隔 %s 秒，从战场的左侧或者右侧对玩家舰队发射 %s 枚射程横跨战场的 %s 。,3,FALSE,,graphics/icons/ssp_UNGP_reaperrain.png,data.ssp_UNGP.ssp_reaperrain,一波死神鱼雷从战场左侧出现,一波死神鱼雷从战场右侧出现,"楼兰海军学说,c162初版,c204再版",,楼兰军工综合体

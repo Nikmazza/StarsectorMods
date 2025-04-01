@@ -31,7 +31,7 @@
 	
 	"drop_prob_officer_rat_chronos_core":0.075,
 	"drop_prob_officer_rat_cosmos_core":0.075,
-	"drop_prob_officer_rat_seraph_core":0.10,
+	"drop_prob_officer_rat_seraph_core":0.15,
 	"drop_prob_officer_rat_primordial_core":0,
 	
 	"drop_prob_officer_rat_neuro_core":0,
@@ -83,6 +83,8 @@
 		  "military":"graphics/portraits/cores/rat_military_core.png",
 		  
 		  "exo_processor":"graphics/portraits/cores/rat_exo_processor.png",
+		  
+		  "rat_neural_shard":"graphics/portraits/cores/rat_neural_shard.png",
 		},
 		
 		"rat_intel": {
@@ -107,6 +109,7 @@
 		  "amelie_holo":"graphics/portraits/rat_exo1_holo.png",
 		  "xander":"graphics/portraits/rat_exo2.png",
 		  "defector":"graphics/portraits/rat_exo3.png",
+		  "executive":"graphics/portraits/rat_exo_exec.png",
 		},
 		
 		"rat_preload": {

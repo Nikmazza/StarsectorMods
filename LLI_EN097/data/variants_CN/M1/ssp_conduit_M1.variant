@@ -1,0 +1,29 @@
+{
+    "displayName": "standard",
+    "fluxCapacitors": 20,
+    "fluxVents": 6,
+    "hullId": "ssp_conduit",
+    "hullMods": [
+        "ssp_CLIFF_lifesteal",
+        "ssp_CLIFF_fluxdepression",
+        "phase_anchor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_conduit_M1",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "autopulse"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ionpulser",
+                "WS0004": "ionpulser"
+            }
+        }
+    ]
+}

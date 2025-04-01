@@ -1,9 +1,9 @@
 {
   "id": "assortment_of_things",
   "name": "Random Assortment of Things",
-  "author": "Lukas04",
+  "author": "Lukas04 & SnazzyPantsMcGee",
   "utility": "false",
-  "version": "2.4.8",
+  "version": "2.5.11",
   "description": "A collection of things I create whenever a random idea pops up into my head.",
   "gameVersion": "0.97a-RC9",
   "jars": ["jars/RandomAssortmentofThings.jar"],

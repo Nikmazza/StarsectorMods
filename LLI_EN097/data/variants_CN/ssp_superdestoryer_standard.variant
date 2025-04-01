@@ -1,0 +1,14 @@
+{
+  "variantId": "ssp_superdestoryer_standard",
+  "hullId": "ssp_superdestoryer",
+  "displayName": "standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

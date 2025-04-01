@@ -1,0 +1,164 @@
+{
+  "hullName": "ssp_superdestoryer",
+  "hullId": "ssp_superdestoryer",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/ssp_superdestoryer.png",
+  "style": "LLI",
+  "height": 212,
+  "width": 155,
+  "center": [77, 106],
+  "collisionRadius": 127,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 116.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ssp_cliff"
+  ],
+  "builtInWeapons": {
+    "WS0001": "ssp_superdestoryer_cover"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [52, 0],
+      "renderOrderMod": 5
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -35,
+      "locations": [-23, -26]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 35,
+      "locations": [-23, 26]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [25, 0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-51, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-58, 55.5],
+      "length": 15,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-58, -55.5],
+      "length": 15,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-71, 42.5],
+      "length": 15,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-71, -42.5],
+      "length": 15,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-77, 35.5],
+      "length": 15,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-77, -35.5],
+      "length": 15,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-83, -25],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-83, 25],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LLI_ENGINE"
+    },
+    {
+      "location": [-102, 0],
+      "length": 36,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LLI_ENGINE"
+    }
+  ],
+  "bounds": [
+    -103.5, 14.5,
+    -39, 75,
+    -30, 75,
+    -24.5, 58,
+    -4.5, 58,
+    4.5, 41,
+    25, 41,
+    36, 30,
+    87, 30,
+    104, 13,
+    104, -13,
+    87, -30,
+    36, -30,
+    25, -41,
+    4.5, -41,
+    -4.5, -58,
+    -24.5, -58,
+    -30, -75,
+    -39, -75,
+    -103.5, -14.5
+  ]
+}

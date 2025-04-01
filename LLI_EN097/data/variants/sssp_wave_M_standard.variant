@@ -1,0 +1,14 @@
+{
+  "variantId": "ssp_wave_M_standard",
+  "hullId": "ssp_wave_M",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

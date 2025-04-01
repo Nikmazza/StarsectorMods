@@ -1,0 +1,41 @@
+{
+    "displayName": "standard",
+    "fluxCapacitors": 11,
+    "fluxVents": 25,
+    "goalVariant": true,
+    "hullId": "ssp_thunder",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "ssp_CLIFF_fluxdepression",
+        "ssp_CLIFF_deliver"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_thunder_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0011": "ssp_solareclipse"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "ssp_nukeM",
+                "WS0008": "ssp_nukeM",
+                "WS0012": "ssp_nuke",
+                "WS0013": "ssp_nuke"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "hveldriver",
+                "WS0010": "hveldriver"
+            }
+        }
+    ]
+}

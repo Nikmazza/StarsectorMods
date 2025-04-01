@@ -24,7 +24,7 @@ class HeadquartersFacility : BaseSettlementFacility() {
     }
 
     override fun canBeBuild(): Boolean {
-        return settlement.primaryPlanet.faction.id == Factions.PLAYER
+        return settlement.primaryPlanet.market.isPlayerOwned
     }
 
     override fun canNotBeBuildReason(tooltip: TooltipMakerAPI, data: SettlementData) {

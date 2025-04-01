@@ -7,10 +7,12 @@ import lunalib.lunaDebug.LunaDebug
 import lunalib.lunaSettings.LunaSettings
 import second_in_command.misc.NPCFleetInflater
 import second_in_command.misc.SCSettings
+import second_in_command.misc.SpecialEventHandler
 import second_in_command.misc.snippets.AddAllOfficersSnippet
 import second_in_command.misc.snippets.AddXPToOfficersSnippet
 import second_in_command.scripts.*
 import second_in_command.specs.SCSpecStore
+import second_in_command.ui.intel.SectorSeedIntel
 import java.lang.Exception
 
 class SCModPlugin : BaseModPlugin() {
@@ -83,6 +85,8 @@ class SCModPlugin : BaseModPlugin() {
         Global.getSector().addTransientScript(SCNeuralJunctionScript())
         Global.getSector().addTransientScript(VanillaSkillsDisabler())
         Global.getSector().addTransientScript(AutomatedShipsManager())
+        Global.getSector().addTransientScript(CommDirectoryRecolorScript())
+        //Global.getSector().addTransientScript(SectorSeedAdderScript())
         Global.getSector().listenerManager.addListener(NPCFleetInflater(), true)
 
         Global.getSector().addTransientListener(SCCampaignEventListener())
@@ -100,6 +104,12 @@ class SCModPlugin : BaseModPlugin() {
 
         if (SCSettings.spawnWithRemoteSurvey && !Global.getSector().characterData.abilities.contains(Abilities.REMOTE_SURVEY)) {
             Global.getSector().characterData.addAbility(Abilities.REMOTE_SURVEY)
+        }
+
+        SpecialEventHandler.checkEvents()
+
+        if (!Global.getSector().intelManager.hasIntelOfClass(SectorSeedIntel::class.java)) {
+            Global.getSector().intelManager.addIntel(SectorSeedIntel(), true)
         }
     }
 

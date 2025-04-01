@@ -24,15 +24,12 @@ class Mending : SCBaseSkillPlugin() {
 
     }
 
-    override fun applyEffectsBeforeShipCreation(data: SCData, stats: MutableShipStatsAPI, variant: ShipVariantAPI, hullSize: ShipAPI.HullSize, id: String) {
+    override fun callEffectsFromSeparateSkill(stats: MutableShipStatsAPI, hullSize: ShipAPI.HullSize, id: String) {
 
         if (stats.isAutomated()) {
             stats.dynamic.getMod(Stats.DMOD_ACQUIRE_PROB_MOD).modifyMult(id, 0f)
             stats.dynamic.getMod(Stats.INDIVIDUAL_SHIP_RECOVERY_MOD).modifyFlat(id, 2f)
         }
-
-
-
     }
 
     override fun applyEffectsAfterShipCreation(data: SCData, ship: ShipAPI, variant: ShipVariantAPI, id: String) {

@@ -1,0 +1,58 @@
+{
+    "displayName": "standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 19,
+    "goalVariant": true,
+    "hullId": "ssp_seaquake",
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+        "ssp_CLIFF_fluxdepression",
+        "ssp_CLIFF_morehp",
+        "ssp_T_longrange"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_seaquake_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "ssp_heatneedle"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0012": "ssp_nuke",
+                "WS0013": "ssp_nuke"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "ssp_gravitonluncher",
+                "WS0008": "ssp_gravitonluncher"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "ionbeam",
+                "WS0005": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "pdlaser",
+                "WS0007": "pdlaser",
+                "WS0010": "pdlaser",
+                "WS0011": "pdlaser"
+            }
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "variantId": "ssp_mercurylake",
+  "hullId": "ssp_mercurylake",
+  "displayName": "Superheavy Interceptor",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "hullMods": ["pointdefenseai","no_weapon_flux","ssp_overloadprotection"],
+  "weaponGroups": [
+	{
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "irpulse"
+      }
+    },
+	{
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "ssp_vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

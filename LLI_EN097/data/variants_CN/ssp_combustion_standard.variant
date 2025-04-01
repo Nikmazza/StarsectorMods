@@ -1,0 +1,36 @@
+{
+    "displayName": "standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "ssp_combustion",
+    "hullMods": [
+        "ssp_T_longrange",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ssp_combustion_standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "hveldriver"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "ssp_MedMissle"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "vulcan",
+                "WS0004": "vulcan",
+                "WS0005": "vulcan",
+                "WS0006": "vulcan"
+            }
+        }
+    ]
+}
