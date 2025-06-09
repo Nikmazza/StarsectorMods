@@ -1,0 +1,10 @@
+{
+  "id":"YNA",
+	"name":"Ynadar Nexus Alliance",
+	"author":"Protonus",	
+	"version":"0.3.0-RC1",
+	"description":"A hard Midline™ focused faction mod with a limited roster of very flexible ships.",
+	"gameVersion":"0.98a-RC5",
+	"jars":["jars/YNA.jar"],
+	"modPlugin":"data.scripts.YNAPlugin",
+}

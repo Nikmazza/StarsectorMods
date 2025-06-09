@@ -1,0 +1,50 @@
+{
+  "hullName": "Tremor Drone",
+  "hullId": "vice_terminator_dem",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/drones/drone_terminatorB.png",
+  "style": "MIDLINE",
+  "height": 21,
+  "width": 18,
+  "center": [9, 8],
+  "collisionRadius": 40,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 30,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [0, 0]
+    },
+    {
+      "id": "WS DEM",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 360,
+      "angle": 0,
+      "locations": [0, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-4, 0],
+      "length": 24,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "TREMOR_DRONE"
+    }
+  ],
+  "bounds": [
+    14, 0,
+    -2, 9,
+    -5, 0,
+    -2, -8
+  ]
+}

@@ -1,0 +1,77 @@
+{
+    "displayName": "Magma",
+    "fluxCapacitors": 23,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "yna_arsonguard",
+    "hullMods": [
+        "armoredweapons",
+        "ecm",
+        "insulatedengine",
+        "targetingunit",
+        "turretgyros",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "yna_arsonguard_Magma",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "MH 01": "yna_svento_m",
+                "MS 02": "breach",
+                "MS 04": "breach",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "MS 01": "heatseeker",
+                "MS 03": "heatseeker",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "yna_emg_m",
+                "WS0002": "yna_emg_m",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "yna_emg_s",
+                "WS0004": "yna_emg_s",
+                "WS0005": "yna_emg_s",
+                "WS0006": "yna_emg_s",
+                "WS0007": "yna_emg_s",
+                "WS0008": "yna_emg_s",
+                "WS0009": "yna_emg_s",
+                "WS0010": "yna_emg_s",
+                "WS0011": "yna_emg_s",
+                "WS0012": "yna_emg_s",
+                "WS0013": "yna_emg_s",
+                "WS0014": "yna_emg_s",
+                "WS0015": "yna_emg_s",
+                "WS0016": "yna_emg_s",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "yna_pd_las1_s",
+                "WS0018": "yna_pd_las1_s",
+                "WS0019": "yna_pd_las1_s",
+                "WS0020": "yna_pd_las1_s",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

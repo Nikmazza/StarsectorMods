@@ -1,0 +1,58 @@
+{
+  "variantId": "hhe_artificer_standard",
+  "hullId": "hhe_artificer",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter",
+	"targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSL-02": "plasma",
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WSL-01": "cyclone"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSM-01": "salamanderpod",
+        "WSM-02": "salamanderpod",
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+		"WSL-03": "guardian",
+		"WSS-01": "hhe_pdpulser",
+		"WSS-02": "hhe_pdpulser",
+        "WSS-03": "hhe_pdpulser",
+        "WSS-04": "hhe_pdpulser",
+        "WSS-05": "hhe_pdpulser",
+        "WSS-06": "hhe_pdpulser"	
+      },
+    },
+  ],
+  "modules": [],
+  "wings": [
+    "claw_wing",
+    "hhe_broadsword_ht_wing",
+    "hhe_broadsword_ht_wing",
+    "hhe_ftr_talon_interceptor_wing"
+  ]
+}

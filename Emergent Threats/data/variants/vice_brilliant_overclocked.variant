@@ -1,12 +1,13 @@
 {
     "displayName": "Overclocked",
     "fluxCapacitors": 0,
-    "fluxVents": 16,
+    "fluxVents": 18,
     "goalVariant": true,
     "hullId": "brilliant",
     "hullMods": [
         "safetyoverrides",
-        "vice_adaptive_thruster_control"
+        "vice_adaptive_thruster_control",
+        "vice_feedback_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -30,7 +31,7 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyburst",
+                "WS 001": "vice_phased_electrolaser",
                 "WS 002": "pdlaser",
                 "WS 003": "pdlaser"
             }

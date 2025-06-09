@@ -17,6 +17,7 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.SpecialItemData;
+import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -79,6 +80,8 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 		sector.getListenerManager().addListener(new IXReputationResetListener());
 		sector.getListenerManager().addListener(new PruneHaulerMarketListener());
 		sector.getListenerManager().addListener(new UpgradeFuelProdListener());
+		
+		makeTrinityKnowTanker();
     }
 	
 	@Override
@@ -254,7 +257,26 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 			}
 		}
 		sector.getMemoryWithoutUpdate().set("$ix_vertex_updated", true);
+		
+		updateColonyItemsForIndustries("cryoarithmetic_engine", "ix_fuel_production");
+		updateColonyItemsForIndustries("synchrotron", "ix_fleet_command");
+		
+		makeTrinityKnowTanker();
 	}
+	
+	private void makeTrinityKnowTanker() {
+		if (Global.getSettings().getModManager().isModEnabled("PAGSM")) {
+			//Global.getSettings().getHullSpec("iapetus_tw").addTag("ix_trinity");
+			Global.getSector().getFaction("ix_trinity").addKnownShip("iapetus_tw", false);
+		}
+	}
+	
+	private void updateColonyItemsForIndustries(String specialItemID, String listOfAdditionalIndustries) {
+        SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(specialItemID);
+        String prevParams = spec.getParams();
+        if (prevParams.contains(listOfAdditionalIndustries)) return;
+        spec.setParams(prevParams + ", " + listOfAdditionalIndustries);
+    }
 	
 	@Override
 	public void generate(SectorAPI sector) {

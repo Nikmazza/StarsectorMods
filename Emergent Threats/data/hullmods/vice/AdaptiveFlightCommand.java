@@ -64,7 +64,7 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 		return false;
 	}
 	
-	//checks if the fighter bays to be deleted are unequipped, as "hidden" bays with equipped fighters do not refund Ordance Points
+	//checks if the fighter bays to be deleted are unequipped, as "hidden" bays with equipped fighters do not refund Ordnance Points
 	private boolean baysToDeleteAreEmpty(ShipAPI ship) {
 		int modBayCount = 0;
 		if (ship.getVariant().hasHullMod("rat_autonomous_bays")) modBayCount++;

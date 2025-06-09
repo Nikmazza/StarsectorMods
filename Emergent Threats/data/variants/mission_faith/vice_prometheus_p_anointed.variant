@@ -1,0 +1,59 @@
+{
+    "displayName": "Anointed",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "prometheus2",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "vice_field_repair_nanites",
+        "reinforcedhull",
+        "shield_shunt",
+        "vice_unified_targeting_core",
+		"vice_mission_deloy_faith"
+    ],
+    "permaMods": ["vice_mission_deloy_faith"],
+    "sMods": [],
+    "variantId": "vice_prometheus_p_anointed",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "heavymg",
+                "WS 005": "heavymg",
+                "WS 031": "hephag",
+                "WS 032": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "squall"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "lightac",
+                "WS 014": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vulcan",
+                "WS 003": "vulcan",
+                "WS 006": "vulcan",
+                "WS 012": "vulcan",
+                "WS 015": "vulcan",
+                "WS 016": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "vice_bolo_p_wing",
+        "vice_bolo_p_wing"
+    ]
+}

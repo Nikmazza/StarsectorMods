@@ -80,7 +80,7 @@ public class ASF_SilahaOnHitEffect implements OnHitEffectPlugin {
         	float sparkAngle2 = projectile.getFacing() - MathUtils.getRandomNumberInRange(79f, 89f);
         	
 			Vector2f sparkVel1 = MathUtils.getPointOnCircumference(fxVel, MathUtils.getRandomNumberInRange(30f, 175f), sparkAngle1);
-			Vector2f sparkVel2 = MathUtils.getPointOnCircumference(fxVel, 48f - MathUtils.getRandomNumberInRange(30f, 175f), sparkAngle2);
+			Vector2f sparkVel2 = MathUtils.getPointOnCircumference(fxVel, MathUtils.getRandomNumberInRange(30f, 175f), sparkAngle2);
 			
 			Global.getCombatEngine().addSmoothParticle(point,
 					sparkVel1,

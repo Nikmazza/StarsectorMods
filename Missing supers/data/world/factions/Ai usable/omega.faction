@@ -1,0 +1,12 @@
+{
+    "hullFrequency":{
+        "hulls":{
+            "missp_continuum":5,
+		},
+	},
+    "knownShips":{
+        "hulls":[
+            "missp_continuum",
+        ],
+	},
+},

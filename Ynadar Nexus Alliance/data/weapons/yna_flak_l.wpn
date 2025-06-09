@@ -1,0 +1,28 @@
+{
+	"id":"yna_flak_l",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"displayArcRadius":600,
+	"turretSprite":"graphics/ynadar/weapons/lb/yna_flak3_t_b.png",
+	"turretGunSprite":"graphics/ynadar/weapons/lb/yna_flak3_t_r.png",
+	"hardpointSprite":"graphics/ynadar/weapons/lb/yna_flak3_h_b.png",
+	"hardpointGunSprite":"graphics/ynadar/weapons/lb/yna_flak3_h_r.png",	
+	"visualRecoil":6.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[31, -11, 32, -4, 32, 4, 31, 11],
+	"turretAngleOffsets":[0, 0, 0, 0],
+	"hardpointOffsets":[37, -11, 38, -4, 38, 4, 37, 11],
+	"hardpointAngleOffsets":[0, 0, 0, 0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":16.0,
+					   "particleSizeMin":8.0,
+					   "particleSizeRange":8.0,
+					   "particleDuration":0.12,
+					   "particleCount":24,
+					  "particleColor":[255,155,75,245]},
+	"projectileSpecId":"yna_flak3_shot",  # projectile that will be fired
+	"fireSoundTwo":"flak_fire",	
+}

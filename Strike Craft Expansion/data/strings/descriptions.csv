@@ -1,0 +1,177 @@
+id,type,text1,text2,text3,notes
+########################,,,,,
+## CAPITAL,,,,,
+hhe_sentinel,SHIP,"An advanced capital ship designed primarily as a carrier, the midline Sentinel-class is the defining assault carrier in the sector able to field heavy fighters and interceptors through its numerous fighter craft squadrons. The ship is rarely seen outside the Persean League systems.
+
+The Sentinel-class supercarrier is among the largest warships in the sector.  Its defining feature are its massive fighter complement (and costs) that exceeds that of the more-common Astral-class carriers, and its central Desolator Cannon, a massive flak weapon with strong development ties to the Devastator modular cannon.
+
+Domain doctrine required that Sentinel-class supercarriers stand by behind the front lines, providing fighter coverage alongside its smaller auxiliary carrier brethren.  The Desolator cannon was to be utilized against stray missiles and hostile fighter groups that had made it behind the lines, and then firing the smaller PD arrays and flares if the fighter groups had made it past the Desolator, and only activating the heavy and inefficient shield generator to intercept ordnance if all other defensive lines had been breached.
+
+Many new Sentinel captains were previously Legion-class Battlecarrier captains, which was considerably better equipped for a front-line role.  These new Sentinel captains tended to neglect the new Domain doctrine, whether due to old habits or plain antipathy for the doctrine, attempting to use their Desolator cannons in a more offensive role.  While occasionally effective, neither the armor nor the shielding of the Sentinel-class was designed for front line attrition, resulting in Sentinel casualties far in excess than anticipated.  It's rumored that the misuse of these ships prompted the Domain to redesign the upcoming Astral project with smaller point-defense weaponry and stand-off missile mounts in order to discourage reckless front-line use of the carrier.
+
+The early attrition rates and excessive procurement cost of new supercarriers ensure that the design remains rare within the Persean Sector, only occasionally seeing a resurgence whenever a high-ranking Kazeron admiral decides they require a new flagship.  The Sentinel-class remains a favourite subject of armchair tacticians, idly theorizing how the warship may have changed the history of Domain naval development had the design not received disreputable recognition from its misuse.  An independent captain with the credits (or luck) to acquire one of the few remaining ships may have the chance to put those theories into practice.",,,
+hhe_astral_culann,SHIP,"A technologically advanced capital ship designed primarily as a carrier, the Astral (Early) class is able to project vast amounts of firepower through its numerous fighter craft squadrons.
+
+The Astral (early) class was originally a pre-production variant, designed and produced by the Domain before the full production model's Recall Device had matured into a combat-ready system.  Its service history in the Domain was limited due to the quick completion and fielding of the finalized Astral-class production models, but blueprints rediscovered in a Culaan cache breathed new life into the older variation.  Primary differences between the two architectures include the pre-production type's lack of an integrated recall device, alternative weapon emplacements emphasizing defensive countermeasures over missile strike capabilities, and slightly older internal subsystems and software protocols.  Despite its theoretical disadvantage in terms of offensive capabilities, the lack of the same cutting edge systems that define the production model results in the pre-production variant being significantly less maintenance-intensive, an attribute that appeals to many financially astute navies of the Persean Sector.
+
+The true power of an Astral lies in its fighter craft, which give the carrier unprecedented flexibility in the battle space. Nearly any enemy ship type that appears on the captain's scopes can quickly be dispatched, given just a launch order of a wing of nimble interceptors, strike bombers or fighters. Automated facilities ensure that a squadron coming back from a mission can quickly be repaired and rearmed behind the safety of the powerful X-35 shield emitter. The Astral-class is very vulnerable should the X-35 come down. This is why when not protected by its fighter wings it never travels alone, but instead is at the head of space-borne carrier fleets. These task forces are a rarity, as the power they hold is usually required to subjugate entire planets or blockade enormous areas of space.
+
+The Astral is perhaps the most technologically advanced capital ship that can be seen in the Sector today. Few serve with the Hegemony due to the high technological requirements that it imposes on orbital docks. Senior Naval Corporate Officers of the Tri-Tachyon Corporation or extremely wealthy private admirals sometimes make an Astral their flagship.",,,
+hhe_artificer,SHIP,"A vanguard combat-carrier capital ship, the Artificer-class Battlecarrier is able to provide heavy fire support with its energy weapons, fighters and missiles.
+
+The Artificer-class capital ship comes from the Domain's battlecarrier line of warships, and was developed concurrently with the Astral-class carrier.  While the Artificer lacks some of the more advanced subsystems such as the X-35 shield emitter and recall device, its dependence on tried-and-true subsystems is generally seen to be as beneficial for the class; the Artificer's battlefield endurance is every bit as good as older Battlecarrier models.
+
+Notable features of the Artificer-class include its armored hangar bays and central runway, protecting strike craft during both takeoff and landing.  Fighter pilots and Strike Wing commanders lovingly refer to the Artificer as the ""Battle Egg"" and appreciate the knowledge that their parent carrier will frequently be in the heat of battle right alongside them.  Individuals frequently reject more prestigious positions aboard an Astral-class carrier to remain a part of an Artificer's crew.
+
+Artificers serve frequently alongside Astrals in Tri-Tachyon carrier groups, and less commonly among independent navies.  The well-rounded battlecarrier is flexible enough to fit into nearly any fleet, if given the chance.",,,
+,,,,,
+### CRUISER,,,,,
+,,,,,
+,,,,,
+,,,,,
+### DESTROYER,,,,,
+hhe_gemini,SHIP,"The Gemini Persean League variation, found in convoys or battlefleets, replaces most of its cargo space for offensive and defensive capabilities. Has three fighter bays to bolster defenses or commence strike attacks.",,,
+,,,,,
+### FRIGATE,,,,,
+,,,,,
+,,,,,
+########################,,,,,
+## FIGHTER,,,,,
+hhe_ftr_broadsword_ht,SHIP,"The final result of cycles of incremental improvements and modernization packages, the Broadsword (Late) enhances the original's durability with a compact shield generator supported by a late Domain-era flux core, at the cost of the original's logistical simplicity.  ",,,
+hhe_ftr_broadsword_ht_mkii,SHIP,"An upgraded variant, the Broadsword Mk.II carries a decoy flare launcher that draws defensive fire away from high-value targets like bombers and their payloads. The fighter also comes with a small shield generator allowing the bow of the fighter to be safely protected. It also comes equipped with stinger mines, which makes it treacherous for enemy ships to engage freely.",,,
+,,,,,
+hhe_ftr_cazin,SHIP,"A post-collapse attempt to reverse-engineer the Broadsword heavy fighter, that the Cazin-class is spaceworthy at all is a testament to the rugged construction of the original source material.  The Cazin falls short of its model in all parameters except in manufacturability and maintenance.  Suitable only for the most desperate and Luddics.",,,
+hhe_ftr_cazin_pirate,SHIP,"Hacked from a degraded Cazin LPC, the original armament and flare system were ripped out in favour of more guns.  With the original being only nominally spaceworthy to begin with, this pirate conversion stresses the poor Cazin chassis to its absolute limit.",,,
+hhe_ftr_bonnethead,SHIP,"Heavily armed and armored, the Tinhead heavy fighter projects massive walls of lead capable of obliterating frigates and light fighter craft.  However, its underpowered main thrusters mean the Tinhead is incapable of forcing an engagement against its intended prey.",,,
+hhe_ftr_lux_tt,SHIP,"The Lux is the leading fighter of the Tri-Tachyon Restoration Project, bringing unused fighter designs back for piloting. Armed with a pulse phaser and flares, the Lux isn¡¯t ideal against small and agile fighters but rather clearing the path with its shields. The chassis design is also oddly familiar¡¦",,,
+hhe_ftr_brokkr,SHIP,"Originally developed as a mountable hull system for larger ships, the Brokkr is a drone launcher with a very efficient nanoforge onboard. Capable of producing drones at rapid speed, the Brokkr¡¯s objective is to disrupt their target with unending amounts drones allowing other ships to deliver the payload. Unfortunately the bulky Brokkr requires a much larger crew and its paper thin armor doesn¡¯t do much for protection. ",,,
+hhe_ftr_lucent,SHIP,"An autonomous AI heavy fighter, the Lucent is heavily protected and armed with a light ion lance, which can destroy lighter fighter craft outright as well as penetrate through heavily fluxed warship shielding to disable systems.",,,
+hhe_ftr_sarissa,SHIP,"A conversion of the Gladius favored by Luddics, the Ixwa replaces the LMG emplacements and IR Pulse turret with a Swarmer battery and Vulcan turret.  Excels at engaging large numbers of unshielded fighters, with the cover from more numerous wings.",,,
+hhe_ftr_loki,SHIP,"Equipped with a light Corvette-level flux core and shuttle-class shield emitter, pairs of late Domain-era Loki Superheavy Fighters bring frigate-level firepower to the few carrier battlegroups with the logistical capacity to field them.",,,
+gg_broadsword_lg,SHIP,"The Sindrian Diktat enhances select LPCs for use by the elite Lion’s Guard.  The standard upgrade package includes a flux core overclocked to 10% greater performance over the stock fighter model, and fighter-grade solar shielding for additional safety when operating in the skies of Inner Askonia.",,,
+gg_gladius_lg,SHIP,"The Sindrian Diktat enhances select LPCs for use by the elite Lion’s Guard.  The standard upgrade package includes a flux core overclocked to 10% greater performance over the stock fighter model, and fighter-grade solar shielding for additional safety when operating in the skies of Inner Askonia.",,,
+gg_broadsword_xiv,SHIP,"Broadswords made up the backbone of the Fourteenth Domain Battlegroup’s fighter complement, and their original LPCs remain as valuable prizes for the modern-day Hegemony.  In addition to the modernized flux core and an enhanced armor package, the XIV Broadsword also replaces the wing-mounted flare launchers with Swarmer packs.  The partial loss of its flare complement is more than made up for by its drastically improved ability to dogfight hostile interceptors and fighters, as well as directly threaten frigates and lighter destroyers.
+
+Like many other Domain-era formations, the Fourteenth Battlegroup received personalized warships, heavily modified using pre-collapse methods.  Battlegroup carriers usually received specialized LPCs, tuned to produce heavily modified and sometimes exotic variants of standard fighter craft, designed to fill the specific needs of that particular battlegroup.
+
+The Broadsword XIV variant was borne from the particular needs of the Fourteenth Domain Battlegroup.  Outfitted for decisive battle, the majority of the fleet consisted of heavy, low tech ships-of-the-line.  Carrier hosts were few and far between relative to other battlegroups, with the majority of the fighter complement provided by Legion battlecarriers.  Domain wargaming suggested that the Fourteenth Battlegroup would be vulnerable to near-pear, carrier-centric adversaries taking air superiority and singling out capital ships for destruction through massed bomber waves.  The department of military acquisitions suggested that this shortcoming could be rectified by developing and deploying a fighter variant that could endure the onslaught of fighter swarms and fight them off with the assistance of the fleet's native point-defense weaponry.  The outline for this type of fighter was named ""Strike Craft Project 14.1""
+
+The Broadsword was an obvious candidate for modification.  Not only was the base variant quite rugged, the air crews of the Fourteenth Battlegroup were already primarily assigned Broadsword wings and could thus easily be trained to utilize a new variant.  While other airframes were given a cursory glance, it was quite clear from the start to all involved that the venerable Broadsword would be chosen to ease the Fourteenth Battlegroup's fighter problem.
+
+The Broadsword XIV modernization incorporated the typical improvements of the XIV fighter program, including an enhanced flux core and a heavy armor package.  The primary issue of the Broadsword in the air-to-air role was its LMG's poor armor penetration, which proved to be unreliable at best against hardened targets (such as another Broadsword).  This issue was solved by scouring through old Broadsword prototype blueprints, which had anti-fighter Swarmer SRM launchers in place of the wing-mounted flares of the production model, apparently changed to reduce production costs.  The design team reverted these changes and sent the proposal to the Board of Military Acquisitions.
+
+The result of Strike Craft Project 14.1 speaks for itself.  The XIV variant is widely thought to be the best version of the Broadsword, and among the top of its class in the air superiority role.  Original Broadsword XIV LPCs remain prized possessions to both collectors and warring factions within the Persean Sector, long after the original XIV Legions were lost to time.",,,
+gg_gladius_xiv,SHIP,"The Gladius was the Fourteenth Domain Battlegroup's premiere heavy interceptor of choice.  In addition to the modernized flux core and heavier armor, the fighter's machineguns were upgraded to dual variants and the flare launcher magazine was expanded threefold, drastically improving its ability to protect allied fighter & interceptor groups.
+
+Like many other Domain-era formations, the Fourteenth Battlegroup received personalized warships, heavily modified using pre-collapse methods.  Battlegroup carriers usually received specialized LPCs, tuned to produce heavily modified and sometimes exotic variants of standard fighter craft, designed to fill the specific needs of that particular battlegroup.
+
+The Gladius XIV variant was built to the specifications of the Fourteenth Domain Battlegroup.  As a follower of the Domain's decisive battle dotrine, the Fourteenth possessed very hangar fighter space compared to other battlegroups, primarily provided by Legion XIV carriers, which were potentially vulnerable to being overwhelmed by hostile fighter craft.  As a result, XIV fighter craft were redesigned to get the absolute most out of their birds.
+
+The Gladius largely satisfied the requirements for a heavy interceptor, and only received incremental (though well-received) improvements to its various subsystems.  The flux core received the usual improvements of the XIV Fighter Program, which was used to satisfy the additional flux demand of installing an additional machine gun to each wing.  Defensive systems were enhanced with an up-armoring package standard for XIV fighters and additional flare launchers, an upgrade virtually necessitated by XIV Broadsword's flare launchers being significantly trimmed back.
+
+The resultant Gladius XIV is a straightforward, fairly unflashy upgrade to the original model.  Despite lacking some of the speed and handling of the originals, it's nonetheless capable of catching and engaging the most common heavy fighters and bombers that the Persean Sector has to offer.",,,
+gg_warthog_xiv,SHIP,"The Warthog XIV exaggerates the original's strengths - and weaknesses.  Upgrades to the armor package and the installation of a centerline large-bore mortar (made feasible by an upgrade to the flux core) produced an assault fighter variant that is tougher, more powerful, and slower than ever before.
+
+Like many other Domain-era formations, the Fourteenth Battlegroup received personalized warships, heavily modified using pre-collapse methods.  Battlegroup carriers usually received specialized LPCs, tuned to produce heavily modified and sometimes exotic variants of standard fighter craft, designed to fill the specific needs of that particular battlegroup.
+
+The Warthog, already capable of taking the brunt of a Destroyer salvo and surviving to tell the tale, seemed like a natural fit for the Fourteenth Battlegroup.  In fact, a prototype of the Warthog XIV was already undergoing test flights at a research station before the XIV Fighter Program was formally announced.
+
+The Warthog received the usual upgrade package for XIV fighter craft, including a modernized flux core and even more ablative armor on top of its already generous supply.  The final prototype, armed with three light mortars, was nearly complete and ready to be sent to the Department of Military Acquisition for approval when an assistant engineer observed that, if one were to remove the current armament, and move this subsystem here and that mechanism there, it might be theoretically possible to mount a heavy mortar in the centerline of the Warthog.  The project leader took that engineer's idle thought and ran with it.
+
+And so began the Warthog XIV's teething issues.  The heavy mortar was installed painlessly enough, but firing the weapon in a test flight generated an unsafe level of noise in the cockpit (teeth-rattling, according to the test pilot), necessitating yet another revision to the core design's armor layout.  A second test flight went off nearly without a hitch, until the low-speed handling test saw the XIV Warthog prototype spiral out of control upon firing the weapon.  Fixes lead to issues, and development was indefinitely stalled.  The original project leader was forced into an early retirement.
+
+The Warthog XIV variant eventually made it to production, presumably after the development team ran out of things to break.  The troublesome development cycle resulted in the Warthog XIV becoming the final strike fighter to be incorporated into the Fourteenth Battlegroup, despite being the first to begin development.  For what little consolation it brought the original design team, the Warthog XIV went on to have a distinguished and reliable record with the Fourteenth Battlegroup, and continues to serve the Hegemony after the Collapse.",,,
+,,,,,
+## INTERCEPTOR,,,,,
+hhe_ftr_spark_tt,SHIP,"The Spark is the leading interceptor of the Tri-Tachyon Restoration Project, bringing unused fighter designs back for piloting. Equipped with a low powered burst PD laser, the Spark¡¯s true strength comes from its speed, maneuverability and an omnishield which makes them durable against other interceptors. The chassis design is also oddly familiar¡¦",,,
+hhe_ftr_draugr,SHIP,"Slick, agile and deadly, the Draugr is a prized phase interceptor developed by the Tri-Tachyon corporation. Armed with a single IR Pulse laser and two Bright missiles, the Draugr can chase and fight nearly any adversary.",,,
+hhe_ftr_helot,SHIP,"The Helot is a heavier and more reliable upgrade than the average talon. Sacrificing its top speed for slightly better durability, the Helot comes with two improved autoguns along with a reliable engine which allows it to catch targets much easier.",,,
+hhe_ftr_talon,SHIP,"The final result of cycles of incremental improvements and modernization packages, the Talon (Late) receives a revised weapon package better suited to destroy shielded fighters.  Unfortunately, the introduction of its own lightweight shield emitter does little to improve the expected survival time of the flimsy base chassis.",,,
+gg_thunder_lg,SHIP,"The Sindrian Diktat enhances select LPCs for use by the elite Lion’s Guard.  The standard upgrade package includes a flux core overclocked to 10% greater performance over the stock fighter model, and fighter-grade solar shielding for additional safety when operating in the skies of Inner Askonia.",,,
+gg_thunder_xiv,SHIP,"Thunder XIV interceptors are upgraded with a hardened armor package and an enhanced flux core, allowing for the removal of the Ion Cannon's inhibitor circuit.  Though the armor slows the interceptor down somewhat, two Thunder XIVs can nearly match the EMP payload of an entire Claw wing.  Frequently paired with the Gladius XIV.",,,
+,,,,,
+## BOMBER,,,,,
+hhe_ftr_manta,SHIP,"A heavily armored and armed support fighter, each Manta is equipped with six Locust short-ranged missiles.  A novel folding wing design allows for dense packing of fighters into limited bay space.",,,
+hhe_ftr_flash_tt,SHIP,"The Flash is the leading strike bomber of the Tri-Tachyon Restoration Project, bringing unused fighter designs back for piloting. Equipped with two mini phase charges, the Flash¡¯s true objective is to carpet bomb a large area preventing enemy ships to engage the area. The ship itself is incredibly durable allowing it to deploy all its charges even under the heaviest fire. The chassis design is also oddly familiar...",,,
+hhe_ftr_prism,SHIP,"An autonomous AI bomber, the Prism carries an exotic lachesis torpedo payload which possesses limited shield-penetration capabilities",,,
+gg_khopesh_xiv,SHIP,"The Khopesh XIV is an incremental upgrade to the original version, sporting an enhanced armor package and annihilator rockets with slightly more powerful engines than stock.  The Khopesh's engine itself is equipped with an afterburner, partially making up for the increased weight of the armor package by allowing for short bursts of speed at key points.
+
+Like many other Domain-era formations, the Fourteenth Battlegroup received personalized warships, heavily modified using pre-collapse methods.  Battlegroup carriers usually received specialized LPCs, tuned to produce heavily modified and sometimes exotic variants of standard fighter craft, designed to fill the specific needs of that particular battlegroup.
+
+The Khopesh was one of the few bombers available in the Fourteenth Battlegroup's arsenal.  As the battlegroup was projected to do most of its heavy-hitting with their capital ships, there was little need for heavy, slow bombers like the Dagger, and there was plenty of need for fighter craft to screen the Battlegroup from other fighters.  Despite this, the power that bombers could project was too useful to ignore, and the Fourteenth legion ultimately received some bomber craft for use against shipping.
+
+The Khopesh, already a battle-tested design, received only incremental improvements.  On top of the flux core enhancement and up-armoring package typical of XIV fighters, fighter-grade ECCM was fit to the rocket pods to slightly increase the probability of a hit.  The engines were overclocked with the ability to temporarily exceed stock specifications in order to cope with the sluggish controls due to the weight of the armor package.
+
+The greatest difference between the XIV Khopesh and the stock variant may well be psychological; with the knowledge that they're better protected, Khopesh XIV pilots often get significantly closer to their prey before firing off the rockets than their counterparts, leading to greater hit probabilities and a reduction in the number of sorties-per-kill.  Though pilot choices are not really a direct (or even intended) effect of the XIV Fighter Program, the results were nonetheless welcome by the Fourteenth Battlegroup.",,,
+,,,,,
+## SUPPORT,,,,,
+hhe_ftr_vernd,SHIP,"The Vernd is a lightweight support fighter designed to supplement the point-defense systems of allied warships while saturating the defense grid of hostile armadas.  Armed with two PD Pulsers and a Shrieker missile pod, the Vernd's limited weapon array is negligible against warship-grade armor and is highly vulnerable to being swarmed.",,,
+,,,,,
+,,,,,
+## DRONES,,,,,
+hhe_drone_tetra,SHIP,Drone ship. Do not read this please.,,,
+hhe_drone_brokkr,SHIP,Drone ship. Do not read this please.,,,
+,,,,,
+,,,,,
+,,,,,
+########################,,,,,
+## WEAPON,,,,,
+hhe_prickler,WEAPON,"The Prickler PD Turret is a cheap precision point-defense weapon.  Intended to be used in concert with high-volume Point Defense systems such as the Vulcan cannon, Pricklers are liable to be overwhelmed by either swarms of small rockets or large and heavily-armed missiles.",,,
+hhe_heavyvulcan,WEAPON,"A triple barreled version of the standard vulcan cannon, the heavy vulcan cannon allows it to project an impressive wall of lead at slightly improved ranges.  The necessarily more compact ammunition feed means the Heavy Vulcan turret can only sustain its firepower for short periods of time before ammunition throttling issues occur and drop the weapon's effective fire rate by half.",Point Defense,,
+hhe_devastator_sentinel,WEAPON,"Essentially a rapid-fire capital-sized flak cannon, the Desolator is a larger variant of the Devastator built into the Sentinel.
+
+Two long barrels launch a rapid barrage of explosive projectiles. The rapid rate of fire produces such a volume of munitions that the proximity detectors become somewhat unreliable, setting themselves off at seemingly random range. The margin of error was deemed acceptable after spectacular field results.
+
+A single salvo from the Desolator can eliminate a fighter wing or flight of missiles, though the shells are of only limited use against larger or more distant targets.",Assault,,
+,,,,,
+hhe_shrieker,WEAPON,"Built to last, the Shrieker is an autoforging missile pod intended to suppress point defenses for other missile weapons and fighters.  The missiles themselves are exceptionally cheap and quick to manufacture, but their near-inert warheads are only filled with just enough explosives to register as a threat to point-defense networks.",Support Fire,,
+,,,,,
+hhe_pdpulser,WEAPON,"The PD Pulser is one of the cheapest energy PD mount available.  The highly diffuse beam is just effective enough to act as a deterrant against unarmored targets, and completely toothless against hardened targets, even by beam PD standards.  Nicknamed the ""flashlight"" by warship crews unfortunate enough to rely primarily on them.",Point Defense,,
+hhe_pulsephaser,WEAPON,"Rapidly fires weak bolts of energy in the infrared spectrum.  The unstable projectile displays desirable ablative properties against light armor, but collapses prematurely when faced with any grade of shield emitter.  Most commonly used in an anti-fighter role.",Suppression,,
+hhe_pdlaserstreamer,WEAPON,"Building off the PD Burst laser design, the PD streamer uses a low-energy wavelength that allows for consistent and reliable operation against missile and fighter threats.  The same wavelength that makes the streamer's sustained operations possible also compromises the Streamer's effectiveness against any sort of hardened targets.",Point Defense,,
+hhe_ir_autopulse,WEAPON,"The IR Autopulse is a battery of 3 smaller IR pulse lasers in a pod, tuned to engage fighters and missiles.  Sheer volume of fire makes the weapon a reasonable general-purpose tool, but the pod's mounting requirements are daunting.",,,
+,,,,,
+## WEAPON FIGHTERS,,,,,
+hhe_ftr_bonnetgun,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_autogun,WEAPON,"A common secondary weapon for ground-based military vehicles, autoguns are smaller and less powerful than light machine guns, but sometimes find use on starfighters in applications when available equipment space is at a premium.",Fighter,,
+hhe_ftr_vulcanrunt,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+,,,,,
+hhe_ftr_prox_mine,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_phasecharge_mini,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+,,,,,
+hhe_ftr_nugget,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_srmsingle,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_brightmissile,WEAPON,"Most commonly used as a fighter-to-fighter weapon on high-tech interceptors, Bright Missiles have a small low-inductance capacitor on the tip of the warhead to create sudden EMP influx, leaving the target fighter engineless and helpless while the interceptor brings its other weapons to bear.",Fighter,,
+hhe_ftr_locust,WEAPON,"A volley of 6 Locust SRMs built into the Manta-class fighter, a generous supply of raw feed gives the fighter effectively limitless loiter time.",Fighter,,
+hhe_ftr_locust_dummy,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+,,,,,
+hhe_ftr_lachesis,WEAPON,"An exotic torpedo weapon most frequently used by Prism-class bombers, the Lachesis is a threat even to ships that it can't overload outright due to its limited shield-piercing properties.",Fighter,,
+,,,,,
+hhe_ftr_pdpulser,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_pdlaser,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_pdlaser_cyan,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_pdlaser_orange,WEAPON,"A diffuse point-defense laser, compact enough to be mounted as a fighter turret without compromising maneuverability or logistical requirements.  While energetic enough to destroy fighter-grade SRMs when fielded en-masse, the diffuse nature of the beam makes the weapon near worthless against hardened targets.",Fighter,,
+hhe_ftr_pdlaser_pink,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_pdburst,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_pdburst_cyan,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_pdburst_orange,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_pdburst_pink,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+,,,,,
+hhe_ftr_pulsephaser,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_irpulse,WEAPON,Fighter weapon. If this dropped something is wrong with the weapon.csv,Fighter,,
+hhe_ftr_ion_lance_light,WEAPON,"A light suppressive strike weapon, the Light Ion Lance can destroy lighter fighter craft outright as well as generate EMP arcs through heavily fluxed targets.",Fighter,,
+,,,,,
+,,,,,
+########################,,,,,
+## SHIP SYSTEMS,,,,,
+,,,,,
+hhe_sys_SuperReserveWing,SHIP_SYSTEM,Deploys a large detachment of fighters that can fight for a very long time before returning to the carrier. The amount of fighters deployed is doubled above the maximum wing size.,Fighter,Deploys a large detachment of fighters that can fight for a very long time before returning to the carrier. The amount of fighters deployed is doubled above the maximum wing size.,
+hhe_sys_drones_tetra,SHIP_SYSTEM,Deploys 8 laser-armed Tetra Drones. The drones can be ordered to closely guard the ship.,Drones,Deploys 8 laser-armed Tetra Drones.,
+hhe_sys_drones_brokkr,SHIP_SYSTEM,Deploys 3 laser-armed defensive drones. The drones can be ordered to closely guard the ship.,Drones,Deploys 3 laser-armed defensive drones.,
+hhe_sys_flarelauncher_blue,SHIP_SYSTEM,Launches flares that interfere with point-defenses.,Defensive,Launches flares that interfere with point-defenses.,
+hhe_sys_flarelauncher_blue_single,SHIP_SYSTEM,Launches a flare that interfere with point-defenses.,Defensive,Launches a single flare that interfere with point-defenses.,
+hhe_sys_flarelauncher_single,SHIP_SYSTEM,Launches a flare that interfere with point-defenses.,Defensive,Launches a single flare that interfere with point-defenses.,
+,,,,,
+,,,,,
+########################,,,,,
+###id,type,text1,text2,text3,notes

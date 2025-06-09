@@ -1,0 +1,38 @@
+{
+  "variantId": "hhe_bonnethead_fighter",
+  "hullId": "hhe_ftr_bonnethead",
+  "displayName": "Heavy Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-06": "swarmer_fighter",
+        "WSS-07": "swarmer_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-01": "vulcan",
+        "WSS-04": "vulcan",
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-05": "hhe_ftr_pdlaser_orange"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

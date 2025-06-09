@@ -1,0 +1,79 @@
+{
+	"id":"yna_las1_mrdem",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"onFireEffect":"com.fs.starfarer.api.impl.combat.dem.DEMEffect",
+	"behaviorSpec":{"behavior":"CUSTOM",
+		"minDelayBeforeTriggering":0,
+		"triggerDistance":[900,950],
+		"preferredMinFireDistance":[800,850],
+		"turnRateBoost":50,
+		"targetingTime":1,
+		"firingTime":61.5,
+		"targetingLaserId":"targetinglaser1",
+		"targetingLaserFireOffset":[10, 0],
+		"payloadWeaponId":"yna_las1_loadem",
+		"targetingLaserRange":0,
+		"targetingLaserArc":3,
+		"bombPumped":false,
+		"snapFacingToTargetIfCloseEnough":true,
+		"fadeOutEngineWhenFiring":false;
+		"randomStrafe":true;
+		"destroyMissleWhenDoneFiring":true,
+		"destroyedExplosionColor":[200,100,0,200],
+	},
+	"sprite":"graphics/ynadar/missiles/yna_las1_missile.png",
+	"size":[12,26],	
+	"center":[6,13],
+	"collisionRadius":11,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,255,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":50, # purely visual	
+	"explosionSpec":{"duration":0.12f,
+					 "radius":75,
+					 "coreRadius":50, # full damage within core radius - at least equal to proximity fuse range
+					 "collisionClass":PROJECTILE_NO_FF,
+					 "collisionClassByFighter":PROJECTILE_FIGHTER,
+					 "particleSizeMin":4.0,
+					 "particleSizeRange":4.0,
+					 "particleDuration":1,
+					 "particleCount":100,
+
+					 "particleColor":[255,100,80,255],
+					 "explosionColor":[255,70,70,255],
+
+					 "useDetailedExplosion":true,
+					 "useDetailedExplosionColorAlpha":true,
+					 "detailedExplosionRadius":150,
+					 "detailedExplosionFlashRadius":350,
+					 "detailedExplosionFlashDuration":1.25,
+
+					 "detailedExplosionFlashColorFringe":[255,20,50,125],
+					 "detailedExplosionFlashColorCore":[155,155,155,255],
+					 "sound":"system_canister_flak_explosion"},									 
+	"engineSpec":{"turnAcc":150,
+				  "turnRate":50,
+				  "acc":400,
+				  "dec":70},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-13, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[200,100,0,200],
+						"contrailDuration":1,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailColor":[255,150,100,75],
+						"glowSizeMult":2.5,
+						"glowAlternateColor":[240,120,0,200],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":7.0,
+				    "length":40.0,
+				    "angle":180.0},
+				    ]
+}

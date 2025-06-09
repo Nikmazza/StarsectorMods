@@ -1,0 +1,14 @@
+#### PERSEAN LEAGUE FACTION
+{
+    "knownFighters":{
+		"fighters":[
+			"hhe_cazin_wing",
+			"hhe_cazin_pirate_wing",
+		],
+    },
+    "knownHullMods":{
+        "hullMods":[
+			"hhe_MissileReload",
+        ],
+    },
+},

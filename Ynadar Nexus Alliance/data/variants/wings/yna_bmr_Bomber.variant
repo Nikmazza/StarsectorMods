@@ -1,0 +1,34 @@
+{
+  "variantId": "yna_bmr_Bomber",
+  "hullId": "yna_bmr",
+  "displayName": "Bomber",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MS 01": "annihilator_fighter",
+        "MS 02": "annihilator_fighter",
+        "MS 03": "annihilator_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "yna_ac_s_ftr",
+        "WS 002": "yna_ac_s_ftr",
+        "WS 003": "yna_ac_s_ftr",
+        "WS 004": "yna_ac_s_ftr"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

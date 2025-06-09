@@ -25,21 +25,21 @@ public class UpgradeFuelProdListener extends BaseCampaignEventListener {
 		if (Global.getSector().getMemoryWithoutUpdate().is("$colony_upgradeFuelProd", false)) { 
 			if (market.hasIndustry(FUEL) && market.hasIndustry(FUEL_IX)) {
 				if (market.getIndustry(FUEL).isBuilding()) {	
-					Global.getSector().getPlayerFleet().getCargo().getCredits().add(450000); 
+					Global.getSector().getPlayerFleet().getCargo().getCredits().add(450000);
+					market.removeIndustry(FUEL, null, false);
 				}
-				market.removeIndustry(FUEL, null, false);
-			} 
+			}
 		}
 		
 		if (Global.getSector().getMemoryWithoutUpdate().is("$colony_upgradeFuelProd", true)) {
 			//determine old industry modifiers
 			Industry fuel = market.getIndustry(FUEL);
+			boolean isImproved = fuel.isImproved();
 			String coreId = fuel.getAICoreId();
 			String itemId = null;
-			boolean isImproved = fuel.isImproved();
 			if (fuel.getSpecialItem() != null) itemId = fuel.getSpecialItem().getId();
 			
-			//add new industry with modifiers and hide old industry
+			//add new industry with modifiers and remove old industry
 			if (itemId == null) market.addIndustry(FUEL_IX);
 			else market.addIndustry(FUEL_IX, new ArrayList<String>(Arrays.asList(itemId)));
 			if (coreId != null) market.getIndustry(FUEL_IX).setAICoreId(coreId);

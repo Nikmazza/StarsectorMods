@@ -8,7 +8,6 @@ import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipwideAIFlags;
 import com.fs.starfarer.api.util.IntervalUtil;
 import org.lazywizard.lazylib.MathUtils;
-import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 public class ASF_TemporalCoreAI implements ShipSystemAIScript {
@@ -31,10 +30,17 @@ public class ASF_TemporalCoreAI implements ShipSystemAIScript {
     @Override
     public void advance(float amount, Vector2f missileDangerDir, Vector2f collisionDangerDir, ShipAPI target) {
     	// don't check if paused / can't use the system
-    	if (engine.isPaused() || !AIUtils.canUseSystemThisFrame(ship)) {
-            THREAT = 0f;
+    	if (engine.isPaused()) {
             return;
         }
+    	
+    	if (!ship.getPhaseCloak().isActive()) {
+    		if (ship.getPhaseCloak().getCooldownRemaining() > 0f) {
+                THREAT = 0f;
+    			return;
+    		}
+    	}
+    	
     	
         // don't check if timer not up
         timer.advance(amount);

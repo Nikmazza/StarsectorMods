@@ -95,21 +95,21 @@ public class IXReputationListener extends BaseCampaignEventListener {
 	}
 	
 	private void giveHyperionIX() {
-		ShipVariantAPI v = Global.getSettings().getVariant("hyperion_ix_special").clone();
+		ShipVariantAPI v = Global.getSettings().getVariant("hyperion_ix_special");
 		FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
 		member.setShipName(NameListUtil.HGS_Judicator);
 		Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);
 	}
 	
 	private void giveRadiantIX() {
-		ShipVariantAPI v = Global.getSettings().getVariant("radiant_ix_custom_2").clone();
+		ShipVariantAPI v = Global.getSettings().getVariant("radiant_ix_custom_2");
 		FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
 		member.setShipName(NameListUtil.HGS_Judicator);
 		Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);
 	}
 
 	private void giveRadiantTW() {
-		ShipVariantAPI v = Global.getSettings().getVariant("radiant_tw_heavy").clone();
+		ShipVariantAPI v = Global.getSettings().getVariant("radiant_tw_heavy_2");
 		FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
 		member.setShipName(NameListUtil.TWC_Kupala);
 		Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);
@@ -119,7 +119,7 @@ public class IXReputationListener extends BaseCampaignEventListener {
 		PersonAPI player = Global.getSector().getPlayerPerson();
 		player.getStats().setSkillLevel(IX_ADMIN_SKILL_ID, 1f);
 		
-		ShipVariantAPI v = Global.getSettings().getVariant("kite_original_Stock").clone();
+		ShipVariantAPI v = Global.getSettings().getVariant("kite_original_Stock");
 		FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
 		member.setShipName(NameListUtil.ISS_Kupala);
 		Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);
@@ -141,6 +141,7 @@ public class IXReputationListener extends BaseCampaignEventListener {
 		FactionAPI indep = sector.getFaction(Factions.INDEPENDENT);
 		FactionAPI brighton = sector.getFaction("brighton");
 		FactionAPI herd = sector.getFaction("magellan_theherd");
+		FactionAPI modNinthAlly = sector.getFaction("DrnArm_calidus");
 		
 		List<FactionAPI> factionList = sector.getAllFactions();
 		factionList.remove(ix);
@@ -154,6 +155,7 @@ public class IXReputationListener extends BaseCampaignEventListener {
 		factionList.remove(pirates);
 		factionList.remove(indep);
 		factionList.remove(herd);
+		factionList.remove(modNinthAlly);
 		
 		ix.setRelationship(marzanna.getId(), 1f);
 		trinity.setRelationship(ix.getId(), 1f);
@@ -163,7 +165,7 @@ public class IXReputationListener extends BaseCampaignEventListener {
 		hvb.setRelationship(trinity.getId(), -1f);
 		hvb.setRelationship(player.getId(), -1f);
 		
-		//if no background setting to 0.5 start
+		//if not taking the agent background background setting that causes 0.5 starting rep with IX
 		if (ix.getRelationship(player.getId()) < 0.40f) {
 			ix.setRelationship(player.getId(), -0.5f);
 			marzanna.setRelationship(player.getId(), -0.5f);

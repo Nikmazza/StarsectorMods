@@ -1,165 +1,120 @@
 {
-  "bounds": [
-    -35,
-    -25.5,
-    16.5,
-    -27.5,
-    38,
-    0,
-    38,
-    -0,
-    16.5,
-    27.5,
-    -35,
-    25.5
-  ],
+  "hullName": "Mercury (Path)",
+  "hullId": "missp_path_mercury",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/mercury/missp_path_mercury.png",
+  "style": "LOW_TECH",
+  "height": 75,
+  "width": 58,
+  "center": [29, 37.5],
+  "collisionRadius": 50,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 44.5,
+  "viewOffset": 0,
   "builtInMods": [
     "ill_advised"
   ],
-  "center": [
-    29,
-    37.5
-  ],
-  "collisionRadius": 50,
-  "engineSlots": [
-    {
-      "angle": 180,
-      "contrailSize": 7,
-      "length": 23,
-      "location": [
-        -36.5,
-        6.5
-      ],
-      "style": "LOW_TECH",
-      "width": 7
-    },
-    {
-      "angle": -180,
-      "contrailSize": 7,
-      "length": 23,
-      "location": [
-        -36.5,
-        -6.5
-      ],
-      "style": "LOW_TECH",
-      "width": 7
-    },
-    {
-      "angle": 180,
-      "contrailSize": 6,
-      "length": 23,
-      "location": [
-        -36.5,
-        12.5
-      ],
-      "style": "LOW_TECH",
-      "width": 6
-    },
-    {
-      "angle": -180,
-      "contrailSize": 6,
-      "length": 23,
-      "location": [
-        -36.5,
-        -12.5
-      ],
-      "style": "LOW_TECH",
-      "width": 6
-    },
-    {
-      "angle": 180,
-      "contrailSize": 5,
-      "length": 13,
-      "location": [
-        -35.5,
-        16.5
-      ],
-      "style": "LOW_TECH",
-      "width": 5
-    },
-    {
-      "angle": -180,
-      "contrailSize": 5,
-      "length": 13,
-      "location": [
-        -35.5,
-        -16.5
-      ],
-      "style": "LOW_TECH",
-      "width": 5
-    },
-    {
-      "angle": 180,
-      "contrailSize": 5,
-      "length": 13,
-      "location": [
-        -33.5,
-        20.5
-      ],
-      "style": "LOW_TECH",
-      "width": 5
-    },
-    {
-      "angle": -180,
-      "contrailSize": 5,
-      "length": 13,
-      "location": [
-        -33.5,
-        -20.5
-      ],
-      "style": "LOW_TECH",
-      "width": 5
-    }
-  ],
-  "height": 75,
-  "hullId": "missp_path_mercury",
-  "hullName": "Mercury (Path)",
-  "hullSize": "FRIGATE",
-  "shieldCenter": [
-    0,
-    0
-  ],
-  "shieldRadius": 44.5,
-  "spriteName": "graphics/ships/mercury/missp_mercury_path.png",
-  "style": "LOW_TECH",
-  "viewOffset": 0,
   "weaponSlots": [
     {
-      "angle": 180,
-      "arc": 360,
       "id": "WS0001",
-      "locations": [
-        -18.5,
-        -0
-      ],
+      "size": "SMALL",
+      "type": "BALLISTIC",
       "mount": "TURRET",
-      "size": "SMALL",
-      "type": "BALLISTIC"
+      "arc": 210,
+      "angle": 180,
+      "locations": [-18.5, -0]
     },
     {
-      "angle": 0,
-      "arc": 5,
       "id": "WS0002",
-      "locations": [
-        11.5,
-        20
-      ],
-      "mount": "HARDPOINT",
       "size": "SMALL",
-      "type": "MISSILE"
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [11.5, 20]
     },
     {
-      "angle": -0,
-      "arc": 5,
       "id": "WS0003",
-      "locations": [
-        11.5,
-        -20
-      ],
-      "mount": "HARDPOINT",
       "size": "SMALL",
-      "type": "MISSILE"
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [11.5, -20]
     }
   ],
-  "width": 58
+  "engineSlots": [
+    {
+      "location": [-36.5, 6.5],
+      "length": 23,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-36.5, -6.5],
+      "length": 23,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-36.5, 12.5],
+      "length": 23,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-36.5, -12.5],
+      "length": 23,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-35.5, 16.5],
+      "length": 13,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-35.5, -16.5],
+      "length": 13,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-33.5, 20.5],
+      "length": 13,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-33.5, -20.5],
+      "length": 13,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -35, -25.5,
+    16.5, -27.5,
+    38, 0,
+    38, -0,
+    16.5, 27.5,
+    -35, 25.5
+  ]
 }

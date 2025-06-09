@@ -1,0 +1,11 @@
+Dark.Revenant for allowing use of code from SWP
+-Used for Tachyon Accelerator onhit script.  
+tomatopaste, for making the sprite used for the Conqueror
+charmingthree, for making the sprites used for the Javelin and Polaris
+HELMUT, for making the sprite used for the Heavy Positron Cannon and Wildcat
+kwbr, for making the sprite used for the Viper
+bigbeans, for making the sprite used for the Viking
+kirbo, for making the sprite used for the Warhawk
+Toopok, for reworking the Warhawk sprite.
+Amazigh, for making the sprite I used to make the Vulcan.
+-Bashed out of parts taken from the Onquest from his mod "RotcesRats"

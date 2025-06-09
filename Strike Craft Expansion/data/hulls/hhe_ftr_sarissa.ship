@@ -1,0 +1,79 @@
+{
+  "hullName": "Sarissa",
+  "hullId": "hhe_ftr_sarissa",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/hhe_sarissa.png",
+  "style": "LOW_TECH",
+  "height": 33,
+  "width": 38,
+  "center": [19, 17],
+  "collisionRadius": 21.5,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 25,
+  "viewOffset": 0,
+  "builtInMods": [
+  ],
+  "weaponSlots": [
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [9.5, -0]
+    },
+    {
+      "id": "WSS-02",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-0.5, -0]
+    },
+    {
+      "id": "SYS-01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-7.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15, 8],
+      "length": 22,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-15, -8],
+      "length": 22,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -12.5, 4.5,
+    -9.5, 12.5,
+    -4, 12,
+    3, 15.5,
+    8, 14,
+    6, 5.5,
+    13, -0,
+    6, -5.5,
+    8, -14,
+    3, -15.5,
+    -4, -12,
+    -9.5, -12.5,
+    -12.5, -4.5,
+    -9.5, -0
+  ]
+}

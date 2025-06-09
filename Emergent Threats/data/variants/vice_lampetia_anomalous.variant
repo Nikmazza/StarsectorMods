@@ -6,9 +6,11 @@
     "hullId": "vice_lampetia",
     "hullMods": [
         "vice_advanced_terminator_core",
+        "vice_feedback_handler",
         "targetingunit",
-        "stabilizedshieldemitter",
-        "vice_adaptive_emitter_diodes"
+        "vice_modular_bolt_coherer",
+        "vice_attuned_emitter_diodes",
+        "vice_adaptive_gravity_drive"
     ],
     "modules": [{"SM 1": "vice_lampetia_secondary_drone_bay"}],
     "permaMods": [],
@@ -18,14 +20,14 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "vice_siege_burst"}
+            "weapons": {"WS 001": "vice_heavy_maser"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "squall",
-                "WS 003": "squall"
+                "WS 002": "vice_warp_torpedo_launcher",
+                "WS 003": "vice_warp_torpedo_launcher"
             }
         },
         {
@@ -33,26 +35,22 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 004": "gravitonbeam",
-                "WS 005": "gravitonbeam",
-                "WS 006": "ionbeam"
+                "WS 005": "gravitonbeam"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 006": "vice_phased_electrolaser",
                 "WS 007": "lrpdlaser",
                 "WS 008": "lrpdlaser",
                 "WS 009": "lrpdlaser",
                 "WS 010": "lrpdlaser",
                 "WS 011": "lrpdlaser",
-                "WS 012": "pdlaser",
-                "WS 013": "pdlaser",
-                "WS 014": "lrpdlaser",
-                "WS 015": "pdlaser",
-                "WS 016": "pdlaser",
-                "WS 017": "pdlaser",
-                "WS 018": "pdlaser"
+                "WS 012": "lrpdlaser",
+                "WS 013": "lrpdlaser",
+                "WS 014": "lrpdlaser"
             }
         }
     ],

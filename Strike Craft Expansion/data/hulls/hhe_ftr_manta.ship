@@ -1,0 +1,109 @@
+{
+  "hullName": "Manta",
+  "hullId": "hhe_ftr_manta",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/hhe_manta.png",
+  "style": "MIDLINE",
+  "height": 30,
+  "width": 44,
+  "center": [22, 15.5],
+  "collisionRadius": 24.5,
+  "shieldCenter": [0.5, -0],
+  "shieldRadius": 25.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 90,
+      "locations": [1.5, 10]
+    },
+    {
+      "id": "WSS-02",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -90,
+      "locations": [1.5, -10]
+    },
+    {
+      "id": "SYS-01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-6.5, 0]
+    },
+    {
+      "id": "WSS-03",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [7.5, 0]
+    },
+    {
+      "id": "WSS-04",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [3.5, 0]
+    },
+    {
+      "id": "WSS-05",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [3.5, 0]
+    },
+  ],
+  "engineSlots": [
+    {
+      "location": [-12.5, 0],
+      "length": 16,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-8.5, 8],
+      "length": 8,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-8.5, -8],
+      "length": 8,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    1.5, 17,
+    6.5, 11,
+    9.5, 0,
+    6.5, -11,
+    1.5, -17,
+    -11, -12.5,
+    -3, -8,
+    -6.5, -3.5,
+    -6.5, 3.5,
+    -3, 8,
+    -11, 12.5
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "variantId": "hhe_sarissa_fighter",
+  "hullId": "hhe_ftr_sarissa",
+  "displayName": "Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-01": "hhe_ftr_swarmer_sarissa"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-02": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

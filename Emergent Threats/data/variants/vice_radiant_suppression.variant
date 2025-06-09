@@ -1,6 +1,6 @@
 {
     "displayName": "Suppression",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 16,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "radiant",
@@ -20,7 +20,6 @@
             "weapons": {
                 "WS 000": "vice_siege_burst",
                 "WS 001": "vice_siege_burst",
-                "WS 003": "vice_siege_burst",
                 "WS 005": "breachpod",
                 "WS 006": "breachpod",
                 "WS 007": "breachpod",
@@ -31,9 +30,14 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "squall",
-                "WS 004": "squall"
+                "WS 002": "vice_warp_torpedo_launcher",
+                "WS 004": "vice_warp_torpedo_launcher"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "vice_heavy_maser"}
         },
         {
             "autofire": true,

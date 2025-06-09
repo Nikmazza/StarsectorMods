@@ -1,6 +1,6 @@
 {
     "displayName": "Automated",
-    "fluxCapacitors": 4,
+    "fluxCapacitors": 7,
     "fluxVents": 20,
     "hullId": "vice_medusa_ai",
     "hullMods": [
@@ -8,11 +8,13 @@
         "targetingunit",
         "ecm",
         "stabilizedshieldemitter",
-        "vice_adaptive_temporal_shell"
+        "vice_adaptive_temporal_shell",
+        "vice_module_handler"
     ],
     "permaMods": [
         "hardenedshieldemitter",
-        "targetingunit"
+        "targetingunit",
+        "vice_module_handler"
     ],
     "sMods": [
         "hardenedshieldemitter",

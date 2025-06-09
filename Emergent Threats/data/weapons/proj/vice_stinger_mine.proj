@@ -9,6 +9,7 @@
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[255,155,125,255],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":100, # purely visual
+	"fizzleOnReachingWeaponRange":true,
 	"flameoutTime":0.05, # total time from flameout to full fadeout
 	"noEngineGlowTime":0.05, # time spent without the engine glow being rendered
 	"fadeTime":0.05, # fadeout duration		

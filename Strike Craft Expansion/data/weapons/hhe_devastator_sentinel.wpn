@@ -1,0 +1,38 @@
+{
+	"id":"hhe_devastator_sentinel",
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	
+	"turretSprite":"graphics/weapons/hhe_devastator_sentinel_base.png",
+	"turretGunSprite":"graphics/weapons/hhe_devastator_sentinel_base_recoil.png",
+	"turretGlowSprite":"graphics/weapons/hhe_devastator_sentinel_base_glow.png",
+	
+	"hardpointSprite":"graphics/weapons/hhe_devastator_sentinel_base.png",
+	"hardpointGunSprite":"graphics/weapons/hhe_devastator_sentinel_base_recoil.png",
+	"hardpointGlowSprite":"graphics/weapons/hhe_devastator_sentinel_base_glow.png",
+	
+	"glowColor":[250,170,10,255],
+	"visualRecoil":8.0,
+	"renderHints":[RENDER_BARREL_BELOW],
+	
+	"turretOffsets":[43, 8, 43, -8],
+	"turretAngleOffsets":[0, 0],
+	"hardpointOffsets":[43, 8, 43, 8],
+	"hardpointAngleOffsets":[0, 0],
+	
+	"displayArcRadius":1250,
+	
+	"barrelMode":"ALTERNATING",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":55.0,
+					   "spread":20,
+					   "particleSizeMin":12.0,
+					   "particleSizeRange":22.0,
+					   "particleDuration":0.15,
+					   "particleCount":35,
+					   "particleColor":[255,225,165,175]},
+					   
+	"projectileSpecId":"hhe_cannon_devastator_sentinel",
+	"fireSoundTwo":"devastator_fire",	
+}

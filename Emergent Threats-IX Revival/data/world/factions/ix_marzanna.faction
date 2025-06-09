@@ -101,7 +101,8 @@
 		},
 	},
 	"illegalCommodities":[
-		"ai_cores",	
+		#"ai_cores",
+		"ix_rogue_ai"
 	],
 	"variantOverrides":{
 		

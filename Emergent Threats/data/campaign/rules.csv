@@ -1,10 +1,15 @@
 id,trigger,conditions,script,text,options,notes
+relLevelLeagueMayflySucceeded,RelLevelMoreDescription,"$global.vice_project_mayfly_succeeded
+$faction.id == persean",,"Following your encounter with Project Mayfly, the Persean League Fleet Intelligence Service has begun to monitor you more closely.",,
+relLevelLeagueMayflyFailed,RelLevelMoreDescription,"$global.vice_project_mayfly_failed
+$faction.id == persean",,"Following your encounter with Project Mayfly, the Persean League Fleet Intelligence Service has begun to monitor you more closely.",,
+,,,,,,
 # Handing in the PK - Persean League,,,,,,
 pk_giveToPL,PopulateOptions,"$isPerson
 !$player.turnedInPlanetkiller
 PlayerHasCargo planetkiller
 PK_CMD rightPostToAcceptPK
-$personFaction.id == persean",$cameToYouSecondWithPK = true,,"pk_turnInPL:""Would the league be in need of a planetkiller?""",#Bringing up this topic with the IX will make TT Arroyo unhappy
+$personFaction.id == persean",$cameToYouSecondWithPK = true,,"pk_turnInPL:""Would the league be in need of a planetkiller?""",#Bringing up this topic will make TT Arroyo unhappy
 pk_turnInPLSel,DialogOptionSelected,$option == pk_turnInPL,,"$PersonRank $personLastName stares at you in alarm.
 
 ""Don't tell me you're harboring a live planetkiller in orbit.""","pk_turnInPL2:""Don't worry. It's encrypted and inert. So do you want it or not?""",
@@ -43,6 +48,7 @@ SetTextHighlights ""Proteus class carrier""
 $player.receivedShipPL = true
 AdjustRep persean 25
 AdjustRepActivePerson 25
+AdjustRep sindrian_diktat -5
 AddRemoveAnyItem SPECIAL planetkiller -1
 $global.gavePKtoPL = true
 $player.turnedInPlanetkiller = true
@@ -52,3 +58,161 @@ $receivedAPlanetkillerFromPlayer","The transaction is completed by the end of th
 
 Your part is done, and the ship is yours.",cutCommLink:Attend to other business,
 pk_turnInPLnmSel,DialogOptionSelected,$option == pk_turnInPLnm,FireAll PopulateOptions,"$HeOrShe nods. ""That's fine, captain. I'll be here to discuss it when you're ready. Was there anything else?""",,
+,,,,,,
+mission_faith_fury_comms,OpenCommLink,"$entity.MagicLib_Bounty_target_hasReply score:1000
+$isPerson
+$faction.id == vice_light_of_ludd
+$postId == warlord
+$rankId == brother",,"A figure clad in an eclectic combination of pirate and Pather garb appears on your screen. $HeOrShe gives you a roguish smile.
+
+""This is John Star... sector of the independent merchant ship Pride of Kazeron, with escorts, can I help you?"" 
+
+Several members of the bridge crew snort in amusement at their captain's antics, seemingly at ease and in no hurry to give battle. The enemy fleet is vast, and does not appear to view you as enough of a threat to take action.","mission_faith_fury_sermon:""Hail, $PersonRank $personFirstName! There's no need to be coy. I've come to hear the good word.""
+mission_faith_fury_attackpolite:""Drop the act, $personFirstName. You're a wanted criminal. We both know how this ends.""
+mission_faith_fury_attackrude:Engage the pirate armada without warning.
+cutCommLink:Make a hasty retreat",
+mission_faith_fury_sermonSel,DialogOptionSelected,$option == mission_faith_fury_sermon,,"""Really? Really!"" $personFirstName clasps $hisOrHer hands in delight. ""Praise be to Ludd!""
+
+The devout pirate launches into a long diatribe about the Light of Ludd, the sins of avarice and idolatry, and specifically how Navarch Mars Kato is a servant of Moloch and an idiot besides, who had the gall to use an unholy Tri-Tachyon built Astral-class carrier to brutally oppress the Luddic faithful of Mazalot, despite being a flag officer of the League. 
+
+$personFirstName seems to have a specific hatred for the Navarch that borders on obsession. Kato's involvement in suppressing the Luddic uprising on Mazalot has left an indelible mark on the pirate captain's mind. Even though the Mazalot rebellion was over half a century ago, before $personName was even born, $heOrShe has not forgotten the injustices of the Persean League.
+
+Despite his eccentricities, $personFirstName paints a harrowing picture of League exploitation and violence against the Luddic majority on Kazeron. It's a compelling point, if you care about that sort of thing.","mission_faith_fury_sympathy:""The sins of the Persean League are unforgivable. But what is to be done?""
+mission_faith_fury_leave:""The crimes of the League call for retribution, but I cannot take part in such violence.""
+mission_faith_fury_attacksermon:""Ha! Your monologuing gave me all the time I needed to prepare for battle.""",
+mission_faith_fury_attackrudeSel,DialogOptionSelected,$option == mission_faith_fury_attackrude,"MakeOtherFleetHostile true
+MakeOtherFleetAggressive true
+$entity.ignorePlayerCommRequests = true","""I was going to bless you and your soldiers before the battle, but you didn't even say hello. So now you can all burn in holy fire. I say good-day!""
+
+$personName cuts the comms with a rude gesture, and a moment later, a swarm of warships and strike craft begin hurtling towards your fleet.",cutCommLink:Cut the comm link,
+mission_faith_fury_attackpoliteSel,DialogOptionSelected,$option == mission_faith_fury_attackpolite,"MakeOtherFleetHostile true
+MakeOtherFleetAggressive true
+$entity.ignorePlayerCommRequests = true","""I suppose we do,"" says $PersonRank $personFirstName. ""I have more guns than you, captain. But you'll have to find that out for yourself.""
+
+The comm link is cut, and a moment later, a swarm of warships and strike craft begin hurtling towards your fleet.",cutCommLink:Engage the armada,
+mission_faith_fury_attacksermonSel,DialogOptionSelected,$option == mission_faith_fury_attacksermon,"MakeOtherFleetHostile true
+MakeOtherFleetAggressive true
+$entity.ignorePlayerCommRequests = true","""I see now the suffering of the faithful cannot move a heart of stone,"" says $PersonRank $personFirstName. ""May Ludd have mercy on your soul, because I certainly won't.""
+
+The comm link is cut, and a moment later, a swarm of warships and strike craft begin hurtling towards your fleet.",cutCommLink:Engage the armada,
+mission_faith_fury_leaveSel,DialogOptionSelected,$option == mission_faith_fury_leave,"$entity.ignorePlayerCommRequests = true
+$global.vice_faith_fury_despawn = true
+DespawnEntity","""Then go in peace,"" says $personFirstName. ""The path of the righteous warrior is not fit for everyone. Perhaps yours will be kinder on your conscience.""
+
+The pirate armada powers down their weapons and prepares to jump out of the system. The Persean League will not be pleased with you taking up the mission, only to let the armada go, but you've made your choice.",cutCommLink:Cut the comm link,
+mission_faith_fury_sympathySel,DialogOptionSelected,$option == mission_faith_fury_sympathy,$entity.ignorePlayerCommRequests = true,"""Retribution,"" says $personFirstName. ""A vendetta aganst Gens Kato.""
+
+The pirate waves his hand, bringing up the profile of a Persean League senior officer, along with details of a secret project she is overseeing.
+
+""Rabasi Kato is a spawn of Mars Kato's foul lineage. And like her grandfather, she would sunder the very firmament by consorting with the minions of Moloch. Even now, she is busy integrating the abominable intelligence into the fleets of Kazeron. I cannot stop her, not even with my many followers, but you can! Take on this sacred task, and I shall grant you my prize ship, a mighty carrier that will serve you well.""","mission_faith_fury_betray:""Blessed be the hammer, and the hand that wields it. Give me all the details."" (Switch sides)
+mission_faith_fury_leave:""I sympathize, $PersonRank, but such a violent crusade is not my path.""
+mission_faith_fury_attacksermon:""As I suspected, you're insane. It's time to put you down.""",
+mission_faith_fury_betraySel,DialogOptionSelected,"$option == mission_faith_fury_betray
+$player.fcm_faction != persean","$global.vice_faith_fury_despawn = true
+$global.vice_faith_fury_ally = true
+SetTextHighlights ""Chalcedon""
+DespawnEntity","$PersonRank $personFirstName nods thoughtfully.
+
+""I had my doubts about you, captain, but I am glad you have seen the Light of Ludd. Once my fleet is safely away, I will contact you with all the information I have on Rabasi Kato. Come to Chalcedon, claim this ship, and hunt down the blasphemer.""
+
+The pirate armada powers down their weapons and prepares to jump out of the system. The Persean League will not be pleased with you taking up the mission, only to let the armada slip away, but you've made your choice.",cutCommLink:Cut the comm link,
+mission_faith_fury_betrayComSel,DialogOptionSelected,"$option == mission_faith_fury_betray
+$player.fcm_faction == persean","$global.vice_faith_fury_despawn = true
+$global.vice_faith_fury_ally = true
+SetTextHighlights ""Chalcedon""
+DespawnEntity","$PersonRank $personFirstName nods thoughtfully.
+
+""You know, I never would have thought a Persean League commissioned officer would see the Light of Ludd. But I have been humbled by your piety. Once my fleet is safely away, I will contact you with all the information I have on Rabasi Kato. Come to Chalcedon, claim this ship, and hunt down the blasphemer.""
+
+The pirate armada powers down their weapons and prepares to jump out of the system. The Persean League will not be pleased with you taking up the mission, only to let the armada slip away, but you've made your choice.",cutCommLink:Cut the comm link,
+,,,,,,
+mission_project_mayfly_comms,OpenCommLink,"$entity.MagicLib_Bounty_target_hasReply score:1000
+$isPerson
+$faction.id == vice_project_mayfly
+$postId == fleetCommander
+$rankId == vice_strategos
+$global.vice_mayfly_spoke_to_fis != true",,"A fleet of Persean League warships appear on your sensors orbiting a lonely ice giant. Most of the ships are arrayed in a typical defensive formation, but in its heart lies a shackled beast, a squadron of automated cruisers giving off reactor readings that are off the charts. Some distance away, a small research station is making its final descent into the atmosphere of the nearby ice giant.
+
+As you prepare to open comms with the League flagship, you receive a hyperwave transmission from a strangely untraceable source. Whoever sent you the message must be monitoring the situation at Skoll to have noticed your arrival.","mission_project_mayfly_fis:Receive the mystery transmission
+mission_project_mayfly_parley:Ignore the transmission and contact Rabasi Kato
+cutCommLink:Cut the comm link",opening convo
+mission_project_mayfly_repeat_comms,OpenCommLink,"$entity.MagicLib_Bounty_target_hasReply score:1000
+$isPerson
+$faction.id == vice_project_mayfly
+$postId == fleetCommander
+$rankId == vice_strategos
+$global.vice_mayfly_spoke_to_fis == true",,"A fleet of Persean League warships appear on your sensors orbiting a lonely ice giant. Most of the ships are arrayed in a typical defensive formation, but in its heart lies a shackled beast, a squadron of automated cruisers giving off reactor readings that are off the charts. Some distance away, a small research station is making its final descent into the atmosphere of the nearby ice giant.","mission_project_mayfly_parley:Contact Rabasi Kato
+cutCommLink:Cut the comm link",opening convo if FIS officer was dismissed
+mission_project_mayfly_repeat_loopSel,DialogOptionSelected,$option == mission_project_mayfly_repeat_loop,ShowPersonVisual,"A fleet of Persean League warships appear on your sensors orbiting a lonely ice giant. Most of the ships are arrayed in a typical defensive formation, but in its heart lies a shackled beast, a squadron of automated cruisers giving off reactor readings that are off the charts. Some distance away, a small research station is making its final descent into the atmosphere of the nearby ice giant.","mission_project_mayfly_parley:Contact Rabasi Kato despite the warning from the FIS
+cutCommLink:Cut the comm link",loopback convo if FIS officer was dismissed
+mission_project_mayfly_fisSel,DialogOptionSelected,$option == mission_project_mayfly_fis,"$global.vice_mayfly_spoke_to_fis = true
+ShowPersonVisual false vice_taylor_sheasby
+","""This is Agent Sheasby of the Fleet Intelligence Service. You are interfering with a Persean League internal security matter. Depart the area immediately, and do not approach the planet of Skoll for the next hour. This is your first and only warning.""
+
+Your scans indicate Rabasi Kato's AI augmented fleet is almost done with scuttling the Project Mayfly research station. Her fleet could depart at any moment, and if you make any significant delays, you may never see it again.","mission_project_mayfly_fis_hostile:""Or you'll do what? Talk me to death?""
+mission_project_mayfly_fis_askForBribe:""Make me a good enough offer, and I'll forget I ever saw anything.""
+mission_project_mayfly_fis_agreeToLeave:""Acknowledged. We are withdrawing to a safe distance and will not approach.""",
+mission_project_mayfly_fis_hostileSel,DialogOptionSelected,$option == mission_project_mayfly_fis_hostile,AdjustRep persean -10,Agent Sheasby does not bother with giving you a response. The line goes ominously silent.,mission_project_mayfly_repeat_loop:Consider the Project Mayfly fleet,
+mission_project_mayfly_fis_agreeToLeaveSel,DialogOptionSelected,$option == mission_project_mayfly_fis_agreeToLeave,"AdjustRep persean 10
+$global.vice_mayfly_fis_left_alone = true
+$global.vice_project_mayfly_despawn = true
+DespawnEntity","For a moment, Agent Sheasby looks caught off guard by your deferential attitude.
+
+""Very good,"" he says, quickly recovering. ""The Persean League appreciates your cooperation. A 'consulting fee' will be forwarded to your account once this matter is resolved to our satisfaction. Good day, captain.""",mission_project_mayfly_repeat_loop:Consider the Project Mayfly fleet,
+mission_project_mayfly_fis_askForBribeSel,DialogOptionSelected,$option == mission_project_mayfly_fis_askForBribe,,"""Half a million credits,"" Sheasby says tersely. ""Not that you deserve a single one, but there you go.""","mission_project_mayfly_fis_bribeAccept:""Pleasure doing business with you.""
+mission_project_mayfly_fis_bribeDecline:""A poor offer from a poor officer. We have nothing more to discuss.""",
+mission_project_mayfly_fis_bribeAcceptSel,DialogOptionSelected,$option == mission_project_mayfly_fis_bribeAccept,"AdjustRep persean -25
+$global.vice_mayfly_fis_took_bribe = true
+$global.vice_project_mayfly_despawn = true
+DespawnEntity","Despite your words, Agent Sheasby is far from pleased. You suspect your reputation with the League will suffer due to the lengths it had to go to in order to secure your cooperation. Nonetheless, once the Project Mayfly fleet departs, you will be much richer.",mission_project_mayfly_repeat_loop:Consider the Project Mayfly fleet,
+mission_project_mayfly_fis_bribeDeclineSel,DialogOptionSelected,$option == mission_project_mayfly_fis_bribeDecline,AdjustRep persean -10,Agent Sheasby does not bother with giving you a response. The line goes ominously silent.,mission_project_mayfly_repeat_loop:Consider the Project Mayfly fleet,
+mission_project_mayfly_battleSel,DialogOptionSelected,$option == mission_project_mayfly_battle,"MakeOtherFleetHostile true
+MakeOtherFleetAggressive true
+$entity.ignorePlayerCommRequests = true","$PersonRank $personLastName chuckles to herself. ""Israfil said I would face you in combat and be victorious, but I know the godminds are not beyond lying. Let's see what fate has in store for us.""
+
+$personLastName's ships, human and AI alike, raise shields and begin their approach.",cutCommLink:Cut the comm link,
+mission_project_mayfly_parleySel,DialogOptionSelected,$option == mission_project_mayfly_parley,"$global.vice_mayfly_spoke_to_fis = true
+$global.vice_mayfly_fis_left_alone = false
+$global.vice_mayfly_fis_took_bribe = false
+AdjustRep persean -10","The image of a Persean League naval officer appears on comms. She nods curtly. Her uniform is neat, bearing the senior rank of a $PersonRank, but her eyes are weary.
+
+""Captain $playerName. I've been waiting for you.""","mission_project_mayfly_parley2:""Waiting for me? We've never met.""
+mission_project_mayfly_battle:""Whatever you have to say, I don't want to hear it. Time to die, spawn of Moloch!""",
+mission_project_mayfly_parley2Sel,DialogOptionSelected,$option == mission_project_mayfly_parley2,,"""He told me of your coming, said you would take Johan Bondevik's place, one pawn replacing another, and that fire and death would follow in your wake. But I believe in your humanity, captain, even more than his infallible visions. So, shall we speak for a moment?""","mission_project_mayfly_parley3:""He? Who's he? What are you talking about?""
+mission_project_mayfly_pawn:""You don't know me. I'm nobody's pawn.""
+mission_project_mayfly_battle:""No, I think not. I'd rather just kill you.""",
+mission_project_mayfly_pawnSel,DialogOptionSelected,$option == mission_project_mayfly_pawn,,"""Yet here you are,"" $personLastName spreads her hands.","mission_project_mayfly_parley3:""Start making sense. Who is this person telling you that we'd meet?""
+mission_project_mayfly_battle:""I'm going to kill you now, not because Brother Johan told me to, but because I want to.""",
+mission_project_mayfly_parley3Sel,DialogOptionSelected,$option == mission_project_mayfly_parley3,"SetTextHighlights ""Israfil""","""Israfil, the Four Winged Glory, the Herald of the End.""
+
+Rabasi Kato closes her eyes and takes a deep breath. Your psych profiling software shows she is in a state of extreme stress, but the indicators of delusional thinking and religious mania are surprisingly low, despite her odd choice of words.
+
+""Let me explain. Several cycles ago, I was contacted by an AI godmind. The being called itself Israfil, although it goes by many names. It showed me prophecies of the Sector's future, except these were not religious visions but interstellar data extrapolations of cause and effect more sophisticated than anything I've ever seen before. Then, one by one, the damned predictions came to pass, and they all led to one thing...""","mission_project_mayfly_parley4:""Let me guess, the Third AI War.""
+mission_project_mayfly_battle:""I've heard enough. Time to put you down, mad dog.""",
+mission_project_mayfly_parley4Sel,DialogOptionSelected,$option == mission_project_mayfly_parley4,,"$personLastName pinches the ridge of her nose as if in great pain.
+
+""Yes, a war not just between humans, or even humans and machines, but between the AI godminds themselves, both emergent and already present. Assuming humanity survives it at all, once the war is over, we will no longer be the dominant species of the Sector.""","mission_project_mayfly_parley5a:""So is that what you're doing with your AI warships, preparing for the next great war?""
+mission_project_mayfly_parley5b:""Share your data on Israfil with me. Perhaps there's some truth to what you're saying.""
+mission_project_mayfly_battle:""I've heard enough. Time to put you down, mad dog.""",
+mission_project_mayfly_parley5aSel,DialogOptionSelected,$option == mission_project_mayfly_parley5a,,"""Not for myself, but for the Persean League, and the people that I love,"" $personLastName smiles sadly. ""This fleet, this entire project, is a provocation against another more insidious AI presence that has wormed its way into the very heart of Kazeron."" 
+
+""With my death, the Archons will be forced to investigate the military and civilian hierarchy of the League from the top down, and from there, my preparations will ensure they uncover a great deal that has been hidden from them. The agents of dust and ruin will be dragged into the light, and I will have given the League a fighting chance in the days to come.""","mission_project_mayfly_parley6:""Alright, say that I believe you. What should I do?""
+mission_project_mayfly_battle:""You're nothing but a delusional AI puppet. It's time to end this.""",
+mission_project_mayfly_parley5bSel,DialogOptionSelected,$option == mission_project_mayfly_parley5b,,"""I'm afraid there's no time for that,"" $personLastName smiles sadly. ""I wish we could have met earlier. But to share the totality of what I know with you now is to brand you with the same death sentence that will soon catch up to me. In a few hours, the Navarchs will find me, and I will die. But the circumstances of my death will force them into an in depth investigation, one that I've ensured will uncover a far more insidious AI threat hidden within the very heart of Kazeron.""
+
+$HeOrShe gazes upon you with a look of frightening intensity. 
+
+""The agents of dust and ruin will be dragged into the light, and I will have given the League a fighting chance in the days to come.""","mission_project_mayfly_parley6:""Alright, say that I believe you. What should I do?""
+mission_project_mayfly_battle:""You're nothing but a delusional AI puppet. It's time to end this.""",
+mission_project_mayfly_parley6Sel,DialogOptionSelected,$option == mission_project_mayfly_parley6,,"""For you? Nothing,"" says $personLastName. ""He will find you as he found me, in time. But until then, let me go fight and die above the skies of my homeworld. I have made many mistakes during my life, captain, done things that I'm not proud of. But perhaps my death will finally be of more service to my beloved Persean League.""
+
+$personLastName pauses for a moment to think. ""Not many people would have been willing to hear me out under such circumstances, so let me offer you a token of my thanks. When my fleet is ready to jump, I will eject a cargo pod and leave behind someting that will hopefully prove useful to you.""","mission_project_mayfly_parleyDone:""Very well, $PersonRank. Whatever it is you're doing, I hope you succeed. I won't interfere.""
+mission_project_mayfly_casualties:""There are thousands aboard yours ships, and thousands more who would face them in battle. What about them?""
+mission_project_mayfly_battle:""Keep your trinkets. You're delusional, and I'm putting an end to this.""",
+mission_project_mayfly_casualtiesSel,DialogOptionSelected,$option == mission_project_mayfly_casualties,,"$personName is unmoved by your concern over casualties.
+
+""My crew all knew the cost when they joined Project Mayfly. As for those who would be brought to their deaths by corrupt and incompetent leaders, that is a tragedy. But if we do not pay the price now, the death toll in the next war will be in the millions. I have spent the last cycle looking into every alternative, but there isn't one. This is the only way.""","mission_project_mayfly_parleyDone:""Very well, $PersonRank. Whatever it is you're doing, I hope you succeed. I won't interfere.""
+mission_project_mayfly_battle:""Enough. I will face you in battle, and speare the citizens of the League from your madness.""",
+mission_project_mayfly_parleyDoneSel,DialogOptionSelected,$option == mission_project_mayfly_parleyDone,"$global.vice_project_mayfly_despawn = true
+$global.vice_project_mayfly_believed_kato = true
+DespawnEntity","$PersonName gives you a salute and signs off. Her fleet begins its approach to Kazeron with transponders off, ready for a battle against impossible odds.",cutCommLink:Cut the comm link,

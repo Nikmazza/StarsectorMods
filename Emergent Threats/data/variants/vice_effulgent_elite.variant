@@ -1,46 +1,46 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 0,
-    "fluxVents": 6,
+    "fluxCapacitors": 12,
+    "fluxVents": 0,
     "goalVariant": true,
     "hullId": "vice_effulgent",
     "hullMods": [
+        "vice_module_handler",
         "eccm",
         "missleracks",
-        "hardenedshieldemitter",
         "vice_adaptive_temporal_shell"
     ],
-    "permaMods": [],
+    "permaMods": ["vice_module_handler"],
     "sMods": [],
     "variantId": "vice_effulgent_elite",
     "weaponGroups": [
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "squall"}
+            "weapons": {"WS 001": "hurricane"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "typhoon",
-                "WS 004": "typhoon"
+                "WS 009": "vice_fragbomb",
+                "WS 010": "vice_fragbomb"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "sabot",
-                "WS 010": "sabot"
+                "WS 003": "harpoonpod",
+                "WS 004": "harpoonpod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "pdlaser",
-                "WS 006": "pdlaser",
+                "WS 005": "pdburst",
+                "WS 006": "pdburst",
                 "WS 007": "pdlaser",
                 "WS 008": "pdlaser"
             }

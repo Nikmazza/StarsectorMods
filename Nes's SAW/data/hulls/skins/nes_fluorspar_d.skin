@@ -1,0 +1,18 @@
+{
+	"baseHullId":"nes_fluorspar",
+	"skinHullId":"nes_fluorspar_d",
+	"hullName":"Fluorspar (D)",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
+	"descriptionId":"nes_fluorspar",
+	"descriptionPrefix":"This ship appears to have been deliberately mothballed, its system logs purged. Despite the lack of maintenance, it appears to be mostly functional.",
+	"restoreToBaseHull":true,
+	"spriteName":"graphics/ships/nes_fluorspar_d.png",
+	"systemId":"nes_crystaltemporalshell_degraded",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["NES_Glitch"],
+	"builtInWeapons":{
+    },
+}

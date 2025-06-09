@@ -1,0 +1,20 @@
+{
+	"displayName":"Drone",
+	"hullId":"vice_terminator_dem",
+	"variantId":"vice_terminator_dem",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["no_weapon_flux", "terminator_core"],
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"vice_autopulse_fighter",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS DEM":"vice_mayfly_dem",
+		 		   },
+		},
+	],
+}

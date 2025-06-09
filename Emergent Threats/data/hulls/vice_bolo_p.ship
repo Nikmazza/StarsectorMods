@@ -1,0 +1,75 @@
+{
+  "hullName": "Bolo (P)",
+  "hullId": "vice_bolo_p",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/vice/ships/bolo_p.png",
+  "style": "LOW_TECH",
+  "height": 35,
+  "width": 34,
+  "center": [17, 16],
+  "collisionRadius": 25,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 22,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 000",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [6, 0]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [11, 10]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [11, -10]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-14, 8],
+      "length": 16,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-14, -7],
+      "length": 16,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-13, -0],
+      "length": 14,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "COBRA_BOMBER"
+    }
+  ],
+  "bounds": [
+    13, 16,
+    -13, 12,
+    -13, -11,
+    13, -15
+  ]
+}

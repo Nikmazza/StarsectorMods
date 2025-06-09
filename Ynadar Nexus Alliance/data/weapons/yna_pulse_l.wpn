@@ -1,0 +1,32 @@
+{
+	"id":"yna_pulse_l",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"LARGE",
+	"displayArcRadius":650,
+	"turretSprite":"graphics/ynadar/weapons/le/yna_elpuls1_t_b.png",
+	"turretGunSprite":"graphics/ynadar/weapons/le/yna_elpuls1_t_r.png",
+	"hardpointSprite":"graphics/ynadar/weapons/le/yna_elpuls1_h_b.png",
+	"hardpointGunSprite":"graphics/ynadar/weapons/le/yna_elpuls1_h_r.png",	
+	"visualRecoil":10.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[34, -10.5, 35, -3.5, 35, 3.5, 34, 10.5],
+	"turretAngleOffsets":[0, 0, 0, 0],
+	"hardpointOffsets":[42, -10.5, 43, -3.5, 43, 3.5, 42, 10.5],
+	"hardpointAngleOffsets":[0, 0, 0, 0],
+	"specialWeaponGlowWidth":15,
+	"specialWeaponGlowHeight":20,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":20.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":24,
+					   "particleSizeMin":8.0,
+					   "particleSizeRange":24.0,
+					   "particleDuration":0.13,
+					   "particleCount":24,
+					   "particleColor":[165,225,185,125]},
+	"interruptibleBurst":false,
+	"autocharge":false,
+	"projectileSpecId":"yna_pulse_m_shot",  # projectile that will be fired
+	"fireSoundTwo":"yna_pulse_l_fire",	
+}

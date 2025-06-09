@@ -1,0 +1,28 @@
+{
+	"quality":0.75,
+	"displayName":"Fighter",
+	"hullId":"gg_gladius_xiv",
+	"variantId":"gg_gladius_xiv_variant",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":[gg_xiv_fighter], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 001":"irpulse",
+		 			#"WS 002":"irpulse",
+		 			"WS 001":"lightdualmg",
+		 			"WS 002":"lightdualmg",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 003":"lightdualmg",
+		 			"WS 003":"irpulse_fighter",
+		 		   },
+		},
+	],
+}

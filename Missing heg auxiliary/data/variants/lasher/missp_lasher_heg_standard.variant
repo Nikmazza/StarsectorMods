@@ -1,43 +1,41 @@
 {
-  "variantId": "missp_lasher_heg_standard",
-  "hullId": "missp_lasher_heg",
-  "displayName": "Standard",
-  "goalVariant": true,
-  "fluxCapacitors": 9,
-  "fluxVents": 10,
-  "quality": 1,
-  "permaMods": [],
-  "hullMods": [
-    "heavyarmor",
-    "blast_doors"
-  ],
-  "weaponGroups": [
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS 002": "lightdualmg",
-        "WS 003": "lightdualmg"
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
-        "WS 001": "sabot",
-        "WS 004": "sabot"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS 005": "lightmortar",
-        "WS 006": "lightmortar",
-        "WS 007": "lightmortar"
-      }
-    }
-  ],
-  "modules": [],
-  "wings": []
+    "displayName": "Standard",
+    "fluxCapacitors": 9,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "missp_lasher_heg",
+    "hullMods": [
+        "heavyarmor",
+        "blast_doors"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "missp_lasher_heg_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmortar",
+                "WS 004": "lightmortar",
+                "WS 007": "lightmortar"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightdualac",
+                "WS 003": "lightdualac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "vulcan",
+                "WS 006": "vulcan"
+            }
+        }
+    ]
 }

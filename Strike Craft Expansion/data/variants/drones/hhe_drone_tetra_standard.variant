@@ -1,0 +1,22 @@
+{
+  "variantId": "hhe_drone_tetra_standard",
+  "hullId": "hhe_drone_tetra",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-01": "hhe_ftr_pdlaser_orange"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

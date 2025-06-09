@@ -2,7 +2,7 @@
   "hullName": "Starliner (Path)",
   "hullId": "missp_path_starliner",
   "hullSize": "CRUISER",
-  "spriteName": "graphics/ships/starliner/missp_starliner_path.png",
+  "spriteName": "graphics/ships/starliner/missp_path_starliner.png",
   "style": "LOW_TECH",
   "height": 325,
   "width": 144,
@@ -12,8 +12,8 @@
   "shieldRadius": 146,
   "viewOffset": 0,
   "builtInMods": [
-    "converted_bay",
-    "ill_advised"
+    "ill_advised",
+    "unstable_injector"
   ],
   "weaponSlots": [
     {
@@ -30,7 +30,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 220,
+      "arc": 203,
       "angle": 56.5,
       "locations": [96.5, 47]
     },
@@ -39,7 +39,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 220,
+      "arc": 203,
       "angle": -56.5,
       "locations": [96.5, -47]
     },
@@ -48,7 +48,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 200,
+      "arc": 152,
       "angle": 90,
       "locations": [58.5, 52]
     },
@@ -57,7 +57,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 200,
+      "arc": 152,
       "angle": -90,
       "locations": [58.5, -52]
     },
@@ -66,8 +66,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 241,
-      "angle": 135,
+      "arc": 112,
+      "angle": 71.5,
       "locations": [-81.5, 37]
     },
     {
@@ -75,8 +75,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 241,
-      "angle": -135,
+      "arc": 112,
+      "angle": -71.5,
       "locations": [-81.5, -37]
     },
     {

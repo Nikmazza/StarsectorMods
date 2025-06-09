@@ -1,0 +1,158 @@
+{
+#collapseopen SHIELDS
+
+	"yna_vent_flux":{ # testing if this thing has too much profile or not
+		"sounds":[
+			{"file":"sounds/sfx_flux/flux_vent.ogg","pitch":1,"volume":0.5},
+			{"file":"sounds/sfx_flux/yna_flux_vent.ogg","pitch":1,"volume":0.75},
+		],
+		"LOW_TECH":{"sounds":[0], "pitch":0.7, "volume":1},
+		"MIDLINE":{"sounds":[0], "pitch":0.85, "volume":1},
+		"HIGH_TECH":{"sounds":[0], "pitch":1, "volume":1},
+		"OMEGA":{"sounds":[0], "pitch":1, "volume":1},
+		"YNADAR":{"sounds":[1], "pitch":1, "volume":1},
+		"FIGHTER":{"sounds":[1], "pitch":1.2, "volume":0.4},
+		"FRIGATE":{"sounds":[1], "pitch":1.1, "volume":0.7},
+		"DESTROYER":{"sounds":[1], "pitch":1, "volume":0.8},
+		"CRUISER":{"sounds":[1], "pitch":0.9, "volume":0.9},
+		"CAPITAL_SHIP":{"sounds":[1], "pitch":0.8, "volume":1},		
+	},	
+	
+# WEAPONS
+
+	
+	
+	# AUTOCANNON
+	"yna_ac_l_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/autocannon_fire_01.ogg","pitch":0.8,"volume":0.9},
+		{"file":"sounds/sfx_wpn_guns/autocannon_fire_01.ogg","pitch":0.825,"volume":0.9},
+		{"file":"sounds/sfx_wpn_guns/autocannon_fire_01.ogg","pitch":0.775,"volume":0.9},
+	],
+	"yna_ac2_l_fire":
+	[
+		{"file":"sounds/sfx_wpn_ballistic/yna_ac_l_fire1.ogg","pitch":1,"volume":1.1},
+		{"file":"sounds/sfx_wpn_ballistic/yna_ac_l_fire1.ogg","pitch":0.95,"volume":1.1},
+		{"file":"sounds/sfx_wpn_ballistic/yna_ac_l_fire1.ogg","pitch":1.05,"volume":1.1},
+	],
+	# VOLLEYGUN
+	"yna_vg1_s_fire":
+	[
+		{"file":"sounds/sfx_wpn_ballistic/yna_vg1_s_fire1.ogg","pitch":0.8,"volume":0.9},
+		{"file":"sounds/sfx_wpn_ballistic/yna_vg1_s_fire1.ogg","pitch":0.825,"volume":0.9},
+		{"file":"sounds/sfx_wpn_ballistic/yna_vg1_s_fire1.ogg","pitch":0.775,"volume":0.9},
+		{"file":"sounds/sfx_wpn_ballistic/yna_vg1_s_fire2.ogg","pitch":0.8,"volume":0.9},
+		{"file":"sounds/sfx_wpn_ballistic/yna_vg1_s_fire2.ogg","pitch":0.825,"volume":0.9},
+		{"file":"sounds/sfx_wpn_ballistic/yna_vg1_s_fire2.ogg","pitch":0.775,"volume":0.9},
+	],
+	
+	# SMARTGUN
+	"yna_sg1_s_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/chaingun_fire_01.ogg","pitch":0.7,"volume":0.7},
+	],
+
+	# Large Mauler
+    "yna_hvy_mauler_fire":[
+            {"file":"sounds/sfx_wpn_ballistic/yna_hvy_mauler_fire1.ogg","pitch":0.98,"volume":0.8},
+            {"file":"sounds/sfx_wpn_ballistic/yna_hvy_mauler_fire1.ogg","pitch":0.99,"volume":0.8},
+            {"file":"sounds/sfx_wpn_ballistic/yna_hvy_mauler_fire1.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/sfx_wpn_ballistic/yna_hvy_mauler_fire1.ogg","pitch":1.01,"volume":0.8},
+    ],
+	
+	# Large Fragcannon
+    "yna_fragcannon_fire":[
+            {"file":"sounds/sfx_wpn_ballistic/yna_fragcannon_fire1.ogg","pitch":0.98,"volume":0.8},
+            {"file":"sounds/sfx_wpn_ballistic/yna_fragcannon_fire1.ogg","pitch":0.99,"volume":0.8},
+            {"file":"sounds/sfx_wpn_ballistic/yna_fragcannon_fire1.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/sfx_wpn_ballistic/yna_fragcannon_fire1.ogg","pitch":1.01,"volume":0.8},
+    ],
+	
+	# Pulse Laser
+	"yna_pulse_m_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_01.ogg","pitch":0.7,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_02.ogg","pitch":0.7,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_03.ogg","pitch":0.7,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_04.ogg","pitch":0.7,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_05.ogg","pitch":0.7,"volume":0.3},		
+	],
+	"yna_pulse_l_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_01.ogg","pitch":0.5,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_02.ogg","pitch":0.5,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_03.ogg","pitch":0.5,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_04.ogg","pitch":0.5,"volume":0.35},
+		{"file":"sounds/sfx_wpn_energy/pulse_laser_fire_05.ogg","pitch":0.5,"volume":0.35},		
+	],
+	
+	# Pulse Laser
+	"yna_magpulse_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/yna_pulse_fire1.ogg","pitch":1.02,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/yna_pulse_fire1.ogg","pitch":1.0,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/yna_pulse_fire1.ogg","pitch":0.98,"volume":0.3},	
+		{"file":"sounds/sfx_wpn_energy/yna_pulse_fire2.ogg","pitch":1.02,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/yna_pulse_fire2.ogg","pitch":1.0,"volume":0.3},
+		{"file":"sounds/sfx_wpn_energy/yna_pulse_fire2.ogg","pitch":0.98,"volume":0.3},	
+	],
+	
+	# Energy Missiles
+    "yna_enmis_light_fire":[
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.95,"volume":0.5},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.92,"volume":0.5},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.96,"volume":0.5},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.97,"volume":0.5},
+    ],
+    "yna_enmis_medium_fire":[
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.68,"volume":0.8},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.69,"volume":0.8},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.67,"volume":0.8},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.71,"volume":0.8},
+    ],
+    "yna_enmis_heavy_fire":[
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.38,"volume":1.2},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.39,"volume":1.2},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.37,"volume":1.2},
+            {"file":"sounds/sfx_wpn_energy/yna_enmis_fire1.ogg","pitch":1.41,"volume":1.2},
+    ],
+	
+	# PLASMA CANNON
+	"yna_plas1_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/yna_plas1_fire1.ogg","pitch":1.0,"volume":0.7},
+		{"file":"sounds/sfx_wpn_energy/yna_plas1_fire1.ogg","pitch":1.02,"volume":0.7},
+		{"file":"sounds/sfx_wpn_energy/yna_plas1_fire1.ogg","pitch":0.98,"volume":0.7},
+	],	
+	
+	
+	# Swarmer 1
+	"yna_srm1_fire":
+	[
+		{"file":"sounds/sfx_wpn_missile/yna_swarm_fire_01.ogg","pitch":1.0,"volume":0.4},
+		{"file":"sounds/sfx_wpn_missile/yna_swarm_fire_01.ogg","pitch":1.02,"volume":0.4},
+		{"file":"sounds/sfx_wpn_missile/yna_swarm_fire_01.ogg","pitch":0.98,"volume":0.4},
+	],	
+	
+	# MINES
+    "yna_mine_ping":{
+            "sounds":[
+                    {"file":"sounds/sfx_systems/mine_strike_pinged_01.ogg","pitch":1.3,"volume":0.6},
+                    {"file":"sounds/sfx_systems/mine_strike_pinged_02.ogg","pitch":1.3,"volume":0.6},
+                    {"file":"sounds/sfx_systems/mine_strike_pinged_03.ogg","pitch":1.3,"volume":0.6},
+                    {"file":"sounds/sfx_systems/mine_strike_pinged_04.ogg","pitch":1.3,"volume":0.6},
+            ],
+    },
+
+    "yna_mine_windup":[
+            {"file":"sounds/sfx_systems/mine_strike_windup_01.ogg","pitch":1.3,"volume":0.6},
+            {"file":"sounds/sfx_systems/mine_strike_windup_02.ogg","pitch":1.3,"volume":0.6},
+            {"file":"sounds/sfx_systems/mine_strike_windup_03.ogg","pitch":1.3,"volume":0.6},
+            {"file":"sounds/sfx_systems/mine_strike_windup_04.ogg","pitch":1.3,"volume":0.6},
+    ],
+
+}
+
+
+
+

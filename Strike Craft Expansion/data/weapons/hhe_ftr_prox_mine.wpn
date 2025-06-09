@@ -1,0 +1,31 @@
+{
+	"id":"hhe_ftr_prox_mine",
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"SMALL",
+	
+	"turretSprite":"graphics/weapons/hhe_empty.png",
+	"hardpointSprite":"graphics/weapons/hhe_empty.png",
+	
+	"hardpointOffsets":[0, 0],
+	"turretOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"turretAngleOffsets":[0],
+	
+	"barrelMode":"ALTERNATING",
+	"renderHints":[RENDER_LOADED_MISSILES_UNLESS_HIDDEN],
+	"interruptibleBurst":false,
+	"projectileSpecId":"hhe_bomb_prox_mine",
+	
+	"animationType":"SMOKE",
+	"smokeSpec":{"particleSizeMin":10.0,
+							 "particleSizeRange":8.0,
+							 "cloudParticleCount":5,
+							 "cloudDuration":1.5,
+							 "cloudRadius":6.0;
+							 "blowbackParticleCount":0,
+							 "blowbackDuration":0.45,
+							 "blowbackLength":20.0,
+							 "blowbackSpread":6.0,
+							 "particleColor":[120,140,160,95]},
+}

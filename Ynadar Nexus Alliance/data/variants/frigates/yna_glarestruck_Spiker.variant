@@ -1,0 +1,35 @@
+{
+  "variantId": "yna_glarestruck_Spiker",
+  "hullId": "yna_glarestruck",
+  "displayName": "Spiker",
+  "goalVariant": true,
+  "fluxCapacitors": 9,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "targetingunit",
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MS 01": "yna_svento_s",
+        "MS 02": "hammer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_ac_s",
+        "WS0002": "yna_ac_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

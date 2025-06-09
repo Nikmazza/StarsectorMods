@@ -1,0 +1,172 @@
+{
+  "hullName": "Flamedial",
+  "hullId": "yna_flamedial",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ynadar/ships/flamedial/flamedial.png",
+  "style": "YNADAR",
+  "height": 146,
+  "width": 128,
+  "center": [64, 69],
+  "collisionRadius": 122,
+  "shieldCenter": [-2, -0],
+  "shieldRadius": 106,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [53, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [16, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 239,
+      "angle": 75,
+      "locations": [2, 33]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 239,
+      "angle": -75,
+      "locations": [2, -33]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-69, 33],
+      "length": 56,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-69, -33],
+      "length": 56,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-62, 42],
+      "length": 16,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-62, -42],
+      "length": 16,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-61, 45],
+      "length": 16,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-61, -45],
+      "length": 16,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60, 48],
+      "length": 16,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60, -48],
+      "length": 16,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59, 51],
+      "length": 16,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59, -51],
+      "length": 16,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58, 54],
+      "length": 16,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-58, -54],
+      "length": 16,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    68, 11,
+    63, 27,
+    6, 46,
+    -28, 41,
+    -30, 57,
+    -51.5, 56,
+    -65, 33,
+    -57, 23,
+    -57, -23,
+    -65, -33,
+    -51.5, -56,
+    -30, -57,
+    -28, -41,
+    6, -46,
+    63, -27,
+    68, -11,
+    56, -0
+  ]
+}

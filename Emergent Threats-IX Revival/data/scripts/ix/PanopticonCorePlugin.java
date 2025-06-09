@@ -12,7 +12,6 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.BaseAICoreOfficerPluginImpl;
-import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
@@ -37,6 +36,7 @@ public class PanopticonCorePlugin extends BaseAICoreOfficerPluginImpl implements
 		boolean isPanopticonCore = PANOPTICON_CORE_ID.equals(aiCoreId);
 		boolean isPanopticonInstance = PANOPTICON_INSTANCE_ID.equals(aiCoreId);
 		boolean isCommandCore = COMMAND_CORE_ID.equals(aiCoreId);
+		boolean isAlphaCore = ("alpha_core").equals(aiCoreId);
 		person.getStats().setSkipRefresh(true);
 		float mult = 1f;
 		if (isPanopticonCore) {
@@ -77,8 +77,22 @@ public class PanopticonCorePlugin extends BaseAICoreOfficerPluginImpl implements
 			person.setRankId(Ranks.SPACE_LIEUTENANT);
 			mult = 0f;
 		}
+		else if (isAlphaCore) {
+			person.setName(new FullName(spec.getName(), "", Gender.ANY));
+			person.setPortraitSprite("graphics/portraits/portrait_ai2b.png");
+			person.getStats().setLevel(7);
+			person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);
+			person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 2);
+			person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);
+			person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);
+			person.getStats().setSkillLevel(Skills.ORDNANCE_EXPERTISE, 2);
+			person.getStats().setSkillLevel(Skills.SYSTEMS_EXPERTISE, 2);
+			person.getStats().setSkillLevel(Skills.POINT_DEFENSE, 2);
+			person.setRankId(Ranks.SPACE_CAPTAIN);
+		}
 		person.getMemoryWithoutUpdate().set("$autoPointsMult", mult);
-		person.setPersonality(Personalities.AGGRESSIVE);
+		if (isAlphaCore) person.setPersonality(Personalities.RECKLESS);
+		else person.setPersonality(Personalities.AGGRESSIVE);
 		person.setPostId(null);
 		person.getStats().setSkipRefresh(false);
         return person;

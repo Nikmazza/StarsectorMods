@@ -2,6 +2,7 @@ package data.hullmods.vice;
 
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
@@ -17,7 +18,7 @@ import data.scripts.vice.util.RemnantSubsystemsUtil;
 public class AdaptiveEmitterDiodes extends BaseHullMod {
 
 	private static float BEAM_RANGE_PENALTY = 100f;
-	private static float BEAM_DAMAGE_PENALTY = 10f;
+	private static float BEAM_DAMAGE_PENALTY = 15f;
 	private static String FIRST_BONUS_TEXT = "hard flux";
 	private static String CONFLICT_MOD_1 = "advancedoptics";
 	private static String CONFLICT_MOD_2 = "high_scatter_amp";
@@ -76,8 +77,13 @@ public class AdaptiveEmitterDiodes extends BaseHullMod {
 		return null;
 	}	
 	
+	private boolean isPredictiveTargetingActive() {
+		return (Global.getSector().getMemoryWithoutUpdate().is("$xo_predictive_targeting_is_active", true));
+	}
+	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) BEAM_RANGE_PENALTY;
+		String penalty = isPredictiveTargetingActive() ? "0 (Predictive Targeting)" : String.valueOf((int) BEAM_RANGE_PENALTY) ;
+		if (index == 0) return penalty;
 		if (index == 1) return "" + (int) BEAM_DAMAGE_PENALTY + "%";
 		if (index == 2) return FIRST_BONUS_TEXT;
 		return null;

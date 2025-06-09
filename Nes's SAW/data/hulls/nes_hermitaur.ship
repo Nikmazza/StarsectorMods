@@ -12,8 +12,7 @@
   "shieldRadius": 100,
   "viewOffset": 0,
   "builtInMods": [
-    "NES_FluxMissiles",
-    "NES_ColorSelector_Herm"
+    "NES_FluxMissiles"
   ],
   "weaponSlots": [
     {
@@ -21,8 +20,8 @@
       "size": "MEDIUM",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 75,
-      "angle": 20,
+      "arc": 160,
+      "angle": 65,
       "locations": [0, 35]
     },
     {
@@ -30,8 +29,8 @@
       "size": "MEDIUM",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 75,
-      "angle": -20,
+      "arc": 160,
+      "angle": -65,
       "locations": [0, -35]
     },
     {
@@ -48,8 +47,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 90,
-      "angle": -20,
+      "arc": 150,
+      "angle": -55,
       "locations": [5, -65]
     },
     {
@@ -57,8 +56,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 90,
-      "angle": 20,
+      "arc": 150,
+      "angle": 55,
       "locations": [5, 65]
     },
     {
@@ -78,15 +77,6 @@
       "arc": 12,
       "angle": 0,
       "locations": [41, 42]
-    },
-    {
-      "id": "NES_DECO_COUNTER",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 0,
-      "locations": [0, 0]
     },
     {
       "id": "WS0033",

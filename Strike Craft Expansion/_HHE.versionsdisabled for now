@@ -1,0 +1,11 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/MrHoon/Starsector/master/_HHE.version",
+    "modName":"HHE: Fighter Expansion",
+    "modThreadId":18074,
+    "modVersion":
+    {
+        "major":1,
+        "minor":0,
+        "patch":1
+    },
+}

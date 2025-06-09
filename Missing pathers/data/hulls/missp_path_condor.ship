@@ -2,7 +2,7 @@
   "hullName": "Condor (Path)",
   "hullId": "missp_path_condor",
   "hullSize": "DESTROYER",
-  "spriteName": "graphics/ships/condor/missp_condor_path.png",
+  "spriteName": "graphics/ships/condor/missp_path_condor.png",
   "style": "LOW_TECH",
   "height": 204,
   "width": 110,
@@ -12,16 +12,17 @@
   "shieldRadius": 108.5,
   "viewOffset": 0,
   "builtInMods": [
-    "ill_advised"
+    "ill_advised",
+    "unstable_injector"
   ],
   "weaponSlots": [
     {
       "id": "WS0001",
       "size": "MEDIUM",
-      "type": "BALLISTIC",
+      "type": "MISSILE",
       "mount": "TURRET",
-      "arc": 360,
-      "angle": 0,
+      "arc": 5,
+      "angle": 90,
       "locations": [-2, 44]
     },
     {
@@ -29,7 +30,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 255,
+      "arc": 225,
       "angle": 0,
       "locations": [82, 21]
     },

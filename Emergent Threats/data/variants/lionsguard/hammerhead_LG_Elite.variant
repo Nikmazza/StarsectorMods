@@ -6,8 +6,7 @@
     "hullId": "hammerhead_LG",
     "hullMods": [
         "hardenedshieldemitter",
-        "targetingunit",
-        "stabilizedshieldemitter"
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],
@@ -22,11 +21,11 @@
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "reaper",
-                "WS 004": "reaper"
+                "WS 003": "vice_fragbomb",
+                "WS 004": "vice_fragbomb"
             }
         },
         {
@@ -35,8 +34,8 @@
             "weapons": {
                 "WS 005": "vulcan",
                 "WS 006": "vulcan",
-                "WS 007": "pdlaser",
-                "WS 008": "pdlaser"
+                "WS 007": "vulcan",
+                "WS 008": "vulcan"
             }
         }
     ]

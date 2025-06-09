@@ -1,0 +1,80 @@
+{
+    "displayName": "Mitrailuse",
+    "fluxCapacitors": 23,
+    "fluxVents": 30,
+    "goalVariant": false,
+    "hullId": "yna_arsonguard",
+    "hullMods": [
+        "fluxdistributor",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "yna_arsonguard_Mitrailuse",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "MH 01": "yna_svento_m",
+                "MS 02": "harpoon",
+                "MS 04": "harpoon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "MS 01": "heatseeker",
+                "MS 03": "heatseeker",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "yna_emg_m",
+                "WS0002": "yna_emg_m",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "yna_vg1_s",
+                "WS0004": "yna_vg1_s",
+                "WS0005": "yna_vg1_s",
+                "WS0006": "yna_vg1_s",
+                "WS0007": "yna_vg1_s",
+                "WS0008": "yna_vg1_s",
+                "WS0009": "yna_vg1_s",
+                "WS0010": "yna_vg1_s",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "yna_ac_s",
+                "WS0012": "yna_ac_s",
+                "WS0013": "yna_ac_s",
+                "WS0014": "yna_ac_s",
+                "WS0015": "yna_ac_s",
+                "WS0016": "yna_ac_s",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "yna_pd_las1_s",
+                "WS0018": "yna_pd_las1_s",
+                "WS0019": "yna_pd_las1_s",
+                "WS0020": "yna_pd_las1_s",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

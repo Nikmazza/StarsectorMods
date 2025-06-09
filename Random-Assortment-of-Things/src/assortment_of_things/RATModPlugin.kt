@@ -39,6 +39,7 @@ import assortment_of_things.exotech.ExoCampaignListener
 import assortment_of_things.exotech.ExotechGenerator
 import assortment_of_things.exotech.terrain.ExotechHyperNebula
 import assortment_of_things.misc.*
+import assortment_of_things.misc.escort.EscortRefitButton
 import com.fs.starfarer.api.EveryFrameScript
 import com.fs.starfarer.api.ui.UIPanelAPI
 import com.fs.starfarer.api.util.DelayedActionScript
@@ -54,7 +55,6 @@ class RATModPlugin : BaseModPlugin() {
     companion object {
         var added = false
 
-        var gameStartedForTitleScene = false
 
         var isHalloween = false
 
@@ -63,12 +63,10 @@ class RATModPlugin : BaseModPlugin() {
     override fun onApplicationLoad() {
         super.onApplicationLoad()
 
-        gameStartedForTitleScene = true
-
         val currentDate = Date()
         //var currentDate = Date(1698530401L * 1000)
-        val startDate = Date(1730329200L * 1000)
-        val endDate = Date(1730437200L * 1000)
+        val startDate = Date(1761865200L * 1000)
+        val endDate = Date(1761973200L * 1000)
         if (startDate.before(currentDate) && endDate.after(currentDate)) {
             isHalloween = true
         }
@@ -88,6 +86,8 @@ class RATModPlugin : BaseModPlugin() {
         FrontiersUtils.loadFacilitiesFromCSV()
 
         ArtifactUtils.loadArtifactsFromCSV()
+
+        LunaRefitManager.addRefitButton(EscortRefitButton())
 
         LunaRefitManager.addRefitButton(AlterationRefitButton())
 

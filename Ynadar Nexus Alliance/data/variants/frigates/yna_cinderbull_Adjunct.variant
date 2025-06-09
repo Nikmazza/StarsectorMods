@@ -1,0 +1,42 @@
+{
+  "variantId": "yna_cinderbull_Adjunct",
+  "hullId": "yna_cinderbull",
+  "displayName": "Adjunct",
+  "goalVariant": false,
+  "fluxCapacitors": 4,
+  "fluxVents": 5,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "auxiliarythrusters",
+    "eccm",
+    "turretgyros",
+    "extendedshieldemitter",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "yna_svento_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_pulse_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "swarmer"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -3,11 +3,12 @@
   "hullId": "nes_fluorspar",
   "displayName": "Pulser",
   "goalVariant": true,
-  "fluxCapacitors": 8,
-  "fluxVents": 20,
+  "fluxCapacitors": 0,
+  "fluxVents": 18,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
+	"reinforcedhull",
     "targetingunit",
     "magazines"
   ],

@@ -1,0 +1,77 @@
+name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
+Efeven Autogun,yna_ac_s,0,,300,900,,120,,5,20,8,,,,KINETIC,90,,0,1.2,1,,0,4,0.5,10,,1000,,,20,,,,"kinetic8, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Standoff / Anti Shield,,,,,,,,,,100
+Theriphor Light Mauler,yna_maul_s,1,,500,900,,100,,4,20,8,,,,HIGH_EXPLOSIVE,75,,0,1.25,1,,0,4,0.5,10,,800,,,30,,,,"he6, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Standoff / Anti Armor,,,,,,,,,,3
+Emabi Pocket Flak,yna_flak_s,1,,500,300,,80,,10,90,7,20,1.5,5,FRAGMENTATION,15,,0,0.25,1,,0,3,0.334,10,,2100,,,30,,,PD,"pd9, SR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Point Defense (Precise),,,,,,,,,,101
+Efonzee Smartgun,yna_sg1_s,2,0.5,800,1000,,150,,5,20,10,,,,HIGH_EXPLOSIVE,105,,0,1.25,1,,0,4,1,10,,800,800,1.25,50,,,,"he6, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Anti Armor,Slow,Poor,,,Fires projectiles that can be intercepted like missiles.,,,,,102
+Wonphorzi Volleygun,yna_vg1_s,3,0.25,1000,600,,360,,5,20,8,,,,FRAGMENTATION,120,,0,1.868,3,0.066,5,15,0.1,20,,500,,,20,,,,"kinetic8, ynadar, ynadar_arsenal_2_bp",,Ynadar,,Area Denial / Finisher,,,,,"Fires a total of %s pellets.
+Each pellet deals %s damage.",27 | 40,,,,103
+,yna_vg1_s_z,0,,1,600,,40,,5,20,0,,,,FRAGMENTATION,10,,0,1,1,,5,15,0.1,20,,500,,,20,,,SYSTEM,,,Ynadar,,,,,,,,,,,,103.01
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Eksemve Autocannon,yna_ac_m,0,,1500,1000,,150,,15,7,14,,,,KINETIC,120,,0,2,3,0.2,0,8,1,10,,1000,,,30,,,,"kinetic14, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Standoff / Anti Shield,,,,,,,,,,110
+Emasiten Autoflak,yna_flak_m,2,,2000,450,,100,,10,120,17,,,,FRAGMENTATION,20,,0,0.1334,1,,0,4,0.2,10,,1400,,,30,,,PD,"pd20, SR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Point Defense (Precise),,,,,,,,,,111
+Eftuezee Smartcannon,yna_sg1_m,2,0.5,2500,1100,,150,,5,20,20,,,,HIGH_EXPLOSIVE,90,,0,0.8,2,0.2,0,4,1,10,,800,800,1.25,50,,,,"he12, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Anti Armor,Slow,Poor,,,Fires projectiles that can be intercepted like missiles.,,,,,112
+Towonphor Volleycannon,yna_vg1_m,3,0.25,3000,700,,800,,5,12,18,,,,FRAGMENTATION,200,,0,2.236,5,0.066,8,24,0.1,20,,500,,,20,,,,"kinetic18, ynadar, ynadar_arsenal_2_bp",,Ynadar,,Area Denial / Finisher,,,,,"Fires a total of %s pellets.
+Each pellet deals %s damage.",100 | 40,,,,113
+,yna_vg1_m_z,0,,1,700,,40,,5,12,0,,,,FRAGMENTATION,10,,0,1,1,,8,24,0.1,20,,500,,,20,,,SYSTEM,,,Ynadar,,,,,,,,,,,,113.01
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ektuphizro Multicannon,yna_ac_l,0,,4000,1000,,100,,10,6,25,,,,KINETIC,80,,0,0.25,1,,0,4,0.25,10,,1000,,,20,,,,"kinetic16, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Standoff / Anti Shield,,,,,,,,,,121
+Eksemtuphi Heavy Autocannon,yna_ac2_l,2,0.5,6000,1200,,400,200,50,6,30,,,,KINETIC,400,,0,1.5,2,0.5,0,3,0.5,10,,1000,,,150,,,,"kinetic20, LR, ynadar",,Ynadar,,Anti Shield,,,,,"On shield hit, deals %s more damage as %s.",25% | Soft-Flux,,,,122
+Pezuubi Heavy Mauler,yna_maul_l,2,0.5,5000,1200,,350,,50,4,30,,,,HIGH_EXPLOSIVE,280,,0,1.25,1,,0,3,0.5,10,,800,,,100,,,,"he20, LR, ynadar, ynadar_arsenal_2_bp",,Ynadar,,Standoff / Anti Armor,,,,,,,,,,123
+Ptraares Gratecannon,yna_fragcannon_l,1,0.8,3500,1000,,2400,,200,5,28,,,,FRAGMENTATION,600,,0,2,1,,0,5,1.5,10,,500,,,400,,,,"kinetic14, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,General,,,,,"Can pass through fighters if they are killed immediately from the damage.
+
+Explodes in a small radius dealing %s of its damage.",50%,,,,124
+Emwotiphor Defender,yna_flak_l,3,0.3,5000,600,,200,,20,75,30,,,,FRAGMENTATION,30,,0,0.1,1,,0,4,0.2,10,,1600,,,30,,,PD,"pd30, SR, ynadar, ynadar_arsenal_2_bp",,Ynadar,,General / Point Defense,,,,,,,,,,125
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Aykeiem Mag-gun,yna_emg_s,0,,300,1000,,120,40,5,30,6,,,,FRAGMENTATION,40,,0,0.667,1,,0,4,0.2,10,,1800,,,20,,,ANTI_FTR,"energy4, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Pressure / Deterrent,,,,,"%s of the damage on shields deals %s.
+On hull hit, %s chance to arc, dealing %s damage as Energy and %s EMP.",50% | Soft-Flux | 10% | 20% | full,,,,200
+,yna_emg_s_z,0,,1,1000,,60,40,5,30,0,,,,FRAGMENTATION,40,,0,1,1,,0,4,0.2,10,,1800,,,20,,,SYSTEM,,,Ynadar,,,,,,,,,,,,200.01
+Eftoem Spike Gun,yna_enmis_s,1,,500,900,,80,,0,20,8,,,,ENERGY,64,,0.1,0.75,2,0.15,,,,,,400,80,5.5,50,,,"ANTI_FTR, DO_NOT_AIM, GUIDED_POOR","energy6, missile1, damage_soft_flux, ynadar, ynadar_arsenal_1_bp",,Ynadar,,General / Anti Small Craft,Medium,Medium,,,"Fires projectiles that can be intercepted like missiles.
+If undamaged, shield hits deal %s.",Soft-Flux,,,,201
+Ruk PD Maser,yna_pd_las1_s,2,,800,600,200,,,0,150,7,,,,FRAGMENTATION,,20,0,0.1,,,,,,,6000,,,,,,,PD,"pd11, beam5, ynadar, ynadar_arsenal_2_bp",,Ynadar,,Point Defense (Precise),,,,,Does %s more damage to missiles.,100%,,,,202
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Aykeiwon Automag,yna_emg_m,0,,600,1200,,120,40,5,15,13,,,,FRAGMENTATION,30,,0,0.2222,1,,0,4,0.2,10,,1800,,,20,,,ANTI_FTR,"energy8, LR, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Pressure / Deterrent,,,,,"%s of the damage on shields deals %s.
+On hull hit, %s chance to arc, dealing %s damage as Energy and %s EMP.",50% | Soft-Flux | 10% | 20% | full,,,,210
+,yna_emg_m_z,0,,1,1200,,60,40,5,12,0,,,,FRAGMENTATION,30,,0,1,1,,0,4,0.2,10,,1800,,,20,,,SYSTEM,,,Ynadar,,,,,,,,,,,,210.01
+Tuechbi Pulse Laser,yna_pulse_m,1,,1200,1000,,150,,0,10,15,,,,ENERGY,125,,0.1,0.7,,,,,,,,1200,,,,,,,"energy12, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Standoff / General,,,,,,,,,,211
+Agiem Spike Cannon,yna_enmis_m,2,,2000,1000,,80,,0,20,15,,,,ENERGY,56,,0.15,0.95,3,0.2,,,,,,400,80,6,50,,,"ANTI_FTR, DO_NOT_AIM, GUIDED_POOR","energy10, missile2, damage_soft_flux, ynadar, ynadar_arsenal_1_bp",,Ynadar,,General / Anti Small Craft,Medium,Medium,,,"Fires projectiles that can be intercepted like missiles.
+If undamaged, shield hits deal %s.",Soft-Flux,,,,212
+Dotrezro EM1 Blaster,yna_blaster_m,3,0.5,3000,900,,300,,0,8,18,,,,HIGH_EXPLOSIVE,300,,0.5,2,,,,,,,,1200,,,,,,USE_LESS_VS_SHIELDS,"energy14, ynadar, ynadar_arsenal_2_bp",,Ynadar,,Anti Armor,,,,,"Deals additional %s damage to armor, not mitigated by reduction.",100,,,,213
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ofepofi Pulse Cannon,yna_pulse_l,0,,1200,1100,,200,,0,10,28,,,,ENERGY,150,,0.25,1,4,0.25,,,,,,1500,,,,,,,"energy18, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Standoff / General,,,,,,,,,,220
+Bequuem Spike Barrage,yna_enmis_l,1,,4000,1100,,80,,0,10,30,,,,ENERGY,48,,0.25,1.5,4,0.25,,,,,,400,80,6.5,50,,,"ANTI_FTR, DO_NOT_AIM, GUIDED_POOR","energy10, missile2, damage_soft_flux, ynadar, ynadar_arsenal_1_bp",,Ynadar,,General / Anti Small Craft,Medium,Medium,,,"Fires projectiles that can be intercepted like missiles.
+If undamaged, shield hits deal %s.",Soft-Flux,,,,221
+Hiarchburn Strategic Laser,yna_hil_l,2,0.3,6000,1000,1000,,,0,5,35,,,,HIGH_EXPLOSIVE,,650,3,0.3,,,,,,,1000,,,,,,,,"beam24, LR, ynadar, ynadar_arsenal_2_bp",,Ynadar,,Finisher / Anti Armor,,,,,Fires a slower moving beam after a %s-second charge.,3,,,,222
+Exocast F-Plasma Cannon,yna_plas1_l,3,0.2,10000,1100,,1000,,,5,30,,,,ENERGY,1000,,0.5,4.5,1,,,,,,,750,,,500,,,STRIKE,"energy22, strike18, LR, ynadar, rare_bp",,Ynadar,,General,,,,,"On shield hit, deals %s more damage as %s.
+On hull hit, deals additional %s damage to armor, not mitigated by reduction.",25% | Soft-Flux | 150,,,,223
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Svento Missile Launcher,yna_svento_s,1,0.7,700,1800,,600,,20,10,3,4,,,HIGH_EXPLOSIVE,0,,0,2,1,,0,0,0,0,,400,80,6,250,,,GUIDED_POOR,"strike6, missile1, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Finisher,Fast,Medium,,,,,,,TRUE,300
+Spotling SRM Launcher,yna_srm1_s,2,0.5,1000,1200,,100,,15,50,5,240,,,FRAGMENTATION,0,,0,4.7,3,0.15,0,0,0,0,,400,200,5,50,,,"ANTI_FTR, DO_NOT_AIM, DO_NOT_CONSERVE","utility8, missile0, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Anti Small Craft,Fast,Great,,,,,,,,301
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Svento Pod Launcher,yna_svento_m,1,0.7,2000,1800,,600,,20,10,10,18,,,HIGH_EXPLOSIVE,0,,0,5.75,3,0.125,0,0,0,0,,400,80,6,250,,,GUIDED_POOR,"strike11, missile2, ynadar, ynadar_arsenal_1_bp",,Ynadar,,Finisher,Fast,Medium,,,,,,,TRUE,310
+Mudcloud Rocket Pod,yna_mudcloud_m,0,,1000,1200,,500,,20,20,8,140,,,FRAGMENTATION,0,,0,3.25,7,0.125,1,1,0,0,,500,40,4,350,,,CONSERVE_1,"rocket7, strike0, ynadar, ynadar_arsenal_1_bp",,Ynadar,,General / Finisher,Fast,None,,,,,,,,311
+Bristlebulb DEM Launcher,yna_las1_dem_m,2,,1500,2500,,1000,,15,20,10,2,,,ENERGY,0,,0,10,1,,0,0,0,0,,120,0,18,1800,,,"CONSERVE_1, GUIDED_POOR, STRIKE","strike8, missile3, ynadar, damage_soft_flux, ynadar_arsenal_2_bp",,Ynadar,,Pressure / Anti Frigate,Slow,Good,,,"Durable missile with %s hull that deals the displayed damage when manually hit.
+Payload is a %s laser dealing %s damage per second at a lifetime of %s seconds. Is only affected by missile-related bonuses.",1800 | Fragmentation | 400 | 60,,,TRUE,312
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Bristlebulb Pod,yna_las1_dem_l,2,,5000,2500,,1000,,15,10,25,15,,,ENERGY,0,,0,6,1,,0,0,0,0,,120,0,18,1800,,,"GUIDED_POOR, STRIKE","strike10, missile4, ynadar, damage_soft_flux, ynadar_arsenal_2_bp",,Ynadar,,Pressure / Anti Frigate,Slow,Good,,,"Durable missile with %s hull that deals the displayed damage when manually hit.
+Payload is a %s laser dealing %s damage per second at a lifetime of %s seconds. Is only affected by missile-related bonuses.",1800 | Fragmentation | 400 | 60,,,TRUE,320
+    Bristlebulb - Payload,yna_las1_loadem,2,,0,1100,400,,,20,30,0,,,,FRAGMENTATION,0,,0.1,0.1,30,0.5,,,,,2400,,,,,,,SYSTEM,,,,,,,,,,,,,,,0.001
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Efeven Snipergun,yna_ac_s_ftr,0,,300,700,,100,,5,20,,,,,KINETIC,75,,0,1.5,1,,0,0,0,0,,1200,,,20,,,SYSTEM,"kinetic8, LR, ynadar, no_sell, no_dealer, no_drop_salvage",,Ynadar,,Standoff / Anti Shield,,,,,,,,,,400
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mudcloud Rack (Fighter),yna_mudcloud_ftr,0,,1000,700,,500,,20,20,,4,,,FRAGMENTATION,0,,0,3.25,4,0.125,1,1,0,0,,500,40,3,350,,,"STRIKE, SYSTEM","rocket7, strike0, ynadar, no_sell, no_dealer, no_drop_salvage",,Ynadar,,General / Finisher,Fast,None,,,,,,,,500
+Svento Automissile,yna_svento_s_ftr,0,,700,800,,600,,20,10,,,,,HIGH_EXPLOSIVE,0,,0,10,1,,0,0,0,0,,400,80,3,250,,,"GUIDED_POOR, SYSTEM","strike6, missile1, ynadar, no_sell, no_dealer, no_drop_salvage",,Ynadar,,Finisher,Fast,Medium,,,,,,,,501
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ayefkei Heatseeker Rack,yna_hvy_heat,1,,1200,3000,,200,1000,15,10,,,,,FRAGMENTATION,0,,0,19.625,4,0.125,0,0,0,,,400,50,15,250,,,"DO_NOT_AIM, DO_NOT_CONSERVE, HEATSEEKER, SYSTEM, SHOW_IN_CODEX","ynadar, no_sell, no_dealer, no_drop_salvage",,Ynadar,,Anti Engine,Fast,Excellent,,,,,,,,600
+Pilum LRM Repeater,yna_supilum,1,,1500,4000,,500,500,25,10,,80,0.5,40,FRAGMENTATION,0,,0,4.625,4,0.125,0,0,0,0,,125,200,30,150,,,"DO_NOT_AIM, DO_NOT_CONSERVE, SYSTEM, SHOW_IN_CODEX","utility15, missile14, ynadar, no_sell, no_dealer, no_drop_salvage",,Ynadar,,Long Range Support,Very Slow,Very Poor,,,"Second-stage hits on shields have a chance to arc through to weapons and engines, dealing %s EMP damage. The chance to pierce the shields is based on the target's hard flux level.",500,,,,601
+Rukmace PD Maser,yna_pdw_las1,2,,400,600,400,,,0,150,,,,,FRAGMENTATION,,25,0,0.05,,,,,,,10000,,,,,,,"PD, SYSTEM, SHOW_IN_CODEX","pd11, beam5, ynadar, no_sell, no_dealer, no_drop_salvage",,Ynadar,,Point Defense (Precise),,,,,Does %s more damage to missiles.,100%,,,,602
+Exocast Barrage,yna_plas1_xl,3,,10000,1350,,1000,,,5,,,,,ENERGY,1000,,0.5,7,6,0.5,,,,,,750,,,500,,,"STRIKE, SYSTEM, SHOW_IN_CODEX","energy26, strike20, LR, ynadar, no_sell, no_dealer, no_drop_salvage",,Ynadar,,General,,,,,"On shield hit, deals %s more damage as %s.
+On hull hit, deals additional %s damage to armor, not mitigated by reduction.",25% | Soft-Flux | 150,,,,603
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Minelayer,yna_minelayer,0,,2000,1000,,800,,25,30,,30,,,HIGH_EXPLOSIVE,0,,0,3,1,,0,0,0,0,,50,50,25,500,,,SYSTEM,,,Ynadar,,,,,,,,,,,,700
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Lidar Dish,yna_lidardish,0,,1,2000,200,,,0,200,0,1000,1000,,FRAGMENTATION,,0,0.2,0.2,0.35,0,,,,,1000000,,,,,,,SYSTEM,lidar,,,,Special,,,,,,,,,,800
+Sensor Dish,yna_sensordish,0,,1,2000,,,,0,100,0,1000,1000,,FRAGMENTATION,,0,0.2,0.2,0.35,0,,,,,1000000,,,,,,,SYSTEM,yna_radar,,,,Special,,,,,,,,,,801

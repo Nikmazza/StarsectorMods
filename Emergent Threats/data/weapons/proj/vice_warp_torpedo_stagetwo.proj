@@ -1,0 +1,44 @@
+{
+	"id":"vice_warp_torpedo_stagetwo",
+	"specClass":"missile",	
+	"missileType":"ROCKET",
+	"sprite":"graphics/vice/weapons/warp_torpedo.png",
+	"onHitEffect":"data.scripts.vice.weapons.WarpTorpedoOnHit",
+	"onFireEffect":"data.scripts.vice.weapons.WarpTorpedoFlareEffect",
+	"size":[18,28],	
+	"center":[9,14],
+	"collisionRadius":20,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[40,100,220,200],
+	"explosionRadius":80, # purely visual
+	"fizzleOnReachingWeaponRange":false,
+	"fadeTime":0.5, # fadeout duration
+	"maxFlightTime":1,
+	"glowColor":[40,100,220,100],
+	"glowRadius":80,
+	"engineSpec":{"turnAcc":0,
+				  "turnRate":0,
+				  "acc":2500,
+				  "dec":300,
+				  "maxSpeed":2500},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-15, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[70,200,255,255],
+						"contrailDuration":1,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":3,  # positive or negative
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailColor":[70,200,255,120],
+						"glowSizeMult":2,
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":10.0,
+				    "length":40.0,
+				    "angle":180.0},
+				    ],
+}

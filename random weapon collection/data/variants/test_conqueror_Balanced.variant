@@ -1,0 +1,88 @@
+{
+    "displayName": "Balanced",
+    "fluxCapacitors": 38,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "test_conqueror",
+    "hullMods": [
+        "fluxdistributor",
+        "stabilizedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "test_conqueror_Balanced",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0019": "gorgonpod",
+                "WS0018": "gorgonpod",
+                "WS0017": "gorgonpod",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0016": "gazer",
+                "WS0015": "gazer",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "devastation",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "rwc_railcannon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0023": "rwc_positron_m",
+                "WS0024": "rwc_positron_m",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0022": "arbalest",
+                "WS0021": "arbalest",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "pdburst",
+                "WS0001": "pdlaser",
+                "WS0011": "pdburst",
+                "WS0014": "pdlaser",
+                "WS0003": "pdlaser",
+                "WS0013": "pdlaser",
+                "WS0002": "pdlaser",
+                "WS0010": "pdlaser",
+                "WS0009": "pdlaser",
+                "WS0004": "pdlaser",
+                "WS0005": "flak",
+                "WS0006": "flak",
+            }
+        },
+    ],
+    "wings": [
+        "rwc_wildcat_wing",
+        "rwc_wildcat_wing",
+    ],
+    "modules": [],
+}

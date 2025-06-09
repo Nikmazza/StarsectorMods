@@ -1,14 +1,14 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 12,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_exhortation",
     "hullMods": [
         "fluxdistributor",
         "hardenedshieldemitter",
-        "targetingunit",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "vice_unified_targeting_core"
     ],
     "permaMods": [],
     "sMods": [],

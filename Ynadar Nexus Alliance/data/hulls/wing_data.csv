@@ -1,0 +1,8 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+yna_drone_torp_wing,yna_drone_torp_Drone,"stay_in_front_of_ship, support0, drone, mid, auto_fighter, ynadar_bp, ynadar",0,,4,4,BOX,0,500,,2,SUPPORT,Drone,12,3000,,,,,,,,,,,,,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+yna_ftr_light_wing,yna_ftr_light_Interceptor,"interceptor1, interceptor, auto_fighter, mid, ynadar_bp, ynadar",1,,3,3,V,4000,200,600,3,INTERCEPTOR,Interceptor,6,6000,,,,,,,,,,,,,100
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+yna_ftr_heavy_wing,yna_ftr_heavy_Fighter,"fighter3, fighter, auto_fighter, mid, ynadar_bp, ynadar",2,,7,7,BOX,4000,500,-400,2,FIGHTER,Heavy Fighter,12,12000,,,,,,,,,,,,,200
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+yna_bmr_wing,yna_bmr_Bomber,"bomber3, bomber, mid, ynadar_bp, ynadar",3,,4,8,V,4000,2000,750,1,BOMBER,Bomber,15,10000,,,,,,,,,,,,,300

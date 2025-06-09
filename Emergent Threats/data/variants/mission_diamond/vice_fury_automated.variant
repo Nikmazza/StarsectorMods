@@ -1,9 +1,8 @@
 {
     "displayName": "Automated",
-    "fluxCapacitors": 12,
+    "fluxCapacitors": 16,
     "fluxVents": 30,
     "hullId": "vice_fury_ai",
-	"goalVariant": false,
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",

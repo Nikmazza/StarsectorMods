@@ -1,7 +1,7 @@
 {
     "displayName": "Support",
     "fluxCapacitors": 0,
-    "fluxVents": 25,
+    "fluxVents": 23,
     "goalVariant": true,
     "hullId": "falcon_LG",
     "hullMods": [
@@ -28,8 +28,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "heavyburst",
-                "WS 006": "heavyburst"
+                "WS 005": "pdburst",
+                "WS 006": "pdburst"
             }
         }
     ]

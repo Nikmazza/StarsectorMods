@@ -1,0 +1,91 @@
+{
+  "variantId": "yna_urgrand_Standard",
+  "hullId": "yna_urgrand",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 44,
+  "fluxVents": 50,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_deck_crew",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "BW 01": "yna_hvy_heat"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pilum_large",
+        "WS0002": "pilum_large",
+        "WS0006": "pilum_large",
+        "WS0007": "pilum_large"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 01": "breach",
+        "MS 02": "breach",
+        "MS 03": "breach",
+        "MS 04": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "hil",
+        "WS0004": "hil",
+        "WS0005": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "railgun",
+        "WS0013": "railgun",
+        "WS0014": "railgun",
+        "WS0015": "railgun",
+        "WS0016": "railgun",
+        "WS0017": "railgun",
+        "WS0018": "railgun",
+        "WS0019": "railgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "flak",
+        "WS0009": "flak",
+        "WS0010": "flak",
+        "WS0011": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0020": "vulcan",
+        "WS0021": "vulcan",
+        "WS0022": "vulcan",
+        "WS0023": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "hoplon_wing",
+    "hoplon_wing"
+  ]
+}

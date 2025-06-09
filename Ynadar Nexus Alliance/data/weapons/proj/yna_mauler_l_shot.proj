@@ -1,0 +1,18 @@
+{
+	"id":"yna_mauler_l_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":120.0,
+	"hitGlowRadius":80,
+	"width":12.0,
+	"fadeTime":0.35,
+	"fringeColor":[255,150,70,225],
+	"coreColor":[255,150,150,180],	
+	"glowColor":[255,165,70,105],
+	"glowRadius":30,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_large_yellow.png"
+}

@@ -1,0 +1,87 @@
+{
+  "variantId": "yna_arsonguard_Balanced",
+  "hullId": "yna_arsonguard",
+  "displayName": "Balanced",
+  "goalVariant": true,
+  "fluxCapacitors": 22,
+  "fluxVents": 30,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "targetingunit",
+    "turretgyros",
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MH 01": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 02": "atropos_single",
+        "MS 04": "atropos_single"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 01": "heatseeker",
+        "MS 03": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "arbalest",
+        "WS0002": "arbalest"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightac",
+        "WS0004": "lightac",
+        "WS0005": "lightac",
+        "WS0006": "lightac",
+        "WS0007": "lightac",
+        "WS0008": "lightac",
+        "WS0009": "lightac",
+        "WS0010": "lightac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "lightag",
+        "WS0012": "lightag",
+        "WS0013": "lightag",
+        "WS0014": "lightag",
+        "WS0015": "lightag",
+        "WS0016": "lightag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "pdlaser",
+        "WS0018": "pdlaser",
+        "WS0019": "pdlaser",
+        "WS0020": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

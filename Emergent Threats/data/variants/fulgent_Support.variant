@@ -1,6 +1,6 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 5,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "fulgent",

@@ -1,0 +1,29 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,hints,tags,rarity,breakProb,minPieces,maxPieces,number
+Sentinel,hhe_sentinel,Supercarrier,Midline,flarelauncher,40,11000,1000,12000,,600,280,8,30,20,10,5,3,4000,FRONT,,90,0.6,0.8,,,600,1300,400,300,15,20,7,600000,3,15,720,0.25,60,60,CARRIER,rare_bp,,0.4,2,4,1989
+Astral (E),hhe_astral_culann,Carrier,High Tech,hhe_sys_drones_tetra,27,10000,900,12000,,600,250,6,30,15,10,7,4,3000,FRONT,,360,0.7,0.6,,,450,1000,250,200,10,20,7,300000,3,15,600,0.25,40,40,CARRIER,rare_bp,,0.6,2,4,1989
+Artificer,hhe_artificer,Battlecarrier,High Tech,fastmissileracks,22,12000,1200,14000,,700,250,4,50,25,15,8,6,2750,OMNI,,180,0.5,0.7,,,400,800,175,225,10,20,8,375000,3,12,720,0.25,40,40,"CARRIER, COMBAT",rare_bp,,0.5,2,4,1989
+Broadsword (L),hhe_ftr_broadsword_ht,,High Tech,hhe_sys_flarelauncher_blue_single,,750,100,400,,50,0,,200,400,350,90,180,30,FRONT,,75,0,1,,,1,1,,,,,,,,,,,,,,,,0,,,1989
+Cazin,hhe_ftr_cazin,,Low Tech,hhe_sys_flarelauncher_single,,600,75,80,,9,0,,180,350,300,80,150,28,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,1989
+Cazin (P),hhe_ftr_cazin_pirate,,Pirate,,,600,75,80,,9,,,180,350,300,80,150,28,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,
+Ixwa,hhe_ftr_sarissa,,Low Tech,,,500,50,100,,40,0,,200,359,300,150,300,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,1989
+Tinhead,hhe_ftr_bonnethead,,Midline,hhe_sys_flarelauncher_single,,800,150,120,,40,0,,150,300,275,180,240,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,1989
+Brokkr,hhe_ftr_brokkr,,High Tech,hhe_sys_drones_brokkr,,750,50,250,,50,0,,150,250,250,90,180,30,OMNI,,135,0,1,,,4,4,,,,,,,,,,,,,,,,0,,,1989
+Lucent,hhe_ftr_lucent,,Remnant,hhe_sys_flarelauncher_blue_single,,600,75,350,,50,0,,200,350,350,180,240,35,OMNI,,240,0,1,,,0,0,,,,,,,,,,,,,,,,0,,,1989
+Loki,hhe_ftr_loki,,High Tech,,,750,75,1000,,100,,,200,300,250,90,180,40,FRONT,,360,0,1,,,2,2,,,,,,,,,,,,,,,,,,,1989
+Broadsword (LG),gg_broadsword_lg,,Low Tech,flarelauncher_fighter,,750,100,80,,10,0,,200,400,350,90,180,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,104
+Broadsword (XIV),gg_broadsword_xiv,,Low Tech,flarelauncher_single,,750,100,80,,10,0,,200,400,350,90,180,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,104
+Gladius (LG),gg_gladius_lg,,Midline,flarelauncher_fighter,,500,75,200,,50,0,,300,400,300,150,300,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,109
+Gladius (XIV),gg_gladius_xiv,,Midline,flarelauncher_fighter,,500,75,200,,50,0,,300,400,300,150,300,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,109
+Warthog (XIV),gg_warthog_xiv,,Midline,flarelauncher_fighter,,750,200,200,,50,0,,130,180,150,100,200,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,110
+Helot,hhe_ftr_helot,,Midline,,,250,40,100,,10,0,,275,350,350,180,270,15,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,1989
+Draugr,hhe_ftr_draugr,,High Tech,,,500,75,300,,100,0,,175,350,300,112,270,20,PHASE,phasecloak,45,,,0.05,0.1,1,1,,,,,,,,,,,,,,,,0,,,1989
+Talon (L),hhe_ftr_talon,,High Tech,,,200,25,150,,30,0,,325,400,300,150,300,10,FRONT,,90,0,1,,,1,1,,,,,,,,,,,,,,,,,,,
+Thunder (LG),gg_thunder_lg,,Midline,,,500,75,750,,100,0,,450,600,500,150,300,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,111
+Thunder (XIV),gg_thunder_xiv,,Midline,,,500,75,750,,100,0,,450,600,500,150,300,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,0,,,111
+Manta,hhe_ftr_manta,,Midline,,,750,75,200,,50,0,,225,400,200,225,270,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,1989
+Prism,hhe_ftr_prism,,Remnant,,,300,10,250,,50,0,,225,350,350,90,180,10,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,0,,,1989
+Khopesh (XIV),gg_khopesh_xiv,,Low Tech,maneuveringjets,,500,75,500,,100,0,,180,225,200,60,120,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,0,,,113
+Vernd,hhe_ftr_vernd,,High Tech,hhe_sys_flarelauncher_blue_single,,225,10,375,,75,0,,175,350,300,120,240,20,OMNI,,160,0,1,,,1,1,,,,,,,,,,,,,,,,0,,,1989
+Tetra Drone,hhe_drone_tetra,,High Tech,,,35,15,100,,50,,,200,250,250,180,360,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,0,,,1989
+Brokkr Drone,hhe_drone_brokkr,,High Tech,,,25,10,100,,50,,,200,250,250,180,360,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,0,,,1989
+Gemini (PL),hhe_gemini,Light Carrier,Persean League,reservewing,12,4250,250,3000,,200,80,3,45,35,25,25,20,500,OMNI,,150,0.4,0.8,,,80,160,100,50,2,35,9,56000,5,15,360,0.25,13,13,CARRIER,rare_bp,,0.5,2,3,1989

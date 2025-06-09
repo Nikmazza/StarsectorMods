@@ -1,0 +1,92 @@
+{
+	#Generic
+	"yna_hmod":{
+		"feat":"Features",
+		"good":"Improvements",
+		"bad":"Drawbacks",
+		"comp":"Compatibilities",
+		"note":"Notes",
+		"ba":"Base",
+		
+		"hl_shunt":"Shield Shunt",
+		"hl_safety":"Safety Overrides",
+		"hl_bal_find":"Ballistic Rangefinder",
+		"hl_mis_auto":"Missile Autoloader",
+		"hl_mis_rack":"Expanded Missile Racks",
+		"hl_yna":"Ynadar Hull",
+		"roundup":"roundup",
+		
+		"comp_yna":"Exclusive to Ynadar ships.%s",
+		"comp_unbased":"logistics, engine and command hull mods and improvised hangars",
+		"comp_omni":"unable to convert into Omnidirectional",
+		"comp_range":"range extension hullmods",
+		"comp_range_full":"Cannot install range extension hullmods.%s",
+		"comp_no_mis_small":"Small Non-Missile weapons by ",
+		"comp_no_mis_med":"Medium Non-Missile weapons by ",
+		"comp_no_mis_large":"Large Non-Missile weapons by ",
+		"comp_large":"Ordinance cost %s for Non-Missile Large weapons,\n %s for Large Missiles.",
+		"comp_med":"Ordinance cost %s for Non-Missile Medium weapons.",
+		
+		"good_range":"All Non-PD Non-Missile Weapon range %s.",
+		"good_pd_range":"PD Weapon range %s.",
+	},
+
+	# Built-ins
+	"yna_mod_hull":{
+		"mod1_flavor":"\"A fair journey best trotted in a distance, viewed far and wide and remembered for long.\"",
+		"mod1_flavor2":" - unidentified explorer",
+		
+		"good_range":"Non-Missile Non-Beam Non-PD Non-Ynadar weapon base range %s/%s/%s, of respective mount sizes.",
+		"good_bean":"Beam and PD base range %s, Beam flux %s.",
+		"good_he_rec":"High-Explosive damage received %s and Beam damage received %s. Stacks multiplicatively.",
+		"good_he_rec_g":"Stacks multiplicatively.",
+		"good_he_rec_extra":"Total HE damage from this alone: 130% Armor, 65% Hull",
+		"good_wep_thresh":"Range reduction threshold %s, if it exists.",
+		"good_sensor":"Combat Sight range %s and Sensor Strength %s.",
+		
+		"bad_recovery":"Supply cost on Recovery/Repair %s.",
+		"bad_deploy":"Deployment cost %s on non-civilian, unless militarized.",
+		"bad_frag_rec":"Fragmentation damage received %s.",
+		"bad_frag_rec_extra":"Total damage from this alone: 35% Armor, 140% Hull",
+		
+		"cost":"Ordinance cost of non-missile Ynadar weapons %s.",
+		"comp":"Cannot install Ballistic Rangefinder. %s",
+		
+		"good_pd_rng":"Non-Beam PD weapon base range on all sizes %s.",
+		"good_beam":"Beam base range %s and flux generation %s.",
+		"good_armor":"Armor multiplied by %s but Strength reduced by %s.",
+		
+		"comp_large":"Ordinance cost %s for Non-Missile Large weapons,\n %s for Large Missiles.",
+	},
+	
+	"yna_mod_nitro":{
+		"time":"Time Flow %s, with adjusted Peak readiness time to match realtime.",
+		"peak":"Peak readiness time %s.",
+		"comp":"Cannot install Jandor Time Reactor. %s",
+		"note":"Only the ship is accelerated. Relative time is experienced normally. %s",
+	},
+	
+	"yna_mod_mis_load":{
+		"ai":"This Autoloader will alter the behavior of using the affected missiles, utilizing them more frequently. %s",
+		"ammo":"If Small Missile maximum ammo is above %s units, they are not counted on the Autoloader but have their ammo increased by %s. However if maximum ammo is above %s units, they are increased by %s instead.",
+		"comp":"Cannot install Missile Autoloader. %s",
+	},
+	
+	"yna_mod_slam_load":{
+		"mount":"Medium Missile ordinance cost is reduced by %s.",
+		"ammo":"Medium Missile ammo capacity are reduced by %s as the rest are stored within the autoloader mechanism.",
+		"comp":"Cannot install Expanded Missile Racks. %s",
+	},
+	
+	"yna_mod_urgrand":{
+	},
+	
+	"yna_mod_peril":{
+		"armor":"Armor %s with Armor Strength reduced by %s.",
+		"flux":"Flux Capacity and Dissipation is multiplied by %s. \n%s",
+		"fluxtra":"This also accounts to additional capacitors and vents.",
+		"sensor":"Sensor Profile and Sensor Strength %s.",
+		"sight":"Combat Sight range %s.",
+		"turret":"Turret health %s.",
+	},
+}

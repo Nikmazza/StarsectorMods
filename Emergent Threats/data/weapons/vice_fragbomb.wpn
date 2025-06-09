@@ -1,7 +1,7 @@
 {
 	"id":"vice_fragbomb",
 	"specClass":"projectile",
-	"type":"MISSILE",
+	"type":"COMPOSITE",
 	"size":"SMALL",
 	"turretSprite":"graphics/vice/weapons/stinger_catapult.png",
 	"hardpointSprite":"graphics/vice/weapons/stinger_catapult.png",

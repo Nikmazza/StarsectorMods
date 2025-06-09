@@ -3,7 +3,6 @@
         "hulls":{
             "missp_atlasmkiii":1.5,
 			"missp_starlinermkii":1.0,
-			"missp_venture_pirate":0.5,
 			"missp_nebulamkii":1.0,
         },
     },
@@ -11,7 +10,6 @@
         "hulls":[
             "missp_atlasmkiii",
 			"missp_starlinermkii",
-			"missp_venture_pirate",
 			"missp_nebulamkii",
         ],
     },
@@ -19,19 +17,7 @@
         "hulls":[
             "missp_atlasmkiii",
 			"missp_starlinermkii",
-			"missp_venture_pirate",
 			"missp_nebulamkii",
         ],
     },
-	"knownFighters":{
-		"fighters":[
-			"missp_nail_wing",
-		],
-	},
-	"priorityFighters":{
-		"tags":[],
-		"fighters":[
-			"missp_nail_wing",
-		],
-	},
 }

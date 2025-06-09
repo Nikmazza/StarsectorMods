@@ -1,0 +1,23 @@
+{
+  "variantId": "yna_perilstar_m_t_l_Standard",
+  "hullId": "yna_perilstar_m_t_l",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_pd_las1_s",
+        "WS0002": "yna_pd_las1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

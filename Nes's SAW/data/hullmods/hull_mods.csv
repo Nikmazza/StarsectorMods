@@ -12,36 +12,11 @@ Increases ship's flux dissipation rate while venting by %s,
 Drastically reduces weapon ranges past %s units,
 
 Incompatible with %s.",brrrt,graphics/hullmods/nes_aafarray.png
-Carnelian Color Selector,NES_ColorSelector_Carn,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Carn,The Last Hero,,
-Hull Livery: Vintage,NES_Midline,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Midline,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_midline.png
-Hull Livery: Reef,NES_Reef,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Reef,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_reef.png
-Hull Livery: Scourge,NES_Toxic,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Toxic,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_toxic.png
-Hull Livery: Turquoise,NES_Turquoise,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Turquoise,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_turquoise.png
-Hull Livery: Navy,NES_Persean,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Persean,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_persean.png
-Hull Livery: Recon,NES_Agent,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Carn_Agent,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_carnelian_hullmod_agent.png
 ,,,,,,,,,,,,,,,,,,
 #Fluorspar,,,,,,,,,,,,,,,,,,
 Crystalline Construction,NES_CrystalHull,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_CrystalHull,"Crystalline structure constantly oscillates, drastically reducing weapon ranges past %s units,
 
-The same effect, when amplified, intensifies beams and may cause a harmonic resonance whithin projectiles fired by the ship, increasing their destructive potential,
+The same effect, when amplified, intensifies beams and may cause a %s whithin projectiles fired by the ship, increasing their destructive potential,
 
 Increases ship's flux dissipation rate while venting by %s,
 
@@ -49,135 +24,43 @@ Incompatible with %s.",,graphics/hullmods/nes_crystalhull.png
 Volatile Shells,NES_VolatileShells,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_VolatileShells,"That was your own fault
 You should have paid attention
 And looked through the lie.",QUAD DAMAGE,
-Crystal Color Selector,NES_ColorSelector,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector,The Colour of Magic,,
-GEMLOCK: Phosphophyllite,NES_Phosphophyllite,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Phosphophyllite,"GEMLOCK experimental system allows reconfiguring crystalline core for a different color profile.
+GEMLOCK: GLITCH,NES_Glitch,,,dmod,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Glitch,":(
+GEMLOCK has experienced a problem.
 
-""By calibrating minute gravitic fluctuations in the allochromatic matrix we can exert control over the photons in ways previously thought impossible, and by extent light emission in the visible spectrum...""
-  - Shou Ratana, lab notes",,graphics/hullmods/nes_fluorspar_hullmod_Phosphophyllite.png
-GEMLOCK: Aquamarine,NES_Aquamarine,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Aquamarine,"GEMLOCK experimental system allows reconfiguring crystalline core for a different color profile.
+Status: 0x0000000000000000000000g
 
-""By calibrating minute gravitic fluctuations in the allochromatic matrix we can exert control over the photons in ways previously thought impossible, and by extent light emission in the visible spectrum...""
-  - Shou Ratana, lab notes",,graphics/hullmods/nes_fluorspar_hullmod_Aquamarine.png
-GEMLOCK: Amber,NES_Amber,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Amber,"GEMLOCK experimental system allows reconfiguring crystalline core for a different color profile.
+Info: An error has occured in gravitic fluctuator.
 
-""By calibrating minute gravitic fluctuations in the allochromatic matrix we can exert control over the photons in ways previously thought impossible, and by extent light emission in the visible spectrum...""
-  - Shou Ratana, lab notes",,graphics/hullmods/nes_fluorspar_hullmod_Amber.png
-GEMLOCK: Rose Quartz,NES_RoseQuartz,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_RoseQuartz,"GEMLOCK experimental system allows reconfiguring crystalline core for a different color profile.
+Attempting Recovery...
 
-""By calibrating minute gravitic fluctuations in the allochromatic matrix we can exert control over the photons in ways previously thought impossible, and by extent light emission in the visible spectrum...""
-  - Shou Ratana, lab notes",,graphics/hullmods/nes_fluorspar_hullmod_RoseQuartz.png
-GEMLOCK: Cinnabar,NES_Cinnabar,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Cinnabar,"GEMLOCK experimental system allows reconfiguring crystalline core for a different color profile.
-
-""By calibrating minute gravitic fluctuations in the allochromatic matrix we can exert control over the photons in ways previously thought impossible, and by extent light emission in the visible spectrum...""
-  - Shou Ratana, lab notes",,graphics/hullmods/nes_fluorspar_hullmod_Cinnabar.png
-GEMLOCK: Bornite,NES_Iridescent,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Iridescent,"GEMLOCK experimental system allows reconfiguring crystalline core for a different color profile.
-
-""By calibrating minute gravitic fluctuations in the allochromatic matrix we can exert control over the photons in ways previously thought impossible, and by extent light emission in the visible spectrum...""
-  - Shou Ratana, lab notes",,graphics/hullmods/nes_fluorspar_hullmod_Iridescent.png
+ERROR
+ERROR
+ERROR",,graphics/hullmods/nes_fluorspar_hullmod_d.png
 ,,,,,,,,,,,,,,,,,,
 #Voltaire,,,,,,,,,,,,,,,,,,
 Improved Turret Assembly,NES_StabilizedTurrets,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_StabilizedTurrets,"Increases the base range of small non-beam energy weapons by %s.
 
 ""Replacing key components with exotic alloys does wonders indeed! The cost? Well, you see...""
   - Huey Randolph, chief engineer",Increases small weapon range,graphics/hullmods/nes_stabilizedturrets.png
-Volt Color Selector,NES_ColorSelector_Volt,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Volt,The Light Fantastic,,
-Hull Livery: Classic,NES_Default,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Default,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Standard.png
-Hull Livery: Vermillion,NES_Crimson,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Crimson,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Crimson.png
-Hull Livery: Hazard,NES_Hazard,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Hazard,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Hazard.png
-Hull Livery: Verdant,NES_Verdant,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Verdant,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Verdant.png
-Hull Livery: Starlight,NES_Sparkle,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Sparkle,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Sparkle.png
-Hull Livery: Black Ops,NES_Commando,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Commando,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Commando.png
-Hull Livery: Dusk,NES_Dusk,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Volt_Dusk,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_voltaire_hullmod_Dusk.png
-,,,,,,,,,,,,,,,,,,
-#Hammerfall,,,,,,,,,,,,,,,,,,
-HF Color Selector,NES_ColorSelector_HF,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_HF,A Hat Full of Sky,,
-Hull Livery: Explorer,NES_Explorer,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Explorer,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_standard.png
-Hull Livery: Surveyor,NES_Surveyor,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Surveyor,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_surveyor.png
-Hull Livery: Rogue,NES_Rogue,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Rogue,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_rogue.png
-Hull Livery: Infiltrator,NES_Infiltrator,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_HF_Infiltrator,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hammerfall_hullmod_infiltrator.png
 ,,,,,,,,,,,,,,,,,,
 #Hermitaur,,,,,,,,,,,,,,,,,,
-Hot Loaded Missiles,NES_FluxMissiles,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_FluxMissiles,"Arming warheads and activating guidance systems inside the racks increases rate of fire, ammo/charge regeneration rate and reduces flux use for all missile weapons by %s.",missile knows where it is,graphics/hullmods/nes_fluxmissiles.png
-Herm Color Selector,NES_ColorSelector_Herm,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Herm,Soul Music,,
-Hull Livery: Antique,NES_Standard,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Standard,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Hot Loaded Missiles,NES_FluxMissiles,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_FluxMissiles,"Arming warheads and activating guidance systems inside the racks increases rate of fire, ammo/charge regeneration rate and reduces flux use for all missile weapons by %s,
 
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_standard.png
-Hull Livery: Devout,NES_Devout,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Devout,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_devout.png
-Hull Livery: Riftborn,NES_Riftborn,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Riftborn,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_riftborn.png
-Hull Livery: Marauder,NES_Marauder,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Marauder,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_marauder.png
-Hull Livery: Albion,NES_Herm_Albion,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Herm_Albion,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hermitaur_hullmod_albion.png
+The process is performed manually, with any mishandling resulting in exposure to deadly hazards. Crew casualties in combat are increased by %s.",missile knows where it is,graphics/hullmods/nes_fluxmissiles.png
 ,,,,,,,,,,,,,,,,,,
 #Hampter,,,,,,,,,,,,,,,,,,
-Tried and Tested,NES_TriedAndTested,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_TriedAndTested,"Able to build %s more permanent hullmod into this ship,
-
-In addition, the supply cost to recover from deployment - and to effect repairs if the ship is disabled - is reduced by %s.
+Tried and Tested,NES_TriedAndTested,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_TriedAndTested,"This ship was built with reliable, time-tested components and does not require excessive maintenance, extra nanoforge capacity can be brought online more easily, alloving the installation of a %s despite the ship already having a fighter bay, increasing the number of operational fighter bays to %s.
 
 ""Made of Sterner Stuff.""
   - Huey Randolph, chief engineer",ol' reliable,graphics/hullmods/nes_triedandtested.png
-Hamter Color Selector,NES_ColorSelector_Hamter,,,,,,,TRUE,TRUE,,0,0,0,0,data.scripts.hullmods.NES_ColorSelector_Hamter,Sourcery,,
-Hull Livery: Standard,NES_Austere,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Austere,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Flux Null-grid,NES_FluxGrid,,,,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_FluxGrid,"Increases the ship's flux dissipation and capacity, including that of additional vents and capacitors, by a factor of %s,
 
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_austere.png
-Hull Livery: Cardinal,NES_Cardinal,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Cardinal,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+The amount of damage taken by shields increased by %s,
+The amount of soft flux raised shields generate per second increased by %s,
 
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_cardinal.png
-Hull Livery: Ivory,NES_Ivory,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Ivory,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Top speed in combat reduced by %s,
 
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_ivory.png
-Hull Livery: Starling,NES_Starling,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Starling,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
+Sensor profile increased by %s.
 
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_starling.png
-Hull Livery: Albion,NES_Hamter_Albion,,,no_build_in,,,,TRUE,,,0,0,0,0,data.scripts.hullmods.NES_Hamter_Albion,"This ship can be personalized with custom markings. By tradition, the costs are covered from the captain's personal account, and as such, not reflected on the running fleet finances.
-
-""Engravings... give you no tactical advantage whatsoever.""
-  - Adam Baker, COMSEC operative",,graphics/hullmods/nes_hamter_hullmod_albion.png
+""Unlimited power!""
+  - Professor Sheev, faculty of high energy physics",hero hampter hullmod,graphics/hullmods/shared_flux_sink.png

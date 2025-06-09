@@ -12,7 +12,6 @@
   "shieldRadius": 109.5,
   "viewOffset": 0,
   "builtInMods": [
-    "heg_militarized"
   ],
   "weaponSlots": [
     {
@@ -52,27 +51,62 @@
       "locations": [
         9, -7,
         8.5, 1.5,
-        14, 8,
-        47.5, 7,
-        30.5, 7
+        19.5, -3.5
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        21.5, 8,
+        37, 8,
+        51.5, 7
       ]
     }
   ],
   "engineSlots": [
     {
-      "location": [-100, -19.5],
-      "length": 58.5,
-      "width": 20,
+      "location": [-99, 18],
+      "length": 75,
+      "width": 24,
       "angle": 180,
-      "contrailSize": 20,
+      "contrailSize": 64,
       "style": "LOW_TECH"
     },
     {
-      "location": [-100, 17.5],
-      "length": 57.5,
-      "width": 20,
-      "angle": -180,
-      "contrailSize": 20,
+      "location": [-99, -19],
+      "length": 75,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-93, -1],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-96, 27],
+      "length": 50,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-97, -29],
+      "length": 50,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
       "style": "LOW_TECH"
     }
   ],

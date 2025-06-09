@@ -1,12 +1,17 @@
 {
 	"designTypeColors":{
         "Sindrian Diktat":[180,0,120,255],
+		"Light of Ludd":[180,255,95,255],
+		"Project Mayfly":[220,185,55,255],
 	},
 	"graphics":{
 		"blueprint_packages":{
 			"vice_ex_bp":"graphics/factions/custom/player_logo05_flag.png",
 			"LG_bp_package":"graphics/factions/sindrian_diktat.png",
         },
+		"fx":{
+			"warp_torp_blast":"graphics/vice/fx/warp_torp_blast.png",
+		},
 		"vice_ships":{
 			"resplendent_adaptive_flight_command":"graphics/vice/ships/hidden/resplendent_adaptive_flight_command.png",
 			"resplendent_adaptive_gravity_drive":"graphics/vice/ships/hidden/resplendent_adaptive_gravity_drive.png",
@@ -29,6 +34,7 @@
 		},
 		"portraits":{
 			"xo_command_subroutine":"graphics/vice/portraits/xo_command_subroutine.png",
+			"vice_taylor_sheasby":"graphics/portraits/portrait_league09.png"
 		},
 	},
 }

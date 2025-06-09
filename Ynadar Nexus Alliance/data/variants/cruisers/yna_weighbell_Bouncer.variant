@@ -1,0 +1,59 @@
+{
+  "variantId": "yna_weighbell_Bouncer",
+  "hullId": "yna_weighbell",
+  "displayName": "Bouncer",
+  "goalVariant": false,
+  "fluxCapacitors": 20,
+  "fluxVents": 30,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MS 01": "yna_svento_s",
+        "MS 02": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_maul_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "yna_ac2_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "yna_enmis_s",
+        "WS0006": "yna_enmis_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_flak_s",
+        "WS0004": "yna_flak_s",
+        "WS0007": "yna_flak_s",
+        "WS0008": "yna_flak_s",
+        "WS0009": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

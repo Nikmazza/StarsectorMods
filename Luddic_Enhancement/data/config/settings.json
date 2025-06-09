@@ -1,5 +1,0 @@
-{
-    "plugins":{
-        "LE_Dram_Missile_Plugin":"data.scripts.everyframe.LE_Dram_Missile_Plugin",
-    },
-}

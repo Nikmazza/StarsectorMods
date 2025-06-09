@@ -41,7 +41,7 @@ public class DawnstarBeamEffect implements BeamEffectPlugin {
 	private boolean IS_ELECTRON = false;
 	
 	//private static float PROTON_DAMAGE = 150;
-	private static float PROTON_DAMAGE = 30;
+	private static float PROTON_DAMAGE = 60;
 	private static float NEUTRON_DAMAGE = 150f;
 	private static float ELECTRON_DAMAGE = 450f; //emp
 	

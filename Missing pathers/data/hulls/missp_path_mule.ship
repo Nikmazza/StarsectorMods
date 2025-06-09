@@ -2,7 +2,7 @@
   "hullName": "Mule (Path)",
   "hullId": "missp_path_mule",
   "hullSize": "DESTROYER",
-  "spriteName": "graphics/ships/mule/missp_mule_path.png",
+  "spriteName": "graphics/ships/mule/missp_path_mule.png",
   "style": "LOW_TECH",
   "height": 192,
   "width": 128,
@@ -12,8 +12,8 @@
   "shieldRadius": 101,
   "viewOffset": 0,
   "builtInMods": [
-    "converted_hangar",
-    "ill_advised"
+    "ill_advised",
+    "safetyoverrides"
   ],
   "weaponSlots": [
     {

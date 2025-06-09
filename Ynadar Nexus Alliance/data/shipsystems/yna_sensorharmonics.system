@@ -1,0 +1,28 @@
+{
+	"id":"yna_sensorharmonics",
+	"type":"ENGINE_MOD",
+	"aiType":"MANEUVERING_JETS",
+	
+	"statsScript":"data.shipsystems.scripts.yna_SensorHarmonics",
+	
+	"engineGlowLengthMult":1,
+	"engineGlowWidthMult":1,
+	"engineGlowGlowMult":1.25,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":false,
+	"clampMaxSpeedAfter":false,
+
+	"outOfUsesSound":"engine_disabled",
+	"useSound":"system_maneuvering_jets",
+	"loopSound":"system_high_energy_focus_loop",
+	"deactivateSound":"system_high_energy_focus_deactivate",
+	#"runScriptWhileIdle":true, # unapply() never gets called
+	
+	"aiHints":{
+		"activeSpeedIncrease":30,
+		"burstMovementPotential":10,
+		"averageSpeedIncrease":25,
+	}
+}

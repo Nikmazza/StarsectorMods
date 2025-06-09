@@ -1,0 +1,67 @@
+{
+  "variantId": "yna_grouse_CA",
+  "hullId": "yna_grouse",
+  "displayName": "Close Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 30,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "hammer",
+        "WS0005": "hammer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "sabot_single",
+        "WS0007": "sabot_single"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "phasebeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "chaingun",
+        "WS0002": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "irpulse",
+        "WS0009": "irpulse",
+        "WS0010": "irpulse",
+        "WS0011": "irpulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "pdlaser",
+        "WS0013": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

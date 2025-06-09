@@ -1,0 +1,59 @@
+{
+  "variantId": "yna_grouse_Breacher",
+  "hullId": "yna_grouse",
+  "displayName": "Breacher",
+  "goalVariant": false,
+  "fluxCapacitors": 15,
+  "fluxVents": 30,
+  "quality": 0.3,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "breach",
+        "WS0005": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "chaingun",
+        "WS0002": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_blaster_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "heatseeker",
+        "WS0007": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "yna_vg1_s",
+        "WS0009": "yna_vg1_s",
+        "WS0010": "yna_vg1_s",
+        "WS0011": "yna_vg1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

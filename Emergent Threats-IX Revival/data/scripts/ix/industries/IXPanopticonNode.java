@@ -13,11 +13,13 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLe
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
+import data.scripts.ix.util.PanopticonStructureUtil;
+
 public class IXPanopticonNode extends BaseIndustry {
 
 	private static float DEFAULT_PATHER_INTEREST = 4f;
 	private static float DEFENSE_BONUS_NODE = 0.5f;
-	private static int STABILITY_BONUS = 5; //display only
+	private static int STABILITY_BONUS = 5;
 	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String CORE = "ix_panopticon";
 	private static String NODE = "ix_panopticon_node";
@@ -25,16 +27,19 @@ public class IXPanopticonNode extends BaseIndustry {
 	private static String PLAYER_NODE = "ix_panopticon_player_node";
 	private static String IX_PLAYER_CORE_ID = "ix_panopticon_instance";
 	private static String MONITORED_VERTEX = "ix_monitored";
+	private static String MONITORED_PLAYER = "ix_monitored_player";
 	private static String FLEET_COMMAND_STATION = "ix_zorya_vertex";
 	private static String FCOMM = "ix_fleet_command";
 	
 	public void apply() {
 		super.apply(false);
-		if (isFunctional()) {
+		if (isFunctional() && !isHidden()) {
 			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD)
 						.modifyMult(getModId(), 1f + DEFENSE_BONUS_NODE, getNameForModifier());
 			market.suppressCondition(Conditions.PIRATE_ACTIVITY);
 			market.addCondition(MONITORED_VERTEX);
+			market.getStability().modifyFlat(id, STABILITY_BONUS, "Panopticon monitoring");
+			PanopticonStructureUtil.applyBlackMarketChange(market, "apply");
 		}
 		else unapply();
 	}
@@ -45,15 +50,22 @@ public class IXPanopticonNode extends BaseIndustry {
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
 		market.unsuppressCondition(Conditions.PIRATE_ACTIVITY);
 		market.removeCondition(MONITORED_VERTEX);
+		market.getStability().unmodify(id);
+		PanopticonStructureUtil.applyBlackMarketChange(market, "unapply");
+	}
+	
+	@Override
+	public boolean isDisrupted() {
+		if (isHidden()) return true;
+		String key = getDisruptedKey();
+		return market.getMemoryWithoutUpdate().is(key, true);
 	}
 	
 	@Override
 	public boolean isHidden() {
 		boolean hidden = false;
-		if (!market.getFactionId().equals(IX_FAC_ID) || !isFunctional()) {
-			hidden = true;
-			market.removeCondition(MONITORED_VERTEX);
-		}
+		if (!market.getFactionId().equals(IX_FAC_ID) || !isFunctional()) hidden = true;
+		if (hidden) unapply();
 		return hidden;
 	}
 	

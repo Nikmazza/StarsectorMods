@@ -1,8 +1,0 @@
-{
-	"music":{
-
-
-      "keruvim_theme":[  {"file":"keruvim_theme.ogg","source":"sounds/music","volume":0.4,"randomStart":true},
-        ],
-	},
-}

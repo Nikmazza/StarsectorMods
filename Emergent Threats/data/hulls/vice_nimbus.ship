@@ -15,7 +15,7 @@
     {
       "id": "WS 001",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "SYSTEM",
       "mount": "HIDDEN",
       "arc": 10,
       "angle": 0,
@@ -24,7 +24,7 @@
     {
       "id": "WS 002",
       "size": "SMALL",
-      "type": "BUILT_IN",
+      "type": "SYSTEM",
       "mount": "HIDDEN",
       "arc": 10,
       "angle": 0,

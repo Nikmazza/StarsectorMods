@@ -1,22 +1,22 @@
 {
 	"music":{
 		"apex_market_friendly":[
-			{"file":"apex_market_friendly.ogg","source":"sounds/music/","volume":0.5,"randomStart":false}
+			{"file":"apex_market_friendly.ogg","source":"sounds/music/","volume":0.75,"randomStart":false}
 		],
 		"apex_market_neutral":[
-			{"file":"apex_market_neutral.ogg","source":"sounds/music/","volume":0.5,"randomStart":false}
+			{"file":"apex_market_neutral.ogg","source":"sounds/music/","volume":0.75,"randomStart":false}
 		],
 		"apex_market_hostile":[
-			{"file":"apex_market_hostile.ogg","source":"sounds/music/","volume":0.5,"randomStart":false}
+			{"file":"apex_market_hostile.ogg","source":"sounds/music/","volume":0.75,"randomStart":false}
 		],
     	"apex_fleet_neutral":[
-			{"file":"apex_fleet_neutral.ogg","source":"sounds/music/","volume":0.5,"randomStart":false}
+			{"file":"apex_fleet_neutral.ogg","source":"sounds/music/","volume":0.75,"randomStart":false}
 		],
 		"apex_fleet_friendly":[
-			{"file":"apex_fleet_friendly.ogg","source":"sounds/music/","volume":0.5,"randomStart":false}
+			{"file":"apex_fleet_friendly.ogg","source":"sounds/music/","volume":0.75,"randomStart":false}
 		],
 		"apex_fleet_hostile":[
-			{"file":"apex_fleet_hostile.ogg","source":"sounds/music/","volume":0.5,"randomStart":false}
+			{"file":"apex_fleet_hostile.ogg","source":"sounds/music/","volume":0.75,"randomStart":false}
 		]
   	},
 	"apex_haymarket_shot":
@@ -205,11 +205,11 @@
 	],
 	"apex_ins_plasma_shot":
 	[
-		{"file":"sounds/weapon/apex_ins_plasma_shot.ogg","pitch":1.0,"volume":1.0}
+		{"file":"sounds/weapon/apex_ins_plasma_shot.ogg","pitch":0.93,"volume":1.0}
 	],
 	"apex_ins_plasma_charged":
 	[
-		{"file":"sounds/weapon/apex_ins_plasma_charged.ogg","pitch":1.0,"volume":1.0}
+		{"file":"sounds/weapon/apex_ins_plasma_charged.ogg","pitch":0.93,"volume":1.0}
 	],
 	"apex_flickerbeam_fire":
 	[
@@ -222,5 +222,35 @@
 		{"file":"sounds/weapon/apex_foamer_fire.ogg","pitch":0.90,"volume":0.2},
 		{"file":"sounds/weapon/apex_foamer_fire.ogg","pitch":1.10,"volume":0.2},
 		{"file":"sounds/weapon/apex_foamer_fire.ogg","pitch":1.00,"volume":0.2}
-	]
+	],
+	"apex_lshotty_charge":
+	[
+		{"file":"sounds/weapon/apex_lshotty_charge.ogg","pitch":0.90,"volume":0.4},
+		{"file":"sounds/weapon/apex_lshotty_charge.ogg","pitch":1.10,"volume":0.4},
+		{"file":"sounds/weapon/apex_lshotty_charge.ogg","pitch":1.00,"volume":0.4}
+	],
+	"apex_lshotty_fire":
+	[
+		{"file":"sounds/weapon/apex_lshotty_fire.ogg","pitch":0.90,"volume":0.4},
+		{"file":"sounds/weapon/apex_lshotty_fire.ogg","pitch":1.10,"volume":0.4},
+		{"file":"sounds/weapon/apex_lshotty_fire.ogg","pitch":1.00,"volume":0.4}
+	],
+	"apex_lrifle_fire":
+	[
+		{"file":"sounds/weapon/apex_lrifle_fire.ogg","pitch":0.90,"volume":0.15},
+		{"file":"sounds/weapon/apex_lrifle_fire.ogg","pitch":1.10,"volume":0.15},
+		{"file":"sounds/weapon/apex_lrifle_fire.ogg","pitch":1.00,"volume":0.15}
+	],
+	"apex_prifle_fire":
+	[
+		{"file":"sounds/weapon/apex_ins_pr_fire.ogg","pitch":0.90,"volume":0.9},
+		{"file":"sounds/weapon/apex_ins_pr_fire.ogg","pitch":1.10,"volume":0.9},
+		{"file":"sounds/weapon/apex_ins_pr_fire.ogg","pitch":1.00,"volume":0.9}
+	],
+	"apex_prifle_charge":
+	[
+		{"file":"sounds/weapon/apex_ins_pr_charge.ogg","pitch":0.90,"volume":0.9},
+		{"file":"sounds/weapon/apex_ins_pr_charge.ogg","pitch":1.10,"volume":0.9},
+		{"file":"sounds/weapon/apex_ins_pr_charge.ogg","pitch":1.00,"volume":0.9}
+	],
 }

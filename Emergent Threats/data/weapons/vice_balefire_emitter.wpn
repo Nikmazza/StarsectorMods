@@ -2,7 +2,7 @@
 	"specClass":"beam",
 	"id":"vice_balefire_emitter",
 	"type":"ENERGY",
-	"size":"MEDIUM",
+	"size":"SMALL",
 	"collisionClass":"RAY_FIGHTER",
 	"collisionClassByFighter":"RAY_FIGHTER",
 	"beamEffect":"data.scripts.vice.weapons.BalefireOnFire",

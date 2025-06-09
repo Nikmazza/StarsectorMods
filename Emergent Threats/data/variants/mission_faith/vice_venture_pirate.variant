@@ -1,0 +1,50 @@
+{
+    "displayName": "Anointed",
+    "fluxCapacitors": 0,
+    "fluxVents": 26,
+    "goalVariant": false,
+    "hullId": "venture_p",
+    "hullMods": [
+		"targetingunit",
+		"vice_mission_deloy_faith"
+    ],
+    "permaMods": ["vice_mission_deloy_faith"],
+    "sMods": [],
+    "variantId": "vice_venture_pirate",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "squall"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "atropos",
+                "WS 007": "atropos"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "ionbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "heavyac",
+                "WS 006": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 003": "flak"
+            }
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+##########################,##################,,,,,,,,,,,,,,,,,,,,,,,,,,,
+## FIGHTER,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hhe_broadsword_ht_wing,hhe_broadsword_ht_fighter,"fighter5, fighter, high, hhe_ftr_tt_bp, merc",0,0.75,6,15,V,4000,500,,3,FIGHTER,Heavy Fighter,12,6000,,,,,,,,,,,,,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hhe_cazin_wing,hhe_cazin_fighter,"fighter2, interceptor, low, hhe_ftr_lc_bp, merc",1,,5,5,V,4000,400,-250,3,FIGHTER,Fighter,10,5000,,,,,,,,,,,,,1
+hhe_cazin_pirate_wing,hhe_cazin_pirate_fighter,"fighter1, fighter, pirate_bp",0,,4,4,V,4000,400,-250,3,INTERCEPTOR,Fighter,10,3500,,,,,,,,,,,,,
+hhe_sarissa_wing,hhe_sarissa_fighter,"fighter4, fighter, low, hhe_ftr_lc_bp, merc",2,,6,12,BOX,4000,750,,2,FIGHTER,Barrage Fighter,10,9000,,,,,,,,,,,,,3
+hhe_bonnethead_wing,hhe_bonnethead_fighter,"fighter5, fighter, mid, hhe_ftr_pl_bp, merc",3,0.5,8,16,V,4000,200,,3,FIGHTER,Heavy Fighter,15,10000,,,,,,,,,,,,,4
+#hhe_lux_tt_wing,hhe_lux_tt_fighter,"fighter4, fighter, high, hhe_ftr_rem_bp",2,0.33,6,10,V,4000,500,-100,4,FIGHTER,Heavy Fighter,15,7500,,,,,,,,,,,,,23
+hhe_brokkr_wing,hhe_brokkr_fighter,"fighter5, fighter, high, hhe_ftr_tt_bp",3,0.75,10,16,BOX,4000,400,300,2,FIGHTER,Support Fighter,15,9000,,,,,,,,,,,,,4
+hhe_lucent_wing,hhe_lucent_fighter,"no_sell, fighter5, fighter, remnant",3,,6,12,V,4000,300,,3,FIGHTER,Assault Drone,15,13500,,,,,,,,,,,,,23
+hhe_loki_wing,hhe_loki_fighter,"fighter10, fighter, high, rare_bp, merc",3,0.5,12,25,V,4000,500,,2,FIGHTER,Fighter,15,12000,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gg_broadsword_lg_variant_wing,gg_broadsword_lg_variant,"fighter4, fighter, low, rare_bp, lions_guard",0,0.6,6,9,V,4000,500,,3,FIGHTER,Heavy Fighter,10,7200,,,,,,,,,,,,,1
+gg_broadsword_xiv_wing,gg_broadsword_xiv_variant,"fighter4, fighter, low, XIV_bp",0,0.4,10,16,V,4000,500,,3,FIGHTER,Heavy Fighter,12,12000,,,,,,,,,,,,,1
+gg_gladius_wing_lg_variant_wing,gg_gladius_lg_variant,"fighter4, fighter, mid, rare_bp, lions_guard",2,0.6,6,7,V,4000,500,300,2,FIGHTER,Fighter,10,12000,,,,,,,,,,,,,3
+gg_gladius_wing_xiv_variant_wing,gg_gladius_xiv_variant,"fighter4, fighter, mid, XIV_bp",2,0.4,9,10,V,4000,500,300,2,FIGHTER,Fighter,10,15000,,,,,,,,,,,,,3
+gg_warthog_xiv_variant_wing,gg_warthog_xiv_variant,"fighter3, fighter, mid, XIV_bp",1,0.4,10,14,CLAW,4000,500,-400,2,FIGHTER,Heavy Fighter,15,13500,,,,,,,,,,,,,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+## INTERCEPTOR,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hhe_helot_wing,hhe_helot_interceptor,"interceptor2, interceptor, mid, hhe_ftr_pl_bp, merc",1,,5,6,DIAMOND,4000,300,-500,6,INTERCEPTOR,Interceptor,6,4000,,,,,,,,,,,,,6
+#hhe_spark_tt_wing,hhe_spark_tt_interceptor,"interceptor4, interceptor, high, hhe_ftr_rem_bp",1,0.33,4,8,CLAW,4000,300,300,5,INTERCEPTOR,Interceptor,8,7500,,,,,,,,,,,,,22
+hhe_draugr_wing,hhe_draugr_interceptor,"interceptor5, interceptor, high, hhe_ftr_tt_bp",2,0.5,7,12,CLAW,6000,200,,3,INTERCEPTOR,Phase Interceptor,12,9000,,,,,,,,,,,,,7
+hhe_ftr_talon_interceptor_wing,hhe_ftr_talon_interceptor,"interceptor3, interceptor, high, hhe_ftr_tt_bp, merc",0,0.75,3,7,V,4000,250,600,4,INTERCEPTOR,Interceptor,7,2000,,,,,,,,,,,,,6
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gg_thunder_xiv_variant_wing,gg_thunder_xiv_variant,"fighter2, interceptor, mid, XIV_bp",2,.4,8,16,V,8000,500,900,2,FIGHTER,Fighter,15,14000,,,,,,,,,,,,,
+gg_thunder_lg_variant_wing,gg_thunder_lg_variant,"fighter2, interceptor, mid, rare_bp, lions_guard",2,.6,6,11,V,8000,500,900,2,FIGHTER,Fighter,15,8400,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+## BOMBER,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hhe_manta_wing,hhe_manta_bomber,"interceptor6, interceptor, mid, hhe_ftr_pl_bp",2,,6,14,V,4000,500,,4,INTERCEPTOR,Interceptor,12,9000,,,,,,,,,,,,,13
+#hhe_flash_tt_wing,hhe_flash_tt_bomber,"bomber3, bomber, high, hhe_ftr_rem_bp",2,0.33,5,12,V,4000,2500,300,4,BOMBER,Strike Bomber,18,7500,,,,,,,,,,,,,21
+hhe_prism_wing,hhe_prism_bomber,"no_sell, bomber4, bomber, remnant",3,,5,18,CLAW,4000,2000,600,3,BOMBER,Strike Drone,18,9000,,,,,,,,,,,,,11
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gg_khopesh_xiv_variant_wing,gg_khopesh_xiv_variant,"bomber3, bomber, low, XIV_bp",1,0.4,6,14,V,4000,1300,750,2,BOMBER,Bomber,15,10500,,,,,,,,,,,,,10
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+## SUPPORT,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hhe_vernd_wing,hhe_vernd_support,"support2, fighter, high, hhe_ftr_tt_bp",1,,4,6,CLAW,0,500,250,3,SUPPORT,Support,10,6000,,,,,,,,,,,,,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+## BUILT IN,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hhe_bi_helot_wing,hhe_helot_interceptor,"no_drop, no_sell, interceptor, mid",0,,2,3,DIAMOND,4000,300,-500,3,INTERCEPTOR,Interceptor,6,0,,,,,,,,,,,,,6
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+##########################,##################,,,,,,,,,,,,,,#########,,,,,,,,,,,,,

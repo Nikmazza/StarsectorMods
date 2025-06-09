@@ -1,0 +1,79 @@
+{
+    "displayName": "Captured",
+    "fluxCapacitors": 2,
+    "fluxVents": 50,
+    "hullId": "vice_proteus",
+    "hullMods": [
+        "vice_mission_deloy_faith",
+        "vice_righteous_fervor",
+        "eccm",
+        "vice_unified_targeting_core",
+        "vice_modular_bolt_coherer",
+        "autorepair",
+        "vice_field_repair_nanites",
+        "reinforcedhull",
+        "fluxbreakers",
+        "shield_shunt",
+        "unstable_injector"
+    ],
+    "permaMods": [
+        "vice_mission_deloy_faith",
+        "vice_righteous_fervor",
+        "eccm",
+        "vice_modular_bolt_coherer",
+        "vice_unified_targeting_core"
+    ],
+    "sMods": [
+        "eccm",
+        "vice_modular_bolt_coherer",
+        "vice_unified_targeting_core"
+    ],
+    "variantId": "vice_proteus_captured",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pulselaser",
+                "WS 003": "pulselaser",
+                "WS 006": "pulselaser",
+                "WS 007": "pulselaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "locust",
+                "WS 001": "locust"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "ioncannon",
+                "WS 015": "ioncannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "dualflak",
+                "WS 005": "dualflak",
+                "WS 008": "heavymg",
+                "WS 009": "heavymg",
+                "WS 010": "heavymg",
+                "WS 016": "pdlaser",
+                "WS 017": "pdlaser"
+            }
+        }
+    ],
+    "wings": [
+        "vice_bolo_p_wing",
+        "vice_bolo_p_wing",
+        "vice_bolo_p_wing",
+        "vice_kite_dem_wing"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "variantId": "yna_ftr_light_Interceptor",
+  "hullId": "yna_ftr_light",
+  "displayName": "Interceptor",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "swarmer_fighter",
+        "WS 003": "yna_mudcloud_ftr"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "yna_ac_s_ftr"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

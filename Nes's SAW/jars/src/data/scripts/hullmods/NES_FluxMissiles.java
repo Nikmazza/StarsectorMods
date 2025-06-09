@@ -10,7 +10,13 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import static data.scripts.utils.NES_Util.txt;
 public class NES_FluxMissiles extends BaseHullMod {
 
-	public final float ROF_BONUS = 50f; //bonus amount, +50%
+	public final float ROF_BONUS = 75f;
+
+	public static float CREW_CASUALTIES = 50; //pre-arming missiles inside their racks is extremely hazardous
+
+	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+		stats.getCrewLossMult().modifyPercent(id, CREW_CASUALTIES);
+	}
 
 	public void advanceInCombat(ShipAPI ship, float amount){
 		if (!ship.isAlive()) return;
@@ -23,6 +29,7 @@ public class NES_FluxMissiles extends BaseHullMod {
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return Math.round(ROF_BONUS) + "%";
+		if (index == 1) return "" + (int) CREW_CASUALTIES + "%";
 		return null;
 	}
 }

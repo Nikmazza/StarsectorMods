@@ -226,7 +226,7 @@
 		"job_forFaction": "tritachyon",
 		"job_deadline": 90,
 		"job_credit_reward": 400000,
-		"job_reward_scaling": 1.0,
+		"job_reward_scaling": 0.75,
 		"job_reputation_reward": 5,
 		
 		"job_type": "assassination",
@@ -350,7 +350,7 @@
 		"job_forFaction": "independent",
 		"job_deadline": 80,
 		"job_credit_reward": 120000,
-		"job_reward_scaling": 0.6,
+		"job_reward_scaling": 0.1,
 		"job_reputation_reward": 10,
 		
 		"job_type": "assassination",
@@ -581,10 +581,10 @@
 		"job_comm_reply": "Ah captain, You walk into my parlour. Now come, dance with me.",
 		"job_intel_success": "With the defeat of this fleet tri-tachyons ambitions, whatever they were should be slowed, for now at least. You have our thanks for this.",
 		
-		"job_forFaction": "tritachyon",
+		"job_forFaction": "hegemony",
 		"job_deadline": 100,
 		"job_credit_reward": 350000,
-		"job_reward_scaling": 1.0,
+		"job_reward_scaling": 0.75,
 		"job_reputation_reward": 5,
 		
 		"job_type": "assassination",
@@ -638,5 +638,169 @@
 		"location_prioritizeUnexplored": false,
 		"location_defaultToAnyEntity": true
 	},
+
+	"A_S-F_berzelius": {
+		"trigger_marketFaction_any": ["hegemony"],
+		"trigger_marketFaction_alliedWith": false,
+		"trigger_player_minLevel": 10,
+		"trigger_weight_mult": 0.6,
+
+		"job_name": "Investigate Hyperspace Anomaly",
+		"job_description": "This is an EYES ONLY job offer from COMSEC, long range sensors detected an immense hyperspace disturbance that bears notable similarities to a gate activation signature, the available scouting fleets we sent have failed to return any actionable intel. As you have proven yourself to be a capable captain we are offering you a sizable reward to investigate the location, and destroy any hostile vessels encountered.",
+		"job_comm_reply": "You attempt to open communications with the fleet, but all attempts at a connection are rejected. Your sensor officer also proceeds to give a warning that the drone vessels are shifting into a combat formation.",
+		"job_intel_success": "Searching through the battered wreck of the largest vessel your salvors come across a series of secured data-vaults, while most of them have taken irreprable damage through the course of the battle one remains intact, and they are able to extract a blueprint package from it.",
+		
+		"job_forFaction": "hegemony",
+		"job_deadline": 360,
+		"job_credit_reward": 100000,
+		"job_reward_scaling": 0.8,
+		"job_reputation_reward": 10,
+		"job_item_reward": {
+		    "A_S-F_arktech_weapon_package":1,
+	        },
+		
+		"job_type": "obliteration",
+		"job_show_type": true,
+		"job_show_captain": false,
+		"job_show_fleet": "none",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "auto",
+		"job_memKey": "$A_S-F_berzelius",
+
+		"target_first_name": "Berzel",
+		"target_last_name": "Zelius",
+		"target_gender": "FEMALE",
+		"target_rank": "unknown",
+		"target_post": "unknown",
+		"target_personality": "reckless",
+		"target_level": 9,
+		"target_elite_skills":4,
+		"target_skill_preference": "NO_ENERGY_YES_BALLISTIC_NO_MISSILE_YES_DEFENSE",
+		
+		"fleet_name": "Proto-Ark Fleet",
+		"fleet_faction": "A_S-F_arkTechD", # ML_bounty
+		"fleet_flagship_variant": "A_S-F_berzelius_desire",
+		"fleet_flagship_recoverable": False,
+		"fleet_preset_ships": {
+		},
+		"fleet_preset_autofit": true,
+		"fleet_scaling_multiplier": 1,
+		"fleet_min_FP": 180,
+		"fleet_composition_faction": "A_S-F_arkTechD",
+		"fleet_composition_quality": 1,
+		"fleet_transponder": false,
+		"fleet_behavior": "AGGRESSIVE",
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting",
+			"theme_interesting_minor",
+			"theme_ruins",
+			"theme_ruins_main",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden"
+		],
+		"location_entities": [
+			"station",
+			"wreck",
+			"debris",
+			"stable_location",
+			"comm_relay",
+			"nav_buoy",
+			"sensor_array",
+			"gas_giant",
+			"planet",
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+
+	"A_S-F_chompiron": {
+		"trigger_marketFaction_any": ["tritachyon"],
+		"trigger_marketFaction_alliedWith": true,
+		"trigger_player_minLevel": 10,
+		"trigger_min_days_elapsed": 300,
+		"trigger_weight_mult": 3,
+
+		"job_name": "Terminate Anomalous Target",
+		"job_description": "An unregistered vessel has been reported to be interfering with deep-sector expeditions and experimental hardware, recovered wreckage shows unusual energy signatures that do not match with any known weapons. The corporation are offering a sizable bounty for the destruction of this interloper.",
+		"job_comm_reply": "Your communication attempt opens to a black screen, you wonder for a moment if the terminal is working correctly before you a distorted picture of a suited spacer appears on-screen, but mere moments later the terminal crashes and goes into a hard-reboot cycle.",
+		"job_intel_success": "Recovery teams work their way through the mangled wreck of the vessel, and after a while they report that the main cannon is still intact, and they suprisingly managed to recover the blueprint for a standard Champion Cruiser.",
+
+		"job_forFaction": "tritachyon",
+		"job_deadline": 300,
+		"job_credit_reward": 500000,
+		"job_reward_scaling": 0.6,
+		"job_reputation_reward": 10,
+		"job_item_reward": {
+		    "A_S-F_heatstroke":1,
+		    "ship_bp champion":1,
+	        },
+		
+		"job_type": "destruction",
+		"job_show_type": true,
+		"job_show_captain": false,
+		"job_show_fleet": "flagshipText",
+		"job_show_distance": "vanillaDistance",
+		"job_difficultyDescription": "auto",
+		"job_memKey": "$A_S-F_chompiron",
+
+		"target_first_name": "ERROR",
+		"target_last_name": "NaN",
+		"target_gender": "MALE",
+		"target_portrait":"graphics/portraits/portrait_undIVulGeD.png",
+
+		"target_rank": "unknown",
+		"target_post": "unknown",
+		"target_personality": "aggressive",
+		"target_level": 10,
+		"target_elite_skills":4, 
+		"target_skill_preference": "YES_ENERGY_YES_BALLISTIC_YES_MISSILE_YES_DEFENSE",
+		
+		"fleet_name": "Anomalous Fleet",
+		"fleet_faction": "ML_bounty",
+		"fleet_flagship_variant": "A_S-F_chompiron_anom",
+		"fleet_flagship_recoverable": false,
+		"fleet_scaling_multiplier": 0.6,
+		"fleet_min_FP": 250,
+		"fleet_composition_faction": "mercenary",
+		"fleet_composition_quality": 2,
+		"fleet_behavior": "AGGRESSIVE",
+
+		"location_distance": "CLOSE",
+		"location_themes": [
+			"theme_core_unpopulated",
+			"theme_interesting_minor",
+			"theme_ruins_secondary",
+			"theme_derelict_probes",
+			"procgen_no_theme_pulsar_blackhole"
+		],
+		"location_themes_blacklist":[
+			"theme_already_occupied",
+			"theme_already_colonized",
+			"theme_hidden"
+		],
+		"location_entities": [
+			"gate",
+			"station",
+			"stable_location",
+			"comm_relay",
+			"nav_buoy",
+			"sensor_array",
+			"gas_giant",
+			"planet",
+			"jump_point"
+		],
+		"location_prioritizeUnexplored": false,
+		"location_defaultToAnyEntity": true
+	},
+
 
 },

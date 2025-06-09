@@ -1,0 +1,14 @@
+#### LUDDIC CHURCH
+{
+	"knownFighters":{
+		"tags":["hhe_ftr_lc_bp"],
+	},
+	"priorityFighters":{
+		"tags":["hhe_ftr_lc_bp"],
+	},
+    "knownHullMods":{
+        "hullMods":[
+			"hhe_MissileReload",			
+        ],
+    },
+},

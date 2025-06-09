@@ -1,0 +1,115 @@
+{
+  "hullName": "Viking",
+  "hullId": "rwc_viking",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/rwc_viking.png",
+  "style": "MIDLINE",
+  "height": 108,
+  "width": 108,
+  "center": [53.5, 48],
+  "collisionRadius": 64,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 63,
+  "viewOffset": 0,
+  "builtInMods": [
+    "missleracks", 
+	"rwc_ground_support_frigate"
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [50.5, -0.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 290,
+      "angle": 180,
+      "locations": [-20, -0.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-6, -44.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-6, 43.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 171,
+      "angle": -65,
+      "locations": [26, -14.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 171,
+      "angle": 65,
+      "locations": [26, 13.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-42, -0.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-47.5, -13.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-47.5, 12.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -41, 19.5,
+    -27, 53.5,
+    -7.5, 53,
+    1, 24,
+    27, 24,
+    58, 4.5,
+    58, -4.5,
+    27, -24,
+    1, -24,
+    -7.5, -53,
+    -27, -53.5,
+    -41, -19.5
+  ]
+}

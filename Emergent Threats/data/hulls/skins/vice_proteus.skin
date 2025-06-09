@@ -7,7 +7,7 @@
 	"hullDesignation":"Carrier",
 	"incompatibleWithBaseHull":true, # for the autofit dialog
 	"descriptionPrefix":"A versatile fleet carrier of the Persean League, the Proteus features a high output fighter autoforge that can quickly replace combat losses in the heat of battle. Although the system only works with lighter strike craft, the ability to overwhelm the enemy with sheer numbers can prove devastating when paired with massed missile strikes.",
-	"tags":["rare_bp", "hist3t", "persean", "merc"],
+	"tags":["rare_bp", "hist3t", "persean", "merc", "vice_proteus"],
 	"tech":"Midline",
 	"builtInWings": [],
 	"fighterBays":4,
@@ -17,7 +17,7 @@
 	"removeBuiltInMods":[], 			# hullmod ids
 	"removeBuiltInWeapons":[], 			# weapon slot ids
 	"systemId":"vice_rapid_deployment",
-	"builtInMods":[],
+	"builtInMods":["vice_proteus_handler"],
 	"addHints":["CARRIER", "COMBAT", "NO_AUTO_ESCORT"],
 	"removeHints":["MISSILE_HARDPOINTS_ROTATE"],
 	"builtInWeapons":{

@@ -1,0 +1,34 @@
+{
+	"id":"hhe_sys_drones_brokkr",
+	"type":"DRONE_LAUNCHER",
+	"aiType":"DRONE_LAUNCHER_PD",
+	
+	"droneVariant":"hhe_drone_brokkr_standard",
+	
+	"allowFreeRoam":false,
+	
+	"launchSpeed":300,
+	"launchDelay":0.5,
+	"maxDrones":4,	# 6,
+	"droneBehavior":[
+		{"droneIndex":[0,1,2],
+		 "defaultFacing":"MATCH_DRONE_HEADING",
+		 "faceEnemy":true,
+		 "holdRoamRange":600,
+		 "freeRoamRange":600,
+		 "targetPriority":[FIGHTER, SHIP_TARGET, SHIP],
+		 "initialOrbitAngle":0,
+		 "orbitRadius":50,
+		 "orbitDir":-1,
+		 "orbitSpeed":50,
+		},
+	],
+	
+	"useSound":"drone_launch",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+
+	}
+}
+

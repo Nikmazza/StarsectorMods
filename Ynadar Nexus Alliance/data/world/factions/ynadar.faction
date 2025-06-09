@@ -1,0 +1,352 @@
+{
+	"id":"ynadar",
+	"color":[235,250,20,255],
+    "secondaryUIColor":[120,60,205,255],
+    "secondarySegments":4,
+	
+	"baseUIColor":[235,250,20,255],
+	#"baseUIColor":[135,150,20,255],
+	"gridUIColor":[85,95,10,75],
+	
+	"entityNamePrefix":"Ynadar",
+	"displayName":"Ynadar Alliance",
+	"displayNameWithArticle":"the Ynadar Alliance",
+	"displayNameLong":"Ynadar Nexus Alliance",
+	"displayNameLongWithArticle":"the Ynadar Nexus Alliance",
+	"logo":"graphics/ynadar/factions/yna.png",
+	"crest":"graphics/ynadar/factions/crest_yna.png",
+	"shipNamePrefix":"YNA",
+	"shipNameSources":{
+		"GREEK":1,
+		"GENERAL":1,
+		"MERCANTILE":1,
+		"SPACE":1,
+	},
+	"names":{
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+			"ynadar_basic_bp":1.5,
+			"ynadar_standard_bp":1.5,
+			
+			"ynadar":2,
+			"base_bp":0.25,
+			"midline_bp":0.25,
+			"lowtech_bp":0.1,
+			"hightech_bp":0.1,
+		},
+		"hulls":{
+			"yna_perilstar":5, #this is to compensate its unusually low default spawn
+			
+			"yna_cinderbull":1.5,
+			"yna_buffalo":2,
+			"buffalo":0.1,
+		},
+	},
+    # ships the faction gets access to when importing S&W out-of-faction
+    "shipsWhenImporting":{
+		"tags":["base_bp", "midline_bp", "ynadar_basic_bp"],
+        "hulls":[
+        ],
+    },
+	"knownShips":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "ynadar_bp", "ynadar_basic_bp", "ynadar_standard_bp"],
+		"hulls":[
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		# capitals are all priority - this makes it so that they will get picked for the "capital" size ship
+		# without concern for matching the doctrine, i.e. a Legion will be as likely a pick as an Onslaught
+		# despite the Legion being a carrier and the carrier portion of the doctrine being low 
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "ynadar_bp"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":["ynadar_bp"],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "hegemony", 
+				"ynadar", "ynadar_arsenal_1_bp", "ynadar_arsenal_2_bp"],
+		"weapons":[
+			"gorgon",
+			"gorgonpod",
+			"gazer",
+			"gazerpod",
+			"dragon",
+			"dragonpod",
+			"hydra",
+		
+			"lightmg",
+			"lightdualmg",
+			"lightac",
+			"lightdualac",
+			"lightag",
+			
+			"heavymg",
+			"flak",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			"heavyac",
+			
+			"mjolnir",
+			
+			"pdburst",
+			"pdlaser",
+			"lrpdlaser",
+			"taclaser",
+			"ioncannon",
+			
+			"phasebeam",
+			"gravitonbeam",
+			"irautolance",
+			"heavyburst",
+			"ionbeam",
+			
+			"guardian",
+			"hil",
+		],
+	},
+	"priorityWeapons":{
+		"tags":["ynadar"],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "persean"],
+		"hullMods":[
+			"frontshield",
+			"turretgyros",
+			"armoredweapons",
+			"autorepair",
+			"auxiliarythrusters",
+			"blast_doors",
+			"dedicated_targeting_core",
+			"magazines",
+			"missleracks",
+			"hardened_subsystems",
+			"heavyarmor",
+			"insulatedengine",
+			"reinforcedhull",
+			"fluxbreakers",
+			"expanded_deck_crew",
+			"recovery_shuttles",
+			"operations_center",
+			"targetingunit",
+			"nav_relay",
+			"ecm",
+			"surveying_equipment",
+			"hiressensors",
+			"efficiency_overhaul",
+		],
+	},
+	"weaponSellFrequency":{
+		"gorgon":10,
+		"gorgonpod":10,
+		"gazer":10,
+		"gazerpod":10,
+		"dragon":10,
+		"dragonpod":10,
+		"hydra":10,
+		"irautolance":10,
+		"heavyac":10,
+		"mjolnir":10,
+		"guardian":5,
+		"hil":5,
+		"pdburst":5,
+		"heavyburst":5,
+		
+		"yna_ac_s":10,
+		"yna_flak_s":10,
+		"yna_maul_s":10,
+		"yna_sg1_s":5,
+		"yna_vg1_s":5,
+
+		"yna_ac_m":10,
+		"yna_flak_m":10,
+		"yna_sg1_m":5,
+		"yna_vg1_m":5,
+
+		"yna_ac_l":10,
+		"yna_ac2_l":5,
+		"yna_maul_l":5,
+		"yna_fragcannon_l":10,
+		"yna_flak_l":5,
+
+		"yna_emg_s":10,
+		"yna_enmis_s":10,
+		"yna_pd_las1_s":10,
+
+		"yna_emg_m":10,
+		"yna_pulse_m":10,
+		"yna_enmis_m":10,
+		"yna_blaster_m":5,
+
+		"yna_pulse_l":10,
+		"yna_enmis_l":5,
+		"yna_hil_l":5,
+		"yna_plas1_l":5,
+
+		"yna_svento_s":10,
+		"yna_srm1_s":10,
+
+		"yna_svento_m":10,
+		"yna_mudcloud_m":10,
+		"yna_las1_dem_m":5,
+		
+		"yna_las1_dem_l":5,
+	},
+	"fighterSellFrequency":{
+		"yna_drone_torp_wing":5,
+		"yna_ftr_light_wing":5,
+		"yna_ftr_heavy_wing":5,
+		"yna_bmr_wing":5,
+	},
+	"hullmodSellFrequency":{
+		"missleracks":10,
+		"eccm":10,
+	},	
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":1,
+		"phaseShips":1,
+		
+		"officerQuality":4,
+		"shipQuality":2,
+		"numShips":1,
+		
+		"shipSize":3,
+		
+		"aggression":2,
+		
+		"combatFreighterProbability":0.15,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+		
+		"officerSkillsShuffleProbability":1f,
+		"officerSkills":[
+			"gunnery_implants",
+			"missile_specialization",
+			"ordnance_expert",
+			"flux_regulation",
+		],
+		
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"officer_training",
+			"crew_training",
+			"coordinated_maneuvers",
+			"electronic_warfare",
+		],
+	},
+	"illegalCommodities":[
+		"organs",
+	],
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_hegemony02.png",
+			"graphics/portraits/portrait_hegemony06.png",
+			"graphics/portraits/portrait_mercenary01.png",
+			"graphics/portraits/portrait_mercenary03.png",
+			"graphics/portraits/portrait_mercenary04.png",
+			"graphics/portraits/portrait12.png",
+			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait15.png",
+			"graphics/portraits/portrait17.png",
+			"graphics/portraits/portrait18.png",
+			"graphics/portraits/portrait20.png",
+			"graphics/portraits/portrait23.png",
+			"graphics/portraits/portrait25.png",
+			"graphics/portraits/portrait26.png",
+			"graphics/portraits/portrait30.png",
+			"graphics/portraits/portrait31.png",
+			"graphics/portraits/portrait33.png",
+			"graphics/portraits/portrait35.png",
+			"graphics/portraits/portrait38.png",
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_hegemony03.png",
+			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary05.png",
+			"graphics/portraits/portrait14.png",
+			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait22.png",
+			"graphics/portraits/portrait27.png",
+			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait29.png",
+			"graphics/portraits/portrait32.png",
+			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait37.png",
+			"graphics/portraits/portrait41.png",
+			"graphics/portraits/portrait42.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+			"spaceCommander":{"name":"Explorer"},
+		},
+		"posts":{
+			"patrolCommander":{"name":"Patrol Commander"},
+			"fleetCommander":{"name":"Fleet Commander"},
+			"baseCommander":{"name":"Base Commander"},
+		},
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"faithful":5,		
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":5,
+		},
+		"HIGH":{
+			"business":3,
+			"soldier":5,
+			"official":2,
+			"aristo":3,
+		},
+	},
+	"custom":{
+		"allowsTransponderOffTrade":false,
+		"offersCommissions":true,
+		"engagesInHostilities":true,
+		"buysAICores":true,
+		"AICoreValueMult":0.5,
+		"AICoreRepMult":0.2,
+		"buysSurveyData":true,
+		"hostilityImpactOnGrowth":true,
+		"caresAboutAtrocities":false,
+		"punitiveExpeditionData":{
+			"vsCompetitors":false,
+			"vsFreePort":false,
+			"canBombard":true,
+			"territorial":false,
+		},
+		"simulatorData":{
+			"showInSimulator":true,
+		},
+	},
+	
+},

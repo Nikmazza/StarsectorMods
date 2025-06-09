@@ -1,0 +1,14 @@
+{
+	"designTypeColors":{
+		"Ynadar":[235,250,20,255],
+	},
+
+    "graphics":{
+		"blueprint_packages":{
+			"yna_basic_package":"graphics/ynadar/icons/cargo/yna_basic_bp.png",
+			"yna_standard_package":"graphics/ynadar/icons/cargo/yna_standard_bp.png",
+			"yna_arsenal_1_package":"graphics/ynadar/icons/cargo/yna_weapon_1_bp.png",
+			"yna_arsenal_2_package":"graphics/ynadar/icons/cargo/yna_weapon_2_bp.png",
+		},
+    }
+}

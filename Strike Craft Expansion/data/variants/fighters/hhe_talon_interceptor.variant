@@ -1,0 +1,25 @@
+{
+	"quality":0.0,
+	"displayName":"Interceptor",
+	"hullId":"hhe_ftr_talon",
+	"variantId":"hhe_ftr_talon_interceptor",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["no_weapon_flux"], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"lightdualmg",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 003":"hhe_ftr_brightmissile",
+		 			#"WS 003":"swarmer",
+		 		   },
+		},
+	],
+}

@@ -1,0 +1,128 @@
+{
+  "variantId": "yna_perilstar_Ambitious",
+  "hullId": "yna_perilstar",
+  "displayName": "Ambitious",
+  "goalVariant": true,
+  "fluxCapacitors": 41,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "LM 01": "yna_las1_dem_l",
+        "LM 02": "yna_las1_dem_l",
+        "LM 03": "hurricane",
+        "LM 04": "hurricane"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "SM 01": "yna_svento_s",
+        "SM 02": "yna_svento_s",
+        "SM 03": "breach",
+        "SM 04": "breach"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MM 01": "salamanderpod",
+        "MM 02": "salamanderpod",
+        "SU 01": "heatseeker",
+        "SU 02": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "BW 01": "yna_plas1_xl",
+        "WS0001": "yna_maul_l",
+        "WS0002": "yna_maul_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_ac2_l",
+        "WS0004": "yna_ac2_l",
+        "WS0006": "yna_ac_m",
+        "WS0007": "yna_ac_m",
+        "WS0010": "yna_ac_m",
+        "WS0011": "yna_ac_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "yna_blaster_m",
+        "WS0009": "yna_blaster_m",
+        "WS0012": "yna_blaster_m",
+        "WS0013": "yna_blaster_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "PD 01": "yna_pd_las1_s",
+        "PD 02": "yna_pd_las1_s",
+        "PD 03": "yna_flak_s",
+        "PD 04": "yna_flak_s",
+        "PD 05": "yna_pd_las1_s",
+        "PD 06": "yna_pd_las1_s",
+        "PD 07": "yna_pd_las1_s",
+        "PD 08": "yna_pd_las1_s",
+        "PD 09": "yna_flak_s",
+        "PD 10": "yna_flak_s",
+        "PD 11": "yna_flak_s",
+        "PD 12": "yna_flak_s",
+        "PD 13": "yna_pd_las1_s",
+        "PD 14": "yna_pd_las1_s",
+        "PD 15": "yna_pd_las1_s",
+        "PD 16": "yna_pd_las1_s",
+        "WS0005": "yna_flak_l",
+        "WS0014": "yna_pulse_m",
+        "WS0015": "yna_pulse_m",
+        "WS0016": "yna_flak_m",
+        "WS0017": "yna_flak_m",
+        "WS0018": "yna_flak_m",
+        "WS0019": "yna_flak_m"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "MS 03": "yna_perilstar_m_t_l_Standard"
+    },
+    {
+      "MS 01": "yna_perilstar_m_f_l_Standard"
+    },
+    {
+      "MS 02": "yna_perilstar_m_f_r_Standard"
+    },
+    {
+      "MS 04": "yna_perilstar_m_t_r_Standard"
+    }
+  ],
+  "wings": [
+    "yna_bmr_wing",
+    "yna_bmr_wing",
+    "yna_ftr_heavy_wing",
+    "yna_ftr_heavy_wing",
+    "yna_ftr_light_wing",
+    "yna_ftr_light_wing"
+  ]
+}

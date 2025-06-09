@@ -1,7 +1,7 @@
 {
     "displayName": "Heavy",
-    "fluxCapacitors": 1,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 47,
     "goalVariant": true,
     "hullId": "radiant_tw",
     "hullMods": [
@@ -30,8 +30,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "spearwall_tw",
-                "WS 004": "spearwall_tw"
+                "WS 002": "stormwall_tw",
+                "WS 004": "stormwall_tw"
             }
         },
         {

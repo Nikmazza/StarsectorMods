@@ -1,6 +1,7 @@
 package data.scripts.xo.synthesis;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CharacterDataAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
@@ -23,7 +24,9 @@ public class ReactorMonitoring extends SCBaseSkillPlugin {
     public void addTooltip(SCData data, TooltipMakerAPI tooltip) {
 		tooltip.addPara("Ships with an Adaptive Reactor Chamber gain 20%% bonus to flux dissipation rate while venting", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("Ships without an Adaptive Reactor Chamber gain 5%% improvement to flux capacity and dissipation", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		
+		tooltip.addPara("Can safely equip 1 additional feedback weapon per ship", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addSpacer(10f);
+		tooltip.addPara("Acquire the Reactor Chamber adaptive hullmod", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Reactor Chamber");
     }
 
     @Override
@@ -34,4 +37,19 @@ public class ReactorMonitoring extends SCBaseSkillPlugin {
 		}
 		else stats.getVentRateMult().modifyMult(id, 1f + REACTOR_VENT_BONUS * 0.01f);
     }
+	
+	@Override
+	public void onActivation(SCData data) {
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_reactor_monitoring_is_active", true);
+		if (data.isPlayer() && !Global.getSector().getMemoryWithoutUpdate().is("$gave_RM_hullmods", true)) {
+			CharacterDataAPI player = Global.getSector().getCharacterData();
+			player.addHullMod("vice_adaptive_reactor_chamber");
+			Global.getSector().getMemoryWithoutUpdate().set("$gave_RM_hullmods", true);
+		}
+	}
+	
+	@Override
+	public void onDeactivation(SCData data) {
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_reactor_monitoring_is_active", false);
+	}
 }

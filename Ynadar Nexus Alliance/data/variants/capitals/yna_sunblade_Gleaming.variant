@@ -1,0 +1,79 @@
+{
+  "variantId": "yna_sunblade_Gleaming",
+  "hullId": "yna_sunblade",
+  "displayName": "Gleaming",
+  "goalVariant": true,
+  "fluxCapacitors": 38,
+  "fluxVents": 50,
+  "quality": 0.6,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "hardenedshieldemitter",
+    "extendedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "harpoonpod",
+        "WS0004": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MIS01": "sabot_single",
+        "MIS02": "sabot_single",
+        "MIS03": "heatseeker",
+        "MIS04": "heatseeker"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "yna_blaster_m",
+        "WS0009": "yna_blaster_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_ac_l",
+        "WS0002": "yna_ac_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "yna_ac_m",
+        "WS0007": "yna_ac_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "heavyburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "yna_flak_s",
+        "WS0011": "yna_flak_s",
+        "WS0012": "yna_flak_s",
+        "WS0013": "yna_flak_s",
+        "WS0014": "yna_pd_las1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

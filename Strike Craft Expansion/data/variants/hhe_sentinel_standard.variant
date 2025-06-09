@@ -1,0 +1,78 @@
+{
+  "variantId": "hhe_sentinel_standard",
+  "hullId": "hhe_sentinel",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 11,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hhe_sfl_PredatorSystem",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WSM-01": "sabotpod",
+        "WSM-02": "sabotpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WSM-03": "harpoonpod",
+        "WSM-04": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSL-01": "hhe_devastator_sentinel",
+        "WSM-06": "hhe_heavyvulcan",
+        "WSM-07": "hhe_heavyvulcan",
+        "WSS-01": "hhe_prickler",
+        "WSS-02": "hhe_prickler",
+        "WSS-03": "hhe_pdpulser",
+        "WSS-04": "hhe_pdpulser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSM-08": "hhe_heavyvulcan",
+        "WSM-09": "hhe_heavyvulcan",
+        "WSS-05": "hhe_pdpulser",
+        "WSS-06": "hhe_pdpulser",
+        "WSS-07": "hhe_prickler",
+        "WSS-08": "hhe_prickler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSM-10": "hhe_pdlaserstreamer",
+        "WSM-11": "hhe_pdlaserstreamer",
+        "WSS-09": "hhe_pdpulser",
+        "WSS-10": "hhe_pdpulser",
+        "WSS-11": "hhe_pdpulser",
+        "WSS-12": "hhe_pdpulser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "hhe_bonnethead_wing",
+    "hhe_bonnethead_wing",
+    "hhe_bonnethead_wing",
+    "broadsword_wing",
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

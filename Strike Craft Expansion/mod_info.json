@@ -1,0 +1,9 @@
+{
+	"id":"SCE",
+	"name":"Strike Fighter Expansion",
+	"author": "IceFire, Original author MrHoon, Last Maintainer Retry",
+	"version":"2.0.0",
+	"description":"Adds various fighter and carrier related things to the game",
+	"gameVersion":"0.98a-RC5",
+	"jars":["jars/HHE_FighterExpansion.jar"]
+}

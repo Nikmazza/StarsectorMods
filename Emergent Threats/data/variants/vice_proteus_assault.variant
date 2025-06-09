@@ -7,7 +7,7 @@
     "hullMods": [
         "magazines",
         "hardenedshieldemitter",
-        "targetingunit",
+        "vice_unified_targeting_core",
         "unstable_injector"
     ],
     "permaMods": [],
@@ -55,9 +55,9 @@
         }
     ],
     "wings": [
-        "claw_wing",
-        "claw_wing",
-        "claw_wing",
-        "claw_wing"
+        "broadsword_wing",
+        "broadsword_wing",
+        "broadsword_wing",
+        "vice_kite_dem_wing"
     ]
 }

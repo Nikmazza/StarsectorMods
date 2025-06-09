@@ -1,12 +1,10 @@
 {
     "displayName": "Automated",
-    "fluxCapacitors": 10,
-    "fluxVents": 6,
+    "fluxCapacitors": 0,
+    "fluxVents": 24,
     "hullId": "vice_aurora_ai",
-	"goalVariant": false,
     "hullMods": [
         "ecm",
-        "missleracks",
         "hardenedshieldemitter",
         "targetingunit",
         "stabilizedshieldemitter",
@@ -19,28 +17,29 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 009": "ionbeam"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 004": "taclaser",
+                "WS 003": "vice_ionstreamer",
+                "WS 005": "vice_ionstreamer",
                 "WS 006": "breachpod",
-                "WS 010": "breach",
-                "WS 011": "breach",
-                "WS 012": "breach",
-                "WS 013": "breach"
+                "WS 009": "breachpod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "taclaser",
-                "WS 005": "taclaser",
-                "WS 007": "gravitonbeam",
-                "WS 008": "gravitonbeam"
+                "WS 010": "atropos",
+                "WS 011": "atropos",
+                "WS 012": "atropos",
+                "WS 013": "atropos"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "vice_lrburstpd",
+                "WS 008": "vice_lrburstpd"
             }
         },
         {
@@ -48,7 +47,8 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "pdlaser",
-                "WS 002": "pdlaser"
+                "WS 002": "pdlaser",
+                "WS 004": "pdburst"
             }
         }
     ]

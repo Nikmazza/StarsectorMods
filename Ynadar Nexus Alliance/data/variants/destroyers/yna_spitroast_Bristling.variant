@@ -1,0 +1,35 @@
+{
+  "variantId": "yna_spitroast_Bristling",
+  "hullId": "yna_spitroast",
+  "displayName": "Bristling",
+  "goalVariant": true,
+  "fluxCapacitors": 11,
+  "fluxVents": 10,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_las1_dem_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "yna_flak_m"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "yna_bmr_wing",
+    "yna_drone_torp_wing"
+  ]
+}

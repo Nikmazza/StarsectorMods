@@ -55,6 +55,15 @@
 			"tags":["military", "wantCauseHarm", "canSatBomb", "canSabotageIndustry", "canDestabilize", "canRebel"],
 			"module":MILITARY
 		},
+		"containAggression":{
+			"name":"Contain Aggression",
+			"desc":"$TheFaction's rampant aggression has gotten out of hand. It falls to us to cut them down to size.",
+			"classPath":"exerelin.campaign.ai.concern.ContainAggressionConcern",
+			"cooldownMult":0.5,
+			"antiRepetitionMult":0.5,
+			"tags":["military", "canInvade", "canSatBomb", "canDeclareWar"],
+			"module":MILITARY
+		},
 		
 		"developRelations":{
 			"name":"Develop Relations",
@@ -90,6 +99,13 @@
 			"desc":"$TheFaction is weak and vulnerable. It would be a shame if something were to happen to them.",
 			"classPath":"exerelin.campaign.ai.concern.VulnerableFactionConcern",
 			"tags":["diplomacy", "military", "canDiplomacy", "diplomacy_positive", "diplomacy_negative", "canDeclareWar", "trait_predatory"],
+			"module":DIPLOMATIC
+		},
+		"interventionConcern":{
+			"name":"Intervene in Conflict",
+			"desc":"Our ally $theOtherFaction is at war with $theFaction. We should intercede on their behalf.",
+			"classPath":"exerelin.campaign.ai.concern.InterventionConcern",
+			"tags":["diplomacy", "military", "trait_helps_allies"],
 			"module":DIPLOMATIC
 		},
 		"commodityCompetition":{
@@ -191,6 +207,12 @@
 			"classPath":"exerelin.campaign.ai.action.MakePeaceAction",
 			"tags":["diplomacy", "canMakePeace", "friendly"],
 		},
+		"interventionAction":{
+			"name":"Intervene in Conflict",
+			"classPath":"exerelin.campaign.ai.action.InterventionAction",
+			"tags":["diplomacy"],
+		},
+		
 		# currently should only be called by the Form Coalition shim action
 		"enterAlliance":{
 			"name":"Enter Alliance",

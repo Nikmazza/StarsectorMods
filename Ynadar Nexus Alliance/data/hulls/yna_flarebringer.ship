@@ -1,0 +1,247 @@
+{
+  "hullName": "Flarebringer",
+  "hullId": "yna_flarebringer",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ynadar/ships/flarebringer/flarebringer.png",
+  "style": "YNADAR",
+  "height": 384,
+  "width": 294,
+  "center": [147, 180],
+  "collisionRadius": 250,
+  "shieldCenter": [10, -0],
+  "shieldRadius": 234,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec",
+    "yna_missile_loader"
+  ],
+  "weaponSlots": [
+    {
+      "id": "HU 01",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [189, -0]
+    },
+    {
+      "id": "MS 01",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [176, 64]
+    },
+    {
+      "id": "MS 02",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [176, -64]
+    },
+    {
+      "id": "MS 03",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [185, 45]
+    },
+    {
+      "id": "MS 04",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [185, -45]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 60,
+      "locations": [135, 57]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -60,
+      "locations": [135, -57]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 20,
+      "locations": [154, 31]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -20,
+      "locations": [154, -31]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 330,
+      "angle": 0,
+      "locations": [21.5, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 330,
+      "angle": 180,
+      "locations": [-30, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 90,
+      "locations": [94, 109]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -90,
+      "locations": [94, -109]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 300,
+      "angle": 180,
+      "locations": [-153, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [33, -95],
+      "length": 72,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [33, 95],
+      "length": 72,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [25, 111],
+      "length": 72,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [25, -111],
+      "length": 72,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [19, 131],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [19, -131],
+      "length": 64,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [21, 122],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [21, -122],
+      "length": 64,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    198, 14,
+    189, 16,
+    186, 45,
+    174, 69,
+    147, 87,
+    167, 91,
+    132, 108,
+    115, 138,
+    78, 142,
+    26, 135,
+    31, 105,
+    44, 84,
+    56, 83,
+    56, 73,
+    -148, 74,
+    -166, 61,
+    -175.5, -0,
+    -166, -61,
+    -148, -74,
+    56, -73,
+    56, -83,
+    44, -84,
+    31, -105,
+    26, -135,
+    78, -142,
+    115, -138,
+    132, -108,
+    167, -91,
+    147, -87,
+    174, -69,
+    186, -45,
+    189, -16,
+    198, -14
+  ]
+}

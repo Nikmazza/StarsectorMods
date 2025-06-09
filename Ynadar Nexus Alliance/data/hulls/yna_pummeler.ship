@@ -1,0 +1,110 @@
+{
+  "hullName": "Pummuler",
+  "hullId": "yna_pummeler",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ynadar/ships/pummeler/pummeler.png",
+  "style": "YNADAR",
+  "height": 56,
+  "width": 94,
+  "center": [50, 32],
+  "collisionRadius": 78,
+  "shieldCenter": [5, 2],
+  "shieldRadius": 66,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec",
+    "yna_missile_loader",
+    "missleracks"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [10, 21]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [16, -16]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [9, -31]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-12, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-31, -0],
+      "length": 30,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 18,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32, 26],
+      "length": 38,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-32, -26],
+      "length": 38,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-30, 12],
+      "length": 12,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-30, -11],
+      "length": 12,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -28, 15,
+    -19.5, 39,
+    7, 39,
+    17, 28,
+    13, -10,
+    18, -16,
+    12, -34,
+    -20, -36,
+    -28, -15
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "variantId": "yna_lumbergiant_Standard",
+  "hullId": "yna_lumbergiant",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 18,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_pulse_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "yna_ac_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "yna_pd_las1_s",
+        "WS0003": "yna_pd_las1_s",
+        "WS0004": "yna_pd_las1_s",
+        "WS0005": "yna_pd_las1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

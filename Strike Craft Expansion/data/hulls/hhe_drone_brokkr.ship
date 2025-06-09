@@ -1,0 +1,41 @@
+{
+  "hullName": "Brokkr Drone",
+  "hullId": "hhe_drone_brokkr",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/drones/hhe_drone_brokkr.png",
+  "style": "HIGH_TECH",
+  "height": 15,
+  "width": 12,
+  "center": [6, 7.5],
+  "collisionRadius": 8,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 9,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": 0,
+      "locations": [2, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-3.5, -0],
+      "length": 6.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    5, 0,
+    0, 4,
+    -2.5, -0,
+    0, -4
+  ]
+}

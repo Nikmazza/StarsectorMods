@@ -1,7 +1,7 @@
 {
     "displayName": "Pirate",
     "fluxCapacitors": 0,
-    "fluxVents": 26,
+    "fluxVents": 29,
     "goalVariant": true,
     "hullId": "vice_praxis",
     "hullMods": [
@@ -44,7 +44,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "dualflak"}
+            "weapons": {"WS 002": "vice_phased_electrolaser"}
         }
     ],
     "wings": ["lux_wing"]

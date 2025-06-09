@@ -13,6 +13,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 public class DistanceUtil {
  
 	private static String ABYSSAL_HULLMOD = "rat_abyssal_grid";
+	private static String SIERRA_HULLMOD = "rat_raphaels_grace";
 	private static String ENTROPY_ARRESTER_1 = "vice_adaptive_entropy_arrester";
 	private static String ENTROPY_ARRESTER_2 = "ix_entropy_arrester";
 	
@@ -71,6 +72,7 @@ public class DistanceUtil {
 		for (ShipAPI s : ships) {
 			if (!s.isDrone() && !s.isFighter() && !s.isHulk() && !s.isPhased()) {
 				if (s.getVariant().hasHullMod(ABYSSAL_HULLMOD) 
+						|| s.getVariant().hasHullMod(SIERRA_HULLMOD) 
 						|| s.getVariant().hasHullMod(ENTROPY_ARRESTER_1) 
 						|| s.getVariant().hasHullMod(ENTROPY_ARRESTER_2)) continue;
 				if (result == null) result = s;

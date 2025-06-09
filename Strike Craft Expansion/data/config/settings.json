@@ -1,0 +1,34 @@
+{
+	########################################
+    "designTypeColors":{
+	########################################
+	
+		"Fighter Weaponry":[110,110,110,255],
+		"S.F.L":[250,185,35,255],
+		
+		"Luddic Church":[75,200,0,255],
+		"Luddic Armada":[115,200,0,255],
+		
+		"Persean League":[220,185,55,255],
+		"Kazeron":[220,185,55,255],
+		"Westernesse":[220,185,55,255],
+		"Mazalot":[220,185,55,255],
+		
+		"Tri-Tachyon":[135,206,255,255],
+		"Restoration Project":[115,225,255,255],
+		"Culann":[135,206,255,255],
+	},
+	
+    "graphics":{
+		"blueprint_packages":{
+			"hhe_ftr_lc_package":"graphics/factions/luddic_church.png",
+			"hhe_ftr_pl_package":"graphics/factions/persean_league.png",
+			"hhe_ftr_tt_package":"graphics/factions/tritachyon.png",
+			"hhe_ftr_rem_package":"graphics/factions/ai_remnant.png",
+		},
+		"planets":{
+			"bread":"graphics/planets/bread.png",
+			
+		}
+	}
+}

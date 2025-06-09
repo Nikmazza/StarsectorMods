@@ -1,0 +1,90 @@
+{
+  "variantId": "yna_urgrand_Monitor",
+  "hullId": "yna_urgrand",
+  "displayName": "Monitor",
+  "goalVariant": true,
+  "fluxCapacitors": 46,
+  "fluxVents": 50,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "BW 01": "yna_hvy_heat"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "yna_las1_dem_l",
+        "WS0002": "yna_las1_dem_l",
+        "WS0006": "yna_las1_dem_l",
+        "WS0007": "yna_las1_dem_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_ac2_l",
+        "WS0004": "yna_ac2_l",
+        "WS0005": "yna_ac2_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "yna_blaster_m",
+        "WS0009": "yna_blaster_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "yna_maul_s",
+        "WS0015": "yna_maul_s",
+        "WS0016": "yna_maul_s",
+        "WS0017": "yna_maul_s",
+        "WS0018": "yna_maul_s",
+        "WS0019": "yna_maul_s",
+        "WS0020": "yna_flak_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MS 01": "yna_srm1_s",
+        "MS 02": "yna_srm1_s",
+        "MS 03": "yna_svento_s",
+        "MS 04": "yna_svento_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "yna_flak_m",
+        "WS0011": "yna_flak_m",
+        "WS0012": "yna_flak_s",
+        "WS0013": "yna_flak_s",
+        "WS0021": "yna_flak_s",
+        "WS0022": "vulcan",
+        "WS0023": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "yna_drone_torp_wing",
+    "yna_drone_torp_wing"
+  ]
+}

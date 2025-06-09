@@ -1,8 +1,4 @@
 {
-	"TAS_acceptedAICoreIds": ["ix_panopticon_core", "ix_panopticon_instance"],
-	"TAS_maintenanceMultipliers": {"ix_panopticon_core": 0.75, "ix_panopticon_instance": 0.75},
-	"TAS_AICoreShipWeightReduction": {"ix_panopticon_core": 0.5, "ix_panopticon_instance": 0.5},
-	
 	"drop_prob_officer_ix_panopticon_core":0.1,
 	"drop_prob_officer_ix_command_core":0,
 	
@@ -11,6 +7,7 @@
 		"IX Battlegroup":[0,245,0,255],
 		"IX Honor Guard":[0,245,0,255],
 		"Trinity Worlds":[190,255,150,255],
+        "Diamond Nexus":[70,255,235,255],
 	},
 	"graphics":{
 		"intel":{

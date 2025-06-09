@@ -1,0 +1,57 @@
+{
+  "id": "plasmabeam",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/test_plasma_beam_turret.png",
+  "turretGlowSprite": "graphics/weapons/plasma_cannon_turret_glow.png",
+  "hardpointSprite": "graphics/weapons/test_plasma_beam_hardpoint.png",
+  "hardpointGlowSprite": "graphics/weapons/plasma_cannon_hardpoint_glow.png",
+  "glowColor": [
+    255,
+    100,
+    150,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    16.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    29,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    100,
+    100,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 45,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 292,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundTwo": "plasmabeam_fire",
+}

@@ -1,13 +1,14 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 2,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "fulgent",
     "hullMods": [
-        "missleracks",
         "targetingunit",
-        "vice_adaptive_thruster_control"
+        "stabilizedshieldemitter",
+        "vice_adaptive_trajectory_analyzer",
+        "vice_feedback_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -18,16 +19,8 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "irpulse",
-                "WS 001": "ioncannon",
+                "WS 001": "vice_phased_electrolaser",
                 "WS 002": "irpulse"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 009": "reaper",
-                "WS 010": "reaper"
             }
         },
         {
@@ -43,9 +36,17 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 005": "ioncannon",
-                "WS 006": "ioncannon",
+                "WS 006": "ioncannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 007": "lrpdlaser",
-                "WS 008": "lrpdlaser"
+                "WS 008": "lrpdlaser",
+                "WS 009": "vice_fragbomb",
+                "WS 010": "vice_fragbomb"
             }
         }
     ]

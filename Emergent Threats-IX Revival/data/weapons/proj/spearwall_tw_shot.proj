@@ -2,14 +2,15 @@
 	"id":"spearwall_tw_shot",
 	"specClass":"missile",	
 	"missileType":"ROCKET",
-	"sprite":"graphics/missiles/flechette_sml.png",
+	"sprite":"graphics/missiles/flechette_med.png",
 	"onFireEffect":"data.scripts.ix.weapons.SpearwallOnFire",
+	"onHitEffect":"data.scripts.ix.weapons.SpearwallOnHit",
 	"size":[8,4],	
 	"center":[4,2],
 	"collisionRadius":10,
 	"collisionClass":"MISSILE_FF",
-	"explosionColor":[255,90,50,255],
-	"explosionRadius":30, # purely visual
+	"explosionColor":[255,90,50,180],
+	"explosionRadius":25, # purely visual
 	"fizzleOnReachingWeaponRange":true,
 	"dudProbabilityOnFlameout":0,
 	"useHitGlowWhenDestroyed":true,

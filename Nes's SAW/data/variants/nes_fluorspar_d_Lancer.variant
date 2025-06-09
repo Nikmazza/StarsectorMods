@@ -1,0 +1,34 @@
+{
+    "displayName": "Lancer",
+    "fluxCapacitors": 17,
+    "fluxVents": 20,
+    "goalVariant": false,
+    "hullId": "nes_fluorspar_d",
+    "hullMods": [
+        "reinforcedhull",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "nes_fluorspar_d_Lancer",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "phasebeam",
+                "WS0002": "phasebeam",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "vulcan",
+                "WS0004": "vulcan",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

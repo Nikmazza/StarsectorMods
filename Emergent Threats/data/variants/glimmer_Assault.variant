@@ -1,13 +1,13 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 4,
+    "fluxCapacitors": 2,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "glimmer",
     "hullMods": [
-        "fluxdistributor",
-        "stabilizedshieldemitter",
-        "vice_adaptive_pulse_resonator"
+        "missleracks",
+        "hardenedshieldemitter",
+        "vice_adaptive_thruster_control"
     ],
     "permaMods": [],
     "sMods": [],
@@ -18,16 +18,16 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "ionpulser",
-                "WS 002": "ioncannon",
-                "WS 003": "ioncannon"
+                "WS 002": "lrpdlaser",
+                "WS 003": "lrpdlaser"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "swarmer",
-                "WS 005": "swarmer"
+                "WS 004": "atropos",
+                "WS 005": "atropos"
             }
         }
     ]

@@ -1,0 +1,20 @@
+{
+	"baseHullId":"iapetus_tw_base",
+	"skinHullId":"iapetus_tw",
+	"hullName":"Iapetus (TW)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"iapetus_tw",
+	"coversColor":[210,230,210,255],
+	"spriteName":"graphics/ships/trinity/iapetus_tw.png",
+	"descriptionPrefix":"This rare warship of the Trinity Worlds is based on a militarized tanker design from the Sindrian Fuel Company. The engines of this ship have been enhanced in a crude yet effective manner, in an effort to mimic the more advanced upgrades of the Fleet.",
+	"tags":["no_dealer"],
+	"tech":"Trinity Worlds",
+	"builtInMods":["tw_superior_pd", "tw_trinity_retrofit"],
+	"builtInWeapons": {
+    },
+    "weaponSlotChanges":{
+    },
+	#"removeHints":["HIDE_IN_CODEX"],
+	"engineSlotChanges":{
+	},   
+}

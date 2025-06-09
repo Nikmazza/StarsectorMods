@@ -1,5 +1,197 @@
 {
-	    "vice_white_whale":{
+	"vice_faith_fury":{
+		"trigger_marketFaction_any": ["independent", "hegemony", "luddic_church", "luddic_path", "persean", "pirates", "player", "sindrian_diktat", "tritachyon"],
+        "trigger_marketFaction_alliedWith": true,
+		"trigger_player_minLevel": 12,
+		
+		#BOUNTY DESCRIPTION
+		"job_name": "Faith and Fury",
+		"job_description": "A notorious strike craft loving corsair has begun flying under the banner of the Light of Ludd, and has gathered a large following of both ==pirate== cutthroats and ==pather== fanatics to his armada. He has set his sights on the Persean League in retaliation for suppressing the Luddic majority on Mazalot, and has already humbled one League expedition sent to rein him in, even salvaging an intact Proteus-class carrier from the battle. \nThe most prominent gens of Kazeron are eager to make this embarrassment go away, not trusting the other members of the Combined Fleet to handle it with the correct balance of urgency and discretion. They have pooled together a significant sum for a private contractor to bring an end to this pirate menace, once and for all. \n==Warning:== The fanaticism of Johan's followers may cause more ships to take to the field at once that would normally be expected. Take precautions against being overwhelmed.",
+		
+		"job_comm_reply": "(should not be visible, actual text in rules.csv)",
+		
+		"job_intel_success": "The post battle salvage operation goes smoothly, and an almost intact data core is retrieved from one of the fallen pirate carriers. \nWithin are detailed ==blueprints== for various fighter and ship designs, seemingly stored as a result of slapdash engineering practices where whatever passed for pirate forge-technicians would make modifications on the fly with every new ship built, and with little regard for design integrity. Their poor technique is your boon, and along with the blueprints you also find a set of hull modifications that make use of remarkably advanced fighter nano-assembly technology. \nGiven the near flawless condition of many of his ships, Brother Johan obviously had significant financial backing. But from where, you have no idea. In any case, that is a puzzle for the Kazeron gens to solve. Your credits have been deposited upon proof of mission success.",
+		
+		"job_intel_failure": "The gens of Kazeron are predictably displeased by your lack of commitment. They continue their search for a more reliable operative to take on the joint Luddic pirate armada.",
+		
+		"job_forFaction": "persean",
+		"job_type": "assassination",
+		"job_credit_reward": 500000,
+		"job_reward_scaling": 0,
+		"job_reputation_reward": 15,
+		"job_item_reward": {
+			"modspec vice_unified_targeting_core":1,
+			"modspec vice_field_repair_nanites":1,
+			"modspec vice_convert_shuttle_bomber":1,
+			"modspec vice_convert_shuttle_attack":1,
+			"ship_bp vice_hellfire_colossus":1,
+			"ship_bp vice_thunderbox":1,
+			"fighter_bp vice_bolo_p_wing":1,
+			"vice_pipebomb":1,
+		},
+		"job_show_type": true,
+		"job_show_captain": true,
+		"job_show_fleet": "vanilla",
+		"job_show_distance": "exact",
+		"job_difficultyDescription": "auto",
+		"job_pick_option": "Confront the armada",
+		"job_memKey": "$vice_faith_fury",
+		
+		#TARGET COMMANDER
+		"target_first_name": "Johan",
+        "target_last_name": "Bondevik",
+		"target_portrait": "graphics/portraits/portrait_luddic02.png",
+		"target_gender": "MALE",
+		"target_rank": "brother",
+		"target_post": "warlord",
+		"target_personality": "reckless",
+		"target_isAI": false,
+		"target_level": 7,
+		"target_elite_skills": 3,
+        "target_skills": {
+			"helmsmanship":2,
+			"damage_control":1;
+			"target_analysis":1,
+			"gunnery_implants":1,
+			"energy_weapon_mastery":1,
+			"point_defense":2,
+			"ballistic_mastery":2,
+        },
+		
+		#TARGET FLEET
+		"fleet_name": "The Blessed Armada",
+        "fleet_faction": "vice_light_of_ludd",
+		"fleet_flagship_variant": "vice_proteus_captured",
+		"fleet_flagship_name": "PLS Pride of Kazeron",
+		"fleet_flagship_recoverable": true,
+		"fleet_flagship_autofit": false,
+		"fleet_preset_ships": {
+			"vice_thunderbox_outlaw_mission": 1,
+			"vice_thunderbox_reaver_mission": 3,
+			"vice_prometheus_p_anointed": 3,
+			"vice_hellfire_pirate": 2,
+			"vice_colossus_p_bandit": 4,
+			"vice_colossus_path": 2,
+			"vice_venture_pirate": 4,
+			"vice_venture_path": 4,
+			"vice_manticore_path": 3,
+		},
+		"fleet_preset_autofit": false,
+		"fleet_scaling_multiplier": 0,
+		"fleet_min_FP": 800, 
+		"fleet_composition_faction": "vice_light_of_ludd",
+		"fleet_composition_quality": 2,
+		"fleet_transponder": false,
+		"fleet_no_retreat": true,
+        "fleet_behavior": "PASSIVE",
+		
+		#LOCATION
+		"location_entitiesID": [
+            "antillia_b",
+        ],
+		"location_distance": "CLOSE",
+		"location_marketFactions": [
+			"pirates"
+		],
+		"location_themes": [
+		],
+		"location_entities": [
+		],
+	},
+	"vice_project_mayfly":{
+		"trigger_marketFaction_any": ["independent", "hegemony", "luddic_church", "luddic_path", "persean", "pirates", "player", "sindrian_diktat", "tritachyon"],
+        "trigger_marketFaction_alliedWith": true,
+		"trigger_player_minLevel": 12,
+		"trigger_memKeys_any": {
+			"$vice_faith_fury_ally": true,
+        },
+		
+		#BOUNTY DESCRIPTION
+		"job_name": "Project Mayfly",
+		"job_description": "As promised, Brother Johan of the Blessed Armada has sent you everything he knows about ==Rabasi Kato== and ==Project Mayfly==, a top secret attempt by the Persean League to introduce hypercognitive AI weaponry into the Combined Fleet arsenal. The Strategos who leads the effort is on the cusp of achieving full operational readiness for her fleet of prototype automated warships. If no one stops her, she may soon plunge the entire Sector into open war. \nTo show his support for your cause, Brother Johan has promised you the use of his prize ship, a Proteus-class carrier captured from the Persean League, which he will make available to you at Chalcedon after you accept the mission. \n==Warning:== The experimental Persean League warships are controlled by a highly aggressive networked AI, which may lead many of the ships to attempt a simultaneous swarming engagement against your fleet, in a manner that no human captain would ever consider safe.",
+		
+		"job_comm_reply": "(should not be visible, actual text in rules.csv)",
+		
+		"job_intel_success": "Against the waves of hostile AI and their human enablers, you proved victorious. Yet the pickings are slim among the wreckage, with the most valuable equipment and data being irrevocably lost in a tremendous explosion aboard the PLS Worthy Accession. A herculean effort by your salvor teams managed to secure the ==blueprints== for several AI cruiser designs from the Project Mayfly research base, that is even now making its descent into the atmosphere of Skoll. Aside from that, there is little more than a debris field of twisted metal left to mark the failed ambitions of Rabasi Kato.",
+		
+		"job_intel_failure": "To your surprise, your decision to let Kato's fleet depart in peace does not have the dramatic Sector-wide consequences you expected. Soon after she leaves the orbit of Skoll, you pick up hyperfield signals indicating a major battle taking place in the Thule system between the forces of Project Mayfly and the Kazeron Navarchy. Kato's AI augmented fleet punches well above its weight, but the Navarchy's sheer numbers eventually overwhelm her. When the loyalist forces are done, every piece of debris is thoroughly bombarded until nothing of value is left. It seems that for now, the League has contained the incident.\nThe Luddic Path are not yet aware of your full culpability in recent events, but the Persean League Fleet Intelligence Service has taken note of your actions.",
+		
+		"job_forFaction": "luddic_path",
+		"job_type": "obliteration",
+		"job_credit_reward": 0,
+		"job_reward_scaling": 0,
+		"job_reputation_reward": 15,
+		"job_item_reward": {
+			"modspec vice_convert_shuttle_dem":1,
+			"ship_bp vice_champion_auto":1,
+			"ship_bp vice_heron_auto":1,
+		},
+		"job_show_type": true,
+		"job_show_captain": true,
+		"job_show_fleet": "vanilla",
+		"job_show_distance": "exact",
+		"job_difficultyDescription": "auto",
+		"job_pick_option": "Confront Project Mayfly",
+		"job_memKey": "$vice_project_mayfly",
+		
+		#TARGET COMMANDER
+		"target_first_name": "Rabasi",
+        "target_last_name": "Kato",
+		"target_portrait": "graphics/portraits/portrait_league05.png",
+		"target_gender": "FEMALE",
+		"target_rank": "vice_strategos",
+		"target_post": "fleetCommander",
+		"target_personality": "steady",
+		"target_isAI": false,
+		"target_level": 7,
+		"target_elite_skills": 3,
+        "target_skills": {
+			"systems_expertise":1,
+			"field_modulation":2;
+			"target_analysis":1,
+			"gunnery_implants":1,
+			"ordnance_expert":1,
+			"point_defense":2,
+			"missile_specialization":2,
+        },
+		
+		#TARGET FLEET
+		"fleet_name": "Project Mayfly",
+        "fleet_faction": "vice_project_mayfly",
+		"fleet_flagship_variant": "pegasus_Strike",
+		"fleet_flagship_name": "PLS Worthy Accession",
+		"fleet_flagship_recoverable": true,
+		"fleet_flagship_autofit": false,
+		"fleet_preset_ships": {
+			"pegasus_Strike": 2,
+			"conquest_DEM": 2,
+			"vice_champion_ai_mission": 5,
+			"vice_heron_ai_mission": 4,
+			
+		},
+		"fleet_preset_autofit": false,
+		"fleet_scaling_multiplier": 0,
+		"fleet_min_FP": 800, 
+		"fleet_composition_faction": "persean",
+		"fleet_composition_quality": 1,
+		"fleet_transponder": false,
+		"fleet_no_retreat": true,
+        "fleet_behavior": "PASSIVE",
+		
+		#LOCATION
+		"location_entitiesID": [
+            "skoll",
+        ],
+		"location_distance": "CLOSE",
+		"location_marketFactions": [
+			"persean"
+		],
+		"location_themes": [
+		],
+		"location_entities": [
+		],
+	},
+	"vice_white_whale":{
 		"trigger_marketFaction_any": ["independent", "hegemony", "luddic_church", "luddic_path", "persean", "pirates", "player", "sindrian_diktat", "tritachyon"],
         "trigger_marketFaction_alliedWith": true,
 		"trigger_player_minLevel": 8,
@@ -175,7 +367,7 @@
 			"planet",
 		],
 	},
-    "vice_dark_diamond":{
+    "vice_dark_diamond_revised":{
 		"trigger_marketFaction_any": ["independent", "hegemony", "luddic_church", "luddic_path", "persean", "pirates", "player", "sindrian_diktat", "tritachyon"],
         "trigger_marketFaction_alliedWith": true,
 		"trigger_player_minLevel": 8,
@@ -185,11 +377,11 @@
 		
 		#BOUNTY DESCRIPTION
 		"job_name": "A Diamond in the Dark",
-		"job_description": "Some time after your encounter with the Vantage Group, you detect a hyperwave signal sent from the ==$system system==. The contents are encrypted, but the frequency matches what you recovered from the TTS Event Horizon. Galen Smith and his mysterious contact have stayed in touch using a still active network of Domain-era hyperwave relays that extend all the way to the edges of the Sector. \nA cross reference of timestamps of past messages show a disturbing correlation with major industrial accidents, mysterious deaths, and even planet wide plagues that have each altered the course of the Sector's history in recent cycles. While it sounds like tabloid fodder, you've found hints that a dark mover behind the scenes threatens the lives of millions. Someone has to put a stop to it.",
+		"job_description": "Some time after your encounter with the Vantage Group, you detect a hyperwave signal sent from the ==$system system==. The contents are encrypted, but the frequency matches what you recovered from the TTS Event Horizon. Galen Smith and his mysterious contact have stayed in touch using a still active network of Domain-era hyperwave relays that extend all the way to the edges of the Sector. \nCuriously, the source matches the last known location of a long overdue Tri-Tachyon tech mining expedition. It is the most promising clue you have of locating the Diamond Nexus.",
 		
-		"job_comm_reply": "You locate a fleet of Tri-Tachyon military vessels. However, at the lead is an Odyssey-class battlecruiser that more closely resembles a droneship of the First AI War than anything else you have seen before. An abstract hologram appears on your screen unbidden, accompanied by a strangely genial voice. \n\n\"Captain, your presence here has significantly raised the probability of a near term malignant singularity event. The Tri-Tachyon Corporation places the highest value on the continued viability of the Persean Sector, and further disruptions will not be tolerated. Surrender your ships to us, and we will begin to repair the damage you have caused.\"\n\nThe enemy fleet turns towards you with eerie precision, raising their shields in unison.",
+		"job_comm_reply": "You locate a major Tri-Tachyon tech mining fleet surrounding what appears to be a recently excavated warship. However, even more curious is the lead vessel, a militarized Odyssey class Battlecarrier that has been twisted into something alien and exceedingly dangerous. Upon detecting your ship, it closes the distance with shocking speed, while the rest of the fleet turns towards you and raise their shields in eerie unison. Whatever they are, you have a fight on your hands.",
 		
-		"job_intel_success": "Your examination of the wreckage reveals the AI core in command was in the process of converting the Tri-Tachyon ships into something new and terrifying. The TTDS Liminal Space was the most changed, and no longer even accommodated a living crew, while the other ships were still in the earliest stages being altered. Of the former crew there is no sign, but study of the wreckage yields a treasure trove of data on ship automation and engineering. \nThe fleet was engaged in salvage operations to gather more resources. However, the conversion process was being conducted elsewhere. Your search for the source of the Diamond Nexus continues.\n[Thanks for playing! The final mission to confront the Diamond Nexus will be completed in a future update of this mod.]",
+		"job_intel_success": "Your examination of the wreckage reveals numerous Tri-Tachyon ships in the process of being converted into something new and terrifying. The TTS Liminal Space was the most changed, and no longer even accommodated a living crew, while the other ships were still in the earliest stages of being altered. There is no sign of the former crewmembers, but a study of the wreckage yields a treasure trove of data on ship automation and engineering. \nMost disturbing of all, records aboard the excavated battleship indicate it was once connected to a cluster of networked AI nodes that were only recently removed, and missing from the wreckage. Your hunt for the Diamond Nexus continues.",
 		
 		"job_type": "assassination", 
 		"job_credit_reward": 0,
@@ -201,14 +393,15 @@
 			"modspec vice_adaptive_neural_net":1,
 			"modspec vice_adaptive_pulse_resonator":1,
 			"modspec vice_adaptive_tactical_core":1,
+			"modspec vice_adaptive_trajectory_analyzer":1,
 		},
 		"job_show_type": true,
 		"job_show_captain": false,
-		"job_show_fleet": "vanilla",
+		"job_show_fleet": "none",
 		"job_show_distance": "vanilla",
-		"job_difficultyDescription": "With a clever bit of engineering, you manage to ping a sensor array near the message's point of origin, and capture a snapshot of a mysterious fleet transiting the system. Drive signatures match various ship that were either purchased by the Vantage Group, or have gone missing in previous cycles. However, the ships maneuver in sync with the eerie precision of an automated drone fleet, similar to those that defended the TTS Event Horizon in your last encounter. Your search for the Diamond Nexus is leading to a most dangerous place.",
-		"job_pick_option": "Track down the fleet",
-		"job_memKey": "$vice_dark_diamond",
+		"job_difficultyDescription": "You manage to ping a sensor array near the message's point of origin, and capture a snapshot of a mysterious fleet transiting the system. Drive signatures match that of a heavily armed Tri-Tachyon tech mining expedition recently launched from Culann. However, the ships maneuver in sync with the eerie precision of an automated drone fleet, similar to the one that defended the TTS Event Horizon. Your search for the Diamond Nexus is leading to a most dangerous place.",
+		"job_pick_option": "Track down the source",
+		"job_memKey": "$vice_dark_diamond_revised", 
 		
 		#TARGET COMMANDER
 		"target_first_name": "Diamond",
@@ -227,11 +420,12 @@
 		#TARGET FLEET
 		"fleet_name": "Exciton Clade",
         "fleet_faction": "diamond_nexus",
-		"fleet_flagship_variant": "vice_lampetia_aberrant",
-		"fleet_flagship_name": "TTDS Liminal Space",
+		"fleet_flagship_variant": "vice_lampetia_anomalous",
+		"fleet_flagship_name": "TTS Liminal Space",
 		"fleet_flagship_recoverable": true,
 		"fleet_flagship_autofit": false,
 		"fleet_preset_ships": {
+			"vice_radiant_ex_hvb": 1,
 			"vice_astral_automated": 1,
 			"vice_odyssey_tt_automated": 2,
 			"vice_aurora_automated": 3,
@@ -239,6 +433,7 @@
 			"vice_shrike_automated": 6,
 			"vice_tempest_automated": 4,
 			"vice_wolf_automated": 6,
+			"vice_candor_emp_assault": 4,
 		},
 		"fleet_preset_autofit": false,
 		"fleet_scaling_multiplier": 0,
@@ -255,11 +450,15 @@
         ],
 		"location_distance": "FAR",
 		"location_themes": [
-			"procgen_no_theme_pulsar_blackhole",
+			"theme_ruins",
+		],
+		"location_themes_blacklist": [
+			"theme_already_occupied",
 		],
 		"location_entities": [
 			"planet",
 		],
+		"location_prioritizeUnexplored": true,
 	},
     "vice_mess_cleanup":{
 		"required_mods_id": ["HMI"],

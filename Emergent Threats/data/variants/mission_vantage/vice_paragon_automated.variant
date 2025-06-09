@@ -6,7 +6,7 @@
     "hullMods": [
         "turretgyros",
         "armoredweapons",
-        "vice_mission_deploy",
+        "vice_mission_deloy_vantage",
         "vice_module_handler",
         "hardenedshieldemitter",
         "insulatedengine",
@@ -15,7 +15,7 @@
         "vice_adaptive_temporal_shell"
     ],
     "permaMods": [
-        "vice_mission_deploy",
+		"vice_mission_deloy_vantage",
         "turretgyros",
         "armoredweapons",
         "vice_module_handler",

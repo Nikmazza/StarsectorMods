@@ -13,7 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "repair_gantry",
-    "NES_ColorSelector_HF"
+    "civgrade"
   ],
   "builtInWeapons": {
     "WS0007": "nes_mining_drill"
@@ -94,15 +94,6 @@
       "arc": 0,
       "angle": 0,
       "locations": [23.5, -0]
-    },
-    {
-      "id": "NES_DECO_COUNTER",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 0,
-      "locations": [0, 0]
     }
   ],
   "engineSlots": [

@@ -1,0 +1,40 @@
+{
+	"combatSmallForSmallFleet":{ 
+		"rwc_viper_Standard": 5,
+	},
+	"combatSmall":{ 
+		"rwc_viper_Standard": 5,
+		"rwc_viking_Strike": 1,
+	},
+	"combatMedium":{
+		"rwc_hurricane_Standard": 5,
+		"rwc_hurricane_Assault": 5,
+	},
+	"combatLarge":{
+		"rwc_javelin_Standard": 5,
+		"rwc_polaris_Standard": 4,
+		"rwc_warhawk_Harassment":1,
+		"rwc_warhawk_Overdriven":1,
+		"rwc_warhawk_Standard":1,
+		"rwc_warhawk_Assault":1,
+	},
+	# capital
+	"combatCapital":{
+		"test_conqueror_Standard": 5,
+		"onslaught_beam_Standard":2,
+		"onslaught_beam_Outdated":2,
+		"onslaught_beam_Elite":2,
+		"rwc_triumphant_Standard":5,
+		"rwc_barrage_Standard":1,
+	},
+	# carriers
+	
+	
+	"carrierLarge":{
+		"rwc_egret_Standard":10,
+		
+	},
+
+	
+	
+}

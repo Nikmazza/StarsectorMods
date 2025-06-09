@@ -1,0 +1,46 @@
+{
+    "displayName": "Suppression",
+    "fluxCapacitors": 0,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "brilliant",
+    "hullMods": [
+        "vice_module_handler",
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "vice_adaptive_emitter_diodes"
+    ],
+    "permaMods": ["vice_module_handler"],
+    "sMods": [],
+    "variantId": "vice_brilliant_suppression",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "vice_heavy_maser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "vice_warp_torpedo_pod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "gravitonbeam",
+                "WS 006": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vice_phased_electrolaser",
+                "WS 002": "pdburst",
+                "WS 003": "pdburst"
+            }
+        }
+    ]
+}

@@ -7,6 +7,7 @@ import assortment_of_things.exotech.intel.ExoshipIntel
 import assortment_of_things.exotech.interactions.exoship.ExoshipRecoveryContactInteraction
 import assortment_of_things.exotech.interactions.questBeginning.ExoshipRemainsIntel
 import assortment_of_things.exotech.items.ExoProcessor
+import assortment_of_things.exotech.submarkets.ExotechSubmarketPlugin
 import assortment_of_things.misc.RATInteractionPlugin
 import assortment_of_things.misc.fixVariant
 import assortment_of_things.misc.getAndLoadSprite
@@ -49,7 +50,7 @@ class ExoshipRemainsInteraction : RATInteractionPlugin() {
 
             textPanel.addPara("With just the press of a button, the procedure can now be begun.")
 
-            createOption("Innitate the repair sequence") {
+            createOption("Initate the repair sequence") {
                 clearOptions()
 
                 textPanel.addPara("Within seconds hundreds of maintenance hatches open across the stations hull, and thousands of drones leave its confines.")
@@ -71,7 +72,7 @@ class ExoshipRemainsInteraction : RATInteractionPlugin() {
 
                     textPanel.addTooltip()
 
-                    createOption("Innitiate a warp") {
+                    createOption("Initiate a warp") {
                         clearOptions()
 
                         closeDialog()
@@ -111,6 +112,18 @@ class ExoshipRemainsInteraction : RATInteractionPlugin() {
                         playerExoship.name = textfield.getText()
 
 
+                        //Fix submarket to prevent non-restockable to be restocked
+                        var oldSubmarket = data.getExoship().market.getSubmarket("rat_exoship_market")?.plugin as ExotechSubmarketPlugin?
+                        if (oldSubmarket != null) {
+                            var newSubmarket = playerExoship.market.getSubmarket("rat_exoship_market").plugin as ExotechSubmarketPlugin
+
+                            newSubmarket.first = oldSubmarket.first
+                            newSubmarket.cargo.addAll(oldSubmarket.cargo)
+
+                            oldSubmarket.cargo.clear()
+                        }
+
+
                         var exoshipToken = Global.getSector().hyperspace.createToken(interactionTarget.location)
 
                         playerExoship.setCircularOrbit(exoshipToken, interactionTarget.facing, 0.1f, 999f)
@@ -145,9 +158,9 @@ class ExoshipRemainsInteraction : RATInteractionPlugin() {
                             Global.getSector().playerFleet.getAbility("fracture_jump").cooldownLeft = 99999f
                         }
 
-                        playerPlugin.warpModule.warp(planet, true, true) {
+                        playerPlugin.warpModule.warp(planet, true, true) @JvmSerializableLambda {
                             playerExoship.addTag(Tags.NON_CLICKABLE)
-                            Global.getSector().getExoData().getExoshipPlugin().warpModule.doQuestlineWarp(planet) {
+                            Global.getSector().getExoData().getExoshipPlugin().warpModule.doQuestlineWarp(planet)  @JvmSerializableLambda {
                                 Global.getSector().getExoData().getExoship().addTag(Tags.NON_CLICKABLE)
                                 Global.getSector().campaignUI.showInteractionDialog(ExoshipRecoveryContactInteraction(), Global.getSector().getExoData().getExoship())
                             }

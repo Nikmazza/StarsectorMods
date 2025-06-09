@@ -1,0 +1,64 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 45,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "rwc_egret",
+    "hullMods": [
+        "expanded_deck_crew",
+        "recovery_shuttles",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_egret_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "squall",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "pilum",
+                "WS0002": "pilum",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "lrpdlaser",
+                "WS0011": "lrpdlaser",
+                "WS0014": "lrpdlaser",
+                "WS0013": "lrpdlaser",
+                "WS0010": "lrpdlaser",
+                "WS0009": "lrpdlaser",
+                "WS0008": "lrpdlaser",
+                "WS0007": "lrpdlaser",
+                "WS0006": "lrpdlaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "pdburst",
+                "WS0004": "pdburst",
+            }
+        },
+    ],
+    "wings": [
+        "longbow_wing",
+        "longbow_wing",
+        "broadsword_wing",
+        "hoplon_wing",
+        "hoplon_wing",
+        "hoplon_wing",
+    ],
+    "modules": [],
+}

@@ -1,0 +1,57 @@
+{
+  "variantId": "yna_ballpeinhead_CS",
+  "hullId": "yna_ballpeinhead",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 9,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "hardened_subsystems",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_svento_m"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "breach",
+        "WS0004": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "yna_ac_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "yna_enmis_s",
+        "WS0006": "yna_enmis_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "yna_pd_las1_s",
+        "WS0008": "yna_pd_las1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

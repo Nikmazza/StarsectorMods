@@ -1,0 +1,134 @@
+{
+  "hullName": "Kindlebow",
+  "hullId": "yna_kindlebow",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ynadar/ships/kindlebow/kindlebow.png",
+  "style": "YNADAR",
+  "height": 76,
+  "width": 160,
+  "center": [80, 39],
+  "collisionRadius": 96,
+  "shieldCenter": [3, -0],
+  "shieldRadius": 89,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec",
+    "delicate",
+    "phasefield",
+    "distributed_fire_control"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [20, 33]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [20, -33]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 180,
+      "locations": [-24, -0]
+    },
+    {
+      "id": "S 01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 45,
+      "locations": [18, 67]
+    },
+    {
+      "id": "S 02",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -45,
+      "locations": [18, -67]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-32, 27],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32, -27],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32, 33],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32, -33],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32, 39],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32, -39],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    22, 16,
+    31, 52,
+    21, 75,
+    7, 65,
+    2, 72,
+    -31, 59,
+    -24, 17,
+    -37, -1,
+    -24, -17,
+    -31, -59,
+    2, -72,
+    7, -65,
+    21, -75,
+    31, -52,
+    22, -16
+  ]
+}

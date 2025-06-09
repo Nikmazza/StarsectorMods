@@ -11,16 +11,24 @@ import com.fs.starfarer.api.combat.ShipAPI;
 public class CompactAutomationHandler extends BaseHullMod {
 	
 	private static String BONUS_MOD_ID = "vice_compact_automation";
+	private static String DISPLAY_MOD_ID = "vice_compact_automation_display";
 	private static String ERROR_MOD_ID = "vice_compact_automation_error";
 	private static String ERROR_MOD_TW = "tw_equipment_error";
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		
-		//if XO is active, add hullmod, otherwise remove it
+		//if XO is active, add actual and display hullmods, otherwise remove them
 		if (Global.getSector().getMemoryWithoutUpdate().is("$xo_compact_automation_is_active", true)) {
-			if (!stats.getVariant().hasHullMod(BONUS_MOD_ID)) stats.getVariant().addMod(BONUS_MOD_ID);
+			if (!stats.getVariant().hasHullMod(BONUS_MOD_ID)) {
+				stats.getVariant().addMod(BONUS_MOD_ID);
+				stats.getVariant().addPermaMod(DISPLAY_MOD_ID);
+			}
 		}
-		else stats.getVariant().getHullMods().remove(BONUS_MOD_ID);
+		else {
+			 	stats.getVariant().getPermaMods().remove(DISPLAY_MOD_ID);
+				stats.getVariant().getHullMods().remove(DISPLAY_MOD_ID);
+				stats.getVariant().getHullMods().remove(BONUS_MOD_ID);
+		}
 		
 		//remove error mod and do nothing if TW drone error mod already present
 		if (stats.getVariant().hasHullMod(ERROR_MOD_TW)) {
@@ -28,9 +36,11 @@ public class CompactAutomationHandler extends BaseHullMod {
 			return;
 		}
 		
-		//workaround for unofficial new game plus incompatability
+		//workaround for unofficial new game plus/second in command SO and balans editions incompatability
 		if (Global.getSettings().getModManager().isModEnabled("ungp")) return;
-
+		if (Global.getSettings().getModManager().isModEnabled("second_in_command_addon")) return;
+		if (Global.getSettings().getModManager().isModEnabled("balans_skills_SiC")) return;
+		
 		int shipOp = getShipOP(stats.getVariant());
 		int usedOp = getUsedOP(stats.getVariant());
 		int op = shipOp - usedOp;

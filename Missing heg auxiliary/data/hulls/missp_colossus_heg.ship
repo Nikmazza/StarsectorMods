@@ -12,7 +12,7 @@
   "shieldRadius": 147,
   "viewOffset": 0,
   "builtInMods": [
-    "converted_hangar"
+    "militarized_subsystems",
   ],
   "weaponSlots": [
     {

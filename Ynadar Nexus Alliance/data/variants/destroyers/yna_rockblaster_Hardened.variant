@@ -1,0 +1,54 @@
+{
+  "variantId": "yna_rockblaster_Hardened",
+  "hullId": "yna_rockblaster",
+  "displayName": "Hardened",
+  "goalVariant": true,
+  "fluxCapacitors": 11,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 01": "sabot_single"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_ac2_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "yna_sg1_s",
+        "WS0003": "yna_sg1_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 02": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "PD 01": "yna_pd_las1_s",
+        "PD 02": "yna_pd_las1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

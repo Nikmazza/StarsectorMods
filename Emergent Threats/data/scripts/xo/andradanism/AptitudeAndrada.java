@@ -41,8 +41,8 @@ public class AptitudeAndrada extends SCBaseAptitudePlugin {
         addSection(section2);
 		
         SCAptitudeSection section3 = new SCAptitudeSection(false, 4, "leadership5");
-		section3.addSkill("xo_andrada_mass_mobilization");
 		section3.addSkill("xo_andrada_unwavering_conviction");
+		section3.addSkill("xo_andrada_mass_mobilization");
         addSection(section3);
     }
 

@@ -1,0 +1,25 @@
+{
+    "displayName": "Converted Torpedo Bomber",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "vice_kite_pirate_b",
+    "hullMods": ["no_weapon_flux", "missleracks", "vice_unstable_injector_ftr"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_kite_bomber",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "lightdualmg"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vice_reaper_slamfire",
+                "WS 002": "vice_reaper_slamfire"
+            }
+        }
+    ]
+}

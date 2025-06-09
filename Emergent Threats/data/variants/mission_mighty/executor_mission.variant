@@ -1,7 +1,7 @@
 {
     "displayName": "Navy",
     "fluxCapacitors": 0,
-    "fluxVents": 43,
+    "fluxVents": 45,
     "hullId": "executor",
     "hullMods": [
         "damaged_mounts",

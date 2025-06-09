@@ -1,0 +1,31 @@
+#### PERSEAN LEAGUE FACTION
+{
+    "knownShips":{
+        "hulls":[
+			"hhe_sentinel",
+           # "hhe_gemini",
+        ],
+    },
+	"priorityShips":{
+		"hulls":[
+			"hhe_sentinel",
+		],
+		},
+    "knownFighters":{
+		"tags":["hhe_ftr_pl_bp", "lions_guard"],
+		"fighters":[
+			"hhe_sarissa_wing",
+			"hhe_ftr_talon_interceptor_wing",
+			"hhe_vernd_wing",
+		],
+    },
+    "knownHullMods":{
+        "hullMods":[
+            "hhe_sfl_AegisSystem",
+            "hhe_sfl_PredatorSystem",
+            "hhe_sfl_HammerSystem",
+			"hhe_bi_artificer_hullmod",
+			"hhe_MissileReload",
+        ],
+    },
+},

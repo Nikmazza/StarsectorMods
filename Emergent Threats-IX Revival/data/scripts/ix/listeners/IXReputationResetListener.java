@@ -57,6 +57,7 @@ public class IXReputationResetListener extends BaseCampaignEventListener {
 		FactionAPI indep = sector.getFaction(Factions.INDEPENDENT);
 		FactionAPI herd = sector.getFaction("magellan_theherd");
 		FactionAPI brighton = sector.getFaction("brighton");
+		FactionAPI modNinthAlly = sector.getFaction("DrnArm_calidus");
 		//FactionAPI dust = sector.getFaction("sotf_dustkeepers"); //initialized
 		
 		List<FactionAPI> factionList = sector.getAllFactions();
@@ -68,6 +69,7 @@ public class IXReputationResetListener extends BaseCampaignEventListener {
 		factionList.remove(pirates);
 		factionList.remove(herd);
 		factionList.remove(indep);
+		factionList.remove(modNinthAlly);
 		
 		String embassyFacId = getEmbassyFactionId();
 		

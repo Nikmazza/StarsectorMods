@@ -20,7 +20,7 @@
 		"4":{"style": "IX_TRINITY"},
 	}, 
 	"builtInWeapons": {
-        "WS 004": "abolisher_built_in_tw",
+        #"WS 004": "abolisher_built_in_tw",
     },
 	"weaponSlotChanges":{
 		"WS 001":{"type": "UNIVERSAL"},

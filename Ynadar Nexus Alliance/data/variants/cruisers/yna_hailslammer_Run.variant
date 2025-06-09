@@ -1,0 +1,68 @@
+{
+  "variantId": "yna_hailslammer_Run",
+  "hullId": "yna_hailslammer",
+  "displayName": "Run",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 30,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MHS01": "harpoonpod",
+        "MHS02": "harpoonpod",
+        "MHS03": "harpoonpod",
+        "MHS04": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MHS05": "yna_blaster_m",
+        "MHS06": "yna_blaster_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "yna_ac_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_ac_s",
+        "WS0002": "yna_ac_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "BW01": "yna_supilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_flak_s",
+        "WS0005": "yna_flak_s",
+        "WS0006": "yna_flak_s",
+        "WS0007": "yna_flak_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

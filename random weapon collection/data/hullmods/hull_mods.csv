@@ -1,0 +1,2 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+Light Ground Support Package ,rwc_ground_support_frigate,,,,,,,,TRUE,,0,0,0,0,data.hullmods.GroundSupportL,"Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",Improves effectiveness of raids.,,graphics/hullmods/ground_support.png

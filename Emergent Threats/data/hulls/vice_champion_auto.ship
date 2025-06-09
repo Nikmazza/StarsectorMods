@@ -1,0 +1,228 @@
+{
+  "hullName": "Chevalier",
+  "hullId": "vice_champion_auto",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/vice/ships/hidden/champion_auto.png",
+  "style": "MIDLINE",
+  "height": 249,
+  "width": 180,
+  "center": [90, 118],
+  "collisionRadius": 160,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 160,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "coherer",
+  ],
+  "builtInWings": [
+    "vice_terminator_dem_wing",
+	"vice_terminator_dem_wing",
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 000",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 50,
+      "locations": [94, 48]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -50,
+      "locations": [94, -48]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 90,
+      "locations": [10, 55]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [10, -55]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 130,
+      "locations": [-70, 48]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 230,
+      "locations": [-70, -48]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 45,
+      "locations": [61, 50]
+    },
+    {
+      "id": "WS 007",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": -45,
+      "locations": [61, -50]
+    },
+    {
+      "id": "WS 008",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 0,
+      "locations": [57, 0]
+    },
+    {
+      "id": "WS 009",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [114, 0]
+    },
+    {
+      "id": "WS 010",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [106, 26]
+    },
+    {
+      "id": "WS 011",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [106, -26]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        16, 10,
+        16, -10
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-116, 51],
+      "length": 61,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-117, 34],
+      "length": 65,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-117, -33],
+      "length": 64.5,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-116, -51],
+      "length": 61,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-115, 17],
+      "length": 80,
+      "width": 25,
+      "angle": 180,
+      "contrailSize": 25,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-115, -17],
+      "length": 80,
+      "width": 25,
+      "angle": 180,
+      "contrailSize": 25,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -80, -7,
+    -114, -11,
+    -115, -57,
+    -103, -62,
+    -93, -81,
+    -54, -71,
+    -33, -48,
+    -12, -45,
+    -4, -67,
+    13, -67,
+    31, -43,
+    43, -43,
+    46, -72,
+    85, -76,
+    114, -17,
+    125, -14,
+    125, 14,
+    114, 17,
+    85, 76,
+    46, 72,
+    43, 43,
+    31, 43,
+    13, 67,
+    -4, 67,
+    -12, 45,
+    -33, 48,
+    -54, 71,
+    -93, 81,
+    -103, 62,
+    -115, 57,
+    -114, 11,
+    -80, 7
+  ]
+}

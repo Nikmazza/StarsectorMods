@@ -1,0 +1,44 @@
+{
+	"id":"hhe_bomb_prox_mine",
+	"specClass":"missile",
+	"missileType":"BOMB_WITH_SLOW",
+	
+	"sprite":"graphics/missiles/hhe_ftr_prox_mine.png",
+	"glowSprite":"graphics/missiles/hhe_ftr_prox_mine_glow.png",
+	"glowColor":[100,100,200,255],
+	
+	"size":[15,15],	
+	"center":[7.5,7.5],
+	"collisionRadius":8,
+	"collisionClass":"MISSILE_NO_FF",
+	
+	"explosionColor":[125,155,225,255],
+	"explosionRadius":100,
+	"flameoutTime":0.05,
+	"noEngineGlowTime":0.05,
+	"fadeTime":0.05,
+	"explosionSpec":{"duration":0.1f, # not visual
+					 "radius":100,
+					 "coreRadius":50, # full damage within core radius
+					 "collisionClass":MISSILE_FF,
+					 "collisionClassByFighter":MISSILE_FF},
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"slowToMaxSpeed":true,
+					"range":50,
+					"explosionSpec":{"duration":0.1f,
+									 "radius":100,
+									 "coreRadius":50,
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":1,
+									 "particleCount":150,
+									 "particleColor":[125,155,225,175],
+									 "sound":"explosion_flak"},
+					},
+	"engineSpec":{"turnAcc":100,
+				  "turnRate":10,
+				  "acc":100,
+				  "dec":100}
+}

@@ -7,7 +7,7 @@
     "hullMods": [
         "missleracks",
         "hardenedshieldemitter",
-        "targetingunit"
+        "vice_unified_targeting_core"
     ],
     "permaMods": [],
     "sMods": [],
@@ -60,9 +60,9 @@
         }
     ],
     "wings": [
-        "gladius_wing",
-        "claw_wing",
-        "claw_wing",
-        "thunder_wing"
+        "thunder_wing",
+        "thunder_wing",
+        "thunder_wing",
+        "vice_kite_dem_wing"
     ]
 }

@@ -4,21 +4,4 @@
 			"graphics/portraits/nes_powerful.png",
 						  ],
 	},
-	
-	# multiplier for how often hulls show up in the faction's fleets
-    "hullFrequency":{
-        "hulls":{
-			"nes_hamter":0.75,
-			"nes_hermitaur":0.75,
-			"nes_hammerfall":0.75,
-        },
-    },
-	
-	"knownShips":{
-        "hulls":[
-			"nes_hammerfall",
-			"nes_hermitaur",
-			"nes_hamter",
-        ],
-    },
 },

@@ -1,0 +1,32 @@
+{
+	"id":"yna_pd_las1_s",
+	"specClass":"beam",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	
+	"beamEffect":"data.scripts.weapons.yna_pd_las1_beam_effect",
+	
+	"turretSprite":"graphics/ynadar/weapons/se/yna_pd_las1_t_b.png",
+	"turretGlowSprite":"graphics/ynadar/weapons/se/yna_pd_las1_t_g.png",
+	"hardpointSprite":"graphics/ynadar/weapons/se/yna_pd_las1_h_b.png",
+	"hardpointGlowSprite":"graphics/ynadar/weapons/se/yna_pd_las1_h_g.png",
+	
+	"turretOffsets":[13, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[15, 0],
+	"hardpointAngleOffsets":[0],
+	
+	"fringeColor":[200,100,0,200],
+	"coreColor":[255,255,255,230],
+	"glowColor":[255,150,100,160],
+	
+	"width":10.0,
+	"textureType":ROUGH,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"pierceSet":[PROJECTILE_FF,PROJECTILE_NO_FF,PROJECTILE_FIGHTER],
+	"fireSoundOne":"laser_intro",
+	"fireSoundTwo":"lr_pd_laser_loop",
+}

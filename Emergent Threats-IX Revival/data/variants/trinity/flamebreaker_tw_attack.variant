@@ -1,17 +1,15 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 0,
-    "fluxVents": 18,
+    "fluxCapacitors": 1,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "flamebreaker_tw",
     "hullMods": [
         "tw_drone_control_node",
         "targetingunit",
+        "tw_modernized_rangefinder",
         "frontemitter",
-        "stabilizedshieldemitter",
-        "ix_dawnstar_controller",
-        "ix_dawnstar_electron",
-        "ix_dawnstar_electron_handler"
+        "stabilizedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -20,38 +18,32 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "dawnstar_hcpb_ix"}
+            "weapons": {"WS 014": "arrester_tw"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "orthrus_s_ix",
-                "WS 010": "orthrus_s_ix",
-                "WS 011": "orthrus_s_ix",
-                "WS 014": "orthrus_l_ix"
+                "WS 009": "spatial_charge_launcher_ix",
+                "WS 010": "spatial_charge_launcher_ix",
+                "WS 011": "spatial_charge_launcher_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "daythorn_mapb_ix",
-                "WS 005": "daythorn_mapb_ix",
-                "WS 008": "daythorn_mapb_ix",
-                "WS 012": "daythorn_mapb_ix",
-                "WS 013": "daythorn_mapb_ix"
+                "WS 001": "cutting_beam_tw",
+                "WS 003": "cutting_beam_tw",
+                "WS 004": "cutting_beam_tw",
+                "WS 005": "plasma_dart_ix",
+                "WS 008": "plasma_dart_ix"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 003": "lightbringer_ciws_ix",
-                "WS 004": "lightbringer_ciws_ix",
-                "WS 006": "morningstar_ciws_ix",
-                "WS 007": "morningstar_ciws_ix"
-            }
+            "weapons": {"WS 002": "brightburn_ciws_ix"}
         }
     ],
     "wings": ["nimbus_tw_wing_m"]

@@ -1,0 +1,14 @@
+{
+	"id":"vice_dem_strike",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.vice.ai.DEMStrikeAI",
+	
+	"statsScript":"data.scripts.vice.shipsystems.DEMStrike",
+	
+	"useSound":"system_nova_burst_fire",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}

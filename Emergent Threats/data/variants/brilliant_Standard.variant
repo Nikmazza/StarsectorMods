@@ -17,7 +17,7 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "breachpod",
+                "WS 004": "vice_warp_torpedo_pod",
                 "WS 005": "gravitonbeam",
                 "WS 006": "gravitonbeam"
             }

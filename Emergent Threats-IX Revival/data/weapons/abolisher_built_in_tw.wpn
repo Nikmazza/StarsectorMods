@@ -24,5 +24,6 @@
 					   "particleCount":50,
 					   "particleColor":[155,100,100,100]},
 	"projectileSpecId":"abolisher_tw_shot",
+	"noImpactSounds":true,
 	"fireSoundTwo":"abolisher_tw_fire",
 }

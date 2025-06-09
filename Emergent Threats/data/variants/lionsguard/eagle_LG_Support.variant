@@ -1,7 +1,7 @@
 {
     "displayName": "Support",
     "fluxCapacitors": 0,
-    "fluxVents": 29,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "eagle_LG",
     "hullMods": [
@@ -16,8 +16,6 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "breach",
-                "WS 002": "breach",
                 "WS 007": "hveldriver",
                 "WS 008": "hveldriver",
                 "WS 013": "heavymauler"
@@ -37,8 +35,10 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "heavyburst",
-                "WS 006": "heavyburst"
+                "WS 001": "vice_fragbomb",
+                "WS 002": "vice_fragbomb",
+                "WS 005": "pdburst",
+                "WS 006": "pdburst"
             }
         }
     ]

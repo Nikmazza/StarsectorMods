@@ -14,6 +14,8 @@ import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
 
+import static data.scripts.utils.NES_Util.txt;
+
 public class NES_CrystalHull extends BaseHullMod {
 
     public static final float VENT_RATE_BONUS = 25f;
@@ -63,8 +65,9 @@ public class NES_CrystalHull extends BaseHullMod {
 
     public String getDescriptionParam(int index, HullSize hullSize) {
         if (index == 0) return Misc.getRoundedValue(RANGE_THRESHOLD); //range cutoff
-        if (index == 1) return "" + (int) VENT_RATE_BONUS + "%";
-        if (index == 2) return Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName();
+        if (index == 1) return "" + txt("hullmod_crystalhull");
+        if (index == 2) return "" + (int) VENT_RATE_BONUS + "%";
+        if (index == 3) return Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName();
         return null;
     }
 

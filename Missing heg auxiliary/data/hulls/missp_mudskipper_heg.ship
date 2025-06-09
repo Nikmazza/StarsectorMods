@@ -12,10 +12,7 @@
   "shieldRadius": 52,
   "viewOffset": 0,
   "builtInMods": [
-    "heg_militarized"
-  ],
-  "builtInWings": [
-    "talon_wing"
+    "militarized_subsystems"
   ],
   "weaponSlots": [
     {
@@ -23,8 +20,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 360,
-      "angle": 0,
+      "arc": 120,
+      "angle": 180,
       "locations": [-13, -0]
     },
     {
@@ -34,16 +31,55 @@
       "mount": "HIDDEN",
       "arc": 360,
       "angle": 0,
-      "locations": [27.5, -0]
+      "locations": [
+        27.5, -0,
+        25.5, 6.5,
+        24.5, -5.5,
+        23.5, 2.5
+      ]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 135,
+      "locations": [16, 27]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": -135,
+      "locations": [16, -27]
     }
   ],
   "engineSlots": [
     {
-      "location": [-39, -0],
+      "location": [-36, -0],
       "length": 57,
       "width": 26,
       "angle": 180,
       "contrailSize": 26,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, 25],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, -23],
+      "length": 24,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 64,
       "style": "LOW_TECH"
     }
   ],

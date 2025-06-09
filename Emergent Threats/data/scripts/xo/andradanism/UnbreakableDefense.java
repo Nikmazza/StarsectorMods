@@ -29,14 +29,18 @@ public class UnbreakableDefense extends SCBaseSkillPlugin {
 		tooltip.addPara("We shield ourselves from the sun, for we are not fools. But we do not hide from it, for we are not cowards. So to with our enemies.", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addPara("  -Quotations from the Supreme Executor", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addSpacer(10f);
-		tooltip.addPara("+10%% flux capacity and armor for Lion's Guard ships", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		boolean isSFC = Global.getSettings().getModManager().isModEnabled("PAGSM");
+		String s = "+10%% flux capacity and armor for Lion's Guard";
+		if (isSFC) s += " and Sindrian Fuel Company ships"; 
+		else s+= " ships";
+		tooltip.addPara(s, 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("+5%% flux capacity and armor for all other ships", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 	}
 
     @Override
     public void applyEffectsBeforeShipCreation(SCData data, MutableShipStatsAPI stats, ShipVariantAPI variant, ShipAPI.HullSize hullSize, String id) {
         String manufacturer = variant.getHullSpec().getManufacturer();
-		if (manufacturer.equals("Lion's Guard")) {
+		if (manufacturer.equals("Lion's Guard") || manufacturer.equals("Sindrian Fuel Company")) {
 			stats.getArmorBonus().modifyPercent(id, ARMOR_BONUS_LG);
 			stats.getFluxCapacity().modifyPercent(id, FLUX_BONUS_LG);
 		}

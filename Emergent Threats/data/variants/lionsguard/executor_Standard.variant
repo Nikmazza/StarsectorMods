@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 0,
-    "fluxVents": 43,
+    "fluxVents": 45,
     "goalVariant": true,
     "hullId": "executor",
     "hullMods": [

@@ -1,3 +1,94 @@
+1.20.SSS
+all cosmetics are now located under the paintjobs menu in the refit screen
+
+Carnelian: absolutely essential
+-built-in drones now match the mothership paintjob
+
+Fluorspar: putting glass in a glass cannon, a delicate flower
+-added Delicate Machinery hullmod
+
+Hampter: more loadout variety, more bees, more fun
+-Tried and Tested: reworked, now allows the installation of a Converted Hangar
+
+Hammerfall: reworked: more reliable, more utility, still dirt cheap
+-built-in Heavy Mining Drill redesigned, is now a more flux efficient long range support beam
+-flux 5000 > 4000
+-dissipation 300 > 225
+-shield arc 70 > 270
+-shield efficiency 1 > 0.8
+-cargo 160 > 240
+-cr to deploy 12 > 10
+-is now a Civilian-grade Hull
+
+added Hampter (P)
+added Hermitaur (P)
+added Hammerfall (P)
+
+updated ship distribution weights
+updated variants
+updated descriptions
+recompiled the mod for java 17
+
+1.19SSS
+Following up the previous update, a set of icy white paint jobs for the hightech lineup, manage them in "Personal" intel tab, for now
+-added "White Fox" Paragon
+-added "White Fox" Astral
+-added "White Fox" Aurora
+-added "White Fox" Fury
+-added "White Fox" Shrike
+-added "White Fox" Medusa
+-added "White Fox" Scarab
+-added "White Fox" Hyperion
+-added "White Fox" Omen
+-added "White Fox" Wolf
+
+1.18SSS
+New set of gunmetal themed paint jobs for the hightech lineup, manage them in "Personal" intel tab, for now
+-added "Ravenguard" Paragon
+-added "Ravenguard" Astral
+-added "Ravenguard" Aurora
+-added "Ravenguard" Fury
+-added "Ravenguard" Shrike
+-added "Ravenguard" Medusa
+-added "Ravenguard" Scarab
+-added "Ravenguard" Hyperion
+-added "Ravenguard" Omen
+-added "Ravenguard" Wolf
+
+1.17SSS
+Carnelian: five. hundred. flux.
+-flux 6500 > 7000
+
+Fluorspar: she wouldn't mind a luxury yacht :P
+-now blueprint is a possible gift for the warlord Kanta during a certain event
+
+Hermitaur: pat pat
+-added Aquarius skin
+-added ALWAYS_PANIC hint, now much more proactive in using missiles
+
+Hampter:
+-Albion skin minor update
+
+added Hampter (Mk. V):
+-one of a kind Hampter variant derelict to be discovered through exploration
+
+added several special Fluorspar derelict spawns to be discovered through exploration
+
+1.16SSS
+Carnelian:
+-added Red Hand skin
+
+Fluorspar: manage venting, shield and holding fire well to squeeze an extra bit of speed from the zero-flux bonus
+-ship system flux cost per second 1(one) > 0
+
+Hermitaur:
+-Hot Loaded Missiles bonus 50% > 75%
+-Hot Loaded Missiles new effect: Crew casualties in combat are increased by 50% (arming missiles by hand inside the racks is extremely detrimental for the crew health and wellbeing)
+-significantly increased ballistic turret arcs (ship retains its blind spot while allowing more weapon choices)
+
+Hermitaur (LP): unused maneuvering jet engines of the stock model repurposed as low power auxiliary thrusters
+-added aux thrusters hullmod built-in
+
 1.15SSS
 Magic Paintjobs: vanilla ships cosmetics, manage them in "Personal" intel tab
 -added "Automata" Paragon

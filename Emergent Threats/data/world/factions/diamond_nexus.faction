@@ -24,9 +24,12 @@
 	"showInIntelTab":false,
 	
 	"shipNameSources":{
-		"MERCANTILE":1,
-		"SPACE":1,
-		"DERELICT_DRONE":1,
+		"JAPANESE":2,
+		"EGYPTIAN":2,
+		"NORDIC":1,
+		"MERCANTILE":2,
+		"SPACE":2,
+		"GENERAL":2,
 	},
 	"names":{
 		"ai":1,

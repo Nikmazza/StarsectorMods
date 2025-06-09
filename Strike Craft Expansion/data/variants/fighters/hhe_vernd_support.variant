@@ -1,0 +1,30 @@
+{
+  "variantId": "hhe_vernd_support",
+  "hullId": "hhe_ftr_vernd",
+  "displayName": "Support Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": ["advancedoptics", "no_weapon_flux"],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "hhe_pdpulser",
+		"WS 002": "hhe_pdpulser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "hhe_shrieker"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

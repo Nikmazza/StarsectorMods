@@ -52,6 +52,7 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	private static float INTERVAL_DECORATIVE_DURATION = 0.5f;
 	
 	private static String ABYSSAL_HULLMOD = "rat_abyssal_grid";
+	private static String SIERRA_HULLMOD = "rat_raphaels_grace";
 	private static String ABYSSAL_TYPE = "Abyssal";
 	private static String SERAPH_TYPE = "Seraph";
 	private static String ENTROPIC_DISCHARGE = "entropic discharge";
@@ -94,11 +95,13 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	}
 	
 	private boolean isDegraded(MutableShipStatsAPI stats) {
-		return (!stats.getVariant().hasHullMod(ABYSSAL_HULLMOD));
+		return (!stats.getVariant().hasHullMod(ABYSSAL_HULLMOD) 
+						&& !stats.getVariant().hasHullMod(SIERRA_HULLMOD));
 	}
 	
 	private boolean isDegraded(ShipAPI ship) {
-		return (!ship.getVariant().hasHullMod(ABYSSAL_HULLMOD));
+		return (!ship.getVariant().hasHullMod(ABYSSAL_HULLMOD) 
+						&& !ship.getVariant().hasHullMod(SIERRA_HULLMOD));
 	}
 	
 	private String getCoreType (ShipAPI ship) {

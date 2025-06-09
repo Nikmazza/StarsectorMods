@@ -36,8 +36,8 @@
             "weapons": {
                 "WS 003": "pdlaser",
                 "WS 004": "pdlaser",
-                "WS 005": "heavyburst",
-                "WS 006": "heavyburst"
+                "WS 005": "pdburst",
+                "WS 006": "pdburst"
             }
         }
     ]

@@ -1,0 +1,37 @@
+#### TRI-TACHYON FACTION
+{
+    "hullFrequency":{
+        "hulls":{
+			"hhe_astral_culann":3,
+			"hhe_artificer":12,
+        },
+    },
+    "knownShips":{
+        "hulls":[
+            "hhe_astral_culann",
+            "hhe_artificer",
+        ],
+    },
+    "priorityShips":{
+        "hulls":[
+            "hhe_astral_culann",
+            "hhe_artificer",
+        ],
+    },
+    "knownFighters":{
+		"tags":["hhe_ftr_tt_bp"],
+        "fighters":[
+            "hhe_broadsword_ht_wing",
+			"hhe_loki_wing",
+        ],
+    },
+    "knownHullMods":{
+        "hullMods":[
+            "hhe_sfl_AegisSystem",
+            "hhe_sfl_PredatorSystem",
+            "hhe_sfl_HammerSystem",
+			"hhe_bi_artificer_hullmod",
+			"hhe_MissileReload",
+        ],
+    },
+},

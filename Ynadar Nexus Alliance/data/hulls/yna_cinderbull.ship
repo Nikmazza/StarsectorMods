@@ -1,0 +1,82 @@
+{
+  "hullName": "Cinderbull",
+  "hullId": "yna_cinderbull",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ynadar/ships/cinderbull/cinderbull.png",
+  "style": "YNADAR",
+  "height": 90,
+  "width": 60,
+  "center": [30, 45],
+  "collisionRadius": 86,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 64,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec",
+    "rugged",
+    "yna_missile_loader"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [34, 19]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [34, -19]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-45, -0],
+      "length": 48,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-45, 14],
+      "length": 48,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-45, -14],
+      "length": 48,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    38, 23,
+    -17, 26,
+    -38, 18,
+    -38, -18,
+    -17, -26,
+    38, -23
+  ]
+}

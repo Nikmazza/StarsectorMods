@@ -48,7 +48,8 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0008": "A_S-F_kombeoTwin"
+        "WS0008": "A_S-F_kombeo",
+        "WS0009": "A_S-F_kombeo"
       }
     }
   ],

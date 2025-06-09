@@ -1,0 +1,87 @@
+{
+  "hullName": "Copperwick",
+  "hullId": "yna_ftr_light",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ynadar/ships/a_wing/light.png",
+  "style": "YNADAR",
+  "height": 35,
+  "width": 28,
+  "center": [14, 16],
+  "collisionRadius": 22,
+  "shieldCenter": [1, -1],
+  "shieldRadius": 22,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": 0,
+      "locations": [9, -7]
+    },
+    {
+      "id": "S 01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-7, -0]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [4, 8.5]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [6, 8.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15, 5],
+      "length": 18,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-15, -5],
+      "length": 18,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-11, -0],
+      "length": 12,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    5, 11,
+    -11, 8,
+    -11, -8,
+    -2, -10,
+    12, -6,
+    5, -0,
+    12, 4
+  ]
+}

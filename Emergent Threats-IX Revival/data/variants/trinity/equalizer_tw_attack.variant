@@ -37,8 +37,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "photon_hammer_ix",
-                "WS 004": "photon_hammer_ix"
+                "WS 003": "ifc_ix",
+                "WS 004": "ifc_ix"
             }
         },
         {

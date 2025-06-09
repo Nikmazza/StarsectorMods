@@ -1,6 +1,6 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 4,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "brilliant",
@@ -8,7 +8,8 @@
         "hardenedshieldemitter",
         "targetingunit",
         "vice_adaptive_temporal_shell",
-        "vice_module_handler"
+        "vice_module_handler",
+        "vice_feedback_handler"
     ],
     "permaMods": ["vice_module_handler"],
     "sMods": [],
@@ -36,7 +37,7 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyburst",
+                "WS 001": "vice_phased_electrolaser",
                 "WS 002": "pdlaser",
                 "WS 003": "pdlaser"
             }

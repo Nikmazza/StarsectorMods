@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -13,6 +14,7 @@ import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.ArmorGridAPI;
+import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -24,6 +26,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipCommand;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.graphics.SpriteAPI;
+import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.ui.Alignment;
@@ -107,8 +110,15 @@ public class ASF_PhantasmagoriaRegulator_off extends BaseHullMod {
             info = new ShipSpecificData();
         }
         
+        
         CombatEngineAPI engine = Global.getCombatEngine();
         MutableShipStatsAPI stats = ship.getMutableStats();
+        
+        if (info.doOnce) {
+        	Global.getCombatEngine().addPlugin(new chargeBarManager(ship));
+        	
+        	info.doOnce = false;
+        }
         
 		if (ship.getPhaseCloak().isActive()) {
 			if (!info.coreActive) {
@@ -769,40 +779,40 @@ public class ASF_PhantasmagoriaRegulator_off extends BaseHullMod {
 		}
 		
 		
-		// UI display of stability level
-		if (ship == Global.getCombatEngine().getPlayerShip()) {
-			
-			// color changes when at low stability levels, it's a warning!
-			if (info.stability > 25) {
-				MagicUI.drawHUDStatusBar(ship,
-						(info.stability * 0.01f),
-						null,
-						null,
-						0.25f,
-						"STABILITY",
-						"CORE",
-						false);				
-			} else if (info.stability > 10) {
-				MagicUI.drawHUDStatusBar(ship,
-						(info.stability * 0.01f),
-						Color.ORANGE,
-						null,
-						0.1f,
-						"STABILITY",
-						"CORE",
-						false);
-			} else {
-				MagicUI.drawHUDStatusBar(ship,
-						(info.stability * 0.01f),
-						Color.RED,
-						null,
-						0,
-						"STABILITY",
-						"CORE",
-						false);
-			}
-			
-        }
+//		// UI display of stability level
+//		if (ship == Global.getCombatEngine().getPlayerShip()) {
+//			
+//			// color changes when at low stability levels, it's a warning!
+//			if (info.stability > 25) {
+//				MagicUI.drawHUDStatusBar(ship,
+//						(info.stability * 0.01f),
+//						null,
+//						null,
+//						0.25f,
+//						"STABILITY",
+//						"CORE",
+//						false);				
+//			} else if (info.stability > 10) {
+//				MagicUI.drawHUDStatusBar(ship,
+//						(info.stability * 0.01f),
+//						Color.ORANGE,
+//						null,
+//						0.1f,
+//						"STABILITY",
+//						"CORE",
+//						false);
+//			} else {
+//				MagicUI.drawHUDStatusBar(ship,
+//						(info.stability * 0.01f),
+//						Color.RED,
+//						null,
+//						0,
+//						"STABILITY",
+//						"CORE",
+//						false);
+//			}
+//			
+//        }
 
 		engine.getCustomData().put("PHANTASMAGORIA_REGULATOR_OFF_DATA_KEY" + ship.getId(), info);
 		
@@ -812,22 +822,33 @@ public class ASF_PhantasmagoriaRegulator_off extends BaseHullMod {
 			return;
 		}
 		
+		// so that the AI knows to never overload the Temporal Core (truly i am giving it access to too much power here)
+		if (info.stability < 25f) {
+			ship.blockCommandForOneFrame(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK);
+		}
+		if (info.stability < 10f) {
+			ship.blockCommandForOneFrame(ShipCommand.USE_SYSTEM);
+		}
+		
         if (!ship.getFluxTracker().isOverloadedOrVenting()) {
         	if (ship.getFluxTracker().getFluxLevel() > 0.9f && info.stability < 50f) {
         		// if flux is over 90%, and stability is below 50: VENT (for stab)
                 ship.giveCommand(ShipCommand.VENT_FLUX, null, 0);
+            	return;
                 // it's generally good to vent when at high flux, and the AI is likely to be in range for the arcs when it hits high flux (by firing a weapon)
         	}
         	
         	if (ship.getFluxTracker().getFluxLevel() > 0.4f && info.stability < 30f) {
         		// if flux is over 40%, and stability is below 30: VENT (for stab)
                 ship.giveCommand(ShipCommand.VENT_FLUX, null, 0);
+            	return;
                 // if at low stab, then vent more aggressively than at high stab, we want to try and have the AI preserve stability.
         	}
         	
         	if (ship.getFluxTracker().getFluxLevel() > 0.7f && ship.getHullLevel() < 0.95f) {
         		// if flux is over 70%, and we've taken more than 5% hull damage: VENT (for regen)
                 ship.giveCommand(ShipCommand.VENT_FLUX, null, 0);
+            	return;
                 // just a "safety" check to make sure the AI will vent (for some regen) if it's taken even a small amount of damage
         	}
         	
@@ -930,12 +951,72 @@ For you must come to my dance
 		 tooltip.addPara("%s", 2f, flavor, new String[] { "But here I won't have any luck\"" });
 	}
 
+	//bar rendering everyframe
+    private static class chargeBarManager extends BaseEveryFrameCombatPlugin {
+
+        ShipAPI ship;
+
+        private chargeBarManager(ShipAPI ship) {
+            this.ship = ship;
+        }
+
+        @Override
+        public void advance(float amount, List<InputEventAPI> events) {
+
+            CombatEngineAPI engine = Global.getCombatEngine();
+            
+            if (!ship.isAlive()) {
+                engine.removePlugin(this);
+                return;
+            }
+            
+            if (ship == engine.getPlayerShip()) {
+            	
+            	ShipSpecificData info = (ShipSpecificData) Global.getCombatEngine().getCustomData().get("PHANTASMAGORIA_REGULATOR_OFF_DATA_KEY" + ship.getId());
+            	
+        			// color changes when at low stability levels, it's a warning!
+        			if (info.stability > 25) {
+        				MagicUI.drawHUDStatusBar(ship,
+        						(info.stability * 0.01f),
+        						Global.getSettings().getColor("textFriendColor").darker(),
+        						null,
+        						0.25f,
+        						"STABILITY",
+        						"CORE    ",
+        						false);				
+        			} else if (info.stability > 10) {
+        				MagicUI.drawHUDStatusBar(ship,
+        						(info.stability * 0.01f),
+        						Color.ORANGE,
+        						null,
+        						0.1f,
+        						"STABILITY",
+        						"CORE    ",
+        						false);
+        			} else {
+        				MagicUI.drawHUDStatusBar(ship,
+        						(info.stability * 0.01f),
+        						Color.RED,
+        						null,
+        						0,
+        						"STABILITY",
+        						"CORE    ",
+        						false);
+        			}
+        		
+            }
+            
+        }
+    }
+    //bar rendering everyframe
+	
     private class ShipSpecificData {
         private float stability = 100f;
         private boolean sysActive = false;
         private boolean coreActive = false;
         private float spool = 2f;
         private boolean pulse = false;
+    	private boolean doOnce = true;
     }
 
 }

@@ -1,0 +1,7 @@
+{
+	"id":"hhe_sys_flarelauncher_blue_single",
+	"type":"WEAPON",
+	"aiType":"FLARE_JAMMER",
+	"weaponDataId":"hhe_flarelauncher_ftr_blue_single",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

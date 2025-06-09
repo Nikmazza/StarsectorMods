@@ -16,17 +16,21 @@ Mandrake,vice_mandrake_base,Destroyer,High Tech,vice_capacitors,9,3000,200,6000,
 Tigershark,vice_tigershark_base,Cruiser,High Tech,plasmajets,17,7000,800,11000,,800,160,,75,55,55,30,30,1500,OMNI,,150,0.5,0.6,,,75,175,150,90,3,30,8,180000,4,20,420,0.25,30,30,,,,,,,HIDE_IN_CODEX,no_dealer,,0.4,2,2,,346.9
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Ships,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Chevalier,vice_champion_auto,Automated Cruiser,Project Mayfly,vice_dem_strike,20,10000,1250,10000,,600,180,2,70,45,30,20,20,1500,OMNI,,210,0.4,0.7,,,0,0,150,150,4,38,8,200000,4,12,480,0.25,30,30,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_dealer, auto_rec",,0.5,2,4,,401.5
+Hemlock,vice_heron_auto,Automated Carrier,Project Mayfly,vice_massdeployment,17,6000,750,5000,,400,120,4,85,60,40,20,25,800,OMNI,,210,0.5,0.7,,,0,0,90,60,3,20,8,160000,3,12,360,0.25,25,25,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, CARRIER","no_dealer, auto_rec",,0.5,2,3,,407.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Aquilon,vice_aquilon,Battlecruiser,High Tech,vice_spatialcharges,24,10000,1200,17000,,800,250,,60,40,30,7,10,2250,OMNI,,180,0.5,0.6,,,300,450,300,280,8,35,8,300000,4,20,600,0.25,35,35,,,,,,,,"rare_bp, hist3t, merc, ind, tritachyon",,0.4,2,3,,505.1
-Banteng,vice_banteng,Long-haul Freighter,High Tech,flarelauncher_active,7,6000,250,3000,,140,60,,50,20,10,15,10,1800,OMNI,,150,0.5,0.8,,,35,140,800,600,3,200,7,60000,3,20,360,0.25,7,7,114,267,,,,,"CIVILIAN, FREIGHTER","rare_bp, merc, ind, persean",,0.6,2,3,,410.1
-Candor (EMP),vice_candor_emp,Drone Gunship,Remnant,microburn,10,2000,450,5000,,400,55,,120,180,120,60,120,280,FRONT,,300,0.5,0.6,,,15,30,20,20,1,20,10,70000,8,30,240,0.25,10,10,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, SHIP_WITH_MODULES","remnant, auto_rec",0.5,0.5,2,2,,207.2
+Banteng,vice_banteng,Long-haul Freighter,High Tech,flarelauncher_active,7,6000,250,3000,,140,60,,50,20,10,15,10,1800,OMNI,,150,0.5,0.8,,,35,140,800,600,3,200,7,60000,3,20,360,0.25,7,7,114,267,,,,,"CIVILIAN, FREIGHTER","rare_bp, merc, ind, persean, midline_bp",,0.6,2,3,,410.1
+Candor (E),vice_candor_emp,Drone Gunship,Remnant,microburn,10,2000,450,5000,,400,55,,120,180,120,60,120,280,FRONT,,300,0.5,0.6,,,15,30,20,20,1,20,10,70000,8,30,240,0.25,10,10,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, SHIP_WITH_MODULES","remnant, auto_rec",0.5,0.5,2,2,,207.2
 Glycon,vice_glycon,Missile Cruiser,High Tech,vice_micromissile,14,5000,600,7000,,350,130,,50,35,35,20,20,1750,OMNI,,180,1,0.6,,,50,100,120,90,3,30,9,110000,5,15,420,0.25,20,20,,,,,,,ALWAYS_PANIC,"rare_bp, high_tech_package, merc, ind, tritachyon, no_autofit",,0.7,2,3,,413.1
-Hellfire Colossus,vice_hellfire_colossus,Modified Battlecruiser,Pirate,burndrive,20,15000,1500,10000,,350,150,,50,20,20,8,10,4000,FRONT,,180,0.5,1,,,250,300,200,600,10,60,7,150000,2,20,720,0.25,24,24,,,,,,,,"rare_bp, pirate_bp",,0.7,2,4,,502.9
+Hellfire Colossus,vice_hellfire_colossus,Modified Battlecruiser,Pirate,burndrive,20,15000,1500,10000,,350,150,,50,20,20,8,10,3000,FRONT,,180,0.5,1,,,250,300,200,600,10,60,7,150000,2,20,720,0.25,24,24,,,,,,,,"rare_bp, pirate_bp",,0.7,2,4,,502.9
 Jubilant,vice_jubilant,Missile Droneship,Remnant,microburn,15,6000,650,8000,,200,125,,50,35,35,20,20,1750,OMNI,,180,1.2,0.6,,,0,0,120,90,3,30,9,120000,5,15,540,0.25,22,22,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, ALWAYS_PANIC","remnant, auto_rec, no_autofit",,0.5,2,3,,413.2
 Lampetia,vice_lampetia,Drone Mothership,Remnant,displacer,28,10000,1000,15000,,1000,280,2,70,50,40,8,12,2500,OMNI,,180,0.25,1,,,0,0,400,450,8,56,8,500000,4,20,600,0.25,45,45,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, CARRIER, COMBAT, NO_AUTO_ESCORT, SHIP_WITH_MODULES","remnant, auto_rec",,0.6,2,4,,505
 Maquech,vice_maquech,Escort Carrier,High Tech,vice_drone_pd,9,3500,175,2400,,100,45,2,45,25,20,15,7,400,OMNI,,150,0.4,0.8,,,75,120,150,40,2,20,9,35000,5,10,360,0.25,9,9,,,,,,,CARRIER,"rare_bp, high_tech_package, merc, ind, tritachyon",,0.6,2,3,,304.1
 Mimesis (P),vice_mimesis_p,Modified Superfreighter,Pirate,maneuveringjets,21,9000,750,8000,,350,250,,30,8,4,4,2,4000,OMNI,,60,0.5,1,,,250,300,200,400,10,40,7,225000,2,20,720,0.25,24,24,,,,,,,"HIDE_IN_CODEX, COMBAT, SHIP_WITH_MODULES",no_dealer,,0.7,2,4,,502.5
 Mutilator,vice_mutilator,Phase Destroyer,High Tech,vice_phaseovercharge,15,4000,650,5000,,500,65,,100,75,50,30,30,400,PHASE,phasecloak,90,,,0.05,0.04,0,20,60,100,2,50,9,120000,5,30,300,0.25,15,15,,,,,,,HIDE_IN_CODEX,no_dealer,,0.5,2,3,,314
 Odyssey (TT),vice_odyssey_tt,Battlecarrier,Tri-Tachyon,microburn,27,10000,1000,15000,,1000,280,2,70,50,40,8,12,2500,OMNI,,180,0.25,1,,,400,800,400,450,8,56,8,500000,4,20,600,0.25,45,45,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT, SHIP_WITH_MODULES","tritachyon, high_tech_package",,0.6,2,4,,505
+Thunderbox,vice_thunderbox,Heavy Carrier,Pirate,burndrive,22,15000,1500,10000,,350,200,4,40,17,17,7,9,3500,FRONT,,180,0.5,1,,,600,1200,300,600,10,60,7,250000,3,20,720,0.25,28,28,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","rare_bp, pirate_bp",,0.7,2,4,,502.9
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Ship Modules,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,vice_emp_emitter,Emitter,High Tech,emp,0,10,10,5000,,600,0,0,0,0,0,0,0,1,NONE,,0,0,0,,,0,0,0,0,0,0,,0,,0,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, module_unselectable, module_no_status_bar",,0,,,,2060
@@ -37,13 +41,17 @@ Odyssey (TT),vice_odyssey_tt,Battlecarrier,Tri-Tachyon,microburn,27,10000,1000,1
 #Fighters,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Flash,flash,,Remnant,,,400,60,350,,50,0,,170,240,200,40,120,30,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,116
 #Lux,lux,,Remnant,,,400,60,350,,50,0,,400,600,500,150,300,30,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,115
+Tremor,vice_terminator_dem,,,,,500,100,200,,50,,,300,400,400,200,400,5,NONE,,360,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,4
+Bolo (P),vice_bolo_p,,Pirate,flarelauncher_fighter,,750,200,180,,100,0,,140,250,200,100,200,40,NONE,,0,0,0,,,3,3,,,,,,,,,,,,,,,,,,,,,,0,,,,118.9
 Helia,vice_helia,,Remnant,,,400,60,400,,50,0,,170,240,200,40,120,50,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,120
 Nimbus,vice_nimbus,,Remnant,vice_pulse_accelerator,,500,60,1000,,150,0,,300,400,300,120,240,45,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,114
 Sundog,vice_sundog,,Remnant,,,450,50,600,,50,0,,160,300,250,60,140,40,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,103
 Gladius (LG),vice_gladius_lg,,Lion's Guard,flarelauncher_fighter,,500,75,200,,50,0,,300,400,300,150,300,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,109
 Spatha,vice_spatha,,Sindrian Diktat,,,650,85,200,,50,0,,280,400,300,130,300,45,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,109.1
 Estoc,vice_estoc,,Sindrian Diktat,,,500,75,500,,100,0,,180,225,200,60,120,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,113.1
-Kite (LG),vice_kite_lg,,Lion's Guard,,,900,150,1400,,80,0,,140,150,75,45,85,120,OMNI,,150,0.5,0.8,,,4,4,,,,,,,,,,,,,,,,,,,,,,0.75,2,2,,217
+Kite (LG),vice_kite_lg,,Lion's Guard,maneuveringjets,,900,150,1400,,80,0,,140,150,75,45,85,120,OMNI,,150,0.5,0.8,,,4,4,,,,,,,,,,,,,,,,,,,,,,0.75,2,2,,217
+Kite (P),vice_kite_pirate_a,,Pirate,maneuveringjets,,900,150,1400,,80,0,,140,150,75,45,85,120,OMNI,,150,0.5,0.8,,,4,4,,,,,,,,,,,,,,,,,,,,,,0.75,2,2,,217
+Kite (P),vice_kite_pirate_b,,Pirate,maneuveringjets,,900,150,1400,,80,0,,140,150,75,45,85,120,OMNI,,150,0.5,0.8,,,4,4,,,,,,,,,,,,,,,,,,,,,,0.75,2,2,,217
 Apotheosis,vice_disruptor_drone,,Starlight Cabal,emp,,750,125,2000,,120,0,,300,400,300,150,300,100,OMNI,,360,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0.5,2,2,,205.1
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Station Drones,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

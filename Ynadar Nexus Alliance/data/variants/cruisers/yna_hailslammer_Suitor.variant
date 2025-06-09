@@ -1,0 +1,74 @@
+{
+  "variantId": "yna_hailslammer_Suitor",
+  "hullId": "yna_hailslammer",
+  "displayName": "Suitor",
+  "goalVariant": false,
+  "fluxCapacitors": 25,
+  "fluxVents": 15,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MHS02": "typhoon",
+        "MHS03": "yna_las1_dem_m",
+        "MHS04": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MHS01": "yna_sg1_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MHS05": "yna_pulse_m",
+        "MHS06": "yna_pulse_m",
+        "WS0004": "yna_pulse_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_ac_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heatseeker",
+        "WS0002": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "BW01": "yna_supilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "yna_flak_s",
+        "WS0006": "yna_flak_s",
+        "WS0007": "yna_flak_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

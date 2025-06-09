@@ -1,6 +1,7 @@
 name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
 Active Flare Salvo,vice_flare_launcher,,,,,,,,,,,,,10,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 Bolide Drones,vice_summonbolide,,,,,,,,6,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+DEM Strike,vice_dem_strike,,,,,,0.15,,,,0.1,,0,15,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
 EMP Emitter,vice_remnantstationemp,,,,,,,,,,0.5,3,0.5,3,,,,,,,,,,,,,graphics/icons/hullsys/emp_emitter.png
 Fleet Jump,vice_fleetjump,,,,,,,,,,3,0,1,30,,,,TRUE,TRUE,,,,TRUE,,,,graphics/icons/hullsys/displacer.png
 Interdictor Array,vice_interdictor,,,,2000,,,,,,1,1,0.5,20,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png

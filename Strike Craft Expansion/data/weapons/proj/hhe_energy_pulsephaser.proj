@@ -1,0 +1,15 @@
+{
+	"id":"hhe_energy_pulsephaser",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":25.0,
+	"width":8.5,
+	"fadeTime":0.25,
+	"fringeColor":[215,162,40,255],
+	"coreColor":[255,200,200,200],
+	"textureType":"SMOOTH",
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

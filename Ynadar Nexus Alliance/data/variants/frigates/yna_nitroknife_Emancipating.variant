@@ -1,0 +1,35 @@
+{
+  "variantId": "yna_nitroknife_Emancipating",
+  "hullId": "yna_nitroknife",
+  "displayName": "Emancipating",
+  "goalVariant": false,
+  "fluxCapacitors": 3,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "hardened_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_vg1_s",
+        "WS0002": "yna_vg1_s",
+        "WS0003": "yna_vg1_s",
+        "WS0004": "yna_vg1_s"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "reaper"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

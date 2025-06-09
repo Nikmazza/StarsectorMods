@@ -1,0 +1,103 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+
+    "rebelFleetSuffix":"Leaguers",
+
+    "crewExpereinceLevelIncreaseChance":0.5, # Double, 0 - 1.0
+    "baseFleetCostMultiplier":0.9, # Double
+	
+    "invasionPointMult": 1.2,
+
+    "positiveDiplomacyExtra":0,
+    "negativeDiplomacyExtra":0,
+	
+    "startRelationships":{
+        "hegemony":0, #Hedges have no problem seeing an exploration faction going about their business and pay taxes no less
+        "luddic_church":0.25, #Same can be said for people who desire to know more
+		"luddic_path": -0.15, #AI Cores placed far away from our reach? Get precious knowledge about the origin of almighty Ludd? Sign me up
+		"pirates": -0.5,  #Don't care about your precious discoveries, we want your loot
+        "blade_breakers": -0.5, #Pirates except with honor, for real you guys
+		"tritachyon": -0.25, #CanIHasCores, srs this time
+        "sindrian_diktat":-0.25, #Basically has their own fuel supply, so no
+        "persean":-0.5, #Im dirty dan, no im dirty dan
+        "ocua": 0.1, #a
+        "xlu": 0, #o
+        "fob": 0.1, #Visions, probably in a weird gross way
+        "dassault_mikoyan": -0.25, #arg
+        "blackrock_driveyards": -0.25, #arg
+		"interstellarimperium": -0.25, #This town ain't big enough for the two of us
+		"independent": 0.5,  #sets up camp to actually join them for once
+        "ORA":-0.25, #No, Ynadar. You can't bring alien relics on our doorstep
+        "diableavionics": -0.25, #Neither should your lives
+        "Coalition": -0.25, #So, you're finally awake
+        "anvil_industries":-0.5, #Yeah, those EMPs had to go
+		"kingdom_of_terra":-0.25, #Grug, nuff said
+    },
+
+	"maxRelationships":{
+	},
+	
+	"diplomacyPositiveChance":{
+		"luddic_church": 2.0, #Once you see it, it's already there
+		"luddic_path": 1.5, #For once, actual positive lore about the pathers
+	};
+	"diplomacyNegativeChance":{
+		"persean": 1.5,
+		"hegemony": 0.33,
+		"luddic_church": 0.33,
+		"luddic_path": 0.5, #that isn't being too mad about AI cores
+	};
+	
+    "morality":"good",
+    
+    "alignments":{
+        "technocratic":1.0,
+        "ideological":0.25,
+        "militarist":0.25,
+        "corporate":-0.25,
+        "hierarchial":-0.5,
+    },
+	"diplomacyTraits":["foreverwar", "neutralist", "lowprofile", "devious"],
+    
+    "vengeanceFleetNames":["Exploratorium", "Bypasser", "Precision Strike"],
+    "vengeanceFleetNamesSingle":["an Exploratorium", "a Bypasser", "a Precision Strike"],
+    
+    "startShipsSolo":[
+		["yna_cinderbull_Assault"],
+		["yna_pummeler_Assault"],
+	],
+    "startShipsCombatSmall":[
+		["yna_ballpeinhead_CS", "yna_maulsling_Balanced", "yna_cinderbull_Support"]
+    ],
+	"startShipsCombatMedium":[
+		["yna_ballpeinhead_Support", "yna_cinderbull_Adjunct", "yna_maulsling_Balanced"],
+		["yna_ballpeinhead_CS", "yna_cinderbull_Defuse", "yna_maulsling_Balanced"]
+	],
+    "startShipsCombatLarge":[
+		["yna_grouse_Bricket", "yna_quillpress_Support", "yna_ballpeinhead_CS"]
+    ],
+    "startShipsCarrierSmall":[["yna_spitroast_Catapult", "yna_spitroast_Support", "yna_buffalo_Standard"]],
+    "startShipsTradeSmall":[["yna_buffalo_Standard", "yna_buffalo_Standard", "yna_pummeler_Assault"]],
+    "startShipsTradeLarge":[["yna_lumbergiant_Standard", "yna_buffalo_Standard", "yna_rockblaster_Assault", "yna_pummeler_Assault"]],
+	
+    "defenceStations":[
+        {"ids":["orbitalstation_mid", "battlestation_mid", "starfortress_mid"]},
+    ],
+	
+    "industrySeeds":[
+        {"id":"orbitalworks", "mult":0.1, "count":1, "roundUp":true},
+    ],
+    
+    "startSpecialItems":[
+        [["yna_basic_package", ""]],
+    ],
+	
+    "bonusSeeds":[
+        {"id":"nanoforge_corrupted", "count":1},
+        {"id":"aiCore_military", "mult":0.5},
+        {"id":"aiCore_heavyindustry", "count":1},
+        {"id":"aiCore_any", "mult":0.5},
+    ],
+    
+}

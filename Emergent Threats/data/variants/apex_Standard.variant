@@ -1,16 +1,16 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 1,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 28,
     "goalVariant": true,
     "hullId": "apex",
     "hullMods": [
-        "magazines",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_reactor_chamber"
+        "vice_module_handler",
+        "vice_adaptive_emitter_diodes"
     ],
-    "permaMods": [],
+    "permaMods": ["vice_module_handler"],
     "sMods": [],
     "variantId": "apex_Standard",
     "weaponGroups": [
@@ -18,30 +18,30 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 000": "vice_lrburstpd",
+                "WS 003": "vice_lrburstpd"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 004": "breachpod",
-                "WS 005": "ionpulser",
-                "WS 006": "ionpulser",
-                "WS 007": "breachpod"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 010": "irpulse",
-                "WS 011": "irpulse",
-                "WS 012": "irpulse",
-                "WS 013": "irpulse"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 000": "heavyburst",
-                "WS 003": "heavyburst",
+                "WS 005": "breachpod",
+                "WS 006": "breachpod",
+                "WS 007": "breachpod",
                 "WS 008": "pdlaser",
                 "WS 009": "pdlaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "pdburst",
+                "WS 011": "pdburst",
+                "WS 012": "pdburst",
+                "WS 013": "pdburst"
             }
         }
     ],

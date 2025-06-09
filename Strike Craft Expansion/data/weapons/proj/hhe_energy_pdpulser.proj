@@ -1,0 +1,15 @@
+{
+	"id":"hhe_energy_pdpulser",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":15.5,
+	"width":5.0,
+	"fadeTime":0.20,
+	"fringeColor":[225,75,75,255],
+	"coreColor":[255,100,100,255],
+	"textureType":"SMOOTH",
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

@@ -1,0 +1,25 @@
+{
+	"id":"vice_ai_commander",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite": false,
+	"scope":"CUSTOM",
+	"scopeStr":"all automated ships in the fleet",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"data.scripts.vice.skills.AIFleetCommander$Level1a"},
+				{"type":"SHIP", "script":"data.scripts.vice.skills.AIFleetCommander$Level1b"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"data.scripts.vice.skills.AIFleetCommander$Level1"},
+			]
+		},
+	],
+}

@@ -1,0 +1,28 @@
+{
+	"quality":0.5,
+	"displayName":"Assault Fighter",
+	"hullId":"gg_warthog_xiv",
+	"variantId":"gg_warthog_xiv_variant",
+	"fluxVents":3,
+	"fluxCapacitors":1,
+	"hullMods":[gg_xiv_fighter], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 001":"lightmg",
+		 			#"WS 002":"lightmg",
+		 			#"WS 001":"lightmortar",
+		 			#"WS 002":"lightmortar",
+		 			#"WS 003":"shredder",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 003":"heavymortar",
+		 		   },
+		},
+	],
+}

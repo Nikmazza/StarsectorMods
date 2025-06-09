@@ -1,0 +1,31 @@
+{
+	"id":"hhe_heavyvulcan",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"displayArcRadius":650,
+	"turretSprite":"graphics/weapons/hhe_heavy_vulcan_blaster_base.png",
+	"turretGunSprite":"graphics/weapons/hhe_heavy_vulcan_blaster_base_recoil.png",
+	"hardpointSprite":"graphics/weapons/hhe_heavy_vulcan_blaster_hardpoint.png",
+	"hardpointGunSprite":"graphics/weapons/hhe_heavy_vulcan_blaster_hardpoint_recoil.png",	
+	"visualRecoil":5.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[16, -5, 18, 0, 16, 5],
+	"turretAngleOffsets":[0, 0, 0],
+	"hardpointOffsets":[21, -5, 23, 0, 21, 5],
+	"hardpointAngleOffsets":[0, 0, 0],
+	"specialWeaponGlowWidth":15,
+	"specialWeaponGlowHeight":40,
+	"barrelMode":"LINKED",
+	"separateRecoilForLinkedBarrels":"TRUE",
+	"animationType":"MUZZLE_FLASH", 
+	"muzzleFlashSpec":{"length":20.0,
+						"spread":6,
+						"particleSizeMin":6.0,
+						"particleSizeRange":8.0,
+						"particleDuration":0.15,
+						"particleCount":7,
+						"particleColor":[255,240,165,200]},
+	"projectileSpecId":"vulcan_shot",  # projectile that will be fired
+	"fireSoundTwo":"vulcan_cannon_fire",	
+}

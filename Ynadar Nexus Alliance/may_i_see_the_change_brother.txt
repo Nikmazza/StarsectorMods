@@ -1,0 +1,386 @@
+**** Version 0.3-RC1 ****
+	Updated for 0.98a-RC5.
+	Faction:
+		Updated for Simulator compatibility.
+
+**** Version 0.3 ****
+	Campaign:
+		Added mod accessibility for IndEvo and New Beginnings.
+		Added faction blueprint packages.
+		Nexerelin:
+			Ynadar Nexus Alliance:
+				Loses their longer diplomatic alignment.
+				Becomes slightly militaristic.
+				No longer Helps Allies.
+				Now starts with basic packages for ships and weapons if selected.
+	Ships:
+		Added Nitroknife, a middling interceptor frigate with a nasty surprise.
+		Added Flamedial, another double Large Energy destroyer but acts as a Sunder replacement.
+		Added Starspot, a gapcloser cruiser that is fast and light with good recon abilities.
+		Added Arsonguard, a heavy escort cruiser with multiple small weapons.
+		Added Flarebringer, a raiding capital ship with decent cargo holds and the most basic, typical frontal capital loadout.
+		Rangefinder Pulse shipsystem:
+			Range passive bonus increased from 20% to 35%.
+		Ynadarian Autoloader hullmod:
+			Missile capacity Capital scale increased from 1-4 = 30, 4+ = 40 to 1-2 = 30, 3-6 = 40, 7+ = 60.
+		Cinderbull:
+			Designation changed from Frigate to Armored Frigate.
+		Clamcan:
+			Turn Acceleration reduced from 45 to 30.
+		Pummeler:
+			Resprited and overhauled.
+			Ynadarian Autoloader hullmod built-in added.
+			Expanded Missile Racks hullmod built-in added.
+			Modular slot changes:
+				From 1 Medium Missile, 4 Small Hybrid
+				To 1 Medium Composite, 1 Small Hybrid, 2 Small Missile.
+			Fleet points reduced from 6 to 5.
+			Ordinance points reduced from 50 to 45.
+			Hull reduced from 2500 to 2000.
+			Flux Capacity increased from 2000 to 3000.
+			Base Supply Maintenance/Repair and Deployment cost reduced from 5 to 4.
+		Ballpeinhead:
+			Sprite adjustment.
+			Fleet points increased from 10 to 12.
+			Manuevering Thrusters shipsystem replaced with Multi-load Crossfeed.
+			Medium Hardpoint slot changed from Missile to Composite.
+			Flux Capacity increased from 4200 to 4500.
+			Flux Dissipation increased from 250 to 280.
+			Top Speed increased from 80 to 90.
+			Skeleton Crew increased from 40 to 60.
+			Crew Capacity reduced from 100 to 80.
+			Fuel Capacity increased from 80 to 100.
+			Base Supply Maintenance/Repair and Deployment cost increased from 11 to 13.
+		Quillpress:
+			Fleet points increased from 9 to 10.
+			Multi-load Crossfeed shipsystem replaced with Manuevering Thrusters.
+			Top Speed increased from 75 to 90.
+			Acceleration increased from 60 to 75.
+			Max Turn Speed increased from 45 to 60.
+			Turn Acceleration increased from 30 to 45.
+			Skeleton Crew reduced from 50 to 40.
+			Crew Capacity reduced from 120 to 100.
+		Spitroast:
+			Fleet points increased from 11 to 13.
+			Hull increased from 4000 to 5000.
+			Top Speed reduced from 65 to 60.
+			Acceleration reduced from 50 to 40.
+			Max Turn Speed increased from 25 to 45.
+			Turn Acceleration increased from 25 to 30.
+		Rockblaster:
+			Fleet points increased from 12 to 15.
+			Base Supply Maintenance/Repair and Deployment cost increased from 13 to 15.
+		Buffalo (YNA):
+			Fleet points increased from 5 to 7.
+		Grouse:
+			Sprite adjustment.
+			Fleet points increased from 14 to 18.
+			Hull increased from 8000 to 9000.
+			Flux Capacity increased from 10000 to 12000.
+			Flux Dissipation reduced from 600 to 550.
+			Max Turn Speed increased from 20 to 25.
+			Crew Capacity reduced from 240 to 180.
+		Hailslammer:
+			Integrated Autoslammer:
+				Missile Ammo pool increased from 24 to 36.
+			Fleet points increased from 17 to 20.
+			Flux Dissipation increased from 300 to 350.
+		Weighbell:
+			Fleet points increased from 14 to 17.
+		Lumbergiant:
+			Fleet points increased from 9 to 11.
+		Sunblade:
+			Tag "rare_bp" is replaced with "ynadar_standard_bp".
+			Designation changed from Battlecruiser to Battleship.
+			Fleet points increased from 24 to 28.
+			Peak Readiness time increased from 600 to 720.
+		Torchmace:
+			Sprite shrunked and adjusted.
+			Tag "rare_bp" is replaced with "ynadar_standard_bp".
+			Designation changed from Fast Battleship to Battlecruiser.
+			Fleet points increased from 24 to 30.
+			Modular slot changes:
+				From 3 Medium Universal, 1 Medium Hybrid, 12 Small Universal, 3 Small Missile, 2 Small Hybrid
+				To 2 Medium Universal, 4 Medium Hybrid, 12 Small Universal, 1 Small Missile, 2 Small Hybrid.
+			Hull reduced from 12000 to 10000.
+			Armor reduced from 1600 to 1200.
+			Flux Capacity reduced from 18000 to 16000.
+			Flux Dissipation reduced from 1200 to 800.
+			Ordinance points reduced from 300 to 260.
+			Top Speed increased from 60 to 65.
+			Acceleration increased from 30 to 45.
+			Deceleration increased from 20 to 30.
+			Max Turn Speed increased from 12 to 18.
+			Turn Acceleration increased from 6 to 9.
+			Mass reduced from 2500 to 2000.
+			Shield Arc increased from 90 to 120.
+			Shield Upkeep reduced from 40% to 30%.
+			Shield Efficiency increased from 1.2 to 1.
+			Skeleton Crew reduced from 250 to 180.
+			Maximum Crew reduced from 400 to 270.
+			Cargo reduced from 300 to 250.
+			Fuel Capacity reduced from 360 to 280.
+			Fuel per LY reduced from 8 to 7.
+			Base Supply Maintenance/Repair and Deployment cost reduced from 35 to 30.
+		Winterthorn:
+			Top Speed increased from 40 to 50.
+			Acceleration increased from 20 to 30.
+			Deceleration increased from 15 to 20.
+			Max Turn Speed increased from 12 to 15.
+			Base Supply Maintenance/Repair and Deployment cost reduced from 45 to 40.
+			Missile capacity increased from 40 to 60.
+		Urgrand:
+			Sprite adjustment.
+			Hangar size reduced from 4 to 2.
+			Modular slot changes:
+				From 2 Large Hybrid, 2 Large Missile, 2 Medium Hybrid, 2 Medium Universal, 2 Medium Missile, 2 Medium Ballistic, 2 Small Universal, 4 Small Missile, 10 Small Ballistic
+				To 3 Large Hybrid, 4 Large Missile, 4 Medium Hybrid, 4 Small Missile, 12 Small Ballistic.
+			Fleet points increased from 35 to 36.
+			Ordinance points increased from 340 to 350.
+			Base Supply Maintenance/Repair and Deployment cost increased from 60 to 65.
+		Perilstar:
+			Base Supply Maintenance/Repair and Deployment cost increased from 135 to 155.
+	Weapons:
+		Added the Aykeiem and Aykeiwon energy mag guns, that fire electromagnetic frag pulses at long range.
+		Added the Theriphor Light Mauler, a long-ranged powered shot assault gun variant. (and be more usable alternative when gyrogun isn't)
+		Added the Bequuem Spike Barrage, a large variant of the energy missile series.
+		Efeven Autogun:
+			Damage per shot increased from 100 to 120.
+			Flux per shot increased from 75 to 90.
+			Cooldown time increased from 0.8 to 1.2.
+			Spread per shot reduced from 1 to 0.5.
+		Efonzee Smartgun:
+			Damage per shot increased from 120 to 150.
+			Flux per shot increased from 90 to 105.
+		Efonzee Smartcannon:
+			Range reduced from 1200 to 1100.
+			Damage per shot increased from 120 to 150.
+			Flux per shot increased from 80 to 90.
+		Wonphorzi Volleygun:
+			ID changed, may have unusual changes midgame.
+			Damage type changed from Kinetic to Fragmentation.
+			Damage per shot increased from 20 to 40x9.
+			Burst Type changed from Linked to Alternating.
+			Burst Size reduced from 4 (36) to 3x9.
+			Flux per shot reduced from 10 (360) to 120 (360).
+			Cooldown time reduced from 3.802 (4.0) to 1.868 (2).
+			Minimum Spread given from 0 to 5.
+			Maximum Spread increased from 4 to 15.
+		Towonphor Volleycannon:
+			ID changed, may have unusual changes midgame.
+			Damage type changed from Kinetic to Fragmentation.
+			Damage per shot increased from 25 to 40x20.
+			Burst Type changed from Linked to Alternating.
+			Burst Size increased from 4 (80) to 5x20.
+			Flux per shot changed from 10 (800) to 200 (800).
+			Cooldown time reduced from 5.802 (6.0) to 2.236 (2.5).
+			Minimum Spread given from 0 to 8.
+			Maximum Spread increased from 4 to 24.
+		Eftoem Spike Gun:
+			Firing sound changed.
+			Range increased from 700 to 900.
+			Damage dealt to shields changed from Hard-flux to Soft-flux, if undamaged.
+			Flux per shot reduced from 80 to 64.
+			Charge Up time reduced from 0.2 to 0.1.
+			Cooldown time reduced from 1.1 to 0.75.
+			Burst delay reduced from 0.2 to 0.15.
+			Projectile Lifetime increased from 3 to 5.5 seconds.
+			Base Value increased from 300 to 500.
+		Agiem Spike Cannon:
+			Firing sound changed.
+			Range increased from 800 to 1000.
+			Damage dealt to shields changed from Hard-flux to Soft-flux, if undamaged.
+			Flux per shot reduced from 60 to 56.
+			Cooldown time increased from 0.85 to 0.95.
+			Burst delay reduced from 0.25 to 0.2.
+			Projectile Lifetime increased from 4 to 6 seconds.
+		Ptraares Gratecannon:
+			Damage per shot increased from 2000 to 2400.
+			Flux per shot reduced from 700 to 600.
+			Projectile Speed increased from 400 to 500.
+		Ruk PD Maser:
+			Base Value increased from 400 to 800.
+		Ofepofi Pulse Cannon:
+			Market Tier reduced from 1 to 0.
+			Turn Rate increased from 5 to 10.
+		Bristlebulb DEM/Pod:
+			"Bristlebulb DEM Torpedo" renamed to "Bristlebulb DEM Launcher".
+			Hitpoints increased from 1500 to 1800.
+			Fragmentation Damage per second reduced from 600 to 400.
+			Duration increased from 40 to 60 seconds.
+		
+**** Version 0.2.1 ****
+	Updated to 0.97a-RC7.
+	Campaign:
+		Miran is moved slightly further away.
+		Skulato now has an inactive gate orbiting it.
+	Ships:
+		Variants are adjusted accordingly with recent vanilla weapon and hullmod balance changes.
+		Kindlebow:
+			Flux Capacity increased from 4000 to 5000.
+			Top Speed increased from 80 to 90.
+			Acceleration increased from 70 to 75.
+			Deceleration increased from 40 to 45.
+			Turn Acceleration increased from 30 to 45.
+			Phase Upkeep reduced from 3% to 2% base flux capacity.
+		Grouse:
+			Base Supply Maintenance/Repair and Deployment cost increased from 17 to 22.
+		Rockblaster:
+			Removed the fake lidar range script that gives the extreme beam range bonus.
+			Added a custom Lidar weapon to compensate the loss of lidar range connected to the script.
+	Weapons:
+		Added Wonphorzi Volleygun and Towonphor Volleycannon:
+			Advanced cartridge guns that unload walls of lead against their general direction with a relatively long delay.
+
+**** Version 0.2.0-RC1 ****
+	Ships:
+		Description fixes.
+		Perilstar:
+			Moved the misaligned turret angle in one module.
+			Added the forgotten SHIP_WITH_MODULES tag.
+
+**** Version 0.2.0 ****
+	Campaign:
+		Ynadar Alliance now has its own flag.
+		Test mission is updated with the new logo as well.
+		Nexerlin:
+			Ynadar is against Corporate but is more Technocratic.
+	Ships:
+		Added Perilstar, Ynadar's flagship juggernaut that boasts multiple main guns, wings and extreme mass.
+		Added Rockblaster, a midline Invictus-Manticore.
+		Added Clamcan, a Dram alternative.
+		Hullmods:
+			Ynadar Hull Specifications:
+				High Explosive damage resistance increased from 30% to 35%.
+				Beam damage resistance increased from 15% to 20%.
+		Armor Hardener Field ship system:
+			Added script to properly remove the debuffs after the system is worn off.
+			Flux Dissipation bonus increased from 50% to 200%.
+		Quillpress:
+			Top Speed increased from 60 to 75.
+			Acceleration increased from 45 to 60.
+			Deceleration increased from 25 to 45.
+			Maximum Turn speed increased from 40 to 45.
+		Weighbell:
+			Resprite updated and upsized.
+			Added 2 additional Small Hybrid turrets.
+			Rear Small Ballistic turret changed to Small Hybrid.
+			Ordinance points increased from 130 to 140.
+		Urgrand:
+			Top Speed increased from 30 to 40.
+			Maximum Turn Speed increased from 8 to 10.
+			Turn Acceleration increased from 4 to 5.
+	Weapons:
+		Added Ektuphizro Multicannon, a rapid fire multicannon turret that replaces the Eksemtuphi Autocannon as a middle ground between the Gauss Cannon.
+		Added Emwotiphor Defender, a capital-sized Flak cannon with an insane DPS with an insane Ordinance cost.
+		Efonzee Smartgun:
+			Cooldown reduced from 1.5 to 1.25.
+		Eftuezee Smartcannon:
+			Cooldown reduced from 1 to 0.8.
+		Eksemtuphi Heavy Autocannon:
+			Id is replaced for the new Multicannon and to compensate Ordinance point change.
+			Price increased from 4000 to 6000.
+			Tier increased from 1 to 2.
+			Rarity increased from 1 to 0.5.
+			Ordinance points increased from 25 to 30.
+			Range increased from 1100 to 1200.
+			Damage per shot increased from 300 to 400.
+			EMP per shot added by 200.
+			Flux per shot increased from 225 to 400.
+			Cooldown reduced from 1.7 to 1.5.
+			Burst delay increased from 0.3 to 0.5.
+			Maximum Spread reduced from 4 to 3.
+			Spread per shot reduced from 1 to 0.5.
+			Added effect of dealing extra damage as Soft-Flux.
+		Pezuubi Heavy Mauler:
+			Cooldown reduced from 1.4 to 1.2.
+			Maximum Spread reduced from 5 to 3.
+			Spread per shot reduced from 1 to 0.5.
+
+**** Version 0.1.2 ****
+	Ships:
+		Added Buffalo (YNA), another Buffalo.
+		Added Torchmace fast battleship, an armored but outgunned capital ship with great agility.
+		Armor Hardener Field ship system:
+			No longer stops weapons from firing.
+			Added 67% RoF reduction during the damper field.
+			Added 50% more flux dissipation during damper field.
+		Pummeler:
+			Shield Angle increased from 90 to 120.
+		Maulsling:
+			Sprite adjusted.
+			All Ballistic Hardpoints are changed to Turrets with 120 angles.
+			Hybrid Turrets are facing sideways but have 240 angle coverage.
+			Armor increased from 400 to 450.
+			Flux Capacity increased from 3000 to 4000.
+			Flux Dissipation increased from 250 to 300.
+			Shield Efficiency reduced from 0.8 to 1.
+			Ordinance points increased from 50 to 55.
+		Urgrand:
+			Sprite adjusted.
+			Designation changed from Battleship to Dreadnought.
+			Added 2 additional hangar bays.
+			Added 2 Small Universal turrets at the front.
+			Added custom Urgrand Design Plan hullmod built-in, discounting Large weapons and gives range.
+			Ordinance points reduced from 370 to 340.
+			Ayefkei MRM Pod:
+				Display name changed to Ayefkei Heatseeker Rack.
+				Missile health increased from 150 to 250.
+				Range increased from 2500 to 3000.
+	Weapons:
+		Added Efonzee Smartgun and Eftuezee Smartcannon, long-range guided explosive autocannons.
+		Added Spotling SRM Launcher, heavy anti-fighter missiles launched in groups with much higher guidance.
+		Pezuubi Heavy Mauler:
+			Damage per shot reduced from 400 to 350.
+			Flux per shot reduced from 320 to 280.
+			Charge Down time reduced from 2.5 to 1.4.
+		Exocast F-Plasma Cannon:
+			Flux per shot increased from 800 to 1000.
+
+
+**** Version 0.1.1 ****
+	Ships:
+		All ships and wings now use a unique hullstyle with a yellow shield.
+		Added Glarestruck phase frigate, a middle-ended phase ship with modified missile autoloader.
+		Added Kindlebow phase destroyer, Harbinger alternative but with an unusual package.
+		Hullmods:
+			Ynadar Hull Specifications:
+				High Explosive damage resistance increased from 25% to 30%.
+				Fragmentation damage taken malus reduced from +50% to +40%.
+			Ynadarian Autoloader:
+				Removed altering missile behavior, as it affects game-wide and not on just on the host ship. Alex pls
+				Ammo count for 20 to 60 capacity from 3x to 4x.
+				Ammo count for 60+ capacity from 2x to 2.5x.
+		Weighbell:
+			Damper Field ship system replaced custom Armor Hardener Field.
+		Maulsling:
+			Peak Readiness time increased from 240 to 300.
+		Weighbell:
+			Shield size slightly increased.
+			Damper Field ship system replaced custom Armor Hardener Field.
+			Front turret arcs now converge and protect the front from 165 to 195.
+		Lumbergiant:
+			Sprite adjusted.
+			Added 1 Small Hybrid turret on the center rear.
+		Sunblade:
+			Sprite adjusted.
+			Added 3 Small Hybrid turrets on the center and middling sides of the hull.
+			2 Small Ballistic turrets from rear changed to Hybrid.
+			Medium Ballistic turrets are adjusted so that they can converge on the front.
+			Hull reduced from 12000 to 11000.
+			Armor increased from 1200 to 1350.
+			Flux Capacity reduced from 24000 to 20000.
+			Flux Dissipation reduced from 1400 to 1200.
+	Weapons:
+		Added missing descriptions.
+		Added Ruk PD Maser, a less versatile but more powerful point defense not!laser.
+		Added Emabi Pocket Flak and Emasiten Autoflak as flak cannon alternatives with faster fire rate and more accurate shots.
+		Added Bristlebulb DEM torpedo and pod, a durable and very long lasting DEM that equates to more than a Dragonfire if left for too long.
+		Added Ofepofi Pulse Cannon, an upsized Teuchbi pulse laser with more range and damage.
+		Added Exocast F-Plasma Cannon, a long-ranged high damage one-shot Plasma Cannon that does soft-flux and anti-armor damage.
+		Eftoem Spike Gun:
+			Price increased from 250 to 300.
+		Hiarchburn Strategic Laser:
+			Tier reduced from 3 to 2.
+			Rarity reduced from 0.2 to 0.3.
+			Price increased from 4500 to 6000.

@@ -1,0 +1,26 @@
+{
+	"quality":0.5,
+	"displayName":"Elite Fighter",
+	"hullId":"gg_broadsword_xiv",
+	"variantId":"gg_broadsword_xiv_variant",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":[gg_xiv_fighter], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"lightmg",
+		 			"WS 002":"lightmg",
+		 		   },
+		},
+		{"mode":"ALTERNATING",
+		 "weapons":{
+		 			"WS 003":"swarmer_fighter",
+					"WS 004":"swarmer_fighter",
+		 		   },
+		},
+	],
+}

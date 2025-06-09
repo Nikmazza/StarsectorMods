@@ -17,7 +17,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 011": "heavyburst"}
+            "weapons": {"WS 011": "vice_phased_electrolaser"}
         },
         {
             "autofire": true,

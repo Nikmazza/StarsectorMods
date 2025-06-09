@@ -3,7 +3,7 @@
     "name": "ZZ Audio Plus",
     "author": "DarkRevenant",
     "utility": "true",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Improves the music variety of the game. Improves certain vanilla sounds. Features work by Cycerin, Psiyon, and more.",
-    "gameVersion": "0.97a"
+    "gameVersion": "0.98a-RC5"
 }

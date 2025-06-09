@@ -27,7 +27,8 @@ public class SubsystemIntegration extends SCBaseSkillPlugin {
     @Override
     public void addTooltip(SCData data, TooltipMakerAPI tooltip) {
         tooltip.addPara("All ships can use AI Adaptive Subsystems, ships that can already do so gain 5%% to combat readiness", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		tooltip.addPara("Acquire the Adaptive Drone Bay, Neural Net, and Tactical Core subsystem hullmods", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addSpacer(10f);
+		tooltip.addPara("Acquire the AI Subsystem Integration hullmod", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "AI Subsystem Integration");
     }
 
     @Override
@@ -44,12 +45,10 @@ public class SubsystemIntegration extends SCBaseSkillPlugin {
 	@Override
 	public void onActivation(SCData data) {
 		if (data.isNPC()) data.getFleet().getMemoryWithoutUpdate().set("$xo_synthesis_fleet", true);
-		if (data.isPlayer() && !Global.getSector().getMemoryWithoutUpdate().is("$gave_IX_hullmods", true)) {
+		if (data.isPlayer() && !Global.getSector().getMemoryWithoutUpdate().is("$gave_SI_hullmods", true)) {
 			CharacterDataAPI player = Global.getSector().getCharacterData();
-			player.addHullMod("vice_adaptive_drone_bay");
-			player.addHullMod("vice_adaptive_neural_net");
-			player.addHullMod("vice_adaptive_tactical_core");
-			Global.getSector().getMemoryWithoutUpdate().set("$gave_synthesis_hullmods", true);
+			player.addHullMod("vice_ai_subsystem_integration");
+			Global.getSector().getMemoryWithoutUpdate().set("$gave_SI_hullmods", true);
 		}
 		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_synthesis_is_active", true);
 	}

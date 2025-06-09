@@ -1,0 +1,67 @@
+{
+    "displayName": "Aegis",
+    "fluxCapacitors": 0,
+    "fluxVents": 45,
+    "goalVariant": true,
+    "hullId": "iapetus_tw",
+    "hullMods": [
+        "targetingunit",
+        "tw_modernized_rangefinder",
+        "ix_reactive_combat_shields",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "iapetus_tw_aegis",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0023": "ifc_ix",
+                "WS0027": "ifc_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0024": "ifc_ix",
+                "WS0028": "ifc_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "plasma_dart_ix",
+                "WS0010": "plasma_dart_ix",
+                "WS0029": "spearwall_tw"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "lightbringer_ciws_ix",
+                "WS0003": "morningstar_ciws_ix",
+                "WS0005": "morningstar_ciws_ix",
+                "WS0007": "morningstar_ciws_ix",
+                "WS0021": "arrester_tw",
+                "WS0025": "brightburn_ciws_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "lightbringer_ciws_ix",
+                "WS0004": "morningstar_ciws_ix",
+                "WS0006": "morningstar_ciws_ix",
+                "WS0008": "morningstar_ciws_ix",
+                "WS0022": "arrester_tw",
+                "WS0026": "brightburn_ciws_ix"
+            }
+        }
+    ]
+}

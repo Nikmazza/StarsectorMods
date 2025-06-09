@@ -9,6 +9,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class ExperimentalHull extends BaseHullMod {
 	
 	private static String OVERRIDE_MOD = "vice_standard_plating";
+	private static String PLATING_MODNAME = "Standard Plating";
 	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
@@ -67,5 +68,10 @@ public class ExperimentalHull extends BaseHullMod {
 			ship.getSpriteAPI().setAlphaMult(alpha);
 			ship.getSpriteAPI().setAngle(angle);
 			ship.getSpriteAPI().setColor(color);	
+	}
+	
+	public String getDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return PLATING_MODNAME;
+		return null;
 	}
 }

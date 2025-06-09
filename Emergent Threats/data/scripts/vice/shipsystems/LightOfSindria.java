@@ -31,7 +31,6 @@ public class LightOfSindria extends BaseShipSystemScript {
 	}
 		
 	public StatusData getStatusData(int index, State state, float effectLevel) {
-
 		return null;
 	}
 

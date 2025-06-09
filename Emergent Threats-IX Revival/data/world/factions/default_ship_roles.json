@@ -83,6 +83,7 @@
 		"glycon_tw_support":5,
 		
 		"tigershark_tw_artillery":5,
+		"tigershark_tw_assault":5,
 		
 		"tigershark_ix_attack":2,
 		"tigershark_ix_missile":2,
@@ -95,12 +96,15 @@
 		"aquilon_ix_strike":5,
 		"aquilon_tw_attack":5,
 		"aquilon_tw_cs":5,
+		"aquilon_tw_suppression":5,
 		
 		"equalizer_ix_attack":5,
 		"equalizer_ix_cs":5,
 		"equalizer_ix_strike":5,
 		"equalizer_tw_attack":5,
 		"equalizer_tw_cs":5,
+		
+		"iapetus_tw_aegis":1, #unknown to Trinity Worlds unless PAGSM is enabled
 		
 		"ionos_tw_attack":7,
 		"ionos_tw_cs":7,

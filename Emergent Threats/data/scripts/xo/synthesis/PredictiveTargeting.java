@@ -1,6 +1,7 @@
 package data.scripts.xo.synthesis;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CharacterDataAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
@@ -25,9 +26,10 @@ public class PredictiveTargeting extends SCBaseSkillPlugin {
     @Override
     public void addTooltip(SCData data, TooltipMakerAPI tooltip) {
 		tooltip.addPara("+5%% energy weapon damage", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		tooltip.addSpacer(10f);
 		tooltip.addPara("Adaptive Emitter Diodes range penalty negated", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("Adaptive Pulse Resonator range bonus increased to 200 su", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addSpacer(10f);
+		tooltip.addPara("Acquire the Emitter Diodes, Pulse Resonator, and Trajectory Analyzer adaptive hullmods", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Emitter Diodes", "Pulse Resonator", "Trajectory Analyzer");
     }
 
     @Override
@@ -41,4 +43,21 @@ public class PredictiveTargeting extends SCBaseSkillPlugin {
 			stats.getBeamWeaponRangeBonus().modifyFlat(id, -PULSE_RANGE_BONUS);
 		}
     }
+	
+	@Override
+	public void onActivation(SCData data) {
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_predictive_targeting_is_active", true);
+		if (data.isPlayer() && !Global.getSector().getMemoryWithoutUpdate().is("$gave_PT_hullmods", true)) {
+			CharacterDataAPI player = Global.getSector().getCharacterData();
+			player.addHullMod("vice_adaptive_emitter_diodes");
+			player.addHullMod("vice_adaptive_pulse_resonator");
+			player.addHullMod("vice_adaptive_trajectory_analyzer");
+			Global.getSector().getMemoryWithoutUpdate().set("$gave_PT_hullmods", true);
+		}
+	}
+	
+	@Override
+	public void onDeactivation(SCData data) {
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_predictive_targeting_is_active", false);
+	}
 }

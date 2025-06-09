@@ -3,19 +3,19 @@
   "hullId": "A_S-F_phantasmagoria",
   "displayName": "Experimental",
   "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 10,
+  "fluxCapacitors": 5,
+  "fluxVents": 6,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "hardened_subsystems",
-    "fluxdistributor",
     "solar_shielding",
     "targetingunit",
     "A_S-F_PhantasmagoriaRegulator_off",
     "A_S-F_PhantasmagoriaCore_off",
     "A_S-F_PhantasmagoriaCutter",
-    "A_S-F_PhantasmagoriaCurtain"
+    "A_S-F_PhantasmagoriaCurtain",
+    "fluxbreakers"
   ],
   "weaponGroups": [
     {
@@ -28,9 +28,7 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {
-        "WS0004": "A_S-F_phantasmagoria_missile"
-      }
+      "weapons": {}
     },
     {
       "autofire": true,
@@ -42,9 +40,7 @@
     {
       "autofire": true,
       "mode": "LINKED",
-      "weapons": {
-        "WS0002": "A_S-F_phantasmagoria_cutter"
-      }
+      "weapons": {}
     }
   ],
   "modules": [],

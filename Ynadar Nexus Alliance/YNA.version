@@ -1,0 +1,11 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/Protonus-xen/Yellow/master/YNA.version",
+    "modName":"Ynadar Nexus Alliance",
+    "modThreadId":27282,
+    "modVersion":
+    {
+        "major":0,
+        "minor":3,
+        "patch":0-RC1
+    },
+}

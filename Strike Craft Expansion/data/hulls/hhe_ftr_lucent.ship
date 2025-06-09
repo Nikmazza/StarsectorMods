@@ -1,0 +1,129 @@
+{
+  "hullName": "Lucent",
+  "hullId": "hhe_ftr_lucent",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/hhe_lucent.png",
+  "style": "HIGH_TECH",
+  "height": 30,
+  "width": 30,
+  "center": [15, 13.5],
+  "collisionRadius": 21,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 21,
+  "viewOffset": 0,
+  "builtInMods": [
+    "hhe_z_wpnflux_impshield",
+    "hhe_z_overload_reduction"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": 0,
+      "locations": [8.5, -0]
+    },
+    {
+      "id": "WS-002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": 0,
+      "locations": [3.5, 12]
+    },
+    {
+      "id": "WS-003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": -0,
+      "locations": [3.5, -12]
+    },
+    {
+      "id": "SYS-02",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": -135,
+      "locations": [-4.5, -11]
+    },
+    {
+      "id": "SYS-01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": 135,
+      "locations": [-4.5, 11]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, 2.5],
+      "length": 14,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-11, -2.5],
+      "length": 14,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-10, -9],
+      "length": 4,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-10, 9],
+      "length": 4,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-11, -6],
+      "length": 4,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-11, 6],
+      "length": 4,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    10, 7.5,
+    13, 4.5,
+    8.5, 3,
+    8.5, -3,
+    13, -4.5,
+    10, -7.5,
+    3, -12.5,
+    -4.5, -11.5,
+    -10, -8.5,
+    -10, 8.5,
+    -4.5, 11.5,
+    3, 12.5
+  ]
+}

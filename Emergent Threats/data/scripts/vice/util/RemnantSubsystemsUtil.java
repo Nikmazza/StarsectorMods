@@ -11,7 +11,9 @@ import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 
 public class RemnantSubsystemsUtil {
-
+	
+	//note, do not name handlers using "vice_adaptive" or isOnlyRemnantMod() will count it as an adaptive hullmod
+	
 	//data
 	private static String HANGAR_MOD_OVERLAP = "Incompatible hangar modification present";
 	private static String HUB = "Subsystem is activated on ship central hub";
@@ -38,6 +40,7 @@ public class RemnantSubsystemsUtil {
 	static {
 		MANUFACTURER_LIST.add("Remnant");
 		MANUFACTURER_LIST.add("Anomalous Phase-Tech");
+		MANUFACTURER_LIST.add("Diamond Nexus");
 		MANUFACTURER_LIST.add("Dustkeeper Proxies");
 		MANUFACTURER_LIST.add("Dustkeeper Contingency");
 		MANUFACTURER_LIST.add("Remnant Mess Object");
@@ -46,6 +49,7 @@ public class RemnantSubsystemsUtil {
 		MANUFACTURER_LIST.add("XIV Remnant");
 		MANUFACTURER_LIST.add("Remnant Defector");
 		MANUFACTURER_LIST.add("Volantian Remnant Conversion");
+		MANUFACTURER_LIST.add("Project Mayfly");
 	}
 	
 	//make ships qualify for adaptive subsystems despite not having the correct manufacturer. Takes highest priority.

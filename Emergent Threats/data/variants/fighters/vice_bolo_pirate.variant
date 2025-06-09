@@ -1,0 +1,25 @@
+{
+    "displayName": "Support Fighter",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "vice_bolo_p",
+    "hullMods": ["no_weapon_flux"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_bolo_pirate",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "lightag"}
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "vice_pilum_single",
+                "WS 002": "vice_pilum_single"
+            }
+        }
+    ]
+}

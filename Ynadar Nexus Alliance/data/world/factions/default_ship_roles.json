@@ -1,0 +1,187 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+		# Yeah nothing here
+		# because all of the ships are long-ranged kiting loadouts
+	},
+	"combatSmall":{
+		"yna_cinderbull_Assault":10,
+		"yna_cinderbull_FS":10,
+		"yna_cinderbull_Support":10,
+		"yna_cinderbull_Adjunct":10,
+		"yna_cinderbull_Defuse":10,
+		"yna_cinderbull_Over":3,
+		"yna_cinderbull_Agitant":3,
+		
+		"yna_pummeler_Assault":10,
+		"yna_pummeler_Strike":10,
+		"yna_pummeler_Support":10,
+		"yna_pummeler_Fuming":5,
+		"yna_pummeler_Bristling":5,
+		
+		"yna_nitroknife_Assault":10,
+		"yna_nitroknife_Burning":8,
+		"yna_nitroknife_Inhibiting":8,
+		"yna_nitroknife_Emancipating":5,
+		
+		"yna_maulsling_Balanced":10,
+		"yna_maulsling_Assault":8,
+		"yna_maulsling_Stringent":5,
+		"yna_maulsling_Prudent":5,
+	},
+	"combatMedium":{
+		"yna_ballpeinhead_Support":10,
+		"yna_ballpeinhead_CS":10,
+		"yna_ballpeinhead_Crater":10,
+		"yna_ballpeinhead_CA":5,
+		
+		"yna_quillpress_CS":10,
+		"yna_quillpress_Picket":10,
+		"yna_quillpress_Support":10,
+		"yna_quillpress_Suppressant":5,
+		"yna_quillpress_Spiker":5,
+		
+		"yna_flamedial_Assault":10,
+		"yna_flamedial_Support":10,
+		"yna_flamedial_Bristling":8,
+		"yna_flamedial_Lingering":6,
+		
+		"yna_rockblaster_Assault":10,
+		"yna_rockblaster_Hardened":8,
+		"yna_rockblaster_Slinging":8,
+	},
+	"combatLarge":{
+		"yna_hailslammer_Assault":10,
+		"yna_hailslammer_LS":5,
+		
+		"yna_starspot_Recon":10,
+		"yna_starspot_Burning":10,
+		"yna_starspot_Smouldering":8,
+		
+		"yna_grouse_Support":10,
+		"yna_grouse_Picket":10,
+		"yna_grouse_Snippet":8,
+		"yna_grouse_Bricket":8,
+		"yna_grouse_CA":3,
+		"yna_grouse_Breacher":3,
+		
+		"yna_weighbell_Assault":10,
+		"yna_weighbell_Strike":10,
+		"yna_weighbell_Support":10,
+		"yna_weighbell_Bouncer":8,
+		"yna_weighbell_Impart":8,
+		"yna_weighbell_Heating":6,
+		"yna_weighbell_Pester":6,
+		
+		"yna_arsonguard_Balanced":10,
+		"yna_arsonguard_Sweltering":7,
+		"yna_arsonguard_Mitrailuse":6,
+		"yna_arsonguard_Magma":5,
+	},
+	"combatCapital":{
+		"yna_sunblade_Standard":8,
+		"yna_sunblade_Searing":10,
+		"yna_sunblade_Gleaming":8,
+		"yna_sunblade_Heating":5,
+		
+		"yna_torchmace_Standard":12,
+		"yna_torchmace_Burning":8,
+		
+		"yna_urgrand_Standard":5,
+		"yna_urgrand_Arbiter":3,
+		"yna_urgrand_Monitor":3,
+		"yna_urgrand_Boistrous":3,
+		
+		"yna_perilstar_Ambitious":0.5,
+	},
+	
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+	},
+	"combatFreighterMedium":{
+	},
+	"combatFreighterLarge":{
+	},
+	
+	"civilianRandom":{
+	},
+
+	# carriers
+	"carrierSmall":{
+		"yna_spitroast_Catapult":10,
+		"yna_spitroast_CS":10,
+		"yna_spitroast_Support":10,
+	},
+	"carrierMedium":{
+	},
+	"carrierLarge":{
+		"yna_winterthorn_Standard":10,
+		"yna_winterthorn_Decisive":5,
+	},
+
+	# phase ships
+	"phaseSmall":{
+		"yna_glarestruck_Standard":10,
+		"yna_glarestruck_Spiker":5,
+	},
+	"phaseMedium":{
+		"yna_kindlebow_Assault":10,
+		"yna_kindlebow_Support":10,
+		"yna_kindlebow_Fuming":5,
+		"yna_kindlebow_Englaze":5,
+	},
+	"phaseLarge":{
+	},
+	"phaseCapital":{
+	},
+
+	# freighters and such
+	"freighterSmall":{
+		"yna_buffalo_Standard":10,
+	},
+	"freighterMedium":{
+		"yna_lumbergiant_Standard":10,
+	},
+	"freighterLarge":{
+	},
+	
+	"tankerSmall":{
+		"yna_clamcan_Standard":10,
+	},
+	"tankerMedium":{
+	},
+	"tankerLarge":{
+	},
+	
+	"personnelSmall":{
+	},
+	"personnelMedium":{
+	},
+	"personnelLarge":{
+	},
+	
+	"linerSmall":{
+	},
+	"linerMedium":{
+	},
+	"linerLarge":{
+	},
+	
+	# utility ships
+	"tug":{
+	},
+	"crig":{
+	},
+	"utility":{
+	},
+	
+	"orbitalStationLowTech":{
+	},
+	
+	"battlestationLowTech":{
+	},
+	
+	
+}

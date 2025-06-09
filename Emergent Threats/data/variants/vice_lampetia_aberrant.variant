@@ -1,14 +1,15 @@
 {
     "displayName": "Aberrant",
-    "fluxCapacitors": 0,
-    "fluxVents": 40,
+    "fluxCapacitors": 4,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_lampetia",
     "hullMods": [
         "vice_advanced_terminator_core",
         "magazines",
         "targetingunit",
-        "vice_adaptive_gravity_drive"
+        "vice_adaptive_gravity_drive",
+        "vice_feedback_handler"
     ],
     "modules": [{"SM 1": "vice_lampetia_secondary_drone_bay"}],
     "permaMods": [],
@@ -34,7 +35,7 @@
             "weapons": {
                 "WS 004": "ionpulser",
                 "WS 005": "ionpulser",
-                "WS 006": "ionpulser"
+                "WS 006": "vice_phased_electrolaser"
             }
         },
         {

@@ -1,6 +1,6 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 8,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_intrepid_ex",

@@ -1,6 +1,7 @@
 package data.scripts.xo.synthesis;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CharacterDataAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
@@ -22,12 +23,19 @@ public class CommandSubroutine extends SCBaseSkillPlugin {
     public void addTooltip(SCData data, TooltipMakerAPI tooltip) {
 		tooltip.addPara("Panoptic Interface fleetwide readiness penalty reduced by 10%%", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("Adaptive Tactical Core upgraded to gamma-level AI performance in the absence of a human captain", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addSpacer(10f);
+		tooltip.addPara("Acquire the Tactical Core adaptive hullmod", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Tactical Core");
     }
 	
 	//skill is never picked by npcs, bonuses handled by hullmods
 	@Override
 	public void onActivation(SCData data) {
 		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_command_subroutine_is_active", true);
+		if (data.isPlayer() && !Global.getSector().getMemoryWithoutUpdate().is("$gave_CS_hullmods", true)) {
+			CharacterDataAPI player = Global.getSector().getCharacterData();
+			player.addHullMod("vice_adaptive_tactical_core");
+			Global.getSector().getMemoryWithoutUpdate().set("$gave_CS_hullmods", true);
+		}
 	}
 	
 	@Override

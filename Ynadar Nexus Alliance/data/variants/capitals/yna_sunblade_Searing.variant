@@ -1,0 +1,80 @@
+{
+  "variantId": "yna_sunblade_Searing",
+  "hullId": "yna_sunblade",
+  "displayName": "Searing",
+  "goalVariant": true,
+  "fluxCapacitors": 28,
+  "fluxVents": 50,
+  "quality": 0.7,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "hardenedshieldemitter",
+    "auxiliarythrusters",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MIS01": "breach",
+        "MIS02": "breach"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MIS03": "heatseeker",
+        "MIS04": "heatseeker"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "yna_svento_m",
+        "WS0004": "yna_svento_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_fragcannon_l",
+        "WS0002": "yna_fragcannon_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "yna_ac_m",
+        "WS0007": "yna_ac_m",
+        "WS0008": "yna_ac_m",
+        "WS0009": "yna_ac_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "heavyburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "yna_pd_las1_s",
+        "WS0011": "yna_pd_las1_s",
+        "WS0012": "yna_flak_s",
+        "WS0013": "yna_flak_s",
+        "WS0014": "yna_flak_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

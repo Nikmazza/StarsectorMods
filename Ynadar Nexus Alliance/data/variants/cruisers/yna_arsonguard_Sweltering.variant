@@ -1,0 +1,87 @@
+{
+    "displayName": "Sweltering",
+    "fluxCapacitors": 17,
+    "fluxVents": 30,
+  "quality": 0,
+    "goalVariant": true,
+    "hullId": "yna_arsonguard",
+    "hullMods": [
+        "fluxdistributor",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "yna_arsonguard_Sweltering",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "MH 01": "yna_svento_m",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "MS 04": "reaper",
+                "MS 02": "reaper",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "yna_blaster_m",
+                "WS0002": "yna_blaster_m",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "yna_ac_s",
+                "WS0010": "yna_ac_s",
+                "WS0009": "yna_ac_s",
+                "WS0008": "yna_ac_s",
+                "WS0005": "yna_ac_s",
+                "WS0004": "yna_ac_s",
+                "WS0007": "yna_ac_s",
+                "WS0006": "yna_ac_s",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "yna_maul_s",
+                "WS0011": "yna_maul_s",
+                "WS0014": "yna_maul_s",
+                "WS0013": "yna_maul_s",
+                "WS0016": "yna_maul_s",
+                "WS0015": "yna_maul_s",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "MS 01": "heatseeker",
+                "MS 03": "heatseeker",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0020": "yna_pd_las1_s",
+                "WS0019": "yna_pd_las1_s",
+                "WS0018": "yna_pd_las1_s",
+                "WS0017": "yna_pd_las1_s",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

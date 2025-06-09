@@ -12,9 +12,10 @@
 		"vice_candor_emp_support":3,
 	},
 	"combatMedium":{
-		"vice_effulgent_assault":3,
-		"vice_effulgent_elite":2,
-		"vice_effulgent_torpedo":3,
+		"vice_effulgent_assault":2,
+		"vice_effulgent_torpedo":2,
+		"vice_effulgent_suppression":2,
+		"vice_effulgent_elite":0, # kept for backwards compatibility
 		"vice_fulgent_overclocked":2,
 		"vice_preceptor_standard":5,# makes ship show up despite Diktat anti-carrier doctrine
 		
@@ -27,9 +28,13 @@
 	"combatLarge":{
 		"vice_brilliant_elite":5,
 		"vice_brilliant_overclocked":3,
+		"vice_brilliant_suppression":5,
 		"vice_glycon_fire_support":4,
 		"vice_glycon_standard":4,
-		"vice_hellfire_pirate":1,	# pirate surprise
+		"vice_hellfire_pirate":1,		# pirate surprise
+		"vice_thunderbox_bandit":0.5,	# pirate surprise
+		"vice_thunderbox_outlaw":0.5,	# pirate surprise
+		"vice_thunderbox_reaver":0.5,	# pirate surprise
 		"vice_jubilant_assault":5,
 		"vice_jubilant_standard":5,
 		"vice_unifier_elite":5,		# makes ship show up despite Diktat anti-carrier doctrine
@@ -45,9 +50,10 @@
 	"combatCapital":{
 		"vice_exhortation_standard":2,	# makes ship show up despite Diktat anti-carrier doctrine
 		"vice_exhortation_elite":2,		# makes ship show up despite Diktat anti-carrier doctrine
-		"vice_incandescent_assault":5,
-		"vice_incandescent_attack":5,
-		"vice_incandescent_elite":5,
+		"vice_incandescent_assault":4,
+		"vice_incandescent_attack":4,
+		"vice_incandescent_elite":3,
+		"vice_incandescent_suppression":4,
 		"vice_radiant_suppression":5,
 		"vice_hellfire_pirate":5,
 		
@@ -71,8 +77,9 @@
 	},
 	
 	"carrierMedium":{
-		"vice_unifier_elite":5,		# for Nex random picker
-		"vice_unifier_standard":5,	# for Nex random picker
+		"vice_unifier_elite":5,			# for Nex random picker
+		"vice_unifier_standard":5,		# for Nex random picker
+		"vice_colossus_p_bandit":5
 	},
 	
 	"carrierLarge":{
@@ -87,6 +94,9 @@
 		"vice_proteus_command":2,		# for Nex random picker
 		"vice_exhortation_standard":2,	# for Nex random picker
 		"vice_exhortation_elite":2,		# for Nex random picker
+		"vice_thunderbox_bandit":3,		
+		"vice_thunderbox_outlaw":3,		
+		"vice_thunderbox_reaver":3,		
 	},
 	"freighterMedium":{
 		"vice_banteng_standard":10,

@@ -1,0 +1,50 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+#########################,,,,,,,,,,,,,,,,,,
+## Logistics,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+## Weapons,,,,,,,,,,,,,,,,,,
+Quickload Missile Racks,hhe_MissileReload,2,,,offensive,Weapons,7500,,,,5,10,15,20,data.hullmods.scripts.hhe_MissileReload,Increases the reload rate and missile regeneration rate of missile weapons by %s.,Increases missile weapon reload rate.,graphics/hullmods/hhe_MissileReload.png
+,,,,,,,,,,,,,,,,,,
+## Fighter,,,,,,,,,,,,,,,,,,
+Augmented Hangar Bay,hhe_DroneHangar,2,,Remnant,special,Fighters,6000,,,,2,4,7,10,data.hullmods.scripts.hhe_DroneHangar,The augmented hangar bay reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s and increases the rate at which it recovers by %s. All fighters deployed by this carrier has their weapon and engine repair rate increased by %s.,Improves fighter replacement refit rate and fighter repair rate in combat.,graphics/hullmods/hhe_DroneHangar.png
+,,,,,,,,,,,,,,,,,,
+SFL: Aegis System,hhe_sfl_AegisSystem,3,,S.F.L,special,Fighters,10000,,,,8,15,20,40,data.hullmods.scripts.hhe_sfl_AegisSystem,"The SFL: Aegis Subsystem as the name suggests improves fighter point-defense capabilities and effectiveness against missile threats.  The package installs a fighter-grade version of %s to the carrier's wings, with similar effects, except for the conversion of non-PD small weapons to become PD capable.  The range of all fighter PD weaponry is also increased by %s.
+
+Unfortunately, all SFL systems add a bulk to the original design of the fighter which decreases the rate it recovers by %s, along with reducing cargo by %s.
+
+%s",Increases durability of fighters.,graphics/hullmods/hhe_SFL_Aegis.png
+SFL: Predator System,hhe_sfl_PredatorSystem,3,,S.F.L,special,Fighters,10000,,,,8,15,20,40,data.hullmods.scripts.hhe_sfl_PredatorSystem,"The SFL: Predator Subsystem is a loadout specifically designed premier space dogfighting.  Increases the damage inflicted by fighters to targets smaller than Capital Ships by an additive %s per size class.  Predator Subsystems also increase autofire accuracy of equipped fighters, increase the top speed of equipped fighters by %s, and dramatically improves fighter handling by installing %s on all craft.
+
+Unfortunately, all SFL systems add a bulk to the original design of the fighter which decreases the rate it recovers by %s, along with reducing cargo by %s.
+
+%s",Increases offensive capabilities of fighters.,graphics/hullmods/hhe_SFL_Predator.png
+SFL: Hammer System,hhe_sfl_HammerSystem,3,,S.F.L,special,Fighters,10000,,,,8,15,20,40,data.hullmods.scripts.hhe_sfl_HammerSystem,"The SFL: Hammer Subsystem boosts performance of bomber and strike fighters against large targets.  Increases fighter damage to targets larger than Fighters by an additive %s per size class.  Bombers are equipped with a fighter-grade version of %s, significantly improving munition performance.
+
+Unfortunately, all SFL systems add a bulk to the original design of the fighter which decreases the rate it recovers by %s, along with reducing cargo by %s.
+
+%s",Increases strength of bomber fighters.,graphics/hullmods/hhe_SFL_Hammer.png
+,,,,,,,,,,,,,,,,,,
+## Special,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+## Built In,,,,,,,,,,,,,,,,,,
+Sentinel Subsystem,hhe_bi_sentinel_hullmod,,,,,,,,TRUE,,0,0,0,0,data.hullmods.scripts.hhe_bi_sentinel_hullmod,"The Sentinel is a primary Fleet Carrier specifically designed to deploy large amounts of fighters and interceptors. Due to this unique fighter production systems %s. In return the Sentinel systems reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s, and increases the rate at which it recovers by %s. Unfortunately this bulky carrier has its drawbacks as certain hullmods cannot be installed.
+
+Restricted Hullmods%s %s",Sentinel Subsystem,graphics/hullmods/hhe_sentinel.png
+Skysweeper Point Defense AI,hhe_bi_artificer_hullmod,,,,"defensive, merc","Weapons, Defenses",10000,,,,4,8,12,20,data.hullmods.scripts.hhe_bi_artificer_hullmod,"Gives all small non-missile weapons the ability to target incoming enemy missiles. Non-PD weapons converted to PD in this way will prioritize targeting fighter craft and ships over missiles. In addition, all weapons get the best possible target leading, regardless of combat radius, and all damage to fighters is increased by %s.",Increases weapon anti-fighter effectiveness,graphics/hullmods/hhe_artificer_ai.png
+Lions Guard LPC,gg_lg_fighter,,,,,,,,TRUE,,0,0,0,0,data.hullmods.scripts.gg_lg_fighter,"The Sindrian Diktat’s elite receives the cream of the crop in fighter craft.  Many Lion’s Guard LPCs are modified with post-production flux management upgrades and fighter-grade solar shielding to the finished airframe, resulting in 10% improvements to flux stats and a 20% reduction to energy weapon damage.
+
+While pushing the fighter’s flux core to their limits does provide a small and exploitable edge to the pilots, the solar shielding is the feature most appreciated by Lion’s Guard airmen (and the most coveted by Diktat regulars), as it affords protection to their craft against the dangers of both energy-based PD and the inner askonia system alike.  Studies suggest this is a major reason that Guardsmen pilots survive their tours of duty at a far higher rate than their regular military counterparts, and retire from service with fewer health defects.","Improves flux stats by 10%, energy weapon resistance by 20%",graphics/hullmods/lg_fighter.png
+XIV Battlegroup LPC,gg_xiv_fighter,,,,,,,,TRUE,,0,0,0,0,data.hullmods.scripts.gg_xiv_fighter,"The Fourteenth Battlegroup, like many other notable units, received customized LPCs suited to their needs.  In addition to often-revised armament loadouts, Fourteenth Battlegroup strike craft consistently feature reinforced core components increasing armor by a flat 50 units at the cost of 10% speed and maneuverability.  The energy management system is replaced by late Domain-era versions to support armament upgrades, increasing flux dissipation and capacity by 20% over standard models.","Increases armor by 50, flux stats by 20%, reduces speed and maneuverability by 10%",graphics/hullmods/xiv_fighter.png
+,,,,,,,,,,,,,,,,,,
+#### HIDDEN,,,,,,,,,,,,,,,,,,
+z Only Fighters,hhe_z_ftr_fighter_only,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_ftr_fighter_only,Only Fighters and Interceptors allowed,,
+z Only Bombers,hhe_z_ftr_bomber_only,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_ftr_bomber_only,Only Bombers allowed,,
+z Helot Proj Speed Bonus,hhe_z_ftr_helot_bonus,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_ftr_helot_bonus,Proj Speed Bonus,,
+z Sarissa Range Bonus,hhe_z_ftr_sarissa_bonus,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_ftr_sarissa_bonus,Range Bonus,,
+,,,,,,,,,,,,,,,,,,
+Z Overload Reduction,hhe_z_overload_reduction,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_overload_reduction,Overload duration reduction.,,
+Z Improved Shields,hhe_z_improvedshields,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_improvedshields,Shield fold rate and turn rate.,,
+Z Wpnflux Reduction,hhe_z_wpnflux_reduce,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_wpnflux_reduce,Weapon flux reduced by %s.,,
+Z Wpnflux Shield,hhe_z_wpnflux_impshield,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.scripts.hhe_z_wpnflux_impshield,No weapon flux and faster shields.,,
+,,,,,,,,,,,,,,,,,,
+############name####,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite

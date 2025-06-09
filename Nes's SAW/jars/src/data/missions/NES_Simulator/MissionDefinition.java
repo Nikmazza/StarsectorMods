@@ -36,14 +36,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters
-		api.addToFleet(FleetSide.PLAYER, "nes_fluorspar_blaster", FleetMemberType.SHIP, true);
-		api.addToFleet(FleetSide.PLAYER, "nes_hamter_assault", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.PLAYER, "nes_hamter_xiv", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_voltaire_standard", FleetMemberType.SHIP, true);
+		api.addToFleet(FleetSide.PLAYER, "nes_fluorspar_blaster", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_carnelian_dem", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_hampter_standard", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "nes_hermitaur_standard", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.PLAYER, "nes_hermitaur_path", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "nes_hammerfall_standard", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.PLAYER, "nes_carnelian_standard", FleetMemberType.SHIP, false);
-		api.addToFleet(FleetSide.PLAYER, "nes_voltaire_standard", FleetMemberType.SHIP, false);
 		
 		// Set up the enemy fleet.
 		// Thirty buffalos :>
@@ -52,16 +50,16 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
-		api.addToFleet(FleetSide.ENEMY,"buffalo2_Fighter_Support", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
+		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);
 		api.addToFleet(FleetSide.ENEMY,"buffalo2_FS", FleetMemberType.SHIP,false);

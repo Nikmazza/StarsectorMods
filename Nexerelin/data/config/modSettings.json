@@ -57,7 +57,8 @@
 		"customFactionTrackFactionColors":{
 			#"music_tritach_encounter_friendly":"hegemony",
 			"music_luddite_shrine":"luddic_church",
-		},
+		},		
+		
 		
 		# currently unused
 		#"faction_spawn_points":{

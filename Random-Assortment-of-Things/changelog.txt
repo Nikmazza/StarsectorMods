@@ -1,3 +1,91 @@
+Version 2.6.6
+Save Compatible
+
+-> Should hopefuly fix the bug that caused the NPC exoship to no longer be able to warp after an innitial warp, will only really be fixed on new saves though. This issue also caused crashes on some java versions.
+-> Fixed bought exotech ships spawning with 50% CR instead of 70%.
+
+
+
+Version 2.6.5
+Save Compatible
+
+-> Fixed a crash with the abyssal warning beacon intel entry.
+-> Potentialy fixed some weird crashes with the exoship warp.
+
+
+
+Version 2.6.4
+Save Compatible
+
+-> Fixed yet another crash with the escort planner.
+
+
+
+Version 2.6.3
+Save Compatible
+
+-> Fixed a crash with the Escort Planner that occured if the only ship deployed was an escorting ship.
+
+
+
+Version 2.6.2
+Save Compatible
+
+-> Added "Escort Planner", a button in refit that allows assigning ships to escort other ships by default.
+ -> Disabled by default. Need to enable it in the Lunalib Config.
+
+
+
+Version 2.6.1
+Save Compatible
+
+-> Fixed a crash that could occur when the Exoship warped.
+
+
+
+Version 2.6.0
+
+-> Updated to 0.98.
+-> Fixed Abyssal Crew Conversion and the Automated Conversion being blocked by Neural Shards.
+-> Fixed instances where officer levels were set as floats, causing issues with other mods.
+-> Compiled for Java 17 and Kotlin 2.0
+
+
+
+Version 2.5.15
+Save compatible with 2.4.x
+
+-> Made the raphael compatible with a change in a future version of SoTF.
+
+
+
+Version 2.5.14
+Save compatible with 2.4.x
+
+-> Fixed the UI indicator for the gilgamesh shield not being positioned correctly.
+-> Fixed a few issues that made certain shaders not render on older hardware.
+-> Fixed a bug that restocked the exoship after completing the questline.
+
+
+
+Version 2.5.13
+Save compatible with 2.4.x
+
+-> Made some adjustments to the exoships route to make it a bit likier to stumble in to the same system as it.
+-> Now generates atleast 3 Hyper-Nav Exotech Beacons per save. (Was a minimum of 2)
+-> Potentialy fixed the issue that made slow-moveing not prevent abyssal storm damage.
+
+
+
+Version 2.5.12
+Save compatible with 2.4.x
+
+-> Moved the rare abyss title screen to Lunalibs system.
+-> Fixed the gilgamesh being able to use shield hullmods, despite not receiving any effects from them.
+-> Fixed some issues with the Gilgamesh Shield UI.
+
+
+
 Version 2.5.11
 Save compatible with 2.4.x
 

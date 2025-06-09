@@ -1,0 +1,66 @@
+{
+  "variantId": "hhe_astral_culann_elite",
+  "hullId": "hhe_astral_culann",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 36,
+  "fluxVents": 48,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSL-01": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WSS-03": "hhe_pdpulser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSM-01": "heavyburst",
+        "WSM-02": "heavyburst",
+        "WSS-01": "pdburst",
+        "WSS-02": "lrpdlaser",
+        "WSS-04": "pdburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSM-03": "heavyburst",
+        "WSM-04": "heavyburst",
+        "WSS-05": "hhe_pdpulser",
+        "WSS-06": "hhe_pdpulser",
+        "WSS-07": "hhe_pdpulser",
+        "WSS-08": "hhe_pdpulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing",
+    "broadsword_wing",
+    "thunder_wing",
+    "thunder_wing",
+    "thunder_wing"
+  ]
+}

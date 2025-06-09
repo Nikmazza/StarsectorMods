@@ -18,6 +18,7 @@ import lunalib.backend.ui.settings.LunaSettingsUISettingsPanel
 import lunalib.backend.ui.versionchecker.LunaVersionUIPanel
 import lunalib.backend.util.getLunaString
 import lunalib.lunaSettings.LunaSettings
+import lunalib.lunaTitle.TitlescreenManager
 import org.lazywizard.lazylib.MathUtils
 import org.lazywizard.lazylib.ui.LazyFont
 import org.lwjgl.input.Keyboard
@@ -58,6 +59,9 @@ class CombatHandler : EveryFrameCombatPlugin
 
     override fun init(engine: CombatEngineAPI?)
     {
+
+        TitlescreenManager.decideOnTitle()
+
         if (enableVersionChecker == null) {
             enableVersionChecker = LunaSettings.getBoolean("lunalib", "luna_enableVC")
         }
@@ -138,7 +142,8 @@ class CombatHandler : EveryFrameCombatPlugin
         val invokeMethod = MethodHandles.lookup().findVirtual(methodClass, "invoke", MethodType.methodType(Any::class.java, Any::class.java, Array<Any>::class.java))
 
         var foundMethod: Any? = null
-        for (method in titlescreen::class.java.methods as Array<Any>)
+        var methods = titlescreen::class.java.methods as Array<Any>
+        for (method in methods)
         {
             if (getNameMethod.invoke(method) == "getScreenPanel")
             {
@@ -311,7 +316,7 @@ class CombatHandler : EveryFrameCombatPlugin
                         val getNameMethod = MethodHandles.lookup().findVirtual(fieldClass, "getName", MethodType.methodType(String::class.java))
                         val setAcessMethod = MethodHandles.lookup().findVirtual(fieldClass,"setAccessible", MethodType.methodType(Void.TYPE, Boolean::class.javaPrimitiveType))
 
-                        val instancesOfFields: Array<out Any> = instanceToGetFrom.javaClass.getDeclaredFields()
+                        val instancesOfFields: Array<out Any> = instanceToGetFrom.javaClass.getDeclaredFields() as Array<out Any>
                         for (obj in instancesOfFields)
                         {
                             setAcessMethod.invoke(obj, true)

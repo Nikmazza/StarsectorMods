@@ -5,7 +5,8 @@
     # multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
         "hulls":{
-            "A_S-F_rinka_p":0.9, # rarer than normal pirate_bp ships, because it can be kinda nasty
+            "A_S-F_rinka_p":0.9, # rarer than normal pirate ships, because it can be kinda nasty
+            "A_S-F_scrag":0.9, # rarer than normal pirate ships, because the burn is too funny
         },
     },
 
@@ -13,12 +14,16 @@
     "shipsWhenImporting":{
         "hulls":[
             "A_S-F_rinka_p",
+            "A_S-F_morris_p",
+            "A_S-F_scrag",
         ],
     },
 
     "knownShips":{
         "hulls":[
             "A_S-F_rinka_p",
+            "A_S-F_morris_p",
+            "A_S-F_scrag",
         ],
     },
 
@@ -27,6 +32,7 @@
 			"A_S-F_kaksos",
 			"A_S-F_laaja",
 			"A_S-F_copperhead",
+			"A_S-F_nexter",
 
 			"A_S-F_bramble",
 			"A_S-F_thicket",

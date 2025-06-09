@@ -1,11 +1,10 @@
 {
     "displayName": "Automated",
     "fluxCapacitors": 0,
-    "fluxVents": 20,
+    "fluxVents": 24,
     "hullId": "vice_astral_ai",
-	"goalVariant": false,
     "hullMods": [
-        "missleracks",
+        "hardenedshieldemitter",
         "stabilizedshieldemitter",
         "vice_adaptive_flight_command"
     ],
@@ -41,9 +40,9 @@
                 "WS 003": "pdlaser",
                 "WS 004": "pdlaser",
                 "WS 005": "pdlaser",
-                "WS 006": "pdlaser",
-                "WS 007": "pdlaser",
-                "WS 008": "pdlaser"
+                "WS 006": "pdburst",
+                "WS 007": "pdburst",
+                "WS 008": "vice_ionstreamer"
             }
         }
     ],

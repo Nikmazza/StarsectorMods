@@ -10,7 +10,6 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
-import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
@@ -38,22 +37,25 @@ import data.scripts.util.MagicCampaign;
 
 public class IXSystemCreation {
 
-	private static int FAC_COUNT = 0;
-	
-	//increase population of starting IX and TW colonies if modded faction count meets lunalib threshold
+	//higher difficulty IX initial system spawn
 	private static boolean isFortress() {
 		return (("Challenging").equals(LunaSettings.getString("EmergentThreats_IX_Revival", "ix_difficulty_setting")));
 	}
-
+	
+	//alternate spawn location
+	private static boolean isAltLocation() {
+		return (LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_alt_location"));
+	}
+	
 	public static void generate(SectorAPI sector) {
 
 		//make the system
 		StarSystemAPI system = sector.createStarSystem("Zorya");
-		LocationAPI hyper = Global.getSector().getHyperspace();
 		system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
 
 		//create the star
-		PlanetAPI star = system.initStar("ix_zorya", // unique id for this star
+		String starString = (isAltLocation()) ? "ix_zorya_alt" : "ix_zorya";
+		PlanetAPI star = system.initStar(starString, // unique id for this star
 				StarTypes.RED_GIANT,  // id in planets.json
 				1100f, // radius (in pixels at default zoom)
 				600); // corona radius, from star edge
@@ -146,7 +148,7 @@ public class IXSystemCreation {
 		
 		market_starbase.addSubmarket(Submarkets.SUBMARKET_OPEN);
 		market_starbase.addSubmarket(Submarkets.GENERIC_MILITARY);
-		market_starbase.addSubmarket("ix_honor_guard_market"); 
+		market_starbase.addSubmarket("ix_honor_guard_market");
 		market_starbase.addSubmarket(Submarkets.SUBMARKET_STORAGE);
 		market_starbase.getTariff().modifyFlat("default_tariff", market_starbase.getFaction().getTariffFraction());
 
@@ -332,11 +334,11 @@ public class IXSystemCreation {
 	private static void generateTrinity(SectorAPI sector) {
 		//make the system
 		StarSystemAPI system = sector.createStarSystem("Danu");
-		LocationAPI hyper = Global.getSector().getHyperspace();
 		system.setBackgroundTextureFilename("graphics/backgrounds/background_galatia.jpg");
 		
 		//create the star
-		PlanetAPI star = system.initStar("tw_danu", // unique id for this star
+		String starString = (isAltLocation()) ? "tw_danu_alt" : "tw_danu";
+		PlanetAPI star = system.initStar(starString, // unique id for this star
 				StarTypes.ORANGE,  // id in planets.json
 				650f, // radius (in pixels at default zoom)
 				300); // corona radius, from star edge

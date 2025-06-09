@@ -1,0 +1,38 @@
+{
+    "displayName": "Networked",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "vice_heron_auto",
+    "hullMods": ["advancedoptics"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_heron_ai_basic",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "gravitonbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "vice_ionstreamer"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pdburst",
+                "WS 002": "pdburst",
+                "WS 004": "pdburst"
+            }
+        }
+    ],
+    "wings": [
+        "lux_wing",
+        "lux_wing",
+        "vice_helia_wing",
+        "vice_helia_wing"
+    ]
+}

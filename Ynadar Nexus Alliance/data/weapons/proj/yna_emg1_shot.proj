@@ -1,0 +1,19 @@
+{
+	"id":"yna_emg1_shot",
+	"specClass":"projectile",
+	#"spawnType":"BEAM",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	
+	"onHitEffect":"data.scripts.weapons.yna_emg1_hit_effect",
+	
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":80.0,
+	"width":10.0,
+	"fadeTime":0.25,
+	"fringeColor":[180,25,35,255],
+	"coreColor":[255,255,255,180],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0	
+}

@@ -9,6 +9,8 @@ import com.fs.starfarer.api.campaign.listeners.FleetEventListener
 import com.fs.starfarer.api.loading.VariantSource
 import com.fs.starfarer.api.util.Misc
 import second_in_command.misc.NPCOfficerGenerator
+import second_in_command.misc.SCSettings
+import second_in_command.misc.backgrounds.AssociatesBackground
 import second_in_command.misc.baseOrModSpec
 import second_in_command.misc.logger
 import second_in_command.skills.PlayerLevelEffects
@@ -43,6 +45,7 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
 
 
 
+        activeOfficers.add(null)
         activeOfficers.add(null)
         activeOfficers.add(null)
         activeOfficers.add(null)
@@ -82,6 +85,12 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
 
 
     fun getActiveOfficers() = activeOfficers.filterNotNull()
+
+    fun remove4thOfficer() {
+        if (!SCSettings.enable4thSlot && activeOfficers.filterNotNull().size > 3) {
+            setOfficerInSlot(3, null)
+        }
+    }
 
     fun generateNPCOfficers() {
 
@@ -190,6 +199,9 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
         else if (getOfficerInSlot(2) == null) {
             setOfficerInSlot(2, officer)
         }
+        else if (getOfficerInSlot(3) == null && SCSettings.enable4thSlot) {
+            setOfficerInSlot(3, officer)
+        }
     }
 
     fun getAssignedOfficers() : ArrayList<SCOfficer?> {
@@ -215,6 +227,7 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
         if (getOfficerInSlot(0) == officer) return 0
         if (getOfficerInSlot(1) == officer) return 1
         if (getOfficerInSlot(2) == officer) return 2
+        if (getOfficerInSlot(3) == officer) return 3
 
         return null
     }
@@ -231,6 +244,11 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
 
 
     override fun advance(amount: Float) {
+
+        //1.3.0 Update fix
+        if (activeOfficers.size <= 3) {
+            activeOfficers.add(null)
+        }
 
         for (skill in getAllActiveSkillsPlugins()) {
             skill.advance(this, amount)

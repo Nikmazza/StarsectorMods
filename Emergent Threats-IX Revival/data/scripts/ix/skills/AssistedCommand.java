@@ -18,6 +18,7 @@ public class AssistedCommand {
 		
 		//can't use colony condition check, effect does not apply for player admin
 		public void apply(MarketAPI market, String id, float level) {
+			if (market == null || market.getStats() == null) return;
 			if (market.hasFunctionalIndustry(CORE)
 						|| market.hasFunctionalIndustry(NODE)
 						|| market.hasFunctionalIndustry(PLAYER_CORE)
@@ -27,6 +28,7 @@ public class AssistedCommand {
 		}
 
 		public void unapply(MarketAPI market, String id) {
+			if (market == null || market.getStats() == null) return;
 			if (market.getAccessibilityMod() != null) market.getAccessibilityMod().unmodifyFlat(id);
 		}
 		
@@ -45,15 +47,17 @@ public class AssistedCommand {
 	
 	public static class Level2 implements MarketSkillEffect {
 		public void apply(MarketAPI market, String id, float level) {
-				if (market.hasFunctionalIndustry(CORE)
-						|| market.hasFunctionalIndustry(NODE)
-						|| market.hasFunctionalIndustry(PLAYER_CORE)
-						|| market.hasFunctionalIndustry(PLAYER_NODE)) {
+			if (market == null || market.getStats() == null) return;
+			if (market.hasFunctionalIndustry(CORE)
+					|| market.hasFunctionalIndustry(NODE)
+					|| market.hasFunctionalIndustry(PLAYER_CORE)
+					|| market.hasFunctionalIndustry(PLAYER_NODE)) {
 				market.getStats().getDynamic().getMod(Stats.COMBAT_FLEET_SIZE_MULT).modifyFlat(id, FLEET_SIZE / 100f, "AI assisted command");
 			}
 		}
 		
 		public void unapply(MarketAPI market, String id) {
+			if (market == null || market.getStats() == null) return;
 			market.getStats().getDynamic().getMod(Stats.COMBAT_FLEET_SIZE_MULT).unmodifyFlat(id);
 		}
 		

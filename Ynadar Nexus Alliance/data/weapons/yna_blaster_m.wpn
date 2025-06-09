@@ -1,0 +1,36 @@
+{
+	"id":"yna_blaster_m",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"mountTypeOverride":"HYBRID",
+	"size":"MEDIUM",
+	"displayArcRadius":450,
+	"turretSprite":"graphics/ynadar/weapons/me/yna_mphe1_t_b.png",
+	"turretGunSprite":"graphics/ynadar/weapons/me/yna_mphe1_t_r.png",
+	"turretGlowSprite":"graphics/ynadar/weapons/me/yna_mphe1_t_g.png",
+	"hardpointSprite":"graphics/ynadar/weapons/me/yna_mphe1_h_b.png",
+	"hardpointGunSprite":"graphics/ynadar/weapons/me/yna_mphe1_h_r.png",
+	"hardpointGlowSprite":"graphics/ynadar/weapons/me/yna_mphe1_h_g.png",
+	"visualRecoil":8.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[20, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[22, 0],
+	"hardpointAngleOffsets":[0],
+	"fringeColor":[255,60,60,225],
+	"coreColor":[255,50,150,225],
+	"glowColor":[255,20,0,125],
+	"specialWeaponGlowWidth":15,
+	"specialWeaponGlowHeight":20,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":36,
+					   "particleSizeMin":12.0,
+					   "particleSizeRange":32.0,
+					   "particleDuration":0.13,
+					   "particleCount":35,
+					   "particleColor":[200,230,185,175]},
+	"projectileSpecId":"yna_blaster_m_shot",  # projectile that will be fired
+	"fireSoundTwo":"mining_blaster_fire",
+}

@@ -1,0 +1,48 @@
+{
+    "displayName": "Anointed",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "goalVariant": false,
+    "hullId": "venture_pather",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "vice_field_repair_nanites",
+        "reinforcedhull",
+        "shield_shunt",
+		"vice_mission_deloy_faith"
+    ],
+    "permaMods": ["vice_mission_deloy_faith"],
+    "sMods": [],
+    "variantId": "vice_venture_path",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "heavymg",
+                "WS 006": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "atropos",
+                "WS 007": "atropos"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "ionpulser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "dualflak",
+                "WS 003": "dualflak"
+            }
+        }
+    ]
+}

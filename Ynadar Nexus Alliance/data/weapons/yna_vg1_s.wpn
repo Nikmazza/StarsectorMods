@@ -1,0 +1,32 @@
+{
+	"id":"yna_vg1_s",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"SMALL",
+	"displayArcRadius":500,
+	"everyFrameEffect":"data.scripts.weapons.yna_volleycannon_effect",
+	"turretSprite":"graphics/ynadar/weapons/sb/yna_svg1_t_b.png",
+	"turretGunSprite":"graphics/ynadar/weapons/sb/yna_svg1_t_r.png",
+	"hardpointSprite":"graphics/ynadar/weapons/sb/yna_svg1_h_b.png",
+	"hardpointGunSprite":"graphics/ynadar/weapons/sb/yna_svg1_h_r.png",	
+	"visualRecoil":3.0,  # the gun sprites are only used if this is non-0
+	#"renderHints":["RENDER_BARREL_BELOW"],
+	"turretOffsets":[4, 0, 7, 0, 10, 0, 4, -5, 7, -5, 10, -5, 4, 5, 7, 5, 10, 5],
+	"turretAngleOffsets":[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"hardpointOffsets":[10, 0, 13, 0, 16, 0, 10, -5, 13, -5, 16, -5, 10, 5, 13, 5, 16, 5],
+	"hardpointAngleOffsets":[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"specialWeaponGlowWidth":4,
+	"specialWeaponGlowHeight":12,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",
+	"separateRecoilForLinkedBarrels":"TRUE",	# Allows shotgun-type blasts
+	"muzzleFlashSpec":{"length":6.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":12.0,
+					   "particleSizeMin":12.0,
+					   "particleSizeRange":14.0,
+					   "particleDuration":0.2,
+					   "particleCount":4,
+					   "particleColor":[165,225,185,135]},
+	"projectileSpecId":"yna_vg1_s_shot",  # projectile that will be fired
+	"fireSoundTwo":"yna_vg1_s_fire",
+}

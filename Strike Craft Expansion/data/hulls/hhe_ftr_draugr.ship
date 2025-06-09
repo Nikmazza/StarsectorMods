@@ -1,0 +1,86 @@
+{
+  "hullName": "Draugr",
+  "hullId": "hhe_ftr_draugr",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/hhe_ftr_draugr.png",
+  "style": "HIGH_TECH",
+  "height": 32,
+  "width": 30,
+  "center": [15, 15],
+  "collisionRadius": 17.5,
+  "shieldCenter": [0.5, -0],
+  "shieldRadius": 20.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": 0,
+      "locations": [12, -0]
+    },
+    {
+      "id": "WSS-03",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HIDDEN",
+      "arc": 180,
+      "angle": -45,
+      "locations": [2, -10]
+    },
+    {
+      "id": "WSS-02",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HIDDEN",
+      "arc": 180,
+      "angle": 45,
+      "locations": [2, 10]
+    },
+    {
+      "id": "SYS-01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 135,
+      "locations": [-7, 8]
+    },
+    {
+      "id": "SYS-02",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": -135,
+      "locations": [-7, -8]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, 3.5],
+      "length": 22.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-11, -3.5],
+      "length": 22.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -1.5, 14,
+    11.5, 0,
+    -1.5, -14,
+    -9.5, -5.5,
+    -9.5, 5.5
+  ]
+}

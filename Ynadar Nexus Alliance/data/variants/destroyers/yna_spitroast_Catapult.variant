@@ -1,0 +1,36 @@
+{
+  "variantId": "yna_spitroast_Catapult",
+  "hullId": "yna_spitroast",
+  "displayName": "Catapult",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 20,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "unstable_injector",
+    "targetingunit",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pilum_large"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "yna_ftr_heavy_wing",
+    "yna_ftr_light_wing"
+  ]
+}

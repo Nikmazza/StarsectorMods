@@ -1,0 +1,269 @@
+id,type,text1,text2,text3,notes
+yna_drone_torp,SHIP,"An easily distinguished drone modification with a missile pod mounted on the side. Crude, but simple and efficient. Protects the ship with its own weight and the guided missiles it  fires.",,,
+yna_ftr_light,SHIP,"Reliable for its semi-autonomous control handled in the safety of the carrier host, Copperbacks are fast, lightweight interceptors that engage their targets with upfront accuracy with its long-ranged snipergun and select missile systems.",,,
+yna_ftr_heavy,SHIP,"A modest drone fighter with a decent weaponry and engagement capability, Hurlblades earned its interest of being a safe option for both offensive and defensive strategies by its cheap cost and versatility.",,,
+yna_bmr,SHIP,"One of the heaviest bombers for its deployment size, the Beatdown bomber is one select strikecraft that can take up a beating and dish another out without compromise.",,,
+,,,,,
+yna_cinderbull,SHIP,"The lightest of the blockhead warships in the Ynadar arsenal, the Cinderbull is a mobile gunship with a nasty surprise inside its simple exterior along with a versatile compartment that accomodates any role.
+
+Modest by design, the Cinderbull is an economical powerhouse for the Ynadarian defense group prided by its simplistic assembly line and no baseline forge requirements other than its existing blueprint. A cheap, reliable artillery piece as many of the ""Midliner"" school members compared to.",,,
+yna_nitroknife,SHIP,"One of the more exotic warships found outside the Persean sector, a seemingly unorthodox interceptor frigate but with a very noteworthy battlefront advantage, powered by a very powerful reactor.
+
+The technology the Nitroknife primarily utilizes would easily be dismissed on the same grounds the Scarab have, an environmental casuality tampering field that accelerates the perception and physicality of the used ship, but it has no presence of such phase technology. Instead the frigate makes use of permanently overclocking its reactor and core systems including its cyberized crew to the point such a similar affect occurs in normal space.
+
+Rumors of Jandori ""Time Reactors"", as many would call, soon surfaced from the far reaches of the Persean sector, commonly percepted as a ""death clock"" for many daring explorers in their attempt to search for such a device. Though in reality, it really is just an overclocking mechanism that even the reluctantly undisclosed Oculian technology can find itself in the same category if not for its efficient but unstable ion reactor technology they tend to make use of. A vital component that soon to be outfitted on heavily modified Lashers dubbed as Nitroknives.",,,
+yna_pummeler,SHIP,"Implemented as a middling combatant in the Ynadar doctrine, the Pummeler assures its role with a respectable arsenal and a spinal mounted missile bay for a robust combat style.
+
+A Brawler derivative with an ablative protective gear and a modest arsenal besiding its ordinance at the spinal piece, Pummelers are more than ideal as a hardhitter and assault gun in space.",,,
+yna_maulsling,SHIP,"A heavily compacted assault frigate with an advanced targeting system and a reliable missile loader makes the Maulsling an entrusted companion in the fleet.
+
+Recent innovation of a much more advanced frigate with long-ranged capabilities gave hope to the slowly winded resistance in the first war. But much like many such breakthroughs, it was lost along with the others as research stations went dark in the coming years.
+
+Rediscovered as the codex implies, the Maulsling is a formidable oppoent even for the larger ships as its improved area-finder makes it easier to land shots that would otherwise stray misses that scuttle for nothing. The Ynadar alliance made sure it goes through great lengths as an escort. ",,,
+yna_glarestruck,SHIP,"An easily misleading phase ship of bright painted colors built with sinister haste and an ability to throw as many ordinance against other frigates of its own size, the Glarestruck is a sophisticated but hardy vessel.
+
+Ynadarian alloys are not something to easily dismiss as its incredible flexibility makes it easier to bounce off violent wave forces in a form of high explosive weaponry. Despite this, the alloys are prone to receive foreign fragments that causes the structural integrity to brittle and lose its cohesive flexibility, same cannot be said with its sensors as they yield early responses with merely a single blink while keeping safe distances.
+
+The Glarestruck's plating is ideal for significant phase resistance, its semi-elastic form makes it bounce through smoothly within P-space without any substantial tear, especially critical in protecting its vital components. And thus, a new phase class is born with its unique baryonic phase stems to replace is traditional, bulkier coils.",,,
+yna_clamcan,SHIP,"Designed as a self-defensive tanker with a surprising feature in mind, Clamcan tankers can easily throw raiders off guard with its reliable and seemingly basic missile launcher.",,,
+,,,,,
+yna_ballpeinhead,SHIP,"A very retrofitted Hammerhead with versatility in mind, the astute design of the Ballpeinhead is meant to hammer down anything that comes in its path with simple but very reliable tricks on its sleeves.",,,
+yna_spitroast,SHIP,"An extreme design that forgoes any basic armament as it is not needed for a carrier, Spitroast carriers are known frontier shooters for its very supportive ordinance and carrier command prowess.
+
+Nobody exactly knows how the Spitroast was even in the production line besides its respective carrier capabilities as a light carrier destroyer. Its spinal deck coverage design made it more suspect that its too unstandardized to even be a Domain-mandated pattern.
+
+Nonetheless, its mount design has made several engineers skeptical about its capacity of any large weapon it could hold at its disposal.",,,
+yna_flamedial,SHIP,"One of the proposed but denied destroyer designs of the older times, designed to siege the enemy front with its reliable energy bombardment capabilities. The Flamedial is a rare sight seen in the distant reaches of Persean space.
+
+Its non-inclusion in the tech archives is viewed less of its expenses but more of its lack of reliable defensive systems to defend itself from opposing forces during the first AI war. The destroyer design vanished much later.
+
+Wrecked data pieces were slowly pieced together by independent communities, only to find itself in the similar regards of the Sunder model, large weapon compartments harnessing a similarly massive power generator complex. Not many were interested in such a blueprint until Ynadarian explorers retrieved it for their own use.",,,
+yna_quillpress,SHIP,"An easily serviceable destroyer with the upfront demands of a once versatile carrier freighter into a heavily armed warship with precision guidance cabilities that can outperform ships larger than its own size.
+
+It's very unusual for the ship the like Gemini-class to receive a massive overhaul with an in-depth combat retrofit in mind. Losing its hangar bay and portions of its much redundant cargo mechanism, the Quillpress modification left much to be desired as a long-ranged support vehicle with four medium ordinances and a seemingly embrassing missile compartment at the front.
+
+The compartment, however, is where most of the cargo configurations the ship underwent with. An advanced autoloader mechanism dedicated to supply the small muniitions rack makes the Quillpress more than enough of a warship to stay around the battlefield and leave their opponents up for a surprise.",,,
+yna_rockblaster,SHIP,"A heavily modified rendition of the Quillpress is a mobile artillery piece with an improved lidar rangefinder. Very adept at long-range and capable of handling its own in prolonged firefights, the Rockblaster is a true heavy combat brawler.",,,
+yna_kindlebow,SHIP,"Less of an actual doctrine direction and more of deviant by design, this uncomfortably unconventional phase ship that forgoes modesty but possesses a significant power concentration usually suited for bombardment.
+
+The Kindlebow is fairly a misnomer for ""Midliner"" ships, but thanks to its advanced alloys and key hull features, a new phase line is formed with some caveats. Its core design surrounding two large weapons and the Ynadarian Baryonic phase stem retrofit, where the stems themselves are embedded directly on the hull. With new studies for more conventional phase technology pouring into the Ynadarian archives, the Kindlebow reached a focal point where its inception came to be.
+
+No one knows how far these studies humanity has ventured off from traditional Phase technology, but for the concern of the Persean sector, best let it be from someone very far away from it.",,,
+yna_buffalo,SHIP,"Heavily modified to adapt in the furthest reach the Persean sector ever could, this Buffalo is improved in most of its standard aspects with the exception of its already reliable cargo container latched on a much sturdier spinal column.
+
+Ynadar retrofits are not simply acceptable in the Persean norms for its reliance on automated redesign and are often involved with questionable scientific figures within their ranks. This makes their Buffalo a rare find, a border worthy ship that is almost never encountered within the general space.
+
+Despite this, the ship is heavily armed for a freighter in addition of its higher upfront cost. Equipped with better targeting computers and two additional turrets, this Buffalo is a headache for many pirates that tried their hands on this yellow cargo ship. Sadly for them, with an unusual tracking advantage, pirates would normally get hit first on almost every encounter.",,,
+,,,,,
+yna_starspot,SHIP,"Closely regarded as an aspirant model, the Starspot cruiser succeeds in that aspect with its simple and reliable weapon design and particularly modest economy value compared to its sibling ships.
+
+Reconnisance cability has always been a crucial requirement for every Ynadarian fleet to have; most of them have long-ranged sensors, redundant rangefinders and reliable prediction tracking systems for an unusually strong targeting potential. The Starspot is no different.
+
+Having a large sensor dish next to its bridge, the ship can detect a variety of targets, whom can, intercept at great distances with good engine power and an easily assessed mass ratio. This makes the Starspot ideal for flanking manuevers or hard assaults that would prevent even the most agile warships to escape.",,,
+yna_grouse,SHIP,"It is unknown whether it is an Eagle or a Falcon by design, but the Grouse cares little as its weapon systems are just enough to put an end for any rival it can potentially be accompanied against.
+
+There is a unique distinction with the modernized cruiser school craft the Grouse possess that neither of its siblings were capable of, a substantial use of a munitions autofactory placed at the center deck of the ship. Such a device is not needed to be directed from the bridge, but more on the crew who can easily take in and process materials for active weapons to make use of.
+
+Convincingly, it matches the same concentration as an Eagle but a flexible weapon configuration allows the Grouse to perform more than just pummeling its enemies. And in thanks with the addition of Ynadarian targeting systems, the cruiser is even more than enough in every situation.",,,
+yna_hailslammer,SHIP,"Demented by its awkward ordinance structure, this pocket arsenal ship is compelled to shower its myriad of long-ranged munitions on unsuspecting fleets. And as it does, its saturation would be mistaken for a battleship.",,,
+yna_arsonguard,SHIP,"A cruiser school experiment went wrong due to its concentrated weapon emplacement of the wrong type in the wrong era, the Arsonguard still prevailed in its earnest as a heavy duty complement thanks to its vastly improved rangefinder and weapon diversity.
+
+The movement of replacing the venerable Dominator was underway with a supposed modernized chassis that is lighter and more suitable for closer engagements, but due to the shortcomings of larger and more powerful warships, this project was easily overshadowed by equally sizable designs. The original blueprint ""Titanguard"" was to be forever archived in the foreseeable future.
+
+Of course, it was then the blueprint was found and integrated with advanced targeting technologies which caused a divergence. A heavy cruiser capable of engaging distant targets, bombarding them with a myriad of lighter ballistics and even effectively pick targets on its whim. The Arsonguard was the result of the change.",,,
+yna_weighbell,SHIP,"A once discontinued cousin of the Valkyrie, this very armored cruiser is poised to strike its enemies at a distance with a powerful sensor system to keep on track of its targets. A streamlined warship from a forgotten age.",,,
+yna_lumbergiant,SHIP,"An advanced multi-type transport vehicle designed to carry various loads with little dependence from the rest of the fleet, the Lumbergiant is an Ynadarian mainstay vessel because of it.
+
+With the popularity of the Atlas superfreighter at its height, so did the desire to take one down just for its very lucrative outcome. Many such designs were to contend with such a threat and one of them happens to be the Lumbergiant pattern.
+
+Stemming from larger original design, the thought of a cruiser freighter was easily put down due to its redundancy fo the more robust Colossus model. Several configurations were considered to allow the ship to do more than just cargo while squeezing every spare space it can for weapon systems. The Lumbergiant has not met the expectations, but it certainly held out as a persistent alternative to Buffalos for the Ynadar system.",,,
+,,,,,
+yna_sunblade,SHIP,"The forgotten and unproposed design later used by the Ynadar Nexus, a battlecruiser fit to take on any mission with its simply all-rounded layout. The Sunblade is both a powerful match for the Ynadarian armada and a ominous mention of rediscoveries on lost tech.
+
+No one in the Persean sector has ever heard of such a craft, neither did its failures as an actual combatant in many fields. Lacking the significant firepower in long-range ordinance being its primary factor. Modest by design and with only a select few armaments in its disposal, the Sunblade was severely irked in its history, thus the prototype was scrubbed almost immediately in the second war. Ynadar engineers looked for a solution to resolve this unfortunate mishap.",,,
+yna_torchmace,SHIP,"A heavy baseline warship with an excellent defensive configuration and mobility, the Torchmace can easily hammer down any advesary at any pace it pleases.
+
+Tug-style hulls are not as easily acceptable in the Domain ship design projects due to its obvious topheavy mass distribution and leaving its more vulnerable components literally behind its framework. However, such a style is overlooked since space tends to favor fronthead ships with durable faces in order to protect those vulnerable components from behind. Most designers would usually steer away from this pattern but few seemed to point out that the torque of the rotation is where its strongest providing significant thrust efficiency where most spread out ships tend to struggle.
+
+Thanks to its physical nature, the Torchmace can easily outmanuever ships of its own size. And with the accomodation of a versatile weapons array, the battlecruiser can engage a wide selection of opponents it can harass.",,,
+yna_flarebringer,SHIP,"While not as outstanding as most of the capital ships dedicated for combat, this heavily armored freight barge can contend the worst a freighter fleet would encounter alone in deepspace with its long-ranged bombardment platform and dedicated missile systems.
+
+Conflicts from not so distant timeframes since the Nexus' inception, the thought of distant stellar trading had catch on with a bashful, but predictable reality; No one want to travel the depths of hyperspace several light years away from the sector core only to receive pirate raids or corporate interceptions after months-worth of flight, but instead rather want to engage with a force of relative combat fitness.
+
+The Flarebringer is frankly the bandaid answer for anything. Its upfront expenses are still not favorable, but it makes up for its massive cargo holdings and passenger decks; allowing for an eager captain with a strong fleet to field one, and is commonly practiced as a planetary raiding craft in the event of an embargo strategy or if there are forbidden technologies needed to be unearthed with force.",,,
+yna_winterthorn,SHIP,"A true multipurpose carrier, the Winterthorn is a sight unsettling to many admirals. Thanks to its amassed fighter and missile composition, an arsenal ship of its kind is fairly enough to nudge the fate of every battle.
+
+A design years late after the inception of the first war, the Winterthorn was horrendously challenged by more adapted designs. Incredibly bulky and requiring too much manpower to bring the ship to operational order, the ship was shortly shelved to make room for more accessible ships of its own size.
+
+Modernization brought the titan to speed, a large autofactory to sustain its massive workload for both munitions and strikecraft and a powerful reactor to reactivate what would previously be deadweight for the hulk, allowing the ship to perform beyond what would easily be failures in its past.",,,
+yna_urgrand,SHIP,"Less of a battleship and more of an actual mobile station, the Urgrand is one of many forgotten wonders of human ingenuity. Proposed to even supercede both of the so-called ""Midliner"" battleships of its size and the ""Other"" respected as Domainer warships. With an arsenal far beyond the Persean standards, the Urgrand left nothing but high expectations that were never realized until now.
+
+This beast of a ship was a massive promise to bring in the oncoming wars ahead, but ceased due to corruption and association of several unwanted benefactors, who were killed off as the final designs were put into place. The Urgrand remained suspect of unreliability and budget funneling that took toll of near loss as time goes by.
+
+Almost untouched, it found its way in the hands of the Ynadar doctrine as its blueprints lied restlessly in the remnants of a proud age it hoped to live in. And at long last, the Urgrand was finally built, and the promise of its power is now rightfully realized and truthfully so.",,,
+yna_perilstar,SHIP,"A mobile space station with a power projection scaling beyond most other supercapital ship of its kind. The Perilstar is the pearl of the Ynadarian design, both by its incredible might and its predictably precariously steep logistical cost.
+
+No blueprint of its being was ever founded elsewhere but in Jandor, slowly pieced together from hulls of various designs like a very large puzzle forcefully fitted together. Prototypes have been made for such a project, with every failure of ever lifting the vessel on its own above atmosphere, as per versitility sake, seemed to be an impossible task. The Perilstar is tasked as a contingency outfit for its enormous size, enough to carry strategic loads of any kind.
+
+Nonetheless with a massive stroke of luck, the ship has finally flown from the surface with no danger of its own being. Many awed at such a seemingly titanically pointless task, but such many knew it was a matter of time another ominous awakening is right around the corner.",,,
+,,,,,
+,,,,,
+yna_ac_s,WEAPON,"Designed with an advanced targeting device in mind, this autocannon fits the role of an assisting standoff firing queue. While moderately complex, it allows some stress off from its more compelling members while still punishing opponents from afar.",,,
+yna_maul_s,WEAPON,"An underscaled Mauler of the assault gun variety, capable of being easily amassed and, with a larger cylinder, capable of besieging armor in short order.
+
+The Prototype-34 Stormgun Mauler is much like any other assault gun of its kind but with a much larger caliber that only the outdated mortar cannon is comparable. Due to this, its ignition core was too unwieldy for modular systems to allow, preventing it from ever put into production. Added to its complexity is its slow reload time and an unbearably short range in its time.
+
+Its modern counterpart was able to adjust against these shortcomings, and with a more flexible modular mounting system, the weapon is as easily available to the manufacturer of the gun.",,,
+yna_flak_s,WEAPON,"A compact flak cannon with an advanced guidance system that allows much faster tracking and precise anti-unit response.
+
+The thought of having the traditionally-sized flak cannon has been an irritating setback for countless captains over the course of history, let alone have an old relic anti-unit defense that is simply set to the modern design. So, in frustration, Ynadar mechanics went to work on such a defensive weapon and delivered to their forges for construction.
+
+The resulting weapon obviously met expectations much to the chagrin of the Persean sector, knowing standard strikecraft would have been dealt with a flak cannon of its size much sooner. But alas, such life within such a sector.",,,
+yna_sg1_s,WEAPON,"A very long-ranged, large caliber autogun loaded with guided gyrojet explosive bullets capable of puncturing armor at safe distances.
+
+Gyrojet artillery seemed to be dead-end project in its true old past, as the equipment designed for such a role was proven too expensive and work-intensive in its time. Arrived in the age of nanoforge technology however, the weapon technology is met with moderate praise as the bullets can finally be done in an automated manner. Unfortunately, Gyrojets still had to contend with munitions that are specialized for one specific role; to destroy its target. In which such munitions already evolved to become more devastating throughout the ages.
+
+Unlike most of forgotten technologies, the Gyrojet is simply remembered and is not needed to be drawn from the lost archives to understand its mechanics. Ynadar engineers are put to work in such a short time that the earliest functioning gyrojet cannons are already built within months after the designs' inceptions. A standard template became available quickly after. Installation of such weapons on the ships are still painstaking as it requires a specific factory to assemble the bullets on the spot.",,,
+yna_vg1_s,WEAPON,"A self-contained volley autocartridge mechanism that unloads walls of flechettes against its unsuspecting targets. A rather simple solution to a rather complicated problem.
+
+Volleyguns did not have a healthy relationship in Old Earth due to its impracticality of loading and unloading its unnatural ammo tubes. Which makes it unfit in many military applications. But due to the rise of automation and the revival of ship-to-ship combat in space, Volleyguns returned in popularity in hopes the users would be able to hit their target over long distances. However, shortcomings have yet again snagged the volleygun's success due to its reckless pollution of stray metal that come to haunt the Domain soon after and having its entire platform dedicated just for the barrels designed to shoot its target. Maturity would consequently develop self-detonation of such munitions but came too late since the arrival of the first AI war.
+
+Its revival in the Persean sector would come from sources such as the Jandori group with a controlled weapon platform capable of firing a myriad of flechettes that can easily tear right through shielding and even armor if plentiful enough.",,,
+,,,,,
+yna_ac_m,WEAPON,"A longer, more complex variant than the standard autocannon, this sniper-complacent design allows the ship to fire at ranges much further down but at the cost of greater computation power requirements and complex cooling system to accommodate the larger caliber.
+
+An uncompromised design; a triple-barreled autocannon with a large caliber than of Persean standards. Very accurate and with reliable recoil compensators makes the weapon more than a match for any Ynadar ship.",,,
+yna_flak_m,WEAPON,"An advanced auto-targeting dual flak cannon with much better rotation motors and recoil dampeners. While it costs a significant caliber downgrade, it compensates with much more accurate shots and faster firing capability.
+
+The Widowmaker has certainly covered grounds as a formidable anti-strikecraft ordinance but is held back by its terrible accuracy and unnecessary recoil. The Ynadarian flak cannon utilizes a smaller caliber for this reason. Propelled on a thinner but much tighter compressed chamber means the explosives can be launched at a great distance without accounting too much on the Square-Cube fragility law.
+
+Once the bullets arrive on the target, they take a slight delay as they close in to the target to maximize its damage output rather than instantly activate where standard flak proximities safely do regardless of its intended target. Thus achieving a more efficient blast core strength.",,,
+yna_sg1_m,WEAPON,"Set up in a larger platform, this gyrojet autocannon can freely produce its munitions uninterrupted, allowing a much more sustained flow of guided explosive rounds for heavier targets.",,,
+yna_vg1_m,WEAPON,A larger volleygun platform complemented into a battery assembly. Its larger and more industrial scale does little to change its ferocity of blasting its enemies with its volley of stacked flechettes.,,,
+,,,,,
+yna_ac_l,WEAPON,"Multiple barrels nested onto a single unit, this seemingly basic design allows the weapon have a variety of modifications into it, such as throwing as many mid-ranged rounds to its designated target with minimal power draw.
+
+The Type-250 was more of a drawing board blueprint than a working prototype in its time. Six interlocked barrels on a branched autoloader mechanism, the Type-250 realized itself as too complex for production, let alone maintenance.
+
+Modernized schematics remedied this with a matured manufacturing protocol for modular weapons. Six autocannons are instead integrated into the barbette with its same old autoloader design. The resulting product is a forward battery with a reliable firepower and range to make up its cost.",,,
+yna_ac2_l,WEAPON,"A fairly simple, meek and unimpossing ballistic cannon that is reliably adept in disrupting shields. With great range and recoil compensation allow the autocannon perform more conveniently in entrenched combat exchanges.
+
+The Mark Nine has proven to be a worthy relic compared to the less reliable and unsustainable relatives in its history, and with it, no competitor has yet to manifest against this unrivaled design. Even with the upcoming 72-model variant, the result is no different to the other losers. The shovelware 72-model was soon taken into interest by Ynadar forces, as they scrape the depths of several fallen research stations after the great wars.
+
+Reconfigured and recalibrated specifically for their vessels, the 72-model solidly held a mainstay service with its robust dual-forwarded recoil system and high-density 380mm static dampener rounds ripping shields at safe distances.",,,
+yna_maul_l,WEAPON,"An upscaled Mauler weapon system with a much larger caliber, setting itself up as a defensible anti-armor siege weapon leaving its unfortunate enemies much farther open in its wake.
+
+Belying its massive size, this Mauler has no direct relation to its original, smaller design especially on its explosive ordinance it shells at its enemies at a distance. While it still partakes similarities with the Hellbore template, it has no bewildering scientific advancements behind it. No antiproton shells, no baryonic coating. The forge for the weapon only produces a simple but large antimatter loaded explosive round with the necessary protection to reach its target properly.
+
+The explosive warhead in question assisting the antimatter reaction is a traditional shaped charge  igniter normally found in a Hephaestus round but at a large mass. Which is a painful reminder for certain gunner crews that; it is safer to work in the conditions of a Pezuubi siege cannon than the sweltering environment the Heavy Mauler has.",,,
+yna_fragcannon_l,WEAPON,"A large recoiless cannon with a massive ablative round placed on the peak of its bore, capable of unleashing a torrent of abrasive fragments upon impact. Equipped with a sophisticated rangefinder, this weapon is founded on the grounds of being a destructive support fire.
+
+There is no surprise of being the eldest main gun in the Ynadar arsenal, the Ptraares fragcannon has nothing fancy under its chassis. What it only has is an open bore with a rifled payload that sticks out of the hole once its previous round is fired from the gun.
+
+Its real notable feature however is its gunnery controls on the turret itself. Telegraphing the next targets the weapon is supposed to pepper with its massive fletchette rounds. The range of such simple projectiles could go as far as the gunner could eyeball the crosshairs.",,,
+yna_flak_l,WEAPON,"A ludicrously expensive flak cannon with a massive defensive payoff, shredding myriad of ordinance thrown against its host and enough to puncture large crafts with ferocity, thanks to its larger shells and rapid tracking response.
+
+Largely ignored by the Domain due to its upfront cost and maintenance, the Type-134 was shelved out of service for an unusual amount of time. Even since the encounters of the AI war, the weapon never experienced combat in the conflict.
+
+Its potential did not go unnoticed and is rebranded into as a modernize defensive system. With a decent rotary mount and autoloader in check, the flak cannon rolled out from the newer yards of Jandor as a devastating deterrent to any strikecraft both at land and in space.",,,
+,,,,,
+,,,,,
+yna_emg_s,WEAPON,"Fires light but potent micromagnetic shells that house dense weaponized ions over long distances without loss. This basic shooter could do more than simply annoy their foes.
+
+While this magnetic gun is one of many mass accelerators that were tested in space warfare, its nature as a very low mass projectile weapon leaves this series much to be desired, and was later shelved as a proof of concept than anywhere useful.
+
+As advances of energy shielding and more electronic-focused components arise, the usage of magnetic weapons against such infrastructure allow this magnet cannon to be graced into notice.
+
+While awful against armor, the micromagnetic technology is advanced enough to enclose a large amount of electric current within a single projectile which, upon release, could cause significant damage to ship internals especially when hit with several more of it.",,,
+yna_enmis_s,WEAPON,"A versatile launcher that allows microchips to manifest high amounts of energy into guided projectiles capable of following targets from a distance and are drawn from a virtually limitless reserve. Reliable but expensive.
+
+Energy missiles is a once disproved concept for many technologists, due to its simple impracticality of containing charged particles in an environment that is- not contained. Certain Domain researchers, however, continue to pursue such an impossible technology only to discover advanced micromagnetics and specialized plasticate circuit mixtures that can survive the extreme conditions of such energy enclosure.
+
+Then so, the energy missile technology was developed but shortlived as the laboratory where it was made vanished, even from the archives, only for fragments to reoccur as drifting data echoes into the emptiness of hyperspace.
+
+Slowly pieced together, the Ynadar weapons research practiced its adaptation as an anti-strikecraft deterrent, freeing more capable ordinances on larger targets that would otherwise be wasted munitions.",,,
+yna_pd_las1_s,WEAPON,"A middle-range precision microwave laser gun designed to melt key components of missiles and rockets in order to destroy them at incredible efficiency.
+
+Discoveries of the Oculian Armada had led the Ynadar engineers to work on a more sophisticated anti-missile weapon. The Microwave beam met the specifications and is mounted on a fast, rotating turret with intelligent tracking computers. While not as readily available as the miniaturized Glint beam cannons and not particularly easy to install, the Ruk pattern is simply better in every aspect and powerful enough to keep the perimeter clean from clutter.",,,
+,,,,,
+yna_emg_m,WEAPON,A triple-barreled energy cannon that propels magnet shells in rapid succession. Simple and light but it gets the job done.,,,
+yna_pulse_m,WEAPON,"An advanced technical pulse cannon variant with recoiling barrels that propel its shots over great distances, allowing supportive firing capabilities for any ship that could mount it.
+
+While its easily contriving to notice energy weapons with recoiling barrels as backwards and, for the most part, cosmetic, the configuration pertains to the rapid magnetic exchange each capicator can take as they unload their reversive kinetic flow to the energy barrel it fires. Not every component could hold a lot of power in a single place. Which is where the Tuechbi managed to isolate the issue by using multicoiled barrels to accelerate solidified energy projectiles at great distances. 
+
+With each passing coil, the projectile is sped up faster, until it leaves its cooled bottleneck with precision and stability to make up its expense.",,,
+yna_blaster_m,WEAPON,"A heavily retrofitted mining blaster, turned into an active anti-armor system with an extreme range coverage thanks to its advanced targeting system at the cost of a very high ordinance configuration.",,,
+yna_enmis_m,WEAPON,"A larger guided energy projector with better firing solution, the Agiem weapon pattern fires a burst of small bolts of homing energy to pressure mobile targets.
+
+A more modernized fit of its smaller counterpart, the Agiem has more efficiency due to its larger conduction space and a more reliant microchip manufacturing overhead. Outsider engineers still remained baffled by its alien design despite its mechanical simplicity with a forge production that would just make a normal microchip melt in the process.",,,
+,,,,,
+yna_pulse_l,WEAPON,"A controlled derivative of the Autopulse Cannon, this variant chambers its pulses in multiple barrels before throttling them at long-range with decent effiency.
+
+With the recent success of the Tuechbi prototype, its larger model was set as a goal within a span of an Earth year. Its practical design is to ensure the barrels are constantly maintained at safe temperatures. While it could not compete to the absurdity of the Mjolnir cannon, the weapon still finds its place on Ynadar fleets for its flexibility and low technology profile.
+
+Tri-Tachyon had several attempts to dismantle the weapon only to find progress to be inconclusive and irritating, all thanks to its modest magnetic design and energy projection.",,,
+yna_enmis_l,WEAPON,"Fit to serve the role as a long-ranged support weapon, this barrage variant of the elusive energy missile technology is also very versatile due to its sufficiently strong damage output and reliable homing capabilities.
+
+It did not take long for a bigger variant to be put into action because of its easy usage despite its severe complexity underneath its chassis. A microforge of such a scale is not much of an issue to build off in an Ynadarian hull, as the shared flexibility of its ordinance manufacturing makes it susceptible to change without losing stability in processing the microchips needed to use such a weapon.
+
+However, ships that are not of the familiar design will still require an overhaul surrounding the weapon platform with enough space to usually become detrimental.",,,
+yna_hil_l,WEAPON,"A seemingly simple exterior of a very high powered laser capable of cutting down the toughest of armor. HSLs are a siege weapon of choice for Ynadarian captains who can take on supportive and aggressive options.
+
+One of the rarer weapons to be found on Ynadar warships, this powerful beam cannon finds itself in the middle of being absurd as in destructive and very capable to impractical and unwieldy to use.
+
+It has no real secret but its electron catalyzer is more massive than of a HIL design, which produces a more unstable beam output but with a much hotter temperature exchange. Such instability is what makes the beam travel so slowly in space as the heat is the only means for the beam to connect further as it travels.
+
+In an atmospheric environment however, the beam could travel far and so quickly. Its intensity is so great that it can effectively drill surfaces, evaporating fairly much anything, hazardously, in its radius in a span of a few minutes. The equivalent of the feat would take months for a mining operation to setup a hole for a rig.",,,
+yna_plas1_l,WEAPON,"Hailed as Ynadar's strongarm of a weapon, a powerful plasma caster with a significant energy stability allowing the projectile to travel through great distances and deal unrecognizable damage to its target in a single hit.
+
+The discovery of a Fusor-type Plasma ejection as a weapon is unprecedented, especially in the midsts of wars that soon passed in the remnants of the Domain. Such a design was never completed in its time as missing variables and blueprints for certain components continue to pummel its exists into limbo. An Ynadarian scientist happens to piece all this together. While not exceptional in every regard, the Exocast pattern is more than enough to decimate even the larger targets as long as enough energy continues to flood its systems. 
+
+Plasma researchers remain skeptical of its existence, despite its apparent such of existence and the actual combative output it already drew out in Persean records. Though their whimsical thoughts of mini-universes will continue to haunt them through the taunts of Ynadarian admirals with such a weapon anywhere.",,,
+,,,,,
+,,,,,
+yna_svento_s,WEAPON,"Easily mistaken as a torpedo due to its stubby figure, it still functions as a conventional missile. Svento ordinances are great damage dealers due to its respective portability of its size.",,,
+yna_srm1_s,WEAPON,"A micromissile package with an unusual ordinance installment, Spotlings are very agile anti-strikecraft munitions that home on targets with no resistance in its flight pattern.",,,
+,,,,,
+yna_svento_m,WEAPON,"A pod system dedicated for the crowded Svento missiles, which makes such a deliverance system ideal for prolonged engagements.",,,
+yna_mudcloud_m,WEAPON,"Low-powered, reactive ablation rockets that are meant to fragment on the intended target, as shards of its remains damage the internals of the ship. Mudclouds are reliable firecrackers that fit such role.",,,
+yna_las1_dem_m,WEAPON,"An endearing drone experiment went missing for centuries, the Bristlebulb DEM torpedo was never thought to be such an irritating weapon to deal with especially in the eyes of daring captains with their small crafts.
+
+Bristlebulbs were originally not meant to be weapons but as early microwave-based scanning probes with some success over its early days. Records shown that Domain miners adopted the tool to locate rich deposits of rare metal, which indeed proven its worth on the field. But as expansion of the human domain grew, so did competition and the usage of such probes were no longer capable of meeting demands, it simply fell off mainstream ever since.
+
+In current times, the probes are more or less retrofitted to overload its microwave sensors into weapons frying anything that comes into contact with its arisen wavelengths. With a durability of what is already a Domain standard and readily available autoforge kit, Bristlebulbs return to the human sectors as a final vendetta for its loss.",,,
+,,,,,
+yna_las1_dem_l,WEAPON,"Built to hold as many long duration, guided laser missiles, the Bristlebulb pod takes advantage of such a load to overwhelm even fairly defended targets.",,,
+,,,,,
+,,,,,
+yna_plas1_xl,WEAPON,"A heavily augmented Exocast prototype designed to project the power of a mobile station, this weapon is ensured to destroy its target once in its range.",,,
+,,,,,
+,,,,,
+yna_ac_s_ftr,WEAPON,A downscaled Efeven autogun to be fitted on strikecraft with fewer shots. No less powerful than its original with its large caliber and distinctly long range.,,,
+,,,,,
+yna_svento_s_ftr,WEAPON,An autofactory rack dedicated for the Bellclap missile system. Capable of firing far too many missiles within its service time unless struck or the drone returns to its host.,,,
+yna_mudcloud_ftr,WEAPON,A sizeable fighter rack for Mudcloud rockets that can punch through opened holes of armor and damage internals or use downrange against other fighters alike.,,,
+,,,,,
+,,,,,
+,,,,,
+yna_hvy_heat,WEAPON,"A custom-fit Salamander system built for longer ranges. While slightly less potent than its original, its increase mass and ordinance amassment makes up for it.",,,
+yna_supilum,WEAPON,"A heavily modified two-stage missile launcher designed for Hailslammers that tend to sit at the backlines. Thanks to its reliable automunitions factory, this weapon is a persistent monster that pesters at even the largest fleets.",,,
+,,,,,
+yna_mine_strike,SHIP_SYSTEM,Teleports three proximity mines to the target area. The mines will slowly track nearby enemy ships and explodes a few seconds after its proximity trigger is activated.,Offensive,Teleports three proximity mines to the target area.,
+yna_multifeed,SHIP_SYSTEM,"Briefly accelerates the targeting and coolant systems that handle ballistic and energy emplacements for a short time, safely increasing their damage output but requires a short resting period to be used again.",Offensive,Provides a flux cost reduction and boost to the rate of fire of all non-missile weapons.,
+yna_fluxjet,SHIP_SYSTEM,Engages extra thrusters and opens flux conduits for release to greatly improve the ship's maneuverability and top speed. The opened conduits consequently allows weapons to fire freely and faster for a brief period once additional thrusters are exhausted.,Offensive,"Provides a brief boost to maneuverability and top speed, then switches to increasing flux effiency and rate of fire for non-missile weapons.",
+yna_hardener,SHIP_SYSTEM,"Briefly draws heat from reactor, shield and weapon systems to energize the armor plating, increasing damage resistance and armor strength while reducing firing speed.",Defensive,Briefly reduces damage taken while increasing flux dissipation but shuts off shields and reduces weapon firing speed.,
+yna_rangefinder,SHIP_SYSTEM,"Activates the ship's active lidar rangefinder to greatly improve its main gun performance with the expense of shutting off most of its defensive weapons and missile systems. If left unused, it passively tracks targets for all of the ship's weapon systems.",Offensive,"Greatly increases the range, rate of fire, and accuracy of the large turret but shuts off other turrets. Increases weapon range moderately if not in use.",
+,,,,,
+ynadar,FACTION,"Basically a splinter group of the Persean League who, for all intents and purposes, chose to disregard the alliance's grievances towards the Hegemony and pursue their efforts in establishing a foothold for the archeological. Much to the dismay of the League, this group was casted out which consequently allowed their advancement to become slightly ahead of most their peers.
+
+Maintaining the balance between deep exploration and honorary tribute to the lost Domain, the Nexus is poised to discover secrets and share what they know to the sector and vowed to find away to rid of entities beyond the Persean sector's control, with the Jandori Shipwright department being the head of this pioneering campaign.
+
+Not fond of their exploratorium doctrine, many corporate factions akin to Tri-Tachyon see such a faction as a threat to their monopoly despite the Hegemony's lax of control over the far distant colonies Ynadar has settled in. On the other hand, the Nexus is seen more as a fettered oracle in the perspective of the Church as such knowledge would otherwise fell through deft ears, as omens that tell the future of humanity.
+
+No one knows what else would lie in the void more than what the Ynadar Nexus know.",,,
+,,,,,
+yna_planet_kalor,CUSTOM,"A frustratingly harsh planet with meager resources up for grabs for the Alliance. Pathers tend to look in to this planet for some reason. Other than that, a simple rock planet with shiny rocks and an industry where said rocks are molten down for processing and shipping to the Ynadar capital, Jandor.",,,
+yna_planet_skulato,CUSTOM,"A burning wasteland left untouched by Ynadar forces. Not as a solid reminder of some silly mistake by weapons of great destruction or by infighting that went horribly wrong. It's just a dead planet without anything particularly remarkable about its horrible state. And no, it has no relics inside.",,,
+yna_planet_jandor,CUSTOM,"Nothing too interesting about the Ynadar capital, Jandor. A fortified world, with a strong industry handle maintaining the exploration armada of the Nexus. Ore is also processed here to ease construction of its advanced ships as space elevators lift and bring down materials in accord. Its farmlands are heavily catered by automation brought from the spoils of deep space scavanging. Large weapon batteries are visible on the surface, pointed at anything that isn't scanned by onlooking patrol.",,"Its modest spaceport on the surface floor is fairly unusual however. For the most part, security are not particularly phased about glowing machinery being departed from several freighters and even from some eager frigates. Faces here are awfully familiar, Hegemony, League and even Sindrians share their hands as crew before their leave on the golden ships. Some Oculians also appear here but not for very long, while Lanestate unioners laugh at the sight of the admiral who just arrived here, probably you perhaps.",
+yna_planet_hekosi,CUSTOM,"Unlike its close-to-the-sun sibling Kalor, Hekosi is a kind yet cold planet. While ore is particularly less interesting in the mines, it possesses the much needed volatiles that can be harvested by hand so safely that it becomes a virtually irreplacable for a home. Its been closely regarded as a second home planet for Ynadar, enough that retirerees tend to live the rest of their lives on this planet. They would even come up with hobbies that can be sold for the rest of the system.",,,
+yna_planet_miran_a,CUSTOM,"Most of the newcomers and the slightly belligerent set up shop on this moon. With a military standing and a less than spectacular mining operation, Miran a is a base. A simple base where it holds as a threshold between actually signing up for the exploration armada or leaving, since it has its own fuel production here.",,,

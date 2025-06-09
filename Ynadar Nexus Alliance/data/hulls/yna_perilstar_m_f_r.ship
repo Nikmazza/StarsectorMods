@@ -1,0 +1,99 @@
+{
+  "hullName": "Module",
+  "hullId": "yna_perilstar_m_f_r",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ynadar/ships/perilstar/perilstar_f_r.png",
+  "style": "YNADAR",
+  "height": 132,
+  "width": 196,
+  "center": [98, 66],
+  "collisionRadius": 120,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 123,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec",
+    "yna_perilmod",
+    "yna_LinkedHull",
+    "reduced_explosion",
+    "always_detaches"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [48, 72]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [34, 40]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -35,
+      "locations": [15, 20]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -20,
+      "locations": [-3, -2]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": -20,
+      "locations": [-3, -34]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": -40,
+      "locations": [-22, -58]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": -35,
+      "locations": [-44, -78]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -55, -92,
+    -55, -68,
+    -20, -35,
+    -20, 10,
+    45, 94,
+    63, 83,
+    42, 27,
+    11, -4,
+    11, -47,
+    -36, -92
+  ]
+}

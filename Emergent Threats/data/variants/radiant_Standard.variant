@@ -1,7 +1,7 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 0,
-    "fluxVents": 27,
+    "fluxVents": 31,
     "goalVariant": true,
     "hullId": "radiant",
     "hullMods": [

@@ -1,0 +1,62 @@
+{
+  "variantId": "yna_hailslammer_Assault",
+  "hullId": "yna_hailslammer",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MHS01": "yna_las1_dem_m",
+        "MHS02": "yna_las1_dem_m",
+        "MHS03": "yna_las1_dem_m",
+        "MHS04": "yna_las1_dem_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MHS05": "pulselaser",
+        "MHS06": "pulselaser",
+        "WS0004": "pulselaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "BW01": "yna_supilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heatseeker",
+        "WS0002": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_flak_s",
+        "WS0005": "yna_flak_s",
+        "WS0006": "yna_flak_s",
+        "WS0007": "yna_flak_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

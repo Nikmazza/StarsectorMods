@@ -7,6 +7,8 @@ public class ASF_loaderOverdriveStats extends BaseShipSystemScript {
 
 	public static final float ROF_BONUS = 9.0f;
 	public static final float FLUX_REDUCTION = 80f;
+
+	public static final float REPAIR_BOOST = 0.4f;
 	
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		
@@ -19,6 +21,9 @@ public class ASF_loaderOverdriveStats extends BaseShipSystemScript {
 		float multc = FLUX_REDUCTION * effectLevel;
 		stats.getBallisticWeaponFluxCostMod().modifyPercent(id, -multc);
 		stats.getMissileWeaponFluxCostMod().modifyPercent(id, -multc);
+		
+		stats.getCombatWeaponRepairTimeMult().modifyMult(id, 1f - (REPAIR_BOOST * effectLevel));
+		stats.getCombatEngineRepairTimeMult().modifyMult(id, 1f - (REPAIR_BOOST * effectLevel));
 	}
 	
 	public void unapply(MutableShipStatsAPI stats, String id) {
@@ -29,6 +34,9 @@ public class ASF_loaderOverdriveStats extends BaseShipSystemScript {
 		
 		stats.getBallisticWeaponFluxCostMod().unmodify(id);
 		stats.getMissileWeaponFluxCostMod().unmodify(id);
+		
+		stats.getCombatWeaponRepairTimeMult().unmodify(id);
+		stats.getCombatEngineRepairTimeMult().unmodify(id);
 	}
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {

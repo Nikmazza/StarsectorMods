@@ -1,0 +1,39 @@
+{
+	
+	# Bonnetgun
+	"hhe_bonnetgun_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/hhe_bonnetgun_fire_01.ogg","pitch":0.950,"volume":0.5},
+		{"file":"sounds/sfx_wpn_guns/hhe_bonnetgun_fire_01.ogg","pitch":0.975,"volume":0.5},
+		{"file":"sounds/sfx_wpn_guns/hhe_bonnetgun_fire_01.ogg","pitch":0.925,"volume":0.5},
+	],	
+	
+	# AUTOGUN
+	"hhe_autogun_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/hhe_autogun_fire_01.ogg","pitch":1.05,"volume":0.15},
+	],
+	
+	# VULCAN RUNT CANNON
+	"hhe_vulcanrunt_fire":
+	[
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_01.ogg","pitch":1.10,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_01.ogg","pitch":1.12,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_01.ogg","pitch":1.14,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_02.ogg","pitch":1.10,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_02.ogg","pitch":1.12,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_02.ogg","pitch":1.14,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_03.ogg","pitch":1.10,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_03.ogg","pitch":1.12,"volume":0.155},
+		{"file":"sounds/sfx_wpn_guns/hhe_vulcanrunt_fire_01_03.ogg","pitch":1.14,"volume":0.155},
+	],
+	
+	# PHASE PULSER
+	"hhe_phase_pulser_fire":
+	[
+		{"file":"sounds/sfx_wpn_energy/hhe_phase_pulser_fire_01.ogg","pitch":1,"volume":0.85},
+		{"file":"sounds/sfx_wpn_energy/hhe_phase_pulser_fire_01.ogg","pitch":1.05,"volume":0.85},
+		{"file":"sounds/sfx_wpn_energy/hhe_phase_pulser_fire_01.ogg","pitch":0.95,"volume":0.85},
+	],
+	
+}

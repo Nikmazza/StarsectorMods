@@ -1,0 +1,52 @@
+{
+  "id": "rwc_positron",
+  "specClass": "projectile",
+  "projectileSpecId": "rwc_positron_shot",
+  "type": "BALLISTIC",
+  "mountTypeOverride": "HYBRID",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/rwc_erailgun_turret.png",
+  "turretGunSprite": "graphics/weapons/rwc_erailgun_recoil_turret.png",
+  "hardpointSprite": "graphics/weapons/rwc_erailgun.png",
+  "hardpointGunSprite": "graphics/weapons/rwc_erailgun_recoil.png",
+  "visualRecoil": 8,
+  "renderHints": [RENDER_BARREL_BELOW],
+    "autocharge": true,
+  "turretOffsets": [
+    22.5,
+    6,
+    22.5,
+    -6
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    38,
+    6,
+    38,
+    -6
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 34,
+    "spread": 15,
+    "particleSizeMin": 15,
+    "particleSizeRange": 15,
+    "particleDuration": 0.3,
+    "particleCount": 10,
+    "particleColor": [
+      130,
+      90,
+      200,
+      255
+    ]
+  },
+  "fireSoundTwo": "rwc_positron_fire"
+}

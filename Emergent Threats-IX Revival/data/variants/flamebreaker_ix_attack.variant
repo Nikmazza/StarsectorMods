@@ -11,8 +11,8 @@
         "ix_point_defense_medium_handler",
         "ix_point_defense_medium",
         "ix_dawnstar_controller",
-        "ix_dawnstar_neutron",
-        "ix_dawnstar_neutron_handler"
+        "ix_dawnstar_proton",
+        "ix_dawnstar_proton_handler"
     ],
     "permaMods": [],
     "sMods": [],

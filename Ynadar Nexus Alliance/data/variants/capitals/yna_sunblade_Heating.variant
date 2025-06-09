@@ -1,0 +1,74 @@
+{
+  "variantId": "yna_sunblade_Heating",
+  "hullId": "yna_sunblade",
+  "displayName": "Heating",
+  "goalVariant": false,
+  "fluxCapacitors": 43,
+  "fluxVents": 50,
+  "quality": 0.3,
+  "permaMods": [],
+  "hullMods": [
+    "turretgyros",
+    "extendedshieldemitter",
+    "frontemitter",
+    "advancedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MIS01": "yna_svento_s",
+        "MIS02": "yna_svento_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "yna_blaster_m",
+        "WS0004": "yna_blaster_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_plas1_l",
+        "WS0002": "yna_plas1_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "yna_ac_m",
+        "WS0007": "yna_ac_m",
+        "WS0008": "yna_ac_m",
+        "WS0009": "yna_ac_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MIS03": "swarmer",
+        "MIS04": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "yna_flak_m",
+        "WS0010": "yna_flak_s",
+        "WS0011": "yna_flak_s",
+        "WS0012": "yna_pd_las1_s",
+        "WS0013": "yna_pd_las1_s",
+        "WS0014": "yna_flak_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

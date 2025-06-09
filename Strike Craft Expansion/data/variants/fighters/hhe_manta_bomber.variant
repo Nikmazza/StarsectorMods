@@ -1,0 +1,38 @@
+{
+  "variantId": "hhe_manta_bomber",
+  "hullId": "hhe_ftr_manta",
+  "displayName": "Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-03": "hhe_ftr_locust",
+		"WSS-04": "hhe_ftr_locust_dummy"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-05": "hhe_prickler",
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-01": "hhe_ftr_pdlaser_orange",
+		"WSS-02": "hhe_ftr_pdlaser_orange",
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

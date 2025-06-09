@@ -12,9 +12,12 @@ import data.scripts.ix.PanopticonCorePlugin;
 public class HvbHandler extends BaseHullMod {
 	
 	private static String CONFLICT_MOD = "autorepair";
-	private static String TO_ADD_MOD_R = "vice_adaptive_entropy_arrester"; //radiant
-	private static String TO_ADD_MOD_T = "vice_adaptive_flux_dissipator"; //tigershark
+	private static String TO_ADD_MOD_R = "vice_adaptive_entropy_arrester"; //Radiant IX
+	private static String TO_ADD_MOD_T = "vice_adaptive_flux_dissipator"; //Tigershark
+	private static String TO_ADD_MOD_EX = "vice_adaptive_emitter_diodes"; //Radiant EX
+	
 	private static String CORE_ID = "ix_panopticon_core";
+	private static String CORE_ID_ALPHA = "alpha_core";
 	private boolean isFirst = true;
 	
 	@Override
@@ -31,9 +34,11 @@ public class HvbHandler extends BaseHullMod {
 					&& !hasAdaptiveMod 
 					&& !stats.getVariant().hasHullMod(CONFLICT_MOD) 
 					&& !stats.getVariant().hasHullMod(TO_ADD_MOD_R) 
-					&& !stats.getVariant().hasHullMod(TO_ADD_MOD_T)) {
-			if (HullSize.CAPITAL_SHIP.equals(hullSize)) stats.getVariant().addMod(TO_ADD_MOD_R);
-			else stats.getVariant().addMod(TO_ADD_MOD_T);
+					&& !stats.getVariant().hasHullMod(TO_ADD_MOD_T)
+					&& !stats.getVariant().hasHullMod(TO_ADD_MOD_EX)) {
+			if (stats.getVariant().hasHullMod("ix_plasma_ramjet")) stats.getVariant().addMod(TO_ADD_MOD_T);
+			else if (stats.getVariant().hasHullMod("ix_panoptic_automated")) stats.getVariant().addMod(TO_ADD_MOD_R);
+			else stats.getVariant().addMod(TO_ADD_MOD_EX);
 		}
 		
 		if (stats.getFleetMember() != null 
@@ -41,7 +46,7 @@ public class HvbHandler extends BaseHullMod {
 			PersonAPI p = new PanopticonCorePlugin().createPerson(CORE_ID, "ix_battlegroup", null);
 			stats.getFleetMember().setCaptain(p);
 		}
-			
+		
 		//delete after combat since IXEncounterListener uses hullmod to apply one time changes
 		if (stats.getVariant().hasDMods()) stats.getVariant().getHullMods().remove(id);
 	}

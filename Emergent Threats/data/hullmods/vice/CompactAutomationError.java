@@ -10,11 +10,13 @@ public class CompactAutomationError extends BaseHullMod {
 	public static float CR_PENALTY = 100f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getMaxCombatReadiness().modifyFlat(id, -CR_PENALTY * 0.01f, "Equipment error");
+		stats.getMaxCombatReadiness().modifyFlat(id, -CR_PENALTY * 0.01f, "Equipment malfunction");
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) CR_PENALTY + "%";
+		if (index == 0) return "Synthesis";
+		if (index == 1) return "Compact Automation";
+		if (index == 2) return "-" + (int) CR_PENALTY + "%";
 		return null;
 	}
 }

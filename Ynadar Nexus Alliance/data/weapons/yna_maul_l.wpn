@@ -1,0 +1,32 @@
+{
+	"id":"yna_maul_l",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"displayArcRadius":650,
+	"turretSprite":"graphics/ynadar/weapons/lb/yna_hm1_t_b.png",
+	"turretGunSprite":"graphics/ynadar/weapons/lb/yna_hm1_t_r.png",
+	"turretUnderSprite":"graphics/ynadar/weapons/lb/yna_hm1_t_u.png",
+	"hardpointSprite":"graphics/ynadar/weapons/lb/yna_hm1_h_b.png",
+	"hardpointGunSprite":"graphics/ynadar/weapons/lb/yna_hm1_h_r.png",	
+	"hardpointUnderSprite":"graphics/ynadar/weapons/lb/yna_hm1_t_u.png",
+	"visualRecoil":10.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[34, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[38, 0],
+	"hardpointAngleOffsets":[0],
+	"specialWeaponGlowWidth":15,
+	"specialWeaponGlowHeight":20,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":36,
+					   "particleSizeMin":12.0,
+					   "particleSizeRange":32.0,
+					   "particleDuration":0.13,
+					   "particleCount":35,
+					   "particleColor":[165,225,185,175]},
+	"projectileSpecId":"yna_mauler_l_shot",  # projectile that will be fired
+	"fireSoundTwo":"yna_hvy_mauler_fire",	
+}

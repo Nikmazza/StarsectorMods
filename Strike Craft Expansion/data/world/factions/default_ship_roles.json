@@ -1,0 +1,97 @@
+{
+	"combatSmallForSmallFleet":{
+	},
+	"combatSmall":{
+	},
+	"combatMedium":{
+			#"shipname":5,
+	},
+	"combatLarge":{
+			#"shipname":7,
+	},
+	"combatCapital":{
+			#"shipname":0,
+	},
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+	},
+	"combatFreighterMedium":{
+	},
+	"combatFreighterLarge":{
+	},
+	
+	"civilianRandom":{
+	},
+
+	# carriers
+	"carrierSmall":{
+			"hhe_gemini_standard":10,
+	},
+	"carrierMedium":{
+			#"shipname":5,
+	},
+	"carrierLarge":{
+			"hhe_sentinel_standard":10,
+			"hhe_astral_culann_standard":10,
+			"hhe_artificer_standard":10,
+	},
+
+	# phase ships
+	"phaseSmall":{
+	},
+	"phaseMedium":{
+	},
+	"phaseLarge":{
+	},
+	"phaseCapital":{
+	},
+
+	# freighters and such
+	"freighterSmall":{
+	},
+	"freighterMedium":{
+	},
+	"freighterLarge":{
+	},
+	
+	"tankerSmall":{
+	},
+	"tankerMedium":{
+	},
+	"tankerLarge":{
+	},
+	
+	"personnelSmall":{
+	},
+	"personnelMedium":{
+	},
+	"personnelLarge":{
+	},
+	
+	"linerSmall":{
+	},
+	"linerMedium":{
+	},
+	"linerLarge":{
+	},
+	
+	# utility ships
+	"tug":{
+	},
+	"crig":{
+	},
+	"utility":{
+	},
+	
+
+
+	# Old/unused below this line
+	"fastAttack":{
+	},
+	"escortSmall":{
+	},
+	"escortMedium":{
+	},
+	
+}

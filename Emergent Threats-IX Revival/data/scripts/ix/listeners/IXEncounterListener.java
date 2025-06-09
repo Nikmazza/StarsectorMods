@@ -59,7 +59,7 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 	@Override
 	public void reportShownInteractionDialog(InteractionDialogAPI dialog) {
 		//gives Dawnstar Reactor to nearest station when initiating battle from "consider your military options"
-		if (dialog.getInteractionTarget() == null) return;
+		if (dialog == null || dialog.getInteractionTarget() == null) return;
 		MarketAPI market = null;
 		if (dialog.getInteractionTarget().getMarket() != null) {
 			market = dialog.getInteractionTarget().getMarket();

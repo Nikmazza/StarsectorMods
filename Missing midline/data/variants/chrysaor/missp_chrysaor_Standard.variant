@@ -1,59 +1,50 @@
 {
-  "variantId": "missp_chrysaor_Standard",
-  "hullId": "missp_chrysaor",
-  "displayName": "Standard",
-  "goalVariant": true,
-  "fluxCapacitors": 0,
-  "fluxVents": 4,
-  "quality": 1,
-  "permaMods": [],
-  "hullMods": [
-    "expanded_deck_crew"
-  ],
+    "displayName": "Standard",
+    "fluxCapacitors": 11,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "missp_chrysaor",
+    "hullMods": ["expanded_deck_crew"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "missp_chrysaor_Standard",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS0012": "gorgonpod"
-            }
+            "weapons": {"WS0012": "squall"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS0002": "heavyburst",
-                "WS0003": "heavyburst",
+                "WS0003": "heavyburst"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS0001": "dualflak",
-                "WS0004": "dualflak",
-                "WS0005": "dualflak",
+                "WS0004": "flak",
+                "WS0005": "flak",
                 "WS0006": "lrpdlaser",
                 "WS0007": "lrpdlaser",
                 "WS0008": "lrpdlaser",
                 "WS0009": "lrpdlaser",
-                "WS0010": "lrpdlaser",
-                "WS0011": "lrpdlaser",
+                "WS0010": "pdburst",
+                "WS0011": "pdburst",
                 "WS0019": "lrpdlaser",
-                "WS0020": "lrpdlaser",
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {}
-    },
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {}
-    }
-  ],
-  "modules": [],
-  "wings": [
-        "dagger_wing",
-        "dagger_wing",
+                "WS0020": "lrpdlaser"
+            }
+        }
+    ],
+    "wings": [
+        "trident_wing",
         "longbow_wing",
-        "longbow_wing",
-        "missp_midline_patrol_craft_wing",
-  ]
+        "trident_wing",
+        "trident_wing",
+        "missp_cutlass_wing"
+    ]
 }

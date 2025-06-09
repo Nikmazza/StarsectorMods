@@ -3,6 +3,7 @@
 	"specClass":"missile",
 	"missileType":"ROCKET",
 	"sprite":"graphics/weapons/trinity/abolisher_tw.png",
+	"onHitEffect":"data.scripts.ix.weapons.AbolisherOnHit",
 	"size":[10,12],	
 	"center":[5,6],
 	"collisionRadius":14,

@@ -1,0 +1,52 @@
+{
+  "id": "apex_ultrabomb",
+  "specClass": "projectile",
+  "projectileSpecId": "apex_ultrabomb_shot",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "everyFrameEffect": "data.weapons.proj.ApexUltrabombExp",
+  "turretSprite": "graphics/weapons/apex_ultrabomb_t.png",
+  "turretGunSprite": "graphics/weapons/apex_ultrabomb_t_barrel.png",
+  "hardpointSprite": "graphics/weapons/apex_ultrabomb_h.png",
+  "hardpointGunSprite": "graphics/weapons/apex_ultrabomb_h_barrel.png",
+  "renderAboveAllWeapons": 0,
+  "visualRecoil": 12,
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "turretOffsets": [
+    30,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    30,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1,
+    "cloudRadius": 15,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 2,
+    "blowbackLength": 5,
+    "blowbackSpread": 10,
+    "particleColor": [
+      170,
+      170,
+      170,
+      100
+    ]
+  },
+  "textureType": ROUGH,
+  "fireSoundTwo": "reaper_fire"
+}

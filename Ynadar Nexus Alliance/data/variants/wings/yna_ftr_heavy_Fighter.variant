@@ -1,0 +1,30 @@
+{
+  "variantId": "yna_ftr_heavy_Fighter",
+  "hullId": "yna_ftr_heavy",
+  "displayName": "Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightmortar",
+        "WS 002": "lightmortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

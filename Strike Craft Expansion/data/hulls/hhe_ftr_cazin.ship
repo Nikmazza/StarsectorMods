@@ -1,0 +1,89 @@
+{
+  "hullName": "Cazin",
+  "hullId": "hhe_ftr_cazin",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/hhe_cazin.png",
+  "style": "LOW_TECH",
+  "height": 33,
+  "width": 30,
+  "center": [15, 13],
+  "collisionRadius": 30,
+  "shieldCenter": [1, 0],
+  "shieldRadius": 22,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -0,
+      "locations": [3, 8.5]
+    },
+    {
+      "id": "WSS-02",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [3, -8.5]
+    },
+    {
+      "id": "WSS-03",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [9, 5]
+    },
+    {
+      "id": "WSS-04",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [9, -5]
+    },
+    {
+      "id": "SYS-01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 180,
+      "locations": [-3, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-8.5, 5],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-8.5, -5],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -2.5, 11.5,
+    11.5, 5.5,
+    15.5, -0,
+    11.5, -5.5,
+    -2.5, -11.5,
+    -7, -9,
+    -5, 0,
+    -7, 9
+  ]
+}

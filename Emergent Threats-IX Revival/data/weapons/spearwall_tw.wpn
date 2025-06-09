@@ -24,6 +24,5 @@
   "autocharge": true,
   "requiresFullCharge":true,
   "projectileSpecId": "spearwall_tw_shot",
-  #"fireSoundOne": "thundermark_ix_spinup",
   "fireSoundTwo": "spearwall_tw_fire"
 }

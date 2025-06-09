@@ -1,0 +1,176 @@
+{
+  "hullName": "Gemini (PL)",
+  "hullId": "hhe_gemini",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/hhe_gemini.png",
+  "style": "MIDLINE",
+  "coversColor": "255,255,255,255",
+  "height": 160,
+  "width": 140,
+  "center": [70, 56],
+  "collisionRadius": 106,
+  "shieldCenter": [22, -0],
+  "shieldRadius": 106,
+  "viewOffset": 0,
+  "builtInWings": [
+    "hhe_bi_helot_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WSM-01",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 100,
+      "locations": [-13, 45]
+    },
+    {
+      "id": "WSM-02",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -100,
+      "locations": [-13, -45]
+    },
+    {
+      "id": "WSS-02",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -45,
+      "locations": [72, -32]
+    },
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 45,
+      "locations": [72, 32]
+    },
+    {
+      "id": "LB 1",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 180,
+      "locations": [
+        83, 4,
+        83, -4
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 90,
+      "locations": [
+        53, 44,
+        45, 44
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": -90,
+      "locations": [
+        53, -44,
+        44, -44
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-53, 29],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-55, 21],
+      "length": 56,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-54, 11],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-54, -11],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-55, -21],
+      "length": 56,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-53, -29],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    74, 52,
+    95, 34,
+    100, 10,
+    94, -0,
+    100, -11,
+    94, -35,
+    74, -52,
+    35, -52,
+    20.5, -37,
+    20.5, -23.5,
+    4, -23.5,
+    11, -44,
+    9, -60.5,
+    -1, -65,
+    -27, -66,
+    -38, -42,
+    -52, -35,
+    -52, -7,
+    -39.5, -8,
+    -33, -0,
+    -39.5, 8,
+    -52, 7,
+    -52, 35,
+    -38, 42,
+    -27, 66,
+    -1, 65,
+    9, 60.5,
+    11, 44,
+    4, 23.5,
+    20.5, 23.5,
+    20.5, 37,
+    35, 52
+  ]
+}

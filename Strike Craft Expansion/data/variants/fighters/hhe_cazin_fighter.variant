@@ -1,0 +1,28 @@
+{
+  "variantId": "hhe_cazin_fighter",
+  "hullId": "hhe_ftr_cazin",
+  "displayName": "Fighter",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-01": "hhe_ftr_autogun",
+        "WSS-02": "hhe_ftr_autogun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

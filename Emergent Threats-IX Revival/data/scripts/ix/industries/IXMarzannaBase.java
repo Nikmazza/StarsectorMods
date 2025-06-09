@@ -176,7 +176,6 @@ public class IXMarzannaBase extends BaseIndustry implements RouteFleetSpawner, F
 								&& (!m.hasCondition(CORONAL_CONDITION))) {
 						if (!m.hasIndustry(IX_NODE) && !m.hasIndustry(IX_CORE)) m.addIndustry(IX_NODE);
 					}
-					//if (!market.hasIndustry(IX_CORE) || !market.hasIndustry(IX_NODE) || market.getIndustry(IX_CORE).isHidden() || market.getIndustry(IX_NODE).isHidden()) market.removeCondition("ix_monitored");
 				}
 				market.addCondition("ix_monitored");
 			}

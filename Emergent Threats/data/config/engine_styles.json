@@ -1,0 +1,16 @@
+{
+	# Reserved engine style ids (can not be used):
+	# "CUSTOM"
+	"TREMOR_DRONE":{
+		"engineColor":[255,150,0,255],
+		"contrailParticleSizeMult":8,
+		"contrailParticleDuration":2,
+		"contrailParticleFinalSizeMult":1,
+		"contrailMaxSpeedMult":0.5f,
+		"contrailAngularVelocityMult":0f,
+		"contrailColor":[255,150,0,25],
+		"glowSizeMult":3.5,
+		"glowAlternateColor":[255,150,0,255],
+		"type":"GLOW" # GLOW or SMOKE
+	},
+}

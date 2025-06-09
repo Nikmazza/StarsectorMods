@@ -14,6 +14,7 @@
 	#"renderHints":[RENDER_LOADED_MISSILES],
 	"interruptibleBurst":false,
 	"displayArcRadius":500,
+	"autocharge":true,
 	"smokeSpec":{"particleSizeMin":10.0,
 				 "particleSizeRange":16.0,
 				 "cloudParticleCount":3,

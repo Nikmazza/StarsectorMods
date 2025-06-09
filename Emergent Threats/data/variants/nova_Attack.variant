@@ -19,11 +19,17 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "vice_siege_burst",
-                "WS 001": "vice_siege_burst",
-                "WS 006": "breachpod",
-                "WS 007": "breachpod",
-                "WS 008": "breachpod",
-                "WS 009": "breachpod"
+                "WS 001": "vice_siege_burst"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "vice_warp_torpedo_pod",
+                "WS 007": "vice_warp_torpedo_pod",
+                "WS 008": "vice_warp_torpedo_pod",
+                "WS 009": "vice_warp_torpedo_pod"
             }
         },
         {

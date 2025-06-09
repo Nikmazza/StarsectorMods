@@ -1,0 +1,22 @@
+{
+  "variantId": "hhe_drone_brokkr_standard",
+  "hullId": "hhe_drone_brokkr",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-01": "hhe_pdpulser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

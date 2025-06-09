@@ -1,0 +1,26 @@
+{
+	"id":"yna_enmis_m",
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/ynadar/weapons/me/yna_enmim1_t_b.png",
+	"hardpointSprite":"graphics/ynadar/weapons/me/yna_enmim1_h_b.png",
+	"visualRecoil":4.0,  # the gun sprites are only used if this is non-0
+	"turretOffsets":[9, 3, 9, -3],
+	"turretAngleOffsets":[15, -15],
+	"hardpointOffsets":[16, 3, 16, -3],
+	"hardpointAngleOffsets":[10, -10],
+	"barrelMode":"LINKED", #"ALTERNATING",
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"interruptibleBurst":false,
+	"autocharge":true,
+	"muzzleFlashSpec":{"length":35.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":6.0,
+					   "particleSizeRange":14.0,
+					   "particleDuration":0.15,
+					   "particleCount":11,
+					   "particleColor":[165,240,255,200]},	
+	"projectileSpecId":"yna_en_mi_srm",
+	"fireSoundTwo":"yna_enmis_medium_fire",
+}

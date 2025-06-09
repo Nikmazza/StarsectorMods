@@ -1,13 +1,12 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 4,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "vice_candor_emp",
     "hullMods": [
         "vice_module_handler",
         "hardenedshieldemitter",
-        "pointdefenseai",
         "stabilizedshieldemitter",
         "vice_adaptive_emitter_diodes"
     ],

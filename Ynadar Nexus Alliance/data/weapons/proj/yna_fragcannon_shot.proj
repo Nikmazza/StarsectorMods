@@ -1,0 +1,25 @@
+{
+	"id":"yna_fragcannon_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	
+	"onHitEffect":"data.scripts.weapons.yna_fragcannon_hit_effect",
+	
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	
+	"length":144.0,
+	"hitGlowRadius":180,
+	"width":16.0,
+	"fadeTime":0.5,
+	"fringeColor":[220,255,30,175],
+	"coreColor":[255,255,255,200],
+	"glowColor":[220,255,30,155],
+	"glowRadius":80,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
+	"passThroughFighters":true,
+	"passThroughFightersOnlyWhenDestroyed":true,
+	"bulletSprite":"graphics/ynadar/missiles/yna_fragshot1.png"
+}

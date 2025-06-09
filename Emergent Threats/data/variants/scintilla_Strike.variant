@@ -1,7 +1,7 @@
 {
     "displayName": "Strike",
     "fluxCapacitors": 0,
-    "fluxVents": 13,
+    "fluxVents": 15,
     "goalVariant": true,
     "hullId": "scintilla",
     "hullMods": ["vice_adaptive_emitter_diodes"],

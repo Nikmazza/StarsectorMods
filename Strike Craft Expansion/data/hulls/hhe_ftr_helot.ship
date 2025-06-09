@@ -1,0 +1,81 @@
+{
+  "hullName": "Helot",
+  "hullId": "hhe_ftr_helot",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/hhe_helot.png",
+  "style": "MIDLINE",
+  "height": 23,
+  "width": 22,
+  "center": [11, 10.5],
+  "collisionRadius": 16,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 16,
+  "viewOffset": 0,
+  "builtInMods": [
+    "hhe_z_ftr_helot_bonus"
+  ],
+  "weaponSlots": [
+    {
+      "id": "SYS-01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-8.5, 0]
+    },
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [2, 7.5]
+    },
+    {
+      "id": "WSS-02",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -0,
+      "locations": [2, -7.5]
+    },
+    {
+      "id": "WSS-03",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 180,
+      "locations": [-0.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-9, 3],
+      "length": 17.5,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-9, -3],
+      "length": 17.5,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -2, -9.5,
+    -7, -7.5,
+    -8, -0,
+    -7, 7.5,
+    -2, 9.5,
+    11, -0
+  ]
+}

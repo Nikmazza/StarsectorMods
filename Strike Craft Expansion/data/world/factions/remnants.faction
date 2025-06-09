@@ -1,0 +1,23 @@
+#### REMNANT FACTION
+{
+	"knownFighters":{
+		"tags":[],
+		"fighters":[
+            "hhe_lucent_wing",
+            "hhe_prism_wing",
+		],
+	},
+    "knownWeapons":{
+        "weapons":[
+            "hhe_pdpulser",
+            "hhe_pdlaserstreamer",
+        ],
+    },
+	"knownHullMods":{
+		"hullMods":[
+			"hhe_DroneHangar",
+			"hhe_bi_artificer_hullmod",
+			"hhe_MissileReload",			
+		],
+	},
+},

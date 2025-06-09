@@ -7,17 +7,25 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.FullName;
+import com.fs.starfarer.api.characters.ImportantPeopleAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.util.Misc;
 
-import data.scripts.vice.listeners.EnemyEncounterListener; //Should move to listeners on next big patch
+import data.scripts.vice.listeners.BountyListener;
+import data.scripts.vice.listeners.EnemyEncounterListener;
 import data.scripts.vice.listeners.ETReputationListener;
 import data.scripts.vice.listeners.PruneBantengMarketListener;
+import data.scripts.vice.luna.AutomateHVBRadiantButton;
+import data.scripts.vice.luna.BiochipAICommanderButton;
+import data.scripts.vice.luna.RemoveMissionDeployHullmod;
 import data.scripts.vice.luna.SignalMaskerInstallButton;
 import data.scripts.vice.luna.SignalMaskerRemoveButton;
 import data.scripts.vice.XOCampaignPlugin;
@@ -32,6 +40,34 @@ public class ETModPlugin extends BaseModPlugin {
 		sector.registerPlugin(synthesisCorePlugin);
 		sector.getFaction("sindrian_diktat").getKnownFighters().remove("talon_wing");
 		sector.getFaction("lions_guard").getKnownFighters().remove("talon_wing");
+		
+		FactionAPI diamond_nexus = sector.getFaction("diamond_nexus");
+		diamond_nexus.setRelationship("remnant", RepLevel.NEUTRAL);
+		diamond_nexus.setRelationship("independent", RepLevel.NEUTRAL);
+		diamond_nexus.setRelationship("player", RepLevel.HOSTILE);
+		
+		ImportantPeopleAPI people = Global.getSector().getImportantPeople();
+		PersonAPI person = Global.getFactory().createPerson();
+		person.setId("vice_taylor_sheasby");
+		person.setFaction("persean");
+		person.setGender(FullName.Gender.MALE);
+		person.setRankId("specialAgent");
+		person.setPostId("investigator");
+		person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Taylor");
+		person.getName().setLast("Sheasby");
+		person.setPortraitSprite(Global.getSettings().getSpriteName("portraits", "vice_taylor_sheasby"));
+		if (!people.containsPerson(person)) people.addPerson(person);
+		
+		//backwards compatability, if player is continuing a pre v0.9.5 game
+		if (!sector.getMemoryWithoutUpdate().is("$bounty_listener_set", true)) {
+			if (sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_succeeded", true)
+				|| sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_failed", true)) return;
+			else {
+				sector.getListenerManager().addListener(new BountyListener());
+				sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
+			}
+		}
 		
 		//obselete
 		//sector.getMemoryWithoutUpdate().set("$mission_picker_tri_tachyon", true);
@@ -75,6 +111,8 @@ public class ETModPlugin extends BaseModPlugin {
 		sector.getListenerManager().addListener(new EnemyEncounterListener());
 		sector.getListenerManager().addListener(new ETReputationListener());
 		sector.getListenerManager().addListener(new PruneBantengMarketListener());
+		//sector.getListenerManager().addListener(new BountyListener());
+		//sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
 		sector.getFaction("sindrian_diktat").getKnownFighters().remove("talon_wing");
 		sector.getFaction("lions_guard").getKnownFighters().remove("talon_wing");
 	}
@@ -95,6 +133,7 @@ public class ETModPlugin extends BaseModPlugin {
 			vice_lions_guard.setRelationship(faction.getId(), RepLevel.HOSTILE);
         }
 		diamond_nexus.setRelationship("remnant", RepLevel.NEUTRAL);
+		diamond_nexus.setRelationship("independent", RepLevel.NEUTRAL);
 		diamond_nexus.setRelationship("diamond_nexus", 1f);
 		vantage_group.setRelationship("vantage_group", 1f);
 		vice_diktat_navy.setRelationship("vice_diktat_navy", 1f);
@@ -104,6 +143,9 @@ public class ETModPlugin extends BaseModPlugin {
 	
 	@Override
 	public void onApplicationLoad() {
+		LunaRefitManager.addRefitButton(new AutomateHVBRadiantButton());
+		LunaRefitManager.addRefitButton(new BiochipAICommanderButton());
+		LunaRefitManager.addRefitButton(new RemoveMissionDeployHullmod());
 		LunaRefitManager.addRefitButton(new SignalMaskerInstallButton());
 		LunaRefitManager.addRefitButton(new SignalMaskerRemoveButton());
 	}

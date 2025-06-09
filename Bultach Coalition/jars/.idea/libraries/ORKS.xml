@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ORKS">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/ORKS.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

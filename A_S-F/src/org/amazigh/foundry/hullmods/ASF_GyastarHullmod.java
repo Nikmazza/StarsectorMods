@@ -19,9 +19,9 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class ASF_GyastarHullmod extends BaseHullMod {
 	
-	public static final float BEAM_GUARD = 0.3f;
+	public static final float BEAM_GUARD = 0.3f; // [CUSTOM CARTRIDGE: BEAM GUARD]
 	
-	public static final float RoF_BOOST = 0.5f;
+	public static final float REVENGE_SHOT = 0.5f; // [CUSTOM CARTRIDGE: REVENGE SHOT]
 	
 	public static final float REPAIR_MULT = 25f;
 	public static final float REPAIR_DISS_MULT = 3f;
@@ -128,7 +128,7 @@ public class ASF_GyastarHullmod extends BaseHullMod {
 		
 		
 		// RoF Modifier
-		stats.getBallisticRoFMult().modifyMult(spec.getId(), 1f + (RoF_BOOST * HULL_RATIO));
+		stats.getBallisticRoFMult().modifyMult(spec.getId(), 1f + (REVENGE_SHOT * HULL_RATIO));
 		// RoF Modifier
 		
 		
@@ -137,7 +137,7 @@ public class ASF_GyastarHullmod extends BaseHullMod {
 		// So what this hullmod does is as follows:
 		// - 30% resist to beam weapon damage
 		// - Increases ballistic RoF as the ship takes hull damage
-		// - Triggers armour repair and boosted dissipation when flux level exceeds 75% (stops when flux level drops below 5%)
+		// - Triggers armour repair and boosted dissipation when flux level exceeds 80% (stops when flux level drops below 5%)
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		return null;

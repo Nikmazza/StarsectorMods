@@ -1,0 +1,23 @@
+{
+  "variantId": "hhe_helot_interceptor",
+  "hullId": "hhe_ftr_helot",
+  "displayName": "Interceptor",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WSS-01": "hhe_ftr_autogun",
+        "WSS-02": "hhe_ftr_autogun"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

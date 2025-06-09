@@ -1,0 +1,22 @@
+{
+  "variantId": "yna_drone_torp_Drone",
+  "hullId": "yna_drone_torp",
+  "displayName": "Drone",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_svento_s_ftr"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

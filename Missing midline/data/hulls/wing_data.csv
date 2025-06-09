@@ -1,2 +1,3 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
-missp_midline_patrol_craft_wing,missp_midline_patrol_craft_Standard,"fighter4, fighter, low, midline_bp",3,,10,20,V,8000,500,600,1,FIGHTER,Assault Craft,30,20000,,,,,,,,,,,,,
+missp_claymore_wing,missp_claymore,"fighter4, fighter, mid, rare_bp, ind, merc",3,,10,20,V,8000,1500,600,1,FIGHTER,Assault Craft,30,20000,,,,,,,,,,,,,
+missp_cutlass_wing,missp_cutlass,"fighter2, fighter, mid, rare_bp, merc, ind",2,,8,15,V,4750,1700,900,2,ASSAULT,Strike Fighter,15,19000,,,,,,,,,,,,,

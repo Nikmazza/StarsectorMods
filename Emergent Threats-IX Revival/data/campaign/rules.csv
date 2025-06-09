@@ -372,6 +372,7 @@ SetTextHighlights ""Radiant (TW) class converted battlecarrier""
 $player.receivedShipTW = true
 AdjustRep ix_trinity 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 AddRemoveAnyItem SPECIAL planetkiller -1
 $global.gavePKtoTW = true
 $player.turnedInPlanetkiller = true
@@ -496,6 +497,7 @@ pk_turnInIXfrig2Sel,DialogOptionSelected,$option == pk_turnInIXfrig2,"AddTextSma
 SetTextHighlights ""Hyperion (HG) class advanced gunship""
 AdjustRep ix_battlegroup 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 AddRemoveAnyItem SPECIAL planetkiller -1
 $global.gavePKtoIX = true
 $player.turnedInPlanetkiller = true
@@ -513,6 +515,7 @@ pk_turnInIXbb2Sel,DialogOptionSelected,$option == pk_turnInIXbb2,"AddTextSmall "
 SetTextHighlights ""Radiant (IX) class converted battleship""
 AdjustRep ix_battlegroup 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 AddRemoveAnyItem SPECIAL planetkiller -1
 $global.gavePKtoIX = true
 $player.turnedInPlanetkiller = true
@@ -568,6 +571,7 @@ AddCommodity ix_panopticon_instance 1
 $player.receivedAdminTraining = true
 AdjustRep ix_battlegroup 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 $global.gavePKtoIX = true
 $player.turnedInPlanetkiller = true
 AddPotentialContact

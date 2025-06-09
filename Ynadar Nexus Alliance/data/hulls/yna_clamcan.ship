@@ -1,0 +1,105 @@
+{
+  "hullName": "Clamcan",
+  "hullId": "yna_clamcan",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ynadar/ships/clamcan/base.png",
+  "style": "YNADAR",
+  "height": 138,
+  "width": 94,
+  "center": [47, 57],
+  "collisionRadius": 100,
+  "shieldCenter": [6, -0],
+  "shieldRadius": 92,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade",
+    "yna_hullspec",
+    "yna_missile_loader"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 180,
+      "locations": [-41, -0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 65,
+      "locations": [48, 39]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -65,
+      "locations": [48, -39]
+    },
+    {
+      "id": "MS 01",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [68, -29]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-56, 13],
+      "length": 36,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-56, -13],
+      "length": 36,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-55, 21],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55, -21],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    71, 19,
+    48, 42,
+    35, 30,
+    -9, 30,
+    -19, 38,
+    -49, 33,
+    -49, -33,
+    -19, -38,
+    -9, -30,
+    35, -30,
+    48, -42,
+    71, -19
+  ]
+}

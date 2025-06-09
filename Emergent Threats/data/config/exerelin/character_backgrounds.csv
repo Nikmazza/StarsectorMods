@@ -1,0 +1,2 @@
+id,name,shortDescription,longDescription,order,iconPath,plugin
+vice_al_fc_bg,AI Fleet Commander,Begin with specialized knowledge in commanding AI warships.,"You are well versed in Domain era special operations procedures for commanding AI warships. Such information was highly classified prior to the Collapse, and is all but unknown in the present day.",20,graphics/vice/icons/ai_commander.png,data.scripts.vice.backgrounds.AIFleetCommander

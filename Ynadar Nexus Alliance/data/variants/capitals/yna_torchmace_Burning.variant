@@ -1,0 +1,87 @@
+{
+  "variantId": "yna_torchmace_Burning",
+  "hullId": "yna_torchmace",
+  "displayName": "Burning",
+  "goalVariant": true,
+  "fluxCapacitors": 24,
+  "fluxVents": 50,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "hardenedshieldemitter",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MS 01": "yna_svento_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_blaster_m",
+        "WS0002": "yna_blaster_m",
+        "WS0003": "yna_blaster_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "yna_maul_s",
+        "WS0012": "yna_maul_s",
+        "WS0013": "yna_maul_s",
+        "WS0014": "yna_maul_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "yna_ac_s",
+        "WS0006": "yna_ac_s",
+        "WS0007": "yna_ac_s",
+        "WS0008": "yna_ac_s",
+        "WS0009": "yna_ac_s",
+        "WS0010": "yna_ac_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 02": "yna_ac_m",
+        "MS 03": "yna_ac_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "heatseeker",
+        "WS0016": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "PD 01": "yna_flak_s",
+        "PD 02": "yna_flak_s",
+        "PDW 01": "yna_pdw_las1",
+        "PDW 02": "yna_pdw_las1",
+        "PDW 03": "yna_pdw_las1",
+        "PDW 04": "yna_pdw_las1",
+        "PDW 05": "yna_pdw_las1",
+        "WS0004": "yna_flak_m"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

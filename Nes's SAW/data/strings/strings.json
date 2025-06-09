@@ -4,6 +4,8 @@
 		
 		# hullmods
 		"hullmod_volatileshells": "CRITICAL!",
+		"hullmod_triedandtested": "Converted Hangar",
+		"hullmod_crystalhull": "harmonic resonance",
 		
 		# shipsystems
 		"system_crystalresonance": "Volatile Weaponry",

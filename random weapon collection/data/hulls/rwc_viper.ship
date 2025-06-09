@@ -1,0 +1,116 @@
+{
+  "hullName": "Viper",
+  "hullId": "rwc_viper",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/rwc_viper.png",
+  "style": "MIDLINE",
+  "height": 124,
+  "width": 108,
+  "center": [54, 51],
+  "collisionRadius": 77,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 77.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-25, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 241,
+      "angle": 59.5,
+      "locations": [-1, 34]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 241,
+      "angle": -59.5,
+      "locations": [-1, -34]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-12, 46]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-12, -46]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [11.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, 22],
+      "length": 67.5,
+      "width": 26,
+      "angle": 180,
+      "contrailSize": 26,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-50, -22],
+      "length": 67.5,
+      "width": 26,
+      "angle": -180,
+      "contrailSize": 26,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -46, 7,
+    -49.5, 13.5,
+    -49.5, 31,
+    -39.5, 35,
+    -29.5, 53,
+    -11, 48,
+    4.5, 47.5,
+    9, 41.5,
+    15, 40.5,
+    19.5, 30.5,
+    69.5, 11.5,
+    64.5, 6,
+    19, 7,
+    19, -7,
+    64.5, -6,
+    69.5, -11.5,
+    19.5, -30.5,
+    15, -40.5,
+    9, -41.5,
+    4.5, -47.5,
+    -11, -48,
+    -29.5, -53,
+    -39.5, -35,
+    -49.5, -31,
+    -49.5, -13.5,
+    -46, -7
+  ]
+}

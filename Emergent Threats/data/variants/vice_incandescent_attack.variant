@@ -1,7 +1,7 @@
 {
     "displayName": "Attack",
     "fluxCapacitors": 0,
-    "fluxVents": 45,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_incandescent",
     "hullMods": [
@@ -9,7 +9,8 @@
         "fluxdistributor",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_emitter_diodes"
+        "vice_adaptive_emitter_diodes",
+        "vice_feedback_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -27,14 +28,6 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 018": "squall",
-                "WS 019": "squall"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
                 "WS 005": "typhoon",
                 "WS 006": "typhoon",
                 "WS 007": "typhoon",
@@ -45,9 +38,17 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "gravitonbeam",
-                "WS 004": "gravitonbeam",
+                "WS 012": "vice_ionstreamer",
+                "WS 013": "vice_ionstreamer",
                 "WS 017": "vice_siege_burst"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "gravitonbeam",
+                "WS 004": "gravitonbeam"
             }
         },
         {
@@ -56,14 +57,14 @@
             "weapons": {
                 "WS 001": "heavyburst",
                 "WS 002": "heavyburst",
-                "WS 009": "heavyburst",
+                "WS 009": "vice_phased_electrolaser",
                 "WS 010": "pdlaser",
                 "WS 011": "pdlaser",
-                "WS 012": "pdlaser",
-                "WS 013": "pdlaser",
                 "WS 014": "pdlaser",
                 "WS 015": "pdlaser",
-                "WS 016": "pdlaser"
+                "WS 016": "pdlaser",
+                "WS 018": "locust",
+                "WS 019": "locust"
             }
         }
     ]

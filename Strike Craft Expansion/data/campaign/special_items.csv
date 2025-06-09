@@ -1,0 +1,10 @@
+name,id,tags,rarity,base price,stack size,cargo space,icon,sound id,sound id drop,plugin,plugin params,desc,order
+########################,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Luddic Church Fighter Blueprint Package,hhe_ftr_lc_package,package_bp,,20000,1000,1,graphics/icons/cargo/blueprint_lowtech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hhe_ftr_lc_bp,Enables heavy industry to construct Luddic Church designed fighter LPCs.,200
+Persean League Fighter Blueprint Package,hhe_ftr_pl_package,package_bp,,20000,1000,1,graphics/icons/cargo/blueprint_midline.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hhe_ftr_pl_bp,Enables heavy industry to construct Persean League designed fighter LPCs.,210
+Tri-Tachyon Fighter Blueprint Package,hhe_ftr_tt_package,package_bp,,20000,1000,1,graphics/icons/cargo/blueprint_hightech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hhe_ftr_tt_bp,Enables heavy industry to construct Tri-Tachyon designed fighter LPCs.,220
+#Restoration Fighter Blueprint Package,hhe_ftr_rem_package,package_bp,,50000,1000,1,graphics/icons/cargo/blueprint_hightech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hhe_ftr_rem_bp,Enables heavy industry to construct Remnant designed fighter LPCs.,225
+,,,,,,,,,,,,,
+########################,,,,,,,,,,,,,
+######name,id,tags,rarity,base price,stack size,cargo space,icon,sound id,sound id drop,plugin,plugin params,desc,order

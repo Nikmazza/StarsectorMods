@@ -1,0 +1,47 @@
+{
+	"id":"stormwall_tw_shot",
+	"specClass":"missile",	
+	"missileType":"ROCKET",
+	"sprite":"graphics/missiles/missile_vlrm_stage1.png",
+	"onFireEffect":"data.scripts.ix.weapons.StormwallOnFire",
+	"onHitEffect":"data.scripts.ix.weapons.StormwallOnHit",
+	"size":[8,10],	
+	"center":[4,5],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[0,0,0,0],
+	"explosionRadius":0, # purely visual
+	"fizzleOnReachingWeaponRange":true,
+	"dudProbabilityOnFlameout":0,
+	"useHitGlowWhenDestroyed":true,
+	"flameoutTime":0.1, # fadeout duration
+	"armingTime":0,
+	"noEngineGlowTime":0.1, # time spent without the engine glow being rendered
+	"fadeTime":0.1, # fadeout duration
+	"engineSpec":{"turnAcc":0,
+				  "turnRate":0,
+				  "acc":2000,
+				  "dec":2000},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-4, 0],
+				    #"style":"TORPEDO",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[0,100,200,255],
+						"contrailDuration":1,
+						"contrailWidthMult":1.5,
+						"contrailWidthAddedFractionAtEnd":1,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":0f, # how far away from engine it starts
+						"contrailColor":[0,100,200,50],
+						"glowSizeMult":2.0,
+						"glowAlternateColor":[0,100,200,255],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":4.0,
+				    "length":14.0,
+				    "angle":180.0}]
+}

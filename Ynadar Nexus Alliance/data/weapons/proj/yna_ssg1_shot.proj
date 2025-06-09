@@ -1,0 +1,57 @@
+{
+	"id":"yna_ssg1_shot",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/shell_large_yellow.png",
+	"useProjectileRangeCalculation":true,
+	"noDebrisWhenDestroyed":true,
+	"size":[8,10],	
+	"center":[4,5],
+	"collisionRadius":6,
+	"collisionClass":"MISSILE_NO_FF",
+	"glowColor":[135,255,155,150],
+	"glowRadius":12,
+	"explosionColor":[135,255,155,150],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":10, # purely visual
+	"explosionSpec":{"duration":0.1f, # not visual
+					 "radius":20,
+					 "coreRadius":15, # full damage within core radius
+					 "collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+					 "collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+					 "particleSizeMin":5.0,
+					 "particleSizeRange":3.0,
+					 "particleDuration":1,
+					 "particleCount":20,
+					 "particleColor":[185,255,205,220],
+					 "explosionColor":[135,255,155,50],
+					 "detailedExplosionFlashColorFringe":[85,255,85,50],
+					 "detailedExplosionFlashRadius":30,
+					 "useDetailedExplosion":true
+					 },
+	"fadeTime":0, # fadeout duration
+	"flameoutTime":0.1, # total time from flameout to full fadeout
+	"noEngineGlowTime":0, # time spent without the engine glow being rendered
+	"engineSpec":{"turnAcc":360,
+				  "turnRate":30,
+				  "acc":600,
+				  "dec":0},			  
+	"engineSlots":[{"id":"ES1",
+					"loc":[2, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[135,255,155,150],
+						"contrailDuration":0.25,
+						"contrailWidthMult":2.4,
+						"contrailWidthAddedFractionAtEnd":-1,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":3, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":0.3, # how far away from engine it starts
+						"contrailColor":[135,255,155,150],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":4.0,
+				    "length":10.0,
+				    "angle":180.0}]
+}

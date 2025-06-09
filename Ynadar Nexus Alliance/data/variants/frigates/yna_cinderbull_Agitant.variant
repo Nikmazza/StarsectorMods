@@ -1,0 +1,39 @@
+{
+  "variantId": "yna_cinderbull_Agitant",
+  "hullId": "yna_cinderbull",
+  "displayName": "Agitant",
+  "goalVariant": false,
+  "fluxCapacitors": 4,
+  "fluxVents": 0,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "hardened_subsystems",
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_srm1_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_vg1_m"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

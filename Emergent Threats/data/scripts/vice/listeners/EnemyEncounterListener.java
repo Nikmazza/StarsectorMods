@@ -35,7 +35,7 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 	
 	@Override
 	public void reportShownInteractionDialog(InteractionDialogAPI dialog) {
-		if (dialog.getInteractionTarget() == null) return;
+		if (dialog == null || dialog.getInteractionTarget() == null) return;
 		MarketAPI market = null;
 		if (dialog.getInteractionTarget().getMarket() != null) {
 			market = dialog.getInteractionTarget().getMarket();
@@ -215,7 +215,8 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 		if (spec.getManufacturer().equals("Abyssal")) return "vice_adaptive_entropy_projector_abyssal";
 		if (spec.getManufacturer().equals("Seraph")) return "vice_adaptive_entropy_projector_abyssal";
 		if (spec.getManufacturer().equals("Remnant Mess Object")) return "vice_adaptive_metastatic_growth";
-		
+		if (var.getHullMods().contains("ix_converted_hull") && var.getHullMods().contains("tw_enhanced_control_node")) return "vice_adaptive_gravity_drive";
+
 		//stations always have Adaptive Neural Net
 		if (var.hasHullMod("vast_bulk")) return "vice_adaptive_neural_net";
 		
@@ -228,15 +229,23 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 		//get number of non-PD beam and pulse weapons
 		int beamCount = 0;
 		int pulseCount = 0;
+		int missileCount = 0;
 		for (String slot : weaponSlots) {
 			WeaponSpecAPI weapon = var.getWeaponSpec(slot);
 			//make adaptive entropy projector the mod for ships that have Charge Transfer Emitter weapons
 			if (weapon.getWeaponId().equals("cte_tw")) isCTE = true;
-			else if (weapon.getType().equals(WeaponType.ENERGY)) {
+			if (weapon.getType().equals(WeaponType.ENERGY)) {
 				if (weapon.getAIHints().contains(AIHints.PD)) continue;
 				else if (weapon.isBeam()) beamCount++;
 				else if (!weapon.isBeam()) pulseCount++;
 			}
+			if (weapon.hasTag("archaic_r")) {
+				if (weapon.hasTag("archaic1")) missileCount++;
+				else if (weapon.hasTag("archaic2")) missileCount += 2;
+				else missileCount += 5;
+			}
+			else if (weapon.getType().equals(WeaponType.MISSILE)) missileCount++;
+			
 		}
 		if (isCTE) return "vice_adaptive_entropy_projector";
 		
@@ -246,6 +255,7 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 		MODLIST.add("vice_adaptive_neural_net");
 		MODLIST.add("vice_adaptive_phase_coils");
 		MODLIST.add("vice_adaptive_reactor_chamber");
+		MODLIST.add("vice_adaptive_trajectory_analyzer");
 		
 		//add special hullmods as potential choices for IX affiliated ships
 		String maker = var.getHullSpec().getManufacturer();
@@ -267,6 +277,9 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 		if ((pulseCount > 3) && !var.hasHullMod("coherer")) return "vice_adaptive_pulse_resonator";
 		else if ((pulseCount >= 1 && beamCount <= 3) && !var.hasHullMod("coherer")) MODLIST.add("vice_adaptive_pulse_resonator");
 		
+		//if 5 missiles or numerous archaic composite weapons present, add adaptive trajectory analyzer 
+		if (missileCount > 4) return "vice_adaptive_trajectory_analyzer";
+			
 		//if ship has no AI core, make adaptive tactical core potential mod
 		if (isWithoutCaptain) MODLIST.add("vice_adaptive_tactical_core");
 		

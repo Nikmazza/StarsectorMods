@@ -1,13 +1,14 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 0,
-    "fluxVents": 50,
+    "fluxVents": 48,
     "goalVariant": true,
     "hullId": "intrepid_tw",
     "hullMods": [
         "extendedshieldemitter",
         "fluxdistributor",
         "targetingunit",
+        "tw_modernized_rangefinder",
         "ix_reactive_combat_shields",
         "stabilizedshieldemitter"
     ],
@@ -27,18 +28,18 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 017": "abolisher_tw",
-                "WS 018": "abolisher_tw"
+                "WS 017": "arrester_tw",
+                "WS 018": "arrester_tw"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "orthrus_m_ix",
-                "WS 006": "orthrus_m_ix",
-                "WS 007": "orthrus_m_ix",
-                "WS 008": "orthrus_m_ix"
+                "WS 005": "spatial_charge_launcher_ix",
+                "WS 006": "spatial_charge_launcher_ix",
+                "WS 007": "spatial_charge_launcher_ix",
+                "WS 008": "spatial_charge_launcher_ix"
             }
         },
         {

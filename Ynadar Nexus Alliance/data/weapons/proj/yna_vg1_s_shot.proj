@@ -1,0 +1,18 @@
+{
+	"id":"yna_vg1_s_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":40.0,
+	"hitGlowRadius":12,
+	"width":5,
+	"fadeTime":0.2,
+	"fringeColor":[215,155,135,175], #[135,155,215,175],
+	"coreColor":[200,155,125,160], #[125,155,200,160],
+	"glowColor":[215,255,120,35], #[120,255,215,35],
+	"glowRadius":6,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_large_yellow.png"
+}

@@ -1,0 +1,34 @@
+{
+  "variantId": "yna_flamedial_Assault",
+  "hullId": "yna_flamedial",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 6,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "autopulse",
+        "WS0002": "autopulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_flak_s",
+        "WS0004": "yna_flak_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

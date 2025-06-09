@@ -1,0 +1,26 @@
+name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
+Devastation Cannon,devastation,3,0.5,3500,900,,400,,40,12,20,,,,HIGH_EXPLOSIVE,400,,0,1,1,,0,5,1,1,,700,,,100,,,,"he18, rare_bp, merc, ind",,,A Devastator Cannon modified to fire much larger shells at a slower rate.  Poorly balanced.,Anti Armor,,,,,,,,,,1
+Autopulse Beam,autopulsebeam,3,,4500,800,800,,,0,20,20,30,1,,ENERGY,,620,0,0,0.5,0.1,,,,,1000000,,,,,,,,"beam18, rare_bp",,,"Similar to the Autopulse Laser, but fires a beam.  Is the reason this mod exists.",General,,,,,,,,,,25
+Thermal Pulse Beam Cannon,tpb,0,,100000,1000,3750,,,0,0,,,,,ENERGY,,3200,0.5,1,2,20,,,,,10000,,,,,,,"SYSTEM,SHOW_IN_CODEX",,TPC_only,,Highly modified Thermal Pulse Cannon that discharges the entire capacitor at once to produce a continuous beam.  ,General,,,,,,,,,,40
+Plasma Beam,plasmabeam,3,,7500,800,1600,,,,20,30,,,,ENERGY,,1750,0.25,0.25,1,1,,,,,10000,,,,,,,"STRIKE, USE_VS_FRIGATES","energy20, rare_bp",,,"Similar to the Plasma Cannon, but fires a beam.",General,,,,,,,,,,23
+Mjolnir Heavy Cannon,test_mjolnir,3,0.5,6000,900,,400,200,5,15,30,,,,ENERGY,480,,0,0.5,1,,0,5,1,10,,900,,,75,,,,"energy18, he17, kinetic17, remnant, rare_bp, hist1t, merc, persean",,,Triple barrel Mjolnir Cannon.,General,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Tachyon Accelerator,test_tachyon_accelerator,3,0.5,8000,1000,,1500,1000,0,7,25,,,,ENERGY,1800,,0.5,4,1,,,,,,,1000,,,200,,,FIRE_WHEN_INEFFICIENT,"energy20, LR, rare_bp, hist1t, merc",,,"Modified Tachyon Lance, fires a projectile instead of a continuous beam.  Unable to pierce shields, but has a powerful disabling effect.",General,,,,,"Hits on hull or armor arc to weapons and engines, dealing extra EMP and  minor energy damage.",,,,,27
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Light Mjolnir Cannon,rwc_light_mjolnir,2,0.75,4000,900,,400,200,5,20,15,,,,ENERGY,520,,0,1.5,1,,0,5,1,10,,900,,,75,,,,"energy14, kinetic13, he13, rare_bp, merc, persean",,,Single barrel Mjolnir Cannon.  Slightly worse flux efficiency.,General,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Harpoon MRM Launcher,rwc_harpoon_reload,0,,1000000,2500,,750,,15,30,,2,0.1,,HIGH_EXPLOSIVE,0,,0,8,1,,0,0,0,,,300,100,12.5,150,,,"DO_NOT_AIM, SYSTEM, SHOW_IN_CODEX, , DO_NOT_CONSERVE",,,,Single rail launcher for the ubiquitous Harpoon MRM.  Large magazines built into the hull ensure slow but reliable firepower in long engagements.,Finisher,Medium,Medium,,,,,,,TRUE,11.6125
+Harpoon MRM Battery,rwc_harpoon_lrg,,,12000,2500,,750,,15,15,24,48,,,HIGH_EXPLOSIVE,0,,,15,8,0.25,0,0,0,,,300,100,12.5,150,,,DO_NOT_AIM,"missile17, strike12, missile_bp, merc, ind",,,Large rail launcher for the common Harpoon MRM.  ,Finisher,Medium,Medium,,,,,,,TRUE,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Positron Cannon,rwc_positron_m,,,8000,850,,300,,,10,12,,,,ENERGY,300,,0,1.75,1,0,0,0,,,,1200,,,150,,,,"energy14, rare_bp, hist1t, merc",,,"Medium gun firing positron blasts. Relatively long range, high velocity, low flux efficiency.",General,,,,,,,,,,
+Heavy Positron Cannon,rwc_positron,,,12000,1000,,500,,,10,26,,,,ENERGY,570,,0,3,1,0,0,0,,,,1200,,,150,,,,"energy20, LR, rare_bp, hist1t, merc",,,"Heavy gun firing positron blasts. Long range, high velocity, low flux efficiency.",General,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Piledriver Heavy Railcannon,rwc_railcannon,,0.5,11000,1000,,450,,125,10,25,,,,KINETIC,500,,0.25,1,1,0,0,2,0.5,0.5,,1100,,,150,,,,"kinetic18, LR, remnant, rare_bp, hist1t, merc, ind",,,"Large electromagnetic cannon, highly effective against shields.",Anti Shield,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Phase Lance Battery,rwc_tribeam,1,,8000,600,3000,,,0,20,22,,,,ENERGY,,3000,0.25,0.5,1,6,,,,,3200,,,,,,,,"energy20, beam19, SR, rare_bp, merc, ind",,,,General,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,20
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Gorgon DEM (Single),rwc_gorgon,1,,250,1000,,800,,15,30,5,1,,,ENERGY,0,,0,1,1,,0,0,0,0,,300,75,6,250,,,"DO_NOT_AIM, SYSTEM, STRIKE, USE_VS_FRIGATES","missile4, strike3, damage_special, damage_soft_flux",,,,Assault / Finisher,Medium,Good,,,"The missile fires a high-powered laser when it gets near the target, dealing approximately %s energy damage in a short burst. This damage is affected by missile damage modifiers and not energy weapon ones.",800,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TRUE,11.9

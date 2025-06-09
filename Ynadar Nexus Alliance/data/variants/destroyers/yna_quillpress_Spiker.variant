@@ -1,0 +1,48 @@
+{
+  "variantId": "yna_quillpress_Spiker",
+  "hullId": "yna_quillpress",
+  "displayName": "Spiker",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 5,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 01": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "yna_vg1_m",
+        "WS 002": "yna_vg1_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "shredder",
+        "WS 004": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_flak_s",
+        "WS0002": "yna_flak_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

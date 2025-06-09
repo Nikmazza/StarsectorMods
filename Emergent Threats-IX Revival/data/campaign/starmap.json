@@ -1,6 +1,8 @@
 {
 	"starSystemLocations":{
 		"ix_zorya":[11300,4600],
+		"ix_zorya_alt":[15300,-18400],
 		"tw_danu":[4000,4900],
+		"tw_danu_alt":[8000,-18100],
 	}
 }

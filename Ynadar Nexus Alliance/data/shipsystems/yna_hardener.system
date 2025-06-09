@@ -1,0 +1,40 @@
+{
+	"id":"yna_hardener",
+	"type":"STAT_MOD",
+	"aiType":"DAMPER_FIELD",
+	
+	"statsScript":"data.shipsystems.scripts.yna_HardenerFieldStats",
+	
+	"jitterUnderColor":[200,165,40,100],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":5,
+	"jitterUnderRange":10,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"jitterColor":[200,165,40,55],
+	"jitterCopies":2,
+	"jitterMinRange":5,
+	"jitterRange":10,
+	"jitterRangeRadiusFraction":0,
+	
+	#"weaponGlowColor":[255,165,90,0],
+	#"weaponTypes":[ENERGY, BALLISTIC, MISSILE],
+	
+	#"engineGlowColor":[255,90,255,255],
+	
+	"soundFilterType":"LOWPASS",
+	"soundFilterGain":0.75,
+	"soundFilterGainHF":0.25,
+
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_damper",
+	"loopSound":"system_damper_loop",
+	"deactivateSound":"system_damper_off",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+

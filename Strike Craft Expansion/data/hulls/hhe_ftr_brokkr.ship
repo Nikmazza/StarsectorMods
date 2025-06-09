@@ -1,0 +1,99 @@
+{
+  "hullName": "Brokkr",
+  "hullId": "hhe_ftr_brokkr",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighters/hhe_ftr_brokkr.png",
+  "style": "HIGH_TECH",
+  "height": 38,
+  "width": 32,
+  "center": [16, 20],
+  "collisionRadius": 22.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 27,
+  "viewOffset": 0,
+  "builtInMods": [
+    "autorepair",
+    "hhe_z_overload_reduction"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WSS-01",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": 90,
+      "locations": [-1, 8]
+    },
+    {
+      "id": "WSS-02",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": -90,
+      "locations": [-1, -8]
+    },
+    {
+      "id": "SYS-01",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": 0,
+      "locations": [7, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        6, 2,
+        6, -2,
+        7, -0
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-18, -0],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-16, 8],
+      "length": 13,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-16, -8],
+      "length": 13,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -13.5, 7.5,
+    -11.5, 11.5,
+    -4.5, 13.5,
+    8.5, 13.5,
+    15, 7,
+    11, 0,
+    15, -7,
+    8.5, -13.5,
+    -4.5, -13.5,
+    -11.5, -11.5,
+    -13.5, -7.5
+  ]
+}

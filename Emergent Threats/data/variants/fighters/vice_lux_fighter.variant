@@ -10,9 +10,6 @@
 		{"mode":"LINKED",
 		 "weapons":{
 					"WS TURRET":"vice_autopulse_fighter",
-					#"WS 001":"vice_pilum_fighter",
-		 			#"WS 002":"irpulse_fighter",
-		 			#"WS 003":"irpulse_fighter",
 		 		   },
 		},
 	],

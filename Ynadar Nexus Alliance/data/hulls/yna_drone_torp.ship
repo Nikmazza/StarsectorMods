@@ -1,0 +1,52 @@
+{
+  "hullName": "Bellclap",
+  "hullId": "yna_drone_torp",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ynadar/ships/a_wing/torp_drone.png",
+  "style": "YNADAR",
+  "height": 27,
+  "width": 32,
+  "center": [16, 12],
+  "collisionRadius": 24,
+  "shieldCenter": [1, 0],
+  "shieldRadius": 24,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [1, 8]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, 9],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-11, -9],
+      "length": 20,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    9, 13,
+    -8, 14,
+    -8, -13,
+    9, -10
+  ]
+}

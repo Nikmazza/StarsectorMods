@@ -1,0 +1,27 @@
+#### PERSEAN LEAGUE FACTION
+{
+    "hullFrequency":{
+        "hulls":{
+			"hhe_astral_culann":.6,
+			#"hhe_gemini":2,
+        },
+    },
+    "knownShips":{
+        "hulls":[
+			"hhe_astral_culann",
+           # "hhe_gemini",
+        ],
+    },
+    "knownHullMods":{
+        "hullMods":[
+            "hhe_sfl_AegisSystem",
+            "hhe_sfl_PredatorSystem",
+            "hhe_sfl_HammerSystem",
+			"hhe_bi_artificer_hullmod",
+			"hhe_MissileReload",
+        ],
+    },
+	"knownFighters":{
+		"tags":["XIV_bp"],
+	},
+},

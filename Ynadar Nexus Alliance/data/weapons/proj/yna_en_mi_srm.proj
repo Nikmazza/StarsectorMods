@@ -1,0 +1,45 @@
+{
+	"id":"yna_en_mi_srm",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/shell_small.png",
+	"useHitGlowWhenDestroyed":true,
+	#"useProjectileRangeCalculation":true,
+	"onFireEffect":"data.scripts.weapons.yna_enmis1_onfire_effect",
+	"noDebrisWhenDestroyed":true,
+	"size":[6,8],	
+	"center":[3,4],
+	"collisionRadius":4,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[185,205,25,220],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":40, # purely visual
+	"glowColor":[185,205,25,220],
+	"glowRadius":18,
+	"fadeTime":0, # fadeout duration			
+	"flameoutTime":0.1, # total time from flameout to full fadeout
+	"noEngineGlowTime":0, # time spent without the engine glow being rendered
+	"engineSpec":{"turnAcc":175,
+				  "turnRate":90,
+				  "maxSpeed":500,
+				  "acc":300,
+				  "dec":0},			  
+	"engineSlots":[{"id":"ES1",
+					"loc":[2, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[185,205,25,120],
+						"contrailDuration":0.3,
+						"contrailWidthMult":1.5,
+						"contrailWidthAddedFractionAtEnd":-1,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":3, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":0.3, # how far away from engine it starts
+						"contrailColor":[185,205,25,150],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":4.0,
+				    "length":10.0,
+				    "angle":180.0}]
+}

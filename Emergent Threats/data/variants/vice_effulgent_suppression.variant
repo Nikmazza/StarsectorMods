@@ -1,0 +1,45 @@
+{
+    "displayName": "Suppression",
+    "fluxCapacitors": 0,
+    "fluxVents": 19,
+    "goalVariant": true,
+    "hullId": "vice_effulgent",
+    "hullMods": [
+        "eccm",
+        "hardenedshieldemitter",
+        "vice_module_handler",
+        "vice_adaptive_trajectory_analyzer"
+    ],
+    "permaMods": ["vice_module_handler"],
+    "sMods": [],
+    "variantId": "vice_effulgent_suppression",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vice_warp_torpedo_launcher",
+                "WS 003": "vice_warp_torpedo_pod",
+                "WS 004": "vice_warp_torpedo_pod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "vice_fragbomb",
+                "WS 010": "vice_fragbomb"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "pdburst",
+                "WS 006": "pdburst",
+                "WS 007": "pdlaser",
+                "WS 008": "pdlaser"
+            }
+        }
+    ]
+}

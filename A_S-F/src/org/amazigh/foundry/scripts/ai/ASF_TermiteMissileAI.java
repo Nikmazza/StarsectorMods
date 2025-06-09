@@ -299,7 +299,7 @@ public class ASF_TermiteMissileAI implements MissileAIPlugin, GuidedMissileAI {
 			}
 		}
 
-		//If we didn't find a point in 40 tries, just choose target center
+		//If we didn't find a point in 20 tries, just choose target center
 		if (!success) {
 			targetPoint = new Vector2f(Misc.ZERO);
 		}

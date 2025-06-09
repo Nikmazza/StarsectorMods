@@ -1,0 +1,79 @@
+{
+  "hullName": "Module",
+  "hullId": "yna_perilstar_m_t_r",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ynadar/ships/perilstar/perilstar_t_r.png",
+  "style": "YNADAR",
+  "height": 118,
+  "width": 70,
+  "center": [35, 59],
+  "collisionRadius": 72,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 72,
+  "viewOffset": 0,
+  "builtInMods": [
+    "yna_hullspec",
+    "yna_perilmod",
+    "yna_LinkedHull",
+    "reduced_explosion",
+    "always_detaches"
+  ],
+  "builtInWeapons": {
+    "WS0001": "yna_pd_las1_s",
+    "WS0002": "yna_pd_las1_s"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [21, -18]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -120,
+      "locations": [-16, -1]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-52, -19],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-56, -8],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-58, 5],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -56, 9,
+    -46, -21,
+    25, -22,
+    55, 11,
+    43, 23,
+    -34, 29
+  ]
+}

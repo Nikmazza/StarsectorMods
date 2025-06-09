@@ -1,0 +1,32 @@
+{
+	"id":"hhe_prickler",
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"SMALL",
+	
+	"turretSprite":"graphics/weapons/hhe_prickler_base.png",
+	"turretGunSprite":"graphics/weapons/hhe_prickler_base_recoil.png",
+	"hardpointSprite":"graphics/weapons/hhe_prickler_hardpoint.png",
+	"hardpointGunSprite":"graphics/weapons/hhe_prickler_hardpoint_recoil.png",
+	
+	"visualRecoil":3.0,
+	"turretOffsets":[13, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[16.5, 0],
+	"hardpointAngleOffsets":[0],
+	
+	"renderHints":[RENDER_BARREL_BELOW],
+	"barrelMode":"ALTERNATING",
+	
+	"animationType":"MUZZLE_FLASH",
+	"muzzleFlashSpec":{"length":20.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":6.0,
+					   "particleSizeRange":8.0,
+					   "particleDuration":0.15,
+					   "particleCount":7,
+					   "particleColor":[255,240,165,200]},
+					   
+	"projectileSpecId":"vulcan_shot",
+	"fireSoundTwo":"vulcan_cannon_fire",
+}

@@ -1,0 +1,60 @@
+{
+  "variantId": "yna_weighbell_Duster",
+  "hullId": "yna_weighbell",
+  "displayName": "Duster",
+  "goalVariant": false,
+  "fluxCapacitors": 19,
+  "fluxVents": 30,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "turretgyros",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 01": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 02": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_fragcannon_l",
+        "WS0002": "yna_fragcannon_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_ac_s",
+        "WS0004": "yna_ac_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "yna_flak_s",
+        "WS0006": "yna_flak_s",
+        "WS0007": "yna_flak_s",
+        "WS0008": "yna_flak_s",
+        "WS0009": "yna_pd_las1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

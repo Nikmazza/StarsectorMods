@@ -1,6 +1,6 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 11,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "vice_tigershark_ex",

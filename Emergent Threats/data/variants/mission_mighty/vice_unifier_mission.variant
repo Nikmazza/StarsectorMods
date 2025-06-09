@@ -7,7 +7,7 @@
         "malfunctioning_comms",
         "fragile_subsystems",
         "advancedoptics",
-        "targetingunit"
+        "vice_unified_targeting_core"
     ],
     "permaMods": [
         "malfunctioning_comms",

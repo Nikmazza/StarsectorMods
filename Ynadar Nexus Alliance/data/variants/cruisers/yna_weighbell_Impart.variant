@@ -1,0 +1,53 @@
+{
+  "variantId": "yna_weighbell_Impart",
+  "hullId": "yna_weighbell",
+  "displayName": "Impart",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 30,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "advancedoptics"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "MS 01": "sabot",
+        "MS 02": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_hil_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "yna_hil_l"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_flak_s",
+        "WS0004": "yna_flak_s",
+        "WS0005": "yna_flak_s",
+        "WS0006": "yna_flak_s",
+        "WS0007": "yna_flak_s",
+        "WS0008": "yna_flak_s",
+        "WS0009": "yna_pd_las1_s"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

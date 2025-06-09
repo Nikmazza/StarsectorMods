@@ -4,7 +4,7 @@
 	"author":"Mira",
 	"version":"2.5b.0-KS003",
 	"description":"Adds Some powerful weapons with questionable balance into the game.",
-	"gameVersion":"0.97",
+	"gameVersion":"0.98a",
 	"jars": [
 		"jars/Superweapons.jar"
 	],

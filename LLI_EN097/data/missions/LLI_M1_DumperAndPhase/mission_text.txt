@@ -1,7 +1,0 @@
-Destroy the enemy with your pirate fleet.
-
-The enemy primarily consists of shieldless carriers and phase ships.
-
-These unshielded ships have opted for the Frenzy and Plunder Tac-Mods, a relatively standard combination.
-
-The rest of the fleet instead opts for Transmission and Persistence, providing powerful support.

@@ -10,30 +10,63 @@ A decision is made, the division is to create a product, a result that would sat
 
 The plan worked, or it would have if the gate network did not choose collapse at the most inopportune moment. The research was frozen, forgotten, and then considered lost. Cycles later, a sub-gamma AI gleaned the lab location from old data banks and a salvage team was dispatched. Their sole find, a ship schematic now serves as a pet project for an excentric TriTach executive.",,,
 ,,,,,
-nes_hamter,SHIP,"An aggressive destroyer with large emplacement, full-sized fighter bay and struggling flux grid, Hampter is an exercise in greed. Nimble for a lowtech design, with cramped quarters and cargoholds this deadly hull is both adored and despised by its captains and crews.",,,
-,,,,,
-nes_hermitaur,SHIP,"An antiquated design predating the shield emitter technology, Hermitaur is encased in overlapping belts of thick armor forming an impressively tough carapace. Powerful frontal layout delivers concentrated firepower, however the aft section is completely exposed. Left unchecked, an experienced opponent would seize the opportunity to set up a pincer maneuver and attack its weak point for massive damage.",,,
-,,,,,
-nes_hammerfall,SHIP,"An utility vessel fit for combat duty, Hammerfall is fully capable of creating its own salvage opportunities.
+nes_hampter,SHIP,"An aggressive destroyer with large emplacement, full-sized fighter bay and struggling flux grid, Hampter is an exercise in greed. Nimble for a lowtech design, with cramped quarters and cargo holds this deadly hull is both adored and despised by its captains and crews.",,,
+nes_hampter_hero,SHIP,"A personal flagship of Alicia Yang, a heavily retrofitted Hampter mark V in a striking livery.
 
-Stemming its roots from Hammerhead blueprint the hull has been expanded and reinforced to accomodate a fully integrated heavy laser drill which, while being impressively efficient, requires to be linked directly into the main power feed, distrupting and severely limiting shields performance, making ship extremely vulnerable to flanking.",,,
+Captain Alicia was rather famous for her jolly, good natured, sometimes whimsical personality and somewhat more importantly for managing to lose her ship in practically every engagement she was part of, but escaping with her life, crew and valuables every time and for the most part, completely unscathed.
+
+Curiously, every encounter where the ship was lost had ended in a resounding victory for the allied fleet. Spacers being a deeply supersticious lot tended to keep a close, watchful eye on her ship to judge the state of battle.
+""Lucky Alicia Yang"" crews would say and it was that luck that kept captain Yang in active service.
+
+She was however never given command of anything more substantial than a destroyer, a failing which prompted Alicia to greedily retrofit her ship with ever bigger and more powerful weapons and endlessly drill crews in gunnery often rivaling or even surpassing many larger ships in terms of pure firepower.
+
+It was rumored that during her last recorded mission, a minor border dispute which escalated into a lenghty standoff with plenty of posturing and little fighting on both sides, Alicia was so engrossed in her favorite Tri-Net holo-show ""Pero Pero Persimon Tree Lyrical Blast Maiden DX"" that she missed a general retreat order, had been subsequently cut off and surrounded only to disappear without a trace alongside her ship and the entire crew.
+
+A following search and rescue operation discovered faint traces of unusual hyperspace distortions at the coordinates of last contact with the ship. Any further investigation was quietly but firmly put to a stop and only vague speculations such as ""discovery of Transverse Jump"" and ""Fleet command selling technology to the Galatia Academy"" remained.
+Cycles later, a woman bearing suspicious resemblance to Alicia Yang was reportedly sighted on one of the luxurious Fikenhild beaches but it was never confirmed.
+
+
+Additional information:
+Pero Pero Persimon Tree Lyrical Blast Maiden, a long running hit series about a group of young girls who in order to protect peace in the universe are fighting against an evil AI organization using the power of magic, friendship and very, very big guns.
+
+In that particular episode Persimon was caught off guard by the grand vill-ai-n Hugh Mann and had been sent to the digital dimension. To save Persimon, her friends rushed in to fight Hugh Mann and his cronies but were all easily overpowered.
+
+Cherry, a divine magical maiden and Persimon's most trusted companion was late to the scene, having been delayed by a cunning plan of the evil organization.
+She had no choice but to face the enemy on her own and fought a losing battle until on the brink of defeat she miraculously awakened to a dormant power within and unleashed her new ultimate attack ""Papillon Slasher EX Twin Nova Fury"" managing to drive back Hugh Mann and save the day.
+
+The next four seasons would cover an expedition to a digital world with the goal to save Persimon and mark a steady decline of the series.
+Later however, Persimon's triumphant return would revitalize the series and mark its rise back to the top of the Tri-Net popularity charts. The holo-show remains ongoing even today.
+
+",,,
+,,,,,
+nes_hermitaur,SHIP,"An antiquated design predating the shield emitter technology, Hermitaur is encased in overlapping belts of thick armor forming an impressively tough carapace. Powerful frontal layout delivers concentrated firepower, however the aft section is completely exposed. Left unchecked, an experienced opponent would seize the opportunity to set up a pincer maneuver and attack its weak point for massive damage.
+
+Crews universally dread assignments to the Hermitaur class and widely consider it a punishment detail, as putting the long obsolete hot-loading mechanism into action soon became known as a quick way to join the casualty list, often permanently.",,,
+,,,,,
+nes_hammerfall,SHIP,"An utility vessel fit for harsh frontier duty, Hammerfall is fully capable of creating its own salvage opportunities.
+
+Built upon a demilitarized Hammerhead frame, the hull has been expanded and reinforced to accomodate the spacious cargo holds, additional crew quarters and a fully integrated Ko Combine Optimaster-990 ""Pillar"" heavy laser drill.",,,
 ,,,,,
 nes_voltaire,SHIP,"A late pre-collapse design of the Domain Navy, Volt is a technologically advanced behemoth of a ship developed with exclusive backing from the Tri-Tachyon corporation. After receiving almost unprecedented amound of funding, the design team came up with heavily armed, well armored hull with an extensive flux grid and powerful engines. All-around automation and use of premium components ensued outstanding performance and ensured exceptional production and maintenance costs. Phobos drone suite was included to protect otherwise vulnerable stern as well as support mothership in the assault, should its captain be daring enough.",,,
 ,,,,,
 nes_carnelian,SHIP,"A pre-collapse design from Altair Exotech combines the exceptional speed and versatility in one fragile package. ""Chrysoberyl"" tandem suite allows a pair of heavily specialized drones to join Carnelian in battle.",,,
+,,,,,
+nes_phasething,SHIP,"Oh, hello there. This ship is a work in progress, the orbital shipyards are working day and night to finish it. Now, curious one, quit poking your nose where is doesn't belong.",,,
 #Drones,,,,,
 nes_drone_phobos,SHIP,"Advanced drone for point defence and close assault duty. Fabrique Orbitale provided the chassis and system designs, while Tri-Tachyon experts were responsible for the weapons suite.",,,
 ,,,,,
-nes_drone_carnelian_attacker,SHIP,Chrysoberyl twins resolute attacker.,,,
+nes_drone_carnelian_attacker,SHIP,"Resolute attacker of the semi-autonomous ""Chrysoberyl"" twin-drone suite developed at Interstellar Dynamics and produced by Altair Exotech.",,,
 ,,,,,
-nes_drone_carnelian_defender,SHIP,Chrysoberyl twins stalwart protector.,,,
+nes_drone_carnelian_defender,SHIP,"Stalwart protector of the semi-autonomous ""Chrysoberyl"" twin-drone suite developed at Interstellar Dynamics and produced by Altair Exotech.",,,
 #Weapons,,,,,
 nes_assault_mjolnir,WEAPON,"""...a greatest revolving cannon ever made. Six gravitic shells... More than enough to kill anything that moves.""","- Adam Baker, COMSEC operative",,
 ,,,,,
-nes_mining_drill,WEAPON,"Heavyweight laser drill designed for deep-space mining. Limited effective range, civilian design and requirements for complete integration made it obsolete as a tool of war. Nonetheless, having the capacity to slice through most armor with terrifying ease it can be used as an effective weapon and generous safety limits could be temporarily overriden to increase its destructive potential.",,,
+nes_mining_drill,WEAPON,"Heavyweight laser drill designed for deep-space mining. Civilian design and requirements for complete integration made it obsolete as a tool of war. Nonetheless, having the capacity to slice through most hull with terrifying ease it can be used as an effective weapon and generous safety limits could be temporarily overriden to increase its destructive potential.",,,
 ,,,,,
 nes_shock,WEAPON,Commencing shock therapy.,,,
 ,,,,,
 nes_flak_drone,WEAPON,Extended range defensive weapon system that fires shrapnel-filled shells equipped with a proximity fuse for maximum effect against fighters and missiles.,,,
 #Shipsystems,,,,,
 nes_crystaltemporalshell,SHIP_SYSTEM,Resonates exotic particles within crystalline structure to accelerate the flow of time on board the ship.,Movement,Briefly accelerates timeflow and disables inertial dampeners. Stores multiple charges.,
+,,,,,
+nes_crystaltemporalshell_degraded,SHIP_SYSTEM,Resonates exotic particles within crystalline structure to accelerate the flow of time on board the ship.,Movement,Briefly accelerates timeflow and disables inertial dampeners. Reduced charges.,

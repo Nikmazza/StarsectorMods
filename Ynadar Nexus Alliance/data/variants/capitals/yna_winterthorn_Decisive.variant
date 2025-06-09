@@ -1,0 +1,89 @@
+{
+  "variantId": "yna_winterthorn_Decisive",
+  "hullId": "yna_winterthorn",
+  "displayName": "Decisive",
+  "goalVariant": true,
+  "fluxCapacitors": 32,
+  "fluxVents": 50,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "armoredweapons",
+    "turretgyros",
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MIS 05": "yna_svento_s",
+        "MIS 06": "yna_svento_s",
+        "MIS 07": "yna_svento_s",
+        "MIS 08": "yna_svento_s"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MIS 03": "sabot_single",
+        "MIS 04": "sabot_single"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "MIS 01": "swarmer",
+        "MIS 02": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "yna_ac_m",
+        "WS0002": "yna_ac_m",
+        "WS0005": "yna_ac_s",
+        "WS0006": "yna_ac_s",
+        "WS0007": "yna_ac_s"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "yna_enmis_m",
+        "WS0004": "yna_enmis_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "MIS 09": "heatseeker",
+        "MIS 10": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "yna_flak_s",
+        "WS0009": "yna_flak_s",
+        "WS0010": "vulcan",
+        "WS0011": "vulcan",
+        "WS0012": "vulcan",
+        "WS0013": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "yna_bmr_wing",
+    "yna_ftr_heavy_wing",
+    "yna_ftr_light_wing"
+  ]
+}
