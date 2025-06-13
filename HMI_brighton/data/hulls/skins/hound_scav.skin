@@ -1,0 +1,23 @@
+{
+	"baseHullId":"hound",
+	"skinHullId":"hound_scav",
+	"hullName":"Hound (BRV)",
+	"descriptionId":"hound",  # optional
+	"descriptionPrefix":"Due to isolation and poor access, the Brighton Federation is forced to use existing and easily accessible scrap to manufacture new vessels, tagged as Brighton Repurposed Vessel (BRV). Reconstructed from spare derelict parts, this ship has severe performance deficincies. The reconstruction however has introduced a more missile focused layout, and the use of easily acquired scrap makes the ship easier to maintain.",
+	"tags":["hmi_scav_base_bp"],
+	"tech":"Brighton Reconstruction",
+	"spriteName":"graphics/ships/hound_scav.png",
+	"baseValueMult":0.7,
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["brighton_base"],
+	"builtInWeapons":{
+    },
+	"weaponSlotChanges":{
+		"WS 002":{
+        "type": "MISSILE",
+		},
+	},
+}

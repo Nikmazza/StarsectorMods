@@ -164,7 +164,7 @@
       "width": 12,
       "angle": 180,
       "contrailSize": 128,
-      "style": "LOW_TECH"
+      "style": "COBRA_BOMBER"
     },
     {
       "location": [-135, 0],
@@ -172,7 +172,7 @@
       "width": 12,
       "angle": 180,
       "contrailSize": 128,
-      "style": "LOW_TECH"
+      "style": "COBRA_BOMBER"
     },
     {
       "location": [-135, 6],
@@ -180,7 +180,7 @@
       "width": 12,
       "angle": 180,
       "contrailSize": 128,
-      "style": "LOW_TECH"
+      "style": "COBRA_BOMBER"
     },
   ],
   "bounds": [

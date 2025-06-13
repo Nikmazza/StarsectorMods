@@ -20,10 +20,10 @@ public class DawnstarReactor extends BaseHullMod {
 	private static String ELECTRON_MOD = "ix_dawnstar_electron";
 	//private static String EXOTIC_MOD = "ix_dawnstar_exotic";
 	
-	//dawnstar L/dawnstar H/daybreak (adaptive), both emitter types
-	private static String P_DAM_L = "20";
-	private static String P_DAM_H = "30 armor";
-	private static String P_DAM_A = "10";
+	//L dawnstar/H dawnstar/single and twin daybreak
+	private static String P_DAM_L = "40";
+	private static String P_DAM_H = "60 armor";
+	private static String P_DAM_A = "20";
 	private static String N_DAM_L = "100";
 	private static String N_DAM_H = "150 kinetic";
 	private static String N_DAM_A = "50";

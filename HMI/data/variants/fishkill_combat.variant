@@ -3,7 +3,7 @@
   "hullId": "fishkill",
   "displayName": "Combat",
   "goalVariant": true,
-  "fluxCapacitors": 1,
+  "fluxCapacitors": 8,
   "fluxVents": 40,
   "quality": 0,
   "permaMods": [],

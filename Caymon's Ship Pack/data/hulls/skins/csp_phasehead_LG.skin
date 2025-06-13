@@ -1,0 +1,24 @@
+{
+  "baseHullId": "csp_phasehead",
+  "baseValue": 70000,
+  "baseValueMult": 1.5,
+  "builtInMods": [
+    "csp_multi_layered_shielding",
+    "andrada_mods",
+    "solar_shielding"
+  ],
+  "descriptionId": "csp_phasehead",
+  "descriptionPrefix": "This ship has been slightly overhauled and upgraded to be used by the Lion's Guard of the Sindrian Diktat, fitted to be able to handle the extreme weather of the Askonia Star System, with some practical use in combat",
+  "fighterBays": 0,
+  "fleetPoints": 14,
+  "fpMod": 0,
+  "tags":["lions_guard"],
+  "hullDesignation": "Destroyer",
+  "hullName": "Phasehead (LG)",
+  "manufacturer": "Lion's Guard",
+  "ordnancePoints": 120,
+  "restoreToBaseHull": false,
+  "skinHullId": "csp_phasehead_LG",
+  "spriteName": "graphics/ships/csp_phaseheadLG.png",
+  "tech": "Lion's Guard"
+}

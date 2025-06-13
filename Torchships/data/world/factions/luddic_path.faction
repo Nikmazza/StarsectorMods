@@ -1,35 +1,28 @@
 {
+    # variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+            "TADA_bully_pather_raider":30,
+	},
+    # multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
         "hulls":{
-            "TADA_challenger_pather":0.5,
-            "TADA_bully_pather":0.5,
-            "TADA_foray_pather":0.25,
-            "TADA_bonnethead_pather":0.25,
+            "TADA_foray_pather":0.125,
         },
     },
+    # ships the faction gets access to when importing S&W out-of-faction
     "shipsWhenImporting":{
         "hulls":[
-            "TADA_scalper",
+            "TADA_bonnethead_pather",
         ],
     },
     "knownShips":{
         "hulls":[
-            "TADA_challenger_pather",
-            "TADA_bully_pather",
-            "TADA_foray_pather",
             "TADA_bonnethead_pather",
         ],
     },
-    "knownWeapons":{
-        "weapons":[
-            "TADA_pike",
-            "TADA_LRA",
-            "TADA_urchin",
+    "knownFighters":{
+        "fighters":[
+            "TADA_firespitter_wing",
         ],
     },
-	"knownHullMods":{
-		"hullMods":[
-			"TADA_reactiveArmor",
-		],
-	},
 },

@@ -43,12 +43,15 @@ public class AdaptiveTemporalShell extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (util.isModuleCheck(ship)) return false;
 		if (ship.getShield() == null) return false;
 		return (util.isApplicable(ship) && util.isOnlyRemnantMod(ship));
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (ship.getVariant().hasHullMod("vice_shipwide_integration") && (ship.getVariant().hasHullMod(THIS_MOD))) return null;
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("hub");
 		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");

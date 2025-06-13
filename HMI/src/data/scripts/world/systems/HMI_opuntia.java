@@ -16,9 +16,9 @@ import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.Debri
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
-import data.campaign.fleets.MessFleetManager;
 import data.campaign.fleets.HMIScavFleetRouteManager;
-import data.campaign.procgen.DomresStationFleetManager;
+import data.campaign.procgen.MessStationFleetManager;
+import indevo.utils.helper.Settings;
 
 import java.awt.*;
 import java.util.Random;
@@ -124,7 +124,7 @@ public class HMI_opuntia implements SectorGeneratorPlugin {
         stationDerelict3.setCircularOrbit(star, 100, 1700, 65f);
         Misc.setDefenderOverride(stationDerelict3, new DefenderDataOverride("mess", 1f, 20, 60));
         CargoAPI extraStationSalvage3 = Global.getFactory().createCargo(true);
-        extraStationSalvage3.addCommodity("mess_nano", 69);
+        extraStationSalvage3.addCommodity("mess_nano", 5);
         BaseSalvageSpecial.addExtraSalvage(extraStationSalvage3, stationDerelict3.getMemoryWithoutUpdate(), -1);
 
 
@@ -145,7 +145,7 @@ public class HMI_opuntia implements SectorGeneratorPlugin {
         stationDerelict1.setCircularOrbit(star, 355, 3000, 200f);
         Misc.setDefenderOverride(stationDerelict1, new DefenderDataOverride("mess", 1f, 185, 250));
         CargoAPI extraStationSalvage2 = Global.getFactory().createCargo(true);
-        extraStationSalvage2.addCommodity("mess_nano", 185);
+        extraStationSalvage2.addCommodity("mess_nano", 21);
         BaseSalvageSpecial.addExtraSalvage(extraStationSalvage2, stationDerelict1.getMemoryWithoutUpdate(), -1);
 
         system.addRingBand(star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 3200, 100f, Terrain.RING, "Salvinia Remnant");
@@ -160,11 +160,20 @@ public class HMI_opuntia implements SectorGeneratorPlugin {
 					opun3.getMarket().addCondition(Conditions.ORE_MODERATE);
 					opun3.getMarket().addCondition(Conditions.RARE_ORE_SPARSE);
                     opun3.getMarket().addCondition("hmi_mess_swarm_cond");
+        opun3.getSpec().setPlanetColor(new Color(157, 157, 239,255));
+        opun3.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "banded"));
+        opun3.getSpec().setGlowColor(new Color(235,38,8,145));
+        opun3.getSpec().setUseReverseLightForGlow(true);
+        opun3.getSpec().setAtmosphereThickness(0.5f);
+        opun3.getSpec().setCloudRotation( 15f );
+        opun3.getSpec().setAtmosphereColor(new Color(216, 212, 241,245));
+
 
 		system.addRingBand(star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 5500, 200f, Terrain.RING, "Cylindropuntia Remnant");
 		system.addAsteroidBelt(star, 240, 5500, 128, 200, 300, Terrain.ASTEROID_BELT, null);
         system.addRingBand(opun3, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 220, 200f, Terrain.RING, "Cylindropuntia Remnant");
         opun3.setCustomDescriptionId("hmi_infested");
+        opun3.addTag("hmi_mess_blocktag");
      
         SectorEntityToken opun_station1 = system.addCustomEntity(
                 "mess_station1",
@@ -177,7 +186,7 @@ public class HMI_opuntia implements SectorGeneratorPlugin {
         opun_station1.addTag("hmi_messstationtag");
 
         int maxFleets = 6 + this.random.nextInt(2);
-        MessFleetManager MessFleets = new MessFleetManager(
+        MessStationFleetManager MessFleets = new MessStationFleetManager(
                 opun_station1, 1.0f, 3, maxFleets, 15.0f, 5, 25);
         system.addScript(MessFleets);
 
@@ -189,7 +198,7 @@ public class HMI_opuntia implements SectorGeneratorPlugin {
         stationDerelict2.setCircularOrbit(star, 120, 5500, 200f);
         Misc.setDefenderOverride(stationDerelict2, new DefenderDataOverride("mess", 1f, 50, 100));
         CargoAPI extraStationSalvage = Global.getFactory().createCargo(true);
-        extraStationSalvage.addCommodity("mess_nano", 200);
+        extraStationSalvage.addCommodity("mess_nano", 12);
         BaseSalvageSpecial.addExtraSalvage(extraStationSalvage, stationDerelict2.getMemoryWithoutUpdate(), -1);
 
 
@@ -210,7 +219,6 @@ public class HMI_opuntia implements SectorGeneratorPlugin {
 		opun_station2.setCustomDescriptionId("hmi_station_cactorum");
         opun_station2.setInteractionImage("illustrations", "industrial_megafacility");
 
-                
         //JUMP POINT
         JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("opun_jumpPointA", "Cactorum Jump-Point");
         OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 250, 7600, 300);

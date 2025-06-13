@@ -1,0 +1,42 @@
+{
+    "displayName": "Pulse",
+    "fluxCapacitors": 4,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "nes_carnelian",
+    "hullMods": [
+        "fluxbreakers",
+        "fluxdistributor",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "nes_carnelian_pulse",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "autopulse",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "pulselaser",
+                "WS0002": "pulselaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "vulcan",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

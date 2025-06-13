@@ -10,6 +10,8 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
+import data.scripts.vice.util.RemoveSpecialFightersUtil;
+
 public class ConvertedBattlecarrier extends BaseHullMod {
 	
 	private static float FITTING_PENALTY = 10f; //text only, actual value 340 set in vice_exhortation.skin
@@ -29,6 +31,7 @@ public class ConvertedBattlecarrier extends BaseHullMod {
 			if (i == SHUTTLE_INDEX) continue;
 			if (wings.get(i).equals(WING_ID)) stats.getVariant().setWingId(i, WING_ID_BACKUP);
 		}
+		RemoveSpecialFightersUtil.deleteSpecialLPCsFromHull(stats.getVariant(), id);
 	}
 	
 	@Override

@@ -55,13 +55,13 @@ public class II_FundaeMirvAI extends II_BaseMissile {
 
     @Override
     protected boolean acquireTarget(float amount) {
-        if (target instanceof MissileAPI) {
-            if (((MissileAPI) target).isFlare()) {
+        if (target instanceof MissileAPI missileAPI) {
+            if (missileAPI.isFlare()) {
                 freeTargeting = false;
             }
         }
-        if (target instanceof ShipAPI) {
-            if ((((ShipAPI) target).getVariant() != null) && ((ShipAPI) target).getVariant().hasHullMod("ii_attraction_matrix")) {
+        if (target instanceof ShipAPI shipAPI) {
+            if ((shipAPI.getVariant() != null) && shipAPI.getVariant().hasHullMod("ii_attraction_matrix")) {
                 freeTargeting = false;
             }
         }
@@ -112,7 +112,8 @@ public class II_FundaeMirvAI extends II_BaseMissile {
 
         noEngines -= amount;
 
-        if (missile.isFizzling() || missile.isFading()) {
+        if (missile.isFizzling() || missile.isFading() || ((missile.getEngineController() != null)
+                && (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()))) {
             detonate -= amount;
             if (detonate <= 0f) {
                 II_FundaeAI.explode(missile, null, new Vector2f(missile.getLocation()), Global.getCombatEngine());
@@ -124,8 +125,7 @@ public class II_FundaeMirvAI extends II_BaseMissile {
             }
         }
 
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone()) {
                 float distance = II_Util.getActualDistance(missile.getLocation(), target, true);
 
@@ -146,6 +146,11 @@ public class II_FundaeMirvAI extends II_BaseMissile {
 
         if (missile.isFizzling() || missile.isFading() || (noEngines > 0f)) {
             return;
+        }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
         }
 
         if (!acquireTarget(amount)) {

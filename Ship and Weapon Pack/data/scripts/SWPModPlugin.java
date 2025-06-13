@@ -14,17 +14,26 @@ import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAIConfig;
 import com.fs.starfarer.api.combat.ShipAIPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.combat.ShipSystemSpecAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.SharedUnlockData;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager;
 import com.fs.starfarer.api.impl.campaign.missions.HandMeDownFreighter;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.loading.Description;
+import com.fs.starfarer.api.loading.FighterWingSpecAPI;
+import com.fs.starfarer.api.loading.HullModSpecAPI;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.thoughtworks.xstream.XStream;
 import data.scripts.campaign.SWP_CampaignPlugin;
 import data.scripts.campaign.SWP_ExcelsiorSpawner;
+import data.scripts.campaign.SWP_ExcelsiorUnlocker;
 import data.scripts.campaign.SWP_IBBFleetEncounterContext;
 import data.scripts.campaign.SWP_IBBInteractionDialogPlugin;
 import data.scripts.campaign.SWP_MarketRiggerScript;
@@ -128,6 +137,14 @@ public class SWPModPlugin extends BaseModPlugin {
         if (!Global.getSector().getGenericPlugins().hasPlugin(SWP_TriTachyonFleetPlugin.class)) {
             Global.getSector().getGenericPlugins().addPlugin(new SWP_TriTachyonFleetPlugin(), true);
         }
+
+        if (!SharedUnlockData.get().isPlayerAwareOfShip("swp_excelsior")) {
+            if (!Global.getSector().getListenerManager().hasListenerOfClass(SWP_ExcelsiorUnlocker.class)) {
+                Global.getSector().getListenerManager().addListener(new SWP_ExcelsiorUnlocker(), true);
+            }
+        }
+
+        syncIBBCodex();
     }
 
     public static void syncSWPScriptsExerelin() {
@@ -154,6 +171,14 @@ public class SWPModPlugin extends BaseModPlugin {
         if (!Global.getSector().getGenericPlugins().hasPlugin(SWP_TriTachyonFleetPlugin.class)) {
             Global.getSector().getGenericPlugins().addPlugin(new SWP_TriTachyonFleetPlugin(), true);
         }
+
+        if (!SharedUnlockData.get().isPlayerAwareOfShip("swp_excelsior")) {
+            if (!Global.getSector().getListenerManager().hasListenerOfClass(SWP_ExcelsiorUnlocker.class)) {
+                Global.getSector().getListenerManager().addListener(new SWP_ExcelsiorUnlocker(), true);
+            }
+        }
+
+        syncIBBCodex();
     }
 
     private static void initGraphicsLib() {
@@ -197,9 +222,11 @@ public class SWPModPlugin extends BaseModPlugin {
         x.alias("SWP_IBBFEC", SWP_IBBFleetEncounterContext.class);
         x.alias("SWP_IBBIDP", SWP_IBBInteractionDialogPlugin.class);
         x.alias("SWP_TTFP", SWP_TriTachyonFleetPlugin.class);
+        x.alias("SWP_EU", SWP_ExcelsiorUnlocker.class);
     }
 
     @Override
+    @SuppressWarnings("UseSpecificCatch")
     public void onApplicationLoad() throws Exception {
         hasGraphicsLib = Global.getSettings().getModManager().isModEnabled("shaderLib");
         if (hasGraphicsLib) {
@@ -210,7 +237,7 @@ public class SWPModPlugin extends BaseModPlugin {
 
         try {
             loadSettings();
-        } catch (IOException | JSONException e) {
+        } catch (Exception e) {
             Global.getLogger(SWPModPlugin.class).log(Level.ERROR, "Settings loading failed! " + e.getMessage());
         }
 
@@ -288,20 +315,16 @@ public class SWPModPlugin extends BaseModPlugin {
     @Override
     public PluginPick<MissileAIPlugin> pickMissileAI(MissileAPI missile, ShipAPI launchingShip) {
         if (HORNET_MRM_ID.contentEquals(missile.getProjectileSpecId())) {
-            return new PluginPick<MissileAIPlugin>(new SWP_HornetAI(missile, launchingShip),
-                    CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_HornetAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
         }
         if (FLAREBURST_MRM_ID.contentEquals(missile.getProjectileSpecId())) {
-            return new PluginPick<MissileAIPlugin>(new SWP_FlareBurstAI(missile, launchingShip),
-                    CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_FlareBurstAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
         }
         if (REDEEMER_MISSILE_ID.contentEquals(missile.getProjectileSpecId())) {
-            return new PluginPick<MissileAIPlugin>(new SWP_RedeemerAI(missile, launchingShip),
-                    CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_RedeemerAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
         }
         if (REDEEMER_SUB_MISSILE_ID.contentEquals(missile.getProjectileSpecId())) {
-            return new PluginPick<MissileAIPlugin>(new SWP_RedeemerSubAI(missile, launchingShip),
-                    CampaignPlugin.PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_RedeemerSubAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
         }
         return null;
     }
@@ -337,17 +360,90 @@ public class SWPModPlugin extends BaseModPlugin {
     @Override
     public PluginPick<AutofireAIPlugin> pickWeaponAutofireAI(WeaponAPI weapon) {
         if (FLAREGUN_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_FlareGunWeaponAI(weapon), PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_FlareGunWeaponAI(weapon), PickPriority.MOD_SET);
         }
         if (FLAREBURST_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_FlareBurstWeaponAI(weapon), PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_FlareBurstWeaponAI(weapon), PickPriority.MOD_SET);
         }
         if (GODMODE_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_GodModeWeaponAI(weapon), PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_GodModeWeaponAI(weapon), PickPriority.MOD_SET);
         }
         if (EMPBOMB_ID.contentEquals(weapon.getId())) {
-            return new PluginPick<AutofireAIPlugin>(new SWP_EMPBombWeaponAI(weapon), PickPriority.MOD_SET);
+            return new PluginPick<>(new SWP_EMPBombWeaponAI(weapon), PickPriority.MOD_SET);
         }
         return null;
+    }
+
+    @Override
+    public void onAboutToStartGeneratingCodex() {
+        Global.getSettings().getHullSpec("swp_excelsior_boss").setLogisticsNAReason("Not available");
+        Global.getSettings().getDescription("swp_excelsior", Description.Type.SHIP).setText1(EXCELSIOR_DESCRIPTION);
+    }
+
+    @Override
+    public void onCodexDataGenerated() {
+        syncIBBCodex();
+
+        CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("swp_ray_core"), CodexDataV2.getShipEntryId("swp_beholder"));
+        CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("swp_ray_core"), CodexDataV2.getShipSystemEntryId("swp_drone_ray"));
+        CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("swp_ray_core"), CodexDataV2.getShipEntryId("swp_boss_beholder"));
+        CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("swp_ray_core"), CodexDataV2.getShipSystemEntryId("swp_boss_drone_death_ray"));
+        CodexDataV2.makeUnrelated(CodexDataV2.getShipEntryId("swp_excelsior"), CodexDataV2.getShipEntryId("swp_excelsior_boss"));
+    }
+
+    /* These are heuristics that may not always be correct... */
+    public static void syncIBBCodex() {
+        for (ShipHullSpecAPI spec : Global.getSettings().getAllShipHullSpecs()) {
+            if ((spec.getBaseHullId().contains("_boss") && (spec.getDesignation().contains("Mod-") || spec.getManufacturer().contentEquals("Cursed")))
+                    || spec.getBaseHullId().contentEquals("ii_boss_titanx") || spec.getBaseHullId().contentEquals("swp_boss_sporeship")) {
+                if (!isIBBEnabled()) {
+                    spec.addTag(Tags.INVISIBLE_IN_CODEX);
+                } else if (spec.getTags() != null) {
+                    spec.getTags().remove(Tags.INVISIBLE_IN_CODEX);
+                }
+            }
+        }
+        for (WeaponSpecAPI spec : Global.getSettings().getActuallyAllWeaponSpecs()) {
+            if (spec.getWeaponId().contains("_boss") && (spec.getManufacturer() != null) && spec.getManufacturer().contains("Unique")) {
+                if (!isIBBEnabled()) {
+                    spec.addTag(Tags.INVISIBLE_IN_CODEX);
+                } else if (spec.getTags() != null) {
+                    spec.getTags().remove(Tags.INVISIBLE_IN_CODEX);
+                }
+            }
+        }
+        for (FighterWingSpecAPI spec : Global.getSettings().getAllFighterWingSpecs()) {
+            if (spec.getId().contains("_boss") && (spec.getVariant() != null) && (spec.getVariant().getHullSpec() != null) && (spec.getVariant().getHullSpec().getManufacturer() != null)
+                    && spec.getVariant().getHullSpec().getManufacturer().contains("Unique")) {
+                if (!isIBBEnabled()) {
+                    spec.addTag(Tags.INVISIBLE_IN_CODEX);
+                } else if (spec.getTags() != null) {
+                    spec.getTags().remove(Tags.INVISIBLE_IN_CODEX);
+                }
+            }
+        }
+        for (HullModSpecAPI spec : Global.getSettings().getAllHullModSpecs()) {
+            if (spec.getId().contains("_boss") && (spec.getManufacturer() != null) && spec.getManufacturer().contains("Unique")) {
+                if (!isIBBEnabled()) {
+                    spec.addTag(Tags.INVISIBLE_IN_CODEX);
+                } else if (spec.getTags() != null) {
+                    spec.getTags().remove(Tags.INVISIBLE_IN_CODEX);
+                }
+            }
+        }
+        for (ShipSystemSpecAPI spec : Global.getSettings().getAllShipSystemSpecs()) {
+            if (spec.getId().contains("_boss_") || spec.getId().contentEquals("ii_empburst")) {
+                if (!isIBBEnabled()) {
+                    spec.addTag(Tags.INVISIBLE_IN_CODEX);
+                } else if (spec.getTags() != null) {
+                    spec.getTags().remove(Tags.INVISIBLE_IN_CODEX);
+                }
+            }
+        }
+        if (!imperiumExists) {
+            Global.getSettings().getHullSpec("swp_boss_excelsior").addTag(Tags.INVISIBLE_IN_CODEX);
+            Global.getSettings().getWeaponSpec("swp_boss_roycocannon").addTag(Tags.INVISIBLE_IN_CODEX);
+            Global.getSettings().getHullModSpec("swp_no_package").addTag(Tags.INVISIBLE_IN_CODEX);
+        }
     }
 }

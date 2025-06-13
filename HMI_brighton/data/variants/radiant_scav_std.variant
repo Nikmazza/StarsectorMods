@@ -1,0 +1,66 @@
+{
+  "variantId": "radiant_scav_std",
+  "hullId": "radiant_scav",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 43,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "blast_doors",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "autopulse"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "locust",
+        "WS0006": "locust"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "sabotpod",
+        "WS0009": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hellbore",
+        "WS0002": "hellbore",
+        "WS0003": "heavyac",
+        "WS0004": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0010": "dualflak",
+        "WS0011": "dualflak",
+        "WS0012": "vulcan",
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0015": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "warthog_wing",
+    "warthog_wing"
+  ]
+}

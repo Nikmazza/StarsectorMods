@@ -3,12 +3,12 @@
 	"skinHullId":"TADA_hightide_pirate",
 	"hullName":"High-tide (P)",
 	"descriptionId":"TADA_hightide",
-	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"descriptionPrefix":"This Hightide-class LRM Boat has its hangar bay in disrepair. Your engineering staff inform you that it is possible to restore this into a fully operational Hightide-class with no sign of its pirate markings.",
 	"spriteName":"graphics/TORCHSHIPS/ships/TADA_hightide_pirate.png",
-	"baseValueMult":1,
+	"baseValueMult":0.75,
         "restoreToBaseHull":true,
 	"addHints":[],
-        "tags":["rare_bp"],
+        "tags":["pirate_bp"],
 	"tech":"Pirate",
         "ordnancePoints":45,
 	"removeWeaponSlots":[], 		# ids
@@ -16,11 +16,7 @@
 	"removeBuiltInMods":[], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
 	"builtInMods":[TADA_noDecks],
-	"builtInWeapons":{
-        },
-	"weaponSlotChanges":{
-	   "WS0005":{
-		  "type": "BALLISTIC"
-	   },
+	"builtInWeapons":{},
+	"weaponSlotChanges":{"WS0005":{"type": "BALLISTIC"},
 	},
 }

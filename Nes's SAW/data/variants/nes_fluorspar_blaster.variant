@@ -3,11 +3,12 @@
   "hullId": "nes_fluorspar",
   "displayName": "Blaster",
   "goalVariant": true,
-  "fluxCapacitors": 11,
+  "fluxCapacitors": 1,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
+	"reinforcedhull",
     "fluxbreakers"
   ],
   "weaponGroups": [

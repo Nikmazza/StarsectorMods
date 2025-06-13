@@ -1,0 +1,41 @@
+{
+  "variantId": "domres_hmi_sapper_pd",
+  "hullId": "domres_hmi_sapper",
+  "displayName": "Shielded",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "frontshield"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "shredder",
+        "WS0002": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "swarmer",
+        "WS0004": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "guardian"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

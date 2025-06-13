@@ -2,7 +2,9 @@
 	"id":"lightdualac_rem",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
 	"type":"BALLISTIC",
+	"mountTypeOverride":"HYBRID",
 	"size":"SMALL",
+	"everyFrameEffect": "data.scripts.weapons.HMI_VariableRangeEffect",
 	"displayArcRadius":600,
 	"turretSprite":"graphics/weapons/light_dual_autocannon_rem_turret_base.png",
 	"turretGunSprite":"graphics/weapons/light_dual_autocannon_rem_turret_recoil.png",

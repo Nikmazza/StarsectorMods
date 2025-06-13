@@ -1,0 +1,15 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,isPhaseCloak,tags,icon
+Energy Overdrive,csp_improvedhighenergyfocus,1,,,,,,,2,0.03,0.25,4,0.25,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Modded Fortress Shield,csp_modifiedfortressshield,,,0.025,,,,,,,1.5,,1.5,0,TRUE,,,TRUE,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Improved Damper Field,csp_improvedamper,1,,,,,,,2,0.04,0.25,2,0.25,0,,,,,,,,,TRUE,,,graphics/icons/hullsys/damper_field.png
+Assault Mode Activate!,csp_assaultmode_activate,,,,,,,,,,1,6,1,5,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Improv Missile Forge,csp_forgevats,,,,,,0.6,,1,0.02,1,0,0,0,,,,,,,,,,,,graphics/icons/hullsys/missile_autoforge.png
+Point Defense Drones,drone_pd,,,,,,,,20,,0,,0,0,,,,,,,,,,,,
+Trans-am,csp_transam,1,,,,,0.25,,,,4,30,2,150,,,,,,,,,,,,graphics/icons/hullsys/temporal_shell.png
+Gunship Call In,csp_Gunship_Call_in,,,,,,,,2,0.03,0,,0,0,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
+Drone Bodyguards,csp_ravelin_drone_guards,,,,,,,,2,,0,,0,0,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
+Improv Damper Field,csp_damper,,,,,,,,2,0.14,0.1,1.6,0.1,0,,,TRUE,TRUE,,,,,,,uses_damper_ai,graphics/icons/hullsys/damper_field.png
+Damper Feed,csp_DamperFeed,,,,,,0.5,,,,0.5,15,0.5,10,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
+Canister Flak,csp_canisterflak_fighter,,,,,,,,,,,,,20,,,,,,,,,,,,
+Mobilize Engage!,csp_mobilize_engage,1,,,,,,,,,0.1,15,0.1,90,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Micro Ammo Feeder,csp_Mammofeed,,,,,,,,2,0.05,1,2,1,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png

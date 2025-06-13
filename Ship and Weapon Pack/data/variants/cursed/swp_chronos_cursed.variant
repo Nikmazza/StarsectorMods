@@ -1,6 +1,6 @@
 {
     "displayName": "Broadside",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 25,
     "fluxVents": 50,
     "hullId": "swp_chronos",
     "hullMods": [

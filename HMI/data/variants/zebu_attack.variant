@@ -30,7 +30,7 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "sml_fragrifle"
+        "WS0001": "rock_launcher"
       }
     },
     {

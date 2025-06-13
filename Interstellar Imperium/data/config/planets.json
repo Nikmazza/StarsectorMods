@@ -12,7 +12,8 @@
         "icon":"graphics/warroom/icon_planet.png",
         "iconColor":[200,210,255,255],
         "isStar":false,
-        "lightPosition":[8,-2,4]
+        "lightPosition":[8,-2,4],
+        "tags":["codex_unlockable"],
     },
     "ii_cydonia":{
         "name":"Ice Giant",
@@ -32,7 +33,8 @@
         "lightPosition":[0,0,10],
         "cloudTexture":"graphics/planets/clouds_textureGiantSharp.png",
         "cloudColor":[160,120,230,175],
-        "cloudRotation":-5
+        "cloudRotation":-5,
+        "tags":["hide_in_codex"],
     },
     "ii_auric":{
         "name":"Auric",
@@ -51,7 +53,8 @@
         "icon":"graphics/warroom/icon_planet.png",
         "iconColor":[255,235,160,255],
         "isStar":false,
-        "lightPosition":[2,2,12]
+        "lightPosition":[2,2,12],
+        "tags":["codex_unlockable"],
     },
     "ii_irradiated-bombarded":{
         "name":"Irradiated-Bombarded",
@@ -68,9 +71,10 @@
         "iconColor":[170,75,70,255],
         "isStar":false,
         "lightPosition":[0,2,25],
-        "glowTexture":"graphics/planets/clouds_textureStar.png",
+        "glowTexture":"graphics/planets/US_clouds_textureStarYellow.png",
         "glowColor":[255,110,110,255],
-        "useReverseLightForGlow":true
+        "useReverseLightForGlow":true,
+        "tags":["codex_unlockable"],
     },
 	"ii_byzantium_mission":{
 		"name":"Terran",
@@ -88,7 +92,8 @@
 		"lightPosition":[4,-1,8],
 		"cloudTexture":"graphics/planets/clouds_banded01.png",
 		"cloudColor":[150,140,130,200],
-		"cloudRotation":-5
+		"cloudRotation":-5,
+        "tags":["hide_in_codex"],
 	},
 	"ii_eventide_mission":{
 		"name":"Terran Eccentric",
@@ -109,6 +114,7 @@
 		"cloudRotation":9,
 		"glowTexture":"graphics/planets/volturn_glow.png",
 		"glowColor":[255,255,255,255],
-		"useReverseLightForGlow":true
+		"useReverseLightForGlow":true,
+        "tags":["hide_in_codex"],
 	}
 }

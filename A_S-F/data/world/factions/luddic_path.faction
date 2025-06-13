@@ -5,6 +5,7 @@
 			"A_S-F_kaksos",
 			"A_S-F_laaja",
 			"A_S-F_copperhead",
+			"A_S-F_nexter",
 
 			"A_S-F_bramble",
 			"A_S-F_thicket",
@@ -18,6 +19,11 @@
 			"A_S-F_anarchyBallistic",
 			"A_S-F_anarchyFlux",
 		],
+	},
+
+	"weaponSellFrequency":{
+		"A_S-F_kaksos":3,
+		"A_S-F_laaja":2,
 	},
 
 },

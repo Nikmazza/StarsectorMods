@@ -56,7 +56,6 @@
   "builtInMods": [
     "unstable_injector",
     "augmentedengines",
-    "fragile_subsystems"
   ],
   "builtInWings": [],
   "center": [
@@ -165,7 +164,7 @@
       "width": 10
     },
     {
-      "angle": -156,
+      "angle": -145,
       "contrailSize": 128,
       "length": 30,
       "location": [
@@ -191,7 +190,7 @@
   "weaponSlots": [
     {
       "angle": 0,
-      "arc": 5.01,
+      "arc": 5,
       "id": "WS0001",
       "locations": [
         79,

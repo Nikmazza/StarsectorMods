@@ -1,0 +1,71 @@
+{
+    "displayName": "Fire Support",
+    "fluxCapacitors": 5,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "TADA_gunwall",
+    "hullMods": ["targetingunit",],
+    "permaMods": [],
+    "variantId": "TADA_gunwall_firesupport",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "heavymauler",
+                "WS0009": "heavymauler",
+                "WS0007": "heavymauler",
+                "WS0012": "heavymauler",
+                "WS0011": "heavymauler",
+                "WS0010": "heavymauler",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0018": "pilum",
+                "WS0017": "pilum",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "hveldriver",
+                "WS0004": "hveldriver",
+                "WS0005": "hveldriver",
+                "WS0001": "hveldriver",
+                "WS0003": "hveldriver",
+                "WS0002": "hveldriver",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "dualflak",
+                "WS0013": "dualflak",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0016": "heavymg",
+                "WS0015": "heavymg",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0020": "vulcan",
+                "WS0021": "vulcan",
+                "WS0022": "vulcan",
+                "WS0019": "vulcan",
+            }
+        }
+    ],
+    "wings": ["hoplon_wing"]
+}

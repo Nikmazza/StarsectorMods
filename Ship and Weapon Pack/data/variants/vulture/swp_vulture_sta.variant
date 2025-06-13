@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 5,
-    "fluxVents": 19,
+    "fluxVents": 26,
     "goalVariant": true,
     "hullId": "swp_vulture",
     "hullMods": [

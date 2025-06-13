@@ -12,6 +12,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
@@ -25,6 +26,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     public static final String ENEMY_FACTION_ID = Factions.REMNANTS;
     public static final int ENEMY_FLEET_SIZE = 110;
 
+    public static boolean printedCodexWarning = false;
+
     @Override
     public void defineMission(MissionDefinitionAPI api) {
         api.initFleet(FleetSide.PLAYER, "HSS", FleetGoal.ATTACK, false);
@@ -32,6 +35,15 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         api.setFleetTagline(FleetSide.PLAYER, "CGR Notre Dame with Hegemony allies");
         api.setFleetTagline(FleetSide.ENEMY, "AI Battlefleet");
+
+        if (!CodexDataV2.hasUnlockedEntryForShip("swp_cathedral") && !CodexDataV2.hasUnlockedEntryForShip("swp_solar")
+                && !printedCodexWarning) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+            api.addBriefingItem("Codex entries for certain ships featured in this mission are not yet unlocked");
+            api.addBriefingItem("Click again to play the mission anyway!");
+            printedCodexWarning = true;
+            return;
+        }
 
         api.addBriefingItem("Destroy the enemy fleet");
         api.addBriefingItem("CGR Notre Dame must survive");

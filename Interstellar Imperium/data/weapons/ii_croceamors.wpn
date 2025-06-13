@@ -3,7 +3,7 @@
     "specClass":"projectile",
     "type":"BALLISTIC",
     "size":"LARGE",
-    "turretSprite":"",
+    "turretSprite":"graphics/imperium/weapons/ii_crocea_mors.png",
     "everyFrameEffect":"data.scripts.weapons.II_CroceaMorsEveryFrame",
     "turretGlowSprite":"graphics/imperium/weapons/ii_crocea_mors_glow.png",
     "hardpointSprite":"",

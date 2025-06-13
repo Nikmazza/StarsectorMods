@@ -14,6 +14,7 @@
   "builtInMods": [
     "hmi_linkedhull",
     "reduced_explosion",
+    "rapidrepaircheck",
     "targetingunit",
     "always_detaches"
   ],
@@ -47,8 +48,8 @@
     },
     {
       "id": "WS0004",
-      "size": "MEDIUM",
-      "type": "HYBRID",
+      "size": "LARGE",
+      "type": "COMPOSITE",
       "mount": "TURRET",
       "arc": 84,
       "angle": 0,
@@ -56,11 +57,11 @@
     },
     {
       "id": "WS0005",
-      "size": "MEDIUM",
-      "type": "HYBRID",
+      "size": "LARGE",
+      "type": "COMPOSITE",
       "mount": "TURRET",
       "arc": 84,
-      "angle": -0,
+      "angle": 0,
       "locations": [32.5, -71]
     },
     {

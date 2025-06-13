@@ -1,0 +1,52 @@
+{
+  "variantId": "kazeron_falcon_league_elite",
+  "hullId": "kazeron_falcon_league",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 17,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "heavyac",
+        "WS 008": "heavyac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "gazer",
+        "WS 002": "gazer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "ionbeam",
+        "WS 006": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "lrpdlaser",
+        "WS 004": "lrpdlaser",
+        "WS 009": "lrpdlaser",
+        "WS 010": "lrpdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -15,6 +15,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -38,6 +39,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
     public static boolean HARD_MODE = false;
     protected boolean campaignMode; // set to true if mission is being created from an arcade machine in campaign
+
+    public static boolean printedCodexWarning = false;
 
     static {
         // name, required mod's ID, variant, backup mod's ID, backup variant, fallback variant
@@ -124,15 +127,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             } else {
                 PersonAPI officer = OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.TRITACHYON), level, FleetFactoryV3.getSkillPrefForShip(member), true, null, true, true, 1, new Random());
                 switch (officer.getPersonalityAPI().getId()) {
-                    case "timid":
+                    case "timid" ->
                         officer.setPersonality("steady");
-                        break;
-                    case "cautious":
+                    case "cautious" ->
                         officer.setPersonality("aggressive");
-                        break;
-                    default:
+                    default ->
                         officer.setPersonality("reckless");
-                        break;
                 }
                 member.setCaptain(officer);
                 float maxCR = member.getRepairTracker().getMaxCR();
@@ -143,15 +143,23 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
     @Override
     public void defineMission(MissionDefinitionAPI api) {
-        if (Global.getSettings().getMissionScore("swp_duelofthecentury") >= 100) {
-            HARD_MODE = true;
-        }
-
         api.initFleet(FleetSide.PLAYER, "TTS", FleetGoal.ATTACK, false);
         api.initFleet(FleetSide.ENEMY, "ISS", FleetGoal.ATTACK, true);
 
         api.setFleetTagline(FleetSide.PLAYER, "Captain Lee's stolen Tri-Tachyon prototype");
         api.setFleetTagline(FleetSide.ENEMY, "\"The Silent Hand\" elite mercenary squad");
+
+        if (!campaignMode && !CodexDataV2.hasUnlockedEntryForShip("swp_excelsior") && !printedCodexWarning) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+            api.addBriefingItem("Codex entries for certain ships featured in this mission are not yet unlocked");
+            api.addBriefingItem("Click again to play the mission anyway!");
+            printedCodexWarning = true;
+            return;
+        }
+
+        if (Global.getSettings().getMissionScore("swp_duelofthecentury") >= 100) {
+            HARD_MODE = true;
+        }
 
         api.setHyperspaceMode(true);
 

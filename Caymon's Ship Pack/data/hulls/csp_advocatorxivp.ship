@@ -1,0 +1,206 @@
+{
+  "hullName": "Advocator(XIVP)",
+  "hullId": "csp_advocatorxivp",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/csp_advocatorxivp.png",
+  "style": "LOW_TECH",
+  "height": 178,
+  "width": 284,
+  "center": [142, 85],
+  "collisionRadius": 169,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 163,
+  "viewOffset": 0,
+  "builtInMods": [
+    "insulatedengine",
+    "recovery_shuttles",
+    "hbi",
+    "csp_piratexiv"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [75, 25]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 180,
+      "locations": [-58, 0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 0,
+      "locations": [10, 106]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 0,
+      "locations": [10, -106]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [75, -25]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        27, -90.5,
+        31, -79.5,
+        27.5, 97.5,
+        27, 89
+      ]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 90,
+      "locations": [-1, 65]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -90,
+      "locations": [-1, -65]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-71, -74.5],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81, -102],
+      "length": 50,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-59, -58.5],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-59, 59.5],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-72, 76.5],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-81, 103],
+      "length": 50,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-68, -34.5],
+      "length": 83.5,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-67, 35.5],
+      "length": 83.5,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -68, 50,
+    -61, 52,
+    -61, 67,
+    -72, 67,
+    -72, 83,
+    -60.5, 86.5,
+    -82, 92,
+    -82, 111.5,
+    -72.5, 128.5,
+    -16.5, 133,
+    0.5, 141,
+    44.5, 133.5,
+    92.5, 110.5,
+    87.5, 101.5,
+    64.5, 92,
+    72, 62,
+    83, 58,
+    89, 41,
+    89, 12,
+    86.5, 0,
+    89, -11,
+    89, -42,
+    83, -58,
+    72, -62,
+    63.5, -91,
+    87.5, -106.5,
+    78.5, -119,
+    43.5, -133.5,
+    0, -141,
+    -16, -133,
+    -73, -129,
+    -82, -111.5,
+    -82, -92,
+    -61, -86,
+    -72, -83,
+    -72, -67,
+    -61, -67,
+    -61, -52,
+    -68, -50
+  ]
+}

@@ -4,11 +4,12 @@
   "displayName": "Suicide",
   "goalVariant": false,
   "fluxCapacitors": 0,
-  "fluxVents": 3,
+  "fluxVents": 13,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
-    "safetyoverrides"
+    "safetyoverrides",
+    "magazines"
   ],
   "weaponGroups": [
     {
@@ -24,6 +25,24 @@
       "weapons": {
         "WS0001": "shredder",
         "WS0002": "shredder"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "hammer",
+        "WS0005": "hammer",
+        "WS0006": "hammer",
+        "WS0007": "hammer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "mining_gen",
+        "WS0009": "mining_gen"
       }
     }
   ],

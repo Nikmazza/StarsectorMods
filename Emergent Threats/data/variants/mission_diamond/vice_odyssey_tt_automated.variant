@@ -1,7 +1,7 @@
 {
     "displayName": "Automated",
-    "fluxCapacitors": 0,
-    "fluxVents": 43,
+    "fluxCapacitors": 1,
+    "fluxVents": 50,
     "hullId": "vice_odyssey_ai",
     "hullMods": [
         "vice_advanced_terminator_core",

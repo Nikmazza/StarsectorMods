@@ -4,12 +4,11 @@
   "displayName": "Standard",
   "goalVariant": false,
   "fluxCapacitors": 0,
-  "fluxVents": 7,
+  "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "expanded_deck_crew",
-    "recovery_shuttles"
+    "expanded_deck_crew"
   ],
   "weaponGroups": [
     {
@@ -21,5 +20,7 @@
     }
   ],
   "modules": [],
-  "wings": []
+  "wings": [
+    "broadsword_wing"
+  ]
 }

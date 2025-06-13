@@ -1,43 +1,53 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 21,
-    "fluxVents": 30,
+    "fluxCapacitors": 29,
+    "fluxVents": 0,
     "goalVariant": true,
     "hullId": "TADA_brilliantX",
     "hullMods": [
-        "fluxbreakers",
-        "magazines"
+        "adaptive_coils",
+        "targetingunit",
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "TADA_brilliantX_standard",
     "weaponGroups": [
         {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "tachyonlance",
+            }
+        },
+        {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "ionpulser",
-                "WS 005": "ionpulser",
-                "WS 006": "ionpulser"
+                "WS 004": "sabotpod",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "heavyneedler",
+                "WS 006": "heavyneedler",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 000": "autopulse"}
+            "weapons": {
+                "WS 001": "heavyburst",
+            }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 002": "pdburst",
-                "WS 003": "pdburst"
+                "WS 003": "pdburst",
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "heavyburst"}
         }
     ]
 }

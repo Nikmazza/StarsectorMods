@@ -1,9 +1,10 @@
 package data.scripts.xo.andradanism;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
@@ -12,9 +13,10 @@ import second_in_command.specs.SCBaseSkillPlugin;
 
 public class ForwardToVictory extends SCBaseSkillPlugin {
     
-	private static float MANEUVER_BONUS = 25f;
-	private static float ZERO_FLUX_LEVEL = 10f;
-	private static float FUEL_USAGE = 1.15f;
+	private static float SENSOR_BONUS_S = 15f;
+	private static float SENSOR_BONUS_M = 30f;
+	private static float SENSOR_BONUS_L = 45f;
+	private static float SENSOR_BONUS_C = 75f;
 	
 	@Override
     public String getAffectsString() {
@@ -26,18 +28,22 @@ public class ForwardToVictory extends SCBaseSkillPlugin {
 		tooltip.addPara("Strike first, strike fast, and you shall always know victory.", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addPara("  -Quotations from the Supreme Executor", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addSpacer(10f);
-		tooltip.addPara("0-flux speed bonus is active at or below 10%% flux", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		tooltip.addPara("+25%% to ship maneuverability", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		tooltip.addPara("+15%% fuel usage", 0f, Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
+		tooltip.addPara("+1 increased maximum burn for ships with less than 9 burn speed", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addPara("Ship sensor strength increased by 15/30/45/75, based on hull size", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addPara("Maximum burn bonus is exclusive with Tactical aptitude Rapid Response skill", 0f, Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
 	}
 
     @Override
     public void applyEffectsBeforeShipCreation(SCData data, MutableShipStatsAPI stats, ShipVariantAPI variant, ShipAPI.HullSize hullSize, String id) {
-		stats.getAcceleration().modifyPercent(id, MANEUVER_BONUS * 2f);
-		stats.getDeceleration().modifyPercent(id, MANEUVER_BONUS);
-		stats.getTurnAcceleration().modifyPercent(id, MANEUVER_BONUS * 2f);
-		stats.getMaxTurnRate().modifyPercent(id, MANEUVER_BONUS);
-		stats.getZeroFluxMinimumFluxLevel().modifyFlat(id, ZERO_FLUX_LEVEL * 0.01f);
-		stats.getFuelUseMod().modifyMult(id, FUEL_USAGE);
+		float bonus = 0f;
+		if (hullSize.equals(HullSize.FRIGATE)) bonus = SENSOR_BONUS_S;
+		else if (hullSize.equals(HullSize.DESTROYER)) bonus = SENSOR_BONUS_M;
+		else if (hullSize.equals(HullSize.CRUISER)) bonus = SENSOR_BONUS_L;
+		else if (hullSize.equals(HullSize.CAPITAL_SHIP)) bonus = SENSOR_BONUS_C;
+		stats.getSensorStrength().modifyFlat(id, bonus);
+		
+		if (data.isSkillActive("sc_tactical_rapid_response")) return;
+		if (stats.getMaxBurnLevel().getModifiedValue() < 9f) stats.getMaxBurnLevel().modifyFlat(id, 1f);
+		
     }
 }

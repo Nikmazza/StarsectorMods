@@ -1,0 +1,28 @@
+{
+	"baseHullId":"radiant",
+	"skinHullId":"vice_radiant_hvb",
+	"hullName":"Radiant (EX)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"vice_radiant_hvb",
+	"hullDesignation":"Battleship",
+	"descriptionPrefix":"This experimental battleship appears to be a prototype for the infamous Radiant-class automated combat drones used by the AI remnant, and is equipped with a non-standard spinal mounted energy weapon. Although exhibiting heavy automation, the ship is operated from a command module intended for a small human crew. Analysis of the maintenance drones that kept it in working condition indicate it had lain dormant inside an abandoned research facility for over a century.",
+	"ordnancePoints":300,
+	"spriteName":"graphics/vice/ships/hidden/radiant_hvb.png",
+	"tags":["no_dealer", "radiant_hvb", "hide_in_codex"],
+	"removeHints":["UNBOARDABLE"],
+	"manufacturer":"High Tech",
+	"systemId":"displacer_degraded",
+	"removeBuiltInMods":["automated"],
+	"builtInMods":["vice_ai_subsystem_integration", "vice_experimental_hull_hvb"],
+	"builtInWeapons": {
+        "WS 003": "vice_fermion_decoupler",
+    },
+    "weaponSlotChanges":{
+		"WS 003":{"type": "BUILT_IN", "mount": "HARDPOINT", "arc": 5,},
+	},
+}
+
+
+
+
+

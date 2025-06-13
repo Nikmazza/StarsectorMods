@@ -1,5 +1,7 @@
 package data.scripts.xo.synthesis;
 
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CharacterDataAPI;
 import com.fs.starfarer.api.combat.FighterLaunchBayAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -28,12 +30,14 @@ public class DroneTactics extends SCBaseSkillPlugin {
     public void addTooltip(SCData data, TooltipMakerAPI tooltip) {
         tooltip.addPara("+10%% damage dealt, or +20%% when Adaptive Flight Command is enabled", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("25%% reduction to drone replacement time when Adaptive Drone Bay is enabled", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		tooltip.addPara("Bonuses apply to all wings on ships with Autonomous Bays or Drone Conversion hullmod", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addPara("Bonuses apply to all wings on ships with Autonomous Bays (RAT) or Drone Conversion (SEEKER) hullmod", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addSpacer(10f);
+		tooltip.addPara("Acquire the Drone Bay and Flight Command adaptive hullmods", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Drone Bay", "Flight Command");
     }
 
     @Override
     public void applyEffectsBeforeShipCreation(SCData data, MutableShipStatsAPI stats, ShipVariantAPI variant, ShipAPI.HullSize hullSize, String id) {
-		if(stats.getVariant().hasHullMod(ADB_MOD_ID)) {
+		if (stats.getVariant().hasHullMod(ADB_MOD_ID)) {
 			stats.getFighterRefitTimeMult().modifyMult(id, 1f - DRONE_REPLACEMENT_BONUS * 0.01f);
 		}
     }
@@ -48,6 +52,16 @@ public class DroneTactics extends SCBaseSkillPlugin {
 			stats.getBallisticWeaponDamageMult().modifyPercent(id, bonus);
 			stats.getEnergyWeaponDamageMult().modifyPercent(id, bonus);
 			stats.getMissileWeaponDamageMult().modifyPercent(id, bonus);
+		}
+	}
+	
+	@Override
+	public void onActivation(SCData data) {
+		if (data.isPlayer() && !Global.getSector().getMemoryWithoutUpdate().is("$gave_DT_hullmods", true)) {
+			CharacterDataAPI player = Global.getSector().getCharacterData();
+			player.addHullMod("vice_adaptive_drone_bay");
+			player.addHullMod("vice_adaptive_flight_command");
+			Global.getSector().getMemoryWithoutUpdate().set("$gave_DT_hullmods", true);
 		}
 	}
 }

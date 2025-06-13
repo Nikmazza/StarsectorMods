@@ -1,0 +1,30 @@
+{
+  "variantId": "Sawtooth_XIV_deathbox",
+  "hullId": "Sawtooth_XIV",
+  "displayName": "Deathbox",
+  "goalVariant": false,
+  "fluxCapacitors": 6,
+  "fluxVents": 7,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "annihilator",
+        "WS0002": "annihilator",
+        "WS0003": "annihilator",
+        "WS0004": "annihilator",
+        "WS0005": "annihilator",
+        "WS0006": "annihilator",
+        "WS0007": "lightneedler"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

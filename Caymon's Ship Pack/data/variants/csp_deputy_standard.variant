@@ -1,0 +1,55 @@
+{
+  "variantId": "csp_deputy_standard",
+  "hullId": "csp_deputy",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "reinforcedhull",
+    "blast_doors"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0019": "lightdualmg",
+        "WS0020": "lightdualmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "csp_deputy_head"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "vulcan"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0016": "csp_deputy_legL_module"
+    },
+    {
+      "WS0015": "csp_deputy_legR_module"
+    }
+  ],
+  "wings": []
+}

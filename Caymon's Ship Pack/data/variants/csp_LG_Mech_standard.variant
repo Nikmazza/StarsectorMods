@@ -1,0 +1,50 @@
+{
+  "variantId": "csp_LG_Mech_standard",
+  "hullId": "csp_LG_Mech",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "fluxbreakers",
+    "hardenedshieldemitter",
+    "extendedshieldemitter",
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "pdlaser",
+        "WS0006": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "heavyneedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "csp_LG_Buster_assault"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "csp_LGHeadBeam"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,55 @@
+{
+  "variantId": "csp_zagreus_Strike",
+  "hullId": "csp_zagreus",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 19,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "multineedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightag",
+        "WS0004": "lightag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "lightdualmg",
+        "WS0006": "lightdualmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "vulcan",
+        "WS0008": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymortar"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

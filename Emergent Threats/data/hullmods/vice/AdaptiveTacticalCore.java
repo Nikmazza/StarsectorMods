@@ -84,6 +84,7 @@ public class AdaptiveTacticalCore extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (isCommandSubroutineActive() && !util.isModuleCheck(ship)) return true;
 		if (ship.getVariant().hasHullMod(RAT_CONFLICT_MOD)) return false;
 		if (util.isModuleCheck(ship)) return false;
@@ -93,6 +94,7 @@ public class AdaptiveTacticalCore extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (ship.getVariant().hasHullMod(SW_INTEGRATION_MOD) && (ship.getVariant().hasHullMod(THIS_MOD))) return null;
 		if (ship.getVariant().hasHullMod(RAT_CONFLICT_MOD)) return "Assistant AI core already installed";
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("hub");

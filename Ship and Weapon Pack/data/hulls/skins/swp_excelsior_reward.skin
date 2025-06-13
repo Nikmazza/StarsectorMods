@@ -4,7 +4,7 @@
     "hullName":"",
     "incompatibleWithBaseHull":false,
 	"hullDesignation":"Superfrigate",
-    "tags":["no_autofit", "no_dealer"],
+    "tags":["no_autofit", "no_dealer", "hide_in_codex"],
     "removeWeaponSlots":[],         # ids
     "removeEngineSlots":[],         # indices, as engine slots have no id in the .ship file
     "removeBuiltInMods":[],         # hullmod ids

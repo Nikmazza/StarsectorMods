@@ -86,11 +86,8 @@ public class TrinityRetrofit extends BaseHullMod {
 	private static String RADIANT_WING = "nimbus_tw_wing_r";
 	private static String GRAV_HULLMOD = "vice_adaptive_gravity_drive";
 	private static String GRAV_HULLMOD_DISPLAY = "Adaptive Gravity Drive";
-	private static String GRAV_SYSTEM = "vice_fleetjump";
 	private static String FTR_HULLMOD = "vice_adaptive_flight_command";
 	private static String FTR_HULLMOD_DISPLAY = "Adaptive Flight Command";
-	private static String FTR_SYSTEM = "vice_targetingsweep";
-	private static String BASE_SYSTEM = "displacer_degraded";
 	
 	//Shrike (TW) DP increase
 	private static float DP_INCREASE = 2f;
@@ -118,15 +115,6 @@ public class TrinityRetrofit extends BaseHullMod {
 				if (variant.getWingId(2) == null) variant.setWingId(2, RADIANT_WING);
 				if (variant.getWingId(3) == null) variant.setWingId(3, RADIANT_WING);
 			}
-			
-			//system swap for Radiant adaptive flight command or adaptive gravity drive
-			if (variant.getNonBuiltInHullmods().contains(FTR_HULLMOD)) {
-				variant.getHullSpec().setShipSystemId(FTR_SYSTEM);
-			}
-			else if (variant.getNonBuiltInHullmods().contains(GRAV_HULLMOD)) {
-				variant.getHullSpec().setShipSystemId(GRAV_SYSTEM);
-			}
-			else variant.getHullSpec().setShipSystemId(BASE_SYSTEM);
 		}
 		else if (variant.hasHullMod(MAQUECH_HULLMOD)) {
 			if (variant.getWingId(0) == null) variant.setWingId(0, MAQUECH_WING);

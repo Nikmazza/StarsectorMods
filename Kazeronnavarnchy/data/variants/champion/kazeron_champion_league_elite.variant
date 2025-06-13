@@ -1,0 +1,61 @@
+{
+  "variantId": "kazeron_champion_league_elite",
+  "hullId": "kazeron_champion_league",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 18,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "advancedoptics",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "hil"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "hydra"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "heavyac",
+        "WS 007": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 010": "ioncannon",
+        "WS 011": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "lrpdlaser",
+        "WS 001": "lrpdlaser",
+        "WS 002": "pdlaser",
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

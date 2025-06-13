@@ -1,0 +1,33 @@
+{
+		# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"csp_makoLG":0.50,
+			"csp_fisheagleLG":0.50,
+			"csp_kindlingLG":0.50,
+			"csp_bonnetheadlg":0.50,
+			"csp_skystrikerLG":0.50,
+			"csp_LG_Mech":0.25,
+			"csp_LGbazaarfalcon":0.50,
+			"csp_manticorelg":0.50,
+			"csp_whitefinlg":0.50,
+		},
+	},
+		"knownShips":{
+		"hulls":[
+			"csp_makoLG",
+			"csp_fisheagleLG",
+			"csp_kindlingLG",
+			"csp_bonnetheadlg",
+			"csp_skystrikerLG",
+			"csp_LG_Mech",
+			"csp_LGbazaarfalcon",
+			"csp_manticorelg",
+			"csp_whitefinlg",
+		],
+	},
+},
+
+

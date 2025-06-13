@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.GuidedMissileAI;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import data.scripts.util.II_Util;
 import java.util.Collections;
 import java.util.List;
@@ -149,8 +150,7 @@ public class II_BaseMissile implements MissileAIPlugin, GuidedMissileAI {
 
     protected boolean acquireTarget(float amount) {
         if (!isTargetValid(target)) {
-            if (target instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) target;
+            if (target instanceof ShipAPI ship) {
                 if (ship.isPhased() && ship.isAlive()) {
                     return false;
                 }
@@ -221,9 +221,8 @@ public class II_BaseMissile implements MissileAIPlugin, GuidedMissileAI {
             return false;
         }
 
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
-            if (ship.isPhased() || !ship.isAlive()) {
+        if (target instanceof ShipAPI ship) {
+            if (ship.isPhased() || !ship.isAlive() || (ship.isStation() && ship.getVariant().hasHullMod(HullMods.VASTBULK))) {
                 return false;
             }
         } else {

@@ -1,0 +1,91 @@
+{
+  "hullName": "Gusto",
+  "hullId": "csp_gusto",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_gusto.png",
+  "style": "MIDLINE",
+  "height": 24,
+  "width": 28,
+  "center": [14, 14],
+  "collisionRadius": 21.5,
+  "shieldCenter": [-0.5, -0],
+  "shieldRadius": 19.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "armoredweapons"
+  ],
+  "builtInWeapons": {
+    "WS0001": "lightdualmg",
+    "WS0002": "lightdualmg",
+    "WS0003": "lightdualac"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [9.5, -8.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [9.5, 9]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [6, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-14, 4.5],
+      "length": 18.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-14, -4],
+      "length": 18.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-7, 0],
+      "length": 13.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -10, -3,
+    -14, -3,
+    -8, -13,
+    1, -12,
+    10, -10,
+    6.5, -2.5,
+    6.5, 2.5,
+    10, 10,
+    1, 12,
+    -10, 11,
+    -14, 3,
+    -10, 3
+  ]
+}

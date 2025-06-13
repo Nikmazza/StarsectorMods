@@ -85,7 +85,9 @@ public class IXSurveillanceCenter extends BaseIndustry {
 					|| market.hasIndustry(VERTEX_NODE)) return 0f;
 					
 		float interest = 0f;
+		boolean hasIndEvo = Global.getSettings().getModManager().isModEnabled("IndEvo");
 		for (Industry industry : market.getIndustries()) {
+			if (hasIndEvo && industry.getCurrentName().equals("Monastic Order")) return 0f;
 			if (industry.getId().equals(SPY_PLAYER_ID)) interest += 0;
 			else interest -= (int) industry.getPatherInterest();
 		}

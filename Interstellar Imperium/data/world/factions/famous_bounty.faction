@@ -1,0 +1,8 @@
+{
+    "portraits":{
+        "standard_male":[
+            "graphics/imperium/portraits/ii_okita.png",
+            "graphics/imperium/portraits/ii_helmutreal.png",
+        ],
+    },
+},

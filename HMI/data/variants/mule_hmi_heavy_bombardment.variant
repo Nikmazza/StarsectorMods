@@ -4,7 +4,7 @@
   "displayName": "Bombardment",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 12,
+  "fluxVents": 8,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
@@ -16,7 +16,7 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS 006": "med_frag_mg"
+        "WS 006": "twotherac"
       }
     },
     {

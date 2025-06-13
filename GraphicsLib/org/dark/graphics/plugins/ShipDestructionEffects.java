@@ -9,30 +9,26 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import java.awt.Color;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.apache.log4j.Level;
+import java.util.WeakHashMap;
 import org.dark.graphics.util.ShipColors;
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
 import org.dark.shaders.light.LightShader;
 import org.dark.shaders.light.StandardLight;
+import org.dark.shaders.util.GraphicsLibSettings;
 import org.dark.shaders.util.ShaderLib;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.combat.entities.AnchoredEntity;
 import org.lwjgl.util.vector.Vector2f;
 
-import static org.dark.graphics.util.ShipColors.EXPLOSION_COLORS;
-
+@SuppressWarnings("UseSpecificCatch")
 public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
 
     private static final Map<String, Float> BOSS_SHIPS = new HashMap<>(9);
@@ -57,17 +53,7 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
 
     private static final Map<HullSize, Float> RIPPLE_LENGTH = new HashMap<>(6);
 
-    private static final String SETTINGS_FILE = "GRAPHICS_OPTIONS.ini";
-
     private static final Vector2f ZERO = new Vector2f();
-
-    private static boolean enabled = true;
-    private static boolean explosionEnabled = true;
-    private static boolean fullExplosionEnabled = true;
-    private static boolean offscreen = false;
-    private static boolean shockwaveEnabled = true;
-    private static float trailScale = 1f;
-    private static boolean trailsEnabled = true;
 
     static {
         BOSS_SHIPS.put("swp_arcade_superhyperion", 4f);
@@ -144,16 +130,6 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
         RIPPLE_LENGTH.put(HullSize.CAPITAL_SHIP, 1.5f);
     }
 
-    static {
-        try {
-            loadSettings();
-        } catch (IOException | JSONException e) {
-            Global.getLogger(ShipDestructionEffects.class).log(Level.ERROR, "Failed to load performance settings: "
-                    + e.getMessage());
-            enabled = false;
-        }
-    }
-
     private static float effectiveRadius(ShipAPI ship) {
         if (ship.getSpriteAPI() == null || ship.isPiece()) {
             return ship.getCollisionRadius();
@@ -163,29 +139,14 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
         }
     }
 
-    private static void loadSettings() throws IOException, JSONException {
-        JSONObject settings = Global.getSettings().loadJSON(SETTINGS_FILE);
-
-        explosionEnabled = settings.getBoolean("enableExplosionEffects");
-        fullExplosionEnabled = settings.getBoolean("enableFullExplosionEffects");
-        offscreen = settings.getBoolean("drawOffscreenParticles");
-        shockwaveEnabled = settings.getBoolean("enableExplosionShockwave");
-        trailsEnabled = settings.getBoolean("enableExplosionTrails");
-        trailScale = (float) settings.getDouble("explosionTrailScale");
-
-        if (trailScale <= 0.01f) {
-            trailsEnabled = false;
-        }
-        enabled = explosionEnabled || shockwaveEnabled || trailsEnabled;
-    }
-
     private CombatEngineAPI engine;
     private IntervalUtil interval;
 
     /* We're not going to bother with per-ship time manipulation applying to this.  Chances are a dead ship won't be warping time. */
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
-        if (engine == null || !enabled) {
+        boolean enabled = GraphicsLibSettings.enableExplosionEffects() || GraphicsLibSettings.enableExplosionShockwave() || GraphicsLibSettings.enableExplosionTrails();
+        if ((engine == null) || !enabled) {
             return;
         }
 
@@ -193,8 +154,13 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
             return;
         }
 
+        if (!Global.getCombatEngine().getCustomData().containsKey(DATA_KEY)) {
+            Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
+        }
+
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
         final Set<ShipAPI> deadShips = localData.deadShips;
+        final List<ShipAPI> lastFrameShips = localData.lastFrameShips;
         final List<ExplodingShip> explodingShips = localData.explodingShips;
         final Map<ShipAPI, Boolean> suppressEffects = localData.suppressEffects;
 
@@ -203,14 +169,19 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
         List<ShipAPI> ships = engine.getShips();
 
         // We run through all the ships and check for newly-destroyed ships, adding them to the graphics loop
-        int shipsSize = ships.size();
-        for (int i = 0; i < shipsSize; i++) {
-            ShipAPI ship = ships.get(i);
+        for (ShipAPI ship : lastFrameShips) {
             if (ship == null) {
                 continue;
             }
 
-            if (ship.isHulk() == true) {
+            float explosionScale = ship.getExplosionScale();
+            boolean dweller = false;
+            if (ship.getHullStyleId().contentEquals("DWELLER")) {
+                explosionScale = 1f;
+                dweller = true;
+            }
+
+            if (!ship.isAlive() && !ship.isFinishedLanding() && (ship.getHullLevel() <= 0.01)) {
                 if (!deadShips.contains(ship)) {
                     deadShips.add(ship);
                     Vector2f shipLoc = ship.getLocation();
@@ -218,71 +189,78 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                     float shipRadius = effectiveRadius(ship);
                     HullSize shipHullSize = ship.getHullSize();
 
-                    boolean suppressed = suppressEffects.containsKey(ship);
+                    boolean suppressed = suppressEffects.containsKey(ship) || (explosionScale <= 0.001);
 
                     String style = ship.getHullStyleId();
-                    if (EXPLOSION_COLORS.get(style) == null) {
+                    if (ShipColors.EXPLOSION_COLORS.get(style) == null) {
                         style = "MIDLINE";
                     }
-                    Color explosionColor = EXPLOSION_COLORS.get(style);
+                    Color explosionColor = ShipColors.EXPLOSION_COLORS.get(style);
                     if (ship.getExplosionFlashColorOverride() != null) {
                         explosionColor = ship.getExplosionFlashColorOverride();
                     }
 
-//                    if (explosionEnabled && !suppressed && shipHullSize != ShipAPI.HullSize.FIGHTER && !ship.isDrone() && !ship.isPiece()) {
+//                    if (GraphicsLibSettings.enableExplosionEffects() && !suppressed && shipHullSize != ShipAPI.HullSize.FIGHTER && !ship.isDrone() && !ship.isPiece()) {
 //                        float intensity = FLARE_BRIGHTNESS.get(shipHullSize) / 10f;
 //                        float intensity2 = FLARE_THICKNESS.get(shipHullSize) / 3f;
 //                        AnamorphicFlare.createFlare(ship, new Vector2f(shipLoc), engine, intensity, intensity2, 0f, 15f,
 //                                1f, EXPLOSION_COLORS.get(style), COLOR_WHITE1);
 //                    }
-                    if (shockwaveEnabled && !suppressed && !ship.isFighter() && !ship.isPiece()) {
+                    if (GraphicsLibSettings.enableExplosionShockwave() && !suppressed && !ship.isFighter() && !ship.isPiece()) {
                         RippleDistortion ripple = new RippleDistortion(shipLoc, shipVel);
-                        ripple.setSize(shipRadius * 4.5f);
-                        ripple.setIntensity(shipRadius);
-                        ripple.setFrameRate(60f / RIPPLE_LENGTH.get(shipHullSize));
-                        ripple.fadeInSize(RIPPLE_LENGTH.get(shipHullSize) * 1.5f);
-                        ripple.fadeOutIntensity(RIPPLE_LENGTH.get(shipHullSize));
-                        ripple.setSize(shipRadius * 1.5f);
+                        if (dweller) {
+                            ripple.setSize(shipRadius * 6f * explosionScale);
+                            ripple.setIntensity(shipRadius * explosionScale * 0.25f);
+                            ripple.setFrameRate(60f / (RIPPLE_LENGTH.get(shipHullSize) / 1.5f));
+                            ripple.fadeInSize(RIPPLE_LENGTH.get(shipHullSize));
+                            ripple.fadeOutIntensity(RIPPLE_LENGTH.get(shipHullSize) / 1.5f);
+                            ripple.setSize(shipRadius * 1.5f * explosionScale);
+                        } else {
+                            ripple.setSize(shipRadius * 4.5f * explosionScale);
+                            ripple.setIntensity(shipRadius * explosionScale);
+                            ripple.setFrameRate(60f / RIPPLE_LENGTH.get(shipHullSize));
+                            ripple.fadeInSize(RIPPLE_LENGTH.get(shipHullSize) * 1.5f);
+                            ripple.fadeOutIntensity(RIPPLE_LENGTH.get(shipHullSize));
+                            ripple.setSize(shipRadius * 1.5f * explosionScale);
+                        }
                         DistortionShader.addDistortion(ripple);
                     }
 
-                    if (explosionEnabled && !suppressed) {
-                        engine.addHitParticle(shipLoc, ZERO, shipRadius * 10f, 0.75f, shipRadius / 50f, COLOR_WHITE1);
-                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 7.5f, 0.25f, shipRadius / 35f, COLOR_WHITE2);
-                        if (fullExplosionEnabled || ship.isPiece()) {
-                            if (offscreen || ShaderLib.isOnScreen(shipLoc, shipRadius * 2f * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
-                                Color color = ShipColors.colorJitter(ShipColors.colorBlend(explosionColor, COLOR_BLACK1, 0.2f), 50f);
-                                engine.spawnExplosion(shipLoc, shipVel, color, shipRadius * 2f, (shipRadius / 60f) * ((float) Math.random() * 0.25f + 1f));
-                            }
-                            if (!ship.isPiece()) {
-                                switch (ship.getHullSize()) {
-                                    case FIGHTER:
-                                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 12f, 0.5f, 0.05f, COLOR_WHITE1);
-                                        break;
-                                    case FRIGATE:
-                                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f, 1f, 0.05f, COLOR_WHITE1);
-                                        break;
-                                    case DESTROYER:
-                                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f, 1f, 0.075f, COLOR_WHITE1);
-                                        break;
-                                    case CRUISER:
-                                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f, 1f, 0.1f, COLOR_WHITE1);
-                                        break;
-                                    default:
-                                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f, 1f, 0.125f, COLOR_WHITE1);
-                                        break;
+                    if (GraphicsLibSettings.enableExplosionEffects() && !suppressed) {
+                        if (!dweller) {
+                            engine.addHitParticle(shipLoc, ZERO, shipRadius * 10f * explosionScale, 0.75f, shipRadius / 50f, COLOR_WHITE1);
+                            engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 7.5f * explosionScale, 0.25f, shipRadius / 35f, COLOR_WHITE2);
+                            if (GraphicsLibSettings.enableFullExplosionEffects() || ship.isPiece()) {
+                                if (GraphicsLibSettings.drawOffscreenParticles()
+                                        || ShaderLib.isOnScreen(shipLoc, shipRadius * 2f * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
+                                    Color color = ShipColors.colorJitter(ShipColors.colorBlend(explosionColor, COLOR_BLACK1, 0.2f), 50f);
+                                    engine.spawnExplosion(shipLoc, shipVel, color, shipRadius * 2f * explosionScale, (shipRadius / 60f) * ((float) Math.random() * 0.25f + 1f));
+                                }
+                                if (!ship.isPiece()) {
+                                    switch (ship.getHullSize()) {
+                                        case FIGHTER ->
+                                            engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 12f * explosionScale, 0.5f, 0.05f, COLOR_WHITE1);
+                                        case FRIGATE ->
+                                            engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f * explosionScale, 1f, 0.05f, COLOR_WHITE1);
+                                        case DESTROYER ->
+                                            engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f * explosionScale, 1f, 0.075f, COLOR_WHITE1);
+                                        case CRUISER ->
+                                            engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f * explosionScale, 1f, 0.1f, COLOR_WHITE1);
+                                        default ->
+                                            engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 15f * explosionScale, 1f, 0.125f, COLOR_WHITE1);
+                                    }
                                 }
                             }
                         }
                         StandardLight light = new StandardLight(shipLoc, shipVel, ZERO, null);
                         if (ship.isPiece()) {
-                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(HullSize.FRIGATE) * 4f);
-                            light.setIntensity(LIGHT_INTENSITY.get(HullSize.FRIGATE));
+                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(HullSize.FRIGATE) * 4f * explosionScale);
+                            light.setIntensity(LIGHT_INTENSITY.get(HullSize.FRIGATE) * explosionScale);
                             light.setLifetime(LIGHT_DURATION.get(HullSize.FRIGATE));
                             light.setAutoFadeOutTime(0.5f + LIGHT_DURATION.get(HullSize.FRIGATE));
                         } else {
-                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(shipHullSize) * 4f);
-                            light.setIntensity(LIGHT_INTENSITY.get(shipHullSize));
+                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(shipHullSize) * 4f * explosionScale);
+                            light.setIntensity(LIGHT_INTENSITY.get(shipHullSize) * explosionScale);
                             light.setLifetime(LIGHT_DURATION.get(shipHullSize));
                             light.setAutoFadeOutTime(0.5f + LIGHT_DURATION.get(shipHullSize));
                         }
@@ -290,8 +268,8 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                         LightShader.addLight(light);
                     }
 
-                    if (trailsEnabled && !ship.isShuttlePod() && !ship.isDrone()) {
-                        int count = (int) (shipRadius * EXPLOSION_SIZE_MOD.get(shipHullSize) / 4f);
+                    if (GraphicsLibSettings.enableExplosionTrails() && !ship.isShuttlePod() && !ship.isDrone() && !dweller) {
+                        int count = (int) (shipRadius * explosionScale * EXPLOSION_SIZE_MOD.get(shipHullSize) / 4f);
                         float length = EXPLOSION_LENGTH.get(shipHullSize) * ((float) Math.random() * 0.5f + 0.75f);
                         if (ship.isPiece()) {
                             count /= 2;
@@ -305,8 +283,8 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                     }
                 }
 
-                /* Don't play full-destruction effects for Omega or DEMs */
-                if (ship.getVariant().hasHullMod("shard_spawner") || ship.getHullSpec().getHullId().contentEquals("dem_drone")) {
+                /* Don't play full-destruction effects for Omega, DEMs, or Dwellers */
+                if (ship.getVariant().hasHullMod("shard_spawner") || ship.getHullSpec().getHullId().contentEquals("dem_drone") || dweller) {
                     suppressEffects(ship, true, false);
                 }
             }
@@ -322,26 +300,28 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                 String shipHullId = ship.getHullSpec().getBaseHullId();
                 float shipRadius = effectiveRadius(ship);
                 HullSize shipHullSize = ship.getHullSize();
-                if (explosionEnabled) {
+                if (GraphicsLibSettings.enableExplosionEffects()) {
                     String style = ship.getHullStyleId();
-                    if (EXPLOSION_COLORS.get(style) == null) {
+                    if (ShipColors.EXPLOSION_COLORS.get(style) == null) {
                         style = "MIDLINE";
                     }
-                    Color explosionColor = EXPLOSION_COLORS.get(style);
+                    Color explosionColor = ShipColors.EXPLOSION_COLORS.get(style);
                     if (ship.getExplosionFlashColorOverride() != null) {
                         explosionColor = ship.getExplosionFlashColorOverride();
                     }
 
-                    boolean suppressed = suppressEffects.containsKey(ship);
+                    float explosionScale = ship.getExplosionScale();
+                    boolean suppressed = suppressEffects.containsKey(ship) || (explosionScale <= 0.001);
 
                     if ((engine.isInCampaign() || engine.isInCampaignSim() || engine.isSimulation() || engine.getPlayerShip() == null
                             || !engine.getPlayerShip().getHullSpec().getHullId().contentEquals("swp_arcade_superhyperion")
                             || BOSS_SHIPS.containsKey(shipHullId)) && !suppressed) {
-                        engine.addHitParticle(shipLoc, ZERO, shipRadius * 15f, 0.75f, shipRadius / 15f, COLOR_WHITE1);
-                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 10f, 0.25f, shipRadius / 10f, COLOR_WHITE2);
-                        if (offscreen || ShaderLib.isOnScreen(shipLoc, shipRadius * 3f * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
+                        engine.addHitParticle(shipLoc, ZERO, shipRadius * 15f * explosionScale, 0.75f, shipRadius / 15f, COLOR_WHITE1);
+                        engine.addSmoothParticle(shipLoc, ZERO, shipRadius * 10f * explosionScale, 0.25f, shipRadius / 10f, COLOR_WHITE2);
+                        if (GraphicsLibSettings.drawOffscreenParticles()
+                                || ShaderLib.isOnScreen(shipLoc, shipRadius * 3f * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
                             Color color = ShipColors.colorJitter(ShipColors.colorBlend(explosionColor, COLOR_BLACK1, 0.2f), 50f);
-                            engine.spawnExplosion(shipLoc, ZERO, color, shipRadius * 3f, (shipRadius / 20f) * ((float) Math.random() * 0.25f + 1f));
+                            engine.spawnExplosion(shipLoc, ZERO, color, shipRadius * 3f * explosionScale, (shipRadius / 20f) * ((float) Math.random() * 0.25f + 1f));
                         }
 //                        float intensity;
 //                        float intensity2;
@@ -359,13 +339,13 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                     if (!suppressed) {
                         StandardLight light = new StandardLight(shipLoc, ZERO, ZERO, null);
                         if (ship.isPiece()) {
-                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(HullSize.FRIGATE) * 3f);
-                            light.setIntensity(LIGHT_INTENSITY.get(HullSize.FRIGATE) * 0.75f);
+                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(HullSize.FRIGATE) * 3f * explosionScale);
+                            light.setIntensity(LIGHT_INTENSITY.get(HullSize.FRIGATE) * 0.75f * explosionScale);
                             light.setLifetime(LIGHT_DURATION.get(HullSize.FRIGATE));
                             light.setAutoFadeOutTime(0.5f + LIGHT_DURATION.get(HullSize.FRIGATE));
                         } else {
-                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(shipHullSize) * 3f);
-                            light.setIntensity(LIGHT_INTENSITY.get(shipHullSize) * 0.75f);
+                            light.setSize(shipRadius * EXPLOSION_SIZE_MOD.get(shipHullSize) * 3f * explosionScale);
+                            light.setIntensity(LIGHT_INTENSITY.get(shipHullSize) * 0.75f * explosionScale);
                             light.setLifetime(LIGHT_DURATION.get(shipHullSize));
                             light.setAutoFadeOutTime(0.5f + LIGHT_DURATION.get(shipHullSize));
                         }
@@ -379,8 +359,8 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                     } else {
                         sizeMod = EXPLOSION_SIZE_MOD.get(shipHullSize);
                     }
-                    int particles = (int) (sizeMod * shipRadius / 2f * ((float) Math.random() * 0.5f + 0.75f));
-                    int fire = (int) (sizeMod * shipRadius / 20f * ((float) Math.random() * 0.5f + 0.75f));
+                    int particles = (int) (sizeMod * explosionScale * shipRadius / 2f * ((float) Math.random() * 0.5f + 0.75f));
+                    int fire = (int) (sizeMod * explosionScale * shipRadius / 20f * ((float) Math.random() * 0.5f + 0.75f));
                     if (BOSS_SHIPS.containsKey(shipHullId)) {
                         sizeMod *= 2f;
                         particles *= 4f;
@@ -388,7 +368,9 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                     }
 
                     float renderParticleRadius = 123.74f * (shipRadius / 5f) * (BOSS_SHIPS.containsKey(shipHullId) ? 5f : 1f) + 0.70711f * shipRadius;
-                    if ((offscreen || ShaderLib.isOnScreen(shipLoc, renderParticleRadius * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) && !suppressed) {
+                    if ((GraphicsLibSettings.drawOffscreenParticles()
+                            || ShaderLib.isOnScreen(shipLoc, renderParticleRadius * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT))
+                            && !suppressed) {
                         for (int i = 0; i < particles; i++) {
                             Vector2f point = new Vector2f(shipLoc);
                             Vector2f vel = new Vector2f();
@@ -410,7 +392,9 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                     }
 
                     float renderFireRadius = 2.2097f * (float) Math.sqrt(shipRadius) * (shipRadius / 25f) * (BOSS_SHIPS.containsKey(shipHullId) ? 3f : 1f) + 1.2728f * shipRadius;
-                    if ((offscreen || ShaderLib.isOnScreen(shipLoc, renderFireRadius * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) && !suppressed) {
+                    if ((GraphicsLibSettings.drawOffscreenParticles()
+                            || ShaderLib.isOnScreen(shipLoc, renderFireRadius * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT))
+                            && !suppressed) {
                         for (int i = 0; i < fire; i++) {
                             Vector2f point = new Vector2f(shipLoc);
                             Vector2f vel = new Vector2f();
@@ -472,15 +456,16 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
             Vector2f shipVel = exploder.ship.getVelocity();
 
             String style = exploder.ship.getHullStyleId();
-            if (EXPLOSION_COLORS.get(style) == null) {
+            if (ShipColors.EXPLOSION_COLORS.get(style) == null) {
                 style = "MIDLINE";
             }
-            Color explosionColor = EXPLOSION_COLORS.get(style);
+            Color explosionColor = ShipColors.EXPLOSION_COLORS.get(style);
             if (exploder.ship.getExplosionFlashColorOverride() != null) {
                 explosionColor = exploder.ship.getExplosionFlashColorOverride();
             }
 
-            boolean suppressed = suppressEffects.containsKey(exploder.ship);
+            float explosionScale = exploder.ship.getExplosionScale();
+            boolean suppressed = suppressEffects.containsKey(exploder.ship) || (explosionScale <= 0.001);
 
             // Draw fire contrails from our burning wrecks
             Iterator<FlamePoint> iter3 = exploder.flamePoints.iterator();
@@ -491,7 +476,9 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                 if (!flamePoint.tick(amount) && CollisionUtils.isPointWithinBounds(flamePoint.anchor.getLocation(), exploder.ship)) {
                     // Don't want to generate too many flames...
                     if (interval.intervalElapsed()) {
-                        if ((offscreen || ShaderLib.isOnScreen(flamePoint.anchor.getLocation(), 113.14f * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) && !suppressed) {
+                        if ((GraphicsLibSettings.drawOffscreenParticles()
+                                || ShaderLib.isOnScreen(flamePoint.anchor.getLocation(), 113.14f * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT))
+                                && !suppressed) {
                             Vector2f point = new Vector2f(flamePoint.anchor.getLocation());
                             Vector2f vel = new Vector2f();
                             Vector2f vel2 = new Vector2f();
@@ -557,7 +544,8 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
 
             // And now we make it explode nicely...
             float renderExplosionRadius = 1.4142f * shipRadius + shipVel.length() * 2.4f * EXPLOSION_SIZE_MOD.get(shipHullSize);
-            if (offscreen || ShaderLib.isOnScreen(shipLoc, renderExplosionRadius * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
+            if (GraphicsLibSettings.drawOffscreenParticles()
+                    || ShaderLib.isOnScreen(shipLoc, renderExplosionRadius * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
                 int bound = 100;
                 while (bound > 0) {
                     bound--;
@@ -646,13 +634,15 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
                 iter3.remove();
             }
         }
+
+        lastFrameShips.clear();
+        lastFrameShips.addAll(ships);
     }
 
     @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
-        Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
-        interval = new IntervalUtil(0.1f / trailScale, 0.1f / trailScale);
+        interval = new IntervalUtil(0.1f / GraphicsLibSettings.explosionTrailScale(), 0.1f / GraphicsLibSettings.explosionTrailScale());
     }
 
     /**
@@ -694,8 +684,8 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
 
         private ExplodingShip(ShipAPI ship, int count, float interval) {
             this.ship = ship;
-            this.count = (int) (count * trailScale);
-            this.interval = interval / trailScale;
+            this.count = (int) (count * GraphicsLibSettings.explosionTrailScale());
+            this.interval = interval / GraphicsLibSettings.explosionTrailScale();
             this.flamePoints = new LinkedList<>();
             ticker = 0f;
         }
@@ -740,7 +730,8 @@ public class ShipDestructionEffects extends BaseEveryFrameCombatPlugin {
     private static final class LocalData {
 
         final Set<ShipAPI> deadShips = new LinkedHashSet<>(100);
+        final List<ShipAPI> lastFrameShips = new LinkedList<>();
         final List<ExplodingShip> explodingShips = new LinkedList<>();
-        final Map<ShipAPI, Boolean> suppressEffects = new LinkedHashMap<>(100);
+        final Map<ShipAPI, Boolean> suppressEffects = new WeakHashMap<>(100);
     }
 }

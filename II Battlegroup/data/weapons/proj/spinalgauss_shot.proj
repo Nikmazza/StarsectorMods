@@ -1,0 +1,18 @@
+{
+	"id":"spinalgauss_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":500.0,
+	"width":40,
+	"fadeTime":0.6,
+	"fringeColor":[170,170,205,255],
+	"coreColor":[235,235,255,255],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
+	"passThroughFighters":true,
+	"passThroughFightersOnlyWhenDestroyed":true,
+	"bulletSprite":"graphics/proj/shell_spinalgauss.png"	
+}

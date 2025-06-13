@@ -1,0 +1,39 @@
+{
+  "variantId": "domres_picket_attack3",
+  "hullId": "domres_picket",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 5,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "railgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

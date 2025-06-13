@@ -11,13 +11,15 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
+import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.II_Util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -60,14 +62,19 @@ public class II_MarketRiggerScript implements EveryFrameScript {
     private final IntervalUtil shortTracker = new IntervalUtil(1f, 1.5f);
 
     /* Counts in days */
-    private final IntervalUtil longTracker = new IntervalUtil(29f, 31f);
+    private IntervalUtil longTracker = new IntervalUtil(1f, 1f);
 
     /* Updates once every longTracker period */
     private final List<String> marketsToManipulate = new ArrayList<>();
 
-    private final Set<String> retainedMembers = new HashSet<>();
+    private final HashMap<String, Float> retainedMembers = new LinkedHashMap<>();
 
     private final Random rand = new Random();
+
+    protected Object readResolve() {
+        longTracker = new IntervalUtil(1f, 1f);
+        return this;
+    }
 
     @Override
     public void advance(float amount) {
@@ -88,10 +95,22 @@ public class II_MarketRiggerScript implements EveryFrameScript {
             FactionAPI faction = sector.getFaction("interstellarimperium");
 
             marketsToManipulate.clear();
-            retainedMembers.clear();
             for (MarketAPI market : sector.getEconomy().getMarketsCopy()) {
                 if (!market.isHidden() && (market.getFaction() == faction)) {
                     marketsToManipulate.add(market.getId());
+                }
+            }
+
+            Set<Map.Entry<String, Float>> retainedSet = retainedMembers.entrySet();
+            Iterator<Map.Entry<String, Float>> iter = retainedSet.iterator();
+            while (iter.hasNext()) {
+                Map.Entry<String, Float> retained = iter.next();
+                float curr = retained.getValue();
+                curr -= 1f;
+                if (curr <= 0f) {
+                    iter.remove();
+                } else {
+                    retained.setValue(curr);
                 }
             }
         }
@@ -108,7 +127,7 @@ public class II_MarketRiggerScript implements EveryFrameScript {
                     CargoAPI cargo = submarket.getCargo();
                     List<FleetMemberAPI> toDelete = new ArrayList<>();
                     for (FleetMemberAPI member : cargo.getMothballedShips().getMembersInPriorityOrder()) {
-                        if (retainedMembers.contains(member.getId())) {
+                        if (retainedMembers.containsKey(member.getId())) {
                             continue;
                         }
 
@@ -132,7 +151,7 @@ public class II_MarketRiggerScript implements EveryFrameScript {
                                 String variantID = variantList.get(MathUtils.getRandomNumberInRange(0, variantList.size() - 1));
                                 variantID += "_Hull";
 
-                                cargo.addMothballedShip(FleetMemberType.SHIP, variantID, null);
+                                addShip(variantID, DModManager.getNumDMods(member.getVariant()), cargo);
 
                                 toDelete.add(member);
                             } else {
@@ -141,7 +160,11 @@ public class II_MarketRiggerScript implements EveryFrameScript {
                                     DModManager.setDHull(member.getVariant());
                                     DModManager.addDMods(member, true, DMods, rand);
                                 }
-                                retainedMembers.add(member.getId());
+                                float time = 30f;
+                                if (submarket instanceof BaseSubmarketPlugin base) {
+                                    time = base.getMinSWUpdateInterval();
+                                }
+                                retainedMembers.put(member.getId(), time);
                             }
                         }
                     }
@@ -152,6 +175,20 @@ public class II_MarketRiggerScript implements EveryFrameScript {
                 }
             }
         }
+    }
+
+    private FleetMemberAPI addShip(String variantId, int dMods, CargoAPI cargo) {
+        FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, variantId);
+
+        if (dMods > 0) {
+            DModManager.setDHull(member.getVariant());
+            DModManager.addDMods(member, true, dMods, rand);
+        }
+
+        member.getRepairTracker().setMothballed(true);
+        member.getRepairTracker().setCR(0.5f);
+        cargo.getMothballedShips().addFleetMember(member);
+        return member;
     }
 
     @Override

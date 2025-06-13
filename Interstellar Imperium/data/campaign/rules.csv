@@ -434,7 +434,7 @@ IIJustitiaIntroductionOptionGrandmotherSel2Comm,DialogOptionSelected,"$option ==
 $player.fcm_faction == interstellarimperium",FireAll IIJustitiaIntroductionOptions,"""And if anything should come between me and my grandchildren..."" Justitia's smile briefly widens unnaturally into a predatory grin, splitting across her digital face. ""Your grandmother has teeth.""",,
 IIJustitiaIntroductionOptionCreepySel,DialogOptionSelected,$option == iiJustitiaIntroCreepy,"AdjustRepPerson ii_justitia SUSPICIOUS -1
 $iiAskedCreepy = true 0
-FireAll IIJustitiaIntroductionOptions","Justitia clicks her nonexitent tongue and gives you a withering look of disappointment. ""That was terribly rude and hurtful, $playerName. Your mother should have washed your mouth out with soap when you were younger.""",,
+FireAll IIJustitiaIntroductionOptions","Justitia clicks her nonexistent tongue and gives you a withering look of disappointment. ""That was terribly rude and hurtful, $playerName. Your mother should have washed your mouth out with soap when you were younger.""",,
 IIJustitiaIntroductionOptionWhatAreYouSel,DialogOptionSelected,$option == iiJustitiaIntroWhatAreYou,"$iiAskedWhatAreYou = true 0
 $iiAskedSomething = true 0
 $iiShowCreepy = false 0","Justitia's coy smile fails to mask the flash of brightness from her lifeless eyes. ""Ah, dearie. You should know better than to ask a woman such personal questions.""",iiJustitiaIntroWhatAreYou2:Continue,

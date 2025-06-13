@@ -2,7 +2,7 @@
   "displayName": "Strike",
   "fluxCapacitors": 0,
   "fluxVents": 6,
-  "goalVariant": false,
+  "goalVariant": true,
   "hullId": "mule_luddic_path",
   "hullMods": [
     "armoredweapons",

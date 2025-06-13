@@ -2,7 +2,7 @@
 	"baseHullId":"ii_module_bastion",
 	"skinHullId":"ii_module_bastion_magnum",
 	"descriptionPrefix":"Equipped with the Magnum Salvo system.",
-	"restoreToBaseHull":true,
+	"restoreToBaseHull":false,
 	"hullDesignation":"Magnum Missile Bastion",
 	"systemId":"ii_magnumsalvo_station",
 	"removeWeaponSlots":[], 		# ids

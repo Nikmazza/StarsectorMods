@@ -1,0 +1,47 @@
+{
+  "id": "csp_LG_arm_left",
+  "specClass": "beam",
+  "type": "DECORATIVE",
+  "size": "SMALL",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/LG arm.png",
+  "hardpointSprite": "graphics/weapons/LG arm.png",
+  "glowColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    -10,
+    -5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    5.5,
+    -5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 10,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 1
+}

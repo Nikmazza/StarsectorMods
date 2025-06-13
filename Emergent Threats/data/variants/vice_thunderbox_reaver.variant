@@ -1,0 +1,50 @@
+{
+    "displayName": "Reaver",
+    "fluxCapacitors": 1,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "vice_thunderbox",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "vice_modular_bolt_coherer",
+        "vice_convert_shuttle_bomber"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_thunderbox_reaver",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS MRL": "vice_spinebreaker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "pulselaser",
+                "WS 008": "pulselaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightdualmg",
+                "WS 002": "lightdualmg",
+                "WS 003": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
+                "WS 009": "vulcan",
+                "WS 010": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "vice_kite_bmr_wing",
+        "vice_kite_bmr_wing",
+        "",
+        ""
+    ]
+}

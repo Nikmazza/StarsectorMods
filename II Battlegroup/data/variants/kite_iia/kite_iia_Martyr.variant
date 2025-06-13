@@ -1,0 +1,32 @@
+{
+  "displayName": "Martyr",
+  "fluxCapacitors": 0,
+  "fluxVents": 2,
+  "goalVariant": true,
+  "hullId": "kite_iia",
+  "hullMods": [
+   "safetyoverrides",
+    "eccm"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "kite_iia_Martyr",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "sabot",
+        "WS 002": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "typhoon"
+      }
+    }
+  ],
+  "wings": []
+}

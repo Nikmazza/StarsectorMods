@@ -17,6 +17,11 @@ public class II_BallistaStage2AI extends II_BaseMissile {
         if (missile.isFading() || missile.isFizzling()) {
             return;
         }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
+        }
 
         if (!acquireTarget(amount)) {
             missile.giveCommand(ShipCommand.ACCELERATE);
@@ -24,7 +29,7 @@ public class II_BallistaStage2AI extends II_BaseMissile {
         }
 
         float angularDistance = MathUtils.getShortestRotation(missile.getFacing(), VectorUtils.getAngleStrict(
-                                                              missile.getLocation(), target.getLocation()));
+                missile.getLocation(), target.getLocation()));
 
         float absAngD = Math.abs(angularDistance);
 

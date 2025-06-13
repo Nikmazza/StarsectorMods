@@ -52,6 +52,7 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	private static float INTERVAL_DECORATIVE_DURATION = 0.5f;
 	
 	private static String ABYSSAL_HULLMOD = "rat_abyssal_grid";
+	private static String SIERRA_HULLMOD = "rat_raphaels_grace";
 	private static String ABYSSAL_TYPE = "Abyssal";
 	private static String SERAPH_TYPE = "Seraph";
 	private static String ENTROPIC_DISCHARGE = "entropic discharge";
@@ -94,11 +95,13 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	}
 	
 	private boolean isDegraded(MutableShipStatsAPI stats) {
-		return (!stats.getVariant().hasHullMod(ABYSSAL_HULLMOD));
+		return (!stats.getVariant().hasHullMod(ABYSSAL_HULLMOD) 
+						&& !stats.getVariant().hasHullMod(SIERRA_HULLMOD));
 	}
 	
 	private boolean isDegraded(ShipAPI ship) {
-		return (!ship.getVariant().hasHullMod(ABYSSAL_HULLMOD));
+		return (!ship.getVariant().hasHullMod(ABYSSAL_HULLMOD) 
+						&& !ship.getVariant().hasHullMod(SIERRA_HULLMOD));
 	}
 	
 	private String getCoreType (ShipAPI ship) {
@@ -161,12 +164,12 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 			float range = (Float) data.stats.get("range");
 			//getNearestNotAbyssal also excludes entropy arrester hulls
 			ShipAPI target = DistanceUtil.getNearestNotAbyssal(ship, range, "enemies");
-			if (target != null) {
+			if (target != null && !ship.isPhased()) {
 				spawnEMP (target, ship, range);
 				pulses++;
 				data.stats.put("pulses", pulses);
 			}
-			if (pulses >= (Integer) MAX_PULSES.get(ship.getVariant().getHullSize())) {
+			if (pulses >= (Integer) MAX_PULSES.get(ship.getVariant().getHullSize()) && !ship.isPhased()) {
 				data.stats.put("pulses", 0f);
 				data.stats.put("timer", 0f);
 				data.stats.put("decorative", 0f);
@@ -255,6 +258,7 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (util.isModuleCheck(ship)) return false;
 		if (ship.getHullSpec().getManufacturer().equals(ABYSSAL_TYPE)
 				|| ship.getHullSpec().getManufacturer().equals(SERAPH_TYPE)) return true;
@@ -262,6 +266,7 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 	}
 
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("hub");
 		if (!util.isApplicable(ship) 
 				&& !ship.getHullSpec().getManufacturer().equals(ABYSSAL_TYPE)

@@ -1,0 +1,8 @@
+{
+	"id":"anotherportraitpack", # internal id
+	"name":"Another Portrait Pack", # displayed to the player
+	"author":"atreg",
+	"version":"1.5.0",
+	"description":"Adds portraits.",
+	"gameVersion":"0.98a-RC5",
+}

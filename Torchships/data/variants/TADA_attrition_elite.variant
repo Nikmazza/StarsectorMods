@@ -1,63 +1,79 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 0,
-    "fluxVents": 18,
+    "fluxCapacitors": 19,
+    "fluxVents": 0,
     "goalVariant": true,
     "hullId": "TADA_attrition",
-    "hullMods": ["missleracks"],
+    "hullMods": [
+        "eccm",
+        "extendedshieldemitter",
+        "missleracks",
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "TADA_attrition_elite",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS0002": "harpoonpod",
-                "WS0003": "harpoonpod"
+                "WS0003": "typhoon",
+                "WS0002": "typhoon",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0020": "heatseeker",
+                "WS0021": "heatseeker",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0004": "reaper",
+                "WS0005": "reaper",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0001": "TADA_triplemortar",
-                "WS0008": "TADA_triplemortar",
-                "WS0009": "TADA_triplemortar"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS0006": "lightneedler",
-                "WS0007": "lightneedler",
+                "WS0008": "lightneedler",
+                "WS0009": "lightneedler",
+                "WS0001": "lightneedler",
+                "WS0011": "lightneedler",
                 "WS0010": "lightneedler",
-                "WS0011": "lightneedler"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0014": "lightag",
-                "WS0015": "lightag",
-                "WS0018": "lightdualac",
-                "WS0019": "lightdualac"
+                "WS0006": "lightdualmg",
+                "WS0007": "lightdualmg",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0004": "vulcan",
-                "WS0005": "vulcan",
-                "WS0012": "vulcan",
-                "WS0013": "vulcan",
-                "WS0016": "vulcan",
+                "WS0014": "mininglaser",
+                "WS0018": "mininglaser",
+                "WS0013": "mininglaser",
+                "WS0012": "mininglaser",
+                "WS0015": "mininglaser",
+                "WS0019": "mininglaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS0017": "vulcan",
-                "WS0020": "vulcan",
-                "WS0021": "vulcan"
+                "WS0016": "vulcan",
             }
         }
     ]

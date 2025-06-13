@@ -1,53 +1,30 @@
 {
-    "hullFrequency":{
-        "hulls":{
-            "TADA_challenger":0.25,
-
-            "TADA_bully":0.25,
-            "TADA_scalper":0.5,
-
-            "TADA_foray":0.12,
-            "TADA_hightide":0.25,
-            "TADA_attrition":0.12,
-            "TADA_bonnethead":0.25,
-            "TADA_owl":0.25,
-
-            "TADA_gunwall":0.12,
-            "TADA_herald":0.12,
-
-            "TADA_crane":0.5,
-        },
-    },
+    # variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+            "TADA_scalper_DEM":5,
+            "TADA_scalper_ftrsupport":5,
+            "TADA_bonnethead_escort":3,
+            "TADA_bonnethead_support":7,
+            "TADA_herald_support":10,
+	},
     "knownShips":{
         "hulls":[
-            "TADA_challenger",
-            "TADA_tinnitus",
-
-            "TADA_bully",
             "TADA_scalper",
-
-            "TADA_foray",
-            "TADA_hightide",
             "TADA_bonnethead",
-            "TADA_owl",
-
             "TADA_crane",
-
             "TADA_herald",
         ],
     },
-    "priorityShips":{
-        "hulls":[
-            #"odyssey",
-            #"conquest",
-            "TADA_herald",
+    "knownFighters":{
+        "fighters":[
+            "TADA_pinnace_wing",
+            "TADA_owlDrone_wing",
         ],
     },
-    "knownWeapons":{
-        "weapons":[
-            "TADA_pike",
-            "TADA_LRA",
-            "TADA_urchin",
-        ],
+    "shipSellFrequency":{
+        "herald":100,
+    },
+    "hullmodSellFrequency":{
+        "TADA_minimalPrep":10,
     },
 },

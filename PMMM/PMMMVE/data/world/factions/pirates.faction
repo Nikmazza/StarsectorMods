@@ -1,0 +1,21 @@
+{
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"falcon_p":0.5, 			# it's pretty good, so make it more rare
+			"wolf_d_pirates":0.8,
+			"mudskipper2":1.3,
+			"colossus3":0.9,
+			"venture":0.5, 				# High DP fleets tend to spam it
+		},
+	},
+	"knownShips":{
+		"hulls":[
+		],
+	},
+	"portraits":{
+		"standard_male":[
+		],
+	},
+}

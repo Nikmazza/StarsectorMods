@@ -1,0 +1,38 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 6,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "cerberus_scav",
+    "hullMods": [
+        "reinforcedhull",
+		"missleracks",
+        "armoredweapons"
+    ],
+    "permaMods": [],
+    "variantId": "cerberus_scav_std",
+    "weaponGroups": [
+	        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "shredder"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "annihilator",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "harpoon",
+                "WS 002": "harpoon"
+            }
+        }
+    ]
+}

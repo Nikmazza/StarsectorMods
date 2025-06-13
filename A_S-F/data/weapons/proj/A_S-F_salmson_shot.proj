@@ -6,7 +6,7 @@
 	"onHitEffect":"org.amazigh.foundry.scripts.arktech.ASF_SalmsonOnHitEffect",
 
 	"spawnType":"BALLISTIC",
-	"collisionClass":"PROJECTILE_FIGHTER",
+	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
 	"length":25.0,
 	"hitGlowRadius":33,

@@ -1,0 +1,55 @@
+{
+  "variantId": "station_domres_base_std",
+  "hullId": "station_domres_base",
+  "displayName": "Crippled",
+  "goalVariant": true,
+  "fluxCapacitors": 50,
+  "fluxVents": 50,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "heavyac",
+        "WS0008": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "flak",
+        "WS0002": "flak",
+        "WS0004": "flak",
+        "WS0005": "flak",
+        "WS0009": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavymauler",
+        "WS0006": "heavymauler"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "BACKLEFT": "station_domres_backleft_variant"
+    },
+    {
+      "TOPRIGHT": "station_domres_topright_variant"
+    },
+    {
+      "RIGHT": "station_domres_right_variant"
+    },
+    {
+      "BACKRIGHTRIGHT": "station_domres_backrightright_variant"
+    }
+  ],
+  "wings": []
+}

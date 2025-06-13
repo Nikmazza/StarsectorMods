@@ -3,7 +3,7 @@
   "hullId": "fishkill",
   "displayName": "Close Support",
   "goalVariant": true,
-  "fluxCapacitors": 18,
+  "fluxCapacitors": 28,
   "fluxVents": 18,
   "quality": 1,
   "permaMods": [],

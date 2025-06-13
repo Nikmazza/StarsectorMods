@@ -4,7 +4,7 @@
 	"author":"Kayse-Complex",
 	"version":"0.1.0",
 	"description":"Some kitbashed phase ships and phase techs for Tri-Tachyon.",
-	"gameVersion": "0.97a",
+	"gameVersion": "0.98a",
 	"jars":["jars/Kayse_PhaseShips.jar"],
 	"dependencies": [
 		{

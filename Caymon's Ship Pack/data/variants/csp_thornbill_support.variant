@@ -1,0 +1,43 @@
+{
+  "variantId": "csp_thornbill_support",
+  "hullId": "csp_thornbill",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 12,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "pointdefenseai",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyburst",
+        "WS0002": "heavyburst",
+        "WS0006": "irpulse",
+        "WS0007": "irpulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "sabot",
+        "WS0004": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "typhoon"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

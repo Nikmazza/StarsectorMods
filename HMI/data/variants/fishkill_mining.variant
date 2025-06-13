@@ -4,13 +4,14 @@
   "displayName": "Mining",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 23,
+  "fluxVents": 21,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
     "expanded_cargo_holds",
     "dedicated_targeting_core",
-    "efficiency_overhaul"
+    "efficiency_overhaul",
+    "auxiliary_fuel_tanks"
   ],
   "weaponGroups": [
     {
@@ -24,8 +25,10 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
+        "WS0004": "jackhammer",
         "WS0014": "hmi_megalauncher_cannon",
         "WS0015": "hammer",
+        "WS0020": "hammer",
         "WS0021": "hmi_megalauncher_cannon"
       }
     },
@@ -33,10 +36,8 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0004": "signpost_med",
         "WS0008": "mining_gen",
-        "WS0016": "mining_burst_blaster",
-        "WS0020": "signpost_sml"
+        "WS0016": "mining_burst_blaster"
       }
     },
     {

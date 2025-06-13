@@ -16,5 +16,13 @@
             "TADA_plasma_splash_C":"graphics/TORCHSHIPS/fx/TADA_plasma_splash_02.png",
             "sweetener":"graphics/TORCHSHIPS/fx/TADA_sweetener.png",
         },
+        "fighterSkinsPlayerOnly":{
+            "TADA_owlDrone_LOW_TECH":"graphics/TORCHSHIPS/ships/TADA_owlDrone_lowtech.png",
+            "TADA_owlDrone_MIDLINE":"graphics/TORCHSHIPS/ships/TADA_owlDrone_midline.png",
+            "TADA_owlDrone_HIGH_TECH":"graphics/TORCHSHIPS/ships/TADA_owlDrone_hightech.png",
+            "TADA_firespitter_LOW_TECH":"graphics/TORCHSHIPS/ships/TADA_firespitter_lowtech.png",
+            "TADA_firespitter_MIDLINE":"graphics/TORCHSHIPS/ships/TADA_firespitter_midline.png",
+            "TADA_firespitter_HIGH_TECH":"graphics/TORCHSHIPS/ships/TADA_firespitter_hightech.png",
+        },
     }
 }

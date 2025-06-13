@@ -7,9 +7,9 @@
   "height": 32,
   "width": 32,
   "center": [16, 16],
-  "collisionRadius": 24,
+  "collisionRadius": 21,
   "shieldCenter": [0, -0],
-  "shieldRadius": 22.5,
+  "shieldRadius": 19.5,
   "viewOffset": 0,
   "builtInMods": [
     "no_weapon_flux"
@@ -27,28 +27,17 @@
   ],
   "engineSlots": [
     {
-      "location": [-3, 3],
+      "location": [-9.5, -0],
       "length": 10.119037,
       "width": 7.643322,
-      "angle": 167,
-      "contrailSize": 7.643322,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-3, -3],
-      "length": 10.119037,
-      "width": 7.643322,
-      "angle": -167,
+      "angle": 180,
       "contrailSize": 7.643322,
       "style": "HIGH_TECH"
     }
   ],
   "bounds": [
-    -12.5, -4,
-    3.5, -11.5,
-    12, -5.5,
-    12, 5.5,
-    3.5, 11.5,
-    -12.5, 4
+    -9, -9,
+    12.5, 2,
+    -10.5, 10
   ]
 }

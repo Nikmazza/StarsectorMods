@@ -1,0 +1,55 @@
+{
+  "displayName": "Bomber",
+  "fluxCapacitors": 0,
+  "fluxVents": 1,
+  "goalVariant": true,
+  "hullId": "heron_ii",
+  "hullMods": [
+    "missleracks"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "heron_ii_Bomber",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "sabot",
+        "WS0003": "sabot",
+        "WS0004": "sabot",
+        "WS0005": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lrpdlaser",
+        "WS 002": "lrpdlaser",
+        "WS 003": "lrpdlaser",
+        "WS 004": "lrpdlaser",
+        "WS 009": "mininglaser",
+        "WS 010": "mininglaser"
+      }
+    }
+  ],
+  "wings": [
+    "trident_wing",
+    "trident_wing"
+  ]
+}

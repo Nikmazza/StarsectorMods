@@ -1,0 +1,48 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 4,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "rwc_viper",
+    "hullMods": [
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_viper_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "arbalest",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "atropos",
+                "WS0004": "atropos",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "railgun",
+                "WS0002": "railgun",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "vulcan",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

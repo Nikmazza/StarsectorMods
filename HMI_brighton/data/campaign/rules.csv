@@ -1,0 +1,90 @@
+id,trigger,conditions,script,text,options,notes
+flavorTextMarketBrighton,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == brighton","AddText ""The port concourse is filled with trader starcraft of every size. Speculators crowd offloading ship captains with deals and peddlers call out to crew, holding wares and projecting personal ad-holos. Here and there are holos advertising safe travel to the core systems, and recruitment and requisition requests for the Federal Navy. The concourse shows no overt indication that the Federation holds sway here, beyond a few green-uniformed enforcers casually patrolling the concourse and a wall bearing the weathered stencil of the Federal Stars."" marketFlavorTextColor",,,
+,,,,,,
+aiCores_turnInResponseBrighton,AICoresTurnedIn,$faction.id == brighton,FireAll PopulateOptions,"$personName thanks you for your contribution to the Federation, before the conversation turns to more weighty matters.",,
+aiCores_turnInOptionSellBrighton,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == righton",FireAll PopulateCoresTurnInOptions,"""We could use every edge we can out here, and these cores will definitely give us that edge. I can't give you many creds for it, but I can say that you'll have the Federation's thanks.""",,
+,,,,,,
+greetingBrightonFriendly,OpenCommLink,"$faction.id == brighton
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Acknowledging receipt of AIS code, clarifying identity chip... Good to see you, $playerName!""
+OR
+""Scanning completed, double checking registry…Hey there $playerName! What can we help you with?""",cutCommLink:Cut the comm link,
+greetingBrightonNeutral,OpenCommLink,"$faction.id == brighton
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""You have been scanned and identified. It's probably best for both our peace of mind if you keep your distance.""
+OR
+""Your identity is known and checked against established registries. Any further action will be considered hostile.""
+OR
+""This isn't the first time you shifty pirate bastards have tried this. Clear off or we'll be forced to attack.""",cutCommLink:Cut the comm link,
+greetingBrightonHostileWeaker,OpenCommLink,"$faction.id == brighton
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""Hostile $shipOrFleet, be advised: we've already dispatched a distress call to a nearby patrol, and it should arrive shortly.""
+OR
+""Hostile $shipOrFleet, be advised: our route is known and our absence will be noted. Cease all hostile activity and retreat.""",cutCommLink:Cut the comm link,
+greetingBrightonHostileWeakerDefiant,OpenCommLink,"$faction.id == brighton
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"The enemy $personRank looks furiously defiant. ""If you think I came all this way just to die pointlessly here, you are flat-out wrong,"" $heOrShe says.
+OR
+""Well this is fucked."" $PersonRank $personName suddenly notices the line is open and shuts it off.",cutCommLink:Cut the comm link,
+greetingBrightonHostileStronger,OpenCommLink,"$faction.id == brighton
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"It appears the enemy $personRank doesn't seem to feel the need to talk to you, as your comm requests go unanswered.",cutCommLink:Cut the comm link,
+,,,,,,
+#DomRes Interaction Descriptions,,,,,,
+greetingDomResHostile,OpenCommLink,"$faction.id == domres score:1000
+$entity.isHostile",$ignorePlayerCommRequests = true 1,"""WARNING: This vessel is property of the Domain Resurgent and is responding with deadly force to tampering by any means and/or damaging or intrusive signals. Vandalism or destruction of Domain Resurgent property is punishable under the MINEX Establishment Act in addition to colonial polity charters applicable within this volume of Domain territory. This infraction is being recorded. If you wish to make an enquiry, please notify our offices in the Manchester System.""",cutCommLink:Cut the comm link,
+greetingDomResFriendly,OpenCommLink,"$faction.id == domres score:1000
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""Domain Resurgent command codes acknowledged, anti-tampering systems have been set to stand-by and will accept target approach for servicing and data logging.""",,
+greetingDomResNeutral,OpenCommLink,"$faction.id == domres score:1000
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","Citizen of the Domain, this automated drone ship has identified and logged your vessel or habitat in the course of executing its mission parameters. Autonomous vessels of the Domain Resurgent are programmed to respond with deadly force to tampering of any means including damaging or intrusive signals. Vandalism or destruction of of Domain Resurgent property is punishable under the MINEX Establishment Act in addition to colonial polity charters applicable within this volume of Domain territory. If you wish to make an enquiry, please notify out offices in the Manchester System.",,
+,,,,,,
+,,, ,,,
+domres_guardpostDetails,ShowSalvageEntityDetails,$customType == domres_guard_probe,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo","Twisted, pockmarked and ruined, the crippled wreck of the Domain Resurgent guardpost shows fearsome scarring from age and weapons fire. Despite being obscured by a scattering of small debris, it is still clear that some systems are still nominally active, buried deep in the derelict.",,
+domres_guardshipDetails,ShowSalvageEntityDetails,$customType == domres_guard_ship,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo","The Domain Resurgent Guardian Satellite is mostly collected together by residual gravity rather than any remaining intact structural reinforcement. Despite the crippling damage, some systems still appear to be nominally active in some parts of the wreck.",,
+domres_stationDetails,ShowSalvageEntityDetails,$customType == domres_guard_station,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo","The vast bulk of the Guardian Station is blasted, battered and wrecked from a centuries past conflict. While a large number of the modules are missing, sensors indicate that some systems are still nominally active, and the surviving weapon emplacements are  functional.",,
+,,,,,,
+,,,,,,
+hmi_recon_stationOpenDialog,OpenInteractionDialog,$tag:hmi_recon_comm_relaytag,"AddText ""The relay fragment has been hastily reconstructed, being barely more than a transmitter attached to a chunk of scrap. On close inspection, the signals being transmitted are attempting to contact several assets in system, although what their significance is and their precise location is unclear from the fairly basic device. Only rudimentary information can be extracted from the response signals. One asset is being obscured by the corona of a star due to the strong ionic static of solar wind in the return signal. Another is in an asteroid field, according to the pops and clicks of asteroid interference. Yet another is in a Lagrange point of Devon, due to Doppler stretching of the signal.""
+
+AddText ""But what is intriguing is the indication of a location outside of the system, somewhere north and east in relation to Manchester. The return signal is weak but vastly more coherent than the other pings in system. This indicates that in a different system entirely, a defence asset is intact - a vast treasure trove of lost Domain-Era technology for the taking, and a considerably more dangerous foe to combat."" textNeutralColor",,,
+hmi_mirror_stationOpenDialog,OpenInteractionDialog,$tag:hmi_mirror_relaytag,"AddText ""The mirror, rather ingeniously, has been converted into a temporary relay. The modification was haphazard, and probably only transmitted for a very limited time. There is evidence of docking, a very short period of reconstruction, and then a very rapid dedocking as evidenced by the damage around the ship clamps. Inside the threadbare construction there is very little beyond the maintenance equipment still firmly secured to the construction, or the amount of equipment conspicuously absent. In the centre of the mirror is a primitive data core, the ancient device still aimlessly attempting to make communication as its fission reactor slowly drains, despite the wiring between it and the main mirror being fried. Converting the signal into readable material reveals a coded message, which is easily cracked by your delta AI:""
+
+AddText ""Jessie, Scaraborough and his Merry Band of Refo Scum got in, and the fuckers on Exeter have finally pulled their heads out of their sandy asses and realised the system defenses have run out of juice. Tell the girls on Devon to grab their guys cause we're fucking right off. I'll try and meet you out of system, but there's a good chance the Refo fucks will track this signal - in which case don't wait up. This might be the last thing I say to you, which will be fuck you, you cancerous toxic bitch. And your limp-dicked husband too!"" textNeutralColor",,,
+domres_station_jump,TradePanelFlavorText,"$market.id == manchester_abandoned_station_market score:1000
+$id == stationDerelict4","AddText""Heading in through a particularly large ruined section you find an entry point - a blast door with a somewhat intact terminal. It doesn't take long to power up the local system and open the door. Inside the facility is dead and airless, dust and trash and debris floating like a slick wet fog. It's bothersome moving through the facility, having to continually open and close blast doors as you wade through the junk, but you make steady headway into the station. Every now and then you catch a glimpse  messages scrawled on the wall, floor, or sometimes floor. The messages are sometimes carefully written directions to where a loved one is, sometimes a spiteful scrawl against the lies of 'DomRes', and sometimes more ordered writing directions to exit points or damaged sections. Once you make it through these tunnels you approach the Western Promenade, the only section still relatively intact. The debris is absent here, the space inside having been vented a long time ago. The reason is high above you - the top of the entire structure can be jury rigged to open, but frustratingly only from the inside. The insistent transmission interferes with any sort of remote you could set up to open the door automatically. Anything stored here will be protected from the elements and be guaranteed to still be there when you return - if it is secured well enough. As you explore, you wonder if this time you'll find that blasted transmitter and blow the bloody thing to smithereens - you wouldn't be surprised if half the damage to the outside structure was done to do just that.""",,,
+domres_station_mining,ShowSalvageEntityDetails,$customType == domres_guard_probe,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo",,,
+domres_station_research,ShowSalvageEntityDetails,$customType == domres_guard_ship,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo",,,
+domres_station_orbital,ShowSalvageEntityDetails,$customType == domres_guard_station,"ShowDefaultVisual
+FireBest DerelictPrintExtraInfo",,,
+,,,,,,
+,,,,,,
+domres_stationpristineContinueDefenders,BeginSalvage,"$customType == domres_guard_station_pristine
+$tag:hmi_pristineguardstation score:103","SetTextHighlights ""\""Recovered - A Mysterious Blueprint Package and A Mysterious Industrial Blueprint!\""""","Your salvage crews at first tentatively, and then excitedly report untouched blueprints of ships from the Domain Resurgent itself, along with a treasure trove of designs and experimental weapons. Particularly of interest is a set of schematics and blueprints that can vastly improve the quality of life on a colony. Everything from air filters that can remove toxic gases and convert them into passive energy, to seals that do not degrade under the most vigorous chemical assault, to thin radiation plating that can block just as well as fifty feet of high-end rad shields can be easily constructed from the blueprints using trivially sourced materials. Using these designs and more, colonial exploitation can be made considerably less hazardous for the enterprising colonist.
+
+""Recovered - A Mysterious Blueprint Package and A Mysterious Industrial Blueprint!""",0:hmi_domres_explore:Fantastic!,
+domres_stationpristineFacility,DialogOptionSelected,$option == hmi_domres_explore,DomResAddLoot DomResAddLoot,"In addition to this trove of fine salvage, you also have a giant hulk of machinery and scrap to process. As your teams take the ship apart, your team locates the records of recieved communications stored on giant, chunky magna-data slates. Curious, you have the ancient dataslates mined. It takes several hours for the poor bastard stuck with the job to finish the task of plying the rad-fried hardware and hideously outdated software to satisfy your curiosity, but eventually a summary is sent to your console.
+
+The first messages are simple orders to claim high priority systems for a 'South Expanse Company'. Later, the communications change source from the company to 'Domain Resurgent', although whether the company changed names or the organisation co-opted the company's assets is unclear. There are some rudimentary surveying information transfers evaluating possible terraforming possibilities, and then a series of increasingly frantic commands which indicate co-ordinates south-west and travel. However, due to some damage in the station or interference, the commands are incomplete. They either demand 'travel' or they give coordinates  but never in the same message. The final command is a Defence Activation, which caused the station to go into star system lock-down and unleash roaming fleets. The final entry, however, is a communication from an unknown source.",0:hmi_domres_salvage_pick:Continue,
+domres_stationpristineFacility2,DialogOptionSelected,$option == hmi_domres_salvage_pick,,"""Attention to all Domain Resurgent colonies, if you still exist... or even existed in the first place. Manchester has fallen. A pirate called Scarborough rounded up all the refugees the ""wise adminstrators"" didn't let in and invaded. They, they nuked Exeter to dust. However, it turns out, that our ""wise administrators"" were lying about Exeter being overflowing with food, and the ""mighty forges of Devon"" feeding their empire - they barely had enough food to feed themselves and had wasted everything else on...on YOU guys. Whatever's left of the ""wise administrators"" is making a last stand in order to call in all their defence assets to kill Scarborough. If your automated defence stations just left for no reason, you now know why. But, if you have any sense you WILL. NOT. Follow them.  Whoever wins there's nothing left here. Anything the Domain Resurgent hasn't wasted, Scarborough has burned. We survivors who are ditching our ""wise administrators"" are heading to a system south-west of Manchester - and this time, we're going to succeed where the Domain Resurgent failed.""",0:hmi_domres_salvage_pick2:A sad story. But their loss is our gain -  pick through the salvage!,
+domres_stationpristineSalvage,DialogOptionSelected,$option == hmi_domres_salvage_pick2,SalvageEntity performSalvage,,,
+,,,,,,
+#Beacons,,,,,,
+beaconOpenDialogDomRes,OpenInteractionDialog,$tag:warning_beacon_domres score:103,"ShowDefaultVisual
+SetShortcut beaconLeave ""ESCAPE""","An autonomous warning beacon that has grown quiet with age. The ancient construction emits a quiet, static ridden signal on a loop.
+
+""Welcome weary traveller to the Domain Resurgent, where all are welcome to assist in rebuilding the Sector! Give us your tired, your weary, your poor and unfed masses, and together we will rebuild the Domain! Please enter the hyperspace gate and register at the Border Crossing station for processing and future settlement on vardent green worlds! All are welcome in the Domain Resurgent!""",beaconLeave:Leave,
+beaconOpenDialogDomResBoss,OpenInteractionDialog,$tag:warning_beacon_domresboss score:103,"ShowDefaultVisual
+SetShortcut beaconLeave ""ESCAPE""","An autonomous warning beacon that has grown quiet with age. The ancient construction emits a quiet, static ridden signal on a loop.
+
+""WARNING: This system has been claimed by the Domain Resurgent as a part of the ongoing resettlement and rebuilding of the Domain of Man. Autonomous Defense Systems have been activated in this system, and WILL destroy all tresspassers. The Domain Resurgent does not take any responsibility for loss of life or property.""",beaconLeave:Leave,
+beaconLeave,DialogOptionSelected,$option == beaconLeave,DismissDialog,,,

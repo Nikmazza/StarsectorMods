@@ -5,7 +5,7 @@
 	"hullDesignation":"Destroyer",
 	"descriptionId":"nes_hermitaur",
 	"descriptionPrefix":"Fanatics of the Luddic Path have made this ship their own, stripping out all unnecessary furnishing and transforming it into a haphazard vehicle of holy war.",
-	"tags":["rare_bp"],
+	"tags":["LP_bp"],
 	"tech":"Luddic Path",
 	"suppliesToRecover":9,
 	"suppliesPerMonth":9,
@@ -14,11 +14,11 @@
 	"spriteName":"graphics/ships/nes_hermitaur_path.png",
 	"systemId":"ammofeed",
 	#"coversColor":[255,255,255,255],
-	"removeWeaponSlots":["WS0003","NES_DECO_COUNTER"], 		# ids
+	"removeWeaponSlots":["WS0003"], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
-	"removeBuiltInMods":["NES_FluxMissiles","NES_ColorSelector_Herm"], 		# hullmod ids
+	"removeBuiltInMods":[], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
-	"builtInMods":["ill_advised","safetyoverrides"],
+	"builtInMods":["ill_advised","safetyoverrides","auxiliarythrusters"],
     "weaponSlotChanges":{
 	   "WS0001":{
 		  "type": "MISSILE"

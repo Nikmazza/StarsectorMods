@@ -1,0 +1,12 @@
+{
+    "hullFrequency":{
+        "hulls":{
+            "missp_sovereign_core":0.1,
+		},
+	},
+    "knownShips":{
+        "hulls":[
+            "missp_sovereign_core",
+        ],
+	},
+},

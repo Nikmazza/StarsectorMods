@@ -68,6 +68,17 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         zelius.getStats().setLevel(4);
 		berzel.setCaptain(zelius);
 		
+		
+		
+		//api.addToFleet(FleetSide.PLAYER, "A_S-F_berzelius_desire", FleetMemberType.SHIP, "Don'yoku", false);
+		
+		//api.addToFleet(FleetSide.PLAYER, "A_S-F_mbishi_def", FleetMemberType.SHIP, "Sirius", false);
+		//api.addToFleet(FleetSide.PLAYER, "A_S-F_mlinzi_def", FleetMemberType.SHIP, "Spica", false);
+		//api.addToFleet(FleetSide.PLAYER, "A_S-F_mtetezi_def", FleetMemberType.SHIP, "Deneb", false);
+		//api.addToFleet(FleetSide.PLAYER, "A_S-F_mtumaji_def", FleetMemberType.SHIP, "Altair", false);
+		
+		
+		
 		api.addToFleet(FleetSide.PLAYER, "A_S-F_giganberg_ark", FleetMemberType.SHIP, "Kyokan", false);
 		api.addToFleet(FleetSide.PLAYER, "A_S-F_gaderoga_ark", FleetMemberType.SHIP, "Hohei", false);
 		api.addToFleet(FleetSide.PLAYER, "A_S-F_gaderoga_ark", FleetMemberType.SHIP, "Heiki", false);
@@ -167,6 +178,10 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.addObjective(minX * 0.5f, 1600f, "sensor_array");
 		api.addObjective(width/4, -1600f, "nav_buoy");
 		
+		api.getContext().aiRetreatAllowed = false;
+//        api.getContext().enemyDeployAll = true; // this makes it a lot harder, mass swarm hell!
+        api.getContext().fightToTheLast = true;
+        
 	}
   
 }

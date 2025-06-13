@@ -1,0 +1,19 @@
+{
+	"id":"orr_wreck_agg_xiv",  # this id must match what's in the spreadsheet
+	"specClass":"beam",
+	"type":"DECORATIVE",
+	"size":"SMALL",
+	"showDamageWhenDecorative":true,
+	"turretSprite":"graphics/orr/weapons/wreck/agg_xiv_deco.png",
+	"turretGlowSprite":"",
+	"hardpointSprite":"",
+	"hardpointGlowSprite":"",
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"glowColor":[0,0,0,0],
+	"textureType":ROUGH,
+	"textureScrollSpeed":1.0,
+	"pixelsPerTexel":1.0,
+}

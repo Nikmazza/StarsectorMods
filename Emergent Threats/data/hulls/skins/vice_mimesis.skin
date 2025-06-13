@@ -12,7 +12,7 @@
 	"baseValueMult":2,
 	"fpMod":3,
 	"spriteName":"graphics/vice/ships/hidden/mimesis.png",
-	"removeBuiltInMods":["vice_active_flare_launcher", "vice_mimesis_hull"],
+	"removeBuiltInMods":["vice_active_flare_launcher", "vice_mimesis_hull", "codex_unlockable"],
 	"builtInWings": ["lux_wing", "lux_wing"],
 	"builtInMods":["vice_abomination_interface", "vice_emp_emitter", "vice_self_evolving_hull"],
 	"weaponSlotChanges":{

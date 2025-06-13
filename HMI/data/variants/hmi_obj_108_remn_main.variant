@@ -13,15 +13,16 @@
     "hardened_subsystems",
     "heavyarmor",
     "hardenedshieldemitter",
-    "unstable_injector"
+    "unstable_injector",
+    "ballistic_rangefinder"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "cryoblaster",
-        "WS0002": "cryoblaster"
+        "WS0001": "cryoflux",
+        "WS0002": "cryoflux"
       }
     },
     {

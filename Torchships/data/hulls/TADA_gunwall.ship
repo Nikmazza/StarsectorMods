@@ -96,7 +96,8 @@
     -0
   ],
   "builtInMods": [
-    "armoredweapons"
+    "armoredweapons",
+    "turretgyros",
   ],
   "builtInWeapons": {
     "WS0019": "vulcan",

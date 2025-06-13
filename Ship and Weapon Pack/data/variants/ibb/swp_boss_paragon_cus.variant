@@ -1,6 +1,6 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 40,
+    "fluxCapacitors": 45,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "swp_boss_paragon",
@@ -10,7 +10,8 @@
         "heavyarmor",
         "stabilizedshieldemitter",
         "fluxdistributor",
-        "fluxbreakers"
+        "fluxbreakers",
+        "autorepair"
     ],
     "permaMods": [
         "hardenedshieldemitter",

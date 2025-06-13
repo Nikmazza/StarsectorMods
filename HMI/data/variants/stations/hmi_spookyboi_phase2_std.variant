@@ -1,0 +1,56 @@
+{
+  "variantId": "hmi_spookyboi_phase2_std",
+  "hullId": "hmi_spookyboi_phase2",
+  "displayName": "Terror",
+  "goalVariant": true,
+  "fluxCapacitors": 50,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0011": "hmi_spooky_plasma"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "tachyonlance",
+        "WS0010": "tachyonlance"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hmi_spooky_rem",
+        "WS0002": "hmi_spooky_rem"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "disintegrator",
+        "WS0004": "disintegrator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "riftbeam",
+        "WS0006": "riftbeam",
+        "WS0007": "pdburst",
+        "WS0008": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

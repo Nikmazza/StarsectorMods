@@ -1,0 +1,30 @@
+{
+    "displayName": "Attack",
+    "fluxCapacitors": 7,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_tinnitus_p",
+    "hullMods": [
+        "missile_autoloader",
+        "missleracks",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_tinnitus_p_attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "heavymg",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "reaper",
+            }
+        },
+    ]
+}

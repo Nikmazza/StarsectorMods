@@ -25,6 +25,7 @@ public class HydromagOnHitEffect implements OnHitEffectPlugin {
 			ShipAPI ship = (ShipAPI) target;
 			if (!applyDegradeCheck(ship, point)) return;
 			ship.setCurrentCR(ship.getCurrentCR() - CR_PENALTY);
+			if (!ship.isHulk()) engine.addFloatingText(point, "Degraded", 30f, Color.yellow, target, 0f, 0f);
 		}
 	}
 		

@@ -1,0 +1,28 @@
+{
+	"baseHullId":"grendel",
+	"skinHullId":"grendel_d_pirates",
+	"hullName":"Grendel (P)",
+	"descriptionId":"grendel",
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"tags":["pirate_bp"],
+	"tech":"Pirate",
+	"ordnancePoints":125,
+	"baseValueMult":.75,
+	"suppliesToRecover":14,
+	"suppliesPerMonth":14,
+	"spriteName":"graphics/ships/phase/wendigo_pirates.png",
+	"removeWeaponSlots":["WS 001", "WS 002", "WS 003", "WS 004"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 010":{
+            "size": "SMALL"
+			},
+		"WS 014":{
+            "size": "SMALL"
+			},
+		},
+	"builtInWeapons":{
+    },
+}

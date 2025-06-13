@@ -1,0 +1,11 @@
+package Jaydee8652.JaydeePiracy.utils;
+
+public class jdp_Factions {
+	public static final String JDP_LAPLACIANS = "jdp_laplacians";
+	public static final String JDP_DEADCOMM = "jdp_deadcomm";
+	public static final String JDP_FLOWERFISH = "jdp_flowerfish";
+}
+
+
+
+

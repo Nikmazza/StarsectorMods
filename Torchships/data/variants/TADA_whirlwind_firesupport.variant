@@ -1,0 +1,31 @@
+{
+    "displayName": "Fire Support",
+    "fluxCapacitors": 12,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "TADA_whirlwind",
+    "hullMods": [
+        "advancedoptics",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_whirlwind_firesupport",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "tachyonlance",
+                "WS0002": "tachyonlance",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "locust",
+            }
+        }
+    ]
+}

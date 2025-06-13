@@ -1,7 +1,7 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 10,
-    "fluxVents": 13,
+    "fluxCapacitors": 12,
+    "fluxVents": 15,
     "goalVariant": true,
     "hullId": "ii_sebastos",
     "hullMods": [

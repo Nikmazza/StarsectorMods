@@ -1,0 +1,68 @@
+{
+  "variantId": "odyssey_scav_cs",
+  "hullId": "odyssey_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "hveldriver",
+        "WS0015": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "salamanderpod",
+        "WS0012": "salamanderpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "vulcan",
+        "WS0007": "vulcan",
+        "WS0011": "vulcan",
+        "WS0018": "vulcan",
+        "WS0019": "vulcan",
+        "WS0020": "vulcan"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "pdlaser",
+        "WS0002": "pdlaser",
+        "WS0003": "pdlaser",
+        "WS0013": "guardian",
+        "WS0016": "pdlaser",
+        "WS0017": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "piranha_wing",
+    "piranha_wing"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+    "displayName": "Squall",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "jdp_plunder",
+    "hullMods": [
+        "autorepair",
+        "hardened_subsystems",
+        "missleracks",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "jdp_plunder_Squall",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "vulcan",
+                "WS 007": "vulcan",
+                "WS 006": "vulcan",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "squall",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

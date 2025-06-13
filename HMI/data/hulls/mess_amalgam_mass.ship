@@ -12,7 +12,8 @@
   "shieldRadius": 52.5,
   "viewOffset": 0,
   "builtInMods": [
-    "automated"
+    "automated",
+	"hmi_mess_visuals"
   ],
   "weaponSlots": [
     {

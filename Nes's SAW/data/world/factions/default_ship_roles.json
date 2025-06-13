@@ -1,35 +1,30 @@
 {
 	"combatMedium":{
-		"nes_hamter_xiv":10,
-        "nes_hamter_standard":4,
-        "nes_hamter_assault":3,
-		"nes_hamter_outdated":3,
+        "nes_hampter_standard":6,
+        "nes_hampter_assault":4,
+		"nes_hampter_xiv":10,
+		"nes_hampter_pirates_p":10,
+				
+		"nes_carnelian_pulse":5,
+		"nes_carnelian_elite":5,
+		"nes_carnelian_dem":0, # PL-only variant, probability overridden in persean_league.faction
 			
-        #"nes_hammerfall_standard":4,
-        #"nes_hammerfall_elite":3,
-		#"nes_hammerfall_outdated":3,
-		#moved below	
-		"nes_carnelian_standard":4,
-		"nes_carnelian_elite":3,
-		"nes_carnelian_beamer":3,
-			
-		"nes_hermitaur_standard":2,
-		"nes_hermitaur_elite":3,
-		"nes_hermitaur_strike":5,
-		
+		"nes_hermitaur_standard":5,
+		"nes_hermitaur_support":5,
 		"nes_hermitaur_path":10,
+		"nes_hermitaur_pirates_overdriven":10,
 			
 		"nes_fluorspar_standard":3,
 		"nes_fluorspar_blaster":4,
 		"nes_fluorspar_pulser":3,
+		
+        "nes_hammerfall_standard":5,
+		"nes_hammerfall_beamer":5,
+		"nes_hammerfall_pirates_p":0, # Overridden to control .skin rarity in pirates.faction
+		"nes_hammerfall_DEM":0, # PL-only variant, probability overridden in persean_league.faction
 	},
 	"combatLarge":{
 		"nes_voltaire_standard":5,
 		"nes_voltaire_strike":5,
-	},
-	"combatFreighterMedium":{
-        "nes_hammerfall_standard":4,
-        "nes_hammerfall_elite":3,
-		"nes_hammerfall_outdated":3,
 	},	
 }

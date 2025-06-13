@@ -1,0 +1,66 @@
+{
+  "variantId": "radiant_scav_cs",
+  "hullId": "radiant_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 4,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "tachyonlance"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "squall",
+        "WS0006": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "gauss",
+        "WS0002": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "salamanderpod",
+        "WS0009": "salamanderpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "flak",
+        "WS0004": "flak",
+        "WS0010": "dualflak",
+        "WS0011": "dualflak",
+        "WS0012": "vulcan",
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0015": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "piranha_wing",
+    "piranha_wing"
+  ]
+}

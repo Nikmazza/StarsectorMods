@@ -1,3 +1,8 @@
+1.0.3:
+-Refactor Fleet Size By DP skill to improve performance and reduce pausing/hitching behavior when used with certain mods.
+-Add initial notification that Fleet Size By DP is loaded.
+-Update notification string formatting to use multicolored strings, added mod title as notification message header.
+
 1.0.2b:
 -Initial Update for 0.96a.
 -Add setting to enable/disable the over DP notification on the campaign layer.

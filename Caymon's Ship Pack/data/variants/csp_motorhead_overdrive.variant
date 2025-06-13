@@ -1,0 +1,62 @@
+{
+  "variantId": "csp_motorhead_overdrive",
+  "hullId": "csp_motorhead",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 2,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardened_subsystems",
+    "safetyoverrides",
+    "armoredweapons",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightdualmg",
+        "WS0004": "lightdualmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualmg",
+        "WS0002": "lightdualmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "reaper"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "csp_piratelance"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+    "modules": [
+    {
+      "WS0006": "csp_motorheadLleg_module"
+    },
+    {
+      "WS0013": "csp_motorheadRleg_module"
+    }
+  ],
+  "wings": []
+}

@@ -3,8 +3,8 @@
   "hullId": "hmi_shotglass",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 7,
-  "fluxVents": 6,
+  "fluxCapacitors": 2,
+  "fluxVents": 10,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
@@ -16,7 +16,7 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "arbalest"
+        "WS0001": "clyde_mg"
       }
     },
     {

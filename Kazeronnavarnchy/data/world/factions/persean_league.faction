@@ -1,0 +1,28 @@
+{
+    "hullFrequency":{
+		"tags":{
+            "kazeron_PL_bp":0.4,
+		},
+		"hulls":{
+
+        },
+    },
+    "knownShips":{
+        "tags":["kazeron_PL_bp"],
+    },
+    "priorityShips":{
+        "hulls":[
+        ],
+    },
+	"knownFighters":{
+		"tags":["kazeron_PL_bp"],
+		"fighters":[
+			"thunder_kazeron_wing",
+			"gladius_kazeron_wing",
+		],
+	},	
+	"knownWeapons":{
+		"weapons":[
+		],
+	},
+},

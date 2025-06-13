@@ -1,0 +1,178 @@
+{
+  "hullName": "Dijeh",
+  "hullId": "csp_dijeh",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/csp_lowtechmech.png",
+  "style": "LOW_TECH",
+  "height": 46,
+  "width": 58,
+  "center": [29, 22],
+  "collisionRadius": 62,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 60.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "csp_strikecraft",
+    "ballistic_rangefinder",
+    "csp_oldways"
+  ],
+  "builtInWeapons": {
+    "WS0003": "csp_lowtechmech_head",
+    "WS0005": "csp_lowtechmech_shoulderR",
+    "WS0006": "csp_lowtechmech_shoulderL",
+    "WS0007": "csp_lowtechmech_deco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 35,
+      "angle": 5,
+      "locations": [6.5, 23.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 35,
+      "angle": -5,
+      "locations": [6.5, -23.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 60,
+      "angle": 0,
+      "locations": [-2, -0],
+      "renderOrderMod": 600
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 60,
+      "angle": 0,
+      "locations": [-9, -25.5],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 60,
+      "angle": 0,
+      "locations": [-9.5, 23.5],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 60,
+      "angle": 0,
+      "locations": [1, -0],
+      "renderOrderMod": 300
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 40,
+      "angle": 0,
+      "locations": [-13.5, -17],
+      "renderOrderMod": 500
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 40,
+      "angle": 0,
+      "locations": [-14, 19],
+      "renderOrderMod": 500
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 25,
+      "angle": 0,
+      "locations": [7.5, 5.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-18, -3.5],
+      "length": 15.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-18, 3.5],
+      "length": 15.5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21, -11.5],
+      "length": 17,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-21, 11.5],
+      "length": 17,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-22, -17.5],
+      "length": 17,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-22, 17.5],
+      "length": 17,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -20, 28.5,
+    -7, 19,
+    3, 19,
+    24, -0,
+    3, -19,
+    -7, -19,
+    -20, -28.5,
+    -22, -17,
+    -21, -8.5,
+    -16, 0,
+    -21, 8.5,
+    -22, 17
+  ]
+}

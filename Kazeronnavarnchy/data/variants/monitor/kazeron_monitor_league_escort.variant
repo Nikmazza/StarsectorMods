@@ -1,0 +1,32 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 6,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "kazeron_monitor_league",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "kazeron_monitor_league_escort",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "heavyburst",
+                "WS 002": "heavyburst"
+            }
+        }
+    ]
+}

@@ -4,6 +4,7 @@
 	"type":"BALLISTIC",
 	"mountTypeOverride":"HYBRID",
 	"size":"LARGE",
+	"everyFrameEffect": "data.scripts.weapons.HMI_VariableRangeEffect",
 	"displayArcRadius":600,
 	"turretSprite":"graphics/weapons/rem_hellbore_cannon_turret_base.png",
 	"turretGunSprite":"graphics/weapons/rem_hellbore_cannon_turret_recoil.png",

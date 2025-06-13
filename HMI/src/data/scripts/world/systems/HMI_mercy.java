@@ -87,8 +87,14 @@ public class HMI_mercy implements SectorGeneratorPlugin {
 
 		//2000
         PlanetAPI merc2 = system.addPlanet("hmi_nuriel", star, "Nuriel", "toxic", 55, 150, 5000, 100);
-		merc2.setCustomDescriptionId("hmi_nuriel");
-		merc2.setInteractionImage("illustrations", "abandoned_station3");
+		Misc.initConditionMarket(merc1);
+		merc2.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+		merc2.getMarket().addCondition(Conditions.HOT);
+		merc2.getMarket().addCondition(Conditions.TOXIC_ATMOSPHERE);
+		merc2.getMarket().addCondition(Conditions.ORE_MODERATE);
+		merc2.getMarket().addCondition(Conditions.RARE_ORE_SPARSE);
+		merc2.getMarket().addCondition(Conditions.ORGANICS_TRACE);
+
 
         //3000
         PlanetAPI merc3 = system.addPlanet("hmi_samiel", star, "Samiel", "haunted", 245, 200, 7500, 200);
@@ -101,9 +107,12 @@ public class HMI_mercy implements SectorGeneratorPlugin {
 		//4000				
         PlanetAPI merc4 = system.addPlanet("path_soul", star, "Soul", "jungle", 245, 200, 9000, 300);
         merc4.setCustomDescriptionId("path_soul");
-		merc4.setInteractionImage("illustrations", "luddic_church");
-		SectorEntityToken merc4B = system.addPlanet("path_soulB", merc4, "Uriel", "barren-bombarded", 235, 70, 750, 60);
+		merc4.setInteractionImage("illustrations", "mazalot");
 
+		PlanetAPI merc4B = system.addPlanet("path_soulB", merc4, "Uriel", "barren-bombarded", 235, 70, 750, 60);
+		Misc.initConditionMarket(merc4B);
+		merc1.getMarket().setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+		merc1.getMarket().addCondition(Conditions.NO_ATMOSPHERE);
      
         //JUMP POINT
         JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("merc_jumpPointA", "Mercy Jump-Point");
@@ -142,7 +151,7 @@ public class HMI_mercy implements SectorGeneratorPlugin {
 
 		system.addRingBand(merc5, "misc", "rings_dust0", 256f, 0, Color.lightGray, 256f, 1150, 80f);
 
-		SectorEntityToken nevermore_station1 = system.addCustomEntity("mercy_corpse", "Corpse", "station_side00", Factions.LUDDIC_PATH);
+		SectorEntityToken nevermore_station1 = system.addCustomEntity("mercy_corpse", "Corpse Station", "station_side00", Factions.LUDDIC_PATH);
 		nevermore_station1.setCircularOrbitPointingDown(merc5, 0, 1150, 30);
 		nevermore_station1.setCustomDescriptionId("mercy_corpse");
 
@@ -174,7 +183,6 @@ public class HMI_mercy implements SectorGeneratorPlugin {
 		merc5d.getMarket().addCondition(Conditions.RARE_ORE_SPARSE);
 		merc5d.getMarket().addCondition(Conditions.NO_ATMOSPHERE);
 
-
 			SectorEntityToken merc5L4 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
 						500f, // min radius
@@ -197,8 +205,18 @@ public class HMI_mercy implements SectorGeneratorPlugin {
 			
 			merc5L4.setCircularOrbit(star, 200f -60f, 18000, 400);
 			merc5L5.setCircularOrbit(star, 200f +60f, 18000, 400);
-			
-		
+
+		//FRINGE JUMP POINT
+		JumpPointAPI jumpPoint3 = Global.getFactory().createJumpPoint("merc_jumpPointA", "Fringe Jump Point");
+		OrbitAPI orbit3 = Global.getFactory().createCircularOrbit(star, 270+60, 20000, 480);
+		jumpPoint3.setOrbit(orbit3);
+		jumpPoint3.setStandardWormholeToNothingVisual();
+		jumpPoint3.setStandardWormholeToHyperspaceVisual();
+		system.addEntity(jumpPoint3);
+
+
+
+
 			SectorEntityToken merc6 = system.addCustomEntity(
 			"hmi_mercy_station",
 			"Abandoned Research Station",
@@ -223,18 +241,14 @@ public class HMI_mercy implements SectorGeneratorPlugin {
 		debrisstation.setCircularOrbit(star, 20f, 31000, 900f);
 		debrisstation.setId("mercy_debrisBelt");
 
-		addDerelict(system, merc6, "aurora_Balanced", ShipRecoverySpecial.ShipCondition.BATTERED, 270f, (Math.random()<0.5));
-		addDerelict(system, merc6, "fury_Attack", ShipRecoverySpecial.ShipCondition.BATTERED, 200f, (Math.random()<0.5));
-		addDerelict(system, merc6, "scarab_Experimental", ShipRecoverySpecial.ShipCondition.BATTERED, 200f, (Math.random()<0.5));
+		addDerelict(system, merc6, "fury_Attack", ShipRecoverySpecial.ShipCondition.WRECKED, 200f, (Math.random()<0.5));
 		addDerelict(system, merc6, "fury_Attack", ShipRecoverySpecial.ShipCondition.BATTERED, 200f, (Math.random()<0.5));
 		addDerelict(system, merc6, "shrike_Attack", ShipRecoverySpecial.ShipCondition.BATTERED, 200f, (Math.random()<0.5));
-		addDerelict(system, merc6, "wolf_Assault", ShipRecoverySpecial.ShipCondition.BATTERED, 200f, (Math.random()<0.5));
-		addDerelict(system, merc6, "wolf_Assault", ShipRecoverySpecial.ShipCondition.BATTERED, 200f, (Math.random()<0.5));
-		addDerelict(system, merc6, "shrike_Attack", ShipRecoverySpecial.ShipCondition.BATTERED, 200f, (Math.random()<0.5));
+		addDerelict(system, merc6, "wolf_Assault", ShipRecoverySpecial.ShipCondition.WRECKED, 200f, (Math.random()<0.5));
 		addDerelict(system, merc6, "wolf_Assault", ShipRecoverySpecial.ShipCondition.BATTERED, 215f, (Math.random()<0.5));
-		addDerelict(system, merc6, "tempest_Attack", ShipRecoverySpecial.ShipCondition.BATTERED, 215f, (Math.random()<0.5));
+		addDerelict(system, merc6, "tempest_Attack", ShipRecoverySpecial.ShipCondition.WRECKED, 215f, (Math.random()<0.5));
 
-        system.autogenerateHyperspaceJumpPoints(true, true);
+        system.autogenerateHyperspaceJumpPoints(true, false);
 
         cleanup(system);
     }

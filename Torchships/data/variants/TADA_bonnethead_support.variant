@@ -1,10 +1,13 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 9,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 25,
     "goalVariant": true,
     "hullId": "TADA_bonnethead",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+    ],
     "permaMods": [],
     "variantId": "TADA_bonnethead_support",
     "weaponGroups": [
@@ -12,34 +15,40 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS0001": "hveldriver",
-                "WS0002": "hveldriver"
+                "WS0001": "heavymauler",
+                "WS0002": "heavymauler",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0008": "gazerpod",
+                "WS0007": "gazerpod",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0003": "ionbeam",
                 "WS0004": "ionbeam",
-                "WS0005": "taclaser",
-                "WS0006": "taclaser"
+                "WS0003": "ionbeam",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0007": "pilum",
-                "WS0008": "pilum"
+                "WS0009": "flak",
+                "WS0010": "flak",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0009": "dualflak",
-                "WS0010": "dualflak"
+                "WS0006": "lrpdlaser",
+                "WS0005": "lrpdlaser",
             }
         }
     ]

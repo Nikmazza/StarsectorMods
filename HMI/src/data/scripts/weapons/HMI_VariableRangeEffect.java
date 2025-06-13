@@ -19,6 +19,8 @@ public class HMI_VariableRangeEffect implements EveryFrameWeaponEffectPlugin {
         RANGE_MODIFIERS.put("mark9_rem",-200f);
         RANGE_MODIFIERS.put("hellbore_rem",-200f);
         RANGE_MODIFIERS.put("railgun_rem",-100f);
+        RANGE_MODIFIERS.put("lightdualac_rem",-100f);
+        RANGE_MODIFIERS.put("heavyac_rem",-100f);
     }
 
     @Override

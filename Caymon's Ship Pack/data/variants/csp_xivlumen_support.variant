@@ -1,0 +1,39 @@
+{
+  "variantId": "csp_xivlumen_support",
+  "hullId": "csp_xivlumen",
+  "displayName": "Support",
+  "goalVariant": false,
+  "fluxCapacitors": 8,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "atropos",
+        "WS 009": "atropos"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "irpulse",
+        "WS 007": "irpulse"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

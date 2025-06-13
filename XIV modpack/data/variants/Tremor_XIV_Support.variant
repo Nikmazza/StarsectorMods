@@ -1,0 +1,34 @@
+{
+  "variantId": "Tremor_XIV_Support",
+  "hullId": "Tremor_XIV",
+  "displayName": "Support",
+  "goalVariant": false,
+  "fluxCapacitors": 19,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "squall",
+        "WS 002": "annihilator",
+        "WS 003": "annihilator",
+        "WS 004": "hveldriver",
+        "WS 005": "hveldriver",
+        "WS 006": "ioncannon",
+        "WS 007": "ioncannon",
+        "WS 008": "ioncannon",
+        "WS 009": "ioncannon",
+        "WS 010": "pdburst",
+        "WS 011": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

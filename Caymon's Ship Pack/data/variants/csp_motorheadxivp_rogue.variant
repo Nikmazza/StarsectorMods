@@ -1,0 +1,57 @@
+{
+  "variantId": "csp_motorheadxivp_rogue",
+  "hullId": "csp_motorheadxivp",
+  "displayName": "Rogue",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "blast_doors",
+    "heavyarmor",
+    "reinforcedhull",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "railgun",
+        "WS0002": "railgun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightag",
+        "WS0004": "lightag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "csp_piratelance"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "atropos"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0006": "csp_motorheadLleg_module"
+    },
+    {
+      "WS0013": "csp_motorheadRleg_module"
+    }
+  ],
+  "wings": []
+}

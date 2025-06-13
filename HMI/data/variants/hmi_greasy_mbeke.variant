@@ -4,7 +4,7 @@
   "displayName": "Mbeke",
   "goalVariant": false,
   "fluxCapacitors": 5,
-  "fluxVents": 6,
+  "fluxVents": 4,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -27,8 +27,8 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "signpost_sml",
-        "WS0006": "signpost_sml"
+        "WS0005": "annihilator",
+        "WS0006": "annihilator"
       }
     },
     {

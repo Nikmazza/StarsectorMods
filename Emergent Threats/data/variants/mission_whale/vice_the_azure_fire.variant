@@ -1,6 +1,6 @@
 {
     "displayName": "Evolving",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 13,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_mimesis",
@@ -9,11 +9,15 @@
         "dedicated_targeting_core",
         "advancedoptics",
         "hardenedshieldemitter",
-        "vice_adaptive_drone_bay"
+        "vice_adaptive_drone_bay",
+        "vice_shipwide_integration_checker",
+        "vice_feedback_handler"
     ],
+    "modules": [{"SM 1": "vice_emp_module"}],
     "permaMods": [
         "autorepair",
-        "dedicated_targeting_core"
+        "dedicated_targeting_core",
+        "vice_shipwide_integration_checker"
     ],
     "sMods": [
         "autorepair",
@@ -25,27 +29,18 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "tachyonlance",
-                "WS 004": "tachyonlance",
-                "WS 009": "breachpod",
-                "WS 010": "breachpod"
+                "WS 003": "vice_heavy_maser",
+                "WS 004": "vice_heavy_maser"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "squall",
-                "WS 008": "squall"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "taclaser",
-                "WS 006": "taclaser",
-                "WS 015": "gravitonbeam"
+                "WS 007": "vice_warp_torpedo_launcher",
+                "WS 008": "vice_warp_torpedo_launcher",
+                "WS 009": "vice_warp_torpedo_pod",
+                "WS 010": "vice_warp_torpedo_pod"
             }
         },
         {
@@ -54,11 +49,13 @@
             "weapons": {
                 "WS 001": "pdlaser",
                 "WS 002": "pdlaser",
+                "WS 005": "pdburst",
+                "WS 006": "pdburst",
                 "WS 013": "pdlaser",
-                "WS 014": "pdlaser"
+                "WS 014": "pdlaser",
+                "WS 015": "vice_phased_electrolaser"
             }
         }
     ],
-	"modules": [{"SM 1": "vice_emp_module"}],
     "wings": []
 }

@@ -1,10 +1,4 @@
 {
-
-    "startShipsCombatLarge":[
-        ["TADA_bonnethead_standard", "TADA_owl_standard"]
-    ],
-
-    "startShipsTradeLarge":[
-        ["TADA_crane_standard", "wayfarer_Standard", "wayfarer_Standard"]
-    ],
+    "startShipsCombatLarge":[["TADA_bonnethead_support", "TADA_scalper_DEM", "TADA_scalper_DEM"]],
+    "startShipsTradeLarge":[["TADA_crane_standard", "TADA_crane_standard"]],
 }

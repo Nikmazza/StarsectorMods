@@ -1,0 +1,168 @@
+{
+  "hullName": "Hampter",
+  "hullId": "nes_hampter_hero",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/nes_hampter_hero.png",
+  "style": "LOW_TECH",
+  "height": 102,
+  "width": 134,
+  "center": [67, 51],
+  "collisionRadius": 110,
+  "shieldCenter": [-3, -0],
+  "shieldRadius": 101,
+  "viewOffset": 0,
+  "builtInMods": [
+    "NES_FluxGrid",
+    "distributed_fire_control"
+  ],
+  "builtInWeapons": {
+    "WS0005": "lidardish"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [42, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [13, -59],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [13, 59],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [31, 37]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [31, -37]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": 125,
+      "locations": [-9, 50]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": -125,
+      "locations": [-9, -50]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [6, -14]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, -39],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 24,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-50, 39],
+      "length": 64,
+      "width": 24,
+      "angle": -180,
+      "contrailSize": 24,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-50, -48],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-50, 48],
+      "length": 32,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-49, -31],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-49, 31],
+      "length": 32,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    15, 57,
+    12, 61,
+    -17, 64,
+    -25, 58,
+    -48, 51,
+    -48, 29,
+    -25, 24,
+    -25, -24,
+    -48, -29,
+    -48, -51,
+    -25, -58,
+    -17, -64,
+    12, -61,
+    15, -57,
+    39, -57,
+    46, -7,
+    40, 0,
+    46, 7,
+    39, 57
+  ]
+}

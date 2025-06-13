@@ -1,21 +1,36 @@
 {
 	"designTypeColors":{
         "Sindrian Diktat":[180,0,120,255],
+		"Light of Ludd":[180,255,95,255],
+		"Project Mayfly":[220,185,55,255],
+		"[Classified]":[170,100,200,255],
 	},
+	
 	"graphics":{
 		"blueprint_packages":{
 			"vice_ex_bp":"graphics/factions/custom/player_logo05_flag.png",
-			"LG_bp_package":"graphics/factions/sindrian_diktat.png",
+			"LG_bp_package":"graphics/factions/lg.png",
         },
+		"fx":{
+			"warp_torp_blast":"graphics/vice/fx/warp_torp_blast.png",
+			"orr_tac_core":"graphics/orr/fx/orr_tac_core.png",
+			"orr_tac_fringe":"graphics/orr/fx/orr_tac_fringe.png",
+			"orr_tac_hit":"graphics/orr/fx/orr_tac_hit.png",
+			"orr_tac_hit_ring":"graphics/orr/fx/orr_tac_hit_ring.png",
+		},
 		"vice_ships":{
 			"resplendent_adaptive_flight_command":"graphics/vice/ships/hidden/resplendent_adaptive_flight_command.png",
 			"resplendent_adaptive_gravity_drive":"graphics/vice/ships/hidden/resplendent_adaptive_gravity_drive.png",
 			"resplendent_base":"graphics/vice/ships/hidden/resplendent.png",
 			
+			"bellicose_ex":"graphics/vice/ships/ex/bellicose_ex.png",
+			"bellicose_ex_classic":"graphics/vice/ships/ex/classic/bellicose_ex.png",
 			"equalizer_ex":"graphics/vice/ships/ex/equalizer_ex.png",
 			"equalizer_ex_classic":"graphics/vice/ships/ex/classic/equalizer_ex.png",
 			"flamebreaker_ex":"graphics/vice/ships/ex/flamebreaker_ex.png",
 			"flamebreaker_ex_classic":"graphics/vice/ships/ex/classic/flamebreaker_ex.png",
+			"howler_ex":"graphics/vice/ships/ex/howler_ex.png",
+			"howler_ex_classic":"graphics/vice/ships/ex/classic/howler_ex.png",
 			"hyperion_ex":"graphics/vice/ships/ex/hyperion_ex.png",
 			"hyperion_ex_classic":"graphics/vice/ships/ex/classic/hyperion_ex.png",
 			"intrepid_ex":"graphics/vice/ships/ex/intrepid_ex.png",
@@ -29,6 +44,7 @@
 		},
 		"portraits":{
 			"xo_command_subroutine":"graphics/vice/portraits/xo_command_subroutine.png",
+			"vice_taylor_sheasby":"graphics/portraits/portrait_league09.png"
 		},
 	},
 }

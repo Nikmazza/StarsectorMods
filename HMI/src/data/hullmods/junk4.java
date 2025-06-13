@@ -7,12 +7,13 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 public class junk4 extends junker {
     private static final float JUNKERBONUS = 0.6f;
     private static final float JUNKERMALUSSPEED = 0.25f;
-    private static final float JUNKERMALUSQUALITY = 0.25f;
+    private static final float JUNKERMALUSQUALITY = 0.20f;
     private static final float ENGAGEMENTMALUS = 0.9f;
 
     @Override
     public void applyEffectsBeforeShipCreation(ShipAPI.HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getSuppliesToRecover().modifyMult(id, JUNKERBONUS);
+        stats.getFighterWingRange().modifyMult(id, ENGAGEMENTMALUS);
     }
 
     public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
@@ -25,9 +26,9 @@ public class junk4 extends junker {
         stats.getShieldDamageTakenMult().modifyPercent(id, (1 + JUNKERMALUSQUALITY) * 100f * effect);
         stats.getHullDamageTakenMult().modifyPercent(id, (1 + JUNKERMALUSQUALITY) * 100f * effect);
 
-        stats.getMissileWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
-        stats.getBallisticWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
-        stats.getEnergyWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
+        stats.getMissileWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
+        stats.getBallisticWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
+        stats.getEnergyWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
 
         fighter.setHeavyDHullOverlay();
     }

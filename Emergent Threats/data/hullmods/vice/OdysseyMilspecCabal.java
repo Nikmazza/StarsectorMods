@@ -11,6 +11,8 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 
+import data.scripts.vice.util.RemoveSpecialFightersUtil;
+
 public class OdysseyMilspecCabal extends BaseHullMod {
 
 	private static float EXTRA_BAYS = 1f;
@@ -42,12 +44,14 @@ public class OdysseyMilspecCabal extends BaseHullMod {
 		
 		int fighterBays = stats.getNumFighterBays().getModifiedInt();
 		
-		//Apotheosis always equipped at bay 0, which is skipped here
+		//Apotheosis always equipped at bay 0, which is skipped in for(int i = 1...)
 		for (int i = 1; i < fighterBays; i++) {
 			if (var.getWingId(i) != null && var.getWingId(i).equals(DRONE_WING_ID)) {
 				var.setWingId(i, null);
 			}
 		}
+		
+		RemoveSpecialFightersUtil.deleteSpecialLPCsFromHull(var, id);
 	}
 	
 	@Override

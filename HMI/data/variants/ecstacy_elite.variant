@@ -1,14 +1,14 @@
 {
   "variantId": "ecstacy_elite",
   "hullId": "ecstacy",
-  "displayName": "Elite",
+  "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 10,
-  "fluxVents": 23,
+  "fluxCapacitors": 0,
+  "fluxVents": 27,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "unstable_injector"
+    "targetingunit"
   ],
   "weaponGroups": [
     {
@@ -24,6 +24,8 @@
       "weapons": {
         "WS0003": "harpoonpod",
         "WS0004": "harpoonpod",
+        "WS0005": "harpoon",
+        "WS0006": "harpoon",
         "WS0011": "harpoon",
         "WS0012": "harpoon"
       }
@@ -40,12 +42,18 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0007": "ioncannon",
-        "WS0008": "ioncannon",
-        "WS0009": "ioncannon",
-        "WS0010": "ioncannon",
         "WS0013": "ioncannon",
         "WS0014": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "pdlaser",
+        "WS0008": "pdlaser",
+        "WS0009": "pdlaser",
+        "WS0010": "pdlaser"
       }
     }
   ],

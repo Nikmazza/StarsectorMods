@@ -3,7 +3,7 @@
     "specClass":"projectile",
     "type":"ENERGY",
     "size":"MEDIUM",
-    "turretSprite":"",
+    "turretSprite":"graphics/swp/weapons/swp_excelsiorcannon.png",
 	"turretGlowSprite":"graphics/swp/weapons/swp_excelsiorcannon_glow.png",
     "hardpointSprite":"",
 	"hardpointGlowSprite":"graphics/swp/weapons/swp_excelsiorcannon_glow.png",

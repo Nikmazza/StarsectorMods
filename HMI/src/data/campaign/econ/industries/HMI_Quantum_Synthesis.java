@@ -2,6 +2,7 @@ package data.campaign.econ.industries;
 
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.util.Pair;
 import data.campaign.econ.HMI_items;
 
 public class HMI_Quantum_Synthesis extends BaseIndustry {
@@ -13,13 +14,16 @@ public class HMI_Quantum_Synthesis extends BaseIndustry {
 
 		demand(Commodities.SUPPLIES, size );
 		demand(Commodities.CREW, size );
-		demand(Commodities.METALS, size - 1);
+		demand(Commodities.METALS, size - 2);
 		demand(Commodities.RARE_METALS, size - 3);
 		demand(Commodities.HEAVY_MACHINERY, size );
 
-		supply(HMI_items.HMICRYSTAL, size );
-		supply(Commodities.ORE, size + 2);
-		supply(Commodities.RARE_ORE, size );
+		supply(Commodities.ORE, size + 4);
+		supply(Commodities.RARE_ORE, size + 3);
+
+
+		Pair<String, Integer> deficit = getMaxDeficit(Commodities.HEAVY_MACHINERY, Commodities.SUPPLIES, Commodities.CREW);
+		applyDeficitToProduction(1, deficit, Commodities.ORE, Commodities.RARE_ORE);
 
     }
     

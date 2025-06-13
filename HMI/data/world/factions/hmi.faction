@@ -35,6 +35,8 @@
         "tags":{"hmi_techmine_bp":0.25},
 		
         "hulls":{
+
+		
 		"fishkill":10,
 		"junk":10,
 		"hmi_locomotive":10,		
@@ -42,7 +44,7 @@
     },
 		# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["base_bp", "hmi_junk_bp"],
+		"tags":["hmi_bp", "base_bp", "hmi_junk_bp"],
 		"hulls":[
 		"apogee",
 		"odyssey",
@@ -51,6 +53,8 @@
 	"knownShips":{
 		"tags":["hmi_bp", "hmi_techmine_bp", "hmi_junk_bp", "base_bp"],
 		"hulls":[
+		"shepherd_heavy",
+		"shepherd_light",	
 		"vanguard_pirates",
 		"wolf_d_pirates",
 		"buffalo_pirates",
@@ -84,6 +88,9 @@
 			"piranha_wing",
 		],
 	},
+	"priorityFighters":{
+		"tags":["hmi_junk_bp"],
+	},
 	"knownWeapons":{
 		"tags":["hmi_bp", "base_bp", "lowtech_bp", "missile_bp"],
 		"weapons":[
@@ -95,6 +102,9 @@
 			"hmi_voracious",
 			"tpc_hmi",
 			"rad_gun",
+			"hil",
+			"guardian",
+			"autopulse",
 		],
 	},
 	"knownHullMods":{
@@ -109,6 +119,7 @@
 			"eccm",
 			"ecm",
 			"expanded_deck_crew",
+			"hmi_miningHSA",
 			"magazines",
 			"missleracks",
 			"extendedshieldemitter",
@@ -126,6 +137,89 @@
 			"stabilizedshieldemitter",
 			"surveying_equipment",
 		],
+	},
+	"weaponSellFrequency":{
+		"lightmg":5,
+		"lightdualmg":5,
+		"lightmortar":5,
+		"vulcan":5,
+		"lightac":5,
+		"lightdualac":5,
+		"sml_fragrifle":5,
+		"sml_shotgrun":10,
+		"rangus_crossbow":5,
+		"hmi_kiddie_mortar":5,
+		"hmi_nailgun":10,
+		"mining_gen":5,
+		"rock_launcher":10,
+		"hmi_slagger_gun":5,		
+
+		"mininglaser":10,
+		"burst_ml":10,
+		"irpulse":5,
+		"heavymg":5,
+		
+		"harpoon_single":5,
+		"sabot_single":5,
+		"kane_missile":10,
+		"seth_sml":10,
+		"mbeke_sml":10,
+		"hammer":5,			
+			
+		"shredder":5,
+		"heavymortar":5,
+		"flak":5,
+		"arbalest":5,
+		"med_frag_mg":5,
+		"twotherac":10,
+		"clyde_mg":5,
+		"pumm_mg":5,
+		"hmi_voracious":2,
+		"launcher_cannon":10,
+		
+		"hmi_mininglaser_array":10,
+		"suowang_pulser":5,	
+		"double_ir":5,
+		"mining_burst_blaster":10,
+		"miningblaster":5,
+		"rad_gun":5,
+		
+		"signpost_med":5,
+		"seth_med":10,
+		"campbelltown_med":5,
+		"mbeke_med":10,
+		"jackhammer":10,
+		"annihilatorpod":10,
+		"pilum":10,			
+					
+		"mark_iv":10,	
+		"hmi_megalauncher_cannon":10,	
+		"hmi_heavy_assault_launcher":10,			
+
+		"pilum_large":5,
+		"hurricane":5,
+		"squall":5,
+		"locust":5,
+		"hammerrack":5,
+		
+		"hil":10,
+		"guardian":5,
+		"autopulse":10,
+		"tpc_hmi":5,
+		
+    },
+		"fighterSellFrequency":{
+		"support_bombardment_drone_wing":5,
+		"hmi_shell_wing":5,
+		"hmi_taker_drone_wing":5,
+		"mining_drone_wing":5,
+	},
+	"hullmodSellFrequency":{
+		"augmentedengines":5,
+		"efficiency_overhaul":5,
+		"hiressensors":5,
+		"insulatedengine":5,
+		"surveying_equipment":5,
 	},
 	
 		"factionDoctrine":{

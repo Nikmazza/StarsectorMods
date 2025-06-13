@@ -22,16 +22,14 @@ public class ETReputationListener extends BaseCampaignEventListener {
 		SectorAPI sector = Global.getSector();
 		
 		//Give Proteus carrier for turning in pk to Persean League
-		if (faction.equals(Factions.PERSEAN)) {
-			if (sector.getPlayerMemoryWithoutUpdate().is("$receivedShipPL", true)) {
-				giveProteusPL();
-				sector.getPlayerMemoryWithoutUpdate().set("$receivedShipPL", false);
-			}
+		if (sector.getPlayerMemoryWithoutUpdate().is("$receivedShipPL", true)) {
+			giveProteusPL();
+			sector.getPlayerMemoryWithoutUpdate().set("$receivedShipPL", false);
 		}
 	}
 	
 	private void giveProteusPL() {
-		ShipVariantAPI v = Global.getSettings().getVariant("vice_proteus_command").clone();
+		ShipVariantAPI v = Global.getSettings().getVariant("vice_proteus_command_pkreward");
 		FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
 		member.setShipName(NameListUtil.PLS_LIBERATOR);
 		Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);

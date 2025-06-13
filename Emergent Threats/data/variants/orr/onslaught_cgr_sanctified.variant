@@ -1,0 +1,68 @@
+{
+    "displayName": "Sanctified",
+    "fluxCapacitors": 3,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "orr_onslaught_cgr_ana",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "dedicated_targeting_core",
+        "magazines",
+        "heavyarmor",
+        "reinforcedhull",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "onslaught_cgr_sanctified",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "orr_ana",
+                "WS 017": "orr_ana",
+                "WS 021": "breachpod",
+                "WS 022": "breachpod",
+                "WS 023": "breachpod",
+                "WS 024": "breachpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "arbalest",
+                "WS 003": "arbalest",
+                "WS 007": "arbalest",
+                "WS 012": "shredder",
+                "WS 013": "shredder",
+                "WS 014": "shredder",
+                "WS 015": "shredder",
+                "WS 019": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "devastator",
+                "WS 020": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
+        }
+    ]
+}

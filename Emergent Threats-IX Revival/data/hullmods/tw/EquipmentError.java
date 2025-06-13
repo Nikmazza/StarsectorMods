@@ -14,7 +14,7 @@ public class EquipmentError extends BaseHullMod {
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) CR_PENALTY + "%";
+		if (index == 0) return "-" + (int) CR_PENALTY + "%";
 		return null;
 	}
 }

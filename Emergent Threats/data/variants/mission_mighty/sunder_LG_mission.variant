@@ -1,7 +1,7 @@
 {
     "displayName": "Navy",
     "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxVents": 14,
     "hullId": "sunder_LG",
     "hullMods": [
         "degraded_engines",
@@ -25,8 +25,8 @@
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 001": "atropos",
-                "WS 005": "atropos"
+                "WS 001": "atropos_single",
+                "WS 005": "atropos_single"
             }
         },
         {

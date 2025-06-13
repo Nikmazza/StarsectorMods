@@ -1,0 +1,54 @@
+{
+  "id": "tpb",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/onslaught_thermal_turret_base.png",
+  "hardpointSprite": "",
+  "hardpointGlowSprite": "graphics/weapons/test_onslaught_thermal_glow.png",
+  "glowColor": [
+    255,
+    100,
+    100,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    25,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    15,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    0,
+    0,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    200
+  ],
+  "width": 70,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 128,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER
+  ],
+  "fireSoundTwo": "thermal_pulse_cannon_fire"
+}

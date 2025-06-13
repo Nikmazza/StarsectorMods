@@ -28,7 +28,7 @@
     "particleSizeRange": 16,
     "spread": 2
   },
-  "projectileSpecId":"hveldriver_shot",
+  "projectileSpecId":"med_frag_mg_shot",
   "renderHints": [
     RENDER_BARREL_BELOW
   ],

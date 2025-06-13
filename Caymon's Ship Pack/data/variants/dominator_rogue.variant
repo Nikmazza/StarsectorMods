@@ -1,0 +1,68 @@
+{
+  "variantId": "dominator_rogue",
+  "hullId": "dominator",
+  "displayName": "Rogue Support",
+  "goalVariant": false,
+  "fluxCapacitors": 16,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "sMods": [
+    "heavyarmor",
+    "reinforcedhull",
+  ],
+  "hullMods": [
+    "targetingunit",
+    "ballistic_rangefinder"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "railgun",
+        "WS 004": "railgun",
+        "WS 005": "railgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 014": "pilum",
+        "WS 015": "pilum",
+        "WS 016": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightmg",
+        "WS 002": "lightmg",
+        "WS 006": "lightmg",
+        "WS 007": "lightmg",
+        "WS 008": "lightmg",
+        "WS 009": "lightmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 012": "mjolnir",
+        "WS 013": "mjolnir"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 010": "flak",
+        "WS 011": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

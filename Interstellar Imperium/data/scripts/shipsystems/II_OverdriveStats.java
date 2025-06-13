@@ -2,6 +2,7 @@ package data.scripts.shipsystems;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -123,7 +124,9 @@ public class II_OverdriveStats extends BaseShipSystemScript {
     private boolean tempArmor = false;
     private boolean tempTargeting = false;
     private boolean tempElite = false;
+    private boolean tempPastPPT = false;
     private float totalPeakTimeLoss = 0f;
+    private float extraCRLoss = 0f;
     private float tempGauge = 0f;
     private boolean unbugify = false;
     private final IntervalUtil interval = new IntervalUtil(TICK_TIME, TICK_TIME);
@@ -137,14 +140,15 @@ public class II_OverdriveStats extends BaseShipSystemScript {
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
         OverdriveData odData = null;
-        if (data instanceof OverdriveData) {
-            odData = (OverdriveData) data;
+        if (data instanceof OverdriveData overdriveData) {
+            odData = overdriveData;
         }
         if ((odData == null) || (STATEKEY != odData.stateKey)) {
             odData = new OverdriveData(STATEKEY);
             Global.getCombatEngine().getCustomData().put(DATA_KEY_ID + "_" + ship.getId(), odData);
             odData.gauge = 1f;
             totalPeakTimeLoss = 0f;
+            extraCRLoss = 0f;
         }
 
         float shipRadius = II_Util.effectiveRadius(ship);
@@ -169,6 +173,7 @@ public class II_OverdriveStats extends BaseShipSystemScript {
         tempArmor = false;
         tempTargeting = false;
         tempElite = false;
+        tempPastPPT = false;
         if (ship.getVariant().hasHullMod(II_BasePackage.ARMOR_PACKAGE)) {
             ENGINE_COLOR = ENGINE_COLOR_ARMOR;
             CONTRAIL_COLOR = CONTRAIL_COLOR_ARMOR;
@@ -192,6 +197,9 @@ public class II_OverdriveStats extends BaseShipSystemScript {
             overGaugeLevel = ELITE_OVER_GAUGE_LEVEL;
             maxOverlevel = ELITE_MAX_OVERLEVEL;
             tempElite = true;
+        }
+        if (ship.getPeakTimeRemaining() <= 0f) {
+            tempPastPPT = true;
         }
 
         gaugeDrainTime = stats.getSystemUsesBonus().computeEffective(gaugeDrainTime);
@@ -401,20 +409,33 @@ public class II_OverdriveStats extends BaseShipSystemScript {
         stats.getMaxRecoilMult().modifyMult(id, II_Util.lerp(1f, RECOIL_MULT, effectLevel * effectOverlevel));
         stats.getRecoilPerShotMult().modifyMult(id, II_Util.lerp(1f, RECOIL_MULT, effectLevel * effectOverlevel));
 
+        float crLossMult = 1f;
         if (ship.getVariant().hasHullMod(II_BasePackage.ARMOR_PACKAGE)) {
+            crLossMult = II_Util.lerp(1f, ARMOR_CR_LOSS_MULT, effectLevel * effectOverlevel);
             totalPeakTimeLoss += (ARMOR_CR_LOSS_MULT - 1f) * effectLevel * effectOverlevelSquared * objectiveAmount;
-            stats.getCRLossPerSecondPercent().modifyMult(id, II_Util.lerp(1f, ARMOR_CR_LOSS_MULT, effectLevel * effectOverlevel));
+            stats.getCRLossPerSecondPercent().modifyMult(id, crLossMult);
             stats.getPeakCRDuration().modifyFlat(id, -totalPeakTimeLoss / ship.getMutableStats().getPeakCRDuration().getMult());
         } else if (ship.getVariant().hasHullMod(II_BasePackage.ELITE_PACKAGE)) {
             if (effectOverlevelSquared > 1f) {
+                crLossMult = II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevel - 1f));
                 totalPeakTimeLoss += (ELITE_OVERLEVEL_CR_LOSS_MULT - 1f) * effectLevel * (effectOverlevelSquared - 1f) * objectiveAmount;
-                stats.getCRLossPerSecondPercent().modifyMult(id, II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevel - 1f)));
+                stats.getCRLossPerSecondPercent().modifyMult(id, crLossMult);
                 stats.getPeakCRDuration().modifyFlat(id, -totalPeakTimeLoss / ship.getMutableStats().getPeakCRDuration().getMult());
             }
         } else {
+            crLossMult = II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevel);
             totalPeakTimeLoss += (CR_LOSS_MULT - 1f) * effectLevel * effectOverlevelSquared * objectiveAmount;
-            stats.getCRLossPerSecondPercent().modifyMult(id, II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevel));
+            stats.getCRLossPerSecondPercent().modifyMult(id, crLossMult);
             stats.getPeakCRDuration().modifyFlat(id, -totalPeakTimeLoss / ship.getMutableStats().getPeakCRDuration().getMult());
+        }
+        if ((ship.getPeakTimeRemaining() <= 0f) && (crLossMult > 1f) && !ship.areSignificantEnemiesInRange()) {
+            float totalLossPerSecond = stats.getCRLossPerSecondPercent().computeEffective(ship.getHullSpec().getCRLossPerSecond());
+            extraCRLoss += (totalLossPerSecond / crLossMult) * (crLossMult - 1f) * objectiveAmount;
+        }
+        if (extraCRLoss >= 1f) {
+            float crLossNow = (float) Math.floor(extraCRLoss);
+            extraCRLoss -= crLossNow;
+            ship.setCurrentCR(ship.getCurrentCR() - crLossNow / 100f);
         }
 
         if (!ship.getVariant().hasHullMod(II_BasePackage.TARGETING_PACKAGE)) {
@@ -563,6 +584,11 @@ public class II_OverdriveStats extends BaseShipSystemScript {
             }
 
             if (Math.random() < (BASE_SPARK_CHANCE_PER_TICK.get(ship.getHullSize())) * effectLevelSquared * effectOverlevelSquared * sparkIntensity) {
+                // Workaround until LazyLib is patched
+                BoundsAPI bounds = ship.getExactBounds();
+                if (bounds != null) {
+                    bounds.update(ship.getLocation(), ship.getFacing());
+                }
                 float targetAngle = (float) Math.random() * 360f;
                 Vector2f targetPointPre = MathUtils.getPointOnCircumference(ship.getLocation(), shipRadius * 2f, targetAngle);
                 Vector2f anchorPoint = CollisionUtils.getCollisionPoint(targetPointPre, ship.getLocation(), ship);
@@ -642,17 +668,17 @@ public class II_OverdriveStats extends BaseShipSystemScript {
         float effectOverlevelSquared = effectOverlevel * effectOverlevel;
 
         switch (index) {
-            case 0:
+            case 0 -> {
                 if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                     return new StatusData("flux capacity +" + Math.round((II_Util.lerp(1f, CAPACITY_MULT, effectLevel * effectOverlevel) - 1f) * 100f) + "%", false);
                 }
-                break;
-            case 1:
+            }
+            case 1 -> {
                 if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                     return new StatusData("flux dissipation +" + Math.round((II_Util.lerp(1f, DISSIPATION_MULT, effectLevel * effectOverlevel) - 1f) * 100f) + "%", false);
                 }
-                break;
-            case 2:
+            }
+            case 2 -> {
                 if (tempTargeting) {
                     if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                         return new StatusData("rate of fire +" + Math.round(TARGETING_ROF_BONUS * effectLevel * effectOverlevel) + "%", false);
@@ -662,8 +688,8 @@ public class II_OverdriveStats extends BaseShipSystemScript {
                         return new StatusData("rate of fire +" + Math.round(ROF_BONUS * effectLevel * effectOverlevel) + "%", false);
                     }
                 }
-                break;
-            case 3:
+            }
+            case 3 -> {
                 if (tempTargeting) {
                     if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                         return new StatusData("projectile speed +" + Math.round((II_Util.lerp(1f, TARGETING_PROJ_SPEED_MULT, effectLevel * effectOverlevel) - 1f) * 100f) + "%", false);
@@ -673,8 +699,8 @@ public class II_OverdriveStats extends BaseShipSystemScript {
                         return new StatusData("improved maneuverability", false);
                     }
                 }
-                break;
-            case 4:
+            }
+            case 4 -> {
                 if (tempTargeting) {
                     if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                         return new StatusData("increased weapon turn rate", false);
@@ -684,31 +710,49 @@ public class II_OverdriveStats extends BaseShipSystemScript {
                         return new StatusData("increased engine power", false);
                     }
                 }
-                break;
-            case 5:
+            }
+            case 5 -> {
                 if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                     return new StatusData("weapon accuracy +" + Math.round((1f - II_Util.lerp(1f, RECOIL_MULT, effectLevel * effectOverlevel)) * 100f) + "%", false);
                 }
-                break;
-            case 6:
+            }
+            case 6 -> {
                 if (tempArmor) {
-                    if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
-                        return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ARMOR_CR_LOSS_MULT, effectLevel * effectOverlevelSquared) - 1f) * 100f) + "%", true);
+                    if (tempPastPPT) {
+                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ARMOR_CR_LOSS_MULT, effectLevel * effectOverlevel) - 1f) * 100f) + "%", true);
+                        }
+                    } else {
+                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ARMOR_CR_LOSS_MULT, effectLevel * effectOverlevelSquared) - 1f) * 100f) + "%", true);
+                        }
                     }
                 } else if (tempElite) {
                     if (effectOverlevelSquared > 1f) {
-                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
-                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevelSquared - 1f)) - 1f) * 100f) + "%", true);
+                        if (tempPastPPT) {
+                            if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                                return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevel - 1f)) - 1f) * 100f) + "%", true);
+                            }
+                        } else {
+                            if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                                return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevelSquared - 1f)) - 1f) * 100f) + "%", true);
+                            }
                         }
                     }
                 } else {
-                    if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
-                        return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevelSquared) - 1f) * 100f) + "%", true);
+                    if (tempPastPPT) {
+                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevel) - 1f) * 100f) + "%", true);
+                        }
+                    } else {
+                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevelSquared) - 1f) * 100f) + "%", true);
+                        }
                     }
                 }
-                break;
-            default:
-                break;
+            }
+            default -> {
+            }
         }
         return null;
     }
@@ -764,9 +808,7 @@ public class II_OverdriveStats extends BaseShipSystemScript {
         }
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
-        if (data instanceof OverdriveData) {
-            OverdriveData odData = (OverdriveData) data;
-
+        if (data instanceof OverdriveData odData) {
             return odData.gauge;
         } else {
             return 0f;

@@ -1,0 +1,23 @@
+{
+	"id":"orr_tac_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"onHitEffect":"data.scripts.orr.weapons.TACOnHit",
+	"length":40,
+	"width":20,
+	"fadeTime":0.3,
+	"fringeColor":[255,110,0,150],
+	"coreColor":[255,170,130,100],
+	"glowColor":[200,65,0,150],
+	"glowRadius":50,
+	"hitGlowRadius":0,	
+	#"textureType":"SMOOTH",  # now also used for "BALLISTIC_AS_BEAM", if specified
+	"textureType":["graphics/orr/fx/orr_tac_fringe.png","graphics/orr/fx/orr_tac_core.png"],
+	"textureScrollSpeed":1,
+	"pixelsPerTexel":1.0,
+	"passThroughMissiles":true,
+	"passThroughFighters":true,
+	"passThroughFightersOnlyWhenDestroyed":true,
+}

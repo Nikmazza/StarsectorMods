@@ -1,0 +1,30 @@
+{
+  "variantId": "csp_gusto_drone",
+  "hullId": "csp_gusto",
+  "displayName": "Super Heavy Drone",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualmg",
+        "WS0002": "lightdualmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightdualac"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

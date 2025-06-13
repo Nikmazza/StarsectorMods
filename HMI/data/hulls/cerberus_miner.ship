@@ -16,7 +16,7 @@
     "rugged"
   ],
   "builtInWeapons": {
-    "WS0004": "jackhammer"
+    "WS0004": "hmi_khorkoi_miningblaster"
   },
   "weaponSlots": [
     {

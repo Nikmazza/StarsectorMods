@@ -3,7 +3,7 @@
   "hullId": "nebula_hmi",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 2,
+  "fluxCapacitors": 4,
   "fluxVents": 0,
   "quality": 1,
   "permaMods": [],

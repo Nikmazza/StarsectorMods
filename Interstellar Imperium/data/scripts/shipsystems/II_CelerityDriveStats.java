@@ -2,6 +2,7 @@ package data.scripts.shipsystems;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.SoundAPI;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
@@ -129,7 +130,7 @@ public class II_CelerityDriveStats extends BaseShipSystemScript {
         Vector2f centerLocation = Vector2f.add(ship.getLocation(), offset, new Vector2f());
 
         switch (state) {
-            case IN: {
+            case IN -> {
                 float startSize = shipRadius * 0.5f;
                 float endSize = shipRadius * 0.75f;
                 if (!started) {
@@ -291,6 +292,11 @@ public class II_CelerityDriveStats extends BaseShipSystemScript {
                         Vector2f projection = VectorUtils.getDirectionalVector(centerLocation, thisEnemy.getLocation());
                         projection.scale(thisEnemy.getCollisionRadius());
                         Vector2f.add(projection, thisEnemy.getLocation(), projection);
+                        // Workaround until LazyLib is patched
+                        BoundsAPI bounds = thisEnemy.getExactBounds();
+                        if (bounds != null) {
+                            bounds.update(thisEnemy.getLocation(), thisEnemy.getFacing());
+                        }
                         Vector2f damagePoint = CollisionUtils.getCollisionPoint(centerLocation, projection, thisEnemy);
                         if (damagePoint == null) {
                             damagePoint = centerLocation;
@@ -333,10 +339,8 @@ public class II_CelerityDriveStats extends BaseShipSystemScript {
                         }
                     }
                 }
-                break;
             }
-            case ACTIVE:
-            case OUT: {
+            case ACTIVE, OUT -> {
                 if ((ship.getPhaseCloak() != null) && ship.isPhased()) {
                     ship.getPhaseCloak().deactivate();
                 }
@@ -444,10 +448,9 @@ public class II_CelerityDriveStats extends BaseShipSystemScript {
                     ship.addAfterimage(afterImageColor, randLoc.x, randLoc.y, vel.x, vel.y, randRange * afterImageJitter,
                             0.05f * afterImageDuration, 0.2f * afterImageDuration * shipTimeMult, 0.05f * afterImageDuration * shipTimeMult, true, false, false);
                 }
-                break;
             }
-            default:
-                break;
+            default -> {
+            }
         }
     }
 
@@ -487,24 +490,21 @@ public class II_CelerityDriveStats extends BaseShipSystemScript {
     @Override
     public StatusData getStatusData(int index, State state, float effectLevel) {
         switch (state) {
-            case IN: {
+            case IN -> {
                 if (index == 0) {
                     return new StatusData("time flow altered", true);
                 }
-                break;
             }
-            case ACTIVE:
-            case OUT: {
+            case ACTIVE, OUT -> {
                 if (index == 0) {
                     return new StatusData("time flow altered", false);
                 }
                 if (index == 1) {
                     return new StatusData("cloak disabled", true);
                 }
-                break;
             }
-            default:
-                break;
+            default -> {
+            }
         }
         return null;
     }

@@ -1,0 +1,37 @@
+{
+  "variantId": "csp_kindlingLG_Support",
+  "hullId": "csp_kindlingLG",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 11,
+  "fluxVents": 11,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "high_scatter_amp",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "ionbeam",
+        "WS 003": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "taclaser",
+        "WS0001": "taclaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "wasp_wing"
+  ]
+}

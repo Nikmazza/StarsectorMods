@@ -1,0 +1,18 @@
+{
+	"baseHullId":"orr_aggressor_base",
+	"skinHullId":"orr_aggressor_orr_tpc",
+	"hullName":"Aggressor",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
+	"descriptionId":"orr_aggressor",
+	"tags":["rare_bp", "merc", "hegemony", "orr_tpc"],
+	"spriteName":"graphics/orr/ships/aggressor_orr_tpc.png",
+	"removeHints":["HIDE_IN_CODEX"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInWeapons": {
+		"WS 016": "orr_tpc",
+		"WS 017": "orr_tpc"
+	},
+}

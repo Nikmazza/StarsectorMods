@@ -1,5 +1,5 @@
 {
-  "hullName": "Lasher",
+  "hullName": "Lasher (A)",
   "hullId": "missp_lasher_heg",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/ships/lasher/lasher_heg.png",
@@ -13,14 +13,13 @@
   "shieldRadius": 64,
   "viewOffset": 0,
   "builtInMods": [
-    "ballistic_rangefinder",
-    "heg_militarized"
+    "ballistic_rangefinder"
   ],
   "weaponSlots": [
     {
       "id": "WS 001",
       "size": "SMALL",
-      "type": "MISSILE",
+      "type": "BALLISTIC",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,
@@ -47,7 +46,7 @@
     {
       "id": "WS 004",
       "size": "SMALL",
-      "type": "MISSILE",
+      "type": "BALLISTIC",
       "mount": "HARDPOINT",
       "arc": 5,
       "angle": 0,

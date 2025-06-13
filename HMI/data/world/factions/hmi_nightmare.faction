@@ -1,11 +1,11 @@
 {
 	id:"hmi_nightmare",
-	"displayName":"Abyssal Horror",
+	"displayName":"Nightmarish Horror",
 	"displayNameWithArticle":"the horror",
-	"displayNameLong":"Abyssal Horror",
-	"displayNameLongWithArticle":"the Abyssal Horror",
-	"entityNamePrefix":"Abyssal Horror",
-	"personNamePrefix":"Abyssal Horror",
+	"displayNameLong":"Nightmarish Horror",
+	"displayNameLongWithArticle":"the Nightmarish Horror",
+	"entityNamePrefix":"Nightmarish Horror",
+	"personNamePrefix":"Nightmarish Horror",
 	"personNamePrefixAOrAn":"a",
 	"displayNameIsOrAre":"are",
 	

@@ -1,0 +1,8 @@
+{
+	"plasmabeam_fire":[
+		{"file": "sounds/weapons/plasmabeam_fire.ogg", "pitch": 1, "volume": .6}
+	],
+	"rwc_positron_fire":[
+		{"file": "sounds/weapons/rwc_positron_fire.ogg", "pitch": 1, "volume": .6}
+	],
+}

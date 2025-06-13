@@ -1,0 +1,57 @@
+{
+  "hullName": "Leg L",
+  "hullId": "csp_deputy_legL",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/armor leg L.png",
+  "style": "LOW_TECH",
+  "height": 52,
+  "width": 42,
+  "center": [19, 24.5],
+  "collisionRadius": 28,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 27,
+  "viewOffset": 0,
+  "builtInMods": [
+    "always_detaches",
+    "reduced_explosion",
+    "ablative_armor"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 139.5,
+      "locations": [-16.5, 15.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 155,
+      "locations": [-20.5, 11]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 177,
+      "locations": [-22, 5.5]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    11, -22,
+    -22.5, 0,
+    -23, 11.5,
+    -17, 17.5,
+    26.5, 7,
+    14.5, -9
+  ]
+}

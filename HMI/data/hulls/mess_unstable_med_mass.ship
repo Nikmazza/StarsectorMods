@@ -12,20 +12,30 @@
   "shieldRadius": 73.5,
   "viewOffset": 0,
   "builtInMods": [
-    "automated"
+    "automated",
+    "hmi_mess_visuals",
+    "hmi_mess_round_swarm"
   ],
   "builtInWings": [
     "drone_feeder_wing",
     "drone_feeder_wing",
     "drone_feeder_wing",
     "drone_feeder_wing",
-    "drone_feeder_wing",
-    "drone_feeder_heavy_wing",
     "drone_feeder_heavy_wing",
     "drone_feeder_heavy_wing"
   ],
   "builtInWeapons": {
-    "WS0001": "feeder_gun_med"
+    "WS0001": "feeder_gun",
+    "WS0002": "feeder_gun",
+    "WS0003": "feeder_gun",
+    "WS0004": "feeder_gun",
+    "WS0005": "feeder_gun",
+    "WS0006": "feeder_gun",
+    "WS0007": "feeder_gun",
+    "WS0008": "feeder_gun",
+    "WS0009": "feeder_gun",
+    "WS0010": "feeder_gun",
+    "WS0011": "feeder_gun"
   },
   "weaponSlots": [
     {
@@ -132,90 +142,99 @@
       "arc": 20,
       "angle": 0,
       "locations": [50, 2]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 50,
+      "angle": 26.5,
+      "locations": [45, 25]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 50,
+      "angle": -26.5,
+      "locations": [45, -25]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 69,
+      "angle": 52,
+      "locations": [28.5, 42]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 69,
+      "angle": -52,
+      "locations": [28.5, -42]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 82,
+      "angle": 71,
+      "locations": [4.5, 46]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 82,
+      "angle": -71,
+      "locations": [4.5, -46]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 51,
+      "angle": 23,
+      "locations": [29.5, 10]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 51,
+      "angle": -23,
+      "locations": [29.5, -10]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 74,
+      "angle": 52.5,
+      "locations": [9.5, 24.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 74,
+      "angle": -52.5,
+      "locations": [9.5, -24.5]
     }
   ],
-  "engineSlots": [
-    {
-      "location": [-44.5, 30.5],
-      "length": 23.591915,
-      "width": 11.431813,
-      "angle": 136,
-      "contrailSize": 11.431813,
-      "style": "LOW_TECH"
-    },
-    {
-      "location": [-46.5, -12.5],
-      "length": 35.947834,
-      "width": 13.964709,
-      "angle": -173,
-      "contrailSize": 13.964709,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-51.5, -2.5],
-      "length": 48.036652,
-      "width": 15.585871,
-      "angle": -175.5,
-      "contrailSize": 15.585871,
-      "style": "LOW_TECH"
-    },
-    {
-      "location": [-51, 6.5],
-      "length": 19.948732,
-      "width": 8.555263,
-      "angle": 175,
-      "contrailSize": 8.555263,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-39.5, -35.5],
-      "length": 9.802043,
-      "width": 12.069787,
-      "angle": -156,
-      "contrailSize": 12.069787,
-      "style": "LOW_TECH"
-    },
-    {
-      "location": [-44, -25.5],
-      "length": 11.629134,
-      "width": 10.442841,
-      "angle": -155.5,
-      "contrailSize": 10.442841,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-23, 41],
-      "length": 10.823205,
-      "width": 8.510755,
-      "angle": 106,
-      "contrailSize": 8.510755,
-      "style": "LOW_TECH"
-    },
-    {
-      "location": [-9, -45],
-      "length": 8.278393,
-      "width": 10.142624,
-      "angle": -102.5,
-      "contrailSize": 10.142624,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-52.5, 17],
-      "length": 6.780311,
-      "width": 5.840338,
-      "angle": 175,
-      "contrailSize": 5.840338,
-      "style": "MIDLINE"
-    },
-    {
-      "location": [-52, 21.5],
-      "length": 4.700766,
-      "width": 4.196572,
-      "angle": 175,
-      "contrailSize": 4.196572,
-      "style": "MIDLINE"
-    }
-  ],
+  "engineSlots": [],
   "bounds": [
     -50.5, -17,
     -34.5, -45.5,

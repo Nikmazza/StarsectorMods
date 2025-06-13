@@ -1,0 +1,59 @@
+{
+  "hullName": "Luz",
+  "hullId": "csp_luz",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/remnant drone.png",
+  "style": "HIGH_TECH",
+  "height": 23,
+  "width": 25,
+  "center": [12.5, 10.5],
+  "collisionRadius": 15,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 14.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "high_scatter_amp"
+  ],
+  "builtInWeapons": {
+    "WS0001": "irautolance"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 35,
+      "angle": 0,
+      "locations": [-1.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-10.5, -4],
+      "length": 6.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-10.5, 4],
+      "length": 6.5,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    6.5, 2.5,
+    11.5, 6,
+    -1.5, 11.5,
+    -10.5, 5.5,
+    -10.5, -5.5,
+    -1.5, -11.5,
+    11.5, -6,
+    6.5, -2.5
+  ]
+}

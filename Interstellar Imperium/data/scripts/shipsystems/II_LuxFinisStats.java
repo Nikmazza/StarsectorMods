@@ -3,6 +3,7 @@ package data.scripts.shipsystems;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.BeamAPI;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.MissileAPI;
@@ -146,7 +147,9 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
     private boolean tempArmor = false;
     private boolean tempTargeting = false;
     private boolean tempElite = false;
+    private boolean tempPastPPT = false;
     private float totalPeakTimeLoss = 0f;
+    private float extraCRLoss = 0f;
     private float tempGauge = 0f;
     private boolean tempLightspearFiring = false;
     private boolean tempLightspearOutTransition = false;
@@ -164,14 +167,15 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
         LuxFinisData lfData = null;
-        if (data instanceof LuxFinisData) {
-            lfData = (LuxFinisData) data;
+        if (data instanceof LuxFinisData luxFinisData) {
+            lfData = luxFinisData;
         }
         if ((lfData == null) || (STATEKEY != lfData.stateKey)) {
             lfData = new LuxFinisData(STATEKEY);
             Global.getCombatEngine().getCustomData().put(DATA_KEY_ID + "_" + ship.getId(), lfData);
             lfData.gauge = 1f;
             totalPeakTimeLoss = 0f;
+            extraCRLoss = 0f;
         }
 
         float shipRadius = II_Util.effectiveRadius(ship);
@@ -226,6 +230,7 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
         tempArmor = false;
         tempTargeting = false;
         tempElite = false;
+        tempPastPPT = false;
         tempLightspearFiring = false;
         tempLightspearOutTransition = false;
         if (ship.getVariant().hasHullMod(II_BasePackage.ARMOR_PACKAGE)) {
@@ -255,6 +260,9 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
             overGaugeLevel = ELITE_OVER_GAUGE_LEVEL;
             maxOverlevel = ELITE_MAX_OVERLEVEL;
             tempElite = true;
+        }
+        if (ship.getPeakTimeRemaining() <= 0f) {
+            tempPastPPT = true;
         }
 
         gaugeDrainTime = stats.getSystemUsesBonus().computeEffective(gaugeDrainTime);
@@ -641,16 +649,28 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
             }
         }
 
+        float crLossMult = 1f;
         if (ship.getVariant().hasHullMod(II_BasePackage.ELITE_PACKAGE)) {
             if (effectOverlevelSquared > 1f) {
+                crLossMult = II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevel - 1f));
                 totalPeakTimeLoss += (ELITE_OVERLEVEL_CR_LOSS_MULT - 1f) * effectLevel * (effectOverlevelSquared - 1f) * objectiveAmount * stats.getTimeMult().getModifiedValue();
-                stats.getCRLossPerSecondPercent().modifyMult(id, II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevel - 1f)));
+                stats.getCRLossPerSecondPercent().modifyMult(id, crLossMult);
                 stats.getPeakCRDuration().modifyFlat(id, -totalPeakTimeLoss / ship.getMutableStats().getPeakCRDuration().getMult());
             }
         } else {
+            crLossMult = II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevel);
             totalPeakTimeLoss += (CR_LOSS_MULT - 1f) * effectLevel * effectOverlevelSquared * objectiveAmount * stats.getTimeMult().getModifiedValue();
-            stats.getCRLossPerSecondPercent().modifyMult(id, II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevel));
+            stats.getCRLossPerSecondPercent().modifyMult(id, crLossMult);
             stats.getPeakCRDuration().modifyFlat(id, -totalPeakTimeLoss / ship.getMutableStats().getPeakCRDuration().getMult());
+        }
+        if ((ship.getPeakTimeRemaining() <= 0f) && (crLossMult > 1f) && !ship.areSignificantEnemiesInRange()) {
+            float totalLossPerSecond = stats.getCRLossPerSecondPercent().computeEffective(ship.getHullSpec().getCRLossPerSecond());
+            extraCRLoss += (totalLossPerSecond / crLossMult) * (crLossMult - 1f) * objectiveAmount;
+        }
+        if (extraCRLoss >= 1f) {
+            float crLossNow = (float) Math.floor(extraCRLoss);
+            extraCRLoss -= crLossNow;
+            ship.setCurrentCR(ship.getCurrentCR() - crLossNow / 100f);
         }
 
         if (!ship.getVariant().hasHullMod(II_BasePackage.TARGETING_PACKAGE)) {
@@ -736,6 +756,11 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
                         continue;
                     }
 
+                    // Workaround until LazyLib is patched
+                    BoundsAPI bounds = thisEnemy.getExactBounds();
+                    if (bounds != null) {
+                        bounds.update(thisEnemy.getLocation(), thisEnemy.getFacing());
+                    }
                     Vector2f projection = VectorUtils.getDirectionalVector(centerLocation, thisEnemy.getLocation());
                     projection.scale(thisEnemy.getCollisionRadius());
                     Vector2f.add(projection, thisEnemy.getLocation(), projection);
@@ -955,6 +980,11 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
             }
 
             if (Math.random() < (BASE_SPARK_CHANCE_PER_TICK.get(ship.getHullSize())) * effectLevelSquared * effectOverlevelSquared * sparkIntensity) {
+                // Workaround until LazyLib is patched
+                BoundsAPI bounds = ship.getExactBounds();
+                if (bounds != null) {
+                    bounds.update(ship.getLocation(), ship.getFacing());
+                }
                 float targetAngle = (float) Math.random() * 360f;
                 Vector2f targetPointPre = MathUtils.getPointOnCircumference(ship.getLocation(), shipRadius * 2f, targetAngle);
                 Vector2f anchorPoint = CollisionUtils.getCollisionPoint(targetPointPre, ship.getLocation(), ship);
@@ -1059,17 +1089,17 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
         damageReductionMult = II_Util.lerp(1f, damageReductionMult, (float) Math.sqrt(tempLightspearChargeLevel) * effectLevel * effectOverlevel);
 
         switch (index) {
-            case 0:
+            case 0 -> {
                 if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                     return new StatusData("flux capacity +" + Math.round((II_Util.lerp(1f, capacityMult, effectLevel * effectOverlevel) - 1f) * 100f) + "%", false);
                 }
-                break;
-            case 1:
+            }
+            case 1 -> {
                 if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                     return new StatusData("flux dissipation +" + Math.round((II_Util.lerp(1f, dissipationMult, effectLevel * effectOverlevel) - 1f) * 100f) + "%", false);
                 }
-                break;
-            case 2:
+            }
+            case 2 -> {
                 if (tempTargeting) {
                     if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                         return new StatusData("rate of fire +" + Math.round(TARGETING_ROF_BONUS * effectLevel * effectOverlevel) + "%", false);
@@ -1079,36 +1109,48 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
                         return new StatusData("improved maneuverability", false);
                     }
                 }
-                break;
-            case 3:
+            }
+            case 3 -> {
                 if (!tempTargeting && !tempLightspearFiring) {
                     if ((state == State.IN) || (state == State.ACTIVE)) {
                         return new StatusData("increased engine power", false);
                     }
                 }
-                break;
-            case 4:
+            }
+            case 4 -> {
                 if (tempLightspearFiring || tempLightspearOutTransition) {
                     if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
                         return new StatusData("" + Math.round((1f - damageReductionMult) * 100f) + "% less damage taken", false);
                     }
                 }
-                break;
-            case 5:
+            }
+            case 5 -> {
                 if (tempElite) {
                     if (effectOverlevelSquared > 1f) {
-                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
-                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevelSquared - 1f)) - 1f) * 100f) + "%", true);
+                        if (tempPastPPT) {
+                            if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                                return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevel - 1f)) - 1f) * 100f) + "%", true);
+                            }
+                        } else {
+                            if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                                return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, ELITE_OVERLEVEL_CR_LOSS_MULT, effectLevel * (effectOverlevelSquared - 1f)) - 1f) * 100f) + "%", true);
+                            }
                         }
                     }
                 } else {
-                    if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
-                        return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevelSquared) - 1f) * 100f) + "%", true);
+                    if (tempPastPPT) {
+                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevel) - 1f) * 100f) + "%", true);
+                        }
+                    } else {
+                        if ((state == State.IN) || (state == State.ACTIVE) || (state == State.OUT)) {
+                            return new StatusData("CR degradation +" + Math.round((II_Util.lerp(1f, CR_LOSS_MULT, effectLevel * effectOverlevelSquared) - 1f) * 100f) + "%", true);
+                        }
                     }
                 }
-                break;
-            default:
-                break;
+            }
+            default -> {
+            }
         }
         return null;
     }
@@ -1164,9 +1206,7 @@ public class II_LuxFinisStats extends BaseShipSystemScript {
         }
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
-        if (data instanceof LuxFinisData) {
-            LuxFinisData odData = (LuxFinisData) data;
-
+        if (data instanceof LuxFinisData odData) {
             return odData.gauge;
         } else {
             return 0f;

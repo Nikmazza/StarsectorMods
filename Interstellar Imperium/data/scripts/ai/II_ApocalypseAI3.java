@@ -25,6 +25,11 @@ public class II_ApocalypseAI3 extends II_BaseMissile {
         if (missile.isFizzling() || missile.isFading()) {
             return;
         }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
+        }
 
         missile.giveCommand(ShipCommand.ACCELERATE);
 
@@ -99,8 +104,7 @@ public class II_ApocalypseAI3 extends II_BaseMissile {
 
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone() || (ship.getOwner() == 100)) {
                 return false;
             }
@@ -111,8 +115,7 @@ public class II_ApocalypseAI3 extends II_BaseMissile {
     @Override
     protected boolean acquireTarget(float amount) {
         if (!isTargetValidAlternate(target)) {
-            if (target instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) target;
+            if (target instanceof ShipAPI ship) {
                 if (ship.isPhased() && ship.isAlive()) {
                     return false;
                 }

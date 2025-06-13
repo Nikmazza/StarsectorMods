@@ -1,0 +1,17 @@
+{
+	"baseHullId":"orr_aggressor_base",
+	"skinHullId":"orr_aggressor_orr_tpl",
+	"hullName":"Aggressor",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
+	"descriptionId":"orr_aggressor",
+	"tags":["no_dealer", "orr_tpl", "hide_in_codex"],
+	"spriteName":"graphics/orr/ships/aggressor_orr_tpl.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInWeapons": {
+		"WS 016": "orr_tpl",
+		"WS 017": "orr_tpl"
+	},
+}

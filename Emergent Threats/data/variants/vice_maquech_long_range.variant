@@ -1,7 +1,7 @@
 {
     "displayName": "Long Range",
     "fluxCapacitors": 0,
-    "fluxVents": 1,
+    "fluxVents": 2,
     "goalVariant": true,
     "hullId": "vice_maquech",
     "hullMods": ["escort_package"],

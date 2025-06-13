@@ -27,6 +27,7 @@ public class IXAdminEasyModeListener extends BaseCampaignEventListener {
 	
 	@Override
 	public void reportPlayerOpenedMarket(MarketAPI market) {
+		if (market == null) return;
 		PersonAPI player = Global.getSector().getPlayerPerson();
 		
 		//adds copy of Industrial Planning to player that already took background, can be deleted after v0.7.5
@@ -40,16 +41,16 @@ public class IXAdminEasyModeListener extends BaseCampaignEventListener {
 		
 		List<MarketAPI> markets = Global.getSector().getEconomy().getMarketsCopy();
 		List<PersonAPI> people = new ArrayList<PersonAPI>();
-		for (MarketAPI market : markets) {
-			if (market == null || market.getFactionId() == null) continue;
-			String facId = market.getFactionId();
+		for (MarketAPI m : markets) {
+			if (m == null || m.getFactionId() == null) continue;
+			String facId = m.getFactionId();
 			if (facId.equals(IX_FAC_ID) || facId.equals(MZ_FAC_ID) || facId.equals(TW_FAC_ID)) {
-				if (market.getAdmin() != null && !market.getAdmin().isAICore()) people.add(market.getAdmin());
+				if (m.getAdmin() != null && !m.getAdmin().isAICore()) people.add(m.getAdmin());
 			}
 			
 			//clear skill from admins of conquered former ix/tw colonies
-			else if (market.getAdmin() != null && market.getAdmin() != player) {
-				PersonAPI p = market.getAdmin();
+			else if (m.getAdmin() != null && m.getAdmin() != player) {
+				PersonAPI p = m.getAdmin();
 				if (p.getStats().hasSkill(IX_ADMIN_SKILL_ID) && p.getStats().hasSkill(INDUSTRY_SKILL_ID)) {
 					p.getStats().setSkillLevel(IX_ADMIN_SKILL_ID, 0f);
 					p.getStats().refreshGovernedOutpostEffects(p.getMarket());
@@ -66,17 +67,17 @@ public class IXAdminEasyModeListener extends BaseCampaignEventListener {
 			for (PersonAPI p : people) {
 				if (!p.getStats().hasSkill(IX_ADMIN_SKILL_ID)) {
 					p.getStats().setSkillLevel(IX_ADMIN_SKILL_ID, 1f);
-					p.getStats().refreshGovernedOutpostEffects(p.getMarket());
+					if (p.getMarket() != null) p.getStats().refreshGovernedOutpostEffects(p.getMarket());
 				}
 			}
 		}
 		
-		//remove AI Assisted Command skill from all admins except player and Caelum Station admin
+		//remove AI Assisted Command skill from all admins except player
 		else {
 			for (PersonAPI p : people) {
 				if (p.getStats().hasSkill(IX_ADMIN_SKILL_ID) && p.getStats().hasSkill(INDUSTRY_SKILL_ID)) {
 					p.getStats().setSkillLevel(IX_ADMIN_SKILL_ID, 0f);
-					p.getStats().refreshGovernedOutpostEffects(p.getMarket());
+					if (p.getMarket() != null) p.getStats().refreshGovernedOutpostEffects(p.getMarket());
 				}
 			}
 		}

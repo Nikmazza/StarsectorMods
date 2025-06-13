@@ -3,13 +3,14 @@ package second_in_command.specs;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import second_in_command.SCData;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**Instantiated whenever needed, do not save class-scope variables within */
+/**Instantiated on application load and kept in memory, do not save class-scope variables within */
 public abstract class SCBaseAptitudePlugin {
 
     public SCAptitudeSpec spec;
@@ -77,6 +78,10 @@ public abstract class SCBaseAptitudePlugin {
     }
 
 
+    public void addCodexDescription(TooltipMakerAPI tooltip) {
+
+    }
+
 
 
 
@@ -94,12 +99,19 @@ public abstract class SCBaseAptitudePlugin {
     private final List<SCAptitudeSection> sections = new ArrayList<>();
 
     //Internal Use Only
+    //Create sections, then immediately clear, to prevent memory leaks due to UI data in sections.
+    //Used to be handled differently, before Aptitudes were hold for the entirety of the session duration.
     public final List<SCAptitudeSection> getSections() {
-        return sections;
+        createSections();
+        List<SCAptitudeSection> list = new ArrayList<>(sections);
+        sections.clear();
+        return list;
     }
 
     //Internal Use Only
+    /**@deprecated Does Nothing now. The aptitude itself no longer keeps sections around after creating it to prevent memory leaks*/
+    @Deprecated
     public final void clearSections() {
-        sections.clear();
+        //sections.clear();
     }
 }

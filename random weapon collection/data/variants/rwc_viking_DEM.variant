@@ -1,0 +1,46 @@
+{
+    "displayName": "DEM",
+    "fluxCapacitors": 6,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "rwc_viking",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_viking_DEM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "dragon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "lightneedler",
+                "WS0006": "lightneedler",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "vulcan",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "gazer",
+                "WS0003": "gazer",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

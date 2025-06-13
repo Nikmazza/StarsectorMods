@@ -2,7 +2,7 @@
   "displayName": "Support",
   "fluxCapacitors": 0,
   "fluxVents": 27,
-  "goalVariant": false,
+  "goalVariant": true,
   "hullId": "venture_luddic",
   "hullMods": [
     "heavyarmor",

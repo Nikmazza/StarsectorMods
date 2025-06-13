@@ -67,5 +67,8 @@
             "swp_cargo_pod_drift":"graphics/illustrations/cargo_pod_drift.jpg",
             "swp_harry":"graphics/illustrations/harry.jpg",
         },
+		"swp":{
+			"swp_icon":"graphics/swp/icons/missions/swp_buried_treasure.png", 
+		},
     },
 }

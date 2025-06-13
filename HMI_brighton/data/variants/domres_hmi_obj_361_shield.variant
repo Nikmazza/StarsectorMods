@@ -1,0 +1,67 @@
+{
+  "variantId": "domres_hmi_obj_361_shield",
+  "hullId": "domres_hmi_obj_361",
+  "displayName": "Shielded",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 13,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "frontshield",
+    "stabilizedshieldemitter",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0018": "locust"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "sabot",
+        "WS0004": "sabot",
+        "WS0007": "sabotpod",
+        "WS0008": "sabotpod",
+        "WS0009": "sabot",
+        "WS0010": "sabot",
+        "WS0011": "sabot",
+        "WS0012": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0014": "mark9",
+        "WS0015": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "shredder",
+        "WS0006": "shredder",
+        "WS0013": "dualflak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "lightdualmg",
+        "WS0002": "lightdualmg",
+        "WS0016": "lightmg",
+        "WS0017": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

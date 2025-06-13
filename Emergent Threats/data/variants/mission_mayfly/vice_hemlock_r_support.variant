@@ -1,0 +1,40 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 4,
+    "goalVariant": true,
+    "hullId": "vice_hemlock_rem",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_hemlock_r_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "vice_ionstreamer"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "vice_warp_torpedo_pod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pdburst",
+                "WS 002": "pdburst"
+            }
+        }
+    ],
+    "wings": [
+        "vice_nimbus_wing",
+        "vice_nimbus_wing",
+        "vice_nimbus_wing",
+        "vice_nimbus_wing"
+    ]
+}

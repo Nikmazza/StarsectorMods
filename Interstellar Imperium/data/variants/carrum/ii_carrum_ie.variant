@@ -1,7 +1,7 @@
 {
     "displayName": "Imperial Elite",
-    "fluxCapacitors": 0,
-    "fluxVents": 0,
+    "fluxCapacitors": 1,
+    "fluxVents": 1,
     "hullId": "ii_carrum",
     "hullMods": [
         "ii_elite_package",

@@ -1,0 +1,41 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 0,
+    "fluxVents": 4,
+    "goalVariant": true,
+    "hullId": "howler_tw",
+    "hullMods": [
+        "ix_dawnstar_controller",
+        "advancedoptics",
+        "extendedshieldemitter",
+        "frontemitter",
+        "ix_dawnstar_neutron",
+        "ix_dawnstar_neutron_handler"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "howler_tw_escort",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "dawnstar_lcpb_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "spatial_charge_launcher_ix",
+                "WS 005": "spatial_charge_launcher_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "daythorn_mapb_ix",
+                "WS 003": "daythorn_mapb_ix"
+            }
+        }
+    ]
+}

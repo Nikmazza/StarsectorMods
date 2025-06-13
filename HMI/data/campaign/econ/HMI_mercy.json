@@ -1,32 +1,7 @@
 {
     "starSystem":"HMI_mercy",
     "markets":[
-	
-        {
-            "entities":["hmi_nuriel"],
-            "faction":"luddic_path",
-            "size":3,
-            "startingConditions":[
-				"hmi_eva_majority",
-				"outpost",
-				"hot",
-				"toxic_atmosphere",
-				"uninhabitable",
-				"population_3",
-				"ore_moderate",
-				"rare_ore_sparse",
-				"organics_trace",
-            ],
-			"industries":[
-				"population",
-				"mining",
-				"grounddefenses",
-				"orbitalstation_high",
-				"spaceport",
-			],
-        },	
-	
-	
+
         {
             "entities":["hmi_samiel"],
             "faction":"HMI",
@@ -50,11 +25,11 @@
         },
         {
             "entities":["path_soul"],
-            "faction":"luddic_path",
+            "faction":"luddic_church",
             "size":5,
             "startingConditions":[
-				"hmi_eva_majority",
-				"cottage_industry",
+				"luddic_majority",
+				"hot",
 				"habitable",
 				"jungle",
 				"population_5",
@@ -64,11 +39,10 @@
 			"industries":[
 				"population",
 				"farming",
-				"heavyindustry",
-				"highcommand",
+				"militarybase",
+				"lightindustry",
 				"battlestation_high",
 				"waystation",
-				"HMI_soul",
 				"megaport",
 			],
         },
@@ -78,9 +52,7 @@
             "faction":"luddic_path",
             "size":3,
             "startingConditions":[
-				"hmi_eva_majority",
-				"cottage_industry",
-				"very_cold",
+				"luddic_majority",
 				"population_3",
 				"volatiles_abundant",
             ],

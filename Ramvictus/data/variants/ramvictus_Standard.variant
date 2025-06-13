@@ -1,0 +1,45 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "ramvictus",
+    "hullMods": [
+        "missleracks",
+        "reinforcedhull",
+        "eccm",
+        "autorepair",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "ramvictus_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "hammerrack",
+                "WS 007": "hammerrack"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "hammerrack",
+                "WS 008": "hammerrack"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "hammerrack",
+                "WS 005": "hammerrack",
+                "WS 006": "hammerrack",
+                "WS 026": "hammerrack"
+            }
+        }
+    ]
+}

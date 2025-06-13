@@ -1,0 +1,65 @@
+{
+    "displayName": "Experimental",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "vice_radiant_hvb",
+    "hullMods": [
+        "blast_doors",
+        "heavyarmor",
+        "targetingunit",
+        "reinforcedhull",
+        "fluxbreakers",
+        "shield_shunt",
+		"vice_mission_deloy_diamond",
+        "vice_adaptive_entropy_arrester"
+    ],
+    "permaMods": ["vice_mission_deloy_diamond"],
+    "sMods": [],
+    "variantId": "vice_radiant_ex_hvb",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "vice_fermion_decoupler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vice_heavy_maser",
+                "WS 004": "vice_heavy_maser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "vice_x-ray_pulse",
+                "WS 001": "vice_x-ray_pulse"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "gravitonbeam",
+                "WS 006": "gravitonbeam",
+                "WS 007": "gravitonbeam",
+                "WS 008": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "pdburst",
+                "WS 012": "pdburst",
+                "WS 013": "pdburst",
+                "WS 014": "pdburst",
+                "WS 015": "pdburst",
+                "WS 016": "pdburst"
+            }
+        }
+    ]
+}

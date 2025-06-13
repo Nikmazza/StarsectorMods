@@ -25,8 +25,8 @@ public class ASF_SalmsonOnHitEffect implements OnHitEffectPlugin {
 		
         float blastDamage = projectile.getDamageAmount()*0.5f;
 		DamagingExplosionSpec blast = new DamagingExplosionSpec(0.2f,
-                65f,
-                35f,
+                100f, //65
+                55f, //35
                 blastDamage,
                 blastDamage/2f,
                 CollisionClass.PROJECTILE_FF,
@@ -46,17 +46,31 @@ public class ASF_SalmsonOnHitEffect implements OnHitEffectPlugin {
 		}
         
         engine.spawnDamagingExplosion(blast,projectile.getSource(),point,false);
-        engine.spawnExplosion(point, fxVel, COLOR_X, 65f, 0.4f);
-        
-        for (int i=0; i < 7; i++) {
-            Vector2f randomVel = MathUtils.getRandomPointOnCircumference(fxVel, MathUtils.getRandomNumberInRange(31f, 53f));
+        engine.spawnExplosion(point, fxVel, COLOR_X, 95f, 0.4f);
+		
+        for (int i=0; i < 9; i++) {
+            Vector2f randomVel = MathUtils.getRandomPointOnCircumference(fxVel, MathUtils.getRandomNumberInRange(31f, 55f));
             
             Global.getCombatEngine().addSmoothParticle(point,
                 randomVel,
-                MathUtils.getRandomNumberInRange(12f, 19f), //size
+                MathUtils.getRandomNumberInRange(7f, 11f), //size
                 1.0f, //brightness
                 MathUtils.getRandomNumberInRange(0.4f, 0.5f), //duration
                 COLOR_P);
+        }
+        
+        float nebAngle = MathUtils.getRandomNumberInRange(0f, 120f);
+        for (int i=0; i < 3; i++) {
+        	nebAngle += MathUtils.getRandomNumberInRange(115f, 125f);
+        	
+        	engine.addNebulaParticle(point,
+    				MathUtils.getPointOnCircumference(fxVel, 39f, nebAngle), //vel
+    				MathUtils.getRandomNumberInRange(16f, 21f), //size
+    				1.7f, //endSizeMult
+    				0f, //rampUpFraction
+    				0.45f, //fullBrightnessFraction
+    				MathUtils.getRandomNumberInRange(0.4f, 0.6f), //dur
+    				COLOR_X);
         }
 	}
 }

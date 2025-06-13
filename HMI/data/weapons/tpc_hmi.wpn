@@ -3,6 +3,7 @@
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"LARGE",
+	"mountTypeOverride": "HYBRID",
 	"turretSprite":"graphics/weapons/tpc_torn_turret_base.png",
 	"turretGlowSprite":"graphics/weapons/tpc_torn_turret_glow.png",
 	"hardpointSprite":"graphics/weapons/tpc_torn_hardpoint_base.png",

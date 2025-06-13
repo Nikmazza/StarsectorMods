@@ -1,0 +1,50 @@
+{
+  "hullName": "Laser Bit",
+  "hullId": "csp_MidlineMechDrone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/Gun drone 2.png",
+  "style": "MIDLINE",
+  "height": 44,
+  "width": 18,
+  "center": [9, 22],
+  "collisionRadius": 25.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 24.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "fluxbreakers"
+  ],
+  "builtInWeapons": {
+    "WS0001": "pulselaser"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": 0,
+      "locations": [-6, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-22, -0],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -20, -9,
+    22, -4,
+    20, -0,
+    22, 4,
+    -20, 9,
+    -22, 0.5
+  ]
+}

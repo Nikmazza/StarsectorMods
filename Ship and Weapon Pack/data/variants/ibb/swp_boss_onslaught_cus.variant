@@ -1,6 +1,6 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 42,
+    "fluxCapacitors": 39,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "swp_boss_onslaught",
@@ -12,7 +12,8 @@
         "auxiliarythrusters",
         "missleracks",
         "fluxdistributor",
-        "hardenedshieldemitter"
+        "hardenedshieldemitter",
+        "armoredweapons"
     ],
     "permaMods": [
         "targetingunit",

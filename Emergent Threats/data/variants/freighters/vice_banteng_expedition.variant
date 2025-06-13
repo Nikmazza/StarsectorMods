@@ -1,0 +1,21 @@
+{
+    "displayName": "Expedition",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "goalVariant": true,
+    "hullId": "vice_banteng",
+    "hullMods": [
+        "expanded_cargo_holds",
+        "extendedshieldemitter",
+        "frontemitter",
+        "surveying_equipment"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_banteng_expedition",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS 001": "heavyburst"}
+    }]
+}

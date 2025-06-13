@@ -1,0 +1,60 @@
+{
+    "displayName": "Pirate",
+    "fluxCapacitors": 7,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "TADA_gunwall_pirate",
+    "hullMods": [
+        "eccm",
+        "magazines",
+        "missleracks",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_gunwall_pirate_pirate",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "TADA_LRA",
+                "WS0004": "TADA_LRA",
+                "WS0005": "TADA_LRA",
+                "WS0001": "TADA_LRA",
+                "WS0003": "TADA_LRA",
+                "WS0002": "TADA_LRA",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0008": "annihilatorpod",
+                "WS0009": "annihilatorpod",
+                "WS0007": "annihilatorpod",
+                "WS0010": "annihilatorpod",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0020": "vulcan",
+                "WS0021": "vulcan",
+                "WS0022": "vulcan",
+                "WS0019": "vulcan",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "pdlaser",
+                "WS0016": "pdlaser",
+                "WS0015": "pdlaser",
+                "WS0011": "pdlaser",
+            }
+        }
+    ],
+    "wings": ["TADA_firespitter_wing"]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "csp_squallburst",
+  "specClass": "projectile",
+  "projectileSpecId": "csp_squall_burst",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/Cetan Squall Burst.png",
+  "hardpointSprite": "graphics/weapons/Cetan Squall Burst.png",
+  "turretOffsets": [
+    35.5,
+    4,
+    35.5,
+    -1,
+    35.5,
+    -5.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    56.5,
+    4,
+    56.5,
+    -1,
+    56.5,
+    -5.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "NONE",
+  "fireSoundTwo": "squall_fire"
+}

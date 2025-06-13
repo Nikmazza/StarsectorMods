@@ -15,6 +15,7 @@
     "hmi_linkedhull",
     "reduced_explosion",
     "targetingunit",
+    "rapidrepaircheck",
     "always_detaches",
     "safetyoverrides"
   ],

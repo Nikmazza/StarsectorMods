@@ -1,0 +1,50 @@
+{
+  "variantId": "csp_luster_assault",
+  "hullId": "csp_luster",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pdburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "csp_lusterhead"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "spark_wing"
+  ]
+}

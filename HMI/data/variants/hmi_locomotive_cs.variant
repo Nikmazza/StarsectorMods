@@ -80,7 +80,7 @@
       "WS0029": "hmi_locomotive_gun_right_cs"
     },
     {
-      "WS0030": "hmi_locomotive_rear_std"
+      "WS0030": "hmi_locomotive_rear_cs"
     },
     {
       "WS0025": "hmi_locomotive_base_variant"

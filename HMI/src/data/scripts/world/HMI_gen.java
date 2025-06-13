@@ -19,10 +19,10 @@ import java.util.List;
     @Override
     public void generate(SectorAPI sector) {
         new HMI_mercy().generate(sector);
-        new HMI_hazard().generate(sector);
         new HMI_obsidian().generate(sector);
         new HMI_kamikaze().generate(sector);
         new HMI_opuntia().generate(sector);
+        new HMI_hazard().generate(sector);
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("HMI");
 //    }
 //    
@@ -32,12 +32,7 @@ import java.util.List;
         FactionAPI mess = sector.getFaction("mess");
         FactionAPI mess_remnant = sector.getFaction("mess_remnant");
         FactionAPI hmi_nightmare = sector.getFaction("hmi_nightmare");
-        FactionAPI domres = sector.getFaction("domres");
-
-        FactionAPI hmi_hitech = sector.getFaction("hmi_obs_hitech");
-        FactionAPI hmi_lowtech = sector.getFaction("hmi_obs_lowtech");
-        FactionAPI hmi_midtech = sector.getFaction("hmi_obs_midtech");
-        FactionAPI hmi_luddtech = sector.getFaction("hmi_obs_luddtech");
+		FactionAPI legio = sector.getFaction("tahlan_legioinfernalis");
 
         FactionAPI player = sector.getFaction(Factions.PLAYER);
         FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
@@ -77,11 +72,6 @@ import java.util.List;
         List<FactionAPI> allFactions = sector.getAllFactions();
         for (FactionAPI curFaction : allFactions) {
 
-            if (curFaction == domres || curFaction.isNeutralFaction()) {
-                continue;
-            }
-            domres.setRelationship(curFaction.getId(), RepLevel.VENGEFUL);
-
             if (curFaction == mess || curFaction.isNeutralFaction()) {
                 continue;
             }
@@ -97,35 +87,10 @@ import java.util.List;
             }
             hmi_nightmare.setRelationship(curFaction.getId(), RepLevel.VENGEFUL);
 
-            if (curFaction == hmi_hitech || curFaction.isNeutralFaction())
-            {
-                continue;
-            }
-            hmi_hitech.setRelationship(curFaction.getId(), RepLevel.HOSTILE);
-
-            if (curFaction == hmi_lowtech || curFaction.isNeutralFaction())
-            {
-                continue;
-            }
-            hmi_lowtech.setRelationship(curFaction.getId(), RepLevel.HOSTILE);
-
-            if (curFaction == hmi_midtech || curFaction.isNeutralFaction())
-            {
-                continue;
-            }
-            hmi_midtech.setRelationship(curFaction.getId(), RepLevel.HOSTILE);
-
-            if (curFaction == hmi_luddtech || curFaction.isNeutralFaction())
-            {
-                continue;
-            }
-            hmi_luddtech.setRelationship(curFaction.getId(), RepLevel.HOSTILE);
         }
 
-        hmi_hitech.setRelationship(pirates.getId(), RepLevel.FRIENDLY);
-        hmi_lowtech.setRelationship(pirates.getId(), RepLevel.FRIENDLY);
-        hmi_midtech.setRelationship(pirates.getId(), RepLevel.FRIENDLY);
-        hmi_luddtech.setRelationship(path.getId(), RepLevel.FRIENDLY);
+		mess.setRelationship("tahlan_legioinfernalis", RepLevel.HOSTILE);
+		mess_remnant.setRelationship("tahlan_legioinfernalis", RepLevel.HOSTILE);
 
     }
 }

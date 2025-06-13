@@ -1,0 +1,65 @@
+{
+  "variantId": "kazeron_eagle_league_elite",
+  "hullId": "kazeron_eagle_league",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 26,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "heavyac",
+        "WS 008": "heavyac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "gazer",
+        "WS 002": "gazer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 013": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "gravitonbeam",
+        "WS 006": "gravitonbeam",
+        "WS 009": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "lrpdlaser",
+        "WS 004": "lrpdlaser",
+        "WS 010": "pdburst",
+        "WS 011": "lrpdlaser",
+        "WS 012": "pdburst"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

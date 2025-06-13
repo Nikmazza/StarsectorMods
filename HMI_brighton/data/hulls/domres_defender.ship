@@ -1,0 +1,146 @@
+{
+  "hullName": "Defender (DomRes)",
+  "hullId": "domres_defender",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/domain_resurgent/hmidr_defender.png",
+  "style": "LOW_TECH",
+  "height": 64,
+  "width": 80,
+  "center": [40, 31],
+  "collisionRadius": 52.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 50,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "armoredweapons",
+    "rugged"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 120,
+      "locations": [-17, 29]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 45,
+      "locations": [21, 24]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -45,
+      "locations": [21, -22]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 240,
+      "locations": [-17, -29]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 105,
+      "locations": [8, 23]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 255,
+      "locations": [8, -20]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 170,
+      "locations": [-19, -2]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": -10,
+      "locations": [18, 8]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-29.5, 15],
+      "length": 40,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 55,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-29, -15],
+      "length": 40,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 55,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-25, 6.5],
+      "length": 24,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-25, -6.5],
+      "length": 24,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    30.5, 31.5,
+    31, 14.5,
+    15.5, 8.5,
+    15, -6,
+    30.5, -14,
+    30, -31,
+    13.5, -33,
+    1.5, -21.5,
+    -10.5, -38,
+    -23.5, -38.5,
+    -31, -10.5,
+    -19, 2,
+    -30.5, 14,
+    -26.5, 39.5,
+    -10, 39.5,
+    1.5, 23.5,
+    14, 33
+  ]
+}

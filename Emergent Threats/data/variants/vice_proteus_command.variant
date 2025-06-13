@@ -1,13 +1,13 @@
 {
     "displayName": "Command",
-    "fluxCapacitors": 34,
+    "fluxCapacitors": 31,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_proteus",
     "hullMods": [
         "missleracks",
         "hardenedshieldemitter",
-        "targetingunit"
+        "vice_unified_targeting_core"
     ],
     "permaMods": [],
     "sMods": [],
@@ -45,7 +45,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 003": "ionbeam",
-                "WS 006": "gravitonbeam"
+                "WS 006": "ionbeam"
             }
         },
         {
@@ -60,9 +60,9 @@
         }
     ],
     "wings": [
-        "gladius_wing",
-        "claw_wing",
-        "claw_wing",
-        "thunder_wing"
+        "thunder_wing",
+        "thunder_wing",
+        "thunder_wing",
+        "vice_kite_dem_wing"
     ]
 }

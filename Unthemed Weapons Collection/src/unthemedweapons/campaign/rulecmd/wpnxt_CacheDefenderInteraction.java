@@ -85,8 +85,7 @@ public class wpnxt_CacheDefenderInteraction extends BaseCommandPlugin {
 
                 //Global.getSector().getCampaignUI().clearMessages();
 
-                if (plugin.getContext() instanceof FleetEncounterContext) {
-                    FleetEncounterContext context = (FleetEncounterContext) plugin.getContext();
+                if (plugin.getContext() instanceof FleetEncounterContext context) {
                     if (context.didPlayerWinEncounterOutright()) {
 
                         SalvageGenFromSeed.SDMParams p = new SalvageGenFromSeed.SDMParams();
@@ -147,8 +146,8 @@ public class wpnxt_CacheDefenderInteraction extends BaseCommandPlugin {
 
                 float playerContribMult = context.computePlayerContribFraction();
 
-                List<SalvageEntityGenDataSpec.DropData> dropRandom = new ArrayList<SalvageEntityGenDataSpec.DropData>();
-                List<SalvageEntityGenDataSpec.DropData> dropValue = new ArrayList<SalvageEntityGenDataSpec.DropData>();
+                List<SalvageEntityGenDataSpec.DropData> dropRandom = new ArrayList<>();
+                List<SalvageEntityGenDataSpec.DropData> dropValue = new ArrayList<>();
 
                 float valueMultFleet = Global.getSector().getPlayerFleet().getStats().getDynamic().getValue(Stats.BATTLE_SALVAGE_MULT_FLEET);
                 float valueModShips = context.getSalvageValueModPlayerShips();

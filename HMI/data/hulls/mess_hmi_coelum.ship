@@ -13,12 +13,14 @@
   "viewOffset": 0,
   "builtInMods": [
     "automated",
+    "hmi_remmesscore",
+    "hmi_mess_visuals",
     "hmi_mess_spawn"
   ],
   "builtInWings": [
     "scandunt_mess_wing",
     "drone_feeder_wing",
-    "drone_feeder_wing"
+    "drone_feeder_heavy_wing"
   ],
   "weaponSlots": [
     {
@@ -45,7 +47,7 @@
     {
       "id": "WS0005",
       "size": "MEDIUM",
-      "type": "SYNERGY",
+      "type": "UNIVERSAL",
       "mount": "TURRET",
       "arc": 104,
       "angle": 0,
@@ -54,7 +56,7 @@
     {
       "id": "WS0006",
       "size": "MEDIUM",
-      "type": "SYNERGY",
+      "type": "UNIVERSAL",
       "mount": "TURRET",
       "arc": 104,
       "angle": -0,
@@ -81,7 +83,7 @@
     {
       "id": "WS0009",
       "size": "MEDIUM",
-      "type": "HYBRID",
+      "type": "UNIVERSAL",
       "mount": "TURRET",
       "arc": 119,
       "angle": 24.5,
@@ -90,7 +92,7 @@
     {
       "id": "WS0010",
       "size": "MEDIUM",
-      "type": "HYBRID",
+      "type": "UNIVERSAL",
       "mount": "TURRET",
       "arc": 119,
       "angle": -24.5,
@@ -117,7 +119,7 @@
     {
       "id": "WS0013",
       "size": "LARGE",
-      "type": "HYBRID",
+      "type": "UNIVERSAL",
       "mount": "TURRET",
       "arc": 136,
       "angle": 0,

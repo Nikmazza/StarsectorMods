@@ -44,6 +44,10 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
             }
         }
 
+        if (!engine.getCustomData().containsKey(DATA_KEY)) {
+            engine.getCustomData().put(DATA_KEY, new LocalData());
+        }
+
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
         final Map<ShipAPI, StandardLight> lights = localData.lights;
 
@@ -336,7 +340,6 @@ public class SWP_SystemLightInjector extends BaseEveryFrameCombatPlugin {
     @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
-        engine.getCustomData().put(DATA_KEY, new LocalData());
     }
 
     private static final class LocalData {

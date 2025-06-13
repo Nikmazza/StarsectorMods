@@ -2,7 +2,7 @@
     "displayName": "Shielded",
     "fluxCapacitors": 9,
     "fluxVents": 10,
-    "goalVariant": false,
+    "goalVariant": true,
     "hullId": "cerberus_luddic",
     "hullMods": [
         "frontshield",

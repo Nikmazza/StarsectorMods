@@ -1,0 +1,127 @@
+{
+  "hullName": "Mako(LG)",
+  "hullId": "csp_makoLG",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/csp_makoLG.png",
+  "style": "MIDLINE",
+  "height": 98,
+  "width": 82,
+  "center": [41, 47],
+  "collisionRadius": 74,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 71,
+  "viewOffset": 0,
+  "builtInMods": [
+    "csp_multi_layered_shielding",
+    "solar_shielding",
+    "andrada_mods"
+  ],
+  "builtInWeapons": {
+    "WS0002": "csp_phasecl",
+    "WS0003": "csp_phasecl"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [23, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [20, 33]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [20, -33]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 20,
+      "angle": 0,
+      "locations": [43, 17]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 20,
+      "angle": -0,
+      "locations": [43, -17]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -141.5,
+      "locations": [-11.5, -34.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 141.5,
+      "locations": [-11.5, 34.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-46.5, 17],
+      "length": 34,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-46.5, -17],
+      "length": 34,
+      "width": 19,
+      "angle": -180,
+      "contrailSize": 19,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    21, -37.5,
+    21, -26.5,
+    41.5, -24.5,
+    43, -15.5,
+    21.5, -11.5,
+    28.5, -0,
+    21.5, 11.5,
+    43, 15.5,
+    41.5, 24.5,
+    21, 26.5,
+    21, 37.5,
+    -43, 37,
+    -37, 24.5,
+    -46.5, 16,
+    -36, 8,
+    -36, -8,
+    -46.5, -16,
+    -37, -24.5,
+    -43, -37
+  ]
+}

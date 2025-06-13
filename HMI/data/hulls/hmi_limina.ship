@@ -16,7 +16,7 @@
     "hmi_limina_reconstruction",
   ],
   "builtInWings": [
-    "scandunt_wing"
+    "scandunt_mess_wing"
   ],
   "weaponSlots": [
     {

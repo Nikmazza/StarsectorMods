@@ -145,7 +145,7 @@ public class HMITimeDilatorStats extends BaseShipSystemScript {
 		} else {
 			if (target == null || target.getOwner() == ship.getOwner()) {
 				if (player) {
-					target = Misc.findClosestShipEnemyOf(ship, ship.getMouseTarget(), HullSize.FIGHTER, range, true);
+					target = Misc.findClosestShipEnemyOf(ship, ship.getMouseTarget(), HullSize.FRIGATE, range, true);
 				} else {
 					Object test = ship.getAIFlags().getCustom(AIFlags.MANEUVER_TARGET);
 					if (test instanceof ShipAPI) {
@@ -157,7 +157,7 @@ public class HMITimeDilatorStats extends BaseShipSystemScript {
 				}
 			}
 			if (target == null) {
-				target = Misc.findClosestShipEnemyOf(ship, ship.getLocation(), HullSize.FIGHTER, range, true);
+				target = Misc.findClosestShipEnemyOf(ship, ship.getLocation(), HullSize.FRIGATE, range, true);
 			}
 		}
 

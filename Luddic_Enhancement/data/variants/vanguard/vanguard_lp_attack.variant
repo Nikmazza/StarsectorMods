@@ -2,7 +2,7 @@
   "variantId": "vanguard_lp_attack",
   "hullId": "vanguard_lp",
   "displayName": "Martyr",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 0,
   "fluxVents": 4,
   "quality": 1,

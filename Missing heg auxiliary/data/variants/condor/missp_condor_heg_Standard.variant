@@ -3,13 +3,11 @@
   "hullId": "missp_condor_heg",
   "displayName": "Standard",
   "goalVariant": false,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 5,
   "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "recovery_shuttles",
-    "pointdefenseai"
   ],
   "weaponGroups": [
     {

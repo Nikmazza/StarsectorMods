@@ -1,0 +1,130 @@
+id,hullIds,name,paintjobFamily,spriteId,unlockedAutomatically,tags,unlockConditions,description
+#Carnelian,,,,,,,,
+nes_carnelian_agent,nes_carnelian,Agent,carnelian_agent,graphics/ships/nes_carnelian_agent.png,true,,,"Shaken, Not Stirred"
+nes_carnelian_redhand,nes_carnelian,Redhand,carnelian_redhand,graphics/ships/nes_carnelian_redhand.png,true,,,We Know
+nes_carnelian_reef,nes_carnelian,Reef,carnelian_reef,graphics/ships/nes_carnelian_reef.png,true,,,Coral
+nes_carnelian_toxic,nes_carnelian,Toxic,carnelian_toxic,graphics/ships/nes_carnelian_toxic.png,true,,,Venomous
+nes_carnelian_turquoise,nes_carnelian,Turquoise,carnelian_turquoise,graphics/ships/nes_carnelian_turquoise.png,true,,,Retro
+nes_carnelian_vintage,nes_carnelian,Vintage,carnelian_vintage,graphics/ships/nes_carnelian_vintage.png,true,,,Timeless
+nes_carnelian_moonbunny,nes_carnelian,Moon Bunny,carnelian_moonbunny,graphics/ships/nes_carnelian_moonbunny.png,true,,,Dark Side
+,,,,,,,,
+#Carnelian Wings,,,,,,,,
+nes_drone_carnelian_attacker_agent,nes_drone_carnelian_attacker,Agent,carnelian_agent,graphics/ships/drones/nes_drone_carnelian_attacker_agent.png,true,,,
+nes_drone_carnelian_attacker_redhand,nes_drone_carnelian_attacker,Redhand,carnelian_redhand,graphics/ships/drones/nes_drone_carnelian_attacker_redhand.png,true,,,
+nes_drone_carnelian_attacker_reef,nes_drone_carnelian_attacker,Reef,carnelian_reef,graphics/ships/drones/nes_drone_carnelian_attacker_reef.png,true,,,
+nes_drone_carnelian_attacker_toxic,nes_drone_carnelian_attacker,Toxic,carnelian_toxic,graphics/ships/drones/nes_drone_carnelian_attacker_toxic.png,true,,,
+nes_drone_carnelian_attacker_turquoise,nes_drone_carnelian_attacker,Turquoise,carnelian_turquoise,graphics/ships/drones/nes_drone_carnelian_attacker_turquoise.png,true,,,
+nes_drone_carnelian_attacker_vintage,nes_drone_carnelian_attacker,Vintage,carnelian_vintage,graphics/ships/drones/nes_drone_carnelian_attacker_vintage.png,true,,,
+nes_drone_carnelian_attacker_moonbunny,nes_drone_carnelian_attacker,Moon Bunny,carnelian_moonbunny,graphics/ships/drones/nes_drone_carnelian_attacker_moonbunny.png,true,,,
+nes_drone_carnelian_defender_agent,nes_drone_carnelian_defender,Agent,carnelian_agent,graphics/ships/drones/nes_drone_carnelian_defender_agent.png,true,,,
+nes_drone_carnelian_defender_redhand,nes_drone_carnelian_defender,Redhand,carnelian_redhand,graphics/ships/drones/nes_drone_carnelian_defender_redhand.png,true,,,
+nes_drone_carnelian_defender_reef,nes_drone_carnelian_defender,Reef,carnelian_reef,graphics/ships/drones/nes_drone_carnelian_defender_reef.png,true,,,
+nes_drone_carnelian_defender_toxic,nes_drone_carnelian_defender,Toxic,carnelian_toxic,graphics/ships/drones/nes_drone_carnelian_defender_toxic.png,true,,,
+nes_drone_carnelian_defender_turquoise,nes_drone_carnelian_defender,Turquoise,carnelian_turquoise,graphics/ships/drones/nes_drone_carnelian_defender_turquoise.png,true,,,
+nes_drone_carnelian_defender_vintage,nes_drone_carnelian_defender,Vintage,carnelian_vintage,graphics/ships/drones/nes_drone_carnelian_defender_vintage.png,true,,,
+nes_drone_carnelian_defender_moonbunny,nes_drone_carnelian_defender,Moon Bunny,carnelian_moonbunny,graphics/ships/drones/nes_drone_carnelian_defender_moonbunny.png,true,,,
+,,,,,,,,
+#Fluorspar,,,,,,,,
+nes_fluorspar_aquamarine,nes_fluorspar,Aquamarine,,graphics/ships/nes_fluorspar_aquamarine.png,true,,,GEMLOCK System
+nes_fluorspar_amber,nes_fluorspar,Amber,,graphics/ships/nes_fluorspar_amber.png,true,,,GEMLOCK System
+nes_fluorspar_rosequartz,nes_fluorspar,Rose Quartz,,graphics/ships/nes_fluorspar_rosequartz.png,true,,,GEMLOCK System
+nes_fluorspar_cinnabar,nes_fluorspar,Cinnabar,,graphics/ships/nes_fluorspar_cinnabar.png,true,,,GEMLOCK System
+nes_fluorspar_iridescent,nes_fluorspar,Bornite,,graphics/ships/nes_fluorspar_iridescent.png,true,,,GEMLOCK System
+,,,,,,,,
+#Volt,,,,,,,,
+nes_voltaire_verdant,nes_voltaire,Verdant,,graphics/ships/nes_voltaire_verdant.png,true,,,Overgrown
+nes_voltaire_hazard,nes_voltaire,Hazard,,graphics/ships/nes_voltaire_hazard.png,true,,,Safety First
+nes_voltaire_crimson,nes_voltaire,Crimson,,graphics/ships/nes_voltaire_crimson.png,true,,,King
+nes_voltaire_commando,nes_voltaire,Commando,,graphics/ships/nes_voltaire_commando.png,true,,,Urban
+nes_voltaire_sparkle,nes_voltaire,Sparkle,,graphics/ships/nes_voltaire_sparkle.png,true,,,And Shine
+nes_voltaire_dusk,nes_voltaire,Dusk,,graphics/ships/nes_voltaire_dusk.png,true,,,Till Dawn
+,,,,,,,,
+#Hammerfall,,,,,,,,
+nes_hammerfall_surveyor,nes_hammerfall,Surveyor,,graphics/ships/nes_hammerfall_surveyor.png,true,,,Bold Explorer
+nes_hammerfall_infiltrator,nes_hammerfall,Infiltrator,,graphics/ships/nes_hammerfall_infiltrator.png,true,,,Great Pretender
+nes_hammerfall_moonbunny,nes_hammerfall,Moon Bunny,,graphics/ships/nes_hammerfall_moonbunny.png,true,,,Dark Side
+,,,,,,,,
+#Hermitaur,,,,,,,,
+nes_hermitaur_luddic,nes_hermitaur,Luddic,,graphics/ships/nes_hermitaur_luddic.png,true,,,True Believer
+nes_hermitaur_riftborn,nes_hermitaur,Riftborn,,graphics/ships/nes_hermitaur_riftborn.png,true,,,Whispers of the Void
+nes_hermitaur_albion,nes_hermitaur,Albion,,graphics/ships/nes_hermitaur_albion.png,true,,,Old Navy
+nes_hermitaur_aquarius,nes_hermitaur,Aquarius,,graphics/ships/nes_hermitaur_aquarius.png,true,,,Big Catch
+,,,,,,,,
+#Hampter,,,,,,,,
+nes_hampter_ivory,nes_hampter,Ivory,,graphics/ships/nes_hampter_ivory.png,true,,,Bad to the Bone
+nes_hampter_starling,nes_hampter,Starling,,graphics/ships/nes_hampter_starling.png,true,,,Early Bird
+nes_hampter_albion,nes_hampter,Albion,,graphics/ships/nes_hampter_albion.png,true,,,Old Navy
+,,,,,,,,
+#crossmod stuff,,,,,,,,
+#sotf,,,,,,,,
+sotf_pledge_sparkle,sotf_pledge,Eidolon,,graphics/ships/crossmod/sotf/sotf_pledge_sparkle.png,true,,,{Care for a dance?}
+sotf_vow_sparkle,sotf_vow,Eidolon,,graphics/ships/crossmod/sotf/sotf_vow_sparkle.png,true,,,{La-la-la let's dance!}
+#rat,,,,,,,,
+rat_raphael_neontiger,rat_raphael,Neon Tiger,neon_tiger,graphics/ships/crossmod/rat/rat_raphael_neontiger.png,true,,,{Dance in the abyss}
+#seeker,,,,,,,,
+SKR_557_dune,SKR_557,Dune,,graphics/ships/crossmod/seeker/SKR_557_dune.png,true,,,by Nes
+SKR_557_path,SKR_557,Path,,graphics/ships/crossmod/seeker/SKR_557_path.png,true,,,by Nes
+,,,,,,,,
+#vanilla stuff,,,,,,,,
+#ivory bastion,,,,,,,,
+nes_champion_ivory,champion,Ivory Bastion,,graphics/ships/ivory/champion_ivory.png,true,,,by Nes
+nes_drover_ivory,drover,Ivory Bastion,,graphics/ships/ivory/drover_ivory.png,true,,,by Nes
+nes_eagle_ivory,eagle,Ivory Bastion,,graphics/ships/ivory/eagle_ivory.png,true,,,by Nes
+nes_falcon_ivory,falcon,Ivory Bastion,,graphics/ships/ivory/falcon_ivory.png,true,,,by Nes
+nes_gryphon_ivory,gryphon,Ivory Bastion,,graphics/ships/ivory/gryphon_ivory.png,true,,,by Nes
+nes_hammerhead_ivory,hammerhead,Ivory Bastion,,graphics/ships/ivory/hammerhead_ivory.png,true,,,by Nes
+nes_heron_ivory,heron,Ivory Bastion,,graphics/ships/ivory/heron_ivory.png,true,,,by Nes
+nes_sunder_ivory,sunder,Ivory Bastion,,graphics/ships/ivory/sunder_ivory.png,true,,,by Nes
+,,,,,,,,
+#Moon Bunny,,,,,true,,,by Nes
+nes_brawler_moonbunny,brawler,Moon Bunny,,graphics/ships/moonbunny/brawler_moonbunny.png,true,,,by Nes
+nes_centurion_moonbunny,centurion,Moon Bunny,,graphics/ships/moonbunny/centurion_moonbunny.png,true,,,by Nes
+nes_champion_moonbunny,champion,Moon Bunny,,graphics/ships/moonbunny/champion_moonbunny.png,true,,,by Nes
+nes_conquest_moonbunny,conquest,Moon Bunny,,graphics/ships/moonbunny/conquest_moonbunny.png,true,,,by Nes
+nes_drover_moonbunny,drover,Moon Bunny,,graphics/ships/moonbunny/drover_moonbunny.png,true,,,by Nes
+nes_eagle_moonbunny,eagle,Moon Bunny,,graphics/ships/moonbunny/eagle_moonbunny.png,true,,,by Nes
+nes_falcon_moonbunny,falcon,Moon Bunny,,graphics/ships/moonbunny/falcon_moonbunny.png,true,,,by Nes
+nes_gryphon_moonbunny,gryphon,Moon Bunny,,graphics/ships/moonbunny/gryphon_moonbunny.png,true,,,by Nes
+nes_hammerhead_moonbunny,hammerhead,Moon Bunny,,graphics/ships/moonbunny/hammerhead_moonbunny.png,true,,,by Nes
+nes_heron_moonbunny,heron,Moon Bunny,,graphics/ships/moonbunny/heron_moonbunny.png,true,,,by Nes
+nes_pegasus_moonbunny,pegasus,Moon Bunny,,graphics/ships/moonbunny/pegasus_moonbunny.png,true,,,by Nes
+nes_sunder_moonbunny,sunder,Moon Bunny,,graphics/ships/moonbunny/sunder_moonbunny.png,true,,,by Nes
+nes_vigilance_moonbunny,vigilance,Moon Bunny,,graphics/ships/moonbunny/vigilance_moonbunny.png,true,,,by Nes
+,,,,,,,,
+#Automata,,,,,,,,
+nes_paragon_automata,paragon,Automata,,graphics/ships/automata/paragon_automata.png,true,,,by Nes
+nes_astral_automata,astral,Automata,,graphics/ships/automata/astral_automata.png,true,,,by Nes
+nes_aurora_automata,aurora,Automata,,graphics/ships/automata/aurora_automata.png,true,,,by Nes
+nes_fury_automata,fury,Automata,,graphics/ships/automata/fury_automata.png,true,,,by Nes
+nes_shrike_automata,shrike,Automata,,graphics/ships/automata/shrike_base_automata.png,true,,,by Nes
+nes_medusa_automata,medusa,Automata,,graphics/ships/automata/medusa_automata.png,true,,,by Nes
+nes_scarab_automata,scarab,Automata,,graphics/ships/automata/scarab_automata.png,true,,,by Nes
+nes_hyperion_automata,hyperion,Automata,,graphics/ships/automata/hyperion2_automata.png,true,,,by Nes
+nes_omen_automata,omen,Automata,,graphics/ships/automata/omen_automata.png,true,,,by Nes
+nes_anubis_automata,anubis,Automata,,graphics/ships/automata/anubis_base_automata.png,true,,,by Nes
+,,,,,,,,
+#Ravenguard,,,,,,,,
+nes_paragon_ravenguard,paragon,Ravenguard,,graphics/ships/ravenguard/paragon_ravenguard.png,true,,,by Nes
+nes_astral_ravenguard,astral,Ravenguard,,graphics/ships/ravenguard/astral_ravenguard.png,true,,,by Nes
+nes_aurora_ravenguard,aurora,Ravenguard,,graphics/ships/ravenguard/aurora_ravenguard.png,true,,,by Nes
+nes_fury_ravenguard,fury,Ravenguard,,graphics/ships/ravenguard/fury_ravenguard.png,true,,,by Nes
+nes_shrike_ravenguard,shrike,Ravenguard,,graphics/ships/ravenguard/shrike_base_ravenguard.png,true,,,by Nes
+nes_medusa_ravenguard,medusa,Ravenguard,,graphics/ships/ravenguard/medusa_ravenguard.png,true,,,by Nes
+nes_scarab_ravenguard,scarab,Ravenguard,,graphics/ships/ravenguard/scarab_ravenguard.png,true,,,by Nes
+nes_hyperion_ravenguard,hyperion,Ravenguard,,graphics/ships/ravenguard/hyperion2_ravenguard.png,true,,,by Nes
+nes_omen_ravenguard,omen,Ravenguard,,graphics/ships/ravenguard/omen_ravenguard.png,true,,,by Nes
+nes_wolf_ravenguard,wolf,Ravenguard,,graphics/ships/ravenguard/wolf_base_ravenguard.png,true,,,by Nes
+nes_anubis_ravenguard,anubis,Ravenguard,,graphics/ships/ravenguard/anubis_base_ravenguard.png,true,,,by Nes
+,,,,,,,,
+#white Fox,,,,,,,,
+nes_paragon_whitefox,paragon,White Fox,,graphics/ships/whitefox/paragon_whitefox.png,true,,,by Nes
+nes_astral_whitefox,astral,White Fox,,graphics/ships/whitefox/astral_whitefox.png,true,,,by Nes
+nes_aurora_whitefox,aurora,White Fox,,graphics/ships/whitefox/aurora_whitefox.png,true,,,by Nes
+nes_fury_whitefox,fury,White Fox,,graphics/ships/whitefox/fury_whitefox.png,true,,,by Nes
+nes_shrike_whitefox,shrike,White Fox,,graphics/ships/whitefox/shrike_base_whitefox.png,true,,,by Nes
+nes_medusa_whitefox,medusa,White Fox,,graphics/ships/whitefox/medusa_whitefox.png,true,,,by Nes
+nes_scarab_whitefox,scarab,White Fox,,graphics/ships/whitefox/scarab_whitefox.png,true,,,by Nes
+nes_hyperion_whitefox,hyperion,White Fox,,graphics/ships/whitefox/hyperion2_whitefox.png,true,,,by Nes
+nes_omen_whitefox,omen,White Fox,,graphics/ships/whitefox/omen_whitefox.png,true,,,by Nes
+nes_wolf_whitefox,wolf,White Fox,,graphics/ships/whitefox/wolf_base_whitefox.png,true,,,by Nes
+nes_anubis_whitefox,anubis,White Fox,,graphics/ships/whitefox/anubis_base_whitefox.png,true,,,by Nes

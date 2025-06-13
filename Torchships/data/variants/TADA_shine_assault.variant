@@ -1,46 +1,57 @@
 {
     "displayName": "Assault",
     "fluxCapacitors": 0,
-    "fluxVents": 17,
+    "fluxVents": 24,
     "goalVariant": true,
     "hullId": "TADA_shine",
     "hullMods": [
-        "eccm",
+        "hardenedshieldemitter",
         "missleracks",
-        "magazines",
-        "hardenedshieldemitter"
+        "targetingunit",
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "TADA_shine_assault",
     "weaponGroups": [
         {
-            "autofire": true,
-            "mode": "LINKED",
+            "autofire": false,
+            "mode": "ALTERNATING",
             "weapons": {
-                "WS0004": "ionpulser",
-                "WS0005": "ionpulser"
+                "WS0001": "typhoon",
+                "WS0003": "typhoon",
+                "WS0002": "typhoon",
             }
         },
         {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS0001": "typhoon",
-                "WS0002": "typhoon",
-                "WS0003": "typhoon"
+                "WS0006": "sabot",
+                "WS0007": "sabot",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0006": "pdlaser",
-                "WS0007": "pdlaser",
-                "WS0008": "pdlaser",
-                "WS0009": "pdlaser",
+                "WS0004": "pulselaser",
+                "WS0005": "pulselaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "ioncannon",
+                "WS0009": "ioncannon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "pdlaser",
                 "WS0010": "pdlaser",
-                "WS0011": "pdlaser"
             }
         }
     ]

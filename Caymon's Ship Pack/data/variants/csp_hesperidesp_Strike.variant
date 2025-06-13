@@ -1,0 +1,71 @@
+{
+  "variantId": "csp_hesperidesp_Strike",
+  "hullId": "csp_hesperidesp",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 27,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missile_autoloader",
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "hephag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "sabot",
+        "WS0009": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "flak",
+        "WS0002": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "mininglaser",
+        "WS0004": "mininglaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "mininglaser",
+        "WS0007": "mininglaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "talon_wing"
+  ]
+}

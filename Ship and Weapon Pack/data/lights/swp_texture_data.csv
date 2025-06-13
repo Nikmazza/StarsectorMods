@@ -32,6 +32,7 @@ swp_alastor,ship,,,material,graphics/swp/material/ships/alastor/swp_alastor_ff_m
 swp_alastor_xiv,ship,,,material,graphics/swp/material/ships/alastor/swp_alastor_ff_xiv_material.png
 swp_buffalo_luddic_path,ship,,,material,graphics/shaders/material/ships/buffalo/buffalo_luddic_path_material.png
 swp_brawler_hegemony,ship,,,material,graphics/shaders/material/ships/brawler/brawler_hegemony_material.png
+swp_centurion_xiv,ship,,,material,graphics/swp/material/ships/centurion/swp_centurion_xiv_material.png
 swp_eagle_black,ship,,,material,graphics/shaders/material/ships/eagle/eagle_black_material.png
 swp_eagle_white,ship,,,material,graphics/shaders/material/ships/eagle/eagle_white_material.png
 swp_dram_luddic_path,ship,,,material,graphics/swp/material/ships/dram/tanker_small_luddic_path_material.png
@@ -150,6 +151,7 @@ swp_alastor,ship,,1,normal,graphics/swp/normal/ships/alastor/swp_alastor_ff_norm
 swp_alastor_xiv,ship,,1,normal,graphics/swp/normal/ships/alastor/swp_alastor_ff_xiv_normal.png
 swp_buffalo_luddic_path,ship,,1,normal,graphics/shaders/normal/ships/buffalo/buffalo_luddic_path_normal.png
 swp_brawler_hegemony,ship,,1,normal,graphics/shaders/normal/ships/brawler/brawler_hegemony_normal.png
+swp_centurion_xiv,ship,,1,normal,graphics/swp/normal/ships/centurion/swp_centurion_xiv_normal.png
 swp_eagle_black,ship,,1,normal,graphics/shaders/normal/ships/eagle/eagle_black_normal.png
 swp_eagle_white,ship,,1,normal,graphics/shaders/normal/ships/eagle/eagle_white_normal.png
 swp_dram_luddic_path,ship,,1,normal,graphics/swp/normal/ships/dram/tanker_small_luddic_path_normal.png
@@ -180,7 +182,7 @@ swp_nautilus,ship,,1,normal,graphics/swp/normal/ships/swp_nautilus_ff_normal.png
 swp_hecate,ship,,1,normal,graphics/swp/normal/ships/swp_hecate_ff_normal.png
 swp_beholder,ship,,1,normal,graphics/swp/normal/ships/beholder/swp_beholder_normal.png
 swp_victory,ship,,1,normal,graphics/swp/normal/ships/swp_victory_bb_normal.png
-swp_chonos,ship,,1,normal,graphics/swp/normal/ships/chronos/swp_chronos_normal.png
+swp_chronos,ship,,1,normal,graphics/swp/normal/ships/chronos/swp_chronos_normal.png
 swp_vortex,ship,,1,normal,graphics/swp/normal/ships/swp_vortex_normal.png
 swp_shimmer,ship,,1,normal,graphics/swp/normal/ships/remnant/swp_shimmer_normal.png
 swp_wall,ship,,1,normal,graphics/swp/normal/ships/derelict/swp_wall_normal.png
@@ -268,6 +270,7 @@ swp_alastor,ship,,,surface,graphics/swp/surface/ships/alastor/swp_alastor_ff_sur
 swp_alastor_xiv,ship,,,surface,graphics/swp/surface/ships/alastor/swp_alastor_ff_xiv_surface.png
 swp_buffalo_luddic_path,ship,,,surface,graphics/shaders/surface/ships/buffalo/buffalo_luddic_path_surface.png
 swp_brawler_hegemony,ship,,,surface,graphics/shaders/surface/ships/brawler/brawler_hegemony_surface.png
+swp_centurion_xiv,ship,,,surface,graphics/swp/surface/ships/centurion/swp_centurion_xiv_surface.png
 swp_eagle_black,ship,,,surface,graphics/shaders/surface/ships/eagle/eagle_black_surface.png
 swp_eagle_white,ship,,,surface,graphics/shaders/surface/ships/eagle/eagle_white_surface.png
 swp_dram_luddic_path,ship,,,surface,graphics/swp/surface/ships/dram/tanker_small_luddic_path_surface.png
@@ -298,7 +301,7 @@ swp_nautilus,ship,,,surface,graphics/swp/surface/ships/swp_nautilus_ff_surface.p
 swp_hecate,ship,,,surface,graphics/swp/surface/ships/swp_hecate_ff_surface.png
 swp_beholder,ship,,,surface,graphics/swp/surface/ships/beholder/swp_beholder_surface.png
 swp_victory,ship,,,surface,graphics/swp/surface/ships/swp_victory_bb_surface.png
-swp_chonos,ship,,,surface,graphics/swp/surface/ships/chronos/swp_chronos_surface.png
+swp_chronos,ship,,,surface,graphics/swp/surface/ships/chronos/swp_chronos_surface.png
 swp_vortex,ship,,,surface,graphics/swp/surface/ships/swp_vortex_surface.png
 swp_shimmer,ship,,,surface,graphics/swp/surface/ships/remnant/swp_shimmer_surface.png
 swp_wall,ship,,,surface,graphics/swp/surface/ships/derelict/swp_wall_surface.png
@@ -578,6 +581,18 @@ swp_flareburst_mrm,missile,,,surface,graphics/swp/surface/missiles/swp_flareburs
 swp_redeemer_missile,missile,,,surface,graphics/swp/surface/missiles/swp_redeemer_missile_surface.png
 swp_redeemer_sub_missile,missile,,,surface,graphics/swp/surface/missiles/swp_redeemer_sub_missile_surface.png
 ,,,,,
+swp_excelsior_auxglow,turret,0,,material,graphics/swp/blank.png
 swp_excelsior_auxglow,turret,1,,material,graphics/swp/blank.png
+swp_arcade_zeroglow,turret,,,material,graphics/swp/blank.png
+swp_arcade_superzeroglow,turret,,,material,graphics/swp/blank.png
+swp_arcade_hyperzeroglow,turret,,,material,graphics/swp/blank.png
+swp_excelsior_auxglow,turret,0,1,normal,graphics/swp/blank.png
 swp_excelsior_auxglow,turret,1,1,normal,graphics/swp/blank.png
+swp_arcade_zeroglow,turret,,1,normal,graphics/swp/blank.png
+swp_arcade_superzeroglow,turret,,1,normal,graphics/swp/blank.png
+swp_arcade_hyperzeroglow,turret,,1,normal,graphics/swp/blank.png
+swp_excelsior_auxglow,turret,0,,surface,graphics/swp/blank.png
 swp_excelsior_auxglow,turret,1,,surface,graphics/swp/blank.png
+swp_arcade_zeroglow,turret,,,surface,graphics/swp/blank.png
+swp_arcade_superzeroglow,turret,,,surface,graphics/swp/blank.png
+swp_arcade_hyperzeroglow,turret,,,surface,graphics/swp/blank.png

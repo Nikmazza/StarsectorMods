@@ -27,6 +27,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -40,12 +41,12 @@ public class HMI_ChurchofEva extends BaseIndustry implements RouteFleetSpawner, 
 	
 	@Override
 	public boolean isHidden() {
-		return !market.getFactionId().equals(Factions.LUDDIC_PATH);
+		return !market.getFactionId().equals("knights_of_eva");
 	}
 	
 	@Override
 	public boolean isFunctional() {
-		return super.isFunctional() && market.getFactionId().equals(Factions.LUDDIC_PATH);
+		return super.isFunctional() && market.getFactionId().equals("knights_of_eva");
 	}
 
 	public void apply() {
@@ -60,12 +61,14 @@ public class HMI_ChurchofEva extends BaseIndustry implements RouteFleetSpawner, 
 		demand(Commodities.RARE_ORE, size-3);
 
 		supply(Commodities.SHIPS, size-3);
+		supply(Commodities.MARINES, size-3);
 		supply(Commodities.FUEL, size-3);
 		supply(Commodities.HEAVY_MACHINERY, size-3);
 
 		MemoryAPI memory = market.getMemoryWithoutUpdate();
 		Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, getModId(), true, -1);
 		Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, getModId(), true, -1);
+
 		
 		float mult = getDeficitMult(Commodities.SUPPLIES, Commodities.MARINES, Commodities.HAND_WEAPONS);
 		String extra = "";
@@ -73,10 +76,15 @@ public class HMI_ChurchofEva extends BaseIndustry implements RouteFleetSpawner, 
 			String com = getMaxDeficit(Commodities.SUPPLIES, Commodities.MARINES, Commodities.HAND_WEAPONS).one;
 			extra = " (" + getDeficitText(com).toLowerCase() + ")";
 		}
-		
+
+		market.getStats().getDynamic().getMod(Stats.PATROL_NUM_LIGHT_MOD).modifyFlat(getModId(), 5);
+		market.getStats().getDynamic().getMod(Stats.PATROL_NUM_MEDIUM_MOD).modifyFlat(getModId(), 2);
+		market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).modifyFlat(getModId(), 1);
 		float bonus = DEFENSE_BONUS_BATTERIES;
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD)
 						.modifyMult(getModId(), 1f + bonus * mult, getNameForModifier() + extra);
+
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).modifyFlat(getModId(0), 0.3f);
 
 		if (!isFunctional()) {
 			supply.clear();
@@ -87,8 +95,14 @@ public class HMI_ChurchofEva extends BaseIndustry implements RouteFleetSpawner, 
 
 	@Override
 	public void unapply() {
-		super.unapply();	
+		super.unapply();
+		market.getStats().getDynamic().getMod(Stats.PATROL_NUM_LIGHT_MOD).unmodifyFlat(getModId());
+		market.getStats().getDynamic().getMod(Stats.PATROL_NUM_MEDIUM_MOD).unmodifyFlat(getModId());
+		market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).unmodifyFlat(getModId());
+
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
+
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).unmodifyFlat(getModId(0));
 		
 		MemoryAPI memory = market.getMemoryWithoutUpdate();
 		Misc.setFlagWithReason(memory, MemFlags.MARKET_PATROL, getModId(), false, -1);
@@ -363,6 +377,15 @@ public class HMI_ChurchofEva extends BaseIndustry implements RouteFleetSpawner, 
 	public boolean showWhenUnavailable() {
 		return false;
 	}
-	
-	
+
+	@Override
+	public RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level) {
+		return level.next();
+	}
+
+	@Override
+	public RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level) {
+		return level.next();
+	}
+
 }

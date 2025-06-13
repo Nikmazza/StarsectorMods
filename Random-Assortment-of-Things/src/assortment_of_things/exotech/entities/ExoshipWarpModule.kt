@@ -37,7 +37,7 @@ class ExoshipWarpModule(var exoship: ExoshipEntity, var exoshipEntity: SectorEnt
 
     fun getMovementModule() = exoship.movement
 
-    var warpListener: (() -> Unit)? = {}
+    var warpListener: (() -> Unit) = @JvmSerializableLambda {}
 
     var playWarpSoundNextFrame = false
     var framesTilWarpSound = 10
@@ -88,6 +88,7 @@ class ExoshipWarpModule(var exoship: ExoshipEntity, var exoshipEntity: SectorEnt
         this.doNotHidePlayer = doNotHidePlayer
         this.skipPreperation = skipPreperation
         warpListener = listener
+        if (listener == null) warpListener = { }
 
         destinationSystem = starSystem
 
@@ -394,12 +395,12 @@ class ExoshipWarpModule(var exoship: ExoshipEntity, var exoshipEntity: SectorEnt
             }
 
 
-            warpListener!!()
+            if (warpListener != null) warpListener!!()
 
             doNotHidePlayer = false
             skipPreperation = false
 
-            warpListener = null
+            warpListener = {  }
 
 
         }

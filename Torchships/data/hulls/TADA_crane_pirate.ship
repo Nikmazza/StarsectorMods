@@ -38,8 +38,8 @@
     -7
   ],
   "builtInMods": [
-    "ground_support",
-    "expanded_deck_crew"
+    "advanced_ground_support",
+    "civgrade",
   ],
   "center": [
     71,

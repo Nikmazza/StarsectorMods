@@ -3,7 +3,7 @@
   "hullId": "nes_voltaire",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 17,
+  "fluxCapacitors": 18,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],

@@ -1,0 +1,255 @@
+{
+  "hullName": "Torchwood",
+  "hullId": "csp_torch",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/Remnant something2.6.3.png",
+  "style": "HIGH_TECH",
+  "height": 325,
+  "width": 384,
+  "center": [191.5, 143],
+  "collisionRadius": 223,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 214.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated"
+  ],
+  "builtInWings": [
+    "csp_luster_wing",
+    "csp_luster_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [99, -65.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [99, 64.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [132, -52.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [132, 51.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 45,
+      "locations": [79, 24.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -45,
+      "locations": [79, -25.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 180,
+      "locations": [-30, 72.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 180,
+      "locations": [-30, -73.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 45,
+      "locations": [3.5, 108.5]
+    },
+    {
+      "id": "WS0012",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -45,
+      "locations": [3.5, -109.5]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 45,
+      "locations": [30, 126.5]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -45,
+      "locations": [30, -127]
+    },
+    {
+      "id": "WS0015",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 45,
+      "locations": [4, 135.5]
+    },
+    {
+      "id": "WS0016",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -45,
+      "locations": [4, -134.5]
+    },
+    {
+      "id": "WS0017",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -41,
+      "locations": [30, -37.5]
+    },
+    {
+      "id": "WS0018",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 45,
+      "locations": [30, 36.5]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        56.5, 84,
+        -75.5, 8.5,
+        30, -8,
+        -75.5, -9.5,
+        38, 93.5,
+        37, -95,
+        54, -84,
+        29.5, 10
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-105, -66.5],
+      "length": 115,
+      "width": 39,
+      "angle": 180,
+      "contrailSize": 39,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-105, 66],
+      "length": 115,
+      "width": 39,
+      "angle": -180,
+      "contrailSize": 39,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -108, 13,
+    -130, 27.5,
+    -136, 36.5,
+    -127, 47.5,
+    -100, 47.5,
+    -107, 57.5,
+    -107, 82,
+    -133, 84.5,
+    -141.5, 115,
+    -113, 131.5,
+    -93.5, 151.5,
+    -53, 151.5,
+    -28.5, 161.5,
+    -15, 148.5,
+    33, 144.5,
+    41, 125.5,
+    76.5, 82,
+    111, 81,
+    111, 61.5,
+    137, 61.5,
+    141, 52.5,
+    138, 42.5,
+    166, 37.5,
+    177, 23.5,
+    136, 3.5,
+    136, -4.5,
+    177, -23.5,
+    166, -37.5,
+    138, -42.5,
+    141, -52.5,
+    137, -61.5,
+    111, -61.5,
+    111, -81,
+    76.5, -82,
+    41, -125.5,
+    33, -144.5,
+    -15, -148.5,
+    -28.5, -161.5,
+    -53, -151.5,
+    -93.5, -151.5,
+    -113, -131.5,
+    -141.5, -115,
+    -133, -84.5,
+    -107, -82,
+    -107, -57.5,
+    -100, -47.5,
+    -127, -47.5,
+    -136, -36.5,
+    -130, -27.5,
+    -108, -13
+  ]
+}

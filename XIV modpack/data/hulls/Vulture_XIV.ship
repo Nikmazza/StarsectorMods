@@ -1,0 +1,163 @@
+{
+  "hullName": "Vulture XIV",
+  "hullId": "Vulture_XIV",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/Vulture_XIV.png",
+  "style": "MIDLINE",
+  "height": 240,
+  "width": 146,
+  "center": [73, 121],
+  "collisionRadius": 120,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 133,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 80,
+      "angle": 0,
+      "locations": [86, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [5, 22]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [5, -22]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 80,
+      "angle": 0,
+      "locations": [44, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 90,
+      "locations": [-71, 38]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-71, -38]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [-48, 53]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 20,
+      "angle": -0,
+      "locations": [-48, -53]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-84.5, 46],
+      "length": 31.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-84.5, -48],
+      "length": 31.5,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-97, 34],
+      "length": 39,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-97, -36],
+      "length": 39,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-109, 22],
+      "length": 56,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-109, -24],
+      "length": 56,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -96, -6.5,
+    -119, -10.5,
+    -120, -20.5,
+    -63, -72.5,
+    -41.5, -62,
+    -38, -44,
+    15.5, -39.5,
+    95, -17,
+    102.5, -24.5,
+    109.5, -18,
+    109.5, 21,
+    101, 23.5,
+    95, 17.5,
+    14.5, 39,
+    -38.5, 43.5,
+    -40.5, 61,
+    -64, 72,
+    -120.5, 20,
+    -119, 11,
+    -96, 6.5
+  ]
+}

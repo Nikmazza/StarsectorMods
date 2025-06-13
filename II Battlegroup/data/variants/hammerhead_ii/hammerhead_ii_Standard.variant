@@ -1,0 +1,42 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 19,
+  "goalVariant": true,
+  "hullId": "hammerhead_ii",
+  "hullMods": [
+    "hardenedshieldemitter",
+    "heavyarmor"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "hammerhead_ii_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hephag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavyac",
+        "WS 002": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lrpdlaser",
+        "WS 006": "lrpdlaser",
+        "WS 007": "lrpdlaser",
+        "WS 008": "lrpdlaser"
+      }
+    }
+  ],
+  "wings": []
+}

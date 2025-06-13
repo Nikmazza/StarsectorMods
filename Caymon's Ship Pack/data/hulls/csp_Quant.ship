@@ -1,0 +1,80 @@
+{
+  "hullName": "Quant",
+  "hullId": "csp_Quant",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_Quant.png",
+  "style": "LOW_TECH",
+  "height": 58,
+  "width": 50,
+  "center": [24.5, 28.5],
+  "collisionRadius": 32.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 32.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "insulatedengine",
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0001": "lightag",
+    "WS0002": "lightag",
+    "WS0003": "swarmer_fighter"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [22.5, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [22.5, -9]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [10.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-21.5, -0],
+      "length": 20.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -22.5, -0,
+    -13, 8,
+    -27, 10.5,
+    1.5, 21.5,
+    -6, 10.5,
+    7, 13.5,
+    28.5, 11.5,
+    16, 5.5,
+    11, -0.5,
+    16, -5.5,
+    28.5, -11.5,
+    7, -13.5,
+    -6.5, -12.5,
+    1, -21.5,
+    -27, -11,
+    -13, -8
+  ]
+}

@@ -2,7 +2,7 @@
 	"baseHullId":"ii_module_drone",
 	"skinHullId":"ii_module_drone_super",
 	"descriptionPrefix":"Features additional, upgraded Tribunal drones.",
-	"restoreToBaseHull":true,
+	"restoreToBaseHull":false,
 	"hullDesignation":"Shock Drone Launcher",
 	"systemId":"ii_drone_station_super",
 	"removeWeaponSlots":[], 		# ids

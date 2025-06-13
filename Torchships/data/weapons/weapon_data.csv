@@ -1,11 +1,11 @@
 name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
 # GENERIC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Mining Pike,TADA_pike,1,0.25,5500,800,,400,0,200,20,10,6,0.5,3,FRAGMENTATION,200,,0,0.1,99999,0.5,5,10,1,5,,2000,,,,,,"STRIKE, USE_VS_FRIGATES","he10, lowtech_bp, pirate_bp, LP_bp, rare_bp",,,,Finisher,,,,,%s:Thows charges that stick to the hull and explode together for %s damage each.,Remote Detonation|200 High Explosive,%s: can fire as fast as the triger is pulled.,Semi-auto weapon,,
+Mining Pike,TADA_pike,1,,850,800,,400,0,200,20,10,6,0.5,3,FRAGMENTATION,200,,0,0.1,99999,0.5,5,10,1,5,,2000,,,,,,"STRIKE, USE_VS_FRIGATES, USE_LESS_VS_SHIELDS","he10, ind, merc, lowtech_bp",,,,Finisher,,,,,%s:Thows charges that stick to the hull and explode together for %s damage each.,Remote Detonation|200 High Explosive,%s: can fire as fast as the triger is pulled.,Semi-auto weapon,,
 ,TADA_pikeSecondary,1,,100,100,,200,200,50,10,,,,,HIGH_EXPLOSIVE,,,0,1,,,,,,,,300,100,5,300,,,SYSTEM,,,,,,,,,,,,,,,
-Long Range Arbalest,TADA_LRA,2,0.5,1600,1200,,150,,20,8,10,10,0.5,,KINETIC,150,,0,1,1,,5,10,5,5,,800,,,30,,,,"kinetic13, LR, base_bp",,,,Anti Shield,,,,,,,,,,
-Urchin Suppressor,TADA_urchin,1,0.5,4000,1200,,300,,0,5,17,60,1.5,10,FRAGMENTATION,100,,0,1.05,10,0.05,0,7,0.5,5,,600,,,30,,,"STRIKE, USE_VS_FRIGATES,FIRE_WHEN_INEFFICIENT","kinetic17, LR, base_bp",,,,Stand-Off Pressure,,,,,,,,,,
-Dioscuri Recoilless Rifle,TADA_dioscuri,1,0.5,5000,900,,340,,20,15,18,,,,HIGH_EXPLOSIVE,375,,0,1.135,,,0,2.5,0.5,1,,650,,,30,,,,"he16, lowtech_bp, pirate_bp, LP_bp, rare_bp, merc",,,,Anti-armor,,,,,,,,,,
-Triple Mortar,TADA_triplemortar,2,,750,700,,75,,4,30,6,,,,HIGH_EXPLOSIVE,60,,0,1.3,3,0.1,0,15,3,10,,500,,,10,,,,"he7, base_bp, merc",,,,Anti Armor,,,,,,,,,,0.75
+Long Range Arbalest,TADA_LRA,1,,900,1200,,150,,20,8,10,10,0.5,,KINETIC,150,,0,1,1,,5,10,5,5,,800,,,30,,,,"kinetic13, LR, ind, merc, lowtech_bp",,,,Anti Shield,,,,,,,,,,
+Urchin Suppressor,TADA_urchin,0,,3250,1200,,300,,0,5,17,60,1.5,10,FRAGMENTATION,100,,0,1.05,10,0.05,0,7,0.5,5,,600,,,30,,,"STRIKE, USE_VS_FRIGATES, FIRE_WHEN_INEFFICIENT","kinetic17, LR, ind, merc, lowtech_bp",,,,Stand-Off Pressure,,,,,,,,,,
+Dioscuri Recoilless Rifle,TADA_dioscuri,1,,3400,900,,340,,20,15,18,,,,HIGH_EXPLOSIVE,375,,0,1.135,,,0,2.5,0.5,1,,650,,,30,,,,"he16, ind, merc, lowtech_bp",,,,Anti-armor,,,,,,,,,,
+Triple Mortar,TADA_triplemortar,1,,250,700,,75,,4,30,6,,,,HIGH_EXPLOSIVE,60,,0,1.3,3,0.1,0,15,3,10,,500,,,10,,,,"he7, ind, merc, lowtech_bp",,,,Anti Armor,,,,,,,,,,0.75
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # HIGHTIDE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Hasta Wave,TADA_pilumWaveR,0,,900,10000,,500,,25,10,10,15,0.16,10,HIGH_EXPLOSIVE,0,,0,8,5,0.5,0,0,0,0,,125,100,80,75,,,"SYSTEM, DO_NOT_AIM, DO_NOT_CONSERVE","utility14, missile8",,,,Long Range Support,Very Slow,Very Poor,,,,,,,,

@@ -14,6 +14,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -71,6 +72,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         ENEMY_FACTIONS.add(Factions.TRITACHYON);
         ENEMY_FACTIONS.add(Factions.DERELICT);
         ENEMY_FACTIONS.add(Factions.REMNANTS);
+        ENEMY_FACTIONS.add(Factions.OMEGA);
+        ENEMY_FACTIONS.add(Factions.DWELLER);
+        //ENEMY_FACTIONS.add(Factions.THREAT);
         ENEMY_FACTIONS.add("interstellarimperium");
         ENEMY_FACTIONS.add("ii_imperial_guard");
     }
@@ -207,15 +211,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.initFleet(FleetSide.ENEMY, "B", FleetGoal.ATTACK, true, size / 8);
 
         switch (numObjectives) {
-            case 0:
+            case 0 ->
                 api.addBriefingItem("Battle size: " + size + "  -  " + (int) width + "x" + (int) height);
-                break;
-            case 1:
+            case 1 ->
                 api.addBriefingItem("Battle size: " + size + "  -  " + numObjectives + " objective" + "  -  " + (int) width + "x" + (int) height);
-                break;
-            default:
+            default ->
                 api.addBriefingItem("Battle size: " + size + "  -  " + numObjectives + " objectives" + "  -  " + (int) width + "x" + (int) height);
-                break;
         }
 
         api.setFleetTagline(FleetSide.PLAYER, playerFaction + " (" + Math.round(playerSize) + " points) (Q " + playerQuality + "%)");
@@ -340,6 +341,23 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             return;
         }
 
+        boolean spoilers = false;
+        for (FleetMemberAPI member : bestPlayerFleet.getFleetData().getMembersListCopy()) {
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getFleetMemberBaseHullId(member))) {
+                spoilers = true;
+                break;
+            }
+        }
+        for (FleetMemberAPI member : bestEnemyFleet.getFleetData().getMembersListCopy()) {
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getFleetMemberBaseHullId(member))) {
+                spoilers = true;
+                break;
+            }
+        }
+        if (spoilers) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+        }
+
         api.addBriefingItem("Match inequality: " + Math.round(bestDistance));
 
         if (boostTime) {
@@ -461,7 +479,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
             float r;
             switch (numObjectives) {
-                case 2:
+                case 2 -> {
                     objs = new ArrayList<>(Arrays.asList(new String[]{
                         SENSOR,
                         SENSOR,
@@ -470,8 +488,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
                         COMM,}));
                     addObjectiveAt(0.25f, 0.5f, 0f, 0f, width, height, api, objs);
                     addObjectiveAt(0.75f, 0.5f, 0f, 0f, width, height, api, objs);
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     r = (float) Math.random();
                     if (r < 0.33f) {
                         addObjectiveAt(0.25f, 0.7f, 1f, 1f, width, height, api, objs);
@@ -486,8 +504,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
                         addObjectiveAt(0.5f, 0.5f, 1f, 1f, width, height, api, objs);
                         addObjectiveAt(0.75f, 0.5f, 1f, 1f, width, height, api, objs);
                     }
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     r = (float) Math.random();
                     if (r < 0.33f) {
                         addObjectiveAt(0.25f, 0.25f, 2f, 1f, width, height, api, objs);
@@ -505,9 +523,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
                         addObjectiveAt(0.6f, 0.5f, 0f, 3f, width, height, api, objs);
                         addObjectiveAt(0.8f, 0.5f, 1f, 2f, width, height, api, objs);
                     }
-                    break;
-                default:
-                    break;
+                }
+                default -> {
+                }
             }
             api.getContext().setStandoffRange(height - 4500f);
         } else {
@@ -529,9 +547,10 @@ public class MissionDefinition implements MissionDefinitionPlugin {
                         return;
                     }
 
-                    float trueFrameTime = Global.getCombatEngine().getElapsedInLastFrame();
-                    float trueFPS = 1 / trueFrameTime;
-                    float newTimeMult = Math.max(1f, trueFPS / 30f);
+                    int roundedFrameTimeMsec = (int) Math.ceil(1000f * Global.getCombatEngine().getElapsedInLastFrame() + 1);
+                    float scaledFPS = 1000f / roundedFrameTimeMsec;
+                    float unscaledFPS = Global.getCombatEngine().getTimeMult().getModifiedValue() * scaledFPS;
+                    float newTimeMult = Math.max(1f, unscaledFPS / 30f);
                     Global.getCombatEngine().getTimeMult().modifyMult("ii_tester", newTimeMult);
                 }
             });

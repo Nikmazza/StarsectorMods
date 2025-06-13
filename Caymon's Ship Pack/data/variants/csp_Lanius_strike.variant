@@ -1,0 +1,48 @@
+{
+  "variantId": "csp_Lanius_strike",
+  "hullId": "csp_Lanius",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter",
+    "fluxcoil",
+    "high_scatter_amp",
+    "hardened_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyblaster",
+        "WS0002": "heavyblaster",
+        "WS0003": "taclaser",
+        "WS0004": "taclaser",
+        "WS0005": "taclaser",
+        "WS0006": "taclaser",
+        "WS0007": "taclaser",
+        "WS0008": "taclaser",
+        "WS0009": "taclaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "sabot",
+        "WS0011": "sabot"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

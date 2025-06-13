@@ -1,0 +1,44 @@
+{
+  "id": "csp_deputy_jackhammer",
+  "specClass": "projectile",
+  "projectileSpecId": "hammer_torp",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/jackhammer2_turret_base.png",
+  "hardpointSprite": "graphics/weapons/armor jackhammer.png",
+  "turretOffsets": [
+    12,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    38.5,
+    2.5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "renderHints":[RENDER_LOADED_MISSILES],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 12,
+    "cloudParticleCount": 8,
+    "cloudDuration": 2.5,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 4,
+    "blowbackDuration": 2,
+    "blowbackLength": 22,
+    "blowbackSpread": 15,
+    "particleColor": [
+      100,
+      100,
+      100,
+      200
+    ]
+  },
+  "fireSoundTwo": "hammer_fire"
+}

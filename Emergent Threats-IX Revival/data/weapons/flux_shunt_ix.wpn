@@ -1,0 +1,22 @@
+{
+	"id":"flux_shunt_ix",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"UNIVERSAL",
+	"size":"SMALL",
+	"turretSprite":"graphics/fx/empty.png",
+	"turretGlowSprite":"graphics/fx/empty.png",
+	"hardpointSprite":"graphics/fx/empty.png",
+	"hardpointGlowSprite":"graphics/fx/empty.png",
+	"glowColor":[200,40,200,150],
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW",
+	#"animationType":"GLOW_AND_FLASH",
+	"autocharge":true,
+	"requiresFullCharge":false, 
+	"projectileSpecId":"flux_shunt_ix_shot",
+	"noImpactSounds":true,
+}

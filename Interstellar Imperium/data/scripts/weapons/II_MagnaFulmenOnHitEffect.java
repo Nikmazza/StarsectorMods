@@ -1,6 +1,7 @@
 package data.scripts.weapons;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CombatAsteroidAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
@@ -46,8 +47,7 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
 
         List<ShipAPI> shipTargets = CombatUtils.getShipsWithinRange(point, areaEffect);
         List<MissileAPI> missileTargets = CombatUtils.getMissilesWithinRange(point, areaEffect);
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             shipTargets.remove(ship);
         }
 
@@ -81,6 +81,11 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
                 Vector2f projection = VectorUtils.getDirectionalVector(point, tgt.getLocation());
                 projection.scale(tgt.getCollisionRadius());
                 Vector2f.add(projection, tgt.getLocation(), projection);
+                // Workaround until LazyLib is patched
+                BoundsAPI bounds = tgt.getExactBounds();
+                if (bounds != null) {
+                    bounds.update(tgt.getLocation(), tgt.getFacing());
+                }
                 damagePoint = CollisionUtils.getCollisionPoint(point, projection, tgt);
             }
             if (damagePoint == null) {
@@ -125,16 +130,14 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
         Iterator<CombatEntityAPI> iter = entityTargets.iterator();
         while (iter.hasNext()) {
             CombatEntityAPI entity = iter.next();
-            if (entity instanceof DamagingProjectileAPI) {
-                DamagingProjectileAPI tgtProj = (DamagingProjectileAPI) entity;
+            if (entity instanceof DamagingProjectileAPI tgtProj) {
                 if ((tgtProj.getProjectileSpecId() != null)
                         && (tgtProj.getProjectileSpecId().contentEquals("ii_magna_fulmen_standard_targeting")
                         || tgtProj.getProjectileSpecId().contentEquals("ii_magna_fulmen_enhanced_targeting"))) {
                     iter.remove();
                 }
             }
-            if (entity instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) entity;
+            if (entity instanceof ShipAPI ship) {
                 List<ShipAPI> children = II_Multi.getChildren(ship);
                 if ((children != null) && !children.isEmpty()) {
                     toRemove.addAll(children);
@@ -163,8 +166,7 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
             }
 
             /* Special case for rays */
-            if (tgt instanceof DamagingProjectileAPI) {
-                DamagingProjectileAPI tgtProj = (DamagingProjectileAPI) tgt;
+            if (tgt instanceof DamagingProjectileAPI tgtProj) {
                 if (tgtProj.getSpawnType() == ProjectileSpawnType.BALLISTIC_AS_BEAM) {
                     tgtProj.setFacing(VectorUtils.getAngle(point, tgtProj.getLocation()));
                     continue;
@@ -172,8 +174,8 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
             }
 
             CombatEntityAPI forceTarget = tgt;
-            if (tgt instanceof ShipAPI) {
-                forceTarget = II_Multi.getRoot((ShipAPI) tgt);
+            if (tgt instanceof ShipAPI shipAPI) {
+                forceTarget = II_Multi.getRoot(shipAPI);
             }
             Vector2f dir = VectorUtils.getDirectionalVector(point, tgt.getLocation());
             II_Util.applyForce(forceTarget, dir, force * reduction);
@@ -376,8 +378,7 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
             engine.addHitParticle(point, new Vector2f(target.getVelocity().x * 0.45f, target.getVelocity().y * 0.45f), BANG_SIZE * fadeSqrt, BANG_BRIGHTNESS * fade, 0.05f, BANG_COLOR);
 
             switch (projectile.getProjectileSpecId()) {
-                case "ii_magna_fulmen_standard_armor":
-                case "ii_magna_fulmen_enhanced_armor": {
+                case "ii_magna_fulmen_standard_armor", "ii_magna_fulmen_enhanced_armor" -> {
                     RippleDistortion ripple = new RippleDistortion(point, new Vector2f(target.getVelocity().x * 0.45f, target.getVelocity().y * 0.45f));
                     ripple.setSize(AREA_EFFECT * fadeSqrt * 1.1f);
                     ripple.setIntensity(AREA_EFFECT * fadeSqrt * 1.1f * 0.05f);
@@ -390,13 +391,12 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
                     explode(projectile, target, point, engine, AREA_DAMAGE * fade, AREA_EFFECT * fadeSqrt, AREA_EFFECT_INNER * fadeSqrt);
 
                     /* Extra damage for the enhanced version, since it does more frag than energy; we need to make it
-                       at least as dangerous to be hit directly as to be splashed. */
+                    at least as dangerous to be hit directly as to be splashed. */
                     if (projectile.getProjectileSpecId().contentEquals("ii_magna_fulmen_enhanced_armor")) {
                         engine.applyDamage(projectile, target, point, AREA_DAMAGE * fade / 2f, DamageType.FRAGMENTATION, 0f, false, false, projectile.getSource(), false);
                     }
-                    break;
                 }
-                case "ii_magna_fulmen_standard_targeting": {
+                case "ii_magna_fulmen_standard_targeting" -> {
                     RippleDistortion ripple = new RippleDistortion(point, new Vector2f(target.getVelocity().x * 0.45f, target.getVelocity().y * 0.45f));
                     ripple.setSize(EXPLOSION_SIZE * fadeSqrt * 0.75f);
                     ripple.setIntensity(EXPLOSION_SIZE * fadeSqrt * 0.75f * 0.1f);
@@ -407,12 +407,10 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
                     ripple.setLifetime(EXPLOSION_DURATION * 0.25f);
                     ripple.setAutoFadeIntensityTime(EXPLOSION_DURATION * 0.25f);
                     DistortionShader.addDistortion(ripple);
-
                     Global.getSoundPlayer().playSound("ii_magnafulmen_targeting_knockback", AUX_SOUND_PITCH, AUX_SOUND_VOLUME * fade, point, ZERO);
                     II_Util.applyForce(target, projectile.getVelocity(), 1500f * fade);
-                    break;
                 }
-                case "ii_magna_fulmen_enhanced_targeting": {
+                case "ii_magna_fulmen_enhanced_targeting" -> {
                     RippleDistortion ripple = new RippleDistortion(point, new Vector2f(target.getVelocity().x * 0.45f, target.getVelocity().y * 0.45f));
                     ripple.setSize(AREA_EFFECT * fadeSqrt * 1.1f);
                     ripple.setIntensity(AREA_EFFECT * fadeSqrt * 1.1f * 0.15f);
@@ -420,22 +418,13 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
                     ripple.fadeInSize(EXPLOSION_DURATION * 0.65f);
                     ripple.fadeOutIntensity(EXPLOSION_DURATION * 0.65f);
                     DistortionShader.addDistortion(ripple);
-
                     Global.getSoundPlayer().playSound("ii_magnafulmen_targeting_blast", AUX_SOUND_PITCH, AUX_SOUND_VOLUME * fade, point, ZERO);
                     II_Util.applyForce(target, projectile.getVelocity(), 3000f * fade);
-
                     repulse(projectile, target, point, 1500f * fade, AREA_EFFECT * fadeSqrt, AREA_EFFECT_INNER * fadeSqrt);
                     engine.addSmoothParticle(point, new Vector2f(target.getVelocity().x * 0.45f, target.getVelocity().y * 0.45f), BANG_SIZE * fadeSqrt / 2f, 1f, EXPLOSION_DURATION * 1.25f, PARTICLE_COLOR);
-                    break;
                 }
-                case "ii_magna_fulmen_standard_elite":
-                case "ii_magna_fulmen_enhanced_elite1":
-                case "ii_magna_fulmen_enhanced_elite2":
-                case "ii_magna_fulmen_enhanced_elite3":
-                case "ii_magna_fulmen_enhanced_elite4": {
-                    if (target instanceof ShipAPI) {
-                        ShipAPI ship = (ShipAPI) target;
-
+                case "ii_magna_fulmen_standard_elite", "ii_magna_fulmen_enhanced_elite1", "ii_magna_fulmen_enhanced_elite2", "ii_magna_fulmen_enhanced_elite3", "ii_magna_fulmen_enhanced_elite4" -> {
+                    if (target instanceof ShipAPI ship) {
                         int numEMP;
                         float empThickness;
                         switch (projectile.getProjectileSpecId()) {
@@ -485,10 +474,9 @@ public class II_MagnaFulmenOnHitEffect implements OnHitEffectPlugin {
                             Global.getSoundPlayer().playSound("ii_magnafulmen_elite_zap", AUX_SOUND_PITCH, AUX_SOUND_VOLUME * fade, point, ZERO);
                         }
                     }
-                    break;
                 }
-                default:
-                    break;
+                default -> {
+                }
             }
         }
     }

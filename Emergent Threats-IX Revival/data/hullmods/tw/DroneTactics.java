@@ -15,6 +15,7 @@ public class DroneTactics extends BaseHullMod {
 	private static String NODE_NAME = "Drone Control Node";
 	private static String DRONE_NAME = "Nimbus Combat Drones";
 	private static String TW_MOD = "tw_drone_control_node";
+	private static String TW_MOD_2 = "tw_enhanced_control_node";
 	
 	private static String NIMBUS_PREF = "nimbus_tw_";
 	private static String NIMBUS_REM = "vice_nimbus_wing";
@@ -24,7 +25,7 @@ public class DroneTactics extends BaseHullMod {
     @Override
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		boolean isAllValidDrones = true;
-		if (!stats.getVariant().hasHullMod(TW_MOD)) isAllValidDrones = false;
+		if (!stats.getVariant().hasHullMod(TW_MOD) && !stats.getVariant().hasHullMod(TW_MOD_2)) isAllValidDrones = false;
 		else {
 			int fighterBays = stats.getNumFighterBays().getModifiedInt();
 			for (int i = 0; i < fighterBays; i++) {

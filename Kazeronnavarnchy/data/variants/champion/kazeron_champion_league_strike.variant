@@ -1,0 +1,66 @@
+{
+  "variantId": "kazeron_champion_league_strike",
+  "hullId": "kazeron_champion_league",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 12,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "advancedoptics",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "phasebeam",
+        "WS 007": "phasebeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "dragonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "taclaser",
+        "WS 001": "taclaser",
+        "WS 010": "taclaser",
+        "WS 011": "taclaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "guardian"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "pdlaser",
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

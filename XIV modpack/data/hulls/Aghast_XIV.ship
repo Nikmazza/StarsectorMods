@@ -1,0 +1,136 @@
+{
+  "hullName": "Aghast",
+  "hullId": "Aghast_XIV",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/Aghast_XIV.png",
+  "style": "MIDLINE",
+  "height": 276,
+  "width": 83,
+  "center": [43, 113],
+  "collisionRadius": 241,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 191.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth",
+    "escort_package",
+    "hiressensors",
+    "ballistic_rangefinder"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [72, -21.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [1, 18.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": -50,
+      "locations": [-44, -15]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 90,
+      "locations": [80, 10]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 90,
+      "locations": [63, 10]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 90,
+      "locations": [44, 10]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 90,
+      "locations": [27, 10]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 180,
+      "locations": [-91, 4]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-112, 3.5],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 24,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-112, -14],
+      "length": 58,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-112, 21],
+      "length": 58,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    152.5, -10,
+    145.5, 5,
+    82, 18.5,
+    9, 18.5,
+    -30, 21,
+    -35, 39,
+    -69.5, 38,
+    -109.5, 27,
+    -109, -20.5,
+    -82.5, -26,
+    -46.5, -36,
+    -31.5, -35,
+    2, -23.5,
+    91.5, -20
+  ]
+}

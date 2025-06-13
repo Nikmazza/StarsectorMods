@@ -1,0 +1,41 @@
+{
+  "displayName": "Artillery",
+  "fluxCapacitors": 3,
+  "fluxVents": 20,
+  "goalVariant": true,
+  "hullId": "hammerhead_ii",
+  "hullMods": [
+    "hardenedshieldemitter"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "hammerhead_ii_Artillery",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "hveldriver",
+        "WS 002": "hveldriver"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lrpdlaser",
+        "WS 006": "lrpdlaser",
+        "WS 007": "lrpdlaser",
+        "WS 008": "lrpdlaser"
+      }
+    }
+  ],
+  "wings": []
+}

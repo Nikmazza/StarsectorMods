@@ -17,6 +17,7 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.SpecialItemData;
+import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -31,6 +32,7 @@ import com.fs.starfarer.api.util.Misc;
 
 import data.scripts.ix.IXCampaignPlugin;
 import data.scripts.ix.IXSystemCreation;
+//import data.scripts.ix.SDFIXBattlegroup;
 import data.scripts.ix.listeners.IXAdminEasyModeListener;
 import data.scripts.ix.listeners.IXEncounterListener;
 import data.scripts.ix.listeners.IXReputationListener; 
@@ -68,8 +70,13 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 			sector.getFaction(TW_FAC_ID).setShowInIntelTab(true);
 			Alliance alliance = AllianceManager.createAlliance(IX_FAC_ID, TW_FAC_ID, AllianceManager.getBestAlignment(IX_FAC_ID, TW_FAC_ID));
 			alliance.setName(NameListUtil.Core_Consensus);
+			Global.getSector().getMemoryWithoutUpdate().is("$trinity_worlds_is_active", true);
 		}
-		else sector.getFaction(TW_FAC_ID).setShowInIntelTab(false);
+		else {
+			sector.getFaction(TW_FAC_ID).setShowInIntelTab(false);
+			Global.getSector().getMemoryWithoutUpdate().is("$trinity_worlds_is_active", false);
+		}
+		
 		
 		sector.getPlayerMemoryWithoutUpdate().set("$reputationIsSetIX", false);
 		sector.registerPlugin(pCorePlugin);
@@ -79,6 +86,13 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 		sector.getListenerManager().addListener(new IXReputationResetListener());
 		sector.getListenerManager().addListener(new PruneHaulerMarketListener());
 		sector.getListenerManager().addListener(new UpgradeFuelProdListener());
+		
+		makeTrinityKnowTanker();
+		
+		PruneHaulerMarketListener pListener = new PruneHaulerMarketListener();
+		for (MarketAPI market : sector.getEconomy().getMarketsCopy()) {
+			pListener.pruneMarket(market);
+		}
     }
 	
 	@Override
@@ -88,6 +102,8 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 		for (MarketAPI market : sector.getEconomy().getMarketsCopy()) {
 			pListener.pruneMarket(market);
 		}
+		MarketAPI homeworld = Global.getSector().getEconomy().getMarket("ix_piorun_market");
+		//if (homeworld != null) sector.addScript(new SDFIXBattlegroup());
 	}
 	
 	@Override
@@ -222,8 +238,8 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 		}
 		if (sector.getStarSystem("Danu") != null 
 				&& sector.getStarSystem("Danu").getEntityById(culmenId) != null
-				&& sector.getStarSystem("Danu").getEntityById(culmenId).getMarket() != null) {
-				
+				&& sector.getStarSystem("Danu").getEntityById(culmenId).getMarket() != null
+				&& LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_trinity_enabled")) {
 			MarketAPI m = sector.getStarSystem("Danu").getEntityById(culmenId).getMarket();
 			if (LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_kresnik_enabled")) {
 				if (!m.hasIndustry(solitonId)) m.addIndustry(solitonId);
@@ -254,7 +270,26 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 			}
 		}
 		sector.getMemoryWithoutUpdate().set("$ix_vertex_updated", true);
+		
+		updateColonyItemsForIndustries("cryoarithmetic_engine", "ix_fleet_command");
+		updateColonyItemsForIndustries("synchrotron", "ix_fuel_production");
+		
+		makeTrinityKnowTanker();
 	}
+	
+	private void makeTrinityKnowTanker() {
+		if (Global.getSettings().getModManager().isModEnabled("PAGSM")) {
+			//Global.getSettings().getHullSpec("iapetus_tw").addTag("ix_trinity");
+			Global.getSector().getFaction("ix_trinity").addKnownShip("iapetus_tw", false);
+		}
+	}
+	
+	private void updateColonyItemsForIndustries(String specialItemID, String listOfAdditionalIndustries) {
+        SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(specialItemID);
+        String prevParams = spec.getParams();
+        if (prevParams.contains(listOfAdditionalIndustries)) return;
+        spec.setParams(prevParams + ", " + listOfAdditionalIndustries);
+    }
 	
 	@Override
 	public void generate(SectorAPI sector) {

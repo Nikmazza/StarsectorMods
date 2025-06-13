@@ -1,0 +1,53 @@
+{
+  "hullName": "Claw(XIV)",
+  "hullId": "csp_xivclaw",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/xiv claw.png",
+  "style": "HIGH_TECH",
+  "height": 30,
+  "width": 26,
+  "center": [13, 13],
+  "collisionRadius": 20,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 20,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "csp_xivremnantF"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [5, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, 4],
+      "length": 16,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13, -3],
+      "length": 16,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 32,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    16, 0,
+    -4, 12,
+    -12, -0,
+    -4, -12
+  ]
+}

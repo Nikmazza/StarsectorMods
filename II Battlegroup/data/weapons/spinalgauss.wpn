@@ -1,0 +1,29 @@
+{
+	"id":"spinalgauss",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"displayArcRadius":1200,
+	"turretSprite":"graphics/weapons/SpinalGauss.png",
+	"turretGlowSprite":"graphics/weapons/SpinalGauss_glow.png",
+	"hardpointSprite":"graphics/weapons/SpinalGauss.png",
+	"hardpointGlowSprite":"graphics/weapons/SpinalGauss_glow.png",
+	"glowColor":[125,200,255,255],
+	"turretOffsets":[25, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[35, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":200.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":15.0,
+					   "particleSizeMin":20.0,
+					   "particleSizeRange":60.0,
+					   "particleDuration":1.25,
+					   "particleCount":75,
+					   "particleColor":[100,100,255,255]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"spinalgauss_shot",  # projectile that will be fired
+	"everyFrameEffect":"II_BG.data.scripts.combat.SpinalRailgunEffect",
+	"fireSoundTwo":"spinalgauss_fire",
+}

@@ -1,0 +1,39 @@
+{
+  "id": "csp_triplepulsearm",
+  "specClass": "projectile",
+  "projectileSpecId": "pulselaser_shot",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/Uni Cetan/csp_tripulsearm.png",
+  "hardpointSprite": "graphics/weapons/Uni Cetan/csp_tripulsearm.png",
+  "turretOffsets": [
+    34.5,
+    1.5,
+    34.5,
+    -1.5,
+    34.5,
+    -4.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    51.5,
+    1.5,
+    51.5,
+    -1.5,
+    51.5,
+    -4.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "NONE",
+  "autocharge": true,
+  "fireSoundTwo": "pulse_laser_fire"
+}

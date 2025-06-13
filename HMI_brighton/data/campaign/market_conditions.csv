@@ -1,0 +1,2 @@
+name,id,planetary,decivRemove,script,desc,icon,order
+Reinforced Construction Facility,hmi_reinforced_condition,,TRUE,data.campaign.econ.industries.HMI_Reinforced_Colony_Cond,"Due to the Reinforced Construction Facility, ongoing colonial maintenance is made safer and more efficient.",graphics/icons/markets/underground_arcology.png,1303

@@ -13,10 +13,11 @@
   "viewOffset": 0,
   "builtInMods": [
     "automated",
+    "hmi_remmesscore",
+    "hmi_mess_visuals",
     "hmi_mess_spawn"
   ],
   "builtInWings": [
-    "drone_feeder_wing",
     "drone_feeder_wing"
   ],
   "weaponSlots": [

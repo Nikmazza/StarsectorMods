@@ -50,7 +50,13 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
     private final IntervalUtil interval = new IntervalUtil(0.015f, 0.015f);
 
     private static ShipAPI findBestTarget(DamagingProjectileAPI proj) {
-        ShipAPI source = proj.getSource();
+        ShipAPI source = null;
+        if (proj.getWeapon() != null) {
+            source = proj.getWeapon().getShip();
+        }
+        if (source == null) {
+            source = proj.getSource();
+        }
         if ((source != null) && (source.getShipTarget() != null)
                 && !source.getShipTarget().isFighter() && !source.getShipTarget().isDrone() && !source.getShipTarget().isShuttlePod()) {
             float angleDif = Math.abs(MathUtils.getShortestRotation(VectorUtils.getAngle(proj.getLocation(), source.getShipTarget().getLocation()), proj.getFacing()));
@@ -108,8 +114,15 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
             }
 
             switch (projectile.getProjectileSpecId()) {
-                case "ii_flare_base": {
-                    ShipAPI source = projectile.getSource();
+                case "ii_flare_base" -> {
+                    WeaponAPI sourceWeapon = projectile.getWeapon();
+                    ShipAPI source = null;
+                    if (sourceWeapon != null) {
+                        source = sourceWeapon.getShip();
+                    }
+                    if (source == null) {
+                        source = projectile.getSource();
+                    }
                     Vector2f sourceVel = null;
                     int type = 0;
                     if (source != null) {
@@ -125,37 +138,43 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                     switch (type) {
                         default:
                         case 0:
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_flares_standard", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_flares_standard", projectile.getLocation(),
                                     projectile.getFacing() + 30f + MathUtils.getRandomNumberInRange(-15f, 15f), sourceVel);
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_flares_standard", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_flares_standard", projectile.getLocation(),
                                     projectile.getFacing() - 30f + MathUtils.getRandomNumberInRange(-15f, 15f), sourceVel);
                             Global.getSoundPlayer().playSound("launch_flare_1", 1f, 1f, projectile.getLocation(), sourceVel);
                             break;
                         case 1:
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_flares_armor", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_flares_armor", projectile.getLocation(),
                                     projectile.getFacing() + 45f + MathUtils.getRandomNumberInRange(-5f, 5f), sourceVel);
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_flares_armor", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_flares_armor", projectile.getLocation(),
                                     projectile.getFacing() + MathUtils.getRandomNumberInRange(-5f, 5f), sourceVel);
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_flares_armor", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_flares_armor", projectile.getLocation(),
                                     projectile.getFacing() - 45f + MathUtils.getRandomNumberInRange(-5f, 5f), sourceVel);
                             Global.getSoundPlayer().playSound("launch_flare_1", 1f, 1f, projectile.getLocation(), sourceVel);
                             break;
                         case 2:
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_flares_targeting", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_flares_targeting", projectile.getLocation(),
                                     projectile.getFacing() + MathUtils.getRandomNumberInRange(-45f, 45f), sourceVel);
                             Global.getSoundPlayer().playSound("system_flare_launcher_active", 1f, 1f, projectile.getLocation(), sourceVel);
                             break;
                         case 3:
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_flares_elite", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_flares_elite", projectile.getLocation(),
                                     projectile.getFacing() + MathUtils.getRandomNumberInRange(-45f, 45f), sourceVel);
                             Global.getSoundPlayer().playSound("system_flare_launcher_active", 1f, 1f, projectile.getLocation(), sourceVel);
                             break;
                     }
                     engine.removeEntity(projectile);
-                    break;
                 }
-                case "ii_armageddon_base": {
-                    ShipAPI source = projectile.getSource();
+                case "ii_armageddon_base" -> {
+                    WeaponAPI sourceWeapon = projectile.getWeapon();
+                    ShipAPI source = null;
+                    if (sourceWeapon != null) {
+                        source = sourceWeapon.getShip();
+                    }
+                    if (source == null) {
+                        source = projectile.getSource();
+                    }
                     boolean replaced = false;
                     Vector2f sourceVel = null;
                     if (source != null) {
@@ -177,25 +196,25 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                             switch (type) {
                                 default:
                                 case 0:
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_armageddon_standard", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_armageddon_standard", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.spawnExplosion(projectile.getLocation(), sourceVel, II_MagnumSalvoStats.GLOW_COLOR_STANDARD, 75f, 0.1f);
                                     Global.getSoundPlayer().playSound("ii_armageddon_fire", 0.9f, 1.1f, projectile.getLocation(), ZERO);
                                     break;
                                 case 1:
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_armageddon_armor", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_armageddon_armor", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.spawnExplosion(projectile.getLocation(), sourceVel, II_MagnumSalvoStats.GLOW_COLOR_ARMOR, 100f, 0.1f);
                                     Global.getSoundPlayer().playSound("ii_armageddon_fire", 0.7f, 1.3f, projectile.getLocation(), ZERO);
                                     break;
                                 case 2:
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_armageddon_targeting", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_armageddon_targeting", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.spawnExplosion(projectile.getLocation(), sourceVel, II_MagnumSalvoStats.GLOW_COLOR_TARGETING, 75f, 0.1f);
                                     Global.getSoundPlayer().playSound("ii_armageddon_fire", 1.1f, 1.2f, projectile.getLocation(), ZERO);
                                     break;
                                 case 3:
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_armageddon_elite", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_armageddon_elite", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.spawnExplosion(projectile.getLocation(), sourceVel, II_MagnumSalvoStats.GLOW_COLOR_ELITE, 75f, 0.1f);
                                     Global.getSoundPlayer().playSound("ii_armageddon_fire", 1.2f, 1.3f, projectile.getLocation(), ZERO);
@@ -206,16 +225,21 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                         }
                     }
                     if (!replaced) {
-                        engine.spawnProjectile(source, projectile.getWeapon(), "ii_armageddon_normal", projectile.getLocation(),
+                        engine.spawnProjectile(source, sourceWeapon, "ii_armageddon_normal", projectile.getLocation(),
                                 projectile.getFacing(), sourceVel);
                         Global.getSoundPlayer().playSound("ii_armageddon_fire", 1f, 1f, projectile.getLocation(), ZERO);
                         engine.removeEntity(projectile);
                     }
-                    break;
                 }
-                case "ii_pulsar_shot": {
-                    ShipAPI source = projectile.getSource();
+                case "ii_pulsar_shot" -> {
                     WeaponAPI sourceWeapon = projectile.getWeapon();
+                    ShipAPI source = null;
+                    if (sourceWeapon != null) {
+                        source = sourceWeapon.getShip();
+                    }
+                    if (source == null) {
+                        source = projectile.getSource();
+                    }
                     if (!repeaterShots.contains(projectile) && (sourceWeapon != null) && sourceWeapon.getId().contentEquals("ii_pulsarrepeater")) {
                         Vector2f srcVel = ZERO;
                         if (source != null) {
@@ -224,10 +248,16 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                         engine.spawnExplosion(projectile.getLocation(), srcVel, REPEATER_MUZZLE_FLASH_COLOR, REPEATER_MUZZLE_FLASH_SIZE, REPEATER_MUZZLE_FLASH_DURATION);
                         repeaterShots.add(projectile);
                     }
-                    break;
                 }
-                case "ii_magna_fulmen_base": {
-                    ShipAPI source = projectile.getSource();
+                case "ii_magna_fulmen_base" -> {
+                    WeaponAPI sourceWeapon = projectile.getWeapon();
+                    ShipAPI source = null;
+                    if (sourceWeapon != null) {
+                        source = sourceWeapon.getShip();
+                    }
+                    if (source == null) {
+                        source = projectile.getSource();
+                    }
                     boolean replaced = false;
                     Vector2f sourceVel = null;
                     if (source != null) {
@@ -268,10 +298,10 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                                     }
                                     for (int j = -2; j < 3; j++) {
                                         if (j == 0) {
-                                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_standard_armor", projectile.getLocation(),
+                                            engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_standard_armor", projectile.getLocation(),
                                                     projectile.getFacing() + (spreadArc * j / 4f), sourceVel);
                                         } else {
-                                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_enhanced_armor", projectile.getLocation(),
+                                            engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_enhanced_armor", projectile.getLocation(),
                                                     projectile.getFacing() + (spreadArc * j / 4f), sourceVel);
                                         }
                                     }
@@ -280,35 +310,35 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                                     break;
                                 }
                                 case 2:
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_enhanced_targeting", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_enhanced_targeting", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.removeEntity(projectile);
                                     replaced = true;
                                     break;
                                 case 3:
                                     /* Elite I */
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_enhanced_elite1", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_enhanced_elite1", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.removeEntity(projectile);
                                     replaced = true;
                                     break;
                                 case 4:
                                     /* Elite II */
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_enhanced_elite2", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_enhanced_elite2", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.removeEntity(projectile);
                                     replaced = true;
                                     break;
                                 case 5:
                                     /* Elite III */
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_enhanced_elite3", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_enhanced_elite3", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.removeEntity(projectile);
                                     replaced = true;
                                     break;
                                 case 6:
                                     /* Elite IV */
-                                    engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_enhanced_elite4", projectile.getLocation(),
+                                    engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_enhanced_elite4", projectile.getLocation(),
                                             projectile.getFacing(), sourceVel);
                                     engine.removeEntity(projectile);
                                     replaced = true;
@@ -318,23 +348,22 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                     }
                     if (!replaced) {
                         if ((source != null) && source.getVariant().hasHullMod(II_BasePackage.ARMOR_PACKAGE)) {
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_standard_armor", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_standard_armor", projectile.getLocation(),
                                     projectile.getFacing(), sourceVel);
                         } else if ((source != null) && source.getVariant().hasHullMod(II_BasePackage.TARGETING_PACKAGE)) {
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_standard_targeting", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_standard_targeting", projectile.getLocation(),
                                     projectile.getFacing(), sourceVel);
                         } else if ((source != null) && source.getVariant().hasHullMod(II_BasePackage.ELITE_PACKAGE)) {
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_standard_elite", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_standard_elite", projectile.getLocation(),
                                     projectile.getFacing(), sourceVel);
                         } else {
-                            engine.spawnProjectile(source, projectile.getWeapon(), "ii_magna_fulmen_standard", projectile.getLocation(),
+                            engine.spawnProjectile(source, sourceWeapon, "ii_magna_fulmen_standard", projectile.getLocation(),
                                     projectile.getFacing(), sourceVel);
                         }
                         engine.removeEntity(projectile);
                     }
-                    break;
                 }
-                case "ii_magna_fulmen_enhanced_targeting": {
+                case "ii_magna_fulmen_enhanced_targeting" -> {
                     if (!projectiles.containsKey(projectile)) {
                         WaveDistortion wave = new WaveDistortion(projectile.getLocation(), ZERO);
                         wave.setIntensity(10f);
@@ -355,10 +384,9 @@ public class II_WeaponScriptPlugin extends BaseEveryFrameCombatPlugin {
                                 MathUtils.getRandomNumberInRange(0.75f, 1.25f), MathUtils.getRandomNumberInRange(0.4f, 0.7f), II_ArbalestLoaderStats.GLOW_COLOR_TARGETING);
 
                     }
-                    break;
                 }
-                default:
-                    break;
+                default -> {
+                }
             }
         }
 

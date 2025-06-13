@@ -24,89 +24,85 @@ import java.util.Random;
 
 public class SWP_BaseRandomBattle implements MissionDefinitionPlugin {
 
-    public static final Comparator<FleetMemberAPI> PRIORITY = new Comparator<FleetMemberAPI>() {
-        // -1 means member1 is first, 1 means member2 is first
-        @Override
-        public int compare(FleetMemberAPI member1, FleetMemberAPI member2) {
-            if (member1.isFlagship()) {
-                if (!member2.isFlagship()) {
-                    return -1;
-                }
-            } else {
-                if (member2.isFlagship()) {
-                    return 1;
-                }
-            }
-            if (!member1.isCivilian()) {
-                if (member2.isCivilian()) {
-                    return -1;
-                }
-            } else {
-                if (!member2.isCivilian()) {
-                    return 1;
-                }
-            }
-            if (!member1.isFighterWing()) {
-                if (member2.isFighterWing()) {
-                    return -1;
-                }
-            } else {
-                if (!member2.isFighterWing()) {
-                    return 1;
-                }
-            }
-            if (member1.getFleetPointCost() > member2.getFleetPointCost()) {
+    public static final Comparator<FleetMemberAPI> PRIORITY = (FleetMemberAPI member1, FleetMemberAPI member2) -> {
+        if (member1.isFlagship()) {
+            if (!member2.isFlagship()) {
                 return -1;
-            } else if (member1.getFleetPointCost() < member2.getFleetPointCost()) {
+            }
+        } else {
+            if (member2.isFlagship()) {
                 return 1;
             }
-            if (member1.getCaptain() != null) {
-                if (member2.getCaptain() == null) {
-                    return -1;
-                }
-            } else {
-                if (member2.getCaptain() != null) {
-                    return 1;
-                }
-            }
-            if (!member1.isFrigate()) {
-                if (member2.isFrigate()) {
-                    return -1;
-                }
-            } else {
-                if (!member2.isFrigate()) {
-                    return 1;
-                }
-            }
-            if (!member1.isDestroyer()) {
-                if (member2.isDestroyer()) {
-                    return -1;
-                }
-            } else {
-                if (!member2.isDestroyer()) {
-                    return 1;
-                }
-            }
-            if (!member1.isCruiser()) {
-                if (member2.isCruiser()) {
-                    return -1;
-                }
-            } else {
-                if (!member2.isCruiser()) {
-                    return 1;
-                }
-            }
-            if (!member1.isCapital()) {
-                if (member2.isCapital()) {
-                    return -1;
-                }
-            } else {
-                if (!member2.isCapital()) {
-                    return 1;
-                }
-            }
-            return member1.getSpecId().compareTo(member2.getSpecId());
         }
+        if (!member1.isCivilian()) {
+            if (member2.isCivilian()) {
+                return -1;
+            }
+        } else {
+            if (!member2.isCivilian()) {
+                return 1;
+            }
+        }
+        if (!member1.isFighterWing()) {
+            if (member2.isFighterWing()) {
+                return -1;
+            }
+        } else {
+            if (!member2.isFighterWing()) {
+                return 1;
+            }
+        }
+        if (member1.getFleetPointCost() > member2.getFleetPointCost()) {
+            return -1;
+        } else if (member1.getFleetPointCost() < member2.getFleetPointCost()) {
+            return 1;
+        }
+        if (member1.getCaptain() != null) {
+            if (member2.getCaptain() == null) {
+                return -1;
+            }
+        } else {
+            if (member2.getCaptain() != null) {
+                return 1;
+            }
+        }
+        if (!member1.isFrigate()) {
+            if (member2.isFrigate()) {
+                return -1;
+            }
+        } else {
+            if (!member2.isFrigate()) {
+                return 1;
+            }
+        }
+        if (!member1.isDestroyer()) {
+            if (member2.isDestroyer()) {
+                return -1;
+            }
+        } else {
+            if (!member2.isDestroyer()) {
+                return 1;
+            }
+        }
+        if (!member1.isCruiser()) {
+            if (member2.isCruiser()) {
+                return -1;
+            }
+        } else {
+            if (!member2.isCruiser()) {
+                return 1;
+            }
+        }
+        if (!member1.isCapital()) {
+            if (member2.isCapital()) {
+                return -1;
+            }
+        } else {
+            if (!member2.isCapital()) {
+                return 1;
+            }
+        } // -1 means member1 is first, 1 means member2 is first
+        return member1.getSpecId().compareTo(member2.getSpecId());
     };
 
     private static boolean first = true;
@@ -139,32 +135,25 @@ public class SWP_BaseRandomBattle implements MissionDefinitionPlugin {
             String faction, String fleetType, MissionDefinitionAPI api, long seed, boolean autoshit) {
         GeneratorFleetTypes type;
         switch (fleetType) {
-            case "raiders":
+            case "raiders" ->
                 type = GeneratorFleetTypes.RAIDERS;
-                break;
-            case "patrol fleet":
+            case "patrol fleet" ->
                 type = GeneratorFleetTypes.PATROL;
-                break;
-            case "hunter-killers":
+            case "hunter-killers" ->
                 type = GeneratorFleetTypes.HUNTERS;
-                break;
-            case "war fleet":
+            case "war fleet" ->
                 type = GeneratorFleetTypes.WAR;
-                break;
-            case "defense fleet":
+            case "defense fleet" ->
                 type = GeneratorFleetTypes.DEFENSE;
-                break;
-            case "convoy":
+            case "convoy" ->
                 type = GeneratorFleetTypes.CONVOY;
-                break;
-            case "blockade-runners":
+            case "blockade-runners" ->
                 type = GeneratorFleetTypes.BLOCKADE;
-                break;
-            case "invasion fleet":
+            case "invasion fleet" ->
                 type = GeneratorFleetTypes.INVASION;
-                break;
-            default:
+            default -> {
                 return null;
+            }
         }
 
         return type.generate(api, side, faction, qualityFactor, opBonus, avgSMods, maxPts, seed, autoshit);
@@ -207,9 +196,9 @@ public class SWP_BaseRandomBattle implements MissionDefinitionPlugin {
         FACTIONS.add(Factions.LUDDIC_CHURCH, 1f);
         FACTIONS.add(Factions.DERELICT, 0.25f);
         FACTIONS.add(Factions.REMNANTS, 0.5f);
-        if (Global.getSettings().isDevMode()) {
-            FACTIONS.add(Factions.OMEGA, 0.1f);
-        }
+        FACTIONS.add(Factions.OMEGA, 0.1f);
+        //FACTIONS.add(Factions.THREAT, 0.2f);
+        FACTIONS.add(Factions.DWELLER, 0.15f);
         if (SWPModPlugin.hasUnderworld) {
             FACTIONS.add("cabal", 0.5f);
         }

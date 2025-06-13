@@ -1,0 +1,177 @@
+{
+  "hullName": "Altergeist",
+  "hullId": "csp_altergeist",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/csp_altergeist.png",
+  "style": "LOW_TECH",
+  "height": 190,
+  "width": 194,
+  "center": [97, 89],
+  "collisionRadius": 135,
+  "shieldCenter": [1, 0],
+  "shieldRadius": 135,
+  "viewOffset": 0,
+  "builtInMods": [
+    "hardened_subsystems",
+    "distributed_fire_control",
+    "csp_phaseinjector"
+  ],
+  "builtInWings": [
+    "sarissa_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 90,
+      "locations": [-28, 68]
+    },
+    {
+      "id": "WS 002",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 0,
+      "locations": [38, 0]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": -90,
+      "locations": [-28, -68]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": -2,
+      "locations": [19, 80]
+    },
+    {
+      "id": "WS 005",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [47, 60]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [47, -60]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 2,
+      "locations": [19, -80]
+    },
+    {
+      "id": "WS 008",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 180,
+      "locations": [
+        -50, 20,
+        -48, 10,
+        -48, -9,
+        -50, -19,
+        -47, 0
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-87, 63],
+      "length": 64,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87, -62],
+      "length": 64,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87, 55],
+      "length": 48,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87, -54],
+      "length": 48,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-83, 77],
+      "length": 96,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-83, -77],
+      "length": 96,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    97, 19,
+    97, -17,
+    77, -35,
+    49, -35,
+    49, -67,
+    48, -68.5,
+    24, -67,
+    -11, -94,
+    -77, -91,
+    -86, -49,
+    -52, -50.5,
+    -28.5, -39,
+    -59.5, -27,
+    -59.5, 25.5,
+    -27, 39,
+    -52, 50.5,
+    -84, 50,
+    -78, 88,
+    -10, 95,
+    24, 68.5,
+    48, 68.5,
+    48, 35,
+    77, 35
+  ]
+}

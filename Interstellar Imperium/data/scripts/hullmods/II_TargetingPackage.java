@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -44,7 +45,7 @@ public class II_TargetingPackage extends II_BasePackage {
         RANGE_BONUS_PD.put(HullSize.CAPITAL_SHIP, 200f);
     }
 
-    private static final Set<String> BLOCKED_HULLMODS = new HashSet<>(1);
+    private static final Set<String> BLOCKED_HULLMODS = new HashSet<>(3);
 
     static {
         BLOCKED_HULLMODS.add("diableavionics_mount");
@@ -72,16 +73,14 @@ public class II_TargetingPackage extends II_BasePackage {
         if (stats.getVariant() != null) {
             String shipId = II_Util.getNonDHullId(stats.getVariant().getHullSpec());
             switch (shipId) {
-                case "ii_carrum":
-                case "ii_barrus": {
+                case "ii_carrum", "ii_barrus" -> {
                     float cargoMod = stats.getVariant().getHullSpec().getCargo() - (stats.getVariant().getHullSpec().getCargo() * CARGO_MOD_CARGO_RATIO);
                     float fuelMod = cargoMod;
                     stats.getCargoMod().modifyFlat(id, -cargoMod);
                     stats.getFuelMod().modifyFlat(id, fuelMod);
-                    break;
                 }
-                default:
-                    break;
+                default -> {
+                }
             }
         }
     }
@@ -205,25 +204,25 @@ public class II_TargetingPackage extends II_BasePackage {
             }
 
             switch (weapon.getId()) {
-                case "ii_titan_deco":
+                case "ii_titan_deco" -> {
                     if (!titanWeaponHasAmmo) {
                         frame = 4;
                     } else {
                         frame = 2;
                     }
-                    break;
-                case "ii_titan_armor_door":
+                }
+                case "ii_titan_armor_door" ->
                     frame = 0;
-                    break;
-                case "ii_titan_targeting_door":
+                case "ii_titan_targeting_door" -> {
                     if (!titanWeaponHasAmmo) {
                         frame = 0;
                     } else {
                         frame = 1;
                     }
-                    break;
-                default:
+                }
+                default -> {
                     continue;
+                }
             }
 
             weapon.getAnimation().setFrame(frame);
@@ -240,7 +239,7 @@ public class II_TargetingPackage extends II_BasePackage {
     }
 
     @Override
-    protected void addPrimaryDescription(TooltipMakerAPI tooltip) {
+    protected void addPrimaryDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         LabelAPI bullet;
         tooltip.setBulletedListMode("    • ");
         bullet = tooltip.addPara("Projectile non-PD weapon range %s/%s/%s/%s (flat, by hull size)", BULLET_PAD, Global.getSettings().getColor("standardTextColor"), Misc.getPositiveHighlightColor(),
@@ -266,17 +265,17 @@ public class II_TargetingPackage extends II_BasePackage {
     protected void addEmptySysModText(TooltipMakerAPI tooltip) {
         LabelAPI bullet;
         tooltip.setBulletedListMode("    • ");
-        bullet = tooltip.addPara("Celerity Drive (Rift Shunts)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Command Center (Targeting Link)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Imperial Flares (Active)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Impulse Booster (Time Alter)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Lux Finis (Impetus)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Magnum Salvo (Kinetic)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Micro-Forge (Extended)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Overdrive (Maximum Firepower)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Shock Buster (Empowered)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Turbofeeder (Recalibrated)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Arbalest Loader (Gravitic Shell)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Celerity Drive (rift shunts)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Command Center (targeting link)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Imperial Flares (active)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Impulse Booster (time alter)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Lux Finis (impetus)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Magnum Salvo (kinetic)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Micro-Forge (extended)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Overdrive (maximum firepower)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Shock Buster (empowered)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Turbofeeder (recalibrated)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Arbalest Loader (gravitic shell)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
         tooltip.setBulletedListMode(null);
     }
 
@@ -284,116 +283,124 @@ public class II_TargetingPackage extends II_BasePackage {
     protected void addEmptyMiscModText(TooltipMakerAPI tooltip) {
         LabelAPI bullet;
         tooltip.setBulletedListMode("    • ");
-        bullet = tooltip.addPara("Cargo (Tanker Conversion)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Lightspear (Lensed)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Titan (Apocalypse MIRV)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
-        bullet = tooltip.addPara("Magna Fulmen (Repulsor)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Cargo (tanker conversion)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        bullet = tooltip.addPara("Lightspear (lensed)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        if (CodexDataV2.codexFullyUnlocked() || CodexDataV2.hasUnlockedEntryForShip("ii_olympus") || Global.getSettings().isDevMode()) {
+            bullet = tooltip.addPara("Titan (apocalypse MIRV)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
+        }
+        bullet = tooltip.addPara("Magna Fulmen (repulsor)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), BULLET_PAD);
         tooltip.setBulletedListMode(null);
     }
 
     @Override
     protected void addImperialFlaresSysModText(TooltipMakerAPI text) {
-        text.addTitle("Imperial Flares (Active)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Imperial Flares (active)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Launches %s as many flares, but the flares %s missiles.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "half", "actively seek");
     }
 
     @Override
     protected void addMicroForgeSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Micro-Forge (Extended)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Micro-Forge (extended)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("The system can be used %s instead of once.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "twice");
     }
 
     @Override
     protected void addTurbofeederSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Turbofeeder (Recalibrated)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Turbofeeder (recalibrated)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Also %s projectile speed while active.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "doubles");
     }
 
     @Override
     protected void addImpulseBoosterSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Impulse Booster (Time Alter)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Impulse Booster (time alter)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Also briefly %s, but %s when used.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "accelerates time", "generates flux");
     }
 
     @Override
     protected void addOverdriveSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Overdrive (Maximum Firepower)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Overdrive (maximum firepower)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Increases rate of fire by %s instead of 50%% and decreases gauge usage by %s. Also %s projectile speed and non-beam turret turn rate while active. %s speed or maneuverability.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "100%", "25%", "doubles", "Does not increase");
     }
 
     @Override
     protected void addMagnumSalvoSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Magnum Salvo (Kinetic)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
-        text.addPara("Enhanced Apocalypse MRMs are %s missiles that deal %s damage.",
+        text.addTitle("Magnum Salvo (kinetic)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addPara("Enhanced Armageddon MRMs are %s missiles that deal %s damage.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "two-stage", "kinetic");
     }
 
     @Override
     protected void addCommandCenterSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Command Center (Targeting Link)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Command Center (targeting link)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("%s mode also increases fighter projectile range by a flat %s and increases fighter projectile speed by %s.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "Speed", "250", "50%");
     }
 
     @Override
     protected void addShockBusterSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Shock Buster (Empowered)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Shock Buster (empowered)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("The system has %s targeting range and %s effectiveness, but has %s charges instead of three. %s flux cost.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "greater", "increased", "two", "Increased");
     }
 
     @Override
     protected void addCelerityDriveSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Celerity Drive (Rift Shunts)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Celerity Drive (rift shunts)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Also reduces weapon flux cost by up to %s while active.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "67%");
     }
 
     @Override
     protected void addLuxFinisSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Lux Finis (Impetus)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Lux Finis (impetus)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Increases flux capacity and dissipation by %s instead of 25%% and decreases gauge usage by %s. Also increases rate of fire by %s while active. %s speed or maneuverability.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "50%", "25%", "50%", "Does not increase");
     }
 
     @Override
     protected void addArbalestLoaderSysModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Arbalest Loader (Gravitic Shell)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Arbalest Loader (gravitic shell)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Using the system charges Magna Fulmen to fire a %s projectile that detonates on impact with %s. The system has %s charges instead of three. %s flux cost.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "slow", "extreme repulsive force", "two", "Increased");
     }
 
     @Override
     protected void addCargoMiscModText(TooltipMakerAPI text, ShipAPI ship) {
-        float cargoMod = ship.getHullSpec().getCargo() - (ship.getHullSpec().getCargo() * CARGO_MOD_CARGO_RATIO);
-        float fuelMod = cargoMod;
-        text.addTitle("Cargo (Tanker Conversion)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
-        text.addPara("Maximum cargo capacity is decreased by %s, but maximum fuel capacity is increased by %s.",
-                INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "" + (int) Math.round(cargoMod), "" + (int) Math.round(fuelMod));
+        text.addTitle("Cargo (tanker conversion)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        if (ship == null) {
+            float cargoMod = CARGO_MOD_CARGO_RATIO * 100f;
+            text.addPara("Maximum cargo capacity is decreased by %s, but maximum fuel capacity is increased by %s amount.",
+                    INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "" + (int) Math.round(cargoMod) + "%", "the same");
+        } else {
+            float cargoMod = ship.getHullSpec().getCargo() - (ship.getHullSpec().getCargo() * CARGO_MOD_CARGO_RATIO);
+            float fuelMod = cargoMod;
+            text.addPara("Maximum cargo capacity is decreased by %s, but maximum fuel capacity is increased by %s.",
+                    INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "" + (int) Math.round(cargoMod), "" + (int) Math.round(fuelMod));
+        }
     }
 
     @Override
     protected void addLightspearMiscModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Lightspear (Lensed)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Lightspear (lensed)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("Lightspear range is increased by a flat %s units.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "300");
     }
 
     @Override
     protected void addTitanMiscModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Titan (Apocalypse MIRV)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Titan (apocalypse MIRV)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("The Titan is equipped with long-ranged %s missiles, dealing %s DPS for approximately %s seconds before reaching a sustained %s DPS.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "Apocalypse-class", "1900", "60", "950");
     }
 
     @Override
     protected void addMagnaFulmenMiscModText(TooltipMakerAPI text, ShipAPI ship) {
-        text.addTitle("Magna Fulmen (Repulsor)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
+        text.addTitle("Magna Fulmen (repulsor)", Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"));
         text.addPara("The Magna Fulmen %s when it hits, propelling the target away.",
                 INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"), "inflicts knockback");
     }

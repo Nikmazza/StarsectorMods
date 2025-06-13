@@ -3,7 +3,7 @@
   "hullId": "cockroach",
   "displayName": "Miner",
   "goalVariant": false,
-  "fluxCapacitors": 7,
+  "fluxCapacitors": 3,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],

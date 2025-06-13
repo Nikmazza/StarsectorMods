@@ -1,7 +1,7 @@
 {
   "id": "mbeke_med",
   "specClass": "projectile",
-  "projectileSpecId": "mbeke_lrm",
+  "projectileSpecId": "mbeke_lrm_med",
   "type": "MISSILE",
   "mountTypeOverride":"COMPOSITE",
   "size": "MEDIUM",

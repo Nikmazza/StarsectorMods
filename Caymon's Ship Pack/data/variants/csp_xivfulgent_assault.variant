@@ -1,0 +1,58 @@
+{
+  "variantId": "csp_xivfulgent_assault",
+  "hullId": "csp_xivfulgent",
+  "displayName": "Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 12,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "ionpulser",
+        "WS 004": "ionpulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "sabotpod",
+        "WS 009": "sabot",
+        "WS 010": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "irpulse",
+        "WS 002": "irpulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightdualmg",
+        "WS 006": "lightdualmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "vulcan",
+        "WS 008": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

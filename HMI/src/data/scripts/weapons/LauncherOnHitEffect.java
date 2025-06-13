@@ -8,7 +8,7 @@ import static com.fs.starfarer.api.combat.DamageType.HIGH_EXPLOSIVE;
 
 public class LauncherOnHitEffect implements OnHitEffectPlugin {
 
-    private static final float EXTRA_DAMAGE = 150f;
+    private static final float EXTRA_DAMAGE = 100f;
 
 
     @Override

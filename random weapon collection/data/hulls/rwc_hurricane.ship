@@ -1,0 +1,115 @@
+{
+  "hullName": "Hurricane",
+  "hullId": "rwc_hurricane",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/rwc_hurricane.png",
+  "style": "HIGH_TECH",
+  "height": 90,
+  "width": 102,
+  "center": [51, 45],
+  "collisionRadius": 77,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 60,
+  "viewOffset": 0,
+  "builtInWings": [
+    "terminator_wing",
+    "terminator_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 258,
+      "angle": 84,
+      "locations": [-19, 38]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 258,
+      "angle": -84,
+      "locations": [-19, -38]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 196,
+      "angle": 0,
+      "locations": [-2.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [14.5, -35]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [14.5, 35]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -17.5, 20,
+        -23, 20
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-44, 20.5],
+      "length": 54,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-44, -20.5],
+      "length": 54,
+      "width": 22,
+      "angle": -180,
+      "contrailSize": 22,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    7.5, 4,
+    42.5, 10.5,
+    42, 19.5,
+    16.5, 30,
+    12.5, 41.5,
+    -23.5, 49,
+    -41, 36.5,
+    -44, 13.5,
+    -38.5, 4,
+    -38.5, -4,
+    -44, -13.5,
+    -41, -36.5,
+    -23.5, -49,
+    12.5, -41.5,
+    16.5, -30,
+    42, -19.5,
+    42.5, -10.5,
+    7.5, -4
+  ]
+}

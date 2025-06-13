@@ -1,5 +1,9 @@
 {
+    "startShipsSolo":[["TADA_tinnitus_attack"]],
+    "startShipsCombatSmall":[["TADA_scalper_attack", "TADA_tinnitus_attack", "TADA_tinnitus_attack"]],
     "startShipsCombatLarge":[
-      ["TADA_foray_outdated", "TADA_crane_standard", "vigilance_Starting", "vigilance_Starting"]
+        ["TADA_bonnethead_elite", "TADA_scalper_attack", "TADA_tinnitus_strike"],
+        ["TADA_owl_balanced", "TADA_scalper_support", "TADA_tinnitus_support"],
     ],
+    "startShipsTradeLarge":[["TADA_crane_standard", "TADA_crane_standard"]],
 }

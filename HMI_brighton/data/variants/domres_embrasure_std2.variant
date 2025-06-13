@@ -1,0 +1,42 @@
+{
+  "variantId": "domres_embrasure_std2",
+  "hullId": "domres_embrasure",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 1,
+  "fluxVents": 2,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "lightag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "lightdualac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heatseeker",
+        "WS0002": "heatseeker"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "domres_talon_wing",
+    "domres_talon_wing"
+  ]
+}

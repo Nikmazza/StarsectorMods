@@ -104,6 +104,7 @@ public class TWSolitonSiegebreaker extends BaseIndustry {
 		if (tracker.intervalElapsed() && !isFired) {
 			SectorEntityToken explosion = null;
 			StarSystemAPI system = market.getStarSystem();
+			if (system.getJumpPoints().size() <= 1) return;
 			SectorEntityToken point = (SectorEntityToken) system.getJumpPoints().get(1);
 			SectorEntityToken origin = market.getStarSystem().getEntityById("tw_danu_culmen_station");
 			LocationAPI cl = point.getContainingLocation();

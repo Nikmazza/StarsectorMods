@@ -7,6 +7,8 @@
 
         "swp_brawler_hegemony_ass":10,
 
+        "swp_centurion_xiv_eli":10,
+
         "swp_dram_luddic_path_rai":10,
 
         "swp_hecate_att":3,
@@ -27,6 +29,8 @@
 
         "swp_brawler_hegemony_ass":10,
 
+        "swp_centurion_xiv_eli":10,
+
         "swp_dram_luddic_path_rai":10,
 
         "swp_hecate_att":2,
@@ -39,6 +43,14 @@
         "swp_vigilance_lions_guard_eli":10,
 
         "swp_wolf_luddic_path_rai":10,
+
+        "swp_brawler_pather_mod":1,
+        "swp_cerberus_luddic_path_mod":1,
+        "swp_dram_luddic_path_mod":1,
+        "swp_hound_luddic_path_mod":1,
+        "swp_kite_luddic_path_mod":1,
+        "swp_lasher_pather_mod":1,
+        "swp_wolf_luddic_path_mod":1,
     },
     "combatMedium":{
         "swp_albatross_cs":5,
@@ -88,6 +100,10 @@
         "swp_caliber_cs":3,
         "swp_caliber_ovd":1,
         "swp_caliber_sta":3,
+
+        "swp_enforcer_luddic_path_mod":1,
+        "swp_manticore_luddic_path_mod":1,
+        "swp_nebula_luddic_path_mod":1,
     },
     "combatLarge":{
         "swp_champion_lions_guard_eli":10,
@@ -128,6 +144,9 @@
         "swp_zenith_cs":1.5,
         "swp_zenith_eli":3,
         "swp_zenith_str":2.5,
+
+        "swp_colossus2_mod":1,
+        "swp_venture_pather_mod":1,
     },
     "combatCapital":{
         "swp_cathedral_gra":4,
@@ -159,6 +178,8 @@
         "swp_victory_ass":5,
         "swp_victory_str":5,
         "swp_victory_eli":0,
+
+        "swp_prometheus2_mod":1,
     },
 
     "combatFreighterSmall":{
@@ -166,6 +187,10 @@
 
         "swp_nautilus_att":3,
         "swp_nautilus_sta":7,
+
+        "swp_cerberus_luddic_path_mod":1,
+        "swp_hound_luddic_path_mod":1,
+        "swp_kite_luddic_path_mod":1,
     },
     "combatFreighterLarge":{
         "swp_circe_cs":3,
@@ -186,6 +211,8 @@
         "swp_vortex_cs":3,
         "swp_vortex_eli":2,
         "swp_vortex_sta":3,
+
+        "swp_condor_luddic_path_mod":1,
     },
     "carrierMedium":{
         "swp_eos_att":2,
@@ -200,6 +227,8 @@
 
     "phaseSmall":{
         "swp_excelsior_eli":1,
+
+        "swp_gremlin_luddic_path_mod":1,
     },
     "phaseMedium":{
         "swp_nightwalker_att":2,

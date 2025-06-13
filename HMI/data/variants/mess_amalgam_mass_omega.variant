@@ -42,7 +42,7 @@
       "mode": "ALTERNATING",
       "weapons": {
         "WS0005": "minipulser",
-        "WS0006": "ioncannon_rem"
+        "WS0006": "ioncannon"
       }
     }
   ],

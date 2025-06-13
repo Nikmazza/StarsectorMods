@@ -14,6 +14,7 @@
   "builtInMods": [
     "hmi_linkedhull",
     "reduced_explosion",
+    "rapidrepaircheck",
     "targetingunit",
     "always_detaches",
     "safetyoverrides"

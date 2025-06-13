@@ -1,3 +1,365 @@
+Version 3.0.9
+Save Compatible with 3.0.0+
+
+-> Fixed a crash that occurs when saving and loading during the transition in the primordial waters biome.
+
+
+
+Version 3.0.8
+Save Compatible with 3.0.0+
+
+-> Decreased the engine brightness of the abyssal burn ability.
+-> Fixed an issue that caused Photospheres to count as visited if you were within the same coordinates in other systems.
+-> Fixed a graphical issue with the genesis.
+-> Fixed a bug that made certain conditions able to generate multiple times in some circumstances.
+
+
+
+Version 3.0.7
+Save Compatible with 3.0.0+
+
+-> Nameless Sea should now show its name on the map if discovered.
+-> Now caches Reflection calls to improve on performance.
+-> Potentialy fixed a rare procgen crash in the abyss.
+-> Fixed a crash that occured if you had the abyss disabled and were fighting a fleet that werent technicly part of a starsystem.
+-> Fixed abyssal fleets pursuing you despite using story-point disengages.
+
+
+
+Version 3.0.6
+Save Compatible with 3.0.0+
+
+-> Slightly increased the amount of fleets spawned on photospheres in the Sea of Harmony (New saves only).
+-> Clarified parts of the Saint Units shipsystem description.
+-> Slightly reduced drop rates of items in the abyssal depths
+-> Slight adjustments to related entries in the codex.
+
+
+
+Version 3.0.5
+Save Compatible with 3.0.0+
+
+-> Made it more likely for larger [THREAT] to spawn in the Abyssal wastes (New saves only).
+-> Fixed an issue that made abyssal storms able to hit a fleet despite slow-moving at low fps.
+
+
+
+Version 3.0.4
+Save Compatible with 3.0.0+
+
+-> Fixed a crash that occured if the abyssal depths are disabled and the player entered combat.
+
+
+
+Version 3.0.3
+Save Compatible with 3.0.0+
+
+-> Heavily reduced the timeflow bonus of abyssal requiem.
+-> Fixed Which mod not working on certain items again.
+-> Decreased the droprate of alterations on abyssal droneships.
+
+
+
+Version 3.0.2
+Save Compatible with 3.0.0+
+
+-> Fixed an issue that could make ships with the Abyssal Grid hullmod unrecoverable.
+-> Fixed the Which mod feature not working on Individual Ship Blueprints.
+
+
+
+Version 3.0.1
+Save Compatible with 3.0.0
+
+-> Made the Saint Unit more likely to use its shipsystems against groups of smaller ships.
+-> Fixed "Abyssal Burn" not being disabled by transverse jump.
+-> Abyssal Wastes and Sea of Harmony now apply their change in color saturation in-combat too.
+
+
+
+Version 3.0.0
+Not save compatible
+
+-> Entirely reworked the abyssal depths.
+  --> Removed the dungeon concept, the depths are instead a single, large system now.
+  --> Added Biomes.
+  --> Added the ability to craft a limited amount of alterations and artifacts. 
+  --> Added (Abyssal) Threat.
+  --> Added the Sensor Darkness mechanic. Unexplored places are now not shown on the map.
+  --> Reduced the average and maximum damage done by abyssal storms.
+
+-> Artifacts are now accessed from the "Fleet" menu instead of intel.
+
+-> Added the "Which mod is this From" utility option.
+  --> Enabled by default, can be disabled in the configs.
+
+-> Added Metallic Paintjobs for baseline abyss ships, credits to Nia Tahl.
+-> Removed the Abyss Difficulty options for now, might be re-added later on.
+-> Removed the Abyssal Major Event.
+-> The "Computational Matrix" Artifact now provides +90 auto points instead if your using SiC.
+-> "Abyssal Adaptability" no longer provides a timeflow boost for ships with the Chronos Core.
+-> "Abyssal Crew Conversion" no longer allows integrating cores & acquiring their skills.
+-> Increased the cooldown of the "Abyssal Cloak" Shipsystem from 15s to 18s.
+-> Decreases the Morkoths Armor Rating from 1300 to 1200.
+-> Decreases the Morkoths Hitpoints from 18000 to 16000.
+-> Reduced the burst damage from Seadragon DEMs from 450 to 400.
+-> Adjusted the "Abyssal Symphony" to be less broken with ships that have infinite ppt, i.e OnslaughtMk1.
+-> Alterations, AI cores, Artifacts and Consumeable Industries should now display codex entries.
+-> Increased the size of the azazel by an additional segment and made its AI more aggressive.
+-> Slightly decreases the speed of all baseline abyssal ships.
+-> Fixed ships continuing to have limited tooltips despite their codex entries being unlocked.
+-> Potentialy fixed the gilgamesh not being recoverable.
+-> A bunch of other stuff.
+
+
+
+Version 3.0.0-Beta11
+Save compatible with beta10
+
+-> Fix for a (GPU) performance issue.
+-> Fixed two minor spelling mistakes.
+
+
+
+Version 3.0.0-Beta10
+Save compatible with beta9
+
+-> Added the miniboss for the sea of solitude.
+-> Increased the cost of integrating the abyssal grid.
+-> Alterations, AI cores, Artifacts and Consumeable Industries should now display codex entries.
+-> Using the "Abyssal Burn" ability in the depths now changes the fleets engine color to the color the biome its in.
+-> Fixed the abyss system not generating with a hyperspace anchor.
+-> Fixed an issue where ships in the mod were using the wrong sounds for opening/closing their shields.
+
+
+
+Version 3.0.0-Beta9
+Save compatible with beta8
+
+-> Added additional compatibility for more content for the Which Mod feature & configs for those in the settings.
+-> Slight performance improvements for the Artifact and WhichMod UI
+-> Fixed the Whichmod feature working on a few more things than supposed to.
+-> Made codex entries for RAT skills unlockable.
+-> The genesis now deals 25% less damage while in phase 2.
+
+
+
+Version 3.0.0-Beta8
+Save compatible with beta7
+
+-> A bunch of performance improvements.
+-> Fixed Abyssal Threat fleets being spammed with additional hullmods (Requires new save).
+-> Abyssal Threat should now have the correct commlink dialog.
+-> Slightly decreased the radius required for colossal photospheres to count as "Visited".
+-> Potentialy fixed a bug where the gabriels timeflow continued to effect the player when it should not.
+-> The alterations menu should no longer be openable for ships from the Symbiotic Void Creatures mod.
+-> Fixed the Droneship Objective not working.
+
+
+
+Version 3.0.0-Beta7
+Save compatible with beta1-6
+
+-> Added the "Which Mod is this From" utility.
+  -> Displays which mod a ship, weapon, fighter or hullmod is from at the bottom of the tooltip.
+  -> Enabled by default, can be disabled in the Lunalib configurations.
+
+
+
+Version 3.0.0-Beta6
+Save compatible with beta1-5
+
+-> Fixed a bug that teleported you to the abyss on save creation.
+-> Decreased the Sensor Range increase from Sensor Arrays from 100% to 50%.
+
+
+
+Version 3.0.0-Beta5
+Save compatible with beta1-4
+
+-> Added the "Abyssal Shipyard" encounter to the Sea of Tranquility (Requires a new save).
+  -> Rewards a sidegrade version of an existing ability.
+-> The Converted Sariel should no longer be able to spawn in the Abyssal Wastes.
+-> Fixed a visual bug that occured in the Primordial Waters on the radar.
+
+
+
+Version 3.0.0-Beta4
+Save compatible with beta1-3
+
+-> Adjusted one of the Saint Units variants to have voltaic PD.
+-> Changed the Prayers two small missile mounts to synergy mounts.
+-> Added an additional prayer variant, which the Saint will also fabricate together with the prior one.
+-> Fixed opposing threat fleets having an incompatible hullmod warning.
+
+
+
+Version 3.0.0-Beta3
+Save compatible with beta1-2
+
+-> Adjusted the "Abyssal Symphony" to be less broken with ships that have infinite ppt, i.e OnslaughtMk1.
+-> Gave Abyssal Threat its own design type, rather than just Threat.
+-> Abyssal XO should no longer spawn with the depth diver start, as you already have one.
+-> Fixed Abyssal Threat ships being able to turn omega ships in to fragments.
+-> The version checker file should now work for the beta.
+
+
+
+Version 3.0.0-Beta2
+Save compatible with beta1
+
+-> Fixed an issue that made the mod reliant on Second-in-Command
+
+
+
+Version 3.0.0-Beta1
+Not save compatible
+
+-> Entirely reworked the abyssal depths.
+  -> Removed the dungeon concept, the depths are instead a single, large system now.
+  -> Added Biomes.
+  -> Added the ability to craft a limited amount of alterations and artifacts. 
+  -> Added (Abyssal) Threat.
+  -> Added the Sensor Darkness mechanic.
+  -> Reduced the average and maximum damage done by abyssal storms.
+  -> Removed the abyssal major event.
+-> Artifacts are now accessed from the "Fleet" menu instead of intel.
+-> Added Metallic Paintjobs for baseline abyss ships, credits to Nia Tahl.
+-> Removed the Abyss Difficulty options for now, might be re-added later on.
+-> The "Computational Matrix" Artifact now provides +90 auto points instead if your using SiC.
+-> "Abyssal Adaptability" no longer provides a timeflow boost for ships with the Chronos Core.
+-> "Abyssal Crew Conversion" no longer allows integrating cores & acquiring their skills.
+-> Increased the cooldown of the "Abyssal Cloak" Shipsystem from 15s to 18s.
+-> Decreases the Morkoths Armor Rating from 1300 to 1200.
+-> Decreases the Morkoths Hitpoints from 18000 to 16000.
+-> Reduced the burst damage from Seadragon DEMs from 450 to 400.
+-> Increased the size of the azazel by an additional segment.
+-> Fixed some issues with the azazels behaviour.
+-> Slightly decreases the speed of all baseline abyssal ships.
+-> Fixed ships continuing to have limited tooltips despite their codex entries being unlocked.
+-> Potentialy fixed the gilgamesh not being recoverable.
+
+
+
+Version 2.6.10
+Save Compatible
+
+-> Fixed a crash sometimes occuring in the abyssal depths.
+
+
+
+Version 2.6.9
+Save Compatible
+
+-> Fixed some unintended ships being available through the arms dealer.
+
+
+
+Version 2.6.8
+Save Compatible
+
+-> Abyssal and Exotech ships can now be unlocked for the codex and simulator.
+-> Fixed Shipsystem Codex Entries having no text.
+-> Fixed Entries that didnt display due to errors.
+-> Removed Codex Entries that are not supposed to be visible.
+
+
+
+Version 2.6.7
+Save Compatible
+
+-> Fixed a crash that could happen from unlocking information about abyssal ships.
+
+
+
+Version 2.6.6
+Save Compatible
+
+-> Should hopefuly fix the bug that caused the NPC exoship to no longer be able to warp after an innitial warp, will only really be fixed on new saves though. This issue also caused crashes on some java versions.
+-> Fixed bought exotech ships spawning with 50% CR instead of 70%.
+
+
+
+Version 2.6.5
+Save Compatible
+
+-> Fixed a crash with the abyssal warning beacon intel entry.
+-> Potentialy fixed some weird crashes with the exoship warp.
+
+
+
+Version 2.6.4
+Save Compatible
+
+-> Fixed yet another crash with the escort planner.
+
+
+
+Version 2.6.3
+Save Compatible
+
+-> Fixed a crash with the Escort Planner that occured if the only ship deployed was an escorting ship.
+
+
+
+Version 2.6.2
+Save Compatible
+
+-> Added "Escort Planner", a button in refit that allows assigning ships to escort other ships by default.
+ -> Disabled by default. Need to enable it in the Lunalib Config.
+
+
+
+Version 2.6.1
+Save Compatible
+
+-> Fixed a crash that could occur when the Exoship warped.
+
+
+
+Version 2.6.0
+
+-> Updated to 0.98.
+-> Fixed Abyssal Crew Conversion and the Automated Conversion being blocked by Neural Shards.
+-> Fixed instances where officer levels were set as floats, causing issues with other mods.
+-> Compiled for Java 17 and Kotlin 2.0
+
+
+
+Version 2.5.15
+Save compatible with 2.4.x
+
+-> Made the raphael compatible with a change in a future version of SoTF.
+
+
+
+Version 2.5.14
+Save compatible with 2.4.x
+
+-> Fixed the UI indicator for the gilgamesh shield not being positioned correctly.
+-> Fixed a few issues that made certain shaders not render on older hardware.
+-> Fixed a bug that restocked the exoship after completing the questline.
+
+
+
+Version 2.5.13
+Save compatible with 2.4.x
+
+-> Made some adjustments to the exoships route to make it a bit likier to stumble in to the same system as it.
+-> Now generates atleast 3 Hyper-Nav Exotech Beacons per save. (Was a minimum of 2)
+-> Potentialy fixed the issue that made slow-moveing not prevent abyssal storm damage.
+
+
+
+Version 2.5.12
+Save compatible with 2.4.x
+
+-> Moved the rare abyss title screen to Lunalibs system.
+-> Fixed the gilgamesh being able to use shield hullmods, despite not receiving any effects from them.
+-> Fixed some issues with the Gilgamesh Shield UI.
+
+
+
 Version 2.5.11
 Save compatible with 2.4.x
 

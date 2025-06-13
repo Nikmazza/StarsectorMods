@@ -1,6 +1,7 @@
 {
   "animationType": "GLOW_AND_FLASH",
-  "barrelMode": "ALTERNATING",
+  "barrelMode": "LINKED",
+  "separateRecoilForLinkedBarrels": true,
   "fireSoundTwo": "heavy_mauler_fire",
   "glowColor": [
     255,
@@ -9,11 +10,17 @@
     255
   ],
   "hardpointAngleOffsets": [
-    0
+    0,
+	0,
+	0
   ],
   "hardpointGlowSprite": "graphics/weapons/bomblauncher_hardpoint_glow.png",
   "hardpointOffsets": [
     10.5,
+    0,
+	10.5,
+    0,
+	10.5,
     0
   ],
   "hardpointSprite": "graphics/weapons/bomblauncher_hardpoint.png",
@@ -40,11 +47,17 @@
   "specClass": "projectile",
   "textureType": ROUGH,
   "turretAngleOffsets": [
-    0
+    0,
+	0,
+	0
   ],
   "turretGlowSprite": "graphics/weapons/bomblauncher_base_glow.png",
   "turretOffsets": [
     4.5,
+    0,
+	4.5,
+    0,
+	4.5,
     0
   ],
   "turretSprite": "graphics/weapons/bomblauncher_base.png",

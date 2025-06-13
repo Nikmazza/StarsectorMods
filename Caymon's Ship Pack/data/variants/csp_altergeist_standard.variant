@@ -1,0 +1,49 @@
+{
+  "variantId": "csp_altergeist_standard",
+  "hullId": "csp_altergeist",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 30,
+  "fluxVents": 13,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "adaptive_coils"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavyac",
+        "WS 003": "heavyac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "heavymortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "lightdualmg",
+        "WS 007": "lightdualmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "sabotpod",
+        "WS 006": "sabotpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

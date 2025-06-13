@@ -9,8 +9,8 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.combat.listeners.DamageDealtModifier;
@@ -18,6 +18,9 @@ import com.fs.starfarer.api.combat.listeners.WeaponRangeModifier;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
+import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 import data.scripts.everyframe.SWP_BlockedHullmodDisplayScript;
 import java.util.HashSet;
 import java.util.Set;
@@ -101,6 +104,49 @@ public class SWP_PDConversion extends BaseHullMod {
     }
 
     @Override
+    public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+        if ((ship == null) || (ship.getVariant() == null) || isForModSpec) {
+            return;
+        }
+
+        float opad = 10f;
+        int extraOPToInstall = 0;
+        for (String slotId : ship.getVariant().getFittedWeaponSlots()) {
+            WeaponSpecAPI weaponSpec = ship.getVariant().getWeaponSpec(slotId);
+            if (weaponSpec.getAIHints().contains(AIHints.PD)) {
+                switch (weaponSpec.getSize()) {
+                    case SMALL ->
+                        extraOPToInstall += OP_INCREASE_SMALL;
+                    case MEDIUM ->
+                        extraOPToInstall += OP_INCREASE_MEDIUM;
+                    case LARGE ->
+                        extraOPToInstall += OP_INCREASE_LARGE;
+                    default -> {
+                    }
+                }
+            }
+        }
+
+        if (extraOPToInstall > 0) {
+            tooltip.addSectionHeading("Ordnance points", Alignment.MID, opad);
+
+            if (ship.getVariant().hasHullMod(spec.getId())) {
+                tooltip.addPara("An additional %s ordnance points are consumed by the ship's (would-be) point defense "
+                        + "weapons as a result of this hullmod's effects.", opad,
+                        Misc.getHighlightColor(),
+                        "" + extraOPToInstall);
+            } else {
+                int opRequiredToInstall = spec.getCostFor(ship.getHullSize()) + extraOPToInstall;
+                tooltip.addPara("If this hullmod were to be installed, an additional %s ordnance points would be "
+                        + "consumed by the ship's point defense weapons, for a total cost of %s ordnance points.", opad,
+                        enoughOPToInstall(ship) ? Misc.getHighlightColor() : Misc.getNegativeHighlightColor(),
+                        "" + extraOPToInstall,
+                        "" + opRequiredToInstall);
+            }
+        }
+    }
+
+    @Override
     public boolean affectsOPCosts() {
         return true;
     }
@@ -125,17 +171,14 @@ public class SWP_PDConversion extends BaseHullMod {
             WeaponSpecAPI weaponSpec = ship.getVariant().getWeaponSpec(slotId);
             if (weaponSpec.getAIHints().contains(AIHints.PD)) {
                 switch (weaponSpec.getSize()) {
-                    case SMALL:
+                    case SMALL ->
                         opRequiredToInstall += OP_INCREASE_SMALL;
-                        break;
-                    case MEDIUM:
+                    case MEDIUM ->
                         opRequiredToInstall += OP_INCREASE_MEDIUM;
-                        break;
-                    case LARGE:
+                    case LARGE ->
                         opRequiredToInstall += OP_INCREASE_LARGE;
-                        break;
-                    default:
-                        break;
+                    default -> {
+                    }
                 }
             }
         }
@@ -176,12 +219,12 @@ public class SWP_PDConversion extends BaseHullMod {
         @Override
         public String modifyDamageDealt(Object param, CombatEntityAPI target, DamageAPI damage, Vector2f point, boolean shieldHit) {
             WeaponAPI weapon = null;
-            if (param instanceof DamagingProjectileAPI) {
-                weapon = ((DamagingProjectileAPI) param).getWeapon();
-            } else if (param instanceof BeamAPI) {
-                weapon = ((BeamAPI) param).getWeapon();
-            } else if (param instanceof MissileAPI) {
-                weapon = ((MissileAPI) param).getWeapon();
+            if (param instanceof DamagingProjectileAPI damagingProjectileAPI) {
+                weapon = damagingProjectileAPI.getWeapon();
+            } else if (param instanceof BeamAPI beamAPI) {
+                weapon = beamAPI.getWeapon();
+            } else if (param instanceof MissileAPI missileAPI) {
+                weapon = missileAPI.getWeapon();
             }
 
             String id = "swp_pdc_dam_mod";
@@ -211,10 +254,10 @@ public class SWP_PDConversion extends BaseHullMod {
 
         @Override
         public float getWeaponRangePercentMod(ShipAPI ship, WeaponAPI weapon) {
-            if (!weapon.getSpec().getAIHints().contains(AIHints.PD) || (weapon.getType() == WeaponType.MISSILE)) {
+            if (!weapon.getOriginalSpec().getAIHints().contains(AIHints.PD) || (weapon.getType() == WeaponType.MISSILE)) {
                 return 0f;
             }
-            return RANGE_BONUS_PERCENT / 100f;
+            return RANGE_BONUS_PERCENT;
         }
 
         @Override

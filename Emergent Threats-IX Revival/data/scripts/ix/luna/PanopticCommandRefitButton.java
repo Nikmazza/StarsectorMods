@@ -55,6 +55,9 @@ public class PanopticCommandRefitButton extends BaseRefitButton {
 		tooltip.addPara("The Panopticon Core will only activate with the elite %s, %s, %s, and %s skills due to not being in direct control of the ship.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Field Modulation", "Gunnery Implants", "Tactical Analysis", "Sword of the Fleet");
 		
 		tooltip.addSpacer(5f);
+		tooltip.addPara("If a human captain is in command but lacks the Sword of the Fleet skill, this hullmod will instead grant the ship the effects of the skill.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "human captain", "Sword of the Fleet");
+		
+		tooltip.addSpacer(5f);
 		tooltip.addPara("Panoptic Interfaces will form an increasingly complex mesh network that strains standard crew operations, causing a %s for all interfaced ships in the fleet that scales based on each ship's size.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "cumulative combat readiness reduction");
 		
 		if (!hasPanopticonCore()) {

@@ -1,0 +1,44 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 0,
+    "fluxVents": 29,
+    "goalVariant": true,
+    "hullId": "vice_bellicose_ex",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "vice_adaptive_pulse_resonator"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_bellicose_ex_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "plasma",
+                "WS 004": "ioncannon",
+                "WS 005": "ioncannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 010": "sabotpod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heavyburst",
+                "WS 003": "heavyburst",
+                "WS 006": "pdlaser",
+                "WS 007": "pdlaser",
+                "WS 008": "atropos",
+                "WS 009": "atropos"
+            }
+        }
+    ]
+}

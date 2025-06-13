@@ -1,7 +1,7 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 0,
-    "fluxVents": 29,
+    "fluxCapacitors": 3,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "vice_flamebreaker_ex",
     "hullMods": [

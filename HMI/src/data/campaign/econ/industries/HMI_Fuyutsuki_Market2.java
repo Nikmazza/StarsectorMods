@@ -14,6 +14,7 @@ import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.PatrolFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
@@ -200,6 +201,9 @@ public class HMI_Fuyutsuki_Market2 extends BaseIndustry implements RouteFleetSpa
 		float rateMult = market.getStats().getDynamic().getStat(Stats.COMBAT_FLEET_SPAWN_RATE_MULT).getModifiedValue();
 		spawnRate *= rateMult;
 
+		if (Global.getSector().isInNewGameAdvance()) {
+			spawnRate *= 3f;
+		}
 
 		float extraTime = 0f;
 		if (returningPatrolValue > 0) {
@@ -212,6 +216,12 @@ public class HMI_Fuyutsuki_Market2 extends BaseIndustry implements RouteFleetSpa
 		tracker.advance(days * spawnRate + extraTime);
 
 		//tracker.advance(days * spawnRate * 100f);
+
+		//DebugFlags.FAST_PATROL_SPAWN = true;
+		if (DebugFlags.FAST_PATROL_SPAWN) {
+			tracker.advance(days * spawnRate * 100f);
+		}
+
 
 		if (tracker.intervalElapsed()) {
 			String sid = getRouteSourceId();
@@ -354,8 +364,9 @@ public class HMI_Fuyutsuki_Market2 extends BaseIndustry implements RouteFleetSpa
 
 		if (fleet == null || fleet.isEmpty()) return null;
 
+
 		fleet.setFaction(market.getFactionId(), true);
-//		fleet.setNoFactionInName(false);
+		fleet.setNoFactionInName(false);
 
 		fleet.addEventListener(this);
 
@@ -363,7 +374,6 @@ public class HMI_Fuyutsuki_Market2 extends BaseIndustry implements RouteFleetSpa
 //		fleet.addScript(ai);
 
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_FLEET, true);
-
 		if (type == PatrolType.FAST || type == PatrolType.COMBAT) {
 			fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_CUSTOMS_INSPECTOR, true);
 		}
@@ -391,6 +401,8 @@ public class HMI_Fuyutsuki_Market2 extends BaseIndustry implements RouteFleetSpa
 		fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().x);
 
 		fleet.addScript(new PatrolAssignmentAIV4(fleet, route));
+
+		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, true, 0.1f);
 
 		//market.getContainingLocation().addEntity(fleet);
 		//fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().y);

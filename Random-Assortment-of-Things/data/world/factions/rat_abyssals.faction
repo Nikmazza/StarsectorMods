@@ -189,10 +189,12 @@
 		},
 	},
 	"custom":{
+		"rat_abyss_faction":true,
 		"engageWhenEvenStrength":true,
 		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
 		"postsNoBounties":true,
 		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+		
 	},	
 	"fleetTypeNames":{
 		"patrolSmall":"Lookout",

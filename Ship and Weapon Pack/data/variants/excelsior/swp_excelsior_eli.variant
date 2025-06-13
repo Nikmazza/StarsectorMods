@@ -1,13 +1,14 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 8,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "swp_excelsior",
     "hullMods": [
         "missleracks",
         "fluxcoil",
-        "solar_shielding"
+        "solar_shielding",
+        "missile_autoloader"
     ],
     "permaMods": [],
     "sMods": [],
@@ -22,8 +23,8 @@
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS0002": "swp_hornet",
-                "WS0003": "swp_hornet"
+                "WS0002": "reaper",
+                "WS0003": "reaper"
             }
         }
     ]

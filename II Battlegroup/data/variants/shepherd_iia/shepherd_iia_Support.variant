@@ -1,0 +1,38 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 0,
+  "fluxVents": 4,
+  "goalVariant": true,
+  "hullId": "shepherd_iia",
+  "hullMods": [
+    "eccm",
+    "ecm"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "shepherd_iia_Support",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lrpdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "taclaser"
+      }
+    }
+  ],
+  "wings": []
+}

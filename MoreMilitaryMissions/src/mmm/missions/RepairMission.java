@@ -11,10 +11,10 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.*;
-import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import mmm.Utils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
@@ -29,34 +29,34 @@ import java.util.*;
 public class RepairMission extends OrbitalMissionBase {
     private static final Logger log = Global.getLogger(RepairMission.class);
     static {
-        if (MagicSettings.getBoolean(MOD_ID, "MmmDebug")) {
+        if (Utils.DEBUG) {
             log.setLevel(Level.ALL);
         }
     }
-    public static enum Stage {
+    public enum Stage {
         ACCEPTED,
         COMPLETED,
         FAILED
     }
 
     public static final String MISSION_ID = "mmm_rm";
-    // Repair that can be done on a station, as a ratio of the remaining disruptions days.
-    public static final float REPAIR_RATIO = MagicSettings.getFloat(MOD_ID, "RmRepairRatio");
     // The time limit, computed as the ratio of days repaired: disruption days * REPAIR_RATIO * TIME_LIMIT_RATIO
     public static final float TIME_LIMIT_RATIO = 0.75f;
     // Minimum/maximum time limit. Also the minimum repair that can be done on a station; you don't get the mission if
     // the station is disrupted for less than MIN_TIME_LIMIT_DAYS / REPAIR_RATIO days.
-    public static final float MIN_TIME_LIMIT_DAYS = 20f;
+    public static final float MIN_TIME_LIMIT_DAYS = 15f;
     public static final float MAX_TIME_LIMIT_DAYS = 60f;
     // Repair cost per fleet point in terms of commodities when repairing at maximum disruption.
     public static final Map<String, Integer> REPAIR_COST_PER_FP = new TreeMap<>();
     static {
-        REPAIR_COST_PER_FP.put(Commodities.SUPPLIES, 7);
+        REPAIR_COST_PER_FP.put(Commodities.SUPPLIES, 8);
         REPAIR_COST_PER_FP.put(Commodities.HEAVY_MACHINERY, 2);
         REPAIR_COST_PER_FP.put(Commodities.METALS, 11);
         REPAIR_COST_PER_FP.put(Commodities.RARE_METALS, 1);
     }
 
+    // Repair that can be done on a station, as a ratio of the remaining disruptions days.
+    public static final float REPAIR_RATIO = MagicSettings.getFloat(MOD_ID, "RmRepairRatio");
     // You will be paid this profit margin above the base price.
     public static final float PROFIT_MARGIN = MagicSettings.getFloat(MOD_ID, "RmProfitMargin");
 
@@ -64,18 +64,20 @@ public class RepairMission extends OrbitalMissionBase {
     // Map<commodity ID, units>
     public Map<String, Integer> repair_cost = new TreeMap<>();
     public String station_name = "";
+    // star fortress, battlestation, etc
+    public String station_desc = "";
 
     // If the market is eligible for this mission right now, returns the station Industry.
     public static Industry getStationIndustryIfEligible(MarketAPI market) {
         // Check to ensure that the market has a station industry and fleet and is functional.
         Industry industry = Misc.getStationIndustry(market);
         if (industry == null) {
-            log.debug(market.getName() + " market has no station");
+//            log.debug(market.getName() + " market has no station");
             return null;
         }
         if (industry.getDisruptedDays() * REPAIR_RATIO < MIN_TIME_LIMIT_DAYS) {
-            log.debug(MessageFormat.format("Station is disrupted for only {0} days.",
-                    industry.getDisruptedDays()));
+//            log.debug(MessageFormat.format("Station is disrupted for only {0} days.",
+//                    industry.getDisruptedDays()));
             return null;
         }
         return industry;
@@ -83,14 +85,14 @@ public class RepairMission extends OrbitalMissionBase {
 
     @Override
     public boolean shouldShowAtMarket(MarketAPI market) {
-        log.debug("shouldShowAtMarket called for " + market.getName());
+//        log.debug("shouldShowAtMarket called for " + market.getName());
         return getStationIndustryIfEligible(market) != null;
     }
 
     @Override
     protected boolean create(MarketAPI createdAt, boolean barEvent) {
         String id = getMissionId();
-        log.debug((isBarEvent() ? "bar" : "contact") + " event; create called with mission_id=" + id);
+//        log.debug((isBarEvent() ? "bar" : "contact") + " event; create called with mission_id=" + id);
         if (!id.equals(MISSION_ID)) {
             log.error("Unexpected mission id: " + id);
             return false;
@@ -106,7 +108,7 @@ public class RepairMission extends OrbitalMissionBase {
 
         // Make sure the faction matches
         if (person.getFaction() != createdAt.getFaction()) {
-            log.debug(MessageFormat.format(
+            log.error(MessageFormat.format(
                     "{0} is in {1} faction instead of {2}",
                     person.getNameString(), person.getFaction().getDisplayName(),
                     createdAt.getFaction().getDisplayName()));
@@ -115,7 +117,7 @@ public class RepairMission extends OrbitalMissionBase {
 
         // Only the station commander can give out this mission.
         if (!person.getPostId().equals(Ranks.POST_STATION_COMMANDER)) {
-            log.debug(person.getNameString() + " is not the station commander");
+            log.error(person.getNameString() + " is not the station commander");
             return false;
         }
 
@@ -136,7 +138,6 @@ public class RepairMission extends OrbitalMissionBase {
 
         // We can find the station's fleet point from the variant of the station.
         String variantId;
-        String station_desc;
         try {
             JSONObject json = new JSONObject(industry.getSpec().getData());
             variantId = json.getString("variant");
@@ -162,7 +163,7 @@ public class RepairMission extends OrbitalMissionBase {
         for (Map.Entry<String, Integer> entry : REPAIR_COST_PER_FP.entrySet()) {
             CommoditySpecAPI spec = econ.getCommoditySpec(entry.getKey());
             // Round to the nearest 10s
-            int cost = Math.max(1, Math.round(fp * entry.getValue() * cost_ratio / 10)) * 10;
+            int cost = myGetRoundNumber(fp * entry.getValue() * cost_ratio);
             repair_cost.put(entry.getKey(), cost);
             base_price += spec.getBasePrice() * cost;
         }
@@ -189,25 +190,13 @@ public class RepairMission extends OrbitalMissionBase {
 
         // needed by rules.csv
         makeImportant(person, "$mmm_rm_needsCommodity", Stage.ACCEPTED);
-        MemoryAPI memory = person.getMemoryWithoutUpdate();
-        memory.set("$mmm_rm_station_desc", station_desc);
-        memory.set("$mmm_rm_totalPrice", Misc.getDGSCredits(getCreditsReward()));
-        memory.set("$mmm_rm_supplies", Misc.getWithDGS(repair_cost.get(Commodities.SUPPLIES)));
-        memory.set("$mmm_rm_heavy_machinery", Misc.getWithDGS(repair_cost.get(Commodities.HEAVY_MACHINERY)));
-        memory.set("$mmm_rm_metals", Misc.getWithDGS(repair_cost.get(Commodities.METALS)));
-        memory.set("$mmm_rm_rare_metals", Misc.getWithDGS(repair_cost.get(Commodities.RARE_METALS)));
-        memory.set("$mmm_rm_time_limit", Misc.getWithDGS(time_limit_days));
-
-        NumberFormat format = NumberFormat.getPercentInstance();
-        format.setMinimumFractionDigits(0);
-        memory.set("$mmm_rm_profit_margin", format.format(PROFIT_MARGIN));
-
         return true;
     }
 
     @Override
     protected void endSuccessImpl(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
-        addPotentialContact(ContactIntel.DEFAULT_POTENTIAL_CONTACT_PROB);
+        // Same probability as DefenseMission
+        addPotentialContact(this, dialog, 0.67f, 0.47f);
         int repair_days = (int) Math.round(Math.ceil(industry.getDisruptedDays() * REPAIR_RATIO));
         industry.setDisrupted(industry.getDisruptedDays() - repair_days);
 
@@ -221,6 +210,20 @@ public class RepairMission extends OrbitalMissionBase {
     @Override
     protected void updateInteractionDataImpl() {
         // These are used in rules.csv
+        set("$mmm_rm_station_desc", station_desc);
+        set("$mmm_rm_totalPrice", Misc.getDGSCredits(getCreditsReward()));
+        set("$mmm_rm_supplies", Misc.getWithDGS(repair_cost.get(Commodities.SUPPLIES)));
+        set("$mmm_rm_heavy_machinery", Misc.getWithDGS(repair_cost.get(Commodities.HEAVY_MACHINERY)));
+        set("$mmm_rm_metals", Misc.getWithDGS(repair_cost.get(Commodities.METALS)));
+        set("$mmm_rm_rare_metals", Misc.getWithDGS(repair_cost.get(Commodities.RARE_METALS)));
+        if (timeLimit != null) {
+            set("$mmm_rm_time_limit", Misc.getWithDGS(timeLimit.days - elapsed));
+        }
+
+        NumberFormat format = NumberFormat.getPercentInstance();
+        format.setMinimumFractionDigits(0);
+        set("$mmm_rm_profit_margin", format.format(PROFIT_MARGIN));
+
         boolean enough = true;
         for (Map.Entry<String, Integer> entry : repair_cost.entrySet()) {
             if (!playerHasEnough(entry.getKey(), entry.getValue())) {

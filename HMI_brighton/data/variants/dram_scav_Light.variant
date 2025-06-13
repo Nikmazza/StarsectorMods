@@ -1,0 +1,33 @@
+{
+    "displayName": "Light",
+    "fluxCapacitors": 2,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "dram_scav",
+    "hullMods": [],
+    "permaMods": [],
+    "variantId": "dram_scav_Light",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+			"WS 003": "salamanderpod"
+			}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "swarmer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vulcan"
+            }
+        }
+    ]
+}

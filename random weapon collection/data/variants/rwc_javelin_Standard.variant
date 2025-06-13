@@ -1,0 +1,55 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 20,
+    "fluxVents": 26,
+    "goalVariant": true,
+    "hullId": "rwc_javelin",
+    "hullMods": [
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_javelin_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "rwc_light_mjolnir",
+                "WS0002": "rwc_light_mjolnir",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0012": "sabotpod",
+                "WS0013": "sabotpod",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "arbalest",
+                "WS0004": "arbalest",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "pdlaser",
+                "WS0010": "pdlaser",
+                "WS0009": "pdlaser",
+                "WS0008": "pdlaser",
+                "WS0005": "pdlaser",
+                "WS0007": "pdlaser",
+                "WS0006": "pdlaser",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

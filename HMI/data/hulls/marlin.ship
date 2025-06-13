@@ -57,75 +57,27 @@
   ],
   "engineSlots": [
     {
-      "location": [-39.5, 20.5],
-      "length": 4.5,
+      "location": [-31.5, 13],
+      "length": 14,
       "width": 4,
-      "angle": 144.5,
-      "contrailSize": 4,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-39.5, -20.5],
-      "length": 4.5,
-      "width": 4,
-      "angle": -144.5,
-      "contrailSize": 4,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-42, 17.5],
-      "length": 4.403849,
-      "width": 3.380009,
-      "angle": 143,
-      "contrailSize": 3.380009,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-42, -17.5],
-      "length": 4.403849,
-      "width": 3.380009,
-      "angle": -143,
-      "contrailSize": 3.380009,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-43, 14.5],
-      "length": 4,
-      "width": 4,
-      "angle": 164,
-      "contrailSize": 4,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-43, -14.5],
-      "length": 4,
-      "width": 4,
-      "angle": -164,
-      "contrailSize": 4,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-44, 11.5],
-      "length": 4.657188,
-      "width": 3.200377,
-      "angle": 175,
-      "contrailSize": 3.200377,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-44, -11.5],
-      "length": 4.657188,
-      "width": 3.200377,
-      "angle": -175,
-      "contrailSize": 3.200377,
-      "style": "HIGH_TECH"
-    },
-    {
-      "location": [-47.5, 0.5],
-      "length": 16.5,
-      "width": 15,
       "angle": 180,
-      "contrailSize": 15,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31.5, -13],
+      "length": 14,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-36, -0],
+      "length": 19,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
       "style": "COBRA_BOMBER"
     }
   ],

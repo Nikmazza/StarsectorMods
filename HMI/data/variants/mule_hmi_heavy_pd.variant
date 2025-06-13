@@ -3,13 +3,14 @@
   "hullId": "mule_hmi_heavy",
   "displayName": "Point Defense",
   "goalVariant": true,
-  "fluxCapacitors": 5,
+  "fluxCapacitors": 4,
   "fluxVents": 14,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
     "turretgyros",
-    "armoredweapons"
+    "armoredweapons",
+    "magazines"
   ],
   "weaponGroups": [
     {
@@ -24,15 +25,16 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS 004": "dualflak",
-        "WS 005": "vulcan",
-        "WS 006": "dualflak"
+        "WS 005": "vulcan"
       }
     },
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "LINKED",
-      "weapons": {}
+      "weapons": {
+        "WS 004": "med_frag_mg",
+        "WS 006": "med_frag_mg"
+      }
     }
   ],
   "modules": [],

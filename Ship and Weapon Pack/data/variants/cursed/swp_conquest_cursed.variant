@@ -1,8 +1,7 @@
 {
     "displayName": "Frontal",
-    "fluxCapacitors": 25,
+    "fluxCapacitors": 29,
     "fluxVents": 50,
-    "goalVariant": false,
     "hullId": "conquest",
     "hullMods": [
         "missleracks",

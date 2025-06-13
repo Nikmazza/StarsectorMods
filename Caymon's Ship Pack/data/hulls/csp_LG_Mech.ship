@@ -1,0 +1,164 @@
+{
+  "hullName": "Cetan (LG)",
+  "hullId": "csp_LG_Mech",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/lion guard main body.png",
+  "style": "MIDLINE",
+  "height": 67,
+  "width": 58,
+  "center": [29.5, 43.5],
+  "collisionRadius": 95.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 94,
+  "viewOffset": 0,
+  "builtInMods": [
+    "solar_shielding",
+    "csp_multi_layered_shielding",
+    "csp_cetanframe",
+    "csp_lionarmory",
+    "andrada_mods"
+  ],
+  "builtInWings": [
+    "csp_MidlineMechDrone_wing"
+  ],
+  "builtInWeapons": {
+    "WS0001": "csp_LG_shoulderLdeco",
+    "WS0002": "csp_LG_shoulderRdeco",
+    "WS0008": "csp_LGchestplate",
+    "WS0010": "csp_LGHeadBeam"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-3.5, -35],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [-3.5, 36],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [-2.5, 16.5],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [-2.5, -15.5],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [19.5, 0.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 30,
+      "angle": -5,
+      "locations": [18, -36.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [11.5, 0.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [0.5, 0.5],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 5,
+      "locations": [3, 40]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-32, 17],
+      "length": 34,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-32.5, -16],
+      "length": 34,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-31, 5],
+      "length": 44.5,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-31, -5],
+      "length": 44.5,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -32.5, 12.5,
+    -35.5, 21.5,
+    -43.5, 25.5,
+    12.5, 29.5,
+    23, 16.5,
+    23, -16.5,
+    15, -27.5,
+    -44, -24,
+    -35, -19.5,
+    -32.5, -12.5
+  ]
+}

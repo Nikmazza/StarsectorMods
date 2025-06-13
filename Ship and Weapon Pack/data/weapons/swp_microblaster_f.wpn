@@ -3,7 +3,7 @@
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"MEDIUM",
-	"turretSprite":"graphics/swp/weapons/swp_microblaster_f.png",
+	"turretSprite":"graphics/swp/weapons/swp_micro_blaster_array_base.png",
 	"hardpointSprite":"graphics/swp/weapons/swp_microblaster_f.png",
 	"turretOffsets":[7, 9, 7, -9],
 	"turretAngleOffsets":[0, 0],

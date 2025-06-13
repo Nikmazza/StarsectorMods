@@ -1,0 +1,54 @@
+{
+  "displayName": "Elite",
+  "fluxCapacitors": 0,
+  "fluxVents": 13,
+  "goalVariant": true,
+  "hullId": "champion_ii",
+  "hullMods": [
+    "eccm",
+    "targetingunit",
+    "missleracks"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "champion_ii_Elite",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "dragon",
+        "WS 001": "dragon",
+        "WS 009": "dragonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "tachyonlance"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "heavymauler",
+        "WS 007": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "pdlaser",
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser",
+        "WS 010": "pdlaser",
+        "WS 011": "pdlaser"
+      }
+    }
+  ],
+  "wings": []
+}

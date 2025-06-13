@@ -280,7 +280,7 @@ public class II_EBaySubmarketPlugin extends MilitarySubmarketPlugin {
 
                 addShips(factionId,
                         40f * sMult, // combat
-                        itemGenRandom.nextFloat() > 0.75 ? 10f : 0f, // freighter 
+                        itemGenRandom.nextFloat() > 0.75 ? 15f : 0f, // freighter 
                         itemGenRandom.nextFloat() > 0.75 ? 10f : 0f, // tanker
                         itemGenRandom.nextFloat() > 0.75 ? 10f : 0f, // transport
                         itemGenRandom.nextFloat() > 0.75 ? 10f : 0f, // liner
@@ -363,20 +363,16 @@ public class II_EBaySubmarketPlugin extends MilitarySubmarketPlugin {
                 String id = pick.specID;
 
                 switch (pick.type) {
-                    case FIGHTER:
+                    case FIGHTER ->
                         ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.FIGHTER_BP, id), 1);
-                        break;
-                    case WEAPON:
+                    case WEAPON ->
                         ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.WEAPON_BP, id), 1);
-                        break;
-                    case SHIP:
+                    case SHIP ->
                         ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.SHIP_BP, id), 1);
-                        break;
-                    case INDUSTRY:
+                    case INDUSTRY ->
                         ourCargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.INDUSTRY_BP, id), 1);
-                        break;
-                    default:
-                        break;
+                    default -> {
+                    }
                 }
             }
         }
@@ -412,9 +408,7 @@ public class II_EBaySubmarketPlugin extends MilitarySubmarketPlugin {
             SpecialItemSpecAPI specialSpec = stack.getSpecialItemSpecIfSpecial();
             if (specialSpec != null) {
                 SpecialItemPlugin plugin = stack.getPlugin();
-                if (plugin instanceof BlueprintProviderItem) {
-                    BlueprintProviderItem bpProvider = (BlueprintProviderItem) plugin;
-
+                if (plugin instanceof BlueprintProviderItem bpProvider) {
                     List<String> providedList = bpProvider.getProvidedFighters();
                     if (providedList != null) {
                         for (String provided : providedList) {
@@ -554,9 +548,7 @@ public class II_EBaySubmarketPlugin extends MilitarySubmarketPlugin {
         SpecialItemSpecAPI specialSpec = stack.getSpecialItemSpecIfSpecial();
         if (specialSpec != null) {
             SpecialItemPlugin plugin = stack.getPlugin();
-            if (plugin instanceof BlueprintProviderItem) {
-                BlueprintProviderItem bpProvider = (BlueprintProviderItem) plugin;
-
+            if (plugin instanceof BlueprintProviderItem bpProvider) {
                 List<String> providedList = bpProvider.getProvidedFighters();
                 if (providedList != null) {
                     for (String provided : providedList) {

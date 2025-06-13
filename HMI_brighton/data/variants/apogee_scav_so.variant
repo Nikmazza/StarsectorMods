@@ -1,0 +1,48 @@
+{
+  "variantId": "apogee_scav_so",
+  "hullId": "apogee_scav",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 21,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "plasma"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "sabot",
+        "WS0004": "sabot",
+        "WS0005": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "locust"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "pdlaser",
+        "WS0006": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

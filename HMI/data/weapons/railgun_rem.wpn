@@ -4,6 +4,7 @@
 	"type":"BALLISTIC",
 	"mountTypeOverride":"HYBRID",
 	"size":"SMALL",
+	"everyFrameEffect": "data.scripts.weapons.HMI_VariableRangeEffect",
 	"turretSprite":"graphics/weapons/railgun_rem_turret_base.png",
 	"turretGlowSprite":"graphics/weapons/railgun_rem_turret_glow.png",
 	"hardpointSprite":"graphics/weapons/railgun_rem_hardpoint_base.png",

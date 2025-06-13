@@ -2,7 +2,7 @@
   "variantId": "vanguard_lp_std",
   "hullId": "vanguard_lp",
   "displayName": "Attack",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 0,
   "fluxVents": 2,
   "quality": 1,

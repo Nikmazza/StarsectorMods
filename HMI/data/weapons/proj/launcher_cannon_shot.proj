@@ -1,6 +1,7 @@
 {
 	"id":"launcher_cannon_shot",
 	"specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.LauncherOnFireEffect",
     "onHitEffect":"data.scripts.weapons.LauncherOnHitEffect",	
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",

@@ -1,0 +1,39 @@
+{
+  "variantId": "csp_manticorexivp_rogue",
+  "hullId": "csp_manticorexivp",
+  "displayName": "Rogue",
+  "goalVariant": true,
+  "fluxCapacitors": 15,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "mjolnir"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightac",
+        "WS 002": "lightac",
+        "WS 003": "lightac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "sabotpod",
+        "WS 005": "sabotpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,0 +1,51 @@
+{
+  "variantId": "grendel_d_lp_std",
+  "hullId": "grendel_d_lp",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 011": "hammerrack",
+        "WS 013": "hammerrack"
+	  }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "sabot_single",
+        "WS 008": "sabot_single",
+        "WS 009": "sabot_single"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 000": "lightac",
+        "WS 005": "lightac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 004": "vulcan",
+        "WS 010": "heavymg",
+        "WS 014": "heavymg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

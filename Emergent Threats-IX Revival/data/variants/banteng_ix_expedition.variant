@@ -1,0 +1,21 @@
+{
+    "displayName": "Expedition",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "banteng_ix",
+    "hullMods": [
+        "expanded_cargo_holds",
+        "extendedshieldemitter",
+        "frontemitter",
+        "surveying_equipment"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "banteng_ix_expedition",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS 001": "lightbringer_ciws_ix"}
+    }]
+}

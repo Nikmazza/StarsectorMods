@@ -1,0 +1,69 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 0,
+    "fluxVents": 7,
+    "goalVariant": true,
+    "hullId": "TADA_herald",
+    "hullMods": [
+        "eccm",
+        "magazines",
+        "missleracks",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_herald_strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "TADA_urchin",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "squall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "TADA_LRA",
+                "WS0003": "TADA_LRA",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "mininglaser",
+                "WS0009": "mininglaser",
+                "WS0006": "heavyburst",
+                "WS0007": "heavyburst",
+                "WS0005": "heavyburst",
+                "WS0012": "mininglaser",
+                "WS0011": "mininglaser",
+                "WS0010": "mininglaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "pdburst",
+                "WS0013": "pdburst",
+            }
+        }
+    ],
+    "wings": [
+        "broadsword_wing",
+        "longbow_wing",
+        "dagger_wing",
+        "dagger_wing",
+        "dagger_wing",
+        "broadsword_wing",
+    ]
+}

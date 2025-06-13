@@ -46,7 +46,7 @@ public class HMIScavFleetRouteManager extends BaseRouteFleetManager {
 		}
 
 		float salvage = getVeryApproximateSalvageValue(system);
-		return (int) (1 + Math.min(salvage*numHMIMarkets / 2, 7));
+		return (int) (1 + Math.min(salvage*numHMIMarkets * 3, 7));
 	}
 	
 	protected void addRouteFleetIfPossible() {

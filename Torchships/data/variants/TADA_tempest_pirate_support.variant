@@ -1,0 +1,16 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 7,
+    "goalVariant": true,
+    "hullId": "TADA_tempest_pirate",
+    "hullMods": ["advancedoptics", "autorepair"],
+    "permaMods": [],
+    "variantId": "TADA_tempest_pirate_support",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS0001": "hil"}
+    }],
+    "wings": []
+}

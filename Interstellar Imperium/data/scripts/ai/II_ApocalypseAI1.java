@@ -44,6 +44,11 @@ public class II_ApocalypseAI1 extends II_BaseMissile {
         if (missile.isFading() || missile.isFizzling()) {
             return;
         }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
+        }
 
         // This missile should always be accelerating
         missile.giveCommand(ShipCommand.ACCELERATE);
@@ -62,11 +67,11 @@ public class II_ApocalypseAI1 extends II_BaseMissile {
         float distance = MathUtils.getDistance(target.getLocation(), missile.getLocation());
         float guidance = 0.5f;
         if (missile.getSource() != null) {
-            guidance += Math.min(missile.getSource().getMutableStats().getMissileGuidance().getModifiedValue() -
-            missile.getSource().getMutableStats().getMissileGuidance().getBaseValue(), 1f) * 0.5f;
+            guidance += Math.min(missile.getSource().getMutableStats().getMissileGuidance().getModifiedValue()
+                    - missile.getSource().getMutableStats().getMissileGuidance().getBaseValue(), 1f) * 0.5f;
         }
         Vector2f guidedTarget = intercept(missile.getLocation(), missile.getVelocity().length(), target.getLocation(),
-                                          target.getVelocity());
+                target.getVelocity());
         if (guidedTarget == null) {
             // If the target is unreachable, try to lead anyway
             Vector2f projection = new Vector2f(target.getVelocity());
@@ -79,22 +84,22 @@ public class II_ApocalypseAI1 extends II_BaseMissile {
         Vector2f.add(guidedTarget, target.getLocation(), guidedTarget);
 
         float angularDistance = MathUtils.getShortestRotation(missile.getFacing(), VectorUtils.getAngle(
-                                                              missile.getLocation(), guidedTarget));
+                missile.getLocation(), guidedTarget));
 
         // Since this is a rapid-fire weapon, using a boolean for faster math
-        turnRight = angularDistance < maxAngleOffTarget * (float) Math.sin((Math.PI / flopPeriod) * flightTime +
-        flopOffset);
+        turnRight = angularDistance < maxAngleOffTarget * (float) Math.sin((Math.PI / flopPeriod) * flightTime
+                + flopOffset);
 
         //Damp angular velocity if we're getting close to the target angle
         if (target instanceof ShipAPI == true) {
-            if (Math.abs(angularDistance) < Math.abs(missile.getAngularVelocity()) && distance <
-                    target.getCollisionRadius() + 150f &&
-                    ((ShipAPI) target).isFighter() || ((ShipAPI) target).isDrone()) {
+            if (Math.abs(angularDistance) < Math.abs(missile.getAngularVelocity()) && distance
+                    < target.getCollisionRadius() + 150f
+                    && ((ShipAPI) target).isFighter() || ((ShipAPI) target).isDrone()) {
                 missile.setAngularVelocity(angularDistance);
             }
         } else {
-            if (Math.abs(angularDistance) < Math.abs(missile.getAngularVelocity()) && distance <
-                    target.getCollisionRadius() + 150f) {
+            if (Math.abs(angularDistance) < Math.abs(missile.getAngularVelocity()) && distance
+                    < target.getCollisionRadius() + 150f) {
                 missile.setAngularVelocity(angularDistance);
             }
         }
@@ -123,8 +128,7 @@ public class II_ApocalypseAI1 extends II_BaseMissile {
 
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone() || (ship.getOwner() == 100)) {
                 return false;
             }
@@ -135,8 +139,7 @@ public class II_ApocalypseAI1 extends II_BaseMissile {
     @Override
     protected boolean acquireTarget(float amount) {
         if (!isTargetValidAlternate(target)) {
-            if (target instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) target;
+            if (target instanceof ShipAPI ship) {
                 if (ship.isPhased() && ship.isAlive()) {
                     return false;
                 }

@@ -3,7 +3,7 @@
 	"specClass":"projectile",
 	"type":"MISSILE",
 	"size":"LARGE",
-	"turretSprite":"",
+    "turretSprite":"graphics/imperium/weapons/ii_fundae_array.png",
 	"hardpointSprite":"",
 	"hardpointOffsets":[7.5, 29, 7.5, 26, 7.5,  23, 7.5,  14, 7.5,  11, 7.5,   8, 7.5,   5,
                         7.5, -5, 7.5, -8, 7.5, -11, 7.5, -14, 7.5, -23, 7.5, -26, 7.5, -29,

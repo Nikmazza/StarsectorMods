@@ -1,0 +1,60 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 0,
+  "fluxVents": 28,
+  "goalVariant": true,
+  "hullId": "champion_ii",
+  "hullMods": [
+    "targetingunit",
+    "eccm",
+    "advancedoptics"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "champion_ii_Support",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 010": "taclaser",
+        "WS 011": "taclaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "pilum",
+        "WS 001": "pilum",
+        "WS 009": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "ionbeam",
+        "WS 007": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "lrpdlaser",
+        "WS 003": "lrpdlaser",
+        "WS 004": "lrpdlaser",
+        "WS 005": "lrpdlaser"
+      }
+    }
+  ],
+  "wings": []
+}

@@ -1,0 +1,39 @@
+{
+  "variantId": "gremlin_follower_of_exspira",
+  "hullId": "gremlin",
+  "displayName": "Followr of Exspira",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 1,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "reinforcedhull",
+    "blast_doors",
+    "csp_ArmoredCoil"
+  ],
+  "sMods": ["nav_relay",
+  "escort_package",
+  "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "lightag",
+        "WS 001": "lightag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "atropos",
+        "WS 003": "atropos"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

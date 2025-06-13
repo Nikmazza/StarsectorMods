@@ -1,0 +1,58 @@
+{
+  "variantId": "csp_bonnetheadlg_so",
+  "hullId": "csp_bonnetheadlg",
+  "displayName": "Overdrive",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymg",
+        "WS0002": "heavymg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ionpulser",
+        "WS0004": "ionpulser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "pilum",
+        "WS0008": "pilum"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "amblaster",
+        "WS0006": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "flak",
+        "WS0010": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

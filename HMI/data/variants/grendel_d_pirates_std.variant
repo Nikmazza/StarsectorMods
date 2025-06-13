@@ -1,0 +1,53 @@
+{
+  "variantId": "grendel_d_pirates_std",
+  "hullId": "grendel_d_pirates",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 5,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missile_autoloader",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "sabot",
+        "WS 008": "sabot",
+        "WS 009": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "heavymauler",
+        "WS 012": "heavymauler",
+        "WS 013": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightdualac",
+        "WS 006": "lightdualac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "vulcan",
+        "WS 010": "vulcan",
+        "WS 014": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

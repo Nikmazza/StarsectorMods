@@ -9,7 +9,7 @@
 	"fleetPoints":9,
 	"ordnancePoints":58,
 	"baseValueMult":4,
-	"systemId":"ix_immanence_engine",
+	"systemId":"ix_immanence_engine_frigate",
 	"spriteName":"graphics/ships/ix/easter_egg/scarab_ix.png",
 	"addHints":["HIDE_IN_CODEX"],
 	"tags":[],

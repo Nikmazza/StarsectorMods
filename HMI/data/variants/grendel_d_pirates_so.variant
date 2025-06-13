@@ -1,0 +1,46 @@
+{
+  "variantId": "grendel_d_pirates_so",
+  "hullId": "grendel_d_pirates",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "reaper",
+        "WS 008": "reaper",
+        "WS 009": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 011": "chaingun",
+        "WS 012": "chaingun",
+        "WS 013": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightdualmg",
+        "WS 006": "lightdualmg",
+        "WS 010": "lightdualmg",
+        "WS 014": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

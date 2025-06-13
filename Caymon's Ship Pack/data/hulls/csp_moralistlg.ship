@@ -1,0 +1,209 @@
+{
+  "hullName": "Moralist",
+  "hullId": "csp_moralistlg",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/csp_MoralistLG.png",
+  "style": "MIDLINE",
+  "height": 247,
+  "width": 124,
+  "center": [62, 118],
+  "collisionRadius": 157,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 151,
+  "viewOffset": 0,
+  "builtInMods": [
+    "andrada_mods",
+    "coherer",
+    "csp_multi_layered_shielding",
+    "solar_shielding"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 105,
+      "locations": [-46, 30]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -105,
+      "locations": [-46, -30]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 75,
+      "locations": [12, 30]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -75,
+      "locations": [12, -30]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 90,
+      "locations": [34, 14]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [34, -14]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 75,
+      "locations": [54, 14]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -75,
+      "locations": [54, -14]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 60,
+      "locations": [73, 14]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -60,
+      "locations": [73, -14]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": 0,
+      "locations": [110, 21]
+    },
+    {
+      "id": "WS0012",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": -0,
+      "locations": [110, -21]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-101, 27],
+      "length": 45,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-101, -27],
+      "length": 45,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-72, -11],
+      "length": 66,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-72, 11],
+      "length": 66,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -55.5, -1,
+    -74, -7,
+    -74, -19,
+    -102, -24,
+    -102, -45,
+    -72, -54,
+    -40, -54,
+    -14.5, -37,
+    -3, -37,
+    8, -47,
+    29.5, -48,
+    118, -34,
+    123, -27,
+    114, -25.5,
+    114, -17,
+    125, -17,
+    125, -9,
+    85.5, -2.5,
+    64, -6,
+    11, -6,
+    11, 8,
+    64, 8,
+    66, 1,
+    64, -6,
+    85.5, -2.5,
+    85.5, 2.5,
+    125, 11,
+    125, 19,
+    114, 19,
+    114, 27,
+    123, 27,
+    120, 33,
+    47, 46,
+    11, 48,
+    -3, 37,
+    -15, 37,
+    -40.5, 54,
+    -72.5, 54,
+    -102, 45,
+    -102, 24,
+    -74, 18,
+    -74, 6,
+    -55.5, 2
+  ]
+}

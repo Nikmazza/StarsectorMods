@@ -1,6 +1,6 @@
 {
     "displayName": "Pirate",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 3,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_mimesis_p",
@@ -9,7 +9,8 @@
         "dedicated_targeting_core",
         "turretgyros",
         "reinforcedhull",
-        "vice_adaptive_thruster_control"
+        "vice_adaptive_thruster_control",
+        "vice_feedback_handler"
     ],
     "modules": [{"SM 1": "vice_active_flare_module"}],
     "permaMods": [
@@ -26,26 +27,21 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "vice_x-ray_pulse",
-                "WS 004": "vice_x-ray_pulse",
-                "WS 009": "breachpod",
-                "WS 010": "breachpod",
-                "WS 011": "breachpod",
-                "WS 012": "breachpod"
+                "WS 003": "vice_heavy_maser",
+                "WS 004": "vice_heavy_maser"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "locust",
-                "WS 008": "locust"
+                "WS 007": "vice_warp_torpedo_launcher",
+                "WS 008": "vice_warp_torpedo_launcher",
+                "WS 009": "vice_warp_torpedo_pod",
+                "WS 010": "vice_warp_torpedo_pod",
+                "WS 011": "vice_warp_torpedo_pod",
+                "WS 012": "vice_warp_torpedo_pod"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 015": "ionbeam"}
         },
         {
             "autofire": true,
@@ -56,7 +52,8 @@
                 "WS 005": "pdburst",
                 "WS 006": "pdburst",
                 "WS 013": "pdlaser",
-                "WS 014": "pdlaser"
+                "WS 014": "pdlaser",
+                "WS 015": "vice_phased_electrolaser"
             }
         }
     ]

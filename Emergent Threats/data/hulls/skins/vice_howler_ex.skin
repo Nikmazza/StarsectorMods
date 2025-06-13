@@ -1,0 +1,11 @@
+{
+	"baseHullId":"vice_howler_base",
+	"skinHullId":"vice_howler_ex",
+	"hullName":"Howler (EX)",
+	"tech":"Experimental",
+	"descriptionId":"vice_ex_all",
+	"descriptionPrefix":"A high-tech skirmisher that served as the foundations for the Glimmer-class droneship. Due to radiation exposure concerns for its living crew, the Howler is equipped with an unusual combat flux shunt system, rather than the Glimmer's infamous high energy focus.",
+	"tags":["rare_bp", "hist2t", "merc", "ind", "tritachyon", "vice_ex_bp"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"builtInMods":["vice_experimental_hull", "vice_subsystem_interface"],
+}

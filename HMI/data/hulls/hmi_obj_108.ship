@@ -12,7 +12,8 @@
   "shieldRadius": 106.5,
   "viewOffset": 0,
   "builtInMods": [
-    "automated"
+    "automated",
+    "hmi_objectboost"
   ],
   "weaponSlots": [
     {

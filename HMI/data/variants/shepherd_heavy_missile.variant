@@ -3,7 +3,7 @@
   "hullId": "shepherd_heavy",
   "displayName": "Missile",
   "goalVariant": true,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 5,
   "fluxVents": 0,
   "quality": 0,
   "permaMods": [],
@@ -15,7 +15,7 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "signpost_sml"
+        "WS0001": "annihilator_fighter"
       }
     },
     {
@@ -26,10 +26,10 @@
       }
     },
     {
-      "autofire": true,
+      "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0003": "seth_med"
+        "WS0003": "sabotpod"
       }
     },
     {

@@ -27,7 +27,11 @@ public class MassMobilization extends SCBaseSkillPlugin {
 		tooltip.addPara("The people build the future, the Party guides the people, the Supreme Executor leads the Party. We all have our place in the Movement.", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addPara("  -Quotations from the Supreme Executor", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addSpacer(10f);
-		tooltip.addPara("15%% deployment cost reduction for Lion's Guard ships, up to 10 points", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		boolean isSFC = Global.getSettings().getModManager().isModEnabled("PAGSM");
+		String s = "15%% deployment cost reduction for Lion's Guard";
+		if (isSFC) s += " and Sindrian Fuel Company ships, up to 10 points";
+		else s += " ships, up to 10 points";
+		tooltip.addPara(s, 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("10%% deployment cost reduction for all other ships, up to 10 points", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("Exclusive with Management aptitude In Good Hands skill", 0f, Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
 	}
@@ -37,8 +41,9 @@ public class MassMobilization extends SCBaseSkillPlugin {
 		if (data.isSkillActive("sc_management_in_good_hands")) return;
 		if (!variant.hasHullMod("automated")) {
 			String manufacturer = variant.getHullSpec().getManufacturer();
-			float baseCost = stats.getSuppliesToRecover().getBaseValue();
-			float reductionMult = manufacturer.equals("Lion's Guard") ? DP_REDUCTION_LG : DP_REDUCTION;
+			boolean isSFC = manufacturer.equals("Lion's Guard") || manufacturer.equals("Sindrian Fuel Company");
+			//float baseCost = stats.getSuppliesToRecover().getBaseValue();
+			float reductionMult = isSFC ? DP_REDUCTION_LG : DP_REDUCTION;
 			stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyMult(id, 1f - reductionMult * 0.01f);
 		}
 	}

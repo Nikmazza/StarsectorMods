@@ -160,6 +160,7 @@
   "spriteName": "graphics/TORCHSHIPS/ships/TADA_tinnitus.png",
   "style": "MIDLINE",
   "viewOffset": 0,
+  "builtInMods": [],
   "weaponSlots": [
     {
       "angle": 0,

@@ -1,0 +1,45 @@
+{
+  "id": "csp_bazooka",
+  "specClass": "projectile",
+  "projectileSpecId": "csp_rocket",
+  "type": "MISSILE",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/csp_luster_bazooka.png",
+  "hardpointSprite": "graphics/weapons/csp_luster_bazooka.png",
+  "renderAboveAllWeapons": true,
+  "turretOffsets": [
+    33.5,
+    -2
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    50.5,
+    -2
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "SMOKE",
+  "autocharge": true,
+  "smokeSpec": {
+    "particleSizeMin": 15,
+    "particleSizeRange": 10,
+    "cloudParticleCount": 6,
+    "cloudDuration": 1.1,
+    "cloudRadius": 20,
+    "blowbackParticleCount": 6,
+    "blowbackDuration": 1,
+    "blowbackLength": 20,
+    "blowbackSpread": 20,
+    "particleColor": [
+      255,
+      255,
+      255,
+      155
+    ]
+  },
+  "fireSoundTwo": "harpoon_fire"
+}

@@ -1,0 +1,42 @@
+{
+  "variantId": "csp_thornbill_standard",
+  "hullId": "csp_thornbill",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 17,
+  "fluxVents": 16,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "fluxcoil"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ionpulser",
+        "WS0002": "ionpulser",
+        "WS0006": "atropos",
+        "WS0007": "atropos"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "breach",
+        "WS0004": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "sabotpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -41,13 +41,11 @@ class AbyssalRaphaelsGrace : BaseHullMod() {
         if (Global.getSector() != null && Global.getSector().playerFleet != null) {
             if (Global.getSector().playerFleet.containingLocation != null)
             {
-                if (Global.getSector().playerFleet.containingLocation.hasTag(AbyssUtils.SYSTEM_TAG)) {
+                if (AbyssUtils.isPlayerInAbyss()) {
                     isInAbyss = true
                 }
             }
         }
-
-        if (!isInAbyss) isInAbyss = ship!!.variant.hasHullMod("rat_sarakiels_blessing")
 
         var abyssColor = Misc.getGrayColor()
         var sectorColor = Misc.getHighlightColor()

@@ -1,0 +1,61 @@
+{
+    "displayName": "XIV",
+    "fluxCapacitors": 4,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "TADA_gunwall_XIV",
+    "hullMods": [
+        "heavyarmor",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "TADA_gunwall_XIV_XIV",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "mark9",
+                "WS0007": "mark9",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0018": "pilum",
+                "WS0017": "pilum",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "TADA_dioscuri",
+                "WS0010": "TADA_dioscuri",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0020": "vulcan",
+                "WS0021": "vulcan",
+                "WS0022": "vulcan",
+                "WS0014": "flak",
+                "WS0013": "flak",
+                "WS0016": "flak",
+                "WS0012": "flak",
+                "WS0015": "flak",
+                "WS0011": "flak",
+                "WS0019": "vulcan",
+            }
+        },
+    ],
+    "wings": [
+        "gladius_wing",
+    ],
+    "modules": [],
+}

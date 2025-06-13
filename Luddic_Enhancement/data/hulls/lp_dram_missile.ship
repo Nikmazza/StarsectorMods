@@ -12,8 +12,7 @@
   "shieldRadius": 63,
   "viewOffset": 0,
   "builtInMods": [
-    "insulatedengine",
-    "automated"
+    "insulatedengine"
   ],
   "builtInWeapons": {
     "WS0001": "le_dram_lights"

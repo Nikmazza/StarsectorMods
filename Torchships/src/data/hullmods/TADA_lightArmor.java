@@ -39,7 +39,8 @@ public class TADA_lightArmor extends BaseHullMod {
     
 //    private float shipHull = 25f;
     private final float shipArmor = 30f;
-    private final float shipFlux = 15f;
+    private final float no_smod_shipFlux = 15f;
+    private final float smod_shipFlux = 0f;
         
 //    private final Set<String> BLOCKED_HULLMODS = new HashSet<>();
 //    {
@@ -63,6 +64,9 @@ public class TADA_lightArmor extends BaseHullMod {
         
         stats.getMaxSpeed().modifyFlat(id, shipSpeed.get(hullSize));
                 
+        boolean sMod = isSMod(stats);
+        float shipFlux = no_smod_shipFlux;
+        if (sMod) shipFlux = smod_shipFlux;
         stats.getFluxDissipation().modifyMult(id, 1-(shipFlux*0.01f));
         stats.getFluxCapacity().modifyMult(id, 1-(shipFlux*0.01f));
     }
@@ -71,7 +75,7 @@ public class TADA_lightArmor extends BaseHullMod {
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){   
         for (String tmp : LighPlating_noncompatible) {
             if (ship.getVariant().getHullMods().contains(tmp)) {  
-                MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), tmp, "SCY_lightArmor");  
+                MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), tmp, "TADA_lightArmor");  
             }
         }
     }
@@ -100,8 +104,8 @@ public class TADA_lightArmor extends BaseHullMod {
                 + (shipSpeed.get(ShipAPI.HullSize.CAPITAL_SHIP)).intValue(); 
         }
         
-        if (index == 2) return "" + Math.round(shipArmor);
-        if (index == 3) return "" + Math.round(shipFlux);
+        if (index == 2) return "" + Math.round(shipArmor) + "%";
+        if (index == 3) return "" + Math.round(no_smod_shipFlux) + "%";
         
 //        if (index == 4) {
 //            return "" 

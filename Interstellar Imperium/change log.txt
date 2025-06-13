@@ -1,3 +1,51 @@
+Version 2.6.9 (May 14, 2025):
+- Improved missile targeting behavior regarding stations
+- Overdrive and Lux Finis now properly reduce CR when PPT has expired, even if there isn't significant enemy presence
+  * These systems already reduced PPT in the same situation; this just extends the behavior to the period after PPT is expired
+- Fixed Pulsar Bomb and Ardea not having any maps
+- Improved robustness of certain scripts to survive edge cases caused by other mods (e.g., Magna Fulmen behavior)
+- Fixed bug preventing Titan Strike from working without the Nexerelin mod enabled
+
+Version 2.6.8 (April 25, 2025):
+- Imperial Embassy and Hadrian no longer have Alpha Cores
+- Replaced the Titan (Fundae) sprite with the original; somehow the file got corrupted/replaced without warning on my end??
+
+Version 2.6.7 (April 24, 2025):
+- Fixed Yamato start crash
+
+Version 2.6.6 (April 24, 2025):
+- Various codex improvements: missing sprites filled in, related items improved some more, package hullmod entries made much more complete/detailed
+- Minor missile AI tweaks
+- Fixed NGC incompatibility introduced by Nexerelin 0.12.0b
+- Fixed problem with bounds checking (w.r.t. LazyLib)
+- Significantly reworked the Yamato's statline to put it on par with its strength in version 2.5.2
+
+Version 2.6.5 (April 6, 2025):
+- Updated for Starsector 0.98a
+- Photon Beam (Sebastos built-in) flux per second reduced to 750 from 1250
+- Photon Beam now regenerates 1 charge per 25 seconds
+- Carnifex Wing reduced to 20 OP from 22 OP
+- Elite Package also increases CR per deployment by 50% (except for the Olympus)
+- Basileus' medium mount changed to Universal from Composite
+- Certain portraits removed
+- Stella Castellum build time increased to match a normal star fortress
+- Titan Bombardment no longer angers vengeful factions if Nexerelin is enabled
+- Turbofeeder AI adjustment
+- Attempt to reduce Magna Fulmen friendly fire
+- Light Ballista Launcher ammo reduced to 4 from 5
+- Ballista LRM Launcher ammo reduced to 20 from 40
+- Heavy Ballista Launcher ammo reduced to 42 from 90
+- Lux Repeater recoil reduced
+- Lux Carbine (Draconarius) recoil reduced slightly
+- Imperial Core Upgrades is no longer compatible with Safety Overrides
+- Crocea Mors (Caesar built-in) cooldown reduced to 6 seconds from 9
+- Crocea Mors flux cost reduced to 1500 from 2500
+- Fundae SRM Pod (small mount) reduced to 5 OP from 7 OP
+- Fundae MLRS (medium mount) reduced to 11 OP from 12 OP
+- Pulsar Cannon reduced to 4 OP from 5 OP
+- Pulsar Repeater reduced to 8 OP from 9 OP
+- Pulsar Cannon and Pulsar Repeater flux cost increased to 30 from 22
+
 Version 2.6.4 (February 3, 2024):
 - Updated for Starsector 0.97a
 - No longer sends punitive expeditions; no Colony Crisis support (yet), so colony harassment outside of Nexerelin will be unlikely

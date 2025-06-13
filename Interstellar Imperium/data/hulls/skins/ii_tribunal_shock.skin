@@ -3,7 +3,7 @@
 	"skinHullId":"ii_tribunal_shock",
 	"descriptionPrefix":"Upgraded with a Shock Buster system.",
 	"hullName":"Tribunal (Shock)",
-    "tags":["no_dealer"],
+    "tags":["no_dealer", "codex_unlockable"],
 	"restoreToBaseHull":true,
 	"ordnancePoints":20,
 	"systemId":"ii_shockbuster",

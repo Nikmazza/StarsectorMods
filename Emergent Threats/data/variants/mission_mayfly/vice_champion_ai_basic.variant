@@ -1,0 +1,50 @@
+{
+    "displayName": "Networked",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+    "goalVariant": false,
+    "hullId": "vice_champion_auto",
+    "hullMods": [
+        "hardened_subsystems",
+        "safetyoverrides",
+        "vice_unified_targeting_core"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_champion_ai_basic",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "ioncannon",
+                "WS 001": "ioncannon",
+                "WS 008": "vice_deadeye_plasma"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "hydra"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "gorgonpod",
+                "WS 011": "gorgonpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser",
+                "WS 006": "heavymg",
+                "WS 007": "heavymg"
+            }
+        }
+    ],
+    "wings": []
+}

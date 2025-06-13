@@ -1,0 +1,23 @@
+{
+    "baseHullId":"vigilance",
+    "skinHullId":"kazeron_vigilance_league",
+    "hullName":"Vigilance (PL)",
+    "descriptionId":"vigilance",
+    "descriptionPrefix":"Constructed using advanced pre-Collapse industrial techniques within the shipyards of Kazeron, this warship was commissioned directly by the ruling Gens of the Persean League. Its uncanny resemblance to extinct Mayasuran naval designs was initially flagged by historians—only for those same scholars to later retract their claims without explanation. Now bearing the colors of the Persean League, this vessel embodies the Navarchy’s doctrine of decisive speed and overwhelming force, equipped with radically retrofitted engines using pre-Collapse engineering.",
+    "tags":["kazeron_PL_bp"],
+    "tech":"Kazeron Navarchy",
+    "spriteName":"graphics/kazeron/ships/vigilance_kazeron.png",
+    "baseValueMult":1.25,
+    "removeWeaponSlots":[],         # ids
+    "removeEngineSlots":[],         # indices, as engine slots have no id in the .ship file
+    "removeBuiltInMods":[],         # hullmod ids
+    "removeBuiltInWeapons":[],      # weapon slot ids
+    "builtInMods":["kazeron"],
+    "builtInWeapons":{
+    },
+	"weaponSlotChanges":{
+	   "WS 001":{
+		  "type": "HYBRID"
+		}
+	},
+}

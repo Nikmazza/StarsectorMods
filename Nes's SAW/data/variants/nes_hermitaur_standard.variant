@@ -1,50 +1,45 @@
 {
-  "variantId": "nes_hermitaur_standard",
-  "hullId": "nes_hermitaur",
-  "displayName": "Standard",
-  "goalVariant": true,
-  "fluxCapacitors": 11,
-  "fluxVents": 20,
-  "quality": 1,
-  "permaMods": [],
-  "hullMods": [
-    "missleracks",
-    "targetingunit",
-    "fluxdistributor"
-  ],
-  "weaponGroups": [
-    {
-      "autofire": false,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0003": "pilum_large"
-      }
-    },
-    {
-      "autofire": false,
-      "mode": "ALTERNATING",
-      "weapons": {
-        "WS0006": "reaper",
-        "WS0007": "reaper"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0001": "heavyac",
-        "WS0002": "heavyac"
-      }
-    },
-    {
-      "autofire": true,
-      "mode": "LINKED",
-      "weapons": {
-        "WS0004": "vulcan",
-        "WS0005": "vulcan"
-      }
-    }
-  ],
-  "modules": [],
-  "wings": []
+    "displayName": "Standard",
+    "fluxCapacitors": 6,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "nes_hermitaur",
+    "hullMods": [
+        "autorepair",
+        "blast_doors",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "nes_hermitaur_standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "hurricane",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0007": "annihilator",
+                "WS0006": "annihilator",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "arbalest",
+                "WS0002": "arbalest",
+                "WS0005": "lightac",
+                "WS0004": "lightac",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
 }

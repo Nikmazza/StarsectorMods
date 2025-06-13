@@ -1,0 +1,84 @@
+{
+  "variantId": "csp_torch_bomber",
+  "hullId": "csp_torch",
+  "displayName": "Bomber Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 14,
+  "fluxVents": 34,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_deck_crew",
+    "hardenedshieldemitter",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "pdlaser",
+        "WS0010": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "hveldriver",
+        "WS0018": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0015": "atropos",
+        "WS0016": "atropos"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "hil",
+        "WS0012": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "pdlaser",
+        "WS0008": "pdlaser",
+        "WS0013": "pdlaser",
+        "WS0014": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "taclaser",
+        "WS0004": "taclaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "sabotpod",
+        "WS0002": "sabotpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "spark_wing",
+    "spark_wing",
+    "spark_wing",
+    "csp_ignite_wing",
+    "csp_ignite_wing",
+    "csp_ignite_wing"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "variantId": "Scalpel_XIV_elite",
+  "hullId": "Scalpel_XIV",
+  "displayName": "Elite",
+  "goalVariant": false,
+  "fluxCapacitors": 9,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "ecm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "reaper",
+        "WS0002": "reaper",
+        "WS0003": "reaper",
+        "WS0004": "reaper",
+        "WS0005": "lightdualac",
+        "WS0006": "lightdualac",
+        "WS0007": "lightdualmg",
+        "WS0008": "lightdualmg",
+        "WS0009": "heavyneedler",
+        "WS0010": "heavyneedler"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

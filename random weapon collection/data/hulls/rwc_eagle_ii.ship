@@ -1,0 +1,237 @@
+{
+  "hullName": "Eagle II",
+  "hullId": "rwc_eagle_ii",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/rwc_eagle_ii.png",
+  "style": "MIDLINE",
+  "height": 218,
+  "width": 169,
+  "center": [85, 86],
+  "collisionRadius": 182,
+  "shieldCenter": [25, -0],
+  "shieldRadius": 155,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-15, 73]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-15, -73]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 155,
+      "locations": [-62, 30]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 205,
+      "locations": [-62, -30]
+    },
+    {
+      "id": "WS 005",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": 60,
+      "locations": [13, 42]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -60,
+      "locations": [13, -42]
+    },
+    {
+      "id": "WS 007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [119, 26]
+    },
+    {
+      "id": "WS 008",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [119, -26]
+    },
+    {
+      "id": "WS 010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 65,
+      "locations": [53, 33]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -65,
+      "locations": [53, -33]
+    },
+    {
+      "id": "WS 013",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [64.5, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-82, 42],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-84, 31],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, 20],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-85, -20],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-84, -31],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83, -41],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-37, 78],
+      "length": 24,
+      "width": 8,
+      "angle": 160,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-42, 67],
+      "length": 28,
+      "width": 8,
+      "angle": 165,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-48, 55],
+      "length": 32,
+      "width": 8,
+      "angle": 170,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-37, -78],
+      "length": 24,
+      "width": 8,
+      "angle": 200,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-42, -67],
+      "length": 28,
+      "width": 8,
+      "angle": 195,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-48, -55],
+      "length": 32,
+      "width": 8,
+      "angle": 190,
+      "contrailSize": 128,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -19, 80.5,
+    -14, 65.5,
+    1, 68.5,
+    126, 31.5,
+    126, 9.5,
+    70, 9,
+    70, -8,
+    124, -8.5,
+    124, -31.5,
+    3, -67.5,
+    -15, -65.5,
+    -17, -77.5,
+    -32, -77.5,
+    -50, -47.5,
+    -78, -50.5,
+    -84, -10.5,
+    -48, -8.5,
+    -48, 9.5,
+    -82, 11.5,
+    -77, 52,
+    -48, 46.5,
+    -32, 79.5
+  ]
+}

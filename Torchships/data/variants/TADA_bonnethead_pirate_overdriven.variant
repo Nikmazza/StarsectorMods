@@ -1,0 +1,31 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 2,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_bonnethead_pirate",
+    "hullMods": [
+        "missleracks",
+        "safetyoverrides",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_bonnethead_pirate_overdriven",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "flak",
+                "WS0010": "flak",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "hammerrack",
+                "WS0002": "hammerrack",
+            }
+        }
+    ]
+}

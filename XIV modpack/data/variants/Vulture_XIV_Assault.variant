@@ -1,0 +1,32 @@
+{
+  "variantId": "Vulture_XIV_Assault",
+  "hullId": "Vulture_XIV",
+  "displayName": "Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 18,
+  "fluxVents": 18,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualac",
+        "WS0002": "hveldriver",
+        "WS0003": "hveldriver",
+        "WS0004": "ionbeam",
+        "WS0005": "vulcan",
+        "WS0006": "vulcan",
+        "WS0007": "annihilator",
+        "WS0008": "annihilator"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

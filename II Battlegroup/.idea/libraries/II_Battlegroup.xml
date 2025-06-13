@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="II Battlegroup">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib/jars/MagicLib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib/jars/MagicLib-Kotlin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib/jars/MagicLib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib/jars/MagicLib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MagicLib/jars/MagicLib-Kotlin.jar!/" />
+    </SOURCES>
+  </library>
+</component>

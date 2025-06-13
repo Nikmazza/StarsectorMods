@@ -3,8 +3,8 @@
   "hullId": "cockroach",
   "displayName": "Outdated",
   "goalVariant": false,
-  "fluxCapacitors": 20,
-  "fluxVents": 8,
+  "fluxCapacitors": 16,
+  "fluxVents": 10,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
@@ -34,7 +34,7 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0006": "mcg_ml"
+        "WS0006": "hmi_mininglaser_array"
       }
     },
     {

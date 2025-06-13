@@ -180,8 +180,8 @@ public class IXHonorGuardMarket extends MilitarySubmarketPlugin {
 			getCargo().getMothballedShips().clear();
 
 			FactionAPI honorGuard = Global.getSector().getFaction("ix_core");
-			FactionDoctrineAPI doctrineOverride = honorGuard.getDoctrine().clone();
-			doctrineOverride.setShipSize(5);
+			FactionDoctrineAPI doctrineOverride = honorGuard.getDoctrine();
+			//doctrineOverride.setShipSize(5);
 			
 			addShips("ix_core", 50.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.0f, 
 					FactionAPI.ShipPickMode.PRIORITY_THEN_ALL, doctrineOverride);

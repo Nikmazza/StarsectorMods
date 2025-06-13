@@ -27,10 +27,12 @@ public class AdaptiveReactorChamber extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		return (util.isApplicable(ship) && util.isOnlyRemnantMod(ship));
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");
 		if (!util.isOnlyRemnantMod(ship)) return util.getIncompatibleCauseString("modcount");
 		return null;

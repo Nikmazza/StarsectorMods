@@ -1,0 +1,69 @@
+{
+  "id": "rwc_tribeam",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/rwc_tribeam_turret.png",
+  "turretGlowSprite": "graphics/weapons/rwc_tribeam_turret_glow.png",
+  "hardpointSprite": "graphics/weapons/rwc_tribeam_hardpoint.png",
+  "hardpointGlowSprite": "graphics/weapons/rwc_tribeam_hardpoint_glow.png",
+  "glowColor": [
+    225,
+    100,
+    255,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    15,
+    0,
+    15,
+    -5,
+    15,
+    5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    23,
+    0,
+    23,
+    -6,
+    23,
+    6
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "fringeColor": [
+    125,
+    0,
+    155,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 20,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundTwo": "phase_beam_loop"
+}

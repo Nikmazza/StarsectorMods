@@ -1,0 +1,343 @@
+- Notes
+	- Obvious credit to Tartiflette as this is simply an unofficial update to one of his mods, Torchships and Deadly Armaments
+	- If you wish to use something from this unofficial update for your own project, go ahead as long as you follow the conditions stated on the Starsector forum page for Torchships and Deadly Armaments
+	- Ship distribution will be clarified in a section of its own
+	- Various changes have been made for a variety of reasons
+		- Some ships have had adjustments to make them more appealing options compared to how they were before
+		- Some ships have had adjustments made to further distinguish them from similar ships in vanilla
+		- Some changes were made to better help this mod's content fit in alongside vanilla content post 0.96
+
+- Miscellaneous
+	- Updated for 0.98
+	- Vast majority of descriptions have had some adjustment from slight edits to being completely redone and so will not be mentioned further down
+	- Variants have been mostly redone, taking advantage of some of the new weapons added in 0.96 and beyond
+		- Variants were redone with 0.98's balance changes being considered
+	- Updated some import statements relating to MagicLib
+	- Removed multipliers associated with Nexerelin's ship stealing feature as they do not seem necessary
+		- Note: the Plasma Pest, and XIV skins of the Niagara and Pest had multipliers relating to this feature
+	- Adjusted title screen variants and simulation variants
+	- Adjusted Nexerelin starting fleet compositions
+	- A few background changes in regards to the rarity values of some items from the mod that won't be mentioned further down, mainly just removing them as they do not seem necessary
+	- Removed some unused folders and csvs in files
+	- Added a MagicLib bounty for Remnant phase ships
+		- Requirements for it to appear are to be level 5 and for 720 ingame days to have passed
+		- Bounty is offered by the Independent faction
+	- Removed version checker
+	- Slight adjustments to a few sprites
+	- Removed the hide from codex hint for the remnant ships and instead gave it the codex unlockable tag
+	- Added Owl (XIV) 
+		- Note: Thanks to Slavodan and Maxwell granting me permission to use their Owl XIV sprite from the Moar XIV mod.
+		- Note: The sprite has had very slight edits similar to the edits I made to the Owl sprite
+		- Note: Mod should still be compatible with Moar XIV due to differences in ship IDs though there will be two different Owl XIVs if you use both this and Moar XIV
+
+- Hullmods
+	- Notes
+		- Various background changes were made to the mentioned hullmods including: rarity values, tier stats, base value, uiTags, and tags
+	- Reactive Armor
+		- Lowered extra energy damage taken to 10%
+		- Added s-mod bonus that turns the 10% extra energy damage taken into -10% energy damage taken instead
+		- Added ablative armor to its list of non compatible hullmods
+		- Should be known by most, if not all, vanilla factions, but should be prominently sold by the Luddic Church
+	- Light Armor
+		- Added s-mod bonus that removes the penalties to flux dissipation and capacity
+		- Added ablative armor to its list of non compatible hullmods
+		- Should be known by most, if not all, vanilla factions, but should be prominently sold by the Pirates
+	- Minimal Preparation
+		- Added s-mod bonus that will bring maintenance reduction up to 60%
+		- Like other logistics hullmods, now requires a spaceport to install
+		- Should be known by most, if not all, vanilla factions, but should be prominently sold by the Persean League
+
+- Weapons
+	- Note: All weapons mentioned here should now be a part of the Lowtech blueprint package
+	- Note: All weapons mentioned here are able to be used by Independents, Mercenaries, Luddic Path, and Pirates and so will not be clarified further down
+	- Mining Pike
+		- Changed base value to 850
+		- Gave it a hint that should make it behave like the IR Autolance vs shields
+		- Lowered Nexerelin mining strength to 10 from 20 bringing it in line with the mining blaster's mining strength
+	- Long Range Arbalest
+		- Lowered tier stat to 1
+		- Changed base value to 900
+		- Found in Luddic Church
+	- Urchin Suppressor
+		- Lowered tier stat to 0
+		- Changed base value to 3250
+		- Found in Luddic Church
+	- Dioscuri Recoilless Rifle
+		- Changed base value to 3400
+		- Found in Hegemony
+	- Triple Mortar
+		- Lowered tier stat to 1
+		- Changed base value to 250
+		- Found in Luddic Church
+
+- Ships
+	- Frigates
+	- Pest (XIV)
+		- Raised base value to be 1.75x of Pest's base value
+		- Should now have the fancy little engine things that the default Pest has
+	- Pest Cutter
+		- Fleet points stat should now be lowered to the fleet points stat of the default Pest
+		- Removed built-in augmented engines
+		- Should have base value that is 1.1x of default pest-class
+		- Should now have a deployment point cost of 4
+		- Renamed to Pest Mk.II
+	- Pest (P)
+		- Should now have the fancy little engine things that the default Pest has
+		- No longer able to be restored to base hull
+		- Fleet points stat should now be lowered to the fleet points stat of the default Pest
+		- Rear energy slot should now be a missile slot
+		- Should now have the same OP as default Pest-class
+		- Should have base value that is 0.9x of default Pest-class
+	- Challenger
+		- Increased fleet points stat to 5 from 4
+	- Challenger (LP)
+		- Deployment point cost raised to 5
+		- Should have a value of 0.75x of default Challenger-class
+	- Lasher (TT)
+		- Increased shield arc to 240
+		- Increased base value to 13500
+	- Tempest Mk.II
+		- Added to pirate blueprint
+		- Changed designation to "Modified Frigate" from "Frigate"
+		- Lowered deployment point cost to 5 from 8
+			- Note: Though the Tempest has a deployment cost of 8, the Mk.II is noticeably weaker thanks in part to its limitations and also not having the Tempest's "drone focused" ship system
+		- Changed ship system to flarelaunchers from active flarelauncers
+		- Increased base value to 18000
+	
+	- Destroyers
+	- Bully
+		- Changed ship system to twin burn chamber from its ready racks ship system
+			- Note: A mobility system should hopefully distinguish it more from the manticore
+			- Note: The ready racks system it had is near pointless now due to the existence of the missile autoloader hullmod in vanilla
+		- Gave it the Distributed Fire Control hullmod
+		- Lowered fuel per lightyear ratio to 2 from 3
+	- Bully (P)
+		- Changed large mount into a missile mount and the small missile mount into an energy mount
+		- Added Shield Shunt and Lightweight plating
+		- Made base value 1.1x of default Bully-class
+		- Deployment point cost set at 10
+		- Given fleet point stat of 10
+		- Swapped ship system to fast missile racks
+		- Should now have 100 OP like default Bully-class
+		- Note: it definitely does seem a bit powerful but keep in mind it has shield shunt and lightweight plating making it quite a "glass cannon"
+	- Bully (LP)
+		- Made base value .8x of default Bully-class
+		- Added ballistic rangefinder
+		- Made base value 1.1x of default Bully-class
+		- Deployment point cost set at 10
+		- Given fleet point stat of 10
+		- Should now have 100 OP like default Bully-class
+	- Scintilla X
+		- No longer found in remnant fleets and can only be encountered via magiclib bounty
+			- Note: It's "hinted" at in starsector's lore that AI cores do not like phase ships hence why I'm having the two automated phase ships in the mod be distributed through a magiclib bounty instead
+		- Lowered deployment point cost to 15 from 20
+		- Lowered fleet points stat to 13 from 15
+	- Cassicus
+		- Reduced number of active flares launched from 18 to 6
+			- Note: for reference, the Apogee (a high tech cruiser) would fire 6 active flares while the Cassicus was shooting 18 active flares.
+		- Lowered deployment point cost to 10 from 11
+		- Lowered base value to 45000
+		- Changed shield efficiency to 0.6 from 0.7
+		- Changed shield to be omni directional
+	- Scalper
+		- Increased fleet point stat to 10 from 9
+		- Decreased deployment point cost to 9 from 10
+		- Changed shield efficiency to 0.8 from 0.9
+	- Scalper (P)
+		- No longer restorable to normal Scalper-class
+		- Given accelerated ammo feeder ship system
+		- Given ballistic rangefinder hullmod
+		- Deployment point cost should be 10
+		- Base value should be 1.1x the base value of the normal Scalper-class
+
+	- Cruisers
+	- Foray
+		- Lowered fleet point stat to 12 from 14
+		- Lowered deployment point cost to 14 from 18
+		- Lowered base value to 80000
+	- Foray (LP)
+		- Removed safety overrides and ill advised modifications
+		- Made it so that it can now be restored to a normal foray
+		- Added built-in lightweight plating
+		- Lowered value to be .75x that of foray's base value
+	- Foray (P)
+		- Same as Foray (LP) minus the removing of any built in hullmods
+		- Note: Since there are both Luddic Path and Pirate versions of the Venture, I'm making these Foray skins noticeably rare in their respective factions and when the player does come across them, they're just meant to be worse versions of the Foray that are meant to be restored to a regular Foray if the player gets their hands on one
+	- Attrition
+		- Lowered deployment point cost to 21 from 22
+		- Lowered fuel per lightyear ration to 4 from 5
+	- Crane
+		- Lowered deployment point cost to 7 from 10
+		- Removed built-in thunder wing
+		- Raised op to 40
+		- Added carrier hint
+		- Lowered base value to 50000
+	- Crane (P)
+		- Lowered deployment point cost to 12 from 17
+		- Removed rarity stat
+		- Removed expanded deck crews hullmod
+		- Swapped ground support hullmod for advanced ground support hullmod
+		- Lowered base value to 65000
+		- Lowered fleet points stat to 10 from 12
+		- Renamed to Crane Mk.II
+	- Owl
+		- Added insulated engine hullmod
+		- Added armored weapon mounts hullmod
+		- Changed base value to 130000
+		- Changed designation to "Hybrid Cruiser" from "Cruiser"
+		- Slight background change in regards to its engines
+		- Raised armor to 1000
+			- Note: Should be 1100 with the built-in armored weapon mounts hullmod
+		- Raised hull to 8000
+			- Note: Should be 8800 with the built-in insulated engine hullmod
+	- Bonnethead
+		- Slight background change in regards to some engines and some turret arcs
+		- Added auxiliary jets hullmod
+		- Changed designation to "Fast Cruiser"
+	- Bonnethead (P)
+		- Switched burn drive for twin burn chamber
+		- Removed built-in d-mod
+		- Lowered deployment cost to 20 from 25
+		- Lowered fleet point stat to 13
+		- Slight background changes in regards to some engines and a turret arc
+		- Lowered base value to 100000
+		- Renamed to Bonnethead Mk.II
+		- Changed designation to "Fast Cruiser"
+	- Bonnethead (LP)
+		- Lowered deployment cost to 18 from 25
+		- Lowered fleet point stat to 13
+		- Lowered base value to 90000
+		- Renamed to Bonnethead Mk.III
+		- Slight background changes in regards to some engines and a turret arc
+		- Changed designation to "Fast Cruiser"
+	- High-tide
+		- Capitalized the B in it's designation "LRM boat"
+		- Lowered deployment cost to 14 from 20
+		- Lowered base value to 80000
+	- Hightide (P)
+		- lowered base value to be .75x of Hightide's base value
+	- Whirlwind
+		- Lowered fleet point stat to 15
+		- Lowered deployment point cost to 24 from 29
+		- Changed shield arc to 120
+		- Lowered base value to 150000
+		- Given hist2t tag
+		- Lowered fuel per lightyear ratio to 3 from 4
+	- Shine
+		- Deployment point cost lowered to 25 from 32
+		- Lowered fleet points stat to 16
+		- Gave it the phase skimmer ship system
+		- Raised shield arc stat to 270 from 225
+		- Changed shield upkeep to 0.4 from 0.5
+		- Changed shield efficiency to 0.6 from 0.7
+		- Lowered fuel per lightyear ratio to 3 from 4
+	- Brilliant X
+		- Lowered deployment cost to 30 from 35
+		- Lowered fleet points stat to 19
+		- No longer found in remnant fleets and can only be encountered via magiclib bounty
+			- Note: It's "hinted" at in starsector's lore that AI cores do not like phase ships hence why I'm having the two automated phase ships in the mod be distributed through a magiclib bounty instead
+
+	- Capitals
+	- Niagara
+		- Raised deployment point cost to 40 from 38
+		- Lowered base value to 275000
+		- Added advanced turret gyros hullmod
+		- Raised top speed to 25
+		- Lowered fuel per lightyear ratio to 15 from 17
+	- Niagara (XIV)
+		- Lowered deployment point cost to 40 from 42
+		- Raised fleet points stat to 33
+		- Raised base value to 481250
+		- Removed rarity stat
+		- removed merc distribution related tag
+		- Added armored weapon mounts and advanced turret gyros hullmods
+		- Raised top speed to 25
+			- Note: due to the XIV hullmod, it will be slightly under 25 once it's speed stat debuff is applied
+		- Lowered fuel per lightyear ratio to 15 from 17
+	- Niagara (P)
+		- Lowered value to be .9x of Niagara's base value
+		- Should have the armored weapon mounts and advanced turret gyros hullmods that the base niagara hull has
+		- Should have accelerated ammo feed ship system now
+		- Changed 4 medium ballistic mounts to missile mounts
+		- Changed 4 medium ballistic mounts to energy mounts
+		- Note: hopefully the mount changes should help balance out having the AAF ship system
+	- Herald
+		- Added b-deck hullmod
+		- Raised amount of fighter bays to 6 from 5
+		- Lowered fuel per lightyear ratio to 10 from 12
+		- Gave it the same sell frequency as heron in PL markets
+
+	- Fighters
+	- Pinnace
+		- Lowered base value to 8000
+		- Lowered fleet points stat to 6
+	- Beak
+		- Raised fleet points stat to 3
+		- Lowered range to 0 like other support fighters
+		- Added lowtech and hightech skins
+		- Lowered OP cost to 3
+		- Lowered base value to 2000
+		- Changed role description to Support Drone
+	- Firespitter
+		- Lowered range to 0 like other support fighters
+		- Increased wing size to 2
+		- Raised OP cost to 6
+		- Raised fleet point stat to 5
+		- Raised base value to 4000
+		- Added midline and hightech skins
+		- Changed role description to Support
+
+	- Ship Distribution
+		- Note: getting it's own section to avoid cluttering the other sections 
+		- Low Tech blueprint package
+			- All modular weapons added by the mod are now able to have their blueprints obtained through the Low Tech blueprint package
+			- Blueprints for the Challenger, Bully, and Foray are in the Low Tech blueprint package
+			- Firespitter fighter blueprint is in the Low Tech blueprint package
+		- Midline blueprint package
+			- Blueprints for the Pest, Scalper, Crane, and Hightide are in the Midline blueprint package
+			- Blueprint for the Beak flak drone is in the Midline blueprint package
+		- High Tech blueprint package
+			- Blueprint for Cassicus is in the High Tech blueprint package
+			- Blueprint for the Pinnace gunship is in the High Tech blueprint package
+		- Pirate blueprint package
+			- All Pirate skin ships besides the Bonnethead Mk.II and Niagara (P) are in the Pirate blueprint package
+		- Luddic Path blueprint package
+			- All Luddic Path skin ships besides the Bonnethead Mk.III are in the Luddic Path blueprint package
+		- XIV blueprint package
+			- Both the Niagara (XIV) and Pest (XIV) are a part of the XIV blueprint package
+		- Rare blueprint
+			- Note: this means that the blueprint for the ship is not a part of a blueprint package, and can be found as an individual blueprint via exploration in the case of this mod
+			- Whirlwind, Herald, Niagara, Niagara (P) Lasher (TT), Bonnethead, Bonnethead Mk.II, Bonnethead Mk.III, Owl, and Attrition have individual blueprints and are not part of a blueprint package
+		- Historian
+			- Note: its those Historian npcs you can sometimes come across as a bar encounter and can give you some blueprint locations in exchange for story point(s)
+			- Whirlwind blueprint location can be possibly sold at a tier 2 Historian encounter
+			- Niagara (XIV) blueprint location can be possibly sold at a tier 3 Historian encounter
+
+		- Hegemony
+			- Gets the Niagara, Bully, Pest, Owl, and XIV skins of Niagara and Pest
+			- Gets the Firespitter fighter
+		- Luddic Church
+			- Get the Challenger, Attrition, Foray, and Hightide
+			- Gets the Firespitter fighter
+				- Added to priority fighter list
+		- Persean League
+			- Gets the Scalper, Bonnethead, Crane, and Herald
+			- Gets the Pinnace and Beak Drone fighters
+		- Tri Tachyon
+			- Gets the Lasher (TT), Cassicus, and Whirlwind
+			- Gets the Pinnace and Beak fighters
+				- Note: From what I can remember, there are no variants that Tri Tachyon has access to that use the Beak Drone so it will probably be very rare in Tri Tachyon fleets if it appears at all
+		- Pirates
+			- Gets all the Pirate ships added by this mod
+			- Gets the Firespitter and Beak Drone fighters
+		- Luddic Path
+			- Gets all the Luddic Path ships added by this mod
+			- Gets the Firespitter fighter
+		- Independents
+			- Gets every ship and fighter besides Pirate ships, Luddic Path ships, XIV ships, Lasher (TT), Herald, and Niagara
+		- Mercenaries
+			- Note: Mercenaries are being classified differently as they are classified differently when it comes to ship distribution in vanilla (merc tag)
+			- All the ships that the independents get plus the Herald and Niagara
+		- Remnants
+			- Gets Shine-class
+			- Note: the 2 Remnant phase ships are not found in remnant fleets and are instead now distributed via a MagicLib bounty

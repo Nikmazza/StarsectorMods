@@ -1,6 +1,6 @@
 {
-    "displayName": "Assault",
-    "fluxCapacitors": 1,
+    "displayName": "Elite",
+    "fluxCapacitors": 4,
     "fluxVents": 10,
     "hullId": "swp_brawler_hegemony",
     "hullMods": ["heavyarmor"],

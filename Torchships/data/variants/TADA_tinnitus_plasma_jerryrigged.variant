@@ -1,0 +1,26 @@
+{
+    "displayName": "Jerry-Rigged",
+    "fluxCapacitors": 9,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "TADA_tinnitus_plasma",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "insulatedengine",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_tinnitus_plasma_jerryrigged",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "TADA_plasma"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "pdlaser"}
+        }
+    ]
+}

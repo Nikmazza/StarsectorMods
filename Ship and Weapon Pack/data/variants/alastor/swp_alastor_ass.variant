@@ -1,13 +1,12 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 4,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "swp_alastor",
     "hullMods": [
         "heavyarmor",
-        "missile_autoloader",
-        "autorepair"
+        "missile_autoloader"
     ],
     "permaMods": [],
     "sMods": [],

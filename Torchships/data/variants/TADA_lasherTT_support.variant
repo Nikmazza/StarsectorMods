@@ -6,7 +6,7 @@
     "hullId": "TADA_lasherTT",
     "hullMods": [
         "advancedoptics",
-        "efficiency_overhaul"
+        "targetingunit",
     ],
     "permaMods": [],
     "variantId": "TADA_lasherTT_support",
@@ -14,17 +14,23 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS_001": "ionbeam"}
+            "weapons": {
+                "WS_001": "gravitonbeam",
+            }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS_002": "gravitonbeam"}
+            "weapons": {
+                "WS_002": "ionbeam",
+            }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS0007": "lrpdlaser"}
+            "weapons": {
+                "WS0007": "lrpdlaser",
+            }
         }
     ]
 }

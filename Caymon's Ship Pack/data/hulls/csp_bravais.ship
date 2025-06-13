@@ -1,0 +1,93 @@
+{
+  "hullName": "Bravais",
+  "hullId": "csp_bravais",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/omega_bravais.png",
+  "style": "OMEGA",
+  "height": 49,
+  "width": 48,
+  "center": [24, 27],
+  "collisionRadius": 37.5,
+  "shieldCenter": [-0.5, -0],
+  "shieldRadius": 33.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "insulatedengine",
+    "solar_shielding",
+    "turretgyros"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 0,
+      "locations": [-7, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -0,
+      "locations": [-7, -9]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [6, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15, 16],
+      "length": 24.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-15, -16],
+      "length": 24.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-17, 4],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-17, -4],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    -18, 18,
+    -5.5, 22,
+    22.5, 6,
+    10, 5,
+    10, -5,
+    22.5, -6,
+    -5.5, -22,
+    -18, -18
+  ]
+}

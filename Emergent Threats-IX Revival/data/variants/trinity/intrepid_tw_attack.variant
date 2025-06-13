@@ -1,6 +1,6 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 2,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "intrepid_tw",
@@ -13,8 +13,8 @@
         "tw_modernized_rangefinder",
         "ix_reactive_combat_shields",
         "stabilizedshieldemitter",
-        "ix_dawnstar_proton",
-        "ix_dawnstar_proton_handler"
+        "ix_dawnstar_electron",
+        "ix_dawnstar_electron_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -36,8 +36,8 @@
                 "WS 006": "spatial_charge_launcher_ix",
                 "WS 007": "spatial_charge_launcher_ix",
                 "WS 008": "spatial_charge_launcher_ix",
-                "WS 017": "spearwall_tw",
-                "WS 018": "spearwall_tw"
+                "WS 017": "stormwall_tw",
+                "WS 018": "stormwall_tw"
             }
         },
         {

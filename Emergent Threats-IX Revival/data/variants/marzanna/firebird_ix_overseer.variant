@@ -1,0 +1,56 @@
+{
+    "displayName": "Overseer",
+    "fluxCapacitors": 3,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "firebird_ix",
+    "hullMods": [
+        "ix_panoptic_command",
+        "ix_panoptic_command_handler",
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter"
+    ],
+    "modules": [{"SM 1": "ix_active_flare_module"}],
+    "permaMods": ["ix_panoptic_command"],
+    "sMods": [],
+    "variantId": "firebird_ix_overseer",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "es_projector_ix",
+                "WS 008": "es_projector_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "orthrus_m_ix",
+                "WS 002": "orthrus_m_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "orthrus_s_ix",
+                "WS 010": "orthrus_s_ix",
+                "WS 011": "orthrus_s_ix",
+                "WS 012": "orthrus_s_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "morningstar_ciws_ix",
+                "WS 004": "morningstar_ciws_ix",
+                "WS 005": "morningstar_ciws_ix",
+                "WS 006": "morningstar_ciws_ix"
+            }
+        }
+    ]
+}

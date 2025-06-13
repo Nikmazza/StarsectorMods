@@ -12,7 +12,8 @@
   "shieldRadius": 165.5,
   "viewOffset": 0,
   "builtInMods": [
-    "automated"
+    "automated",
+    "hmi_objectboost"
   ],
   "builtInWings": [
     "trowel_drone_wing",

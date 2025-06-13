@@ -2,7 +2,6 @@ package data.scripts.campaign.customstart;
 
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.Script;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
@@ -10,8 +9,10 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.CharacterCreationData;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
 import com.fs.starfarer.api.impl.campaign.rulecmd.newgame.NGCAddStartingShipsByFleetType;
+import com.fs.starfarer.api.impl.campaign.rulecmd.newgame.Nex_NGCFinalize;
 import data.scripts.campaign.intel.SWP_IBBIntel.FamousBountyStage;
 import data.scripts.campaign.intel.SWP_IBBTracker;
 import exerelin.campaign.ExerelinSetupData;
@@ -36,44 +37,45 @@ public class II_YamatoStart extends CustomStart {
         CharacterCreationData data = (CharacterCreationData) memoryMap.get(MemKeys.LOCAL).get("$characterData");
 
         NGCAddStartingShipsByFleetType.generateFleetFromVariantIds(dialog, data, null, ships);
-        NGCAddStartingShipsByFleetType.addStartingDModScript(memoryMap.get(MemKeys.LOCAL));
+        Nex_NGCFinalize.addStartingDModScript(memoryMap.get(MemKeys.LOCAL));
 
         FireBest.fire(null, dialog, memoryMap, "ExerelinNGCStep4");
 
-        data.addScript(new Script() {
-            @Override
-            public void run() {
-                Global.getSector().addScript(new EveryFrameScript() {
+        data.addScript(() -> {
+            Global.getSector().addScript(new EveryFrameScript() {
 
-                    private boolean done = false;
+                private boolean done = false;
 
-                    @Override
-                    public boolean isDone() {
-                        return done;
-                    }
+                @Override
+                public boolean isDone() {
+                    return done;
+                }
 
-                    @Override
-                    public boolean runWhilePaused() {
-                        return true;
-                    }
+                @Override
+                public boolean runWhilePaused() {
+                    return true;
+                }
 
-                    @Override
-                    public void advance(float amount) {
-                        CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
-                        for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-                            if (member.getShipName().contentEquals("Yamato")) {
-                                done = true;
-                                break;
-                            }
-
-                            member.setShipName("Yamato");
+                @Override
+                public void advance(float amount) {
+                    CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
+                    for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+                        if (member.getShipName().contentEquals("Yamato")) {
+                            done = true;
+                            break;
                         }
+
+                        member.setShipName("Yamato");
                     }
+                }
 
-                });
+            });
 
-                SWP_IBBTracker.getTracker().reportStageCompleted(FamousBountyStage.STAGE_YAMATO);
-            }
+            SWP_IBBTracker.getTracker().reportStageCompleted(FamousBountyStage.STAGE_YAMATO);
+            Global.getSector().getMemoryWithoutUpdate().set("$ii_yamatostart", true);
+            Global.getSettings().getHullSpec("ii_boss_dominus").getTags().remove(Tags.INVISIBLE_IN_CODEX);
+            Global.getSettings().getWeaponSpec("ii_boss_wavemotion").getTags().remove(Tags.INVISIBLE_IN_CODEX);
+            Global.getSettings().getShipSystemSpec("ii_boss_modifiedbooster").getTags().remove(Tags.INVISIBLE_IN_CODEX);
         });
     }
 }

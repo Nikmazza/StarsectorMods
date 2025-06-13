@@ -12,8 +12,7 @@
   "shieldRadius": 155.5,
   "viewOffset": 0,
   "builtInMods": [
-    "NES_StabilizedTurrets",
-	"NES_ColorSelector_Volt",
+    "NES_StabilizedTurrets"
   ],
   "builtInWings": [
     "nes_phobos_wing"
@@ -99,15 +98,6 @@
       "arc": 10,
       "angle": 0,
       "locations": [48, -0]
-    },
-	{
-      "id": "NES_DECO_COUNTER",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 0,
-      "locations": [0, 0]
     }
   ],
   "engineSlots": [

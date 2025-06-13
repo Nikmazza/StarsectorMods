@@ -1,0 +1,33 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 19,
+    "goalVariant": true,
+    "hullId": "missp_crescendo_bay_right",
+    "hullMods": [
+        "targetingunit",
+        "expanded_deck_crew"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "missp_crescendo_bay_right_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "heatseeker",
+                "WS0004": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "devastator"}
+        }
+    ],
+    "wings": [
+        "trident_wing",
+        "trident_wing"
+    ]
+}

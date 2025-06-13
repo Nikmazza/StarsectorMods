@@ -1,0 +1,27 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
+    "goalVariant": true,
+    "hullId": "nebula_scav",
+    "hullMods": [],
+    "permaMods": [],
+    "variantId": "nebula_scav_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+			"WS 003": "harpoonpod",
+			"WS 004": "harpoonpod"
+			}
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "vulcan",
+                "WS 002": "vulcan"
+            }
+        }]
+}

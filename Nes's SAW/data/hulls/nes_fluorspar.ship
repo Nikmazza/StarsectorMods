@@ -13,8 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "NES_CrystalHull",
-    "NES_ColorSelector",
-    "NES_VolatileShells"
+    "NES_VolatileShells",
+    "delicate"
   ],
   "builtInWeapons": {
     "WS0005": "nes_blinker_amber",
@@ -104,15 +104,6 @@
       "arc": 0,
       "angle": 0,
       "locations": [23.5, -0]
-    },
-    {
-      "id": "NES_DECO_COUNTER",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
-      "angle": 0,
-      "locations": [-6.5, -0]
     }
   ],
   "engineSlots": [

@@ -1,0 +1,7 @@
+{
+	"baseHullId":"afflictor",
+	"skinHullId":"afflictor_d_pirates",
+
+	"tags":["pirate_bp"],
+	"spriteName":"graphics/ships/phase/pmm_afflictor_p.png",
+}

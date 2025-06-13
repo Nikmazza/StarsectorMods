@@ -17,6 +17,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.PatrolFleetData;
@@ -176,7 +177,6 @@ public class IXMarzannaBase extends BaseIndustry implements RouteFleetSpawner, F
 								&& (!m.hasCondition(CORONAL_CONDITION))) {
 						if (!m.hasIndustry(IX_NODE) && !m.hasIndustry(IX_CORE)) m.addIndustry(IX_NODE);
 					}
-					//if (!market.hasIndustry(IX_CORE) || !market.hasIndustry(IX_NODE) || market.getIndustry(IX_CORE).isHidden() || market.getIndustry(IX_NODE).isHidden()) market.removeCondition("ix_monitored");
 				}
 				market.addCondition("ix_monitored");
 			}
@@ -683,6 +683,11 @@ public class IXMarzannaBase extends BaseIndustry implements RouteFleetSpawner, F
 			fleet.setFaction(market.getFactionId());
 			fleet.setNoFactionInName(true);
 			fleet.setName("Marzanna Cartel Enforcers");
+			FleetMemberAPI f = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "firebird_ix_overseer");
+			f.getRepairTracker().setCR(0.66f); //70% - 1 core on cruiser in fleet penalty
+			fleet.getFleetData().addFleetMember(f);
+			fleet.getFleetData().sort();
+			fleet.updateFleetView();
 		}
 		
 		if (fleet == null || fleet.isEmpty()) return null;

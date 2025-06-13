@@ -4,7 +4,7 @@
   "displayName": "Mbeke",
   "goalVariant": false,
   "fluxCapacitors": 0,
-  "fluxVents": 0,
+  "fluxVents": 2,
   "quality": 1,
   "permaMods": [],
   "hullMods": [],
@@ -20,8 +20,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0016": "kane_missile",
-        "WS0017": "kane_missile"
+        "WS0016": "hammer",
+        "WS0017": "hammer"
       }
     },
     {

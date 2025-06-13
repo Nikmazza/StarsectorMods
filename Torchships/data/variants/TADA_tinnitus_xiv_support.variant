@@ -1,12 +1,12 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "TADA_tinnitus_xiv",
     "hullMods": [
-        "fluxbreakers",
-        "hardenedshieldemitter"
+        "adaptiveshields",
+        "targetingunit",
     ],
     "permaMods": [],
     "sMods": [],

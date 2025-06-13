@@ -13,41 +13,24 @@ import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.Misc;
 import java.awt.Color;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Level;
 import org.dark.shaders.light.LightShader;
 import org.dark.shaders.light.StandardLight;
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.dark.shaders.util.GraphicsLibSettings;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 import org.lwjgl.util.vector.Vector3f;
 
+@SuppressWarnings("UseSpecificCatch")
 public class LightInjector extends BaseEveryFrameCombatPlugin {
 
     private static final String DATA_KEY = "GLib_LightInjector";
 
-    private static final String SETTINGS_FILE = "GRAPHICS_OPTIONS.ini";
-
     private static final Vector2f ZERO = new Vector2f();
-
-    private static boolean hyperEnabled;
-    private static boolean sunEnabled;
-
-    static {
-        try {
-            loadSettings();
-        } catch (IOException | JSONException e) {
-            Global.getLogger(ShipDestructionEffects.class).log(Level.ERROR, "Failed to load settings: " + e.getMessage());
-            sunEnabled = false;
-            hyperEnabled = false;
-        }
-    }
 
     private static float effectiveRadius(ShipAPI ship) {
         if (ship.getSpriteAPI() == null || ship.isPiece()) {
@@ -61,10 +44,8 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
     private static List<NearbyPlanetData> getNearbyStars(CampaignFleetAPI playerFleet) {
         LocationAPI loc = playerFleet.getContainingLocation();
         List<NearbyPlanetData> result = new ArrayList<>(2);
-        if (loc instanceof StarSystemAPI) {
-            StarSystemAPI system = (StarSystemAPI) loc;
-            List<PlanetAPI> planets = system.getPlanets();
-            for (PlanetAPI planet : planets) {
+        if (loc instanceof StarSystemAPI system) {
+            for (PlanetAPI planet : system.getPlanets()) {
                 if (!planet.isStar()) {
                     continue;
                 }
@@ -73,13 +54,6 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
             }
         }
         return result;
-    }
-
-    private static void loadSettings() throws IOException, JSONException {
-        JSONObject settings = Global.getSettings().loadJSON(SETTINGS_FILE);
-
-        sunEnabled = settings.getBoolean("enableSunLight");
-        hyperEnabled = settings.getBoolean("enableHyperLight");
     }
 
     private CombatEngineAPI engine;
@@ -94,14 +68,15 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
             return;
         }
 
+        if (!Global.getCombatEngine().getCustomData().containsKey(DATA_KEY)) {
+            Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
+        }
+
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
         final Map<ShipAPI, StandardLight> lights = localData.lights;
         final Map<ShipAPI, StandardLight> travelLights = localData.travelLights;
 
-        List<ShipAPI> ships = engine.getShips();
-        int shipsSize = ships.size();
-        for (int i = 0; i < shipsSize; i++) {
-            ShipAPI ship = ships.get(i);
+        for (ShipAPI ship : engine.getShips()) {
             if (ship.isHulk()) {
                 continue;
             }
@@ -113,11 +88,8 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
                 if (ship.getEngineController() == null) {
                     break;
                 }
-                List<ShipEngineAPI> engines = ship.getEngineController().getShipEngines();
                 int num = 0;
-                int enginesSize = engines.size();
-                for (int j = 0; j < enginesSize; j++) {
-                    ShipEngineAPI eng = engines.get(j);
+                for (ShipEngineAPI eng : ship.getEngineController().getShipEngines()) {
                     if (eng.isActive() && !eng.isDisabled() && eng.getContribution() > 0f) {
                         num++;
                         if (location == null) {
@@ -173,17 +145,14 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
             if (system != null) {
                 String id = system.getId();
                 switch (id) {
-                    case "burndrive":
+                    case "burndrive" -> {
                         if (system.isActive()) {
                             Vector2f location = null;
                             if (ship.getEngineController() == null) {
                                 break;
                             }
-                            List<ShipEngineAPI> engines = ship.getEngineController().getShipEngines();
                             int num = 0;
-                            int enginesSize = engines.size();
-                            for (int j = 0; j < enginesSize; j++) {
-                                ShipEngineAPI eng = engines.get(j);
+                            for (ShipEngineAPI eng : ship.getEngineController().getShipEngines()) {
                                 if (eng.isActive() && !eng.isDisabled()) {
                                     num++;
                                     if (location == null) {
@@ -229,18 +198,15 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
-                        break;
-                    case "maneuveringjets":
+                    }
+                    case "maneuveringjets" -> {
                         if (system.isActive()) {
                             Vector2f location = null;
                             if (ship.getEngineController() == null) {
                                 break;
                             }
-                            List<ShipEngineAPI> engines = ship.getEngineController().getShipEngines();
                             int num = 0;
-                            int enginesSize = engines.size();
-                            for (int j = 0; j < enginesSize; j++) {
-                                ShipEngineAPI eng = engines.get(j);
+                            for (ShipEngineAPI eng : ship.getEngineController().getShipEngines()) {
                                 if (eng.isActive() && !eng.isDisabled()) {
                                     num++;
                                     if (location == null) {
@@ -286,18 +252,15 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
-                        break;
-                    case "plasmajets":
+                    }
+                    case "plasmajets" -> {
                         if (system.isActive()) {
                             Vector2f location = null;
                             if (ship.getEngineController() == null) {
                                 break;
                             }
-                            List<ShipEngineAPI> engines = ship.getEngineController().getShipEngines();
                             int num = 0;
-                            int enginesSize = engines.size();
-                            for (int j = 0; j < enginesSize; j++) {
-                                ShipEngineAPI eng = engines.get(j);
+                            for (ShipEngineAPI eng : ship.getEngineController().getShipEngines()) {
                                 if (eng.isActive() && !eng.isDisabled()) {
                                     num++;
                                     if (location == null) {
@@ -338,18 +301,15 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
-                        break;
-                    case "microburn":
+                    }
+                    case "microburn" -> {
                         if (system.isActive()) {
                             Vector2f location = null;
                             if (ship.getEngineController() == null) {
                                 break;
                             }
-                            List<ShipEngineAPI> engines = ship.getEngineController().getShipEngines();
                             int num = 0;
-                            int enginesSize = engines.size();
-                            for (int j = 0; j < enginesSize; j++) {
-                                ShipEngineAPI eng = engines.get(j);
+                            for (ShipEngineAPI eng : ship.getEngineController().getShipEngines()) {
                                 if (eng.isActive() && !eng.isDisabled()) {
                                     num++;
                                     if (location == null) {
@@ -390,18 +350,15 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
-                        break;
-                    case "microburn_omega":
+                    }
+                    case "microburn_omega" -> {
                         if (system.isActive()) {
                             Vector2f location = null;
                             if (ship.getEngineController() == null) {
                                 break;
                             }
-                            List<ShipEngineAPI> engines = ship.getEngineController().getShipEngines();
                             int num = 0;
-                            int enginesSize = engines.size();
-                            for (int j = 0; j < enginesSize; j++) {
-                                ShipEngineAPI eng = engines.get(j);
+                            for (ShipEngineAPI eng : ship.getEngineController().getShipEngines()) {
                                 if (eng.isActive() && !eng.isDisabled()) {
                                     num++;
                                     if (location == null) {
@@ -442,8 +399,62 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
-                        break;
-                    case "emp":
+                    }
+                    case "combat_burn" -> {
+                        if (system.isActive()) {
+                            Vector2f location = null;
+                            if (ship.getEngineController() == null) {
+                                break;
+                            }
+                            int num = 0;
+                            for (ShipEngineAPI eng : ship.getEngineController().getShipEngines()) {
+                                if (eng.isActive() && !eng.isDisabled()) {
+                                    num++;
+                                    if (location == null) {
+                                        location = new Vector2f(eng.getLocation());
+                                    } else {
+                                        Vector2f.add(location, eng.getLocation(), location);
+                                    }
+                                }
+                            }
+                            if (location == null) {
+                                break;
+                            }
+
+                            location.scale(1f / num);
+
+                            if (lights.containsKey(ship)) {
+                                StandardLight light = lights.get(ship);
+
+                                light.setLocation(location);
+
+                                if ((system.isActive() && !system.isOn()) || system.isChargedown()) {
+                                    if (!light.isFadingOut()) {
+                                        light.fadeOut(1f);
+                                    }
+                                }
+                            } else {
+                                StandardLight light = new StandardLight(location, ZERO, ZERO, null);
+                                float intensity = (float) Math.sqrt(shipRadius) / 20f;
+                                float size = intensity * 300f;
+
+                                light.setIntensity(intensity);
+                                light.setSize(size);
+                                Color color = null;
+                                if (!ship.getEngineController().getShipEngines().isEmpty()) {
+                                    color = ship.getEngineController().getShipEngines().get(0).getEngineColor();
+                                }
+                                if (color != null) {
+                                    light.setColor(color);
+                                }
+                                light.fadeIn(1f);
+
+                                lights.put(ship, light);
+                                LightShader.addLight(light);
+                            }
+                        }
+                    }
+                    case "emp" -> {
                         if (system.isActive()) {
                             Vector2f location = ship.getLocation();
 
@@ -469,9 +480,9 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
                                 LightShader.addLight(light);
                             }
                         }
-                        break;
-                    default:
-                        break;
+                    }
+                    default -> {
+                    }
                 }
             }
         }
@@ -508,26 +519,29 @@ public class LightInjector extends BaseEveryFrameCombatPlugin {
     @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
-        engine.getCustomData().put(DATA_KEY, new LocalData());
-
-        if (engine.getCustomData().containsKey("noSunPlugin")) {
-            return;
-        }
-        if (hyperEnabled) {
-            if (engine.isInCampaign()) {
-                if (Global.getSector().getHyperspace() == Global.getSector().getPlayerFleet().getContainingLocation()) {
-                    engine.addPlugin(new HyperPlugin());
+        if (engine != null) {
+            engine.getCustomData().put(DATA_KEY, new LocalData());
+            if (engine.getCustomData().containsKey("noSunPlugin")) {
+                return;
+            }
+            if (GraphicsLibSettings.enableHyperLight()) {
+                if (engine.isInCampaign()) {
+                    if (Global.getSector().getHyperspace() == Global.getSector().getPlayerFleet().getContainingLocation()) {
+                        if (Misc.getAbyssalDepthOfPlayer() < 1f) {
+                            engine.addPlugin(new HyperPlugin());
+                        }
+                    }
                 }
             }
-        }
-        if (sunEnabled) {
-            if (engine.isInCampaign()) {
-                List<NearbyPlanetData> stars = getNearbyStars(Global.getSector().getPlayerFleet());
-                for (NearbyPlanetData data : stars) {
-                    engine.addPlugin(new SunPlugin(data.offset.length(), data.offset.normalise(data.offset), data.planet, 5f / (float) Math.sqrt(stars.size())));
+            if (GraphicsLibSettings.enableSunLight()) {
+                if (engine.isInCampaign()) {
+                    List<NearbyPlanetData> stars = getNearbyStars(Global.getSector().getPlayerFleet());
+                    for (NearbyPlanetData data : stars) {
+                        engine.addPlugin(new SunPlugin(data.offset.length(), data.offset.normalise(data.offset), data.planet, 5f / (float) Math.sqrt(stars.size())));
+                    }
+                } else {
+                    engine.addPlugin(new SunPlugin());
                 }
-            } else {
-                engine.addPlugin(new SunPlugin());
             }
         }
     }

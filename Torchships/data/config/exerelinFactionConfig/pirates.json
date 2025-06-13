@@ -1,16 +1,14 @@
 {
     "startShipsSolo":[
-        ["TADA_challenger_pirate_standard"]
+        ["TADA_challenger_pirate_attack"],
+        ["TADA_tinnitus_p_attack"],
+        ["TADA_tempest_strike"],
     ],
-
     "startShipsCombatSmall":[
-        ["TADA_tinnitus_plasma_standard", "TADA_tinnitus_plasma_standard", "TADA_tinnitus_plasma_standard", "TADA_tinnitus_plasma_standard"],
-        ["TADA_bully_pirate_combat", "TADA_scalper_pirate_escort", "TADA_tinnitus_p_standard"]
+        ["TADA_tinnitus_plasma_jerryrigged", "TADA_tinnitus_plasma_jerryrigged", "TADA_tinnitus_plasma_jerryrigged", "TADA_tinnitus_plasma_jerryrigged"],
+        ["TADA_bully_pirate_overdriven", "TADA_tinnitus_p_attack", "TADA_tinnitus_p_attack"],
+        ["TADA_scalper_pirate_standard", "TADA_challenger_pirate_firesupport", "TADA_challenger_pirate_firesupport"],
     ],
-
-    "startShipsCombatLarge":[
-        ["TADA_bonnethead_pirate_outdated", "TADA_hightide_pirate_combat"],
-        ["TADA_foray_pirate_improvised", "TADA_bully_pirate_assault", "TADA_challenger_pirate_standard"]
-    ],
-
+    "startShipsCombatLarge":[["TADA_bonnethead_pirate_overdriven", "TADA_hightide_pirate_firesupport", "TADA_hightide_pirate_firesupport"]],
+    "startShipsCarrierLarge":[["TADA_crane_pirate_standard", "TADA_crane_pirate_standard", "TADA_tinnitus_p_escort", "TADA_tinnitus_p_escort"]],
 }

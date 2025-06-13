@@ -33,6 +33,7 @@ public class PruneHaulerMarketListener extends BaseCampaignEventListener {
 			int shipCountBant = 0;
 			int shipCountBuff = 0;
 			if (s.getSpecId().equals(Submarkets.SUBMARKET_STORAGE)) return;
+			if (s.getSpecId().equals("ix_honor_guard_market")) return;
 			List<FleetMemberAPI> shipsToDelete = new ArrayList<FleetMemberAPI>();
 			List<FleetMemberAPI> ships = s.getCargo().getMothballedShips().getMembersListCopy();
 			for (FleetMemberAPI ship : ships) {
@@ -54,8 +55,8 @@ public class PruneHaulerMarketListener extends BaseCampaignEventListener {
 				for (FleetMemberAPI ship : shipsToDelete) {
 					s.getCargo().getMothballedShips().removeFleetMember(ship);
 				}
+				s.getPlugin().updateCargoPrePlayerInteraction();
 			}
-			s.getPlugin().updateCargoPrePlayerInteraction();
 		}
 	}
 

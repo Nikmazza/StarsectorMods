@@ -2,7 +2,6 @@ package data.scripts.campaign;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -12,8 +11,8 @@ import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
+import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.VariantSource;
-import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.plugins.AutofitPlugin.AvailableFighter;
 import com.fs.starfarer.api.plugins.AutofitPlugin.AvailableWeapon;
@@ -26,20 +25,12 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-// Tons of code duplication, should be a stripped-down copy of DefaultFleetInflater except for the necessary package-
-// restricted transient variables and the use of the IG autofit plugin
+// Tons of code duplication, but not sure how else to insert the IG autofit plugin
 public class II_IGFleetInflater extends DefaultFleetInflater {
 
     public II_IGFleetInflater(DefaultFleetInflaterParams p) {
         super(p);
     }
-
-    private transient FleetMemberAPI currMember = null;
-    private transient ShipVariantAPI currVariant = null;
-    private transient List<AvailableFighter> fighters;
-    private transient List<AvailableWeapon> weapons;
-    private transient List<String> hullmods;
-    private transient FactionAPI faction;
 
     @Override
     public void inflate(CampaignFleetAPI fleet) {
@@ -65,6 +56,17 @@ public class II_IGFleetInflater extends DefaultFleetInflater {
         }
 
         hullmods = new ArrayList<>(faction.getKnownHullMods());
+        if (p.blockHullmodsWithItemReqs != null && p.blockHullmodsWithItemReqs) {
+            List<String> filtered = new ArrayList<>();
+            for (String id : hullmods) {
+                HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+                if (spec.getEffect() != null && spec.getEffect().getRequiredItem() != null) {
+                    continue;
+                }
+                filtered.add(id);
+            }
+            hullmods = filtered;
+        }
 
         SortedWeapons nonPriorityWeapons = new SortedWeapons();
         SortedWeapons priorityWeapons = new SortedWeapons();
@@ -175,15 +177,12 @@ public class II_IGFleetInflater extends DefaultFleetInflater {
 
                         int num = 2;
                         switch (size) {
-                            case LARGE:
+                            case LARGE ->
                                 num = 2;
-                                break;
-                            case MEDIUM:
+                            case MEDIUM ->
                                 num = 2;
-                                break;
-                            case SMALL:
+                            case SMALL ->
                                 num = 2;
-                                break;
                         }
 
                         if (this.p.allWeapons != null && this.p.allWeapons) {
@@ -303,62 +302,5 @@ public class II_IGFleetInflater extends DefaultFleetInflater {
 
         fleet.getFleetData().setSyncNeeded();
         fleet.getFleetData().syncIfNeeded();
-    }
-
-    @Override
-    public void clearFighterSlot(int index, ShipVariantAPI variant) {
-        variant.setWingId(index, null);
-        for (AvailableFighter curr : fighters) {
-            if (curr.getId().equals(curr.getId())) {
-                curr.setQuantity(curr.getQuantity() + 1);
-                break;
-            }
-        }
-    }
-
-    @Override
-    public void clearWeaponSlot(WeaponSlotAPI slot, ShipVariantAPI variant) {
-        variant.clearSlot(slot.getId());
-        for (AvailableWeapon curr : weapons) {
-            if (curr.getId().equals(curr.getId())) {
-                curr.setQuantity(curr.getQuantity() + 1);
-                break;
-            }
-        }
-    }
-
-    @Override
-    public List<AvailableFighter> getAvailableFighters() {
-        return fighters;
-    }
-
-    @Override
-    public List<AvailableWeapon> getAvailableWeapons() {
-        return weapons;
-    }
-
-    @Override
-    public List<String> getAvailableHullmods() {
-        return hullmods;
-    }
-
-    @Override
-    public boolean isPriority(WeaponSpecAPI weapon) {
-        return faction.isWeaponPriority(weapon.getWeaponId());
-    }
-
-    @Override
-    public boolean isPriority(FighterWingSpecAPI wing) {
-        return faction.isFighterPriority(wing.getId());
-    }
-
-    @Override
-    public FleetMemberAPI getMember() {
-        return currMember;
-    }
-
-    @Override
-    public FactionAPI getFaction() {
-        return faction;
     }
 }

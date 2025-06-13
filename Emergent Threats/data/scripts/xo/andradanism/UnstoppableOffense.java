@@ -25,18 +25,20 @@ public class UnstoppableOffense extends SCBaseSkillPlugin {
 		tooltip.addPara("The weak fear the spiritual potency of the killing machine. The strong instinctually recognize its beauty.", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addPara("  -Quotations from the Supreme Executor", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addSpacer(10f);
-		tooltip.addPara("+10%% energy weapon damage for Lion's Guard ships", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		boolean isSFC = Global.getSettings().getModManager().isModEnabled("PAGSM");
+		String s = "+10%% energy weapon damage for Lion's Guard";
+		if (isSFC) s += " and Sindrian Fuel Company ships";
+		else s += " ships";
+		tooltip.addPara(s, 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("+5%% energy weapon damage for all other ships", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
     }
 
     @Override
     public void applyEffectsBeforeShipCreation(SCData data, MutableShipStatsAPI stats, ShipVariantAPI variant, ShipAPI.HullSize hullSize, String id) {
         String manufacturer = variant.getHullSpec().getManufacturer();
-		if (manufacturer.equals("Lion's Guard")) {
+		if (manufacturer.equals("Lion's Guard") || manufacturer.equals("Sindrian Fuel Company")) {
 			stats.getEnergyWeaponDamageMult().modifyPercent(id, ENERGY_DAMAGE_LG);
 		}
-		else {
-			stats.getEnergyWeaponDamageMult().modifyPercent(id, ENERGY_DAMAGE);
-		}
+		else stats.getEnergyWeaponDamageMult().modifyPercent(id, ENERGY_DAMAGE);
     }
 }

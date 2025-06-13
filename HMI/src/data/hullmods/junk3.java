@@ -7,7 +7,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 public class junk3 extends junker {
     private static final float JUNKERBONUS = 0.7f;
     private static final float JUNKERMALUSSPEED = 0.2f;
-    private static final float JUNKERMALUSQUALITY = 0.20f;
+    private static final float JUNKERMALUSQUALITY = 0.15f;
     private static final float ENGAGEMENTMALUS = 0.9f;
 
     @Override
@@ -27,9 +27,9 @@ public class junk3 extends junker {
         stats.getShieldDamageTakenMult().modifyPercent(id, (1 + JUNKERMALUSQUALITY) * 100f * effect);
         stats.getHullDamageTakenMult().modifyPercent(id, (1 + JUNKERMALUSQUALITY) * 100f * effect);
 
-        stats.getMissileWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
-        stats.getBallisticWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
-        stats.getEnergyWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
+        stats.getMissileWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
+        stats.getBallisticWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
+        stats.getEnergyWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
 
         fighter.setHeavyDHullOverlay();
     }

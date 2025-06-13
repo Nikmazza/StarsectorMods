@@ -1,0 +1,34 @@
+{
+  "variantId": "Knobkerrie_XIV_missile",
+  "hullId": "Knobkerrie_XIV",
+  "displayName": "Missile Support",
+  "goalVariant": false,
+  "fluxCapacitors": 19,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "squall",
+        "WS0002": "squall",
+        "WS0003": "cyclone",
+        "WS0004": "bomb",
+        "WS0005": "bomb",
+        "WS0006": "hveldriver",
+        "WS0007": "hveldriver",
+        "WS0008": "dualflak",
+        "WS0009": "dualflak",
+        "WS0010": "guardian"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

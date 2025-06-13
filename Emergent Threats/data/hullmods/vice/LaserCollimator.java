@@ -35,7 +35,7 @@ public class LaserCollimator extends BaseHullMod {
 	private static String WEAPON_M_NAME = "Twin Tactical Lasers";
 	private static String WEAPON_L_NAME = "High Intensity Lasers";
 	private static String WEAPON_S_ID = "taclaser";
-	private static String WEAPON_M_ID = "twin_tactical_laser_ix";
+	private static String WEAPON_M_ID = "vice_twin_tactical_laser";
 	private static String WEAPON_L_ID = "hil";
 	
 	private static String CONFLICT_MOD_1 = "advancedoptics";

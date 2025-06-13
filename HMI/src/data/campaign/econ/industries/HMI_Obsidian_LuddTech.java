@@ -6,6 +6,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
@@ -33,9 +34,24 @@ import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
+import data.campaign.fleets.HMIObsidianHitechFleetAssignmentAI;
+import data.campaign.fleets.HMIObsidianLuddtechFleetAssignmentAI;
 
 public class HMI_Obsidian_LuddTech extends BaseIndustry implements RouteManager.RouteFleetSpawner, FleetEventListener {
-        
+
+	public static final WeightedRandomPicker<String> LUDDTECH_FACTIONS = new WeightedRandomPicker<>();
+
+	@Override
+	public boolean isFunctional() {
+		return super.isFunctional() && market.getFactionId().equals(Factions.PIRATES);
+	}
+
+	static {
+		LUDDTECH_FACTIONS.add(Factions.LUDDIC_CHURCH, 4f);
+		LUDDTECH_FACTIONS.add(Factions.INDEPENDENT, 0.5f);
+		LUDDTECH_FACTIONS.add(Factions.HEGEMONY, 0.5f);
+	}
+
         @Override
         public void apply() {
 		super.apply(true);
@@ -141,9 +157,9 @@ public class HMI_Obsidian_LuddTech extends BaseIndustry implements RouteManager.
 			int medium = getCount(PatrolType.COMBAT);
 			int heavy = getCount(PatrolType.HEAVY);
 
-			int maxLight = 3;
-			int maxMedium = 1;
-			int maxHeavy = 0;
+			int maxLight = 4;
+			int maxMedium = 2;
+			int maxHeavy = 1;
 
 			WeightedRandomPicker<PatrolType> picker = new WeightedRandomPicker<PatrolType>();
 			picker.add(PatrolType.HEAVY, maxHeavy - heavy);
@@ -226,6 +242,21 @@ public class HMI_Obsidian_LuddTech extends BaseIndustry implements RouteManager.
 
 	public CampaignFleetAPI spawnFleet(RouteData route) {
 
+		WeightedRandomPicker<String> factionPicker = new WeightedRandomPicker<>();
+		int index = 0;
+		for (String item : LUDDTECH_FACTIONS.getItems()) {
+			FactionAPI f;
+			try {
+				f = Global.getSector().getFaction(item);
+			} catch (Exception e) {
+				f = null;
+			}
+			if (f != null) {
+				factionPicker.add(f.getId(), LUDDTECH_FACTIONS.getWeight(index));
+			}
+			index++;
+		}
+
 		PatrolFleetData custom = (PatrolFleetData) route.getCustom();
 		PatrolType type = custom.type;
 
@@ -237,14 +268,14 @@ public class HMI_Obsidian_LuddTech extends BaseIndustry implements RouteManager.
 		String fleetType = type.getFleetType();
 		switch (type) {
 			case FAST:
-				combat = Math.round(3f + (float) random.nextFloat() * 2f) * 5f;
+				combat = Math.round(6f + (float) random.nextFloat() * 2f) * 5f;
 				break;
 			case COMBAT:
-				combat = Math.round(6f + (float) random.nextFloat() * 3f) * 5f;
+				combat = Math.round(10f + (float) random.nextFloat() * 3f) * 5f;
 				tanker = Math.round((float) random.nextFloat()) * 5f;
 				break;
 			case HEAVY:
-				combat = Math.round(10f + (float) random.nextFloat() * 5f) * 5f;
+				combat = Math.round(14f + (float) random.nextFloat() * 3f) * 5f;
 				tanker = Math.round((float) random.nextFloat()) * 10f;
 				freighter = Math.round((float) random.nextFloat()) * 10f;
 				break;
@@ -253,7 +284,7 @@ public class HMI_Obsidian_LuddTech extends BaseIndustry implements RouteManager.
 		FleetParamsV3 params = new FleetParamsV3(
 				market,
 				null, // loc in hyper; don't need if have market
-				"hmi_obs_luddtech",//Factions.LIONS_GUARD, "hmi_exec"
+				factionPicker.pick(),//Factions.LIONS_GUARD, "hmi_exec"
 				route.getQualityOverride(), // quality override
 				fleetType,
 				combat, // combatPts
@@ -275,6 +306,8 @@ public class HMI_Obsidian_LuddTech extends BaseIndustry implements RouteManager.
 
 		if (fleet == null || fleet.isEmpty()) return null;
 
+		fleet.setFaction(market.getFactionId(), true);
+		fleet.setNoFactionInName(false);
 
 		fleet.addEventListener(this);
 
@@ -318,12 +351,14 @@ public class HMI_Obsidian_LuddTech extends BaseIndustry implements RouteManager.
 		if (custom.spawnFP <= 0) {
 			custom.spawnFP = fleet.getFleetPoints();
 		}
-
+		boolean pirate = random.nextBoolean();
+		fleet.addScript(new HMIObsidianLuddtechFleetAssignmentAI(fleet, route, pirate));
+		fleet.addTag("ObsidianLuddTech");
 		return fleet;
 	}
 
 	public String getRouteSourceId() {
-		return getMarket().getId() + "_" + "hmiexec";
+		return getMarket().getId() + "_" + "luddobsidian";
 	}
 
 	@Override

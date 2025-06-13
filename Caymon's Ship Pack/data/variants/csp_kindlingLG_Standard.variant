@@ -1,0 +1,36 @@
+{
+  "variantId": "csp_kindlingLG_Standard",
+  "hullId": "csp_kindlingLG",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 14,
+  "fluxVents": 13,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "advancedoptics"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "harpoonpod",
+        "WS 003": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "taclaser",
+        "WS0001": "taclaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "longbow_wing"
+  ]
+}

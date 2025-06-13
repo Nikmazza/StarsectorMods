@@ -9,9 +9,16 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class ExperimentalHull extends BaseHullMod {
 	
 	private static String OVERRIDE_MOD = "vice_standard_plating";
+	private static String PLATING_MODNAME = "Standard Plating";
 	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		
+		if (ship.getHullSpec().getHullId().equals("vice_bellicose_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_bellicose_ex_default_D")) {
+			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "bellicose_ex_classic");
+			else applySkin(ship, "bellicose_ex");
+		}
 		
 		if (ship.getHullSpec().getHullId().equals("vice_equalizer_ex") 
 					|| ship.getHullSpec().getHullId().equals("vice_equalizer_ex_default_D")) {
@@ -23,6 +30,12 @@ public class ExperimentalHull extends BaseHullMod {
 					|| ship.getHullSpec().getHullId().equals("vice_flamebreaker_ex_default_D")) {
 			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "flamebreaker_ex_classic");
 			else applySkin(ship, "flamebreaker_ex");
+		}
+
+		else if (ship.getHullSpec().getHullId().equals("vice_howler_ex") 
+					|| ship.getHullSpec().getHullId().equals("vice_howler_ex_default_D")) {
+			if (ship.getVariant().hasHullMod(OVERRIDE_MOD)) applySkin(ship, "howler_ex_classic");
+			else applySkin(ship, "howler_ex");
 		}
 		
 		else if (ship.getHullSpec().getHullId().equals("vice_hyperion_ex") 
@@ -67,5 +80,10 @@ public class ExperimentalHull extends BaseHullMod {
 			ship.getSpriteAPI().setAlphaMult(alpha);
 			ship.getSpriteAPI().setAngle(angle);
 			ship.getSpriteAPI().setColor(color);	
+	}
+	
+	public String getDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return PLATING_MODNAME;
+		return null;
 	}
 }

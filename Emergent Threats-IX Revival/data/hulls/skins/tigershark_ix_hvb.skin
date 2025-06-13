@@ -11,7 +11,7 @@
 	"ordnancePoints":170,
 	"baseValueMult":2,
 	"spriteName":"graphics/ships/ix/hvb/tigershark_ix_hvb.png",
-	"tags":["no_autofit"],
+	"tags":["no_autofit", "hide_in_codex"],
 	#"removeHints":["HIDE_IN_CODEX"],
 	"tech":"IX Battlegroup",
 	"builtInMods":["automated", "ix_plasma_ramjet", "ix_ninth"],

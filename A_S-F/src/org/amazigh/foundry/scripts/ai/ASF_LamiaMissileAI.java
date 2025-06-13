@@ -242,7 +242,7 @@ public class ASF_LamiaMissileAI implements MissileAIPlugin, GuidedMissileAI {
             MISSILE.giveCommand(ShipCommand.TURN_RIGHT);
         } else {
             MISSILE.giveCommand(ShipCommand.TURN_LEFT);
-        }  
+        } 
         
         
         if (RANGE) {

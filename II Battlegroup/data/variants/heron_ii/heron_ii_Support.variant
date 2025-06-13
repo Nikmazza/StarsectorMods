@@ -1,0 +1,53 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 0,
+  "fluxVents": 1,
+  "goalVariant": true,
+  "hullId": "heron_ii",
+  "hullMods": [
+    "missleracks",
+    "eccm"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "heron_ii_Support",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "harpoon",
+        "WS0003": "harpoon",
+        "WS0004": "harpoon",
+        "WS0005": "harpoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "pilum",
+        "WS0001": "pilum_large"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lrpdlaser",
+        "WS 002": "lrpdlaser",
+        "WS 003": "lrpdlaser",
+        "WS 004": "lrpdlaser"
+      }
+    }
+  ],
+  "wings": [
+    "trident_ii_wing",
+    "broadsword_ii_wing"
+  ]
+}

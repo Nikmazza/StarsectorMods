@@ -3,7 +3,7 @@
   "hullId": "hammerhead_hmi",
   "displayName": "Strike",
   "goalVariant": true,
-  "fluxCapacitors": 17,
+  "fluxCapacitors": 19,
   "fluxVents": 20,
   "quality": 0,
   "permaMods": [],
@@ -24,8 +24,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0003": "kane_missile",
-        "WS0004": "kane_missile"
+        "WS0003": "hammer",
+        "WS0004": "hammer"
       }
     },
     {

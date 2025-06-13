@@ -2,6 +2,7 @@
     "swp_excelsior_bounty":{
         "trigger_marketFaction_any": ["pirates", "independent", "tritachyon"],
         "trigger_marketFaction_alliedWith": false,
+        "trigger_player_minLevel": 5,
         #"trigger_weight_mult": 100,
 
         "job_name": "Better Left Buried",

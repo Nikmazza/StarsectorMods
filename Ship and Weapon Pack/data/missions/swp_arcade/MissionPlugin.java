@@ -273,7 +273,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                 }
                 if (shipTypes.containsKey(shipForStats)) {
                     switch (shipTypes.get(shipForStats)) {
-                        case 1:
+                        case 1 -> {
                             for (int i = 0; i < AURA_MOD.get(ship.getHullSize()); i++) {
                                 if (Math.random() < (amount * 6f) && !engine.isPaused()) {
                                     engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
@@ -363,8 +363,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                             ship.getMutableStats().getTurnAcceleration().modifyMult("mook", 0.5f);
                             ship.getMutableStats().getShieldTurnRateMult().modifyMult("mook", 0.25f);
                             ship.getMutableStats().getShieldUnfoldRateMult().modifyMult("mook", 0.5f);
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             for (int i = 0; i < AURA_MOD.get(ship.getHullSize()); i++) {
                                 if (Math.random() < (amount * 9f) && !engine.isPaused()) {
                                     engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
@@ -459,8 +459,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                             ship.getMutableStats().getShieldUpkeepMult().modifyMult("mook", 2f);
                             ship.getMutableStats().getPhaseCloakActivationCostBonus().modifyMult("mook", 2f);
                             ship.getMutableStats().getPhaseCloakUpkeepCostBonus().modifyMult("mook", 2f);
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             for (int i = 0; i < AURA_MOD.get(ship.getHullSize()); i++) {
                                 if (Math.random() < (amount * 12) && !engine.isPaused()) {
                                     engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
@@ -577,8 +577,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                             ship.getMutableStats().getShieldUpkeepMult().modifyMult("mook", 2f);
                             ship.getMutableStats().getPhaseCloakActivationCostBonus().modifyMult("mook", 2f);
                             ship.getMutableStats().getPhaseCloakUpkeepCostBonus().modifyMult("mook", 2f);
-                            break;
-                        case 4:
+                        }
+                        case 4 -> {
                             for (int i = 0; i < AURA_MOD.get(ship.getHullSize()); i++) {
                                 if (Math.random() < (amount * 6f) && !engine.isPaused()) {
                                     engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
@@ -654,25 +654,20 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 }
                             }
                             float shieldsize;
-                            switch (ship.getHullSize()) {
-                                case FIGHTER:
-                                    shieldsize = 180f;
-                                    break;
-                                case FRIGATE:
-                                    shieldsize = 210f;
-                                    break;
-                                case DESTROYER:
-                                    shieldsize = 240f;
-                                    break;
-                                case CRUISER:
-                                    shieldsize = 270f;
-                                    break;
-                                case CAPITAL_SHIP:
-                                    shieldsize = 300f;
-                                    break;
-                                default:
-                                    shieldsize = 300f;
-                            }
+                            shieldsize = switch (ship.getHullSize()) {
+                                case FIGHTER ->
+                                    180f;
+                                case FRIGATE ->
+                                    210f;
+                                case DESTROYER ->
+                                    240f;
+                                case CRUISER ->
+                                    270f;
+                                case CAPITAL_SHIP ->
+                                    300f;
+                                default ->
+                                    300f;
+                            };
                             if (ship.getShield() == null || ship.getShield().getType() != ShieldType.FRONT
                                     || ship.getShield().getArc() != shieldsize) {
                                 ship.setShield(ShieldType.FRONT, 0f, 0f, shieldsize);
@@ -684,9 +679,9 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                             ship.getMutableStats().getMaxTurnRate().modifyMult("mook", 1.5f);
                             ship.getMutableStats().getArmorDamageTakenMult().modifyMult("mook", 0.8f);
                             ship.getMutableStats().getHullDamageTakenMult().modifyMult("mook", 0.8f);
-                            break;
-                        default:
-                            break;
+                        }
+                        default -> {
+                        }
                     }
 
                     if (BOSS_SHIPS.containsKey(shipForStats.getHullSpec().getHullId())) {
@@ -695,55 +690,49 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                         for (int i = 0; i < AURA_MOD.get(ship.getHullSize()); i++) {
                             if (Math.random() < (amount * 15f) && !engine.isPaused()) {
                                 switch (shipForStats.getHullSpec().getHullId()) {
-                                    case "swp_arcade_superhyperion":
+                                    case "swp_arcade_superhyperion" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
                                                 (float) Math.random() * 10f + 5f,
                                                 (float) Math.random() * 0.25f + 0.75f, 1f,
                                                 new Color(255, 255, 255));
-                                        break;
-                                    case "swp_arcade_oberon":
+                                    case "swp_arcade_oberon" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
                                                 (float) Math.random() * 10f + 5f,
                                                 (float) Math.random() * 0.25f + 0.75f, 1f,
                                                 new Color(255, 185, 0));
-                                        break;
-                                    case "swp_arcade_ultron":
+                                    case "swp_arcade_ultron" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
                                                 (float) Math.random() * 10f + 5f,
                                                 (float) Math.random() * 0.25f + 0.75f, 1f,
                                                 new Color(200, 100, 255));
-                                        break;
-                                    case "swp_arcade_zeus":
+                                    case "swp_arcade_zeus" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
                                                 (float) Math.random() * 10f + 5f,
                                                 (float) Math.random() * 0.25f + 0.75f, 1f,
                                                 new Color(255, 255, 255));
-                                        break;
-                                    case "swp_arcade_ezekiel":
+                                    case "swp_arcade_ezekiel" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
                                                 (float) Math.random() * 10f + 5f,
                                                 (float) Math.random() * 0.25f + 0.75f, 1f,
                                                 new Color(255, 255, 255));
-                                        break;
-                                    case "swp_arcade_cristarium":
+                                    case "swp_arcade_cristarium" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
                                                 (float) Math.random() * 10f + 5f,
                                                 (float) Math.random() * 0.25f + 0.75f, 1f,
                                                 new Color(150, 225, 255));
-                                        break;
-                                    case "swp_arcade_zero":
+                                    case "swp_arcade_zero" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
@@ -751,8 +740,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                                 (float) Math.random() * 0.25f + 0.75f, 1f, new Color(
                                                 255, 50,
                                                 150));
-                                        break;
-                                    case "swp_arcade_superzero":
+                                    case "swp_arcade_superzero" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
@@ -760,8 +748,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                                 (float) Math.random() * 0.25f + 0.75f, 1f, new Color(
                                                 255, 0,
                                                 0));
-                                        break;
-                                    case "swp_arcade_hyperzero":
+                                    case "swp_arcade_hyperzero" ->
                                         engine.addSmoothParticle(MathUtils.getRandomPointInCircle(ship.getLocation(),
                                                 shipRadius),
                                                 ZERO,
@@ -769,14 +756,14 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                                 (float) Math.random() * 0.25f + 0.75f, 1f,
                                                 new Color(50, 50,
                                                         50));
-                                        break;
-                                    default:
+                                    default -> {
+                                    }
                                 }
                             }
                         }
                         ship.getMutableStats().getAutofireAimAccuracy().modifyMult("boss", 5f);
                         switch (shipForStats.getHullSpec().getHullId()) {
-                            case "swp_arcade_superhyperion":
+                            case "swp_arcade_superhyperion" -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 1.5f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 1.5f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 1.5f);
@@ -785,14 +772,14 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 ship.getMutableStats().getAcceleration().modifyMult("boss", 1.5f);
                                 ship.getMutableStats().getDeceleration().modifyMult("boss", 1.5f);
                                 switch (bossLevel) {
-                                    case 11:
+                                    case 11 -> {
                                         ship.getMutableStats().getBallisticRoFMult().modifyMult("boss", 1.5f);
                                         ship.getMutableStats().getEnergyRoFMult().modifyMult("boss", 1.5f);
                                         ship.getMutableStats().getMissileRoFMult().modifyMult("boss", 1.5f);
                                         ship.getMutableStats().getBeamWeaponDamageMult().modifyMult("boss", 1.5f);
                                         ship.getMutableStats().getOverloadTimeMod().modifyMult("boss", 1.5f);
-                                        break;
-                                    case 12:
+                                    }
+                                    case 12 -> {
                                         ship.getMutableStats().getBallisticRoFMult().modifyMult("boss", 3f);
                                         ship.getMutableStats().getEnergyRoFMult().modifyMult("boss", 3f);
                                         ship.getMutableStats().getMissileRoFMult().modifyMult("boss", 3f);
@@ -801,8 +788,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                         ship.getMutableStats().getOverloadTimeMod().modifyMult("boss", 1f);
                                         ship.getMutableStats().getFluxDissipation().modifyMult("boss", 1.25f);
                                         ship.getMutableStats().getFluxCapacity().modifyMult("boss", 1.25f);
-                                        break;
-                                    default:
+                                    }
+                                    default -> {
                                         ship.getMutableStats().getBallisticRoFMult().modifyMult("boss", 4f);
                                         ship.getMutableStats().getEnergyRoFMult().modifyMult("boss", 4f);
                                         ship.getMutableStats().getMissileRoFMult().modifyMult("boss", 4f);
@@ -811,7 +798,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                         ship.getMutableStats().getOverloadTimeMod().modifyMult("boss", 0.5f);
                                         ship.getMutableStats().getFluxDissipation().modifyMult("boss", 1.5f);
                                         ship.getMutableStats().getFluxCapacity().modifyMult("boss", 1.5f);
-                                        break;
+                                    }
                                 }
                                 ship.getMutableStats().getVentRateMult().modifyMult("boss", 0.5f);
                                 ship.getMutableStats().getArmorDamageTakenMult().modifyMult("boss", 0.33f);
@@ -853,8 +840,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                         }
                                     }
                                 }
-                                break;
-                            case "swp_arcade_oberon":
+                            }
+                            case "swp_arcade_oberon" -> {
                                 ship.getMutableStats().getOverloadTimeMod().modifyMult("boss", 0.5f);
                                 ship.getMutableStats().getWeaponDamageTakenMult().modifyMult("boss", 0.33f);
                                 ship.getMutableStats().getHullDamageTakenMult().modifyMult("boss", 0.33f);
@@ -884,8 +871,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 if (ship == shipForStats) {
                                     bar1.render();
                                 }
-                                break;
-                            case "swp_arcade_ultron":
+                            }
+                            case "swp_arcade_ultron" -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 1.5f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 1.5f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 1.5f);
@@ -922,8 +909,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 if (ship == shipForStats) {
                                     bar1.render();
                                 }
-                                break;
-                            case "swp_arcade_zeus":
+                            }
+                            case "swp_arcade_zeus" -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 1.5f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 1.5f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 1.5f);
@@ -961,8 +948,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 if (ship == shipForStats) {
                                     bar1.render();
                                 }
-                                break;
-                            case "swp_arcade_ezekiel":
+                            }
+                            case "swp_arcade_ezekiel" -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 1.75f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 1.75f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 1.75f);
@@ -995,8 +982,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 if (ship == shipForStats) {
                                     bar1.render();
                                 }
-                                break;
-                            case "swp_arcade_cristarium":
+                            }
+                            case "swp_arcade_cristarium" -> {
                                 if (ship.getDeployedDrones() != null) {
                                     for (ShipAPI drone : ship.getDeployedDrones()) {
                                         drone.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 2.5f);
@@ -1047,8 +1034,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 if (ship == shipForStats) {
                                     bar1.render();
                                 }
-                                break;
-                            case "swp_arcade_zero":
+                            }
+                            case "swp_arcade_zero" -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 2f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 2f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 2f);
@@ -1109,8 +1096,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 if (ship == shipForStats) {
                                     bar1.render();
                                 }
-                                break;
-                            case "swp_arcade_superzero":
+                            }
+                            case "swp_arcade_superzero" -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 2.25f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 2.25f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 2.25f);
@@ -1179,8 +1166,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     }
                                     bar1.render();
                                 }
-                                break;
-                            case "swp_arcade_hyperzero":
+                            }
+                            case "swp_arcade_hyperzero" -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 2.5f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 2.5f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 2.5f);
@@ -1249,8 +1236,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     }
                                     bar1.render();
                                 }
-                                break;
-                            default:
+                            }
+                            default -> {
                                 ship.getMutableStats().getBallisticWeaponDamageMult().modifyMult("boss", 2f);
                                 ship.getMutableStats().getEnergyWeaponDamageMult().modifyMult("boss", 2f);
                                 ship.getMutableStats().getMissileWeaponDamageMult().modifyMult("boss", 2f);
@@ -1262,7 +1249,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 if (ship == shipForStats) {
                                     bar1.render();
                                 }
-                                break;
+                            }
                         }
                         List<WeaponAPI> weapons = ship.getAllWeapons();
                         for (WeaponAPI weapon : weapons) {
@@ -1280,9 +1267,9 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                             Vector2f loc = new Vector2f(ship.getLocation());
                             loc.setY(loc.y + shipRadius);
                             switch (ship.getHullSpec().getHullId()) {
-                                case "swp_arcade_superhyperion":
+                                case "swp_arcade_superhyperion" -> {
                                     switch (ship.getVariant().getHullVariantId()) {
-                                        case "swp_arcade_superhyperion_hul":
+                                        case "swp_arcade_superhyperion_hul" -> {
                                             engine.addFloatingText(loc, "Hulk Hogan", 75f, Color.ORANGE, ship, 2f, 2f);
                                             ship.getSpriteAPI().setColor(new Color(255, 0, 0));
                                             for (WeaponAPI weapon : ship.getAllWeapons()) {
@@ -1306,8 +1293,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                                         new Color(255, 0, 0),
                                                         1f, 1f);
                                             }
-                                            break;
-                                        case "swp_arcade_superhyperion_she":
+                                        }
+                                        case "swp_arcade_superhyperion_she" -> {
                                             engine.addFloatingText(loc, "Iron Sheik", 75f, Color.ORANGE, ship, 2f, 2f);
                                             ship.getSpriteAPI().setColor(new Color(255, 255, 0));
                                             for (WeaponAPI weapon : ship.getAllWeapons()) {
@@ -1331,8 +1318,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                                         new Color(255, 255, 0),
                                                         1f, 1f);
                                             }
-                                            break;
-                                        case "swp_arcade_superhyperion_war":
+                                        }
+                                        case "swp_arcade_superhyperion_war" -> {
                                             engine.addFloatingText(loc, "Ultimate Warrior", 75f, Color.ORANGE, ship, 2f,
                                                     2f);
                                             ship.getSpriteAPI().setColor(new Color(255, 0, 255));
@@ -1357,34 +1344,27 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                                         new Color(255, 0, 255),
                                                         1f, 1f);
                                             }
-                                            break;
+                                        }
                                     }
-                                    break;
-                                case "swp_arcade_oberon":
+                                }
+                                case "swp_arcade_oberon" ->
                                     engine.addFloatingText(loc, "Oberon", 75f, Color.ORANGE, ship, 2f, 2f);
-                                    break;
-                                case "swp_arcade_ultron":
+                                case "swp_arcade_ultron" ->
                                     engine.addFloatingText(loc, "Ultron", 75f, Color.ORANGE, ship, 2f, 2f);
-                                    break;
-                                case "swp_arcade_zeus":
+                                case "swp_arcade_zeus" ->
                                     engine.addFloatingText(loc, "Zeus", 100f, Color.ORANGE, ship, 2f, 2f);
-                                    break;
-                                case "swp_arcade_ezekiel":
+                                case "swp_arcade_ezekiel" ->
                                     engine.addFloatingText(loc, "Ezekiel", 75f, Color.ORANGE, ship, 2f, 2f);
-                                    break;
-                                case "swp_arcade_cristarium":
+                                case "swp_arcade_cristarium" ->
                                     engine.addFloatingText(loc, "Cristarium", 75f, Color.ORANGE, ship, 2f, 2f);
-                                    break;
-                                case "swp_arcade_zero":
+                                case "swp_arcade_zero" ->
                                     engine.addFloatingText(loc, "Zero", 75f, Color.ORANGE, ship, 2f, 2f);
-                                    break;
-                                case "swp_arcade_superzero":
+                                case "swp_arcade_superzero" ->
                                     engine.addFloatingText(loc, "Super Zero", 75f, Color.RED, ship, 2f, 2f);
-                                    break;
-                                case "swp_arcade_hyperzero":
+                                case "swp_arcade_hyperzero" ->
                                     engine.addFloatingText(loc, "Omega Zero", 75f, Color.WHITE, ship, 2f, 2f);
-                                    break;
-                                default:
+                                default -> {
+                                }
                             }
                         }
                         if (!ship.getHullSpec().getHullId().contentEquals("swp_arcade_superhyperion")) {
@@ -1789,27 +1769,19 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                 if (BOSS_SHIPS.containsKey(ship.getHullSpec().getHullId())) {
                     float superscalar;
                     switch (bossLevel) {
-                        case 1:
+                        case 1 ->
                             superscalar = 1f;
-                            break;
-                        case 3:
+                        case 3 ->
                             superscalar = 1.5f;
-                            break;
-                        case 5:
+                        case 5 ->
                             superscalar = 2f;
-                            break;
-                        case 7:
+                        case 7 ->
                             superscalar = 2.5f;
-                            break;
-                        case 9:
+                        case 9 ->
                             superscalar = 3f;
-                            break;
-                        case 11:
-                        case 12:
-                        case 13:
+                        case 11, 12, 13 ->
                             superscalar = 2f;
-                            break;
-                        case 15:
+                        case 15 -> {
                             switch (ultralevel) {
                                 case 2:
                                     superscalar = 36f;
@@ -1822,10 +1794,9 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     superscalar = 4f;
                                     break;
                             }
-                            break;
-                        default:
+                        }
+                        default ->
                             superscalar = 1f;
-                            break;
                     }
                     points += worth * 10f * superscalar * scale;
                     engine.addFloatingText(new Vector2f(ship.getLocation()), "+" + (int) (worth * 10f * superscalar
@@ -1844,40 +1815,35 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                 } else {
                     points += worth * bonusMultiplier * (threshold + 1) * scale;
                     switch (shipTypes.get(ship)) {
-                        case 0:
+                        case 0 ->
                             engine.addFloatingText(new Vector2f(ship.getLocation()), "+" + (int) (worth * bonusMultiplier
                                     * (threshold + 1) * scale),
                                     35f,
                                     Color.WHITE, new SimpleEntity(new Vector2f(ship.getLocation())), 4f, 3f);
-                            break;
-                        case 1:
+                        case 1 ->
                             engine.addFloatingText(new Vector2f(ship.getLocation()), "+" + (int) (worth * bonusMultiplier
                                     * (threshold + 1) * scale),
                                     50f,
                                     new Color(255, 255, 100), new SimpleEntity(new Vector2f(
                                             ship.getLocation())), 4f, 3f);
-                            break;
-                        case 2:
+                        case 2 ->
                             engine.addFloatingText(new Vector2f(ship.getLocation()), "+" + (int) (worth * bonusMultiplier
                                     * (threshold + 1) * scale),
                                     65f,
                                     new Color(255, 150, 100), new SimpleEntity(new Vector2f(
                                             ship.getLocation())), 4f, 3f);
-                            break;
-                        case 3:
+                        case 3 ->
                             engine.addFloatingText(new Vector2f(ship.getLocation()), "+" + (int) (worth * bonusMultiplier
                                     * (threshold + 1) * scale),
                                     80f,
                                     new Color(50, 150, 255), new SimpleEntity(
                                             new Vector2f(ship.getLocation())), 4f, 3f);
-                            break;
-                        case 4:
+                        case 4 ->
                             engine.addFloatingText(new Vector2f(ship.getLocation()), "+" + (int) (worth * bonusMultiplier
                                     * (threshold + 1) * scale),
                                     50f,
                                     new Color(100, 255, 150), new SimpleEntity(new Vector2f(
                                             ship.getLocation())), 4f, 3f);
-                            break;
                     }
                     buffLevel += worth / 750f;
                     maxPoints += 1.33f / (1f + buffLevel * 0.33f) * worth * 0.04f;
@@ -1975,23 +1941,18 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                     if (fmember != null) {
                         int type = shipTypes.get(s);
                         switch (type) {
-                            case 4:
+                            case 4 ->
                                 fp += fmember.getFleetPointCost() * 2f;
-                                break;
-                            case 3:
+                            case 3 ->
                                 fp += fmember.getFleetPointCost() * 3f;
-                                break;
-                            case 2:
+                            case 2 ->
                                 fp += fmember.getFleetPointCost() * 2.5f;
-                                break;
-                            case 1:
+                            case 1 ->
                                 fp += fmember.getFleetPointCost() * 2f;
-                                break;
-                            case 0:
+                            case 0 ->
                                 fp += fmember.getFleetPointCost();
-                                break;
-                            default:
-                                break;
+                            default -> {
+                            }
                         }
                         numShips++;
                     }
@@ -2008,7 +1969,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                 type = 0;
                 double rand = Math.random();
                 switch (threshold) {
-                    case 0:
+                    case 0 -> {
                         if (rand >= 0.99) {
                             type = 3;
                         } else if (rand >= 0.97) {
@@ -2020,8 +1981,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    case 1:
+                    }
+                    case 1 -> {
                         if (rand >= 0.98) {
                             type = 3;
                         } else if (rand >= 0.94) {
@@ -2033,8 +1994,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         if (rand >= 0.97) {
                             type = 3;
                         } else if (rand >= 0.91) {
@@ -2046,8 +2007,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         if (rand >= 0.96) {
                             type = 3;
                         } else if (rand >= 0.88) {
@@ -2059,8 +2020,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    case 4:
+                    }
+                    case 4 -> {
                         if (rand >= 0.95) {
                             type = 3;
                         } else if (rand >= 0.85) {
@@ -2072,8 +2033,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    case 5:
+                    }
+                    case 5 -> {
                         if (rand >= 0.94) {
                             type = 3;
                         } else if (rand >= 0.82) {
@@ -2085,8 +2046,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    case 6:
+                    }
+                    case 6 -> {
                         if (rand >= 0.92) {
                             type = 3;
                         } else if (rand >= 0.76) {
@@ -2098,8 +2059,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    case 7:
+                    }
+                    case 7 -> {
                         if (rand >= 0.897) {
                             type = 3;
                         } else if (rand >= 0.69) {
@@ -2111,9 +2072,9 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 type = 1;
                             }
                         }
-                        break;
-                    default:
-                        break;
+                    }
+                    default -> {
+                    }
                 }
                 ShipAPI spawned = makeShip();
                 if (spawned == null) {
@@ -2124,7 +2085,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                 if (spawned.isFighter()) {
                     rand = Math.max(Math.random(), Math.max(rand, Math.random()));
                     switch (threshold) {
-                        case 0:
+                        case 0 -> {
                             if (rand >= 0.99) {
                                 type = 3;
                             } else if (rand >= 0.97) {
@@ -2136,8 +2097,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        case 1:
+                        }
+                        case 1 -> {
                             if (rand >= 0.98) {
                                 type = 3;
                             } else if (rand >= 0.94) {
@@ -2149,8 +2110,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             if (rand >= 0.97) {
                                 type = 3;
                             } else if (rand >= 0.91) {
@@ -2162,8 +2123,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             if (rand >= 0.96) {
                                 type = 3;
                             } else if (rand >= 0.88) {
@@ -2175,8 +2136,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        case 4:
+                        }
+                        case 4 -> {
                             if (rand >= 0.95) {
                                 type = 3;
                             } else if (rand >= 0.85) {
@@ -2188,8 +2149,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        case 5:
+                        }
+                        case 5 -> {
                             if (rand >= 0.94) {
                                 type = 3;
                             } else if (rand >= 0.82) {
@@ -2201,8 +2162,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        case 6:
+                        }
+                        case 6 -> {
                             if (rand >= 0.92) {
                                 type = 3;
                             } else if (rand >= 0.76) {
@@ -2214,8 +2175,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        case 7:
+                        }
+                        case 7 -> {
                             if (rand >= 0.897) {
                                 type = 3;
                             } else if (rand >= 0.69) {
@@ -2227,9 +2188,9 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                     type = 1;
                                 }
                             }
-                            break;
-                        default:
-                            break;
+                        }
+                        default -> {
+                        }
                     }
                 }
                 spawnList.add(spawned);
@@ -2247,7 +2208,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                     }
                     shipTypes.put(shp, type);
                     switch (type) {
-                        case 4:
+                        case 4 -> {
                             // Shielded
                             shipWorths.put(shp, 1f * engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(
                                     shp).getMember().getFleetPointCost());
@@ -2255,8 +2216,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 fp += engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(shp).getMember().getFleetPointCost()
                                         * 2f;
                             }
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             // Elite
                             shipWorths.put(shp, 2f * engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(
                                     shp).getMember().getFleetPointCost());
@@ -2264,8 +2225,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 fp += engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(shp).getMember().getFleetPointCost()
                                         * 3f;
                             }
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             // Powered
                             shipWorths.put(shp, 1f * engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(
                                     shp).getMember().getFleetPointCost());
@@ -2273,8 +2234,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 fp += engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(shp).getMember().getFleetPointCost()
                                         * 2.5f;
                             }
-                            break;
-                        case 1:
+                        }
+                        case 1 -> {
                             // Armored
                             shipWorths.put(shp, 1f * engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(
                                     shp).getMember().getFleetPointCost());
@@ -2282,14 +2243,14 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                                 fp += engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(shp).getMember().getFleetPointCost()
                                         * 2f;
                             }
-                            break;
-                        case 0:
+                        }
+                        case 0 -> {
                             shipWorths.put(shp, 0.5f
                                     * engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(shp).getMember().getFleetPointCost());
                             if (!shp.isFighter()) {
                                 fp += engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(shp).getMember().getFleetPointCost();
                             }
-                            break;
+                        }
                     }
                 }
             }
@@ -2298,23 +2259,22 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                 if (!newShip.isFighter()) {
                     type = shipTypes.get(newShip);
                     switch (type) {
-                        case 3:
+                        case 3 -> {
                             newShip.setCRAtDeployment(0.8f);
                             newShip.setCurrentCR(0.8f);
-                            break;
-                        case 2:
-                        case 4:
+                        }
+                        case 2, 4 -> {
                             newShip.setCRAtDeployment(0.7f);
                             newShip.setCurrentCR(0.7f);
-                            break;
-                        case 1:
+                        }
+                        case 1 -> {
                             newShip.setCRAtDeployment(0.5f);
                             newShip.setCurrentCR(0.5f);
-                            break;
-                        case 0:
+                        }
+                        case 0 -> {
                             newShip.setCRAtDeployment(0.6f);
                             newShip.setCurrentCR(0.6f);
-                            break;
+                        }
                     }
                     engine.getFleetManager(FleetSide.ENEMY).getDeployedFleetMember(newShip).getMember().getCaptain().setPersonality(
                             "aggressive");
@@ -2334,6 +2294,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
     }
 
     @Override
+    @SuppressWarnings("UseSpecificCatch")
     public void init(CombatEngineAPI engine) {
         if (first) {
             first = false;
@@ -2348,7 +2309,7 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
         combatOver = false;
         try {
             reloadSettings();
-        } catch (IOException | JSONException ex) {
+        } catch (Exception ex) {
             maxPoints = 50f;
             buffLevel = 0f;
             threshold = 0;
@@ -2399,45 +2360,46 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
             threshold = settings.getInt("startingDifficulty");
         }
         switch (threshold) {
-            case 1:
+            case 1 -> {
                 maxPoints = 57.5f;
                 buffLevel = 0.2f;
                 bossLevel = 0;
-                break;
-            case 2:
+            }
+            case 2 -> {
                 maxPoints = 70f;
                 buffLevel = 0.55f;
                 bossLevel = 2;
-                break;
-            case 3:
+            }
+            case 3 -> {
                 maxPoints = 82.5f;
                 buffLevel = 0.935f;
                 bossLevel = 4;
-                break;
-            case 4:
+            }
+            case 4 -> {
                 maxPoints = 95f;
                 buffLevel = 1.365f;
                 bossLevel = 6;
-                break;
-            case 5:
+            }
+            case 5 -> {
                 maxPoints = 107.5f;
                 buffLevel = 1.85f;
                 bossLevel = 8;
-                break;
-            case 6:
+            }
+            case 6 -> {
                 maxPoints = 120f;
                 buffLevel = 2.375f;
                 bossLevel = 10;
-                break;
-            case 7:
+            }
+            case 7 -> {
                 maxPoints = 132.5f;
                 buffLevel = 2.965f;
                 bossLevel = 14;
-                break;
-            default:
+            }
+            default -> {
                 maxPoints = 50f;
                 buffLevel = 0f;
                 bossLevel = 0;
+            }
         }
 
         if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
@@ -2475,6 +2437,8 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
         FACTIONS.add(Factions.DERELICT, 0.25f);
         FACTIONS.add(Factions.REMNANTS, 0.5f);
         FACTIONS.add(Factions.OMEGA, 0.1f);
+        //FACTIONS.add(Factions.THREAT, 0.25f);
+        FACTIONS.add(Factions.DWELLER, 0.1f);
         FACTIONS.add("domain", 0.25f);
         FACTIONS.add("sector", 0.5f);
         FACTIONS.add("everything", 1f);
@@ -2545,25 +2509,19 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
 
         String id;
         switch (level) {
-            case 1:
+            case 1 ->
                 id = "swp_arcade_oberon_ult";
-                break;
-            case 2:
+            case 2 ->
                 id = "swp_arcade_ultron_ult";
-                break;
-            case 3:
+            case 3 ->
                 id = "swp_arcade_zeus_ult";
-                break;
-            case 4:
+            case 4 ->
                 id = "swp_arcade_ezekiel_ult";
-                break;
-            case 5:
+            case 5 ->
                 id = "swp_arcade_cristarium_ult";
-                break;
-            case 6:
+            case 6 ->
                 id = "swp_arcade_superhyperion_war";
-                break;
-            case 7:
+            case 7 -> {
                 switch (ultralevel) {
                     case 2:
                         id = "swp_arcade_hyperzero_ult";
@@ -2576,10 +2534,9 @@ public class MissionPlugin extends BaseEveryFrameCombatPlugin {
                         id = "swp_arcade_zero_ult";
                         break;
                 }
-                break;
-            default:
+            }
+            default ->
                 id = "swp_arcade_superhyperion_str";
-                break;
         }
         mapX = engine.getMapWidth();
         mapY = engine.getMapHeight();

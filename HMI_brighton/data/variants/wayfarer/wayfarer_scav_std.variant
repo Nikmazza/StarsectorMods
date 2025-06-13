@@ -1,0 +1,40 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 6,
+    "goalVariant": true,
+    "hullId": "wayfarer_scav",
+    "hullMods": [
+	"missleracks",
+	"insulatedengine"
+	],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "wayfarer_scav_std",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "heavymortar",
+                "WS 002": "heavymortar",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "sabot",
+                "WS 004": "sabot",
+            }
+        },				
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "swarmer",
+                "WS 006": "swarmer"
+            }
+        }
+    ]
+}

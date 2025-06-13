@@ -1,0 +1,76 @@
+{
+  "variantId": "kazeron_conquest_league_suppressor",
+  "hullId": "kazeron_conquest_league",
+  "displayName": "Suppressor",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 24,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "hardenedshieldemitter",
+    "reinforcedhull",
+    "advancedoptics"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 012": "hil",
+        "WS 015": "irautolance",
+        "WS 016": "irautolance",
+        "WS 022": "irautolance"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "hydra",
+        "WS 002": "hydra"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 019": "gazerpod",
+        "WS 020": "gazerpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 014": "mjolnir"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "pdburst",
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 009": "pdburst",
+        "WS 010": "pdburst",
+        "WS 011": "guardian",
+        "WS 013": "guardian"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

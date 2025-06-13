@@ -1,7 +1,7 @@
 {
 	"id":"vice_fragbomb_fighter",
 	"specClass":"projectile",
-	"type":"BALLISTIC",
+	"type":"COMPOSITE",
 	"size":"SMALL",
 	"turretSprite":"graphics/weapons/bomb_bay_turret_base.png",
 	"hardpointSprite":"graphics/weapons/bomb_bay_hardpoint_base.png",

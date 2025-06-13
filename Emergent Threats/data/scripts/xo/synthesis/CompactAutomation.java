@@ -1,6 +1,7 @@
 package data.scripts.xo.synthesis;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CharacterDataAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
@@ -26,6 +27,8 @@ public class CompactAutomation extends SCBaseSkillPlugin {
     @Override
     public void addTooltip(SCData data, TooltipMakerAPI tooltip) {
         tooltip.addPara("Increases ship fitting by 3/5/7/10 ordnance points, based on hull size", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addSpacer(10f);
+		tooltip.addPara("Acquire the Metastatic Growth adaptive hullmod", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Metastatic Growth");
     }
 
     @Override
@@ -39,6 +42,11 @@ public class CompactAutomation extends SCBaseSkillPlugin {
 	@Override
 	public void onActivation(SCData data) {
 		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_compact_automation_is_active", true);
+		if (data.isPlayer() && !Global.getSector().getMemoryWithoutUpdate().is("$gave_CA_hullmods", true)) {
+			CharacterDataAPI player = Global.getSector().getCharacterData();
+			player.addHullMod("vice_adaptive_metastatic_growth");
+			Global.getSector().getMemoryWithoutUpdate().set("$gave_CA_hullmods", true);
+		}
 	}
 	
 	@Override

@@ -1,0 +1,9 @@
+{
+	"builtInMods": [
+		"orr_onslaught"
+	],
+    "builtInWeapons": {
+        "WS 016": "orr_tpc",
+        "WS 017": "orr_tpc",
+    },
+}

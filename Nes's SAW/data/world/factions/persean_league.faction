@@ -5,11 +5,16 @@
 						],
 	},
 	
+	"variantOverrides":{
+		"nes_carnelian_dem":10,
+		"nes_hammerfall_DEM":10,
+	},
+	
 	# multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
         "hulls":{
-			"nes_carnelian":0.4, #somewhat rare
-			"nes_hammerfall":0.4, #somewhat rare
+			"nes_carnelian":0.4, # Rare
+			"nes_hammerfall":0.6, # Somewhat rare
         },
     },
 	

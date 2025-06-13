@@ -4,7 +4,10 @@
     "fluxVents": 9,
     "goalVariant": true,
     "hullId": "swp_wolf_luddic_path",
-    "hullMods": ["missleracks"],
+    "hullMods": [
+        "missleracks",
+        "turretgyros"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "swp_wolf_luddic_path_rai",

@@ -1,0 +1,50 @@
+{
+  "variantId": "kazeron_hammerhead_league_strike",
+  "hullId": "kazeron_hammerhead_league",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 13,
+  "fluxVents": 15,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter",
+    "escort_package",
+    "advancedoptics"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "phasebeam",
+        "WS 002": "phasebeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "gazer",
+        "WS 004": "gazer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "pdlaser",
+        "WS 006": "pdlaser",
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

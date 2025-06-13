@@ -14,14 +14,15 @@
   "builtInMods": [
     "advancedoptics",
     "advancedshieldemitter",
-    "automated",
     "fluxbreakers",
     "magazines",
+    "automated",
     "turretgyros",
     "targetingunit",
     "ecm",
     "nav_relay",
-    "hmi_terror_boost"
+    "hmi_terror_boost",
+    "hmi_terror_spawner3"
   ],
   "builtInWeapons": {
     "WS00003": "hmi_spooky_p3_plasma",

@@ -17,5 +17,7 @@
 		engine:"increased engine power",
 
 		hm_incompatible:"Can not be installed in conjonction with ",
+
+		minimalprepCREffect: "Minimal Preparation",
     }
 }

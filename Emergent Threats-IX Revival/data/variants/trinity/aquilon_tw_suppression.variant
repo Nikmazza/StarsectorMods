@@ -1,0 +1,51 @@
+{
+    "displayName": "Suppression",
+    "fluxCapacitors": 0,
+    "fluxVents": 49,
+    "goalVariant": true,
+    "hullId": "aquilon_tw",
+    "hullMods": [
+        "targetingunit",
+        "tw_modernized_rangefinder",
+        "ix_reactive_combat_shields",
+        "frontemitter",
+        "stabilizedshieldemitter",
+        "ix_aquilon_sc",
+        "ix_aquilon_sc_handler"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "aquilon_tw_suppression",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "arrester_tw"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "starfall_rocket_ix",
+                "WS 003": "starfall_rocket_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "cte_tw"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "lightbringer_ciws_ix",
+                "WS 005": "lightbringer_ciws_ix",
+                "WS 007": "plasma_dart_ix",
+                "WS 008": "plasma_dart_ix",
+                "WS 009": "plasma_dart_ix",
+                "WS 010": "plasma_dart_ix"
+            }
+        }
+    ]
+}

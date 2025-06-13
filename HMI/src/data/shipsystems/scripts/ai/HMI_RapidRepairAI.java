@@ -62,11 +62,11 @@ public class HMI_RapidRepairAI implements ShipSystemAIScript {
 
 
             if (flameout && !system.isActive() && AIUtils.canUseSystemThisFrame(ship)){
-                ship.giveCommand(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK, null, 0);
+                ship.giveCommand(ShipCommand.USE_SYSTEM, null, 0);
             }
 
             if (weapondown && !system.isActive() && AIUtils.canUseSystemThisFrame(ship)) {
-                ship.giveCommand(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK, null, 0);
+                ship.giveCommand(ShipCommand.USE_SYSTEM, null, 0);
             }
         }
     }

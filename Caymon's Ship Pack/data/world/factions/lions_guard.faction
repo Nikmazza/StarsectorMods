@@ -1,0 +1,14 @@
+{
+    "hullFrequency":{
+               "hulls":{
+            "csp_phasehead":0,
+            "csp_solarizedflare":0,
+            "csp_MidlineMech":0.25,
+        },
+    },  
+      "knownFighters":{
+        "fighters":[
+            "csp_lordbritish_wing",
+        ],
+    },
+},

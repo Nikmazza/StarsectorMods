@@ -1,0 +1,172 @@
+{
+  "hullName": "Whitefin(LG)",
+  "hullId": "csp_whitefinlg",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/csp_whitefin.png",
+  "style": "MIDLINE",
+  "height": 159,
+  "width": 107,
+  "center": [54, 81],
+  "collisionRadius": 117.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 111,
+  "viewOffset": 0,
+  "builtInMods": [
+    "csp_multi_layered_shielding",
+    "solar_shielding",
+    "high_scatter_amp",
+    "andrada_mods"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [45, -23]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [45, 23]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [71, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [71, 33]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [71, -33]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": -121,
+      "locations": [-28, -39]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": 121,
+      "locations": [-28, 39]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-78, -15.5],
+      "length": 24.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-78, 15.5],
+      "length": 24.5,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-79, -26.5],
+      "length": 28,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-79, 26.5],
+      "length": 28,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-80, -37],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-80, 37],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -45, 3.5,
+    -79, 10,
+    -81, 44,
+    -72, 47,
+    -65, 42,
+    -40, 44,
+    -34, 52,
+    -22, 52,
+    2, 29.5,
+    1, 20,
+    21, 17,
+    44, 52,
+    61, 52,
+    76, 37,
+    76, 29,
+    66, 23,
+    78, 10,
+    78, -8.5,
+    66, -22,
+    76, -29,
+    76, -37,
+    60, -53,
+    45, -53,
+    21, -16,
+    1, -19,
+    2, -29.5,
+    -22.5, -52,
+    -22, -52,
+    -34, -52,
+    -40, -44,
+    -65, -41,
+    -72, -47,
+    -81, -44,
+    -79, -10,
+    -45, -2.5
+  ]
+}

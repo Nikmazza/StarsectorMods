@@ -1,12 +1,13 @@
 {
-    "masterVersionFile":"https://www.sc2mafia.com/Starsector/version/audioplus.version",
+    "masterVersionFile":"https://bitbucket.org/DarkRevenant/audio-plus/downloads/audioplus.version",
     "modName":"Audio Plus",
     "modThreadId":10985,
-    "directDownloadURL": "https://bitbucket.org/modmafia/audio-plus/downloads/Audio_Plus_1.2.1.7z",
+    "directDownloadURL": "https://bitbucket.org/DarkRevenant/audio-plus/downloads/Audio_Plus_1.2.3.7z",
+    "changelogURL":"https://bitbucket.org/DarkRevenant/audio-plus/downloads/change_log.txt",
     "modVersion":
     {
         "major":1,
         "minor":2,
-        "patch":1
+        "patch":3
     },
 }

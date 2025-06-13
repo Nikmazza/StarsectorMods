@@ -17,8 +17,8 @@ import com.fs.starfarer.api.util.Misc;
 public class AttunedEmitterDiodes extends BaseHullMod {
 
 	private static float BEAM_RANGE_PENALTY = 100f;
-	private static float BEAM_DAMAGE_PENALTY = 15f;
-	private static float BEAM_DAMAGE_PENALTY_SMOD = 10f;
+	private static float BEAM_DAMAGE_PENALTY = 20f;
+	private static float BEAM_DAMAGE_PENALTY_SMOD = 15f;
 	private static String FIRST_BONUS_TEXT = "hard flux";
 	private static String COHERER = "coherer";
 	private static String COHERER_2 = "vice_modular_bolt_coherer";
@@ -78,7 +78,7 @@ public class AttunedEmitterDiodes extends BaseHullMod {
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
 		if (isForModSpec || ship == null) return;
 		if (!ship.getVariant().hasHullMod(COHERER) && !ship.getVariant().hasHullMod(COHERER_2)) {
-			tooltip.addPara("System offline due to mission Modular Bolt Coherer", 10f, Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
+			tooltip.addPara("System offline due to missing Modular Bolt Coherer", 10f, Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
 		}
 	}
 	

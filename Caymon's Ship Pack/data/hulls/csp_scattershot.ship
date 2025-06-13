@@ -1,0 +1,90 @@
+{
+  "hullName": "Scattershot",
+  "hullId": "csp_scattershot",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_scattershot.png",
+  "style": "LOW_TECH",
+  "height": 61,
+  "width": 61,
+  "center": [30.5, 31],
+  "collisionRadius": 36.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 35.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "armoredweapons"
+  ],
+  "builtInWeapons": {
+    "WS0001": "csp_doombore"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [27.5, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-16.5, 18.5],
+      "length": 12.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-25.5, 6.5],
+      "length": 21,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-26, -6],
+      "length": 21,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-15, 22],
+      "length": 16,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-16, -18.5],
+      "length": 12.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-15, -22],
+      "length": 16,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    30, 0,
+    -7.5, -27.5,
+    -29.5, -11,
+    -26, -2.5,
+    -26, 3.5,
+    -29.5, 9.5,
+    -7, 27.5
+  ]
+}

@@ -13,15 +13,14 @@
   "viewOffset": 0,
   "builtInMods": [
     "automated",
+    "hmi_messcore",
+    "hmi_mess_visuals",
     "hmi_mess_spawn"
   ],
   "builtInWings": [
     "drone_feeder_wing",
     "drone_feeder_wing",
-    "drone_feeder_wing",
-    "drone_feeder_wing",
-    "drone_feeder_heavy_wing",
-    "drone_feeder_heavy_wing"
+    "drone_feeder_wing"
   ],
   "builtInWeapons": {
     "WS0004": "ioncannon"

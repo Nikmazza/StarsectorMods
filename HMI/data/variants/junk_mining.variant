@@ -3,8 +3,8 @@
   "hullId": "junk",
   "displayName": "Mining",
   "goalVariant": true,
-  "fluxCapacitors": 12,
-  "fluxVents": 37,
+  "fluxCapacitors": 27,
+  "fluxVents": 50,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
@@ -32,7 +32,6 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "mining_gen",
         "WS0002": "mining_gen",
         "WS0003": "mining_gen",
         "WS0004": "mining_gen"
@@ -56,6 +55,7 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
+        "WS0001": "launcher_cannon",
         "WS0005": "rock_launcher",
         "WS0006": "rock_launcher",
         "WS0011": "rock_launcher",

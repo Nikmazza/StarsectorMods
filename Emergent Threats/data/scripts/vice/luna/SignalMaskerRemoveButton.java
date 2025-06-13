@@ -4,6 +4,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -78,5 +79,6 @@ public class SignalMaskerRemoveButton extends BaseRefitButton {
 				}
 			}
 		}
+		if (!hasAdded) cargo.addSpecial(new SpecialItemData(ITEM_ID, ""), 1);
 	}
 }

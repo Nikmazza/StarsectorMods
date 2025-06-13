@@ -1,0 +1,62 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_bonnethead",
+    "hullMods": [
+        "armoredweapons",
+        "autorepair",
+        "missleracks",
+        "shield_shunt",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "TADA_bonnethead_elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "heavyneedler",
+                "WS0002": "heavyneedler",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0008": "dragon",
+                "WS0007": "dragon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "TADA_triplemortar",
+                "WS0005": "TADA_triplemortar",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "heavyburst",
+                "WS0003": "heavyburst",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "lightdualmg",
+                "WS0010": "lightdualmg",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

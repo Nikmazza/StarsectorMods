@@ -2,6 +2,7 @@
 	"id":"mining_gen",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
 	"type":"BALLISTIC",
+	"mountTypeOverride":"HYBRID",
 	"size":"SMALL",
 	"turretSprite":"graphics/weapons/mining_gen_turret_base.png",
 	"turretGlowSprite":"graphics/weapons/mining_gen_turret_glow.png",

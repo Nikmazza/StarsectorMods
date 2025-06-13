@@ -1,0 +1,53 @@
+{
+  "variantId": "berserker_scav_attack",
+  "hullId": "berserker_scav",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 12,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_deck_crew",
+    "extendedshieldemitter",
+    "unstable_injector",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "railgun",
+        "WS0002": "railgun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "annihilatorpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "heavymortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "dualflak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "talon_wing",
+    "talon_wing",
+    "talon_wing"
+  ]
+}

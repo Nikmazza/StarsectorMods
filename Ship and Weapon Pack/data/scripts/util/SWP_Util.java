@@ -5,6 +5,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.combat.BattleObjectiveAPI;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
@@ -161,6 +162,11 @@ public class SWP_Util {
                 }
 
                 if (filterBlocked && CollisionUtils.getCollides(originPoint, nearestPoint, otherEntity.getLocation(), otherEntity.getCollisionRadius())) {
+                    // Workaround until LazyLib is patched
+                    BoundsAPI bounds = otherEntity.getExactBounds();
+                    if (bounds != null) {
+                        bounds.update(otherEntity.getLocation(), otherEntity.getFacing());
+                    }
                     if (CollisionUtils.getCollisionPoint(nearestPoint, originPoint, otherEntity) != null) {
                         remove = true;
                         break;
@@ -294,8 +300,8 @@ public class SWP_Util {
     }
 
     public static void applyForce(CombatEntityAPI target, Vector2f dir, float force) {
-        if (target instanceof ShipAPI) {
-            ShipAPI root = SWP_Multi.getRoot((ShipAPI) target);
+        if (target instanceof ShipAPI shipAPI) {
+            ShipAPI root = SWP_Multi.getRoot(shipAPI);
             float forceRatio = root.getMass() / root.getMassWithModules();
             CombatUtils.applyForce(root, dir, force * forceRatio);
         } else {
@@ -812,12 +818,15 @@ public class SWP_Util {
         sectorFactions.put("xhanempire", 0.75f);
         sectorFactions.put("tahlan_legioinfernalis", 0.5f);
         sectorFactions.put("scalartech", 0.5f);
+        sectorFactions.put("cabal", 0.5f);
+        sectorFactions.put("tahlan_greathouses", 0.75f);
 
         Map<String, Float> everythingFactions = new HashMap<>();
         everythingFactions.putAll(sectorFactions);
-        everythingFactions.put(Factions.OMEGA, 1f);
+        everythingFactions.put(Factions.OMEGA, 0.75f);
+        everythingFactions.put(Factions.THREAT, 1f);
+        everythingFactions.put(Factions.DWELLER, 0.5f);
         everythingFactions.put("templars", 0.5f);
-        everythingFactions.put("cabal", 0.5f);
         everythingFactions.put("exigency", 0.75f);
         everythingFactions.put("approlight", 0.75f);
         everythingFactions.put("immortallight", 0.25f);
@@ -826,7 +835,16 @@ public class SWP_Util {
         everythingFactions.put("OCI", 0.5f);
         everythingFactions.put("kingdom_of_terra", 0.5f);
         everythingFactions.put("sylphon", 1f);
-        everythingFactions.put("tahlan_greathouses", 0.75f);
+
+        Set<String> banHullsFromFactions = new HashSet<>();
+        banHullsFromFactions.add(Factions.OMEGA);
+        banHullsFromFactions.add(Factions.THREAT);
+        banHullsFromFactions.add(Factions.DWELLER);
+
+        Set<String> banFightersFromFactions = new HashSet<>();
+        banFightersFromFactions.add(Factions.OMEGA);
+        banFightersFromFactions.add(Factions.THREAT);
+        banFightersFromFactions.add(Factions.DWELLER);
 
         List<FactionAPI> extraFactionAPIs = new ArrayList<>();
         extraFactionAPIs.add(Global.getSector().getFaction("domain"));
@@ -836,17 +854,15 @@ public class SWP_Util {
         for (FactionAPI extraFactionAPI : extraFactionAPIs) {
             Map<String, Float> factions;
             switch (extraFactionAPI.getId()) {
-                case "domain":
+                case "domain" ->
                     factions = domainFactions;
-                    break;
-                case "sector":
+                case "sector" ->
                     factions = sectorFactions;
-                    break;
-                case "everything":
+                case "everything" ->
                     factions = everythingFactions;
-                    break;
-                default:
+                default -> {
                     continue;
+                }
             }
 
             Set<String> setCopy;
@@ -907,28 +923,32 @@ public class SWP_Util {
                     continue;
                 }
 
-                for (String alwaysKnownShip : factionAPI.getAlwaysKnownShips()) {
-                    if (!extraFactionAPI.getAlwaysKnownShips().contains(alwaysKnownShip)) {
-                        extraFactionAPI.addUseWhenImportingShip(alwaysKnownShip);
-                    }
-                }
-                for (String knownShip : factionAPI.getKnownShips()) {
-                    if (!extraFactionAPI.getKnownShips().contains(knownShip)) {
-                        extraFactionAPI.addKnownShip(knownShip, false);
-                        extraFactionAPI.getHullFrequency().put(knownShip, faction.getValue());
-                    } else {
-                        Float freq = extraFactionAPI.getHullFrequency().get(knownShip);
-                        if (freq == null) {
-                            freq = faction.getValue();
-                        } else {
-                            freq += faction.getValue();
+                if (!banHullsFromFactions.contains(factionAPI.getId())) {
+                    for (String alwaysKnownShip : factionAPI.getAlwaysKnownShips()) {
+                        if (!extraFactionAPI.getAlwaysKnownShips().contains(alwaysKnownShip)) {
+                            extraFactionAPI.addUseWhenImportingShip(alwaysKnownShip);
                         }
-                        extraFactionAPI.getHullFrequency().put(knownShip, freq);
+                    }
+                    for (String knownShip : factionAPI.getKnownShips()) {
+                        if (!extraFactionAPI.getKnownShips().contains(knownShip)) {
+                            extraFactionAPI.addKnownShip(knownShip, false);
+                            extraFactionAPI.getHullFrequency().put(knownShip, faction.getValue());
+                        } else {
+                            Float freq = extraFactionAPI.getHullFrequency().get(knownShip);
+                            if (freq == null) {
+                                freq = faction.getValue();
+                            } else {
+                                freq += faction.getValue();
+                            }
+                            extraFactionAPI.getHullFrequency().put(knownShip, freq);
+                        }
                     }
                 }
-                for (String knownFighter : factionAPI.getKnownFighters()) {
-                    if (!extraFactionAPI.getKnownFighters().contains(knownFighter)) {
-                        extraFactionAPI.addKnownFighter(knownFighter, false);
+                if (!banFightersFromFactions.contains(factionAPI.getId())) {
+                    for (String knownFighter : factionAPI.getKnownFighters()) {
+                        if (!extraFactionAPI.getKnownFighters().contains(knownFighter)) {
+                            extraFactionAPI.addKnownFighter(knownFighter, false);
+                        }
                     }
                 }
                 for (String knownWeapon : factionAPI.getKnownWeapons()) {

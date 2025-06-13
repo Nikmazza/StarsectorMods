@@ -59,6 +59,9 @@ public class SWP_RedeemerSubAI extends SWP_BaseMissile {
     @Override
     public void advance(float amount) {
         boolean noEngines = missile.isFizzling() || missile.isFading();
+        if (missile.getEngineController() != null) {
+            noEngines &= missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut();
+        }
 
         float maxSpeed = missile.getMaxSpeed();
 
@@ -146,8 +149,8 @@ public class SWP_RedeemerSubAI extends SWP_BaseMissile {
     protected boolean acquireTarget(float amount) {
         if (!isTargetValid(target)) {
             if (parent != null) {
-                if (parent.getMissileAI() instanceof GuidedMissileAI) {
-                    CombatEntityAPI parentTarget = ((GuidedMissileAI) parent.getMissileAI()).getTarget();
+                if (parent.getMissileAI() instanceof GuidedMissileAI guidedMissileAI) {
+                    CombatEntityAPI parentTarget = guidedMissileAI.getTarget();
                     if (target != parentTarget) {
                         setTarget(parentTarget);
                         if (target == null) {
@@ -156,8 +159,7 @@ public class SWP_RedeemerSubAI extends SWP_BaseMissile {
                     }
                 }
             }
-            if (target instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) target;
+            if (target instanceof ShipAPI ship) {
                 if (ship.isPhased() && ship.isAlive()) {
                     return false;
                 }
@@ -173,8 +175,8 @@ public class SWP_RedeemerSubAI extends SWP_BaseMissile {
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
         if (parent != null) {
-            if (parent.getMissileAI() instanceof GuidedMissileAI) {
-                CombatEntityAPI parentTarget = ((GuidedMissileAI) parent.getMissileAI()).getTarget();
+            if (parent.getMissileAI() instanceof GuidedMissileAI guidedMissileAI) {
+                CombatEntityAPI parentTarget = guidedMissileAI.getTarget();
                 if (target != parentTarget) {
                     return false;
                 }

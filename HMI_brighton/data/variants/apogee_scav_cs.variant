@@ -1,0 +1,57 @@
+{
+  "variantId": "apogee_scav_cs",
+  "hullId": "apogee_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 24,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "advancedoptics",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "annihilatorpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "hil",
+        "WS0007": "gravitonbeam",
+        "WS0008": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "heatseeker",
+        "WS0004": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "pdlaser",
+        "WS0006": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

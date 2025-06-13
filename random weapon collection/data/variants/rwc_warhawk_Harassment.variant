@@ -1,0 +1,66 @@
+{
+  "variantId": "rwc_warhawk_Harassment",
+  "hullId": "rwc_warhawk",
+  "displayName": "Harassment",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "ionpulser",
+        "WS0014": "ionpulser",
+        "WS0015": "test_tachyon_accelerator"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "gorgon",
+        "WS0010": "gorgon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "gazer",
+        "WS0008": "gazer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "rwc_positron_m",
+        "WS0012": "rwc_positron_m"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pdlaser",
+        "WS0002": "pdlaser",
+        "WS0005": "pdlaser",
+        "WS0006": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

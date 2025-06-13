@@ -1,0 +1,46 @@
+{
+  "variantId": "Tanngrisni_XIV_Elite",
+  "hullId": "Tanngrisni_XIV",
+  "displayName": "Elite",
+  "goalVariant": false,
+  "fluxCapacitors": 21,
+  "fluxVents": 21,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ioncannon",
+        "WS0002": "ioncannon",
+        "WS0003": "squall",
+        "WS0004": "ioncannon",
+        "WS0005": "ioncannon",
+        "WS0006": "heavyneedler",
+        "WS0007": "heavyneedler",
+        "WS0008": "amblaster",
+        "WS0009": "amblaster",
+        "WS0010": "ionbeam",
+        "WS0011": "ionbeam",
+        "WS0012": "gauss",
+        "WS0013": "gauss",
+        "WS0014": "heavyblaster",
+        "WS0015": "heavyblaster",
+        "WS0016": "ioncannon",
+        "WS0017": "ioncannon",
+        "WS0018": "heavyburst",
+        "WS0019": "heavyburst",
+        "WS0020": "pdburst",
+        "WS0021": "pdburst",
+        "WS0022": "squall"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

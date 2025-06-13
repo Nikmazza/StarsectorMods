@@ -1,0 +1,51 @@
+{
+    "displayName": "Beamer",
+    "fluxCapacitors": 6,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "nes_hammerfall",
+    "hullMods": [
+        "blast_doors",
+        "missile_autoloader",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "nes_hammerfall_beamer",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "gravitonbeam",
+                "WS0002": "gravitonbeam",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "harpoon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "taclaser",
+                "WS0004": "taclaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "pdlaser",
+                "WS0006": "pdlaser",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

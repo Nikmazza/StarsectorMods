@@ -44,9 +44,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0007": "pdlaser",
-                "WS0008": "pdlaser",
-                "WS0009": "pdlaser"
+                "WS0007": "lrpdlaser",
+                "WS0008": "lrpdlaser",
+                "WS0009": "lrpdlaser"
             }
         }
     ]

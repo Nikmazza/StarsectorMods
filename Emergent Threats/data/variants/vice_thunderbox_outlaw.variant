@@ -1,0 +1,52 @@
+{
+    "displayName": "Outlaw",
+    "fluxCapacitors": 0,
+    "fluxVents": 21,
+    "goalVariant": true,
+    "hullId": "vice_thunderbox",
+    "hullMods": [
+        "vice_field_repair_nanites",
+        "reinforcedhull",
+        "fluxbreakers",
+        "shield_shunt",
+        "vice_convert_shuttle_attack"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_thunderbox_outlaw",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS MRL": "vice_spinebreaker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "railgun",
+                "WS 002": "railgun",
+                "WS 003": "lightag",
+                "WS 004": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
+                "WS 007": "dualflak",
+                "WS 008": "dualflak",
+                "WS 009": "vulcan",
+                "WS 010": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "vice_kite_atk_wing",
+        "vice_kite_atk_wing",
+        "",
+        ""
+    ]
+}

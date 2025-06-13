@@ -1,0 +1,597 @@
+{
+  "bounds": [
+    -200,
+    189.5,
+    -105,
+    156,
+    -64,
+    168.5,
+    -17,
+    178,
+    156,
+    159,
+    220,
+    109,
+    221,
+    89,
+    201,
+    84,
+    247,
+    29.5,
+    142,
+    -2.5,
+    247,
+    -28.5,
+    202,
+    -91,
+    224,
+    -95,
+    221,
+    -117,
+    157,
+    -165,
+    -15,
+    -181,
+    -61,
+    -174.5,
+    -104,
+    -158,
+    -204,
+    -190.5,
+    -199,
+    -132.5,
+    -198,
+    116.5
+  ],
+  "builtInMods": [
+    "hbi",
+    "ablative_armor",
+    "second_BG",
+    "invictus_modernization",
+    "distributed_fire_control"
+  ],
+  "builtInWeapons": {
+    "WS0003": "spinalgauss"
+  },
+  "builtInWings": [],
+  "center": [
+    189,
+    211
+  ],
+  "collisionRadius": 300,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 120,
+      "length": 100,
+      "location": [
+        -209,
+        50
+      ],
+      "style": "LOW_TECH",
+      "width": 32
+    },
+    {
+      "angle": 180,
+      "contrailSize": 120,
+      "length": 100,
+      "location": [
+        -213,
+        19
+      ],
+      "style": "LOW_TECH",
+      "width": 32
+    },
+    {
+      "angle": 180,
+      "contrailSize": 120,
+      "length": 100,
+      "location": [
+        -213,
+        -19
+      ],
+      "style": "LOW_TECH",
+      "width": 32
+    },
+    {
+      "angle": 180,
+      "contrailSize": 120,
+      "length": 100,
+      "location": [
+        -209,
+        -49
+      ],
+      "style": "LOW_TECH",
+      "width": 32
+    },
+    {
+      "angle": 180,
+      "contrailSize": 80,
+      "length": 60,
+      "location": [
+        -204,
+        96
+      ],
+      "style": "LOW_TECH",
+      "width": 24
+    },
+    {
+      "angle": 180,
+      "contrailSize": 88,
+      "length": 64,
+      "location": [
+        -204,
+        77
+      ],
+      "style": "LOW_TECH",
+      "width": 26
+    },
+    {
+      "angle": 180,
+      "contrailSize": 88,
+      "length": 64,
+      "location": [
+        -204,
+        -77
+      ],
+      "style": "LOW_TECH",
+      "width": 26
+    },
+    {
+      "angle": 180,
+      "contrailSize": 80,
+      "length": 60,
+      "location": [
+        -204,
+        -95
+      ],
+      "style": "LOW_TECH",
+      "width": 24
+    },
+    {
+      "angle": 180,
+      "contrailSize": 18,
+      "length": 42,
+      "location": [
+        -199,
+        -114.5
+      ],
+      "style": "LOW_TECH",
+      "width": 18
+    },
+    {
+      "angle": -180,
+      "contrailSize": 18,
+      "length": 42,
+      "location": [
+        -199,
+        115.5
+      ],
+      "style": "LOW_TECH",
+      "width": 18
+    },
+    {
+      "angle": 180,
+      "contrailSize": 18,
+      "length": 42,
+      "location": [
+        -198,
+        -126.5
+      ],
+      "style": "LOW_TECH",
+      "width": 18
+    },
+    {
+      "angle": -180,
+      "contrailSize": 18,
+      "length": 42,
+      "location": [
+        -198,
+        127.5
+      ],
+      "style": "LOW_TECH",
+      "width": 18
+    },
+    {
+      "angle": 180,
+      "contrailSize": 18,
+      "length": 42,
+      "location": [
+        -198,
+        -141.5
+      ],
+      "style": "LOW_TECH",
+      "width": 18
+    },
+    {
+      "angle": -180,
+      "contrailSize": 18,
+      "length": 42,
+      "location": [
+        -198,
+        142.5
+      ],
+      "style": "LOW_TECH",
+      "width": 18
+    },
+    {
+      "angle": -166.5,
+      "contrailSize": 29.236786,
+      "length": 84.754364,
+      "location": [
+        -72,
+        -168.5
+      ],
+      "style": "LOW_TECH",
+      "width": 29.236786
+    },
+    {
+      "angle": 166.5,
+      "contrailSize": 29.236786,
+      "length": 84.754364,
+      "location": [
+        -72,
+        169.5
+      ],
+      "style": "LOW_TECH",
+      "width": 29.236786
+    }
+  ],
+  "height": 470,
+  "hullId": "invictus_ii",
+  "hullName": "Invictus (II)",
+  "hullSize": "CAPITAL_SHIP",
+  "shieldCenter": [
+    0,
+    7
+  ],
+  "shieldRadius": 277,
+  "spriteName": "graphics/ships/invictus_ii.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 45,
+      "arc": 150,
+      "id": "WS 000",
+      "locations": [
+        127,
+        119
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 150,
+      "id": "WS 002",
+      "locations": [
+        170.5,
+        -75
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -90,
+      "arc": 150,
+      "id": "WS 003",
+      "locations": [
+        51,
+        -133.5
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "COMPOSITE"
+    },
+    {
+      "angle": 90,
+      "arc": 5,
+      "id": "WS 004",
+      "locations": [
+        -57,
+        124.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 225,
+      "arc": 150,
+      "id": "WS 005",
+      "locations": [
+        -127,
+        -75
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 135,
+      "arc": 150,
+      "id": "WS 006",
+      "locations": [
+        -127,
+        71
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 90,
+      "arc": 5,
+      "id": "WS 007",
+      "locations": [
+        -101.5,
+        127.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 90,
+      "arc": 150,
+      "id": "WS 008",
+      "locations": [
+        50.5,
+        131.5
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "COMPOSITE"
+    },
+    {
+      "angle": 0,
+      "arc": 150,
+      "id": "WS 009",
+      "locations": [
+        170.5,
+        72
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 90,
+      "arc": 8,
+      "id": "WS 011",
+      "locations": [
+        -8,
+        168
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 65,
+      "arc": 8,
+      "id": "WS 012",
+      "locations": [
+        106,
+        140
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 15,
+      "arc": 8,
+      "id": "WS 013",
+      "locations": [
+        190,
+        104
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": -15,
+      "arc": 8,
+      "id": "WS 015",
+      "locations": [
+        190,
+        -107
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": -65,
+      "arc": 8,
+      "id": "WS 016",
+      "locations": [
+        106,
+        -143
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": -90,
+      "arc": 8,
+      "id": "WS 017",
+      "locations": [
+        -7,
+        -172
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 250,
+      "arc": 8,
+      "id": "WS 018",
+      "locations": [
+        -79,
+        -158
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 210,
+      "arc": 8,
+      "id": "WS 019",
+      "locations": [
+        -166,
+        -117
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 150,
+      "arc": 8,
+      "id": "WS 020",
+      "locations": [
+        -166,
+        114
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 110,
+      "arc": 8,
+      "id": "WS 021",
+      "locations": [
+        -79,
+        154
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "SYSTEM"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 022",
+      "locations": [
+        131,
+        77
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 023",
+      "locations": [
+        120,
+        23
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 024",
+      "locations": [
+        120,
+        -27
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": 0,
+      "arc": 360,
+      "id": "WS 025",
+      "locations": [
+        131,
+        -81
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "DECORATIVE"
+    },
+    {
+      "angle": -45,
+      "arc": 150,
+      "id": "WS 026",
+      "locations": [
+        123,
+        -120
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -90,
+      "arc": 5,
+      "id": "WS 027",
+      "locations": [
+        -53,
+        -119,
+        -84,
+        -119,
+        -101,
+        -118,
+        -69,
+        -119
+      ],
+      "mount": "HIDDEN",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": -90,
+      "arc": 5,
+      "id": "WS0001",
+      "locations": [
+        -57,
+        -128.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "MISSILE"
+    },
+    {
+      "angle": -90,
+      "arc": 5,
+      "id": "WS0002",
+      "locations": [
+        -99,
+        -131.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 0,
+      "id": "WS0003",
+      "locations": [
+        104.5,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "BUILT_IN"
+    }
+  ],
+  "width": 380
+}

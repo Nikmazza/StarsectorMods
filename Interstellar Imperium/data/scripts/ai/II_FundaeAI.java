@@ -1,6 +1,7 @@
 package data.scripts.ai;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
@@ -73,13 +74,13 @@ public class II_FundaeAI extends II_BaseMissile {
 
     @Override
     protected boolean acquireTarget(float amount) {
-        if (target instanceof MissileAPI) {
-            if (((MissileAPI) target).isFlare()) {
+        if (target instanceof MissileAPI missileAPI) {
+            if (missileAPI.isFlare()) {
                 freeTargeting = false;
             }
         }
-        if (target instanceof ShipAPI) {
-            if ((((ShipAPI) target).getVariant() != null) && ((ShipAPI) target).getVariant().hasHullMod("ii_attraction_matrix")) {
+        if (target instanceof ShipAPI shipAPI) {
+            if ((shipAPI.getVariant() != null) && shipAPI.getVariant().hasHullMod("ii_attraction_matrix")) {
                 freeTargeting = false;
             }
         }
@@ -128,7 +129,8 @@ public class II_FundaeAI extends II_BaseMissile {
 
         noEngines -= amount;
 
-        if (missile.isFizzling() || missile.isFading()) {
+        if (missile.isFizzling() || missile.isFading() || ((missile.getEngineController() != null)
+                && (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()))) {
             detonate -= amount;
             if (detonate <= 0f) {
                 explode(missile, null, new Vector2f(missile.getLocation()), Global.getCombatEngine());
@@ -140,8 +142,7 @@ public class II_FundaeAI extends II_BaseMissile {
             }
         }
 
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone()) {
                 float distance = II_Util.getActualDistance(missile.getLocation(), target, true);
 
@@ -162,6 +163,11 @@ public class II_FundaeAI extends II_BaseMissile {
 
         if (missile.isFizzling() || missile.isFading() || (noEngines > 0f)) {
             return;
+        }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
         }
 
         if (!acquireTarget(amount)) {
@@ -248,8 +254,7 @@ public class II_FundaeAI extends II_BaseMissile {
                 continue;
             }
 
-            if (tgt instanceof ShipAPI) {
-                ShipAPI shp = (ShipAPI) tgt;
+            if (tgt instanceof ShipAPI shp) {
                 if (!shp.isFighter() && !shp.isDrone()) {
                     continue;
                 }
@@ -296,6 +301,11 @@ public class II_FundaeAI extends II_BaseMissile {
                 Vector2f projection = VectorUtils.getDirectionalVector(point, tgt.getLocation());
                 projection.scale(tgt.getCollisionRadius());
                 Vector2f.add(projection, tgt.getLocation(), projection);
+                // Workaround until LazyLib is patched
+                BoundsAPI bounds = tgt.getExactBounds();
+                if (bounds != null) {
+                    bounds.update(tgt.getLocation(), tgt.getFacing());
+                }
                 damagePoint = CollisionUtils.getCollisionPoint(point, projection, tgt);
             }
             if (damagePoint == null) {

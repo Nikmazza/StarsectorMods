@@ -51,6 +51,10 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
             }
         }
 
+        if (!engine.getCustomData().containsKey(DATA_KEY)) {
+            engine.getCustomData().put(DATA_KEY, new LocalData());
+        }
+
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
         final Map<ShipAPI, Object> lights = localData.lights;
 
@@ -442,7 +446,6 @@ public class II_ImperiumLightInjector extends BaseEveryFrameCombatPlugin {
     @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
-        engine.getCustomData().put(DATA_KEY, new LocalData());
     }
 
     private static final class LocalData {

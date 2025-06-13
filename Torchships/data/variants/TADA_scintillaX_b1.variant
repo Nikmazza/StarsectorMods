@@ -1,0 +1,47 @@
+{
+    "displayName": "Corrupted",
+    "fluxCapacitors": 3,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "TADA_scintillaX",
+    "hullMods": [
+        "reinforcedhull",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_scintillaX_b1",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "resonatormrm",
+                "WS0002": "resonatormrm",
+                "WS 006": "resonatormrm",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 008": "amsrm",
+                "WS 007": "amsrm",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "shockrepeater",
+                "WS 001": "shockrepeater",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser",
+            }
+        }
+    ]
+}

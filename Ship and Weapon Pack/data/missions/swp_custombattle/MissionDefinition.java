@@ -7,6 +7,7 @@ import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.impl.combat.EscapeRevealPlugin;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
@@ -111,14 +112,12 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
             if (null == escape) {
                 escape = FleetSide.PLAYER;
             } else {
-                switch (escape) {
-                    case PLAYER:
-                        escape = FleetSide.ENEMY;
-                        break;
-                    default:
-                        escape = null;
-                        break;
-                }
+                escape = switch (escape) {
+                    case PLAYER ->
+                        FleetSide.ENEMY;
+                    default ->
+                        null;
+                };
             }
             refreshPlayer = true;
             refreshEnemy = true;
@@ -226,20 +225,6 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
             refreshEnemy = true;
         }
 
-        if (null == escape) {
-            api.addBriefingItem("Defeat all enemy forces");
-        } else {
-            switch (escape) {
-                case PLAYER:
-                    api.addBriefingItem("Escape from the enemy forces");
-                    break;
-                case ENEMY:
-                default:
-                    api.addBriefingItem("Prevent the enemy forces from escaping");
-                    break;
-            }
-        }
-
         api.initMap(-width / 2f, width / 2f, -height / 2f, height / 2f);
 
         if (escape == FleetSide.PLAYER) {
@@ -251,18 +236,6 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
             api.initFleet(FleetSide.ENEMY, Global.getSector().getFaction(enemyFaction).getEntityNamePrefix(), FleetGoal.ESCAPE, true, size / 8);
         } else {
             api.initFleet(FleetSide.ENEMY, Global.getSector().getFaction(enemyFaction).getEntityNamePrefix(), FleetGoal.ATTACK, true, size / 8);
-        }
-
-        switch (objectiveCount) {
-            case 0:
-                api.addBriefingItem("Battle size: " + size + "  -  " + (int) width + "x" + (int) height);
-                break;
-            case 1:
-                api.addBriefingItem("Battle size: " + size + "  -  " + objectiveCount + " objective" + "  -  " + (int) width + "x" + (int) height);
-                break;
-            default:
-                api.addBriefingItem("Battle size: " + size + "  -  " + objectiveCount + " objectives" + "  -  " + (int) width + "x" + (int) height);
-                break;
         }
 
         if (refreshPlayer || refreshEnemy) {
@@ -381,45 +354,35 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
         String playerSModString = "";
         if (playerSMods >= 0) {
             switch (playerSMods) {
-                case 0:
+                case 0 ->
                     playerSModString = "0-1";
-                    break;
-                case 1:
+                case 1 ->
                     playerSModString = "0-2";
-                    break;
-                case 2:
+                case 2 ->
                     playerSModString = "1-3";
-                    break;
-                case 3:
+                case 3 ->
                     playerSModString = "2-3";
-                    break;
-                case 4:
+                case 4 ->
                     playerSModString = "3";
-                    break;
-                default:
-                    break;
+                default -> {
+                }
             }
         }
         String enemySModString = "";
         if (enemySMods >= 0) {
             switch (enemySMods) {
-                case 0:
+                case 0 ->
                     enemySModString = "0-1";
-                    break;
-                case 1:
+                case 1 ->
                     enemySModString = "0-2";
-                    break;
-                case 2:
+                case 2 ->
                     enemySModString = "1-3";
-                    break;
-                case 3:
+                case 3 ->
                     enemySModString = "2-3";
-                    break;
-                case 4:
+                case 4 ->
                     enemySModString = "3";
-                    break;
-                default:
-                    break;
+                default -> {
+                }
             }
         }
 
@@ -472,11 +435,16 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
             }
         }
 
+        boolean spoilers = false;
+
         float friendlyDP = 0f;
         float friendlyFP = 0f;
         for (FleetMemberAPI member : playerFleetData.getMembersListCopy()) {
             friendlyDP += member.getDeploymentPointsCost();
             friendlyFP += member.getFleetPointCost();
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getFleetMemberBaseHullId(member))) {
+                spoilers = true;
+            }
         }
 
         float enemyDP = 0f;
@@ -484,9 +452,39 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
         for (FleetMemberAPI member : enemyFleetData.getMembersListCopy()) {
             enemyDP += member.getDeploymentPointsCost();
             enemyFP += member.getFleetPointCost();
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getFleetMemberBaseHullId(member))) {
+                spoilers = true;
+            }
         }
 
         float distance = Math.abs(enemyDP - friendlyDP) + Math.abs(enemyFP - friendlyFP);
+
+        if (spoilers) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+        }
+
+        if (null == escape) {
+            api.addBriefingItem("Defeat all enemy forces");
+        } else {
+            switch (escape) {
+                case PLAYER:
+                    api.addBriefingItem("Escape from the enemy forces");
+                    break;
+                case ENEMY:
+                default:
+                    api.addBriefingItem("Prevent the enemy forces from escaping");
+                    break;
+            }
+        }
+
+        switch (objectiveCount) {
+            case 0 ->
+                api.addBriefingItem("Battle size: " + size + "  -  " + (int) width + "x" + (int) height);
+            case 1 ->
+                api.addBriefingItem("Battle size: " + size + "  -  " + objectiveCount + " objective" + "  -  " + (int) width + "x" + (int) height);
+            default ->
+                api.addBriefingItem("Battle size: " + size + "  -  " + objectiveCount + " objectives" + "  -  " + (int) width + "x" + (int) height);
+        }
 
         api.addBriefingItem("Match inequality: " + Math.round(distance));
 
@@ -642,9 +640,10 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
                         return;
                     }
 
-                    float trueFrameTime = Global.getCombatEngine().getElapsedInLastFrame();
-                    float trueFPS = 1 / trueFrameTime;
-                    float newTimeMult = Math.max(1f, trueFPS / 30f);
+                    int roundedFrameTimeMsec = (int) Math.ceil(1000f * Global.getCombatEngine().getElapsedInLastFrame() + 1);
+                    float scaledFPS = 1000f / roundedFrameTimeMsec;
+                    float unscaledFPS = Global.getCombatEngine().getTimeMult().getModifiedValue() * scaledFPS;
+                    float newTimeMult = Math.max(1f, unscaledFPS / 30f);
                     Global.getCombatEngine().getTimeMult().modifyMult("swp_tester", newTimeMult);
                 }
             });

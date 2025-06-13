@@ -112,14 +112,17 @@ public class II_TitanBombardment extends BaseHullMod {
     @Override
     public String getDescriptionParam(int index, HullSize hullSize, ShipAPI ship) {
         switch (index) {
-            case 0:
+            case 0 -> {
                 return "" + (int) GROUND_BONUS;
-            case 1:
+            }
+            case 1 -> {
                 return "" + (int) BOMBARD_BONUS;
-            case 2:
+            }
+            case 2 -> {
                 return "" + (int) Math.round(DP_PENALTY);
-            default:
-                break;
+            }
+            default -> {
+            }
         }
         return null;
     }
@@ -133,46 +136,61 @@ public class II_TitanBombardment extends BaseHullMod {
             label.setHighlight(efficiencyOverhaul.getDisplayName());
         }
 
-        float CR = ship.getCurrentCR();
-        if (ship.getFleetMember() != null) {
-            CR = ship.getFleetMember().getRepairTracker().getBaseCR();
-        }
-
         Color hc1 = Misc.getHighlightColor();
         Color hc2 = Misc.getHighlightColor();
-        if (CR < getCRPenalty(ship.getVariant())) {
-            hc1 = Misc.getNegativeHighlightColor();
-        }
-        if (CR < getEradicationCRPenalty(ship.getVariant())) {
-            hc2 = Misc.getNegativeHighlightColor();
-        }
-        tooltip.addSectionHeading("Combat Readiness",
-                Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
-        tooltip.addPara("The Titan is available in combat while the ship has at least %s combat readiness. After combat ends "
-                + "(assuming the Titan was fired), combat readiness will be reduced by %s.", PARA_PAD,
-                hc1, "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%", "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%");
 
-        tooltip.addPara("This ship can engage in bombardment operations while it has at least %s combat readiness. Engaging in "
-                + "a bombardment operation will reduce combat readiness by %s.", PARA_PAD,
-                hc1, "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%", "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%");
-        if (getCRPenalty(ship.getVariant()) > II_TitanPlugin.CR_PENALTY) {
+        float CR = 100f;
+        if (ship != null) {
+            CR = ship.getCurrentCR();
+            if (ship.getFleetMember() != null) {
+                CR = ship.getFleetMember().getRepairTracker().getBaseCR();
+            }
+            if (CR < getCRPenalty(ship.getVariant())) {
+                hc1 = Misc.getNegativeHighlightColor();
+            }
+            if (CR < getEradicationCRPenalty(ship.getVariant())) {
+                hc2 = Misc.getNegativeHighlightColor();
+            }
+        }
+
+        tooltip.addSectionHeading("Combat readiness",
+                Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
+        if (ship != null) {
+            tooltip.addPara("The Titan is available in combat while the ship has at least %s combat readiness. After combat ends "
+                    + "(assuming the Titan was fired), combat readiness will be reduced by %s.", PARA_PAD,
+                    hc1, "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%", "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%");
+
+            tooltip.addPara("This ship can engage in bombardment operations while it has at least %s combat readiness. Engaging in "
+                    + "a bombardment operation will reduce combat readiness by %s.", PARA_PAD,
+                    hc1, "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%", "" + (int) Math.round(getCRPenalty(ship.getVariant()) * 100f) + "%");
+        } else {
+            tooltip.addPara("The Titan is available in combat while the ship has sufficient combat readiness. After combat ends "
+                    + "(assuming the Titan was fired), combat readiness will be reduced.", PARA_PAD);
+        }
+
+        if ((ship != null) && (getCRPenalty(ship.getVariant()) > II_TitanPlugin.CR_PENALTY)) {
             float penaltyScalePct = 100f * ((getCRPenalty(ship.getVariant()) / II_TitanPlugin.CR_PENALTY) - 1f);
             tooltip.addPara("Combat readiness cost is increased by %s due to hull defects.", PARA_PAD, Misc.getNegativeHighlightColor(), "" + Math.round(penaltyScalePct) + "%");
         } else {
             tooltip.addPara("Combat readiness cost will be increased if the ship suffers any hull defects.", PARA_PAD);
         }
-        if (CR < getCRPenalty(ship.getVariant())) {
+        if ((ship != null) && (CR < getCRPenalty(ship.getVariant()))) {
             tooltip.addPara("Insufficient combat readiness for Titan deployment!", Misc.getNegativeHighlightColor(), PARA_PAD);
             tooltip.addPara("Insufficient combat readiness for bombardment operations!", Misc.getNegativeHighlightColor(), PARA_PAD);
         }
 
-        tooltip.addSectionHeading("Market Eradication",
+        tooltip.addSectionHeading("Market eradication",
                 Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
         tooltip.addPara("Enables the eradication of worlds, which immediately decivilizes and permanently desecrates the target.", PARA_PAD);
-        tooltip.addPara("Market eradication is possible while the ship has at least %s combat readiness. Eradicating a market "
-                + "will reduce combat readiness by %s.", PARA_PAD,
-                hc2, "" + (int) Math.round(getEradicationCRPenalty(ship.getVariant()) * 100f) + "%", "" + (int) Math.round(getEradicationCRPenalty(ship.getVariant()) * 100f) + "%");
-        if (CR < getEradicationCRPenalty(ship.getVariant())) {
+        if (ship != null) {
+            tooltip.addPara("Market eradication is possible while the ship has at least %s combat readiness. Eradicating a market "
+                    + "will reduce combat readiness by %s.", PARA_PAD,
+                    hc2, "" + (int) Math.round(getEradicationCRPenalty(ship.getVariant()) * 100f) + "%", "" + (int) Math.round(getEradicationCRPenalty(ship.getVariant()) * 100f) + "%");
+        } else {
+            tooltip.addPara("Market eradication is possible while the ship has sufficient combat readiness. Eradicating a market "
+                    + "will reduce combat readiness.", PARA_PAD);
+        }
+        if ((ship != null) && (CR < getEradicationCRPenalty(ship.getVariant()))) {
             tooltip.addPara("Insufficient combat readiness for market eradication!", Misc.getNegativeHighlightColor(), PARA_PAD);
         }
     }
@@ -204,21 +222,20 @@ public class II_TitanBombardment extends BaseHullMod {
                 int frame;
 
                 switch (weapon.getId()) {
-                    case "ii_titan_deco":
+                    case "ii_titan_deco" -> {
                         if (!titanWeaponHasAmmo) {
                             frame = 4;
                         } else {
                             frame = 0;
                         }
-                        break;
-                    case "ii_titan_armor_door":
+                    }
+                    case "ii_titan_armor_door" ->
                         frame = 0;
-                        break;
-                    case "ii_titan_targeting_door":
+                    case "ii_titan_targeting_door" ->
                         frame = 0;
-                        break;
-                    default:
+                    default -> {
                         continue;
+                    }
                 }
 
                 weapon.getAnimation().setFrame(frame);

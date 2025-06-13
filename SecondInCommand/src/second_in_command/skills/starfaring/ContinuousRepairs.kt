@@ -34,6 +34,7 @@ class ContinuousRepairs : SCBaseSkillPlugin() {
 
         tooltip.addPara("Ships lost in combat have a 60/60/40/30 percent chance to avoid d-mods, based on hullsize", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
         tooltip.addPara("Every 240 deployment points worth of opponents defeated remove a random d-mod from a random ship", 0f, Misc.getHighlightColor(), Misc.getHighlightColor())
+        tooltip.addPara("   - Defeated capital ships provide twice as much towards this score", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "capital ships", "twice")
         tooltip.addPara("   - This effect can trigger multiple times from the same battle", 0f, Misc.getTextColor(), Misc.getHighlightColor())
         tooltip.addPara("   - This count is being kept track of between battles", 0f, Misc.getTextColor(), Misc.getHighlightColor())
         tooltip.addPara("   - Ignores ships with the Rugged Construction hullmod", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Rugged Construction")
@@ -57,6 +58,7 @@ class ContinuousRepairs : SCBaseSkillPlugin() {
             ShipAPI.HullSize.DESTROYER -> stats!!.dynamic.getMod(Stats.DMOD_ACQUIRE_PROB_MOD).modifyMult(id, 0.4f)
             ShipAPI.HullSize.CRUISER -> stats!!.dynamic.getMod(Stats.DMOD_ACQUIRE_PROB_MOD).modifyMult(id, 0.6f)
             ShipAPI.HullSize.CAPITAL_SHIP -> stats!!.dynamic.getMod(Stats.DMOD_ACQUIRE_PROB_MOD).modifyMult(id, 0.7f)
+            else -> null
         }
     }
 
@@ -87,6 +89,46 @@ class ContinuousRepairs : SCBaseSkillPlugin() {
 
 }
 
+
+class ContinousIntel(var pick: FleetMemberAPI, var specId: String) : BaseIntelPlugin() {
+
+    init {
+        Global.getSector().addScript(this)
+        endAfterDelay(30f)
+    }
+
+    override fun notifyEnded() {
+        Global.getSector().removeScript(this)
+    }
+
+    override fun getName(): String {
+        return "Skill - Continuous Repairs"
+    }
+
+    override fun getIcon(): String {
+        return "graphics/secondInCommand/starfaring/continuous_repairs.png"
+    }
+
+    override fun hasSmallDescription(): Boolean {
+        return false
+    }
+
+    override fun addBulletPoints(info: TooltipMakerAPI?, mode: IntelInfoPlugin.ListInfoMode?, isUpdate: Boolean, tc: Color?, initPad: Float) {
+        var spec = Global.getSettings().getHullModSpec(specId)
+        info!!.addPara("${pick.shipName} - removed ${spec.displayName}", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "${spec.displayName}")
+    }
+
+    override fun getTitleColor(mode: IntelInfoPlugin.ListInfoMode?): Color {
+        return Misc.getBasePlayerColor()
+    }
+
+    override fun getIntelTags(map: SectorMapAPI?): MutableSet<String> {
+        var tags = super.getIntelTags(map)
+        tags.add("Skills")
+        return tags
+    }
+}
+
 class ContinuousRepairsListener() : BaseCampaignEventListener(false) {
 
     var required = 240
@@ -99,6 +141,7 @@ class ContinuousRepairsListener() : BaseCampaignEventListener(false) {
 
             for (data in plugin.loserData.ownCasualties) {
                 dp += data.member.deploymentPointsCost
+                if (data.member.isCapital) dp += data.member.deploymentPointsCost
             }
 
             while (dp >= required) {
@@ -116,7 +159,7 @@ class ContinuousRepairsListener() : BaseCampaignEventListener(false) {
 
                     var dmodSpecs = Global.getSettings().allHullModSpecs.filter { it.hasTag(Tags.HULLMOD_DMOD) }
 
-                    var hmods = pick.variant.permaMods
+                    var hmods = pick.variant.permaMods + pick.variant.hullMods
 
                     var foundDmods = ArrayList<String>()
                     for (hmod in hmods) {
@@ -126,7 +169,7 @@ class ContinuousRepairsListener() : BaseCampaignEventListener(false) {
                     }
 
                     var hmodPick = foundDmods.randomOrNull()
-                    if (hmodPick != null) {
+                    if (hmodPick != null && pick.variant != null) {
                         DModManager.removeDMod(pick.variant, hmodPick)
 
                         val spec = DModManager.getMod(hmodPick)
@@ -137,38 +180,7 @@ class ContinuousRepairsListener() : BaseCampaignEventListener(false) {
 
 
                         //Intel
-                        var intel = object : BaseIntelPlugin() {
-
-                            init {
-                                endAfterDelay(30f)
-                            }
-
-                            override fun getName(): String {
-                                return "Skill - Continuous Repairs"
-                            }
-
-                            override fun getIcon(): String {
-                                return "graphics/secondInCommand/starfaring/continuous_repairs.png"
-                            }
-
-                            override fun hasSmallDescription(): Boolean {
-                                return false
-                            }
-
-                            override fun addBulletPoints(info: TooltipMakerAPI?, mode: IntelInfoPlugin.ListInfoMode?, isUpdate: Boolean, tc: Color?, initPad: Float) {
-                                info!!.addPara("${pick.shipName} - removed ${spec.displayName}", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "${spec.displayName}")
-                            }
-
-                            override fun getTitleColor(mode: IntelInfoPlugin.ListInfoMode?): Color {
-                                return Misc.getBasePlayerColor()
-                            }
-
-                            override fun getIntelTags(map: SectorMapAPI?): MutableSet<String> {
-                                var tags = super.getIntelTags(map)
-                                tags.add("Skills")
-                                return tags
-                            }
-                        }
+                        var intel = ContinousIntel(pick, spec.id)
 
                         Global.getSector().intelManager.addIntel(intel)
 

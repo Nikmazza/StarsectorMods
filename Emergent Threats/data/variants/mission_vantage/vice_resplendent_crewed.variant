@@ -4,7 +4,7 @@
     "fluxVents": 50,
     "hullId": "vice_resplendent_ex",
     "hullMods": [
-        "targetingunit",
+        "vice_unified_targeting_core",
         "fluxdistributor",
         "magazines",
         "hardenedshieldemitter",
@@ -18,12 +18,12 @@
         {"SM 2": "vice_resplendent_drone_forge"}
     ],
     "permaMods": [
-        "targetingunit",
+        "vice_unified_targeting_core",
         "fluxdistributor",
         "vice_shipwide_integration_checker"
     ],
     "sMods": [
-        "targetingunit",
+        "vice_unified_targeting_core",
         "fluxdistributor"
     ],
     "variantId": "vice_resplendent_crewed",

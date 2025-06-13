@@ -1,0 +1,51 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "goalVariant": true,
+    "hullId": "TADA_scalper_pirate",
+    "hullMods": [
+        "missile_autoloader",
+        "missleracks",
+        "safetyoverrides",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_scalper_pirate_overdriven",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "typhoon",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "reaper",
+                "WS0002": "reaper",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "lightdualac",
+                "WS0006": "lightdualac",
+                "WS0007": "lightdualac",
+                "WS0004": "lightdualac",
+                "WS0005": "lightdualac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "lightmg",
+                "WS0010": "lightmg",
+            }
+        },
+    ],
+}

@@ -33,6 +33,7 @@
   ],
   "builtInMods": [
     "automated",
+	"hmi_mess_visuals",
     "hmi_mess_spawn"
   ],
   "builtInWings": [],

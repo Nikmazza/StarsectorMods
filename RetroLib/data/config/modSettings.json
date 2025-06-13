@@ -1,8 +1,0 @@
-{
-	"RetroLib": {
-		"devModeRetrofitter": false,
-		"conversionPriceMult": 1.0,
-		"shipBuyPriceMult": 1.0,
-		"shipSellPriceMult": 1.0
-	}
-}

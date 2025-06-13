@@ -1,0 +1,78 @@
+{
+  "variantId": "ork_battlecruiser_harasser",
+  "hullId": "ork_battlecruiser",
+  "displayName": "Harasser",
+  "goalVariant": true,
+  "fluxCapacitors": 17,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "ork_dem_large",
+        "WS0014": "ork_dem_large"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "ork_old_laser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "ork_thumpa",
+        "WS0019": "ork_thumpa"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ork_noshield_small",
+        "WS0002": "ork_noshield_small",
+        "WS0003": "ork_noshield_small",
+        "WS0004": "ork_noshield_small",
+        "WS0006": "ork_noshield_small",
+        "WS0007": "ork_noshield_small"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "ork_rotary_pd_small",
+        "WS0010": "vulcan",
+        "WS0011": "ork_rotary_pd_small",
+        "WS0015": "vulcan",
+        "WS0016": "ork_rotary_pd_small",
+        "WS0018": "ork_rotary_pd_small",
+        "WS0020": "ork_rotary_pd"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "ork_plasma_shotgun_medium",
+        "WS0012": "ork_plasma_shotgun_medium"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

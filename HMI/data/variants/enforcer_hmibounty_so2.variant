@@ -4,7 +4,7 @@
   "displayName": "Overdriven",
   "goalVariant": false,
   "fluxCapacitors": 0,
-  "fluxVents": 13,
+  "fluxVents": 9,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -17,10 +17,10 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS 006": "signpost_sml",
-        "WS 007": "signpost_sml",
-        "WS 008": "signpost_sml",
-        "WS 009": "signpost_sml"
+        "WS 006": "annihilator",
+        "WS 007": "annihilator",
+        "WS 008": "annihilator",
+        "WS 009": "annihilator"
       }
     },
     {

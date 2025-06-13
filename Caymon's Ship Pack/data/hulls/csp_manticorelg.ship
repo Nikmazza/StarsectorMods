@@ -1,0 +1,162 @@
+{
+  "hullName": "Manticore(Lg)",
+  "hullId": "csp_manticorelg",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/csp_manticore_lg.png",
+  "style": "LOW_TECH",
+  "height": 158,
+  "width": 170,
+  "center": [85, 75.5],
+  "collisionRadius": 108.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 106.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "csp_multi_layered_shielding",
+    "solar_shielding",
+    "advancedoptics",
+    "andrada_mods"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [2.5, -54]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [2.5, 54]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [10.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [57.5, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -90,
+      "locations": [-22.5, -27.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 90,
+      "locations": [-22.5, 27.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 2,
+      "locations": [31.5, -54]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -2,
+      "locations": [31.5, 54]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-65.5, -32],
+      "length": 40,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-65.5, 32],
+      "length": 40,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-66.5, -18],
+      "length": 48.5,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-66.5, 18],
+      "length": 48.5,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-73.5, -0],
+      "length": 55,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -75.5, 6,
+    -66.5, 11,
+    -65.5, 37,
+    -29.5, 50,
+    -26.5, 77,
+    -18.5, 83,
+    -2, 84.5,
+    16.5, 79,
+    31.5, 54.5,
+    25.5, 28,
+    40, 19,
+    63.5, 19,
+    70.5, -0,
+    63.5, -19,
+    40, -19,
+    25.5, -28,
+    31.5, -54.5,
+    16.5, -79,
+    -2, -85.5,
+    -26.5, -77,
+    -29.5, -50,
+    -65.5, -37,
+    -66.5, -11,
+    -75.5, -6
+  ]
+}

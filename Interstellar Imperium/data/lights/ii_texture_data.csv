@@ -3,6 +3,10 @@ ii_adamas,ship,,,material,graphics/imperium/material/ships/adamas/ii_adamas_mate
 ii_adamas_armor,ship,,,material,graphics/imperium/material/ships/adamas/ii_adamas_armor_material.png
 ii_adamas_targeting,ship,,,material,graphics/imperium/material/ships/adamas/ii_adamas_targeting_material.png
 ii_adamas_elite,ship,,,material,graphics/imperium/material/ships/adamas/ii_adamas_elite_material.png
+ii_ardea,ship,,,material,graphics/imperium/material/ships/ardea/ii_ardea_material.png
+ii_ardea_armor,ship,,,material,graphics/imperium/material/ships/ardea/ii_ardea_armor_material.png
+ii_ardea_targeting,ship,,,material,graphics/imperium/material/ships/ardea/ii_ardea_targeting_material.png
+ii_ardea_elite,ship,,,material,graphics/imperium/material/ships/ardea/ii_ardea_elite_material.png
 ii_barrus,ship,,,material,graphics/imperium/material/ships/barrus/ii_barrus_material.png
 ii_barrus_armor,ship,,,material,graphics/imperium/material/ships/barrus/ii_barrus_armor_material.png
 ii_barrus_targeting,ship,,,material,graphics/imperium/material/ships/barrus/ii_barrus_targeting_material.png
@@ -123,6 +127,10 @@ ii_adamas,ship,,1,normal,graphics/imperium/normal/ships/adamas/ii_adamas_normal.
 ii_adamas_armor,ship,,1,normal,graphics/imperium/normal/ships/adamas/ii_adamas_armor_normal.png
 ii_adamas_targeting,ship,,1,normal,graphics/imperium/normal/ships/adamas/ii_adamas_targeting_normal.png
 ii_adamas_elite,ship,,1,normal,graphics/imperium/normal/ships/adamas/ii_adamas_elite_normal.png
+ii_ardea,ship,,1,normal,graphics/imperium/normal/ships/ardea/ii_ardea_normal.png
+ii_ardea_armor,ship,,1,normal,graphics/imperium/normal/ships/ardea/ii_ardea_armor_normal.png
+ii_ardea_targeting,ship,,1,normal,graphics/imperium/normal/ships/ardea/ii_ardea_targeting_normal.png
+ii_ardea_elite,ship,,1,normal,graphics/imperium/normal/ships/ardea/ii_ardea_elite_normal.png
 ii_barrus,ship,,1,normal,graphics/imperium/normal/ships/barrus/ii_barrus_normal.png
 ii_barrus_armor,ship,,1,normal,graphics/imperium/normal/ships/barrus/ii_barrus_armor_normal.png
 ii_barrus_targeting,ship,,1,normal,graphics/imperium/normal/ships/barrus/ii_barrus_targeting_normal.png
@@ -243,6 +251,10 @@ ii_adamas,ship,,,surface,graphics/imperium/surface/ships/adamas/ii_adamas_surfac
 ii_adamas_armor,ship,,,surface,graphics/imperium/surface/ships/adamas/ii_adamas_armor_surface.png
 ii_adamas_targeting,ship,,,surface,graphics/imperium/surface/ships/adamas/ii_adamas_targeting_surface.png
 ii_adamas_elite,ship,,,surface,graphics/imperium/surface/ships/adamas/ii_adamas_elite_surface.png
+ii_ardea,ship,,,surface,graphics/imperium/surface/ships/ardea/ii_ardea_surface.png
+ii_ardea_armor,ship,,,surface,graphics/imperium/surface/ships/ardea/ii_ardea_armor_surface.png
+ii_ardea_targeting,ship,,,surface,graphics/imperium/surface/ships/ardea/ii_ardea_targeting_surface.png
+ii_ardea_elite,ship,,,surface,graphics/imperium/surface/ships/ardea/ii_ardea_elite_surface.png
 ii_barrus,ship,,,surface,graphics/imperium/surface/ships/barrus/ii_barrus_surface.png
 ii_barrus_armor,ship,,,surface,graphics/imperium/surface/ships/barrus/ii_barrus_armor_surface.png
 ii_barrus_targeting,ship,,,surface,graphics/imperium/surface/ships/barrus/ii_barrus_targeting_surface.png
@@ -482,8 +494,8 @@ ii_boss_yamato_wing_right,hardpoint,,,material,graphics/imperium/material/weapon
 ii_boss_yamato_wing_right,turret,,,material,graphics/imperium/material/weapons/deco/ii_boss_yamato_wing_right_material.png
 ii_boss_yamato_radar,hardpoint,,,material,graphics/imperium/material/weapons/deco/ii_boss_yamato_radar_material.png
 ii_boss_yamato_radar,turret,,,material,graphics/imperium/material/weapons/deco/ii_boss_yamato_radar_material.png
-ii_boss_wmg,hardpoint,,,material,graphics/imperium/material/weapons/ii_boss_wmg_material.png
-ii_boss_wmg,turret,,,material,graphics/imperium/material/weapons/ii_boss_wmg_material.png
+ii_boss_wavemotion,hardpoint,,,material,graphics/imperium/material/weapons/ii_boss_wmg_material.png
+ii_boss_wavemotion,turret,,,material,graphics/imperium/material/weapons/ii_boss_wmg_material.png
 ii_boss_titanx_glow,hardpoint,,,material,graphics/imperium/blank.png
 ii_boss_titanx_glow,turret,,,material,graphics/imperium/blank.png
 ii_titan_lights,hardpoint,,,material,graphics/imperium/blank.png
@@ -842,8 +854,8 @@ ii_boss_yamato_wing_right,hardpoint,,1,normal,graphics/imperium/normal/weapons/d
 ii_boss_yamato_wing_right,turret,,1,normal,graphics/imperium/normal/weapons/deco/ii_boss_yamato_wing_right_normal.png
 ii_boss_yamato_radar,hardpoint,,1,normal,graphics/imperium/normal/weapons/deco/ii_boss_yamato_radar_normal.png
 ii_boss_yamato_radar,turret,,1,normal,graphics/imperium/normal/weapons/deco/ii_boss_yamato_radar_normal.png
-ii_boss_wmg,hardpoint,,1,normal,graphics/imperium/normal/weapons/ii_boss_wmg_normal.png
-ii_boss_wmg,turret,,1,normal,graphics/imperium/normal/weapons/ii_boss_wmg_normal.png
+ii_boss_wavemotion,hardpoint,,1,normal,graphics/imperium/normal/weapons/ii_boss_wmg_normal.png
+ii_boss_wavemotion,turret,,1,normal,graphics/imperium/normal/weapons/ii_boss_wmg_normal.png
 ii_boss_titanx_glow,hardpoint,,1,normal,graphics/imperium/blank.png
 ii_boss_titanx_glow,turret,,1,normal,graphics/imperium/blank.png
 ii_titan_lights,hardpoint,,1,normal,graphics/imperium/blank.png
@@ -1202,8 +1214,8 @@ ii_boss_yamato_wing_right,hardpoint,,,surface,graphics/imperium/surface/weapons/
 ii_boss_yamato_wing_right,turret,,,surface,graphics/imperium/surface/weapons/deco/ii_boss_yamato_wing_right_surface.png
 ii_boss_yamato_radar,hardpoint,,,surface,graphics/imperium/surface/weapons/deco/ii_boss_yamato_radar_surface.png
 ii_boss_yamato_radar,turret,,,surface,graphics/imperium/surface/weapons/deco/ii_boss_yamato_radar_surface.png
-ii_boss_wmg,hardpoint,,,surface,graphics/imperium/surface/weapons/ii_boss_wmg_surface.png
-ii_boss_wmg,turret,,,surface,graphics/imperium/surface/weapons/ii_boss_wmg_surface.png
+ii_boss_wavemotion,hardpoint,,,surface,graphics/imperium/surface/weapons/ii_boss_wmg_surface.png
+ii_boss_wavemotion,turret,,,surface,graphics/imperium/surface/weapons/ii_boss_wmg_surface.png
 ii_boss_titanx_glow,hardpoint,,,surface,graphics/imperium/blank.png
 ii_boss_titanx_glow,turret,,,surface,graphics/imperium/blank.png
 ii_titan_lights,hardpoint,,,surface,graphics/imperium/blank.png
@@ -1447,7 +1459,7 @@ ii_ballista_stage2,missile,,,material,graphics/imperium/material/missiles/ii_bal
 ii_photonbeam_core,missile,,,material,graphics/imperium/material/missiles/ii_photonbeam_core_material.png
 ii_javelin_mrm,missile,,,material,graphics/imperium/material/missiles/ii_javelin_asm_material.png
 ii_javelin_super,missile,,,material,graphics/imperium/material/missiles/ii_superjavelin_material.png
-ii_pulsarbomb,missile,,,material,graphics/imperium/material/missiles/ii_pulsarbomb_material.png
+ii_pulsarbomb_bomb,missile,,,material,graphics/imperium/material/missiles/ii_pulsarbomb_material.png
 ii_fundae_missile,missile,,,material,graphics/imperium/material/missiles/ii_fundae_missile_material.png
 ii_fundae_submissile,missile,,,material,graphics/imperium/material/missiles/ii_fundae_missile_material.png
 ii_armageddon_normal,missile,,,material,graphics/imperium/material/missiles/ii_armageddon_missile_material.png
@@ -1462,7 +1474,7 @@ ii_ballista_stage2,missile,,1,normal,graphics/imperium/normal/missiles/ii_ballis
 ii_photonbeam_core,missile,,1,normal,graphics/imperium/normal/missiles/ii_photonbeam_core_normal.png
 ii_javelin_mrm,missile,,1,normal,graphics/imperium/normal/missiles/ii_javelin_asm_normal.png
 ii_javelin_super,missile,,1,normal,graphics/imperium/normal/missiles/ii_superjavelin_normal.png
-ii_pulsarbomb,missile,,1,normal,graphics/imperium/normal/missiles/ii_pulsarbomb_normal.png
+ii_pulsarbomb_bomb,missile,,1,normal,graphics/imperium/normal/missiles/ii_pulsarbomb_normal.png
 ii_fundae_missile,missile,,1,normal,graphics/imperium/normal/missiles/ii_fundae_missile_normal.png
 ii_fundae_submissile,missile,,1,normal,graphics/imperium/normal/missiles/ii_fundae_missile_normal.png
 ii_armageddon_normal,missile,,1,normal,graphics/imperium/normal/missiles/ii_armageddon_missile_normal.png
@@ -1477,7 +1489,7 @@ ii_ballista_stage2,missile,,,surface,graphics/imperium/surface/missiles/ii_balli
 ii_photonbeam_core,missile,,,surface,graphics/imperium/surface/missiles/ii_photonbeam_core_surface.png
 ii_javelin_mrm,missile,,,surface,graphics/imperium/surface/missiles/ii_javelin_asm_surface.png
 ii_javelin_super,missile,,,surface,graphics/imperium/surface/missiles/ii_superjavelin_surface.png
-ii_pulsarbomb,missile,,,surface,graphics/imperium/surface/missiles/ii_pulsarbomb_surface.png
+ii_pulsarbomb_bomb,missile,,,surface,graphics/imperium/surface/missiles/ii_pulsarbomb_surface.png
 ii_fundae_missile,missile,,,surface,graphics/imperium/surface/missiles/ii_fundae_missile_surface.png
 ii_fundae_submissile,missile,,,surface,graphics/imperium/surface/missiles/ii_fundae_missile_surface.png
 ii_armageddon_normal,missile,,,surface,graphics/imperium/surface/missiles/ii_armageddon_missile_surface.png

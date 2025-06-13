@@ -1,0 +1,99 @@
+{
+  "variantId": "Endless_mk2_XIV_Doomship",
+  "hullId": "Endless_mk2_XIV",
+  "displayName": "Endless MKII XIV Doomship",
+  "goalVariant": false,
+  "fluxCapacitors": 50,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "fluxbreakers",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "squall",
+        "WS0007": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "mjolnir",
+        "WS0004": "mjolnir",
+        "WS0008": "hephag",
+        "WS0009": "hephag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "heavyneedler",
+        "WS0013": "heavyneedler",
+        "WS0014": "heavyac",
+        "WS0015": "heavyac",
+        "WS0016": "shredder",
+        "WS0017": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0025": "swarmer",
+        "WS0026": "swarmer",
+        "WS0031": "swarmer",
+        "WS0032": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "devastator",
+        "WS0011": "mark9"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "dualflak",
+        "WS0002": "dualflak",
+        "WS0018": "flak",
+        "WS0019": "dualflak",
+        "WS0020": "dualflak",
+        "WS0021": "vulcan",
+        "WS0022": "vulcan",
+        "WS0023": "vulcan",
+        "WS0024": "vulcan",
+        "WS0027": "vulcan",
+        "WS0028": "vulcan",
+        "WS0029": "vulcan",
+        "WS0030": "vulcan",
+        "WS0033": "vulcan",
+        "WS0034": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing",
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

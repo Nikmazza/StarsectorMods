@@ -1,0 +1,146 @@
+{
+  "hullName": "Kindling(LG)",
+  "hullId": "csp_kindlingLG",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/csp_kindlingLG.png",
+  "style": "MIDLINE",
+  "height": 136,
+  "width": 122,
+  "center": [61, 69],
+  "collisionRadius": 95,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 95,
+  "viewOffset": 0,
+  "builtInMods": [
+    "csp_multi_layered_shielding",
+    "solar_shielding",
+    "andrada_mods"
+  ],
+  "builtInWings": [
+    "xyphos_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [8, -47]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [10, 47]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 300,
+      "angle": -30,
+      "locations": [-12, -39]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 70,
+      "locations": [0.5, 52]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -54.5,
+      "locations": [0, -59.5]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 300,
+      "angle": 30,
+      "locations": [-12, 39]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        24, 0.5,
+        21, 6.5,
+        20, -0,
+        21.5, -6.5,
+        25.5, 5.5,
+        25.5, -5.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-68.5, 22],
+      "length": 34,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-68.5, -21],
+      "length": 34,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-67.5, 33],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-67.5, -32.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -25, -45,
+    -67, -40.5,
+    -69, -15.5,
+    -53.5, -10,
+    -54, 9,
+    -69, 21,
+    -62.5, 43,
+    -28, 44,
+    17, 61.5,
+    18.5, 39,
+    66, 17,
+    62, 7,
+    62, -6,
+    66.5, -18.5,
+    17, -36.5,
+    16.5, -60
+  ]
+}

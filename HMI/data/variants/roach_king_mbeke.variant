@@ -3,7 +3,7 @@
   "hullId": "roach_king",
   "displayName": "Mbeke",
   "goalVariant": false,
-  "fluxCapacitors": 13,
+  "fluxCapacitors": 7,
   "fluxVents": 25,
   "quality": 1,
   "permaMods": [],
@@ -45,12 +45,12 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0004": "signpost_med",
-        "WS0005": "signpost_med",
-        "WS0006": "signpost_sml",
-        "WS0024": "signpost_sml",
-        "WS0025": "signpost_sml",
-        "WS0026": "signpost_sml"
+        "WS0004": "campbelltown_med",
+        "WS0005": "campbelltown_med",
+        "WS0006": "annihilator",
+        "WS0024": "annihilator",
+        "WS0025": "annihilator",
+        "WS0026": "annihilator"
       }
     },
     {

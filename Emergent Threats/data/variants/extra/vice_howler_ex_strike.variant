@@ -1,0 +1,38 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 0,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "vice_howler_ex",
+    "hullMods": [
+        "extendedshieldemitter",
+        "fluxdistributor",
+        "vice_adaptive_emitter_diodes"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_howler_ex_strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "vice_lrburstpd"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "vice_ionstreamer",
+                "WS 005": "vice_ionstreamer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser"
+            }
+        }
+    ]
+}

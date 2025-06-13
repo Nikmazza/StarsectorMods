@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 3,
-    "fluxVents": 19,
+    "fluxCapacitors": 0,
+    "fluxVents": 21,
     "goalVariant": true,
     "hullId": "vice_jubilant",
     "hullMods": [
@@ -9,7 +9,7 @@
         "eccm",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_emitter_diodes"
+        "vice_adaptive_trajectory_analyzer"
     ],
     "permaMods": ["vice_module_handler"],
     "sMods": [],
@@ -18,16 +18,12 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 008": "taclaser",
-                "WS 009": "taclaser"
-            }
+            "weapons": {"WS 001": "vice_warp_torpedo_launcher"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "squall",
                 "WS 002": "harpoon",
                 "WS 003": "harpoon",
                 "WS 004": "harpoon",
@@ -39,7 +35,15 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 011": "ionbeam"}
+            "weapons": {"WS 011": "vice_phased_electrolaser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "vice_ionstreamer",
+                "WS 009": "vice_ionstreamer"
+            }
         }
     ]
 }

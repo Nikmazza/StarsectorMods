@@ -3,6 +3,7 @@ package data.scripts.campaign;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.impl.campaign.HullModItemManager;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.VariantSource;
@@ -86,6 +87,15 @@ public class II_IGAutofitPlugin extends CoreAutofitPlugin {
             return 0;
         }
 
+        boolean hasItemIfAny = HullModItemManager.getInstance().isRequiredItemAvailable(mod.getId(),
+                delegate.getFleetMember(), current, delegate.getMarket());
+        if (!hasItemIfAny) {
+            if (orig != null && ship != null) {
+                ship.setVariantForHullmodCheckOnly(orig);
+            }
+            return 0;
+        }
+
         if (orig != null && ship != null) {
             ship.setVariantForHullmodCheckOnly(orig);
         }
@@ -93,6 +103,13 @@ public class II_IGAutofitPlugin extends CoreAutofitPlugin {
         current.addMod(mod.getId());
         if (sModIt) {
             current.addPermaMod(mod.getId(), true);
+        }
+
+        if (ship != null && mod.getId() != null && mod.getEffect() != null) {
+            if (!mod.hasTag(Tags.DO_NOT_APPLY_HULLMOD_DURING_AUTOFIT)) {
+                mod.getEffect().applyEffectsBeforeShipCreation(ship.getHullSize(), ship.getMutableStats(), mod.getId());
+                mod.getEffect().applyEffectsAfterShipCreation(ship, mod.getId());
+            }
         }
         return cost;
     }

@@ -1,0 +1,185 @@
+{
+  "hullName": "Scalpel XIV",
+  "hullId": "Scalpel_XIV",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/Scalpel_XIV.png",
+  "style": "MIDLINE",
+  "height": 117,
+  "width": 152,
+  "center": [76, 62],
+  "collisionRadius": 80.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 93,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [20, 65]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [20, -65]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [35, 36]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": -0,
+      "locations": [35, -36]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 0,
+      "locations": [17, 10]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -0,
+      "locations": [17, -10]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-11, 31]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -180,
+      "locations": [-11, -31]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 80,
+      "angle": -0,
+      "locations": [7, -38]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 80,
+      "angle": 0,
+      "locations": [7, 38]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-4, -4.5]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-5.5, -4]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, -66.5],
+      "length": 44.5,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-11, 66],
+      "length": 44.5,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, -55.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, 55],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -11, -23,
+    -17, -32,
+    -62, -46.5,
+    -9, -47,
+    -10.5, -71.5,
+    16.5, -75,
+    22.5, -65.5,
+    17.5, -50.5,
+    33.5, -45,
+    34.5, -25,
+    53.5, -6,
+    53.5, 6.5,
+    34.5, 25.5,
+    33.5, 44.5,
+    18, 49.5,
+    23, 66,
+    14.5, 75,
+    -9.5, 72,
+    -10.5, 48,
+    -61.5, 47.5,
+    -17, 31.5,
+    -11, 23
+  ]
+}

@@ -98,6 +98,8 @@
   "builtInMods": [
     "fourteenth",
     "hbi",
+    "armoredweapons",
+    "turretgyros",
   ],
   "builtInWings": [],
   "center": [

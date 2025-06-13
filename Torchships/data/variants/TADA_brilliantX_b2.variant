@@ -1,0 +1,50 @@
+{
+    "displayName": "Corrupted",
+    "fluxCapacitors": 23,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "TADA_brilliantX",
+    "hullMods": ["reinforcedhull"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_brilliantX_b2",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "realitydisruptor",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "cryoflux",
+                "WS 006": "cryoflux",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "cryoblaster",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "minipulser",
+                "WS 003": "minipulser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "riftbeam",
+            }
+        }
+    ]
+}

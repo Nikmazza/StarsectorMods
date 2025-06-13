@@ -1,0 +1,38 @@
+{
+    "displayName": "Bandit",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "colossus3",
+    "hullMods": [
+		"vice_unified_targeting_core",
+		"vice_mission_deloy_faith"
+    ],
+    "permaMods": ["vice_mission_deloy_faith"],
+    "sMods": [],
+    "variantId": "vice_colossus_p_bandit",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "lightmortar",
+                "WS 012": "lightmortar",
+                "WS 015": "lightac",
+                "WS 016": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "vulcan",
+                "WS 014": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "vice_bolo_p_wing",
+        "vice_bolo_p_wing"
+    ]
+}

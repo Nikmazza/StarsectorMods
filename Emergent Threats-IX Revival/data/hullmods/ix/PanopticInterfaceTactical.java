@@ -32,6 +32,7 @@ public class PanopticInterfaceTactical extends BaseHullMod {
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+		if (stats.getVariant().hasHullMod("automated")) return;
 		if (PanopticInterfaceUtil.hasConflictMod(stats.getVariant())) return;
 		float speedBonus = getspeedBonusForHull(hullSize);
 		PersonAPI person = null;
@@ -45,6 +46,7 @@ public class PanopticInterfaceTactical extends BaseHullMod {
 	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		if (ship.getVariant().hasHullMod("automated")) return;
 		PersonAPI person = ship.getCaptain();
 		if (person == null || !hasRank2(person)) return;
 		ship.addListener(new TacticalInterfaceRangeMod());
@@ -76,6 +78,11 @@ public class PanopticInterfaceTactical extends BaseHullMod {
 	
 	@Override
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (ship == null) return;
+		if (ship.getVariant().hasHullMod("automated")) {
+			tooltip.addPara("Interface cannot be activated on automated ship", Misc.getNegativeHighlightColor(), 10f);
+			return;
+		}
 		PersonAPI person = ship.getCaptain();
 		Color line1Color = Misc.getHighlightColor();
 		Color line2Color = Misc.getHighlightColor();
@@ -106,7 +113,6 @@ public class PanopticInterfaceTactical extends BaseHullMod {
 		tooltip.addSpacer(-10f);
 		tooltip.addPara(s3, line3Color, 10f);
 		
-		if (ship == null) return;
 		String s = "";
 		float crPenalty = 0f;
 		if (PanopticInterfaceUtil.hasConflictMod(ship.getVariant())) s = "Warning: Incompatible AI system present. Interface is inactive.";

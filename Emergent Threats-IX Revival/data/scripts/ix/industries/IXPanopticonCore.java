@@ -20,7 +20,7 @@ public class IXPanopticonCore extends BaseIndustry {
 
 	private static float DEFAULT_PATHER_INTEREST = 10f;
 	private static float DEFENSE_BONUS_NODE = 1f;
-	private static int STABILITY_BONUS = 5; //display only
+	private static int STABILITY_BONUS = 5;
 	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String CORE = "ix_panopticon";
 	private static String NODE = "ix_panopticon_node";
@@ -40,17 +40,21 @@ public class IXPanopticonCore extends BaseIndustry {
 		super.apply(false);
 		
 		PanopticonStructureUtil.activatePlayerCores();
-		
 		if (isFunctional()) {
 			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD)
 						.modifyMult(getModId(), 1f + DEFENSE_BONUS_NODE, getNameForModifier());
 			market.suppressCondition(Conditions.PIRATE_ACTIVITY);
 			market.addCondition(MONITORED_VERTEX);
-			
+			market.getStability().modifyFlat(id, STABILITY_BONUS, "Panopticon monitoring");
+			/**
+			//causes inventory to refresh with every docking due to market being constantly re-added
 			if (market.getFactionId().equals(IX_FAC_ID) && !market.hasSubmarket(HONOR_GUARD_SUBMARKET)) {
 				market.addSubmarket(HONOR_GUARD_SUBMARKET);
 			}
 			else market.removeSubmarket(HONOR_GUARD_SUBMARKET);
+			**/
+			PanopticonStructureUtil.applyBlackMarketChange(market, "apply");
+			Global.getSector().getMemoryWithoutUpdate().set("$ix_panopticon_core_active", true);
 		}
 		else unapply();
 	}
@@ -58,22 +62,34 @@ public class IXPanopticonCore extends BaseIndustry {
 	@Override
 	public void unapply() {
 		super.unapply();
-		
 		PanopticonStructureUtil.activatePlayerCores();
-		
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
 		market.unsuppressCondition(Conditions.PIRATE_ACTIVITY);
 		market.removeCondition(MONITORED_VERTEX);
-		market.removeSubmarket(HONOR_GUARD_SUBMARKET);
+		//market.removeSubmarket(HONOR_GUARD_SUBMARKET);
+		market.getStability().unmodify(id);
+		PanopticonStructureUtil.applyBlackMarketChange(market, "unapply");
+		Global.getSector().getMemoryWithoutUpdate().set("$ix_panopticon_core_active", false);
+	}
+	
+	@Override
+	public boolean isDisrupted() {
+		/**
+		if (isHidden()) return true;
+		String key = getDisruptedKey();
+		return market.getMemoryWithoutUpdate().is(key, true);
+		**/
+		boolean disrupted = false;
+		if (!market.getFactionId().equals(IX_FAC_ID) || !isFunctional()) disrupted = true;
+		if (disrupted) unapply();
+		return disrupted;
 	}
 	
 	@Override
 	public boolean isHidden() {
 		boolean hidden = false;
-		if (!market.getFactionId().equals(IX_FAC_ID) || !isFunctional()) {
-			hidden = true;
-			market.removeCondition(MONITORED_VERTEX);
-		}
+		//if (!market.getFactionId().equals(IX_FAC_ID) || !isFunctional()) hidden = true;
+		//if (hidden) unapply();
 		return hidden;
 	}
 	

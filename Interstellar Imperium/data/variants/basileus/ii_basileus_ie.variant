@@ -1,7 +1,7 @@
 {
     "displayName": "Imperial Elite",
-    "fluxCapacitors": 10,
-    "fluxVents": 3,
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
     "hullId": "ii_basileus",
     "hullMods": [
         "ii_elite_package",
@@ -14,11 +14,11 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS0001": "ii_solis"}
+            "weapons": {"WS0001": "ii_heavypulselaser"}
         },
         {
             "autofire": false,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
                 "WS0002": "sabot",
                 "WS0003": "sabot",
@@ -28,7 +28,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS0005": "railgun"}
+            "weapons": {"WS0005": "ii_custos"}
         }
     ]
 }

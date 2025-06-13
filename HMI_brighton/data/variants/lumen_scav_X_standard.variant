@@ -1,0 +1,50 @@
+{
+  "variantId": "lumen_scav_X_standard",
+  "hullId": "lumen_scav_X",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 6,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "hardened_subsystems",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "phasebeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hammer",
+        "WS0002": "hammer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "railgun",
+        "WS0004": "railgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "vulcan",
+        "WS0007": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

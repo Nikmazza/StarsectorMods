@@ -1,0 +1,76 @@
+{
+  "variantId": "kazeron_conquest_league_elite",
+  "hullId": "kazeron_conquest_league",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 28,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "hardenedshieldemitter",
+    "reinforcedhull",
+    "advancedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "mjolnir",
+        "WS 013": "mjolnir"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 015": "heavyac",
+        "WS 017": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 016": "heavymauler",
+        "WS 018": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 022": "ionbeam",
+        "WS 023": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "pdburst",
+        "WS 004": "pdburst",
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 009": "pdburst",
+        "WS 010": "pdburst",
+        "WS 012": "guardian",
+        "WS 014": "guardian"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

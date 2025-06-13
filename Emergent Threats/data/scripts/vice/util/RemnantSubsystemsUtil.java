@@ -11,12 +11,15 @@ import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 
 public class RemnantSubsystemsUtil {
-
+	
+	//note, do not name handlers using "vice_adaptive" or isOnlyRemnantMod() will count it as an adaptive hullmod
+	
 	//data
 	private static String HANGAR_MOD_OVERLAP = "Incompatible hangar modification present";
 	private static String HUB = "Subsystem is activated on ship central hub";
 	private static String MANUFACTURER = "Incompatible hull. AI Subsystem Integration or comparable upgrade required";
 	private static String MODCOUNT = "Adaptive subsystem limited to one per ship";
+	private static String DRIVE_FIELD = "Adaptive Drive Field currently active";
 	private static String MODULE = "Cannot be installed on ship modules";
 	private static String NOSHIELDS = "Ship has no shields";
 	private static String UNNECESSARY = "Ship can already equip adaptive subsystems";
@@ -24,11 +27,16 @@ public class RemnantSubsystemsUtil {
 	
 	private static String MODULE_HANDLER = "vice_module_handler";
 	
+	//cannot add another adaptive mod while DRIVE_FIELD_HULLMOD is active
+	private static String DRIVE_FIELD_HULLMOD = "vice_adaptive_drive_field";
+	
 	//for letting ships use adaptive subsystems when these hullmods are equipped
 	private static String ADAPTIVE_ENABLING_HULLMOD = "vice_ai_subsystem_integration";
 	private static String ABOMINATION_INTERFACE_HULLMOD = "vice_abomination_interface";
 	private static String SHIPWIDE_INTEGRATION_HULLMOD = "vice_shipwide_integration";
-	private static String ADAPTIVE_TACTICAL_CORE = "vice_adaptive_tactical_core";
+	private static String SUBSYSTEM_INTERFACE_HULLMOD = "vice_subsystem_interface";
+	private static String SUBSYSTEM_INTERFACE_HULLMOD_TW = "tw_subsystem_interface";
+	private static String SEMI_AUTOMATED_HULLMOD = "ix_semi_automated";
 	
 	//skeleton crew upper limit for ADAPTIVE_ENABLING_HULLMOD, need ABOMINATION_INTERFACE_HULLMOD if exceeded
 	private static float AUTOMATION_MIN_CREW_UPPER_LIMIT = 1500f;
@@ -38,6 +46,7 @@ public class RemnantSubsystemsUtil {
 	static {
 		MANUFACTURER_LIST.add("Remnant");
 		MANUFACTURER_LIST.add("Anomalous Phase-Tech");
+		MANUFACTURER_LIST.add("Diamond Nexus");
 		MANUFACTURER_LIST.add("Dustkeeper Proxies");
 		MANUFACTURER_LIST.add("Dustkeeper Contingency");
 		MANUFACTURER_LIST.add("Remnant Mess Object");
@@ -46,6 +55,7 @@ public class RemnantSubsystemsUtil {
 		MANUFACTURER_LIST.add("XIV Remnant");
 		MANUFACTURER_LIST.add("Remnant Defector");
 		MANUFACTURER_LIST.add("Volantian Remnant Conversion");
+		MANUFACTURER_LIST.add("Project Mayfly");
 	}
 	
 	//make ships qualify for adaptive subsystems despite not having the correct manufacturer. Takes highest priority.
@@ -159,7 +169,11 @@ public class RemnantSubsystemsUtil {
 	//for synthesis aptitude skill to check if ship can already use subsystems and should therefore gain CR
 	public boolean isApplicableWithoutSynthesis(ShipVariantAPI variant) {
 		if (variant.hasHullMod(SHIPWIDE_INTEGRATION_HULLMOD)) return true;
+		if (variant.hasHullMod(SUBSYSTEM_INTERFACE_HULLMOD)) return true;
+		if (variant.hasHullMod(SUBSYSTEM_INTERFACE_HULLMOD_TW)) return true;
 		if (variant.hasHullMod(ABOMINATION_INTERFACE_HULLMOD)) return true;
+		if (variant.hasHullMod(SEMI_AUTOMATED_HULLMOD)) return true;
+		
 		for (String mod : variant.getSMods()) {
 			if (mod.equals(ADAPTIVE_ENABLING_HULLMOD)) return true;
 		}
@@ -234,6 +248,11 @@ public class RemnantSubsystemsUtil {
 			if (ship.getVariant().hasHullMod(s)) return true;
 		}
 		return false;
+	}
+	
+	//cannot add another adaptive mod while DRIVE_FIELD_HULLMOD is active since ADF is logistics hullmod
+	public boolean hasDriveField(ShipAPI ship) {
+		return (ship.getVariant().getHullMods().contains(DRIVE_FIELD_HULLMOD));
 	}
 	
 	//limit one adaptive mod at a time. Not enabled at RModCount <= 1, leave at 1 for easier switching
@@ -323,6 +342,7 @@ public class RemnantSubsystemsUtil {
 	}
 	
 	public String getIncompatibleCauseString(String cause) {
+		if (cause.equals("drivefield")) return DRIVE_FIELD;
 		if (cause.equals("hangarmodoverlap")) return HANGAR_MOD_OVERLAP;
 		if (cause.equals("hub")) return HUB;
 		if (cause.equals("manufacturer")) return MANUFACTURER;

@@ -1,0 +1,19 @@
+Change log - - 1.7.0v - - 27. 05. 2025
+
+[Weapons]
+- All ballistic weapon slots of Kazeron Navarchy vessels switched with hybrid slots 
+- Replaced all existing weapon loadouts accordingly 
+
+[Ships]
+Removed following vessels:
+- Odyssey
+- Valkyrie
+
+- Switched built-in weapons on the Monitor with Heavy Burst Laser
+- Full paintjob rework on all remaining ships
+- Navarchy vessel raraity lowered from 0.5 to 0.4
+
+
+
+
+

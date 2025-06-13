@@ -3,7 +3,7 @@
   "hullId": "hmi_creep",
   "displayName": "Close Support",
   "goalVariant": true,
-  "fluxCapacitors": 7,
+  "fluxCapacitors": 10,
   "fluxVents": 13,
   "quality": 1,
   "permaMods": [],

@@ -259,8 +259,8 @@ public class II_LuxFinisAI implements ShipSystemAIScript {
         }
 
         ShipAPI immediateShipTarget;
-        if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof ShipAPI) {
-            immediateShipTarget = (ShipAPI) flags.getCustom(AIFlags.MANEUVER_TARGET);
+        if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof ShipAPI shipAPI) {
+            immediateShipTarget = shipAPI;
         } else {
             immediateShipTarget = ship.getShipTarget();
         }

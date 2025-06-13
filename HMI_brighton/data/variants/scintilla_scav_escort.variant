@@ -1,0 +1,51 @@
+{
+  "variantId": "scintilla_scav_escort",
+  "hullId": "scintilla_scav",
+  "displayName": "Escort",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "advancedshieldemitter",
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 006": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "swarmer",
+        "WS 008": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "vulcan",
+        "WS 003": "vulcan",
+        "WS0001": "flak",
+        "WS0002": "flak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "gladius_wing",
+    "gladius_wing"
+  ]
+}

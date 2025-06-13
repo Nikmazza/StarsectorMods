@@ -1,0 +1,198 @@
+{
+  "hullName": "Phoca XIV",
+  "hullId": "Phoca_XIV",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/Phoca_XIV.png",
+  "style": "MIDLINE",
+  "height": 278,
+  "width": 118,
+  "center": [59, 139],
+  "collisionRadius": 141.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 163,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [97, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [66, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [34, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 245,
+      "angle": 180,
+      "locations": [-51, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 180,
+      "locations": [-80, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -0,
+      "locations": [13, 21]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [13, -21]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 90,
+      "locations": [-23, 25]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -90,
+      "locations": [-23, -25]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 90,
+      "locations": [-40, 25]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -90,
+      "locations": [-40, -25]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-54, 48]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-54, -48]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-127, -28.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-127, 28],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-133, -11],
+      "length": 53.5,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-133, 10],
+      "length": 53.5,
+      "width": 23,
+      "angle": -180,
+      "contrailSize": 23,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -139, -19,
+    -119, -37.5,
+    -85, -33.5,
+    -67, -44,
+    -58, -58,
+    -45.5, -55.5,
+    -40.5, -41.5,
+    -12.5, -35.5,
+    25, -38,
+    37, -26.5,
+    112, -20,
+    120.5, -12,
+    135, -6,
+    135, 5,
+    120.5, 12,
+    111, 20,
+    31.5, 25,
+    16, 39,
+    -12.5, 35,
+    -41.5, 41,
+    -43, 54,
+    -58, 58,
+    -66, 44.5,
+    -94, 32.5,
+    -120.5, 38,
+    -139, 19.5
+  ]
+}

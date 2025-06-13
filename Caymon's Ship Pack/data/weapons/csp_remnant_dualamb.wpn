@@ -1,0 +1,42 @@
+{
+  "id": "csp_remnant_dualamb",
+  "specClass": "projectile",
+  "projectileSpecId": "amblaster_shot",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/remnant_mech_arm_AMB.png",
+  "hardpointSprite": "graphics/weapons/remnant_mech_arm_AMB.png",
+  "turretOffsets": [
+    23,
+    3,
+    23,
+    -1
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    38,
+    3,
+    38,
+    -1
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode":"LINKED", # or LINKED.  whether barrels fire at the same time or alternate.
+  "glowColor":[155,100,255,255],
+  	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":50.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":10.0,
+					   "particleDuration":0.12,
+					   "particleCount":15,
+					   "particleColor":[155,100,255,255]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"requiresFullCharge":true,  # for pulse weapons - whether the weapon will fire at a lower strength partial charge
+  "fireSoundTwo": "antimatter_blaster_fire",
+}

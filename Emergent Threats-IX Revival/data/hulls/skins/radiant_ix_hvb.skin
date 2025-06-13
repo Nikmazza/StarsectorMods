@@ -11,7 +11,7 @@
 	"baseValueMult":1.5,
 	"systemId":"displacer",
 	"spriteName":"graphics/ships/ix/hvb/radiant_ix_hvb.png",
-	"tags":["no_autofit"],
+	"tags":["no_autofit", "hide_in_codex"],
 	"tech":"IX Battlegroup",
 	"builtInMods":["automated", "ix_ninth"],
 	"builtInWeapons": {

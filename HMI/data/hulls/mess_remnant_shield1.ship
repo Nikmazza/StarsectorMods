@@ -11,6 +11,7 @@
   ],
   "builtInMods": [
     "supercomputer",
+	"hmi_mess_visuals",
     "reduced_explosion"
   ],
   "builtInWings": [],

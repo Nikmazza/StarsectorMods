@@ -23,7 +23,7 @@ public class IXPanopticonPlayerNode extends BaseIndustry {
 
 	private static float DEFAULT_PATHER_INTEREST = 4f;
 	private static float DEFENSE_BONUS_NODE = 0.5f;
-	private static int STABILITY_BONUS = 5; //display only
+	private static int STABILITY_BONUS = 5;
 	private static String CORE = "ix_panopticon";
 	private static String NODE = "ix_panopticon_node";
 	private static String PLAYER_CORE = "ix_panopticon_player_core";	//structure id
@@ -42,7 +42,9 @@ public class IXPanopticonPlayerNode extends BaseIndustry {
 			market.suppressCondition(Conditions.PIRATE_ACTIVITY);
 			if (!market.hasCondition(MONITORED_VERTEX) && !market.hasCondition(MONITORED_PLAYER)) {
 				market.addCondition(MONITORED_PLAYER);
+				market.getStability().modifyFlat(id, STABILITY_BONUS, "Panopticon monitoring");
 			}
+			PanopticonStructureUtil.applyBlackMarketChange(market, "apply");
 		}
 		else unapply();
 	}
@@ -53,7 +55,16 @@ public class IXPanopticonPlayerNode extends BaseIndustry {
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
 		market.unsuppressCondition(Conditions.PIRATE_ACTIVITY);
 		if (market.hasIndustry(PLAYER_CORE) && !market.getIndustry(PLAYER_CORE).isHidden()) return;
-		else market.removeCondition(MONITORED_PLAYER);
+		market.removeCondition(MONITORED_PLAYER);
+		market.getStability().unmodify(id);
+		PanopticonStructureUtil.applyBlackMarketChange(market, "unapply");
+	}
+	
+	@Override
+	public boolean isDisrupted() {
+		if (isHidden()) return true;
+		String key = getDisruptedKey();
+		return market.getMemoryWithoutUpdate().is(key, true);
 	}
 	
 	//classic panopticon overrides player version when both are present
@@ -64,13 +75,14 @@ public class IXPanopticonPlayerNode extends BaseIndustry {
 		else if (market.hasIndustry(NODE) && !market.getIndustry(NODE).isHidden()) hidden = true;
 		else if (market.hasIndustry(PLAYER_CORE) && !market.getIndustry(PLAYER_CORE).isHidden()) hidden = true;
 		else if (!isFunctional()) hidden = true;
-		if (hidden) market.removeCondition(MONITORED_PLAYER);
+		if (hidden) unapply();
 		return hidden;
 	}
 	
 	@Override
 	public boolean isFunctional() {
-		return PanopticonStructureUtil.panopticonIsActiveCheck(market, false);
+		return Global.getSector().getMemoryWithoutUpdate().is("$player_panopticon_core_active", true);
+		//return PanopticonStructureUtil.panopticonIsActiveCheck(market, false);
 	}
 
 	@Override

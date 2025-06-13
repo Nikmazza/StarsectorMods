@@ -1,0 +1,137 @@
+{
+  "hullName": "Fish eagle (LG)",
+  "hullId": "csp_fisheagleLG",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/csp_fisheagle LG.png",
+  "style": "MIDLINE",
+  "height": 113,
+  "width": 90,
+  "center": [45, 50],
+  "collisionRadius": 75.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 71.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "csp_multi_layered_shielding",
+    "solar_shielding",
+    "andrada_mods",
+    "coherer"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 205,
+      "angle": 90,
+      "locations": [3, 28]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 205,
+      "angle": -90,
+      "locations": [3, -28]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [1, 0]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": 0,
+      "locations": [47, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": 0,
+      "locations": [33, 25]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": -0,
+      "locations": [33, -25]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 205,
+      "angle": 180,
+      "locations": [-23, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-41, -0],
+      "length": 44.5,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-48, -18],
+      "length": 50,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-48, 17],
+      "length": 50,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    55.5, -3,
+    63, -3,
+    63, -11,
+    40, -18.5,
+    39, -29,
+    29, -37,
+    11.5, -38.5,
+    1, -45,
+    -22, -40,
+    -49, -23.5,
+    -49, -11,
+    -42, -10,
+    -42, 10,
+    -49, 11,
+    -49, 24,
+    -18, 41,
+    0, 45,
+    15, 37,
+    29, 37,
+    36, 31,
+    43, 17,
+    63, 10,
+    63, 3,
+    55.5, 3
+  ]
+}

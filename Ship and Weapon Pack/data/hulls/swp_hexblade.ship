@@ -68,7 +68,7 @@
         10,
         -0
       ],
-      "mount": "TURRET",
+      "mount": "HARDPOINT",
       "size": "SMALL",
       "type": "ENERGY"
     }

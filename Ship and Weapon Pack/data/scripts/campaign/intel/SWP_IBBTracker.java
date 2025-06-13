@@ -21,8 +21,8 @@ public class SWP_IBBTracker extends BaseScript {
 
     public static SWP_IBBTracker getTracker() {
         for (EveryFrameScript script : Global.getSector().getScripts()) {
-            if (script instanceof SWP_IBBTracker) {
-                return (SWP_IBBTracker) script;
+            if (script instanceof SWP_IBBTracker sWP_IBBTracker) {
+                return sWP_IBBTracker;
             }
         }
 

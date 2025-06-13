@@ -1,0 +1,43 @@
+{
+  "variantId": "decketry_scav_std",
+  "hullId": "decketry_scav",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "reinforcedhull",
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavymortar",
+        "WS0004": "heavymortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "harpoon",
+        "WS0006": "harpoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "railgun",
+        "WS0002": "railgun"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

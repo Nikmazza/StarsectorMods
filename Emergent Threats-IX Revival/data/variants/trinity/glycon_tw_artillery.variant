@@ -1,7 +1,7 @@
 {
     "displayName": "Artillery",
     "fluxCapacitors": 0,
-    "fluxVents": 5,
+    "fluxVents": 1,
     "goalVariant": true,
     "hullId": "glycon_tw",
     "hullMods": [
@@ -17,7 +17,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "abolisher_tw"}
+            "weapons": {"WS 001": "arrester_tw"}
         },
         {
             "autofire": true,

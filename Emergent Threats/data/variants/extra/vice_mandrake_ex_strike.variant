@@ -1,6 +1,6 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 2,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "vice_mandrake_ex",

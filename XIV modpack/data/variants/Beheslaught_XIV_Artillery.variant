@@ -1,0 +1,71 @@
+{
+  "variantId": "Beheslaught_XIV_Artillery",
+  "hullId": "Beheslaught_XIV",
+  "displayName": "Artillery",
+  "goalVariant": false,
+  "fluxCapacitors": 23,
+  "fluxVents": 28,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "blast_doors",
+    "efficiency_overhaul",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "cyclone",
+        "WS0003": "lightdualac",
+        "WS0004": "lightdualac",
+        "WS0005": "heavyac",
+        "WS0006": "heavyac",
+        "WS0007": "devastator",
+        "WS0008": "devastator",
+        "WS0009": "lightdualac",
+        "WS0010": "lightdualac",
+        "WS0011": "heavyac",
+        "WS0012": "heavyac",
+        "WS0013": "devastator",
+        "WS0014": "devastator",
+        "WS0015": "heavyac",
+        "WS0016": "heavyac",
+        "WS0017": "pilum",
+        "WS0018": "pilum",
+        "WS0019": "lightdualmg",
+        "WS0020": "lightdualmg",
+        "WS0021": "lightdualmg",
+        "WS0022": "lightdualmg",
+        "WS0023": "lightdualmg",
+        "WS0024": "lightdualmg",
+        "WS0025": "lightdualmg",
+        "WS0026": "lightdualmg",
+        "WS0027": "lightdualmg",
+        "WS0028": "lightdualmg",
+        "WS0029": "heavyac",
+        "WS0030": "heavyac",
+        "WS0031": "lightdualac",
+        "WS0032": "lightdualac",
+        "WS0033": "lightdualac",
+        "WS0034": "lightdualac",
+        "WS0035": "annihilatorpod",
+        "WS0036": "annihilatorpod",
+        "WS0037": "locust",
+        "WS0038": "annihilatorpod",
+        "WS0039": "annihilatorpod",
+        "WS0040": "atropos_single",
+        "WS0041": "atropos_single"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "talon_wing",
+    "talon_wing",
+    "talon_wing",
+    "talon_wing"
+  ]
+}

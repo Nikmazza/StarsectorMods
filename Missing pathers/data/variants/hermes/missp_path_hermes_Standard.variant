@@ -1,18 +1,17 @@
 {
+  "variantId": "missp_path_hermes_Standard",
+  "hullId": "missp_path_hermes",
   "displayName": "Standard",
+  "goalVariant": true,
   "fluxCapacitors": 0,
   "fluxVents": 0,
-  "goalVariant": true,
-  "hullId": "missp_path_hermes",
-  "hullMods": [],
-  "modules": [],
-  "permaMods": [],
   "quality": 0,
-  "variantId": "missp_path_hermes_Standard",
+  "permaMods": [],
+  "hullMods": [],
   "weaponGroups": [
     {
       "autofire": false,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
         "WS0002": "hammer",
         "WS0003": "hammer"
@@ -26,5 +25,6 @@
       }
     }
   ],
+  "modules": [],
   "wings": []
 }

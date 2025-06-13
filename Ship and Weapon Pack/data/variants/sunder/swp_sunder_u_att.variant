@@ -1,6 +1,6 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 8,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_sunder_u",

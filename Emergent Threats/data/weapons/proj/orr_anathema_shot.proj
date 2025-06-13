@@ -1,0 +1,17 @@
+{
+	"id":"orr_anathema_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"onHitEffect":"data.scripts.orr.weapons.AnathemaOnHit",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":45.0,
+	"hitGlowRadius":50,
+	"width":12,
+	"fadeTime":0.20,
+	"fringeColor":[255,240,175,235],
+	"coreColor":[225,255,205,200],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_large_green.png"
+}

@@ -1,0 +1,50 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 1,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "vice_bellicose_ex",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "vice_adaptive_emitter_diodes"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_bellicose_ex_strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vice_siege_burst",
+                "WS 010": "breachpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "vice_ionstreamer",
+                "WS 009": "vice_ionstreamer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "gravitonbeam",
+                "WS 003": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "pdburst",
+                "WS 005": "pdburst"
+            }
+        }
+    ]
+}

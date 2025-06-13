@@ -9,7 +9,7 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class RemThumpOnHitEffect implements OnHitEffectPlugin {
 
-    private static final float DAMAGE = 15f;
+    private static final float DAMAGE = 50f;
 
     @Override
     public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {

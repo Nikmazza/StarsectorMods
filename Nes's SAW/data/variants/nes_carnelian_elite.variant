@@ -3,12 +3,13 @@
   "hullId": "nes_carnelian",
   "displayName": "Elite",
   "goalVariant": true,
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 0,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "targetingunit"
+    "targetingunit",
+    "blast_doors"
   ],
   "weaponGroups": [
     {

@@ -28,15 +28,9 @@
             "weapons": {
                 "WS 001": "orthrus_l_ix",
                 "WS 002": "orthrus_s_ix",
-                "WS 003": "orthrus_s_ix"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 004": "spatial_charge_launcher_ix",
-                "WS 005": "spatial_charge_launcher_ix"
+                "WS 003": "orthrus_s_ix",
+                "WS 004": "orthrus_s_ix",
+                "WS 005": "orthrus_s_ix"
             }
         },
         {

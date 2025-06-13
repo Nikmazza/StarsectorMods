@@ -1,3 +1,110 @@
+Version 1.16.6 (June 7, 2025)
+- Punisher burn speed increased to 9 from 8
+- Enforcer (LP) supplies/rec increased to 11 from 10
+- Improved Nightwalker AI aggressiveness and decisionmaking when using the Chrono Boost ship system
+- Nightwalker peak performance time increased to 240 seconds from 180 seconds
+- Changed repository location (version checker discontinuity)
+
+Version 1.16.5 (May 14, 2025)
+- Improved missile targeting behavior regarding stations
+- Slightly adjusted ship tags (Kanta's gifts, mercenary faction allowance, etc.)
+- Added a dirty hack to make the Circe (and, to a lesser degree, the Venture) more common in Independent and Tri-Tachyon markets
+- Certain IBB fleets can no longer spawn with hulls/fighters from certain story-locked "factions"
+- Added LunaLib icon
+- Fixed Chronos not having normal/surface maps
+
+Version 1.16.4 (April 25, 2025)
+- Updated sprites for Hammerhead (XIV), Sunder (XIV), and Gryphon (XIV), courtesy of BigBeans
+- Brawler (H) has been converted to Brawler (XIV)
+- Un-broke the Lightning Gun's newly fixed-then-broken functionality
+
+Version 1.16.3 (April 24, 2025)
+- No longer crashes if you don't use Interstellar Imperium
+
+Version 1.16.2 (April 24, 2025)
+- Updated for Starsector 0.98a-RC8
+- Lightning Gun changes:
+  * Deals half soft flux damage to shields
+  * Damage increased to 225 from 150 (sustained DPS increased to 113 from 90)
+  * EMP increased to 600 from 400
+  * Flux per shot increased to 300 from 225 (efficiency improved to 1.33 from 1.5, burst flux/sec reduced to 600 from 675, sustained flux/sec increased to 150 from 135)
+  * Now has 4 charges, does not fire in a burst of 3, and regenerates 1 charge every 2 seconds (cooldown between shots is 0.5 seconds)
+    - With Expanded Magazines, it can shoot 7 times in a row
+    - With S-Mod Expanded Magazines, it can shoot 8 times in a row and has 169 sustained DPS
+- Striker changes:
+  * Top speed reduced to 90 from 100 (standard variant)
+  * Shield efficiency improved to 1.0 from 1.2 (standard variant)
+  * Shield efficiency improved to 0.9 from 1.0 (LC variant)
+  * Deceleration improved by about 43% to match acceleration
+  * Armor increased to 700 from 600
+- Beholder changes:
+  * Shield efficiency improved to 0.7 from 0.8
+  * Acceleration/deceleration improved by 50%
+  * Doubled Ray Drone replacement rate
+  * Redesignated Escort Destroyer
+- Codex improvements
+- IBB stuff no longer appears in the Codex if the feature is disabled
+- Minor missile AI tweaks
+- Banned Threat from missions
+- Fixed NGC incompatibility introduced by Nexerelin 0.12.0b
+- Fixed problem with bounds checking (w.r.t. LazyLib)
+- Improved several descriptions
+- Polished IBB presentation a bit
+
+Version 1.16.1 (April 5, 2025)
+- Alastor base ordnance points actually reduced to 55
+- Ion Torpedo OP reduced to 4 from 6
+- Trebuchet ammo increased to 30 from 15
+- Hornet MRM hit points reverted to 100
+- Hornet MRM OP reduced to 4 from 5
+- Tornado Hornet Launcher OP reduced to 10 from 12
+- Reliant HMG damage increased to 8 from 6
+- Mini-Blaster (all) damage increased to 25 from 20
+- Heavy Ion Blaster OP reduced to 14 from 15
+- Lightning Gun OP reduced to 14 from 15
+- Chronos OP increased to 240 from 225
+- Mission adjustments to hopefully avoid story spoilers
+- Fixed range modifier for PD Assault Conversion
+- Also improved description for PD Assault Conversion
+- Extreme Modifications is actually used by Pather ships now (Luddic Path are the only faction that sells the hullmod)
+  * Fewer than 1 in 10 will roll a "Heavily Modified" variant with 3 s-mods plus Extreme Modifications
+
+Version 1.16.0 (April 2, 2025)
+- Updated for Starsector 0.98a
+- Updated sprite for Caliber, courtesy of Lortus
+- Updated sprite and layout for Leviathan, courtesy of King Alfonzo
+- Updated sprite for Raptor, courtesy of Demto
+- Updated sprite and layout for Beholder, courtesy of Sleepyfish
+- Added Centurion (XIV), sprite by King Alfonzo
+- Ion Torpedo now requires 500 flux per shot and has a 3 second cooldown (rather than 1 second)
+- Trebuchets now require 333 flux per shot (999 per volley)
+- Trebuchet hit points reduced to 250
+- Hornet MRM hit points reduced to 75 from 100
+- Alastor is cheaper to run: 4 DP/supplies per deployment (reduced from 5) and 15% CR per deployment (increased from 12%)
+- Alastor flux capacity reduced to 2500 from 2700
+- Alastor base ordnance points reduced to 55 from 60
+- Chronos redesignated to Light Battleship, fuel/LY reduced to 8
+- Liberator, also being a Light Battleship, matches the Chronos' burn speed at 8 (was 7)
+- Liberator flux dissipation increased to 700 from 600
+- Striker reworked
+  * Acceleration/deceleration improved
+  * Standard variant:
+    - Top speed increased to 100 from 80
+    - Shield efficiency reduced to 1.2 from 1.0
+    - Ballistic Rangefinder built-in (Missile Autoloader remains built-in as well)
+    - 1x small missile turret, 4x small ballistic hardpoint, 4x small ballistic turret
+    - Accelerated Ammo Feeder system
+  * Luddic Church variant:
+    - Retains original top speed, shield efficiency, and Burst Jets system
+    - 4x small missile hardpoint, 5x small ballistic turret
+    - Built-in Expanded Missile Racks replaces Missile Autoloader
+- Falx and Hexblade Wings are no longer found with Independents
+- Beholder's drones now properly inherit the range modifier of High Scatter Amplifier, in addition to the damage modifier
+- Zenith top speed increased to 60 from 55
+- Zenith DP/supplies per deployment reduced to 25 from 30
+- Victory weapon arcs and types tweaked: now has two small hybrid turrets up front and *much* better coverage on the medium hybrids
+- Victory shield adjusted to omni (520 flux/s) from frontal (390 flux/s)
+
 Version 1.15.1 (February 3, 2024)
 - Updated for Starsector 0.97a
 - Added 2 OP to the LG skins for Alastor and Vigilance

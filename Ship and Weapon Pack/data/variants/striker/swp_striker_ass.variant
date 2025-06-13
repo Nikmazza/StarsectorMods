@@ -1,10 +1,13 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 5,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_striker",
-    "hullMods": ["heavyarmor"],
+    "hullMods": [
+        "heavyarmor",
+        "unstable_injector"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "swp_striker_ass",
@@ -13,16 +16,8 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS0001": "railgun",
-                "WS0002": "railgun"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS0003": "swarmer",
-                "WS0004": "swarmer"
+                "WS0001": "lightdualac",
+                "WS0002": "lightdualac"
             }
         },
         {
@@ -31,11 +26,19 @@
             "weapons": {"WS0005": "annihilator"}
         },
         {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "lightmortar",
+                "WS0004": "lightmortar"
+            }
+        },
+        {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0006": "lightag",
-                "WS0007": "lightag"
+                "WS0006": "lightmortar",
+                "WS0007": "lightmortar"
             }
         },
         {

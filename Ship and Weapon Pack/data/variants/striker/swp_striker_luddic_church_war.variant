@@ -1,10 +1,13 @@
 {
     "displayName": "War",
-    "fluxCapacitors": 10,
-    "fluxVents": 11,
+    "fluxCapacitors": 7,
+    "fluxVents": 0,
+    "goalVariant": true,
     "hullId": "swp_striker_luddic_church",
     "hullMods": [
+        "swp_pdconversion",
         "heavyarmor",
+        "autorepair",
         "ballistic_rangefinder"
     ],
     "permaMods": [],
@@ -12,34 +15,22 @@
     "variantId": "swp_striker_luddic_church_war",
     "weaponGroups": [
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0001": "swp_contender",
-                "WS0002": "swp_contender",
-                "WS0003": "swp_contender",
-                "WS0004": "swp_contender"
+                "WS0005": "lightdualmg",
+                "WS0006": "lightdualmg",
+                "WS0007": "lightdualmg"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS0005": "sabot"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS0006": "lightdualac",
-                "WS0007": "lightdualac"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS0008": "vulcan",
-                "WS0009": "vulcan"
+                "WS0001": "annihilator",
+                "WS0002": "annihilator",
+                "WS0003": "annihilator",
+                "WS0004": "annihilator"
             }
         }
     ]

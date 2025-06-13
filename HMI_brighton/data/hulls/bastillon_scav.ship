@@ -1,0 +1,198 @@
+{
+  "hullName": "Bastillon (Scav)",
+  "hullId": "bastillon_scav",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/bastillon_scav.png",
+  "style": "LOW_TECH",
+  "height": 129,
+  "width": 154,
+  "center": [77, 57],
+  "collisionRadius": 100.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 93.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "brighton_derelict",
+    "rugged"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [18, 18]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -0,
+      "locations": [18, -18]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 0,
+      "locations": [58.5, 23]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -0,
+      "locations": [58.5, -23]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -0,
+      "locations": [44.5, 38]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 0,
+      "locations": [44.5, -37]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": 53.5,
+      "locations": [3, 54.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -53.5,
+      "locations": [3, -54.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 90,
+      "locations": [-35, 64.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": -90,
+      "locations": [-35, -64.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-48.5, 23]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -180,
+      "locations": [-48.5, -23]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-49, 9],
+      "length": 37,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-49, -9],
+      "length": 37,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-53, 40],
+      "length": 34,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-53, -40],
+      "length": 34,
+      "width": 23,
+      "angle": -180,
+      "contrailSize": 23,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -50.5, -13.5,
+    -57, -17,
+    -54, -48.5,
+    -40.5, -51,
+    -45, -60,
+    -44, -75.5,
+    -28, -76.5,
+    -12.5, -53.5,
+    -2.5, -69.5,
+    15.5, -65,
+    21.5, -51,
+    39.5, -50,
+    53.5, -45.5,
+    54.5, -34.5,
+    71.5, -30.5,
+    71.5, -14,
+    40.5, -10,
+    40.5, 10,
+    71.5, 14,
+    71.5, 30.5,
+    54.5, 34.5,
+    53.5, 45.5,
+    39.5, 50,
+    21.5, 51,
+    15.5, 65,
+    -2.5, 69.5,
+    -12.5, 53.5,
+    -28, 76.5,
+    -44, 75.5,
+    -45, 60,
+    -40.5, 51,
+    -54, 48.5,
+    -57, 17,
+    -50.5, 13.5
+  ]
+}

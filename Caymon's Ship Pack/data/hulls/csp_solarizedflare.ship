@@ -1,0 +1,95 @@
+{
+  "hullName": "Solarized Flare",
+  "hullId": "csp_solarizedflare",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/csp_solarizeflare.png",
+  "style": "MIDLINE",
+  "height": 106,
+  "width": 66,
+  "center": [33, 56],
+  "collisionRadius": 76.5,
+  "shieldCenter": [-4, -0],
+  "shieldRadius": 68,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [16, 0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 57.5,
+      "locations": [2, 21]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -57.5,
+      "locations": [2, -21]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 90,
+      "locations": [-26.5, 14]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -90,
+      "locations": [-26.5, -14]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-54.5, 7.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-54.5, -7.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    10, -23.5,
+    41.5, -16.5,
+    41.5, -8,
+    48.5, -5.5,
+    48.5, 5.5,
+    41, 7.5,
+    41, 15,
+    10, 23.5,
+    2, 32,
+    -7, 21,
+    -55, 19,
+    -55, -17.5,
+    -7, -21,
+    2, -30
+  ]
+}

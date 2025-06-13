@@ -1,0 +1,76 @@
+{
+  "variantId": "csp_stheno_beamer",
+  "hullId": "csp_stheno",
+  "displayName": "Beamer",
+  "goalVariant": true,
+  "fluxCapacitors": 24,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0015": "amblaster",
+        "WS0016": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "gravitonbeam",
+        "WS0002": "gravitonbeam",
+        "WS0003": "gravitonbeam",
+        "WS0004": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "heavymauler",
+        "WS0006": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "taclaser",
+        "WS0008": "taclaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "reaper",
+        "WS0014": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "mininglaser",
+        "WS0010": "mininglaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "pdburst",
+        "WS0012": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

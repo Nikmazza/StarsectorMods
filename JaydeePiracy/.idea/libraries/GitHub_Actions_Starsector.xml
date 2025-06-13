@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GitHub-Actions-Starsector">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MagicLib/GitHub-Actions-Starsector.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

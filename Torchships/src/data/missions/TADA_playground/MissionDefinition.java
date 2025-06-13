@@ -29,41 +29,42 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
             // Set up the player's fleet                                  
             api.addToFleet(FleetSide.PLAYER, "TADA_challenger_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_challenger_pirate_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_challenger_pather_combat", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_assault", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_p_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_plasma_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_xiv_assault", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_lasherTT_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_tempest_pirate_combat", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_challenger_pirate_attack", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_challenger_pather_raider", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_attack", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_p_attack", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_plasma_jerryrigged", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_tinnitus_xiv_support", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_lasherTT_attack", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_tempest_pirate_strike", FleetMemberType.SHIP, false);
 
-            api.addToFleet(FleetSide.PLAYER, "TADA_bully_combat", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_bully_pirate_combat", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_bully_pather_brawler", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_scalper_standard", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_bully_attack", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_bully_pirate_firesupport", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_bully_pather_raider", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_scalper_attack", FleetMemberType.SHIP, false);
             api.addToFleet(FleetSide.PLAYER, "TADA_scalper_pirate_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_cassicus_combat", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_cassicus_escort", FleetMemberType.SHIP, false);
 
-            api.addToFleet(FleetSide.PLAYER, "TADA_hightide_outdated", FleetMemberType.SHIP, false);    
-            api.addToFleet(FleetSide.PLAYER, "TADA_hightide_pirate_outdated", FleetMemberType.SHIP, false);                         
-            api.addToFleet(FleetSide.PLAYER, "TADA_foray_standard", FleetMemberType.SHIP, false);                            
-            api.addToFleet(FleetSide.PLAYER, "TADA_foray_pirate_standard", FleetMemberType.SHIP, false);                            
-            api.addToFleet(FleetSide.PLAYER, "TADA_foray_pather_standard", FleetMemberType.SHIP, false);       
-            api.addToFleet(FleetSide.PLAYER, "TADA_attrition_elite", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_bonnethead_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_bonnethead_pirate_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_bonnethead_pather_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_owl_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_whirlwind_standard", FleetMemberType.SHIP, false);       
+            api.addToFleet(FleetSide.PLAYER, "TADA_hightide_firesupport", FleetMemberType.SHIP, false);    
+            api.addToFleet(FleetSide.PLAYER, "TADA_hightide_pirate_pirate", FleetMemberType.SHIP, false);                         
+            api.addToFleet(FleetSide.PLAYER, "TADA_foray_support", FleetMemberType.SHIP, false);                            
+            api.addToFleet(FleetSide.PLAYER, "TADA_foray_pirate_pirate", FleetMemberType.SHIP, false);                            
+            api.addToFleet(FleetSide.PLAYER, "TADA_foray_pather_pather", FleetMemberType.SHIP, false);       
+            api.addToFleet(FleetSide.PLAYER, "TADA_attrition_standard", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_bonnethead_balanced", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_bonnethead_pirate_firesupport", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_bonnethead_pather_raider", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_owl_balanced", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_owl_xiv_support", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_whirlwind_elite", FleetMemberType.SHIP, false);       
 
-            api.addToFleet(FleetSide.PLAYER, "TADA_gunwall_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_gunwall_pirate_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_gunwall_XIV_standard", FleetMemberType.SHIP, false);
-            api.addToFleet(FleetSide.PLAYER, "TADA_herald_standard", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_gunwall_firesupport", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_gunwall_pirate_pirate", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_gunwall_XIV_XIV", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "TADA_herald_strike", FleetMemberType.SHIP, false);
 
             api.addToFleet(FleetSide.PLAYER, "TADA_crane_standard", FleetMemberType.SHIP, "SAS Birdie", false);    
-            api.addToFleet(FleetSide.PLAYER, "TADA_crane_pirate_standard", FleetMemberType.SHIP, false);         
+            api.addToFleet(FleetSide.PLAYER, "TADA_crane_pirate_pirate", FleetMemberType.SHIP, false);         
 
 
             // Mark a ship as essential, if you want

@@ -1,0 +1,138 @@
+{
+  "hullName": "Ignite",
+  "hullId": "csp_ignite",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_ignite.png",
+  "style": "HIGH_TECH",
+  "height": 50,
+  "width": 40,
+  "center": [20, 23],
+  "collisionRadius": 29.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 29,
+  "viewOffset": 0,
+  "builtInMods": [
+    "solar_shielding"
+  ],
+  "builtInWeapons": {
+    "WS0001": "csp_built_in_breach_srmF",
+    "WS0002": "csp_built_in_breach_srmF",
+    "WS0003": "csp_harpoonF",
+    "WS0004": "csp_ignitedeco",
+    "WS0005": "csp_harpoonF"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2, 10]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2, -10]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [1, 2.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [1, -2.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-20.5, -7],
+      "length": 13,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22, -4.5],
+      "length": 11,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22.5, -2],
+      "length": 10,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22.5, 2],
+      "length": 10,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22, 4.5],
+      "length": 11,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-21, 7],
+      "length": 13,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -19, -2.5,
+    -23, -3,
+    -19, -11,
+    -6, -9,
+    3, -17,
+    3, -6.5,
+    11, -9,
+    27, -0,
+    11.5, 9,
+    4, 6,
+    3, 17,
+    -7.5, 8.5,
+    -19, 11,
+    -23, 2,
+    -19, 1
+  ]
+}

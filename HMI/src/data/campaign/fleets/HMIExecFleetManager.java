@@ -42,9 +42,6 @@ public class HMIExecFleetManager extends BaseLimitedFleetManager {
 				if (market.hasIndustry("orbitalworks")) {
 					count++;
 				}
-				if (market.hasIndustry("mining")) {
-					count++;
-				}
 			}
 		}
 		return count;
@@ -54,7 +51,7 @@ public class HMIExecFleetManager extends BaseLimitedFleetManager {
 	@Override
 	protected CampaignFleetAPI spawnFleet() {
 		StarSystemAPI target = pickTargetSystem();
-		if (true) return null;
+//		if (true) return null;
 		if (target == null) return null;
 
 		String fleetType = FleetTypes.PATROL_LARGE;
@@ -135,7 +132,6 @@ public class HMIExecFleetManager extends BaseLimitedFleetManager {
 		return fleet;
 	}
 
-
 	protected StarSystemAPI pickTargetSystem() {
 		WeightedRandomPicker<StarSystemAPI> picker = new WeightedRandomPicker<StarSystemAPI>();
 		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
@@ -187,7 +183,7 @@ public class HMIExecFleetManager extends BaseLimitedFleetManager {
 		}
 		return picker.pick();
 	}
-	
+
 }
 
 

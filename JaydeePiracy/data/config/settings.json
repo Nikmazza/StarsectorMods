@@ -1,0 +1,52 @@
+{
+	"ruleCommandPackages":[
+        "data.scripts.rulescmd",
+    ],
+	"designTypeColors":{
+		"Consolidated Mysore-Congreve":[155,155,155,255],
+		"Aquamesh Biogenics":[24,24,119,255],
+		"Flowerfish Mercenary Network":[187,36,55,255],
+	},
+	"graphics":{
+		"campaignEntities":{
+			"jdp_missile":"graphics/stations/jdp_missile.png",
+			"jdp_missile_glow":"graphics/stations/jdp_missile_glow.png",
+		},
+		"glows":{
+            "jdp_laplacian_glow1":"graphics/ships/jdp_laplacian_glow1.png",
+            "jdp_laplacian_glow2":"graphics/ships/jdp_laplacian_glow2.png",
+        },
+		"illustrations":{
+			"jdp_station1":"graphics/illustrations/jdp_station1.png",
+			"jdp_station2":"graphics/illustrations/jdp_station2.png",
+			"jdp_station3":"graphics/illustrations/jdp_station3.png",
+			"jdp_comm_relay":"graphics/illustrations/jdp_comm_relay.png",
+			"jdp_sensor_array":"graphics/illustrations/jdp_sensor_array.png",
+			"jdp_missile":"graphics/illustrations/jdp_missile.png",
+			"jdp_derelictmissile":"graphics/illustrations/jdp_derelictmissile.png",
+			"jdp_derelictservers":"graphics/illustrations/jdp_derelictservers.png",
+			"jdp_derelictpenrose":"graphics/illustrations/jdp_derelictpenrose.png",
+
+		},
+		"characters":{
+			"jdp_calhoum":"graphics/portraits/jdp_calhoum.png",
+			"jdp_demon":"graphics/portraits/jdp_demon.png",
+			"jdp_rampant":"graphics/portraits/jdp_rampant.png",
+			"jdp_paolo":"graphics/portraits/jdp_paolo.png",
+			"jdp_omega":"graphics/portraits/characters/omega.png",
+			"jdp_pendragon":"graphics/portraits/portrait_ai2b.png",
+			"jdp_pendragon2":"graphics/portraits/jdp_pendragon2.png",
+			"jdp_pendragon3":"graphics/portraits/jdp_pendragon3.png",
+			"jdp_deadcomm":"graphics/portraits/jdp_deadcomm.png",
+			"jdp_maerula":"graphics/portraits/jdp_maerula.png",
+			"jdp_wasabi":"graphics/portraits/jdp_wasabi.png",
+			"jdp_kabayaki":"graphics/portraits/jdp_kabayaki.png",
+		},
+	}
+}
+
+
+
+
+
+

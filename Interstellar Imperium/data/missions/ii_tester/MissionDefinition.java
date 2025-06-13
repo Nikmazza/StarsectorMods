@@ -1,7 +1,9 @@
 package data.missions.ii_tester;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberType;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
@@ -20,10 +22,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.setFleetTagline(FleetSide.PLAYER, "Interstellar Armada");
         api.setFleetTagline(FleetSide.ENEMY, "The void");
 
-        api.addToFleet(FleetSide.PLAYER, "ii_olympus_pb", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ii_olympus_ac", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ii_olympus_sup", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ii_olympus_fb", FleetMemberType.SHIP, false);
+        if (CodexDataV2.hasUnlockedEntryForShip("ii_olympus") || Global.getSettings().isDevMode()) {
+            api.addToFleet(FleetSide.PLAYER, "ii_olympus_pb", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "ii_olympus_ac", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "ii_olympus_sup", FleetMemberType.SHIP, false);
+            api.addToFleet(FleetSide.PLAYER, "ii_olympus_fb", FleetMemberType.SHIP, false);
+        }
         api.addToFleet(FleetSide.PLAYER, "ii_barrus_sta", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ii_barrus_arm", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ii_barrus_art", FleetMemberType.SHIP, false);
@@ -104,11 +108,15 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.addToFleet(FleetSide.PLAYER, "ii_basileus_ass", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ii_basileus_cs", FleetMemberType.SHIP, false);
         api.addToFleet(FleetSide.PLAYER, "ii_basileus_eli", FleetMemberType.SHIP, false);
-        if (IIModPlugin.hasSWP) {
+        if (IIModPlugin.hasSWP && (CodexDataV2.hasUnlockedEntryForShip("swp_boss_excelsior_cus") || Global.getSettings().isDevMode())) {
             api.addToFleet(FleetSide.PLAYER, "swp_boss_excelsior_cus", FleetMemberType.SHIP, false);
         }
-        api.addToFleet(FleetSide.PLAYER, "ii_boss_dominus_cus", FleetMemberType.SHIP, false);
-        api.addToFleet(FleetSide.PLAYER, "ii_boss_titanx_cus", FleetMemberType.SHIP, false);
+        if (CodexDataV2.hasUnlockedEntryForShip("ii_boss_dominus_cus") || Global.getSettings().isDevMode()) {
+            api.addToFleet(FleetSide.PLAYER, "ii_boss_dominus_cus", FleetMemberType.SHIP, false);
+        }
+        if (CodexDataV2.hasUnlockedEntryForShip("ii_boss_titanx_cus") || Global.getSettings().isDevMode()) {
+            api.addToFleet(FleetSide.PLAYER, "ii_boss_titanx_cus", FleetMemberType.SHIP, false);
+        }
 
         // Set up the map.
         float width = 20000f;

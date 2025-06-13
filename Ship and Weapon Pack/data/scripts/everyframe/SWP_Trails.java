@@ -93,58 +93,58 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
             }
 
             switch (projectile.getProjectileSpecId()) {
-                case CONTENDER_PROJECTILE_ID:
+                case CONTENDER_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.3f)) {
                         trailCount += 1f;
                     }
-                    break;
-                case FLAMER_PROJECTILE_ID:
+                }
+                case FLAMER_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.35f)) {
                         trailCount += 1f / 7.5f;
                     }
-                    break;
-                case ION_BLASTER_PROJECTILE_ID:
+                }
+                case ION_BLASTER_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.2f)) {
                         trailCount += 5f;
                     }
-                    break;
-                case GUNGNIR_PROJECTILE_ID:
+                }
+                case GUNGNIR_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 1.2f)) {
                         trailCount += 2f;
                     }
-                    break;
-                case GUNGNIR_SUBMUNITION_PROJECTILE_ID:
+                }
+                case GUNGNIR_SUBMUNITION_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.6f)) {
                         trailCount += 1f / 2f;
                     }
-                    break;
-                case EXCELSIOR_4_PROJECTILE_ID:
+                }
+                case EXCELSIOR_4_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.2f)) {
                         trailCount += 1f;
                     }
-                    break;
-                case EXCELSIOR_12_PROJECTILE_ID:
+                }
+                case EXCELSIOR_12_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.25f)) {
                         trailCount += 2f;
                     }
-                    break;
-                case EXCELSIOR_24_PROJECTILE_ID:
+                }
+                case EXCELSIOR_24_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.3f)) {
                         trailCount += 3f;
                     }
-                    break;
-                case EXCELSIOR_40_PROJECTILE_ID:
+                }
+                case EXCELSIOR_40_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.3f)) {
                         trailCount += 4f;
                     }
-                    break;
-                case EXCELSIOR_60_PROJECTILE_ID:
+                }
+                case EXCELSIOR_60_PROJECTILE_ID -> {
                     if (SWP_Util.isOnscreen(projectile.getLocation(), projectile.getVelocity().length() * 0.3f)) {
                         trailCount += 5f;
                     }
-                    break;
-                default:
-                    break;
+                }
+                default -> {
+                }
             }
         }
 
@@ -160,28 +160,17 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
 
             boolean enableAngleFade = true;
             switch (spec) {
-                case MEGAPULSE_PROJECTILE_ID:
+                case MEGAPULSE_PROJECTILE_ID ->
                     enableAngleFade = false;
-                    break;
 
-                default:
-                    break;
+                default -> {
+                }
             }
 
             switch (spec) {
-                case CONTENDER_PROJECTILE_ID:
-                case FLAMER_PROJECTILE_ID:
-                case ION_BLASTER_PROJECTILE_ID:
-                case GUNGNIR_PROJECTILE_ID:
-                case GUNGNIR_SUBMUNITION_PROJECTILE_ID:
-                case EXCELSIOR_4_PROJECTILE_ID:
-                case EXCELSIOR_12_PROJECTILE_ID:
-                case EXCELSIOR_24_PROJECTILE_ID:
-                case EXCELSIOR_40_PROJECTILE_ID:
-                case EXCELSIOR_60_PROJECTILE_ID:
-                case CANISTER_PROJECTILE_ID:
-                case CANISTER_SUBMUNITION_PROJECTILE_ID:
-                case MEGAPULSE_PROJECTILE_ID:
+                case CONTENDER_PROJECTILE_ID, FLAMER_PROJECTILE_ID, ION_BLASTER_PROJECTILE_ID, GUNGNIR_PROJECTILE_ID, GUNGNIR_SUBMUNITION_PROJECTILE_ID,
+                        EXCELSIOR_4_PROJECTILE_ID, EXCELSIOR_12_PROJECTILE_ID, EXCELSIOR_24_PROJECTILE_ID, EXCELSIOR_40_PROJECTILE_ID, EXCELSIOR_60_PROJECTILE_ID,
+                        CANISTER_PROJECTILE_ID, CANISTER_SUBMUNITION_PROJECTILE_ID, MEGAPULSE_PROJECTILE_ID -> {
                     data = trailMap.get(proj);
                     if (data == null) {
                         data = new TrailData();
@@ -219,10 +208,10 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                     }
 
                     trailMap.put(proj, data);
-                    break;
-
-                default:
+                }
+                default -> {
                     continue;
+                }
             }
 
             if (!data.enabled) {
@@ -269,7 +258,7 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
             }
 
             switch (spec) {
-                case CONTENDER_PROJECTILE_ID:
+                case CONTENDER_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -304,9 +293,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case FLAMER_PROJECTILE_ID:
+                case FLAMER_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         if (Math.random() <= 0.66) {
                             data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS * 2f);
@@ -348,9 +337,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case ION_BLASTER_PROJECTILE_ID:
+                case ION_BLASTER_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -502,9 +491,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case GUNGNIR_PROJECTILE_ID:
+                case GUNGNIR_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -572,9 +561,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case GUNGNIR_SUBMUNITION_PROJECTILE_ID:
+                case GUNGNIR_SUBMUNITION_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS * 2f, SIXTY_FPS * 2f);
                     }
@@ -614,9 +603,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case EXCELSIOR_4_PROJECTILE_ID:
+                case EXCELSIOR_4_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -656,9 +645,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case EXCELSIOR_12_PROJECTILE_ID:
+                case EXCELSIOR_12_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -726,9 +715,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case EXCELSIOR_24_PROJECTILE_ID:
+                case EXCELSIOR_24_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -824,9 +813,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case EXCELSIOR_40_PROJECTILE_ID:
+                case EXCELSIOR_40_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -950,9 +939,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case EXCELSIOR_60_PROJECTILE_ID:
+                case EXCELSIOR_60_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -1104,9 +1093,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case CANISTER_PROJECTILE_ID:
+                case CANISTER_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -1174,9 +1163,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case CANISTER_SUBMUNITION_PROJECTILE_ID:
+                case CANISTER_SUBMUNITION_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS * 2f, SIXTY_FPS * 2f);
                     }
@@ -1216,9 +1205,9 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                case MEGAPULSE_PROJECTILE_ID:
+                case MEGAPULSE_PROJECTILE_ID -> {
                     if (data.interval == null) {
                         data.interval = new IntervalUtil(SIXTY_FPS, SIXTY_FPS);
                     }
@@ -1253,10 +1242,10 @@ public class SWP_Trails extends BaseEveryFrameCombatPlugin {
                                 1f /* frameOffsetMult */
                         );
                     }
-                    break;
+                }
 
-                default:
-                    break;
+                default -> {
+                }
             }
         }
 

@@ -12,7 +12,7 @@ import com.fs.starfarer.api.util.Misc;
 public class FleetOverride extends BaseHullMod {
 
 	private static float FIGHTER_DAMAGE_BONUS = 15f;
-	private static float FIGHTER_DAMAGE_BONUS_XO = 20f;
+	private static float FIGHTER_DAMAGE_BONUS_XO = 30f; //display only, extra damage handled by Doctrinal Purity
 	private static float PILOT_SURVIVAL_PENALTY = 50f;
 	
 	@Override
@@ -23,7 +23,7 @@ public class FleetOverride extends BaseHullMod {
 	@Override
 	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
 		MutableShipStatsAPI stats = fighter.getMutableStats();
-		float bonus = isDoctrinalPurityActive() ? FIGHTER_DAMAGE_BONUS_XO : FIGHTER_DAMAGE_BONUS;
+		float bonus = FIGHTER_DAMAGE_BONUS;
 		stats.getBallisticWeaponDamageMult().modifyMult(id, 1f + bonus * 0.01f);
 		stats.getEnergyWeaponDamageMult().modifyMult(id, 1f + bonus * 0.01f);
 		stats.getMissileWeaponDamageMult().modifyMult(id, 1f + bonus * 0.01f);

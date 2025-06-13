@@ -1,0 +1,37 @@
+{
+  "id": "csp_breachgun",
+  "specClass": "projectile",
+  "projectileSpecId": "csp_soundwave",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/csp_breachgun_hardpoint_base.png",
+  "hardpointSprite": "graphics/weapons/csp_breachgun_hardpoint_base.png",
+  "turretOffsets": [
+    10.5,
+    0,
+    8.5,
+    -6,
+    8.5,
+    6
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    15.5,
+    0,
+    13.5,
+    -6,
+    13.5,
+    6
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "NONE"
+}

@@ -1,0 +1,75 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+		"brawler_ii_Artillery":3,
+		"brawler_ii_Support":2,
+		"brawler_ii_Anti_air":1,
+		"kite_iia_Martyr": 1,
+		"kite_iia_Hunter": 2,
+		"kite_iia_Support": 4,
+		"shepherd_iia_Support": 4,
+
+		
+	},
+	
+	"combatSmall":{
+		"brawler_ii_Artillery":3,
+		"brawler_ii_Support":2,
+		"brawler_ii_Anti_air":1,
+		"kite_iia_Martyr": 1,
+		"kite_iia_Hunter": 2,
+		"kite_iia_Support": 4,
+		"shepherd_iia_Support": 4,
+		
+	},
+	
+	"combatMedium":{
+		
+		"hammerhead_ii_Artillery":2,
+		"hammerhead_ii_Standard":3,
+		"hammerhead_ii_Martyr":1,
+		
+	},
+	"combatLarge":{
+		
+		"eagle_ii_Elite":5,
+		"eagle_ii_Support":5,
+		"eagle_ii_Martyr":3,
+		"champion_ii_Elite": 3,
+		"champion_ii_Assault":3,
+		"champion_ii_Support":3,
+		"champion_ii_Martyr":2,
+		
+		
+	},
+	"combatCapital":{
+		"conquest_ii_Assault":2,
+		"conquest_ii_Elite":1,
+		"conquest_ii_Martyr":1,
+		"invictus_ii_Standard":0.5,
+		
+		
+	},
+	
+
+	# carriers
+	"carrierSmall":{
+		"condor_iia_Support":4,
+
+		
+	},
+	"carrierMedium":{
+		"heron_ii_Bomber":2,
+		"heron_ii_Support":1,
+		"heron_ii_Suppression":1,
+	},
+
+	# freighters and such
+	"freighterLarge":{
+		"atlas_iia_Support":4,
+	}
+	
+
+	
+}

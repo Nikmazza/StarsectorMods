@@ -1,0 +1,20 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+trident_ii_wing,trident_ii_Bomber,"bomber6, bomber, high, rare_bp, hist1t",3,0.1,9,24,V,4000,2000,600,2,BOMBER,Bomber,25,42000,,,,,,,,,,,,,13
+broadsword_ii_wing,broadsword_ii_Fighter,"fighter5, fighter, high, rare_bp, hist1t",3,0.25,7,12,V,4000,500,,3,FIGHTER,Heavy Fighter,10,18000,,,,,,,,,,,,,1
+warthog_ii_wing,warthog_ii_Fighter,"fighter5, fighter, high, rare_bp, hist1t",3,0.25,8,15,CLAW,2000,500,-400,3,FIGHTER,Heavy Fighter,10,27000,,,,,,,,,,,,,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,50
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,13,,

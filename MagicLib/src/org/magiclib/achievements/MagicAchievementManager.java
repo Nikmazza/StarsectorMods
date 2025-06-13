@@ -150,7 +150,7 @@ public class MagicAchievementManager {
         } else {
             logger.info("MagicLib achievements are disabled.");
             removeIntel();
-            saveAchievements(true);
+            saveAchievements(true, false);
 
             if (isSaveLoaded) {
                 Global.getSector().removeTransientScriptsOfClass(MagicAchievementRunner.class);
@@ -221,9 +221,15 @@ public class MagicAchievementManager {
     /**
      * This writes to disk.
      */
-    protected void saveAchievements(boolean printUnchangedResultToLog) {
+    protected void saveAchievements(boolean printUnchangedResultToLog, boolean forceSave) {
         JSONObject commonJson;
         JSONArray savedAchievements = new JSONArray();
+
+        // Prevents accidentally wiping achievements if the feature is disabled on game load.
+        // Also, no reason to save nothing anyway.
+        if (!forceSave && achievements.isEmpty()) {
+            return;
+        }
 
         // Put all achievements into a json array.
         for (MagicAchievement achievement : achievements.values()) {
@@ -240,7 +246,7 @@ public class MagicAchievementManager {
         try {
             newAchievementsJsonString = savedAchievements.toString(indent);
 
-            if (newAchievementsJsonString.equals(lastSavedJson)) {
+            if (!forceSave && newAchievementsJsonString.equals(lastSavedJson)) {
                 if (printUnchangedResultToLog) {
                     logger.info("Not saving achievements because they haven't changed.");
                 }
@@ -297,7 +303,7 @@ public class MagicAchievementManager {
         try {
             // Create file if it doesn't exist.
             if (!Global.getSettings().fileExistsInCommon(commonFilename)) {
-                saveAchievements(true);
+                saveAchievements(true, true);
             }
 
             try {
@@ -308,7 +314,7 @@ public class MagicAchievementManager {
                 logger.warn("Unable to load achievements from " + commonFilename + ", making a backup and remaking it.", ex);
                 Global.getSettings().writeTextFileToCommon(commonFilename + ".backup", Global.getSettings().readTextFileFromCommon(commonFilename));
                 Global.getSettings().deleteTextFileFromCommon(commonFilename);
-                saveAchievements(true);
+                saveAchievements(true, true);
                 commonJson = JSONUtils.loadCommonJSON(commonFilename);
                 savedAchievementsJson = commonJson.getJSONArray(achievementsJsonObjectKey);
             }
@@ -326,6 +332,11 @@ public class MagicAchievementManager {
             try {
                 JSONObject savedAchievementJson = savedAchievementsJson.getJSONObject(i);
                 String specId = savedAchievementJson.optString("id", "");
+
+                if (specId.isEmpty()) {
+                    continue;
+                }
+
                 // Try to load the achievement from a spec in a loaded mod.
                 MagicAchievement loadedAchievement = generatedAchievementsById.get(specId);
 

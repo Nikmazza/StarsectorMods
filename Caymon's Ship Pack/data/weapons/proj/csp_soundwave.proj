@@ -1,0 +1,25 @@
+{
+	"id":"csp_soundwave",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",  # BALLISTIC, PLASMA, BALLISTIC_AS_BEAM or BEAM - BALLISTIC doesn't work for pulse weapons
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":30.0,
+	"width":10.0,
+	"hitGlowRadius":50,
+	"fadeTime":0.5,
+	"fringeColor":[155,0,0,255],
+	"coreColor":[255,255,255,255],
+	"darkCore":false,
+	"textureType":SMOOTH,  # only needed for BEAM spawnType
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":1.0,
+	"bulletSprite":"graphics/missiles/The beats are too fire to handle.png" # only for BALLISTIC or BALLISTIC_AS_BEAM
+	
+### DO NOT SET - these are taken from weapon_data.csv (which in turn comes from a googledocs spreadsheet)	
+#	"damage":50.0,
+#	"maxRange":500,
+#	"moveSpeed":250,
+#	"maxHealth":1,
+	
+}

@@ -1,0 +1,15 @@
+{
+
+	"shipsWhenImporting":{
+		"tags":["remnant"],
+		"hulls":["csp_luster"
+		],
+	},
+
+	"ranks":{
+		"ranks":{"SpecRem1":{"name":"The Abnormality"},
+		},
+		"posts":{"SpecRem1":{"name":"Inevitability"},
+		},
+	},
+	},

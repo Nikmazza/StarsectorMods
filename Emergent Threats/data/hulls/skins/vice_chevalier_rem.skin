@@ -1,0 +1,25 @@
+{
+	"baseHullId":"vice_champion_auto",
+	"skinHullId":"vice_chevalier_rem",
+	"hullName":"Chevalier (R)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"vice_mayfly_rem",
+	"descriptionPrefix":"A heavily upgraded and fully automated variant of the Champion-class cruiser, the Chevalier is equipped with a remote charged DEM Strike system that grants its flock of cutting edge Tremor drones improved firepower. This particular model appears to make use of metamaterial hull plating and plasma propulsion engines commonly found on Remnant hulls, despite the original prototypes being constructed from a midline tech base.",
+	"tags":["auto_rec", "no_dealer", "no_autofit", "codex_unlockable"],
+	"tech":"Remnant",
+	"spriteName":"graphics/vice/ships/hidden/champion_auto_r.png",
+	"removeWeaponSlots":["WS 004", "WS 005"],
+	"builtInMods":[],
+    "weaponSlotChanges":{
+	   "WS 012":{"type": "ENERGY"},
+	   "WS 013":{"type": "ENERGY"},
+    },
+    "engineSlotChanges":{
+		"0":{"style":"HIGH_TECH"},
+		"1":{"style":"HIGH_TECH"},
+		"2":{"style":"HIGH_TECH"},
+		"3":{"style":"HIGH_TECH"},
+		"4":{"style":"HIGH_TECH"},
+		"5":{"style":"HIGH_TECH"},
+	},
+}

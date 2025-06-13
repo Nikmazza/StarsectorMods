@@ -2,6 +2,16 @@
 	"abolisher_tw_fire":[
 		{"file": "sounds/weapons/abolisher_tw_fire.ogg", "pitch": 1, "volume": 1}
 	],
+	"abolisher_tw_hit":[
+		{"file": "sounds/weapons/abolisher_tw_hit.ogg", "pitch": 0.6, "volume": 0.8},
+		{"file": "sounds/weapons/abolisher_tw_hit.ogg", "pitch": 0.7, "volume": 0.8},
+		{"file": "sounds/weapons/abolisher_tw_hit.ogg", "pitch": 0.8, "volume": 0.8}
+	],
+	"arrester_tw_hit":[
+		{"file": "sounds/weapons/arrester_tw_hit.ogg", "pitch": 0.9, "volume": 1},
+		{"file": "sounds/weapons/arrester_tw_hit.ogg", "pitch": 1.0, "volume": 1},
+		{"file": "sounds/weapons/arrester_tw_hit.ogg", "pitch": 1.1, "volume": 1}
+	],	
 	"antecedent_ix_explode":[
 		{"file": "sounds/weapons/antecedent_ix_explode.ogg", "pitch": 1, "volume": 0.6}
 	],
@@ -58,6 +68,9 @@
 			{"file":"sounds/weapons/es_projector_ix_hit_07.ogg","pitch":1,"volume":1.5},
 		],
 	},
+	"flux_shunt_ix_activate":[
+		{"file": "sounds/systems/flux_shunt_ix_activate.ogg", "pitch": 1, "volume": 1}
+	],
 	"ifc_ix_fire":[
 		{"file": "sounds/weapons/ifc_ix_fire.ogg", "pitch": 1, "volume": 1}
 	],

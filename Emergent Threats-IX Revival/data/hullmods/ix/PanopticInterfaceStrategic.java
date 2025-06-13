@@ -16,6 +16,7 @@ public class PanopticInterfaceStrategic extends BaseHullMod {
 	//dp bonus equal to cr penalty from PanopticInterfaceUtil.getReadinessPenaltyForHull()
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+		if (stats.getVariant().hasHullMod("automated")) return;
 		if (PanopticInterfaceUtil.hasConflictMod(stats.getVariant())) return;
 		float deployReduction = PanopticInterfaceUtil.getReadinessPenaltyForHull(hullSize) - 1f;
 		stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(id, -deployReduction);
@@ -32,6 +33,10 @@ public class PanopticInterfaceStrategic extends BaseHullMod {
 	@Override
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
 		if (ship == null) return;
+		if (ship.getVariant().hasHullMod("automated")) {
+			tooltip.addPara("Interface cannot be activated on automated ship", Misc.getNegativeHighlightColor(), 10f);
+			return;
+		}
 		String s = "";
 		float crPenalty = 0f;
 		if (PanopticInterfaceUtil.hasConflictMod(ship.getVariant())) s = "Warning: Incompatible AI system present. Interface is inactive.";

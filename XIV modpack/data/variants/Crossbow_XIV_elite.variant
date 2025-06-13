@@ -1,0 +1,44 @@
+{
+  "variantId": "Crossbow_XIV_elite",
+  "hullId": "Crossbow_XIV",
+  "displayName": "Elite",
+  "goalVariant": false,
+  "fluxCapacitors": 21,
+  "fluxVents": 21,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "arbalest",
+        "WS0002": "arbalest",
+        "WS0003": "multineedler",
+        "WS0004": "multineedler",
+        "WS0005": "annihilatorpod",
+        "WS0006": "annihilatorpod",
+        "WS0007": "heavymortar",
+        "WS0008": "heavymortar",
+        "WS0009": "lightmortar",
+        "WS0010": "lightmortar",
+        "WS0011": "cyclone",
+        "WS0012": "cyclone",
+        "WS0013": "lightdualmg",
+        "WS0014": "lightdualmg",
+        "WS0015": "lightdualmg",
+        "WS0016": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing",
+    "thunder_wing",
+    "thunder_wing"
+  ]
+}

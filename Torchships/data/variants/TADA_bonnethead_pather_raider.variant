@@ -1,0 +1,45 @@
+{
+    "displayName": "Raider",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_bonnethead_pather",
+    "hullMods": [
+        "heavyarmor",
+        "shield_shunt",
+        "unstable_injector",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_bonnethead_pather_raider",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "lightdualac",
+                "WS0004": "lightdualac",
+                "WS0003": "lightdualac",
+                "WS0002": "lightdualac",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0006": "hammer",
+                "WS0007": "hammer",
+                "WS0005": "hammer",
+                "WS0001": "hammer",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "lightdualmg",
+                "WS0010": "lightdualmg",
+            }
+        }
+    ]
+}

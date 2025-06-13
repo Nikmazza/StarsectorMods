@@ -45,12 +45,14 @@ public class AdaptiveThrusterControl extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (util.isModuleCheck(ship)) return false;
 		if (hasThrusterModOverlap(ship)) return false;
 		return (util.isApplicable(ship) && util.isOnlyRemnantMod(ship));
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("hub");
 		if (hasThrusterModOverlap(ship)) return "Incompatible engine modification present";
 		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");

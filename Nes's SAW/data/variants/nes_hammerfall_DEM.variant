@@ -1,0 +1,45 @@
+{
+    "displayName": "DEM",
+    "fluxCapacitors": 0,
+    "fluxVents": 20,
+    #"goalVariant": false,
+    "hullId": "nes_hammerfall",
+    "hullMods": [
+        "missile_autoloader",
+        "pointdefenseai",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "nes_hammerfall_DEM",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "irautolance",
+                "WS0002": "irautolance",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "gorgon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "pdburst",
+                "WS0005": "pdburst",
+                "WS0004": "pdburst",
+                "WS0006": "pdburst",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

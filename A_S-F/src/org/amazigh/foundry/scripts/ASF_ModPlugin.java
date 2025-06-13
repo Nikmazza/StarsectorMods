@@ -11,6 +11,7 @@ import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.loading.Description;
 
 import org.amazigh.foundry.scripts.ai.ASF_AlbatreosMagicMissileAI;
@@ -19,10 +20,16 @@ import org.amazigh.foundry.scripts.ai.ASF_LamiaMissileAI;
 import org.amazigh.foundry.scripts.ai.ASF_LernaMissileAI;
 import org.amazigh.foundry.scripts.ai.ASF_LernaSubMissileAI;
 import org.amazigh.foundry.scripts.ai.ASF_MagicSwarmMissileAI;
+import org.amazigh.foundry.scripts.ai.ASF_PersisMissileAI;
+import org.amazigh.foundry.scripts.ai.ASF_PersisSwarmMissileAI;
 import org.amazigh.foundry.scripts.ai.ASF_PhiliaMissileAI;
 import org.amazigh.foundry.scripts.ai.ASF_RocketArtyMagicMissileAI;
 import org.amazigh.foundry.scripts.ai.ASF_TermiteMissileAI;
+import org.amazigh.foundry.scripts.ai.ASF_WeaverDrunkRocketAI;
 import org.amazigh.foundry.scripts.everyframe.ASF_arkTechSpawnPlugin;
+import org.dark.shaders.light.LightData;
+import org.dark.shaders.util.ShaderLib;
+
 import exerelin.utilities.NexConfig;
 import exerelin.utilities.NexFactionConfig;
 import exerelin.utilities.NexFactionConfig.StartFleetSet;
@@ -45,7 +52,12 @@ public class ASF_ModPlugin extends BaseModPlugin {
 	public static final String ASF_PHILIA_MISSILE_ID = "A_S-F_philia_srm";
 	public static final String ASF_PHANTASMAGORIA_MICRO_MISSILE_ID = "A_S-F_phantasmagoria_micro_missile";
 	public static final String ASF_TERMITE_MISSILE_ID = "A_S-F_termite_srm";
-	
+	public static final String ASF_PERSIS_MISSILE_ID = "A_S-F_persis_missile";
+	public static final String ASF_PERSIS_SUB_MISSILE_ID = "A_S-F_persis_frag";
+	public static final String ASF_WEAVER_ROCKET_ID = "A_S-F_weaver_rocket";
+	public static final String ASF_NEXTER_MISSILE_ID = "A_S-F_nexter_mssl";
+
+	public boolean HAS_GRAPHICSLIB = false;
     public boolean isExerelin = false;
     public boolean ratInfestation = false;
     
@@ -53,6 +65,7 @@ public class ASF_ModPlugin extends BaseModPlugin {
     public static String TRANSPARENCE_ALT_DESCRIPTION = "The Transparence is a unique prototype ship featuring a wide variety of bleeding-edge technologies. The Photon Accelerator Core around which this vessel has been constructed stretches the bounds of what could be considered possible by conventional domain science to allow for the ship to deliver cruiser-grade levels of firepower while being nearly as agile as some frigates.";
     public static String RANGDA_ALT_DESCRIPTION = "A prototype testbed for a novel vectored thrust system, the Rangda is one of the most slippery vessels in the sector, able to get in and out of combat with ease.";
     public static String LAFIEL_ALT_DESCRIPTION = "Origins unknown, the designers clearly thought that it'd be sane to expose living crew to a rapidly fluctuating temporal gradient. Aftereffects of combat deployment mean that even with stringent psychological profiling, frequent cycling of crews is highly recommended.";
+    public static String PERSENACHIA_ALT_DESCRIPTION = "A heretic, surrounded with the husks of the dead. In order to hide its form, it spreads a dense and violent storm. The glowing fog conceals it while it hunts its prey and then entraps them in a dance of death, creating more victims.";
     
     //New game stuff
     @Override
@@ -62,6 +75,15 @@ public class ASF_ModPlugin extends BaseModPlugin {
     }
     
     public void onApplicationLoad() throws Exception {
+
+        boolean hasGraphicsLib = Global.getSettings().getModManager().isModEnabled("shaderLib");
+        if (hasGraphicsLib) {
+            HAS_GRAPHICSLIB = true;
+            ShaderLib.init();
+            //TextureData.readTextureDataCSV((String)"data/config/asf_texture_data.csv");
+            LightData.readLightDataCSV((String)"data/config/asf_lights_data.csv");
+        }
+    	
     	isExerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
     	if(isExerelin) {
     		if (Global.getSettings().getMissionScore("ASF_phantasmagoria_mission") > 0) {
@@ -88,14 +110,22 @@ public class ASF_ModPlugin extends BaseModPlugin {
     			fleetSetRangda.addFleet(rangdaFleet);
     			Global.getSettings().getDescription("A_S-F_rangda", Description.Type.SHIP).setText2(RANGDA_ALT_DESCRIPTION);
     		}
-    		
-    		// so you *can* unlock the lafiel as a custom start, "just" beat all missions (test included) with over 95% score.
-    		if (Global.getSettings().getMissionScore("ASF_phantasmagoria_mission") > 0.95f && Global.getSettings().getMissionScore("ASF_transparence_mission") > 0.95f && Global.getSettings().getMissionScore("ASF_rangda_mission") > 0.95f && Global.getSettings().getMissionScore("ASF_arkDefenders") > 0.95f && Global.getSettings().getMissionScore("ASF_testbattle") > 0.95f) {
+    		if (Global.getSettings().getMissionScore("ASF_persenachia_mission") > 0) {
     			NexFactionConfig faction = NexConfig.getFactionConfig("player");
-    			StartFleetSet fleetSetRangda = faction.getStartFleetSet(StartFleetType.SUPER.name());
-    			List<String> rangdaFleet = new ArrayList<>(1);
-    			rangdaFleet.add("A_S-F_lafiel_starter");
-    			fleetSetRangda.addFleet(rangdaFleet);
+    			StartFleetSet fleetSetPers = faction.getStartFleetSet(StartFleetType.SUPER.name());
+    			List<String> persenachiaFleet = new ArrayList<>(1);
+    			persenachiaFleet.add("A_S-F_persenachia_starter");
+    			fleetSetPers.addFleet(persenachiaFleet);
+    			Global.getSettings().getDescription("A_S-F_persenachia", Description.Type.SHIP).setText2(PERSENACHIA_ALT_DESCRIPTION);
+    		}
+    		
+    		// so you *can* unlock the lafiel as a custom start, "just" beat all special missions with over 95% score (only 75% score is needed for the test mission tho!)
+    		if (Global.getSettings().getMissionScore("ASF_phantasmagoria_mission") > 0.95f && Global.getSettings().getMissionScore("ASF_transparence_mission") > 0.95f && Global.getSettings().getMissionScore("ASF_rangda_mission") > 0.95f && Global.getSettings().getMissionScore("ASF_persenachia_mission") > 0.95f && Global.getSettings().getMissionScore("ASF_arkDefenders") > 0.95f && Global.getSettings().getMissionScore("ASF_testbattle") > 0.75f) {
+    			NexFactionConfig faction = NexConfig.getFactionConfig("player");
+    			StartFleetSet fleetSetLafiel = faction.getStartFleetSet(StartFleetType.SUPER.name());
+    			List<String> lafielFleet = new ArrayList<>(1);
+    			lafielFleet.add("A_S-F_lafiel_starter");
+    			fleetSetLafiel.addFleet(lafielFleet);
     			Global.getSettings().getDescription("A_S-F_lafiel", Description.Type.SHIP).setText2(LAFIEL_ALT_DESCRIPTION);
     		}
     		
@@ -157,8 +187,51 @@ public class ASF_ModPlugin extends BaseModPlugin {
                 return new PluginPick<MissileAIPlugin>(new ASF_MagicSwarmMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             case ASF_TERMITE_MISSILE_ID:
                 return new PluginPick<MissileAIPlugin>(new ASF_TermiteMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case ASF_PERSIS_MISSILE_ID:
+                return new PluginPick<MissileAIPlugin>(new ASF_PersisMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case ASF_PERSIS_SUB_MISSILE_ID:
+                return new PluginPick<MissileAIPlugin>(new ASF_PersisSwarmMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case ASF_WEAVER_ROCKET_ID:
+                return new PluginPick<MissileAIPlugin>(new ASF_WeaverDrunkRocketAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case ASF_NEXTER_MISSILE_ID:
+                return new PluginPick<MissileAIPlugin>(new ASF_RocketArtyMagicMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             default:
                 return null;
         }
     }
+    
+    @Override
+	public void onCodexDataGenerated() {
+		
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_auditor"), CodexDataV2.getShipEntryId("A_S-F_auditor_mod"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_rinka"), CodexDataV2.getShipEntryId("A_S-F_rinka_p"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_gaoler"), CodexDataV2.getShipEntryId("A_S-F_mancatcher"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_bathory"), CodexDataV2.getShipEntryId("A_S-F_bathory_mod"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_henki"), CodexDataV2.getShipEntryId("A_S-F_pneuma"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_niteo"), CodexDataV2.getShipEntryId("A_S-F_lafiel"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_morris"), CodexDataV2.getShipEntryId("A_S-F_morris_p"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_peryton"), CodexDataV2.getShipEntryId("A_S-F_perytonne"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_lanner"), CodexDataV2.getShipEntryId("A_S-F_lanner_p"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_apologee"), CodexDataV2.getShipEntryId("apogee"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_phobia"), CodexDataV2.getShipEntryId("A_S-F_jorogumo"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_initone"), CodexDataV2.getShipEntryId("A_S-F_initone_lg"));
+		CodexDataV2.makeRelated(CodexDataV2.getShipEntryId("A_S-F_chompiron"), CodexDataV2.getShipEntryId("champion"));
+		
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyBallistic"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyEnergy"));
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyBallistic"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyFlux"));
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyBallistic"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyShields"));
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyBallistic"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyTargeting"));
+		
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyEnergy"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyFlux"));
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyEnergy"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyShields"));
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyEnergy"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyTargeting"));
+
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyFlux"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyShields"));
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyFlux"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyTargeting"));
+		
+		CodexDataV2.makeRelated(CodexDataV2.getHullmodEntryId("A_S-F_anarchyShields"), CodexDataV2.getHullmodEntryId("A_S-F_anarchyTargeting"));
+		// linking the anarchy hullmods, because it seems like an idea
+		
+	}
+    
 }

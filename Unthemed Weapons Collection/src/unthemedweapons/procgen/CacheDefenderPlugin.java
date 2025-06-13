@@ -2,7 +2,6 @@ package unthemedweapons.procgen;
 
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.BaseGenericPlugin;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
@@ -160,8 +159,7 @@ public class CacheDefenderPlugin extends BaseGenericPlugin implements SalvageGen
             numOfficers = 13f * sizeFrac * MathUtils.randBetween(0.8f, 1.2f, random);
             maxOfficerLevel = Math.min(7f, 9f * sizeFrac * MathUtils.randBetween(0.8f, 1.25f, random));
 
-            if (fleet.getInflater() instanceof DefaultFleetInflater) {
-                DefaultFleetInflater inflater = (DefaultFleetInflater) fleet.getInflater();
+            if (fleet.getInflater() instanceof DefaultFleetInflater inflater) {
                 DefaultFleetInflaterParams params = (DefaultFleetInflaterParams) inflater.getParams();
                 params.averageSMods = averageSMods < 0f ? null : (int) averageSMods;
                 params.quality = quality;
@@ -178,8 +176,8 @@ public class CacheDefenderPlugin extends BaseGenericPlugin implements SalvageGen
     }
 
     private void generateFleetForEnergyCache(CampaignFleetAPI fleet, Random random) {
-        List<String> radiantSkills = Arrays.asList(Skills.GUNNERY_IMPLANTS, Skills.TARGET_ANALYSIS, Skills.IMPACT_MITIGATION, Skills.COMBAT_ENDURANCE, Skills.ORDNANCE_EXPERTISE, Skills.HELMSMANSHIP, Skills.SYSTEMS_EXPERTISE);
-        List<Integer> radiantEliteSkills = Arrays.asList( 1, 2, 3, 4, 5);
+        List<String> radiantSkills = Arrays.asList(Skills.GUNNERY_IMPLANTS, Skills.TARGET_ANALYSIS, Skills.IMPACT_MITIGATION, Skills.FIELD_MODULATION, Skills.ORDNANCE_EXPERTISE, Skills.HELMSMANSHIP, Skills.SYSTEMS_EXPERTISE);
+        List<Integer> radiantEliteSkills = Arrays.asList( 1, 2, 3, 5, 6);
         PersonAPI commander = CampaignUtils.createOfficer(Factions.MERCENARY, Personalities.STEADY, radiantSkills, radiantEliteSkills, random);
         commander.getStats().setSkipRefresh(true);
         commander.getStats().setSkillLevel(Skills.BEST_OF_THE_BEST, 1);
@@ -309,7 +307,6 @@ public class CacheDefenderPlugin extends BaseGenericPlugin implements SalvageGen
         for (int i = 0; i < unofficeredLasherCount; i++) {
             CampaignUtils.addToFleet(fleet, "wpnxt_lasher_Cache", null, null);
         }
-
     }
 
     @Override
@@ -319,8 +316,7 @@ public class CacheDefenderPlugin extends BaseGenericPlugin implements SalvageGen
 
     @Override
     public int getHandlingPriority(Object params) {
-        if (!(params instanceof SDMParams)) return -1;
-        SDMParams p = (SDMParams) params;
+        if (!(params instanceof SDMParams p)) return -1;
 
         if (p.entity == null) {
             return -1;

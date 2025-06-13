@@ -4,7 +4,6 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
-import com.sun.istack.internal.NotNull;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.util.*;
@@ -15,20 +14,18 @@ public abstract class CollisionUtils {
     public static boolean canCollide(Object o, Collection<? extends CombatEntityAPI> ignoreList, ShipAPI source, boolean friendlyFire) {
         int owner = source == null ? 100 : source.getOwner();
         // Ignore things that aren't combat entities
-        if (!(o instanceof CombatEntityAPI)) return false;
+        if (!(o instanceof CombatEntityAPI entity)) return false;
         // Ignore non-missile projectiles
         if ((o instanceof DamagingProjectileAPI) && !(o instanceof MissileAPI)) return false;
         // Ignore explicitly added items to ignore list
         if (ignoreList != null && ignoreList.contains(o)) return false;
-
-        CombatEntityAPI entity = (CombatEntityAPI) o;
 
         // Ignore objects with NONE collision class
         if (CollisionClass.NONE.equals(entity.getCollisionClass())) return false;
         // Ignore phased ships
         if (entity instanceof ShipAPI && ((ShipAPI) entity).isPhased()) return false;
         // Always ignore source and source modules
-        if (entity instanceof ShipAPI && EngineUtils.getBaseShip((ShipAPI) entity).equals(EngineUtils.getBaseShip(source))) return false;
+        if (entity instanceof ShipAPI && Objects.equals(EngineUtils.getBaseShip((ShipAPI) entity), EngineUtils.getBaseShip(source))) return false;
         // Always ignore friendly fighters and missiles
         if (entity.getOwner() == owner && (o instanceof MissileAPI || EngineUtils.isFighter(entity))) return false;
         // Ignore all friendlies if friendly fire is off
@@ -38,7 +35,7 @@ public abstract class CollisionUtils {
     }
 
     /** Get the two extremal points of the shield's active arc */
-    public static Pair<Vector2f, Vector2f> getShieldBounds(@NotNull ShieldAPI shield) {
+    public static Pair<Vector2f, Vector2f> getShieldBounds(ShieldAPI shield) {
         Vector2f shieldBound1 = Misc.getUnitVectorAtDegreeAngle(shield.getFacing() + shield.getActiveArc() / 2f);
         shieldBound1.scale(shield.getRadius());
         Vector2f.add(shieldBound1, shield.getLocation(), shieldBound1);
@@ -257,8 +254,7 @@ public abstract class CollisionUtils {
         if (thisShield != null) {
             allShields.add(thisShield);
         }
-        if (entity instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) entity;
+        if (entity instanceof ShipAPI ship) {
             // [entity] is itself a parent module
             for (ShipAPI child : ship.getChildModulesCopy()) {
                 if (child.getShield() != null) {

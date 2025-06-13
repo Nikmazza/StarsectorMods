@@ -34,8 +34,8 @@ public class RemPaladinEffect implements BeamEffectPlugin {
 				maxDist = Math.max(maxDist, Misc.getDistance(point, curr.getTo()));
 			}
 			if (maxDist < 15f) {
-				DamagingProjectileAPI e = engine.spawnDamagingExplosion(createExplosionSpec(), beam.getSource(), point);
-				e.addDamagedAlready(target);
+				//DamagingProjectileAPI e = engine.spawnDamagingExplosion(createExplosionSpec(), beam.getSource(), point);
+				//e.addDamagedAlready(target);
 				List<CombatEntityAPI> validTargets = new ArrayList<CombatEntityAPI>();
 				for (CombatEntityAPI entityToTest : CombatUtils.getEntitiesWithinRange(point, 500f)) {
 					if (entityToTest instanceof ShipAPI || entityToTest instanceof AsteroidAPI || entityToTest instanceof MissileAPI) {
@@ -60,7 +60,7 @@ public class RemPaladinEffect implements BeamEffectPlugin {
 					validTargets.add(new SimpleEntity(MathUtils.getRandomPointInCircle(point, 500f)));
 				}
 				CombatEntityAPI target2 = null;
-				for (int i = 0; i < 4; i++) {
+				for (int i = 0; i < 6; i++) {
 					if (validTargets.isEmpty()) {
 						target2 = new SimpleEntity(MathUtils.getRandomPointInCircle(point, 500f));
 					} else {
@@ -68,8 +68,8 @@ public class RemPaladinEffect implements BeamEffectPlugin {
 					}
 					engine.spawnEmpArc(beam.getSource(), point, target2, target2,
 							DamageType.ENERGY, //Damage type
-							MathUtils.getRandomNumberInRange(0.8f, 1.2f) * 200f, //Damage
-							MathUtils.getRandomNumberInRange(0.8f, 1.2f) * 300f, //Emp
+							MathUtils.getRandomNumberInRange(0.8f, 1.2f) * 100f, //Damage
+							MathUtils.getRandomNumberInRange(0.8f, 1.2f) * 200f, //Emp
 							100000f, //Max range
 							"tachyon_lance_emp_impact", //Impact sound
 							10f, // thickness of the lightning bolt
@@ -82,29 +82,29 @@ public class RemPaladinEffect implements BeamEffectPlugin {
 		}
 	}
 
-	public DamagingExplosionSpec createExplosionSpec() {
-		float damage = 200f;
-		DamagingExplosionSpec spec = new DamagingExplosionSpec(
-				0.1f, // duration
-				200f, // radius
-				100f, // coreRadius
-				damage, // maxDamage
-				damage / 2f, // minDamage
-				CollisionClass.PROJECTILE_FF, // collisionClass
-				CollisionClass.PROJECTILE_FIGHTER, // collisionClassByFighter
-				3f, // particleSizeMin
-				3f, // particleSizeRange
-				0.5f, // particleDuration
-				150, // particleCount
-				new Color(145, 245, 255,100), // particleColor
-				new Color(145, 245, 255, 50)  // explosionColor
-		);
-
-		spec.setDamageType(DamageType.FRAGMENTATION);
-		spec.setUseDetailedExplosion(false);
-		spec.setSoundSetId("explosion_guardian");
-		return spec;
-	}
+//	public DamagingExplosionSpec createExplosionSpec() {
+//		float damage = 100f;
+//		DamagingExplosionSpec spec = new DamagingExplosionSpec(
+//				0.1f, // duration
+//				200f, // radius
+//				100f, // coreRadius
+//				damage, // maxDamage
+//				damage / 2f, // minDamage
+//				CollisionClass.PROJECTILE_FF, // collisionClass
+//				CollisionClass.PROJECTILE_FIGHTER, // collisionClassByFighter
+//				3f, // particleSizeMin
+//				3f, // particleSizeRange
+//				0.5f, // particleDuration
+//				150, // particleCount
+//				new Color(145, 245, 255,100), // particleColor
+//				new Color(145, 245, 255, 50)  // explosionColor
+//		);
+//
+//		spec.setDamageType(DamageType.HIGH_EXPLOSIVE);
+//		spec.setUseDetailedExplosion(false);
+//		spec.setSoundSetId("explosion_guardian");
+//		return spec;
+//	}
 }
 
 

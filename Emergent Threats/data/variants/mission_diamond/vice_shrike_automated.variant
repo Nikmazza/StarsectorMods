@@ -1,9 +1,8 @@
 {
     "displayName": "Automated",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 3,
     "fluxVents": 20,
     "hullId": "vice_shrike_ai",
-	"goalVariant": false,
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",

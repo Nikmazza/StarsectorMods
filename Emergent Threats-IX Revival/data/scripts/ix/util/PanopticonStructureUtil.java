@@ -5,6 +5,9 @@ import java.util.List;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
+
+import lunalib.lunaSettings.LunaSettings;
 
 public class PanopticonStructureUtil {
 	
@@ -17,13 +20,22 @@ public class PanopticonStructureUtil {
 	private static String P_NODE = "ix_panopticon_player_node";
 	private static String CORONAL_CONDITION = "aotd_coronal_market_cond";
 
-	
 	private static List<String> STRUCTURE_LIST = new ArrayList<String>();
 	static {
 		STRUCTURE_LIST.add("tw_cloudburst_academy");
 		STRUCTURE_LIST.add("tw_fleet_embassy");
 		STRUCTURE_LIST.add("ix_embassy_player");
 		STRUCTURE_LIST.add("ix_surveillance_center");
+	}
+	
+	public static void applyBlackMarketChange(MarketAPI market, String command) {
+		if (command.equals("apply")) {
+			boolean isEnabled = LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_monitor_enabled");
+			if (isEnabled) market.removeSubmarket(Submarkets.SUBMARKET_BLACK);
+			else market.addSubmarket(Submarkets.SUBMARKET_BLACK);
+		}
+		//excludes player run colonies
+		else if (market.hasSubmarket(Submarkets.SUBMARKET_OPEN)) market.addSubmarket(Submarkets.SUBMARKET_BLACK);
 	}
 	
 	public static boolean panopticonIsActiveCheck(MarketAPI m, boolean isCoreWorld) {
@@ -33,6 +45,7 @@ public class PanopticonStructureUtil {
 				if (m.hasIndustry(s) && !m.getIndustry(s).isHidden() && CORE_ID.equals(m.getIndustry(s).getAICoreId())) isActive = true;
 			}
 		}
+		//disabled for now, trying out core set memflag instead of running script every time for every node
 		else {
 			//old nodes are not active on worlds where a core would be present
 			for (String s: STRUCTURE_LIST) {
@@ -101,6 +114,12 @@ public class PanopticonStructureUtil {
 							m.removeIndustry(P_NODE, null, false);
 						}
 						else if (m.hasIndustry(P_CORE) && m.getIndustry(P_CORE).isHidden()) m.addIndustry(P_NODE);
+						else if ((m.hasIndustry(CORE) && m.getIndustry(CORE).isDisrupted()) 
+								|| (m.hasIndustry(NODE) && m.getIndustry(NODE).isDisrupted())) {
+						m.removeIndustry(CORE, null, false);
+						m.removeIndustry(NODE, null, false);
+						m.addIndustry(P_NODE);
+						}
 					}
 				}
 			}

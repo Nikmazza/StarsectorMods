@@ -12,6 +12,7 @@
   "shieldRadius": 100,
   "viewOffset": 0,
   "builtInMods": [
+    "ballistic_rangefinder",
     "missile_autoloader"
   ],
   "weaponSlots": [
@@ -36,7 +37,7 @@
     {
       "id": "WS0003",
       "size": "SMALL",
-      "type": "COMPOSITE",
+      "type": "BALLISTIC",
       "mount": "HARDPOINT",
       "arc": 10,
       "angle": 0,
@@ -45,7 +46,7 @@
     {
       "id": "WS0004",
       "size": "SMALL",
-      "type": "COMPOSITE",
+      "type": "BALLISTIC",
       "mount": "HARDPOINT",
       "arc": 10,
       "angle": -0,
@@ -112,6 +113,22 @@
       "width": 24,
       "angle": -180,
       "contrailSize": 24,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-76, 7.5],
+      "length": 64,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-76, -7.5],
+      "length": 64,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
       "style": "LOW_TECH"
     },
     {

@@ -15,7 +15,7 @@
 	"spriteName":"graphics/vice/ships/hidden/praxis.png",
 	"removeWeaponSlots":[],
 	"removeEngineSlots":[],
-	"removeBuiltInMods":["civgrade", "surveying_equipment"],
+	"removeBuiltInMods":["civgrade", "surveying_equipment", "codex_unlockable"],
 	"removeBuiltInWeapons":[],
 	"removeBuiltInWings":["mining_drone_wing"],
 	"builtInMods":["vice_praxis_hull"],

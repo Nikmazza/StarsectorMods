@@ -1,0 +1,71 @@
+{
+  "hullName": "Lux(XIV)",
+  "hullId": "csp_xivlux",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/xiv lux.png",
+  "style": "HIGH_TECH",
+  "height": 25,
+  "width": 28,
+  "center": [14, 13],
+  "collisionRadius": 21,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 21,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "csp_xivremnantF"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": 0,
+      "locations": [11, 0]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": 0,
+      "locations": [11, 3]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": 0,
+      "locations": [11, -3]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, 9],
+      "length": 14,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13, -9],
+      "length": 14,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -11, 14,
+    11, 8,
+    11, -8,
+    -11, -14
+  ]
+}

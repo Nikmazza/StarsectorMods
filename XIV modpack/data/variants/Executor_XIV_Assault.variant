@@ -1,0 +1,69 @@
+{
+  "variantId": "Executor_XIV_Assault",
+  "hullId": "Executor_XIV",
+  "displayName": "Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 21,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightneedler",
+        "WS0002": "lightneedler",
+        "WS0003": "heavyneedler",
+        "WS0004": "heavyneedler",
+        "WS0005": "lightmortar",
+        "WS0006": "lightmortar",
+        "WS0007": "annihilatorpod",
+        "WS0008": "annihilatorpod",
+        "WS0009": "cyclone",
+        "WS0010": "lightmortar",
+        "WS0011": "lightmortar",
+        "WS0012": "arbalest",
+        "WS0013": "arbalest",
+        "WS0014": "bomb",
+        "WS0015": "bomb",
+        "WS0016": "arbalest",
+        "WS0017": "arbalest",
+        "WS0018": "heavymauler",
+        "WS0019": "arbalest",
+        "WS0020": "lightneedler",
+        "WS0021": "lightneedler",
+        "WS0022": "lightneedler",
+        "WS0023": "lightneedler",
+        "WS0024": "heavymauler",
+        "WS0025": "arbalest",
+        "WS0026": "chaingun",
+        "WS0027": "chaingun",
+        "WS0028": "lightdualmg",
+        "WS0029": "lightdualmg",
+        "WS0030": "lightmortar",
+        "WS0031": "lightmortar",
+        "WS0032": "lightmortar",
+        "WS0033": "lightmortar",
+        "WS0034": "bomb",
+        "WS0035": "bomb",
+        "WS0036": "bomb",
+        "WS0037": "bomb",
+        "WS0038": "lightdualmg",
+        "WS0039": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing",
+    "broadsword_wing",
+    "warthog_wing",
+    "warthog_wing"
+  ]
+}

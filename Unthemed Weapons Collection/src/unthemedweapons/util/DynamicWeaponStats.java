@@ -32,12 +32,12 @@ public class DynamicWeaponStats {
             bonuses[1] += stats.getBeamWeaponDamageMult().getPercentMod();
             bonuses[2] *= stats.getBeamWeaponDamageMult().getMult();
         }
-        MutableStat relevantStat = null;
-        switch (weapon.getType()) {
-            case BALLISTIC: relevantStat = stats.getBallisticWeaponDamageMult(); break;
-            case ENERGY: relevantStat = stats.getEnergyWeaponDamageMult(); break;
-            case MISSILE: relevantStat = stats.getMissileWeaponDamageMult(); break;
-        }
+        MutableStat relevantStat = switch (weapon.getType()) {
+            case BALLISTIC -> stats.getBallisticWeaponDamageMult();
+            case ENERGY -> stats.getEnergyWeaponDamageMult();
+            case MISSILE -> stats.getMissileWeaponDamageMult();
+            default -> null;
+        };
 
         if (relevantStat != null) {
             bonuses[0] += relevantStat.getFlatMod();
@@ -121,19 +121,19 @@ public class DynamicWeaponStats {
             if (spec.isInterruptibleBurst()) {
                 burstSize = 1;
             }
-            fluxRatio = weapon.getFluxCostToFire() * getFluxCostMult(weapon) / burstSize / ((ProjectileWeaponSpecAPI) spec).getEnergyPerShot();
+            fluxRatio = weapon.getFluxCostToFire() / burstSize / ((ProjectileWeaponSpecAPI) spec).getEnergyPerShot();
         }
         else {
             if (weapon.isBurstBeam()) {
                 float totalTime = spec.getBurstDuration() + weapon.getCooldown();
                 totalTime += (float) ReflectionUtils.invokeMethod(spec, "getChargeupTime");
-                fluxRatio = weapon.getFluxCostToFire() * getFluxCostMult(weapon) / (totalTime) / spec.getDerivedStats().getFluxPerSecond();
+                fluxRatio = weapon.getFluxCostToFire() / (totalTime) / baseFluxPerSecond;
                 float origDelay = totalTime;
                 float newDelay = totalTime - weapon.getCooldown() + weapon.getCooldown() / getRoFMult(weapon);
                 rofMult = origDelay / newDelay;
             }
             else {
-                fluxRatio = weapon.getFluxCostToFire() * getFluxCostMult(weapon) / spec.getDerivedStats().getFluxPerSecond();
+                fluxRatio = weapon.getFluxCostToFire() / baseFluxPerSecond;
             }
         }
 
@@ -226,17 +226,4 @@ public class DynamicWeaponStats {
         }
         return mult;
     }
-
-    // Anything that's a StatBonus should already be taken into account,
-    // anything that's a MutableStat needs to be manually incorporated
-    // getBeamWeaponFluxCostMult is just a multiplier!
-    private static float getFluxCostMult(WeaponAPI weapon) {
-        MutableShipStatsAPI stats = weapon.getShip().getMutableStats();
-        float mult = 1f;
-        if (weapon.isBeam()) {
-            mult *= stats.getBeamWeaponFluxCostMult().getModifiedValue();
-        }
-        return mult;
-    }
-
 }

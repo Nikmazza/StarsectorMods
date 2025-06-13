@@ -1,7 +1,7 @@
 {
     "displayName": "DEM Strike",
     "fluxCapacitors": 5,
-    "fluxVents": 12,
+    "fluxVents": 15,
     "goalVariant": true,
     "hullId": "swp_archer",
     "hullMods": [
@@ -37,7 +37,11 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS0007": "pdburst"}
+            "weapons": {
+                "WS0007": "pdlaser",
+                "WS0008": "pdlaser",
+                "WS0009": "pdlaser"
+            }
         }
     ]
 }

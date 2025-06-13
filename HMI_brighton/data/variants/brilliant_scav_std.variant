@@ -1,0 +1,58 @@
+{
+  "variantId": "brilliant_scav_std",
+  "hullId": "brilliant_scav",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 28,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0010": "autopulse"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "harpoonpod",
+        "WS0006": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "miningblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "heavyac",
+        "WS0007": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "vulcan",
+        "WS0004": "vulcan",
+        "WS0008": "vulcan",
+        "WS0009": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

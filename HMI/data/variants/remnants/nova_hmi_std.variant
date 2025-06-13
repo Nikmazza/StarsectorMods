@@ -1,0 +1,56 @@
+{
+  "variantId": "nova_hmi_std",
+  "hullId": "nova",
+  "displayName": "Strike",
+  "goalVariant": false,
+  "fluxCapacitors": 32,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "eccm",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "mark9_rem",
+        "WS 001": "mark9_rem"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "sabotpod",
+        "WS 007": "sabotpod",
+        "WS 008": "sabotpod",
+        "WS 009": "sabotpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "miningblaster",
+        "WS 003": "miningblaster",
+        "WS 004": "miningblaster",
+        "WS 005": "miningblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 010": "pdburst",
+        "WS 011": "pdburst",
+        "WS 012": "pdburst",
+        "WS 013": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -55,6 +55,7 @@ public class AdaptiveDroneBay extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (ship.isFrigate()) return false;
 		if (ship.getHullSpec().getHullId().equals(MIMESIS) || ship.getHullSpec().getHullId().equals(MIMESIS_D)) return true;
 		if (ship.getVariant().hasHullMod("ix_odyssey_retrofit")) return false;
@@ -71,6 +72,7 @@ public class AdaptiveDroneBay extends BaseHullMod {
 	}
 
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("module");
 		if (ship.isFrigate()) return "Cannot be installed on frigate";
 		if (ship.getVariant().hasHullMod("ix_odyssey_retrofit")) return "Incompatible hull, install Terminus Relay to enable drones";

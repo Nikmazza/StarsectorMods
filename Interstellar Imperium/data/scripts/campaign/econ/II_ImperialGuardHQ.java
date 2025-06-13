@@ -241,8 +241,7 @@ public class II_ImperialGuardHQ extends BaseIndustry implements RouteFleetSpawne
     public int getCount(IGPatrolType... types) {
         int count = 0;
         for (RouteData data : RouteManager.getInstance().getRoutesForSource(getRouteSourceId())) {
-            if (data.getCustom() instanceof IGPatrolFleetData) {
-                IGPatrolFleetData custom = (IGPatrolFleetData) data.getCustom();
+            if (data.getCustom() instanceof IGPatrolFleetData custom) {
                 for (IGPatrolType type : types) {
                     if (type == custom.type) {
                         count++;
@@ -287,8 +286,7 @@ public class II_ImperialGuardHQ extends BaseIndustry implements RouteFleetSpawne
 
         if (reason == FleetDespawnReason.REACHED_DESTINATION) {
             RouteData route = RouteManager.getInstance().getRoute(getRouteSourceId(), fleet);
-            if (route.getCustom() instanceof IGPatrolFleetData) {
-                IGPatrolFleetData custom = (IGPatrolFleetData) route.getCustom();
+            if (route.getCustom() instanceof IGPatrolFleetData custom) {
                 if (custom.spawnFP > 0) {
                     float fraction = fleet.getFleetPoints() / custom.spawnFP;
                     returningPatrolValue += fraction;
@@ -298,8 +296,7 @@ public class II_ImperialGuardHQ extends BaseIndustry implements RouteFleetSpawne
 
         if ((reason == FleetDespawnReason.DESTROYED_BY_BATTLE) || (reason == FleetDespawnReason.NO_MEMBERS)) {
             RouteData route = RouteManager.getInstance().getRoute(getRouteSourceId(), fleet);
-            if (route.getCustom() instanceof IGPatrolFleetData) {
-                IGPatrolFleetData custom = (IGPatrolFleetData) route.getCustom();
+            if (route.getCustom() instanceof IGPatrolFleetData custom) {
                 if (custom.type == IGPatrolType.DEFENDER) {
                     defenderSpawnWeight = -1f * DEFENDER_RESPAWN_TIMER_MINIMUM * DEFENDER_SPAWN_WEIGHT_PER_DAY;
                 }
@@ -319,21 +316,19 @@ public class II_ImperialGuardHQ extends BaseIndustry implements RouteFleetSpawne
         float freighter = 0f;
         String fleetType = type.getFleetType();
         switch (type) {
-            case FAST:
+            case FAST ->
                 combat = Math.round(3f + (float) random.nextFloat() * 2f) * 5f;
-                break;
-            case COMBAT:
+            case COMBAT -> {
                 combat = Math.round(6f + (float) random.nextFloat() * 3f) * 5f;
                 tanker = Math.round((float) random.nextFloat()) * 5f;
-                break;
-            case HEAVY:
+            }
+            case HEAVY -> {
                 combat = Math.round(10f + (float) random.nextFloat() * 5f) * 5f;
                 tanker = Math.round((float) random.nextFloat()) * 10f;
                 freighter = Math.round((float) random.nextFloat()) * 10f;
-                break;
-            case DEFENDER:
+            }
+            case DEFENDER ->
                 combat = 20 * 5f;
-                break;
         }
 
         FleetParamsV3 params = new FleetParamsV3(
@@ -380,18 +375,14 @@ public class II_ImperialGuardHQ extends BaseIndustry implements RouteFleetSpawne
         String postId = Ranks.POST_PATROL_COMMANDER;
         String rankId = Ranks.SPACE_COMMANDER;
         switch (type) {
-            case FAST:
+            case FAST ->
                 rankId = Ranks.SPACE_LIEUTENANT;
-                break;
-            case COMBAT:
+            case COMBAT ->
                 rankId = Ranks.SPACE_COMMANDER;
-                break;
-            case HEAVY:
+            case HEAVY ->
                 rankId = Ranks.SPACE_CAPTAIN;
-                break;
-            case DEFENDER:
+            case DEFENDER ->
                 rankId = Ranks.SPACE_ADMIRAL;
-                break;
         }
 
         fleet.getCommander().setPostId(postId);

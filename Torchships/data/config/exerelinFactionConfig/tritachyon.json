@@ -1,5 +1,5 @@
 {
-    "startShipsCombatLarge":[
-      ["TADA_whirlwind_standard", "TADA_cassicus_defense", "TADA_lasherTT_standard"],
-    ],
+    "startShipsSolo":[["TADA_lasherTT_attack"]],
+    "startShipsCombatSmall":[["TADA_cassicus_ftrsupport", "TADA_lasherTT_attack", "TADA_lasherTT_attack"]],
+    "startShipsCombatLarge":[["TADA_whirlwind_elite", "TADA_cassicus_escort", "TADA_lasherTT_support"]],
 }

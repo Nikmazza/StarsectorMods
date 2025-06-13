@@ -1,0 +1,17 @@
+{
+	"baseHullId":"nes_hampter",
+	"skinHullId":"nes_hampter_pirates",
+	"hullName":"Hampter (P)",
+	"descriptionId":"nes_hampter",
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"tags":["pirate_bp"],
+	#"tags":["rare_bp"],
+	"tech":"Pirate",
+	"spriteName":"graphics/ships/nes_hampter_pirates.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInWeapons":{
+    },    
+}

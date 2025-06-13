@@ -136,24 +136,19 @@ public class II_TitanStrike extends BaseCommandPlugin {
         options = dialog.getOptionPanel();
 
         switch (command) {
-            case "showDefenses":
-            case "goBackToDefenses": {
+            case "showDefenses", "goBackToDefenses" -> {
                 /* Inject new options into existing menu! */
                 clearTemp();
                 showDefenses();
-                break;
             }
-            case "iiTitanStrikeMenu":
+            case "iiTitanStrikeMenu" ->
                 titanStrikeMenu();
-                break;
-            case "iiTitanStrikeConfirm":
+            case "iiTitanStrikeConfirm" ->
                 titanStrikeConfirm();
-                break;
-            case "iiTitanStrikeResult":
+            case "iiTitanStrikeResult" ->
                 titanStrikeResult();
-                break;
-            default:
-                break;
+            default -> {
+            }
         }
 
         return true;
@@ -331,20 +326,31 @@ public class II_TitanStrike extends BaseCommandPlugin {
             canTitanStrike = true;
         }
 
+        // Logic differs from vanilla but matches Nex, which is what players care about
         temp.willBecomeHostile.clear();
         temp.willBecomeHostile.add(faction);
 
-        List<FactionAPI> nonHostile = new ArrayList<>();
-        for (FactionAPI fac : Global.getSector().getAllFactions()) {
-            if (temp.willBecomeHostile.contains(fac)) {
-                continue;
-            }
+        boolean hidden = market.isHidden();
 
-            if (fac.getCustomBoolean(Factions.CUSTOM_CARES_ABOUT_ATROCITIES)) {
-                boolean facHostile = fac.isHostileTo(Factions.PLAYER);
-                temp.willBecomeHostile.add(fac);
-                if (!facHostile) {
-                    nonHostile.add(fac);
+        List<FactionAPI> nonHostile = new ArrayList<>();
+        List<FactionAPI> vengeful = new ArrayList<>();
+
+        if (!hidden && !Global.getSettings().optBoolean("nex_ignoreSatBomb", false)) {
+            for (FactionAPI fac : Global.getSector().getAllFactions()) {
+                if (temp.willBecomeHostile.contains(fac)) {
+                    continue;
+                }
+
+                if (fac.getCustomBoolean(Factions.CUSTOM_CARES_ABOUT_ATROCITIES)) {
+                    if (IIModPlugin.isExerelin && (faction.getRelationshipLevel(market.getFaction()) == RepLevel.VENGEFUL)) {
+                        vengeful.add(faction);
+                    } else {
+                        boolean facHostile = fac.isHostileTo(Factions.PLAYER);
+                        temp.willBecomeHostile.add(fac);
+                        if (!facHostile) {
+                            nonHostile.add(fac);
+                        }
+                    }
                 }
             }
         }
@@ -364,6 +370,23 @@ public class II_TitanStrike extends BaseCommandPlugin {
             hostileInfo.setBulletedListMode(BaseIntelPlugin.INDENT);
             float hostileInitPad = 0f;
             for (FactionAPI fac : nonHostile) {
+                hostileInfo.addPara(Misc.ucFirst(fac.getDisplayName()), fac.getBaseUIColor(), hostileInitPad);
+                hostileInitPad = 3f;
+            }
+            hostileInfo.setBulletedListMode(null);
+
+            text.addTooltip();
+        }
+
+        if (!vengeful.isEmpty()) {
+            text.addPara("Due to their hatred of " + faction.getDisplayNameWithArticle() + ", the following factions can be expected to overlook your crime:");
+
+            TooltipMakerAPI hostileInfo = text.beginTooltip();
+            hostileInfo.setParaFontDefault();
+
+            hostileInfo.setBulletedListMode(BaseIntelPlugin.INDENT);
+            float hostileInitPad = 0f;
+            for (FactionAPI fac : vengeful) {
                 hostileInfo.addPara(Misc.ucFirst(fac.getDisplayName()), fac.getBaseUIColor(), hostileInitPad);
                 hostileInitPad = 3f;
             }
@@ -506,8 +529,7 @@ public class II_TitanStrike extends BaseCommandPlugin {
             }
 
             boolean hasStar = false;
-            if (market.getLocation() instanceof StarSystemAPI) {
-                StarSystemAPI marketSystem = (StarSystemAPI) market.getLocation();
+            if (market.getLocation() instanceof StarSystemAPI marketSystem) {
                 for (PlanetAPI planet : marketSystem.getPlanets()) {
                     if (planet.getSpec().isStar() && !planet.getSpec().isNebulaCenter() && !planet.getSpec().isBlackHole()) {
                         hasStar = true;
@@ -625,8 +647,7 @@ public class II_TitanStrike extends BaseCommandPlugin {
             }
 
             boolean hasStar = false;
-            if (market.getLocation() instanceof StarSystemAPI) {
-                StarSystemAPI marketSystem = (StarSystemAPI) market.getLocation();
+            if (market.getLocation() instanceof StarSystemAPI marketSystem) {
                 for (PlanetAPI planet : marketSystem.getPlanets()) {
                     if (planet.getSpec().isStar() && !planet.getSpec().isNebulaCenter() && !planet.getSpec().isBlackHole()) {
                         hasStar = true;

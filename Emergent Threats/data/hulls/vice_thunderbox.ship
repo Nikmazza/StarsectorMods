@@ -1,0 +1,217 @@
+{
+  "hullName": "Thunderbox",
+  "hullId": "vice_thunderbox",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/vice/ships/thunderbox.png",
+  "style": "LOW_TECH",
+  "height": 310,
+  "width": 215,
+  "center": [107, 162],
+  "collisionRadius": 195,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 195,
+  "viewOffset": 0,
+  "builtInMods": ["vice_unified_targeting_core", "vice_vast_launch_bays"],
+  "builtInWeapons": {"WS MRL": "vice_spinebreaker"},
+  "weaponSlots": [
+    {
+      "id": "WS MRL",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [138, 0]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [133, 28]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [133, -28]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 50,
+      "locations": [118, 67]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -40,
+      "locations": [118, -67]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 90,
+      "locations": [10, 67]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -90,
+      "locations": [10, -67]
+    },
+    {
+      "id": "WS 007",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [-49, 79]
+    },
+    {
+      "id": "WS 008",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [-49, -79]
+    },
+    {
+      "id": "WS 009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 125,
+      "locations": [-87, 84]
+    },
+    {
+      "id": "WS 010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -125,
+      "locations": [-87, -84]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 90,
+      "locations": [
+        40, 70,
+        58, 60,
+        75, 70
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 270,
+      "locations": [
+        40, -70,
+        58, -60,
+        75, -70
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-157, 26],
+      "length": 57,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-157, -26],
+      "length": 57,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-138, 68],
+      "length": 57,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 44,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-138, -68],
+      "length": 57,
+      "width": 24,
+      "angle": -180,
+      "contrailSize": 44,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-157, -6],
+      "length": 70,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "COBRA_BOMBER"
+    },
+    {
+      "location": [-157, 0],
+      "length": 70,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "COBRA_BOMBER"
+    },
+    {
+      "location": [-157, 6],
+      "length": 70,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "COBRA_BOMBER"
+    }
+  ],
+  "bounds": [
+    -155, -36,
+    -144, -38,
+    -133, -84,
+    -33, -95,
+    -2, -86,
+    133, -86,
+    141, -65,
+    141, 65,
+    133, 86,
+    -2, 86,
+    -33, 95,
+    -133, 84,
+    -144, 38,
+    -155, 36
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "bounds": [
+    34,
+    28,
+    32,
+    -28,
+    -31,
+    -27,
+    -32,
+    26
+  ],
+  "builtInMods": [
+    "militarized_subsystems",
+    "comp_storage",
+    "second_BG_a"
+  ],
+  "builtInWings": [
+    "borer_wing"
+  ],
+  "center": [
+    39,
+    45
+  ],
+  "collisionRadius": 70,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -40,
+        20
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -40,
+        -19
+      ],
+      "style": "LOW_TECH",
+      "width": 16
+    },
+    {
+      "angle": 140,
+      "contrailSize": 128,
+      "length": 4,
+      "location": [
+        -22,
+        35
+      ],
+      "style": "LOW_TECH",
+      "width": 2
+    },
+    {
+      "angle": 145,
+      "contrailSize": 128,
+      "length": 4,
+      "location": [
+        -30,
+        33
+      ],
+      "style": "LOW_TECH",
+      "width": 3
+    },
+    {
+      "angle": 220,
+      "contrailSize": 128,
+      "length": 4,
+      "location": [
+        -22,
+        -33
+      ],
+      "style": "LOW_TECH",
+      "width": 2
+    },
+    {
+      "angle": 215,
+      "contrailSize": 128,
+      "length": 4,
+      "location": [
+        -30,
+        -32
+      ],
+      "style": "LOW_TECH",
+      "width": 3
+    }
+  ],
+  "height": 92,
+  "hullId": "shepherd_iia",
+  "hullName": "Shepherd (II)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    1,
+    0
+  ],
+  "shieldRadius": 70,
+  "spriteName": "graphics/ships/shepherd_iia.png",
+  "style": "LOW_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": -75,
+      "arc": 200,
+      "id": "WS 007",
+      "locations": [
+        -3,
+        -23
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 0,
+      "arc": 20,
+      "id": "WS 008",
+      "locations": [
+        31,
+        -19
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "COMPOSITE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 003",
+      "locations": [
+        -3,
+        19,
+        12,
+        19,
+        26,
+        19
+      ],
+      "mount": "HIDDEN",
+      "size": "SMALL",
+      "type": "LAUNCH_BAY"
+    },
+    {
+      "angle": 105,
+      "arc": 200,
+      "id": "WS0001",
+      "locations": [
+        -5,
+        2
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    }
+  ],
+  "width": 78
+}

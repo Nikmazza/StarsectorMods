@@ -2,7 +2,7 @@
 	"baseHullId":"ii_module_combat",
 	"skinHullId":"ii_module_combat_extended",
 	"descriptionPrefix":"Modified with extended shields.",
-	"restoreToBaseHull":true,
+	"restoreToBaseHull":false,
 	"removeWeaponSlots":[], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":[], 		# hullmod ids

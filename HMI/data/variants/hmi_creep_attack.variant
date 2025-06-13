@@ -3,8 +3,8 @@
   "hullId": "hmi_creep",
   "displayName": "Attack",
   "goalVariant": true,
-  "fluxCapacitors": 11,
-  "fluxVents": 11,
+  "fluxCapacitors": 6,
+  "fluxVents": 16,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -41,8 +41,6 @@
       "mode": "ALTERNATING",
       "weapons": {
         "WS0003": "clyde_mg",
-        "WS0005": "chaingun",
-        "WS0006": "chaingun",
         "WS0007": "hmi_nailgun",
         "WS0008": "hmi_nailgun"
       }
@@ -51,6 +49,8 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
+        "WS0005": "med_frag_mg",
+        "WS0006": "med_frag_mg",
         "WS0009": "lightmg",
         "WS0011": "lightdualmg",
         "WS0012": "vulcan",

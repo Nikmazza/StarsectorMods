@@ -1,9 +1,57 @@
+## v1.4.0
+- Updated for Starsector 0.98
+- Compiled for Java17 and Kotlin 2.0
+- Made KOL and [REDACTED] fleets unlockable for the simulator.
+- Added rare main menu setpieces.
+- Fixed a crash on Mac & Linux with the Alysse AI.
+- Dusk EM anomalies nerfed: unlike vanilla, these will now respect hardflux levels when determining shield penetration
+- Improved some [VERY REDACTED] flavor descriptions.
+- Kiyohime sprite reworked
+- Seiryu sprite touchups
+- Nian is now much more aggressive as an enemy.
+- Improved Linggui's normal maps
+- Wani - improved slot types to encourage build freedom
+- Wani, Suzaku System:
+  - Its system is now much more responsive.
+  - Its system can now be used to dodge through attacks.
+- Added some visual effects
+- Fixed a few crash that could occur while using the special Dusk AI.
+
+## v1.3.6
+- The Null Gate can now be selected as a travel option when interacting with a gate, if its been scanned.
+- The Null Gate now has custom travel VFX.
+- The Null Gate should now be fully scanned when traveled to, it was only partialy scanned before.
+- The Null Gate glitch can now only happen once per save, and only after the main story has been completed.
+
+## v1.3.5
+- Fixed Mimosa Lidar AI for real this time
+- Fixed Crash on Ninaya Boss fight
+
+## v1.3.4
+- Linggui:
+  - Fully Resprited
+  - [Buff] +2 Medium missile turrets
+  - [Buff] Ordnance Points 310 -> 330
+- Drastically improved Ninmah boss fight AI
+- Drastically improved Dusk Core AI 
+- Defeating both Elysian Boss's no longer shuts down all the Dawn and Dusk fleets
+- Defeating the Dusk Boss no longer shuts down all the Dawn fleets
+- Dawntide fleets no longer effected by its system's star terrain effect
+- Mount and AI tag changes to fix Mimosa's Lidar system and Nian's facing
+- Fixed rare CTD on Alysse's AI when switching to and from autopilot while piloting one
+
+## v1.3.3
+- Re-Added the VFX Shader to the location it was removed from, will only be in affect if you have GraphicsLib shaders enabled now.
+- Fixed the Dawntide Builtin not applying the solar shielding effect.
+- Fixed a crash that can occur when a Nian-Class ship takes damage.
+
 ## v1.3.2
-- Removed some VFX that due to an issue caused peoples screen to turn mostly black in a certain location
+- Removed some VFX that due to an issue caused some peoples screen to turn mostly black in a certain location
 - Fixed the Nians Built-in weapon being able to spawn independently of the ship
 
 ## v1.3.1
 -Fixes linking intel location not showing up after fighting Ninaya
+
 ## v1.3.0
 
 ### Knights of Ludd

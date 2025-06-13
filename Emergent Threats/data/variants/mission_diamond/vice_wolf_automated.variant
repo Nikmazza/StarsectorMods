@@ -2,7 +2,6 @@
     "displayName": "Automated",
     "fluxCapacitors": 9,
     "fluxVents": 10,
-    "goalVariant": false,
     "hullId": "vice_wolf_ai",
     "hullMods": [
         "fluxdistributor",
@@ -28,8 +27,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "pdlaser",
-                "WS 003": "pdlaser"
+                "WS 002": "lrpdlaser",
+                "WS 003": "lrpdlaser"
             }
         }
     ]

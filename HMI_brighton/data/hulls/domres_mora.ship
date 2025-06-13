@@ -1,0 +1,208 @@
+{
+  "hullName": "Mora (DomRes)",
+  "hullId": "domres_mora",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/domain_resurgent/hmidr_mora.png",
+  "style": "LOW_TECH",
+  "height": 190,
+  "width": 228,
+  "center": [114, 95],
+  "collisionRadius": 150,
+  "shieldCenter": [1, 1],
+  "shieldRadius": 140,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder",
+    "bdeck",
+    "automated",
+	"hmi_domres_info"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": 0,
+      "locations": [45, 85]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 40,
+      "locations": [20, 81]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -50,
+      "locations": [21, -88]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 121,
+      "angle": -9,
+      "locations": [41, 46]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 217,
+      "angle": 38,
+      "locations": [65, -45]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -152,
+      "locations": [-27, -95]
+    },
+    {
+      "id": "WS 011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 118,
+      "locations": [-7, 104]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 202,
+      "angle": -37,
+      "locations": [65, -63]
+    },
+    {
+      "id": "WS 013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 18.5,
+      "locations": [41, 63]
+    },
+    {
+      "id": "WS 014",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 180,
+      "locations": [-66, -1]
+    },
+    {
+      "id": "WS 015",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 300,
+      "angle": 0,
+      "locations": [-37, 21]
+    },
+    {
+      "id": "WS 016",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 300,
+      "angle": 0,
+      "locations": [
+        -38, -14,
+        -38, -20
+      ]
+    },
+    {
+      "id": "WS 017",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 300,
+      "angle": 0,
+      "locations": [
+        17.5, 11,
+        11, -3,
+        19, 18,
+        15.5, -11.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-68, 78],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-71, 66],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-71, -62],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-68, -74],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    49, 91,
+    55, 34.5,
+    79, 32,
+    80, -14,
+    72, -24.5,
+    80, -30,
+    79.5, -76.5,
+    58, -77.5,
+    57, -90,
+    37.5, -92,
+    37, -109,
+    -39.5, -108,
+    -66.5, -83.5,
+    -72.5, -55.5,
+    -53, -45,
+    -94, -31,
+    -71, -22.5,
+    -71, 24.5,
+    -93.5, 34,
+    -53.5, 50,
+    -73.5, 60.5,
+    -67, 88,
+    -17.5, 110.5,
+    37, 109,
+    37.5, 92
+  ]
+}

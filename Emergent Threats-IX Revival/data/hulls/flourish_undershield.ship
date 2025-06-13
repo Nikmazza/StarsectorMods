@@ -6,10 +6,10 @@
   "style": "IX_FLOURISHSHIELD",
   "height": 4,
   "width": 4,
-  "center": [31.5, 32],
-  "collisionRadius": 58,
-  "shieldCenter": [0, -0],
-  "shieldRadius": 58,
+  "center": [32, 32],
+  "collisionRadius": 62,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 62,
   "viewOffset": 0,
   "builtInMods": [
     "advancedshieldemitter",
@@ -22,8 +22,8 @@
   "engineSlots": [],
   "bounds": [
     -13, -0,
-    0, 28.5,
+    0, 27,
     13, -0,
-    0, -28.5
+    0, -27
   ]
 }

@@ -1,0 +1,76 @@
+{
+  "variantId": "csp_stheno_standard",
+  "hullId": "csp_stheno",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 19,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "missile_autoloader"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0015": "amblaster",
+        "WS0016": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "pulselaser",
+        "WS0004": "pulselaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "miningblaster",
+        "WS0002": "miningblaster"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "breachpod",
+        "WS0006": "breachpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "pdlaser",
+        "WS0010": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "pdlaser",
+        "WS0008": "pdlaser",
+        "WS0011": "pdlaser",
+        "WS0012": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "sabot",
+        "WS0014": "sabot"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

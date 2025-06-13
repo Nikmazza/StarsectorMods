@@ -3,8 +3,8 @@
   "hullId": "roach_king",
   "displayName": "Outdated",
   "goalVariant": true,
-  "fluxCapacitors": 20,
-  "fluxVents": 30,
+  "fluxCapacitors": 10,
+  "fluxVents": 25,
   "quality": 0,
   "permaMods": [
     "fragile_subsystems",

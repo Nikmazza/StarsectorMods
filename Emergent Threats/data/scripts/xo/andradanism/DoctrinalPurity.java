@@ -13,6 +13,10 @@ import second_in_command.specs.SCBaseSkillPlugin;
 
 public class DoctrinalPurity extends SCBaseSkillPlugin {
 	
+	//1.1 * 1.1363 = 1.2
+	private static float FIGHTER_DAMAGE_BONUS = 13.63f;
+	private static float ENERGY_RANGE_BONUS = 100f;
+	
 	@Override
     public String getAffectsString() {
         return "all carriers with a Fleet Override";
@@ -23,11 +27,23 @@ public class DoctrinalPurity extends SCBaseSkillPlugin {
 		tooltip.addPara("Discipline is life.", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addPara("  -Quotations from the Supreme Executor", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addSpacer(10f);
-		tooltip.addPara("Built-in and Modular Fleet Override fighter damage bonus increased by 5%%", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addPara("Built-in and Modular Fleet Override damage bonus increased to 15%%", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addPara("Strike craft energy weapon range increased by 100 su", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("Gain access to the Modular Fleet Override hullmod", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 	}
     
-	//bonus handled by hullmods
+	@Override
+	public void applyEffectsToFighterSpawnedByShip(SCData data, ShipAPI fighter, ShipAPI ship, String id) {
+		MutableShipStatsAPI stats = fighter.getMutableStats();
+		ShipVariantAPI v = ship.getVariant();
+		if (v.hasHullMod("vice_fleet_override") || v.hasHullMod("vice_modular_fleet_override")) {
+			stats.getBallisticWeaponDamageMult().modifyMult(id, 1f + FIGHTER_DAMAGE_BONUS * 0.01f);
+			stats.getEnergyWeaponDamageMult().modifyMult(id, 1f + FIGHTER_DAMAGE_BONUS * 0.01f);
+			stats.getMissileWeaponDamageMult().modifyMult(id, 1f + FIGHTER_DAMAGE_BONUS * 0.01f);
+			stats.getEnergyWeaponRangeBonus().modifyFlat(id, ENERGY_RANGE_BONUS);
+		}
+	}
+		
 	@Override
 	public void onActivation(SCData data) {
 		if (data.isPlayer()) {

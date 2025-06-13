@@ -1,0 +1,115 @@
+{
+  "hullName": "Vic Viper",
+  "hullId": "csp_vicviper",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_ Vicviper.png",
+  "style": "HIGH_TECH",
+  "height": 54,
+  "width": 48,
+  "center": [24, 25],
+  "collisionRadius": 35,
+  "shieldCenter": [-0.5, -0],
+  "shieldRadius": 31.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "hardenedshieldemitter",
+    "solar_shielding",
+    "terminator_core"
+  ],
+  "builtInWeapons": {
+    "WS0001": "irpulse",
+    "WS0002": "irpulse",
+    "WS0003": "csp_option_lance",
+    "WS0004": "csp_option_lance"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 70,
+      "angle": 0,
+      "locations": [5, 15.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 70,
+      "angle": -0,
+      "locations": [5, -15.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [16.5, 5.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [16.5, -5.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-24, 13],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "CUSTOM",
+      "styleId": "COBRA_BOMBER"
+    },
+    {
+      "location": [-24, -13],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "COBRA_BOMBER"
+    },
+    {
+      "location": [-11.5, -0],
+      "length": 34,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "CUSTOM",
+      "styleId": "COBRA_BOMBER"
+    }
+  ],
+  "bounds": [
+    -12, 2,
+    -24, 4,
+    -24, 16,
+    -13, 17,
+    -6.5, 23,
+    -3, 18,
+    6, 18,
+    19, 12,
+    20, 7,
+    29, 5.5,
+    18, -0,
+    29, -5.5,
+    20, -7,
+    19, -12,
+    6, -18,
+    -3, -18,
+    -7, -23,
+    -13, -17,
+    -24, -16,
+    -24, -4,
+    -12, -2
+  ]
+}

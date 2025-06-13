@@ -1,7 +1,7 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 0,
-    "fluxVents": 23,
+    "fluxVents": 24,
     "goalVariant": true,
     "hullId": "swp_vulture_lions_guard",
     "hullMods": ["targetingunit"],

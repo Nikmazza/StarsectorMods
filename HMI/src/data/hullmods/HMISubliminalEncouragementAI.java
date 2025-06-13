@@ -8,6 +8,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import java.util.HashSet;
 import java.util.Set;
 
+import static data.scripts.util.HMI_txt.txt;
+
 public class HMISubliminalEncouragementAI extends BaseHullMod {
 	
 	public static final float CR_BONUS = 10f;
@@ -22,7 +24,8 @@ public class HMISubliminalEncouragementAI extends BaseHullMod {
 	}
 	private float check=0;
 	private String id, ERROR="IncompatibleHullmodWarning";
-	
+	private final String insertdesiredstringhere=txt("HMI_sub2");
+
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
 
@@ -44,7 +47,7 @@ public class HMISubliminalEncouragementAI extends BaseHullMod {
 	}
 
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getMaxCombatReadiness().modifyFlat(id, CR_BONUS * 0.01f);
+		stats.getMaxCombatReadiness().modifyFlat(id, CR_BONUS * 0.01f, insertdesiredstringhere);
 		stats.getSuppliesPerMonth().modifyMult(id, 1 + (MAINTENANCE_MALUS * 0.01f));
 		stats.getRepairRatePercentPerDay().modifyPercent(id, -REPAIR_MALUS);
 	}

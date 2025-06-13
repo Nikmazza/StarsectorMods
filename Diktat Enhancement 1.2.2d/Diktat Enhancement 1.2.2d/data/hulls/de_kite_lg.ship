@@ -1,0 +1,92 @@
+{
+  "hullName": "Kite (LG)",
+  "hullId": "de_kite_lg",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/DE/ships/lg_kite.png",
+  "style": "HIGH_TECH",
+  "height": 65,
+  "width": 82,
+  "center": [41, 32.5],
+  "collisionRadius": 61,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 53.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [5.5, 22]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": -0,
+      "locations": [5.5, -22]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-11.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-26.5, 27.5],
+      "length": 13,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-26.5, -27.5],
+      "length": 13,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31.5, 12],
+      "length": 16.5,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31.5, -12],
+      "length": 16.5,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -31.5, -18,
+    -26, -23.5,
+    -26.5, -30.5,
+    -19, -41.5,
+    1.5, -29,
+    4.5, -22.5,
+    32.5, -0,
+    4.5, 22.5,
+    1.5, 29,
+    -19, 41.5,
+    -26.5, 30.5,
+    -26, 23.5,
+    -31.5, 18
+  ]
+}

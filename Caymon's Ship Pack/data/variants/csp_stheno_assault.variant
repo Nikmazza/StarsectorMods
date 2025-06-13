@@ -1,0 +1,77 @@
+{
+  "variantId": "csp_stheno_assault",
+  "hullId": "csp_stheno",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 29,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "hardenedshieldemitter",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0015": "amblaster",
+        "WS0016": "amblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "ionpulser",
+        "WS0006": "ionpulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "miningblaster",
+        "WS0002": "miningblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "ionpulser",
+        "WS0004": "ionpulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "reaper",
+        "WS0014": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "mininglaser",
+        "WS0010": "mininglaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "mininglaser",
+        "WS0008": "mininglaser",
+        "WS0011": "mininglaser",
+        "WS0012": "mininglaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -1,15 +1,15 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 11,
+    "fluxCapacitors": 5,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_resplendent",
     "hullMods": [
         "fluxdistributor",
         "hardenedshieldemitter",
-        "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_gravity_drive"
+        "vice_unified_targeting_core",
+        "vice_adaptive_pulse_resonator"
     ],
     "permaMods": [],
     "sMods": [],
@@ -27,8 +27,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "pilum",
-                "WS 008": "pilum"
+                "WS 007": "vice_warp_torpedo_pod",
+                "WS 008": "vice_warp_torpedo_pod"
             }
         },
         {

@@ -1,0 +1,17 @@
+{
+	"baseHullId":"nes_hermitaur",
+	"skinHullId":"nes_hermitaur_pirates",
+	"hullName":"Hermitaur (P)",
+	"descriptionId":"nes_hermitaur",
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"tags":["pirate_bp"],
+	#"tags":["rare_bp"],
+	"tech":"Pirate",
+	"spriteName":"graphics/ships/nes_hermitaur_pirates.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInWeapons":{
+    },    
+}

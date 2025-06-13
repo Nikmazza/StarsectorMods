@@ -1,0 +1,26 @@
+{
+  "id": "csp_Ionsmg",
+  "specClass": "projectile",
+  "projectileSpecId": "ionpulser_shot",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/csp_luster_ionsmg2.png",
+  "hardpointSprite": "graphics/weapons/csp_luster_ionsmg2.png",
+  "turretOffsets": [
+    17,
+    0.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    26.5,
+    0.5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "NONE",
+  "fireSoundTwo": "ion_pulser_fire"
+}

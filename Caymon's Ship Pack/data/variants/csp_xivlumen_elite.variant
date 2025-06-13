@@ -1,0 +1,39 @@
+{
+  "variantId": "csp_xivlumen_elite",
+  "hullId": "csp_xivlumen",
+  "displayName": "Elite",
+  "goalVariant": false,
+  "fluxCapacitors": 6,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "minipulser",
+        "WS 007": "minipulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "amsrm"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "amsrm"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

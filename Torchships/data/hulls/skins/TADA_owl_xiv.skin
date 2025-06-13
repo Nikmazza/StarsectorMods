@@ -1,0 +1,19 @@
+{
+	"baseHullId":"TADA_owl",
+	"skinHullId":"TADA_owl_xiv",
+	"hullName":"Owl (XIV)",
+	"descriptionId":"TADA_owl",
+	"descriptionPrefix":"A survivor of the original 14th Domain Battlegroup which founded the Hegemony, this ship is a prime specimen of the Domain Navy's 'decisive battle' doctrine, particularly exhibited by a series of radical structural modifications performed using pre-Collapse industrial technology.",
+	"fleetPoints":17,
+	"ordnancePoints":155,
+	"baseValueMult":1.75,
+	"tags":["XIV_bp"],
+	"tech":"XIV Battlegroup",
+	"spriteName":"graphics/TORCHSHIPS/ships/FromMoarXIV_owl_XIV.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["fourteenth",],
+	"builtInWeapons":{},
+}

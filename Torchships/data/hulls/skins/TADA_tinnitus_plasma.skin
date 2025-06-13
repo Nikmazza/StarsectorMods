@@ -1,24 +1,22 @@
 {
-    # Plasma Pest gets built-in engine mods, High Energy Focus system and the built-in plasma torch weapon
     "baseHullId":"TADA_tinnitus",
     "skinHullId":"TADA_tinnitus_plasma",
-    "hullName":"Pest Cutter",
+    "hullName":"Pest Mk.II",
     "descriptionId":"TADA_tinnitus",
-    "descriptionPrefix":"This ship has been heavily modified to field an industrial-sized hull cutter tool over-tuned into a fearsome, if short ranged, weapon.",
-    "fleetPoints":5,
+    "descriptionPrefix":"This ship has been heavily modified to field an industrial-sized hull cutter tool over-tuned into a fearsome, though short ranged, weapon.",
+    #"fleetPoints":5,
     "ordnancePoints":30,
-    "baseValueMult":1,
-    "tags":["rare_bp"],
+    "baseValueMult":1.1,
+    "suppliesToRecover":4,
+    "suppliesPerMonth":4,
+    "tags":["pirate_bp"],
     "tech":"Pirate",
     "spriteName":"graphics/TORCHSHIPS/ships/TADA_tinitus_plasma.png",
     "removeWeaponSlots":[], 		# ids
     "removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
     "removeBuiltInMods":[], 		# hullmod ids
     "removeBuiltInWeapons":[], 		# weapon slot ids
-    "builtInMods":[
-        "unstable_injector",
-        "augmentedengines",
-    ],
+    "builtInMods":["unstable_injector"],
     "builtInWeapons":{
         "WS0001":"TADA_plasma",
     },
@@ -27,5 +25,6 @@
             "type": "BUILT_IN"
         },
     },
+    #"systemId":"flarelauncher",
     "systemId":"highenergyfocus",
 }

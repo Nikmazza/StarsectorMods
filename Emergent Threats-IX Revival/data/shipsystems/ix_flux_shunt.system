@@ -1,0 +1,11 @@
+{
+	"id":"ix_flux_shunt",
+	"type":"WEAPON",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.ix.ai.FluxShuntAI",
+	"statsScript":"data.scripts.ix.shipsystems.FluxShunt",
+	"weaponDataId":"flux_shunt_ix",
+	"useSound":"flux_shunt_ix_activate",
+	"aiHints":{
+	}
+}

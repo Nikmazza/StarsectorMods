@@ -1,0 +1,52 @@
+{
+    "displayName": "Networked",
+    "fluxCapacitors": 0,
+    "fluxVents": 3,
+    "goalVariant": false,
+    "hullId": "vice_heron_auto",
+    "hullMods": [
+        "advancedoptics",
+        "hardenedshieldemitter",
+		"vice_modular_fleet_override",
+        "vice_adaptive_thruster_control"
+    ],
+    "permaMods": [
+        "vice_mission_deloy_mayfly",
+        "advancedoptics",
+        "hardenedshieldemitter",
+		"vice_modular_fleet_override",
+    ],
+    "sMods": [
+        "advancedoptics",
+        "hardenedshieldemitter",
+		"vice_modular_fleet_override",
+    ],
+    "variantId": "vice_heron_ai_mission",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "gravitonbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "vice_ionstreamer"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pdburst",
+                "WS 002": "pdburst",
+                "WS 004": "pdburst"
+            }
+        }
+    ],
+    "wings": [
+        "vice_nimbus_wing",
+        "vice_nimbus_wing",
+        "vice_helia_wing",
+        "vice_helia_wing"
+    ]
+}

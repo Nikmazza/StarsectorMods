@@ -55,6 +55,20 @@ public class ShapedExplosionUtil {
 				maxVel = 30f + shipSpeed;
 			}
 			
+			else if (type.equals("warptorp")) {
+				numParticles = 100;
+				minSize = 15f;
+				maxSize = 15f;
+				
+				minDur = 0.4f;
+				maxDur = 0.7f;
+			
+				arc = 90f;
+				scatter = 20f;
+				minVel = 200f;
+				maxVel = 500f;
+			}
+			
 			Vector2f spawnPoint = new Vector2f(loc);
 			for (int i = 0; i < numParticles; i++) {
 				float angleOffset = (float) Math.random();

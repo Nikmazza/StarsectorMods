@@ -14,7 +14,7 @@
 	"hardpointOffsets":[15,0],  #39
 	"hardpointAngleOffsets":[0],
 	"barrelMode":"ALTERNATING",
-	"animationType": "GLOW_AND_FLASH",
+	"animationType":"GLOW_AND_FLASH",
 	"muzzleFlashSpec":{"length":110.0,   # only used if animationType = MUZZLE_FLASH
 					   "spread":5.0,
 					   "particleSizeMin":18.0,
@@ -22,7 +22,7 @@
 					   "particleDuration":0.3,
 					   "particleCount":26,
 					  "particleColor":[100,175,100,200]},
-	"interruptibleBurst":false,
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"A_S-F_silaha_shot",  # projectile that will be fired
 	"fireSoundTwo":"A_S-F_silaha_fire",
 }

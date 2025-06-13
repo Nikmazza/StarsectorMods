@@ -45,6 +45,11 @@ public class SWP_HornetAI extends SWP_BaseMissile {
         if (missile.isFizzling() || missile.isFading()) {
             return;
         }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
+        }
 
         timeAccum += amount;
 
@@ -115,26 +120,20 @@ public class SWP_HornetAI extends SWP_BaseMissile {
             if (!isTargetValid(tmp)) {
                 mod = 0f;
             } else {
-                switch (tmp.getHullSize()) {
-                    case FIGHTER:
-                        mod = 1f;
-                        break;
-                    case FRIGATE:
-                        mod = 15f;
-                        break;
-                    case DESTROYER:
-                        mod = 13f;
-                        break;
-                    case CRUISER:
-                        mod = 12f;
-                        break;
-                    case CAPITAL_SHIP:
-                        mod = 10f;
-                        break;
-                    default:
-                        mod = 0f;
-                        break;
-                }
+                mod = switch (tmp.getHullSize()) {
+                    case FIGHTER ->
+                        1f;
+                    case FRIGATE ->
+                        15f;
+                    case DESTROYER ->
+                        13f;
+                    case CRUISER ->
+                        12f;
+                    case CAPITAL_SHIP ->
+                        10f;
+                    default ->
+                        0f;
+                };
             }
             float distance = MathUtils.getDistance(tmp, missile.getLocation());
             if (distance > maxDistance) {

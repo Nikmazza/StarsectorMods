@@ -3,6 +3,7 @@
 	"skinHullId":"vice_intrepid_ex",
 	"hullName":"Intrepid (EX)",
 	"hullDesignation":"Battleship",
+	"tech":"Experimental",
 	"descriptionId":"vice_ex_all",
 	"descriptionPrefix":"A high-tech battleship prototype intended to replace the venerable Onslaught. The Intrepid was the result of bitter compromises between reformers and traditionalists within the Domain Navy, and bears several antiquated design traits such as fixed forward shields and built-in energy weapons that are rarely found on high-tech hulls. Nonetheless, it is a highly capable flotilla leader when its vulnerable flanks are well protected by escorts.",
 	"tags":["rare_bp", "hist3t", "merc", "ind", "tritachyon", "vice_ex_bp"],

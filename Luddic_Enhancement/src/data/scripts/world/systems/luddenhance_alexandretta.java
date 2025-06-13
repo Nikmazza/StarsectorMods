@@ -62,10 +62,8 @@ public class luddenhance_alexandretta implements SectorGeneratorPlugin {
 
 		alexandretta1c.getMarket().addCondition(Conditions.RUINS_EXTENSIVE);
 		alexandretta1c.getMarket().getFirstCondition(Conditions.RUINS_EXTENSIVE).setSurveyed(true);
-		alexandretta1c.getMarket().addCondition(Conditions.TECTONIC_ACTIVITY);
 		alexandretta1c.getMarket().addCondition(Conditions.TOXIC_ATMOSPHERE);
 		alexandretta1c.getMarket().addCondition(Conditions.EXTREME_WEATHER);
-		alexandretta1c.getMarket().addCondition(Conditions.RARE_ORE_SPARSE);
 		alexandretta1c.getMarket().addCondition(Conditions.ORE_SPARSE);
 		alexandretta1c.getMarket().addCondition(Conditions.IRRADIATED);
 
@@ -180,6 +178,7 @@ public class luddenhance_alexandretta implements SectorGeneratorPlugin {
 					new ArrayList<>
 							(Arrays.asList(Conditions.POPULATION_5,
 									Conditions.RUINS_EXTENSIVE,
+									Conditions.POLLUTION,
 									Conditions.VERY_COLD,
 									Conditions.ORE_MODERATE,
 									Conditions.RARE_ORE_SPARSE)),
@@ -188,7 +187,7 @@ public class luddenhance_alexandretta implements SectorGeneratorPlugin {
 									Industries.SPACEPORT,
 									Industries.MILITARYBASE,
 									Industries.HEAVYBATTERIES,
-									luddenhance_industries.REFIT,
+									Industries.HEAVYINDUSTRY,
 									Industries.POPULATION)),
 					new ArrayList<>(
 							Arrays.asList( // which submarkets to generate
@@ -206,6 +205,7 @@ public class luddenhance_alexandretta implements SectorGeneratorPlugin {
 					new ArrayList<>
 							(Arrays.asList(Conditions.POPULATION_6,
 									Conditions.RUINS_EXTENSIVE,
+									Conditions.POLLUTION,
 									Conditions.VERY_COLD,
 									Conditions.ORE_MODERATE,
 									Conditions.RARE_ORE_SPARSE)),
@@ -215,7 +215,7 @@ public class luddenhance_alexandretta implements SectorGeneratorPlugin {
 									Industries.MILITARYBASE,
 									Industries.HEAVYBATTERIES,
 									Industries.BATTLESTATION,
-									luddenhance_industries.REFIT,
+									Industries.HEAVYINDUSTRY,
 									Industries.POPULATION)),
 					new ArrayList<>(
 							Arrays.asList( // which submarkets to generate
@@ -249,7 +249,6 @@ public class luddenhance_alexandretta implements SectorGeneratorPlugin {
 		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("alexandretta_jump_point1", "Alexandretta Jump-point");
 		OrbitAPI orbit = Global.getFactory().createCircularOrbit(gate, 0, 300, 20);
 		jumpPoint.setOrbit(orbit);
-		jumpPoint.setRelatedPlanet(alexandretta3);
 		jumpPoint.setStandardWormholeToHyperspaceVisual();
 		system.addEntity(jumpPoint);
 

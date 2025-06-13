@@ -335,21 +335,21 @@ public class HMI_Fuyutsuki_Market extends BaseIndustry implements RouteFleetSpaw
 		CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);
 		
 		if (fleet == null || fleet.isEmpty()) return null;
-		
-		fleet.setFaction("hmi_exec", true); //This is an everyframescript, so we want "hmi_exec"
-		fleet.setNoFactionInName(true);
+
+		fleet.setFaction(market.getFactionId(), true);
+		fleet.setNoFactionInName(false);
 		
 		fleet.addEventListener(this);
 		
 //		PatrolAssignmentAIV2 ai = new PatrolAssignmentAIV2(fleet, custom);
 //		fleet.addScript(ai);
-		
+
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_FLEET, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, true, 0.3f);
-
 		if (type == PatrolType.FAST || type == PatrolType.COMBAT) {
 			fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_CUSTOMS_INSPECTOR, true);
 		}
+
 		
 		String postId = Ranks.POST_PATROL_COMMANDER;
 		String rankId = Ranks.SPACE_COMMANDER;

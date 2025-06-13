@@ -1,0 +1,47 @@
+{
+  "id": "csp_sabot_shotgun",
+  "specClass": "projectile",
+  "projectileSpecId": "csp_slugshot",
+  "type": "BALLISTIC",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/csp_luster_sabotShotgun2.png",
+  "hardpointSprite": "graphics/weapons/csp_luster_sabotShotgun2.png",
+  "turretOffsets": [
+    30.5,
+    4,
+    30.5,
+    -3
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    45.5,
+    4,
+    45.5,
+    -3
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "interruptibleBurst": true,
+  "muzzleFlashSpec": {
+    "length": 30,
+    "spread": 5,
+    "particleSizeMin": 15,
+    "particleSizeRange": 15,
+    "particleDuration": 0.15,
+    "particleCount": 25,
+    "particleColor": [
+      100,
+      255,
+      200,
+      205
+    ]
+  },
+  "fireSoundTwo": "heavy_mauler_fire"
+}

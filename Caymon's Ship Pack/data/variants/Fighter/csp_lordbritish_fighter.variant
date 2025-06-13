@@ -1,0 +1,30 @@
+{
+  "variantId": "csp_lordbritish_fighter",
+  "hullId": "csp_lordbritish",
+  "displayName": "Support Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "csp_breachgun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heatseeker",
+        "WS0002": "heatseeker"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

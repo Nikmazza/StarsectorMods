@@ -3,12 +3,11 @@
   "hullId": "hmi_convict",
   "displayName": "Close Support",
   "goalVariant": true,
-  "fluxCapacitors": 8,
-  "fluxVents": 0,
+  "fluxCapacitors": 9,
+  "fluxVents": 5,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "missleracks",
     "expanded_deck_crew"
   ],
   "weaponGroups": [
@@ -16,14 +15,15 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "mbeke_med"
+        "WS0006": "twotherac",
+        "WS0009": "seth_med"
       }
     },
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0009": "signpost_med"
+        "WS0001": "mbeke_med"
       }
     },
     {
@@ -38,8 +38,7 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0002": "taclaser",
-        "WS0006": "med_frag_mg"
+        "WS0002": "taclaser"
       }
     },
     {

@@ -1,0 +1,85 @@
+0.1.1
+Now requires Magiclib and Lazylib.  
+Added the Flash HVM, a very maneuverable short-medium range missile.  Comes in small, medium, and large versions.
+Added the Critical Point Targeting hullmod.  It increases weapon damage, and buffs range slightly, but prevents installation of ITU/DTC.
+Added the Eagle II, a modified Eagle with a large hardpoint.  
+Added a secret ship as a bounty.  Thanks to NEON for the sprite.
+Fixed hardpoint recoil for Light Mjolnir.  
+Made the Tachyon Accelerator's projectile much larger for better visibility.
+Updated the sprites for the Tachyon Accelerator and Plasma Beam, both are now more visually distinct from the Tachyon Lance and Plasma Cannon.
+Updated the Triumphant's sprite-added slightly more plating near the bridge.
+Nerfed the Polaris' built-in missile reload slightly.
+0.1.0
+Initial 0.98a compatibility.  No changes made, just a mod_info update.
+0.0.16
+Nerfed the Piledriver Heavy Railcannon. It now fires single shots, with worse flux efficiency.  OP 22->25. 
+Nerfed the Devastation.  Damage 450->400, added recoil.
+Nerfed Harpoon Battery.  Ammo 80->48
+Buffed Heavy Positron Cannon. OP 30->27
+Added the Phase Beam Battery, a triple phase beam in a large slot.  High damage output, bad range and slightly less flux efficient.
+Added the Hurricane, a high tech frigate with Terminator drones.
+Added the Vulcan, a cross between the Onslaught and Conquest.
+Added the Triumphant, a broadside capital ship with heavy armor.
+Enabled spawning of a few more ships in shops and enemy fleets.
+0.0.15
+Adds version checker support.
+Added the Wildcat, a DEM bomber.  
+Rebalanced the Warhawk.  Added a large hybrid hardpoint, DP 22->26, +50 dissipation/+500 capacity.  Sprite reworked by Toopok.
+0.0.14
+Added the Positron Cannon, a medium slot version of the Heavy Positron Cannon.
+Added the Viking, a missile frigate.
+Added the Warhawk, a very mobile midline cruiser.  Will appear rarely in mercenary fleets.
+Buffed the Piledriver Heavy Railcannon, OP 26->22, damage 400->450, and range 900->1000.
+0.0.13
+Added the Harpoon Battery, a large slot Harpoon.
+Added the Piledriver Heavy Railcannon, a large slot kinetic weapon.  Will appear in enemy fleets.
+The Viper should now spawn in NPC fleets.
+Fixed the Mjolnir Heavy Cannon sprite (again).  
+0.0.12
+Added the Viper, a midline frigate with AAF.
+Added the Barrage, a capital ship built out of station modules.  Slow, but very heavy firepower.
+
+0.0.11
+Reworked Egret sprite and added one additional small energy mount.  OP 260->265.
+Added the Heavy Positron Cannon, a hybrid large weapon.  
+
+0.0.10
+Added the Polaris, a midline battlecarrier cruiser.
+Buffed Conqueror (50->45) and Javelin (25->22) DP. 
+
+0.0.9
+Updated Mjolnir Heavy Cannon sprite.  Should sit correctly on turret mounts now.
+Added the Javelin, a midline cruiser equipped with AAF.
+Added the Light Mjolnir to the Persean League's known blueprints.
+
+0.0.8
+Changed Plasma Beam firing sound.
+
+0.0.7
+Reduced Egret's flux dissipation to 600.
+Increased the Mjolnir Heavy Cannon's projectile speed to 900, to match the stock Mjolnir.
+Added the Conqueror, a fast midline capital with forward-focused firepower.  Very weak if flanked.  
+Added the Light Mjolnir, a single-barrel medium slot version of the Mjolnir Cannon.
+Updated sprite for Plasma Beam and Autopulse Beam.  They now no longer use the same sprite as the Plasma Cannon/Autopulse Laser.
+
+0.0.6
+Updated Onslaught (B) sprite to match redone Onslaught.  Moved right TPC hardpoint so it will match up with the weapon model.  
+Updated Egret sprite, large mount should no longer be blurry.  
+
+0.0.5
+Added the Tachyon Accelerator, a large slot energy weapon similar to the Tachyon Lance.  Has no shield-penetrating effect.
+Added onhit effect to Tachyon Accelerator.  
+Compatibility with 0.97.  To use with 0.96, edit the mod_info.json.
+
+0.0.4
+Edited the sprite of the Onslaught (B) to be more visually distinct from the standard Onslaught.
+
+0.0.3
+Made the Egret (midline capital carrier), Devastation (Large HE Ballistic), and Mjolnir Heavy Cannon (Large Energy Ballistic) appear in stores and NPC fleets.  
+Due to Persean League doctrine, the Egret will be rarely seen in stores or their fleets.  More likely to appear in merc fleets.
+
+0.0.2
+Added new midline carrier.  
+
+0.0.1
+Initial Release

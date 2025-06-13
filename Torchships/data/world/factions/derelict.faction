@@ -4,13 +4,13 @@
             "TADA_pike",
             "TADA_LRA",
             "TADA_urchin",
+            "TADA_triplemortar",
+            "TADA_dioscuri"
         ],
     },
 	"knownHullMods":{
 		"hullMods":[
 			"TADA_reactiveArmor",
-			#"TADA_lightArmor",
-			#"TADA_minimalPrep",
 		],
 	},
 },

@@ -1,0 +1,60 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 3,
+  "fluxVents": 30,
+  "goalVariant": true,
+  "hullId": "eagle_ii",
+  "hullMods": [
+    "targetingunit",
+    "eccm",
+    "hardenedshieldemitter",
+    "auxiliarythrusters"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "eagle_ii_Support",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "gravitonbeam",
+        "WS 006": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "lrpdlaser",
+        "WS 004": "lrpdlaser",
+        "WS 010": "lrpdlaser",
+        "WS 012": "lrpdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heatseeker",
+        "WS 002": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "annihilatorpod",
+        "WS 008": "annihilatorpod"
+      }
+    }
+  ],
+  "wings": []
+}

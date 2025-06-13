@@ -9,7 +9,6 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipCommand;
-import com.fs.starfarer.api.util.IntervalUtil;
 import data.scripts.util.SWP_Util;
 import java.awt.Color;
 import java.util.Collections;
@@ -90,7 +89,6 @@ public class SWP_FlareBurstAI extends SWP_BaseMissile {
     }
 
     private float currentTime = 0f;
-    private final IntervalUtil interval = new IntervalUtil(0.1f, 0.1f);
 
     public SWP_FlareBurstAI(MissileAPI missile, ShipAPI launchingShip) {
         super(missile, launchingShip);
@@ -106,8 +104,6 @@ public class SWP_FlareBurstAI extends SWP_BaseMissile {
                     DamageType.FRAGMENTATION, 0f, false, false, missile, false);
             return;
         }
-
-        interval.advance(amount);
 
         float maxSpeed = missile.getMaxSpeed();
         if (!acquireTarget(amount)) {
@@ -127,6 +123,12 @@ public class SWP_FlareBurstAI extends SWP_BaseMissile {
             Global.getCombatEngine().applyDamage(missile, missile.getLocation(), missile.getHitpoints() * 2f,
                     DamageType.FRAGMENTATION, 0f, false, false, missile, false);
             return;
+        }
+
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
         }
 
         distance = MathUtils.getDistance(target.getLocation(), missile.getLocation());
@@ -225,8 +227,7 @@ public class SWP_FlareBurstAI extends SWP_BaseMissile {
 
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
-        if (target instanceof MissileAPI) {
-            MissileAPI msl = (MissileAPI) target;
+        if (target instanceof MissileAPI msl) {
             return !(msl.isFlare() || msl.isFizzling() || msl.isFading() || (msl.getOwner() == missile.getOwner()) || (msl.getCollisionClass() == CollisionClass.NONE));
         }
         return false;

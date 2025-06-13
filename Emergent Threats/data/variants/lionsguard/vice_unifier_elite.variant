@@ -1,12 +1,12 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 0,
-    "fluxVents": 18,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "vice_unifier",
     "hullMods": [
         "hardenedshieldemitter",
-        "targetingunit"
+        "vice_unified_targeting_core"
     ],
     "permaMods": [],
     "sMods": [],

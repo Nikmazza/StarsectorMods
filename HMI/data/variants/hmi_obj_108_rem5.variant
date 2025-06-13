@@ -3,20 +3,21 @@
   "hullId": "hmi_obj_108",
   "displayName": "ERROR",
   "goalVariant": false,
-  "fluxCapacitors": 11,
-  "fluxVents": 30,
+  "fluxCapacitors": 0,
+  "fluxVents": 24,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "magazines"
+    "magazines",
+    "ballistic_rangefinder"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "thumper_rem",
-        "WS0002": "thumper_rem"
+        "WS0001": "miningblaster",
+        "WS0002": "miningblaster"
       }
     },
     {

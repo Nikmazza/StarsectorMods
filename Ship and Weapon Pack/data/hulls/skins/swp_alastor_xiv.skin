@@ -8,7 +8,7 @@
     "tags":["XIV_bp", "hist1t"],
     "tech":"XIV Battlegroup",
     "fleetPoints":5,
-    "ordnancePoints":63,
+    "ordnancePoints":58,
     "baseValueMult":1.75,
     "spriteName":"graphics/swp/ships/alastor/swp_alastor_ff_xiv.png",
     "removeWeaponSlots":[],         # ids

@@ -2,7 +2,7 @@
 	"baseHullId":"ii_module_combat",
 	"skinHullId":"ii_module_combat_super",
 	"descriptionPrefix":"Upgraded with an Overdrive system, Heavy Armor, Reinforced Emplacements, and Advanced Turret Gyros.",
-	"restoreToBaseHull":true,
+	"restoreToBaseHull":false,
 	"hullDesignation":"Super Combat Module",
 	"systemId":"ii_overdrive",
 	"removeWeaponSlots":[], 		# ids

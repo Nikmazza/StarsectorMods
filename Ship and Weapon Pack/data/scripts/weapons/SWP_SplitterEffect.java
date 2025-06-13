@@ -1,6 +1,7 @@
 package data.scripts.weapons;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
@@ -130,7 +131,7 @@ public class SWP_SplitterEffect implements EveryFrameWeaponEffectPlugin, OnFireE
             Color particleColor;
             int particleCount;
             switch (spec) {
-                case GUNGNIR_PROJECTILE_ID:
+                case GUNGNIR_PROJECTILE_ID -> {
                     newSpec = GUNGNIR_SUBMUNITION_WEAPON_ID;
                     submunitions = GUNGNIR_SUBMUNITIONS;
                     fuseDistance = GUNGNIR_FUSE_DISTANCE;
@@ -145,8 +146,8 @@ public class SWP_SplitterEffect implements EveryFrameWeaponEffectPlugin, OnFireE
                     detonateSound = GUNGNIR_DETONATION_SOUND_ID;
                     particleColor = GUNGNIR_PARTICLE_COLOR;
                     particleCount = GUNGNIR_PARTICLE_COUNT;
-                    break;
-                case CANISTER_PROJECTILE_ID:
+                }
+                case CANISTER_PROJECTILE_ID -> {
                     newSpec = CANISTER_SUBMUNITION_WEAPON_ID;
                     submunitions = CANISTER_SUBMUNITIONS;
                     fuseDistance = CANISTER_FUSE_DISTANCE;
@@ -161,9 +162,10 @@ public class SWP_SplitterEffect implements EveryFrameWeaponEffectPlugin, OnFireE
                     detonateSound = CANISTER_DETONATION_SOUND_ID;
                     particleColor = CANISTER_PARTICLE_COLOR;
                     particleCount = CANISTER_PARTICLE_COUNT;
-                    break;
-                default:
+                }
+                default -> {
                     continue;
+                }
             }
 
             if (projectile.isFading() || projectile.didDamage()) {
@@ -233,6 +235,11 @@ public class SWP_SplitterEffect implements EveryFrameWeaponEffectPlugin, OnFireE
                             finalList.add(ship);
                         }
                     } else if (CollisionUtils.getCollides(loc, projection, ship.getLocation(), ship.getCollisionRadius())) {
+                        // Workaround until LazyLib is patched
+                        BoundsAPI bounds = ship.getExactBounds();
+                        if (bounds != null) {
+                            bounds.update(ship.getLocation(), ship.getFacing());
+                        }
                         Vector2f point = CollisionUtils.getCollisionPoint(loc, projection, ship);
                         if (point != null && MathUtils.getDistance(loc, point) <= splitDistance) {
                             finalList.add(ship);

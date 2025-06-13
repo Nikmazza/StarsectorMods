@@ -44,11 +44,15 @@
 	"shipsWhenImporting":{
 		"tags":[],
 		"hulls":[
+			"rat_genesis",
+			"rat_genesis_serpent_head",
 		],
 	},
 	"knownShips":{
 		"tags":[],
 		"hulls":[
+			"rat_genesis",
+			"rat_genesis_serpent_head",
 		],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
@@ -189,6 +193,7 @@
 		},
 	},
 	"custom":{
+		"rat_abyss_faction":true,
 		"engageWhenEvenStrength":true,
 		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
 		"postsNoBounties":true,

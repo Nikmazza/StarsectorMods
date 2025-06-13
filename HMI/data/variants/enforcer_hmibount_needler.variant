@@ -3,10 +3,10 @@
   "hullId": "enforcer_xiv",
   "displayName": "Needler",
   "goalVariant": false,
-  "fluxCapacitors": 12,
+  "fluxCapacitors": 17,
   "fluxVents": 20,
   "quality": 1,
-  "permaMods": [],
+  "permaMods": ["HMI_MB_armourmounts"],
   "hullMods": [
     "missleracks",
     "ballistic_rangefinder",

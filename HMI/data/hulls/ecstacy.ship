@@ -36,38 +36,20 @@
     {
       "id": "WS0003",
       "size": "MEDIUM",
-      "type": "SYNERGY",
-      "mount": "TURRET",
-      "arc": 126,
-      "angle": 90,
-      "locations": [-29, 31.5]
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": 132.5,
+      "locations": [-23.5, 65.5]
     },
     {
       "id": "WS0004",
       "size": "MEDIUM",
-      "type": "SYNERGY",
-      "mount": "TURRET",
-      "arc": 126,
-      "angle": -90,
-      "locations": [-29, -31.5]
-    },
-    {
-      "id": "WS0005",
-      "size": "SMALL",
-      "type": "ENERGY",
-      "mount": "TURRET",
-      "arc": 170,
-      "angle": 174.5,
-      "locations": [-57.5, 27]
-    },
-    {
-      "id": "WS0006",
-      "size": "SMALL",
-      "type": "ENERGY",
-      "mount": "TURRET",
-      "arc": 170,
-      "angle": -174.5,
-      "locations": [-57.5, -27]
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 12,
+      "angle": -132.5,
+      "locations": [-23.5, -65.5]
     },
     {
       "id": "WS0007",
@@ -151,51 +133,77 @@
       "locations": [29, -0]
     },
     {
-      "id": "WS0017",
+      "id": "WS0005",
       "size": "SMALL",
-      "type": "LAUNCH_BAY",
-      "mount": "TURRET",
-      "arc": 40,
-      "angle": -135,
-      "locations": [
-        -8, -49.5,
-        -17.5, -52,
-        -3.5, -54.5
-      ]
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [66, 59]
     },
     {
-      "id": "LB 1",
-      "size": "LARGE",
-      "type": "LAUNCH_BAY",
-      "mount": "HIDDEN",
-      "arc": 360,
-      "angle": 0,
-      "locations": [
-        -7.5, 50.5,
-        -16, 51.5,
-        -3.5, 55
-      ]
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [66, -59]
     }
   ],
   "engineSlots": [
     {
-      "location": [-90.5, 38],
-      "length": 23,
-      "width": 12,
+      "location": [-84, 40.5],
+      "length": 13.5,
+      "width": 10,
       "angle": 180,
-      "contrailSize": 12,
-      "style": "HIGH_TECH"
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "GreenFlare"
     },
     {
-      "location": [-90.5, -38],
-      "length": 23,
-      "width": 12,
+      "location": [-84, -40.5],
+      "length": 13.5,
+      "width": 10,
       "angle": -180,
-      "contrailSize": 12,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "GreenFlare"
+    },
+    {
+      "location": [-63, 64.5],
+      "length": 5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
       "style": "HIGH_TECH"
     },
     {
-      "location": [-90.5, 33],
+      "location": [-63, -64.5],
+      "length": 5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-64.5, 61.5],
+      "length": 5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-64.5, -61.5],
+      "length": 5,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-66.5, 58],
       "length": 7.5,
       "width": 6,
       "angle": 180,
@@ -203,7 +211,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-90.5, -33],
+      "location": [-66.5, -58],
       "length": 7.5,
       "width": 6,
       "angle": -180,
@@ -211,7 +219,32 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-91.5, 29.5],
+      "location": [-90, 19],
+      "length": 22.5,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-90, -19],
+      "length": 22.5,
+      "width": 19,
+      "angle": -180,
+      "contrailSize": 19,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55, -0],
+      "length": 22,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "GreenFlare"
+    },
+    {
+      "location": [-71.5, 47],
       "length": 7.5,
       "width": 6,
       "angle": 180,
@@ -219,7 +252,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-91.5, -29.5],
+      "location": [-71.5, -47],
       "length": 7.5,
       "width": 6,
       "angle": -180,
@@ -227,7 +260,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-92, 25.5],
+      "location": [-70, 51],
       "length": 7.5,
       "width": 6,
       "angle": 180,
@@ -235,7 +268,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-92, -25.5],
+      "location": [-70, -51],
       "length": 7.5,
       "width": 6,
       "angle": -180,
@@ -243,71 +276,72 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-92, 18.5],
-      "length": 26.5,
-      "width": 24,
+      "location": [-67.5, 53.5],
+      "length": 4.5,
+      "width": 4,
       "angle": 180,
-      "contrailSize": 24,
+      "contrailSize": 4,
       "style": "HIGH_TECH"
     },
     {
-      "location": [-92, -18.5],
-      "length": 26.5,
-      "width": 24,
+      "location": [-67.5, -53.5],
+      "length": 4.5,
+      "width": 4,
       "angle": -180,
-      "contrailSize": 24,
+      "contrailSize": 4,
       "style": "HIGH_TECH"
     },
     {
-      "location": [-57.5, -0],
-      "length": 43.5,
-      "width": 25,
+      "location": [-87, 30],
+      "length": 8.5,
+      "width": 7,
       "angle": 180,
-      "contrailSize": 25,
+      "contrailSize": 7,
+      "style": "CUSTOM",
+      "styleId": "GreenFlare"
+    },
+    {
+      "location": [-87, -30],
+      "length": 8.5,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
       "style": "CUSTOM",
       "styleId": "GreenFlare"
     }
   ],
   "bounds": [
-    -59, -7,
-    -92, -10.5,
-    -90.5, -44.5,
-    -76, -44.5,
-    -49.5, -61,
-    -44.5, -59.5,
-    -38, -63.5,
-    -36.5, -68,
-    -16.5, -76,
-    -9, -72,
-    8.5, -85,
-    39, -80.5,
-    50, -70,
-    60, -69.5,
-    68, -53,
-    78.5, -50.5,
-    77.5, -38,
-    69, -33,
-    67, -18,
-    79, -3,
-    79, 3,
-    67, 18,
-    69, 33,
-    77.5, 38,
-    78.5, 50.5,
-    68, 53,
-    60, 69.5,
-    50, 70,
-    39, 80.5,
-    8.5, 85,
-    -9, 72,
-    -16.5, 76,
-    -36.5, 68,
-    -38, 63.5,
-    -44.5, 59.5,
-    -49.5, 61,
-    -76, 44.5,
-    -90.5, 44.5,
-    -92, 10.5,
-    -59, 7
+    -55, -6.5,
+    -89, -12,
+    -84, -44.5,
+    -72, -46,
+    -63, -67.5,
+    -37, -66.5,
+    -23.5, -79.5,
+    -9, -71,
+    13, -83.5,
+    40, -80.5,
+    46, -73.5,
+    73.5, -66.5,
+    81.5, -39.5,
+    68.5, -31.5,
+    68, -17,
+    79.5, -4.5,
+    79.5, 4.5,
+    68, 17,
+    68.5, 31.5,
+    81.5, 39.5,
+    73.5, 66.5,
+    46, 73.5,
+    40, 80.5,
+    13, 83.5,
+    -9, 71,
+    -23.5, 79.5,
+    -37, 66.5,
+    -63, 67.5,
+    -72, 46,
+    -84, 44.5,
+    -89, 12,
+    -55, 6.5
   ]
 }

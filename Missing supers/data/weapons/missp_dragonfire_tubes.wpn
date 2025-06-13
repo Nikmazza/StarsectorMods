@@ -1,0 +1,74 @@
+{
+  "id": "missp_dragonfire_tubes",
+  "specClass": "projectile",
+  "projectileSpecId": "missp_dragon_lrm",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/missp_dragonfire_tubes.png",
+  "hardpointSprite": "graphics/weapons/missp_dragonfire_tubes.png",
+  #"renderHints": [RENDER_LOADED_MISSILES],
+  "turretOffsets": [
+    15,
+    -13,
+    17,
+    -8,
+    19,
+    -3,
+    19,
+    3,
+    17,
+    8,
+    15,
+    13
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    58.5,
+    7.5,
+    58.5,
+    -7.5,
+    32.5,
+    7.5,
+    32.5,
+    -7.5,
+    6.5,
+    7.5,
+    6.5,
+    -7.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "cloudParticleCount": 9,
+    "cloudDuration": 1,
+    "cloudRadius": 20,
+    "blowbackParticleCount": 7,
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      100,
+      100,
+      100,
+      200
+    ]
+  },
+  "fireSoundTwo": "dragonfire_fire"
+}

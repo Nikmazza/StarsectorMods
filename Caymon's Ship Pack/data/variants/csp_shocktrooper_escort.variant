@@ -1,0 +1,63 @@
+{
+  "variantId": "csp_shocktrooper_escort",
+  "hullId": "csp_shocktrooper",
+  "displayName": "Escort",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 15,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "mark9"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "vulcan",
+        "WS0007": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "lightmortar",
+        "WS0006": "lightmortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightac",
+        "WS0002": "lightac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "breach"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

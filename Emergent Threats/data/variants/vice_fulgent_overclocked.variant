@@ -1,7 +1,7 @@
 {
     "displayName": "Overclocked",
     "fluxCapacitors": 0,
-    "fluxVents": 2,
+    "fluxVents": 19,
     "goalVariant": true,
     "hullId": "fulgent",
     "hullMods": [
@@ -16,34 +16,30 @@
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS 001": "heavyblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 000": "ioncannon",
-                "WS 001": "pulselaser",
-                "WS 002": "ioncannon"
+                "WS 009": "atropos",
+                "WS 010": "atropos"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "reaper",
-                "WS 010": "reaper"
+                "WS 003": "vice_warp_torpedo_pod",
+                "WS 004": "vice_warp_torpedo_pod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "sabotpod",
-                "WS 004": "sabotpod"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "irpulse",
-                "WS 006": "irpulse"
+                "WS 005": "pdlaser",
+                "WS 006": "pdlaser"
             }
         }
     ]

@@ -1,6 +1,6 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 10,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "swp_conquest_lions_guard",

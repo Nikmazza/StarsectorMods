@@ -9,6 +9,7 @@ public class HMI_Horror_Boost extends BaseHullMod {
 
 	public static float DAMAGE_INCREASE = 10f;
 	public static float FLUX_BOOST = 0.75f;
+	public static final float CR_BONUS = 30f;
 
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 
@@ -16,7 +17,7 @@ public class HMI_Horror_Boost extends BaseHullMod {
 		stats.getWeaponTurnRateBonus().modifyPercent(id, (DAMAGE_INCREASE * 5f));
 		stats.getWeaponDamageTakenMult().modifyMult(id, 0f);
 		stats.getShieldUnfoldRateMult().modifyPercent(id, DAMAGE_INCREASE * 2f);
-
+		stats.getMaxCombatReadiness().modifyFlat(id, CR_BONUS * 0.01f);
 	}
 
 		public String getDescriptionParam(int index, HullSize hullSize) {

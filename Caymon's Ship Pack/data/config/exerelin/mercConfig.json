@@ -1,0 +1,78 @@
+{
+	"companies":{
+"humblesupport": {
+	"name": "Humble Support",
+	"desc": "A Mercenary group of Captains who speclizes in support focused loadouts and ships. Great for providing escorts to Capitals and Cruisers.",
+	"feeUpfront": 70000,
+	"feeMonthly": 1850,
+	"faction": "independent",
+	"minLevel": 3,
+	"minRep": "INHOSPITABLE",
+	"ships": [
+		[
+			"apogee_Balanced",
+			"enforcer_Balanced",
+			"hammerhead_Balanced",
+			"hammerhead_Support",
+			"medusa_PD",
+			"fury_Support"
+		],
+		[
+			"csp_solarizedflare_Support",
+			"csp_foreshadow_Support",
+			"vigilance_FS",
+			"wolf_PD",
+			"lasher_PD",
+			"monitor_Escort"
+		],
+	],
+	"extraFP": 10,
+	"doctrineSizeOverride": 4,
+	"officers": [
+		{
+			"level": 5,
+			"rankId": "spaceCommander"
+		},
+		{
+			"level": 3
+		},
+		{
+			"level": 3
+		}
+	],
+	"averageSMods": 0,
+	"miscData": {
+		"maxAutogenFleetSize": 6
+	}
+},
+
+		"TechSupport":{
+			"name":"Premium Tri Tachyon Tech Support",
+			"desc":"Thank you for signing up for Tri-Tachyon's Premium Nitro First class Prime One Pass Unlimited Platnium tier box Club! By becoming a Patron, you get access to numerous Tri-Tachyon technology, However, If you sign up for this excluvise offer, you'll get excluvise access to our Top of the line Robotics Services! Sponsored by Raid Shado-",
+			"feeUpfront":230000,
+			"feeMonthly":4250,
+			"faction":"remnant",
+			"minRep":"HOSTILE",
+			"minLevel":8,
+			"ships":[
+				["fulgent_Assault","fulgent_Support","scintilla_Strike","scintilla_Support","csp_Lanius_assault","csp_Lanius_standard","csp_vritra_strike"],
+				["csp_vritra_standard","csp_thornbill_support","csp_thornbill_standard","glimmer_Assault","glimmer_Support","lumen_Standard","lumen_Support"],
+			],
+			"extraFP":10,
+			"officers":[	# added to ships in order
+				{
+					"level":5,
+					"aiCoreId":"beta_core",
+				},
+				{
+					"level":3,
+					"aiCoreId":"gamma_core",
+				}
+			],
+			"averageSMods":1,
+			"miscData":{
+				"ignoreMarketRelationship":true,
+			}
+		}
+	}
+}

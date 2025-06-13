@@ -1,0 +1,65 @@
+{
+  "variantId": "domres_hmi_obj_361_cs",
+  "hullId": "domres_hmi_obj_361",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 27,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0018": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0014": "gauss",
+        "WS0015": "gauss"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "heatseeker",
+        "WS0004": "heatseeker",
+        "WS0007": "salamanderpod",
+        "WS0008": "salamanderpod",
+        "WS0009": "heatseeker",
+        "WS0010": "heatseeker",
+        "WS0011": "heatseeker",
+        "WS0012": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "heavymauler",
+        "WS0006": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "vulcan",
+        "WS0002": "vulcan",
+        "WS0013": "flak",
+        "WS0016": "vulcan",
+        "WS0017": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

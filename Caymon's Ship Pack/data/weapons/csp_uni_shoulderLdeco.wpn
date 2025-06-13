@@ -1,0 +1,48 @@
+{
+  "id": "csp_uni_shoulderLdeco",
+  "specClass": "beam",
+  "type": "DECORATIVE",
+  "size": "SMALL",
+  "everyFrameEffect": "data.scripts.weapons.CSP_mechEffect2",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/Uni Cetan/csp_uni_shoulder_L.png",
+  "hardpointSprite": "graphics/weapons/Uni Cetan/csp_uni_shoulder_L.png",
+  "glowColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    2.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    14.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 10,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 1
+}

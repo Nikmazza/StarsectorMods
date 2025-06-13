@@ -5,7 +5,7 @@
     "incompatibleWithBaseHull":false,
     "descriptionId":"buffalo",
     "descriptionPrefix":"This ship has been given Sindrian Diktat markings. Systems modifications are otherwise superficial.",
-    "tags":["LG_bp","no_dealer"],
+    "tags":["LG_bp","no_dealer", "codex_unlockable"],
     "tech":"Sindrian Diktat",
     "spriteName":"graphics/swp/ships/buffalo/buffalo_diktat.png",
     "removeWeaponSlots":[],         # ids

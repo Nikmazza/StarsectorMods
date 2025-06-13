@@ -1,0 +1,184 @@
+{
+  "bounds": [
+    34,
+    35.5,
+    36,
+    -3.5,
+    37,
+    -21,
+    37,
+    -21,
+    52.5,
+    -29.5,
+    14.5,
+    -40.5,
+    -10.5,
+    -54.5,
+    -36.5,
+    -61.5,
+    -46,
+    -55.5,
+    -20.5,
+    -40.5,
+    -17.5,
+    -1.5,
+    -21,
+    41.5,
+    -45,
+    57,
+    -35.5,
+    60,
+    -10.5,
+    51.5
+  ],
+  "builtInMods": [
+    "second_BG", "advancedcore"
+  ],
+  "builtInWings": [],
+  "center": [
+    59.5,
+    47.5
+  ],
+  "collisionRadius": 0.5,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -24.5,
+        27.5
+      ],
+      "style": "MIDLINE",
+      "width": 24
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -24.5,
+        -28.5
+      ],
+      "style": "MIDLINE",
+      "width": 24
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 24,
+      "location": [
+        -21.5,
+        10.5
+      ],
+      "style": "MIDLINE",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 24,
+      "location": [
+        -21.5,
+        -11.5
+      ],
+      "style": "MIDLINE",
+      "width": 12
+    },
+    {
+      "angle": 145,
+      "contrailSize": 128,
+      "length": 16,
+      "location": [
+        -12,
+        54
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": 225,
+      "contrailSize": 128,
+      "length": 16,
+      "location": [
+        -12,
+        -54
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": 160,
+      "contrailSize": 128,
+      "length": 20,
+      "location": [
+        -22,
+        38.5
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": 200,
+      "contrailSize": 128,
+      "length": 20,
+      "location": [
+        -22,
+        -40.5
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    }
+  ],
+  "height": 100,
+  "hullId": "brawler_ii",
+  "hullName": "Brawler (II)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0.5,
+    -0.5
+  ],
+  "shieldRadius": 82.5,
+  "spriteName": "graphics/ships/brawler_ii.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS 001",
+      "locations": [
+        26,
+        14.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "COMPOSITE"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 003",
+      "locations": [
+        8.5,
+        46
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "UNIVERSAL"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 004",
+      "locations": [
+        8.5,
+        -46
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "UNIVERSAL"
+    }
+  ],
+  "width": 120
+}

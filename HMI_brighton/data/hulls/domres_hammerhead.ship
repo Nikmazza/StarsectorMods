@@ -1,0 +1,168 @@
+{
+  "hullName": "Hammerhead (DomRes)",
+  "hullId": "domres_hammerhead",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/domain_resurgent/hmidr_hammerhead.png",
+  "style": "LOW_TECH",
+  "coversColor": "255,255,255,255",
+  "height": 164,
+  "width": 108,
+  "center": [54, 73.5],
+  "collisionRadius": 130,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 120,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder",
+    "automated",
+	"hmi_domres_info"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [82, 31]
+    },
+    {
+      "id": "WS 002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [81.5, -31]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [84.5, 11]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [84.5, -11]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": 45,
+      "locations": [53.5, 16]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 215,
+      "angle": -45,
+      "locations": [53.5, -16]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 218,
+      "angle": 102,
+      "locations": [-19.5, 36]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 218,
+      "angle": -102,
+      "locations": [-19.5, -36]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-72.5, 38],
+      "length": 75,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-71.5, 27],
+      "length": 65,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 60,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-70.5, 15],
+      "length": 55,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-70.5, -15],
+      "length": 55,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-71.5, -26],
+      "length": 65,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-72.5, -38],
+      "length": 75,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 80,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    39, 24,
+    50.5, 49.5,
+    69.5, 51,
+    77.5, 39,
+    83.5, 0,
+    77.5, -39,
+    71.5, -50,
+    49.5, -49.5,
+    42.5, -23.5,
+    14, -19,
+    9.5, -37,
+    -6, -48,
+    -42.5, -46.5,
+    -70.5, -44,
+    -64.5, -7,
+    -33.5, -1,
+    -64.5, 8,
+    -70.5, 44,
+    -42.5, 47,
+    -6, 48,
+    9.5, 37,
+    14, 19
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "hullName": "Cutlet",
+  "hullId": "csp_cutlet",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/omega_cutlet.png",
+  "style": "OMEGA",
+  "height": 128,
+  "width": 132,
+  "center": [66, 63],
+  "collisionRadius": 94.5,
+  "shieldCenter": [0.5, -0],
+  "shieldRadius": 93,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "do_not_back_off",
+    "shard_spawner",
+    "fluxshunt"
+  ],
+  "builtInWings": [
+    "csp_bravais_shieldbreaker_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [14, 13]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [14, -13]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-16, 19]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -0,
+      "locations": [-16, -19]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-29, 42]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": -0,
+      "locations": [-29, -42]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        31, -0.5,
+        31.5, 2,
+        33, 3,
+        32, -2,
+        33.5, -3.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-27, 4],
+      "length": 31,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-27, -4],
+      "length": 31,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-47, -52],
+      "length": 31,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-47, 52],
+      "length": 31,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-48.5, -59.5],
+      "length": 23.5,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-48.5, 59.5],
+      "length": 23.5,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    -27, 0.5,
+    -57.5, 5,
+    -45.5, 26.5,
+    -57, 47.5,
+    -49.5, 66.5,
+    65.5, 23,
+    45.5, 15,
+    56, 4.5,
+    41, 5,
+    41, -5,
+    56, -4.5,
+    45.5, -15,
+    65.5, -23,
+    -49.5, -66.5,
+    -57, -47.5,
+    -45.5, -26.5,
+    -57.5, -5,
+    -27, -0.5
+  ]
+}

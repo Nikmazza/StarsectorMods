@@ -1,7 +1,8 @@
 {
 	"id":"launcher_rock_shot",
 	"specClass":"projectile",
-    "onHitEffect":"data.scripts.weapons.RockOnHitEffect",	
+	"onFireEffect":"data.scripts.weapons.LauncherOnFireEffect",
+    "onHitEffect":"data.scripts.weapons.RockOnHitEffect",
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",

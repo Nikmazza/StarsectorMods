@@ -1,6 +1,7 @@
 package org.dark.graphics.plugins;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.ModSpecAPI;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamageType;
@@ -10,43 +11,51 @@ import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import java.awt.Color;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import org.apache.log4j.Level;
 import org.dark.graphics.util.ShipColors;
+import org.dark.shaders.util.GraphicsLibSettings;
 import org.dark.shaders.util.ShaderLib;
+import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
+@SuppressWarnings("UseSpecificCatch")
 public class ArcEffectOnOverload extends BaseEveryFrameCombatPlugin {
+
+    private static final Set<String> EXCLUDED_HULLS = new HashSet<>(20);
 
     private static final float OFFSCREEN_GRACE_CONSTANT = 500f;
     private static final float OFFSCREEN_GRACE_FACTOR = 2f;
 
-    private static final String SETTINGS_FILE = "GRAPHICS_OPTIONS.ini";
-
-    private static boolean enabled = true;
-    private static boolean useVentColors = false;
-    private static boolean offscreen = false;
+    private static final String SETTINGS_SPREADSHEET = "data/config/glib/no_arc_overload.csv";
 
     static {
         try {
             loadSettings();
-        } catch (IOException | JSONException e) {
-            Global.getLogger(ArcEffectOnOverload.class).log(Level.ERROR, "Failed to load performance settings: "
-                    + e.getMessage());
-            enabled = false;
+        } catch (Exception e) {
+            Global.getLogger(ArcEffectOnOverload.class).log(Level.ERROR, "Failed to load settings: " + e.getMessage());
         }
     }
 
     private static void loadSettings() throws IOException, JSONException {
-        JSONObject settings = Global.getSettings().loadJSON(SETTINGS_FILE);
+        for (ModSpecAPI mod : Global.getSettings().getModManager().getEnabledModsCopy()) {
+            JSONArray rows;
+            try {
+                rows = Global.getSettings().getMergedSpreadsheetDataForMod("id", SETTINGS_SPREADSHEET, mod.getId());
+            } catch (RuntimeException e) {
+                continue;
+            }
 
-        enabled = settings.getBoolean("enableOverloadArcs");
-        useVentColors = settings.getBoolean("useVentColorsForOverloadArcs");
-        offscreen = settings.getBoolean("drawOffscreenParticles");
+            for (int i = 0; i < rows.length(); i++) {
+                String id = rows.getJSONObject(i).getString("id");
+                EXCLUDED_HULLS.add(id);
+            }
+        }
     }
 
     private CombatEngineAPI engine;
@@ -55,7 +64,7 @@ public class ArcEffectOnOverload extends BaseEveryFrameCombatPlugin {
     /* We're not going to bother with per-ship time manipulation applying to this.  An overloaded ship probably won't be warping time. */
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
-        if (engine == null || !enabled) {
+        if ((engine == null) || !GraphicsLibSettings.enableOverloadArcs()) {
             return;
         }
 
@@ -72,30 +81,27 @@ public class ArcEffectOnOverload extends BaseEveryFrameCombatPlugin {
                 if (ship.isHulk()) {
                     continue;
                 }
+                if (EXCLUDED_HULLS.contains(ship.getHullSpec().getBaseHullId())) {
+                    continue;
+                }
 
                 if (ship.getFluxTracker().isOverloaded()) {
-                    if (offscreen || ShaderLib.isOnScreen(ship.getLocation(), ship.getCollisionRadius()
-                            * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
+                    if (GraphicsLibSettings.drawOffscreenParticles()
+                            || ShaderLib.isOnScreen(ship.getLocation(), ship.getCollisionRadius() * OFFSCREEN_GRACE_FACTOR + OFFSCREEN_GRACE_CONSTANT)) {
                         int arcs = 1;
                         switch (ship.getHullSize()) {
-                            case FIGHTER:
+                            case FIGHTER ->
                                 arcs = 0;
-                                break;
-                            case FRIGATE:
-                            case DEFAULT:
+                            case FRIGATE, DEFAULT ->
                                 arcs = 1;
-                                break;
-                            case DESTROYER:
+                            case DESTROYER ->
                                 arcs = 1;
-                                break;
-                            case CRUISER:
+                            case CRUISER ->
                                 arcs = 2;
-                                break;
-                            case CAPITAL_SHIP:
+                            case CAPITAL_SHIP ->
                                 arcs = 3;
-                                break;
-                            default:
-                                break;
+                            default -> {
+                            }
                         }
 
                         ShipAPI empTarget = ship;
@@ -115,7 +121,7 @@ public class ArcEffectOnOverload extends BaseEveryFrameCombatPlugin {
                             if (ship.getOverloadColor() != null) {
                                 Color core;
                                 Color fringe;
-                                if (useVentColors) {
+                                if (GraphicsLibSettings.useVentColorsForOverloadArcs()) {
                                     core = ship.getVentCoreColor();
                                     fringe = ship.getVentFringeColor();
                                 } else {

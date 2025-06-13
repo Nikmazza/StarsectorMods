@@ -1,35 +1,41 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 34,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 14,
     "goalVariant": true,
     "hullId": "TADA_herald",
     "hullMods": [
+        "advancedoptics",
+        "eccm",
+        "missleracks",
         "targetingunit",
-        "fluxbreakers",
-        "turretgyros"
     ],
     "permaMods": [],
-    "sMods": [],
     "variantId": "TADA_herald_support",
     "weaponGroups": [
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS0002": "gauss"}
+            "weapons": {
+                "WS0006": "gravitonbeam",
+                "WS0007": "gravitonbeam",
+                "WS0005": "gravitonbeam",
+            }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS0001": "locust"}
+            "weapons": {
+                "WS0001": "hydra",
+            }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0005": "ionbeam",
-                "WS0006": "gravitonbeam",
-                "WS0007": "gravitonbeam"
+                "WS0004": "heavymauler",
+                "WS0003": "heavymauler",
+                "WS0002": "heavymauler",
             }
         },
         {
@@ -38,27 +44,20 @@
             "weapons": {
                 "WS0008": "lrpdlaser",
                 "WS0009": "lrpdlaser",
-                "WS0010": "lrpdlaser",
-                "WS0011": "lrpdlaser",
-                "WS0012": "lrpdlaser",
+                "WS0014": "lrpdlaser",
                 "WS0013": "lrpdlaser",
-                "WS0014": "lrpdlaser"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS0003": "flak",
-                "WS0004": "flak"
+                "WS0012": "lrpdlaser",
+                "WS0011": "lrpdlaser",
+                "WS0010": "lrpdlaser",
             }
         }
     ],
     "wings": [
-        "TADA_owlDrone_wing",
-        "TADA_firespitter_wing",
-        "TADA_firespitter_wing",
-        "TADA_firespitter_wing",
-        "TADA_owlDrone_wing"
+        "TADA_pinnace_wing",
+        "claw_wing",
+        "claw_wing",
+        "claw_wing",
+        "claw_wing",
+        "TADA_pinnace_wing",
     ]
 }

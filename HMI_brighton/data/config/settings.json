@@ -1,0 +1,15 @@
+{
+
+    "graphics":{
+			"blueprint_packages":{
+			"hmi_scav_package":"graphics/icons/cargo/hmi_scav_pack.png",
+			"hmi_scav_base_package":"graphics/icons/cargo/hmi_scav_base_pack.png",
+			"hmi_domres_package":"graphics/icons/cargo/hmi_domres_pack.png",
+			},
+	},
+    	"designTypeColors":{
+		"Brighton Reconstruction":[100,153,94,255],
+		"Autonomous Domain Resurgent":[208,0,255,255],
+		"Domain Resurgent":[148,86,160,255],
+	},
+}

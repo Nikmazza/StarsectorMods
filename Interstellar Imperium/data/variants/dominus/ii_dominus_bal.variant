@@ -1,6 +1,6 @@
 {
     "displayName": "Balanced",
-    "fluxCapacitors": 30,
+    "fluxCapacitors": 32,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "ii_dominus",

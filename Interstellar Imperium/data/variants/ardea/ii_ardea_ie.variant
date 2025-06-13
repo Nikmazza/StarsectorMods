@@ -1,6 +1,6 @@
 {
     "displayName": "Imperial Elite",
-    "fluxCapacitors": 12,
+    "fluxCapacitors": 14,
     "fluxVents": 30,
     "hullId": "ii_ardea",
     "hullMods": ["ii_elite_package"],

@@ -12,10 +12,14 @@ import static data.scripts.util.TADA_txt.txt;
 
 public class TADA_minimalPrep extends BaseHullMod {
     
-    private final float shipMaintenance = 50f;
+    private final float no_smod_shipMaintenance = 50f;
     private final float shipRecovery = 50f;
     private final float shipCrLoss = 40f;
     private final float shipPPTLoss = 75f;
+
+    private final float smod_shipMaintenance = 60f;
+
+    private final String creffect=txt("minimalprepCREffect");
         
 //    private final Set<String> BLOCKED_HULLMODS = new HashSet<>();
 //    {
@@ -27,9 +31,13 @@ public class TADA_minimalPrep extends BaseHullMod {
     
     @Override
     public void applyEffectsBeforeShipCreation(ShipAPI.HullSize hullSize, MutableShipStatsAPI stats, String id) {
-        stats.getSuppliesPerMonth().modifyMult(id,shipMaintenance*0.01f);
+        boolean sMod = isSMod(stats);
+        float shipMaintenance = no_smod_shipMaintenance;
+        if (sMod) shipMaintenance = smod_shipMaintenance;
+        stats.getSuppliesPerMonth().modifyMult(id, 1-(shipMaintenance*0.01f));
+
         stats.getRepairRatePercentPerDay().modifyMult(id,shipRecovery*0.01f);
-        stats.getMaxCombatReadiness().modifyMult(id, 1-(shipCrLoss*0.01f));
+        stats.getMaxCombatReadiness().modifyFlat(id, 0-(shipCrLoss*0.01f), creffect);
         
         stats.getPeakCRDuration().modifyMult(id, 1-(shipPPTLoss*0.01f));
         
@@ -41,17 +49,17 @@ public class TADA_minimalPrep extends BaseHullMod {
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){     
         for (String tmp : MinPrep_noncompatible) {
             if (ship.getVariant().getHullMods().contains(tmp)) {
-                MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), tmp, "SCY_minimalPrep");  
+                MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), tmp, "TADA_minimalPrep");  
             }
         }
     }
     
     @Override
     public String getDescriptionParam(int index, ShipAPI.HullSize hullSize) {
-        if (index == 0) return "" + (int)shipMaintenance;  
-        if (index == 1) return "" + (int)shipRecovery;  
-        if (index == 2) return "" + (int)shipCrLoss;  
-        if (index == 3) return "" + (int)shipPPTLoss;  
+        if (index == 0) return "" + (int)no_smod_shipMaintenance + "%";
+        if (index == 1) return "" + (int)shipRecovery + "%";  
+        if (index == 2) return "" + (int)shipCrLoss + "%";  
+        if (index == 3) return "" + (int)shipPPTLoss + "%";  
         
         //incompatibility list
         String list = "\n";
@@ -62,6 +70,12 @@ public class TADA_minimalPrep extends BaseHullMod {
             list+="\n";
         }
         if (index == 4) return list;
+        return null;
+    }
+
+    @Override
+    public String getSModDescriptionParam(int index, ShipAPI.HullSize hullSize) {
+        if (index == 0) return "" + "10%";  
         return null;
     }
     

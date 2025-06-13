@@ -3,10 +3,10 @@
 	"type":"EMP",
 	"aiType":"EMP",
 	
-	"range":400,
+	"range":600,
 	
 	"empDamage":200,
-	"damage":20,
+	"damage":80,
 	"damageType":ENERGY,
 	
 	#"effectColor1":[150,150,255,200],
@@ -21,8 +21,8 @@
 	"outOfUsesSound":"gun_out_of_ammo",
 	
 	"aiHints":{
-		"threatRange":500,
-		"threatAmount":3,
+		"threatRange":700,
+		"threatAmount":5,
 		"threatAngle":0,
 		"threatArc":360,
 	}

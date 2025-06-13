@@ -1,6 +1,7 @@
 {
 	"id":"hmi_megalauncher_cannon_shot",
 	"specClass":"projectile",
+	"onFireEffect":"data.scripts.weapons.LauncherOnFireEffect",
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
@@ -14,7 +15,7 @@
 	"pixelsPerTexel":5.0,
 	"bulletSprite":"graphics/missiles/shell_large_devastator.png",
 	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
-					"shotRangeVariance":0.50,
+					"shotRangeVariance":0.9,
 					"range":0,
 					"explosionSpec":{"duration":0.12f,
 									 "radius":60,

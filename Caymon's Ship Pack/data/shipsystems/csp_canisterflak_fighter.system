@@ -1,0 +1,8 @@
+{
+	"id":"csp_canisterflak_fighter",
+	"type":"WEAPON",
+	"aiType":"CANISTER_FLAK",
+	
+	"weaponDataId":"canister_flak",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

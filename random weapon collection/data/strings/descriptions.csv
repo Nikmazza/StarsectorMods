@@ -1,0 +1,48 @@
+id,type,text1,text2,text3,text4,notes
+devastation,WEAPON,A Devastator Cannon modified to fire much larger shells at a slower rate.  Compromise between the rapid fire of the Hephaestus and the raw striking power of the Hellbore.,,,,
+test_mjolnir,WEAPON,"Enlarged version of the Mjolnir.  Impressive damage output and rate of fire, but with an equally impressive flux cost.",,,,
+plasmabeam,WEAPON,"Similar to the Plasma Cannon, but fires a beam.  Trades effectiveness against shields for the ability to burn through the thickest armor.",,,,
+autopulsebeam,WEAPON,"Similar to the Autopulse Laser, but fires a beam.  Is the reason this mod exists.",,,,
+tpb,WEAPON,Highly modified Thermal Pulse Cannon that discharges the entire capacitor at once to produce a continuous beam.  ,,,,
+test_tachyon_accelerator,WEAPON,"Modified Tachyon Lance, fires a projectile instead of a continuous beam.  Unable to pierce shields, but has a powerful disabling effect.",,,,
+rwc_harpoon_reload,WEAPON,Single rail launcher for the ubiquitous Harpoon MRM.  Large magazines built into the hull ensure slow but reliable firepower in long engagements.,,,,
+rwc_light_mjolnir,WEAPON,"Cut-down Mjolnir variant.  Can be mounted on lighter vessels, but at a small loss in flux efficiency.",,,,
+rwc_harpoon_lrg,WEAPON,Large rail launcher for the common Harpoon MRM.  ,,,,
+rwc_positron,WEAPON,"Heavy gun firing positron blasts. Long range, high velocity, low flux efficiency.",,,,
+rwc_railcannon,WEAPON,"Heavy magnetic accelerator cannon, firing solid slugs of metal at high velocity.  Effective against shields and light armor.",,,,
+rwc_positron_m,WEAPON,Medium gun firing positron blasts. Relatively long range for an energy weapon.,,,,
+rwc_tribeam,WEAPON,Triple mounted Phase Lance.  High power draw results in decreased efficiency and longer cooldown time.,,,,
+rwc_gorgon,WEAPON,Single mount for the Gorgon DEM.  The less effective targeting systems on a fighter result in a shorter lock-on range.,,,,
+rwc_flash,WEAPON,"High agility missile with a somewhat short range and a small warhead.   Great against smaller targets, like destroyers and frigates.",,,,
+rwc_flash_m,WEAPON,"Multiple launcher for a high agility missile with a somewhat short range and a small warhead.   Great against smaller targets, like destroyers and frigates.",,,,
+rwc_flash_l,WEAPON,Rapid launcher system for high velocity missiles.  Has impressive damage output but individual missiles are relatively weak.,,,,
+rwc_dragonslayer,WEAPON,Massive twin-barrel cannon built into the Hrunting prototype.  Deals incredible damage against unshielded targets.,,,,
+,,,,,,
+onslaught_beam,SHIP,A modified Onslaught-class battleship.  No hulls were known to have been produced.,,,,
+test_egret,SHIP,"Large carrier based off of the successful Heron-class.  Carries a powerful strike wing, but few weapons even for a carrier.   ",,,,
+test_conqueror,SHIP,A fast battleship with heavily forward-focused armament.  ,,,,
+rwc_javelin,SHIP,"Midline cruiser equipped with an accelerated ammunition feed for the main guns.  Good firepower, but not particularly mobile.",,,,
+rwc_polaris,SHIP,Midline battlecarrier with integrated missile launchers.  ,,,,
+rwc_egret,SHIP,"Large carrier based off of the successful Heron-class.  Carries a powerful strike wing, but few weapons even for a carrier.   ",,,,
+rwc_viper,SHIP,"A relatively large frigate, equipped with ballistic weaponry and a high-speed ammo feeder.  ",,,,
+rwc_barrage,SHIP,A slow but powerful battleship constructed mostly out of modules intended for orbital stations.  Carries extensive ammunition reserves for missiles and a powerful ballistic armament.,,,,
+rwc_warhawk,SHIP,A very maneuverable cruiser design based on the Falcon.,,,,
+rwc_viking,SHIP,"Heavy missile frigate.  Designed to support planetary raids, it is capable of atmospheric combat.",,,,
+rwc_wildcat,SHIP,Heavy strike fighter.  Carries the Gorgon DEM and twin LMGs.,,,,
+rwc_vulcan,SHIP,"A combination of the strengths of the Onslaught and the Conquest, the Vulcan is a battleship with heavy forward-facing firepower and the flux to take advantage of it.  Very low rearward firepower.",,,,
+rwc_hurricane,SHIP,"Fast high-tech destroyer, equipped with the same Terminator drones as the Tempest.  These drones lack the secondary function of the Tempest's, however.",,,,
+rwc_triumphant,SHIP,A broadside focused battleship with a system that boosts turn rate and firepower.  ,,,,
+rwc_hrunting,SHIP,"ERROR // Hull does not match any known design.  
+
+A combination of a massive shaped block of armor and enormous integrated artillery, this vessel appears more as an unholy amalgam from the monomaniacal imagination of a deranged Domain military procurement official than a real, functioning starship. And yet it exists, with every Tri-Pad imagining analysis triggering some sort of hardcoded COMSEC blockade.
+
+
+Analysis of on-board databanks has yielded a few historical clues: this is indeed a phase battleship, as unbelievable as it might seem, similar in design age with the ill-fated Grendel project.  Code-named Hrunting, the project was an attempt to push phase technology - then limited to the Domain Armada - to its absolute limits.  Orion Shipyards was selected, after the resounding success of their Onslaught-class battleship design. Unsurprisingly, inefficiencies in the design, operation and refitting led to absurd cost overruns, numerous accidents and  several project reshuffles. The project was on verge of shutdown when both the hull and existing design team were ""recruited"" by a black ops Domain Armada unit. All records hence were wiped, with what remains only indicating a rushed combat refitting that saw the Hrunting equipped with its modular weaponry, before departing from pages of history forever.  Elements of the design, however, have appeared in other more successful projects unrelated to phase technology.
+
+But these answers yield more questions. What sort of threat would push Domain towards mobilizing such an absurd project? And more importantly, how such a vessel found its way to the Persean Sector, without any visible signs of battle damage, or more importantly, any signs of use? 
+
+Where did it go? And what did it see? ",,,,
+,,,,,,
+rwc_plasmajets2,SHIP_SYSTEM,"Provides a brief but extreme boost to top speed, along with a slight maneuverability boost.",Movement,"Provides a brief but extreme boost to top speed, along with a slight maneuverability boost.",,
+rwc_dynamic_stabilizer,SHIP_SYSTEM,"Reroutes excess drive energy to boost weapon fire rate with a corresponding flux cost reduction.  Also increases turn rate, but not max speed.",Offensive,"Boosts weapon fire rate with a corresponding flux cost reduction.  Also increases turn rate, but not max speed.",,
+rwc_overdrive,SHIP_SYSTEM,Executing a controlled reactor overload allows improvements to all combat parameters.  Still-intact safeties enforce a cooldown time between uses to prevent catastrophic overheating.,Offensive,"Boosts turn rate, top speed, and weapon fire rate with a corresponding flux cost reduction. ",,

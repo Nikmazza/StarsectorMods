@@ -1,0 +1,77 @@
+{
+  "variantId": "kazeron_conquest_league_assault",
+  "hullId": "kazeron_conquest_league",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 33,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "hardenedshieldemitter",
+    "reinforcedhull",
+    "advancedshieldemitter",
+    "armoredweapons",
+    "magazines",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 005": "pdburst",
+        "WS 011": "mjolnir",
+        "WS 012": "mjolnir"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "hydra",
+        "WS 002": "hydra"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 019": "gazerpod",
+        "WS 020": "gazerpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 022": "irautolance"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser",
+        "WS 009": "pdburst",
+        "WS 010": "pdburst",
+        "WS 015": "dualflak",
+        "WS 016": "dualflak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

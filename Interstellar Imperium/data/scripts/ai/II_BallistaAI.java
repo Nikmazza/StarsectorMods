@@ -35,6 +35,11 @@ public class II_BallistaAI extends II_BaseMissile {
         if (missile.isFading() || missile.isFizzling()) {
             return;
         }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
+        }
 
         if (!acquireTarget(amount)) {
             missile.giveCommand(ShipCommand.ACCELERATE);
@@ -126,8 +131,7 @@ public class II_BallistaAI extends II_BaseMissile {
     @Override
     protected boolean acquireTarget(float amount) {
         if (!isTargetValidAlternate(target)) {
-            if (target instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) target;
+            if (target instanceof ShipAPI ship) {
                 if (ship.isPhased() && ship.isAlive()) {
                     return false;
                 }
@@ -169,8 +173,7 @@ public class II_BallistaAI extends II_BaseMissile {
 
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone()) {
                 return false;
             }

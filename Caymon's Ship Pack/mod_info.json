@@ -1,0 +1,17 @@
+{
+	"id":"Csp",
+	"name":"Caymon's Ship pack",
+	"author":"Caymon",
+	"version":"1.2.4",
+	"description":"Just another Ship pack.",
+	"gameVersion":"0.98a-RC5",
+	"dependencies": [
+        {
+            "id": "MagicLib",
+            "name": "MagicLib",
+        },
+    ],
+
+	"jars":["jars/Caymon's Ship Pack.jar"],
+    "modPlugin":"data.scripts.csp_ModPlugin",
+}

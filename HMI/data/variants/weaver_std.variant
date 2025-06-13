@@ -3,7 +3,7 @@
   "hullId": "weaver",
   "displayName": "Silk",
   "goalVariant": true,
-  "fluxCapacitors": 15,
+  "fluxCapacitors": 19,
   "fluxVents": 10,
   "quality": 1,
   "permaMods": [],

@@ -11,6 +11,7 @@
   "shieldCenter": [-6, -0],
   "shieldRadius": 105,
   "viewOffset": 0,
+  "builtInMods": ["pointdefenseai"],
   "weaponSlots": [
     {
       "id": "WS0001",
@@ -72,8 +73,8 @@
       "type": "SYSTEM",
       "mount": "HIDDEN",
       "arc": 0,
-      "angle": 180,
-      "locations": [0, 79]
+      "angle": -175,
+      "locations": [1.5, -82]
     },
     {
       "id": "WS0008",
@@ -81,45 +82,9 @@
       "type": "SYSTEM",
       "mount": "HIDDEN",
       "arc": 0,
-      "angle": -180,
-      "locations": [0, -79]
-    },
-    {
-      "id": "WS0009",
-      "size": "SMALL",
-      "type": "SYSTEM",
-      "mount": "HIDDEN",
-      "arc": 0,
-      "angle": -175,
-      "locations": [1.5, -82]
-    },
-    {
-      "id": "WS0010",
-      "size": "SMALL",
-      "type": "SYSTEM",
-      "mount": "HIDDEN",
-      "arc": 0,
       "angle": 175,
       "locations": [1.5, 82]
     },
-    {
-      "id": "WS0011",
-      "size": "SMALL",
-      "type": "SYSTEM",
-      "mount": "HIDDEN",
-      "arc": 0,
-      "angle": -170,
-      "locations": [3, -85]
-    },
-    {
-      "id": "WS0012",
-      "size": "SMALL",
-      "type": "SYSTEM",
-      "mount": "HIDDEN",
-      "arc": 0,
-      "angle": 170,
-      "locations": [3, 85]
-    }
   ],
   "engineSlots": [
     {

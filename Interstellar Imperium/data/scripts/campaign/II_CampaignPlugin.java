@@ -21,7 +21,7 @@ public class II_CampaignPlugin extends BaseCampaignPlugin {
     @Override
     public PluginPick<InteractionDialogPlugin> pickInteractionDialogPlugin(SectorEntityToken interactionTarget) {
         if (interactionTarget.hasTag("ii_ex_vis_gate")) {
-            return new PluginPick<InteractionDialogPlugin>(new RuleBasedInteractionDialogPluginImpl(), PickPriority.MOD_SPECIFIC);
+            return new PluginPick<>(new RuleBasedInteractionDialogPluginImpl(), PickPriority.MOD_SPECIFIC);
         }
         return null;
     }

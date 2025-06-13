@@ -7,13 +7,8 @@
 		"graphics/portraits/portrait_hmi_hegemonyvet_01.png",	
 		],
 	},
-		},
-	"knownShips":{
-		"tags":["hmi_bp"],
-	},
 	"illegalCommodities":[
 		"red_water",
 		"mess_nano",
-		"hmi_crystal",
 	],
 },

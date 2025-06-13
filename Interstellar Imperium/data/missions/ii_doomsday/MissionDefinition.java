@@ -8,6 +8,7 @@ import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -16,6 +17,8 @@ import java.util.List;
 import org.lwjgl.util.vector.Vector2f;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
+
+    public static boolean printedCodexWarning = false;
 
     @Override
     public void defineMission(MissionDefinitionAPI api) {
@@ -27,6 +30,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         // mission results screens to identify each side.
         api.setFleetTagline(FleetSide.PLAYER, "5th Imperial Fleet special operations unit");
         api.setFleetTagline(FleetSide.ENEMY, "Samsara station with Eventide defense fleet");
+
+        if (!CodexDataV2.hasUnlockedEntryForShip("ii_olympus") && !printedCodexWarning) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+            api.addBriefingItem("Codex entries for certain ships featured in this mission are not yet unlocked");
+            api.addBriefingItem("Click again to play the mission anyway!");
+            printedCodexWarning = true;
+            return;
+        }
 
         // These show up as items in the bulleted list under
         // "Tactical Objectives" on the mission detail screen

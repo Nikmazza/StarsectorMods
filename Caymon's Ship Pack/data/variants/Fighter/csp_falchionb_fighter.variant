@@ -1,0 +1,30 @@
+{
+  "variantId": "csp_falchionb_fighter",
+  "hullId": "csp_falchionb",
+  "displayName": "Bomber Super Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "csp_built_in_breach_srmF",
+        "WS0002": "csp_built_in_breach_srmF"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "sabot"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

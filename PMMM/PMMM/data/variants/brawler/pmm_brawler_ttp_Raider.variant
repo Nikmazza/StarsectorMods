@@ -1,0 +1,34 @@
+{
+    "displayName": "Raider",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "pmm_brawler_ttp",
+    "hullMods": [
+        "auxiliarythrusters",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "pmm_brawler_ttp_Raider",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heavyblaster",
+                "WS 001": "irautolance",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "breach",
+                "WS 003": "breach",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

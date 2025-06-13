@@ -1,0 +1,39 @@
+{
+  "variantId": "csp_xivglimmer_elite",
+  "hullId": "csp_xivglimmer",
+  "displayName": "Elite",
+  "goalVariant": false,
+  "fluxCapacitors": 8,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "solar_shielding"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "cryoflux",
+        "WS 002": "minipulser",
+        "WS 003": "minipulser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "sabot",
+        "WS 005": "sabot"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

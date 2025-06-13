@@ -117,7 +117,7 @@
             "ii_yellow_star":"graphics/planets/US_star_textureCustomYellow.jpg",
             "ii_orange_star":"graphics/planets/US_star_textureCustomOrange.jpg",
             "ii_red_star":"graphics/planets/US_star_textureCustomRed.jpg",
-            "ii_star_clouds":"graphics/planets/clouds_textureStar.png",
+            "ii_star_clouds":"graphics/planets/US_clouds_textureStarYellow.png",
         },
         "terrain":{
             "ii_nebula_orange":"graphics/imperium/terrain/ii_nebula_orange.png",

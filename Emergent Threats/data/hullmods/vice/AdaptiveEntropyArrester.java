@@ -9,9 +9,11 @@ import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveEntropyArrester extends BaseHullMod {
 
-	private static float HEAL_HULL_AMOUNT = 0.5f; //+1% per second
+	private static float HEAL_HULL_AMOUNT = 1f; //1% hull per second
+	private static float HEAL_HULL_CAP = 150f; //max hull heal per second
 	private static float REPAIR_BONUS = 50f;
 	private static String CONFLICT_MOD = "autorepair";
+	private static String CONFLICT_MOD_2 = "vice_field_repair_nanites";
 	private static String DUPLICATE_MOD = "ix_entropy_arrester";
 	private static String THIS_MOD = "vice_adaptive_entropy_arrester";
 	//Utility variables
@@ -41,7 +43,9 @@ public class AdaptiveEntropyArrester extends BaseHullMod {
 		float maxHP = ship.getMaxHitpoints();
 
 		if (currentHP < maxHP) {
-			float newHP = currentHP + (maxHP * amount * HEAL_HULL_AMOUNT * 0.01f);
+			float healedHP = maxHP * HEAL_HULL_AMOUNT * 0.01f;
+			if (healedHP > HEAL_HULL_CAP) healedHP = HEAL_HULL_CAP;
+			float newHP = currentHP + (healedHP * amount);
 			if (newHP < maxHP) ship.setHitpoints(newHP);
 			else ship.setHitpoints(maxHP);
 		}
@@ -49,8 +53,10 @@ public class AdaptiveEntropyArrester extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (ship.getVariant().hasHullMod(DUPLICATE_MOD)) return false;
 		if (ship.getVariant().hasHullMod(CONFLICT_MOD)) return false;
+		if (ship.getVariant().hasHullMod(CONFLICT_MOD_2)) return false;
 		if (util.isModuleCheck(ship)) return false;
 		if (ship.getVariant().hasHullMod("automated") 
 				&& ship.getVariant().hasHullMod("ix_plasma_ramjet") 
@@ -59,18 +65,21 @@ public class AdaptiveEntropyArrester extends BaseHullMod {
 	}
 
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (ship.getVariant().hasHullMod(DUPLICATE_MOD)) return "Already present on ship";
 		if (ship.getVariant().hasHullMod("vice_shipwide_integration") && (ship.getVariant().hasHullMod(THIS_MOD))) return null;
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("hub");
 		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");
 		if (ship.getVariant().hasHullMod(CONFLICT_MOD)) return "Incompatible with Automated Repair Unit";
+		if (ship.getVariant().hasHullMod(CONFLICT_MOD_2)) return "Incompatible with Field Repair Nanites";
 		if (!util.isOnlyRemnantMod(ship)) return util.getIncompatibleCauseString("modcount");
 		return null;
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + HEAL_HULL_AMOUNT + "%";
-		if (index == 1) return "" + (int) REPAIR_BONUS + "%";
+		if (index == 0) return "" + (int) HEAL_HULL_AMOUNT + "%";
+		if (index == 1) return "" + (int) HEAL_HULL_CAP;
+		if (index == 2) return "" + (int) REPAIR_BONUS + "%";
 		return null;
 	}
 }

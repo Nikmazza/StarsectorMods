@@ -3,7 +3,7 @@
   "hullId": "hammerhead_hmi",
   "displayName": "Outdated",
   "goalVariant": false,
-  "fluxCapacitors": 15,
+  "fluxCapacitors": 7,
   "fluxVents": 10,
   "quality": 0,
   "permaMods": [],
@@ -26,16 +26,16 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "signpost_sml",
-        "WS0004": "signpost_sml"
+        "WS0003": "hammer",
+        "WS0004": "hammer"
       }
     },
     {
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "sml_fragrifle",
-        "WS0002": "sml_fragrifle"
+        "WS0001": "hmi_nailgun",
+        "WS0002": "hmi_nailgun"
       }
     },
     {

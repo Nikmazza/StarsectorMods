@@ -1,0 +1,29 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "colossus_base_scav",
+    "hullMods": [
+        "insulatedengine",
+        "unstable_injector"
+    ],
+    "permaMods": [],
+    "variantId": "colossus_scav_Standard",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {						
+            "WS 002": "salamanderpod",
+            "WS 004": "salamanderpod"
+        }
+    },
+	{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "swarmer",
+			"WS 003": "swarmer"
+        }
+    }]
+}

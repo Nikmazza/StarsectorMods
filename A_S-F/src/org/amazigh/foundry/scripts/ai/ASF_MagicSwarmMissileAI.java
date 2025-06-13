@@ -247,7 +247,7 @@ public class ASF_MagicSwarmMissileAI implements MissileAIPlugin, GuidedMissileAI
             correctAngle = correctAngle+correction;
         }
         
-        if(WAVE_AMPLITUDE>0){            
+        if(WAVE_AMPLITUDE>0){
             //waving
             float multiplier=1;
             if(ECCM<=1){
@@ -311,7 +311,7 @@ public class ASF_MagicSwarmMissileAI implements MissileAIPlugin, GuidedMissileAI
 			}
 		}
 
-		//If we didn't find a point in 40 tries, just choose target center
+		//If we didn't find a point in 20 tries, just choose target center
 		if (!success) {
 			targetPoint = new Vector2f(Misc.ZERO);
 		}

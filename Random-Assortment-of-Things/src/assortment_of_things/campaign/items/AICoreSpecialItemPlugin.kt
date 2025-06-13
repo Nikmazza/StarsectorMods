@@ -20,7 +20,9 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI
 import com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin
 import com.fs.starfarer.api.graphics.SpriteAPI
+import com.fs.starfarer.api.impl.SharedUnlockData
 import com.fs.starfarer.api.impl.campaign.ids.Factions
+import com.fs.starfarer.api.impl.codex.CodexDataV2
 import com.fs.starfarer.api.loading.Description
 import com.fs.starfarer.api.ui.Alignment
 import com.fs.starfarer.api.ui.TooltipMakerAPI
@@ -130,10 +132,7 @@ class AICoreSpecialItemPlugin : BaseSpecialItemPlugin() {
     fun renderSpecialGlow(w: Float, h: Float, centerX: Float, centerY: Float, alphaMult: Float, sprite: SpriteAPI) {
         var time = (Global.getSector().scripts.find { it is ConstantTimeIncreaseScript } as ConstantTimeIncreaseScript).time / 8
 
-
-
         GL20.glUseProgram(shader)
-
 
         GL20.glUniform1f(GL20.glGetUniformLocation(shader, "iTime"), time)
         GL20.glUniform1f(GL20.glGetUniformLocation(shader, "alphaMult"), alphaMult)
@@ -184,8 +183,11 @@ class AICoreSpecialItemPlugin : BaseSpecialItemPlugin() {
         return 500f
     }
 
-    override fun createTooltip(tooltip: TooltipMakerAPI?, expanded: Boolean, transferHandler: CargoTransferHandlerAPI?, stackSource: Any?) {
+    override fun createTooltip(tooltip: TooltipMakerAPI, expanded: Boolean, transferHandler: CargoTransferHandlerAPI?, stackSource: Any?) {
         val opad = 10f
+
+        tooltip.codexEntryId = CodexDataV2.getCommodityEntryId(commoditySpec.id)
+        SharedUnlockData.get().reportPlayerAwareOfCommodity(commoditySpec.id,true)
 
         var skillSpec = Global.getSettings().getSkillSpec(cores.get(commoditySpec.id))
 

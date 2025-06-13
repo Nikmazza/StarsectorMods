@@ -11,10 +11,12 @@ import java.util.Arrays;
 public class MysteryLuddicMajority extends BaseMarketConditionPlugin {
 
 	private static String [] luddicFactions = new String [] {
-		"knights_of_ludd",
-		"luddic_church",
-		"luddic_path",
-		"ashen_keepers",
+			"ashen_keepers",
+			"knights_of_ludd",
+			"luddic_church",
+			"luddic_path",
+			"knights_of_eva",
+
 	};
 	public void apply(String id) {
 		if (Arrays.asList(luddicFactions).contains(market.getFactionId())) {

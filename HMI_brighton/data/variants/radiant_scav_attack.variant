@@ -1,0 +1,66 @@
+{
+  "variantId": "radiant_scav_attack",
+  "hullId": "radiant_scav",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "auxiliarythrusters",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "plasma"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "hammerrack",
+        "WS0006": "hammerrack"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "harpoonpod",
+        "WS0009": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "mark9",
+        "WS0002": "mark9",
+        "WS0003": "heavyac",
+        "WS0004": "heavyac",
+        "WS0010": "hveldriver",
+        "WS0011": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0012": "vulcan",
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0015": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

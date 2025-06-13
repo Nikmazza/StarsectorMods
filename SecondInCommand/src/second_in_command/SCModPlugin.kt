@@ -6,8 +6,11 @@ import com.fs.starfarer.api.impl.campaign.ids.Abilities
 import lunalib.lunaDebug.LunaDebug
 import lunalib.lunaSettings.LunaSettings
 import second_in_command.misc.NPCFleetInflater
+import second_in_command.misc.ReflectionUtils
 import second_in_command.misc.SCSettings
 import second_in_command.misc.SpecialEventHandler
+import second_in_command.misc.backgrounds.AssociatesBackground
+import second_in_command.misc.codex.CodexHandler
 import second_in_command.misc.snippets.AddAllOfficersSnippet
 import second_in_command.misc.snippets.AddXPToOfficersSnippet
 import second_in_command.scripts.*
@@ -17,8 +20,19 @@ import java.lang.Exception
 
 class SCModPlugin : BaseModPlugin() {
 
-    override fun onApplicationLoad() {
+    override fun onAboutToStartGeneratingCodex() {
+        CodexHandler.onAboutToStartGeneratingCodex()
+    }
 
+    override fun onAboutToLinkCodexEntries() {
+        CodexHandler.onAboutToLinkCodexEntries()
+    }
+
+    override fun onCodexDataGenerated() {
+        CodexHandler.onCodexDataGenerated()
+    }
+
+    override fun onApplicationLoad() {
         LunaSettings.addSettingsListener(SCSettings())
 
         LunaDebug.addSnippet(AddAllOfficersSnippet())
@@ -68,8 +82,16 @@ class SCModPlugin : BaseModPlugin() {
         }
     }
 
-    override fun onGameLoad(newGame: Boolean) {
+    class TestClass(var name: String) {
 
+        var name3: String = ""
+
+        fun combine(toAdd1: String, toAdd2: String) : String {
+            return name + toAdd1 + toAdd2
+        }
+    }
+
+    override fun onGameLoad(newGame: Boolean) {
         if (!Global.getSector().playerPerson.stats.hasSkill("sc_utility_skill")) {
             Global.getSector().playerPerson.stats.setSkillLevel("sc_utility_skill", 2f)
         }
@@ -111,6 +133,12 @@ class SCModPlugin : BaseModPlugin() {
         if (!Global.getSector().intelManager.hasIntelOfClass(SectorSeedIntel::class.java)) {
             Global.getSector().intelManager.addIntel(SectorSeedIntel(), true)
         }
+
+        if (Global.getSettings().modManager.isModEnabled("nexerelin")) {
+            AssociatesBackground.fillMissingSlot()
+        }
+
+        SCUtils.getPlayerData().remove4thOfficer()
     }
 
     override fun onNewGame() {

@@ -3,6 +3,7 @@ package data.scripts.weapons;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
@@ -78,8 +79,7 @@ public class II_WaveMotionBeamEffect implements BeamEffectPlugin {
             }
 
             boolean shieldHit = false;
-            if (tgt instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) tgt;
+            if (tgt instanceof ShipAPI ship) {
                 if (ship.getShield() != null && ship.getShield().isWithinArc(point)) {
                     shieldHit = true;
                 }
@@ -99,6 +99,11 @@ public class II_WaveMotionBeamEffect implements BeamEffectPlugin {
                 Vector2f projection = VectorUtils.getDirectionalVector(tgt.getLocation(), point);
                 projection.scale(tgt.getCollisionRadius());
                 Vector2f.add(projection, tgt.getLocation(), projection);
+                // Workaround until LazyLib is patched
+                BoundsAPI bounds = tgt.getExactBounds();
+                if (bounds != null) {
+                    bounds.update(tgt.getLocation(), tgt.getFacing());
+                }
                 damagePoint = CollisionUtils.getCollisionPoint(point, projection, tgt);
             }
             if (damagePoint == null) {

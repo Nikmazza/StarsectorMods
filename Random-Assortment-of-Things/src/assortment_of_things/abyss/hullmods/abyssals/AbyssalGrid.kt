@@ -21,17 +21,18 @@ class AbyssalGrid : BaseHullMod() {
 
     override fun applyEffectsBeforeShipCreation(hullSize: ShipAPI.HullSize?, stats: MutableShipStatsAPI?, id: String?) {
 
-
-        if (Global.getSector()?.characterData?.person != null) {
-            if (Misc.getAllowedRecoveryTags().contains(Tags.AUTOMATED_RECOVERABLE)
-                || stats!!.variant.hasHullMod("rat_abyssal_conversion") ||
-                stats!!.variant.hasHullMod("rat_chronos_conversion") || stats!!.variant.hasHullMod("rat_cosmos_conversion") || stats!!.variant.hasHullMod("rat_seraph_conversion")) {
-                stats!!.variant.removeTag(Tags.VARIANT_UNBOARDABLE)
-            }
-            else {
-                stats!!.variant.addTag(Tags.VARIANT_UNBOARDABLE)
+        //Only on abyssal ships
+        if (stats!!.variant.baseOrModSpec().hasTag("rat_abyssals") || stats!!.variant.baseOrModSpec().hasTag("rat_seraph")) {
+            if (Global.getSector()?.characterData?.person != null) {
+                if (Misc.getAllowedRecoveryTags().contains(Tags.AUTOMATED_RECOVERABLE) || stats!!.variant.hasHullMod("rat_abyssal_conversion")) {
+                    stats!!.variant.removeTag(Tags.VARIANT_UNBOARDABLE)
+                }
+                else {
+                    stats!!.variant.addTag(Tags.VARIANT_UNBOARDABLE)
+                }
             }
         }
+
 
         stats!!.energyWeaponFluxCostMod.modifyMult(id, 0.9f)
         stats!!.energyWeaponRangeBonus.modifyFlat(id, 100f)
@@ -85,7 +86,7 @@ class AbyssalGrid : BaseHullMod() {
         return false
     }
 
-    override fun getUnapplicableReason(ship: ShipAPI?): String {
+    /*override fun getUnapplicableReason(ship: ShipAPI?): String {
         return "Can only be prebuilt into abyssal hulls."
-    }
+    }*/
 }

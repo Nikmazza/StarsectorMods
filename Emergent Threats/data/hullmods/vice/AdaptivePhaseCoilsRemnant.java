@@ -62,6 +62,7 @@ public class AdaptivePhaseCoilsRemnant extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (util.isModuleCheck(ship)) return false;
 		if (ship.getVariant().hasHullMod("phase_anchor") || ship.getVariant().hasHullMod("adaptive_coils")) return false;
 		if (util.hasSierraMods(ship)) return false;
@@ -69,6 +70,7 @@ public class AdaptivePhaseCoilsRemnant extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (ship.getVariant().hasHullMod("vice_shipwide_integration") && (ship.getVariant().hasHullMod(THIS_MOD))) return null;
 		if (util.isModuleCheck(ship)) return util.getIncompatibleCauseString("hub");
 		if (ship.getVariant().hasHullMod("phase_anchor")) return "Incompatible with Phase Anchor";

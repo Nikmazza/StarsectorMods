@@ -3,7 +3,7 @@
     "specClass":"projectile",
     "type":"ENERGY",
     "size":"LARGE",
-    "turretSprite":"",
+    "turretSprite":"graphics/swp/weapons/swp_roycocannon.png",
     "hardpointSprite":"",
     "turretOffsets":[30, 3.5, 30, -3.5],
     "turretAngleOffsets":[0, 0],

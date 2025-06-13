@@ -23,7 +23,7 @@ public class SwordOfTheFleet {
 		}
 		
 		public String getEffectDescription(float level) {
-			return "+" + (int)(SHIELD_BONUS_UNFOLD) + "% to raise shield speed";
+			return "+" + (int) SHIELD_BONUS_UNFOLD + "% to raise shield speed";
 		}
 		
 		public String getEffectPerLevelDescription() {
@@ -54,7 +54,7 @@ public class SwordOfTheFleet {
 		}
 		
 		public String getEffectDescription(float level) {
-			return "+" + (int)(ENERGY_REGEN_BONUS) + "% energy weapon ammo regeneration rate when piloting IX Battlegroup ships without an ammo regeneration bonus";
+			return "+" + (int) ENERGY_REGEN_BONUS + "% energy weapon ammo regeneration rate when piloting IX Battlegroup ships without an ammo regeneration bonus";
 		}
 		
 		public String getEffectPerLevelDescription() {
@@ -77,7 +77,7 @@ public class SwordOfTheFleet {
 		}
 		
 		public String getEffectDescription(float level) {
-			return "+" + (int)(ENERGY_ROF_BONUS) + "% energy weapon rate of fire";
+			return "+" + (int) ENERGY_ROF_BONUS + "% energy weapon rate of fire";
 		}
 		
 		public String getEffectPerLevelDescription() {

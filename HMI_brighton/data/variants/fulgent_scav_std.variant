@@ -1,0 +1,54 @@
+{
+  "variantId": "fulgent_scav_std",
+  "hullId": "fulgent_scav",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 6,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "advancedshieldemitter",
+    "armoredweapons",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "miningblaster"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "annihilator",
+        "WS0003": "annihilator",
+        "WS0006": "annihilator",
+        "WS0007": "annihilator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "gravitonbeam",
+        "WS0005": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "vulcan",
+        "WS0009": "vulcan",
+        "WS0010": "vulcan",
+        "WS0011": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

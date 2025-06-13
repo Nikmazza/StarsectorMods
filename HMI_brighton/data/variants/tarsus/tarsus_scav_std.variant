@@ -1,0 +1,27 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "tarsus_scav",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "tarsus_scav_std",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "ALTERNATING",
+        "weapons": {
+            "WS 003": "lightdualac",
+            "WS 004": "lightdualac"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "annihilatorpod",
+                "WS 002": "annihilatorpod"
+            }
+        }
+    ]
+}

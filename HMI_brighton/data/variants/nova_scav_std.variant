@@ -1,0 +1,61 @@
+{
+  "variantId": "nova_scav_std",
+  "hullId": "nova_scav",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 36,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "advancedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "mjolnir"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "harpoonpod",
+        "WS 009": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 000": "heavymauler",
+        "WS 001": "heavymauler",
+        "WS 005": "heavymauler",
+        "WS 007": "hellbore",
+        "WS 012": "mark9"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "gravitonbeam",
+        "WS 003": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 010": "vulcan",
+        "WS 011": "dualflak",
+        "WS 013": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

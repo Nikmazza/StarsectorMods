@@ -11,8 +11,10 @@ import static data.scripts.util.TADA_txt.txt;
 public class TADA_reactiveArmor extends BaseHullMod {
 
     private final float explosive = -33f;    
-    private final float energy = 25f;
     private final float kinetic = 25f;
+    private final float no_smod_energy = 10f;
+
+    private final float smod_energy = -10f;
 
 //    private final Set<String> BLOCKED_HULLMODS = new HashSet<>();
 //    {
@@ -26,10 +28,14 @@ public class TADA_reactiveArmor extends BaseHullMod {
     @Override
     public void applyEffectsBeforeShipCreation(ShipAPI.HullSize hullSize, MutableShipStatsAPI stats, String id) {
         
-        stats.getHighExplosiveDamageTakenMult().modifyMult(id, 1+(explosive/100));
+        stats.getHighExplosiveDamageTakenMult().modifyMult(id, 1 + (explosive / 100));
         
-        stats.getEnergyDamageTakenMult().modifyPercent(id, energy);
         stats.getKineticDamageTakenMult().modifyPercent(id, kinetic);
+
+        boolean sMod = isSMod(stats);
+        float energy = no_smod_energy;
+        if (sMod) energy = smod_energy;
+        stats.getEnergyDamageTakenMult().modifyPercent(id, energy);
         //stats.getFragmentationDamageTakenMult().modifyMult(id, 1+(frag/100));
         //stats.getArmorDamageTakenMult().modifyMult(id, frag);
     }
@@ -38,7 +44,7 @@ public class TADA_reactiveArmor extends BaseHullMod {
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
         for (String tmp : ReactiveArmor_noncompatible) {
             if (ship.getVariant().getHullMods().contains(tmp)) {   
-                MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), tmp, "SCY_reactiveArmor");
+                MagicIncompatibleHullmods.removeHullmodWithWarning(ship.getVariant(), tmp, "TADA_reactiveArmor");
             }
         }
     }
@@ -46,9 +52,9 @@ public class TADA_reactiveArmor extends BaseHullMod {
     @Override
     public String getDescriptionParam(int index, ShipAPI.HullSize hullSize) {
         
-        if (index == 0) return "" + Math.round(explosive);  
-        if (index == 1) return "" + Math.round(energy); 
-        if (index == 2) return "" + Math.round(kinetic); 
+        if (index == 0) return "" + Math.round(explosive) + "%";
+        if (index == 1) return "" + "+" + Math.round(kinetic) + "%";
+        if (index == 2) return "" + "+" + Math.round(no_smod_energy ) + "%"; 
         
         //incompatibility list
         String list = "\n";
@@ -59,6 +65,13 @@ public class TADA_reactiveArmor extends BaseHullMod {
             list+="\n";
         }
         if (index == 3) return list;
+        return null;
+    }
+
+    @Override
+    public String getSModDescriptionParam(int index, ShipAPI.HullSize hullSize) {
+
+        if (index == 0) return "" + Math.round(smod_energy) + "%";
         return null;
     }
     

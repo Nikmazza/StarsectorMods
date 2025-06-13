@@ -1,0 +1,38 @@
+{
+    "displayName": "Raider",
+    "fluxCapacitors": 6,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_challenger_pather",
+    "hullMods": [
+        "heavyarmor",
+        "missleracks",
+        "unstable_injector",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_challenger_pather_raider",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "heavymg",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "hammer",
+                "WS0002": "hammer",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "vulcan",
+            }
+        }
+    ]
+}

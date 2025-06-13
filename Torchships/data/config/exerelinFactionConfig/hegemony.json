@@ -1,13 +1,5 @@
 {
-    "startShipsSolo":[
-        ["TADA_challenger_standard"]
-    ],
-
-    "startShipsCombatSmall":[
-      ["TADA_bully_combat", "TADA_challenger_brawler", "TADA_challenger_brawler"],
-    ],
-
-    "startShipsCombatLarge":[
-      ["TADA_attrition_outdated", "TADA_tinnitus_xiv_advanced", "TADA_tinnitus_xiv_advanced"],
-    ],
+    "startShipsSolo":[["TADA_tinnitus_xiv_elite"]],
+    "startShipsCombatSmall":[["TADA_bully_elite", "TADA_tinnitus_strike", "TADA_tinnitus_strike"]],
+    "startShipsCombatLarge":[["TADA_owl_balanced", "TADA_bully_ftrsupport", "TADA_tinnitus_xiv_support"]],
 }

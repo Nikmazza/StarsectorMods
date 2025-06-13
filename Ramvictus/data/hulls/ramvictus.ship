@@ -1,0 +1,273 @@
+{
+    "bounds": [
+        -124,
+        115,
+        -123,
+        159,
+        -45,
+        156,
+        -35,
+        181,
+        138,
+        162,
+        202,
+        112,
+        203,
+        92,
+        183,
+        87,
+        185,
+        1,
+        184,
+        -88,
+        206,
+        -92,
+        203,
+        -114,
+        139,
+        -162,
+        -33,
+        -178,
+        -41,
+        -156,
+        -122,
+        -155,
+        -125,
+        -117,
+        -190,
+        -123,
+        -190,
+        124
+    ],
+    "builtInMods": [
+        "hbi",
+        "ablative_armor",
+        "distributed_fire_control",
+        "vast_hangar"
+    ],
+    "center": [
+        182,
+        211
+    ],
+    "collisionRadius": 300,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 120,
+            "length": 100,
+            "location": [
+                -208,
+                50
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 120,
+            "length": 100,
+            "location": [
+                -212,
+                19
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 120,
+            "length": 100,
+            "location": [
+                -212,
+                -19
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 120,
+            "length": 100,
+            "location": [
+                -208,
+                -49
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 60,
+            "location": [
+                -203,
+                96
+            ],
+            "style": "LOW_TECH",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 88,
+            "length": 64,
+            "location": [
+                -203,
+                77
+            ],
+            "style": "LOW_TECH",
+            "width": 26
+        },
+        {
+            "angle": 180,
+            "contrailSize": 88,
+            "length": 64,
+            "location": [
+                -203,
+                -77
+            ],
+            "style": "LOW_TECH",
+            "width": 26
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 60,
+            "location": [
+                -203,
+                -95
+            ],
+            "style": "LOW_TECH",
+            "width": 24
+        }
+    ],
+    "height": 420,
+    "hullId": "ramvictus",
+    "hullName": "Ramvictus",
+    "hullSize": "CAPITAL_SHIP",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 277,
+    "spriteName": "graphics/ships/ramvictus/ramvictus.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 45,
+            "arc": 150,
+            "id": "WS 000",
+            "locations": [
+                129,
+                121
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": -90,
+            "arc": 150,
+            "id": "WS 003",
+            "locations": [
+                53,
+                -136
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 90,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                -55,
+                133
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 225,
+            "arc": 150,
+            "id": "WS 005",
+            "locations": [
+                -125,
+                -73
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 135,
+            "arc": 150,
+            "id": "WS 006",
+            "locations": [
+                -125,
+                73
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 90,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                -99,
+                133
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 90,
+            "arc": 150,
+            "id": "WS 008",
+            "locations": [
+                53,
+                136
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "COMPOSITE"
+        },
+   	{
+            "angle": -45,
+            "arc": 150,
+            "id": "WS 026",
+            "locations": [
+                129,
+                -121
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": -90,
+            "arc": 5,
+            "id": "WS 027",
+            "locations": [
+                -53,
+                -126,
+                -84,
+                -126,
+                -101,
+                -125,
+                -69,
+                -126
+            ],
+            "mount": "HIDDEN",
+            "size": "LARGE",
+            "type": "LAUNCH_BAY"
+        }
+    ],
+    "width": 364
+}

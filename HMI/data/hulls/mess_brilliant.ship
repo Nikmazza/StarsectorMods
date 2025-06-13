@@ -41,6 +41,8 @@
   ],
   "builtInMods": [
     "automated",
+	"hmi_remmesscore",
+	"hmi_mess_visuals",
     "hmi_mess_spawn_medium"
   ],
   "builtInWings": [

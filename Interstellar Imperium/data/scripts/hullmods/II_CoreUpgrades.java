@@ -4,12 +4,17 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import data.scripts.everyframe.II_BlockedHullmodDisplayScript;
+import static data.scripts.hullmods.II_BasePackage.PARA_PAD;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class II_CoreUpgrades extends II_BasePackage {
 
@@ -26,6 +31,12 @@ public class II_CoreUpgrades extends II_BasePackage {
         SPEED_BONUS.put(HullSize.DESTROYER, 15f);
         SPEED_BONUS.put(HullSize.CRUISER, 10f);
         SPEED_BONUS.put(HullSize.CAPITAL_SHIP, 5f);
+    }
+
+    private static final Set<String> BLOCKED_HULLMODS = new HashSet<>(1);
+
+    static {
+        BLOCKED_HULLMODS.add("safetyoverrides");
     }
 
     @Override
@@ -47,6 +58,48 @@ public class II_CoreUpgrades extends II_BasePackage {
             stats.getMaxTurnRate().modifyPercent(id, MANEUVERABILITY_BONUS * 100f);
             stats.getTurnAcceleration().modifyPercent(id, MANEUVERABILITY_BONUS * 100f);
         }
+    }
+
+    @Override
+    public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+        super.applyEffectsAfterShipCreation(ship, id);
+
+        for (String tmp : BLOCKED_HULLMODS) {
+            if (ship.getVariant().getNonBuiltInHullmods().contains(tmp) && !ship.getVariant().getSMods().contains(tmp)) {
+                ship.getVariant().removeMod(tmp);
+                II_BlockedHullmodDisplayScript.showBlocked(ship);
+            }
+        }
+    }
+
+    @Override
+    protected void addCompatibilityStatement(TooltipMakerAPI tooltip) {
+        HullModSpecAPI safetyOverrides = Global.getSettings().getHullModSpec("safetyoverrides");
+        LabelAPI label = tooltip.addPara("Only compatible with Imperium hulls. Only one Imperial Package can be installed. Incompatible with "
+                + safetyOverrides.getDisplayName() + ".", PARA_PAD);
+        label.setHighlightColors(Global.getSettings().getDesignTypeColor("Imperium"), Global.getSettings().getDesignTypeColor("Imperium"),
+                Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor());
+        label.setHighlight("Imperium", "Imperial Package", safetyOverrides.getDisplayName());
+    }
+
+    @Override
+    public String getUnapplicableReason(ShipAPI ship) {
+        String reason = super.getUnapplicableReason(ship);
+        if (reason != null) {
+            if ((ship != null) && ship.getVariant().getHullMods().contains("safetyoverrides")) {
+                HullModSpecAPI safetyOverrides = Global.getSettings().getHullModSpec("safetyoverrides");
+                return "Incompatible with " + safetyOverrides.getDisplayName();
+            }
+        }
+        return reason;
+    }
+
+    @Override
+    public boolean isApplicableToShip(ShipAPI ship) {
+        if (!super.isApplicableToShip(ship)) {
+            return false;
+        }
+        return !((ship != null) && ship.getVariant().getHullMods().contains("safetyoverrides"));
     }
 
     @Override
@@ -73,13 +126,6 @@ public class II_CoreUpgrades extends II_BasePackage {
     }
 
     @Override
-    protected void addCompatibilityStatement(TooltipMakerAPI tooltip) {
-        LabelAPI label = tooltip.addPara("Only compatible with Imperium hulls. Incompatible with the Imperial Packages.", PARA_PAD);
-        label.setHighlightColors(Global.getSettings().getDesignTypeColor("Imperium"), Global.getSettings().getDesignTypeColor("Imperium"));
-        label.setHighlight("Imperium", "Imperial Packages");
-    }
-
-    @Override
     public boolean hasSModEffect() {
         return true;
     }
@@ -98,7 +144,7 @@ public class II_CoreUpgrades extends II_BasePackage {
             tooltip.addPara("This hullmod only applies if it is built into the hull using a story point. Otherwise, it has no effect.",
                     PARA_PAD, Misc.getStoryOptionColor(), "story point");
         }
-        addPrimaryDescription(tooltip);
+        addPrimaryDescription(tooltip, ship);
 
         if (isForModSpec) {
             tooltip.addSpacer(PARA_PAD);
@@ -116,11 +162,11 @@ public class II_CoreUpgrades extends II_BasePackage {
 
     @Override
     public void addSModEffectSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec, boolean isForBuildInList) {
-        addPrimaryDescription(tooltip);
+        addPrimaryDescription(tooltip, ship);
     }
 
     @Override
-    protected void addPrimaryDescription(TooltipMakerAPI tooltip) {
+    protected void addPrimaryDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         LabelAPI bullet;
         tooltip.setBulletedListMode("    • ");
         bullet = tooltip.addPara("Maximum combat readiness %s", BULLET_PAD, Global.getSettings().getColor("standardTextColor"), Misc.getPositiveHighlightColor(),

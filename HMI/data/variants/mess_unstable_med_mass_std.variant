@@ -13,7 +13,35 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "feeder_gun_med"
+        "WS0001": "feeder_gun",
+        "WS0002": "feeder_gun",
+        "WS0003": "feeder_gun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "feeder_gun",
+        "WS0005": "feeder_gun",
+        "WS0008": "feeder_gun",
+        "WS0009": "feeder_gun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "feeder_gun",
+        "WS0007": "feeder_gun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "feeder_gun",
+        "WS0011": "feeder_gun"
       }
     }
   ],

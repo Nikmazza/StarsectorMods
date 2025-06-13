@@ -3,22 +3,23 @@ package data.campaign.fleets;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager;
-import com.fs.starfarer.api.impl.campaign.ids.Abilities;
-import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
-import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.*;
+import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
-import data.campaign.procgen.DomresAssignmentAI;
 import data.campaign.procgen.MessRemnAssignmentAI;
 import org.lazywizard.lazylib.MathUtils;
 
-import java.util.Random;
+import java.util.*;
 
+import static com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager.addRemnantInteractionConfig;
 import static com.fs.starfarer.api.util.Misc.random;
 
 public class MessFleetManager extends SourceBasedFleetManager {
@@ -34,7 +35,6 @@ public class MessFleetManager extends SourceBasedFleetManager {
 		this.minPts = minPts;
 		this.maxPts = maxPts;
 	}
-
 
 	@Override
 	protected CampaignFleetAPI spawnFleet() {
@@ -86,6 +86,7 @@ public class MessFleetManager extends SourceBasedFleetManager {
 		if ((fleet == null) || fleet.isEmpty()) {
 			return null;
 		}
+
 		fleet.removeAbility(Abilities.EMERGENCY_BURN);
 		fleet.removeAbility(Abilities.SENSOR_BURST);
 		fleet.removeAbility(Abilities.GO_DARK);
@@ -94,10 +95,17 @@ public class MessFleetManager extends SourceBasedFleetManager {
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_ON, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_FLEET, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_ALLOW_DISENGAGE, false);
-
-//		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true);
+		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_NO_JUMP, true);
+		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_HOLD_VS_STRONGER, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_FIGHT_TO_THE_LAST, true);
+
+		//This section is prolly what is making Remnant fleets not retreat. Hopefully this line ensures that they do not retreat under any circumstance.
+
+		addRemnantInteractionConfig(fleet);
+
+// 		Commenting this out for now, it might be that doing this both here and in the faction file results in a double negative?
+		//fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_FIGHT_TO_THE_LAST, true);
 
 		fleet.addScript(new MessRemnAssignmentAI(fleet, (StarSystemAPI) spawnEntityMess.getContainingLocation(), spawnEntityMess));
 
@@ -129,7 +137,6 @@ public class MessFleetManager extends SourceBasedFleetManager {
 			totalLost++;
 		}
 	}
-
 }
 
 

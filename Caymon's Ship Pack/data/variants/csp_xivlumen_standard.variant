@@ -1,0 +1,40 @@
+{
+  "variantId": "csp_xivlumen_standard",
+  "hullId": "csp_xivlumen",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter",
+    "fluxcoil"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "railgun",
+        "WS 009": "railgun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "hammer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "hammer"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

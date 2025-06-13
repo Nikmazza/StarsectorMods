@@ -1,0 +1,18 @@
+id
+# NOTES
+# Ship IDs entered here will be allowed by the Engineering hub (Reverse Engineering ship hulls)
+# Ships that would break the game (Balance/Technical/Lore) if the player could produce them via blueprint should not be on this list.
+sentry_scav
+picket_scav
+defender_scav
+defender_scav_mk2
+glimmer_scav
+lumen_scav
+lumen_scav_X
+fulgent_scav
+scintilla_scav
+bastillon_scav
+berserker_scav
+brilliant_scav
+rampart_scav
+radiant_scav

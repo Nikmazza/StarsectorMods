@@ -1,7 +1,7 @@
 {
     "displayName": "Torpedo",
-    "fluxCapacitors": 0,
-    "fluxVents": 4,
+    "fluxCapacitors": 9,
+    "fluxVents": 0,
     "goalVariant": true,
     "hullId": "vice_effulgent",
     "hullMods": [

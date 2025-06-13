@@ -64,7 +64,8 @@ public class NinayaBoss extends BaseHullMod {
             float armorRegen = 0.8f;
             float hpRegen = 0.6f;
 
-
+            ship.getMutableStats().getPeakCRDuration().modifyFlat("phase_boss_cr", 100000);
+            if(ship.getCurrentCR() < 0.4f) ship.setCurrentCR(0.4f);
 
             if(phaseTwo && phaseTwoTimer < MAX_TIME){
 
@@ -238,9 +239,6 @@ public class NinayaBoss extends BaseHullMod {
                 ship.setCaptain(captain);
             }
 
-            if (ship.getOwner() != 0 || StarficzAIUtils.DEBUG_ENABLED || true) {
-                ship.getMutableStats().getPeakCRDuration().modifyFlat("phase_boss_cr", 1000000);
-            }
 
             // force shields on, there is no situation where shields should be off (newly added in 1.0.8: unless about to overload for a suicide run)
             if((!engine.isUIAutopilotOn() || engine.getPlayerShip() != ship)){
@@ -255,7 +253,7 @@ public class NinayaBoss extends BaseHullMod {
                 if(ventingHardflux){
                     Vector2f point = StarficzAIUtils.getBackingOffStrafePoint(ship);
                     if(point != null)
-                        StarficzAIUtils.strafeToPoint(ship, point);
+                        StarficzAIUtils.strafeToPointV2(ship, point);
                 }
             }
 

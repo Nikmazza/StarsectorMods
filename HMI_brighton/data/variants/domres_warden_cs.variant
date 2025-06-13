@@ -1,0 +1,34 @@
+{
+  "variantId": "domres_warden_cs",
+  "hullId": "domres_warden",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "insulatedengine",
+    "heavyarmor",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 001": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "lightac",
+        "WS0002": "lightac"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

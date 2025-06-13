@@ -1,0 +1,42 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "venture_scav",
+    "hullMods": [
+	"missleracks",
+	"armoredweapons"
+	],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "venture_scav_std",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "sabot",
+                "WS 007": "sabot"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+				"WS 002": "annihilatorpod",
+                "WS 005": "annihilatorpod",
+                "WS 006": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 003": "flak"
+            }
+        }
+    ],
+    "wings": []
+}

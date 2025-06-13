@@ -1,0 +1,10 @@
+{
+	# multiplier for how often hulls show up in the faction's fleets
+    "hullFrequency":{
+    "hulls":{
+  "csp_altergeist":0,
+  "csp_lowtechmech":3,
+        },
+	},
+},
+

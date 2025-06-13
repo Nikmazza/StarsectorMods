@@ -16,7 +16,8 @@
     "reduced_explosion",
     "targetingunit",
     "always_detaches",
-    "safetyoverrides"
+    "rapidrepaircheck",
+    "loco_safetyoverrides"
   ],
   "weaponSlots": [
     {
@@ -24,8 +25,8 @@
       "size": "LARGE",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 125,
-      "angle": -90,
+      "arc": 187,
+      "angle": -75.5,
       "locations": [-17, -11.5]
     },
     {

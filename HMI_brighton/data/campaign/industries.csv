@@ -1,0 +1,2 @@
+id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order
+HMI_reinforcedcolony,Reinforced Construction Facility,60,30,,10,,,"structure, urban",,graphics/icons/markets/hmi_construction.png,data.campaign.econ.industries.HMI_Reinforced_Colony,This building houses a construction and maintenance operation which uses Domain-Era construction techniques to reinforce colonial systems and structures. These techniques help reduce the impact of hazardous conditions on day to day functioning of the colony.,9208

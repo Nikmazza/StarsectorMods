@@ -1,0 +1,130 @@
+{
+  "hullName": "Gorget XIV",
+  "hullId": "Gorget_XIV",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/Gorget_XIV.png",
+  "style": "MIDLINE",
+  "height": 161,
+  "width": 120,
+  "center": [60, 75],
+  "collisionRadius": 83.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 96,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [-33, 24]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": -0,
+      "locations": [-33, -24]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 85,
+      "angle": 0,
+      "locations": [-1, 32]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 85,
+      "angle": -0,
+      "locations": [-1, -32]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [-37, 49]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": -0,
+      "locations": [-37, -49]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 180,
+      "locations": [-66, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-69, -36.5],
+      "length": 45,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-69, 36],
+      "length": 45,
+      "width": 19,
+      "angle": -180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-70, -25],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-70, 24.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -72.5, -10.5,
+    -68, -46,
+    -37, -60,
+    0.5, -41.5,
+    22, -14.5,
+    87, -4.5,
+    85.5, 5.5,
+    23, 14.5,
+    6.5, 39,
+    -37.5, 60,
+    -68, 43,
+    -72.5, 7.5
+  ]
+}

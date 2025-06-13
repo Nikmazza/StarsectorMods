@@ -1,0 +1,13 @@
+id,name,iconPath,npcSpawnWeight,plugin
+#Mercenary,,,,
+sc_veteranstandard,Veteran Standard,graphics/skills/damage_control2.png,1.5,data.skills.VeteranStandard
+sc_coordinatedstrikeattack,Coordinated Strike Attack,graphics/skills/fighter_uplink2.png,1,data.skills.CoordinatedStrikeAttack
+sc_wellequipped,Well Equipped,graphics/skills/fleet_logistics.png,0,data.skills.WellEquipped
+sc_veteranmods,Veteran Modification,graphics/skills/loadout_design.png,1,data.skills.VeteranMods
+sc_raptorpackdoctrine,Raptorpack Doctrine,graphics/skills/coordinated_maneuvers2.png,1.5,data.skills.RaptorpackDoctrine
+sc_overhauledarmorstructure,Overhauled Armor Structure,graphics/skills/construction.png,1,data.skills.OverhauledArmorStructure
+sc_escortduty,Escort Duty,graphics/skills/advanced_tactics.png,1,data.skills.EscortDuty
+sc_divideandconquer,Divide and Conquer,graphics/skills/space_ops.png,1,data.skills.DivideandConquer
+sc_cyberneticaugmentation,Cybernetic Augmentation,graphics/skills/cybernetic_augmentation.png,1.5,data.skills.csp_cyberneticaugmentation
+sc_strengthofthepackisthewolf,Strength of the pack is the wolf...,graphics/skills/auxiliary_support.png,1,data.skills.Strengthofthepackisthewolf
+sc_mechcraft,Mechanized Command,graphics/skills/quick_as_the_wind.png,1,data.skills.Mechcraft

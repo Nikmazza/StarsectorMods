@@ -1,11 +1,10 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 9,
+    "fluxCapacitors": 8,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "swp_alastor",
     "hullMods": [
-        "fluxdistributor",
         "unstable_injector",
         "targetingunit"
     ],

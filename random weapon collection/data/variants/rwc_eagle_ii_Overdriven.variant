@@ -1,0 +1,65 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 9,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "rwc_eagle_ii",
+    "hullMods": [
+        "safetyoverrides",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_eagle_ii_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "multineedler",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "atropos",
+                "WS 001": "atropos",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "chaingun",
+                "WS 007": "chaingun",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "ionpulser",
+                "WS 005": "ionpulser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "mininglaser",
+                "WS 003": "mininglaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "pdlaser",
+                "WS 010": "pdlaser",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

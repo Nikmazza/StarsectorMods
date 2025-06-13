@@ -1,13 +1,14 @@
 {
     "displayName": "Fire Support",
-    "fluxCapacitors": 10,
-    "fluxVents": 39,
+    "fluxCapacitors": 20,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_chronos",
     "hullMods": [
         "targetingunit",
         "eccm",
-        "magazines"
+        "magazines",
+        "missleracks"
     ],
     "permaMods": [],
     "sMods": [],

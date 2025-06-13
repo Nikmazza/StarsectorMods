@@ -13,6 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "automated",
+    "hmi_mess_visuals",
     "hmi_mess_spawn"
   ],
   "weaponSlots": [
@@ -22,8 +23,8 @@
       "type": "UNIVERSAL",
       "mount": "HARDPOINT",
       "arc": 22,
-      "angle": -83.5,
-      "locations": [28.5, -48.5]
+      "angle": 77,
+      "locations": [-7.5, 36.5]
     },
     {
       "id": "WS0002",
@@ -40,8 +41,8 @@
       "type": "UNIVERSAL",
       "mount": "TURRET",
       "arc": 146,
-      "angle": -50.5,
-      "locations": [43.5, -25.5]
+      "angle": 46.5,
+      "locations": [33.5, 34]
     },
     {
       "id": "WS0004",
@@ -49,8 +50,8 @@
       "type": "UNIVERSAL",
       "mount": "HARDPOINT",
       "arc": 14,
-      "angle": 76,
-      "locations": [30.5, 50]
+      "angle": -119,
+      "locations": [42.5, -22]
     },
     {
       "id": "WS0005",
@@ -58,8 +59,8 @@
       "type": "UNIVERSAL",
       "mount": "HARDPOINT",
       "arc": 14,
-      "angle": 90,
-      "locations": [16, 45]
+      "angle": -93,
+      "locations": [19, -25.5]
     },
     {
       "id": "WS0006",
@@ -67,8 +68,8 @@
       "type": "UNIVERSAL",
       "mount": "HARDPOINT",
       "arc": 14,
-      "angle": 90,
-      "locations": [4, 42]
+      "angle": -77,
+      "locations": [5.5, -26]
     },
     {
       "id": "WS0007",
@@ -76,8 +77,8 @@
       "type": "UNIVERSAL",
       "mount": "HARDPOINT",
       "arc": 14,
-      "angle": 109,
-      "locations": [-15.5, 45.5]
+      "angle": -106.5,
+      "locations": [-13, -28.5]
     },
     {
       "id": "WS0008",
@@ -85,7 +86,7 @@
       "type": "SYSTEM",
       "mount": "HARDPOINT",
       "arc": 4,
-      "angle": -158.5,
+      "angle": -154,
       "locations": [-50.5, -34.5]
     },
     {
@@ -94,8 +95,8 @@
       "type": "SYSTEM",
       "mount": "HARDPOINT",
       "arc": 4,
-      "angle": 122.5,
-      "locations": [-50.5, 34.5]
+      "angle": -85.5,
+      "locations": [-44.5, -33]
     },
     {
       "id": "WS0010",
@@ -104,7 +105,7 @@
       "mount": "HARDPOINT",
       "arc": 4,
       "angle": 97,
-      "locations": [-42, 38]
+      "locations": [-44, 34]
     }
   ],
   "engineSlots": [
@@ -151,14 +152,13 @@
   ],
   "bounds": [
     -74, -28,
-    -34.5, -48,
-    28.5, -56,
-    58, -45,
+    -36.5, -40,
+    26, -31.5,
+    54.5, -41,
     74.5, -15,
     74.5, 15,
-    58, 45,
-    28.5, 56,
-    -34.5, 48,
+    54.5, 41,
+    -36.5, 40,
     -74, 28
   ]
 }

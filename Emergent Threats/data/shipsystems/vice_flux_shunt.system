@@ -1,0 +1,11 @@
+{
+	"id":"vice_flux_shunt",
+	"type":"WEAPON",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.vice.ai.FluxShuntAI",
+	"statsScript":"data.scripts.vice.shipsystems.FluxShunt",
+	"weaponDataId":"vice_flux_shunt",
+	"useSound":"vice_flux_shunt_activate",
+	"aiHints":{
+	}
+}

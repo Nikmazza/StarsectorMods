@@ -3,7 +3,7 @@
   "hullId": "beldam",
   "displayName": "Plasma",
   "goalVariant": false,
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 5,
   "fluxVents": 50,
   "quality": 1,
   "permaMods": [],

@@ -1,0 +1,30 @@
+{
+	"baseHullId":"cerberus",
+	"skinHullId":"cerberus_scav",
+	"hullName":"Cerberus (BRV)",
+	"descriptionId":"cerberus",  # optional
+	"descriptionPrefix":"Due to isolation and poor access, the Brighton Federation is forced to use existing and easily accessible scrap to manufacture new vessels, tagged as Brighton Repurposed Vessel (BRV). Reconstructed from spare derelict parts, this ship has severe performance deficincies. The reconstruction however has introduced a more missile focused layout, and the use of easily acquired scrap makes the ship easier to maintain.",
+	"tags":["hmi_scav_base_bp"],
+	"tech":"Brighton Reconstruction",
+	"spriteName":"graphics/ships/cerberus_scav.png",
+	"baseValueMult":0.7,
+	"addHints":[],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 001":{
+        "type": "COMPOSITE",
+		},
+		"WS 002":{
+        "type": "COMPOSITE",
+		},
+		"WS 003":{
+        "type": "MISSILE",
+		},
+	},
+	"builtInMods":["brighton_base"],
+	"builtInWeapons":{
+    },
+}

@@ -1,7 +1,7 @@
 {
     "displayName": "Tactical",
-    "fluxCapacitors": 0,
-    "fluxVents": 26,
+    "fluxCapacitors": 5,
+    "fluxVents": 31,
     "goalVariant": true,
     "hullId": "ii_matriarch",
     "hullMods": ["ii_targeting_package"],

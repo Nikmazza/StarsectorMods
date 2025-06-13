@@ -1,6 +1,6 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 16,
+    "fluxCapacitors": 20,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_boss_phaeton",

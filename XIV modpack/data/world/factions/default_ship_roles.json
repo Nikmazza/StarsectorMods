@@ -1,0 +1,63 @@
+{
+	"combatSmallForSmallFleet":{
+	},
+	"combatSmall":{
+		"Velite_XIV_Assault":10,
+		"Hartfell_XIV_overdriven":10,
+		"Sawtooth_XIV_deathbox":10,
+		"Baronin_XIV_Burst": 10,
+		
+	},
+	"combatMedium":{
+			#"shipname":5,
+		"Dart_XIV_elite":10,
+		"Armadillo_XIV_Picket":10,
+		"Aghast_XIV_escort":10,
+		"Cassina_XIV_elite":10,
+		"Scalpel_XIV_elite":10,
+		"Gorget_XIV_picket":10,
+		"Potterycup_XIV_Support":10,
+
+	},
+	"combatLarge":{
+			#"shipname":7,
+		"Harrier_XIV_Assault":10,
+		"Tremor_XIV_Support":10,
+		"Division_XIV_assault":10,
+		"Owl_XIV_Support":10,
+		"Owl_spec_ops_XIV_Assault":10,
+		"Phoca_XIV_Standard":10,
+		"Charon_XIV_standard":10,
+		"Vulture_XIV_Assault":10,
+
+	},
+	"combatCapital":{
+			#"shipname":0,
+		"Endless_XIV_Doomship":10,
+		"Endless_mk2_XIV_Doomship":10,
+		"Beheslaught_XIV_Artillery":10,
+		"Executor_XIV_Assault":10,
+		"Tanngrisni_XIV_Elite":10,
+		"Knobkerrie_XIV_missile":10,
+		"Kana_XIV_standard":10,
+		"Cassowary_XIV_elite":10,
+		"Haast_XIV_Assault":10,
+		"Ingria_XIV_standard":10,
+		"Sevastoron_XIV_Support":10,
+		"Pegasus_XIV_standard":10,
+		"moxiv_Titan_XIV_Assault":10,
+	},
+	
+	# carriers
+	"carrierSmall":{
+
+	},
+	"carrierMedium":{
+			#"shipname":5,
+		"Stormhawk_XIV_Support":10,
+	},
+	"carrierLarge":{
+		"Trajan_XIV_Standard":10,
+		"Crossbow_XIV_elite":10,
+	},
+}

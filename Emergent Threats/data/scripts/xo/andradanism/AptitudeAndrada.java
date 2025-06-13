@@ -3,6 +3,8 @@ package data.scripts.xo.andradanism;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 import second_in_command.SCData;
 import second_in_command.specs.SCAptitudeSection;
@@ -20,6 +22,11 @@ public class AptitudeAndrada extends SCBaseAptitudePlugin {
     @Override
     public String getOriginSkillId() {
         return "xo_andrada_supreme_leadership";
+    }
+	
+	@Override
+	public void addCodexDescription(TooltipMakerAPI tooltip) {
+        tooltip.addPara("Andradanism represents the overarching naval doctrine of the Sindrian Diktat. It functions best when combined with Lion's Guard ships and their specialized technologies, but all ships stand to benefit from improved performance. It also provides an alternative to Management for fleet commanders looking to field a greater number of ships in combat. \n\nAndradanism officers are almost exclusively found on Diktat colonies, although on rare occasions, a Sindrian exile trained in the aptitude can be recruited from an independent world.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Andradanism", "Management");
     }
 	
     //Determines which skills are added and how they are sectioned off in the UI
@@ -41,12 +48,12 @@ public class AptitudeAndrada extends SCBaseAptitudePlugin {
         addSection(section2);
 		
         SCAptitudeSection section3 = new SCAptitudeSection(false, 4, "leadership5");
-		section3.addSkill("xo_andrada_mass_mobilization");
 		section3.addSkill("xo_andrada_unwavering_conviction");
+		section3.addSkill("xo_andrada_mass_mobilization");
         addSection(section3);
     }
 
-    public Float getMarketSpawnweight(MarketAPI market){
+    public Float getMarketSpawnweight(MarketAPI market) {
         float weight = spec.getSpawnWeight();
 		String id = "";
 		if (market.getFaction() != null) id = market.getFaction().getId();

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/jars/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="LazyLib" level="project" />
+    <orderEntry type="library" name="Starsector Core" level="project" />
+    <orderEntry type="library" name="MagicLib" level="project" />
+    <orderEntry type="library" name="ExerelinCore" level="project" />
+    <orderEntry type="library" name="Graphics" level="project" />
+    <orderEntry type="library" name="armaa" level="application" />
+    <orderEntry type="library" name="Kotlin-Runtime" level="application" />
+    <orderEntry type="library" name="Diable_Avionics" level="project" />
+    <orderEntry type="library" name="SecondInCommand" level="project" />
+  </component>
+</module>

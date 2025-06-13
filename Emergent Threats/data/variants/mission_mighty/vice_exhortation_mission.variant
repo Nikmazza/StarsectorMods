@@ -1,6 +1,6 @@
 {
     "displayName": "Navy",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 12,
     "fluxVents": 50,
     "hullId": "vice_exhortation",
     "hullMods": [
@@ -8,8 +8,8 @@
         "defective_manufactory",
         "fluxdistributor",
         "hardenedshieldemitter",
-        "targetingunit",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "vice_unified_targeting_core"
     ],
     "permaMods": [
         "damaged_deck",

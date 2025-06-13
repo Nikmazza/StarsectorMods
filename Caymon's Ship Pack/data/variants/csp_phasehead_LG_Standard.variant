@@ -1,0 +1,51 @@
+{
+  "variantId": "csp_phasehead_LG_Standard",
+  "hullId": "csp_phasehead_LG",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "adaptive_coils",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavyneedler",
+        "WS 002": "heavyneedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "sabot",
+        "WS 004": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightag",
+        "WS 006": "lightag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

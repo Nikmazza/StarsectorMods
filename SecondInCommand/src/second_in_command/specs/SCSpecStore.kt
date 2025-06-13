@@ -12,16 +12,18 @@ object SCSpecStore {
     var logger = Global.getLogger(this::class.java).apply { level = Level.ALL }
 
     private var aptitudeSpecs = ArrayList<SCAptitudeSpec>()
+    private var aptitudeSpecsMap = HashMap<String, SCAptitudeSpec>()
     @JvmStatic
     fun getAptitudeSpecs() = aptitudeSpecs
     @JvmStatic
-    fun getAptitudeSpec(specId: String) = aptitudeSpecs.find { it.id == specId }
+    fun getAptitudeSpec(specId: String) = aptitudeSpecsMap.get(specId)
 
-    private var skillSpecs = ArrayList<SCSkillSpec>()
+    //private var skillSpecs = ArrayList<SCSkillSpec>()
+    private var skillSpecs = HashMap<String, SCSkillSpec>()
     @JvmStatic
     fun getSkillSpecs() = skillSpecs
     @JvmStatic
-    fun getSkillSpec(specId: String) = skillSpecs.find { it.id == specId }
+    fun getSkillSpec(specId: String) = skillSpecs.get(specId)
 
 
     private var categorySpecs = ArrayList<SCCategorySpec>()
@@ -89,11 +91,13 @@ object SCSpecStore {
             var tags = row.getString("tags").split(",").map { it.trim() }
 
             var modName = filterModPath(row.getString("fs_rowSource"))
+            var modSpec = Global.getSettings().modManager.enabledModsCopy.find { it.dirName == modName }!!
 
             val pluginPath = row.getString("plugin")
 
-            var spec = SCAptitudeSpec(id, name, categories, spawnWeight, color, tags, specsOrder, modName, pluginPath)
+            var spec = SCAptitudeSpec(id, name, categories, spawnWeight, color, tags, specsOrder, modSpec, pluginPath)
             aptitudeSpecs.add(spec)
+            aptitudeSpecsMap.put(id, spec)
         }
 
         logger.debug("Second in Command: Loaded ${aptitudeSpecs.count()} Aptitude Specs.")
@@ -123,7 +127,7 @@ object SCSpecStore {
             val pluginPath = row.getString("plugin")
 
             var spec = SCSkillSpec(id, name, iconPath, npcSpawnWeight, order, modName, pluginPath)
-            skillSpecs.add(spec)
+            skillSpecs.put(id, spec)
         }
 
         logger.debug("Second in Command: Loaded ${skillSpecs.count()} Skill Specs.")

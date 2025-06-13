@@ -1,0 +1,30 @@
+{
+  "id": "csp_doombore",
+  "specClass": "projectile",
+  "projectileSpecId": "hellbore_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/csp_doombore_cannon_hardpoint_base.png",
+  "turretGunSprite": "graphics/weapons/csp_doombore_cannon_hardpoint_recoil3.png",
+  "hardpointSprite": "graphics/weapons/csp_doombore_cannon_hardpoint_base.png",
+  "hardpointGunSprite": "graphics/weapons/csp_doombore_cannon_hardpoint_recoil3.png",
+  "renderAboveAllWeapons": 0,
+  "turretOffsets": [
+    32,
+    2
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    38,
+    1.5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "renderHints":["RENDER_BARREL_BELOW"],
+  "barrelMode": "ALTERNATING",
+  "animationType": "NONE",
+  "textureType": ROUGH
+}

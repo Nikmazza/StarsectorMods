@@ -1,4 +1,30 @@
 id,trigger,conditions,script,text,options,notes
+#Nex omega interaction,,,,,,
+nex_HistorianOmegaHail_optsPCore,Nex_HistorianOmegaHailOpts,PlayerHasCargo ix_panopticon_core,,,9:nex_HistorianOmegaHail_bribePCore:Offer a Panopticon Core,
+nex_HistorianOmegaHail_optsPInst,Nex_HistorianOmegaHailOpts,PlayerHasCargo ix_panopticon_instance,,,10:nex_HistorianOmegaHail_bribePInst:Offer a Panopticon Instance,
+nex_HistorianOmegaHailBribePCore,DialogOptionSelected,$option == nex_HistorianOmegaHail_bribePCore,,"The return transmission is instantaneous.
+
+""omega query?
+context impalpable
+sublimate antagonist
+grid entropy perigee""",nex_HistorianOmegaHail_IXFrantic:Continue,
+nex_HistorianOmegaHailBribePInst,DialogOptionSelected,$option == nex_HistorianOmegaHail_bribePInst,,"The return transmission is instantaneous.
+
+""omega query?
+context impalpable
+optimate antagonist
+grid entropy maxima""",nex_HistorianOmegaHail_IXFrantic:Continue,
+nex_HistorianOmegaIXFrantic,DialogOptionSelected,$option == nex_HistorianOmegaHail_IXFrantic,"SetTextHighlightColors bad
+Highlight ""\""HOSTILE ONTOLOGY ABORT ABORT ABORT\""""","Your ship receives a massive burst transmission from the strange entity. The incoming data is barely decipherable, an inchoate howl from a digital mind.
+
+""hostile ontology abort""
+
+Within the entity, the power output of whatever passes for a reactor begins to rise, and rise, and rise, well past what should be the point of criticality.
+
+""HOSTILE ONTOLOGY ABORT ABORT ABORT""
+
+Each facet shines like a tiny star against the system's background radiation, and they're closing fast.",cutCommLink:Power up weapons and cut the comm link,
+,,,,,,
 #Commissioned Crews,,,,,,
 cc_ix_NGCPickStartingShips,ExerelinNGCStep3,"$playerFaction == ix_battlegroup
 !$ix_battlegroup_ChangeMind","AddText ""Commissioned Crews Bonus: Reduce ship system recharge time.""
@@ -208,7 +234,7 @@ PlayerHasCargo ix_antimatter_stabilizer",,,colony_titheStabilizer:Tithe Antimatt
 colony_titheStabilizerKnights,PopulateOptions,"$isPerson
 $personFaction.id == knights_of_selkie
 !$market.isPlayerOwned
-PlayerHasCargo ix_antimatter_stabilizer",,,,
+PlayerHasCargo ix_antimatter_stabilizer",,,colony_titheStabilizer:Tithe Antimatter Stabilizer technology,
 colony_titheStabilizerSel,DialogOptionSelected,$option == colony_titheStabilizer,,"The $PersonPost examines a stabilizer deep scan with great alarm.
 
 ""Such dangerous abomination should not be allowed to exist,"" $heOrShe says. ""Bring us any of these you may find, and we shall gladly purify and unmake them. Praise be to Ludd.""","colony_titheStabilizerGive1:Tithe 1 Stabilizer
@@ -234,6 +260,51 @@ AdjustRepActivePerson 10
 AddRemoveAnyItem RESOURCES ix_antimatter_stabilizer -1",,,
 colony_titheStabilizerGive1NotEnoughSel,DialogOptionSelected,"$option == colony_titheStabilizerGive1
 !PlayerHasCargo ix_antimatter_stabilizer",,You have no more Antimatter Stabilizers,cutCommLink:Done,
+,,,,,,
+# Ask for Panopticon Core,,,,,,
+ix_askForPanopticonCore,PickGreeting,"$isPerson
+$personFaction.id == ix_battlegroup
+$postId == supplyOfficer
+$market.id == ix_vertex_market
+!$global.asked_ix_for_panop_instance",ShowPersonVisual,"""This is $personLastName,"" $heOrShe glances up from the datatpad in $hisOrHer hand. ""Can I help you?""","ix_askForPanopCore:""I would like to request a Panopticon Core for my fleet.""
+ix_askForPanopInst:""Is there any chance I could obtain a Panopticon Instance?""
+cutCommLink:Cut the comm link",
+ix_askForPanopticonCoreAskedInstance,PickGreeting,"$isPerson
+$personFaction.id == ix_battlegroup
+$postId == supplyOfficer
+$market.id == ix_vertex_market
+$global.asked_ix_for_panop_instance",ShowPersonVisual,"""This is $personLastName,"" $heOrShe glances up from the datatpad in $hisOrHer hand. ""Can I help you?""","ix_askForPanopCore:""I would like to request a Panopticon Core for my fleet.""
+cutCommLink:Cut the comm link",
+ix_askForPanopticonCoreRepHostile,DialogOptionSelected,"$option == ix_askForPanopCore
+$faction.relValue < 0",,"""Are you serious?"" $PersonRank $personLastName glares at you. I have no idea how you managed to sneak onto this station, but I'm sure security is already on their way.""
+
+The screen goes dead before you can answer.",cutCommLink:Cut the comm link,
+ix_askForPanopticonCoreRepLow,DialogOptionSelected,"$option == ix_askForPanopCore
+$faction.relValue >= 0
+$faction.relValue < 0.5",,"""Fleet Command seems to like you well enough,"" says $PersonRank $personLastName. ""But there are several captains ahead of you who are waiting to have their ships outfitted. I might be able to make an exception if you complete a few more missions for the Fleet. But in the meantime, you'll have to wait for a new core to be available through standard channels, just like everyone else.""",cutCommLink:Cut the comm link,
+ix_askForPanopticonCoreRepGood,DialogOptionSelected,"$option == ix_askForPanopCore
+$faction.relValue >= 0.5",,"$PersonRank $personLastName pulls up your record and gives it a quick scan. $HeOrShe nods in approval. ""Normally, you'd have to put in a standard requisition order, just like everyone else. But given your record of exemplary service to the Fleet, I could expedite matters on this occasion.""
+
+$HeOrShe inputs a few quick commands, then gives you a pointed look. ""You know, the other captains won't be pleased when they hear about you jumping the queue like this. Your reputation is going to take a pretty big hit within the Fleet. Are you sure you want to go through with it?""","ix_askForPanopCoreConfirm:""Yes, get me the core. I can't afford to wait any longer.""
+cutCommLink:""On second thought, forget we had this conversation"".",
+ix_askForPanopCoreConfirmSel,DialogOptionSelected,"$option == ix_askForPanopCoreConfirm
+$global.trinity_worlds_is_active","AdjustRep ix_battlegroup HOSTILE -30
+AdjustRep ix_trinity HOSTILE -30
+AddCommodity ix_panopticon_core 1","$personLastName nods. ""Very well. I need to make the arrangements personally, but the core should be delivered to you within the hour. Good day, captain. Don't say I didn't warn you.""
+
+Soon after the call is ended, a shuttle from Vertex Station arrives to dock with your flagship and deliver the Panopticon Core. By then, news of your special requisition has already begun to filter through to the Fleet. As predicted, many of the other captains do not look favorably upon this example of blatant favoritism. You will have to work hard going forward to counter the damage to your reputation, and prove to the rest of the Fleet that you are worthy of such rare equipment.",cutCommLink:Cut the comm link,
+ix_askForPanopCoreConfirmSelNoTrinity,DialogOptionSelected,"$option == ix_askForPanopCoreConfirm
+!$global.trinity_worlds_is_active","AdjustRep ix_battlegroup HOSTILE -30
+AddCommodity ix_panopticon_core 1","$personLastName nods. ""Very well. I need to make the arrangements personally, but the core should be delivered to you within the hour. Good day, captain. Don't say I didn't warn you.""
+
+Soon after the call is ended, a shuttle from Vertex Station arrives to dock with your flagship and deliver the Panopticon Core. By then, news of your special requisition has already begun to filter through to the Fleet. As predicted, many of the other captains do not look favorably upon this example of blatant favoritism. You will have to work hard going forward to counter the damage to your reputation, and prove to the rest of the Fleet that you are worthy of such rare equipment.",cutCommLink:Cut the comm link,
+ix_askForPanopticonInstRepHostile,DialogOptionSelected,"$option == ix_askForPanopInst
+$faction.relValue < 0",,"""Are you serious?"" $PersonRank $personLastName glares at you. I have no idea how you managed to sneak onto this station, but I'm sure security is already on their way.""
+
+The screen goes dead before you can answer.",cutCommLink:Cut the comm link,
+ix_askForPanopticonInstRepGood,DialogOptionSelected,"$option == ix_askForPanopInst
+$faction.relValue >= 0",$global.asked_ix_for_panop_instance = true,"""Not a chance,"" says $personLastName. ""If you ever perform an extraordinary service for Fleet Command, they might consider it. Otherwise the answer is no. Don't bother asking me again.""","ix_askForPanopCore:""Alright, what about a standard Panopticon Core?""
+cutCommLink:Cut the comm link",
 ,,,,,,
 # Already has AI Assisted Command,,,,,,
 pk_diploIXOfferHasBgAlready,PopulateOptions,"$isPerson
@@ -270,7 +341,7 @@ RemoveOption pk_diploOfferPKMissingIX
 RemoveOption pk_diploOfferPKFoundIX
 RemoveOption pk_turnInIXpanopticon","$PersonRank $personLastName pauses for a moment, appearing genuinely surprised. ""Well, my day just got interesting. Pardon me. We'll speak again soon.""
 
-After keeping you waiting for several minutes, $personLastName returns onscreen with a broad smile on his face. 
+After keeping you waiting for several minutes, $personLastName returns onscreen with a broad smile on $hisOrHer face. 
 
 ""Fleet Command greatly appreciate your gesture. I've been informed that an official representative will be arriving at your ship within the day to receive the PK device and discuss how we may proceed. You've done us a great service, captain. Thank you.""",pk_diploIXaccepted:Continue,
 pk_diploIXacceptedSel,DialogOptionSelected,$option == pk_diploIXaccepted,,"Your ship receives a distinguished older gentleman just in time for dinner, no doubt a deliberate choice. His shuttle soon departs with the secured planetkiller.
@@ -343,7 +414,7 @@ pk_turnInTWSel,DialogOptionSelected,$option == pk_turnInTW,,"$PersonRank $person
 pk_turnInTWadmin:""Your administrators are famous for their efficiency. Might I receive the same training?""
 pk_turnInTWship:""I've noticed unusual ships patrolling Danu on occasion, I'm sure you know the ones.""
 pk_turnInTWnm:""Never mind, I've reconsidered.""",
-pk_turnInTWnmSel,DialogOptionSelected,$option == pk_turnInTWnm,,"""That's just fine with me,"" $personLastName sighs in audible relief. ""Why don't we pretend this conversation never happened. Sorry to be abrupt, captain, bit I'm being called away to a meeting. Good day.""
+pk_turnInTWnmSel,DialogOptionSelected,$option == pk_turnInTWnm,,"""That's just fine with me,"" $personLastName sighs in audible relief. ""Why don't we pretend this conversation never happened. Sorry to be abrupt, captain, but I'm being called away to a meeting. Good day.""
 
 Before you can utter another word, $PersonRank $personLastName has already turned off $hisOrHer comm-link.",cutCommLink:Attend to other business,
 pk_turnInTWmoneySel,DialogOptionSelected,$option == pk_turnInTWmoney,"AddCommodity credits 250000
@@ -372,6 +443,7 @@ SetTextHighlights ""Radiant (TW) class converted battlecarrier""
 $player.receivedShipTW = true
 AdjustRep ix_trinity 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 AddRemoveAnyItem SPECIAL planetkiller -1
 $global.gavePKtoTW = true
 $player.turnedInPlanetkiller = true
@@ -496,6 +568,7 @@ pk_turnInIXfrig2Sel,DialogOptionSelected,$option == pk_turnInIXfrig2,"AddTextSma
 SetTextHighlights ""Hyperion (HG) class advanced gunship""
 AdjustRep ix_battlegroup 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 AddRemoveAnyItem SPECIAL planetkiller -1
 $global.gavePKtoIX = true
 $player.turnedInPlanetkiller = true
@@ -513,6 +586,7 @@ pk_turnInIXbb2Sel,DialogOptionSelected,$option == pk_turnInIXbb2,"AddTextSmall "
 SetTextHighlights ""Radiant (IX) class converted battleship""
 AdjustRep ix_battlegroup 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 AddRemoveAnyItem SPECIAL planetkiller -1
 $global.gavePKtoIX = true
 $player.turnedInPlanetkiller = true
@@ -568,6 +642,7 @@ AddCommodity ix_panopticon_instance 1
 $player.receivedAdminTraining = true
 AdjustRep ix_battlegroup 25
 AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
 $global.gavePKtoIX = true
 $player.turnedInPlanetkiller = true
 AddPotentialContact

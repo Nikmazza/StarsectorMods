@@ -1,0 +1,34 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 13,
+    "goalVariant": true,
+    "hullId": "mule_scav",
+    "hullMods": ["heavyarmor",
+	"armoredweapons",
+	"missleracks"],
+    "permaMods": [],
+    "variantId": "mule_scav_std",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "sabotpod"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "annihilatorpod",
+                "WS 002": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "vulcan"
+            }
+        }
+    ]
+}

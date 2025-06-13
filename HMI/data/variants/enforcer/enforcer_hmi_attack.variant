@@ -1,13 +1,14 @@
 {
   "displayName": "Attack",
-  "fluxCapacitors": 20,
+  "fluxCapacitors": 4,
   "fluxVents": 20,
   "goalVariant": false,
   "hullId": "enforcer_d_pirates",
   "hullMods": [
     "missleracks",
     "fragile_subsystems",
-    "glitched_sensors"
+    "glitched_sensors",
+	"safetyoverrides"
   ],
   "permaMods": [],
   "quality": 0,
@@ -26,10 +27,10 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS 006": "kane_missile",
-        "WS 007": "kane_missile",
-        "WS 008": "kane_missile",
-        "WS 009": "kane_missile"
+        "WS 006": "hammer",
+        "WS 007": "hammer",
+        "WS 008": "hammer",
+        "WS 009": "hammer"
       }
     },
     {

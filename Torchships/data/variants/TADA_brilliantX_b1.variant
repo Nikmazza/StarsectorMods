@@ -1,0 +1,50 @@
+{
+    "displayName": "Corrupted",
+    "fluxCapacitors": 26,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "TADA_brilliantX",
+    "hullMods": ["reinforcedhull"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_brilliantX_b1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "vpdriver",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "resonatormrm",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "disintegrator",
+                "WS 006": "disintegrator",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "cryoblaster",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "shockrepeater",
+                "WS 003": "shockrepeater",
+            }
+        }
+    ]
+}

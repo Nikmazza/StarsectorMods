@@ -1,0 +1,47 @@
+{
+  "hullName": "Option Drone",
+  "hullId": "csp_optiondrone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_optiondrone.png",
+  "style": "HIGH_TECH",
+  "height": 15,
+  "width": 18,
+  "center": [9, 7.5],
+  "collisionRadius": 8.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 7.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0001": "csp_dronelance"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-6, -0],
+      "length": 12,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    0, 5,
+    7, -0,
+    0, -5,
+    -6.5, -0
+  ]
+}

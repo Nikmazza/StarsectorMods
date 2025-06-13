@@ -1,0 +1,66 @@
+{
+  "variantId": "domres_hmi_obj_361_std",
+  "hullId": "domres_hmi_obj_361",
+  "displayName": "Armoured",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 15,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0014": "mjolnir",
+        "WS0015": "mjolnir"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0018": "hammerrack"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "harpoon",
+        "WS0004": "harpoon",
+        "WS0007": "harpoonpod",
+        "WS0008": "harpoonpod",
+        "WS0009": "harpoon",
+        "WS0010": "harpoon",
+        "WS0011": "harpoon",
+        "WS0012": "harpoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "heavyac",
+        "WS0006": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "vulcan",
+        "WS0002": "vulcan",
+        "WS0013": "dualflak",
+        "WS0016": "vulcan",
+        "WS0017": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

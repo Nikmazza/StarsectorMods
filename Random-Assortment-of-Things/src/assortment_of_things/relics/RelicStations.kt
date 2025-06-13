@@ -74,7 +74,7 @@ class RelicStations {
         RelicStation("rat_cryochamber").apply {
             systemFilter = { system -> true }
             weight = 100f
-            postGeneration = {
+            postGeneration = @JvmSerializableLambda {
                 var people = ArrayList<PersonAPI>()
 
                 let {
@@ -82,7 +82,7 @@ class RelicStations {
                     people.add(person)
                     person.stats.setSkillLevel("rat_maverick", 1f)
 
-                    person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7f)
+                    person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7)
 
                     person.setPersonality(Personalities.RECKLESS)
                     person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7)
@@ -96,7 +96,7 @@ class RelicStations {
                     people.add(person)
                     person.stats.setSkillLevel("rat_maintaining_momentum", 1f)
 
-                    person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7f)
+                    person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7)
 
                     person.setPersonality(Personalities.AGGRESSIVE)
                     person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7)
@@ -110,7 +110,7 @@ class RelicStations {
                     people.add(person)
                     person.stats.setSkillLevel("rat_perfect_planning", 1f)
 
-                    person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7f)
+                    person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7)
 
                     person.setPersonality(Personalities.STEADY)
                     person.memoryWithoutUpdate.set(MemFlags.OFFICER_MAX_LEVEL, 7)
@@ -127,7 +127,7 @@ class RelicStations {
             systemFilter = { system -> system.planets.any { it.typeId == "black_hole" } && system.planets.filter { !it.isStar }.size >= 2 }
             weight = 1000f
 
-            postGeneration = { station ->
+            postGeneration = @JvmSerializableLambda { station ->
                 var blackhole = station.containingLocation.planets.find { it.typeId == "black_hole" }
                 station.setCircularOrbit(blackhole, MathUtils.getRandomNumberInRange(0f, 360f), blackhole!!.radius + station.radius + 250f, 120f)
 
@@ -165,7 +165,7 @@ class RelicStations {
             systemFilter = { system -> system.planets.any { !it.isStar } && system.hasTag(Tags.THEME_DERELICT)}
             locations = linkedMapOf(LocationType.PLANET_ORBIT to 10f)
 
-            postGeneration = {station ->
+            postGeneration = @JvmSerializableLambda {station ->
                 var fleet = Global.getFactory().createEmptyFleet(Factions.DERELICT, "Automated Defenses", false)
 
                 for (pick in fleet.faction.pickShip(ShipRoles.COMBAT_CAPITAL, ShipPickParams.all(), null, Random())) {

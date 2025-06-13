@@ -51,15 +51,15 @@ public class SWP_ZeroAI implements ShipSystemAIScript {
                 return false;
             }
 
-            if (proj instanceof MissileAPI) {
-                if (((MissileAPI) proj).getEngineController().isTurningLeft() || ((MissileAPI) proj).getEngineController().isTurningRight()) {
+            if (proj instanceof MissileAPI missileAPI) {
+                if (missileAPI.getEngineController().isTurningLeft() || missileAPI.getEngineController().isTurningRight()) {
                     return false;
                 }
             }
 
             return (CollisionUtils.getCollides(proj.getLocation(), Vector2f.add(proj.getLocation(), (Vector2f) new Vector2f(proj.getVelocity()).scale(
-                                                                                SECONDS_TO_LOOK_AHEAD), null), ship.getLocation(), ship.getCollisionRadius()) &&
-                    Math.abs(MathUtils.getShortestRotation(proj.getFacing(), VectorUtils.getAngle(proj.getLocation(), ship.getLocation()))) <= 90f);
+                    SECONDS_TO_LOOK_AHEAD), null), ship.getLocation(), ship.getCollisionRadius())
+                    && Math.abs(MathUtils.getShortestRotation(proj.getFacing(), VectorUtils.getAngle(proj.getLocation(), ship.getLocation()))) <= 90f);
         }
     };
 
@@ -90,14 +90,14 @@ public class SWP_ZeroAI implements ShipSystemAIScript {
             Iterator<ShipAPI> iter = possibleTargets.iterator();
             while (iter.hasNext()) {
                 ShipAPI possibleTarget = iter.next();
-                if (possibleTarget.isFighter() || possibleTarget.isDrone() || !possibleTarget.isAlive() || possibleTarget == ship ||
-                        possibleTarget.getOwner() ==
-                        ship.getOwner()) {
+                if (possibleTarget.isFighter() || possibleTarget.isDrone() || !possibleTarget.isAlive() || possibleTarget == ship
+                        || possibleTarget.getOwner()
+                        == ship.getOwner()) {
                     iter.remove();
                 }
             }
 
-            if (possibleTargets.size() > 0) {
+            if (!possibleTargets.isEmpty()) {
                 ship.giveCommand(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK, null, 0);
             }
         }
@@ -177,30 +177,29 @@ public class SWP_ZeroAI implements ShipSystemAIScript {
                 maxDistance = 600f;
             }
             switch (ship.getHullSpec().getBaseHullId()) {
-                case "swp_arcade_superzero":
+                case "swp_arcade_superzero" ->
                     maxDistance += 150f;
-                    break;
-                case "swp_arcade_hyperzero":
+                case "swp_arcade_hyperzero" ->
                     maxDistance += 300f;
-                    break;
-                default:
+                default -> {
+                }
             }
 
             if (shouldUseSystem) {
                 if (flags.hasFlag(AIFlags.PURSUING) && ship.getShipTarget() != null) {
                     ship.getMouseTarget().set(ship.getShipTarget().getLocation());
                     ship.giveCommand(ShipCommand.USE_SYSTEM, getClamped(ship.getLocation(), ship.getShipTarget().getLocation(), maxDistance), 0);
-                } else if ((flags.hasFlag(AIFlags.BACK_OFF) || flags.hasFlag(AIFlags.BACK_OFF_MIN_RANGE) || flags.hasFlag(AIFlags.BACKING_OFF)) &&
-                        ship.getShipTarget() != null) {
+                } else if ((flags.hasFlag(AIFlags.BACK_OFF) || flags.hasFlag(AIFlags.BACK_OFF_MIN_RANGE) || flags.hasFlag(AIFlags.BACKING_OFF))
+                        && ship.getShipTarget() != null) {
                     Vector2f point = new Vector2f(ship.getShipTarget().getLocation());
                     Vector2f.sub(ship.getLocation(), point, point);
                     Vector2f.add(point, ship.getLocation(), point);
                     ship.getMouseTarget().set(point);
                     ship.giveCommand(ShipCommand.USE_SYSTEM, getClamped(ship.getLocation(), point, maxDistance), 0);
                 } else {
-                    Vector2f point = MathUtils.getPointOnCircumference(ship.getLocation(), 300f, ship.getFacing() + (Math.random() > 0.5 ? 90f : -90f) *
-                                                                       ((float) Math.random() * 0.5f +
-                                                                        0.75f));
+                    Vector2f point = MathUtils.getPointOnCircumference(ship.getLocation(), 300f, ship.getFacing() + (Math.random() > 0.5 ? 90f : -90f)
+                            * ((float) Math.random() * 0.5f
+                            + 0.75f));
                     ship.getMouseTarget().set(point);
                     ship.giveCommand(ShipCommand.USE_SYSTEM, getClamped(ship.getLocation(), point, maxDistance), 0);
                 }

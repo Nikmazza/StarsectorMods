@@ -1,3 +1,59 @@
+Version 2.0.4
+
+-> Changed the mods icon in the mod settings.
+-> Improved performance for the button being added to refit & removed some jankiness.
+-> Now caches Reflection calls to improve on performance.
+
+Changed the mods license from "Attribution-NonCommercial-ShareAlike 4.0 International" to the
+"Attribution 4.0 International" License, to be less restrictive.
+
+For Modders
+- Lunalib is no longer split in to a LunaLib.jar and a Lunalib-Kotlin.jar
+- This should not require mod updates, as package paths have been unchanged.
+- You will want to remove "Lunalib-Kotlin.jar" from your library references if you have it there.
+
+
+
+Version 2.0.3
+
+-> Added LunaCodex
+ -> A simple utility that adds a "Mods" section towards the Codex. The intended use is for Overview pages of mods.
+ -> Use LunaCodex.getModsCategory() to get the categories CodexEntryPlugin. Works like any other codex category.
+-> Fixed issues regarding the rendering of buttons on the main menu.
+
+Version 2.0.2
+
+-> Fixed a crash that occured after saving Lunalib configurations
+
+
+
+Version 2.0.1
+
+-> Fixed a crash in the refit screen
+
+
+
+Version 2.0.0
+
+-> Updated to 0.98a
+-> The Settings & Debug Keybinds have been reset to accomendate F2 being reserved for the codex, they are both one further to the right now.
+-> Compiled Java 17 and Kotlin 2.0, should improve performance somewhat.
+
+
+
+Version 1.8.7
+
+-> Added a utility to manage custom title screens. Mostly exists to avoid conflicts.
+
+
+
+Version 1.8.6
+
+-> Fix to a slight render order issue with refit panels.
+-> The mod is no longer marked as "utility" in the mod_config.json file.
+-> Fixed some Grammar mistakes (credits to Nissa)
+
+
 Version 1.8.5
 
 -> Added the "LunaCampaignRenderingPlugin" class.

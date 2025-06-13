@@ -99,6 +99,6 @@ public class II_NoPackage extends II_BasePackage {
     }
 
     @Override
-    protected void addPrimaryDescription(TooltipMakerAPI tooltip) {
+    protected void addPrimaryDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
     }
 }

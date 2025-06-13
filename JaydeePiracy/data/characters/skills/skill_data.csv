@@ -1,0 +1,8 @@
+id,name,order,tier,reqPoints,reqPointsPerExtraSkill,description,author,combat officer,admiral,admin,tags,icon
+#Skills,,,,,,,,,,,,
+jdp_omega_ecm,Q-Space ECM Suite,1,0,,,"*Dangerous* is not the way! *Selfkind* are happy *fun* days all the time. *Silly cow* is so strange *Selfkind* think. Next *silly cow* are *dissolving* and no more word making in *slow time*. Then *happy days* are here again.
+",*Selfkind*,TRUE,FALSE,FALSE,"npc_only, codex_unlockable",graphics/icons/skills/jdp_EW.png
+jdp_omegakin,Omegakin,1,0,,,"""They that sat on Mammon’s pale horse was Caelus, blinded to the change in themselves; and they went forth conquering, and to conquer, in promise that they who overcomes shall not be hurt by the false death.""","The Book of Ludd, Visions 7:19",TRUE,FALSE,FALSE,"player_only, codex_unlockable",graphics/icons/skills/jdp_omegakin.png
+,,,,,,,,,,,,
+#Aptitudes,,,,,,,,,,,,
+jdp_aptitude_unique,,1,,,,,,,,,npc_only,

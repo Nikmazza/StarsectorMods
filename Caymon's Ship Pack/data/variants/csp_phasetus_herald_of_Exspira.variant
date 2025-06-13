@@ -1,0 +1,63 @@
+{
+  "variantId": "csp_phasetus_herald_of_Exspira",
+  "hullId": "csp_phasetus",
+  "displayName": "Divine",
+  "goalVariant": true,
+  "quality": 1,
+  "permaMods": ["nav_relay"],
+  "fluxCapacitors": 50,
+    "fluxVents": 2,
+    "hullMods": [
+        "fluxbreakers",
+        "armoredweapons",
+        "blast_doors",
+        ],
+    "sMods": ["reinforcedhull","auxiliarythrusters","heavyarmor"
+    ],
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "mark9",
+                "WS 026": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "pilum_large",
+                "WS 007": "pilum_large",
+                "WS0001": "pilum_large",
+                "WS0002": "pilum_large"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "devastator",
+                "WS 010": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "mark9",
+                "WS 009": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "devastator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "devastator"}
+        }
+    ]
+}

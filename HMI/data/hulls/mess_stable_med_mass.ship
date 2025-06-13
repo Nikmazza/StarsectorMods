@@ -13,7 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "pointdefenseai",
-    "automated"
+    "automated",
+	"hmi_mess_visuals"
   ],
   "builtInWeapons": {
     "WS0001": "feeder_gun",

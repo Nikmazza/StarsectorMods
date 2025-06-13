@@ -6,7 +6,7 @@
     "beamFireOnlyOnFullCharge":true,
     "beamEffect":"data.scripts.weapons.II_TriplexBeamStationEffect",
     "everyFrameEffect":"data.scripts.weapons.II_TriplexBeamStationEveryFrame",
-    "turretSprite":"",
+    "turretSprite":"graphics/imperium/weapons/ii_tpbc_turret_base.png",
     "turretGlowSprite":"graphics/imperium/weapons/ii_tpbc_tribunal_glow.png",
     "hardpointSprite":"",
     "hardpointGlowSprite":"graphics/imperium/weapons/ii_tpbc_tribunal_glow.png",

@@ -5,6 +5,7 @@ import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.impl.combat.EscapeRevealPlugin;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -25,13 +26,10 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
         double r = Math.random();
         if (r < 0.8) {
             escape = null;
-            api.addBriefingItem("Defeat all enemy forces");
         } else if (r < 0.9) {
             escape = FleetSide.PLAYER;
-            api.addBriefingItem("Escape from the enemy forces");
         } else {
             escape = FleetSide.ENEMY;
-            api.addBriefingItem("Prevent the enemy forces from escaping");
         }
 
         int size = 5 + (int) ((float) Math.random() * 55);
@@ -57,30 +55,6 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
         }
 
         int objectiveCount = (int) Math.floor(size * ((float) Math.random() * 0.75f + 0.5f) / 8f);
-
-        String battleSize;
-        if (size >= 50) {
-            battleSize = "Armageddon";
-        } else if (size >= 35) {
-            battleSize = "War";
-        } else if (size >= 20) {
-            battleSize = "Assault";
-        } else if (size >= 10) {
-            battleSize = "Raid";
-        } else {
-            battleSize = "Skirmish";
-        }
-        switch (objectiveCount) {
-            case 0:
-                api.addBriefingItem("Battle size: " + battleSize);
-                break;
-            case 1:
-                api.addBriefingItem("Battle size: " + battleSize + "  -  " + objectiveCount + " objective");
-                break;
-            default:
-                api.addBriefingItem("Battle size: " + battleSize + "  -  " + objectiveCount + " objectives");
-                break;
-        }
 
         int playerSize = (int) (size * 5f * (escape == FleetSide.PLAYER ? 0.5f : 1f));
         int enemySize = (int) (size * 5f * (escape == FleetSide.ENEMY ? 0.5f : 1f) * 1.05f + 5f);
@@ -186,11 +160,16 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
         FleetDataAPI playerFleetData = generateFleet(playerSize, playerQualityFactor, 0f, -1, FleetSide.PLAYER, playerFaction, playerFleet, api, MathUtils.getRandom().nextLong(), false);
         FleetDataAPI enemyFleetData = generateFleet(enemySize, enemyQualityFactor, 0f, -1, FleetSide.ENEMY, enemyFaction, enemyFleet, api, MathUtils.getRandom().nextLong(), false);
 
+        boolean spoilers = false;
+
         float friendlyDP = 0f;
         float friendlyFP = 0f;
         for (FleetMemberAPI member : playerFleetData.getMembersListCopy()) {
             friendlyDP += member.getDeploymentPointsCost();
             friendlyFP += member.getFleetPointCost();
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getFleetMemberBaseHullId(member))) {
+                spoilers = true;
+            }
         }
 
         float enemyDP = 0f;
@@ -198,9 +177,50 @@ public class MissionDefinition extends SWP_BaseRandomBattle {
         for (FleetMemberAPI member : enemyFleetData.getMembersListCopy()) {
             enemyDP += member.getDeploymentPointsCost();
             enemyFP += member.getFleetPointCost();
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getFleetMemberBaseHullId(member))) {
+                spoilers = true;
+            }
         }
 
         float distance = Math.abs(enemyDP - friendlyDP) + Math.abs(enemyFP - friendlyFP);
+
+        if (spoilers) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+        }
+
+        if (null == escape) {
+            api.addBriefingItem("Defeat all enemy forces");
+        } else {
+            switch (escape) {
+                case PLAYER:
+                    api.addBriefingItem("Escape from the enemy forces");
+                    break;
+                case ENEMY:
+                default:
+                    api.addBriefingItem("Prevent the enemy forces from escaping");
+                    break;
+            }
+        }
+        String battleSize;
+        if (size >= 50) {
+            battleSize = "Armageddon";
+        } else if (size >= 35) {
+            battleSize = "War";
+        } else if (size >= 20) {
+            battleSize = "Assault";
+        } else if (size >= 10) {
+            battleSize = "Raid";
+        } else {
+            battleSize = "Skirmish";
+        }
+        switch (objectiveCount) {
+            case 0 ->
+                api.addBriefingItem("Battle size: " + battleSize);
+            case 1 ->
+                api.addBriefingItem("Battle size: " + battleSize + "  -  " + objectiveCount + " objective");
+            default ->
+                api.addBriefingItem("Battle size: " + battleSize + "  -  " + objectiveCount + " objectives");
+        }
 
         api.addBriefingItem("Match inequality: " + Math.round(distance));
 

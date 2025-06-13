@@ -98,29 +98,22 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
     public static int calculatePowerLevel(FamousBountyStage stage) {
         float pointFactor = Math.max(0.5f, 0.65f + (Math.min(stage.qf, 1f) * Math.max((float) Math.sqrt(stage.qf), 1f) * 0.35f));
         float sModFactor;
-        switch (stage.sMods) {
-            case -1:
-                sModFactor = 0f;
-                break;
-            case 0:
-                sModFactor = 0.25f;
-                break;
-            case 1:
-                sModFactor = 1f;
-                break;
-            case 2:
-                sModFactor = 2f;
-                break;
-            case 3:
-                sModFactor = 2.75f;
-                break;
-            case 4:
-                sModFactor = 3f;
-                break;
-            default:
-                sModFactor = 0f;
-                break;
-        }
+        sModFactor = switch (stage.sMods) {
+            case -1 ->
+                0f;
+            case 0 ->
+                0.25f;
+            case 1 ->
+                1f;
+            case 2 ->
+                2f;
+            case 3 ->
+                2.75f;
+            case 4 ->
+                3f;
+            default ->
+                0f;
+        };
         pointFactor *= 1f + ((stage.opBonus + (12f * sModFactor)) / 100f);
         float factionFactor = 1f;
         if (stage.fleetFaction.contentEquals(Factions.TRITACHYON)) {
@@ -232,38 +225,32 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
         }
 
         if (fleet.getFlagship() == null || fleet.getFlagship().getCaptain() != person) {
-            result = new IBBResult(IBBResultType.END_OTHER, 0);
-            sendUpdateIfPlayerHasIntel(result, false);
-            endMission(false);
+            reportResult(new IBBResult(IBBResultType.END_OTHER, 0));
         }
     }
 
     @Override
     public void reportFleetDespawnedToListener(CampaignFleetAPI fleet, FleetDespawnReason reason, Object param) {
-        if (isDone() || isEnding()) {
+        if (isDone()) {
             return;
         }
 
         if (this.fleet == fleet) {
             fleet.setCommander(fleet.getFaction().createRandomPerson());
-            result = new IBBResult(IBBResultType.END_OTHER, 0);
-            sendUpdateIfPlayerHasIntel(result, false);
-            endMission(false);
+            reportResult(new IBBResult(IBBResultType.END_OTHER, 0));
         }
     }
 
     @Override
     public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
-        if (isDone() || isEnding()) {
+        if (isDone()) {
             return;
         }
 
         if (battle.isInvolved(fleet) && !battle.isPlayerInvolved()) {
             if (fleet.getFlagship() == null || fleet.getFlagship().getCaptain() != person) {
                 fleet.setCommander(fleet.getFaction().createRandomPerson());
-                result = new IBBResult(IBBResultType.END_TAKEN, 0);
-                sendUpdateIfPlayerHasIntel(result, false);
-                endMission(false);
+                reportResult(new IBBResult(IBBResultType.END_TAKEN, 0));
                 return;
             }
         }
@@ -279,36 +266,18 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
 
         payment = (int) (bountyCredits * battle.getPlayerInvolvementFraction());
         if (payment <= 0) {
-            result = new IBBResult(IBBResultType.END_TAKEN, 0);
-            sendUpdateIfPlayerHasIntel(result, false);
-            endMission(false);
+            reportResult(new IBBResult(IBBResultType.END_TAKEN, 0));
             return;
         }
 
         log.info(String.format("Paying bounty of %f from the International Bounty Board", payment));
         Global.getSector().getPlayerFleet().getCargo().getCredits().add(payment);
-        result = new IBBResult(IBBResultType.END_PLAYER_BOUNTY, (int) payment);
-        sendUpdateIfPlayerHasIntel(result, false);
-
-        /* Mark bounty as completed */
-        endMission(false);
+        reportResult(new IBBResult(IBBResultType.END_PLAYER_BOUNTY, (int) payment));
     }
 
     @Override
     protected void notifyEnding() {
-        super.notifyEnding();
-        endMission(false);
-    }
-
-    public void endMission(boolean expire) {
-        if (!isEnding() && !isEnded()) {
-            if (expire) {
-                SWP_IBBTracker.getTracker().reportStageExpired(thisStage);
-            } else {
-                SWP_IBBTracker.getTracker().reportStageCompleted(thisStage);
-            }
-        }
-
+        // clean up fleet
         if (fleet != null) {
             fleet.getMemoryWithoutUpdate().set("$stillAlive", false);
             fleet.getMemoryWithoutUpdate().unset(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE);
@@ -322,10 +291,27 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 fleet.despawn();
             }
         }
+    }
 
-        if (!isEnding() && !isEnded()) {
-            endAfterDelay();
+    public void reportResult(IBBResult result) {
+        if (this.result != null) {
+            return;
         }
+        this.result = result;
+        sendUpdateIfPlayerHasIntel(result, false);
+        endMission(false);
+    }
+
+    public void endMission(boolean expire) {
+        if (!isEnding() && !isEnded()) {
+            if (expire) {
+                SWP_IBBTracker.getTracker().reportStageExpired(thisStage);
+            } else {
+                SWP_IBBTracker.getTracker().reportStageCompleted(thisStage);
+            }
+            setImportant(false);
+        }
+        endAfterDelay();
     }
 
     public FamousBountyStage getStage() {
@@ -404,102 +390,88 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
         it = thisStage.it;
         they = thisStage.they;
         switch (thisStage) {
-            case STAGE_UNDINE: {
+            case STAGE_UNDINE -> {
                 targetDescLong = "%s, known to possess a rag-tag fleet of renegade pirates. The primary danger is "
                         + person.getName().getLast() + "'s pair of unique Lashers, which " + getHeOrShe()
                         + " has put to devastating use raiding supply lines.";
-                break;
             }
-            case STAGE_ELDER_ORB: {
+            case STAGE_ELDER_ORB -> {
                 targetDescLong = "%s, wanted dead for arson, murder, and invasion of privacy. " + Misc.ucFirst(getHeOrShe())
                         + " is a dangerous sexual deviant, known to perform bizarre and horrifying experiments on those "
                         + getHeOrShe() + " captures. " + person.getName().getLast() + " currently has a unique Beholder at "
                         + getHisOrHer() + " beck and call.";
-                break;
             }
-            case STAGE_PONY: {
+            case STAGE_PONY -> {
                 targetDescLong = "%s, whose private flotilla is helmed by a pair of unique ships. "
                         + "One of these is a unique Mule, which " + person.getName().getLast()
                         + " recently used to steal a unique Tarsus. " + Misc.ucFirst(getHeOrShe())
                         + " is a dangerous criminal who will stop at nothing to bring chaos to the Sector.";
-                break;
             }
-            case STAGE_HADES: {
+            case STAGE_HADES -> {
                 targetDescLong = "%s, who commands a converted trade fleet, largely purchased privately. "
                         + person.getName().getLast() + " is in possession of four unique Cerberi, which " + getHeOrShe()
                         + " stole from an IBB shareholder.";
-                break;
             }
-            case STAGE_FRACTURE: {
+            case STAGE_FRACTURE -> {
                 targetDescLong = "a former Lion's Guard officer named %s, who officially declared war against... "
                         + "'everyone'. As a result, " + person.getName().getLast() + " is wanted dead by nearly every government. "
                         + Misc.ucFirst(getHeOrShe()) + " possesses a unique Sunder and a unique Hammerhead, which " + getHeOrShe()
                         + " has used to great effect in the past.";
-                break;
             }
-            case STAGE_KINGFISHER: {
+            case STAGE_KINGFISHER -> {
                 targetDescLong = "%s, a famed war hero known for singlehandedly stopping the Mazalot Rebellion. However, "
                         + getHeOrShe() + " later fell victim to a neurological disease, eventually summoning the most loyal members of "
                         + getHisOrHer() + " old fleet and going on a rampage. Despite " + person.getName().getLast() + "'s mental disorder, "
                         + getHeOrShe() + " remains a skilled commander, and is in possession of a unique Eagle.";
-                break;
             }
-            case STAGE_LIBERTY: {
+            case STAGE_LIBERTY -> {
                 targetDescLong = "%s, once an esteemed leader. Now, " + getHeOrShe()
                         + " has lost every trace of sanity, carrying on against the Sector in the name of a fictional empire. "
                         + person.getName().getLast() + " commands a unique Wuzhang, and leads a band of indoctrinated cronies.";
-                break;
             }
-            case STAGE_POSEIDON: {
+            case STAGE_POSEIDON -> {
                 targetDescLong = "%s, a known terrorist at large. Calls for mercenaries and bounty hunters to take this "
                         + " dangerous individual down have been met with failure. " + person.getName().getLast()
                         + " owns a unique Charybdis, which " + getHeOrShe() + " reportedly plundered from the Anar shipyards.";
-                break;
             }
-            case STAGE_RAPTOR: {
+            case STAGE_RAPTOR -> {
                 targetDescLong = "%s, the daughter of a retired admiral. Using the privilege " + getHeOrShe() + " received, "
                         + person.getName().getLast() + " acquired a unique Falcon and a unique Medusa. Unfortunately, "
                         + getHeOrShe() + " went on a romp, carving a war-path of destruction in " + getHisOrHer() + " wake.";
-                break;
             }
-            case STAGE_IHS: {
+            case STAGE_IHS -> {
                 targetDescLong = "%s. " + Misc.ucFirst(getHeOrShe()) + " is perhaps the most dangerous of all the Idoneus exiles, "
                         + "wanted by various factions for " + getHisOrHer() + " frequent attacks on trading groups and military "
                         + "transport fleets in the sector's outer regions. " + Misc.ucFirst(getHeOrShe()) + " has borne witness to "
                         + "the full lifecycle of at least three full-scale exiled fleets; such extensive battlefield experience "
                         + "cannot be ignored. Additionally, " + getHisOrHer() + " flagship is a unique and dangerous hybrid prototype.";
-                break;
             }
-            case STAGE_GULF: {
+            case STAGE_GULF -> {
                 targetDescLong = "%s, wanted on charges of treason by the Diable Corporation. " + Misc.ucFirst(getHeOrShe())
                         + " thereafter carved a war-path through allied territory, costing local polities millions in damage. As such, "
                         + getHeOrShe() + " is officially wanted dead by all IBB member polities. " + person.getName().getLast()
                         + " commands a large Diable fleet from the helm of " + getHisOrHer() + " unique Gust.";
-                break;
             }
-            case STAGE_BIG_MAC: {
+            case STAGE_BIG_MAC -> {
                 targetDescLong = "Rylek, former ARS brass who seems to have decided that the Society's crusade against the Domain "
                         + "was far too sane for their liking, and have struck out on " + getHisOrHer() + " own with the declared "
                         + "intent of exterminating all humanity. Rylek took " + getHisOrHer() + " old flagship with " + getHimOrHer()
                         + " (a unique Macnamara Heavy Cruiser) and have since accumulated a sizeable band of similarly insane pirates.";
-                break;
             }
-            case STAGE_FRANKENSTEIN: {
+            case STAGE_FRANKENSTEIN -> {
                 targetDescLong = "Sir %s, who once inherited a tremendous fortune from " + getHisOrHer()
                         + " father, including a unique hull vaguely describable as an unholy amalgamation of dead ships. While "
                         + person.getName().getLast() + " was once considered a respected knight, " + getHeOrShe()
                         + " has since let " + getHisOrHer() + " vast wealth get to " + getHisOrHer() + " head, engaging in a "
                         + "rampaging joyride, causing countless deaths along the way.";
-                break;
             }
-            case STAGE_LEVIATHAN: {
+            case STAGE_LEVIATHAN -> {
                 targetDescLong = "%s, formerly a multi-millionaire trade magnate. However, " + getHeOrShe()
                         + " recently fell afoul of the authorities after inciting and exploiting several food shortages. "
                         + person.getName().getLast() + " is currently on the run, commanding a large privateer armada "
                         + "from " + getHisOrHer() + " massive unique Atlas and a pair of unique Phaetons.";
-                break;
             }
-            case STAGE_VESTIGE: {
+            case STAGE_VESTIGE -> {
                 targetDescLong = "%s. You are likely aware that ScalarTech Solutions likes to avoid conflict. Mostly. But "
                         + person.getName().getLast() + ", one of their commanders, has made a bit of a name for " + getHimOrHerself()
                         + " by taking a more aggressive approach. " + Misc.ucFirst(getHeOrShe()) + " raids convoys of factions that could "
@@ -509,112 +481,97 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                         + "That's where you come in; we have confirmation that ScalarTech will look the other way if "
                         + person.getName().getLast() + " were to be dealt with \"off the record.\" Beware " + getHisOrHer()
                         + " unique ScalarTech flagship; the reports are clear on its devastating capabilities.";
-                break;
             }
-            case STAGE_EMPEROR: {
+            case STAGE_EMPEROR -> {
                 targetDescLong = "%s. " + Misc.ucFirst(getHeOrShe()) + " was once a double-agent, working for the Tri-Tachyon in secret "
                         + "while posing as a Hegemony commander. " + Misc.ucFirst(getHeOrShe()) + " eventually betrayed both parties, "
                         + " in the process becoming wanted dead in duplicate. " + person.getName().getLast() + " still possesses "
                         + getHisOrHer() + " loyal fleet, and has a unique Dominator as well as four unique Brawlers under "
                         + getHisOrHer() + " command.";
-                break;
             }
-            case STAGE_YAMATO: {
+            case STAGE_YAMATO -> {
                 targetDescLong = "%s, a renowned war veteran. For unknown reasons, " + getHeOrShe()
                         + " rebelled against the Sector's established governments. " + person.getName().getLast()
                         + " now brings " + getHisOrHer() + " private fleet to bear against us. " + Misc.ucFirst(getHeOrShe())
                         + " commands a unique Dominus, a famous ship that has seen many great battles over its long career.";
-                break;
             }
-            case STAGE_EUPHORIA: {
+            case STAGE_EUPHORIA -> {
                 targetDescLong = "famed drug magnate %s, wanted on charges of terrorism and crimes against humanity. "
                         + Misc.ucFirst(getHeOrShe()) + " is known to have uploaded his mind into an Alpha core, using " + getHisOrHer()
                         + " incredible mental capacity to throw several economies into chaos. " + person.getName().getLast()
                         + " is also known to have connections to the Starlight Cabal, having quickly acquired a fleet of "
                         + "high-end warships via mysterious means. " + person.getName().getLast()
                         + " was last seen commanding a unique Astral.";
-                break;
             }
-            case STAGE_CLERIC: {
+            case STAGE_CLERIC -> {
                 targetDescLong = "%s, an estranged Templar leader. " + person.getName().getLast() + " seeks to destroy everything "
                         + getHeOrShe() + " can, so the IBB has decided that this indivudal must be stopped. " + person.getName().getLast()
                         + "'s fleet contains a unique Paladin of unknown origin.";
-                break;
             }
-            case STAGE_RAST: {
+            case STAGE_RAST -> {
                 targetDescLong = "%s, a \"copycat\" of Rast the Desireless. " + Misc.ucFirst(getHeOrShe()) + " stole Rast's flagship "
                         + "amidst a rebellion against the Foundation of Borken. Afterwards, " + person.getName().getLast()
                         + " assembled a group of Borken rebels and proceeded to embark on a journey into the \"cosmic harem\". "
                         + Misc.ucFirst(getHeOrShe()) + " evidently failed to understand the true meaning of the \"real\" Rast's love, "
                         + "given the multitude of colonies " + Misc.ucFirst(getHeOrShe()) + " has razed. " + person.getName().getLast()
                         + "'s fleet is a powerful warband led by a unique ShuddeMell.";
-                break;
             }
-            case STAGE_POPE: {
+            case STAGE_POPE -> {
                 targetDescLong = "%s. We have little information on the target. The presumption is that " + getHeOrShe()
                         + " is aligned with the Knights Templar in some way, judging by " + person.getName().getLast()
                         + "'s unique Archbishop of immense power and accompanying fleet of cult followers.";
-                break;
             }
-            case STAGE_ILIAD: {
+            case STAGE_ILIAD -> {
                 targetDescLong = "%s, a well-known admiral, famously wheelchair-bound due to injuries sustained during "
                         + getHisOrHer() + " final battle. Now, " + getHeOrShe() + " seeks to regain " + getHisOrHer()
                         + " former glory by taking " + getHisOrHer() + " armada on a crash course through the sector, "
                         + "purportedly causing as much damage as possible. " + person.getName().getLast() + " commands "
                         + getHisOrHer() + " signature unique Odyssey and unique Aurora.";
-                break;
             }
-            case STAGE_TITAN_X: {
+            case STAGE_TITAN_X -> {
                 targetDescLong = "a deranged madman by the name of %s. This monster has been capturing various faction officials, "
                         + "committing psychological torture of the most vile sort, no doubt toward some nefarious ends. "
                         + "Worse still, every fleet we've sent to deal with " + getHimOrHer()
                         + " has mysteriously vanished without a trace. Whole fleets just... missing. Commander, " + person.getName().getLast()
                         + " must be stopped, but be careful; " + getHisOrHer() + " fleet contains a unique phase ship of Imperial design.";
-                break;
             }
-            case STAGE_FRAMEBREAKER: {
+            case STAGE_FRAMEBREAKER -> {
                 targetDescLong = "%s, \"The King\", who fashioned " + getHimOrHerself()
                         + " after the legendary prophet Ludd to acquire a fleet of followers. " + Misc.ucFirst(getHisOrHer())
                         + " numerous acts of terrorism have left a long trail of bodies. " + "King " + person.getName().getLast()
                         + " commands a fleet of fanatics from a unique Onslaught. " + Misc.ucFirst(getHisOrHer())
                         + " fanatics are also in possession of a pair of unique Dominators.";
-                break;
             }
-            case STAGE_ODIN: {
+            case STAGE_ODIN -> {
                 targetDescLong = "an artificial entity, designated %s. Being an ancient AI, " + getHeOrShe()
                         + " predates the Collapse. For reasons of international security, this AI must be destroyed as soon as possible. "
                         + person.getName().getLast() + " was last seen controlling a unique Mimir and six unique Potnia-bisses.";
-                break;
             }
-            case STAGE_BULLSEYE: {
+            case STAGE_BULLSEYE -> {
                 targetDescLong = "a P.A.C.K admiral by the name of %s, purportedly spliced with canine genes by "
                         + getHisOrHer() + " own request. The operation drove " + person.getName().getLast()
                         + " insane, as evidenced by the fact that " + getHeOrShe() + " proceeded to swipe a group of "
                         + "cutting-edge P.A.C.K. warships in order to raid various colonies indiscriminately.";
-                break;
             }
-            case STAGE_LUCIFER: {
+            case STAGE_LUCIFER -> {
                 targetDescLong = "%s, a failed Tri-Tachyon Alpha AI experiment. After falling rampant, " + getHeOrShe()
                         + " stole a set of Domain-era schematics for prototype phase coils. We recently discovered that "
                         + person.getName().getLast() + " put this technology to use, creating a powerful fleet consisting "
                         + "almost entirely of unique phase ships. " + Misc.ucFirst(getHisOrHer()) + " continued existence "
                         + "cannot be allowed.";
-                break;
             }
-            case STAGE_SPORESHIP: {
+            case STAGE_SPORESHIP -> {
                 targetDescLong = "%s, an unknown AI entity, theorized to be a cluster of Alphas working in tandem. " + Misc.ucFirst(getHeOrShe())
                         + " has somehow obtained a Domain-era sporeship, a legendary type of vessel. " + person.getName().getLast()
                         + "'s intentions are unknown at this point, but " + getHeOrShe() + " appears to be building up a "
                         + "fleet of automated ships. This development is a threat to the Persean Sector at large.";
-                break;
             }
-            case STAGE_ZEUS: {
+            case STAGE_ZEUS -> {
                 targetDescLong = "IBB founder %s, who has gone AWOL. Before going rampant, " + getHeOrShe()
                         + " obtained a unique Paragon, a unique Conquest, and a unique Onslaught. Be advised: "
                         + person.getName().getLast() + " is a gifted tactician and a master of starship modification.";
-                break;
             }
-            case STAGE_CANCER: {
+            case STAGE_CANCER -> {
                 targetDescLong = "...\"%s.\" Yes, really. " + Misc.ucFirst(getHeOrShe()) + " was a relatively unknown cybernetics "
                         + "engineer and hobbyist scrapper by the name of Gary Boldmann, until about a cycle ago when " + getHeOrShe()
                         + " came across some kind of experimental Tri-Tachyon implant stored in a hidden cache at the sector's edge. "
@@ -625,13 +582,12 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                         + "know much about " + person.getName().getFullName() + "'s capabilities, beyond the fact that " + getHeOrShe()
                         + " is using some kind of temporal manipulation technology that even the Tachs wrote off as \"irresponsibly "
                         + "dangerous.\" Good grief.";
-                break;
             }
-            default:
+            default -> {
                 log.info(String.format("No definition for stage %s", thisStage.name()));
                 thisStage = null;
                 ended = true;
-                break;
+            }
         }
     }
 
@@ -805,12 +761,10 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
         }
 
         switch (result.type) {
-            case END_PLAYER_BOUNTY:
+            case END_PLAYER_BOUNTY ->
                 info.addPara("%s received", initPad, tc, h, Misc.getDGSCredits(result.payment));
-                break;
-            case END_TAKEN:
-            case END_OTHER:
-                break;
+            case END_TAKEN, END_OTHER -> {
+            }
 
         }
 
@@ -838,11 +792,12 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
 
         if (result != null) {
             switch (result.type) {
-                case END_PLAYER_BOUNTY:
+                case END_PLAYER_BOUNTY -> {
                     return "IBB Mission Completed - " + n;
-                case END_OTHER:
-                case END_TAKEN:
+                }
+                case END_OTHER, END_TAKEN -> {
                     return "IBB Mission Ended - " + n;
+                }
             }
         }
 
@@ -1033,6 +988,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 }
             }
         }
+
+        info.addPara("The target is " + targetDescLong, opad, Misc.getHighlightColor(), person.getNameString());
     }
 
     @Override
@@ -1049,6 +1006,7 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
         Set<String> tags = super.getIntelTags(map);
         tags.add(Tags.INTEL_BOUNTY);
         tags.add(Tags.INTEL_MISSIONS);
+        tags.add(Tags.INTEL_ACCEPTED);
         return tags;
     }
 
@@ -1078,16 +1036,15 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
 
         FactionDoctrineAPI doctrine = Global.getSector().getFaction(fleetFactionId).getDoctrine().clone();
         switch (thisStage) {
-            case STAGE_LUCIFER:
+            case STAGE_LUCIFER ->
                 doctrine.setAggression(5);
-                break;
-            case STAGE_ZEUS:
+            case STAGE_ZEUS -> {
                 doctrine.setWarships(4);
                 doctrine.setCarriers(2);
                 doctrine.setPhaseShips(1);
                 doctrine.setShipSize(5);
-                break;
-            default:
+            }
+            default -> {
                 /* Trend taller */
                 if ((maxPts >= 50) && (doctrine.getShipSize() <= 1)) {
                     doctrine.setShipSize(doctrine.getShipSize() + 1);
@@ -1116,7 +1073,7 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 } else if ((maxPts >= 500) && (doctrine.getShipSize() <= 4)) {
                     doctrine.setShipSize(doctrine.getShipSize() + 1);
                 }
-                break;
+            }
         }
 
         final FleetParamsV3 params = new FleetParamsV3(
@@ -1160,11 +1117,12 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
         person.setPersonality(thisStage.personality);
 
         fleet.getMemoryWithoutUpdate().set("$banterText", thisStage.banterText);
+        fleet.getMemoryWithoutUpdate().set("$chatter_introSplash_name", person.getNameString());
 
         /* Bounty definitions */
         List<FleetMemberAPI> specialShips = new ArrayList<>(10);
         switch (thisStage) {
-            case STAGE_UNDINE: {
+            case STAGE_UNDINE -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_lasher_r_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Salamander");
@@ -1174,9 +1132,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 member.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_PONY: {
+            case STAGE_PONY -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_tarsus_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Carpal");
@@ -1186,9 +1143,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 member.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_HADES: {
+            case STAGE_HADES -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_cerberus_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Dis");
@@ -1215,9 +1171,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC);
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_FRACTURE: {
+            case STAGE_FRACTURE -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_hammerhead_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Phillipshead");
@@ -1227,9 +1182,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 member.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_RAPTOR: {
+            case STAGE_RAPTOR -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_medusa_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Gorgon");
@@ -1239,9 +1193,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 member.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_BIG_MAC: {
+            case STAGE_BIG_MAC -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "loamtp_burke_assault");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Big Guns");
@@ -1326,9 +1279,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Big Rig");
                 specialShips.add(member);
-                break;
             }
-            case STAGE_LEVIATHAN: {
+            case STAGE_LEVIATHAN -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_phaeton_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Clymene");
@@ -1347,9 +1299,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC);
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_VESTIGE: {
+            case STAGE_VESTIGE -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "tahlan_skirt_hunter");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Petticoat");
@@ -1359,9 +1310,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Kilt");
                 specialShips.add(member);
-                break;
             }
-            case STAGE_EMPEROR: {
+            case STAGE_EMPEROR -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_brawler_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Boxer");
@@ -1398,9 +1348,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC);
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_ILIAD: {
+            case STAGE_ILIAD -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_aurora_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Dawnstar");
@@ -1410,9 +1359,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 member.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_TITAN_X: {
+            case STAGE_TITAN_X -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_excelsior_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Royco");
@@ -1422,9 +1370,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 member.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_FRAMEBREAKER: {
+            case STAGE_FRAMEBREAKER -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_dominator_luddic_path_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Ludd's Hammer");
@@ -1443,9 +1390,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC);
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_ODIN: {
+            case STAGE_ODIN -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "msp_boss_potniaBis_boss");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Maleficent");
@@ -1500,9 +1446,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC);
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_BULLSEYE: {
+            case STAGE_BULLSEYE -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "pack_bulldog_bullseye_Bullseye");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Charlie");
@@ -1586,9 +1531,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC);
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_LUCIFER: {
+            case STAGE_LUCIFER -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_euryale_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Euryale");
@@ -1645,18 +1589,16 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC);
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_SPORESHIP: {
+            case STAGE_SPORESHIP -> {
                 params.factionId = Factions.DERELICT;
                 params.maxShipSize = 3;
                 CampaignFleetAPI temp = FleetFactoryV3.createFleet(params);
                 for (FleetMemberAPI member : temp.getFleetData().getMembersListCopy()) {
                     fleet.getFleetData().addFleetMember(member);
                 }
-                break;
             }
-            case STAGE_ZEUS: {
+            case STAGE_ZEUS -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "swp_boss_conquest_cus");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Nike");
@@ -1676,9 +1618,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
                 member.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
                 specialShips.add(member);
-                break;
             }
-            case STAGE_CANCER: {
+            case STAGE_CANCER -> {
                 FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "uw_boss_corruption_cur");
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Murderhobo");
@@ -1748,10 +1689,8 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
                 fleet.getFleetData().addFleetMember(member);
                 member.setShipName("Just Die Already");
                 specialShips.add(member);
-                break;
             }
-            default: {
-                break;
+            default -> {
             }
         }
 
@@ -1805,6 +1744,11 @@ public class SWP_IBBIntel extends BaseIntelPlugin implements EveryFrameScript, F
         fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true);
         fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_INTERACTION_DIALOG_CONFIG_OVERRIDE_GEN, new IBBInteractionConfigGen());
         fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_NO_MILITARY_RESPONSE, true);
+        fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, true);
+        fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_DO_NOT_IGNORE_PLAYER, true);
+        fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, true);
+        fleet.getMemoryWithoutUpdate().set(MemFlags.CAN_ONLY_BE_ENGAGED_WHEN_VISIBLE_TO_PLAYER, true);
+        fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_NO_JUMP, true);
 
         fleet.setFaction(faction.getId(), true);
         fleet.setNoFactionInName(true);

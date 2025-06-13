@@ -131,7 +131,7 @@
     },
     {
       "angle": 173,
-      "contrailSize": 128,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         -92,
@@ -142,7 +142,7 @@
     },
     {
       "angle": -173,
-      "contrailSize": 128,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         -92,
@@ -153,7 +153,7 @@
     },
     {
       "angle": 145,
-      "contrailSize": 128,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         43,
@@ -163,8 +163,8 @@
       "width": 10
     },
     {
-      "angle": -156,
-      "contrailSize": 128,
+      "angle": -145,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         43,
@@ -201,7 +201,7 @@
     },
     {
       "angle": -22.5,
-      "arc": 120.010002,
+      "arc": 120,
       "id": "WS0004",
       "locations": [
         62,

@@ -1,0 +1,46 @@
+{
+    "displayName": "Pather",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "goalVariant": true,
+    "hullId": "TADA_foray_pather",
+    "hullMods": [
+        "militarized_subsystems",
+        "safetyoverrides",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_foray_pather_pather",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "lightac",
+                "WS0005": "lightac",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "TADA_hammerStorm",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "lightmortar",
+                "WS0003": "lightmortar",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "heavymg",
+            }
+        }
+    ]
+}

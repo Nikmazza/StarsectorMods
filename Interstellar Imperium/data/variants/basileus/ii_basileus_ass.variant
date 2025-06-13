@@ -1,6 +1,6 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 2,
     "fluxVents": 3,
     "goalVariant": true,
     "hullId": "ii_basileus",

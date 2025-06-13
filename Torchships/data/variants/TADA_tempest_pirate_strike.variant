@@ -1,0 +1,16 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 2,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "TADA_tempest_pirate",
+    "hullMods": ["fluxbreakers"],
+    "permaMods": [],
+    "variantId": "TADA_tempest_pirate_strike",
+    "weaponGroups": [{
+        "autofire": false,
+        "mode": "LINKED",
+        "weapons": {"WS0001": "autopulse"}
+    }],
+    "wings": []
+}

@@ -3,11 +3,13 @@
   "hullId": "scintilla",
   "displayName": "Rogue",
   "goalVariant": false,
-  "fluxCapacitors": 15,
+  "fluxCapacitors": 17,
   "fluxVents": 0,
   "quality": 0,
   "permaMods": [],
-  "hullMods": [],
+  "hullMods": [
+    "eccm",
+  ],
   "weaponGroups": [
     {
       "autofire": false,

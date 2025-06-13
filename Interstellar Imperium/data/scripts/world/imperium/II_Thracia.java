@@ -390,8 +390,8 @@ public class II_Thracia {
                 new ArrayList<>(Arrays.asList(
                         new ArrayList<>(Arrays.asList(Industries.POPULATION)),
                         new ArrayList<>(Arrays.asList(Industries.SPACEPORT)),
-                        new ArrayList<>(Arrays.asList(Industries.MINING, Commodities.ALPHA_CORE)), // Industry
-                        new ArrayList<>(Arrays.asList(Industries.HEAVYBATTERIES, Commodities.ALPHA_CORE)), // No free alphas for you shitbags
+                        new ArrayList<>(Arrays.asList(Industries.MINING)), // Industry
+                        new ArrayList<>(Arrays.asList(Industries.HEAVYBATTERIES)),
                         new ArrayList<>(Arrays.asList(Industries.MILITARYBASE)))), // Industry
                 new ArrayList<>(Arrays.asList(
                         Submarkets.SUBMARKET_BLACK,

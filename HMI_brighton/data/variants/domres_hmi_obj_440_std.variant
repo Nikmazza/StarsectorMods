@@ -1,0 +1,51 @@
+{
+  "variantId": "domres_hmi_obj_440_std",
+  "hullId": "domres_hmi_obj_440",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 30,
+  "fluxVents": 4,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missile_autoloader"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "heavymauler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "harpoon",
+        "WS0008": "harpoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "squall",
+        "WS0004": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "dualflak",
+        "WS0002": "dualflak",
+        "WS0005": "vulcan",
+        "WS0006": "vulcan",
+        "WS0010": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

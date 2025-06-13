@@ -97,7 +97,8 @@
 		},
 	},
 	"illegalCommodities":[
-		"ai_cores",	
+		#"ai_cores",
+		"ix_rogue_ai"
 	],
 	"variantOverrides":{
 		"hyperion_ix_elite":3,

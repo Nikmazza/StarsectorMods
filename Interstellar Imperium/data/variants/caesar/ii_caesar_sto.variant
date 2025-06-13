@@ -1,6 +1,6 @@
 {
     "displayName": "Storm",
-    "fluxCapacitors": 32,
+    "fluxCapacitors": 38,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "ii_caesar",

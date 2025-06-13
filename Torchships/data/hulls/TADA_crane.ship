@@ -42,9 +42,7 @@
   ],
   "builtInWeapons": {
   },
-  "builtInWings": [
-    "thunder_wing"
-  ],
+  "builtInWings": [],
   "center": [
     71,
     97

@@ -1,6 +1,6 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 14,
+    "fluxCapacitors": 20,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "radiant",

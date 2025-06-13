@@ -1,0 +1,68 @@
+{
+    "displayName": "Relic",
+    "fluxCapacitors": 1,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "orr_onslaught_cgr_ana",
+    "hullMods": [
+        "armoredweapons",
+        "ballistic_rangefinder",
+        "dedicated_targeting_core",
+        "heavyarmor",
+        "reinforcedhull",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "onslaught_cgr_relic",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "orr_ana",
+                "WS 017": "orr_ana"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 021": "sabotpod",
+                "WS 022": "sabotpod",
+                "WS 023": "sabotpod",
+                "WS 024": "sabotpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymortar",
+                "WS 003": "heavymortar",
+                "WS 007": "heavymortar",
+                "WS 014": "arbalest",
+                "WS 015": "arbalest",
+                "WS 019": "hellbore"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 010": "flak",
+                "WS 011": "flak",
+                "WS 012": "flak",
+                "WS 013": "flak",
+                "WS 018": "devastator",
+                "WS 020": "devastator"
+            }
+        }
+    ]
+}

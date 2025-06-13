@@ -13,7 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "targetingunit",
+	"hmi_remmesscore",
     "automated",
+	"hmi_mess_visuals",
     "hmi_mess_spawn"
   ],
   "weaponSlots": [

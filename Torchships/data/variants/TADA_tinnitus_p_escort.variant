@@ -1,0 +1,32 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_tinnitus_p",
+    "hullMods": [
+        "eccm",
+        "magazines",
+        "missile_autoloader",
+        "missleracks",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_tinnitus_p_escort",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "irautolance",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "swarmer",
+            }
+        }
+    ]
+}

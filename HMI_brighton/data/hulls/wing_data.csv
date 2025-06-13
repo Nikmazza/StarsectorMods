@@ -1,0 +1,5 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+domres_talon_wing,domres_talon_standard,"no_sell, interceptor1, interceptor, low, domres_rec_bp, auto_fighter",2,,3,6,V,4000,200,600,4,INTERCEPTOR,Interceptor Drone,8,4000,,,,,,,,,,,,,6.1
+domres_broadsword_wing,domres_broadsword_standard,"no_sell, fighter4, fighter, low, domres_rec_bp, auto_fighter",2,,6,12,V,2000,500,,3,FIGHTER,Heavy Drone Fighter,14,8000,,,,,,,,,,,,,1.1
+domres_warthog_wing,domres_warthog_standard,"no_sell, fighter3, fighter, mid, domres_rec_bp, auto_fighter",2,,8,14,CLAW,2000,500,-400,3,FIGHTER,Heavy Drone Fighter,18,12000,,,,,,,,,,,,,4.1
+domres_sifter_drone_wing,domres_sifter_drone_std,"no_drop, no_sell, support0, drone, low, auto_fighter",0,,5,0,BOX,1000,500,,4,FIGHTER,Drone,10,850,,,,,,,,,,,,,17

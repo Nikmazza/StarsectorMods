@@ -1,0 +1,60 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 15,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "rwc_eagle_ii",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_eagle_ii_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "devastation",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "atropos",
+                "WS 001": "atropos",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "heavyac",
+                "WS 007": "heavyac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "gravitonbeam",
+                "WS 005": "gravitonbeam",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "pdlaser",
+                "WS 003": "pdlaser",
+                "WS 012": "pdlaser",
+                "WS 010": "pdlaser",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

@@ -15,6 +15,7 @@
     "hmi_linkedhull",
     "reduced_explosion",
     "targetingunit",
+    "rapidrepaircheck",
     "always_detaches"
   ],
   "weaponSlots": [
@@ -23,8 +24,8 @@
       "size": "LARGE",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 125,
-      "angle": -90,
+      "arc": 187,
+      "angle": -75.5,
       "locations": [-16, -16.5]
     },
     {

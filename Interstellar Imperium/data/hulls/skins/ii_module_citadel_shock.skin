@@ -2,7 +2,7 @@
 	"baseHullId":"ii_module_citadel",
 	"skinHullId":"ii_module_citadel_shock",
 	"descriptionPrefix":"Equipped with a station-grade Shock Buster system.",
-	"restoreToBaseHull":true,
+	"restoreToBaseHull":false,
 	"hullDesignation":"Shock Beam Bastion",
 	"systemId":"ii_shockbuster_station",
 	"removeWeaponSlots":[], 		# ids

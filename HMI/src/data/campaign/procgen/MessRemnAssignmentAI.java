@@ -29,11 +29,12 @@ public class MessRemnAssignmentAI implements EveryFrameScript {
 	
 	protected void giveInitialAssignments() {
 		boolean playerInSameLocation = fleet.getContainingLocation() == Global.getSector().getCurrentLocation();
-		
+
 		// launch from source if player is in-system, or sometimes
-		if (playerInSameLocation && (float) Math.random() < 0.1f && source != null) {
+		if (playerInSameLocation || (float) Math.random() < 0.1f && source != null) {
 			fleet.setLocation(source.getLocation().x, source.getLocation().y);
 			fleet.addAssignment(FleetAssignment.ORBIT_AGGRESSIVE, source, 3f + (float) Math.random() * 2f);
+
 		} else {
 			// start at random location
 			SectorEntityToken target = data.campaign.procgen.MessRemnSeededFleetManager.pickEntityToGuard(new Random(), homeSystem, fleet);

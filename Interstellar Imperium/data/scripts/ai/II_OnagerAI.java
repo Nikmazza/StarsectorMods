@@ -185,7 +185,8 @@ public class II_OnagerAI extends II_BaseMissile {
             }
         }
 
-        if (missile.isFizzling() || missile.isFading()) {
+        if (missile.isFizzling() || missile.isFading() || ((missile.getEngineController() != null)
+                && (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()))) {
             if (target == null) {
                 return;
             }
@@ -328,8 +329,7 @@ public class II_OnagerAI extends II_BaseMissile {
 
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone()) {
                 return false;
             }

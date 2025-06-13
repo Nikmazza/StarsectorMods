@@ -1,0 +1,67 @@
+{
+  "variantId": "csp_garudalg_antifighter",
+  "hullId": "csp_garudalg",
+  "displayName": "Anti Small Craft",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "gravitonbeam",
+        "WS0002": "taclaser",
+        "WS0003": "taclaser",
+        "WS0004": "gravitonbeam",
+        "WS0005": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "locust",
+        "WS0013": "locust"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "harpoonpod",
+        "WS0009": "harpoonpod",
+        "WS0010": "harpoonpod",
+        "WS0011": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "sabotpod",
+        "WS0007": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "vulcan",
+        "WS0015": "vulcan",
+        "WS0016": "vulcan",
+        "WS0017": "vulcan",
+        "WS0018": "vulcan",
+        "WS0019": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

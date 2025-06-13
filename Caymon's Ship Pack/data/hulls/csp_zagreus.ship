@@ -1,0 +1,171 @@
+{
+  "hullName": "Zagreus",
+  "hullId": "csp_zagreus",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/csp_zagreus2.png",
+  "style": "LOW_TECH",
+  "height": 150,
+  "width": 144,
+  "center": [72, 67],
+  "collisionRadius": 113,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 107.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth",
+    "ballistic_rangefinder"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-27, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": -0,
+      "locations": [61, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [19, -34]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [19, 34]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -90,
+      "locations": [-19, -48]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 180,
+      "locations": [-43, -18]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 180,
+      "locations": [-43, 18]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": 90,
+      "locations": [-19, 48]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-66, 23.5],
+      "length": 38,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-66, -24],
+      "length": 38,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-56, -48],
+      "length": 33,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-55, 49],
+      "length": 33,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-64, 6.5],
+      "length": 23,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-64, -6.5],
+      "length": 23,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-51, -58],
+      "length": 29,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-51, 60],
+      "length": 29,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -40, 72,
+    27, 50,
+    81, 16,
+    74, 11,
+    74, -9,
+    80.5, -16,
+    27, -50,
+    -39.5, -71,
+    -66, -24,
+    -63, 0.5,
+    -66, 24.5
+  ]
+}

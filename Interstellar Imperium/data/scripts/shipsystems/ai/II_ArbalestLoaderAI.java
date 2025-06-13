@@ -1,5 +1,6 @@
 package data.scripts.shipsystems.ai;
 
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatAssignmentType;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -161,6 +162,11 @@ public class II_ArbalestLoaderAI implements ShipSystemAIScript {
                                 distanceThreshold = Math.min(distanceThreshold, distanceToTmp + tmp.getCollisionRadius());
                             }
 
+                            // Workaround until LazyLib is patched
+                            BoundsAPI bounds = tmp.getExactBounds();
+                            if (bounds != null) {
+                                bounds.update(tmp.getLocation(), tmp.getFacing());
+                            }
                             Vector2f collisionPoint = CollisionUtils.getCollisionPoint(ship.getLocation(), endpoint, tmp);
                             if (collisionPoint != null) {
                                 if (aimPoint == null) {
@@ -312,8 +318,8 @@ public class II_ArbalestLoaderAI implements ShipSystemAIScript {
                 targetSpot = null;
             }
             CombatEntityAPI immediateTarget;
-            if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof CombatEntityAPI) {
-                immediateTarget = (CombatEntityAPI) flags.getCustom(AIFlags.MANEUVER_TARGET);
+            if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof CombatEntityAPI combatEntityAPI) {
+                immediateTarget = combatEntityAPI;
             } else {
                 immediateTarget = ship.getShipTarget();
             }

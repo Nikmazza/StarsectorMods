@@ -1,0 +1,271 @@
+{
+  "bounds": [
+    247,
+    23.5,
+    214.5,
+    59,
+    186.5,
+    64,
+    183.5,
+    70,
+    -11.5,
+    71,
+    -18.5,
+    61,
+    -48.5,
+    73,
+    -52.5,
+    89,
+    -73.5,
+    85,
+    -98.5,
+    77.5,
+    -91.5,
+    53,
+    -115.5,
+    58,
+    -133.5,
+    37,
+    -137.5,
+    0,
+    -134.5,
+    -37,
+    -116.5,
+    -57,
+    -92.5,
+    -52,
+    -100,
+    -76.5,
+    -74.5,
+    -83,
+    -52.5,
+    -88,
+    -48.5,
+    -69,
+    -16.5,
+    -60,
+    -12.5,
+    -70,
+    184.5,
+    -71,
+    187.5,
+    -62,
+    214.5,
+    -58,
+    246,
+    -20.5,
+    251.5,
+    -2
+  ],
+  "builtInMods": [
+    "militarized_subsystems",
+    "second_BG_a",
+    "unstable_injector"
+  ],
+  "builtInWings": [],
+  "center": [
+    99,
+    142.5
+  ],
+  "collisionRadius": 330,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 32,
+      "location": [
+        -133.5,
+        44
+      ],
+      "style": "MIDLINE",
+      "width": 8
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -135.5,
+        33
+      ],
+      "style": "MIDLINE",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -138.5,
+        17
+      ],
+      "style": "MIDLINE",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 96,
+      "location": [
+        -138.5,
+        0
+      ],
+      "style": "MIDLINE",
+      "width": 24
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -138.5,
+        -17
+      ],
+      "style": "MIDLINE",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 48,
+      "location": [
+        -135.5,
+        -32
+      ],
+      "style": "MIDLINE",
+      "width": 12
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 32,
+      "location": [
+        -133.5,
+        -44
+      ],
+      "style": "MIDLINE",
+      "width": 8
+    },
+    {
+      "angle": 180,
+      "contrailSize": 64,
+      "length": 32,
+      "location": [
+        -104.5,
+        -73
+      ],
+      "style": "MIDLINE",
+      "width": 8
+    },
+    {
+      "angle": -180,
+      "contrailSize": 64,
+      "length": 32,
+      "location": [
+        -104.5,
+        73
+      ],
+      "style": "MIDLINE",
+      "width": 8
+    }
+  ],
+  "height": 400,
+  "hullId": "atlas_iia",
+  "hullName": "Atlas (II) (A)",
+  "hullSize": "CAPITAL_SHIP",
+  "shieldCenter": [
+    49.5,
+    0
+  ],
+  "shieldRadius": 230,
+  "spriteName": "graphics/ships/atlas_iia.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 100,
+      "arc": 210,
+      "id": "WS 001",
+      "locations": [
+        -61.5,
+        78
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 260,
+      "arc": 210,
+      "id": "WS 002",
+      "locations": [
+        -61.5,
+        -78
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 0,
+      "arc": 210,
+      "id": "WS 003",
+      "locations": [
+        206.5,
+        0
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 45,
+      "arc": 210,
+      "id": "WS0001",
+      "locations": [
+        205,
+        36
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": -45,
+      "arc": 210,
+      "id": "WS0002",
+      "locations": [
+        205,
+        -36
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 30.5,
+      "arc": 210,
+      "id": "WS0003",
+      "locations": [
+        234,
+        19
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": -30.5,
+      "arc": 210,
+      "id": "WS0004",
+      "locations": [
+        234,
+        -19
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    }
+  ],
+  "width": 200
+}

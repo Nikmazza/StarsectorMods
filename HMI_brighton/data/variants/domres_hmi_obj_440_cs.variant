@@ -1,0 +1,57 @@
+{
+  "variantId": "domres_hmi_obj_440_cs",
+  "hullId": "domres_hmi_obj_440",
+  "displayName": "Close Support",
+  "goalVariant": false,
+  "fluxCapacitors": 27,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hveldriver",
+        "WS0002": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "hurricane",
+        "WS0004": "hurricane"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "heavymauler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "annihilator",
+        "WS0008": "annihilator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "vulcan",
+        "WS0006": "vulcan",
+        "WS0010": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

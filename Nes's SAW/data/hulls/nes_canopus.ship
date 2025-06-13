@@ -1,0 +1,231 @@
+{
+  "hullName": "Canopus",
+  "hullId": "nes_canopus",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/nes_canopus.png",
+  "style": "HIGH_TECH",
+  "height": 230,
+  "width": 208,
+  "center": [104, 115],
+  "collisionRadius": 140,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 135,
+  "viewOffset": 0,
+  "builtInMods": [
+    "delicate",
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -30,
+      "locations": [88, -41]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 30,
+      "locations": [88, 41]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -45,
+      "locations": [62, -77]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 45,
+      "locations": [62, 77]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 90,
+      "locations": [-23, 60]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -90,
+      "locations": [-23, -60]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -130,
+      "locations": [-82, -70]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 130,
+      "locations": [-82, 70]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [83, -79]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [83, 79]
+    },
+    {
+      "id": "WS0011",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [47, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-113, -22],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-113, 22],
+      "length": 64,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-105, -34],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-105, 34],
+      "length": 48,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-102, -43],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-102, 43],
+      "length": 32,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-100, -50],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-100, 50],
+      "length": 24,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-97, -57],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-97, 57],
+      "length": 24,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    46, 16.5,
+    104.5, 21.5,
+    107.5, 52,
+    95, 73,
+    77, 76,
+    79, 86,
+    50.5, 97.5,
+    18, 70,
+    -5, 55,
+    -34.5, 73,
+    -87.5, 71.5,
+    -106.5, 22.5,
+    -94, 10,
+    -77, 10,
+    -77, -10,
+    -94, -10,
+    -106.5, -22.5,
+    -87.5, -71.5,
+    -34.5, -73,
+    -5, -55,
+    18, -70,
+    50.5, -97.5,
+    79, -86,
+    77, -76,
+    95, -73,
+    107.5, -52,
+    104.5, -21.5,
+    46, -16.5
+  ]
+}

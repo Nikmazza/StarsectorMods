@@ -23,7 +23,7 @@ public class HMI_seele implements SectorGeneratorPlugin {
 //    }
     Random characterSaveSeed = StarSystemGenerator.random;
     Random random = new Random(characterSaveSeed.nextLong());
-
+    public static String HMINIGHTMARE_KEY = "$hmi_nightmarestation";
 
     public void generate(SectorAPI sector) {
 
@@ -64,7 +64,7 @@ public class HMI_seele implements SectorGeneratorPlugin {
                 0.7f, // flare probability
                 2.0f); // CR loss multiplier, good values are in the range of 1-5); // extent of corona outside star)
         system.setLightColor(new Color(255, 90, 0)); // light color in entire system, affects all entities
-        system.getLocation().set(-71000, -40000);
+        system.getLocation().set(-71000, -23000);
         /*
          * addPlanet() parameters:
          * 1. What the planet orbits (orbit is always circular)
@@ -113,9 +113,10 @@ public class HMI_seele implements SectorGeneratorPlugin {
         system.addRingBand(seele1, "misc", "rings_dust0", 256f, 0, new Color(0, 0, 0, 0), 64f, 2525, 175f, Terrain.RING, "...forgot...how...");
         system.addRingBand(seele1, "misc", "rings_dust0", 256f, 0, new Color(0, 0, 0, 0), 64f, 3289, 175f, Terrain.RING, "...help...");
 
-        SectorEntityToken stationNightmare = DerelictThemeGenerator.addSalvageEntity(system, "hmi_station_nightmare", Factions.DERELICT);
+        SectorEntityToken stationNightmare = DerelictThemeGenerator.addSalvageEntity(system, "hmi_station_nightmare", Factions.NEUTRAL);
+        stationNightmare.getMemoryWithoutUpdate().set(HMINIGHTMARE_KEY, true);
         stationNightmare.setCircularOrbit(seele1, 100, 600, 65f);
-
+        Misc.setDefenderOverride(stationNightmare, new DefenderDataOverride("hmi_nightmare", 1f, 100, 400, 10));
 
 
 
@@ -177,7 +178,7 @@ public class HMI_seele implements SectorGeneratorPlugin {
                 0.7f, // flare probability
                 2.0f); // CR loss multiplier, good values are in the range of 1-5
         system2.setLightColor(new Color(225, 100, 100)); // light color in entire system, affects all entities
-        system2.getLocation().set(-68500, -36050);
+        system2.getLocation().set(-68500, -26000);
 
         /*
          * addPlanet() parameters:
@@ -240,7 +241,7 @@ public class HMI_seele implements SectorGeneratorPlugin {
                 0.7f, // flare probability
                 2.0f); // CR loss multiplier, good values are in the range of 1-5
         system3.setLightColor(new Color(225, 100, 100)); // light color in entire system, affects all entities
-        system3.getLocation().set(-71000, -37200);
+        system3.getLocation().set(-71000, -21700);
 
         /*
          * addPlanet() parameters:

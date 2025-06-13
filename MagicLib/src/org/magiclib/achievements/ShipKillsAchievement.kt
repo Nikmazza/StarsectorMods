@@ -11,7 +11,7 @@ import com.fs.starfarer.api.mission.FleetSide
 import org.magiclib.paintjobs.MagicPaintjobManager
 
 /**
- * Abstract class for achievements that require the player to kill a certain number of ships.
+ * Abstract class for achievements that require the player's flagship to kill a certain number of ships.
  *
  * Usage:
  *
@@ -22,12 +22,13 @@ import org.magiclib.paintjobs.MagicPaintjobManager
  *    }
  * }
  *
- * @property playerShipHullIds Hull IDs of ships that count towards this achievement.
+ * @property playerShipHullIds Hull IDs of ships piloted by the player that count towards this achievement.
+ *   If null, any player ship counts.
  * @property killCount Number of ships the player must kill to complete this achievement.
  * @property rewardedPaintjobIds Paintjob IDs to unlock when this achievement is completed.
  */
 abstract class ShipKillsAchievement(
-    val playerShipHullIds: List<String>,
+    val playerShipHullIds: List<String>? = null,
     val killCount: Float,
     val rewardedPaintjobIds: List<String>
 ) : MagicAchievement() {
@@ -41,11 +42,20 @@ abstract class ShipKillsAchievement(
         var damageRatio = 0.7f
     }
 
+    /**
+     * Percent of damage to hull the player must deal to a ship to count as a kill.
+     * Overrides `ShipKillsAchievement.damageRatio` if not null.
+     */
+    var damageRatioOverride: Float? = null
     protected val killedShipIds = mutableListOf<String>()
 
     override fun onSaveGameLoaded(isComplete: Boolean) {
         super.onSaveGameLoaded(isComplete)
         if (isComplete) {
+            // If achievement is marked as complete, call `onCompleted`.
+            // It _should_ already have been called, but maybe someone edited the text file to unlock it,
+            // or maybe a new paintjob was added to this achievement after the player completed it, so
+            // if we don't re-unlock the paintjobs here, the new ones won't be unlocked.
             onCompleted(null)
             return
         }
@@ -108,18 +118,19 @@ abstract class ShipKillsAchievement(
         if (ship.isFighter) return // get real
 
         // Check that the player was using a ship that counts towards this achievement.
-        if (combatEngine.playerShip?.hullSpec?.hullId !in playerShipHullIds) return
+        if (playerShipHullIds != null && combatEngine.playerShip?.hullSpec?.hullId !in playerShipHullIds) return
 
         val totalDamage = damageInfoPerShipId.amountFromOthers + damageInfoPerShipId.amountFromPlayer
         val playerDamageRatio = damageInfoPerShipId.amountFromPlayer / totalDamage
 
-        if (playerDamageRatio >= damageRatio) {
+        if (playerDamageRatio >= (damageRatioOverride ?: damageRatio)) {
             val maxProgress = maxProgress ?: return
             val prev =
-                (memory["killsByHull${combatEngine.playerShip?.hullSpec?.hullId}"] as? String?)?.toIntOrNull() ?: 0
+                (achievementMemory["killsByHull${combatEngine.playerShip?.hullSpec?.hullId}"] as? String?)?.toIntOrNull()
+                    ?: 0
             val newValue = (prev + 1).coerceAtMost(maxProgress.toInt())
 
-            memory["killsByHull${combatEngine.playerShip?.hullSpec?.hullId}"] = (newValue).toString()
+            achievementMemory["killsByHull${combatEngine.playerShip?.hullSpec?.hullId}"] = (newValue).toString()
             progress = newValue.toFloat()
 
             if (newValue >= maxProgress) {

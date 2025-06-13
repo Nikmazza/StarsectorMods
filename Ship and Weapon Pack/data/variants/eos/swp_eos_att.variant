@@ -1,6 +1,6 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 4,
+    "fluxCapacitors": 8,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "swp_eos",

@@ -27,7 +27,7 @@
 	"illegalCommodities":[
 	],
 	
-		"variantOverrides":{
+	"variantOverrides":{
 	},
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
@@ -95,7 +95,32 @@
 			"rad_gun",
 		],
 	},
-	
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":5,
+		"shipQuality":3,
+		"numShips":1,
+		
+		"shipSize":2,
+		
+		"aggression":5,
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.05,
+
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+			"electronic_warfare",
+			"officer_management",
+			"coordinated_maneuvers",
+			"fighter_doctrine",
+		],
+	},
 	"music":{
 		"encounter_hostile":"music_tritach_encounter_hostile",
 	},	
@@ -126,31 +151,4 @@
 		"patrolLarge":"Storm Swarm",
 		
 	},
-	"factionDoctrine":{
-		"warships":4,
-		"carriers":2,
-		"phaseShips":1,
-		
-		"officerQuality":5,
-		"shipQuality":3,
-		"numShips":1,
-		
-		"shipSize":2,
-		
-		"aggression":5,
-		
-		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
-		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
-		"autofitRandomizeProbability":0.05,
-
-		"commanderSkillsShuffleProbability":0,
-		"commanderSkills":[
-			"electronic_warfare",
-			"officer_management",
-			"coordinated_maneuvers",
-			"fighter_doctrine",
-		],
-	},
-	
 },

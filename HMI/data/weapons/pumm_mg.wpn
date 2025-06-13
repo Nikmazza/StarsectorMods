@@ -1,48 +1,32 @@
 {
-  "animationType": "MUZZLE_FLASH",
-  "barrelMode": "ALTERNATING",
-  "displayArcRadius": 250,
-  "fireSoundTwo": "vulcan_cannon_fire",
-  "hardpointAngleOffsets": [
-    0
-  ],
-  "hardpointGunSprite": "graphics/weapons/frag_carbine_hardpoint_recoil.png",
-  "hardpointOffsets": [
-    25,
-    0
-  ],
-  "hardpointSprite": "graphics/weapons/frag_carbine_hardpoint_base.png",
-  "id": "pumm_mg",
-  "muzzleFlashSpec": {
-    "length": 20,
-    "particleColor": [
-      255,
-      240,
-      165,
-      200
-    ],
-    "particleCount": 7,
-    "particleDuration": 0.15,
-    "particleSizeMin": 6,
-    "particleSizeRange": 8,
-    "spread": 6
-  },
-  "projectileSpecId": "pumm_med_shot",
-  "renderHints": [
-    RENDER_BARREL_BELOW
-  ],
-  "size": "MEDIUM",
-  "specClass": "projectile",
-  "textureType": ROUGH,
-  "turretAngleOffsets": [
-    0
-  ],
-  "turretGunSprite": "graphics/weapons/frag_carbine_turret_recoil.png",
-  "turretOffsets": [
-    24,
-    0
-  ],
-  "turretSprite": "graphics/weapons/frag_carbine_turret_base.png",
-  "type": "BALLISTIC",
-  "visualRecoil": 5
+	"id":"pumm_mg",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/hmi_pummerer/pummerer_turret_base00.png",
+	"hardpointSprite":"graphics/weapons/hmi_pummerer/pummerer_hardpoint_base00.png",
+	"numFrames":3,
+	"frameRate":20,
+	#"turretOffsets":[22, -4, 22, 4],
+	#"turretAngleOffsets":[0, 0],
+	#"hardpointOffsets":[31, -4, 31, 4],
+	#"hardpointAngleOffsets":[0, 0],
+	#"alwaysAnimate":"true",
+	"turretOffsets":[22, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[33, 0],
+	"hardpointAngleOffsets":[0],		
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	#"interruptibleBurst":true,
+	"muzzleFlashSpec":{"length":35.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":10.0,
+					   "particleSizeRange":16.0,
+					   "particleDuration":0.15,
+					   "particleCount":12,
+					   "particleColor":[255,140,125,200]},	
+	"projectileSpecId":"shredder_shot",  # projectile that will be fired
+	#"fireSoundOne":"thumper_spinup",
+	"fireSoundTwo":"thumper_fire",	
 }

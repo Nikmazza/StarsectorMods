@@ -1,7 +1,7 @@
 {
     "displayName": "Strike",
     "fluxCapacitors": 5,
-    "fluxVents": 1,
+    "fluxVents": 5,
     "goalVariant": true,
     "hullId": "swp_eos",
     "hullMods": [],
@@ -42,7 +42,7 @@
     "wings": [
         "trident_wing",
         "trident_wing",
-        "claw_wing",
+        "trident_wing",
         "claw_wing"
     ]
 }

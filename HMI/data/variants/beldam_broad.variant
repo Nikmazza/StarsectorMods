@@ -3,7 +3,7 @@
   "hullId": "beldam",
   "displayName": "Broadsider",
   "goalVariant": false,
-  "fluxCapacitors": 16,
+  "fluxCapacitors": 20,
   "fluxVents": 50,
   "quality": 1,
   "permaMods": [],

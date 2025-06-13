@@ -25,7 +25,7 @@ public class SWP_CampaignPlugin extends BaseCampaignPlugin {
             if (SWPModPlugin.isExerelin) {
                 return null;    // Nex takes care of this
             } else {
-                return new PluginPick<InteractionDialogPlugin>(new SWP_IBBInteractionDialogPlugin(), PickPriority.MOD_SPECIFIC);
+                return new PluginPick<>(new SWP_IBBInteractionDialogPlugin(), PickPriority.MOD_SPECIFIC);
             }
         }
         return null;

@@ -10,6 +10,7 @@ public class RemFluxBeamEffect implements BeamEffectPlugin {
 
 	private IntervalUtil fireInterval = new IntervalUtil(0.25f, 1.75f);
 	private boolean wasZero = true;
+	private float DAMAGE_MULTIPLIER = 2f;
 	
 	
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
@@ -22,11 +23,11 @@ public class RemFluxBeamEffect implements BeamEffectPlugin {
 			fireInterval.advance(dur);
 
 			if (fireInterval.intervalElapsed()) {
-				float FLUX_LEVEL = (beam.getSource().getFluxTracker().getFluxLevel())* 0.5f + 1f;
+				float FLUX_LEVEL = (beam.getSource().getFluxTracker().getFluxLevel())* DAMAGE_MULTIPLIER + 1f;
 				float DAMAGE = beam.getDamage().getBaseDamage();
 
 				if (beam.getDamageTarget() != null){
-					engine.applyDamage(beam.getDamageTarget(), beam.getTo(), DAMAGE * FLUX_LEVEL, DamageType.ENERGY, 0f, false, true, beam.getSource());
+					engine.applyDamage(beam.getDamageTarget(), beam.getTo(), DAMAGE * FLUX_LEVEL, DamageType.FRAGMENTATION, 0f, false, false, beam.getSource());
 				}
 			}
 		}

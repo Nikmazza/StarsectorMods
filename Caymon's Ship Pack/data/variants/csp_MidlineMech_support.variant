@@ -1,0 +1,48 @@
+{
+  "variantId": "csp_MidlineMech_support",
+  "hullId": "csp_MidlineMech",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 18,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "reinforcedhull",
+    "heavyarmor",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "csp_HeadBeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "ioncannon",
+        "WS0006": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "heavymg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "csp_Buster_Rifle"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

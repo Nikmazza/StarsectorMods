@@ -1,0 +1,69 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 4,
+    "fluxVents": 50,
+    "hullId": "missp_paradigm",
+    "hullMods": [
+        "targetingunit",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "missp_paradigm_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS0004": "hurricane"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0021": "dragon",
+                "WS0022": "dragon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "gauss"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "gauss",
+                "WS0003": "mjolnir"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "gravitonbeam",
+                "WS0010": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "heavymg",
+                "WS0006": "heavymg",
+                "WS0007": "dualflak",
+                "WS0008": "dualflak",
+                "WS0011": "lrpdlaser",
+                "WS0012": "lrpdlaser",
+                "WS0013": "pdburst",
+                "WS0014": "pdburst",
+                "WS0015": "lrpdlaser",
+                "WS0016": "lrpdlaser",
+                "WS0017": "lrpdlaser",
+                "WS0018": "lrpdlaser",
+                "WS0019": "pdburst",
+                "WS0020": "pdburst"
+            }
+        }
+    ]
+}

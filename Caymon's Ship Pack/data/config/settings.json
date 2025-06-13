@@ -1,0 +1,14 @@
+{
+  "designTypeColors":{
+      "Lion's Guard":[160,0,95,255],
+	 "XIV Remnant":[188,121,40,255],
+
+  },
+
+  "graphics":{
+      "characters":{
+         "csp_xivai":"graphics/portraits/csp_xivai.png",
+      },
+},
+
+}

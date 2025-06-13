@@ -76,6 +76,6 @@
     # Note, the Eos and Vortex will NOT spawn normally!
     #   Instead, a plugin is created to hijack the standard FleetFactory for Tri-Tachyon fleets.
     "factionDoctrine":{
-        "combatFreighterProbability":0.25,
+        "combatFreighterProbability":0.5,
     },
 },

@@ -11,7 +11,7 @@
 			],
 			"industries":[
 				"population",
-				["fuelprod", "synchrotron"],
+				"HMI_neverfuel",
 				"spaceport",
 				"orbitalstation",
 				"waystation",

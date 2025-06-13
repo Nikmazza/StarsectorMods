@@ -8,16 +8,13 @@
   "width": 112,
   "center": [56, 69],
   "collisionRadius": 140,
-  "shieldCenter": [8, -0],
+  "shieldCenter": [12, -0],
   "shieldRadius": 118.5,
   "viewOffset": 0,
   "builtInMods": [
     "repair_gantry",
-    "NES_ColorSelector_HF"
+    "surveying_equipment"
   ],
-  "builtInWeapons": {
-    "WS0007": "nes_mining_drill"
-  },
   "weaponSlots": [
     {
       "id": "LB 1",
@@ -35,18 +32,18 @@
     {
       "id": "WS0001",
       "size": "MEDIUM",
-      "type": "HYBRID",
+      "type": "ENERGY",
       "mount": "HARDPOINT",
-      "arc": 12,
+      "arc": 10,
       "angle": -0,
       "locations": [81, -31]
     },
     {
       "id": "WS0002",
       "size": "MEDIUM",
-      "type": "HYBRID",
+      "type": "ENERGY",
       "mount": "HARDPOINT",
-      "arc": 12,
+      "arc": 10,
       "angle": 0,
       "locations": [81, 31]
     },
@@ -71,38 +68,29 @@
     {
       "id": "WS0005",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
-      "arc": 205,
-      "angle": -120,
+      "arc": 215,
+      "angle": -115,
       "locations": [-17, -39]
     },
     {
       "id": "WS0006",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
-      "arc": 205,
-      "angle": 120,
+      "arc": 215,
+      "angle": 115,
       "locations": [-17, 39]
     },
     {
       "id": "WS0007",
-      "size": "LARGE",
-      "type": "BUILT_IN",
-      "mount": "HARDPOINT",
-      "arc": 0,
-      "angle": 0,
-      "locations": [23.5, -0]
-    },
-    {
-      "id": "NES_DECO_COUNTER",
       "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
-      "arc": 0,
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
       "angle": 0,
-      "locations": [0, 0]
+      "locations": [66, -0]
     }
   ],
   "engineSlots": [
@@ -207,6 +195,6 @@
     47.5, -46.5,
     70.5, -48.5,
     82, -31,
-    61.5, -0
+    67, -0
   ]
 }

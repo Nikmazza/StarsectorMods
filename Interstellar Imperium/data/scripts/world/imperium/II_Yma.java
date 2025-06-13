@@ -8,7 +8,6 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
@@ -17,10 +16,9 @@ import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.IIModPlugin;
+import static data.scripts.world.imperium.II_Thracia.addMarketplace;
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import static data.scripts.world.imperium.II_Thracia.addMarketplace;
 
 public class II_Yma {
 
@@ -46,7 +44,7 @@ public class II_Yma {
                         new ArrayList<>(Arrays.asList(Industries.WAYSTATION)),
                         new ArrayList<>(Arrays.asList(Industries.PATROLHQ)),
                         new ArrayList<>(Arrays.asList("commerce")), // Industry
-                        new ArrayList<>(Arrays.asList("ii_orbitalstation", Commodities.ALPHA_CORE)))),
+                        new ArrayList<>(Arrays.asList("ii_orbitalstation")))),
                 new ArrayList<>(Arrays.asList(
                         Submarkets.SUBMARKET_BLACK,
                         Submarkets.SUBMARKET_OPEN,

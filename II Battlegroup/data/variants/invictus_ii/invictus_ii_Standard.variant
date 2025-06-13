@@ -1,0 +1,53 @@
+{
+  "displayName": "Standard",
+  "fluxCapacitors": 0,
+  "fluxVents": 21,
+  "goalVariant": true,
+  "hullId": "invictus_ii",
+  "hullMods": [
+    "armoredweapons"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "invictus_ii_Standard",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "spinalgauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "hellbore",
+        "WS 009": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "devastator",
+        "WS 005": "devastator",
+        "WS 006": "devastator",
+        "WS 026": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "squall",
+        "WS 004": "locust",
+        "WS 007": "locust",
+        "WS 008": "squall",
+        "WS0001": "locust",
+        "WS0002": "locust"
+      }
+    }
+  ],
+  "wings": []
+}

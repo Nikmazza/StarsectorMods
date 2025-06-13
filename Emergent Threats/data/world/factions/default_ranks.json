@@ -1,6 +1,8 @@
 {
+	# unique ranks can be used by rules.csv for initiating custom dialog with bounty fleets
 	"ranks":{
 		"vice_smuggler":{"name":"Smuggler Contact"},
+		"vice_strategos":{"name":"Strategos"},
 	},
 	"posts":{
 		"vice_AI":{"name":"Artificial Intelligence"},

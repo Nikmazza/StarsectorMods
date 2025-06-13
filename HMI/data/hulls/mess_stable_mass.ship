@@ -12,7 +12,8 @@
   "shieldRadius": 37.5,
   "viewOffset": 0,
   "builtInMods": [
-    "automated"
+    "automated",
+	"hmi_mess_visuals"
   ],
   "builtInWings": [
     "drone_feeder_heavy_wing"

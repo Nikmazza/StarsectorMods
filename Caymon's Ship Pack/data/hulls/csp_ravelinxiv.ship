@@ -1,0 +1,137 @@
+{
+  "hullName": "Ravelin(XIV)",
+  "hullId": "csp_ravelinxiv",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/csp_ravelinXIV.png",
+  "style": "HIGH_TECH",
+  "height": 109,
+  "width": 94,
+  "center": [47, 52],
+  "collisionRadius": 81.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 78,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "fourteenth",
+    "csp_xivremnant",
+    "advancedcore",
+    "armoredweapons"
+  ],
+  "builtInWeapons": {
+    "WS0007": "csp_ravelinxivdeco",
+    "WS0008": "csp_ravelinxivdeco2"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [1.5, 18],
+      "renderOrderMod": 500
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": -0,
+      "locations": [1.5, -18],
+      "renderOrderMod": 500
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [16, -0],
+      "renderOrderMod": 500
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [39, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 2,
+      "locations": [20, -31],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": -2,
+      "locations": [20, 31],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 0,
+      "locations": [31.5, -0.5],
+      "renderOrderMod": 400
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 0,
+      "locations": [9, -0.5],
+      "renderOrderMod": 300
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-29, 26],
+      "length": 35,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-29, -26],
+      "length": 35,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -30.5, 33.5,
+    -44.5, 45.5,
+    -11, 44.5,
+    24, 38,
+    25.5, 25,
+    56, 0,
+    26, -26,
+    24, -39,
+    -12, -46,
+    -45, -46,
+    -31, -35
+  ]
+}

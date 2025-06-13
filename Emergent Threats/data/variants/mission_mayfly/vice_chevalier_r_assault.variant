@@ -1,0 +1,56 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 0,
+    "fluxVents": 25,
+    "goalVariant": true,
+    "hullId": "vice_chevalier_rem",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+        "stabilizedshieldemitter",
+        "vice_module_handler",
+        "vice_adaptive_reactor_chamber"
+    ],
+    "permaMods": ["vice_module_handler"],
+    "sMods": [],
+    "variantId": "vice_chevalier_r_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "vice_x-ray_pulse"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "cyclone"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "sabotpod",
+                "WS 011": "sabotpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "ioncannon"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "ioncannon",
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser",
+                "WS 006": "dualflak",
+                "WS 007": "dualflak",
+                "WS 012": "pdlaser",
+                "WS 013": "pdlaser"
+            }
+        }
+    ],
+    "wings": []
+}

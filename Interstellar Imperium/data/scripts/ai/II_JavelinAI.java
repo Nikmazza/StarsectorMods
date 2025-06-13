@@ -56,6 +56,9 @@ public class II_JavelinAI extends II_BaseMissile {
     public void advance(float amount) {
         boolean noEngines;
         noEngines = missile.isFizzling() || missile.isFading();
+        if (missile.getEngineController() != null) {
+            noEngines &= missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut();
+        }
 
         float maxSpeed = missile.getMaxSpeed();
 
@@ -181,8 +184,7 @@ public class II_JavelinAI extends II_BaseMissile {
     @Override
     protected boolean acquireTarget(float amount) {
         if (!isTargetValidAlternate(target)) {
-            if (target instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) target;
+            if (target instanceof ShipAPI ship) {
                 if (ship.isPhased() && ship.isAlive()) {
                     return false;
                 }
@@ -211,26 +213,20 @@ public class II_JavelinAI extends II_BaseMissile {
             if (!isTargetValid(tmp)) {
                 mod = 0f;
             } else {
-                switch (tmp.getHullSize()) {
-                    case FIGHTER:
-                        mod = 0.1f;
-                        break;
-                    case FRIGATE:
-                        mod = 3f;
-                        break;
-                    case DESTROYER:
-                        mod = 8f;
-                        break;
-                    case CRUISER:
-                        mod = 12f;
-                        break;
-                    case CAPITAL_SHIP:
-                        mod = 15f;
-                        break;
-                    default:
-                        mod = 0f;
-                        break;
-                }
+                mod = switch (tmp.getHullSize()) {
+                    case FIGHTER ->
+                        0.1f;
+                    case FRIGATE ->
+                        3f;
+                    case DESTROYER ->
+                        8f;
+                    case CRUISER ->
+                        12f;
+                    case CAPITAL_SHIP ->
+                        15f;
+                    default ->
+                        0f;
+                };
             }
             float distance = MathUtils.getDistance(tmp, missile.getLocation());
             if (distance > maxDistance) {
@@ -257,26 +253,20 @@ public class II_JavelinAI extends II_BaseMissile {
             if (!isTargetValidAlternate(tmp)) {
                 mod = 0f;
             } else {
-                switch (tmp.getHullSize()) {
-                    case FIGHTER:
-                        mod = 0.1f;
-                        break;
-                    case FRIGATE:
-                        mod = 3f;
-                        break;
-                    case DESTROYER:
-                        mod = 8f;
-                        break;
-                    case CRUISER:
-                        mod = 12f;
-                        break;
-                    case CAPITAL_SHIP:
-                        mod = 15f;
-                        break;
-                    default:
-                        mod = 0f;
-                        break;
-                }
+                mod = switch (tmp.getHullSize()) {
+                    case FIGHTER ->
+                        0.1f;
+                    case FRIGATE ->
+                        3f;
+                    case DESTROYER ->
+                        8f;
+                    case CRUISER ->
+                        12f;
+                    case CAPITAL_SHIP ->
+                        15f;
+                    default ->
+                        0f;
+                };
             }
             float distance = MathUtils.getDistance(tmp, missile.getLocation());
             if (distance > maxDistance) {
@@ -293,8 +283,7 @@ public class II_JavelinAI extends II_BaseMissile {
 
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone()) {
                 return false;
             }

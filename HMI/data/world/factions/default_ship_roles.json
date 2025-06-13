@@ -9,14 +9,6 @@
 			
 			"hmi_streak_std":5,
 			
-			"domres_defender_shielded":5,	
-			"domres_defender_armoured":5,
-			
-			"domres_sentry_bomber":5,
-								
-			"lasher_mess_vulcan":10,
-			"lasher_mess_ir":7,
-			
 			"mess_cerberus_pd":5,
 			"mess_cerberus_vulcan":5,
 			
@@ -31,6 +23,18 @@
 			
 			"wolf_p_attack_mining":2,
 			
+			"cerberus_miner_attack":2,
+			"cerberus_miner_attack2":3,
+			"cerberus_miner_outdated":5,
+			
+			"cerberus_miner_luddic_std":10,
+			
+			"cerberus_miningblaster":2,
+			
+			"lasher_hmi_attack":2,
+			"lasher_hmi_outdated":3,
+			
+			"lasher_hmi_lp_attack":5,
 			
 			"shepherd_heavy_missile":2,
 			"shepherd_heavy_standard":6,
@@ -59,44 +63,7 @@
 			"aureole_std":2,
 			"aureole_anti":1,
 			"aureole_sabot":1,						
-			
-			"vigilance_ak_std":10,
-			
-			"vigilance_mandate_std":10,
-			"wolf_mandate_Strike":10,
-			"vayra_omen_rm_strike":10,
-			
-			"domres_defender_shielded":5,	
-			"domres_defender_armoured":5,
-			
-			"domres_picket_attack":3,	
-			"domres_picket_attack2":3,
-			"domres_picket_attack3":3,	
-			
-			"domres_sentry_strike":3,	
-			"domres_sentry_bomber":3,
-			"domres_sentry_cs":3,
-			
-			"domres_warden_std":5,	
-			"domres_warden_attack":2,
-			"domres_warden_cs":3,			
-			
-			"domres_centurion_cs":5,
-			"domres_centurion_area":5,			
-			
-			"lasher_mess_mortar":10,
-			"lasher_mess_anti":1,
-			"lasher_mess_mg":7,
-			"lasher_mess_ir":7,
-			"lasher_mess_auto":10,
-			"lasher_mess_assault":7,
-			"lasher_mess_annhilator":3,
-			
-			"wolf_mess_harpoon":2,
-			"wolf_mess_ion":5,
-			"wolf_mess_beamer":10,
-			"wolf_mess_needler":3,
-			"wolf_mess_reaper":1,
+
 			
 			"mess_cerberus_blaster":2,
 			"mess_cerberus_strike1":5,
@@ -202,18 +169,21 @@
 			"ascendate_overdriven":1,
 			
 			"prognosticator_std":10,
-			
-			"hammerhead_hmi_mm_std":10,
+
 			
 			"monjeau_strike":3,
 			"monjeau_cs":3,
 			"monjeau_std":7,
-			"monjeau_attack":1,					
+			"monjeau_attack":1,	
+			
+
 
 			"revelio_attack":4,
 			"revelio_cs":3,
 			"revelio_lancer":2,
 			"revelio_missile":3,
+			
+			"fulgent_bomber":2,
 			
 			"barbican_std":10,
 			
@@ -221,46 +191,6 @@
 			
 			"embrasure_std":2,
 
-			"enforcer_mess_ion":4,
-			"enforcer_mess_salamander":2,
-			"enforcer_mess_sabot":2,
-			"enforcer_mess_annhiliator":4,
-			"enforcer_mess_reaper":1,
-			"enforcer_mess_flak":3,
-			"enforcer_mess_burst":3,
-			"enforcer_mess_beamer":3,
-			"enforcer_mess_mg":5,
-			"enforcer_mess_heavyauto":2,
-			"enforcer_mess_auto":6,
-			"enforcer_mess_assault":6,
-			"enforcer_mess_needler":1,	
-			
-			"hammerhead_mess_burst":3,
-			"hammerhead_mess_reaper":1,
-			"hammerhead_mess_pulse":6,
-			"hammerhead_mess_autogun":6,
-			"hammerhead_mess_mortar":8,
-			"hammerhead_mess_assault":4,
-			"hammerhead_mess_sabot":2,
-			"hammerhead_mess_swarmer":2,
-			
-			"hammerhead_mess_drone_burst":3,
-			"hammerhead_mess_drone_blaster":1,
-			"hammerhead_mess_drone_harpoon":2,
-			"hammerhead_mess_drone_salamander":2,
-			"hammerhead_mess_drone_sabot":2,
-			"hammerhead_mess_drone_reaper":1,
-			"hammerhead_mess_drone_needler":2,
-			"hammerhead_mess_drone_ion":5,
-			"hammerhead_mess_drone_beam":5,
-			"hammerhead_mess_drone_auto":5,
-			"hammerhead_mess_drone_mg":2,
-			"hammerhead_mess_drone_mortar":5,
-			"hammerhead_mess_drone_railgun":4,
-			"hammerhead_mess_drone_pulser":5,
-			"hammerhead_mess_drone_vulcan":5,
-			"hammerhead_mess_drone_swarmer":2,	
-			
 			"mess_buffalo_breach":2,
 			"mess_buffalo_harpoon":4,
 			"mess_buffalo_sabot":4,
@@ -285,22 +215,6 @@
 			"mess_tarsus_he":4,
 			"mess_tarsus_vulcan":4,
 			"mess_tarsus_pulse":3,	
-
-			"domres_bastillon_std":3,
-			"domres_bastillon_cs":3,
-			"domres_bastillon_attack":3,
-			
-			"domres_berserker_cs":3,
-			"domres_berserker_std":3,
-			"domres_berserker_atttack":3,
-
-			"domres_hammerhead_std":10,
-
-			"domres_barbican_std":10,
-			
-			"domres_hmi_sapper_std":2,
-			
-			"domres_embrasure_std":2,
 			
 			"mess_fulgent_harpoon":3,
 			"mess_fulgent_swarmer":3,
@@ -335,23 +249,21 @@
 			
 			"sulemain_cs":3,	
 			"sulemain_std":3,	
+			
+			"grendel_d_lp_std":0.5,
 
-			"vayra_brilliant_ai_Standard":10,
-		
 			"outworks_std":8,			
 			"outworks_missile":2,
 
 			"bracket_std":10,			
 			
-			"ecstacy_lancer":3,
-			"ecstacy_elite":1,
-			"ecstacy_attack":4,
+			"ecstacy_lancer":1,
+			"ecstacy_elite":5,
+			"ecstacy_attack":3,
 			"ecstacy_cs":1,
 
-			"hmi_coelum_cs":2,
-			"hmi_coelum_attack":2,
-			"hmi_coelum_std":3,
-
+			"brilliant_hmi_mk9":1,
+			"brilliant_hmi_std":1,			
 
 			"hmi_obj_361_missile":5,
 			"hmi_obj_361_ballistic":5,				
@@ -372,17 +284,7 @@
 			"mess_venture_blaster":1,
 			"mess_venture_salamander":1,
 			"mess_venture_reaper":1,		
-			
-			"dominator_mess_reaper":1,
-			"dominator_mess_blaster":2,
-			"dominator_mess_lancer":2,
-			"dominator_mess_vulcan":2,
-			"dominator_mess_beamer":2,
-			"dominator_mess_railgun":1,
-			"dominator_mess_autogun":4,
-			"dominator_mess_annhiliator":3,
-			"dominator_mess_salamander":3,
-			
+
 			"mess_colossus_auto":4,
 			"mess_colossus_rail":2,
 			"mess_colossus_needle":1,
@@ -394,17 +296,11 @@
 			"mess_colossus_pd":4,
 			"mess_colossus_pulse":2,
 			"mess_colossus_plasma":1,
-			"mess_colossus_lance":2,			
-			
-			"domres_rampart_std":2,
-			"domres_rampart_bombardment":2,
-			"domres_rampart_attack":2,
-			
-			"domres_outworks_std":6,
-			
-			"domres_bracket_std":10,
-			
-			"domres_eagle_attack":10,
+			"mess_colossus_lance":2,
+
+			"mess_apex_missile":2,
+			"mess_apex_needler":1,
+			"mess_apex_blaster":2,			
 						
 			"mess_brilliant_reaper":3,
 			"mess_brilliant_guass":3,
@@ -437,15 +333,17 @@
 		"hmi_herakles_cs":3,
 		"hmi_herakles_brawl":3,
 		
+		"nova_hmi_std":1,
+		"radiant_hmi_std":1,
+
+	
 		"hmi_herakles_rc_std":10,
 		
-		"vayra_radiant_ai_Standard":10,
-		
+				
 		"hmi_spookyboi_base_var":10,
 		
 		"mess_brilliant_reaper":8,
-		"mess_brilliant_guass":8,
-		"mess_brilliant_pulse":8,		
+		"mess_brilliant_guass":8,	
 		
 		"mess_ecstacy_assault":2,
 		"mess_ecstacy_cs":2,			
@@ -459,7 +357,11 @@
 		"mess_radiant_missile":1,		
 		"mess_radiant_pulser":2,
 		"mess_radiant_beam":2,
-		"mess_radiant_ballistic":1,		
+		"mess_radiant_ballistic":1,	
+
+		"mess_nova_strike":2,
+		"mess_nova_cs":2,
+		"mess_nova_blaster":1,			
 	},
 	
 	
@@ -469,6 +371,10 @@
 			"cerberus_miner_attack2":1,
 			"cerberus_miner_mining":2,
 			"cerberus_miner_outdated":3,
+			
+			"cerberus_miner_luddic_std":10,
+			
+			"cerberus_miningblaster":4,
 			
 			"lasher_hmi_outdatedcs":1,	
 			"lasher_hmi_attack":1,
@@ -481,17 +387,16 @@
 			
 			"wayfarer_p_mining":5,
 			
-			"remora_standard":10,
-			"remora_ak_standard":10,
-			"remora_mandate_standard":10,
+			"remora_standard":10,		
 			
 			"hmi_snail_attack":2,
 			"hmi_snail_cs":1,
 			"hmi_snail_escort":7,
 			"hmi_snail_mbeke":3,
 			
+			"shepherd_heavy_mining":5,
 			"shepherd_light_std":5,	
-			"maunderer_std":2,
+			"maunderer_std":5,
 			
 	},
 	"combatFreighterMedium":{
@@ -502,10 +407,15 @@
 			"hammerhead_hmi_outdated3":1,
 			"hammerhead_hmi_strike":5,
 			
-			"hammerhead_hmi_mm_std":10,
+			"zebu_attack":5,
+			"zebu_standard":2,
+			"zebu_mbeke":3,
 			
-			"mule_hmi_light_std":5,	
-			
+			"mule_hmi_light_std":5,			
+
+			"hippocampus_standard":8,
+			"hippocampus_cs":2,
+
 	},
 	"combatFreighterLarge":{	
 			"junk_autocannon":1.5,
@@ -526,13 +436,7 @@
 			"mule_hmi_heavy_outdated2":1,
 			"mule_hmi_heavy_pd":1,
 			"mule_hmi_heavy_standard":5,
-			
-			"mule_hmi_heavy_mm_std":10,
-			
-			
-			"vayra_drover_ai_strike":10,
-			"condor_mandate_Strike":10,
-					
+
 			"dram_mess_standard":10,
 			
 			"mess_scintilla_lancer":3,
@@ -543,10 +447,6 @@
 	
 			"hippocampus_standard":15,
 			"hippocampus_cs":5,
-						
-			"hippocampus_ak_std":10,
-			
-			"hippocampus_mandate_std":10,
 			
 			"hmi_convict_cs":1,
 			"hmi_convict_std":6,
@@ -573,14 +473,9 @@
 			"fishkill_combat":1.5,
 			"fishkill_cs":1.5,
 			"fishkill_mining":2,
-
-			"domres_mora_attack":4,
-			"domres_mora_cs":4,			
-	},
+			
+			"grendel_d_lp_std":0.5,
 	
-	"phaseSmall":{
-		"vayra_shade_ai_Assault":10,
-		"vayra_afflictor_ai_Strike":10,
 	},
 
 
@@ -588,14 +483,18 @@
 		"mulligan_std":10,
 		
 		"mulligan_pirates_std":10,
-
-		"vayra_harbinger_ai_Strike":10,		
+		
+		"mulligan_lp_variant":10,
 		
 	},
 	
 	
 	"phaseLarge":{	
-		"vayra_doom_ai_Strike":10,
+		
+		"grendel_d_pirates_std":7,
+		"grendel_d_pirates_so":3,
+		
+		"grendel_d_lp_std":10,
 	},	
 	
 	# freighters and such

@@ -2,6 +2,7 @@ package data.scripts.util;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BattleObjectiveAPI;
+import com.fs.starfarer.api.combat.BoundsAPI;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
@@ -139,6 +140,11 @@ public class II_Util {
                 }
 
                 if (filterBlocked && CollisionUtils.getCollides(originPoint, nearestPoint, otherEntity.getLocation(), otherEntity.getCollisionRadius())) {
+                    // Workaround until LazyLib is patched
+                    BoundsAPI bounds = otherEntity.getExactBounds();
+                    if (bounds != null) {
+                        bounds.update(otherEntity.getLocation(), otherEntity.getFacing());
+                    }
                     if (CollisionUtils.getCollisionPoint(nearestPoint, originPoint, otherEntity) != null) {
                         remove = true;
                         break;
@@ -261,8 +267,8 @@ public class II_Util {
     }
 
     public static void applyForce(CombatEntityAPI target, Vector2f dir, float force) {
-        if (target instanceof ShipAPI) {
-            ShipAPI root = II_Multi.getRoot((ShipAPI) target);
+        if (target instanceof ShipAPI shipAPI) {
+            ShipAPI root = II_Multi.getRoot(shipAPI);
             float forceRatio = root.getMass() / root.getMassWithModules();
             CombatUtils.applyForce(root, dir, force * forceRatio);
         } else {

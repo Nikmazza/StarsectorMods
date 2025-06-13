@@ -3,6 +3,8 @@ package data.scripts.xo.synthesis;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 import second_in_command.SCData;
 import second_in_command.specs.SCAptitudeSection;
@@ -12,14 +14,20 @@ import lunalib.lunaSettings.LunaSettings;
 
 public class AptitudeSynthesis extends SCBaseAptitudePlugin {
 	
+	private static String IN_FAC_ID = "independent";
 	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String TW_FAC_ID = "ix_trinity";
 	private static String TT_FAC_ID = "tritachyon";
-	
+
     //The ID of the skill that is always active
     @Override
     public String getOriginSkillId() {
         return "xo_synthesis_subsystem_integration";
+    }
+	
+	@Override
+	public void addCodexDescription(TooltipMakerAPI tooltip) {
+        tooltip.addPara("Synthesis enables the unrestricted use of AI Adaptive Subsystems, specialized hullmods normally limited either to Remnant automated hulls, or individual subsystem integrated ships. Depending on skill choice, the aptitude can also reduce the fleet wide CR penalty for using IX Battlegroup Panoptic Interfaces, as well as enable the use of a small number of automated ships. \n\nSynthesis officers can be recruited from the IX Battlegroup, Trinity Worlds, Tri-Tachyon, and occasionally on independent worlds.", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Synthesis", "AI Adaptive Subsystems");
     }
 	
     //Determines which skills are added and how they are sectioned off in the UI
@@ -54,6 +62,7 @@ public class AptitudeSynthesis extends SCBaseAptitudePlugin {
         if (IX_FAC_ID.equals(id)) weight *= 2f;
 		else if (TW_FAC_ID.equals(id)) weight *= 2f;
         else if (TT_FAC_ID.equals(id)) weight *= 1f;
+		else if (IN_FAC_ID.equals(id)) weight *= 0.5f;
 		else weight = 0f;
         return weight;
     }

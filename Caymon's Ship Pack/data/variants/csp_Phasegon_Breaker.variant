@@ -1,0 +1,62 @@
+{
+  "variantId": "csp_Phasegon_Breaker",
+  "hullId": "csp_Phasegon",
+  "displayName": "Shield Breaker",
+  "goalVariant": true,
+  "fluxCapacitors": 50,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardened_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "gauss",
+        "WS 002": "gauss"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "ionbeam",
+        "WS 006": "ionbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "heavymauler",
+        "WS0001": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 009": "heavyburst",
+        "WS 010": "heavyburst",
+        "WS 016": "pdburst",
+        "WS 022": "pdburst",
+        "WS 023": "pdburst"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 011": "sabot",
+        "WS 012": "sabot",
+        "WS 017": "sabot",
+        "WS 018": "sabot"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

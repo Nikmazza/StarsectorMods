@@ -1,0 +1,37 @@
+{
+  "variantId": "Phoca_XIV_Standard",
+  "hullId": "Phoca_XIV",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 17,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualac",
+        "WS0002": "heavyac",
+        "WS0003": "heavymauler",
+        "WS0004": "heavymauler",
+        "WS0005": "heavyac",
+        "WS0006": "lightdualmg",
+        "WS0007": "lightdualmg",
+        "WS0008": "lightag",
+        "WS0009": "lightag",
+        "WS0010": "lightag",
+        "WS0011": "lightag",
+        "WS0012": "lightdualac",
+        "WS0013": "lightdualac"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

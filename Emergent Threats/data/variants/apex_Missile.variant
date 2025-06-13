@@ -1,13 +1,14 @@
 {
     "displayName": "Suppression",
-    "fluxCapacitors": 2,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 23,
     "goalVariant": true,
     "hullId": "apex",
     "hullMods": [
+        "eccm",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_emitter_diodes"
+        "vice_adaptive_trajectory_analyzer"
     ],
     "permaMods": [],
     "sMods": [],
@@ -17,30 +18,30 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "ionbeam",
-                "WS 003": "ionbeam"
+                "WS 010": "vice_ionstreamer",
+                "WS 011": "vice_ionstreamer",
+                "WS 012": "vice_ionstreamer",
+                "WS 013": "vice_ionstreamer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "vice_warp_torpedo_pod",
+                "WS 005": "vice_warp_torpedo_pod",
+                "WS 006": "vice_warp_torpedo_pod",
+                "WS 007": "vice_warp_torpedo_pod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "gravitonbeam",
-                "WS 005": "vice_lrburstpd",
-                "WS 006": "vice_lrburstpd",
-                "WS 007": "gravitonbeam"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
+                "WS 000": "heavyburst",
+                "WS 003": "heavyburst",
                 "WS 008": "pdlaser",
-                "WS 009": "pdlaser",
-                "WS 010": "pdlaser",
-                "WS 011": "pdlaser",
-                "WS 012": "pdlaser",
-                "WS 013": "pdlaser"
+                "WS 009": "pdlaser"
             }
         }
     ],

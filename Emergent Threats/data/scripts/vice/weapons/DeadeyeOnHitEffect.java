@@ -11,7 +11,7 @@ import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 
 public class DeadeyeOnHitEffect implements OnHitEffectPlugin {
 	
-	private static float DAMAGE = 50f;
+	private static float DAMAGE = 150f;
 	
 	public void onHit(DamagingProjectileAPI proj, CombatEntityAPI target, Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
 		if (!shieldHit) {

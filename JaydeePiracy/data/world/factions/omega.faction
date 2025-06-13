@@ -1,0 +1,26 @@
+{
+	"logo":"graphics/factions/jdp_omega_flag.png",
+	"crest":"graphics/factions/jdp_omega_crest.png",
+	
+	"color":[235,235,235,255],
+	"baseUIColor":[235,235,235,255],
+	
+    "hullFrequency":{
+        "hulls":{
+            "jdp_penrose":0.00001, #Ludicrous ship, coould be kinda fun to have it jump you very very occasionally.
+        },
+    },
+    "ranks":{
+		"ranks":{
+			"jdp_dancer":{"name":"Database Error: Rank *Dancer* Unrecognised"},
+		},
+		"posts":{
+			"jdp_gamemaster":{"name":"Database Error: Post *Gamemaster* Unrecognised"},
+		},
+	},
+    "knownShips":{
+        "hulls":[
+            "jdp_penrose",
+        ],
+    },
+},

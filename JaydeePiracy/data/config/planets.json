@@ -1,0 +1,47 @@
+{	
+	"jdp_red_pulsar":{
+		"name":"Red Neutron Star",
+		"tilt":0, # left-right (>0 tilts to the left)
+		"pitch":0, # towards-away from the viewer (>0 pitches towards)
+		"rotation":-3, # degrees/second
+		"planetColor":[255,50,50,255],
+		"atmosphereThickness":0.25, # as fraction of radius.  Set to 0 for no atmosphere
+		"atmosphereThicknessMin":10, #  minimum thickness in pixels
+		"atmosphereColor":[255,50,50,255],
+		"texture":"graphics/planets/star_red.jpg",
+		"icon":"graphics/warroom/icon_star.png",
+		"iconColor":[255,50,50,255],
+		"starCoronaSprite":"graphics/fx/star_halo.png", # optional, defaults to really bright particle
+		"starCoronaColor":[255,50,50,60], # optional, defaults to white
+		"starCoronaSizeMult":5.12, # required, multiplier for star's radius
+		"isStar":true,
+		"isPulsar":true,
+		"tags":["codex_unlockable"],
+		"lightPosition":[0,0,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
+	},
+	"jdp_fractal":{
+		"name":"Fractal",
+		"aOrAn":"an",
+		"tilt":20, # left-right (>0 tilts to the left)
+		"pitch":15, # towards-away from the viewer (>0 pitches towards)
+		"rotation":4.5, # degrees/second
+		"planetColor":[200,160,240,255],
+		"atmosphereThickness":0.1, # as fraction of radius.  Set to 0 for no atmosphere
+		"atmosphereThicknessMin":20, #  minimum thickness in pixels
+		"atmosphereColor":[210,180,245,40],
+		"texture":"graphics/planets/jdp_fractal.jpg",
+		"icon":"graphics/warroom/icon_planet.png",
+		"iconColor":[200,160,240,255],
+		"isStar":false,
+		"lightPosition":[0,0,50], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
+		"cloudTexture":"graphics/planets/aurorae.png", # omit for no cloud layer
+		"cloudColor":[200,160,240,128],
+		"tags":["codex_unlockable"],
+		"cloudRotation":3, # degrees/second, optional
+	},	
+}
+
+
+
+
+

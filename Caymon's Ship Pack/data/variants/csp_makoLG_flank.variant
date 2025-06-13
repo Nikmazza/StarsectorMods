@@ -1,0 +1,40 @@
+{
+  "variantId": "csp_makoLG_flank",
+  "hullId": "csp_makoLG",
+  "displayName": "Flanker",
+  "goalVariant": true,
+  "fluxCapacitors": 9,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "reinforcedhull",
+    "heavyarmor",
+    "fluxbreakers"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "csp_phasecl"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "csp_phasecl"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ionpulser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

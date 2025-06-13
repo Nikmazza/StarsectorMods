@@ -1,0 +1,122 @@
+{
+  "hullName": "Hesperides",
+  "hullId": "csp_hesperides",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/csp_hesperides.png",
+  "style": "LOW_TECH",
+  "height": 230,
+  "width": 130,
+  "center": [65, 111],
+  "collisionRadius": 142.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 138,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -90,
+      "locations": [-12.5, -34]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 90,
+      "locations": [-12.5, 34]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [40, 37]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [40, -37]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [86, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-96, 57.5],
+      "length": 20,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-96, -57],
+      "length": 20,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-109, 18.5],
+      "length": 38.5,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-109, -18.5],
+      "length": 38.5,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -89, -4,
+    -110, -8,
+    -110, -28,
+    -108, -46,
+    -100, -54,
+    -97, -62,
+    -47, -63,
+    -36.5, -55,
+    56, -55,
+    92, -29,
+    118, -9.5,
+    117.5, 10.5,
+    91.5, 29,
+    57, 55,
+    -37.5, 55,
+    -45, 62,
+    -97, 62,
+    -97, 53.5,
+    -108, 47,
+    -110, 29.5,
+    -110, 8,
+    -89, 4
+  ]
+}

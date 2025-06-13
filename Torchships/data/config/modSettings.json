@@ -10,6 +10,7 @@
 			"ii_armor_package",
 			"TADA_reactiveArmor",
 			"SKR_ancientArmor",
+			"ablative_armor",
 		],
 
 		"ReactiveArmor_noncompatible": [
@@ -18,6 +19,7 @@
 			"ii_armor_package",
 			"TADA_lightArmor",
 			"SKR_ancientArmor",
+			"ablative_armor",
 		],
 
 		"MinPrep_noncompatible": [
@@ -52,9 +54,6 @@
 		    #increases the "cost" of stealing a given ship
 			#"my_fancy_ship":1.5,
 			#"do_not_steal":-1,
-			"TADA_tinnitus_plasma":1.5,
-			"TADA_tinnitus_xiv":2,
-			"TADA_gunwall_XIV":2,
 		},
 		"mining_ship_strengths":{
 			#"mining_wing": 0.5,
@@ -65,7 +64,7 @@
 		    #"small_mining_weapon":2,
 		    #"medium_mining_weapon":10,
 		    #"large_mining_weapon":20,
-			"TADA_pike":20,
+			"TADA_pike":10,
 		},
 		"mining_hidden_ships_and_weapons":[
 		    #??????

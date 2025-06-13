@@ -1,0 +1,22 @@
+{
+  "variantId": "csp_optiondrone_drone",
+  "hullId": "csp_optiondrone",
+  "displayName": "Drone",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "csp_dronelance"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

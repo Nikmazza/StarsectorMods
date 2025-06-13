@@ -1,0 +1,19 @@
+{
+	"baseHullId":"orr_onslaught_base",
+	"skinHullId":"orr_onslaught_cgr_tpc",
+	"hullName":"Onslaught (LC)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"onslaught",
+	"descriptionPrefix":"An antiquated Onslaught-class battleship that was given to the Luddic Church by their Hegemony allies during the First AI War. In light of the difficulty of keeping the foreign behemoths operational, most ships of this type were retired by the Knights of Ludd long ago. Those few that have survived to the present day are exalted relics, bearing alterations both large and small that have made them more suited to the needs of the Church.",
+	"spriteName":"graphics/orr/ships/onslaught_cgr_tpc.png",
+	"addHints":["HIDE_IN_CODEX"],
+	"tech":"Luddic Church",
+	"shieldType":"PHASE",
+	"defenseId":"damper",
+	"tags":["special_allows_system_use", "system_allows_special_use", "no_dealer", "orr_tpc", "hide_in_codex"],
+	"builtInMods":["orr_damper_field"],
+	"builtInWeapons": {
+		"WS 016": "orr_tpc",
+		"WS 017": "orr_tpc"
+	},
+}

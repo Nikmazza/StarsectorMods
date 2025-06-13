@@ -1,0 +1,22 @@
+{ 
+    "hullFrequency":{
+        "hulls":{
+			"missp_chrysaor":0.25,
+        },
+    },
+	"shipsWhenImporting":{
+        "hulls":[            
+			"missp_paradigm",
+			"missp_chrysaor",
+			"missp_allegiant",
+			],
+    },
+	"knownFighters":{
+		"fighters":[
+			"missp_claymore_wing",
+		],
+	},
+	"variantOverrides":{
+		"missp_chrysaor_Standard":1,
+		},
+},

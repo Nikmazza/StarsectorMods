@@ -6,17 +6,18 @@
 		"red_water",
 	],
 		"hullFrequency":{
-		"tags":{
-			"hmi_bp":0.25,
+        "hulls":{
+			"shepherd_heavy":0.35,
+			"shepherd_light":0.35,
+			"lasher_hmi":0.35,
+			"cerberus_miner":0.25,
+			"maunderer":0.25,
+			"remora":0.25,
+			"mulligan":0.25,
+			"mule_hmi_heavy":0.25,
+			"mule_hmi_light":0.25,
+			"nebula_hmi":0.25,
+			"hippocampus":0.25,
 		},
-	},
-		"shipsWhenImporting":{
-		"tags":["hmi_bp"],
-	},
-	"knownShips":{
-		"tags":["hmi_bp"],
-		"hulls":[
-		"mulligan",
-		],
 	},
 },

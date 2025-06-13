@@ -13,10 +13,7 @@
 		
 		"cerberus_luddic_Shielded":4,
 		"cerberus_luddic_Standard":6,
-		
-		"hermes_pather_mg":10,
-		"hermes_pather_mortar":5,
-		
+
 		"vanguard_lp_std":5,
 		"vanguard_lp_attack":5,		
 		
@@ -43,7 +40,6 @@
 		"mule_lp_x_std":4,	
 			
 		"phaeton_lp_attack":7,
-		"phaeton_lp_cs":2,
 		"phaeton_lp_strike":3,		
 	},
 	"combatLarge":{

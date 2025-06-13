@@ -2,7 +2,7 @@
   "hullName": "Prognosticator",
   "hullId": "prognosticator",
   "hullSize": "DESTROYER",
-  "spriteName": "graphics/ships/prognosticator.png",
+  "spriteName": "graphics/ships/prognosticator/prognosticator.png",
   "style": "HIGH_TECH",
   "height": 163,
   "width": 88,

@@ -6,7 +6,7 @@
 	"descriptionId":"onslaught",
 	"descriptionPrefix":"The former flagship of Admiral Phillip Andrada was also the first ship to declare for the Lion during the Opis crisis. As the newly established Sindrian Diktat gradually began to deploy warships of its own design, it retired its fleet of captured Hegemony capital ships until only this vessel remained in active service. However, as a piece of history graced by the Supreme Executor himself, no expense was spared to update this ship to the modern combat doctrine of the Lion's Guard.",
 	"coversColor":[180,255,255,255],
-	"tags":["no_dealer"],
+	"tags":["no_dealer", "codex_unlockable"],
 	"tech":"Lion's Guard",
 	"fleetPoints":35,
 	"spriteName":"graphics/vice/ships/hidden/onslaught_lg.png",

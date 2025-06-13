@@ -28,15 +28,15 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0016": "kane_missile",
-        "WS0017": "kane_missile"
+        "WS0016": "hammer",
+        "WS0017": "hammer"
       }
     },
     {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0005": "signpost_med"
+        "WS0005": "campbelltown_med"
       }
     },
     {

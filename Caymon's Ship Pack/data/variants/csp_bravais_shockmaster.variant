@@ -1,0 +1,30 @@
+{
+  "variantId": "csp_bravais_shockmaster",
+  "hullId": "csp_bravais",
+  "displayName": "Shockmsdyrt",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "shockrepeater",
+        "WS0002": "shockrepeater"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "riftlance"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

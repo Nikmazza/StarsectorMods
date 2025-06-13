@@ -1,0 +1,76 @@
+{
+  "hullName": "Dagclaw",
+  "hullId": "csp_Dagclaw",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_Dagclaw.png",
+  "style": "MIDLINE",
+  "height": 35,
+  "width": 24,
+  "center": [11.5, 16.5],
+  "collisionRadius": 30,
+  "shieldCenter": [0.5, -0],
+  "shieldRadius": 22,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS 001": "lightdualmg",
+    "WS 002": "lightdualmg",
+    "WS0001": "csp_Dagclawdeco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [6, 9]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [6, -9]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -180,
+      "locations": [7, 0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-1.5, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-4, 0],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -16.5, -0,
+    0.5, 12,
+    18.5, -0.5,
+    1, -12.5
+  ]
+}

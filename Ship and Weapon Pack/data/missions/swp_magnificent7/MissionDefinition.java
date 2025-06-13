@@ -20,11 +20,11 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.ShipRoles;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
-import data.scripts.SWPModPlugin;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -70,16 +70,19 @@ public class MissionDefinition implements MissionDefinitionPlugin {
     protected String getRole(String type) {
         WeightedRandomPicker<String> picker = new WeightedRandomPicker<>();
         switch (type) {
-            case "cruiser":
+            case "cruiser" -> {
                 picker.add(ShipRoles.COMBAT_LARGE, 15);
                 picker.add(ShipRoles.CARRIER_MEDIUM, 3);
-                break;
-            case "destroyer":
+            }
+            case "destroyer" -> {
                 return ShipRoles.COMBAT_MEDIUM;
-            case "frigate":
+            }
+            case "frigate" -> {
                 return ShipRoles.COMBAT_SMALL;
-            case "carrier":
+            }
+            case "carrier" -> {
                 return ShipRoles.CARRIER_SMALL;
+            }
         }
         return picker.pick();
     }
@@ -99,6 +102,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             if (!picks.isEmpty()) {
                 variantId = picks.get(0).variantId;
             } else {
+                continue;
+            }
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getBaseHullId(Global.getSettings().getVariant(variantId).getHullSpec()))) {
                 continue;
             }
             if (!type.equals("cruiser") || Global.getSettings().getVariant(variantId).getHullSize() == HullSize.CRUISER) {
@@ -148,19 +154,10 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         api.setFleetTagline(FleetSide.PLAYER, "Seven brave samurai");
         api.setFleetTagline(FleetSide.ENEMY, "Pirate Pillager Fleet");
 
-        if (!SWPModPlugin.hasUnderworld) {
-            api.addBriefingItem("UNDERWORLD REQUIRED");
-            api.addBriefingItem("Download Underworld to play this mission!");
-        }
-
-        if (!SWPModPlugin.hasUnderworld) {
-            return;
-        } else {
-            api.addBriefingItem("Defeat the attackers");
-            api.addBriefingItem("The ISS Yojimbo must survive");
-            //api.addBriefingItem("All friendly captains are highly skilled");
-            api.addBriefingItem("Click mission to re-roll ships (more available with different mods)");
-        }
+        api.addBriefingItem("Defeat the attackers");
+        api.addBriefingItem("The ISS Yojimbo must survive");
+        //api.addBriefingItem("All friendly captains are highly skilled");
+        api.addBriefingItem("Click mission to re-roll ships (more available with different mods)");
 
         addPlayerShip(api, "cruiser", "ISS Yojimbo", "steady", true);
         addPlayerShip(api, "cruiser", "ISS Palisade", "aggressive");

@@ -1,0 +1,49 @@
+{
+  "variantId": "csp_altergeist_strike",
+  "hullId": "csp_altergeist",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 14,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "adaptive_coils"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "hveldriver",
+        "WS 003": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "vulcan",
+        "WS 007": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "sabotpod",
+        "WS 006": "sabotpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

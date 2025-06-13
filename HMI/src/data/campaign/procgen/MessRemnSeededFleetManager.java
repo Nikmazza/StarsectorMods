@@ -222,14 +222,11 @@ public class MessRemnSeededFleetManager extends SeededFleetManager {
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_ON, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_FLEET, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_ALLOW_LONG_PURSUIT, true);
-		
-		// to make dormant fleets not try to retreat and get harried repeatedly for CR loss 
-		if (dormant) {
-			//fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true);
-		}
+
 		
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_NO_JUMP, true);
-		
+
+
 		if (dormant) {
 			fleet.setTransponderOn(false);
 //			fleet.getMemoryWithoutUpdate().unset(MemFlags.MEMORY_KEY_PATROL_FLEET);

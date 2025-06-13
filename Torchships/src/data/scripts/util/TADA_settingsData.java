@@ -5,7 +5,6 @@ package data.scripts.util;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.magiclib.util.MagicSettings;
 
 public class TADA_settingsData {        
     

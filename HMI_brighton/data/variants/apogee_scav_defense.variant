@@ -1,0 +1,56 @@
+{
+  "variantId": "apogee_scav_defense",
+  "hullId": "apogee_scav",
+  "displayName": "Defensive",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 30,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "gravitonbeam",
+        "WS0008": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "phasebeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "swarmer",
+        "WS0004": "swarmer",
+        "WS0009": "locust"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "guardian"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "pdburst",
+        "WS0006": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -8,6 +8,7 @@ import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.ShipRoles;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.loading.RoleEntryAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -23,29 +24,27 @@ import java.util.TreeSet;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
 
-    public static final Comparator<FleetMemberAPI> PRIORITY = new Comparator<FleetMemberAPI>() {
-        @Override
-        public int compare(FleetMemberAPI member1, FleetMemberAPI member2) {
-            if (ALWAYS_LAST.contains(member1.getHullId()) && !ALWAYS_LAST.contains(member2.getHullId())) {
-                return 1;
-            } else if (!ALWAYS_LAST.contains(member1.getHullId()) && ALWAYS_LAST.contains(member2.getHullId())) {
-                return -1;
-            }
-            float wt1 = member1.getStats().getSuppliesPerMonth().getBaseValue() + member1.getMinCrew() / 100f;
-            float wt2 = member2.getStats().getSuppliesPerMonth().getBaseValue() + member2.getMinCrew() / 100f;
-            if (Float.compare(wt2, wt1) == 0) {
-                if (member1.getHullSpec().getHullName().compareTo(member2.getHullSpec().getHullName()) != 0) {
-                    return member1.getHullSpec().getHullName().compareTo(member2.getHullSpec().getHullName());
-                } else {
-                    return member1.getId().compareTo(member2.getId());
-                }
+    private static final Set<String> ALWAYS_LAST = new HashSet<>(10);
+
+    public static final Comparator<FleetMemberAPI> PRIORITY = (FleetMemberAPI member1, FleetMemberAPI member2) -> {
+        if (ALWAYS_LAST.contains(member1.getHullId()) && !ALWAYS_LAST.contains(member2.getHullId())) {
+            return 1;
+        } else if (!ALWAYS_LAST.contains(member1.getHullId()) && ALWAYS_LAST.contains(member2.getHullId())) {
+            return -1;
+        }
+        float wt1 = member1.getStats().getSuppliesPerMonth().getBaseValue() + member1.getMinCrew() / 100f;
+        float wt2 = member2.getStats().getSuppliesPerMonth().getBaseValue() + member2.getMinCrew() / 100f;
+        if (Float.compare(wt2, wt1) == 0) {
+            if (member1.getHullSpec().getHullName().compareTo(member2.getHullSpec().getHullName()) != 0) {
+                return member1.getHullSpec().getHullName().compareTo(member2.getHullSpec().getHullName());
             } else {
-                return Float.compare(wt2, wt1);
+                return member1.getId().compareTo(member2.getId());
             }
+        } else {
+            return Float.compare(wt2, wt1);
         }
     };
 
-    private static final Set<String> ALWAYS_LAST = new HashSet<>(10);
     private static final List<String> FACTIONS = new ArrayList<>(28);
     private static final List<String> ROLES = new ArrayList<>(29);
 
@@ -63,6 +62,8 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         FACTIONS.add(Factions.DERELICT);
         FACTIONS.add(Factions.REMNANTS);
         FACTIONS.add(Factions.OMEGA);
+        FACTIONS.add(Factions.DWELLER);
+        //FACTIONS.add(Factions.THREAT);
         FACTIONS.add("cabal");
         FACTIONS.add("interstellarimperium");
         FACTIONS.add("blackrock_driveyards");
@@ -332,7 +333,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
                 } else {
                     member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, variant);
                 }
-                if (Global.getSettings().isDevMode() || !member.getHullSpec().getTags().contains(Tags.RESTRICTED)) {
+                if (Global.getSettings().isDevMode() || (!member.getHullSpec().getTags().contains(Tags.RESTRICTED)
+                        && !member.getHullSpec().getTags().contains(Tags.MONSTER)
+                        && CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getBaseHullId(member.getHullSpec())))) {
                     ships.add(member);
                 }
             } catch (Exception ex) {
@@ -389,9 +392,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         @Override
         public boolean equals(Object obj) {
-            if (obj instanceof ModuleShip) {
-                ModuleShip other = (ModuleShip) obj;
-
+            if (obj instanceof ModuleShip other) {
                 if (!variant.getHullSpec().getHullId().contentEquals(other.variant.getHullSpec().getHullId())) {
                     return false;
                 }

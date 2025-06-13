@@ -1,0 +1,43 @@
+{
+  "variantId": "scintilla_scav_attack",
+  "hullId": "scintilla_scav",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 13,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "heavymortar",
+        "WS0002": "heavymortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 006": "sabotpod",
+        "WS 007": "sabot",
+        "WS 008": "sabot"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "lightmg",
+        "WS 003": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "warthog_wing",
+    "warthog_wing"
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "hullName": "Rampart (Scav)",
+  "hullId": "rampart_scav",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/rampart_scav.png",
+  "style": "LOW_TECH",
+  "height": 199,
+  "width": 202,
+  "center": [101, 94.5],
+  "collisionRadius": 134.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 131.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "brighton_derelict",
+    "rugged"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [91, -19]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 202,
+      "angle": -34.5,
+      "locations": [49, -64.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 218,
+      "angle": -108.5,
+      "locations": [18, -83]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 236,
+      "angle": -136.5,
+      "locations": [-56, -84.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 237,
+      "angle": 51,
+      "locations": [35.5, 44]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [
+        46.5, 15.5,
+        -18, 74.5,
+        -17.5, 64.5
+      ]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [
+        -18.5, 59.5,
+        -17.5, 68,
+        -16, 80.5
+      ]
+    },
+    {
+      "id": "WS0012",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [
+        44.5, 65.5,
+        46, 71.5,
+        45, 59
+      ]
+    },
+    {
+      "id": "WS0013",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [
+        46.5, 21,
+        47.5, 26.5,
+        52, 11
+      ]
+    },
+    {
+      "id": "WS0014",
+      "size": "MEDIUM",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 43,
+      "angle": 54,
+      "locations": [20, 78.5]
+    },
+    {
+      "id": "WS0016",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 42,
+      "angle": 127.5,
+      "locations": [-65, 70.5]
+    },
+    {
+      "id": "WS0017",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 42,
+      "angle": -90,
+      "locations": [-69.5, -94.5]
+    },
+    {
+      "id": "WS0018",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 42,
+      "angle": 0,
+      "locations": [67.5, 36]
+    },
+    {
+      "id": "WS0015",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 40,
+      "angle": 2.5,
+      "locations": [70.5, -59.5]
+    },
+    {
+      "id": "WS0019",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 42,
+      "angle": -74.5,
+      "locations": [-35, -72]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-87.5, 44.5],
+      "length": 31.5,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 24,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87.5, -65.5],
+      "length": 31.5,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 24,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-91.5, 0.5],
+      "length": 44.5,
+      "width": 29,
+      "angle": 180,
+      "contrailSize": 29,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-92, -21],
+      "length": 44.5,
+      "width": 29,
+      "angle": 180,
+      "contrailSize": 29,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-93, 24],
+      "length": 56.5,
+      "width": 37,
+      "angle": 180,
+      "contrailSize": 37,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-94, -44.5],
+      "length": 49,
+      "width": 38,
+      "angle": 180,
+      "contrailSize": 38,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    91.5, -46.5,
+    93, -35.5,
+    102.5, -34,
+    102.5, -4,
+    92, -0,
+    82.5, 8,
+    82.5, 20.5,
+    63, 48,
+    84.5, 49,
+    84.5, 80,
+    68, 82,
+    67.5, 91.5,
+    55.5, 100.5,
+    31.5, 101.5,
+    27.5, 94,
+    -11.5, 94.5,
+    -26.5, 90,
+    -36.5, 83,
+    -74.5, 81,
+    -74.5, 56,
+    -85.5, 53,
+    -88.5, 38,
+    -93.5, 36,
+    -94.5, -55.5,
+    -87.5, -58,
+    -88.5, -72,
+    -73, -76.5,
+    -74.5, -94,
+    -48, -97.5,
+    -24, -98.5,
+    -13, -95.5,
+    -1.5, -98,
+    21.5, -100.5,
+    37.5, -85.5,
+    67.5, -84.5,
+    78.5, -71.5,
+    78.5, -47.5
+  ]
+}

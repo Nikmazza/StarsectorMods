@@ -36,7 +36,9 @@
 	
 	"nex_keepSModsForRecoveredShips":true,	# note: only affects enemy ships, friendly ships already keep their mods
 	
-	"nex_enableMiningHarass":true,
+	"nex_enableMiningFleets":"true",
+	
+	"nex_enableMiningHarass":true,	# raiders bother a mining player
 	"nex_miningHarassThreshold": 11,
 	
 	"nex_conquestMissionIntervalRateMult":0.05,
@@ -56,6 +58,8 @@
 	"nex_gbTurnDaysPlayer":1,	# when player is participating
 	"nex_gbTurnDaysNPC":1,	# when player is not participating
 	
+	"nex_pirateBasesRequireLivePirateFaction":true,	# pirate/Pather bases stop spawning if their faction has been eliminated (i.e. due to no non-hidden markets)
+	
 	"nex_disruptMissionRewardMult":25000,	# no longer used
 	
 	"nex_transferMarket_valueDivisor":100000,
@@ -68,8 +72,8 @@
 	
 	"nex_governorship_maxSize":4,	# tooltip will not be updated to reflect changes to this
 	"nex_governorship_industryValueMult":0.8,
-	"nex_autonomousIncomeMult":0.2,
-	"nex_rulerIncomeMult":0.2,	# making it same as autonomous income mult saves me the trouble of rewriting the tooltip for it
+	"nex_autonomousIncomeMult":0.25,
+	"nex_rulerIncomeMult":0.25,	# making it same as autonomous income mult saves me the trouble of rewriting the tooltip for it
 	"nex_xpPerProfitMargin":4000,	# passive XP income from profitable colonies administered by player
 	
 	"nex_fleetRequestOrganizeTimeMult":0.75,	# default 0.75
@@ -124,6 +128,9 @@
 	"nex_vicVirusBombChance":0.5,	# at 0.5, half of sat bomb expeditions by VIC will be converted to virus bomb expeditions
 	"nex_ignoreSatBomb":false,	# no rep loss with third parties for sat bombing (also no perma-hatred with anyone)
 	
+	"nex_blueprintSwap_minAvailable":7,
+	"nex_blueprintSwap_maxAvailable":10,
+	
 	"nex_specialForces_overOfficerLimitWarningOnly":true,
 	
 	"nex_sizeFractionForVictory":0.501,	# note: winner must also be twice as big as the next largest party
@@ -172,7 +179,7 @@
 	
 	# these control the allowed slider length
 	"nex_randomSector_maxSystems":48,
-	"nex_randomSector_maxPlanets":80,
+	"nex_randomSector_maxPlanets":120,
 	"nex_randomSector_maxStations":80,
 	# pushes everything this far away from a specified sector center (_not_ [0, 0]).
 	# not really recommended, likely to mess with the generation in undesirable ways if significant values are used
@@ -181,6 +188,7 @@
 	
 	"nex_customStartFleetThresholds":[0, 80000, 160000, 240000, 500000, 1000000],
 	
+	"nex_factionSetupMaxPoints":100,
 	"nex_factionSetupNumFont":"graphics/fonts/insignia21LTaa.fnt",
 	
 	"plugins":{

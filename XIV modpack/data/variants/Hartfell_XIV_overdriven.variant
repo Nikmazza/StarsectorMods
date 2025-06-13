@@ -1,0 +1,29 @@
+{
+  "variantId": "Hartfell_XIV_overdriven",
+  "hullId": "Hartfell_XIV",
+  "displayName": "Overdriven",
+  "goalVariant": false,
+  "fluxCapacitors": 5,
+  "fluxVents": 7,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightneedler",
+        "WS0002": "lightneedler",
+        "WS0003": "reaper",
+        "WS0004": "reaper",
+        "WS0005": "reaper",
+        "WS0006": "ioncannon_fighter"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

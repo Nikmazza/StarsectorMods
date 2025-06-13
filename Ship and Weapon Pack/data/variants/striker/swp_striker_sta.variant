@@ -1,35 +1,35 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 5,
-    "fluxVents": 16,
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_striker",
-    "hullMods": [
-        "eccm",
-        "ballistic_rangefinder",
-        "targetingunit"
-    ],
+    "hullMods": ["fluxdistributor"],
     "permaMods": [],
     "sMods": [],
     "variantId": "swp_striker_sta",
     "weaponGroups": [
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
                 "WS0001": "lightac",
                 "WS0002": "lightac",
-                "WS0006": "lightac",
-                "WS0007": "lightac"
+                "WS0003": "lightac",
+                "WS0004": "lightac"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
+            "weapons": {"WS0005": "swp_hornet"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS0003": "breach",
-                "WS0004": "breach",
-                "WS0005": "breach"
+                "WS0006": "lightag",
+                "WS0007": "lightag"
             }
         },
         {

@@ -1,34 +1,57 @@
 package mmm.missions;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionBarEventWrapper;
 import com.fs.starfarer.api.loading.PersonMissionSpec;
+import mmm.Utils;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
-import java.util.Random;
+import java.util.Map;
 
 // Same as HubMissionBarEventWrapper, but returns true for isAlwaysShow, does not lock itself on a market, and does not
 // use BarEventSpec.
 public class MmmHubMissionBarEventWrapper extends HubMissionBarEventWrapper {
+    private static final Logger log = Global.getLogger(MmmHubMissionBarEventWrapper.class);
+    static {
+        if (Utils.DEBUG) {
+            log.setLevel(Level.ALL);
+        }
+    }
+
+//    protected int cycle_month = -1;
+
     public MmmHubMissionBarEventWrapper(String specId) {
         // Note that we don't actually use super.spec
         super(specId);
     }
 
-    // Adapted from HubMissionBarEventWrapper; does not check shownAt
+    // Adapted from HubMissionBarEventWrapper; does not check shownAt, and uses our own PRNG logic. Missions needs
+    // to update their own PRNG seed by calling OrbitalMissionBase.updateSeed
     @Override
     public boolean shouldShowAtMarket(MarketAPI market) {
         abortMission();
 
-        if (!specId.equals(specId)) return false;  // sanity check
-
-        genRandom = new Random(seed + market.getId().hashCode() * 181783497276652981L);
-        if (specId.equals(DefenseMission.MISSION_ID)) {
-            mission = new DefenseMission();
-        } else if (specId.equals(RepairMission.MISSION_ID)) {
-            mission = new RepairMission();
-        } else {
-            return false;
+        // Since we don't know the quest giver here, person missions will need to set their own PRNG in their
+        // shouldShowAtMarket/create if they need it. Note that MmmProcurementMission is only used for contact missions,
+        // so it is not supported here.
+        genRandom = OrbitalMissionBase.getRandom(specId, market);
+        switch (specId) {
+            case DefenseMission.MISSION_ID:
+                mission = new DefenseMission();
+                break;
+            case RepairMission.MISSION_ID:
+                mission = new RepairMission();
+                break;
+            case EscortMission.MISSION_ID:
+                mission = new EscortMission();
+                break;
+            default:
+                log.error("Unimplemented specId=" + specId);
+                return false;
         }
         mission.setMissionId(specId);
         mission.setGenRandom(genRandom);
@@ -38,11 +61,25 @@ public class MmmHubMissionBarEventWrapper extends HubMissionBarEventWrapper {
             mission.setIconName(spec.getIcon());
         }
 
-        return mission.shouldShowAtMarket(market);
+        try {
+            return mission.shouldShowAtMarket(market);
+        } catch (Exception e) {
+            log.error(e);
+        }
+        return false;
     }
 
     @Override
     public boolean isAlwaysShow() {
         return true;
+    }
+
+    @Override
+    public void addPromptAndOption(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+        try {
+            super.addPromptAndOption(dialog, memoryMap);
+        } catch (Exception e) {
+            log.error(e);
+        }
     }
 }

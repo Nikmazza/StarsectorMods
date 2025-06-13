@@ -1,0 +1,61 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+    "goalVariant": true,
+    "hullId": "TADA_bonnethead",
+    "hullMods": [
+        "converted_hangar",
+        "magazines",
+        "missleracks",
+        "pointdefenseai",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_bonnethead_escort",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "irautolance",
+                "WS0003": "irautolance",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0008": "gorgonpod",
+                "WS0007": "gorgonpod",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "flak",
+                "WS0010": "flak",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "heavymg",
+                "WS0002": "heavymg",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "pdburst",
+                "WS0005": "pdburst",
+            }
+        },
+    ],
+    "wings": [
+        "TADA_owlDrone_wing",
+    ],
+}

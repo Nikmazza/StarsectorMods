@@ -1,6 +1,6 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 4,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_archon",
@@ -33,7 +33,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS0006": "pdlaser"}
+            "weapons": {"WS0006": "lrpdlaser"}
         }
     ]
 }

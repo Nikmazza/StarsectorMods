@@ -1,0 +1,40 @@
+{
+  "variantId": "domres_hmi_sapper_cs",
+  "hullId": "domres_hmi_sapper",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 12,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyac",
+        "WS0002": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heatseeker",
+        "WS0004": "heatseeker"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

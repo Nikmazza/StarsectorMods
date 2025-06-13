@@ -1,0 +1,58 @@
+{
+  "variantId": "csp_Lanius_overdrive",
+  "hullId": "csp_Lanius",
+  "displayName": "Overdrive",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "high_scatter_amp",
+    "hardened_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "taclaser",
+        "WS0004": "taclaser",
+        "WS0005": "taclaser",
+        "WS0006": "taclaser",
+        "WS0007": "taclaser",
+        "WS0008": "taclaser",
+        "WS0009": "taclaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "sabot",
+        "WS0011": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "phasebeam",
+        "WS0002": "phasebeam"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

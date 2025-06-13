@@ -3,8 +3,8 @@
   "hullId": "calico",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 3,
-  "fluxVents": 20,
+  "fluxCapacitors": 0,
+  "fluxVents": 19,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -22,8 +22,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0003": "signpost_sml",
-        "WS0004": "signpost_sml"
+        "WS0003": "annihilator",
+        "WS0004": "annihilator"
       }
     },
     {
@@ -38,7 +38,7 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0008": "lightdualac"
+        "WS0008": "sml_shotgrun"
       }
     },
     {

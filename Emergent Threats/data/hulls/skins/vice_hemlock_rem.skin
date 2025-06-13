@@ -1,0 +1,22 @@
+{
+	"baseHullId":"vice_heron_auto",
+	"skinHullId":"vice_hemlock_rem",
+	"hullName":"Hemlock (R)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"vice_mayfly_rem",
+	"descriptionPrefix":"A heavily upgraded and fully automated variant of the Heron-class carrier, the Hemlock is equipped with a high capacity drone autoforge that can replenish combat losses at a truly staggering rate. This particular model appears to make use of metamaterial hull plating and plasma propulsion engines commonly found on Remnant hulls, despite the original prototypes being constructed from a midline tech base.",
+	"tags":["auto_rec", "no_dealer", "codex_unlockable"],
+	"tech":"Remnant",
+	"spriteName":"graphics/vice/ships/hidden/heron_auto_r.png",
+	"builtInMods":[],
+    "engineSlotChanges":{
+		"0":{"style":"HIGH_TECH"},
+		"1":{"style":"HIGH_TECH"},
+		"2":{"style":"HIGH_TECH"},
+		"3":{"style":"HIGH_TECH"},
+		"4":{"style":"HIGH_TECH"},
+		"5":{"style":"HIGH_TECH"},
+		"6":{"style":"HIGH_TECH"},
+		"7":{"style":"HIGH_TECH"},
+	},
+}

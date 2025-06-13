@@ -1,0 +1,223 @@
+{
+  "bounds": [
+    36.5,
+    16,
+    51.5,
+    49,
+    65.5,
+    50,
+    73.5,
+    38,
+    79.5,
+    -1,
+    73.5,
+    -40,
+    67.5,
+    -51,
+    51.5,
+    -50,
+    38.5,
+    -17,
+    6.5,
+    -21,
+    6,
+    -32,
+    -19.5,
+    -53,
+    -93,
+    -66,
+    -74.5,
+    -45,
+    -68.5,
+    -8,
+    -37.5,
+    -2,
+    -68.5,
+    7,
+    -74.5,
+    43,
+    -88,
+    66.5,
+    -18.5,
+    52,
+    6.5,
+    29,
+    6.5,
+    18
+  ],
+  "builtInMods": ["second_BG", "ballistic_rangefinder"],
+  "builtInWings": [],
+  "center": [
+    68,
+    92
+  ],
+  "collisionRadius": 130,
+  "coversColor": "255,255,255,255",
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 80,
+      "length": 75,
+      "location": [
+        -80,
+        36.5
+      ],
+      "style": "MIDLINE",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 60,
+      "length": 65,
+      "location": [
+        -79,
+        25.5
+      ],
+      "style": "MIDLINE",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 80,
+      "length": 55,
+      "location": [
+        -78,
+        13.5
+      ],
+      "style": "MIDLINE",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 80,
+      "length": 55,
+      "location": [
+        -78,
+        -16.5
+      ],
+      "style": "MIDLINE",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 80,
+      "length": 65,
+      "location": [
+        -79,
+        -27.5
+      ],
+      "style": "MIDLINE",
+      "width": 16
+    },
+    {
+      "angle": 180,
+      "contrailSize": 80,
+      "length": 75,
+      "location": [
+        -80,
+        -39.5
+      ],
+      "style": "MIDLINE",
+      "width": 16
+    }
+  ],
+  "height": 175,
+  "hullId": "hammerhead_ii",
+  "hullName": "Hammerhead (II)",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 120,
+  "spriteName": "graphics/ships/hammerhead_ii.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 001",
+      "locations": [
+        75,
+        31
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS 002",
+      "locations": [
+        75,
+        -31
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 45,
+      "arc": 215,
+      "id": "WS 005",
+      "locations": [
+        48,
+        16
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": -45,
+      "arc": 215,
+      "id": "WS 006",
+      "locations": [
+        48,
+        -16
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 115,
+      "arc": 215,
+      "id": "WS 007",
+      "locations": [
+        -25,
+        39
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 245,
+      "arc": 215,
+      "id": "WS 008",
+      "locations": [
+        -25,
+        -39
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0001",
+      "locations": [
+        65.5,
+        -0.5
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "BALLISTIC"
+    }
+  ],
+  "width": 135
+}

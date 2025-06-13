@@ -18,6 +18,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
@@ -129,6 +130,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         ENEMY_FACTIONS.add(Factions.TRITACHYON);
         ENEMY_FACTIONS.add(Factions.DERELICT);
         ENEMY_FACTIONS.add(Factions.REMNANTS);
+        ENEMY_FACTIONS.add(Factions.OMEGA);
+        ENEMY_FACTIONS.add(Factions.DWELLER);
+        //ENEMY_FACTIONS.add(Factions.THREAT);
         ENEMY_FACTIONS.add("interstellarimperium");
         ENEMY_FACTIONS.add("ii_imperial_guard");
     }
@@ -304,6 +308,17 @@ public class MissionDefinition implements MissionDefinitionPlugin {
             return;
         }
 
+        boolean spoilers = false;
+        for (FleetMemberAPI member : bestEnemyFleet.getFleetData().getMembersListCopy()) {
+            if (!CodexDataV2.hasUnlockedEntryForShip(CodexDataV2.getFleetMemberBaseHullId(member))) {
+                spoilers = true;
+                break;
+            }
+        }
+        if (spoilers) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+        }
+
         api.addBriefingItem("Incorrectness: " + Math.round(bestDistance));
 
         if (boostTime) {
@@ -405,9 +420,10 @@ public class MissionDefinition implements MissionDefinitionPlugin {
                         return;
                     }
 
-                    float trueFrameTime = Global.getCombatEngine().getElapsedInLastFrame();
-                    float trueFPS = 1 / trueFrameTime;
-                    float newTimeMult = Math.max(1f, trueFPS / 30f);
+                    int roundedFrameTimeMsec = (int) Math.ceil(1000f * Global.getCombatEngine().getElapsedInLastFrame() + 1);
+                    float scaledFPS = 1000f / roundedFrameTimeMsec;
+                    float unscaledFPS = Global.getCombatEngine().getTimeMult().getModifiedValue() * scaledFPS;
+                    float newTimeMult = Math.max(1f, unscaledFPS / 30f);
                     Global.getCombatEngine().getTimeMult().modifyMult("ii_tester", newTimeMult);
                 }
             });

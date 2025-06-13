@@ -1,0 +1,3 @@
+commodity,group,freq
+item_industry_bp:HMI_reinforcedcolony,hmi_domres_colony,1000
+item_:{tags:[domres_drop]},hmi_domres_bp,1000

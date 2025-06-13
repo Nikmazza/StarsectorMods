@@ -1,0 +1,30 @@
+{
+	"baseHullId":"eradicator",
+	"skinHullId":"eradicator_pirates",
+
+	# Everything below is optional
+	"tags":["rare_bp"],
+	"hullName":"Eradicator (P)",
+	"tech":"Pirate", # alternate for "manufacturer"
+	"restoreToBaseHull":false, # default false
+	"suppliesToRecover":20,
+	"suppliesPerMonth":20,
+	"descriptionId":"eradicator",
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"systemId":"burndrive",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], # indices, as engine slots have no id in the .ship file; first indice is 0
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWings":[], # wing ids; breaks variant compatibility with base hull
+	"removeBuiltInWeapons":[], # weapon slot ids; breaks variant compatibility with base hull
+	"removeHints":[],
+	"addHints":[],
+	"builtInMods":["pmm_compmods",],
+	"builtInWings":[], # wing ids; breaks variant compatibility with base hull
+	"builtInWeapons":{
+	},
+	"weaponSlotChanges":{
+	},
+    "engineSlotChanges":{
+    }
+}

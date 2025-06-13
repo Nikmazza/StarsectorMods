@@ -6,6 +6,7 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipCommand;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -94,7 +95,7 @@ public class ASF_GaderogaHullmod extends BaseHullMod {
 		
 		
 		// Stat setup section
-		float DAMAGE = 1 - ship.getHullLevel();
+		float DAMAGE = 1.01f - ship.getHullLevel();
 		if (DAMAGE > 0.8f) {
 			DAMAGE = 0.8f;
 		}
@@ -154,11 +155,11 @@ public class ASF_GaderogaHullmod extends BaseHullMod {
 		}
 		
 		if (ship.getHullLevel() < info.THRESHOLD) {
-			info.TIMER += ((info.THRESHOLD - ship.getHullLevel()) * 120f);
+			info.TIMER += ((info.THRESHOLD - ship.getHullLevel()) * 90f);
 			info.THRESHOLD = ship.getHullLevel();
 		}
 		
-		if (info.TIMER > 8f) {
+		if (info.TIMER > 6f) {
 			info.ARMED = true;
 		}
 		
@@ -171,7 +172,7 @@ public class ASF_GaderogaHullmod extends BaseHullMod {
 				// INITIAL EFFECT
 			}
 			
-			interval_2.advance(engine.getElapsedInLastFrame() * stats.getTimeMult().getModifiedValue());
+			interval_2.advance(engine.getElapsedInLastFrame());
 			if (interval_2.intervalElapsed()) {
 				info.TIMER -= interval_2.getIntervalDuration();
 			}
@@ -234,6 +235,28 @@ public class ASF_GaderogaHullmod extends BaseHullMod {
 		// Fancy Damage Buff Section
 		
 		engine.getCustomData().put("WARBURN_DATA_KEY" + ship.getId(), info);
+		
+		
+		// AI trickery section
+		if (Global.getCombatEngine().isPaused() || ship.getShipAI() == null) {
+			return;
+		}
+		if (ship.getFluxLevel() > 0.9f) {
+			info.VENTBRAINTIMER += (amount * 2f);	
+        } else if (ship.getFluxLevel() < 0.8f) {
+        	info.VENTBRAINTIMER = Math.max(0f, info.VENTBRAINTIMER - amount);
+        }
+		if (info.VENTBRAINTIMER > 4f && !ship.getSystem().isActive()) {
+			ship.giveCommand(ShipCommand.VENT_FLUX, null, 0);
+			info.VENTBRAINTIMER = 0f;
+		}
+		
+		engine.getCustomData().put("WARBURN_DATA_KEY" + ship.getId(), info);
+		
+			// while flux is over 90%, gain "brain" value at 2/sec
+			// if flux is below 80%, lose "brain" value at 1/sec
+			// if "brain" value is at 4 or more, and the system is not currently active, force a vent.
+		// AI trickery section
 	}
 		// So what this hullmod does is as follows:
 		// - Increases monthly supply cost by 75%
@@ -241,8 +264,8 @@ public class ASF_GaderogaHullmod extends BaseHullMod {
 		// - Reduces all weapons flux cost as the ship takes hull damage
 		// - Repairs armour while venting, the amount repaired scales up based on current flux level
 		// -- On taking Hull damage:
-		// --- Increment a "timer" gaining 10 seconds of time for each 10% hull damage taken.
-		// --- If timer is over 10, start decaying the timer and gain a timeflow + damage resistance buff until the timer runs out.
+		// --- Increment a "timer" gaining 9 seconds of time for each 10% hull damage taken.
+		// --- If timer is over 6, start decaying the timer and gain a timeflow + damage resistance buff until the timer runs out.
 		// --- Speed and RoF are reduced while this buff is active, to stop you becoming a psycho demon, and to make it more of a "free vent" than a buff.
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
@@ -280,5 +303,6 @@ public class ASF_GaderogaHullmod extends BaseHullMod {
         private float TIMER = 0f;
         private boolean ARMED = false;
         private boolean ACTIVE = false;
+        private float VENTBRAINTIMER = 0f;
     }
 }

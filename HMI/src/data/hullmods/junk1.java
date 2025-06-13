@@ -8,7 +8,7 @@ public class junk1 extends junker {
 
     private static final float JUNKERBONUS = 0.9f;
     private static final float JUNKERMALUSSPEED = 0.1f;
-    private static final float JUNKERMALUSQUALITY = 0.10f;
+    private static final float JUNKERMALUSQUALITY = 0.05f;
 
 
     @Override
@@ -26,9 +26,9 @@ public class junk1 extends junker {
         stats.getShieldDamageTakenMult().modifyPercent(id, (1 + JUNKERMALUSQUALITY) * 100f * effect);
         stats.getHullDamageTakenMult().modifyPercent(id, (1 + JUNKERMALUSQUALITY) * 100f * effect);
 
-        stats.getMissileWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
-        stats.getBallisticWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
-        stats.getEnergyWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * effect);
+        stats.getMissileWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
+        stats.getBallisticWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
+        stats.getEnergyWeaponDamageMult().modifyPercent(id, JUNKERMALUSQUALITY * 100f * (1 - effect));
 
         fighter.setHeavyDHullOverlay();
     }

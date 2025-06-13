@@ -6,11 +6,14 @@ import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
+
+    public static boolean printedCodexWarning = false;
 
     @Override
     public void defineMission(MissionDefinitionAPI api) {
@@ -19,6 +22,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
         api.setFleetTagline(FleetSide.PLAYER, "<DATA EXPUNGED>");
         api.setFleetTagline(FleetSide.ENEMY, "Hegemony Advance Scouts");
+
+        if (!CodexDataV2.hasUnlockedEntryForShip("swp_solar") && !printedCodexWarning) {
+            api.addBriefingItem("WARNING: POTENTIAL SPOILERS");
+            api.addBriefingItem("Codex entries for certain ships featured in this mission are not yet unlocked");
+            api.addBriefingItem("Click again to play the mission anyway!");
+            printedCodexWarning = true;
+            return;
+        }
 
         api.addBriefingItem("Eradicate the enemy fleet");
         api.addBriefingItem("TTDS Automata must survive");

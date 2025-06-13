@@ -2,7 +2,7 @@
   "variantId": "bracket_std",
   "hullId": "bracket",
   "displayName": "Defender",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 11,
   "fluxVents": 3,
   "quality": 1,

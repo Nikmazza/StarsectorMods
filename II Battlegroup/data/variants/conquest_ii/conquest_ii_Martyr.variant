@@ -1,0 +1,70 @@
+{
+  "displayName": "Martyr",
+  "fluxCapacitors": 0,
+  "fluxVents": 20,
+  "goalVariant": true,
+  "hullId": "conquest_ii",
+  "hullMods": [
+    "armoredweapons",
+    "targetingunit",
+    "shield_shunt",
+    "heavyarmor"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "conquest_ii_Martyr",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "multineedler",
+        "WS0002": "multineedler",
+        "WS0021": "multineedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS00014": "irpulse",
+        "WS0013": "irpulse",
+        "WS0015": "irpulse",
+        "WS0016": "irpulse",
+        "WS0017": "irpulse",
+        "WS0018": "irpulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "miningblaster",
+        "WS0004": "miningblaster",
+        "WS0007": "shredder",
+        "WS0008": "shredder",
+        "WS0011": "chaingun",
+        "WS0012": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "hurricane",
+        "WS0006": "hurricane",
+        "WS0009": "hurricane",
+        "WS0010": "hurricane"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0019": "mininglaser",
+        "WS0020": "mininglaser"
+      }
+    }
+  ],
+  "wings": []
+}

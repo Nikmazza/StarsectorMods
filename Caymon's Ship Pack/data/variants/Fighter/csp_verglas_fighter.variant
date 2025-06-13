@@ -1,0 +1,30 @@
+{
+  "variantId": "csp_verglas_fighter",
+  "hullId": "csp_verglas",
+  "displayName": "Heavy Assault Drone",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ionpulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "breach",
+        "WS0003": "breach"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

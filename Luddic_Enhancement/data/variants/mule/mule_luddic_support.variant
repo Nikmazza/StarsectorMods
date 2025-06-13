@@ -2,7 +2,7 @@
     "displayName": "FTR Support",
     "fluxCapacitors": 10,
     "fluxVents": 10,
-	"goalVariant": false,
+	"goalVariant": true,
 	"hullId": "mule_luddic",
     "hullMods": [
         "converted_hangar",

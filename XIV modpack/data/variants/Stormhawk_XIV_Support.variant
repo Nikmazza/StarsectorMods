@@ -1,0 +1,38 @@
+{
+  "variantId": "Stormhawk_XIV_Support",
+  "hullId": "Stormhawk_XIV",
+  "displayName": "Support",
+  "goalVariant": false,
+  "fluxCapacitors": 16,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualac",
+        "WS0002": "lightdualac",
+        "WS0003": "arbalest",
+        "WS0004": "arbalest",
+        "WS0005": "ionbeam",
+        "WS0006": "ionbeam",
+        "WS0007": "pdburst",
+        "WS0008": "pdburst",
+        "WS0009": "storm_harpoon",
+        "WS0010": "storm_harpoon",
+        "WS0011": "storm_harpoon",
+        "WS0012": "storm_harpoon"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

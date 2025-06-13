@@ -10,11 +10,15 @@
 		
 		"vice_candor_emp_assault":3,
 		"vice_candor_emp_support":3,
+		
+		"vice_howler_ex_assault":4,
+		"vice_howler_ex_strike":4,
 	},
 	"combatMedium":{
-		"vice_effulgent_assault":3,
-		"vice_effulgent_elite":2,
-		"vice_effulgent_torpedo":3,
+		"vice_effulgent_assault":2,
+		"vice_effulgent_torpedo":2,
+		"vice_effulgent_suppression":2,
+		"vice_effulgent_elite":0, # kept for backwards compatibility
 		"vice_fulgent_overclocked":2,
 		"vice_preceptor_standard":5,# makes ship show up despite Diktat anti-carrier doctrine
 		
@@ -27,27 +31,37 @@
 	"combatLarge":{
 		"vice_brilliant_elite":5,
 		"vice_brilliant_overclocked":3,
+		"vice_brilliant_suppression":5,
 		"vice_glycon_fire_support":4,
 		"vice_glycon_standard":4,
-		"vice_hellfire_pirate":1,	# pirate surprise
+		"vice_hellfire_pirate":1,		# pirate surprise
+		"vice_thunderbox_bandit":0.5,	# pirate surprise
+		"vice_thunderbox_outlaw":0.5,	# pirate surprise
+		"vice_thunderbox_reaver":0.5,	# pirate surprise
 		"vice_jubilant_assault":5,
 		"vice_jubilant_standard":5,
 		"vice_unifier_elite":5,		# makes ship show up despite Diktat anti-carrier doctrine
 		"vice_unifier_standard":5,	# makes ship show up despite Diktat anti-carrier doctrine
-		
+
+		"vice_bellicose_ex_assault":5,
+		"vice_bellicose_ex_strike":5,
 		"vice_flamebreaker_ex_assault":5,
 		"vice_flamebreaker_ex_strike":5,
 		"vice_tigershark_ex_assault":3,
 		"vice_tigershark_ex_ballistic":2,
 		"vice_tigershark_ex_strike":3,
+		
+		"vice_chevalier_r_assault":3, # project mayfly is not known to remnant unless mission was failed
+		"vice_chevalier_r_strike":3, # project mayfly is not known to remnant unless mission was failed
 	},
 	
 	"combatCapital":{
 		"vice_exhortation_standard":2,	# makes ship show up despite Diktat anti-carrier doctrine
 		"vice_exhortation_elite":2,		# makes ship show up despite Diktat anti-carrier doctrine
-		"vice_incandescent_assault":5,
-		"vice_incandescent_attack":5,
-		"vice_incandescent_elite":5,
+		"vice_incandescent_assault":4,
+		"vice_incandescent_attack":4,
+		"vice_incandescent_elite":3,
+		"vice_incandescent_suppression":4,
 		"vice_radiant_suppression":5,
 		"vice_hellfire_pirate":5,
 		
@@ -61,6 +75,14 @@
 
 		"vice_proteus_assault":1, # makes ship show up despite Persean anti-carrier doctrine
 		"vice_proteus_command":1, # makes ship show up despite Persean anti-carrier doctrine
+		
+		"aggressor_orr_assault":4,
+		"aggressor_orr_standard":4,
+		"aggressor_orr_elite":2,
+		"aggressor_xiv_elite_new":10,
+		
+		"onslaught_cgr_relic":1,
+		"onslaught_cgr_sanctified":1,
 	},
 	
 	"carrierSmall":{
@@ -71,8 +93,9 @@
 	},
 	
 	"carrierMedium":{
-		"vice_unifier_elite":5,		# for Nex random picker
-		"vice_unifier_standard":5,	# for Nex random picker
+		"vice_unifier_elite":5,			# for Nex random picker
+		"vice_unifier_standard":5,		# for Nex random picker
+		"vice_colossus_p_bandit":5
 	},
 	
 	"carrierLarge":{
@@ -87,6 +110,12 @@
 		"vice_proteus_command":2,		# for Nex random picker
 		"vice_exhortation_standard":2,	# for Nex random picker
 		"vice_exhortation_elite":2,		# for Nex random picker
+		"vice_thunderbox_bandit":3,		
+		"vice_thunderbox_outlaw":3,		
+		"vice_thunderbox_reaver":3,		
+		
+		"vice_hemlock_r_strike":3, # project mayfly is not known to remnant unless mission was failed
+		"vice_hemlock_r_support":3, # project mayfly is not known to remnant unless mission was failed
 	},
 	"freighterMedium":{
 		"vice_banteng_standard":10,

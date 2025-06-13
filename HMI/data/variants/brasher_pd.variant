@@ -22,8 +22,26 @@
       "autofire": true,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "dualflak",
-        "WS0002": "dualflak"
+        "WS0001": "med_frag_mg",
+        "WS0002": "med_frag_mg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "swarmer",
+        "WS0005": "swarmer",
+        "WS0006": "swarmer",
+        "WS0007": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "vulcan",
+        "WS0009": "vulcan"
       }
     }
   ],

@@ -12,8 +12,7 @@
   "shieldRadius": 130,
   "viewOffset": 0,
   "builtInMods": [
-    "NES_AafArray",
-	"NES_ColorSelector_Carn"
+    "NES_AafArray"
   ],
   "builtInWings": [
     "nes_drone_carnelian_attacker_wing",
@@ -84,18 +83,9 @@
       "size": "SMALL",
       "type": "DECORATIVE",
       "mount": "TURRET",
-      "arc": 12,
-      "angle": 0,
-      "locations": [21, -0]
-    },
-	{
-      "id": "NES_DECO_COUNTER",
-      "size": "SMALL",
-      "type": "DECORATIVE",
-      "mount": "TURRET",
       "arc": 0,
       "angle": 0,
-      "locations": [0, 0]
+      "locations": [21, -0]
     }
   ],
   "engineSlots": [

@@ -1,0 +1,41 @@
+{
+  "variantId": "csp_hesperides_Standard",
+  "hullId": "csp_hesperides",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_cargo_holds",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "dualflak",
+        "WS0002": "dualflak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "vulcan",
+        "WS0004": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

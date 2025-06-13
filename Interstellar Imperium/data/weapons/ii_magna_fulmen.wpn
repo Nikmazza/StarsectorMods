@@ -3,7 +3,7 @@
     "specClass":"projectile",
     "type":"ENERGY",
     "size":"LARGE",
-    "turretSprite":"",
+    "turretSprite":"graphics/imperium/weapons/ii_magna_fulmen.png",
     "everyFrameEffect":"data.scripts.weapons.II_MagnaFulmenEveryFrame",
     "turretGlowSprite":"graphics/imperium/weapons/ii_magna_fulmen_glow.png",
     "hardpointSprite":"",

@@ -1,0 +1,59 @@
+{
+  "variantId": "fulgent_scav_attack",
+  "hullId": "fulgent_scav",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "unstable_injector",
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "typhoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "hammer",
+        "WS0003": "hammer",
+        "WS0006": "hammer",
+        "WS0007": "hammer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "heavyac",
+        "WS0005": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "lightag",
+        "WS0009": "lightag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0010": "lightmg",
+        "WS0011": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -64,7 +64,7 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 		return false;
 	}
 	
-	//checks if the fighter bays to be deleted are unequipped, as "hidden" bays with equipped fighters do not refund Ordance Points
+	//checks if the fighter bays to be deleted are unequipped, as "hidden" bays with equipped fighters do not refund Ordnance Points
 	private boolean baysToDeleteAreEmpty(ShipAPI ship) {
 		int modBayCount = 0;
 		if (ship.getVariant().hasHullMod("rat_autonomous_bays")) modBayCount++;
@@ -101,11 +101,13 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return false;
 		if (ship.getVariant().hasHullMod(ADAPTIVE_DRONE_BAY)) return false;
 		return (util.isApplicable(ship) && util.isOnlyRemnantMod(ship) && isCarrier(ship) && baysToDeleteAreEmpty(ship));
 	}
 
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (ship.getVariant().hasHullMod(ADAPTIVE_DRONE_BAY)) return "Ship does not have standard fighter bays";
 		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");
 		if (!util.isOnlyRemnantMod(ship)) return util.getIncompatibleCauseString("modcount");

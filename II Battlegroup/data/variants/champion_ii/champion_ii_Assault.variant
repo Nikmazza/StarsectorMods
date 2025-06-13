@@ -1,0 +1,58 @@
+{
+  "displayName": "Assault",
+  "fluxCapacitors": 0,
+  "fluxVents": 23,
+  "goalVariant": true,
+  "hullId": "champion_ii",
+  "hullMods": [
+    "eccm",
+    "targetingunit"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "champion_ii_Assault",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "cyclone"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "typhoon",
+        "WS 001": "typhoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "heavyneedler",
+        "WS 007": "heavyneedler",
+        "WS 008": "multineedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "pdlaser",
+        "WS 003": "pdlaser",
+        "WS 004": "pdlaser",
+        "WS 005": "pdlaser",
+        "WS 010": "pdlaser",
+        "WS 011": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "wings": []
+}

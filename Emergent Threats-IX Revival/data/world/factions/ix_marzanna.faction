@@ -101,7 +101,8 @@
 		},
 	},
 	"illegalCommodities":[
-		"ai_cores",	
+		#"ai_cores",
+		"ix_rogue_ai"
 	],
 	"variantOverrides":{
 		
@@ -111,7 +112,9 @@
 		"tags":{
 		},
 		"hulls":{
-			
+			"firebird_ix_assault":1,
+			"firebird_ix_escort":1,
+			"firebird_ix_overseer":0,
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction

@@ -1,0 +1,39 @@
+{
+  "variantId": "csp_ravelinxiv_future",
+  "hullId": "csp_ravelinxiv",
+  "displayName": "Future of XIV",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "fluxdistributor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "riftlance",
+        "WS0002": "riftlance"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "vpdriver"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

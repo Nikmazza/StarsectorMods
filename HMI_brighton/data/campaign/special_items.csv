@@ -1,0 +1,14 @@
+name,id,tags,rarity,base price,stack size,cargo space,icon,sound id,sound id drop,plugin,plugin params,desc,order
+Brighton Scavenged Package,hmi_scav_package,package_bp,,50000,1000,1,graphics/icons/cargo/blueprint_lowtech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hmi_scav_bp,Enables heavy industry to reconstruct Domain and Remnant hulls into what can be charitably called semi-functional vessels used by the Brighton Federation.,200
+Brighton Reconstructed Package,hmi_scav_base_package,package_bp,,10000,1000,1,graphics/icons/cargo/blueprint_lowtech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hmi_scav_base_bp,"Enables heavy industry to reconstruct Domain and Remnant hulls into vessels of established make, but of drastically reduced quality.",200
+Domain Resurgent Blueprint Package,hmi_domres_package,"package_bp, no_drop, domres_drop",,100000,1000,1,graphics/icons/cargo/blueprint_lowtech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,domres_rec_bp,"Enables heavy industry to construct hulls modified by the Domain Resurgent, with a focus on autonomous ships with strong defense and an emphasis on ballistic weaponry.",200
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,, ,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,, ,,,,,,,,

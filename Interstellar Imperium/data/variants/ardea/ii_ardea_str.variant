@@ -1,7 +1,7 @@
 {
     "displayName": "Strike",
     "fluxCapacitors": 0,
-    "fluxVents": 11,
+    "fluxVents": 13,
     "goalVariant": true,
     "hullId": "ii_ardea",
     "hullMods": [

@@ -1,0 +1,61 @@
+{
+  "variantId": "nova_scav_cs",
+  "hullId": "nova_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 36,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 004": "hil"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "squall"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 000": "hveldriver",
+        "WS 001": "hveldriver",
+        "WS 002": "gravitonbeam",
+        "WS 003": "gravitonbeam",
+        "WS 005": "hveldriver",
+        "WS 011": "heavymauler",
+        "WS 012": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 008": "pilum",
+        "WS 009": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 010": "vulcan",
+        "WS 013": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

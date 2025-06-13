@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import com.fs.starfarer.api.campaign.FactionAPI;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
@@ -37,6 +38,8 @@ public class HMI_MessSpawner extends BaseHullMod {
 	public static Color JITTER_COLOR = new Color(255, 255,255,50);
 	public static String DATA_KEY = "core_shard_spawner_data_key";
 
+	private static final Color SPARK_COLOR = new Color(192, 193, 224, 255);
+	private static final Color SPARK_COLOR3 = new Color(75, 63, 83, 175);
 	public static float SPAWN_TIME = 4f;
 
 	public static enum ShardType {
@@ -641,8 +644,12 @@ public class HMI_MessSpawner extends BaseHullMod {
 							if (durMult < 0.1f) durMult = 0.1f;
 							dur *= 0.5f + 0.5f * durMult;
 						}
-						engine.addNegativeNebulaParticle(pt, v, nSize * 1f, 2f,
-								0.5f / dur, 0f, dur, c);
+//						engine.addNegativeNebulaParticle(pt, v, nSize * 1f, 2f,
+//								0.5f / dur, 0f, dur, c);
+						engine.addSmokeParticle(pt, v, 1f * nSize, 1f, dur,
+								SPARK_COLOR);
+						engine.addSmokeParticle(pt, v, 1f * nSize, 1f, dur,
+								SPARK_COLOR3);
 					}
 				}
 
@@ -788,6 +795,11 @@ public class HMI_MessSpawner extends BaseHullMod {
 					ship.setHoldFire(false);
 					ship.setCollisionClass(collisionClass);
 					ship.getMutableStats().getHullDamageTakenMult().unmodifyMult("ShardSpawnerInvuln");
+					FactionAPI faction = Global.getSector().getFaction("mess");
+					if (faction != null) {
+						String name = faction.pickRandomShipName();
+						ship.setName(name);
+					}
 				}
 				engine.removePlugin(this);
 			}

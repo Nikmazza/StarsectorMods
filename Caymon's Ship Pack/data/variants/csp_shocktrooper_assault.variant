@@ -1,0 +1,56 @@
+{
+  "variantId": "csp_shocktrooper_assault",
+  "hullId": "csp_shocktrooper",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 13,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightac",
+        "WS0002": "lightac",
+        "WS0005": "lightac",
+        "WS0006": "lightac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "vulcan",
+        "WS0007": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "hellbore"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "atropos"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

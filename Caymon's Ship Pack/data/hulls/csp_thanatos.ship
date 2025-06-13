@@ -1,0 +1,217 @@
+{
+  "hullName": "Thanatos XIV",
+  "hullId": "csp_thanatos",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/csp_thanatos.png",
+  "style": "LOW_TECH",
+  "height": 137,
+  "width": 200,
+  "center": [100, 63],
+  "collisionRadius": 110,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 107,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth",
+    "nav_relay"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 3,
+      "locations": [5, -62]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": -3,
+      "locations": [6, 62]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 0,
+      "locations": [62, 0],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 0,
+      "locations": [54.5, 0],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [-1, 22]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [-1, -22]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -36.5, 0,
+        -34.5, 2.5,
+        -36.5, 8,
+        -34.5, -4,
+        -37, -8.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-62, 45],
+      "length": 43,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-53, 58],
+      "length": 46,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-57, 36],
+      "length": 30.5,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-57, -35.5],
+      "length": 30.5,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-62, -45],
+      "length": 43,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-53, -58],
+      "length": 46,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-34, 87.5],
+      "length": 10.5,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-34, -87.5],
+      "length": 10.5,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-37, -84.5],
+      "length": 10.5,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-37, 84.5],
+      "length": 10.5,
+      "width": 2,
+      "angle": -180,
+      "contrailSize": 2,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -52, 9,
+    -56, 15,
+    -42, 23.5,
+    -57, 32,
+    -63, 39,
+    -63, 50,
+    -54, 52,
+    -54, 64.5,
+    -42, 67,
+    -38, 85,
+    -35, 89,
+    -30, 91.5,
+    -21, 91,
+    -21, 99,
+    -17, 97,
+    6, 70.5,
+    9, 58,
+    72.5, 27.5,
+    65, 21,
+    72, 10,
+    70, 5.5,
+    70, -5.5,
+    72, -10,
+    65, -21,
+    72.5, -27.5,
+    9, -58,
+    6, -70.5,
+    -17, -97,
+    -21, -99,
+    -21, -91,
+    -30, -91.5,
+    -35, -89,
+    -38, -85,
+    -42, -67,
+    -54, -64.5,
+    -54, -52,
+    -63, -50,
+    -63, -39,
+    -57, -32,
+    -42, -23.5,
+    -56, -15,
+    -52, -9
+  ]
+}

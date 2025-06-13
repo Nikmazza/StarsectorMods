@@ -1,6 +1,6 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 3,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "ionos_tw",
@@ -33,7 +33,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "spearwall_tw"}
+            "weapons": {"WS 001": "stormwall_tw"}
         },
         {
             "autofire": true,

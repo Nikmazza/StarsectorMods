@@ -1,0 +1,33 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "vice_station_weapon_platform1",
+    "hullMods": [
+        "vice_adaptive_neural_net",
+        "turretgyros",
+        "eccm",
+        "vice_module_handler"
+    ],
+    "permaMods": [
+        "vice_adaptive_neural_net",
+        "vice_module_handler"
+    ],
+    "sMods": [],
+    "variantId": "remnant_weapon_platform1_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vice_heavy_maser",
+                "WS 004": "vice_warp_torpedo_launcher"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "tachyonlance"}
+        }
+    ]
+}

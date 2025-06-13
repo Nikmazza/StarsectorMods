@@ -4,12 +4,13 @@
   "displayName": "Suppression",
   "goalVariant": false,
   "fluxCapacitors": 8,
-  "fluxVents": 13,
+  "fluxVents": 16,
   "quality": 0,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "armoredweapons"
+    "armoredweapons",
+    "auxiliarythrusters"
   ],
   "weaponGroups": [
     {
@@ -25,6 +26,24 @@
       "weapons": {
         "WS0001": "launcher_cannon",
         "WS0002": "launcher_cannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "rock_launcher",
+        "WS0005": "rock_launcher",
+        "WS0008": "rock_launcher",
+        "WS0009": "rock_launcher"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "seth_sml",
+        "WS0007": "seth_sml"
       }
     }
   ],

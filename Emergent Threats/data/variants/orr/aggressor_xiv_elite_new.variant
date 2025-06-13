@@ -1,0 +1,53 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 0,
+    "fluxVents": 49,
+    "goalVariant": true,
+    "hullId": "orr_aggressor_xiv_tpc",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "hardenedshieldemitter",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "aggressor_xiv_elite_new",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "breachpod",
+                "WS 012": "breachpod",
+                "WS 013": "breachpod",
+                "WS 014": "breachpod",
+                "WS 016": "orr_tpc",
+                "WS 017": "orr_tpc"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "railgun",
+                "WS 003": "railgun",
+                "WS 004": "heavyneedler",
+                "WS 005": "heavyneedler",
+                "WS 010": "hephag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "dualflak",
+                "WS 006": "vulcan",
+                "WS 007": "vulcan",
+                "WS 008": "flak",
+                "WS 009": "flak",
+                "WS 018": "flak",
+                "WS 019": "flak"
+            }
+        }
+    ]
+}

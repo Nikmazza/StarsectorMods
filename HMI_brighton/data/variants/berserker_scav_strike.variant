@@ -1,0 +1,45 @@
+{
+  "variantId": "berserker_scav_strike",
+  "hullId": "berserker_scav",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 11,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "swarmer",
+        "WS0002": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "flak",
+        "WS0005": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "piranha_wing",
+    "piranha_wing",
+    "piranha_wing"
+  ]
+}

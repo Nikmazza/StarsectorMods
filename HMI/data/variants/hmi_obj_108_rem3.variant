@@ -3,7 +3,7 @@
   "hullId": "hmi_obj_108",
   "displayName": "ERROR",
   "goalVariant": false,
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 7,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
@@ -15,8 +15,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "phasebeam_rem",
-        "WS0002": "phasebeam_rem"
+        "WS0001": "phasebeam",
+        "WS0002": "phasebeam"
       }
     },
     {

@@ -5,7 +5,7 @@ import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
-import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
+import com.fs.starfarer.api.impl.campaign.procgen.*;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
 
@@ -19,8 +19,18 @@ public class HMI_hazard implements SectorGeneratorPlugin {
 	@Override
 	public void generate(SectorAPI sector) {
 
+		final Constellation hmi_hazard_Constellation = new Constellation(
+				Constellation.ConstellationType.NORMAL,
+				StarAge.OLD
+		);
+		final NameGenData data = new NameGenData("null", "null");
+		final ProcgenUsedNames.NamePick HMI_Constellation = new ProcgenUsedNames.NamePick(data, "Eyes of Lillith", "null");
+		hmi_hazard_Constellation.setNamePick(HMI_Constellation);
+
+
 		StarSystemAPI system = sector.createStarSystem("Hazard");
 		LocationAPI hyper = Global.getSector().getHyperspace();
+
 		system.setBackgroundTextureFilename("graphics/backgrounds/background1.jpg");
 
 		// create the star and generate the hyperspace anchor for this system
@@ -136,13 +146,22 @@ public class HMI_hazard implements SectorGeneratorPlugin {
 		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("hazard_jumpPointB", "Timms Jump-point");
 		OrbitAPI orbitouter = Global.getFactory().createCircularOrbit(hazard2a, 270, 2000, 350);
 		jumpPoint.setOrbit(orbitouter);
-		jumpPoint.setRelatedPlanet(hazard2);
 		jumpPoint.setStandardWormholeToHyperspaceVisual();
 		system.addEntity(jumpPoint);
 
 		// generates hyperspace destinations for in-system jump points
 		system.autogenerateHyperspaceJumpPoints(true, true);
 		cleanup(system);
+
+		hmi_hazard_Constellation.getSystems().add(sector.getStarSystem("Hazard"));
+		hmi_hazard_Constellation.getSystems().add(sector.getStarSystem("Opuntia"));
+		hmi_hazard_Constellation.getSystems().add(sector.getStarSystem("Mercy"));
+		hmi_hazard_Constellation.getSystems().add(sector.getStarSystem("Obsidian"));
+		sector.getStarSystem("Hazard").setConstellation(hmi_hazard_Constellation);
+		sector.getStarSystem("Opuntia").setConstellation(hmi_hazard_Constellation);
+		sector.getStarSystem("Mercy").setConstellation(hmi_hazard_Constellation);
+		sector.getStarSystem("Obsidian").setConstellation(hmi_hazard_Constellation);
+
 	}
 
 	void cleanup(StarSystemAPI system){
@@ -154,4 +173,5 @@ public class HMI_hazard implements SectorGeneratorPlugin {
 		editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius * 0.5f, 0, 360f);
 		editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius, 0, 360f, 0.25f);
 	}
+
 }

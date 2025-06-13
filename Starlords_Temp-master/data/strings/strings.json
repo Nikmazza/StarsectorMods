@@ -1,0 +1,82 @@
+{
+  "starlords_lords_dialog": {
+    "lordGenderDress": "dress",
+    "lordGenderSuit": "suit",
+
+
+
+
+    "relation_increase": "Relations with $string increased by $string.",
+    "relation_decrease": "Relations with $string decreased by $string.",
+    "refuse_suggest_action": "I'm sorry, but I'm unable to do that."
+
+
+
+
+  },
+  "starlords_ui": {
+    "lords_category": "Lords",
+    "politics_category": "Politics",
+    "lord_defection": "The treacherous $string has betrayed $string and defected to $string!",
+    "feast_start": "$string invites the Lords of the realm to a feast at $string",
+    "feast_end": "After weeks of revelry, the feast at $string has ended",
+    "fleet_feast_desc": "Attending feast at $string",
+    "fleet_collect_taxes_desc": "Collecting taxes at $string",
+    "fleet_upgrade_fleet_desc": "Upgrading fleet at $string",
+    "fleet_venture_desc": "Attending to business at $string",
+    "fleet_patrol_desc": "Patrolling around $string",
+    "fleet_follow_desc": "Following $string",
+    "fleet_defend_desc": "Defending $string",
+    "fleet_raid_desc": "Raiding $string",
+    "fleet_campaign_follow_desc": "On Campaign",
+    "fleet_campaign_lead_desc": "Leading campaign at $string",
+    "offensive_raid_generic": "$string Raid",
+    "offensive_raid_industry": "$string Industry Raid",
+    "offensive_bombard_tactical": "$string Tactical Bombardment",
+    "offensive_bombard_saturation": "#string Saturation Bombardment",
+    "offensive_nex_ground_battle": "$string Ground Invasion",
+    "campaign_start": "Marshal $string has raised the realm's navy at $string. All lords must answer the call!",
+    "campaign_end": "The campaign has ended and lords given leave to attend to their individual duties.",
+    "lord_defeated_escape": "$string was defeated in battle but managed to escape.",
+    "lord_defeated_captured": "$string was defeated in battle and captured by $string forces.",
+    "lord_defeated_released": "$string was defeated and captured by $string forces but allowed to go free.",
+    "lord_escaped_captivity": "$string has escaped from prison!",
+    "lord_freed_captivity": "$string has been released from captivity.",
+    "laws_crown_authority": "Dictatorial Power",
+    "laws_crown_authority_0": "1x Ruler Political Weight Modifier",
+    "laws_crown_authority_1": "1.2x Ruler Political Weight Modifier",
+    "laws_crown_authority_2": "1.5x Ruler Political Weight Modifier|Unlocks Veto",
+    "laws_crown_authority_3": "2x Ruler Political Weight Modifier|Unlocks Force Pass",
+    "laws_crown_authority_4": "3x Ruler Political Weight Modifier",
+    "laws_crown_authority_tooltip": "Determines the influence of the ruler on the council.",
+    "laws_noble_authority": "Oligarchical Power",
+    "laws_noble_authority_0": "All votes are equal|-100% Base Income from Rank |+50% Lord Base Income",
+    "laws_noble_authority_1": "+50% Political Weight from Rank|-50% Base Income from Rank |+25% Lord Base Income",
+    "laws_noble_authority_2": "+100% Political Weight from Rank",
+    "laws_noble_authority_3": "+200% Political Weight from Rank|+50% Base Income from Rank |-25% Lord Base Income",
+    "laws_noble_authority_4": "+300% Political Weight from Rank|+100% Base Income from Rank |-50% Lord Base Income",
+    "laws_noble_authority_tooltip": "Determines the influence of high-ranking lords on the council",
+    "laws_trade_law": "Tariff Level",
+    "laws_trade_law_0": "-50% Lord Tax |+150% Lord Trade",
+    "laws_trade_law_1": "-25% Lord Tax |+75% Lord Trade",
+    "laws_trade_law_2": "No modifiers",
+    "laws_trade_law_3": "+50% Lord Tax |-25% Lord Trade",
+    "laws_trade_law_4": "+100% Lord Tax |-50% Lord Trade",
+    "laws_trade_law_tooltip": "Higher levels increase taxation while lowering business income for lords. Taxation is better when your faction has many fiefs, while trade is better when you have many allies.",
+    "laws_feast_law": "Feast Regulations",
+    "laws_feast_law_0": "30 Day Feast Cooldown",
+    "laws_feast_law_1": "90 Day Feast Cooldown",
+    "laws_feast_law_2": "180 Day Feast Cooldown",
+    "laws_feast_law_3": "365 Day Feast Cooldown",
+    "laws_feast_law_4": "Feasts Banned",
+    "laws_feast_law_tooltip": "Regulates how often lords may take time off their duties to feast",
+    "laws_tooltip": "Displays the laws of your faction. You can also choose to propose various legislation. Your proposal will be added alongside everyone else's and voted on in order of popularity in the council.",
+    "lord_defeated_killed": "$string was killed in battle fighting against $string forces.",
+    "lord_spawned": "A new starlord by the name of $string has appeared and joined the $string"
+  },
+  "starlords_title": {
+    "title_default_0": "Lord",
+    "title_default_1": "High Lord",
+    "title_default_2": "First Lord"
+  }
+}

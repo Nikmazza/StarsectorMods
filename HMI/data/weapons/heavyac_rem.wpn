@@ -2,7 +2,9 @@
 	"id":"heavyac_rem",  # this id must match what's in the spreadsheet
 	"specClass":"projectile",
 	"type":"BALLISTIC",
+	"mountTypeOverride":"HYBRID",
 	"size":"MEDIUM",
+	"everyFrameEffect": "data.scripts.weapons.HMI_VariableRangeEffect",
 	"displayArcRadius":650,
 	"turretSprite":"graphics/weapons/heavy_autocannon_rem_turret_base.png",
 	"turretGunSprite":"graphics/weapons/heavy_autocannon_rem_turret_recoil.png",

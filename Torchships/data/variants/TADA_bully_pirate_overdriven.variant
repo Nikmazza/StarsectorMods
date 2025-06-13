@@ -1,0 +1,49 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 2,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_bully_pirate",
+    "hullMods": [
+        "missleracks",
+        "safetyoverrides",
+        "unstable_injector",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_bully_pirate_overdriven",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "ioncannon",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "hammerrack",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "lightac",
+                "WS0003": "lightac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "vulcan",
+                "WS0006": "vulcan",
+                "WS0007": "vulcan",
+                "WS0005": "vulcan",
+            }
+        }
+    ]
+}

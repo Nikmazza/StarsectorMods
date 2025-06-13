@@ -1,0 +1,61 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 15,
+    "fluxVents": 1,
+    "goalVariant": True,
+    "hullId": "rwc_polaris",
+    "hullMods": [
+        "missleracks",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_polaris_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "rwc_harpoon_reload",
+                "WS0014": "rwc_harpoon_reload",
+                "WS0010": "rwc_harpoon_reload",
+                "WS0008": "rwc_harpoon_reload",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "rwc_harpoon_reload",
+                "WS0013": "rwc_harpoon_reload",
+                "WS0009": "rwc_harpoon_reload",
+                "WS0015": "rwc_harpoon_reload",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "hveldriver",
+                "WS0006": "hveldriver",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "pdburst",
+                "WS0003": "pdburst",
+                "WS0002": "pdburst",
+                "WS0005": "pdburst",
+                "WS0004": "pdburst",
+            }
+        },
+    ],
+    "wings": [
+        "longbow_wing",
+        "broadsword_wing",
+        "dagger_wing",
+    ],
+    "modules": [],
+}

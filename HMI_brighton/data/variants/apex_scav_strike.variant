@@ -1,0 +1,56 @@
+{
+  "variantId": "apex_scav_strike",
+  "hullId": "apex_scav",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 18,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "sabotpod",
+        "WS 007": "sabotpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "harpoonpod",
+        "WS 006": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 010": "lightac",
+        "WS 011": "lightac",
+        "WS 012": "lightac",
+        "WS 013": "lightac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 000": "dualflak",
+        "WS 003": "dualflak",
+        "WS 008": "lightmg",
+        "WS 009": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

@@ -3,7 +3,7 @@
   "hullId": "cockroach",
   "displayName": "Attack",
   "goalVariant": true,
-  "fluxCapacitors": 10,
+  "fluxCapacitors": 8,
   "fluxVents": 15,
   "quality": 0,
   "permaMods": [],

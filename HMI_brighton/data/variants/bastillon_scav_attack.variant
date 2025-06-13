@@ -1,0 +1,53 @@
+{
+  "variantId": "bastillon_scav_attack",
+  "hullId": "bastillon_scav",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "heavyarmor",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "annihilator",
+        "WS0004": "annihilator"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "chaingun",
+        "WS0002": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "chaingun",
+        "WS0008": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "lightdualmg",
+        "WS0006": "lightdualmg",
+        "WS0009": "lightmg",
+        "WS0010": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

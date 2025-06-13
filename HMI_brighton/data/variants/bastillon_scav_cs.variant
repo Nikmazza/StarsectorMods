@@ -1,0 +1,54 @@
+{
+  "variantId": "bastillon_scav_cs",
+  "hullId": "bastillon_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 6,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "extendedshieldemitter",
+    "advancedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hveldriver",
+        "WS0002": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "heavymauler",
+        "WS0008": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "heatseeker",
+        "WS0004": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "vulcan",
+        "WS0006": "vulcan",
+        "WS0009": "lightmg",
+        "WS0010": "lightmg",
+        "WS0011": "lightmg",
+        "WS0012": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

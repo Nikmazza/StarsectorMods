@@ -1,0 +1,63 @@
+{
+  "variantId": "csp_viperlg_elite",
+  "hullId": "csp_viperlg",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 29,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "heavyac",
+        "WS0003": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "mininglaser",
+        "WS0005": "mininglaser",
+        "WS0007": "mininglaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "gigacannon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "irautolance",
+        "WS0008": "irautolance"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "mininglaser",
+        "WS0010": "mininglaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -3,7 +3,7 @@
   "hullId": "mule_hmi_heavy",
   "displayName": "Mining",
   "goalVariant": false,
-  "fluxCapacitors": 2,
+  "fluxCapacitors": 0,
   "fluxVents": 15,
   "quality": 0,
   "permaMods": [],
@@ -24,8 +24,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS 001": "signpost_sml",
-        "WS 002": "signpost_sml"
+        "WS 001": "annihilator_fighter",
+        "WS 002": "annihilator_fighter"
       }
     },
     {

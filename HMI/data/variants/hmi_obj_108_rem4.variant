@@ -4,20 +4,22 @@
   "displayName": "ERROR",
   "goalVariant": false,
   "fluxCapacitors": 0,
-  "fluxVents": 16,
+  "fluxVents": 6,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "unstable_injector",
-    "auxiliarythrusters"
+    "auxiliarythrusters",
+    "high_scatter_amp",
+    "magazines"
   ],
   "weaponGroups": [
     {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "heavyburst_rem",
-        "WS0002": "heavyburst_rem"
+        "WS0001": "heavyburst",
+        "WS0002": "heavyburst"
       }
     },
     {

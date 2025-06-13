@@ -1,0 +1,36 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 13,
+    "goalVariant": true,
+    "hullId": "TADA_cassicus",
+    "hullMods": ["safetyoverrides"],
+    "permaMods": [],
+    "variantId": "TADA_cassicus_overdriven",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "plasma",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "sabot",
+                "WS0002": "sabot",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "pdlaser",
+                "WS0004": "pdlaser",
+                "WS0005": "pdlaser",
+            }
+        }
+    ]
+}

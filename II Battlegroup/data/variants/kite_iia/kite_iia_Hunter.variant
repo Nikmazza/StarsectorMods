@@ -1,0 +1,32 @@
+{
+  "displayName": "Hunter",
+  "fluxCapacitors": 0,
+  "fluxVents": 9,
+  "goalVariant": true,
+  "hullId": "kite_iia",
+  "hullMods": [
+    "eccm",
+    "missleracks"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "kite_iia_Hunter",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "harpoon",
+        "WS 002": "harpoon"
+      }
+    }
+  ],
+  "wings": []
+}

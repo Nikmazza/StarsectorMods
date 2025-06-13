@@ -3,7 +3,7 @@
     "specClass":"projectile",
     "type":"BALLISTIC",
     "size":"SMALL",
-	"turretSprite":"",
+	"turretSprite":"graphics/imperium/weapons/ii_siegemortar_turret_base.png",
 	"hardpointSprite":"",
 	"turretOffsets":[4, 0],
 	"turretAngleOffsets":[0],

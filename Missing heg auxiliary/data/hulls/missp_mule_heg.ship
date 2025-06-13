@@ -11,8 +11,7 @@
   "shieldCenter": [0, 0],
   "shieldRadius": 95.5,
   "viewOffset": 0,
-  "builtInMods": [
-    "heg_militarized"
+  "builtInMods": ["armoredweapons"
   ],
   "weaponSlots": [
     {
@@ -20,7 +19,7 @@
       "size": "MEDIUM",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 310,
+      "arc": 270,
       "angle": 0,
       "locations": [54, -0]
     },
@@ -29,8 +28,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 230,
-      "angle": 91,
+      "arc": 210,
+      "angle": 90,
       "locations": [-8, 40]
     },
     {
@@ -38,8 +37,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 230,
-      "angle": -91,
+      "arc": 210,
+      "angle": -90,
       "locations": [-8, -40]
     },
     {
@@ -47,7 +46,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 230,
+      "arc": 150,
       "angle": 180,
       "locations": [-62, -0]
     },

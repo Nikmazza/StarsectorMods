@@ -1,6 +1,6 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 6,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "swp_sunder_u",

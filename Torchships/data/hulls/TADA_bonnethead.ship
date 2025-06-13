@@ -128,7 +128,7 @@
     },
     {
       "angle": 173,
-      "contrailSize": 128,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         -92,
@@ -139,7 +139,7 @@
     },
     {
       "angle": -173,
-      "contrailSize": 128,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         -92,
@@ -150,7 +150,7 @@
     },
     {
       "angle": 145,
-      "contrailSize": 128,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         43,
@@ -160,8 +160,8 @@
       "width": 10
     },
     {
-      "angle": -156,
-      "contrailSize": 128,
+      "angle": -145,
+      "contrailSize": 8,
       "length": 30,
       "location": [
         43,
@@ -183,6 +183,7 @@
   "spriteName": "graphics/TORCHSHIPS/ships/TADA_bonnethead.png",
   "style": "MIDLINE",
   "viewOffset": 0,
+  "builtInMods": ["auxiliarythrusters"],
   "weaponSlots": [
     {
       "angle": 90,
@@ -197,7 +198,7 @@
       "type": "MISSILE"
     },
     {
-      "angle": -90.010002,
+      "angle": -90,
       "arc": 0,
       "id": "WS0008",
       "locations": [
@@ -246,7 +247,7 @@
     },
     {
       "angle": -22.5,
-      "arc": 120.010002,
+      "arc": 120,
       "id": "WS0004",
       "locations": [
         62,

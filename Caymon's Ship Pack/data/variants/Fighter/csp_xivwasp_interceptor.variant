@@ -1,0 +1,22 @@
+{
+  "variantId": "csp_xivwasp_interceptor",
+  "hullId": "csp_xivwasp",
+  "displayName": "Interceptor drone",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "csp_taclaserShort"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

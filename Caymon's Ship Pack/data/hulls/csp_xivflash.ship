@@ -1,0 +1,103 @@
+{
+  "hullName": "Flash(XIV)",
+  "hullId": "csp_xivflash",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/xiv flare.png",
+  "style": "HIGH_TECH",
+  "height": 30,
+  "width": 36,
+  "center": [18, 15],
+  "collisionRadius": 26,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 26,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "csp_xivremnantF"
+  ],
+  "builtInWeapons": {
+    "WS 001": "csp_atroposF",
+    "WS 002": "csp_harpoonF",
+    "WS 003": "csp_harpoonF",
+    "WS0001": "csp_flashdeco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 4,
+      "angle": 0,
+      "locations": [3, -0]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [8.5, -7]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [8.5, 7]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 4,
+      "angle": 0,
+      "locations": [0, -0],
+      "renderOrderMod": 100
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, 13],
+      "length": 12,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-11, 9],
+      "length": 12,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13, -13],
+      "length": 12,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-11, -8],
+      "length": 12,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -11, 15,
+    10, 10,
+    10, -11,
+    -11, -16
+  ]
+}

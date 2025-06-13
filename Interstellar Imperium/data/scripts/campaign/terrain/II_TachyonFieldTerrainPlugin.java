@@ -31,9 +31,7 @@ public class II_TachyonFieldTerrainPlugin extends BaseRingTerrain {
 
     @Override
     public void applyEffect(SectorEntityToken entity, float days) {
-        if (entity instanceof CampaignFleetAPI) {
-            CampaignFleetAPI fleet = (CampaignFleetAPI) entity;
-
+        if (entity instanceof CampaignFleetAPI fleet) {
             float effect = getEffectMult(fleet);
             fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_1", "Inside tachyon field", 1f + (BURN_MULT_MAX
                     - 1f) * effect,

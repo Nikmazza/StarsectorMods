@@ -1,0 +1,50 @@
+{
+  "variantId": "apex_scav_cs",
+  "hullId": "apex_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 29,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 000": "hveldriver",
+        "WS 003": "hveldriver"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "gravitonbeam",
+        "WS 005": "gravitonbeam",
+        "WS 006": "gravitonbeam",
+        "WS 007": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 008": "vulcan",
+        "WS 009": "vulcan",
+        "WS 010": "vulcan",
+        "WS 011": "vulcan",
+        "WS 012": "vulcan",
+        "WS 013": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "piranha_wing",
+    "piranha_wing"
+  ]
+}

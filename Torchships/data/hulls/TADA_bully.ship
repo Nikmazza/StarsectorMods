@@ -79,6 +79,9 @@
   "spriteName": "graphics/TORCHSHIPS/ships/TADA_bully.png",
   "style": "LOW_TECH",
   "viewOffset": 0,
+  "builtInMods": [
+    "distributed_fire_control",
+  ],
   "weaponSlots": [
     {
       "angle": 0,

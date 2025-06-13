@@ -1,0 +1,57 @@
+{
+  "variantId": "csp_heliadae_bomber",
+  "hullId": "csp_heliadae",
+  "displayName": "Bomber",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "reinforcedhull"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "atropos",
+        "WS0002": "atropos"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "vulcan",
+        "WS0004": "vulcan",
+        "WS0007": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "heavymortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "lightdualac",
+        "WS0006": "lightdualac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "perdition_wing",
+    "perdition_wing"
+  ]
+}

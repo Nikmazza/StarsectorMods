@@ -20,17 +20,19 @@ public class MissionDefinition implements MissionDefinitionPlugin {
         "Killing enemies makes you more powerful",
         "Your foe grows stronger over time",
         "Chain combos together for a score and CR multiplier",
-        "Ammo regenerates when you kill enemies"
+        "Ammo regenerates when you kill enemies",
+        "HEAVY STORY SPOILERS!"
     };
     private String ship = "swp_arcade_superhyperion_str";
 
     protected boolean campaignMode;    // set to true if mission is being created from an arcade machine in campaign
 
     @Override
+    @SuppressWarnings("UseSpecificCatch")
     public void defineMission(MissionDefinitionAPI api) {
         try {
             reloadSettings();
-        } catch (IOException | JSONException ex) {
+        } catch (Exception ex) {
             Global.getLogger(MissionDefinition.class).log(Level.ERROR, ex);
         }
 

@@ -1,0 +1,48 @@
+{
+  "id": "csp_uniHeadBeam",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/Uni Cetan/csp_unicetanhead.png",
+  "hardpointSprite": "graphics/weapons/Uni Cetan/csp_unicetanhead.png",
+  "glowColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    14.5,
+    -2.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    22.5,
+    -2.5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 10,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 1,
+  "fireSoundOne": "burst_pd_fire"
+}

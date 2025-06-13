@@ -1,0 +1,26 @@
+{
+  "variantId": "Baronin_XIV_Burst",
+  "hullId": "Baronin_XIV",
+  "displayName": "Burst",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ballistic_rangefinder"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyneedler",
+        "WS0002": "annihilatorpod",
+        "WS0003": "tpc"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

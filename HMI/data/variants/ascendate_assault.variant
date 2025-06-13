@@ -4,11 +4,10 @@
   "displayName": "Assault",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 12,
+  "fluxVents": 16,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "auxiliarythrusters",
     "heavyarmor"
   ],
   "weaponGroups": [
@@ -23,8 +22,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0005": "mcg_ml",
-        "WS0006": "mcg_ml"
+        "WS0005": "mining_burst_blaster",
+        "WS0006": "mining_burst_blaster"
       }
     },
     {

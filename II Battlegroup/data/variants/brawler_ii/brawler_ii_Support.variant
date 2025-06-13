@@ -1,0 +1,34 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 1,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "brawler_ii",
+  "hullMods": [
+    "auxiliarythrusters",
+    "eccm",
+    "ecm",
+    "missleracks"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "brawler_ii_Support",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "heatseeker",
+        "WS 004": "heatseeker"
+      }
+    }
+  ],
+  "wings": []
+}

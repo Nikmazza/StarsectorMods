@@ -1,0 +1,155 @@
+{
+  "hullName": "Luster",
+  "hullId": "csp_luster_fighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_luster.png",
+  "style": "HIGH_TECH",
+  "height": 40,
+  "width": 48,
+  "center": [24, 21],
+  "collisionRadius": 66.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 65,
+  "viewOffset": 0,
+  "builtInMods": [
+    "solar_shielding",
+    "extendedshieldemitter",
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0003": "csp_lusterhead",
+    "WS0004": "csp_luster_shoulderLdeco",
+    "WS0005": "csp_luster_shoulderRdeco",
+    "WS0006": "csp_Ionsmg",
+    "WS0007": "csp_sabot_shotgun"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 30,
+      "angle": 0,
+      "locations": [-7, -16],
+      "renderOrderMod": 300
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [-11, 19],
+      "renderOrderMod": 300
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 50,
+      "angle": 0,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [-4, 21.5],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [-4, -21.5],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 25,
+      "angle": -4,
+      "locations": [14, 22]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 25,
+      "angle": 4,
+      "locations": [23.5, -21.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-16, 3],
+      "length": 17.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-16, -3],
+      "length": 17.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-15, -6],
+      "length": 13.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-15, 6],
+      "length": 13.5,
+      "width": 3,
+      "angle": -180,
+      "contrailSize": 3,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-18, -11.5],
+      "length": 19.5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-18, 11.5],
+      "length": 19.5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -10, -0,
+    -18, 12,
+    -10, 17,
+    0, 17,
+    17.5, -0,
+    0, -17,
+    -10, -17,
+    -18, -12
+  ]
+}

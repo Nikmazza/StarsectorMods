@@ -1,0 +1,51 @@
+{
+  "variantId": "csp_phasehead_xiv_Strike",
+  "hullId": "csp_phasehead_xiv",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 19,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+        "targetingunit",
+        "adaptive_coils",
+        "heavyarmor"
+    ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "lightneedler",
+        "WS 006": "lightneedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "sabot",
+        "WS 004": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavymortar",
+        "WS 002": "heavymortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "pdburst",
+        "WS 008": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

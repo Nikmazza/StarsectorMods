@@ -1,0 +1,85 @@
+{
+  "variantId": "csp_torch_swarm",
+  "hullId": "csp_torch",
+  "displayName": "Swarm Defense",
+  "goalVariant": true,
+  "fluxCapacitors": 38,
+  "fluxVents": 37,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_deck_crew",
+    "pointdefenseai",
+    "targetingunit",
+    "magazines"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "flak",
+        "WS0018": "flak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "salamanderpod",
+        "WS0002": "salamanderpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "pdburst",
+        "WS0014": "pdburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "guardian",
+        "WS0012": "guardian"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "swarmer",
+        "WS0010": "swarmer",
+        "WS0015": "swarmer",
+        "WS0016": "swarmer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "pdburst",
+        "WS0008": "pdburst"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "pdburst",
+        "WS0004": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "spark_wing",
+    "spark_wing",
+    "spark_wing",
+    "spark_wing",
+    "spark_wing",
+    "spark_wing"
+  ]
+}

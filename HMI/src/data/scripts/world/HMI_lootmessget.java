@@ -15,10 +15,10 @@ import java.util.List;
 
 public class HMI_lootmessget extends BaseCampaignEventListener implements EveryFrameScript {
 
-	public static final float MESS_PER_HULL_POINT = 0.002f;
 	public static final float CORE1_PER_HULL_POINT = 0.00001f;
-	public static final float CORE2_PER_HULL_POINT = 0.000005f;
-	public static final float CORE3_PER_HULL_POINT = 0.000001f;
+	public static final float CORE2_PER_HULL_POINT = 0.000001f;
+	public static final float CORE3_PER_HULL_POINT = 0.0000001f;
+	public static final float RARE_METAL_PER_HULL_POINT = 0.001f;
 
 	public HMI_lootmessget() {
 		super(true);
@@ -56,9 +56,6 @@ public class HMI_lootmessget extends BaseCampaignEventListener implements EveryF
 
 		if (messHull != 0)
 		{
-			int nummess = (int)(messHull * MESS_PER_HULL_POINT * MathUtils.getRandomNumberInRange(0.75f, 1.25f));
-			loot.addCommodity("mess_nano", nummess);
-			loot.addCommodity(Commodities.METALS, -nummess);
 
 			int numcore1 = (int)(messHull * CORE1_PER_HULL_POINT * MathUtils.getRandomNumberInRange(0.75f, 1.25f));
 			loot.addCommodity("gamma_core", numcore1);
@@ -71,6 +68,11 @@ public class HMI_lootmessget extends BaseCampaignEventListener implements EveryF
 			int numcore3 = (int)(messHull * CORE3_PER_HULL_POINT * MathUtils.getRandomNumberInRange(0.75f, 1.25f));
 			loot.addCommodity("alpha_core", numcore3);
 			loot.addCommodity(Commodities.METALS, -numcore3);
+
+			int numcore4 = (int)(messHull * RARE_METAL_PER_HULL_POINT * MathUtils.getRandomNumberInRange(0.75f, 1.25f));
+			loot.addCommodity(Commodities.RARE_METALS, numcore4);
+			loot.addCommodity(Commodities.METALS, -numcore4);
+
 		}
 	}
 

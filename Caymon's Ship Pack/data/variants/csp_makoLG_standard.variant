@@ -1,0 +1,41 @@
+{
+  "variantId": "csp_makoLG_standard",
+  "hullId": "csp_makoLG",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 9,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "fluxbreakers",
+    "hardenedshieldemitter",
+    "hardened_subsystems",
+    "advancedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "csp_phasecl"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "csp_phasecl"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pulselaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

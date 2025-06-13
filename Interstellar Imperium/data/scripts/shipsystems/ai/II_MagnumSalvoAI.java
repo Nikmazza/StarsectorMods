@@ -70,8 +70,8 @@ public class II_MagnumSalvoAI implements ShipSystemAIScript {
         tracker.advance(amount);
         if (tracker.intervalElapsed()) {
             ShipAPI immediateShipTarget;
-            if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof ShipAPI) {
-                immediateShipTarget = (ShipAPI) flags.getCustom(AIFlags.MANEUVER_TARGET);
+            if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof ShipAPI shipAPI) {
+                immediateShipTarget = shipAPI;
             } else {
                 immediateShipTarget = ship.getShipTarget();
             }

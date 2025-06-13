@@ -31,7 +31,6 @@ class AbyssalCrewConversion : BaseAlteration() {
     override fun applyEffectsBeforeShipCreation(hullSize: ShipAPI.HullSize?, stats: MutableShipStatsAPI?, id: String?) {
         super.applyEffectsBeforeShipCreation(hullSize, stats, id)
 
-
         if (stats!!.variant.hasHullMod(HullMods.AUTOMATED))
         {
             stats!!.variant.removePermaMod(HullMods.AUTOMATED)
@@ -58,19 +57,17 @@ class AbyssalCrewConversion : BaseAlteration() {
         super.addPostDescriptionSection(tooltip, hullSize, ship, width, isForModSpec)
 
         tooltip!!.addSpacer(5f)
-        tooltip!!.addPara("Replaces the AI-Components in abyssal hulls with a miniature bridge and leaves a subterminal for the integration of either a chronos, cosmos or seraph core, allowing humans to crew the ship. \n\n" +
-                "The subterminal allows an integrated core to activate the additional effects on ships with the \"Abyssal Adaptability\" hullmod.", 0f,
-            Misc.getTextColor(), Misc.getHighlightColor(), "subterminal", "chronos", "cosmos", "seraph", "humans to crew the ship", "subterminal", "\"Abyssal Adaptability\"")
+        tooltip!!.addPara("Replaces the AI-Components in abyssal hulls with a miniature bridge, allowing humans to crew the ship. \n\n" +
+                "Having a human officer assigned removes the shipsystem penalty of the \"Abyssal Adaptability\" hullmod.", 0f,
+            Misc.getTextColor(), Misc.getHighlightColor(), "allowing humans to crew the ship", "\"Abyssal Adaptability\"")
 
-        tooltip.addSpacer(10f)
-
-        tooltip!!.addPara("Cores can be integrated from the \"Additional Options\" button at the top of the refit screen if this alteration is installed.",0f,
-            Misc.getGrayColor(), Misc.getGrayColor(), "")
+        /*tooltip!!.addPara("Cores can be integrated from the \"Additional Options\" button at the top of the refit screen if this alteration is installed.",0f,
+            Misc.getGrayColor(), Misc.getGrayColor(), "")*/
 
     }
 
     override fun canInstallAlteration(member: FleetMemberAPI?, variant: ShipVariantAPI?, marketAPI: MarketAPI?): Boolean {
-        return (variant!!.hasHullMod("rat_abyssal_core") || variant!!.hasHullMod("rat_seraphs_grace") ||  variant!!.hasHullMod("rat_genesis_hullmod") || variant!!.hasHullMod("rat_genesis_serpent_hullmod")) && (member!!.captain == null || member!!.captain.nameString == "")
+        return (variant!!.hasHullMod("rat_abyssal_core") || variant!!.hasHullMod("rat_seraphs_grace") ||  variant!!.hasHullMod("rat_genesis_hullmod") || variant!!.hasHullMod("rat_genesis_serpent_hullmod")) && (member!!.captain == null || member!!.captain.nameString == "" || member.captain?.hasTag("rat_neuro_shard") == true)
     }
 
     override fun cannotInstallAlterationTooltip(tooltip: TooltipMakerAPI?,  member: FleetMemberAPI?, variant: ShipVariantAPI?, width: Float) {
@@ -83,7 +80,7 @@ class AbyssalCrewConversion : BaseAlteration() {
     }
 
     override fun canUninstallAlteration(member: FleetMemberAPI?, variant: ShipVariantAPI?, marketAPI: MarketAPI?): Boolean {
-        return member!!.captain == null || member!!.captain.nameString == ""
+        return member!!.captain == null || member!!.captain.nameString == "" || member.captain?.hasTag("rat_neuro_shard") == true
     }
 
     override fun cannotUninstallAlterationTooltip(tooltip: TooltipMakerAPI?,member: FleetMemberAPI?, variant: ShipVariantAPI?,width: Float) {

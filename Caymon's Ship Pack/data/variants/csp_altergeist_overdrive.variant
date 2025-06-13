@@ -1,0 +1,49 @@
+{
+  "variantId": "csp_altergeist_overdrive",
+  "hullId": "csp_altergeist",
+  "displayName": "Override",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 4,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides",
+    "adaptive_coils"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavymg",
+        "WS 003": "heavymg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "chaingun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 004": "lightmg",
+        "WS 007": "lightmg"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "sabotpod",
+        "WS 006": "sabotpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -3,11 +3,12 @@
     "markets":[
 	        {
             "entities":["pyrite"],
-            "faction":"pirates",
+            "faction":"tritachyon",
             "size":4,
             "startingConditions":[
-				"trade_center",
+				"free_market",
 				"organized_crime",
+				"hmi_smugglernetwork",
 				"hot",
 				"no_atmosphere",
 				"ore_ultrarich",
@@ -34,6 +35,7 @@
 				"thin_atmosphere",
 				"low_gravity",
 				"large_refugee_population",
+				"hmi_smugglernetwork",
 				"ore_sparse",
 				"rare_ore_sparse",
 				"population_4",
@@ -58,6 +60,7 @@
 				"thin_atmosphere",
 				"high_gravity",
 				"dissident",
+				"hmi_smugglernetwork",
 				"ore_sparse",
 				"rare_ore_sparse",
 				"volatiles_trace",
@@ -100,7 +103,7 @@
         },
         {
             "entities":["anthracite"],
-            "faction":"pirates",
+            "faction":"hegemony",
             "size":4,
             "startingConditions":[
 				"poor_light",
@@ -109,13 +112,14 @@
 				"ore_moderate",
 				"rare_ore_rich",
 				"volatiles_diffuse",
-				"population_4",
+				"hmi_smugglernetwork",
+				"population_5",
             ],
 			"industries":[
 				"population",
 				"mining",
 				"refining",
-				"militarybase",
+				"patrolhq",
 				"HMI_obsidian_lowtech",
 				"grounddefenses",
 				"waystation",

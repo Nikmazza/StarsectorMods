@@ -1,6 +1,6 @@
 {
     "displayName": "Annihilator",
-    "fluxCapacitors": 20,
+    "fluxCapacitors": 28,
     "fluxVents": 30,
     "hullId": "doom",
     "hullMods": [

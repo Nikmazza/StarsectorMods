@@ -1,0 +1,51 @@
+{
+  "variantId": "kazeron_drover_league_elite",
+  "hullId": "kazeron_drover_league",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 2,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "eccm",
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "gazer",
+        "WS 004": "gazer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "gorgon",
+        "WS 005": "gorgon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "lightmg",
+        "WS 001": "pdburst"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "thunder_kazeron_wing",
+    "gladius_kazeron_wing"
+  ]
+}

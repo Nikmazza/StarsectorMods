@@ -3,6 +3,7 @@ package second_in_command.misc;
 import com.fs.starfarer.api.characters.*;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.ui.BaseTooltipCreator;
 import com.fs.starfarer.api.ui.LabelAPI;
@@ -45,6 +46,8 @@ public class VanillaSkillTooltip extends BaseTooltipCreator {
     public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
         tooltip.addTitle(skill.getName(), skill.getGoverningAptitudeColor());
         tooltip.addSpacer(10f);
+
+        tooltip.setCodexEntryId(CodexDataV2.getSkillEntryId(skill.getId()));
 
        /* if (skill.getScopeStr() != null) {
             tooltip.addPara(skill.getScopeStr(), 0);
@@ -115,7 +118,7 @@ public class VanillaSkillTooltip extends BaseTooltipCreator {
         }
 
         for (HullModSpecAPI hullmodSpec: hullmodSpecs) {
-            tooltip.addPara("Hull mod: " + hullmodSpec.getDisplayName() + " - " + ReflectionUtils.INSTANCE.invoke("getShortDesc", hullmodSpec, new Array[]{}, false) , 0f,
+            tooltip.addPara("Hull mod: " + hullmodSpec.getDisplayName() + " - " + ReflectionUtils.invoke("getShortDesc", hullmodSpec, new Array[]{}, null, null) , 0f,
                     Misc.getTextColor(), Misc.getHighlightColor(), hullmodSpec.getDisplayName());
         }
 

@@ -4,7 +4,7 @@
         {
             "entities":["mess_station2"],
             "faction":"HMI",
-            "size":4,
+            "size":5,
             "startingConditions":[
 				"hardpolity",
 				"ruins_vast",
@@ -15,7 +15,7 @@
 				"HMI_messmaker",
 				["heavyindustry","corrupted_nanoforge","beta_core"],
 				"megaport",
-				"grounddefenses",
+				"heavybatteries",
 				"militarybase",
 				"starfortress",
 			],

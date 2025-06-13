@@ -3,7 +3,7 @@
   "hullId": "monjeau",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 2,
+  "fluxCapacitors": 0,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],
@@ -31,7 +31,7 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0007": "flak"
+        "WS0007": "med_frag_mg"
       }
     }
   ],

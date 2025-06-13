@@ -1,0 +1,19 @@
+{
+  "baseHullId": "csp_phasehead",
+  "baseValue": 70000,
+  "baseValueMult": 1.5,
+  "builtInMods": [
+    "fourteenth"
+  ],
+  "descriptionId": "csp_phasehead",
+  "descriptionPrefix": "Built to the specifications of the 14th Domain Battlegroup which founded the Hegemony, this vessel is a prime example of the Domain Navy's 'decisive battle' doctrine, particularly exhibited by a series of radical structural modifications performed using pre-Collapse industrial technology.",
+  "fleetPoints": 12,
+  "tech":"XIV Battlegroup",
+  "tags":["XIV_bp"],
+  "hullDesignation": "Destroyer",
+  "hullName": "Phasehead (XIV)",
+  "ordnancePoints": 120,
+  "restoreToBaseHull": false,
+  "skinHullId": "csp_phasehead_xiv",
+  "spriteName": "graphics/ships/csp_phaseheadxiv.png"
+}

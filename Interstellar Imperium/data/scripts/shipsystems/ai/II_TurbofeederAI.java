@@ -87,8 +87,8 @@ public class II_TurbofeederAI implements ShipSystemAIScript {
 
             ShipAPI immediateShipTarget;
             float immediateTargetDistance = Float.MAX_VALUE;
-            if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof ShipAPI) {
-                immediateShipTarget = (ShipAPI) flags.getCustom(AIFlags.MANEUVER_TARGET);
+            if (flags.getCustom(AIFlags.MANEUVER_TARGET) instanceof ShipAPI shipAPI) {
+                immediateShipTarget = shipAPI;
             } else {
                 immediateShipTarget = ship.getShipTarget();
             }
@@ -202,9 +202,9 @@ public class II_TurbofeederAI implements ShipSystemAIScript {
             if (wantsToStandOff && immediateTargetWithinEligibleRange) {
                 if (immediateTargetWithinOptimalRange) {
                     if (ultraHighFlux) {
-                        desire += 0.75f;
+                        desire += 1.75f;
                     } else if (veryHighFlux) {
-                        desire += 1f;
+                        desire += 1.5f;
                     } else if (highFlux) {
                         desire += 1.25f;
                     } else {
@@ -229,9 +229,9 @@ public class II_TurbofeederAI implements ShipSystemAIScript {
             if (wantsToCloseDistance && immediateTargetWithinEligibleRange) {
                 if (immediateTargetWithinOptimalRange) {
                     if (ultraHighFlux) {
-                        desire += 1f;
+                        desire += 2f;
                     } else if (veryHighFlux) {
-                        desire += 1.25f;
+                        desire += 1.75f;
                     } else if (highFlux) {
                         desire += 1.5f;
                     } else {
@@ -255,13 +255,13 @@ public class II_TurbofeederAI implements ShipSystemAIScript {
 
             desire *= directBenefitFrac;
             if (ultraHighFlux) {
-                desire += 0.5f * indirectBenefitFrac;
-            } else if (veryHighFlux) {
                 desire += 0.75f * indirectBenefitFrac;
+            } else if (veryHighFlux) {
+                desire += 1f * indirectBenefitFrac;
             } else if (highFlux) {
                 desire += 1f * indirectBenefitFrac;
             } else {
-                desire += 1.25f * indirectBenefitFrac;
+                desire += 0.75f * indirectBenefitFrac;
             }
 
             if (ship.getVariant().hasHullMod(II_BasePackage.ARMOR_PACKAGE)) {

@@ -1,7 +1,7 @@
 {
     "displayName": "Imperial Elite",
-    "fluxCapacitors": 10,
-    "fluxVents": 34,
+    "fluxCapacitors": 20,
+    "fluxVents": 32,
     "hullId": "ii_barrus",
     "hullMods": [
         "ii_elite_package",

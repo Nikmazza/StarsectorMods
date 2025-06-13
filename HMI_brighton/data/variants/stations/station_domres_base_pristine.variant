@@ -1,0 +1,70 @@
+{
+  "variantId": "station_domres_base_pristine",
+  "hullId": "station_domres_base",
+  "displayName": "Pristine",
+  "goalVariant": true,
+  "fluxCapacitors": 100,
+  "fluxVents": 100,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavymauler",
+        "WS0006": "heavymauler",
+        "WS0007": "heavymauler",
+        "WS0008": "heavymauler",
+        "WS0009": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "flak",
+        "WS0002": "flak",
+        "WS0004": "flak",
+        "WS0005": "flak"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "BACKLEFT": "station_domres_backleft_variant"
+    },
+    {
+      "LEFT": "station_domres_left_variant"
+    },
+    {
+      "TOPLEFTLEFT": "station_domres_topleftleft_variant"
+    },
+    {
+      "TOPLEFT": "station_domres_topleft_variant"
+    },
+    {
+      "TOPTOPLEFT": "station_domres_toptopleft_variant"
+    },
+    {
+      "TOPRIGHT": "station_domres_topright_variant"
+    },
+    {
+      "TOPRIGHTRIGHT": "station_domres_toprightright_variant"
+    },
+    {
+      "RIGHT": "station_domres_right_variant"
+    },
+    {
+      "BACKRIGHTRIGHT": "station_domres_backrightright_variant"
+    },
+    {
+      "BACKRIGHT": "station_domres_backright_variant"
+    },
+    {
+      "BACKBACKRIGHT": "station_domres_backbackright_variant"
+    }
+  ],
+  "wings": []
+}

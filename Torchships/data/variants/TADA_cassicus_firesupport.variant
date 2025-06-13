@@ -1,0 +1,46 @@
+{
+    "displayName": "Fire Support",
+    "fluxCapacitors": 3,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "TADA_cassicus",
+    "hullMods": [
+        "advancedoptics",
+        "targetingunit",
+        "turretgyros",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_cassicus_firesupport",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "tachyonlance",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "heatseeker",
+                "WS0002": "heatseeker",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "taclaser",
+                "WS0005": "taclaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "pdburst",
+            }
+        }
+    ]
+}

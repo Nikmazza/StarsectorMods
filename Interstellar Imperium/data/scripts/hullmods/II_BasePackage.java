@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.graphics.SpriteAPI;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -93,6 +94,18 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeImperialFlaresPostDescription(TooltipMakerAPI tooltip) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/flare_launcher.png", 64f);
         addImperialFlaresSysModText(text);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo;
+            if (CodexDataV2.codexFullyUnlocked() || CodexDataV2.hasUnlockedEntryForShip("ii_olympus") || Global.getSettings().isDevMode()) {
+                appliesTo = text.addPara("Applies to %s, %s, and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                        Global.getSettings().getHullSpec("ii_carrum").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_princeps").getHullNameWithDashClass(),
+                        Global.getSettings().getHullSpec("ii_olympus").getHullNameWithDashClass());
+            } else {
+                appliesTo = text.addPara("Applies to %s and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                        Global.getSettings().getHullSpec("ii_carrum").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_princeps").getHullNameWithDashClass());
+            }
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -101,6 +114,11 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeMicroForgePostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/missile_autoforge.png", 64f);
         addMicroForgeSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_basileus").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -109,6 +127,12 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeTurbofeederPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/ammo_feeder.png", 64f);
         addTurbofeederSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s, %s, and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_triarius").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_praetorian").getHullNameWithDashClass(),
+                    Global.getSettings().getHullSpec("ii_dictator").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -117,22 +141,38 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeImpulseBoosterPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/infernium_injector.png", 64f);
         addImpulseBoosterSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s, %s, %s, and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_decurion").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_interrex").getHullNameWithDashClass(),
+                    Global.getSettings().getHullSpec("ii_sebastos").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_barrus").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
     protected abstract void addImpulseBoosterSysModText(TooltipMakerAPI text, ShipAPI ship);
 
     private void makeOverdrivePostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
-        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/maneuvering_jets.png", 64f);
+        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/plasma_jets.png", 64f);
         addOverdriveSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_legionary").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_dominus").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
     protected abstract void addOverdriveSysModText(TooltipMakerAPI text, ShipAPI ship);
 
     private void makeMagnumSalvoPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
-        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/missile_racks.png", 64f);
+        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/heavy_missile_autoforge.png", 64f);
         addMagnumSalvoSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_ixon").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -141,14 +181,24 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeCommandCenterPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/reserve_deployment.png", 64f);
         addCommandCenterSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_ardea").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_matriarch").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
     protected abstract void addCommandCenterSysModText(TooltipMakerAPI text, ShipAPI ship);
 
     private void makeShockBusterPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
-        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/quantum_disruptor.png", 64f);
+        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/energy_lash.png", 64f);
         addShockBusterSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_lynx").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_caesar").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -157,6 +207,11 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeCelerityDrivePostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/temporal_shell.png", 64f);
         addCelerityDriveSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_maximus").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -165,14 +220,24 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeLuxFinisPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/high_energy_focus.png", 64f);
         addLuxFinisSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_adamas").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
     protected abstract void addLuxFinisSysModText(TooltipMakerAPI text, ShipAPI ship);
 
     private void makeArbalestLoaderPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
-        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/emp_emitter.png", 64f);
+        TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/hullsys/lidar_barrage.png", 64f);
         addArbalestLoaderSysModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_libritor").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -181,6 +246,11 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeCargoPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/skills/fleet_logistics.png", 64f);
         addCargoMiscModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s and %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_carrum").getHullNameWithDashClass(), Global.getSettings().getHullSpec("ii_barrus").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -189,6 +259,11 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeLightspearPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/skills/applied_physics.png", 64f);
         addLightspearMiscModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_adamas").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -197,6 +272,11 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeTitanPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/skills/missile_specialization.png", 64f);
         addTitanMiscModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_olympus").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -205,6 +285,11 @@ public abstract class II_BasePackage extends BaseHullMod {
     private void makeMagnaFulmenPostDescription(TooltipMakerAPI tooltip, ShipAPI ship) {
         TooltipMakerAPI text = tooltip.beginImageWithText("graphics/icons/skills/target_analysis.png", 64f);
         addMagnaFulmenMiscModText(text, ship);
+        if (Global.CODEX_TOOLTIP_MODE) {
+            LabelAPI appliesTo = text.addPara("Applies to %s", INTERNAL_PARA_PAD, Global.getSettings().getColor("standardTextColor"), Global.getSettings().getColor("hColor"),
+                    Global.getSettings().getHullSpec("ii_libritor").getHullNameWithDashClass());
+            appliesTo.italicize();
+        }
         tooltip.addImageWithText(INTERNAL_PAD);
     }
 
@@ -216,11 +301,11 @@ public abstract class II_BasePackage extends BaseHullMod {
         label.setHighlight("Imperium", "Imperial Package");
     }
 
-    protected abstract void addPrimaryDescription(TooltipMakerAPI tooltip);
+    protected abstract void addPrimaryDescription(TooltipMakerAPI tooltip, ShipAPI ship);
 
     @Override
     public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
-        addPrimaryDescription(tooltip);
+        addPrimaryDescription(tooltip, ship);
 
         if (getHullModId().contentEquals(NO_PACKAGE)) {
             LabelAPI label = tooltip.addPara("Imperial Packages cannot be installed on this hull.", 0f);
@@ -239,84 +324,90 @@ public abstract class II_BasePackage extends BaseHullMod {
                 label.setAlignment(Alignment.MID);
             }
 
-            LabelAPI heading = tooltip.addSectionHeading("System Mod",
+            LabelAPI heading = tooltip.addSectionHeading("System mod",
                     Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
-
-            if (isForModSpec || (ship == null) || (ship.getSystem() == null)) {
+            if (Global.CODEX_TOOLTIP_MODE) {
+                makeImperialFlaresPostDescription(tooltip);
+                makeMicroForgePostDescription(tooltip, null);
+                makeTurbofeederPostDescription(tooltip, null);
+                makeImpulseBoosterPostDescription(tooltip, null);
+                makeOverdrivePostDescription(tooltip, null);
+                makeMagnumSalvoPostDescription(tooltip, null);
+                makeCommandCenterPostDescription(tooltip, null);
+                makeShockBusterPostDescription(tooltip, null);
+                makeCelerityDrivePostDescription(tooltip, null);
+                makeLuxFinisPostDescription(tooltip, null);
+                makeArbalestLoaderPostDescription(tooltip, null);
+            } else if (isForModSpec || (ship == null) || (ship.getSystem() == null)) {
                 makeEmptySysModPostDescription(tooltip);
             } else {
                 String shipSystemId = ship.getSystem().getId();
                 switch (shipSystemId) {
-                    case "ii_flares":
+                    case "ii_flares" ->
                         makeImperialFlaresPostDescription(tooltip);
-                        break;
-                    case "ii_microforge":
+                    case "ii_microforge" ->
                         makeMicroForgePostDescription(tooltip, ship);
-                        break;
-                    case "ii_turbofeeder":
+                    case "ii_turbofeeder" ->
                         makeTurbofeederPostDescription(tooltip, ship);
-                        break;
-                    case "ii_impulsebooster":
+                    case "ii_impulsebooster" ->
                         makeImpulseBoosterPostDescription(tooltip, ship);
-                        break;
-                    case "ii_overdrive":
+                    case "ii_overdrive" ->
                         makeOverdrivePostDescription(tooltip, ship);
-                        break;
-                    case "ii_magnumsalvo":
-                    case "ii_magnumsalvo_station":
+                    case "ii_magnumsalvo", "ii_magnumsalvo_station" ->
                         makeMagnumSalvoPostDescription(tooltip, ship);
-                        break;
-                    case "ii_commandcenter":
+                    case "ii_commandcenter" ->
                         makeCommandCenterPostDescription(tooltip, ship);
-                        break;
-                    case "ii_shockbuster":
+                    case "ii_shockbuster" ->
                         makeShockBusterPostDescription(tooltip, ship);
-                        break;
-                    case "ii_celeritydrive":
+                    case "ii_celeritydrive" ->
                         makeCelerityDrivePostDescription(tooltip, ship);
-                        break;
-                    case "ii_luxfinis":
+                    case "ii_luxfinis" ->
                         makeLuxFinisPostDescription(tooltip, ship);
-                        break;
-                    case "ii_arbalestloader":
+                    case "ii_arbalestloader" ->
                         makeArbalestLoaderPostDescription(tooltip, ship);
-                        break;
-                    default:
+                    default ->
                         makeEmptySysModPostDescription(tooltip);
-                        break;
                 }
             }
 
-            if (isForModSpec || (ship == null) || (ship.getSystem() == null)) {
-                heading = tooltip.addSectionHeading("Miscellaneous Mod",
+            if (Global.CODEX_TOOLTIP_MODE) {
+                heading = tooltip.addSectionHeading("Miscellaneous mod",
+                        Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
+                makeCargoPostDescription(tooltip, null);
+                makeLightspearPostDescription(tooltip, null);
+                if (CodexDataV2.codexFullyUnlocked() || CodexDataV2.hasUnlockedEntryForShip("ii_olympus") || Global.getSettings().isDevMode()) {
+                    makeTitanPostDescription(tooltip, null);
+                }
+                makeMagnaFulmenPostDescription(tooltip, null);
+            } else if (isForModSpec || (ship == null) || (ship.getSystem() == null)) {
+                heading = tooltip.addSectionHeading("Miscellaneous mod",
                         Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
                 makeEmptyMiscModPostDescription(tooltip);
             } else {
                 String shipId = II_Util.getNonDHullId(ship.getHullSpec());
                 switch (shipId) {
-                    case "ii_carrum":
-                    case "ii_barrus":
-                        heading = tooltip.addSectionHeading("Miscellaneous Mod",
+                    case "ii_carrum", "ii_barrus" -> {
+                        heading = tooltip.addSectionHeading("Miscellaneous mod",
                                 Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
                         makeCargoPostDescription(tooltip, ship);
-                        break;
-                    case "ii_adamas":
-                        heading = tooltip.addSectionHeading("Miscellaneous Mod",
+                    }
+                    case "ii_adamas" -> {
+                        heading = tooltip.addSectionHeading("Miscellaneous mod",
                                 Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
                         makeLightspearPostDescription(tooltip, ship);
-                        break;
-                    case "ii_olympus":
-                        heading = tooltip.addSectionHeading("Miscellaneous Mod",
+                    }
+                    case "ii_olympus" -> {
+                        heading = tooltip.addSectionHeading("Miscellaneous mod",
                                 Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
                         makeTitanPostDescription(tooltip, ship);
-                        break;
-                    case "ii_libritor":
-                        heading = tooltip.addSectionHeading("Miscellaneous Mod",
+                    }
+                    case "ii_libritor" -> {
+                        heading = tooltip.addSectionHeading("Miscellaneous mod",
                                 Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), Global.getSettings().getColor("buttonBgDark"), Alignment.TMID, SECTION_PAD);
                         makeMagnaFulmenPostDescription(tooltip, ship);
-                        break;
-                    default:
-                        break;
+                    }
+                    default -> {
+                    }
                 }
             }
         }

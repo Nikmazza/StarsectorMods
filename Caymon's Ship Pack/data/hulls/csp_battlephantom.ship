@@ -1,0 +1,149 @@
+{
+  "hullName": "Battle Phantom",
+  "hullId": "csp_battlephantom",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/csp_battlephantom.png",
+  "style": "HIGH_TECH",
+  "height": 151,
+  "width": 192,
+  "center": [96, 66],
+  "collisionRadius": 116.5,
+  "shieldCenter": [1.5, -0],
+  "shieldRadius": 109.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield",
+    "delicate",
+    "ground_support"
+  ],
+  "builtInWings": [
+    "terminator_wing",
+    "terminator_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 000",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 150,
+      "locations": [-32, 85.5]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 210,
+      "locations": [-32, -92.5]
+    },
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [70, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [68, 31]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": -0,
+      "locations": [68, -31]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -7.5, 1,
+        -9.5, 7.5,
+        -11.5, 1,
+        -10.5, -5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-52.5, 50.5],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55.5, 42.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-63.5, 30.5],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-63.5, -30.5],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55.5, -42.5],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-52.5, -51.5],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -22.5, 95,
+    72.5, 35,
+    70, 14,
+    70.5, -14.5,
+    72, -26,
+    62, -40.5,
+    -27.5, -95.5,
+    -44, -83.5,
+    -64, -29.5,
+    -37.5, -14.5,
+    -38, 16,
+    -65.5, 30.5,
+    -40.5, 91
+  ]
+}

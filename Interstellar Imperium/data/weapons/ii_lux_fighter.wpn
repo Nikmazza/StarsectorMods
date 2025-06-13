@@ -3,7 +3,7 @@
     "specClass":"projectile",
     "type":"BALLISTIC",
     "size":"SMALL",
-    "turretSprite":"",
+    "turretSprite":"graphics/imperium/weapons/ii_lux_turret_base.png",
     "hardpointSprite":"",
     "specialWeaponGlowWidth":15,
     "specialWeaponGlowHeight":30,

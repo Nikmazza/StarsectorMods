@@ -1,0 +1,14 @@
+{
+	"starts":[
+		{
+			"id":"csp_vicviperpilot_start",
+			"name":"Superfighter Vic Viper",
+			"difficulty":"Normal",
+			"desc":"Pilot this experimental fighter and shoot up your enemies!",
+	"className":"data.scripts.campaign.customstart.csp_vicviperpilot_start",
+			"factionId":"player",
+			"requiredModId":"Csp",
+			"randomSector":0,
+		},
+	],
+}

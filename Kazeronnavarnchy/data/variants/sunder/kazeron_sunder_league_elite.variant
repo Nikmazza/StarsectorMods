@@ -1,0 +1,43 @@
+{
+  "variantId": "kazeron_sunder_league_elite",
+  "hullId": "kazeron_sunder_league",
+  "displayName": "Elite Escort",
+  "goalVariant": true,
+  "fluxCapacitors": 17,
+  "fluxVents": 18,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "escort_package"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "gravitonbeam",
+        "WS 003": "hil",
+        "WS 004": "gravitonbeam",
+        "WS 006": "pdlaser",
+        "WS 007": "pdlaser",
+        "WS 008": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "gazer",
+        "WS 005": "gazer"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

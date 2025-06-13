@@ -4,30 +4,42 @@
   "displayName": "Standard",
   "goalVariant": false,
   "fluxCapacitors": 0,
-  "fluxVents": 7,
+  "fluxVents": 0,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "heavyarmor",
-    "reinforcedhull"
+    "reinforcedhull",
+    "missleracks"
   ],
   "weaponGroups": [
     {
       "autofire": false,
-      "mode": "LINKED",
+      "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "heavymauler",
-        "WS0002": "hveldriver",
-        "WS0003": "hveldriver",
         "WS0004": "harpoonpod",
         "WS0005": "harpoonpod",
         "WS0006": "harpoon",
         "WS0007": "harpoon"
       }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "hveldriver",
+        "WS0003": "hveldriver"
+      }
     }
   ],
   "modules": [],
   "wings": [
-    "talon_wing"
+    "missp_broadswordmkii_wing"
   ]
 }

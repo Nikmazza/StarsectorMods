@@ -1,0 +1,51 @@
+{
+  "variantId": "rampart_scav_cs",
+  "hullId": "rampart_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 2,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "gauss"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hurricane"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "flak",
+        "WS0005": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "warthog_wing",
+    "warthog_wing",
+    "thunder_wing",
+    "thunder_wing"
+  ]
+}

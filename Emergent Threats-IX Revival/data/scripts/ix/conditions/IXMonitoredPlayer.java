@@ -5,7 +5,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import lunalib.lunaSettings.LunaSettings;
+//import lunalib.lunaSettings.LunaSettings;
 
 public class IXMonitoredPlayer extends BaseHazardCondition {
 	
@@ -13,23 +13,17 @@ public class IXMonitoredPlayer extends BaseHazardCondition {
 	
     @Override
     public void apply(String id) {
-		market.getStability().modifyFlat(id, STABILITY_BONUS, "Panopticon monitoring");
-		boolean isMonitorEnabled = LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_monitor_enabled");
-		if (isMonitorEnabled) market.removeSubmarket(Submarkets.SUBMARKET_BLACK);
-		else if (!market.hasSubmarket(Submarkets.SUBMARKET_BLACK)) {
-			market.addSubmarket(Submarkets.SUBMARKET_BLACK);
-		}
+		//market.getStability().modifyFlat(id, STABILITY_BONUS, "Panopticon monitoring");
 	}
     
     @Override
     public void unapply(String id) {
-		market.getStability().unmodify(id);
-		if (!market.hasSubmarket(Submarkets.SUBMARKET_BLACK)) market.addSubmarket(Submarkets.SUBMARKET_BLACK);
+		//market.getStability().unmodify(id);
 	}
     
     @Override
     protected void createTooltipAfterDescription(TooltipMakerAPI tooltip, boolean expanded) {
         float opad = 10f;
-		tooltip.addPara("%s stability", opad, Misc.getHighlightColor(), "+" + STABILITY_BONUS);
+		//tooltip.addPara("%s stability", opad, Misc.getHighlightColor(), "+" + STABILITY_BONUS);
     }
 }

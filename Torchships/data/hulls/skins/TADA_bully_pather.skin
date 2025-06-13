@@ -5,17 +5,19 @@
 	"descriptionId":"TADA_bully",
 	"descriptionPrefix":"Fanatics of the Luddic Path have made this ship their own, stripping out all unnecessary furnishing and transforming it into a haphazard vehicle of holy war.",
 	"spriteName":"graphics/TORCHSHIPS/ships/TADA_bully_pather.png",
-	"baseValueMult":0.9,
-    "ordnancePoints":80,
+	"baseValueMult":1.1,
+	"fleetPoints":10,
+   "suppliesToRecover":10,
+   "suppliesPerMonth":10,
 	"addHints":[],
-        "tags":["LP_bp"],
+   "tags":["LP_bp"],
 	"tech":"Luddic Path",
 	"removeWeaponSlots":[], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":[], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
 	"systemId":"ammofeed",
-	"builtInMods":["safetyoverrides","ill_advised"],
+	"builtInMods":["safetyoverrides","ill_advised", "ballistic_rangefinder"],
 	"builtInWeapons":{
     },
     "weaponSlotChanges":{

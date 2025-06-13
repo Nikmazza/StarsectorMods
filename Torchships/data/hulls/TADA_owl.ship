@@ -12,7 +12,9 @@
   "shieldRadius": 180,
   "viewOffset": 0,
   "builtInMods": [
-    "ecm"
+    "ecm",
+    "insulatedengine",
+    "armoredweapons",
   ],
   "weaponSlots": [
     {
@@ -227,7 +229,7 @@
       "width": 8.485281,
       "angle": 149,
       "contrailSize": 128,
-      "style": "MIDLINE_NO_SMOKE"
+      "style": "MIDLINE"
     },
     {
       "location": [151, -24],
@@ -235,7 +237,7 @@
       "width": 8.485281,
       "angle": -149,
       "contrailSize": 128,
-      "style": "MIDLINE_NO_SMOKE"
+      "style": "MIDLINE"
     }
   ],
   "bounds": [

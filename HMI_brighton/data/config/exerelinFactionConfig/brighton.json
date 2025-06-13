@@ -1,0 +1,78 @@
+{
+	"uniqueModClassName":"data.scripts.HMI_modPlugin",
+    "playableFaction":true,
+    "corvusCompatible":true,
+    "crewExpereinceLevelIncreaseChance":0.0,
+    "baseFleetCostMultiplier":1.0,
+    "customRebelFaction":"",
+    "customRebelFleetId":"",
+    "rebelFleetSuffix":"Revolutionaries",
+	
+    "positiveDiplomacyExtra":0,
+    "negativeDiplomacyExtra":0,
+    "factionsLiked":[
+		"shadow_industry",
+		"luddic_church",
+		"ora",
+		"persean"],
+    "factionsDisliked":[
+	"diable",
+	"luddic_path", 
+	"pirates"],
+	
+	"startRelationships":{
+    		"shadow_industry": 0.7,
+    		"luddic_church": 0.3,
+			"ora": 0.5,
+    		"persean": 0.3
+			},
+	
+    "morality":"good",
+	
+    "alignments":{
+            "corporate":0,
+            "technocratic":0,
+            "militarist":0,
+            "diplomatic":1,
+            "ideological":1,
+			},
+	
+	"diplomacyTraits":["neutralist", "weak-willed", "pacifist", "helps_allies", "lowprofile"],
+	
+	"miningVariantsOrWings":["shepherd_scav_std", "venture_scav_std"],
+	
+	
+    "startShipsSolo":["lumen_scav_X_standard"],
+    "startShipsCombatSmall":["fulgent_scav_std", "sentry_scav_attack", "lumen_scav_std"],
+    "startShipsTradeSmall":["tarsus_scav_std", "bastillon_scav_std", "cerberus_scav_std", "hound_scav_std"],
+    "startShipsCombatLarge":["brilliant_scav_std", "fulgent_scav_std", "sentry_scav_attack", "sentry_scav_cs"],
+    "startShipsTradeLarge":["colossus3_scav_variant", "scintilla_scav_attack", "mule_scav_std", "hound_scav_std"],
+		
+		
+    "startSpecialItems":[
+        [["hmi_scav_package", ""], 
+		["hmi_scav_base_package", ""]],
+    ],
+	
+	"colonyExpeditionChance":1.5,	# Must Acquire Additional Sources of Revenue!
+    "colonyTargetValuator":"exerelin.campaign.colony.LuddicColonyTargetValuator",
+    
+	    "defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"]},
+    ],
+    
+    "industrySeeds":[
+        {"id":"orbitalworks", "mult":0.1},
+        {"id":"fuelprod", "mult":0.1},
+        {"id":"lightindustry", "mult":0.1},
+    ],
+    
+    "bonusSeeds":[
+        {"id":"nanoforge_pristine", "count":1},
+        {"id":"aiCore_station", "count":1, "mult":0.1},
+        {"id":"aiCore_military", "mult":0.25},
+        {"id":"aiCore_fuelprod", "count":1},
+        {"id":"aiCore_other", "mult":0.5},
+		],
+	},
+}

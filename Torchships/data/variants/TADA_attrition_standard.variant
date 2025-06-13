@@ -1,10 +1,13 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 5,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "TADA_attrition",
-    "hullMods": ["fluxbreakers"],
+    "hullMods": [
+        "fluxbreakers",
+        "stabilizedshieldemitter",
+    ],
     "permaMods": [],
     "variantId": "TADA_attrition_standard",
     "weaponGroups": [
@@ -12,8 +15,8 @@
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS0002": "typhoon",
-                "WS0003": "typhoon"
+                "WS0003": "pilum",
+                "WS0002": "pilum",
             }
         },
         {
@@ -21,17 +24,17 @@
             "mode": "ALTERNATING",
             "weapons": {
                 "WS0020": "heatseeker",
-                "WS0021": "heatseeker"
+                "WS0021": "heatseeker",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0006": "railgun",
-                "WS0007": "railgun",
                 "WS0008": "railgun",
-                "WS0009": "railgun"
+                "WS0009": "railgun",
+                "WS0004": "railgun",
+                "WS0005": "railgun",
             }
         },
         {
@@ -39,24 +42,36 @@
             "mode": "LINKED",
             "weapons": {
                 "WS0001": "lightag",
-                "WS0012": "lightag",
-                "WS0013": "lightag",
-                "WS0014": "lightag",
-                "WS0015": "lightag"
+                "WS0011": "lightag",
+                "WS0010": "lightag",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0004": "vulcan",
-                "WS0005": "vulcan",
-                "WS0010": "vulcan",
-                "WS0011": "vulcan",
-                "WS0016": "vulcan",
-                "WS0017": "vulcan",
+                "WS0014": "lightag",
+                "WS0015": "lightag",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "lightdualac",
+                "WS0016": "lightdualac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "vulcan",
+                "WS0007": "vulcan",
                 "WS0018": "vulcan",
-                "WS0019": "vulcan"
+                "WS0013": "vulcan",
+                "WS0012": "vulcan",
+                "WS0019": "vulcan",
             }
         }
     ]

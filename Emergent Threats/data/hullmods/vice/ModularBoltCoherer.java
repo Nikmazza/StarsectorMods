@@ -12,26 +12,20 @@ import com.fs.starfarer.api.util.Misc;
 public class ModularBoltCoherer extends BaseHullMod {
 	
 	private static float PULSE_RANGE_BONUS = 100f;
+	private static float PULSE_RANGE_BONUS_XO = 200f; //text only, actual bonus handled by Andradanism EF Mastery
 	private static float CASUALTY_PENALTY = 25f;
 	private static float CASUALTY_PENALTY_XO = 0f;
 	private static float FLUX_COST_BONUS = 5f;
 	
 	private static String CONFLICT_MOD = "coherer";
 	private static String CONFLICT_MOD_2 = "vice_adaptive_pulse_resonator";
-	private static String NEGATE_MOD = "vice_special_modifications";
-	
-	private static boolean isPriorityRequisitionActive = false;
-	
+	private static String NEGATE_MOD = "vice_special_modifications";	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getEnergyWeaponRangeBonus().modifyFlat(id, PULSE_RANGE_BONUS);
 		stats.getBeamWeaponRangeBonus().modifyFlat(id, -PULSE_RANGE_BONUS);
 		if (isSMod(stats)) stats.getEnergyWeaponFluxCostMod().modifyMult(id, 1f - FLUX_COST_BONUS * 0.01f);
-		if (stats.getVariant().hasHullMod(NEGATE_MOD)) isPriorityRequisitionActive = true;
-		else {
-			stats.getCrewLossMult().modifyPercent(id, CASUALTY_PENALTY);
-			isPriorityRequisitionActive = false;
-		}
+		if (!stats.getVariant().hasHullMod(NEGATE_MOD))	stats.getCrewLossMult().modifyPercent(id, CASUALTY_PENALTY);
 	}
 	
 	@Override
@@ -57,8 +51,13 @@ public class ModularBoltCoherer extends BaseHullMod {
 		return null;
 	}
 	
+	private boolean isEnergyFocusMAsteryActive() {
+		return (Global.getSector().getMemoryWithoutUpdate().is("$xo_energy_focus_mastery_is_active", true));
+	}
+	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) PULSE_RANGE_BONUS;
+		float range = isEnergyFocusMAsteryActive() ? PULSE_RANGE_BONUS_XO : PULSE_RANGE_BONUS;
+		if (index == 0) return "" + (int) range;
 		if (index == 1) return "" + (int) CASUALTY_PENALTY + "%";
 		return null;
 	}

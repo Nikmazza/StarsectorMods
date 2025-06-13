@@ -1,0 +1,8 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+Light Ground Support Package ,rwc_ground_support_frigate,,,,,,,,TRUE,,0,0,0,0,data.hullmods.GroundSupportL,"Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",Improves effectiveness of raids.,,graphics/hullmods/ground_support.png
+Critical Point Targeting,rwc_targeting,3,,,"offensive, merc, standard",Weapons,10000,,,,4,8,15,25,data.hullmods.rwc_targeting,"Extends the range of ballistic and energy weapons by %s/%s/%s/%s, depending on hull size. Increases damage dealt by weapons by %s.  Not compatible with Dedicated Targeting Core or Integrated Targeting Unit.
+",Increases weapon damage and adds a slight range bonus.,,graphics/hullmods/rwc_targeting.png
+Prototype Phase Coils,rwc_phasecoils,,,,,,,,TRUE,,0,0,0,0,data.hullmods.rwc_phasecoils,"The extremely rugged phase coils installed on this vessel are less affected by flux buildup.
+
+This increases the threshold at which speed bottoms out by %s,  from %s to %s, functionally increasing this ship's minimum speed while phased.",Reduces impact of hard flux level on top speed while phased.,,graphics/hullmods/rwc_phasecoils.png
+Enhanced Rangefinder,rwc_rangefinder,,,,,,,,TRUE,,0,0,0,0,data.hullmods.rwc_rangefinder,<tooltip created in the script due to lots of highlighting>,Increases ballistic weapon range,,graphics/hullmods/ballistic_rangefinder.png

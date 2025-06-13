@@ -1,7 +1,7 @@
 {
     "displayName": "Custom",
     "fluxCapacitors": 0,
-    "fluxVents": 1,
+    "fluxVents": 5,
     "goalVariant": true,
     "hullId": "swp_boss_sporeship_ll",
     "hullMods": [

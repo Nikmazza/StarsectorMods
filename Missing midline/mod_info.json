@@ -2,7 +2,7 @@
     "id": "missingmidlineships",
     "name": "Missing Midline Ships",
     "author": "Scarface, IceFire",
-    "version": "1.0.3",
+    "version": "2.0.2",
     "description": "Adds midline ships the the rooster.",
-    "gameVersion": "0.97a",
+    "gameVersion": "0.98a-RC5",
 }

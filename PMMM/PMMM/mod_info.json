@@ -1,0 +1,31 @@
+{
+    "id":"PirateMiniMegaMod", # For the convenience of troubleshooters, include your name and the mod name, not just an acronym.
+	"name":"PMMM", # Displayed to the player
+	"author":"MiniDeth",
+    "utility":"false",
+	"version":"1.7.7",
+	"description":"A mod meant to add variance and a bit of cursed mechanics to pirates.",
+    "gameVersion": "0.98a-RC5",
+	"replace":[
+		#Ships
+
+        #Variants
+		
+	],
+  	"jars":["jars/PMMM.jar"],
+    "modPlugin":"data.plugins.PMMModPlugin",
+	  	"dependencies": [
+        {
+            "id": "lw_lazylib",
+            "name": "LazyLib"
+        },
+        {
+            "id": "MagicLib",
+            "name": "MagicLib"
+        },
+        {
+            "id": "shaderLib",
+            "name": "GraphicsLib"
+        }
+    ],
+}

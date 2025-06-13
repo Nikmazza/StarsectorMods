@@ -1,0 +1,67 @@
+{
+    "displayName": "Networked",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "goalVariant": false,
+    "hullId": "vice_champion_auto",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter",
+        "vice_unified_targeting_core",
+        "vice_module_handler",
+        "vice_mission_deloy_mayfly",
+        "hardened_subsystems",
+        "safetyoverrides",
+        "vice_adaptive_flux_dissipator"
+    ],
+    "permaMods": [
+        "vice_mission_deloy_mayfly",
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter",
+        "vice_unified_targeting_core",
+        "vice_module_handler"
+    ],
+    "sMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter",
+        "vice_unified_targeting_core"
+    ],
+    "variantId": "vice_champion_ai_mission",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "ioncannon",
+                "WS 001": "ioncannon",
+                "WS 008": "vice_deadeye_plasma"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "cyclone"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "sabotpod",
+                "WS 011": "sabotpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser",
+                "WS 005": "pdlaser",
+                "WS 006": "heavymg",
+                "WS 007": "heavymg"
+            }
+        }
+    ],
+    "wings": []
+}

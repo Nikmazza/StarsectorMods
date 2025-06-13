@@ -1,0 +1,43 @@
+{
+    "displayName": "FTR Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "TADA_cassicus",
+    "hullMods": [
+        "advancedoptics",
+        "converted_hangar",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_cassicus_ftrsupport",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "hil",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "swarmer",
+                "WS0002": "swarmer",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "lrpdlaser",
+                "WS0004": "lrpdlaser",
+                "WS0005": "lrpdlaser",
+            }
+       },
+    ],
+    "wings": [
+        "TADA_pinnace_wing",
+    ],
+}

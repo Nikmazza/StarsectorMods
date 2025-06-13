@@ -1,7 +1,5 @@
 package data.scripts.campaign.econ;
 
-import java.awt.Color;
-
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -15,6 +13,7 @@ import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
+import java.awt.Color;
 
 public class II_InterstellarBazaar extends BaseIndustry implements MarketImmigrationModifier {
 

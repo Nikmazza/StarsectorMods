@@ -3,7 +3,7 @@
   "hullId": "hmi_greasy",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 10,
+  "fluxCapacitors": 9,
   "fluxVents": 10,
   "quality": 0,
   "permaMods": [],
@@ -17,7 +17,8 @@
       "mode": "LINKED",
       "weapons": {
         "WS0002": "sml_shotgrun",
-        "WS0003": "sml_shotgrun"
+        "WS0003": "sml_shotgrun",
+        "WS0004": "ioncannon"
       }
     },
     {
@@ -31,9 +32,7 @@
     {
       "autofire": true,
       "mode": "ALTERNATING",
-      "weapons": {
-        "WS0004": "irpulse"
-      }
+      "weapons": {}
     },
     {
       "autofire": true,

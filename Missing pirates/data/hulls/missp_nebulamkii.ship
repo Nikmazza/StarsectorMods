@@ -12,8 +12,6 @@
   "shieldRadius": 107.5,
   "viewOffset": 0,
   "builtInMods": [
-    "civgrade",
-    "ecm",
     "nav_relay",
     "eccm"
   ],
@@ -23,8 +21,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 270,
-      "angle": 135,
+      "arc": 156,
+      "angle": 116.5,
       "locations": [-61, 34]
     },
     {
@@ -32,8 +30,8 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 270,
-      "angle": -135,
+      "arc": 156,
+      "angle": -116.5,
       "locations": [-61, -34]
     },
     {
@@ -41,7 +39,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 130,
+      "arc": 152,
       "angle": 45,
       "locations": [73.5, 28.5]
     },
@@ -50,7 +48,7 @@
       "size": "SMALL",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 130,
+      "arc": 152,
       "angle": -45,
       "locations": [73.5, -28.5]
     },
@@ -59,7 +57,7 @@
       "size": "MEDIUM",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 190,
+      "arc": 143,
       "angle": 90,
       "locations": [-25, 40]
     },
@@ -68,7 +66,7 @@
       "size": "MEDIUM",
       "type": "BALLISTIC",
       "mount": "TURRET",
-      "arc": 190,
+      "arc": 143,
       "angle": -90,
       "locations": [-25, -40]
     },
@@ -77,7 +75,7 @@
       "size": "SMALL",
       "type": "MISSILE",
       "mount": "HARDPOINT",
-      "arc": 0,
+      "arc": 5,
       "angle": 90,
       "locations": [25, 43]
     },
@@ -86,7 +84,7 @@
       "size": "SMALL",
       "type": "MISSILE",
       "mount": "HARDPOINT",
-      "arc": 0,
+      "arc": 5,
       "angle": -90,
       "locations": [25, -43]
     },
@@ -97,7 +95,10 @@
       "mount": "HIDDEN",
       "arc": 360,
       "angle": 0,
-      "locations": [72, 0.5]
+      "locations": [
+        62, 13,
+        64, -10.5
+      ]
     }
   ],
   "engineSlots": [

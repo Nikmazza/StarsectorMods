@@ -1,0 +1,33 @@
+{
+	"carrierSmall":{
+        "kazeron_drover_league_elite":10,
+    },
+    "carrierMedium":{
+        "kazeron_heron_league_elite":10,
+    },
+	"combatSmall":{
+		"kazeron_brawler_league_assault":10,
+		"kazeron_brawler_league_supressor":7,
+		"kazeron_centurion_league_escort":10,
+		"kazeron_vigilance_league_elite":10,
+		"kazeron_monitor_league_escort":10,
+	},
+	"combatMedium":{
+		"kazeron_hammerhead_league_assault":10,
+		"kazeron_hammerhead_league_strike":7,
+		"kazeron_sunder_league_elite":10,
+	},
+	"combatLarge":{
+		"kazeron_gryphon_league_elite":6,
+		"kazeron_champion_league_elite":7,
+		"kazeron_champion_league_strike":10,
+		"kazeron_eagle_league_elite":10,
+		"kazeron_falcon_league_elite":10,
+	},
+	"combatCapital":{
+		"kazeron_conquest_league_suppressor":8,
+		"kazeron_conquest_league_assault":10,
+		"kazeron_conquest_league_elite":7,
+		"kazeron_pegasus_league_elite":10,
+	},
+}

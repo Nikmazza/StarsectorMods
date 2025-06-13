@@ -1,0 +1,60 @@
+{
+  "variantId": "csp_deputy_overdrive",
+  "hullId": "csp_deputy",
+  "displayName": "Overdriven",
+  "goalVariant": true,
+  "fluxCapacitors": 3,
+  "fluxVents": 5,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "reinforcedhull",
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "heavymg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "csp_deputy_head"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0019": "lightmg",
+        "WS0020": "lightmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "lightmg"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0016": "csp_deputy_legL_module"
+    },
+    {
+      "WS0015": "csp_deputy_legR_module"
+    }
+  ],
+  "wings": []
+}

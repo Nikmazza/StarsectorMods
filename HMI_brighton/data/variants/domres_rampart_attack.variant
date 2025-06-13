@@ -1,0 +1,41 @@
+{
+  "variantId": "domres_rampart_attack",
+  "hullId": "domres_rampart",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 4,
+  "fluxVents": 22,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "safetyoverrides",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "devastator",
+        "WS 001": "devastator",
+        "WS 002": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "annihilatorpod",
+        "WS 004": "annihilatorpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

@@ -8,6 +8,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.hullmods.HighScatterAmp.HighScatterAmpDamageDealtMod;
+import com.fs.starfarer.api.impl.hullmods.HighScatterAmp.HighScatterAmpRangeMod;
 import com.fs.starfarer.api.util.IntervalUtil;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -79,12 +80,29 @@ public class SWP_RayCore extends BaseHullMod {
                 } else if (!mothership.hasListenerOfClass(HighScatterAmpDamageDealtMod.class) && ship.hasListenerOfClass(HighScatterAmpDamageDealtMod.class)) {
                     ship.removeListenerOfClass(HighScatterAmpDamageDealtMod.class);
                 }
+                if (mothership.hasListenerOfClass(HighScatterAmpRangeMod.class) && !ship.hasListenerOfClass(HighScatterAmpRangeMod.class)) {
+                    ship.addListener(new HighScatterAmpRangeMod());
+                } else if (!mothership.hasListenerOfClass(HighScatterAmpRangeMod.class) && ship.hasListenerOfClass(HighScatterAmpRangeMod.class)) {
+                    ship.removeListenerOfClass(HighScatterAmpRangeMod.class);
+                }
             }
         }
     }
 
     @Override
     public String getDescriptionParam(int index, HullSize hullSize) {
+        if (index == 0) {
+            return "" + (int) DAMAGE_MISSILES_PERCENT + "%";
+        }
+        if (index == 1) {
+            return "" + (int) DAMAGE_FIGHTERS_PERCENT + "%";
+        }
+        if (index == 2) {
+            return "" + (int) Math.round((1f - DAMAGE_SHIELDS_MULT) * 100f) + "%";
+        }
+        if (index == 3) {
+            return "High Scatter Amplifier";
+        }
         return null;
     }
 

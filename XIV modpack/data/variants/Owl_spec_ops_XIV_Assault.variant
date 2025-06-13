@@ -1,0 +1,36 @@
+{
+  "variantId": "Owl_spec_ops_XIV_Assault",
+  "hullId": "Owl_spec_ops_XIV",
+  "displayName": "Spec Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 22,
+  "fluxVents": 23,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "ecm",
+    "hardenedshieldemitter",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ioncannon_fighter",
+        "WS0002": "heavyneedler",
+        "WS0003": "heavyneedler",
+        "WS0004": "heavymauler",
+        "WS0005": "heavymauler",
+        "WS0006": "ioncannon",
+        "WS0007": "ioncannon",
+        "WS0008": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing"
+  ]
+}

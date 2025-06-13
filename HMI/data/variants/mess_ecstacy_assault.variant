@@ -3,7 +3,7 @@
   "hullId": "mess_ecstacy",
   "displayName": "Assault",
   "goalVariant": true,
-  "fluxCapacitors": 3,
+  "fluxCapacitors": 2,
   "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
@@ -49,7 +49,8 @@
       "weapons": {
         "WS0003": "salamanderpod",
         "WS0004": "salamanderpod",
-        "WS0011": "ioncannon"
+        "WS0011": "ioncannon",
+        "WS0012": "ioncannon"
       }
     }
   ],

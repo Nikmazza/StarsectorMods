@@ -65,46 +65,46 @@ public class HMI_HorrorSpawner2 extends BaseHullMod {
 	static {
 
 		ShardTypeVariants small = new ShardTypeVariants();
-		variantData.put(HullSize.CAPITAL_SHIP, small);
+		variantData.put(HullSize.FRIGATE, small);
 
-		small.get(ShardType.GENERAL).add("hmi_spookyboi_phase3_variant", 10f);
+		small.get(ShardType.GENERAL).add("hmi_spookyboi_phase2_left_std", 10f);
 
-		small.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase3_variant", 10f);
+		small.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase2_left_std", 10f);
 
-		small.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase3_variant", 10f);
+		small.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase2_left_std", 10f);
 
 
-		small.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase3_variant", 10f);
+		small.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase2_left_std", 10f);
 
-		small.get(ShardType.MISSILE).add("hmi_spookyboi_phase3_variant", 10f);
+		small.get(ShardType.MISSILE).add("hmi_spookyboi_phase2_left_std", 10f);
 
 
 
 		ShardTypeVariants medium = new ShardTypeVariants();
-		variantData.put(HullSize.CAPITAL_SHIP, medium);
+		variantData.put(HullSize.DESTROYER, medium);
 
-		medium.get(ShardType.GENERAL).add("hmi_spookyboi_phase3_variant");
+		medium.get(ShardType.GENERAL).add("hmi_spookyboi_phase2_right_std", 10f);
 
-		medium.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase3_variant");
+		medium.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase2_right_std", 10f);
 
-		medium.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase3_variant");
+		medium.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase2_right_std", 10f);
 
-		medium.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase3_variant");
+		medium.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase2_right_std", 10f);
 
-		medium.get(ShardType.MISSILE).add("hmi_spookyboi_phase3_variant");
+		medium.get(ShardType.MISSILE).add("hmi_spookyboi_phase2_right_std", 10f);
 
 		ShardTypeVariants large = new ShardTypeVariants();
 		variantData.put(HullSize.CAPITAL_SHIP, large);
 
-		large.get(ShardType.GENERAL).add("hmi_spookyboi_phase3_variant");
+		large.get(ShardType.GENERAL).add("hmi_spookyboi_phase3_variant", 10f);
 
-		large.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase3_variant");
+		large.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase3_variant", 10f);
 
-		large.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase3_variant");
+		large.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase3_variant", 10f);
 
-		large.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase3_variant");
+		large.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase3_variant", 10f);
 
-		large.get(ShardType.MISSILE).add("hmi_spookyboi_phase3_variant");
+		large.get(ShardType.MISSILE).add("hmi_spookyboi_phase3_variant", 10f);
 	}
 
 	public static class ShardSpawnerData {
@@ -158,53 +158,53 @@ public class HMI_HorrorSpawner2 extends BaseHullMod {
 		float maxFrigates = 0f;
 
 		if (ship.isCapital()) {
-			splitWeight = 1f;
+			splitWeight = 3f;
 
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		} else if (ship.isCruiser()) {
-			splitWeight = 1f;
+			splitWeight = 3f;
 
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		} else if (ship.isDestroyer()) {
-			splitWeight = 1f;
+			splitWeight = 3f;
 
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		} else if (ship.isFrigate()) {
-			splitWeight = 1f;
+			splitWeight = 3f;
 
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		}
 		WeightedRandomPicker<ShardType> typePicker = getTypePickerBasedOnLocalConditions(ship);
 
@@ -241,29 +241,29 @@ public class HMI_HorrorSpawner2 extends BaseHullMod {
 
 
 			if (cruiser) {
-				ShardTypeVariants variants = variantData.get(HullSize.CAPITAL_SHIP);
+				ShardTypeVariants variants = variantData.get(HullSize.CRUISER);
 				WeightedRandomPicker<String> variantPicker = variants.get(type);
 				variant = variantPicker.pick();
 				if (variant != null) {
-					weight = 4f;
+					weight = 1f;
 					cruisers++;
 					cruiserProb *= cruiserProbMult;
 				}
 			}
 
 			if (destroyer && variant == null) {
-				ShardTypeVariants variants = variantData.get(HullSize.CAPITAL_SHIP);
+				ShardTypeVariants variants = variantData.get(HullSize.DESTROYER);
 				WeightedRandomPicker<String> variantPicker = variants.get(type);
 				variant = variantPicker.pick();
 				if (variant != null) {
-					weight = 2f;
+					weight = 1f;
 					destroyers++;
 					destroyerProb *= destroyerProbMult;
 				}
 			}
 
 			if (frigate && variant == null) {
-				ShardTypeVariants variants = variantData.get(HullSize.CAPITAL_SHIP);
+				ShardTypeVariants variants = variantData.get(HullSize.FRIGATE);
 				WeightedRandomPicker<String> variantPicker = variants.get(type);
 				variant = variantPicker.pick();
 				if (variant != null) {

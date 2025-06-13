@@ -3,10 +3,8 @@ package mmm.missions;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
-import com.fs.starfarer.api.impl.campaign.ids.Ranks;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation;
+import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
@@ -15,7 +13,6 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent;
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger.TriggerAction;
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger.TriggerActionContext;
-import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -26,42 +23,49 @@ import java.awt.Color;
 import java.text.MessageFormat;
 import java.util.*;
 
+import mmm.Utils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.lwjgl.util.vector.Vector2f;
-import org.magiclib.campaign.MagicFleetBuilder;
 import org.magiclib.util.MagicSettings;
 
+import static com.fs.starfarer.api.campaign.rules.MemKeys.MARKET;
+
 public class DefenseMission extends HubMissionWithBarEvent implements FleetEventListener {
-    private static final String MOD_ID = OrbitalMissionBase.MOD_ID;
+    private static final String MOD_ID = Utils.MOD_ID;
     private static final Logger log = Global.getLogger(DefenseMission.class);
     static {
         if (MagicSettings.getBoolean(MOD_ID, "MmmDebug")) {
             log.setLevel(Level.ALL);
         }
     }
-    public static enum Stage {
+    public enum Stage {
         ACCEPTED,
         IN_SYSTEM,
         COMPLETED,
         FAILED
     }
 
+    // Strings:
     public static final String MISSION_ID = "mmm_dm";
+
+    // Memory flags:
     public static final String MISSION_DATA_KEY = "$mmm_dm_mission_data";
-    public static final String STRENGTH_RATIO_KEY = "$mmm_dm_strength_ratio";
+    public static final String DIFFICULTY_KEY = "$mmm_dm_difficulty";
+    public static final String TIMEOUT_KEY = "$mmm_dm_timeout";
+
+    // Settings:
     // How far to spawn enemy fleets away from the station.
     public static final float SPAWN_DISTANCE_MIN = 5500f;
     public static final float SPAWN_DISTANCE_MAX = 6000f;
     // How many arc does the enemy spawn from?
     public static final int SPAWN_DEGREES = 45;
-    // An enemy fleet is considered to be defeated if its fleet strength falls at or below this ratio. Note that
-    // MagicLib generates logistic ships at 20% of total
-    public static final float FLEET_DEFEAT_RATIO = 0.4f;
+    // Note that timestamp is in game milliseconds, while float time is game days, but advance is called with
+    // real seconds (10 real seconds = 1 game day).
     // Beware of overflow if you convert this to float instead of double.
-    public static final long MILLISECONDS_PER_DAY = 86400000L;
+    public static final long MILLISECONDS_PER_DAY = OrbitalMissionBase.MILLISECONDS_PER_DAY;
     // Maximum number of fleets to show in the intel screen.
-    public static final int MAX_FLEETS_TO_SHOW = 10;
+    public static final int MAX_FLEETS_TO_SHOW = 20;
     // Add this fraction only enemy fleet points as supplies to their cargo
     public static final float PLAYER_FP_TO_SUPPLIES_RATIO = 0.75f;
     // Don't generate multiple fleets if it would result in smaller fleets then this limit, so the enemy fleets have
@@ -70,20 +74,16 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
 
     // These following settings are loaded from modSettings.json after restart:
     // Chance to add contact after mission success
-    public static final float POTENTIAL_CONTACT_PROB =
-            MagicSettings.getFloat(MOD_ID, "DmPotentialContactProbability");
+//    public static final float POTENTIAL_CONTACT_PROB =
+//            MagicSettings.getFloat(MOD_ID, "DmPotentialContactProbability");
     // How many days you need to defend the station after arriving in system.
     public static final int MAX_DEFEND_DAYS = MagicSettings.getInteger(MOD_ID, "DmMaxDefendDays");
-    // How many credits you get per fleet strength.
-    public static final int CREDIT_REWARD_PER_FP = MagicSettings.getInteger(MOD_ID, "DmCreditRewardPerFp");
+    // How many price you get per fleet strength.
+    public static int CREDIT_REWARD_PER_FP;
     // Minimum credit you get per mission.
-    public static final int MIN_CREDIT_REWARD = MagicSettings.getInteger(MOD_ID, "DmMinCreditReward");
-    // Changes the effective fleet strength of the station for enemy strength calculation. This smaller this ratio,
-    // the weaker the enemy is initially.
-    public static final float STATION_EFFECTIVE_FP_RATIO =
-            MagicSettings.getFloat(MOD_ID, "DmStationEffectiveFpRatio");
+    public static int MIN_CREDIT_REWARD;
     // How much the max enemy fleet strength grows after a successful mission (based on current enemy fleet strength).
-    public static final float DIFFICULTY_GROWTH = MagicSettings.getFloat(MOD_ID, "DmDifficultyGrowth");
+    public static float DIFFICULTY_GROWTH;
     // Reduce your mission credit by this ratio of station fleet strength; the smaller this number is, the less the
     // station FP matters in reward computation and the more credit you get.
     public static final float STATION_FP_REWARD_REDUCTION =
@@ -93,16 +93,24 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
     public static final float SINGLE_FACTION_PROB = MagicSettings.getFloat(MOD_ID, "DmSingleFactionProb");
     // The time granularity for changing invasion decisions. The actual limit is between 80% and 120% of this value.
     public static final int INVASION_TIME_PERIOD_DAYS = MagicSettings.getInteger(MOD_ID, "DmInvasionTimePeriodDays");
-    // The first time you visit a market, what's the chance that there's an invasion? If you fail the roll, you
-    // need to wait INVASION_TIME_PERIOD_DAYS for the invasion to arrive.
-    public static final float INVASION_PROB =MagicSettings.getFloat(MOD_ID, "DmInvasionProb");
+    // Invasion probability for each time window.
+    public static float INVASION_PROB;
     // If true generate enemies from any factions with ships, including hidden factions, like omega and Lion's Guard.
     // Can spoil content and break immersion if set to true. If false also skip factions with no markets.
-    public static final boolean USE_HIDDEN_FACTIONS = MagicSettings.getBoolean(MOD_ID, "DmUseHiddenFactions");
+    public static boolean USE_HIDDEN_FACTIONS;
+    // If set allied fleets won't chase after the enemy fleets, making it more likely that they will make it to the
+    // station.
+    public static boolean ENEMY_IGNORED_BY_OTHER_FLEETS;
+    // Limit the maximum size of enemy fleets.
+    public static int MAX_ENEMY_FP;
+    // Blacklist the provided faction ID from enemy fleet reinforcement; has priority over FACTION_WHITELIST.
     public static final Set<String> FACTION_BLACKLIST =
             new HashSet<>(MagicSettings.getList(MOD_ID, "DmReinforcementFactionBlacklist"));
-    public static final Map<String, Float> FACTION_STRENGTH_RATIO =
-            new HashMap<>(MagicSettings.getFloatMap(MOD_ID, "DmFactionStrengthRatio"));
+    // Treat the provided provided faction ID as non-hidden (and has markets), allowing it to be used even if
+    // USE_HIDDEN_FACTIONS is false.
+    public static final Set<String> FACTION_WHITELIST =
+            new HashSet<>(MagicSettings.getList(MOD_ID, "DmReinforcementFactionWhitelist"));
+    public static final Map<String, Float> FACTION_STRENGTH_RATIO = OrbitalMissionBase.FACTION_STRENGTH_RATIO;
 
     public MissionData mission_data = null;  // also attached to the Market's memory permanently
     public CampaignFleetAPI station = null;  // The defending station.
@@ -143,29 +151,46 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
     public static class WakeUpEnemyFleetsAction implements TriggerAction {
         public List<CampaignFleetAPI> fleets;
         public CampaignFleetAPI target;
+        public List<String> reinforcementFactions;
         public Random random;
-        public WakeUpEnemyFleetsAction(List<CampaignFleetAPI> fleets, CampaignFleetAPI target, Random random) {
+        public WakeUpEnemyFleetsAction(List<CampaignFleetAPI> fleets, CampaignFleetAPI target,
+                                       List<String> reinforcementFactions, Random random) {
             this.fleets = fleets;
             this.target = target;
+            this.reinforcementFactions = reinforcementFactions;
             this.random = random;
         }
 
         @Override
         public void doAction(TriggerActionContext context) {
-            String enemy_faction = pickEnemyFaction(target.getFaction());
-            log.debug("WakeUpEnemyFleetAction.doAction: " + enemy_faction);
+            String enemy_faction = pickEnemyFaction(target.getFaction(), reinforcementFactions);
+//            log.debug("WakeUpEnemyFleetAction.doAction: " + enemy_faction);
+            String actionText = "attacking " + target.getName();
             Vector2f target_loc = target.getLocation();
             float base_angle = (float) random.nextFloat() * 360;
             for (CampaignFleetAPI fleet : fleets) {
                 if (enemy_faction != null) {
                     fleet.setFaction(enemy_faction, true);
                 }
+
+                // Ensure the fleet is in the right system
+                // TODO: revert?
+                if (fleet.getContainingLocation() != null) {
+                    fleet.getContainingLocation().removeEntity(fleet);
+                }
+                target.getContainingLocation().addEntity(fleet);
+
                 float distance = SPAWN_DISTANCE_MIN + random.nextFloat() * (SPAWN_DISTANCE_MAX - SPAWN_DISTANCE_MIN);
                 float angle = base_angle + (float) (Math.random() * SPAWN_DEGREES) % 360;
                 float angle_radians = (float) (angle * Math.PI * 2f / 360);
                 float x = (float) (Math.cos(angle_radians) * distance) + target_loc.x;
                 float y = (float) (Math.sin(angle_radians) * distance) + target_loc.y;
                 fleet.setLocation(x, y);
+
+                fleet.clearAssignments();
+                // Less likely to be distracted by hostile fleets then ATTACK_LOCATION
+                fleet.addAssignment(FleetAssignment.DELIVER_MARINES, target, 1000f, actionText);
+                fleet.addAssignment(FleetAssignment.ATTACK_LOCATION, target, 1000f, actionText);
                 fleet.setDoNotAdvanceAI(false);
             }
         }
@@ -184,176 +209,187 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         // When does the fleet expire and has to be regenerated?
         public long fleet_expiration_ts = Long.MAX_VALUE;
 
-        // Did the last roll succeeds?
-        public boolean roll_result = false;
-        // When the roll result expires; afterward if the roll was a success then no invasion is allowed for 1 cool down
-        // period. If the roll was a fail then the invasion is guaranteed for 2 cool down periods. In either case
-        // you have to re-roll afterward.
-        public long roll_expires_ts = Long.MIN_VALUE;
-        // Never earlier than roll_expires_ts.
-        public long cool_down_end_ts = Long.MIN_VALUE;
+        public long invasionsStartTs = 0;
+        public long milliPerIndex = 0;
+        public int savedPct = 0;  // Propagate invasion probability change quickly
+        public int invasionBits = 0;
+        public BitSet invasions = null;
 
         public void ClearFleets() {
             fleets.clear();
             defeat_thresholds.clear();
             reinforcement_factions.clear();
             difficulty = 0;
-            fleet_expiration_ts = cool_down_end_ts;
         }
-        public void ClearAndDespawnFleets() {
+
+        // Also sets the fleet expiration time for the fleet to be generated.
+        public void ClearAndDespawnFleets(long now) {
             for (CampaignFleetAPI fleet : fleets) {
                 fleet.despawn();
             }
             ClearFleets();
+            if (now > Long.MIN_VALUE && milliPerIndex > 0) {
+//                fleet_expiration_ts = roll_expires_ts > now ? roll_expires_ts : now + 2L * INVASION_TIME_PERIOD_DAYS;
+                fleet_expiration_ts = now + milliPerIndex;
+            }
         }
 
-        public static long pickNewTs(long now, int time_periods, Random random) {
-            double delay_days = time_periods * INVASION_TIME_PERIOD_DAYS * (0.85 + 0.3 * random.nextDouble());
-            return now + Math.round(delay_days * MILLISECONDS_PER_DAY);
-        }
+//        public static long pickNewTs(long now, float time_periods, Random random) {
+//            double factor = random == null ? 1.0 : 0.85 + 0.3 * random.nextDouble();
+//            double delay_days = time_periods * INVASION_TIME_PERIOD_DAYS * factor;
+//            return now + Math.round(delay_days * MILLISECONDS_PER_DAY);
+//        }
 
         // Representing a string representing timestamp ts.
         public static String getDaysFromNowStr(long now, long ts) {
-            if (ts == Long.MIN_VALUE) return "-inf";
-            if (ts == Long.MAX_VALUE) return "inf";
-            return String.format("%.1f days", (ts - now) / (double) MILLISECONDS_PER_DAY);
+            return OrbitalMissionBase.getDaysFromNowStr(now, ts);
         }
 
-        // Check the roll results, re-roll if necessary.
+        // Check the invasion bitmap for roll results.
         public boolean checkRollResultAndReRoll(boolean is_player_owned, Random random) {
+            float prob = is_player_owned ? (float) Math.sqrt(INVASION_PROB) : INVASION_PROB;
+            if (prob < 0.01f) return false;
+            if (prob > 0.99f || Global.getSettings().isDevMode()) return true;
+
             long now = Global.getSector().getClock().getTimestamp();
-            boolean result;
-            Float roll = null;
-            if (now >= cool_down_end_ts) {
-                // Needs to re-roll
-                if (Global.getSettings().isDevMode()) {
-                    roll = -1f;
-                } else {
-                    roll = random.nextFloat();
+            int pct = Math.round(prob * 100);
+            if (invasions == null || savedPct != pct) {
+                invasionsStartTs = now;
+                double factor = 0.85 + 0.3 * random.nextDouble();
+                milliPerIndex = Math.round(INVASION_TIME_PERIOD_DAYS * MILLISECONDS_PER_DAY * factor);
+                savedPct = pct;
+
+                invasionBits = Math.min(100, Math.round(prob > 0.5f ? 2f / (1 - prob) : 2f / prob));
+                int bitsToSet = (int) (invasionBits * prob);
+                if (random.nextFloat() < invasionBits * prob - bitsToSet) {
+                    ++bitsToSet;
                 }
-                // Great invasion chance for player faction.
-                result = roll_result = roll <= (is_player_owned ? (INVASION_PROB + 1f) / 2 : INVASION_PROB);
-                roll_expires_ts = pickNewTs(now, 1, random);
-                // Give 2 time period time to see the guaranteed invasion after a failed roll.
-                cool_down_end_ts = pickNewTs(roll_expires_ts, roll_result ? 1 : 2, random);
-            } else if (now >= roll_expires_ts) {
-                result = !roll_result;
-            } else {
-                result = roll_result;
+
+                List<Boolean> bits = new ArrayList<>(Collections.nCopies(invasionBits, false));
+                for (int i = 0; i < bitsToSet; ++i) {
+                    bits.set(i, true);
+                }
+                Collections.shuffle(bits, random);
+                invasions = new BitSet(bits.size());
+                for (int i = 0; i < bits.size(); ++i) {
+                    if (bits.get(i)) {
+                        invasions.set(i);
+                    }
+                }
             }
+
+            int index = (int) ((now - invasionsStartTs) / milliPerIndex);
+            if (index >= invasionBits) {
+                invasions = null;
+                return checkRollResultAndReRoll(is_player_owned, random);
+            }
+            boolean roll = invasions.get(index);
+
+//            log.debug(MessageFormat.format(
+//                    "checkRollResultAndReRoll: roll={0}, prob={1}, index={2}, size={3}, milliPerIndex={3}, fleet_expiration_ts={4}, size={5}, invasions={6}",
+//                    roll, prob, index, getDaysFromNowStr(now, now + milliPerIndex), getDaysFromNowStr(now, fleet_expiration_ts), invasionBits, invasions));
             log.debug(MessageFormat.format(
-                    "checkRollResultAndReRoll: invasion={0}, roll={1}, roll_result={2}; roll_expires_ts={3}, " +
-                            "cool_down_end_ts={4}.",
-                    result, roll, roll_result, getDaysFromNowStr(now, roll_expires_ts),
-                    getDaysFromNowStr(now, cool_down_end_ts)));
-            return result;
+                    "roll={0}, prob={1}, index={2}, width={3}, size={4}, invasions={5}",
+                    roll, prob, index, getDaysFromNowStr(now, now + milliPerIndex), invasionBits, invasions));
+            return roll;
         }
 
-        // Called on accept to ensure that checkRollResultAndReRoll returns false and no re-rolls.
-        public void lockMarket() {
-            roll_result = false;
-            roll_expires_ts = Long.MAX_VALUE;
-            cool_down_end_ts = Long.MAX_VALUE;
-        }
-
-        // Called on endFailureImpl to unlock the market.
-        public void unlockMarket(Random random) {
-            roll_expires_ts = cool_down_end_ts =
-                    pickNewTs(Global.getSector().getClock().getTimestamp(), 1, random);
-        }
-    }
-
-    // Compares 2 fleets by effective strength
-    public static class CompareFleetByStrength implements Comparator<CampaignFleetAPI> {
-        @Override
-        public int compare(CampaignFleetAPI o0, CampaignFleetAPI o1) {
-            return Math.round(o0.getEffectiveStrength() - o1.getEffectiveStrength());
-        }
-    }
-
-    // Compares 2 fleets by fleet strength difference with the expected value.
-    public static class CompareFleetByFpDiff implements Comparator<CampaignFleetAPI> {
-        public int expected_fp;
-        public CompareFleetByFpDiff(int expected_fp) {
-            this.expected_fp = expected_fp;
-        }
-        @Override
-        public int compare(CampaignFleetAPI o1, CampaignFleetAPI o2) {
-            return Math.abs(expected_fp - getFleetStrength(o1)) - Math.abs(expected_fp - getFleetStrength(o2));
+        public void clearInvasionBitSet() {
+            invasions = null;
         }
     }
 
     // Obtains all faction ids, with no duplicates, such that those appearing in preferred appears first in the provided
-    // order.
+    // order. Here preferred can have duplicates.
     public static List<String> getAllFactionIds(List<String> preferred) {
-        HashSet<String> existing = new HashSet<>();
-        ArrayList<String> order = new ArrayList<>();
-        if (preferred != null) {
-            for (String id : preferred) {
-                if (existing.add(id)) {
-                    order.add(id);
-                }
-            }
+        LinkedHashSet<String> order;
+        if (preferred == null) {
+            order = new LinkedHashSet<>();
+        } else {
+            order = new LinkedHashSet<>(preferred);
         }
 
+//        HashSet<String> existing = new HashSet<>();
+//        ArrayList<String> order = new ArrayList<>();
+//        if (preferred != null) {
+//            for (String id : preferred) {
+//                if (existing.add(id)) {
+//                    order.add(id);
+//                }
+//            }
+//        }
+
         for (FactionAPI faction : Global.getSector().getAllFactions()) {
-            if (existing.add(faction.getId())) {
-                order.add(faction.getId());
-            }
+            order.add(faction.getId());
+//            if (existing.add(faction.getId())) {
+//                order.add(faction.getId());
+//            }
         }
-        return order;
+        return new ArrayList<>(order);
     }
 
     // Find a faction for the enemy fleet, and check that the market is not hostile to you.
-    public static String pickEnemyFaction(FactionAPI market_faction) {
+    public static String pickEnemyFaction(FactionAPI market_faction, List<String> preferred) {
         // Must be hostile with the enemy faction but not hostile with the defending faction or else you won't be able
         // to join the battle.
         FactionAPI player_faction = Global.getSector().getPlayerFaction();
-        if (market_faction.isAtBest(player_faction, RepLevel.HOSTILE)) {
+        if (market_faction.isHostileTo(player_faction)) {
             log.debug("Relationship with " + market_faction.getDisplayName() + " is hostile");
             return null;
         }
 
         // The enemy faction must also be hostile to both the player and market.
-        List<String> faction_ids = getAllFactionIds(
+        if (preferred == null) {
+            preferred = new ArrayList<>();
+        }
+        preferred.addAll(
                 Arrays.asList(Factions.PIRATES, Factions.REMNANTS, Factions.OMEGA, Factions.LUDDIC_PATH));
-        for (String faction_id :faction_ids) {
-            if (player_faction.isAtBest(faction_id, RepLevel.HOSTILE) &&
-                    market_faction.isAtBest(faction_id, RepLevel.HOSTILE)) {
+        List<String> faction_ids = getAllFactionIds(preferred);
+        for (String faction_id : faction_ids) {
+            if (player_faction.isHostileTo(faction_id) && market_faction.isHostileTo(faction_id)) {
                 return faction_id;
             }
         }
-        log.debug("Cannot find an enemy faction.");
+        log.error("Cannot find an enemy faction.");
         return null;
     }
 
     // If the market is eligible for this mission right now, returns the station fleet.
     public static CampaignFleetAPI getStationIfEligible(MarketAPI market, Random random) {
-        if (random == null) return null;  // sanity check
+        if (market == null || market.getMemoryWithoutUpdate() == null) return null;  // sanity check
 
-        if (pickEnemyFaction(market.getFaction()) == null) return null;
+        if (pickEnemyFaction(market.getFaction(), null) == null) return null;
 
         // Check to ensure that the market has a station industry and fleet and is functional.
         Industry industry = Misc.getStationIndustry(market);
         if (industry == null) {
-            log.debug(market.getName() + " market has no station");
+//            log.debug(market.getName() + " market has no station");
             return null;
         }
         if (!industry.isFunctional()) {
-            log.debug(market.getName() + " station industry is not functional.");
+//            log.debug(market.getName() + " station industry is not functional.");
             return null;
         }
 
         CampaignFleetAPI fleet = Misc.getStationFleet(market);
+        if (fleet == null && industry instanceof OrbitalStation) {
+            try {
+                fleet = ((OrbitalStation) industry).getStationFleet();
+            } catch (Exception ignored) {}
+        }
         if (fleet == null) {
-            log.debug(market.getName() + " station fleet is missing.");
+            log.error(market.getName() + " station fleet is missing.");
             return null;
         }
 
-        // Check invasion timestamps.
+        // Check invasion timeout and window logic.
+        if (market.getMemoryWithoutUpdate().getBoolean(TIMEOUT_KEY)) {
+            return null;
+        }
+
         MissionData data = getMissionData(market);
         if (!data.checkRollResultAndReRoll(market.isPlayerOwned(), random)) {
-            log.debug("No invasions at " + market.getName() + " this time.");
+//            log.debug("No invasions at " + market.getName() + " this time.");
             return null;
         }
 
@@ -362,14 +398,15 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
 
     @Override
     public boolean shouldShowAtMarket(MarketAPI market) {
-        log.debug("shouldShowAtMarket called for " + market.getName());
-        return getStationIfEligible(market, getGenRandom()) != null;
+//        log.debug("shouldShowAtMarket called for " + market.getName());
+        // Get new random so contact/bar missions are consistent.
+        return getStationIfEligible(market, OrbitalMissionBase.getRandom(MISSION_ID, market)) != null;
     }
 
     @Override
     protected boolean create(MarketAPI createdAt, boolean barEvent) {
         String id = getMissionId();
-        log.debug((isBarEvent() ? "bar" : "contact") + " event; create called with mission_id=" + id);
+//        log.debug((barEvent ? "bar" : "contact") + " event; create called with mission_id=" + id);
         if (!id.equals(MISSION_ID)) {
             log.error("Unexpected mission id: " + id);
             return false;
@@ -377,12 +414,17 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
 
         station = getStationIfEligible(createdAt, getGenRandom());
         if (station == null) return false;  // market not eligible
+        station.inflateIfNeeded();
 
         if (barEvent) OrbitalMissionBase.createBarGiver(this, createdAt);
 
         PersonAPI person = getPerson();
         Industry industry = Misc.getStationIndustry(createdAt);
-        if (person == null || person.getMarket() != createdAt || industry == null) return false;  // sanity check
+        // sanity check
+        if (person == null || person.getMarket() != createdAt || industry == null || station.getStarSystem() == null ||
+                createdAt.getStarSystem() == null) {
+            return false;
+        }
 
         // Make sure the faction matches
         if (person.getFaction() != createdAt.getFaction()) {
@@ -416,10 +458,14 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         // briefing, so we will instead create the fleet but move it away and disable it, then move it back after we're
         // within 1 LY of the system after ACCEPT.
         mission_data = getMissionData(createdAt);
-        if (mission_data == null) return false;  // sanity check
+//        if (mission_data == null) return false;  // sanity check
 
         if (!createEnemyFleets(mission_data, station, getGenRandom())) return false;  // Failed to generate a fleet
         if (mission_data.fleets.isEmpty()) return false;  // sanity check
+
+//        for (CampaignFleetAPI fleet : mission_data.fleets) {
+//            changes.add(new EntityAdded(fleet));
+//        }
 
         // set our starting, success and failure stages
         setStartingStage(Stage.ACCEPTED);
@@ -437,7 +483,8 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         // Once you have entered the system, you win if the station is still alive/not disrupted in 20 days.
         connectWithDaysElapsed(Stage.IN_SYSTEM, Stage.COMPLETED, MAX_DEFEND_DAYS);
         connectWithCustomCondition(Stage.IN_SYSTEM, Stage.FAILED, new StationDisruptedChecker(station, industry));
-        // If the enemy fleets are all defeated, you also win.
+        // If the enemy fleets are all defeated, you also win; this check should be added after StationDisruptedChecker
+        // so that if both happens in the same battle StationDisruptedChecker has priority.
         connectWithCustomCondition(Stage.IN_SYSTEM, Stage.COMPLETED,
                 new FleetsDefeatedChecker(mission_data.fleets, mission_data.defeat_thresholds));
 
@@ -456,59 +503,42 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         // When we're within 1LY wakes up the enemy fleet AI and move them to SPAWN_DISTANCE around the station.
         beginWithinHyperspaceRangeTrigger(createdAt, 1f, false,
                 Stage.ACCEPTED, Stage.IN_SYSTEM);
-        triggerCustomAction(new WakeUpEnemyFleetsAction(mission_data.fleets, station, getGenRandom()));
+        triggerCustomAction(new WakeUpEnemyFleetsAction(mission_data.fleets, station,
+                mission_data.reinforcement_factions, getGenRandom()));
         endTrigger();
-
-        // Used by rules.csv
-        MemoryAPI memory = person.getMemoryWithoutUpdate();
-        memory.set("$mmm_dm_reward", Misc.getDGSCredits(getCreditsReward()));
-        if (mission_data.fleets.size() > 1) {
-            memory.set("$mmm_dm_fleet_desc_bar", "fairly powerful fleets");
-            memory.set("$mmm_dm_fleet_desc_contact", "are fairly powerful fleets");
-        } else {
-            memory.set("$mmm_dm_fleet_desc_bar", "a fairly powerful fleet");
-            memory.set("$mmm_dm_fleet_desc_contact", "is a fairly powerful fleet");
-        }
 
         return true;
     }
 
     protected void makeFleetGoAway(CampaignFleetAPI fleet) {
-        if (!fleet.isAlive() ||
-                fleet.getCurrentAssignment().getAssignment() == FleetAssignment.GO_TO_LOCATION_AND_DESPAWN) {
-            return;
-        }
-        fleet.clearAssignments();
-        fleet.addAssignment(FleetAssignment.STANDING_DOWN, null,
-                0.5f + 0.5f * (float) Math.random());
-        String actionText = "leaving system";
-        SectorEntityToken target = Misc.findNearestJumpPoint(fleet);
-        // Less likely to be distracted by hostile fleets then GO_TO_LOCATION_AND_DESPAWN.
-        fleet.addAssignment(FleetAssignment.DELIVER_MARINES, target, 1000f, actionText);
-        fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, target, 1000f, actionText);
+        OrbitalMissionBase.addDespawnAssignment(fleet, true);
         makeUnimportant(fleet);
     }
-
 
     @Override
     protected void endSuccessImpl(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
         // Update difficulty if successful.
         int difficulty = getOrIncreaseDifficulty(mission_data.difficulty);
-        OrbitalMissionBase.addPotentialContact(this, POTENTIAL_CONTACT_PROB);
+        // Assuming defaultPotentialContactProbability is 0.25f, and bar giver has 0 relation before mission (thus 7%
+        // on success, then this results in 50% for non-player faction and 65% for player faction.
+        OrbitalMissionBase.addPotentialContact(this, dialog, 0.67f, 0.47f);
         endFailureImpl(dialog, memoryMap);
         log.info("Mission success; new difficulty=" + difficulty);
     }
 
+    // Also called in endSuccessImpl
     @Override
     protected void endFailureImpl(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
         // Mission is done; make the fleet go away then despawn itself
         for (CampaignFleetAPI fleet : mission_data.fleets) {
             makeFleetGoAway(fleet);
+            // Note that we cannot do this in reportBattleOccurred since we will run into concurrent list modification
+            // error.
             fleet.removeEventListener(this);
         }
         // Note that mission_data is put into the MemoryAPI, so we reuse it for later missions.
-        mission_data.ClearFleets();
-        mission_data.unlockMarket(getGenRandom());
+        mission_data.ClearFleets();  // Does not despawn fleet
+        mission_data.clearInvasionBitSet();
     }
 
     protected static String getStationDesc(CampaignFleetAPI station) {
@@ -527,34 +557,30 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
                 !mission_data.fleets.isEmpty()) {
             final int cols = 7;
             final float opad = 10f;
-            final float iconSize = 440 / cols;
+            final float iconSize = 440f / cols;
             final Color h = Misc.getHighlightColor();
 
             int num_ships = 0;
-            ArrayList<ArrayList<FleetMemberAPI>> members_list = new ArrayList<>();
+            List<List<FleetMemberAPI>> members_list = new ArrayList<>();
             for (CampaignFleetAPI fleet : mission_data.fleets) {
-                ArrayList<FleetMemberAPI> members = new ArrayList<>();
-                for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-                    if (!member.isFighterWing()) {
-                        ++num_ships;
-                        if (members.size() < cols) {
-                            members.add(member);
-                        }
-                    }
+                List<FleetMemberAPI> members = OrbitalMissionBase.sortedFleet(fleet.getFleetData().getMembersListCopy());
+                num_ships += members.size();
+                if (members.size() > cols) {
+                    members = members.subList(0, cols);
                 }
                 members_list.add(members);
             }
 
             String s_or = mission_data.fleets.size() > 1 ? "s" : "";
-            String num_fleets_str = "" + mission_data.fleets.size();
-            String num_ships_str = "" + num_ships;
-            String enemy_str = "" + Math.round(getFleetStrength(mission_data.fleets));
-            String player_str = "" + getPlayerFleetStrength();
-            String station_str = "" + Math.round(station.getEffectiveStrength());
+            String num_fleets_str = String.valueOf(mission_data.fleets.size());
+            String num_ships_str = String.valueOf(num_ships);
+            String enemy_str = String.valueOf(getFleetStrength(mission_data.fleets));
+            String player_str = String.valueOf(getPlayerFleetStrength());
+            String station_str = String.valueOf(Math.round(getFleetStrength(station)));
             Color station_color = station.getFaction().getBaseUIColor();
             String station_desc = getStationDesc(station);
 
-            updateInteractionData(dialog, memoryMap);
+//            updateInteractionData(dialog, memoryMap);
             TextPanelAPI text = dialog.getTextPanel();
 
             TooltipMakerAPI info = text.beginTooltip();
@@ -569,7 +595,8 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
 
             ArrayList<String> highlights = new ArrayList<>();
             ArrayList<Color> hl_colors = new ArrayList<>();
-            String ship_desc = mission_data.reinforcement_factions.size() > 1 ? "a mixture of " : "";
+            StringBuilder ship_desc = new StringBuilder(
+                    mission_data.reinforcement_factions.size() > 1 ? "a mixture of " : "");
             for (int i = 0; i < mission_data.reinforcement_factions.size(); ++i) {
                 FactionAPI faction = Global.getSector().getFaction(mission_data.reinforcement_factions.get(i));
                 String display_name = faction.getDisplayName();
@@ -577,11 +604,11 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
                 hl_colors.add(faction.getBaseUIColor());
 
                 if (i == 0) {
-                    ship_desc += display_name;
+                    ship_desc.append(display_name);
                 } else if (i == mission_data.reinforcement_factions.size() - 1) {
-                    ship_desc += " and " + display_name;
+                    ship_desc.append(" and ").append(display_name);
                 } else {
-                    ship_desc += ", " + display_name;
+                    ship_desc.append(", ").append(display_name);
                 }
             }
             highlights.addAll(Arrays.asList(num_fleets_str, num_ships_str, enemy_str, player_str, station_desc,
@@ -593,11 +620,11 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
                     "containing {3} ships with a combined strength of {4} points. For comparison your " +
                     "ships have {5} points, while our {6} has {7} points.\"";
             info.addPara(
-                    MessageFormat.format(msg, ship_desc, num_fleets_str, s_or, num_ships_str, enemy_str,
+                    MessageFormat.format(msg, ship_desc.toString(), num_fleets_str, s_or, num_ships_str, enemy_str,
                             player_str, station_desc, station_str),
                     opad, hl_colors.toArray(new Color[0]), highlights.toArray(new String[0]));
 
-            String days_str = "" + MAX_DEFEND_DAYS;
+            String days_str = String.valueOf(MAX_DEFEND_DAYS);
             msg = "\"Your mission is to defeat the enemy fleet{0} or protect our {1} for {2} days. You up for it?\"";
             info.addPara(MessageFormat.format(msg, s_or, station_desc, days_str), opad, h, days_str);
             text.addTooltip();
@@ -607,34 +634,57 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
     }
 
     @Override
+    protected void updateInteractionDataImpl() {
+        // Used by rules.csv
+        set("$mmm_dm_reward", Misc.getDGSCredits(getCreditsReward()));
+        if (mission_data.fleets.size() > 1) {
+            set("$mmm_dm_fleet_desc_bar", "fairly powerful fleets");
+            set("$mmm_dm_fleet_desc_contact", "are fairly powerful fleets");
+        } else {
+            set("$mmm_dm_fleet_desc_bar", "a fairly powerful fleet");
+            set("$mmm_dm_fleet_desc_contact", "is a fairly powerful fleet");
+        }
+    }
+
+    @Override
     public void accept(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
         if (station == null || mission_data == null || mission_data.fleets.isEmpty()) return;  // sanity check
 
-        mission_data.lockMarket();
-        String actionText = "attacking " + station.getName();
+        // Lock the market from further invasions for 2 time windows.
+        float factor = 0.85f + 0.3f * getGenRandom().nextFloat();
+        MemoryAPI memory = getPerson().getMarket().getMemoryWithoutUpdate();
+        memory.set(TIMEOUT_KEY, true, 2 * INVASION_TIME_PERIOD_DAYS * factor);
+
         for (CampaignFleetAPI fleet : mission_data.fleets) {
+            OrbitalMissionBase.keepFleetInflated(fleet);
+
             // Making the fleet important also prevents it from being despawned.
             makeImportant(fleet, "$mmm_dm_target", Stage.ACCEPTED, Stage.IN_SYSTEM);
             fleet.addEventListener(this);
 
-            fleet.clearAssignments();
-            // Less likely to be distracted by hostile fleets then ATTACK_LOCATION
-            fleet.addAssignment(FleetAssignment.DELIVER_MARINES, station, 1000f, actionText);
-            fleet.addAssignment(FleetAssignment.ATTACK_LOCATION, station, 1000f, actionText);
+//            fleet.clearAssignments();
+//            // Less likely to be distracted by hostile fleets then ATTACK_LOCATION
+//            fleet.addAssignment(FleetAssignment.DELIVER_MARINES, station, 1000f, actionText);
+//            fleet.addAssignment(FleetAssignment.ATTACK_LOCATION, station, 1000f, actionText);
             // Remove faction impact.
             fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_NO_REP_IMPACT, true);
             fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_LOW_REP_IMPACT, true);
+
+            if (ENEMY_IGNORED_BY_OTHER_FLEETS) {
+                setFlag(fleet, MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, false, Stage.ACCEPTED, Stage.IN_SYSTEM);
+            }
 
             // Adds some extra supplies to the cargo since the enemy sometimes drops very little
             CargoAPI cargo = fleet.getCargo();
             cargo.addSupplies(Math.min(fleet.getFleetPoints() * PLAYER_FP_TO_SUPPLIES_RATIO, cargo.getMaxCapacity()));
         }
-        log.info(MessageFormat.format(
-                "ACCEPTED: enemy_points={0}, player_points={1}, station_points={2}, credit_rewards={3}" +
-                        ", defeat_thresholds=",
-                getFleetStrength(mission_data.fleets), getPlayerFleetStrength(), getFleetStrength(station),
-                getCreditsReward()) + mission_data.defeat_thresholds.toString());
+//        log.info(MessageFormat.format(
+//                "ACCEPTED: enemy_points={0}, player_points={1}, station_points={2}, credit_rewards={3}" +
+//                        ", defeat_thresholds=",
+//                getFleetStrength(mission_data.fleets), getPlayerFleetStrength(), getFleetStrength(station),
+//                getCreditsReward()) + mission_data.defeat_thresholds.toString());
         super.accept(dialog, memoryMap);
+        OrbitalMissionBase.acceptCommon(MISSION_ID, getPerson(), null);
     }
 
     @Override
@@ -681,7 +731,7 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
             if (is_finished) {
                 addResultBulletsAssumingAlreadyIndented(info, mode);
             } else {
-                display_steps = !is_finished;
+                display_steps = true;
             }
         } else if (getResult() != null) {
             if (mode == ListInfoMode.IN_DESC) addResultBulletsAssumingAlreadyIndented(info, mode);
@@ -711,8 +761,7 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
             int arrive_days = Math.max(1, Math.round(timeLimit.days - elapsed));
             int defend_days = 0;
             for (StageConnection connection : connections) {
-                if (connection.from == Stage.IN_SYSTEM && connection.checker != null &&
-                        connection.checker instanceof DaysElapsedChecker) {
+                if (connection.from == Stage.IN_SYSTEM && connection.checker instanceof DaysElapsedChecker) {
                     float days = ((DaysElapsedChecker) connection.checker).days - getData(Stage.IN_SYSTEM).elapsed;
                     defend_days = Math.max(1, Math.round(days));
                 }
@@ -720,7 +769,7 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
 
             if (stage != Stage.IN_SYSTEM) {
                 String s_or = arrive_days > 1 ? "s" : "";
-                String d = "" + arrive_days;
+                String d = String.valueOf(arrive_days);
                 String name = station.getStarSystem().getNameWithLowercaseTypeShort();
                 info.addPara(MessageFormat.format("Arrive at {0} in {1} day{2}.", name, d, s_or),
                         pad, text_color, h, name, d);
@@ -728,7 +777,7 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
             }
 
             String s_or = defend_days > 1 ? "s" : "";
-            String d = "" + defend_days;
+            String d = String.valueOf(defend_days);
             String fleets_desc = "the enemy fleet";
             if (mission_data.fleets.size() == 2) {
                 fleets_desc = "both enemy fleets";
@@ -747,54 +796,24 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
     // already greater.
     public static int getOrIncreaseDifficulty(Integer difficulty) {
         MemoryAPI memory = Global.getSector().getMemoryWithoutUpdate();
-        final String KEY = "$mmm_dm_difficulty";
-        Integer p = (Integer) memory.get(KEY);
+        Integer p = (Integer) memory.get(DIFFICULTY_KEY);
 
         if (difficulty != null && difficulty > 0) {
             int new_difficulty = Math.max(p == null ? 0 : p, difficulty);
-            memory.set(KEY, new Integer(new_difficulty));
+            memory.set(DIFFICULTY_KEY, new_difficulty);
             return new_difficulty;
         }
         return p == null ? 0 : p;
     }
 
     public static int getFleetStrength(CampaignFleetAPI fleet) {
-        Float strength_ratio = (Float) fleet.getMemoryWithoutUpdate().get(STRENGTH_RATIO_KEY);
-        if (strength_ratio == null) {
-            strength_ratio = 1f;
-        }
-        int points = Math.round(fleet.getEffectiveStrength() * strength_ratio);
-        return fleet.isStationMode() ? Math.round(points * STATION_EFFECTIVE_FP_RATIO) : points;
-    }
-    // Same as above, but also tags the fleet with STRENGTH_RATIO_KEY so it can be applied.
-    public static int getFleetStrength(CampaignFleetAPI fleet, String reinforcement_faction) {
-        Float strength_ratio = FACTION_STRENGTH_RATIO.get(reinforcement_faction);
-        if (strength_ratio != null) {
-            fleet.getMemoryWithoutUpdate().set(STRENGTH_RATIO_KEY, strength_ratio);
-        }
-        return getFleetStrength(fleet);
+        return OrbitalMissionBase.getFleetStrength(fleet);
     }
     public static int getFleetStrength(List<CampaignFleetAPI> fleets) {
-        int fp = 0;
-        for (CampaignFleetAPI fleet : fleets) {
-            fp += getFleetStrength(fleet);
-        }
-        return fp;
+        return OrbitalMissionBase.getFleetStrength(fleets);
     }
-
     public static int getPlayerFleetStrength() {
-        // When you talk to a contact with stellar network, sometimes the getPlayerFleet() call returns an empty fleet?
-        // As a workaround memorize the player fleet strength.
-        int strength = getFleetStrength(Global.getSector().getPlayerFleet());
-        MemoryAPI memory = Global.getSector().getMemoryWithoutUpdate();
-        final String KEY = "$mmm_dm_player_fp";
-        if (strength > 0) {
-            memory.set(KEY, new Integer(strength));
-        } else {
-            Object val = memory.get(KEY);
-            if (val != null) strength = (Integer) val;
-        }
-        return strength;
+        return OrbitalMissionBase.getPlayerFleetStrength();
     }
 
     public static List<String> pickReinforcementFactions(Random random) {
@@ -808,26 +827,25 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         // Add any faction that has ships and has a different ship set from an existing one and isn't in the
         // blacklist. Also skip hidden factions (not shown in intel tab), if the USE_HIDDEN_FACTIONS setting is off,
         // as well as factions without markets.
-        HashSet<String> factions_with_markets = null;
-        if (!USE_HIDDEN_FACTIONS) {
-            factions_with_markets = new HashSet<>();
-            for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
-                factions_with_markets.add(market.getFactionId());
-            }
+        HashSet<String> factions_with_markets = new HashSet<>();
+        for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+            factions_with_markets.add(market.getFactionId());
         }
 
         ArrayList<String> candidate_factions = new ArrayList<>();
-        HashSet<TreeSet<String>> ships_set = new HashSet<>();
+        // We use hashCode instead of TreeSet<String> to save memory.
+        HashSet<Integer> ships_set = new HashSet<>();
         for (String faction_id : faction_ids) {
             if (FACTION_BLACKLIST.contains(faction_id)) continue;
             FactionAPI faction = Global.getSector().getFaction(faction_id);
-            if (!USE_HIDDEN_FACTIONS) {
-                if (!faction.isShowInIntelTab() || !factions_with_markets.contains(faction.getId())) {
+            if (!USE_HIDDEN_FACTIONS && !FACTION_WHITELIST.contains(faction_id)) {
+                if (faction_id.equals(Factions.PLAYER) || !faction.isShowInIntelTab() ||
+                        !factions_with_markets.contains(faction.getId())) {
                     continue;
                 }
             }
 
-            if (!faction.getKnownShips().isEmpty() && ships_set.add(new TreeSet<>(faction.getKnownShips()))) {
+            if (!faction.getKnownShips().isEmpty() && ships_set.add(faction.getKnownShips().hashCode())) {
                 candidate_factions.add(faction_id);
             }
         }
@@ -850,7 +868,8 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         int fp_min = Math.max(MIN_ENEMY_FP_PER_FLEET, Math.round(player_fp * 0.6f));
         int fp_max = Math.max(fp_min, (player_fp + station_fp) / 2);
         int fleets_max = Math.max(1, target_fp / fp_min);
-        int fleets_min = Math.max(1, Math.min(fleets_max, (int) Math.round(Math.ceil((float) target_fp / fp_max))));
+        int ceil = (target_fp + fp_max - 1) / fp_max;
+        int fleets_min = Math.max(1, Math.min(fleets_max, ceil));
         log.debug(MessageFormat.format(
                 "computeFleetSize: target_fp={0}, player_fp={1}, station_fp={2}, fp range: ({3}, {4}) " +
                         "fleets range: ({5}, {6})",
@@ -859,7 +878,6 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         if (fleets_max > fleets_min) {
             num = fleets_min + random.nextInt(target_fp / fp_min - fleets_min);
         }
-        SharedData.getData().getPersonBountyEventData().isParticipating("1");
         return target_fp / num;
     }
 
@@ -879,65 +897,22 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
         return data;
     }
 
-    public static class CreateFleetResult {
-        CampaignFleetAPI fleet;
-        // The updated expected strength per input fleet points.
-        float input_fp_per_output;
-        public CreateFleetResult(CampaignFleetAPI fleet, float input_fp_per_output) {
-            this.fleet = fleet;
-            this.input_fp_per_output = input_fp_per_output;
-        }
-    }
     // Actually creates a fleet targeting station with possibly multiple attempts.
-    public static CreateFleetResult createFleet(
+    public static OrbitalMissionBase.CreateFleetResult createFleet(
             CampaignFleetAPI station, String reinforcement_faction, int attempts, int expected_fp,
-            float input_fp_per_output) {
-        ArrayList<CampaignFleetAPI> candidates = new ArrayList<>();
-        int threshold = Math.round(expected_fp * 0.15f);
-        for (int i = 0; i < attempts; ++i){
-            int input_fp = Math.round(expected_fp * input_fp_per_output);
+            float input_fp_per_output, Random random) {
+        // Store the fleet as the neutral faction so they don't take over the local comm relay etc.
+        OrbitalMissionBase.CreateFleetResult result = OrbitalMissionBase.createFleet(
+                station, station.getName() + " Invasion Fleet", Factions.NEUTRAL, reinforcement_faction,
+                attempts, expected_fp, input_fp_per_output);
 
-            // Keeping the fleets around as the enemy faction can result in them grabbing the system's comm relay, etc.
-            // To prevent this we set them to the neutral faction, and change them to the enemy faction when we wake
-            // them up.
-            CampaignFleetAPI fleet = new MagicFleetBuilder()
-                    .setFleetName(station.getName() + " Invasion Fleet")
-                    .setFleetFaction(Factions.NEUTRAL)
-                    .setReinforcementFaction(reinforcement_faction)     // controls ship types
-                    .setMinFP(input_fp)
-                    .setAssignmentTarget(station)
-                    .create();
-            if (fleet == null) {
-                log.error("Failed to find " + input_fp + " MinFP fleet for " + reinforcement_faction);
-                break;
-            }
-
-            // Send the fleet away and don't allow it to move.
-            fleet.setDoNotAdvanceAI(true);
-            fleet.setLocation(-26000, -26000);
-
-            int output_fp = getFleetStrength(fleet, reinforcement_faction);
-            log.debug(MessageFormat.format(
-                    "createFleet: reinforcement={0}, expected_fp={1}, input_fp={2}, output_fp={3}" +
-                            ", input_fp_per_output={4}, threshold={5}, attempt {6}/{7}",
-                    reinforcement_faction, expected_fp, input_fp, output_fp, input_fp_per_output, threshold,
-                    i + 1, attempts));
-            input_fp_per_output = input_fp / (float) output_fp;
-            candidates.add(fleet);
-            // If we're off by more then 15%, try again with an adjusted input_fp_per_output.
-            if (Math.abs(output_fp - expected_fp) <= threshold) break;
+        // Remove fleet from system
+        if (result.fleet != null) {
+            result.fleet.setDoNotAdvanceAI(true);
+//            result.fleet.setLocation(-35000, -35000);
+            result.fleet.getContainingLocation().removeEntity(result.fleet);
         }
-
-        // Now pick the best candidate and de-spawns the rest
-        if (candidates.isEmpty()) {
-            return new CreateFleetResult(null, input_fp_per_output);
-        }
-        CampaignFleetAPI chosen = Collections.min(candidates, new CompareFleetByFpDiff(expected_fp));
-        candidates.remove(chosen);
-        for (CampaignFleetAPI fleet : candidates) {
-            fleet.despawn();
-        }
-        return new CreateFleetResult(chosen, input_fp_per_output);
+        return result;
     }
 
     // Create enemy fleets with the provided strength attacking the target station, but send it away and disable AI.
@@ -952,31 +927,33 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
             log.debug("fleet too old; generating new fleet");
             generate_new_fleets = true;
         } else {
-            for (CampaignFleetAPI fleet : data.fleets) {
-                if (!fleet.isAlive()) {
-                    log.debug("existing fleet not alive; generating new fleet");
-                    generate_new_fleets = true;
-                    break;
-                }
-            }
+//            for (CampaignFleetAPI fleet : data.fleets) {
+//                if (!fleet.isAlive()) {
+//                    log.debug("existing fleet not alive; generating new fleet");
+//                    generate_new_fleets = true;
+//                    break;
+//                }
+//            }
         }
 
         if (!generate_new_fleets) return true;
-        data.ClearAndDespawnFleets();  // Now fleets are empty.
+        long now = Global.getSector().getClock().getTimestamp();
+        data.ClearAndDespawnFleets(now);  // Now fleets are empty.
 
         // Computes expected strength of the new fleet from the strength of the station and the strength of the player.
         int player_fp = getPlayerFleetStrength();
         int station_fp = getFleetStrength(station);
         int difficulty = getOrIncreaseDifficulty(null);
-        int min_points = player_fp + station_fp;
-        int max_points = station_fp + Math.max(player_fp, Math.round(difficulty * DIFFICULTY_GROWTH));
+        int min_points = Math.min(MAX_ENEMY_FP, player_fp + station_fp);
+        int max_points = Math.min(MAX_ENEMY_FP,
+                station_fp + Math.max(player_fp, Math.round(difficulty * DIFFICULTY_GROWTH)));
         int target_fp = min_points + random.nextInt(max_points - min_points + 1);
         int fp_per_fleet = computeFleetSize(target_fp, player_fp, station_fp, random);
 
         log.debug(MessageFormat.format(
                 "createEnemyFleets: player_fp={0}, station_fp={1}, fp_range=({2}, {3}), fp_per_fleet={4}" +
-                       ", target_fp={5}, difficulty={6}",
-                player_fp, station_fp, min_points, max_points, fp_per_fleet, target_fp, difficulty));
+                       ", target_fp={5}, difficulty={6}, MAX_ENEMY_FP={7}",
+                player_fp, station_fp, min_points, max_points, fp_per_fleet, target_fp, difficulty, MAX_ENEMY_FP));
 
         // Now generates the fleets. Unfortunately the minFP parameter in MagicFleetBuilder is more of a suggestion;
         // it's neither a minimum nor a maximum, so we may get ships with more or less fleet strength then expected.
@@ -993,6 +970,7 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
 
         int actual_fp = 0;
         int remaining = target_fp;
+        int failed = 0;
         for (int i = 0; remaining >= fp_per_fleet * 2 / 3; ++i) {
             // Try not to generate a bunch of large fleets then 1 small one, which would be annoying to hunt down;
             // divide the remaining strength evenly, but no smaller than fp_per_fleet.  Also try extra hard to generate
@@ -1000,19 +978,20 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
             int num = Math.max(1, (int) Math.round(Math.floor((double) remaining / fp_per_fleet)));
             int expected_fp = remaining / num;
             // If we switch factions give it 1 more attempt, since the ratio might have changed.
-            int attempts = (i == 0 || reinforcement_factions.size() > 1) ? 2 : 1;
+            int attempts = (i == 0 || reinforcement_factions.size() > 1) ? 3 : 2;
             if (num <= 2) {
                 attempts += 2;
             }
 
             String reinforcement_faction = reinforcement_factions.get(i % reinforcement_factions.size());
-            CreateFleetResult result = createFleet(station, reinforcement_faction, attempts, expected_fp,
-                    input_fp_per_output);
+            OrbitalMissionBase.CreateFleetResult result = createFleet(station, reinforcement_faction, attempts,
+                    expected_fp, input_fp_per_output, random);
             input_fp_per_output = result.input_fp_per_output;
 
             if (result.fleet == null) {  // MagicLib failed to find a fleet
-                if (i >= 50) {  // Give up to avoid infinite loop
-                    data.ClearAndDespawnFleets();
+                failed += 1;
+                if (failed > reinforcement_factions.size() + 2) {  // Give up to avoid infinite loop
+                    data.ClearAndDespawnFleets(now);
                     log.error(MessageFormat.format("Failed to create fleet with {0} strength.", expected_fp));
                     return false;
                 }
@@ -1023,25 +1002,31 @@ public class DefenseMission extends HubMissionWithBarEvent implements FleetEvent
             fleet_to_faction.put(result.fleet, reinforcement_faction);
             actual_fp += getFleetStrength(result.fleet);
             remaining = target_fp - actual_fp;
+            failed = 0;
         }
 
         if (data.fleets.size() > 1) {
             // Reorder the fleets according to strength and rename them.
-            Collections.sort(data.fleets, new CompareFleetByStrength());
+            Collections.sort(data.fleets, new Comparator<CampaignFleetAPI>() {
+                @Override
+                public int compare(CampaignFleetAPI o1, CampaignFleetAPI o2) {
+                    return Math.round(o1.getEffectiveStrength() - o2.getEffectiveStrength());
+                }
+            });
             Collections.reverse(data.fleets);
             for (int i = 0; i < data.fleets.size(); ++i) {
                 data.fleets.get(i).setName(station.getName() + " Invasion Fleet " + (i + 1));
             }
         }
 
-        StringBuffer buf = new StringBuffer(MessageFormat.format(
+        StringBuilder buf = new StringBuilder(MessageFormat.format(
                 "Created {0} fleets with {1} total strength ({2} target):",
                 data.fleets.size(),  actual_fp, target_fp));
         // Update associated values in MissionData
         data.difficulty = Math.max(actual_fp - station_fp, player_fp);
         // Compute defeat threshold and total rewards
         for (CampaignFleetAPI fleet : data.fleets) {
-            data.defeat_thresholds.add(Math.round(getFleetStrength(fleet) * FLEET_DEFEAT_RATIO));
+            data.defeat_thresholds.add(Math.round(getFleetStrength(fleet) * OrbitalMissionBase.FLEET_DEFEAT_RATIO));
             String faction = fleet_to_faction.get(fleet);
             if (!data.reinforcement_factions.contains(faction)) {
                 data.reinforcement_factions.add(faction);

@@ -24,36 +24,31 @@ import org.dark.shaders.distortion.DistortionAPI;
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
 import org.dark.shaders.distortion.WaveDistortion;
+import org.dark.shaders.util.GraphicsLibSettings;
 import org.dark.shaders.util.ShaderLib;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
+@SuppressWarnings("UseSpecificCatch")
 public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
 
     private static final Set<String> EXCLUDED_PROJECTILES = new HashSet<>(20);
 
     private static final String DATA_KEY = "GLib_Distortions";
 
-    private static final String SETTINGS_FILE = "GRAPHICS_OPTIONS.ini";
     private static final String SETTINGS_SPREADSHEET = "data/config/glib/no_shield_ripple.csv";
 
     private static final Vector2f ZERO = new Vector2f();
 
-    private static boolean enabled = true;
-    private static boolean mjolnirEnabled = true;
-    private static boolean shieldEnabled = true;
-
     static {
         try {
             loadSettings();
-        } catch (IOException | JSONException e) {
+        } catch (Exception e) {
             Global.getLogger(DistortionsPlugin.class).log(Level.ERROR, "Failed to load performance settings: "
                     + e.getMessage());
-            enabled = false;
         }
     }
 
@@ -71,24 +66,23 @@ public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
                 EXCLUDED_PROJECTILES.add(id);
             }
         }
-
-        JSONObject settings = Global.getSettings().loadJSON(SETTINGS_FILE);
-
-        shieldEnabled = settings.getBoolean("enableShieldRipples");
-        mjolnirEnabled = settings.getBoolean("enableMjolnirRipples");
-        enabled = shieldEnabled || mjolnirEnabled;
     }
 
     private CombatEngineAPI engine;
 
     @Override
     public void advance(float amount, List<InputEventAPI> events) {
-        if (engine == null || !enabled) {
+        boolean enabled = GraphicsLibSettings.enableShieldRipples() || GraphicsLibSettings.enableMjolnirRipples();
+        if ((engine == null) || !enabled) {
             return;
         }
 
         if (engine.isPaused() || !ShaderLib.areShadersAllowed() || !ShaderLib.areBuffersAllowed()) {
             return;
+        }
+
+        if (!Global.getCombatEngine().getCustomData().containsKey(DATA_KEY)) {
+            Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
         }
 
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
@@ -103,14 +97,14 @@ public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
             }
 
             if (!projectiles.containsKey(projectile)) {
-                if ((projectile.getProjectileSpecId() != null) && projectile.getProjectileSpecId().contentEquals("mjolnir_shot") && mjolnirEnabled) {
+                if (GraphicsLibSettings.enableMjolnirRipples() && (projectile.getProjectileSpecId() != null) && projectile.getProjectileSpecId().contentEquals("mjolnir_shot")) {
                     WaveDistortion wave = new WaveDistortion(projectile.getLocation(), ZERO);
                     wave.setIntensity(5f);
                     wave.setSize(50f);
                     wave.flip(true);
                     DistortionShader.addDistortion(wave);
                     projectiles.put(projectile, new ProjectileInfo(wave, projectile.getDamageAmount()));
-                } else if (shieldEnabled && ((projectile.getProjectileSpecId() == null) || !EXCLUDED_PROJECTILES.contains(projectile.getProjectileSpecId()))) {
+                } else if (GraphicsLibSettings.enableShieldRipples() && ((projectile.getProjectileSpecId() == null) || !EXCLUDED_PROJECTILES.contains(projectile.getProjectileSpecId()))) {
                     projectiles.put(projectile, new ProjectileInfo(projectile.getDamageAmount()));
                 }
             }
@@ -128,8 +122,7 @@ public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
             if (projectile.didDamage()) {
                 CombatEntityAPI target = projectile.getDamageTarget();
 
-                if (target instanceof ShipAPI && shieldEnabled) {
-                    ShipAPI ship = (ShipAPI) target;
+                if (GraphicsLibSettings.enableShieldRipples() && (target instanceof ShipAPI ship)) {
                     float distanceFromShieldBorder = 0f;
                     if (ship.getShield() != null) {
                         distanceFromShieldBorder = Math.abs((MathUtils.getDistance(projectile.getLocation(),
@@ -156,11 +149,27 @@ public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
                             }
                         }
                         float factor = ship.getMutableStats().getShieldDamageTakenMult().getModifiedValue();
-                        createHitRipple(position, ship.getVelocity(), info.damage * fader * factor,
-                                projectile.getDamageType(), VectorUtils.getFacing(
-                                VectorUtils.getDirectionalVector(ship.getShield().getLocation(),
-                                        projectile.getLocation())),
-                                ship.getShield().getRadius());
+                        if (projectile instanceof MissileAPI) {
+                            factor *= ship.getMutableStats().getMissileShieldDamageTakenMult().getModifiedValue();
+                        } else {
+                            factor *= ship.getMutableStats().getProjectileShieldDamageTakenMult().getModifiedValue();
+                        }
+                        switch (projectile.getDamageType()) {
+                            case ENERGY ->
+                                factor *= ship.getMutableStats().getEnergyShieldDamageTakenMult().getModifiedValue();
+                            case KINETIC ->
+                                factor *= ship.getMutableStats().getKineticShieldDamageTakenMult().getModifiedValue();
+                            case HIGH_EXPLOSIVE ->
+                                factor *= ship.getMutableStats().getHighExplosiveShieldDamageTakenMult().getModifiedValue();
+                            case FRAGMENTATION ->
+                                factor *= ship.getMutableStats().getFragmentationShieldDamageTakenMult().getModifiedValue();
+                            default -> {
+                            }
+                        }
+                        boolean dweller = ship.getHullStyleId().contentEquals("DWELLER");
+                        createHitRipple(position, ship.getVelocity(), info.damage * fader * factor, projectile.getDamageType(),
+                                VectorUtils.getFacing(VectorUtils.getDirectionalVector(ship.getShield().getLocation(), projectile.getLocation())),
+                                ship.getShield().getRadius(), dweller);
                     } else if (ShaderModPlugin.templarsExists && TEM_LatticeShield.shieldLevel(ship) > 0f) {
                         float fader = 1f;
                         if (!(projectile instanceof MissileAPI) && projectile.getWeapon() != null) {
@@ -174,11 +183,9 @@ public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
                             }
                         }
                         float factor = ship.getMutableStats().getShieldDamageTakenMult().getModifiedValue();
-                        createHitRipple(projectile.getLocation(), ship.getVelocity(), info.damage * fader * factor,
-                                projectile.getDamageType(),
-                                VectorUtils.getFacing(VectorUtils.getDirectionalVector(ship.getLocation(),
-                                        projectile.getLocation())),
-                                ship.getCollisionRadius());
+                        createHitRipple(projectile.getLocation(), ship.getVelocity(), info.damage * fader * factor, projectile.getDamageType(),
+                                VectorUtils.getFacing(VectorUtils.getDirectionalVector(ship.getLocation(), projectile.getLocation())),
+                                ship.getCollisionRadius(), false);
                     }
                 }
 
@@ -222,11 +229,10 @@ public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
     @Override
     public void init(CombatEngineAPI engine) {
         this.engine = engine;
-        Global.getCombatEngine().getCustomData().put(DATA_KEY, new LocalData());
     }
 
     private void createHitRipple(Vector2f location, Vector2f velocity, float damage, DamageType type, float direction,
-            float shieldRadius) {
+            float shieldRadius, boolean dweller) {
         float dmg = damage;
         if (type == DamageType.FRAGMENTATION) {
             dmg *= 0.25f;
@@ -266,25 +272,40 @@ public class DistortionsPlugin extends BaseEveryFrameCombatPlugin {
             end2 -= 360f;
         }
 
-        RippleDistortion ripple = new RippleDistortion(location, velocity);
-        ripple.setSize(size);
-        ripple.setIntensity(size * 0.3f);
-        ripple.setFrameRate(60f / fadeTime);
-        ripple.fadeInSize(fadeTime * 1.2f);
-        ripple.fadeOutIntensity(fadeTime);
-        ripple.setSize(size * 0.2f);
-        ripple.setArc(start1, end1);
-        DistortionShader.addDistortion(ripple);
+        if (dweller) {
+            fadeTime *= 1.5f;
+            size *= 1.5f;
 
-        ripple = new RippleDistortion(location, velocity);
-        ripple.setSize(size);
-        ripple.setIntensity(size * 0.075f);
-        ripple.setFrameRate(60f / fadeTime);
-        ripple.fadeInSize(fadeTime * 1.2f);
-        ripple.fadeOutIntensity(fadeTime);
-        ripple.setSize(size * 0.2f);
-        ripple.setArc(start2, end2);
-        DistortionShader.addDistortion(ripple);
+            RippleDistortion ripple = new RippleDistortion(location, velocity);
+            ripple.setSize(size);
+            ripple.setIntensity(size * 0.1f);
+            ripple.setFrameRate(60f / fadeTime);
+            ripple.fadeInSize(fadeTime * 1.2f);
+            ripple.fadeOutIntensity(fadeTime);
+            ripple.setSize(size * 0.2f);
+            ripple.setArc(start1, end1);
+            DistortionShader.addDistortion(ripple);
+        } else {
+            RippleDistortion ripple = new RippleDistortion(location, velocity);
+            ripple.setSize(size);
+            ripple.setIntensity(size * 0.3f);
+            ripple.setFrameRate(60f / fadeTime);
+            ripple.fadeInSize(fadeTime * 1.2f);
+            ripple.fadeOutIntensity(fadeTime);
+            ripple.setSize(size * 0.2f);
+            ripple.setArc(start1, end1);
+            DistortionShader.addDistortion(ripple);
+
+            ripple = new RippleDistortion(location, velocity);
+            ripple.setSize(size);
+            ripple.setIntensity(size * 0.075f);
+            ripple.setFrameRate(60f / fadeTime);
+            ripple.fadeInSize(fadeTime * 1.2f);
+            ripple.fadeOutIntensity(fadeTime);
+            ripple.setSize(size * 0.2f);
+            ripple.setArc(start2, end2);
+            DistortionShader.addDistortion(ripple);
+        }
     }
 
 //    private float getAdjustedDamage(DamagingProjectileAPI proj, float baseDamage, boolean shields) {

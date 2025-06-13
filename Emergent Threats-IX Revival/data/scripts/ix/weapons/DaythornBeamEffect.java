@@ -32,7 +32,7 @@ public class DaythornBeamEffect implements BeamEffectPlugin {
 	private boolean IS_ELECTRON = false;
 	
 	//private static float PROTON_DAMAGE = 50f;
-	private static float PROTON_DAMAGE = 10f;
+	private static float PROTON_DAMAGE = 20f;
 	private static float NEUTRON_DAMAGE = 50f;
 	private static float ELECTRON_DAMAGE = 150f; //emp
 	

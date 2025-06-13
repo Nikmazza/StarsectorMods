@@ -1,0 +1,131 @@
+{
+  "hullName": "Licht",
+  "hullId": "csp_licht",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/remnant something 3.2.1.png",
+  "style": "HIGH_TECH",
+  "height": 93,
+  "width": 98,
+  "center": [49, 49],
+  "collisionRadius": 80,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 78.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "escort_package"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -123,
+      "locations": [-15, -27]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 123,
+      "locations": [-15, 27]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 2,
+      "locations": [37, -29]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -2,
+      "locations": [37, 29]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 0,
+      "locations": [-13, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-45, 4],
+      "length": 26,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-45, -4],
+      "length": 26,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-42, -10.5],
+      "length": 14,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-42, 10.5],
+      "length": 14,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -45, 8,
+    -42, 12,
+    -32, 14.5,
+    -47, 19,
+    -20, 43,
+    -3, 45,
+    1, 41,
+    -10, 18.5,
+    25.5, 42,
+    42, 42,
+    43, 25,
+    32, 20,
+    16, 20,
+    22, 11,
+    19, 9.5,
+    19, -9.5,
+    22, -11,
+    16, -20,
+    32, -20,
+    43, -25,
+    42, -42,
+    25.5, -42,
+    -10, -18.5,
+    1, -41,
+    -3, -45,
+    -20, -43,
+    -47, -19,
+    -32, -14.5,
+    -42, -12,
+    -45, -8
+  ]
+}

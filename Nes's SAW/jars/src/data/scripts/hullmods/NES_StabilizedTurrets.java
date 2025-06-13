@@ -52,7 +52,6 @@ public class NES_StabilizedTurrets extends BaseHullMod {
 				return 0f;
 			}
 
-			//Stolen from Nicke. Thx buddy
 			float percentRangeIncreases = ship.getMutableStats().getEnergyWeaponRangeBonus().getPercentMod();
 			if (ship.hasListenerOfClass(WeaponRangeModifier.class)) {
 				for (WeaponRangeModifier listener : ship.getListeners(WeaponRangeModifier.class)) {

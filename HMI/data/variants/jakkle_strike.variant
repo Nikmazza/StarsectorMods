@@ -3,7 +3,7 @@
   "hullId": "jakkle",
   "displayName": "Strike",
   "goalVariant": false,
-  "fluxCapacitors": 10,
+  "fluxCapacitors": 8,
   "fluxVents": 15,
   "quality": 1,
   "permaMods": [],

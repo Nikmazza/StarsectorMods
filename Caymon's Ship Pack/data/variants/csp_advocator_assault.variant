@@ -1,0 +1,64 @@
+{
+  "variantId": "csp_advocator_assault",
+  "hullId": "csp_advocator",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 13,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "vulcan",
+        "WS0006": "vulcan"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "devastator"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "vulcan"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "pilum_large"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "hoplon_wing",
+    "hoplon_wing",
+    "hoplon_wing"
+  ]
+}

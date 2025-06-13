@@ -1,0 +1,247 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+
+	"cerberus_scav_std":10,
+
+	"hound_scav_std":10,	
+
+	"wayfarer_scav_std":10,	
+	
+	"domres_defender_shielded":5,	
+	"domres_defender_armoured":5,
+			
+	"domres_sentry_bomber":5,
+	},
+	
+	
+	"combatSmall":{
+	
+	"cerberus_scav_std":10,
+	
+	"hound_scav_std":10,	
+	
+	"decketry_scav_std":7,
+	"decketry_scav_cs":3,	
+	
+	"lumen_scav_X_standard":7,
+	"lumen_scav_X_cs":3,
+	
+	"wayfarer_scav_std":10,
+	
+
+			"domres_defender_shielded":5,	
+			"domres_defender_armoured":5,
+			
+			"domres_picket_attack":3,	
+			"domres_picket_attack2":3,
+			"domres_picket_attack3":3,	
+			
+			"domres_sentry_strike":3,	
+			"domres_sentry_bomber":3,
+			"domres_sentry_cs":3,
+			
+			"domres_warden_std":5,	
+			"domres_warden_attack":2,
+			"domres_warden_cs":3,			
+			
+			"domres_centurion_cs":5,
+			"domres_centurion_area":5,
+
+	},
+	
+	"combatMedium":{
+	
+	"bastillon_scav_attack":2,
+	"bastillon_scav_cs":3,
+	"bastillon_scav_std":5,
+	
+	"mule_scav_std":10,	
+	
+	"fulgent_scav_attack":1,
+	"fulgent_scav_cs":2,
+	"fulgent_scav_std":7,
+	
+	"venture_scav_std":10,	
+	
+	
+			"domres_bastillon_std":3,
+			"domres_bastillon_cs":3,
+			"domres_bastillon_attack":3,
+			
+			"domres_berserker_cs":3,
+			"domres_berserker_std":3,
+			"domres_berserker_atttack":3,
+
+			"domres_hammerhead_std":7,
+			"domres_hammerhead_cs":2,
+			"domres_hammerhead_so":1,
+			
+			"domres_barbican_std":10,
+			
+			"domres_hmi_sapper_std":3,
+			"domres_hmi_sapper_pd":1,
+			"domres_hmi_sapper_cs":1,
+			
+			"domres_embrasure_std":2,
+			"domres_embrasure_std2":2,
+			"domres_embrasure_std3":2,
+	
+	},
+	"combatLarge":{
+	
+	"brilliant_scav_attack":1,
+	"brilliant_scav_cs":2,
+	"brilliant_scav_std":7,
+	
+	"apogee_scav_cs":4,
+	"apogee_scav_defense":2,
+	"apogee_scav_so":1,	
+	"apogee_scav_std":6,
+
+	"apex_scav_cs":3,
+	"apex_scav_strike":2,
+	"apex_scav_std":5,
+	
+				
+			"domres_rampart_std":2,
+			"domres_rampart_bombardment":2,
+			"domres_rampart_attack":2,
+			
+			"domres_outworks_std":6,
+			"domres_outworks_cs":6,
+			
+			"domres_bracket_std":3,
+			"domres_bracket_std2":7,
+			
+			"domres_eagle_attack":10,
+	
+	},
+	"combatCapital":{
+	
+		"nova_scav_strike":2,
+		"nova_scav_cs":1,
+		"nova_scav_std":5,	
+		
+		"radiant_scav_attack":1,
+		"radiant_scav_cs":1,
+		"radiant_scav_std":4,			
+		
+		
+		"odyssey_scav_std":6,
+		"odyssey_scav_attack":2,
+		"odyssey_scav_auto":2,
+		"odyssey_scav_cs":4,
+		
+		"atlas_mk2_scav_Standard":10,
+		
+				
+		"domres_hmi_obj_440_std":3,
+		"domres_hmi_obj_440_cs":1,	
+		"domres_hmi_obj_440_pd":1,
+
+		"domres_hmi_obj_361_shield":3,
+		"domres_hmi_obj_361_std":3,	
+		"domres_hmi_obj_361_cs":3,
+
+		"domres_hmi_obj_241_talon":2,
+		"domres_hmi_obj_241_broad":2,	
+		"domres_hmi_obj_241_wart":2,	
+		
+		
+	},
+	
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+	
+	"cerberus_scav_std":10,
+	"hound_scav_std":10,
+	"wayfarer_scav_std":10,
+	
+	},
+	
+	"combatFreighterMedium":{
+	"mule_scav_std":10,
+	"tarsus_scav_std":10,
+	
+	},
+	
+	"combatFreighterLarge":{
+		"venture_scav_std":10,
+	},
+	
+	"civilianRandom":{
+		"kite_scav_Standard":1,
+		"nebula_scav_Standard":4,
+		"dram_scav_Light":10,
+		"phaeton_scav_Standard":3,
+		"tarsus_scav_std":3,
+		"colossus_scav_Standard":1,
+	},		
+
+	# carriers
+	"carrierSmall":{
+	"shepherd_scav_std":10,
+	},
+	
+	"carrierMedium":{
+	"condor_scav_std":10,
+	
+	"berserker_scav_attack":2,
+	"berserker_scav_strike":3,
+	"berserker_scav_std":5,
+
+	"scintilla_scav_attack":1,
+	"scintilla_scav_cs":2,
+	"scintilla_scav_escort":1,
+	"scintilla_scav_std":6,
+
+	"colossus3_scav_variant":10,
+	
+	},
+	
+	"carrierLarge":{
+	"rampart_scav_attack":1,
+	"rampart_scav_cs":2,
+	"rampart_scav_std":7,	
+	
+	
+			"domres_mora_attack":4,
+			"domres_mora_cs":4,		
+	
+	},
+	
+	# freighters and such
+	"freighterSmall":{
+		"tarsus_scav_std":10,
+	},
+	
+	"freighterMedium":{
+		"colossus_scav_Standard":10,
+		"tarsus_scav_std":10,
+	},
+	
+	"tankerSmall":{
+		"dram_scav_Light":10,
+	},
+	"tankerMedium":{
+		"phaeton_scav_Standard":10,
+	},
+	
+	"personnelSmall":{
+		"kite_scav_Standard":10,
+	},
+	"personnelMedium":{
+		"nebula_scav_Standard":1,
+	},
+	
+	"linerSmall":{
+		"kite_scav_Standard":1,
+	},	
+	
+	"linerMedium":{
+		"nebula_scav_Standard":10,
+	},
+}

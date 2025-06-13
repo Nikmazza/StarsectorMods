@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import com.fs.starfarer.api.campaign.FactionAPI;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
@@ -34,8 +35,11 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class HMI_MessSpawnerGreater extends BaseHullMod {
 
-	public static Color JITTER_COLOR = new Color(255, 255,255,50);
+	public static Color JITTER_COLOR = new Color(101, 91, 109,50);
 	public static String DATA_KEY = "core_shard_spawner_data_key";
+
+	private static final Color SPARK_COLOR = new Color(192, 193, 224, 255);
+	private static final Color SPARK_COLOR3 = new Color(75, 63, 83, 175);
 
 	public static float SPAWN_TIME = 4f;
 
@@ -81,95 +85,99 @@ public class HMI_MessSpawnerGreater extends BaseHullMod {
 		ShardTypeVariants small = new ShardTypeVariants();
 		variantData.put(HullSize.FRIGATE, small);
 
-		small.get(ShardType.GENERAL).add("mess_stable_med_mass_std", 1f);
-		small.get(ShardType.GENERAL).add("mess_unstable_med_mass_std", 1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_missile", 0.1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_kinetic", 0.1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_he", 0.1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_frag", 0.1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_energy", 0.1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_scary2", 0.1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_scary1", 0.1f);
-		small.get(ShardType.GENERAL).add("mess_amalgam_med_mass_omega", 0.1f);
+		small.get(ShardType.GENERAL).add("mess_stable_mass_std", 1f);
+		small.get(ShardType.GENERAL).add("mess_unstable_mass_std", 1f);
+		small.get(ShardType.GENERAL).add("mess_amalgam_mass_std", 0.1f);
+		small.get(ShardType.GENERAL).add("mess_amalgam_mass_std2", 0.1f);
+		small.get(ShardType.GENERAL).add("mess_amalgam_mass_std3", 0.1f);
 
-		small.get(ShardType.ANTI_ARMOR).add("mess_stable_med_mass_std", 1f);
-		small.get(ShardType.ANTI_ARMOR).add("mess_unstable_med_mass_std", 10f);
+		small.get(ShardType.ANTI_ARMOR).add("mess_stable_mass_std", 1f);
+		small.get(ShardType.ANTI_ARMOR).add("mess_unstable_mass_std", 10f);
 
-		small.get(ShardType.ANTI_SHIELD).add("mess_stable_med_mass_std", 1f);
-		small.get(ShardType.ANTI_SHIELD).add("mess_unstable_med_mass_std", 10f);
+		small.get(ShardType.ANTI_SHIELD).add("mess_stable_mass_std", 1f);
+		small.get(ShardType.ANTI_SHIELD).add("mess_unstable_mass_std", 10f);
 		//small.get(ShardType.ANTI_SHIELD).add("aspect_shieldbreaker_wing", 10f);
 
-		small.get(ShardType.POINT_DEFENSE).add("mess_stable_med_mass_std", 1f);
-		small.get(ShardType.POINT_DEFENSE).add("mess_unstable_med_mass_std", 10f);
+		small.get(ShardType.POINT_DEFENSE).add("mess_stable_mass_std", 1f);
+		small.get(ShardType.POINT_DEFENSE).add("mess_unstable_mass_std", 10f);
 		//small.get(ShardType.POINT_DEFENSE).add("aspect_shock_wing", 10f);
 
-		small.get(ShardType.MISSILE).add("mess_stable_med_mass_std", 1f);
-		small.get(ShardType.MISSILE).add("mess_unstable_med_mass_std", 10f);
+		small.get(ShardType.MISSILE).add("mess_stable_mass_std", 1f);
+		small.get(ShardType.MISSILE).add("mess_unstable_mass_std", 10f);
 		//small.get(ShardType.MISSILE).add("aspect_missile_wing", 10f);
 
 
 		ShardTypeVariants medium = new ShardTypeVariants();
 		variantData.put(HullSize.DESTROYER, medium);
 
-		medium.get(ShardType.GENERAL).add("mess_stable_med_mass_std", 10f);
-		medium.get(ShardType.GENERAL).add("mess_unstable_med_mass_std", 5f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_missile", 0.1f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_energy", 0.1f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_frag", 0.1f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_kinetic", 0.5f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_he", 0.5f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_scary2", 0.01f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_scary1", 0.01f);
-		medium.get(ShardType.GENERAL).add("mess_amalgam_med_mass_omega", 0.0001f);
+		medium.get(ShardType.GENERAL).add("mess_stable_mass_std", 10f);
+		medium.get(ShardType.GENERAL).add("mess_unstable_mass_std", 5f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_energy", 0.1f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_beamer", 0.1f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_ballistic", 0.1f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_ballistic2", 0.1f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_std", 0.5f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_std2", 0.5f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_std3", 0.5f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_remnant", 0.01f);
+		medium.get(ShardType.GENERAL).add("mess_amalgam_mass_omega", 0.0001f);
 
 
-		medium.get(ShardType.ANTI_ARMOR).add("mess_stable_med_mass_std", 10f);
-		medium.get(ShardType.ANTI_ARMOR).add("mess_unstable_med_mass_std", 1f);
-		medium.get(ShardType.ANTI_ARMOR).add("mess_amalgam_med_mass_he", 0.5f);
-		medium.get(ShardType.ANTI_ARMOR).add("mess_amalgam_med_mass_missile", 0.5f);
+		medium.get(ShardType.ANTI_ARMOR).add("mess_stable_mass_std", 10f);
+		medium.get(ShardType.ANTI_ARMOR).add("mess_unstable_mass_std", 1f);
+		medium.get(ShardType.ANTI_ARMOR).add("mess_amalgam_mass_antiarmour", 0.5f);
+		medium.get(ShardType.ANTI_ARMOR).add("mess_amalgam_mass_antiarmour2", 0.5f);
 
-		medium.get(ShardType.ANTI_SHIELD).add("mess_stable_med_mass_std", 3f);
-		medium.get(ShardType.ANTI_SHIELD).add("mess_unstable_med_mass_std", 6f);
-		medium.get(ShardType.ANTI_SHIELD).add("mess_amalgam_med_mass_kinetic", 1f);
+		medium.get(ShardType.ANTI_SHIELD).add("mess_stable_mass_std", 3f);
+		medium.get(ShardType.ANTI_SHIELD).add("mess_unstable_mass_std", 6f);
+		medium.get(ShardType.ANTI_SHIELD).add("mess_amalgam_mass_antishield", 0.5f);
+		medium.get(ShardType.ANTI_SHIELD).add("mess_amalgam_mass_antishield2", 0.5f);
 
-		medium.get(ShardType.POINT_DEFENSE).add("mess_stable_med_mass_std", 1f);
-		medium.get(ShardType.POINT_DEFENSE).add("mess_unstable_med_mass_std", 5f);
-		medium.get(ShardType.POINT_DEFENSE).add("mess_amalgam_med_mass_frag", 0.5f);
-		medium.get(ShardType.POINT_DEFENSE).add("mess_amalgam_med_mass_kinetic", 0.5f);
+		medium.get(ShardType.POINT_DEFENSE).add("mess_stable_mass_std", 1f);
+		medium.get(ShardType.POINT_DEFENSE).add("mess_unstable_mass_std", 5f);
+		medium.get(ShardType.POINT_DEFENSE).add("mess_amalgam_mass_antiftr", 0.5f);
+		medium.get(ShardType.POINT_DEFENSE).add("mess_amalgam_mass_pd", 0.5f);
 
-		medium.get(ShardType.MISSILE).add("mess_stable_med_mass_std", 6f);
-		medium.get(ShardType.MISSILE).add("mess_unstable_med_mass_std", 3f);
-		medium.get(ShardType.MISSILE).add("mess_amalgam_med_mass_missile", 0.5f);
-
+		medium.get(ShardType.MISSILE).add("mess_unstable_mass_std", 6f);
+		medium.get(ShardType.MISSILE).add("mess_stable_mass_std", 3f);
+		medium.get(ShardType.MISSILE).add("mess_amalgam_mass_missile", 0.5f);
+		medium.get(ShardType.MISSILE).add("mess_amalgam_mass_missile2", 0.5f);
+		medium.get(ShardType.MISSILE).add("mess_amalgam_mass_sabot", 0.1f);
+		medium.get(ShardType.MISSILE).add("mess_amalgam_mass_harpoon", 0.1f);
 
 		ShardTypeVariants large = new ShardTypeVariants();
 		variantData.put(HullSize.CRUISER, large);
 
-		large.get(ShardType.GENERAL).add("mess_stable_med_mass_std", 10f);
-		large.get(ShardType.GENERAL).add("mess_unstable_med_mass_std", 5f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_missile", 3f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_energy", 3f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_frag", 3f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_kinetic", 3f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_he", 3f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_scary2", 0.1f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_scary1", 0.1f);
-		large.get(ShardType.GENERAL).add("mess_amalgam_med_mass_omega", 0.01f);
+		large.get(ShardType.GENERAL).add("mess_unstable_mass_std", 10f);
+		large.get(ShardType.GENERAL).add("mess_stable_mass_std", 6f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_energy", 1f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_beamer", 1f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_ballistic", 1f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_ballistic2", 1f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_std", 3f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_std2", 3f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_std3", 3f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_remnant", 0.1f);
+		large.get(ShardType.GENERAL).add("mess_amalgam_mass_omega", 0.01f);
 
-		large.get(ShardType.ANTI_ARMOR).add("mess_unstable_med_mass_std", 10f);
-		large.get(ShardType.ANTI_ARMOR).add("mess_stable_med_mass_std", 3f);
-		large.get(ShardType.ANTI_ARMOR).add("mess_amalgam_med_mass_he", 2f);
-		large.get(ShardType.ANTI_ARMOR).add("mess_amalgam_med_mass_missile", 2f);
+		large.get(ShardType.ANTI_ARMOR).add("mess_unstable_mass_std", 10f);
+		large.get(ShardType.ANTI_ARMOR).add("mess_stable_mass_std", 3f);
+		large.get(ShardType.ANTI_ARMOR).add("mess_amalgam_mass_antiarmour", 2f);
+		large.get(ShardType.ANTI_ARMOR).add("mess_amalgam_mass_antiarmour2", 2f);
 
-		large.get(ShardType.ANTI_SHIELD).add("mess_unstable_med_mass_std", 10f);
-		large.get(ShardType.ANTI_SHIELD).add("mess_amalgam_med_mass_kinetic", 3f);
+		large.get(ShardType.ANTI_SHIELD).add("mess_unstable_mass_std", 10f);
+		large.get(ShardType.ANTI_SHIELD).add("mess_amalgam_mass_antishield", 2f);
+		large.get(ShardType.ANTI_SHIELD).add("mess_amalgam_mass_antishield2", 2f);
 
-		large.get(ShardType.POINT_DEFENSE).add("mess_unstable_med_mass_std", 10f);
-		large.get(ShardType.POINT_DEFENSE).add("mess_amalgam_med_mass_frag", 3f);
-		large.get(ShardType.POINT_DEFENSE).add("mess_amalgam_med_mass_kinetic", 1f);
+		large.get(ShardType.POINT_DEFENSE).add("mess_unstable_mass_std", 10f);
+		large.get(ShardType.POINT_DEFENSE).add("mess_amalgam_mass_antiftr", 1f);
+		large.get(ShardType.POINT_DEFENSE).add("mess_amalgam_mass_pd", 1f);
 
-		large.get(ShardType.MISSILE).add("mess_unstable_med_mass_std", 10f);
-		large.get(ShardType.MISSILE).add("mess_amalgam_med_mass_missile", 3f);
+		large.get(ShardType.MISSILE).add("mess_unstable_mass_std", 10f);
+		large.get(ShardType.MISSILE).add("mess_amalgam_mass_missile", 1f);
+		large.get(ShardType.MISSILE).add("mess_amalgam_mass_missile2", 1f);
+		large.get(ShardType.MISSILE).add("mess_amalgam_mass_sabot", 0.5f);
+		large.get(ShardType.MISSILE).add("mess_amalgam_mass_harpoon", 0.5f);
 	}
 
 	public static class ShardSpawnerData {
@@ -637,8 +645,12 @@ public class HMI_MessSpawnerGreater extends BaseHullMod {
 							if (durMult < 0.1f) durMult = 0.1f;
 							dur *= 0.5f + 0.5f * durMult;
 						}
-						engine.addNegativeNebulaParticle(pt, v, nSize * 1f, 2f,
-								0.5f / dur, 0f, dur, c);
+//						engine.addNegativeNebulaParticle(pt, v, nSize * 1f, 2f,
+//								0.5f / dur, 0f, dur, c);
+						engine.addSmokeParticle(pt, v, 1f * nSize, 1f, dur,
+								SPARK_COLOR);
+						engine.addSmokeParticle(pt, v, 1f * nSize, 1f, dur,
+								SPARK_COLOR3);
 					}
 				}
 
@@ -784,6 +796,11 @@ public class HMI_MessSpawnerGreater extends BaseHullMod {
 					ship.setHoldFire(false);
 					ship.setCollisionClass(collisionClass);
 					ship.getMutableStats().getHullDamageTakenMult().unmodifyMult("ShardSpawnerInvuln");
+					FactionAPI faction = Global.getSector().getFaction("mess");
+					if (faction != null) {
+						String name = faction.pickRandomShipName();
+						ship.setName(name);
+					}
 				}
 				engine.removePlugin(this);
 			}

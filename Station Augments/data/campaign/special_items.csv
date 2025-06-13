@@ -1,0 +1,2 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+Station Augment Blueprint,SA_augmentBlueprint,"station_augment_BP, hide_in_codex",Fabrique Orbitale,,1000,1,1,,graphics/SA_blueprintAugment.png,ui_chip_pickup,ui_industry_bp_drop,niko_SA.specialItems.SA_augmentBlueprintPlugin,SA_augmentNormal,Contains the technological specifications needed to construct a station-bound augment.,600

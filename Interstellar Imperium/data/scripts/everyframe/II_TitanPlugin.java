@@ -730,6 +730,10 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
             }
         }
 
+        if (!engine.getCustomData().containsKey(DATA_KEY)) {
+            engine.getCustomData().put(DATA_KEY, new LocalData());
+        }
+
         final LocalData localData = (LocalData) engine.getCustomData().get(DATA_KEY);
         final Map<ShipAPI, ShipAPI> titanSource = localData.titanSource;
         final Map<String, ExplosionData> explodingShips = localData.explodingShips;
@@ -756,7 +760,13 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                 activated = true;
 
                 Vector2f location = new Vector2f(projectile.getLocation());
-                ShipAPI ship = projectile.getSource();
+                ShipAPI ship = null;
+                if (source != null) {
+                    ship = source.getShip();
+                }
+                if (ship == null) {
+                    ship = projectile.getSource();
+                }
                 float angle = projectile.getFacing();
                 int owner = projectile.getOwner();
 
@@ -1060,7 +1070,7 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
 
             if (!ship.isAlive()) {
                 switch (II_Util.getNonDHullId(ship.getHullSpec())) {
-                    case "ii_olympus":
+                    case "ii_olympus" -> {
                         List<WeaponAPI> weapons = ship.getAllWeapons();
                         for (WeaponAPI weapon : weapons) {
                             if (weapon.getId().contentEquals("ii_titan_w")) {
@@ -1072,8 +1082,8 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                             }
                         }
                         activated = true;
-                        break;
-                    case "ii_boss_titanx":
+                    }
+                    case "ii_boss_titanx" -> {
                         float effectLevel = ship.getMutableStats().getDynamic().getValue(TITANX_STAT_KEY, 0f);
                         if (effectLevel > 0f) {
                             if (effectLevel <= 1f) {
@@ -1096,18 +1106,13 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                             }
                         }
                         activated = true;
-                        break;
-                    case "ii_titan":
-                    case "ii_titan_armor":
-                    case "ii_titan_targeting":
-                    case "ii_titan_elite":
-                    case "ii_titan_armor_door":
-                    case "ii_titan_targeting_door":
+                    }
+                    case "ii_titan", "ii_titan_armor", "ii_titan_targeting", "ii_titan_elite", "ii_titan_armor_door", "ii_titan_targeting_door" -> {
                         ship.setCollisionClass(CollisionClass.SHIP);
                         activated = true;
-                        break;
-                    default:
-                        break;
+                    }
+                    default -> {
+                    }
                 }
             } else if (II_Util.getNonDHullId(ship.getHullSpec()).contentEquals("ii_olympus")) {
                 activated = true;
@@ -1220,17 +1225,14 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                 boolean nuke = false;
                 boolean titan = false;
                 switch (II_Util.getNonDHullId(ship.getHullSpec())) {
-                    case "ii_titan":
-                    case "ii_titan_elite":
+                    case "ii_titan", "ii_titan_elite" -> {
                         nuke = true;
                         titan = true;
-                        break;
-                    case "ii_titan_armor":
-                    case "ii_titan_targeting":
+                    }
+                    case "ii_titan_armor", "ii_titan_targeting" ->
                         titan = true;
-                        break;
-                    default:
-                        break;
+                    default -> {
+                    }
                 }
 
                 if (nuke || titan) {
@@ -1311,16 +1313,13 @@ public class II_TitanPlugin extends BaseEveryFrameCombatPlugin {
                         otherShip.getAIFlags().setFlag(AIFlags.MANEUVER_TARGET, 1f, ship);
                         otherShip.getAIFlags().setFlag(AIFlags.HAS_INCOMING_DAMAGE, 1f);
                         otherShip.getAIFlags().setFlag(AIFlags.IN_CRITICAL_DPS_DANGER, 1f);
-                        otherShip.getAIFlags().setFlag(AIFlags.KEEP_SHIELDS_ON, 1f);
                         otherShip.getAIFlags().setFlag(AIFlags.DO_NOT_PURSUE, 1f);
                         otherShip.getAIFlags().setFlag(AIFlags.BACK_OFF, 1f);
                         otherShip.getAIFlags().unsetFlag(AIFlags.HARASS_MOVE_IN);
                         otherShip.getAIFlags().unsetFlag(AIFlags.MAINTAINING_STRIKE_RANGE);
-                        otherShip.getAIFlags().unsetFlag(AIFlags.DO_NOT_USE_SHIELDS);
                         otherShip.getAIFlags().unsetFlag(AIFlags.PURSUING);
                         otherShip.getAIFlags().unsetFlag(AIFlags.DO_NOT_BACK_OFF);
                         otherShip.getAIFlags().unsetFlag(AIFlags.SAFE_FROM_DANGER_TIME);
-                        otherShip.getAIFlags().unsetFlag(AIFlags.PHASE_ATTACK_RUN);
                     }
                 }
             }

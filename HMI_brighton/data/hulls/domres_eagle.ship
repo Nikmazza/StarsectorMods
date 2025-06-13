@@ -1,0 +1,202 @@
+{
+  "hullName": "Eagle (DomRes)",
+  "hullId": "domres_eagle",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/domain_resurgent/hmidr_eagle.png",
+  "style": "MIDLINE",
+  "height": 218,
+  "width": 168,
+  "center": [84.5, 104],
+  "collisionRadius": 142.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 138.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ballistic_rangefinder",
+    "automated",
+	"hmi_domres_info"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 005",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": 60,
+      "locations": [-5, 42.5]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 170,
+      "angle": -60,
+      "locations": [-5, -41.5]
+    },
+    {
+      "id": "WS 007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [101, 26.5]
+    },
+    {
+      "id": "WS 008",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [101, -25.5]
+    },
+    {
+      "id": "WS 009",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 0,
+      "locations": [16, 0.5]
+    },
+    {
+      "id": "WS 011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [54, 0.5]
+    },
+    {
+      "id": "WS 013",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [91, 0.5]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 33.5,
+      "locations": [37, 43.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -33.5,
+      "locations": [37, -43.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 248,
+      "angle": 118,
+      "locations": [-46, 67.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 248,
+      "angle": -118,
+      "locations": [-46, -67.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [17, 63.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [17, -63.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-101, 40.5],
+      "length": 26.5,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-101, -39.5],
+      "length": 26.5,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-102, 23],
+      "length": 40,
+      "width": 30,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-102, -22],
+      "length": 40,
+      "width": 30,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -69.5, -11,
+    -102, -13.5,
+    -102.5, -47.5,
+    -73, -51.5,
+    -64.5, -79,
+    -33.5, -79.5,
+    -33, -71.5,
+    9.5, -72.5,
+    65, -46.5,
+    75, -46.5,
+    88, -37,
+    112, -34.5,
+    111.5, -14.5,
+    96.5, -12.5,
+    96.5, 13.5,
+    111.5, 15.5,
+    112, 35.5,
+    88, 38,
+    75, 47.5,
+    65, 47.5,
+    9.5, 73.5,
+    -33, 72.5,
+    -33.5, 80.5,
+    -64.5, 80,
+    -73, 52.5,
+    -102.5, 48.5,
+    -102, 14.5,
+    -69.5, 12
+  ]
+}

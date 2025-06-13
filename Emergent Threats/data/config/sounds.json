@@ -1,9 +1,36 @@
 {
+	"orr_anathema_fire":[
+		{"file": "sounds/weapons/orr_anathema_fire.ogg", "pitch": 1, "volume": 0.4},
+	],
+	"orr_hmc_fire":[
+		{"file": "sounds/weapons/orr_hmc_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"orr_neutron_autolance_loop":[
+		{"file": "sounds/weapons/orr_neutron_autolance_loop.ogg", "pitch": 1, "volume": 1}
+	],
+	"orr_pulse_lance_fire":[
+		{"file": "sounds/weapons/orr_pulse_lance_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"orr_tac_fire":[
+		{"file": "sounds/weapons/orr_tac_fire.ogg", "pitch": 0.7, "volume": 0.7}
+	],
 	"vice_autopulse_fire":[
 		{"file": "sounds/weapons/vice_autopulse_fire.ogg", "pitch": 1, "volume": 1}
 	],
 	"vice_deadeye_plasma_fire":[
 		{"file": "sounds/weapons/vice_deadeye_plasma_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_electrolaser_pulse":[
+		{"file": "sounds/weapons/vice_electrolaser_pulse.ogg", "pitch": 1, "volume": 0.8}
+	],
+	"vice_fermion_decoupler_loop":[
+		{"file": "sounds/weapons/vice_fermion_decoupler_loop.ogg", "pitch": 1, "volume": 0.4}
+	],
+	"vice_flux_shunt_activate":[
+		{"file": "sounds/systems/vice_flux_shunt_activate.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_heavy_maser_loop":[
+		{"file": "sounds/weapons/vice_heavy_maser_loop.ogg", "pitch": 1, "volume": 1.2}
 	],
 	"vice_hmc_fire":[
 		{"file": "sounds/weapons/vice_hmc_fire.ogg", "pitch": 1, "volume": 1}
@@ -28,5 +55,11 @@
 	],
 	"vice_x-ray_pulse_fire":[
 		{"file": "sounds/weapons/vice_x-ray_pulse_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_warp_torpedo_fire":[
+		{"file": "sounds/weapons/vice_warp_torpedo_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"vice_warp_torpedo_hit":[
+		{"file": "sounds/weapons/vice_warp_torpedo_hit.ogg", "pitch": 1, "volume": 1}
 	],
 }

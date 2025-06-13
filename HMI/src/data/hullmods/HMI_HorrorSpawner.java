@@ -65,33 +65,33 @@ public class HMI_HorrorSpawner extends BaseHullMod {
 	static {
 
 		ShardTypeVariants small = new ShardTypeVariants();
-		variantData.put(HullSize.CAPITAL_SHIP, small);
+		variantData.put(HullSize.DESTROYER, small);
 
-		small.get(ShardType.GENERAL).add("hmi_spookyboi_phase2_std", 10f);
+		small.get(ShardType.GENERAL).add("hmi_spookyboi_phase2_left", 10f);
 
-		small.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase2_std", 10f);
+		small.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase2_left", 10f);
 
-		small.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase2_std", 10f);
+		small.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase2_left", 10f);
 
 
-		small.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase2_std", 10f);
+		small.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase2_left", 10f);
 
-		small.get(ShardType.MISSILE).add("hmi_spookyboi_phase2_std", 10f);
+		small.get(ShardType.MISSILE).add("hmi_spookyboi_phase2_left", 10f);
 
 
 
 		ShardTypeVariants medium = new ShardTypeVariants();
-		variantData.put(HullSize.CAPITAL_SHIP, medium);
+		variantData.put(HullSize.CRUISER, medium);
 
-		medium.get(ShardType.GENERAL).add("hmi_spookyboi_phase2_std");
+		medium.get(ShardType.GENERAL).add("hmi_spookyboi_phase2_right_std");
 
-		medium.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase2_std");
+		medium.get(ShardType.ANTI_ARMOR).add("hmi_spookyboi_phase2_right_std");
 
-		medium.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase2_std");
+		medium.get(ShardType.ANTI_SHIELD).add("hmi_spookyboi_phase2_right_std");
 
-		medium.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase2_std");
+		medium.get(ShardType.POINT_DEFENSE).add("hmi_spookyboi_phase2_right_std");
 
-		medium.get(ShardType.MISSILE).add("hmi_spookyboi_phase2_std");
+		medium.get(ShardType.MISSILE).add("hmi_spookyboi_phase2_right_std");
 
 		ShardTypeVariants large = new ShardTypeVariants();
 		variantData.put(HullSize.CAPITAL_SHIP, large);
@@ -163,48 +163,48 @@ public class HMI_HorrorSpawner extends BaseHullMod {
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		} else if (ship.isCruiser()) {
 			splitWeight = 1f;
 
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		} else if (ship.isDestroyer()) {
 			splitWeight = 1f;
 
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		} else if (ship.isFrigate()) {
 			splitWeight = 1f;
 
 			cruiserProb = 1f;
 			cruiserProbMult = 1f;
 			maxCruisers = 1f;
-			destroyerProb = 0f;
-			destroyerProbMult = 0f;
-			maxDestroyers = 0f;
-			frigateProb = 0f;
-			frigateProbMult = 0f;
-			maxFrigates = 0f;
+			destroyerProb = 1f;
+			destroyerProbMult = 1f;
+			maxDestroyers = 1f;
+			frigateProb = 1f;
+			frigateProbMult = 1f;
+			maxFrigates = 1f;
 		}
 		WeightedRandomPicker<ShardType> typePicker = getTypePickerBasedOnLocalConditions(ship);
 

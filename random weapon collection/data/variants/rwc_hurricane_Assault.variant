@@ -1,0 +1,43 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 15,
+    "fluxVents": 16,
+    "goalVariant": true,
+    "hullId": "rwc_hurricane",
+    "hullMods": [
+        "magazines",
+        "missleracks",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "rwc_hurricane_Assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "phasebeam",
+                "WS0002": "phasebeam",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "reaper",
+                "WS0004": "reaper",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "pulselaser",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

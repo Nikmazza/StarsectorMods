@@ -2,6 +2,7 @@
     "knownFighters":{
         "fighters":[
             "swp_falx_wing",
+            "swp_hexblade_wing",
         ],
     },
     "knownWeapons":{

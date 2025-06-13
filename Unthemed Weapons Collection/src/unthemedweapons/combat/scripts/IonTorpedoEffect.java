@@ -13,6 +13,7 @@ import unthemedweapons.util.TargetChecker;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("unused")
@@ -22,6 +23,7 @@ public class IonTorpedoEffect implements OnHitEffectPlugin {
     private static final int maxTargets = 100;
     private static final float effectChance = 0.5f;
     private static final float energyDamageSmall = 200f, energyDamageMedium = 400f, energyDamageLarge = 800f, energyDamageEngine = 400f;
+    private static final float maxTotalDamage = 5000f;
 
     private enum DisabledType {
         NONE,
@@ -31,18 +33,13 @@ public class IonTorpedoEffect implements OnHitEffectPlugin {
         ENGINE;
 
         private float getDamage() {
-            switch (this) {
-                case SMALL:
-                    return energyDamageSmall;
-                case MEDIUM:
-                    return energyDamageMedium;
-                case LARGE:
-                    return energyDamageLarge;
-                case ENGINE:
-                    return energyDamageEngine;
-                default:
-                    return 0f;
-            }
+            return switch (this) {
+                case SMALL -> energyDamageSmall;
+                case MEDIUM -> energyDamageMedium;
+                case LARGE -> energyDamageLarge;
+                case ENGINE -> energyDamageEngine;
+                default -> 0f;
+            };
         }
     }
 
@@ -66,8 +63,7 @@ public class IonTorpedoEffect implements OnHitEffectPlugin {
             // Boolean term is true if the weapon or engine is already disabled
             List<Pair<Vector2f, DisabledType>> damageLocs = new ArrayList<>();
 
-            if (tgt instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) tgt;
+            if (tgt instanceof ShipAPI ship) {
                 ShipEngineControllerAPI engineController = ship.getEngineController();
                 // Apply EMP damage to each engine if applicable
                 if (engineController != null) {
@@ -84,31 +80,27 @@ public class IonTorpedoEffect implements OnHitEffectPlugin {
                     DisabledType type = DisabledType.NONE;
                     if (Misc.random.nextFloat() <= effectChance) {
                         if (weapon.isDisabled()) {
-                            switch (weapon.getSlot().getSlotSize()) {
-                                case SMALL:
-                                    type = DisabledType.SMALL;
-                                    break;
-                                case MEDIUM:
-                                    type = DisabledType.MEDIUM;
-                                    break;
-                                case LARGE:
-                                    type = DisabledType.LARGE;
-                                    break;
-                            }
+                            type = switch (weapon.getSlot().getSlotSize()) {
+                                case SMALL -> DisabledType.SMALL;
+                                case MEDIUM -> DisabledType.MEDIUM;
+                                case LARGE -> DisabledType.LARGE;
+                            };
                         }
                     }
                     damageLocs.add(new Pair<>(weapon.getLocation(), type));
                 }
             }
 
-            if (tgt instanceof MissileAPI) {
-                MissileAPI missile = (MissileAPI) tgt;
+            Collections.shuffle(damageLocs);
+
+            if (tgt instanceof MissileAPI missile) {
                 ShipEngineControllerAPI engineController = missile.getEngineController();
                 if (engineController != null) {
                     damageLocs.add(new Pair<>(missile.getLocation(), engineController.isFlamedOut() ? DisabledType.ENGINE : DisabledType.NONE));
                 }
             }
 
+            float totalDamage = 0f;
             for (Pair<Vector2f, DisabledType> pair : damageLocs) {
                 Vector2f loc = pair.one;
                 // pt is inside shield, proj.getLocation() is outside
@@ -126,6 +118,8 @@ public class IonTorpedoEffect implements OnHitEffectPlugin {
                             false
                     );
                 }
+                totalDamage += pair.two.getDamage();
+                if (totalDamage >= maxTotalDamage) break;
             }
         }
     }

@@ -258,7 +258,8 @@
 			"zea_shield_dawn":"graphics/zea/fx/zea_shield_dawn.png",
 			"zea_shield_dusk":"graphics/zea/fx/zea_shield_dusk.png",
 			"zea_shield_elysia":"graphics/zea/fx/zea_shield_elysia.png",
-			"zea_shield_elysia_2":"graphics/zea/fx/zea_shield_elysia_2.png"
+			"zea_shield_elysia_2":"graphics/zea/fx/zea_shield_elysia_2.png",
+			"nullspace_gate_glow_overwrite":"graphics/zea/fx/nullspace_gate_glow_overwrite.png"
 		},
 		"ui":{
 			"kol_refit_hmod":"graphics/kol/ui/kol_hmod.png",
@@ -295,7 +296,9 @@
 			"kol_forest_path_large":"graphics/kol/illustrations/kol_forest_path_big.png",
 			"kol_tree_canaan_large":"graphics/kol/illustrations/kol_tree_canaan_big.png",
 			"kol_citadel_large":"graphics/kol/illustrations/kol_citadel_big.png",
-			"zea_banner":"graphics/zea/illustrations/zea_banner.png"
+			"zea_banner":"graphics/zea/illustrations/zea_banner.png",
+			"zea_dusk_yuki1":"graphics/zea/illustrations/zea_dusk_yuki1.png",
+			"zea_dusk_yuki2":"graphics/zea/illustrations/zea_dusk_yuki2.png"
 		},
 		"terrain":{
 			"nebula_zea_black":"graphics/kol/terrain/nebula_kol_black_shiny.png",

@@ -1,0 +1,4 @@
+{
+    "startShipsSolo":[["TADA_challenger_attack"]],
+    "startShipsCombatLarge":[["TADA_attrition_outdated", "TADA_challenger_firesupport", "TADA_challenger_firesupport", "TADA_challenger_firesupport"]],
+}

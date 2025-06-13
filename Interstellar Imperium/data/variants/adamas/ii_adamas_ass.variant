@@ -1,6 +1,6 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 15,
+    "fluxCapacitors": 19,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "ii_adamas",

@@ -1,0 +1,60 @@
+{
+  "displayName": "Martyr",
+  "fluxCapacitors": 0,
+  "fluxVents": 2,
+  "goalVariant": true,
+  "hullId": "champion_ii",
+  "hullMods": [
+    "shield_shunt",
+    "safetyoverrides",
+    "armoredweapons"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "champion_ii_Martyr",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "sabotpod",
+        "WS 001": "sabotpod",
+        "WS 006": "miningblaster",
+        "WS 007": "miningblaster"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "cyclone"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "plasma"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 010": "ioncannon",
+        "WS 011": "ioncannon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "mininglaser",
+        "WS 003": "mininglaser",
+        "WS 004": "mininglaser",
+        "WS 005": "mininglaser"
+      }
+    }
+  ],
+  "wings": []
+}

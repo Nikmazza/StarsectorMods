@@ -1,0 +1,46 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 2,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "tigershark_tw",
+    "hullMods": [
+        "advancedoptics",
+        "extendedshieldemitter",
+        "targetingunit",
+        "tw_modernized_rangefinder",
+        "frontemitter",
+        "tw_tigershark_stormwall",
+        "tw_tigershark_sw_handler",
+        "ix_dawnstar_controller",
+        "ix_dawnstar_neutron",
+        "ix_dawnstar_neutron_handler"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "tigershark_tw_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "stormwall_built_in_tw"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "dawnstar_lcpb_ix",
+                "WS 002": "dawnstar_lcpb_ix",
+                "WS 003": "lightbringer_ciws_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "plasma_dart_ix",
+                "WS 006": "plasma_dart_ix"
+            }
+        }
+    ]
+}

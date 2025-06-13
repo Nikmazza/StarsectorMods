@@ -1,7 +1,7 @@
 {
     "displayName": "Imperial Elite",
     "fluxCapacitors": 20,
-    "fluxVents": 29,
+    "fluxVents": 33,
     "hullId": "ii_dominus",
     "hullMods": [
         "ii_elite_package",

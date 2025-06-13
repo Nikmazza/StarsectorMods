@@ -3,7 +3,7 @@
   "hullId": "marinas",
   "displayName": "Attack",
   "goalVariant": true,
-  "fluxCapacitors": 10,
+  "fluxCapacitors": 8,
   "fluxVents": 0,
   "quality": 1,
   "permaMods": [],

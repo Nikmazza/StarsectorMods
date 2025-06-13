@@ -3,7 +3,7 @@
   "hullId": "hmi_herakles",
   "displayName": "Close Support",
   "goalVariant": true,
-  "fluxCapacitors": 46,
+  "fluxCapacitors": 28,
   "fluxVents": 50,
   "quality": 0,
   "permaMods": [],
@@ -33,12 +33,12 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0002": "heavyac",
-        "WS0003": "heavyac",
-        "WS0004": "heavyac",
-        "WS0005": "heavyac",
-        "WS0006": "launcher_cannon",
-        "WS0007": "launcher_cannon"
+        "WS0002": "twotherac",
+        "WS0003": "twotherac",
+        "WS0004": "hmi_voracious",
+        "WS0005": "hmi_voracious",
+        "WS0006": "hmi_voracious",
+        "WS0007": "hmi_voracious"
       }
     },
     {

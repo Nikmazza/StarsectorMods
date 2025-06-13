@@ -1,0 +1,30 @@
+{
+	"baseHullId":"buffalo",
+	"skinHullId":"buffalo_pirates",
+
+	# Everything below is optional
+	"tags":["pirate_bp"],
+	"spriteName":"graphics/ships/pmm_buffalo_p.png",
+	"hullName":"Buffalo (P)",
+	"tech":"Pirate", # alternate for "manufacturer"
+	"restoreToBaseHull":false, # default false
+	"baseValueMult":1.5,
+	"suppliesToRecover":5,
+	"suppliesPerMonth":5,
+	"descriptionId":"buffalo",  # optional
+	"descriptionPrefix":"Seedy traders have gutted this Buffalo's internals and hacked together a basic phase rig—just enough to maintain a weak phase field for smuggling operations.",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], # indices, as engine slots have no id in the .ship file; first indice is 0
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWings":[], # wing ids; breaks variant compatibility with base hull
+	"removeBuiltInWeapons":[], # weapon slot ids; breaks variant compatibility with base hull
+	"builtInMods":["shielded_holds","ill_advised", "comp_storage","phasefield","high_maintenance"],
+	"builtInWings":[], # wing ids; breaks variant compatibility with base hull
+	"weaponSlotChanges":{
+		"WS 001":{
+            "type": "BALLISTIC"
+		}
+	},
+    "engineSlotChanges":{
+    }
+}

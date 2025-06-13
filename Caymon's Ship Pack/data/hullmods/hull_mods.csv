@@ -1,0 +1,245 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+Modified Terminator Core,csp_terminatorcore,,,,codex_unlockable,,,,TRUE,,0,0,0,0,data.hullmods.csp_terminatorcore,"A modified terminator core, modified to to be useable on bigger fighter chassis and for non-ai use",,graphics/hullmods/terminator_core.png
+Phase Injector,csp_phaseinjector,,,,,,,,TRUE,,0,0,0,0,data.hullmods.csp_PhaseInjector,Specialized thrusters that function while a phase ship is in phase space.,,graphics/hullmods/phase_injector.png
+Multi-Layered Shielding,csp_multi_layered_shielding,,,,,,,,TRUE,,0,0,0,0,data.hullmods.csp_multi_layered_shielding,"A improvement upon the solar shielding techology, developed to help ships of the Diktat survive the extreme storms of a Water World and the Seas of Volturn. Along with use in combat situations and due to such, is largely excluvise to the Diktat's Lion Guard at this time to serve as a hidden advantage against their enemies.",,graphics/hullmods/csp_shield.png
+Cetan Frame,csp_cetanframe,,,,,,,,TRUE,,0,0,0,0,data.hullmods.csp_cetanframe,"A type of frame first made for the Cetan Mech. This is what allows the Cetan and similar mechs that use this frame to able perform as well as they do. However the frame is often pushed to it's limit in Combat by default, making installing any Safety Overrides Redundant",,graphics/hullmods/Cetan_frame.png
+"""Fourtheeth Pirategroup""",csp_piratexiv,,,,,,,,TRUE,,0,0,0,0,data.hullmods.csp_piratexiv,"A wolf in sheep's clothing, this ship has been modified with the external plating of Fourteenth Battlegroup vessels ""acquired"" by Hegemony spacers turned pirate. Such a tactic has fooled many a captain into believing they were passing a normal Hegemony fleet rather than entering a crafty trap.",,graphics/hullmods/xivpirate.png
+XIV... Remnant?,csp_xivremnant,,,,codex_unlockable,,,,TRUE,,0,0,0,0,data.hullmods.csp_xivremnant,"This should not be possible. All logic should say otherwise. This cannot exist. Yet, here it is, a Remnant vessel constructed with an alloy that is exotic, yet resembles armor of the Fourteenth Battlegroup vessels. It was likely made from the armor of salvaged or captured XIV ships as this alloy cannot be created with industrial methods known to man alive in Persean Sector. The only remaining explanation is an AI creating the design and overseeing the construction itself. One shudders to think what this design's capabilities are. Ludd's mercy to any who experience this Abomination's wrath firsthand.",,graphics/hullmods/xivremnant.png
+XIV... Remnant Fighters?,csp_xivremnantF,,,,codex_unlockable,,,,TRUE,,0,0,0,0,data.hullmods.csp_xivremnantF,"This should not be possible. All logic should say otherwise. This cannot exist. Yet, here it is, a Remnant Fighter constructed with an alloy that is exotic, yet resembles armor of the Fourteenth Battlegroup vessels. It was likely made from the armor of salvaged or captured XIV ships as this alloy cannot be created with industrial methods known to man alive in Persean Sector. The only remaining explanation is an AI creating the design and overseeing the construction itself. One shudders to think what this design's capabilities are. Ludd's mercy to any who experience this Abomination's wrath firsthand.",,graphics/hullmods/xivremnant.png
+Energy Defense Ampifier,csp_csp_Energyamplifier,,,,,,,,TRUE,,0,0,0,0,data.hullmods.csp_Energyamplifier,"Amplifiers added onto the weapons mounts, allowing for energy based point defense to have further reach to intercept and destroy missile and fighters ",,graphics/hullmods/csp_Energy Defense Ampifier.png
+Phase Tank,csp_ArmoredCoil,2,,,"phase,merc,tritachyon",Phase,24000,,,,8,15,20,40,data.hullmods.csp_ArmoredCoil,An armored refit for phase ships that trade their speed and distance and time diluation effect while phased to be able to have more armor in key areas to overall make the ship harder to kill,,graphics/hullmods/phase_tank.png
+Strikecraft Caller,csp_strikecraft,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_strikecraft,"Thank you Gettag, Very cool",,graphics/hullmods/xivremnant.png
+WINGCOM Caller,csp_wingcom,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_wingcom,"Thank you Gettag, Very cool",,graphics/hullmods/xivremnant.png
+Overlord Suite Caller A,csp_overlordA,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_overlordA,"Thank you Gettag, Very cool",,graphics/hullmods/xivremnant.png
+Overlord Suite Caller B,csp_overlordB,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_overlordB,"Thank you Gettag, Very cool",,graphics/hullmods/xivremnant.png
+Overlord Suite Caller G,csp_overlordG,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_overlordG,"Thank you Gettag, Very cool",,graphics/hullmods/xivremnant.png
+Interchangeable Arms,csp_cetanweaponSwap,,,,no_build_in,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_cetanweaponSwap,This machine can be customized.,,graphics/icons/markets/rogue_ai.png
+R ARM: BUSTER,csp_selector_buster,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_buster,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a bunch of projectiles that are effective against armor and shields alike.
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: MARK CANNON,csp_selector_mark9,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_mark9,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires kinetic projectiles that excel at breaking the shields of enenmy ships
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: SWARM MIRV,csp_selector_mirv,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_mirv,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires 3 MIRVS that spilts into a swarm of Swarmer missiles to hunt down fighters.
+
+%s",,graphics/hullmods/hand_r.png
+L ARM: FLUX HAND,csp_selector_normalarm,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_normalarm,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s does absolutely nothing but helps you keep your flux mangement undercontrol if you're running flux heavy weaponry by not contributing to it.
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: SQUALL LAUNCHER,csp_selector_squall,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_squall,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s launches a burst of squall missiles that track onto their targets and deal considerable damage to shields
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: DEVESATOR ARM,csp_selector_devesator,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_devesator,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s launches a burst of Devesator Shots that does heavy high explosive in an area while also providing Point Defense capabilities.
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: FTYPE BLASTER,csp_selector_ftype,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_ftype,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s does absolutely nothing but helps you keep your flux mangement undercontrol if you're running flux heavy weaponry by not contributing to it.
+
+%s",,graphics/hullmods/hand_l.png
+Lion's Armory,csp_lionarmory,,,,no_build_in,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_lionarmory,This machine can be customized.,,graphics/icons/markets/rogue_ai.png
+R ARM: LION'S CLAW,csp_selector_claw,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_claw,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a bunch of projectiles that are effective against armor and shields alike.
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: MJOLNIR ARM,csp_selector_mjolnirR,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_mjolnirR,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires Energy projectiles that are effective against both shields and armor.
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: BREACH SRM ARM,csp_selector_breach,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_breach,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires 5 Breach SRMS that help strip the target of its armor and distract PD from bigger missiles.
+
+%s",,graphics/hullmods/hand_r.png
+L ARM: MJOLNIR ARM,csp_selector_mjolnirL,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_mjolnirL,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires Energy projectiles that are effective against both shields and armor.
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: PILUM LRM,csp_selector_pilum,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_pilum,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s launches a burst of Pilum missiles that slowly track down and disable their target from long range, making them easy targets for the rest of the fleet.
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: NEEDLER ARM,csp_selector_needler,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_needler,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s excels at quickly bursting down shields along with a side benefit of providing minimal PD capablities
+
+%s",,graphics/hullmods/hand_l.png
+Pirate Strap ons,csp_piratestrapons,,,,no_build_in,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_piratestrapons,This machine can be customized.,,graphics/icons/markets/rogue_ai.png
+L ARM: ANNIHILATOR ARM,csp_selector_annihilator,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_annihilator,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a bunch of missiles that provide an easy source of anti armor.
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: AUTOCANNON ARM,csp_selector_autocannon,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_autocannon,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires kinetic projectiles that are effective against shields.
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: BREACH SRM ARM,csp_selector_motorbreach,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_motorbreach,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires 3 Breach SRMS that help strip the target of its armor and distract PD from bigger missiles.
+
+%s",,graphics/hullmods/hand_l.png
+R ARM: LIGHT ASSAULT GUN ARM,csp_selector_LAG,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_LAG,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires anti armor projectiles at a high rate of fire that can also provide point defence against missiles.
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: IR PULSE ARM,csp_selector_irpulsearm,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_irpulsearm,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s fires 2 IR Pulse shots that are effective against both shield and armor.
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: THUMPER ARM,csp_selector_thumper,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_thumper,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+%s provides point defense against missiles and fighters
+
+%s",,graphics/hullmods/hand_r.png
+AI Overlords,csp_aioverlords,,,,no_build_in,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_aioverlords,This machine can be customized.,,graphics/icons/markets/rogue_ai.png
+R ARM: LOCUST ARM,csp_selector_locust,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_locust,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires upgraded annihilator rockets that track their target and inflict energy damage. Does more damage to shields.
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: PULSE ARM,csp_selector_pulseR,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_pulseR,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a constant flow of energy shots, making for a good general purpose weapon
+%s",,graphics/hullmods/hand_r.png
+R ARM: PULSAR ARM,csp_selector_pulsar,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_pulsar,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a burst of ionized shots that inflicts heavy damage to any ship in its path and can disable weapons and engines of said ship.
+
+%s",,graphics/hullmods/hand_r.png
+L ARM: PLASMA ARM,csp_selector_plasma,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_plasma,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s is a downsized plasma cannon that has lost some of its firepower and consisnent back to back firing for reduced flux cost.
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: ANTIMATTER ARM,csp_selector_antimatter,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_antimatter,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s is an upgraded Antimatter blaster put together by the automanous AI, now with 2 shots instead of one and a slow reloading mechanicism to allow for use throughout a fight
+%s",,graphics/hullmods/hand_l.png
+L ARM: PULSE ARM,csp_selector_pulseL,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_pulseL,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a constant flow of energy shots, making for a good general purpose weapon.
+
+%s",,graphics/hullmods/hand_l.png
+AI Strikecraft Overlords,csp_aistrikecraftoverlords,,,,no_build_in,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_aistrikecraftoverlords,This machine can be customized.,,graphics/icons/markets/rogue_ai.png
+R ARM: MISSLE LAUNCHER ARM,csp_selector_missile_launcher_R,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_missile_launcher_R,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a barrage of small missiles rapidly that hurts armor
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: HEAVY RIFLE ARM,csp_selector_heavyrifle,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_heavyrifle,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a heavy energy shot
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: DOUBLE BARREL SHOTGUN ARM,csp_selector_doubleshotgun,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_doubleshotgun,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires 2 Slug Shotguns shots that deal heavy damage to shields
+
+%s",,graphics/hullmods/hand_r.png
+L ARM: MISSLE LAUNCHER ARM,csp_selector_missile_launcher_L,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_missile_launcher_L,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a barrage of small missiles rapidly that hurts armor
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: ION SMG ARM,csp_selector_ion_smg,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_ion_smg,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a 3 burst of ion shots with a quick reload
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: ROCKET LAUNCHER ARM,csp_selector_rocket_launcher,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_rocket_launcher,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a powerful missile that deals a a lot of damage to armor
+
+%s",,graphics/hullmods/hand_l.png
+The Old Ways,csp_oldways,,,,no_build_in,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_oldways,This machine can be customized.,,graphics/icons/markets/rogue_ai.png
+R ARM: ASSAULT RIFLE ARM,csp_selector_assaultrifle,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_assaultrifle,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a barrage of small missiles rapidly that hurts armor
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: PULSE LASER ARM,csp_selector_rynex,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_rynex,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a heavy energy shot
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: SWARMER ARM,csp_selector_swarmerarm,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_swarmerarm,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires 2 Slug Shotguns shots that deal heavy damage to shields
+
+%s",,graphics/hullmods/hand_r.png
+L ARM: MACHINE RIFLE ARM,csp_selector_machinerifle,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_machinerifle,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a barrage of small missiles rapidly that hurts armor
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: LIGHT MJOINIR ARM,csp_selector_LightMjolnir,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_LightMjolnir,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a 3 burst of ion shots with a quick reload
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: PROX CHARGE ARM,csp_selector_proxcharge,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_proxcharge,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a powerful missile that deals a a lot of damage to armor
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: ANDERSSON ARM,csp_selector_andersson,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_andersson,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a powerful missile that deals a a lot of damage to armor
+
+%s",,graphics/hullmods/hand_l.png
+R ARM: MAGLEV GENERATOR ARM,csp_selector_maglev,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_maglev,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a powerful missile that deals a a lot of damage to armor
+
+%s",,graphics/hullmods/hand_l.png
+Armored Core,csp_armoredcore,,,,no_build_in,,,,TRUE,TRUE,0,0,0,0,data.hullmods.csp_armoredcore,This machine can be customized.,,graphics/icons/markets/rogue_ai.png
+R ARM: JACKHAMMER ARM,csp_selector_jackhammer,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_jackhammer,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a barrage of small missiles rapidly that hurts armor
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: HEAVY MACHINE GUN ARM,csp_selector_hmg,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_hmg,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a heavy energy shot
+
+%s",,graphics/hullmods/hand_r.png
+R ARM: TWIN CHAINGUN ARM,csp_selector_chaingunR,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_chaingunR,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires 2 Slug Shotguns shots that deal heavy damage to shields
+
+%s",,graphics/hullmods/hand_r.png
+L ARM: MINING BLASTER ARM,csp_selector_miningblaster,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_miningblaster,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a barrage of small missiles rapidly that hurts armor
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: EXPANDED SWARMER ARM,csp_selector_expandedswarmer,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_expandedswarmer,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a 3 burst of ion shots with a quick reload
+
+%s",,graphics/hullmods/hand_l.png
+L ARM: TWIN CHAINGUN ARM,csp_selector_chaingunL,,,,"no_build_in,hide_in_codex",,,,TRUE,,0,0,0,0,data.hullmods.csp_selector_chaingunL,"HAND weapons can be changed to better suit the pilot's preferences. 
+
+The %s fires a powerful missile that deals a a lot of damage to armor
+
+%s",,graphics/hullmods/hand_l.png

@@ -1,0 +1,73 @@
+{
+    "displayName": "Attack",
+    "fluxCapacitors": 8,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "TADA_herald",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_herald_attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "TADA_dioscuri",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "pilum_large",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "lightac",
+                "WS0009": "lightac",
+                "WS0010": "lightac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "heavyac",
+                "WS0003": "heavyac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "heavyburst",
+                "WS0007": "heavyburst",
+                "WS0005": "heavyburst",
+                "WS0012": "mininglaser",
+                "WS0011": "mininglaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "lightdualmg",
+                "WS0013": "lightdualmg",
+            }
+        }
+    ],
+    "wings": [
+        "talon_wing",
+        "cobra_wing",
+        "cobra_wing",
+        "cobra_wing",
+        "cobra_wing",
+        "talon_wing",
+    ]
+}

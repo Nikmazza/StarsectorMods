@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 15,
-    "fluxVents": 21,
+    "fluxVents": 24,
     "goalVariant": true,
     "hullId": "swp_circe",
     "hullMods": ["advancedoptics"],

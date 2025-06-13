@@ -1,0 +1,53 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 1,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "vice_chevalier_rem",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter",
+        "vice_unified_targeting_core",
+        "vice_adaptive_emitter_diodes"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_chevalier_r_strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "vice_heavy_maser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "vice_warp_torpedo_launcher",
+                "WS 010": "vice_warp_torpedo_pod",
+                "WS 011": "vice_warp_torpedo_pod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "gravitonbeam",
+                "WS 007": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "pdburst",
+                "WS 001": "pdburst",
+                "WS 002": "pdburst",
+                "WS 003": "pdburst",
+                "WS 012": "pdlaser",
+                "WS 013": "pdlaser"
+            }
+        }
+    ],
+    "wings": []
+}

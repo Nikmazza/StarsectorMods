@@ -9,12 +9,17 @@
 
     "flameoutOnImpactChance":0,
 
-	"useSound":"system_burn_drive_deactivate",
+	"useSound":"zea_elysian_minijump_deactivate",
     "outOfUsesSound":"engine_disabled",
+	
+	"jitterColor":[255,255,255,125],
+	"jitterCopies":1,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":1,
 
     "aiHints":{
-		"activeSpeedIncrease":200,
-		"burstMovementPotential":50,
-		"averageSpeedIncrease":100,
+		"activeSpeedIncrease":0,
+        "burstMovementPotential":1000,
+        "averageSpeedIncrease":10,
     }
 }

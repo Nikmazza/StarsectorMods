@@ -1,0 +1,55 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 24,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "TADA_owl_xiv",
+    "hullMods": ["targetingunit"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "TADA_owl_xiv_support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "hveldriver",
+                "WS0008": "hveldriver",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "heavymauler",
+                "WS0006": "heavymauler",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "taclaser",
+                "WS0002": "taclaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "taclaser",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "pdburst",
+            }
+        }
+    ],
+    "wings": [
+        "TADA_firespitter_wing",
+        "longbow_wing",
+    ]
+}

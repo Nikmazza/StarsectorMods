@@ -63,8 +63,7 @@ public class II_LightspearStationBeamEffect implements BeamEffectPlugin {
 
         ArrayList<WeaponAPI> photonBeams = new ArrayList<>(3);
         for (WeaponAPI shipWeapon : ship.getAllWeapons()) {
-            if (shipWeapon.getId().startsWith("ii_photonbeam")
-                    && !shipWeapon.isDisabled() && !shipWeapon.isPermanentlyDisabled()) {
+            if (shipWeapon.getId().startsWith("ii_photonbeam") && !shipWeapon.isDisabled() && !shipWeapon.isPermanentlyDisabled()) {
                 photonBeams.add(shipWeapon);
             }
         }

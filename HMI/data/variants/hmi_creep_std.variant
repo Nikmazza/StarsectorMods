@@ -4,7 +4,7 @@
   "displayName": "Standard",
   "goalVariant": true,
   "fluxCapacitors": 20,
-  "fluxVents": 6,
+  "fluxVents": 4,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -23,15 +23,14 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "kane_missile",
-        "WS0002": "kane_missile"
+        "WS0001": "annihilator",
+        "WS0002": "annihilator"
       }
     },
     {
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0003": "chaingun",
         "WS0005": "heavyac",
         "WS0006": "heavyac",
         "WS0009": "lightac",
@@ -51,6 +50,7 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
+	    "WS0003": "med_frag_mg",
         "WS0012": "vulcan",
         "WS0013": "burst_ml"
       }

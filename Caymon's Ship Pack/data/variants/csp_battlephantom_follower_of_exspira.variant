@@ -1,0 +1,37 @@
+{
+  "variantId": "csp_battlephantom_follower_of_exspira",
+  "hullId": "csp_battlephantom",
+  "displayName": "Follower of Exspira",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 1,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "unstable_injector",
+    "csp_ArmoredCoil"
+  ],
+  "sMods": ["nav_relay",
+  "escort_package",
+  "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pilum_large"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "irpulse",
+        "WS0003": "irpulse"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

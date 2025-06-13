@@ -3,7 +3,7 @@
   "hullId": "hmi_greasy",
   "displayName": "Close Support",
   "goalVariant": true,
-  "fluxCapacitors": 6,
+  "fluxCapacitors": 8,
   "fluxVents": 10,
   "quality": 0,
   "permaMods": [
@@ -21,15 +21,15 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0007": "heavyac"
+        "WS0007": "med_frag_mg"
       }
     },
     {
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0005": "signpost_sml",
-        "WS0006": "signpost_sml"
+        "WS0005": "annihilator_fighter",
+        "WS0006": "annihilator"
       }
     },
     {

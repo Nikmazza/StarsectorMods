@@ -1,0 +1,54 @@
+{
+  "variantId": "Sevastoron_XIV_Support",
+  "hullId": "Sevastoron_XIV",
+  "displayName": "Support",
+  "goalVariant": false,
+  "fluxCapacitors": 23,
+  "fluxVents": 25,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ballistic_rangefinder",
+    "hardenedshieldemitter"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavymauler",
+        "WS0002": "heavymauler",
+        "WS0003": "lightdualac",
+        "WS0004": "lightdualac",
+        "WS0005": "lightdualac",
+        "WS0006": "lightdualac",
+        "WS0007": "annihilatorpod",
+        "WS0008": "annihilatorpod",
+        "WS0009": "tpc",
+        "WS0010": "tpc",
+        "WS0011": "squall",
+        "WS0012": "squall",
+        "WS0013": "heavymauler",
+        "WS0014": "heavymauler",
+        "WS0015": "lightdualmg",
+        "WS0016": "lightdualmg",
+        "WS0017": "lightdualmg",
+        "WS0018": "lightdualmg",
+        "WS0019": "lightdualmg",
+        "WS0020": "lightdualmg",
+        "WS0021": "dualflak",
+        "WS0022": "dualflak",
+        "WS0023": "flak",
+        "WS0024": "flak",
+        "WS0025": "pdburst",
+        "WS0026": "pdburst",
+        "WS0027": "lightdualmg",
+        "WS0028": "lightdualmg",
+        "WS0029": "heavyneedler",
+        "WS0030": "heavyneedler"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

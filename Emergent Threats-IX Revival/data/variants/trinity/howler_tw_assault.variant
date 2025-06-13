@@ -1,0 +1,38 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+    "goalVariant": true,
+    "hullId": "howler_tw",
+    "hullMods": [
+        "advancedoptics",
+        "extendedshieldemitter",
+        "frontemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "howler_tw_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "muon_autolance_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "orthrus_s_ix",
+                "WS 005": "orthrus_s_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "morningstar_ciws_ix",
+                "WS 003": "morningstar_ciws_ix"
+            }
+        }
+    ]
+}

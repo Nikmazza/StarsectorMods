@@ -1,0 +1,20 @@
+{
+    "displayName": "Expedition",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "hullId": "vice_banteng_tt",
+    "hullMods": [
+        "auxiliary_fuel_tanks",
+        "expanded_cargo_holds",
+        "extendedshieldemitter",
+        "frontemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_banteng_tt_mission",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS 001": "heavyburst"}
+    }]
+}

@@ -1,0 +1,221 @@
+{
+  "hullName": "Advocator",
+  "hullId": "csp_advocator",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/csp_advocator.png",
+  "style": "LOW_TECH",
+  "height": 176,
+  "width": 278,
+  "center": [139, 84],
+  "collisionRadius": 169,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 163,
+  "viewOffset": 0,
+  "builtInMods": [
+    "insulatedengine",
+    "recovery_shuttles",
+    "hbi"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [76, 25]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 180,
+      "locations": [-57, 0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 0,
+      "locations": [11, 106]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 0,
+      "locations": [11, -106]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [76, -25]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        28, -93.5,
+        32, -82.5,
+        28.5, 94.5,
+        28, 86
+      ]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 90,
+      "locations": [0, 65]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -90,
+      "locations": [0, -65]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-70, -75],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-80, -102.5],
+      "length": 50,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-58, -59],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-58, 59],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-71, 76],
+      "length": 60,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-80, 102.5],
+      "length": 50,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-69, -127],
+      "length": 25,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-69, 127],
+      "length": 25,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-67, -35],
+      "length": 83.5,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-66, 35],
+      "length": 83.5,
+      "width": 31,
+      "angle": 180,
+      "contrailSize": 31,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -74, 10,
+    -67, 10,
+    -67, 50,
+    -60, 52,
+    -60, 67,
+    -71, 67,
+    -71, 83,
+    -59.5, 86.5,
+    -81, 92,
+    -81, 111.5,
+    -66, 137,
+    80, 124,
+    84, 119,
+    84, 108,
+    65.5, 92,
+    73, 62,
+    84, 58,
+    90, 41,
+    90, 12,
+    87.5, -0,
+    90, -11,
+    90, -42,
+    84, -58,
+    73, -62,
+    64.5, -91,
+    84, -108,
+    84, -117,
+    80, -124,
+    -66, -137,
+    -81, -111.5,
+    -81, -92,
+    -60, -86,
+    -71, -83,
+    -71, -67,
+    -60, -67,
+    -60, -52,
+    -67, -50,
+    -67, -10,
+    -74, -10
+  ]
+}

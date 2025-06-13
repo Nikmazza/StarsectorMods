@@ -1,0 +1,60 @@
+{
+  "variantId": "ravelin_bodyguardbodyguard",
+  "hullId": "ravelin",
+  "displayName": "Bodyguard",
+  "goalVariant": false,
+  "fluxCapacitors": 10,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "fluxcoil",
+    "fluxdistributor",
+    "solar_shielding",
+    "armoredweapons",
+    "automated",
+    "csp_xivremnant"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "lightdualmg",
+        "WS 003": "lightdualmg",
+        "WS 004": "heavymg",
+        "WS 005": "heavymg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 006": "pdlaser",
+        "WS 007": "pdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "flak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "reaper"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

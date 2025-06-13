@@ -10,10 +10,26 @@
   "hullMods": [],
   "weaponGroups": [
     {
-      "autofire": false,
+      "autofire": true,
       "mode": "LINKED",
       "weapons": {
         "WS0001": "feeder_gun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "feeder_gun",
+        "WS0003": "feeder_gun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "feeder_gun",
+        "WS0005": "feeder_gun"
       }
     }
   ],

@@ -1,0 +1,120 @@
+{
+  "hullName": "Sawtooth XIV",
+  "hullId": "Sawtooth_XIV",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/Sawtooth_XIV.png",
+  "style": "MIDLINE",
+  "height": 107,
+  "width": 54,
+  "center": [27, 53.5],
+  "collisionRadius": 58.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 63,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth",
+    "ill_advised"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [41, -17.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [26.5, -18]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [12.5, -17.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [-1.5, -18]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [-15.5, -18]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [-29.5, -18]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [-21.5, 3]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, 0.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-51.5, 12],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-50.5, -11.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    53.5, -16,
+    49.5, -2,
+    -31.5, 21.5,
+    -38.5, 27.5,
+    -53, 18,
+    -53, -19,
+    -41, -27.5,
+    -34, -20.5,
+    50.5, -18.5
+  ]
+}

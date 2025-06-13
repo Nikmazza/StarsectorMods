@@ -41,8 +41,8 @@ public class II_MagnumSalvoStats extends BaseShipSystemScript {
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
         MagnumSalvoData msData = null;
-        if (data instanceof MagnumSalvoData) {
-            msData = (MagnumSalvoData) data;
+        if (data instanceof MagnumSalvoData magnumSalvoData) {
+            msData = magnumSalvoData;
         }
         if ((msData == null) || (STATEKEY != msData.stateKey)) {
             msData = new MagnumSalvoData(STATEKEY);
@@ -159,8 +159,7 @@ public class II_MagnumSalvoStats extends BaseShipSystemScript {
         }
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
-        if (data instanceof MagnumSalvoData) {
-            MagnumSalvoData msData = (MagnumSalvoData) data;
+        if (data instanceof MagnumSalvoData msData) {
             return msData.armed;
         } else {
             return 0;
@@ -173,8 +172,7 @@ public class II_MagnumSalvoStats extends BaseShipSystemScript {
         }
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
-        if (data instanceof MagnumSalvoData) {
-            MagnumSalvoData msData = (MagnumSalvoData) data;
+        if (data instanceof MagnumSalvoData msData) {
             msData.armed = armed;
         }
     }

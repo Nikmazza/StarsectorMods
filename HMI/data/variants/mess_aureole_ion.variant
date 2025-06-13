@@ -17,7 +17,7 @@
       "mode": "ALTERNATING",
       "weapons": {
         "WS0001": "ioncannon",
-        "WS0002": "ioncannon_fighter",
+        "WS0002": "ioncannon",
         "WS0004": "ioncannon"
       }
     }

@@ -1,0 +1,129 @@
+{
+  "hullName": "Verglas(XIV)",
+  "hullId": "csp_verglas",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/xiv verglas.png",
+  "style": "HIGH_TECH",
+  "height": 29,
+  "width": 28,
+  "center": [14, 14.5],
+  "collisionRadius": 20.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 19.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "csp_xivremnantF",
+    "no_weapon_flux",
+    "insulatedengine"
+  ],
+  "builtInWeapons": {
+    "WS0001": "ionpulser",
+    "WS0002": "csp_built_in_breach_srmF",
+    "WS0003": "csp_built_in_breach_srmF",
+    "WS0004": "csp_verglasdeco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [7, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-3.5, -8.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-3.5, 8.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 0,
+      "locations": [0, -0],
+      "renderOrderMod": 100
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, 3],
+      "length": 18,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-11, -3],
+      "length": 18,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13, -7],
+      "length": 18,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-14, -9.5],
+      "length": 18,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13, 7],
+      "length": 18,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-14, 9.5],
+      "length": 18,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -11.5, 4,
+    -13.5, 8,
+    -11.5, 11,
+    -3, 14,
+    2.5, 9,
+    14.5, 4,
+    11.5, -0,
+    14.5, -4,
+    2.5, -9,
+    -3, -14,
+    -11.5, -11,
+    -13.5, -8,
+    -11.5, -4
+  ]
+}

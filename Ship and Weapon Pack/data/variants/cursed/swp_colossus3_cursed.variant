@@ -1,8 +1,7 @@
 {
     "displayName": "Fireworks",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 4,
     "fluxVents": 3,
-    "goalVariant": false,
     "hullId": "colossus3",
     "hullMods": [
         "missleracks",

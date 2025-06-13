@@ -1,0 +1,52 @@
+{
+  "id": "rwc_flash_l",
+  "specClass": "projectile",
+  "projectileSpecId": "rwc_hvm",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/rwc_flash_l.png",
+  "hardpointSprite": "graphics/weapons/rwc_flash_l_hardpoint.png",
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "turretOffsets": [
+    8,
+    7,
+    8,
+    -7
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    13,
+    7,
+    13,
+    -7
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 3,
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      100,
+      100,
+      100,
+      200
+    ]
+  },
+  "fireSoundTwo": "harpoon_fire"
+}

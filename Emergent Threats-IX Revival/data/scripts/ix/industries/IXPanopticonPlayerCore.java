@@ -23,7 +23,7 @@ public class IXPanopticonPlayerCore extends BaseIndustry {
 
 	private static float DEFAULT_PATHER_INTEREST = 10f;
 	private static float DEFENSE_BONUS_NODE = 1f;
-	private static int STABILITY_BONUS = 5; //display only
+	private static int STABILITY_BONUS = 5;
 	private static String CORE = "ix_panopticon";
 	private static String NODE = "ix_panopticon_node";
 	private static String PLAYER_CORE = "ix_panopticon_player_core";	//structure id
@@ -40,9 +40,13 @@ public class IXPanopticonPlayerCore extends BaseIndustry {
 			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD)
 						.modifyMult(getModId(), 1f + DEFENSE_BONUS_NODE, getNameForModifier());
 			market.suppressCondition(Conditions.PIRATE_ACTIVITY);
+			market.removeSubmarket(Submarkets.SUBMARKET_BLACK);
 			if (!market.hasCondition(MONITORED_VERTEX) && !market.hasCondition(MONITORED_PLAYER)) {
 				market.addCondition(MONITORED_PLAYER);
-			}			
+				market.getStability().modifyFlat(id, STABILITY_BONUS, "Panopticon monitoring");
+			}
+			PanopticonStructureUtil.applyBlackMarketChange(market, "apply");
+			Global.getSector().getMemoryWithoutUpdate().set("$player_panopticon_core_active", true);
 		}
 		else unapply();
 	}
@@ -53,6 +57,16 @@ public class IXPanopticonPlayerCore extends BaseIndustry {
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
 		market.unsuppressCondition(Conditions.PIRATE_ACTIVITY);
 		if (!market.hasIndustry(PLAYER_NODE)) market.removeCondition(MONITORED_PLAYER);
+		market.getStability().unmodify(id);
+		PanopticonStructureUtil.applyBlackMarketChange(market, "unapply");
+		Global.getSector().getMemoryWithoutUpdate().set("$player_panopticon_core_active", false);
+	}
+	
+	@Override
+	public boolean isDisrupted() {
+		if (isHidden()) return true;
+		String key = getDisruptedKey();
+		return market.getMemoryWithoutUpdate().is(key, true);
 	}
 	
 	//classic panopticon overrides player version when both are present
@@ -62,7 +76,7 @@ public class IXPanopticonPlayerCore extends BaseIndustry {
 		if (market.hasIndustry(CORE) && !market.getIndustry(CORE).isHidden()) hidden = true;
 		else if (market.hasIndustry(NODE) && !market.getIndustry(NODE).isHidden()) hidden = true;
 		else if (!isFunctional()) hidden = true;
-		if (hidden) market.removeCondition(MONITORED_PLAYER);
+		if (hidden) unapply();
 		return hidden;
 	}
 	

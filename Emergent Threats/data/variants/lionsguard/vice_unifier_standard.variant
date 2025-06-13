@@ -6,7 +6,7 @@
     "hullId": "vice_unifier",
     "hullMods": [
         "advancedoptics",
-        "targetingunit"
+        "vice_unified_targeting_core"
     ],
     "permaMods": [],
     "sMods": [],

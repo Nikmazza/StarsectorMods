@@ -1,0 +1,16 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "pmm_derelict_master_cover",
+    "hullMods": [
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "pmm_derelict_master_cover_sta",
+    "weaponGroups": [],
+    "wings": [],
+    "modules": [],
+}

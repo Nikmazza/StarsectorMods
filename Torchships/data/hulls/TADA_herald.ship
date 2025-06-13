@@ -11,6 +11,9 @@
   "shieldCenter": [-0.5, 0],
   "shieldRadius": 214.5,
   "viewOffset": 0,
+  "builtInMods": [
+    "bdeck"
+  ],
   "weaponSlots": [
     {
       "id": "WS0001",

@@ -1,0 +1,92 @@
+{
+	"variantOverrides":{
+	},
+	"hullFrequency":{
+		"hulls":{
+			"Beheslaught_XIV":0, #Not in their original fleet lineup so not being added
+			"Endless_XIV":0,
+			"Endless_mk2_XIV":0,
+			"Tanngrisni_XIV":0.3,
+			"Trajan_XIV":0.3,
+			"Knobkerrie_XIV":0.2,
+			"Kana_XIV":0.6,
+			"Crossbow_XIV":0.3,
+			"Cassowary_XIV":0.1,
+			"Haast_XIV":0.4,
+			"Ingria_XIV":0.5,
+			"Sevastoron_XIV":0.3,
+			"Pegasus_XIV":0.3,
+			"moxiv_Titan_XIV":0,
+
+			"Harrier_XIV":0.5,
+			"Stormhawk_XIV":0.8,
+			"Tremor_XIV":0.6,
+			"Division_XIV":0.5,
+			"Vulture_XIV":0.7,
+			"Owl_XIV":0.5,
+			"Owl_spec_ops_XIV":0.1,
+			"Phoca_XIV":0.5,
+
+
+			"Potterycup_XIV":0.5,
+			"Aghast_XIV":0.9,
+			"Armadillo_XIV":0.6,
+			"Gorget_XIV":0.4,
+			"Scalpel_XIV":0.5,
+
+
+			"Velite_XIV":0.7,
+			"Hartfell_XIV":0.8,
+			"Sawtooth_XIV":0.3,
+			"Baronin_XIV":0.4,
+
+		},
+	},	
+	"knownShips":{
+		"hulls":[
+			"Beheslaught_XIV",
+			"Endless_XIV",
+			"Endless_mk2_XIV",
+			"Ingria_XIV",
+			"Sevastoron_XIV",
+			"Pegasus_XIV",
+			"moxiv_Titan_XIV",
+
+			"Tanngrisni_XIV",
+			"Trajan_XIV",
+			"Knobkerrie_XIV",
+			"Kana_XIV",
+			"Crossbow_XIV",
+			"Cassowary_XIV",
+			"Haast_XIV",
+
+			"Harrier_XIV",
+			"Stormhawk_XIV",
+			"Tremor_XIV",
+			"Division_XIV",
+			"Vulture_XIV",
+			"Owl_XIV",
+			"Owl_spec_ops_XIV",
+			"Phoca_XIV",
+
+
+			"Potterycup_XIV",
+			"Aghast_XIV",
+			"Armadillo_XIV",
+			"Gorget_XIV",
+			"Scalpel_XIV",
+
+
+			"Velite_XIV",
+			"Hartfell_XIV",
+			"Sawtooth_XIV",
+			"Baronin_XIV",
+
+		],
+	},
+	"priorityShips":{
+		"hulls":[
+
+		],
+	},
+},

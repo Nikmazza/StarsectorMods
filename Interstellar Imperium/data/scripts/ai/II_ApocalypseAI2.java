@@ -34,6 +34,11 @@ public class II_ApocalypseAI2 extends II_BaseMissile {
         if (missile.isFading() || missile.isFizzling()) {
             return;
         }
+        if (missile.getEngineController() != null) {
+            if (missile.getEngineController().isFlamedOut() || missile.getEngineController().isFlamingOut()) {
+                return;
+            }
+        }
 
         if (!acquireTarget(amount)) {
             missile.giveCommand(ShipCommand.ACCELERATE);
@@ -41,7 +46,7 @@ public class II_ApocalypseAI2 extends II_BaseMissile {
         }
 
         float angularDistance = MathUtils.getShortestRotation(missile.getFacing(), VectorUtils.getAngle(
-                                                              missile.getLocation(), target.getLocation()));
+                missile.getLocation(), target.getLocation()));
 
         if (timer.intervalElapsed()) {
             offtarget = (offtarget > 0 ? offtarget - 1 : offtarget + 1);
@@ -99,8 +104,7 @@ public class II_ApocalypseAI2 extends II_BaseMissile {
 
     @Override
     protected boolean isTargetValid(CombatEntityAPI target) {
-        if (target instanceof ShipAPI) {
-            ShipAPI ship = (ShipAPI) target;
+        if (target instanceof ShipAPI ship) {
             if (ship.isFighter() || ship.isDrone() || (ship.getOwner() == 100)) {
                 return false;
             }
@@ -111,8 +115,7 @@ public class II_ApocalypseAI2 extends II_BaseMissile {
     @Override
     protected boolean acquireTarget(float amount) {
         if (!isTargetValidAlternate(target)) {
-            if (target instanceof ShipAPI) {
-                ShipAPI ship = (ShipAPI) target;
+            if (target instanceof ShipAPI ship) {
                 if (ship.isPhased() && ship.isAlive()) {
                     return false;
                 }

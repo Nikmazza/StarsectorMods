@@ -3,7 +3,7 @@
   "hullId": "hmi_herakles",
   "displayName": "Witherer",
   "goalVariant": true,
-  "fluxCapacitors": 36,
+  "fluxCapacitors": 34,
   "fluxVents": 50,
   "quality": 0,
   "permaMods": [],
@@ -33,10 +33,10 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0010": "signpost_sml",
-        "WS0011": "signpost_sml",
+        "WS0010": "annihilator",
+        "WS0011": "annihilator",
         "WS0012": "annihilator",
-        "WS0013": "annihilator_fighter"
+        "WS0013": "annihilator"
       }
     },
     {

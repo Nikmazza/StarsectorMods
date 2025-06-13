@@ -1,0 +1,55 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 7,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "TADA_scalper",
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_scalper_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "hveldriver",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "harpoon",
+                "WS0002": "harpoon",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "TADA_triplemortar",
+                "WS0007": "TADA_triplemortar",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "vulcan",
+                "WS0010": "vulcan",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "lrpdlaser",
+                "WS0004": "lrpdlaser",
+                "WS0005": "lrpdlaser",
+            }
+        }
+    ],
+}

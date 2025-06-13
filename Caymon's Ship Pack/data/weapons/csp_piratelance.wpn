@@ -1,0 +1,45 @@
+{
+  "id": "csp_piratelance",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/motorhead_head.png",
+  "hardpointSprite": "graphics/weapons/motorhead_head.png",
+  "glowColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    10,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    20,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    207,36,27,255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+"width":20.0,
+	"textureType":ROUGH,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+  "fireSoundOne": "phase_beam_loop"
+}

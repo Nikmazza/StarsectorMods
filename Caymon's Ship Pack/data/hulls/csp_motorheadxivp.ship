@@ -1,0 +1,204 @@
+{
+  "hullName": "Motorhead (xivP)",
+  "hullId": "csp_motorheadxivp",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/motorheadxivp_body.png",
+  "style": "LOW_TECH",
+  "height": 103,
+  "width": 150,
+  "center": [50, 57],
+  "collisionRadius": 86,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 82,
+  "viewOffset": 0,
+  "builtInMods": [
+    "rugged",
+    "autorepair",
+    "csp_piratestrapons",
+    "csp_piratexiv"
+  ],
+  "builtInWeapons": {
+    "WS0009": "csp_motorheadxivp_shoulderRdeco",
+    "WS0010": "csp_motorheadxivp_shoulderLdeco",
+    "WS0011": "csp_motorheadxivpbodydeco",
+    "WS0012": "csp_piratelance"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 115,
+      "angle": 0,
+      "locations": [17, -4],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 115,
+      "angle": -0,
+      "locations": [17, -46],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [-9, 12],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": -0,
+      "locations": [-9, -62],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0.5,
+      "locations": [33.5, -25],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 15,
+      "angle": 0,
+      "locations": [30.5, 26]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 100,
+      "angle": 0,
+      "locations": [8, -75.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [-5.5, -25],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [11, -25.5],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 100,
+      "angle": 0,
+      "locations": [11.5, 30.5],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 100,
+      "angle": 0,
+      "locations": [-5.5, -80.5],
+      "renderOrderMod": 200
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 0,
+      "locations": [-40.5, 11.5]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": -0,
+      "locations": [-39, -62]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-32, -5],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-31, -35],
+      "length": 55,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-32, -46],
+      "length": 24,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-31, -17],
+      "length": 55,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -32, -22,
+    -56, -34.5,
+    -53.5, -40,
+    -39.5, -38,
+    -34, -44,
+    8, -46.5,
+    38, -16,
+    37.5, 17.5,
+    14.5, 44.5,
+    -34, 46,
+    -39.5, 40,
+    -53.5, 42,
+    -55.5, 36,
+    -32, 24
+  ]
+}

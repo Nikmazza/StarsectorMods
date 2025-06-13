@@ -3,7 +3,7 @@
   "hullId": "cockroach",
   "displayName": "Suicide",
   "goalVariant": false,
-  "fluxCapacitors": 7,
+  "fluxCapacitors": 9,
   "fluxVents": 0,
   "quality": 0,
   "permaMods": [],
@@ -23,8 +23,8 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0016": "kane_missile",
-        "WS0017": "kane_missile"
+        "WS0016": "hammer",
+        "WS0017": "hammer"
       }
     },
     {

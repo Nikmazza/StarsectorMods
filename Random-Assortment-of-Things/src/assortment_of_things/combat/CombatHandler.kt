@@ -1,26 +1,27 @@
 package assortment_of_things.combat
 
-import assortment_of_things.RATModPlugin
 import assortment_of_things.abyss.AbyssUtils
-import assortment_of_things.abyss.entities.AbyssalPhotosphere
-import assortment_of_things.abyss.procgen.AbyssDepth
-import assortment_of_things.abyss.procgen.AbyssProcgen
-import assortment_of_things.abyss.procgen.types.IonicStormAbyssType
-import assortment_of_things.abyss.scripts.AbyssCombatHueApplier
-import assortment_of_things.abyss.scripts.ChangeMainMenuColorScript
-import assortment_of_things.abyss.scripts.ResetBackgroundScript
+import assortment_of_things.abyss.combat.*
+import assortment_of_things.abyss.entities.light.*
+import assortment_of_things.abyss.entities.primordial.PrimordialPhotosphere
+import assortment_of_things.abyss.procgen.biomes.BaseAbyssBiome
+import assortment_of_things.abyss.procgen.biomes.PrimordialWaters
+import assortment_of_things.abyss.procgen.biomes.SeaOfSolitude
 import assortment_of_things.backgrounds.neural.NeuralShardScript
 import assortment_of_things.backgrounds.zero_day.ZeroDayScript
 import assortment_of_things.misc.RATSettings
-import assortment_of_things.misc.getAndLoadSprite
+import assortment_of_things.misc.ReflectionUtils
+import assortment_of_things.misc.escort.EscortOrdersManager
 import com.fs.starfarer.api.GameState
 import com.fs.starfarer.api.Global
-import com.fs.starfarer.api.campaign.PlanetAPI
 import com.fs.starfarer.api.campaign.SectorEntityToken
 import com.fs.starfarer.api.combat.*
 import com.fs.starfarer.api.input.InputEventAPI
+import com.fs.starfarer.campaign.WarpingSpriteRenderer
 import exerelin.campaign.backgrounds.CharacterBackgroundUtils
+import org.dark.shaders.post.PostProcessShader
 import org.lazywizard.lazylib.MathUtils
+import org.magiclib.kotlin.setBrightness
 
 
 class CombatHandler : EveryFrameCombatPlugin
@@ -29,13 +30,14 @@ class CombatHandler : EveryFrameCombatPlugin
 
     override fun init(engine: CombatEngineAPI)  {
 
+        //Global.getCombatEngine().addLayeredRenderingPlugin(ShadedSphere())
 
         if (RATSettings.enableAbyss!! && Global.getCurrentState() == GameState.TITLE) {
 
-            if (RATModPlugin.isHalloween /*&& !engine.isSimulation*/) {
+          /*  if (RATModPlugin.isHalloween *//*&& !engine.isSimulation*//*) {
                 engine.addPlugin(AbyssSpecialTitleScreen())
-            }
-            else if (RATModPlugin.gameStartedForTitleScene) {
+            }*/
+           /* else if (RATModPlugin.gameStartedForTitleScene) {
                 RATModPlugin.gameStartedForTitleScene = false
 
                 var random = MathUtils.getRandomNumberInRange(1, 100)
@@ -44,7 +46,7 @@ class CombatHandler : EveryFrameCombatPlugin
                     engine.addPlugin(AbyssTitleScreen())
                 }
 
-            }
+            }*/
         }
 
        /* engine!!.addPlugin(object : BaseEveryFrameCombatPlugin() {
@@ -66,12 +68,12 @@ class CombatHandler : EveryFrameCombatPlugin
             engine.addPlugin(DPSMeter())
         }*/
 
-        if (ChangeMainMenuColorScript.isInAbyss && Global.getCurrentState() == GameState.TITLE && !RATModPlugin.isHalloween) {
+       /* if (ChangeMainMenuColorScript.isInAbyss && Global.getCurrentState() == GameState.TITLE && !RATModPlugin.isHalloween) {
             //Global.getCombatEngine().backgroundColor = ChangeMainMenuColorScript.lastAbyssColor
             engine.addPlugin(AbyssTitleScreen())
             ChangeMainMenuColorScript.isInAbyss = false
 
-        }
+        }*/
 
 
 
@@ -79,6 +81,8 @@ class CombatHandler : EveryFrameCombatPlugin
 
         if (Global.getCurrentState() != GameState.TITLE && Global.getSector() != null)
         {
+
+            Global.getCombatEngine().addPlugin(EscortOrdersManager())
 
             if (Global.getSettings().modManager.isModEnabled("nexerelin")) {
                 if (CharacterBackgroundUtils.isBackgroundActive("rat_neural_shard")) {
@@ -90,7 +94,11 @@ class CombatHandler : EveryFrameCombatPlugin
                 }
             }
 
-            var system = Global.getSector()?.playerFleet?.starSystem ?: return
+            if (AbyssUtils.isPlayerInAbyss()) {
+                initAbyss()
+            }
+
+            /*var system = Global.getSector()?.playerFleet?.starSystem ?: return
             if (system.hasTag(AbyssUtils.SYSTEM_TAG) && Global.getCombatEngine().missionId == null)
             {
                 var data = AbyssUtils.getSystemData(system)
@@ -108,13 +116,13 @@ class CombatHandler : EveryFrameCombatPlugin
 
                 ResetBackgroundScript.resetBackground = true
 
-               /* if (darkness!!.containsEntity(Global.getSector().playerFleet)) {
+               *//* if (darkness!!.containsEntity(Global.getSector().playerFleet)) {
                     CombatEngine.getBackground().color = color.darker()
                 }
                 else {
                     if (depth == AbyssDepth.Shallow) CombatEngine.getBackground().color = color.brighter()
                     if (depth == AbyssDepth.Deep) CombatEngine.getBackground().color = color.brighter().brighter().brighter()
-                }*/
+                }*//*
 
                // Global.getCombatEngine().isRenderStarfield = false
                 if (darkness!!.containsEntity(Global.getSector().playerFleet)) {
@@ -156,15 +164,160 @@ class CombatHandler : EveryFrameCombatPlugin
 
 
             }
+*/        }
+    }
+
+    fun initAbyss() {
+        var engine = Global.getCombatEngine()
+
+        var data = AbyssUtils.getData()
+        var manager = AbyssUtils.getBiomeManager()
+        var dominant = manager.getDominantBiome()
+
+        var darkness = data.darknessTerrain ?: return
+        var lightLevel = 1-darkness.getLightlevel(Global.getSector().playerFleet) //1 If full brightness
+        var darknessLevel = darkness.getDarknessMult() //Biome dependent darkness mult
+
+        var currentColor = manager.getCurrentBiomeColor()
+        var currentDarkColor = manager.getCurrentDarkBiomeColor()
+        var currentBackgroundColor = manager.getCurrentBackgroundColor()
+        var currentLightColor = manager.getCurrentSystemLightColor()
+
+        //Background
+        var backgroundBrightness = 40
+        backgroundBrightness += (75 * lightLevel * darknessLevel).toInt()
+        if (dominant is PrimordialWaters) {
+            backgroundBrightness -= 20
+            currentDarkColor = currentDarkColor.darker()
         }
+
+        var background = currentBackgroundColor.setBrightness(backgroundBrightness)
+
+        Global.getCombatEngine().backgroundColor = background
+
+        //Background Warper
+        var warper = CombatBackgroundWarper(8, 0.25f)
+        ReflectionUtils.set(null,  Global.getCombatEngine(), warper, WarpingSpriteRenderer::class.java,)
+        warper.overwriteColor = background
+
+
+        //Hue
+        engine.addLayeredRenderingPlugin(AbyssCombatHueApplier(currentDarkColor, lightLevel, darknessLevel))
+
+        //Sea of Solitude rendering
+        if (dominant is SeaOfSolitude) {
+            Global.getCombatEngine().addLayeredRenderingPlugin(SolitudeStormCombatRenderer(dominant))
+            Global.getCombatEngine().addLayeredRenderingPlugin(SolitudeStormParticleCombatRenderer(dominant.getParticleColor(), dominant.getDarkBiomeColor()))
+        }
+
+        //Display Lightsources in combat
+        var lightSource: SectorEntityToken? = null
+        var lightSources = Global.getSector().playerFleet.containingLocation.customEntities.filter { it.customPlugin is AbyssalLight }
+        for (source in lightSources)
+        {
+            var plugin = source.customPlugin as AbyssalLight
+            if (MathUtils.getDistance(source.location, Global.getSector().playerFleet.location) < (plugin.radius / 10) - 10)
+            {
+                if (plugin is AbyssalPhotosphere || plugin is AbyssalBeacon || plugin is AbyssalDecayingPhotosphere || plugin is AbyssalColossalPhotosphere || plugin is PrimordialPhotosphere) {
+                    lightSource = source
+                }
+                break
+            }
+        }
+
+        if (lightSource != null) {
+            var plugin = lightSource.customPlugin
+
+            if (plugin is AbyssalPhotosphere) {
+                engine!!.addLayeredRenderingPlugin(CombatPhotosphereRenderer(lightSource))
+            }
+
+            if (plugin is AbyssalColossalPhotosphere) {
+                engine!!.addLayeredRenderingPlugin(CombatColossalPhotosphereRenderer(lightSource))
+            }
+
+            if (plugin is AbyssalDecayingPhotosphere) {
+                engine!!.addLayeredRenderingPlugin(CombatDecayingPhotosphereRenderer(lightSource))
+            }
+
+            if (plugin is PrimordialPhotosphere) {
+                var biome = AbyssUtils.getBiomeManager().getBiome(PrimordialWaters::class.java) as PrimordialWaters
+                if (biome.getLevel() != 0f) {
+                    engine!!.addLayeredRenderingPlugin(CombatPrimordialPhotosphereRenderer(lightSource))
+                }
+            }
+
+            if (plugin is AbyssalBeacon) {
+                engine!!.addLayeredRenderingPlugin(CombatBeaconRenderer(lightSource, currentLightColor))
+            }
+        }
+
+
+
+        var levels = manager.getBiomeLevels()
+        var saturation = levels.map { it.key.getSaturation() * it.value }.sum()
+
+        engine.customData.set("rat_current_abyss_biome", dominant)
+        engine.customData.set("rat_current_abyss_saturation", saturation)
+    }
+
+
+    fun advanceAbyss(amount: Float) {
+        var asteroids = ArrayList(Global.getCombatEngine().asteroids)
+        asteroids.forEach { Global.getCombatEngine().removeEntity(it) }
+
+        var saturation = Global.getCombatEngine().customData.get("rat_current_abyss_saturation") as Float?
+        if (saturation != null) {
+            PostProcessShader.setSaturation(false, saturation)
+        }
+
     }
 
     override fun processInputPreCoreControls(amount: Float, events: MutableList<InputEventAPI>?) {
     }
 
+    /*var replacements = ArrayList<ShadedShipSpriteTest>()
+    var radius = 0f*/
 
     override fun advance(amount: Float, events: MutableList<InputEventAPI>?)
     {
+
+      /*  for (ship in Global.getCombatEngine().ships) {
+            if (!ship.hasTag("sprite_replaced2")) {
+                ship.addTag("sprite_replaced2")
+                var shaded = ThreatFragmentShader(ship)
+                shaded.init()
+            }
+        }*/
+
+       /* for (ship in Global.getCombatEngine().ships) {
+            if (!ship.hasTag("sprite_replaced")) {
+                ship.addTag("sprite_replaced")
+                var shaded = ShadedShipSpriteTest(ship)
+                shaded.init()
+                replacements.add(shaded)
+            }
+        }
+
+        radius += 500 * amount
+        var baseOffset = 900f
+        var min = 0 - baseOffset + radius
+        var max = 0 + radius
+
+
+        if (radius >= baseOffset * 2) radius = 0f
+
+        for (replacement in replacements) {
+            replacement.minRadius = min
+            replacement.maxRadius = max
+        }*/
+
+
+
+
+
+
+
         /*if (ArtifactUtils.getActiveArtifact() != null)
         {
             ArtifactUtils.getActivePlugin()!!.advanceInCombat(Global.getSector().playerFleet, ArtifactUtils.STAT_MOD_ID)
@@ -183,7 +336,12 @@ class CombatHandler : EveryFrameCombatPlugin
         if (Global.getCurrentState() != GameState.TITLE && Global.getSector() != null)
         {
             var system = Global.getSector()?.playerFleet?.starSystem ?: return
-            if (system.hasTag(AbyssUtils.SYSTEM_TAG) && Global.getCombatEngine().missionId == null)
+
+            if (AbyssUtils.isPlayerInAbyss()) {
+                advanceAbyss(amount)
+            }
+
+            /*if (system.hasTag(AbyssUtils.SYSTEM_TAG) && Global.getCombatEngine().missionId == null)
             {
 
                 var data = AbyssUtils.getSystemData(system)
@@ -252,7 +410,7 @@ class CombatHandler : EveryFrameCombatPlugin
                         ship.mutableStats.empDamageTakenMult.modifyMult("rat_ionicstorm", 1.20f)
                     }
                 }
-            }
+            }*/
         }
     }
 

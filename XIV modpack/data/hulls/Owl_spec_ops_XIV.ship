@@ -1,0 +1,219 @@
+{
+  "hullName": "Spec Ops Owl",
+  "hullId": "Owl_spec_ops_XIV",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/Owl_spec_ops_XIV.png",
+  "style": "MIDLINE",
+  "height": 315,
+  "width": 178,
+  "center": [89, 157.5],
+  "collisionRadius": 157.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 177.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fourteenth",
+    "operations_center",
+    "unstable_injector",
+    "safetyoverrides",
+    "hiressensors",
+    "insulatedengine",
+    "solar_shielding",
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 80,
+      "angle": 0,
+      "locations": [88.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 19,
+      "angle": 0,
+      "locations": [61.5, -21.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 19,
+      "angle": -0,
+      "locations": [61.5, 21.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 19,
+      "angle": 0,
+      "locations": [15.5, -31.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 19,
+      "angle": -0,
+      "locations": [15.5, 31.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-72.5, 20]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-72.5, -20]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 50,
+      "angle": 180,
+      "locations": [-115.5, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -32.5, 50.5,
+        -22.5, 56
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -47.5, 55,
+        -40.5, 60.5
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -29.5, -50.5,
+        -22, -56
+      ]
+    },
+    {
+      "id": "LB 4",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -45, -54.5,
+        -40, -60.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-124.5, 48],
+      "length": 45.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-124.5, -48],
+      "length": 45.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-138.5, 34.5],
+      "length": 46.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-138.5, -34.5],
+      "length": 46.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-151.5, 20],
+      "length": 58,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-151.5, -20],
+      "length": 58,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -156, -25,
+    -127.5, -58.5,
+    -106.5, -60,
+    -74.5, -91.5,
+    -60.5, -84.5,
+    -64, -66.5,
+    -27, -64.5,
+    -13.5, -55.5,
+    80.5, -30.5,
+    100.5, -30,
+    157, -12,
+    157, 12,
+    100.5, 30,
+    80.5, 30.5,
+    -13.5, 55.5,
+    -27, 64.5,
+    -64, 66.5,
+    -60.5, 84.5,
+    -74.5, 91.5,
+    -106.5, 60,
+    -127.5, 58.5,
+    -156, 25
+  ]
+}

@@ -3,7 +3,7 @@
   "hullId": "slugworth",
   "displayName": "Attack",
   "goalVariant": true,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 2,
   "fluxVents": 16,
   "quality": 1,
   "permaMods": [],

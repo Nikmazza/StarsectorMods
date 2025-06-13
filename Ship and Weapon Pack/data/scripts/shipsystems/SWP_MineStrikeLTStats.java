@@ -1,8 +1,5 @@
 package data.scripts.shipsystems;
 
-import java.awt.Color;
-import java.util.List;
-import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -20,6 +17,9 @@ import com.fs.starfarer.api.impl.combat.MineStrikeStatsAIInfoProvider;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
+import java.awt.Color;
+import java.util.List;
+import org.lwjgl.util.vector.Vector2f;
 
 public class SWP_MineStrikeLTStats extends BaseShipSystemScript implements MineStrikeStatsAIInfoProvider {
 
@@ -41,8 +41,8 @@ public class SWP_MineStrikeLTStats extends BaseShipSystemScript implements MineS
     @Override
     public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
         ShipAPI ship;
-        if (stats.getEntity() instanceof ShipAPI) {
-            ship = (ShipAPI) stats.getEntity();
+        if (stats.getEntity() instanceof ShipAPI shipAPI) {
+            ship = shipAPI;
         } else {
             return;
         }

@@ -26,25 +26,23 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
+                "WS 005": "annihilatorpod",
+                "WS 006": "annihilatorpod",
+                "WS 007": "annihilatorpod",
+                "WS 008": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "vice_heavy_maser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 002": "locust",
-                "WS 004": "locust"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "typhoon",
-                "WS 006": "typhoon",
-                "WS 007": "typhoon",
-                "WS 008": "typhoon"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 003": "guardian",
+                "WS 004": "locust",
                 "WS 009": "pdlaser",
                 "WS 011": "pdlaser",
                 "WS 012": "pdburst",

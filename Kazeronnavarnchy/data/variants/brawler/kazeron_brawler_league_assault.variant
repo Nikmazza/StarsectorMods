@@ -1,0 +1,40 @@
+{
+  "variantId": "kazeron_brawler_league_assault",
+  "hullId": "kazeron_brawler_league",
+  "displayName": "Assault",
+  "goalVariant": true,
+  "fluxCapacitors": 9,
+  "fluxVents": 6,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "phasebeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "gorgon",
+        "WS 004": "gorgon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "heavyac"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

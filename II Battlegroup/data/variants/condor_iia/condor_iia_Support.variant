@@ -1,0 +1,28 @@
+{
+  "displayName": "Support",
+  "fluxCapacitors": 0,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "condor_iia",
+  "hullMods": [
+    "eccm"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "condor_iia_Support",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "vulcan",
+        "WS 002": "vulcan",
+        "WS 003": "pilum",
+        "WS0001": "pilum_large"
+      }
+    }
+  ],
+  "wings": [
+    "broadsword_wing"
+  ]
+}

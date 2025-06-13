@@ -1,0 +1,56 @@
+{
+  "variantId": "apogee_scav_std",
+  "hullId": "apogee_scav",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 28,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "autopulse"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "sabot",
+        "WS0004": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "hurricane"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "ionpulser",
+        "WS0007": "gravitonbeam",
+        "WS0008": "gravitonbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "lrpdlaser",
+        "WS0006": "lrpdlaser"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

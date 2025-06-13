@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="II_BG:jar">
+    <output-path>$PROJECT_DIR$/jars</output-path>
+    <root id="archive" name="II_BG.jar">
+      <element id="module-output" name="II_BG" />
+    </root>
+  </artifact>
+</component>

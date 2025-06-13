@@ -4,7 +4,7 @@
   "displayName": "Exodus",
   "goalVariant": true,
   "fluxCapacitors": 0,
-  "fluxVents": 17,
+  "fluxVents": 3,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
@@ -19,6 +19,7 @@
       "weapons": {
         "WS0001": "hammerrack",
         "WS0002": "hammerrack",
+        "WS0015": "multineedler",
         "WS0017": "hammerrack"
       }
     },
@@ -59,7 +60,6 @@
         "WS0012": "lightdualmg",
         "WS0013": "flak",
         "WS0014": "flak",
-        "WS0015": "heavymg",
         "WS0018": "lightdualmg",
         "WS0019": "lightdualmg",
         "WS0020": "lightdualmg",

@@ -58,8 +58,8 @@ public class II_ArbalestLoaderStats extends BaseShipSystemScript {
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
         ArbalestLoaderData alData = null;
-        if (data instanceof ArbalestLoaderData) {
-            alData = (ArbalestLoaderData) data;
+        if (data instanceof ArbalestLoaderData arbalestLoaderData) {
+            alData = arbalestLoaderData;
         }
         if ((alData == null) || (STATEKEY != alData.stateKey)) {
             alData = new ArbalestLoaderData(STATEKEY);
@@ -204,8 +204,7 @@ public class II_ArbalestLoaderStats extends BaseShipSystemScript {
         }
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
-        if (data instanceof ArbalestLoaderData) {
-            ArbalestLoaderData alData = (ArbalestLoaderData) data;
+        if (data instanceof ArbalestLoaderData alData) {
             return alData.armed;
         } else {
             return 0;
@@ -218,8 +217,7 @@ public class II_ArbalestLoaderStats extends BaseShipSystemScript {
         }
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
-        if (data instanceof ArbalestLoaderData) {
-            ArbalestLoaderData alData = (ArbalestLoaderData) data;
+        if (data instanceof ArbalestLoaderData alData) {
             alData.armed = armed;
         }
     }
@@ -230,8 +228,7 @@ public class II_ArbalestLoaderStats extends BaseShipSystemScript {
         }
 
         Object data = Global.getCombatEngine().getCustomData().get(DATA_KEY_ID + "_" + ship.getId());
-        if (data instanceof ArbalestLoaderData) {
-            ArbalestLoaderData alData = (ArbalestLoaderData) data;
+        if (data instanceof ArbalestLoaderData alData) {
             return alData.active;
         } else {
             return 0;

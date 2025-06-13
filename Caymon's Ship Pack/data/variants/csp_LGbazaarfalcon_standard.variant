@@ -1,0 +1,61 @@
+{
+  "variantId": "csp_LGbazaarfalcon_standard",
+  "hullId": "csp_LGbazaarfalcon",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 25,
+  "fluxVents": 30,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 009": "pdburst",
+        "WS 010": "pdburst"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 005": "pulselaser",
+        "WS 006": "pulselaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "mininglaser",
+        "WS 004": "mininglaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "sabot",
+        "WS 002": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "heavymortar",
+        "WS 008": "heavymortar"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "csp_Fantia_wing",
+    "csp_Fantia_wing"
+  ]
+}

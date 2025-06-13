@@ -3,6 +3,7 @@
   "specClass": "beam",
   "type": "ENERGY",
   "size": "MEDIUM",
+  "mountTypeOverride": "HYBRID",
   "collisionClass": "RAY_FIGHTER",
   "collisionClassByFighter": "RAY_FIGHTER",
   "turretSprite": "graphics/weapons/hmi_mining_array_turret.png",

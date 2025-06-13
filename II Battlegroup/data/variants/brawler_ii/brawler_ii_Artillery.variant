@@ -1,0 +1,33 @@
+{
+  "displayName": "Artillery",
+  "fluxCapacitors": 5,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "brawler_ii",
+  "hullMods": [
+    "armoredweapons",
+    "advancedoptics",
+    "auxiliarythrusters"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "brawler_ii_Artillery",
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "gauss"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 003": "taclaser",
+        "WS 004": "taclaser"
+      }
+    }
+  ],
+  "wings": []
+}

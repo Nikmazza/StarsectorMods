@@ -29,6 +29,7 @@ public class HMI_kamikaze implements SectorGeneratorPlugin {
 	public void generate(SectorAPI sector) {
 		StarSystemAPI system = sector.createStarSystem("Kamikaze");
 		LocationAPI hyper = Global.getSector().getHyperspace();
+
 		system.setBackgroundTextureFilename("graphics/backgrounds/background6.jpg");
 
 		PlanetAPI star = system.initStar("kamikaze_star",
@@ -233,11 +234,10 @@ public class HMI_kamikaze implements SectorGeneratorPlugin {
 		kamikazestation1.setInteractionImage("illustrations", "orbital");
 		kamikazestation1.setCustomDescriptionId("hmi_hurricane_station");
 
-		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("kamikaze2_jump_point1", "Inner Jump-point");
+		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("kamikaze2_jump_point1", "Hurricane Jump-point");
 		OrbitAPI orbit = Global.getFactory().createCircularOrbit(kamikaze2, 240, 3000, 600);
 		jumpPoint.setOrbit(orbit);
 		jumpPoint.setRelatedPlanet(kamikaze2);
-		jumpPoint.setStandardWormholeToHyperspaceVisual();
 		system.addEntity(jumpPoint);
 			
 		PlanetAPI kamikaze3 = system.addPlanet("typhoon", star, "Typhoon", "rocky_metallic", 120, 180, 20000, 700);
@@ -318,14 +318,13 @@ public class HMI_kamikaze implements SectorGeneratorPlugin {
 
 
 
-		JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("kamikaze4_jump_point1", "Outer Jump-point");
+		JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("kamikaze4_jump_point1", "Rascal Jump-point");
 		OrbitAPI orbit1 = Global.getFactory().createCircularOrbit(kamikaze4, 60, 3000, 1200);
 		jumpPoint1.setOrbit(orbit1);
 		jumpPoint1.setRelatedPlanet(kamikaze4);
-		jumpPoint1.setStandardWormholeToHyperspaceVisual();
 		system.addEntity(jumpPoint1);
 
-		system.autogenerateHyperspaceJumpPoints(true, true);
+		system.autogenerateHyperspaceJumpPoints(false, true);
 		cleanup(system);
 	}
 

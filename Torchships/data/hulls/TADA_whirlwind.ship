@@ -11,6 +11,7 @@
   "shieldCenter": [8, -0],
   "shieldRadius": 134,
   "viewOffset": 0,
+  "builtInMods": [],
   "builtInWeapons": {
     "SYSTEM": "TADA_whirlwindSystem"
   },

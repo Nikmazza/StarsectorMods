@@ -1,0 +1,130 @@
+{
+  "hullName": "FalchionB",
+  "hullId": "csp_falchionb",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/csp_falchionb.png",
+  "style": "HIGH_TECH",
+  "height": 50,
+  "width": 40,
+  "center": [20, 23],
+  "collisionRadius": 28.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 28,
+  "viewOffset": 0,
+  "builtInMods": [
+    "advancedshieldemitter"
+  ],
+  "builtInWeapons": {
+    "WS0001": "csp_built_in_breach_srmF",
+    "WS0002": "csp_built_in_breach_srmF",
+    "WS0003": "sabot",
+    "WS0004": "csp_falchionbdeco"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2, 10]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2, -10]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [3, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-20.5, -7],
+      "length": 13,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22, -4.5],
+      "length": 11,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22.5, -2],
+      "length": 10,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22.5, 2],
+      "length": 10,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22, 4.5],
+      "length": 11,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-21, 7],
+      "length": 13,
+      "width": 2,
+      "angle": 180,
+      "contrailSize": 2,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -19, -2.5,
+    -23, -3,
+    -19, -11,
+    -6, -9,
+    0, -18,
+    6, -17,
+    3, -6.5,
+    9.5, -8.5,
+    27, -0,
+    9.5, 8.5,
+    4, 6,
+    6.5, 18,
+    0, 18,
+    -7.5, 8.5,
+    -19, 11,
+    -23, 2,
+    -19, 1
+  ]
+}

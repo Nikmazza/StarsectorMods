@@ -1,0 +1,23 @@
+{
+	"baseHullId":"orr_aggressor_base",
+	"skinHullId":"orr_aggressor_xiv_tac",
+	"hullName":"Aggressor (XIV)",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
+	"descriptionId":"orr_aggressor",
+	"descriptionPrefix":"Built to the specifications of the 14th Domain Battlegroup which founded the Hegemony, this vessel is a prime example of the Domain Navy's 'decisive battle' doctrine, particularly exhibited by a series of radical structural modifications performed using pre-Collapse industrial technology.",
+	"tags":["no_dealer", "orr_tac", "hide_in_codex"],
+	"tech":"XIV Battlegroup",
+	"fleetPoints":32,
+	"ordnancePoints":280,
+	"baseValueMult":1.75,
+	"spriteName":"graphics/orr/ships/aggressor_xiv_tac.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["fourteenth"],
+	"builtInWeapons": {
+		"WS 016": "orr_tac",
+		"WS 017": "orr_tac"
+	},
+}

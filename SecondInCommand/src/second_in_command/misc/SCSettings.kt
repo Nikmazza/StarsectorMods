@@ -1,9 +1,11 @@
 package second_in_command.misc
 
+import com.fs.starfarer.api.GameState
 import com.fs.starfarer.api.Global
 import lunalib.lunaSettings.LunaSettings
 import lunalib.lunaSettings.LunaSettingsListener
 import second_in_command.SCUtils
+import second_in_command.misc.backgrounds.AssociatesBackground
 
 class SCSettings : LunaSettingsListener {
 
@@ -38,11 +40,14 @@ class SCSettings : LunaSettingsListener {
             480000f, //LV3
             1440000f, //LV4*/
         )
-        var canNPCsSpawnWithSkills = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_canNPCsSpawnWithSkills")!!
+
+
+        var enable4thSlot = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enable4thSlot")!!
         var xpGainMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_officerXPMult")!!
 
         var playerXPMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_playerXPMult")!!
 
+        var canNPCsSpawnWithSkills = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_canNPCsSpawnWithSkills")!!
         var difficulty = LunaSettings.getString(SCUtils.MOD_ID, "sc_fleetDifficulty")
 
         @JvmStatic
@@ -72,12 +77,20 @@ class SCSettings : LunaSettingsListener {
     }
 
     fun applySettings() {
-        canNPCsSpawnWithSkills = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_canNPCsSpawnWithSkills")!!
         xpGainMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_officerXPMult")!!
+
+        enable4thSlot = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enable4thSlot")!!
+        if (Global.getCurrentState() == GameState.CAMPAIGN) {
+            if (Global.getSettings().modManager.isModEnabled("nexerelin")) {
+                AssociatesBackground.fillMissingSlot()
+            }
+            SCUtils.getPlayerData().remove4thOfficer()
+        }
 
         playerXPMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_playerXPMult")!!
         Global.getSettings().setFloat("xpGainMult", playerXPMult)
 
+        canNPCsSpawnWithSkills = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_canNPCsSpawnWithSkills")!!
         difficulty = LunaSettings.getString(SCUtils.MOD_ID, "sc_fleetDifficulty")
 
         playerMaxLevel = LunaSettings.getInt(SCUtils.MOD_ID, "sc_playerMaxLevel")

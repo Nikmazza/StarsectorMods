@@ -2,7 +2,7 @@
 	"id":"heavyac_rem_shot",
 	"specClass":"projectile",
 	#"onHitEffect":"data.scripts.weapons.Autocannon_Rem_Fire",
-	"onHitEffect":"data.scripts.weapons.RemAutocannonOnHitEffect",
+	#"onHitEffect":"data.scripts.weapons.RemAutocannonOnHitEffect",
 	"spawnType":"BALLISTIC",
 	"collisionClass":"PROJECTILE_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",

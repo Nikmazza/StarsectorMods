@@ -1,0 +1,93 @@
+{
+  "hullName": "Zweihander",
+  "hullId": "missp_zweihander",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/zweihander/missp_zweihander.png",
+  "style": "MIDLINE",
+  "height": 40,
+  "width": 40,
+  "center": [20, 15],
+  "collisionRadius": 36,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 30,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [4, 10.5]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -0,
+      "locations": [4, -10.5]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": 0,
+      "locations": [10, -0]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 280,
+      "angle": 180,
+      "locations": [-6, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-5, 17.5],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-5, -17.5],
+      "length": 24,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-13, -6],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-13, 6],
+      "length": 32,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    10, 13,
+    10, -11,
+    -8, -14,
+    -13, 1,
+    -7, 16
+  ]
+}

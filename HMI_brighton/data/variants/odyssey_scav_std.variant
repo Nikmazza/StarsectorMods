@@ -1,0 +1,68 @@
+{
+  "variantId": "odyssey_scav_std",
+  "hullId": "odyssey_scav",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 27,
+  "fluxVents": 50,
+  "quality": 0.5,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "hveldriver",
+        "WS0009": "squall",
+        "WS0015": "mark9"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0013": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "pilum",
+        "WS0012": "pilum"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "pdlaser",
+        "WS0002": "pdlaser",
+        "WS0003": "pdlaser",
+        "WS0006": "vulcan",
+        "WS0007": "vulcan",
+        "WS0011": "vulcan",
+        "WS0014": "vulcan",
+        "WS0016": "pdlaser",
+        "WS0017": "pdlaser",
+        "WS0018": "vulcan",
+        "WS0019": "vulcan",
+        "WS0020": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "hoplon_wing",
+    "broadsword_wing"
+  ]
+}

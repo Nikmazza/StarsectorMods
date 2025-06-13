@@ -1,7 +1,7 @@
 {
     "displayName": "DEM",
-    "fluxCapacitors": 8,
-    "fluxVents": 10,
+    "fluxCapacitors": 5,
+    "fluxVents": 8,
     "goalVariant": true,
     "hullId": "swp_alastor",
     "hullMods": [

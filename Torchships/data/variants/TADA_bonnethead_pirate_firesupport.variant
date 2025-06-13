@@ -1,0 +1,39 @@
+{
+    "displayName": "Fire Support",
+    "fluxCapacitors": 1,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "TADA_bonnethead_pirate",
+    "hullMods": [
+        "eccm",
+        "magazines",
+        "missleracks",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "variantId": "TADA_bonnethead_pirate_firesupport",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "TADA_urchin",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "squall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "heavymg",
+                "WS0010": "heavymg",
+            }
+        }
+    ]
+}

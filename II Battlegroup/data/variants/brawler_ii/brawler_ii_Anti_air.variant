@@ -1,0 +1,28 @@
+{
+  "displayName": "Anti_Air",
+  "fluxCapacitors": 3,
+  "fluxVents": 10,
+  "goalVariant": true,
+  "hullId": "brawler_ii",
+  "hullMods": [
+    "auxiliarythrusters",
+    "eccm",
+    "ecm",
+    "missleracks"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "brawler_ii_Anti_air",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "locust",
+        "WS 003": "swarmer",
+        "WS 004": "swarmer"
+      }
+    }
+  ],
+  "wings": []
+}

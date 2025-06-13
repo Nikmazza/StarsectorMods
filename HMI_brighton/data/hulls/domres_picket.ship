@@ -1,0 +1,84 @@
+{
+  "hullName": "Picket (DomRes)",
+  "hullId": "domres_picket",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/domain_resurgent/hmidr_picket.png",
+  "style": "LOW_TECH",
+  "height": 70,
+  "width": 38,
+  "center": [21, 34.5],
+  "collisionRadius": 40,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 38.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "rugged"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 139,
+      "angle": 35,
+      "locations": [-9.5, 11]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [25, 8]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [29.5, -6]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-32.5, 4.5],
+      "length": 12,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-29, -9],
+      "length": 8,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-32.5, -3],
+      "length": 21,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    34.5, -2.5,
+    28.5, 2.5,
+    28, 13.5,
+    9, 20,
+    -33, 9,
+    -33, -6.5,
+    -20.5, -14.5,
+    15.5, -14.5,
+    34.5, -9.5
+  ]
+}

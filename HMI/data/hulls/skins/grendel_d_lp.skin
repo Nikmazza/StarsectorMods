@@ -1,0 +1,34 @@
+{
+	"baseHullId":"grendel",
+	"skinHullId":"grendel_d_lp",
+	"hullName":"Grendel (LP)",
+	"descriptionId":"grendel",
+	"descriptionPrefix":"Fanatics of the Luddic Path have crudely modified this ship, overloading the engines and power systems then replacing the original ballistic turret mount with a massive missile launcher, the better to execute bold alpha-strikes upon capital ships and cruisers.",
+	"tags":["rare_bp"],
+	"tech":"Luddic Path",
+	"ordnancePoints":90,
+	"baseValueMult":1.5,
+	"spriteName":"graphics/ships/phase/wendigo_lp.png",
+	"removeWeaponSlots":["WS 001", "WS 002", "WS 003", "WS 006", "WS 012"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 010":{
+            "size": "SMALL"
+			},
+		"WS 011":{
+            "size": "LARGE",
+			"type": "MISSILE"
+			},
+		"WS 013":{
+            "size": "LARGE",
+			"type": "MISSILE"
+			},			
+		"WS 014":{
+            "size": "SMALL"
+			},				
+			
+		},
+	"builtInMods":["safetyoverrides","ill_advised"],
+}

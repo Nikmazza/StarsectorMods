@@ -1,0 +1,70 @@
+{
+  "variantId": "odyssey_scav_auto",
+  "hullId": "odyssey_scav",
+  "displayName": "Autopulse",
+  "goalVariant": false,
+  "fluxCapacitors": 6,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "magazines",
+    "dedicated_targeting_core"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "harpoonpod",
+        "WS0005": "harpoonpod",
+        "WS0012": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0013": "autopulse",
+        "WS0015": "autopulse"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "lrpdlaser",
+        "WS0002": "lrpdlaser",
+        "WS0003": "lrpdlaser",
+        "WS0016": "lrpdlaser",
+        "WS0017": "lrpdlaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "vulcan",
+        "WS0007": "vulcan",
+        "WS0011": "vulcan",
+        "WS0014": "vulcan",
+        "WS0018": "vulcan",
+        "WS0019": "vulcan",
+        "WS0020": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

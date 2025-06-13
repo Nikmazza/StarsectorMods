@@ -1,0 +1,43 @@
+{
+  "variantId": "Haast_XIV_Assault",
+  "hullId": "Haast_XIV",
+  "displayName": "Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 25,
+  "fluxVents": 24,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "cyclone",
+        "WS0002": "cyclone",
+        "WS0003": "arbalest",
+        "WS0004": "arbalest",
+        "WS0005": "lightdualac",
+        "WS0006": "lightdualac",
+        "WS0007": "lightdualac",
+        "WS0008": "bomb",
+        "WS0009": "lightdualac",
+        "WS0010": "lightdualac",
+        "WS0011": "arbalest",
+        "WS0012": "arbalest",
+        "WS0013": "pdburst",
+        "WS0014": "pdburst",
+        "WS0015": "dualflak",
+        "WS0016": "dualflak",
+        "WS0017": "ioncannon",
+        "WS0018": "cyclone",
+        "WS0019": "mark9"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

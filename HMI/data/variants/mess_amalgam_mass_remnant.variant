@@ -4,7 +4,7 @@
   "displayName": "Irrational",
   "goalVariant": false,
   "fluxCapacitors": 10,
-  "fluxVents": 6,
+  "fluxVents": 5,
   "quality": 1,
   "permaMods": [],
   "hullMods": [],
@@ -13,7 +13,7 @@
       "autofire": false,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0001": "phasebeam_rem"
+        "WS0001": "phasebeam"
       }
     },
     {
@@ -27,8 +27,8 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0002": "ioncannon_rem",
-        "WS0003": "irpulse_rem",
+        "WS0002": "ioncannon",
+        "WS0003": "irpulse",
         "WS0004": "railgun_rem"
       }
     },
@@ -36,7 +36,7 @@
       "autofire": true,
       "mode": "ALTERNATING",
       "weapons": {
-        "WS0005": "burst_rem"
+        "WS0005": "breach"
       }
     },
     {

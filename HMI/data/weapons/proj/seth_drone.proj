@@ -38,7 +38,7 @@
 					"splitRange":750,
 					"minTimeToSplit":1,
 					"numShots":3,
-					"damage":50,
+					"damage":40,
 					"impact":5,
 					"emp":0,
 					"damageType":KINETIC,

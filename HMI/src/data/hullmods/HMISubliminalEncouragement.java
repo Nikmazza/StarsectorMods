@@ -5,6 +5,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
+import static data.scripts.util.HMI_txt.txt;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,7 +31,7 @@ public class HMISubliminalEncouragement extends BaseHullMod {
 	private float AIcheck=0;
 	private String AIid, AISWITCH="hmi_subliminal_ai";
 	private String AIid2, AISWITCH2="hmi_subliminal";
-
+	private final String insertdesiredstringhere=txt("HMI_sub");
 
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id){
@@ -70,7 +71,7 @@ public class HMISubliminalEncouragement extends BaseHullMod {
 	}
 
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getMaxCombatReadiness().modifyFlat(id, CR_BONUS * 0.01f);
+		stats.getMaxCombatReadiness().modifyFlat(id, CR_BONUS * 0.01f, insertdesiredstringhere);
 		stats.getCRLossPerSecondPercent().modifyMult(id, CASUALTY_INCREASE);
 	}
 	

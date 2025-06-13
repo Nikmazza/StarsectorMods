@@ -1,7 +1,7 @@
 {
     "displayName": "Q-Ship",
-    "fluxCapacitors": 5,
-    "fluxVents": 13,
+    "fluxCapacitors": 7,
+    "fluxVents": 15,
     "goalVariant": true,
     "hullId": "swp_circe",
     "hullMods": [

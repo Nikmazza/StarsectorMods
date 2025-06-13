@@ -71,8 +71,7 @@ public class II_StellaCastellum extends OrbitalStation {
                     this.getDemand("purified_rare_metal").getQuantity().modifyFlat("Construction2", demandPurifiedTransplutonics, "Stella Castellum Construction");
                 }
                 if (yesterdayProgress != this.buildProgress) {
-                    Pair<String, Integer> deficit = getMaxDeficit("refined_metal",
-                            "purified_rare_metal");
+                    Pair<String, Integer> deficit = getMaxDeficit("refined_metal", "purified_rare_metal");
                     if (deficit.two > 0) {
                         this.buildProgress = yesterdayProgress;
                         haltedBuilding = true;
@@ -101,7 +100,13 @@ public class II_StellaCastellum extends OrbitalStation {
         applyIncomeAndUpkeep(size);
         demand(Commodities.CREW, size);
         demand(Commodities.SUPPLIES, size);
-        market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyMult(getModId(), 1f + DEFENSE_BONUS_CASTELLUM, getNameForModifier());
+        float mult = getDeficitMult(Commodities.SUPPLIES);
+        String extra = "";
+        if (mult != 1) {
+            String com = getMaxDeficit(Commodities.SUPPLIES).one;
+            extra = " (" + getDeficitText(com).toLowerCase() + ")";
+        }
+        market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyMult(getModId(), 1f + DEFENSE_BONUS_CASTELLUM * mult, getNameForModifier() + extra);
         matchCommanderToAICore(aiCoreId);
         if (!isFunctional()) {
             supply.clear();

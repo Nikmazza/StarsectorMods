@@ -1,0 +1,58 @@
+{
+  "variantId": "domres_hmi_obj_241_broad",
+  "hullId": "domres_hmi_obj_241",
+  "displayName": "Strike",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 3,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "hellbore"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "hurricane"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "harpoonpod",
+        "WS0011": "harpoonpod",
+        "WS0012": "harpoonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "flak",
+        "WS0004": "heavymg",
+        "WS0005": "vulcan",
+        "WS0006": "vulcan",
+        "WS0007": "vulcan",
+        "WS0008": "vulcan",
+        "WS0009": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "domres_broadsword_wing",
+    "domres_broadsword_wing",
+    "domres_broadsword_wing",
+    "domres_broadsword_wing"
+  ]
+}

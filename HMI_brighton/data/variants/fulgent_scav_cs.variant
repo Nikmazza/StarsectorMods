@@ -1,0 +1,52 @@
+{
+  "variantId": "fulgent_scav_cs",
+  "hullId": "fulgent_scav",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 20,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "hardened_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "heavymauler",
+        "WS0005": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "heatseeker",
+        "WS0003": "heatseeker",
+        "WS0006": "heatseeker",
+        "WS0007": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ionbeam"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0008": "vulcan",
+        "WS0009": "vulcan",
+        "WS0010": "vulcan",
+        "WS0011": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

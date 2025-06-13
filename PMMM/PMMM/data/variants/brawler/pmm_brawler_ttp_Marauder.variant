@@ -1,0 +1,38 @@
+{
+    "displayName": "Marauder",
+    "fluxCapacitors": 10,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "pmm_brawler_ttp",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "pmm_brawler_ttp_Marauder",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "sabot",
+                "WS 003": "sabot",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyblaster",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "ionpulser",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

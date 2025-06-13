@@ -31,8 +31,8 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0005": "swarmer_fighter",
-        "WS0006": "swarmer_fighter",
+        "WS0005": "swarmer",
+        "WS0006": "swarmer",
         "WS0008": "swarmer",
         "WS0009": "swarmer",
         "WS0010": "swarmer",

@@ -18,13 +18,8 @@ class AbyssalSeraphsGrace : BaseHullMod() {
 
     fun isInAbyss() : Boolean {
         var isInAbyss = false
-        if (Global.getSector() != null && Global.getSector().playerFleet != null) {
-            if (Global.getSector().playerFleet.containingLocation != null)
-            {
-                if (Global.getSector().playerFleet.containingLocation.hasTag(AbyssUtils.SYSTEM_TAG)) {
-                    isInAbyss = true
-                }
-            }
+        if (AbyssUtils.isPlayerInAbyss()) {
+            isInAbyss = true
         }
 
         if (Global.getSettings().modManager.isModEnabled("second_in_command")) {
@@ -41,9 +36,9 @@ class AbyssalSeraphsGrace : BaseHullMod() {
 
     override fun applyEffectsBeforeShipCreation(hullSize: ShipAPI.HullSize?, stats: MutableShipStatsAPI?, id: String?) {
 
-        if (Global.getSector().playerFleet?.fleetData?.membersListCopy?.contains(stats!!.fleetMember) == true) {
+        /*if (Global.getSector().playerFleet?.fleetData?.membersListCopy?.contains(stats!!.fleetMember) == true) {
             stats!!.variant.removeTag(Tags.SHIP_LIMITED_TOOLTIP)
-        }
+        }*/
 
         var conversions = listOf("rat_abyssal_conversion", "rat_chronos_conversion", "rat_cosmos_conversion", "rat_seraph_conversion", "rat_primordial_conversion")
         if (conversions.none { stats!!.variant.hullMods.contains(it) } && !stats!!.variant.hasHullMod(HullMods.AUTOMATED)) {
@@ -86,8 +81,6 @@ class AbyssalSeraphsGrace : BaseHullMod() {
         }
 
         var isInAbyss = isInAbyss()
-
-        if (!isInAbyss) isInAbyss = ship!!.variant.hasHullMod("rat_sarakiels_blessing")
 
         var abyssColor = Misc.getGrayColor()
         var sectorColor = Misc.getHighlightColor()

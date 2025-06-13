@@ -15,6 +15,8 @@ import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
 import com.fs.starfarer.api.util.Highlights;
 import com.fs.starfarer.api.util.Misc;
 
+import lunalib.lunaSettings.LunaSettings;
+
 public class TWArmsBazaarMarket extends BaseSubmarketPlugin {
 	
 	@Override
@@ -76,12 +78,15 @@ public class TWArmsBazaarMarket extends BaseSubmarketPlugin {
 		addAndRemoveStockpiledResources(seconds, false, true, true);
 		sinceLastCargoUpdate = 0f;
 		
+		String faction = "ix_battlegroup";
+		if (LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_trinity_enabled")) faction = "ix_trinity";
+		
 		if (okToUpdateShipsAndWeapons()) {
 			sinceSWUpdate = 0f;
 			pruneWeapons(0f);
 			
 			int weapons = 7 + Math.max(0, market.getSize() - 1) * 2;
-			addWeapons(weapons, weapons + 2, 3, "ix_trinity");
+			addWeapons(weapons, weapons + 2, 3, faction);
 			
 			if (getCargo().getCommodityQuantity("fuel") < 1000f) {
 				getCargo().addCommodity("fuel", 2000f + (float) Math.random() * 1000f);
