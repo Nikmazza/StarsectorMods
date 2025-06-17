@@ -1,0 +1,18 @@
+{
+  "id": "spinloki_treasurehunt",
+  "name": "Treasure Hunt",
+  "author": "spinloki",
+  "utility": false,
+  "version": { "major": '0', "minor": '2', "patch": '4' },
+  "description": "Starsector IntelliJ template.",
+  "gameVersion": "0.98a-RC7",
+  "jars": [ "jars/TreasureHunt.jar" ],
+  "modPlugin": "spinloki.treasurehunt.TreasureHunt",
+  "dependencies": [
+    {
+        "id": "lw_lazylib",
+        "name": "LazyLib",
+        "version": "3.0.0"
+    }
+  ]
+}
