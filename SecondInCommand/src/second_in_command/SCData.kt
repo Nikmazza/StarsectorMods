@@ -74,7 +74,7 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
 
             clearCommanderSkills()
 
-            if (!fleet.hasTag("sc_do_not_generate_skills")) {
+            if (SCSettings.canNPCsSpawnWithSkills && !fleet.hasTag("sc_do_not_generate_skills")) {
                 generateNPCOfficers()
             }
 
@@ -183,6 +183,10 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
     }
 
     fun setOfficerInEmptySlotIfAvailable(officer: SCOfficer) {
+        setOfficerInEmptySlotIfAvailable(officer, false)
+    }
+
+    fun setOfficerInEmptySlotIfAvailable(officer: SCOfficer, ignoreProgressionMode: Boolean) {
 
         //Check for incompatibilities
         var categories = officer.getAptitudePlugin().categories
@@ -197,16 +201,19 @@ class SCData(var fleet: CampaignFleetAPI) : EveryFrameScript, FleetEventListener
             }
         }
 
-        if (getOfficerInSlot(0) == null) {
+        var isProgressionMode = SCSettings.progressionMode
+        var level = Global.getSector().playerPerson.stats.level
+
+        if (getOfficerInSlot(0) == null && (!isProgressionMode || level >= SCSettings.progressionSlot1Level!! || ignoreProgressionMode)) {
             setOfficerInSlot(0, officer)
         }
-        else if (getOfficerInSlot(1) == null) {
+        else if (getOfficerInSlot(1) == null && (!isProgressionMode || level >= SCSettings.progressionSlot2Level!! || ignoreProgressionMode)) {
             setOfficerInSlot(1, officer)
         }
-        else if (getOfficerInSlot(2) == null) {
+        else if (getOfficerInSlot(2) == null && (!isProgressionMode || level >= SCSettings.progressionSlot3Level!! || ignoreProgressionMode)) {
             setOfficerInSlot(2, officer)
         }
-        else if (getOfficerInSlot(3) == null && SCSettings.enable4thSlot) {
+        else if (getOfficerInSlot(3) == null && SCSettings.enable4thSlot && (!isProgressionMode || level >= SCSettings.progressionSlot4Level!! || ignoreProgressionMode)) {
             setOfficerInSlot(3, officer)
         }
     }

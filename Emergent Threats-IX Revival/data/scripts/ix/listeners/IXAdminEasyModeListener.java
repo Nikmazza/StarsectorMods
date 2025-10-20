@@ -53,7 +53,7 @@ public class IXAdminEasyModeListener extends BaseCampaignEventListener {
 				PersonAPI p = m.getAdmin();
 				if (p.getStats().hasSkill(IX_ADMIN_SKILL_ID) && p.getStats().hasSkill(INDUSTRY_SKILL_ID)) {
 					p.getStats().setSkillLevel(IX_ADMIN_SKILL_ID, 0f);
-					p.getStats().refreshGovernedOutpostEffects(p.getMarket());
+					if (p.getMarket() != null) p.getStats().refreshGovernedOutpostEffects(p.getMarket());
 				}
 			}
 		}

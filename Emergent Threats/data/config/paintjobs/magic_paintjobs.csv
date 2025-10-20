@@ -1,0 +1,19 @@
+id,hullIds,name,paintjobFamily,spriteId,unlockedAutomatically,tags,unlockConditions,description
+#Coven,,,,,,,,
+vice_bellicose_standard,vice_bellicose_base,Standard Plating,,graphics/vice/ships/ex/classic/bellicose_ex.png,true,,,High-tech ceramic armor
+vice_equalizer_standard,vice_equalizer_base,Standard Plating,,graphics/vice/ships/ex/classic/equalizer_ex.png,true,,,High-tech ceramic armor
+vice_flamebreaker_standard,vice_flamebreaker_base,Standard Plating,,graphics/vice/ships/ex/classic/flamebreaker_ex.png,true,,,High-tech ceramic armor
+vice_howler_standard,vice_howler_base,Standard Plating,,graphics/vice/ships/ex/classic/howler_ex.png,true,,,High-tech ceramic armor
+vice_hyperion_standard,vice_hyperion_base,Standard Plating,,graphics/vice/ships/ex/classic/hyperion_ex.png,true,,,High-tech ceramic armor
+vice_intrepid_standard,vice_intrepid_base,Standard Plating,,graphics/vice/ships/ex/classic/intrepid_ex.png,true,,,High-tech ceramic armor
+,,,,,,,,
+vice_iris_standard,vice_iris_base,Standard Plating,,graphics/vice/ships/ex/classic/iris_ex.png,true,,,High-tech ceramic armor
+vice_mandrake_standard,vice_mandrake_base,Standard Plating,,graphics/vice/ships/ex/classic/mandrake_ex.png,true,,,High-tech ceramic armor
+vice_tigershark_standard,vice_tigershark_base,Standard Plating,,graphics/vice/ships/ex/classic/tigershark_ex.png,true,,,High-tech ceramic armor
+,,,,,,,,
+orr_intrepid_ana_standard,orr_intrepid_ana_base,Standard Plating,,graphics/orr/ships/intrepid_exb_ana.png,true,,,High-tech ceramic armor
+orr_intrepid_hmc_standard,orr_intrepid_hmc_base,Standard Plating,,graphics/orr/ships/intrepid_exb_hmc.png,true,,,High-tech ceramic armor
+orr_intrepid_giga_standard,orr_intrepid_giga_base,Standard Plating,,graphics/orr/ships/intrepid_exb_giga.png,true,,,High-tech ceramic armor
+orr_intrepid_tac_standard,orr_intrepid_tac_base,Standard Plating,,graphics/orr/ships/intrepid_exb_tac.png,true,,,High-tech ceramic armor
+orr_intrepid_tpc_standard,orr_intrepid_tpc_base,Standard Plating,,graphics/orr/ships/intrepid_exb_tpc.png,true,,,High-tech ceramic armor
+orr_intrepid_tpl_standard,orr_intrepid_tpl_base,Standard Plating,,graphics/orr/ships/intrepid_exb_tpl.png,true,,,High-tech ceramic armor

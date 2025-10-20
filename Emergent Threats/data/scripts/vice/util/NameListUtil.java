@@ -1,13 +1,13 @@
 package data.scripts.vice.util;
 
 //For avoiding the need to re-translate various names embedded in .java files when they are updated
-//used by BountyListener, ETReputationListener
+//used by BountyListener, ETReputationListener, LureInfectedFleetAbility
 public class NameListUtil {
-	
 	
 	public static String PLS_LIBERATOR = "PLS Liberator";
 	public static String PLS_PRIDE_OF_KAZERON = "PLS Pride of Kazeron";
 	public static String TTS_CONTANGO = "TTS Contango";
+	public static String ASM_INFESTED_HUSK = "Infected Husk";
 	public static String FLS_CREDIT_PAYMENT_SMALL = "Received 100,000 credits";
 	public static String FLS_CREDIT_PAYMENT_LARGE = "Received 500,000 credits";
 	public static String KATO_BIOCHIP = "Received Cerebral Biochip";

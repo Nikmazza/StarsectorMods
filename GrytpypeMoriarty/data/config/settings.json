@@ -1,0 +1,40 @@
+{
+    "plugins":{     
+    },
+
+    "graphics":{
+			"blueprint_packages":{
+			"gmda_package":"graphics/icons/cargo/GMDA_pack.png",
+			"gm_s_package":"graphics/icons/cargo/GMs_pack.png",
+			"gmfs_package":"graphics/icons/cargo/GMFS_pack.png",
+			"gmhs_package":"graphics/icons/cargo/GMHS_pack.png",
+			},
+        "misc":{            		
+        },	
+        
+        "characters":{
+                "gmda_mate":"graphics/portraits/portrait_william_mate.png",	
+				"gmda_columbo":"graphics/portraits/portrait_comissioner_gordon.png",
+				"gmda_sherlock":"graphics/portraits/portrait_grytpype_thynne.png",
+				"gmda_poirot":"graphics/portraits/portrait_jim_moriarty.png",
+        },
+        
+        "illustrations":{
+		},
+			
+		"intel":{
+		}
+		
+	},
+    	"designTypeColors":{
+		"GMDA Series":[187,205,224,255],
+		"Grytpype-Moriarty Design":[187,205,224,255],
+		"GMFS Series":[247,129,106,255],
+		"GM Fire Service Design":[247,129,106,255],
+		"GMHS Series":[255,255,255,255],
+		"GM Stock Series":[192,192,192,255],
+		"GMDA High Quality Series":[133,146,196,255],
+		"GMDA Prototype":[133,146,196,255],
+	},
+    
+}

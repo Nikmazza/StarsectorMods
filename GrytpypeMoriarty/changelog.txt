@@ -1,0 +1,310 @@
+0.9.9h
+-Updated for 0.97
+
+
+0.9.9g
+-Fixed the GMHS and GMFS glitched Hullmods For Realsies
+
+0.9.9f
+-Fixed the GMHS and GMFS glitched Hullmods
+
+0.9.9e
+Update to 0.96a
+-Spellcheck by Network Pesci (Much appreciated!)
+
+0.9.9d
+
+Venture (GM), Rushcutter (GM)
+-Slight reduction in armour
+
+Mule (GM), Jutter (GM)
+-Unswapped armour values
+
+Crun Guns
+-Lose EMP on the smalls, less flux efficient, slower transverse speed
+-Medium projectile speed increased
+-Scripted damage fixed
+
+Bluebottlers
+-Now properly interferes with enemy movement
+-Small Bluebottlers have been slightly nerfed.
+
+Bludknocks
+-Missiles slightly slower, lower damage
+
+Poor Missile Integration
+-Now only blocks expanded missile racks
+
+Pomsom Blaster, Phlognisticator, Milton Welder
+-Fixed sounds and visual effects
+
+-Fixed some descriptions
+
+0.9.c
+-Fixed the Broadsword (GM) having the wrong weapon
+
+0.9.9b
+-Fixed Stock GM Blueprint error
+
+0.9.9a
+-Tweaked a few stats
+-Forum release
+
+0.9.9
+
+-Completely rejigged GMDA
+
+-Removed Sagitus (GMs), Wayfarer (GM)/(GMs) and Tarsus (GM)
+-Added the Atlas (GM) and New Venture (GMHQ)
+-Carker (GM), Mule (GM) and Venture (GM) reworked to be more defensive and less fragile
+-'Low-Tier' ships no longer have the Overdrive suite.
+-Old Venture (GM) now Venture (GMHQ) with overall improved stats.
+
+-Split up fleets into two different fleets
+	-Raider fleets; spawn as normal, comprised of lower-tier ships
+	-Defender fleets, show up around Agreus, Ilm and New Maxios, have better ships and are all lead by an Onslaught (GM).
+
+-GMDA fundamentally reworked to be less cancerous to fight, and will no longer draw in independants to defend them if you end up fighting them.
+
+-Crun gun no longer PD, now works like a long-ish range EMP suppression weapon
+-Bluebottler no longer EMP, now has higher impact to muddle enemy movement
+
+0.9.8a
+-Update for 0.95.1
+
+0.9.8 (Beta)
+-Added GM Fire Service Ships and weapons (very WIP)
+-Added GM Health Service Ships (very WIP)
+-Bluebottler Gun is now a longer ranged, burst fire machine gun
+-Fixed Broadsword (GM) being unhittable
+-Fixed Pirhana (GM)'s description
+
+
+0.9.7c
+-Allowed Reinforced Bulkheads back onto GMDA ships
+
+0.9.7b
+-Fixed the Crun Cannon explosion being blinding
+-Reduced maintenance of the Carker from 16 to 12
+-Broadsword (GM) now more reliably uses it's Lurgi Beam, reduced the range and visual intensity of Lurgi Beam.
+
+0.9.7a
+-Added Pirhana (GM)
+-Added Talon (GM)
+-Fixed the Lasher (GMHQ)'s phase cloak
+-Fixed several spelling mistakes
+-Lightly fiddled with several weapons to be more balanced.
+-GMDA Overdriver now also adds up to 25% damage to ballistic and energy weapons at high flux.
+
+
+0.9.7
+-Added Buffalo (GMDA)
+-Added Cerberus (GMDA)
+-Added Colossus (GMDA)
+-Added Gremlin (GMDA)
+-Added Bluebottler Cannon
+-Added Crun Cannon
+-(GMs) hulls are now white, and their spawning in Independant fleets has been greatly reduced
+-Minor Changes to weapon and ship sprites
+-Tried to implement a one-off basic bar mission
+
+
+0.9.5d
+-Changed Fleet spawning to be less overwhelming
+
+0.9.5c
+-Defintiely, Actually Fixed the Speeding Ticket Encounter Dialogue Actually.
+
+0.9.5b
+-Actually Fixed the Speeding Ticket Encounter Dialogue For Realsies.
+
+0.9.5a
+-Fixed the Speeding Ticket Encounter Dialogue - will need time before fleets start doing it correctly, however.
+-Kite (GMHQ) max speed reduced slightly
+-Onslaught (GM) sprite altered - it's now wider.
+
+0.9.5
+-GMDA Overhauled - again
+	-Ships are much more powerful across the board, but are more expensive to maintain and cost more to deploy.
+	-Faction now brought more strictly in line with CABAL's extortion script, however they will only ever demand money.
+	-Fleets will pretend to be independant if threatened.
+-Added Mercenary Outposts - very expensive colony structures that add defense fleets to your markets, proportional to market size. Right now there are only two:
+	-Nedwin Seagoon Security Depot - Provides a complement of defending fleets to your market, except they're all GMDA affiliated. Requires good relations with GMDA to build.
+	-Condottiere Mercenary Company - Provides independant military patrols, however the number and size of the patrols is very limited for the cost.
+	-Only one can be built at a time, however it is possible to cheese this.
+-Renamed Condor (GM), Tarsus (GMs) and Tarsus (GM) to Carker, Hummer and Jutter, respectively.
+-Venture (GM) overhauled; new sprite that looks more Venture-ish, is now a better support vessel than the old version.
+-Vigilance (GM) has been changed to the Rushcutter, with a new sprite with chunkier stats.
+-Added the Mule (GM), a powerful if supply-inefficient combat freighter
+-Sunder (GM), Falcon (GM), Wolf (GM), Wolf (GMHQ), Lasher (GM) and Lasher (GMHQ) have had their sprites overhauled to be chunkier.
+-Fixed the Sagitus (C) being one pixel too thin.
+-Tweaked the sprite of the the Wayfarer (GM).
+-Wolf (GMs) and Lasher (GMs) removed from rotation. Kept as legacy, until I figure out what to do with them.
+-The modular Lurgi Suppression beam is now a medium weapon, and has been consequently buffed.
+
+
+0.9.4b
+-Changed the DP of the Condor (GM) and Venture (GM), should a bit more balanced to use.
+-Tweaked the Sunder (GMHQ) to be better.
+-Reworked the overdrive Hullmod - now gives a scaling bonus dependant on flux level, with increased speed, acceleration, venting and damage output at high flux, but also range maluses down to 450 s.u. at high flux.
+
+0.9.4a
+-Hotfix to change the GMs hullmod crash.
+-Tweaked the Bluebottler Gun to be more flux efficient.
+
+0.9.4
+-GMDA hullmod now actually works.
+-Coloured GMs ships removed from rotation. Kept as a legacy, however, to prevent game crashing.
+-Added the Kite (GMHQ), Lasher (GMHQ) and Wolf (GMHQ)
+-Tweaked various sprites and weapons.
+-Changed the GMDA faction flag.
+
+
+0.9.3
+-Clarified the GMDA playstyle by breaking the hullmods into two base hullmods
+	-Bludknock Engines, which gives a zero-flux speed boost while blocking the engine mods
+	-Overdrive System, which explains the boosts at high flux and drawbacks to using the system
+-Due to the inclusion of the Speeding Ticket system (Similar to Luddic Path), the chances of being completely ganked by GMDA fleets has been mitigated for early game fleets. Consequently, a lot of the nerfs have been removed from GMDA ships, making them more attractive.
+-Standard GM Stock ships are now worse, but cheaper.
+-Coloured GMs ships are now rarer and better - in the future they may be phased out completely, excluding any future ideas to make a Wolf with Terminator Drones, a Phase Lasher, or an EMP kite.
+-Altered various ship stats to be more compliant with 0.9.1a.
+-The Crun Gun, in addition to Fighter Elimination, is now also good at general purpose PD, while the Bluebottler gun and Modular Lurgi Suppression Beam have been slightly improved.
+-The Sprites for all of the frigates (excluding the Kite), and the Sagitus duo have been reworked
+-The Tarsus (GM), Tarsus (GMs) and Condor (GM) have been reworked both in sprite and function
+-GMDA blueprints now have images in them.
+-Descriptions have had a pass over - still might be mistakes lurking in there somwehere.
+
+0.9.2d
+-Updated ship prices etc. for 0.9.1a.
+
+0.9.2c
+Removed some variants from HMI that had snuck in somehow.
+
+0.9.2b
+-Coloured Lashers and Wolves hit with the buff bat.
+
+0.9.2a
+-Lasher (GMs) and Wolf (GMs) have been reworked
+	-Grey GMs ships are worse than their respective vanilla versions, but cheaper to run.
+	-Coloured GMs ships have been buffed to fit with their drawbacks to make them more attractive, but made rarer to see in patrols.
+-GMDA and GMs hullmods now have the high flux speed boost activate at lower thresholds (65% and 75%, respectively), and the speeds tweaked.
+-Description for Shift Jets added
+-Bribe script tweaked - should be more forgiving...?
+
+0.9.2
+-Added Phase hullmod to Sunder (GMHQ)
+-All GMDA ships with overdrive have had their mobility systems downgraded in quality and their speeds slightly cut.
+	-It made no real sense where the playstyle was to sacrifice speed between low and high flux, and yet have shipsystems that mitigated this.
+
+0.9.1a
+-Fixed Hullmod Description Crash
+-Fixed Glow Sprite of Onslaught (GMHQ)
+
+0.9.0
+-Updated to 0.9.0a
+-Minor sprite updates across the board.
+-Onslaught (GM) and Onslaught (GMHQ) have been tweaked to have less weapon mounts in general; ordinance has been tweaked accordingly.
+-The Bludknock missiles fired from the Thunder (GM) are now weaker, and move faster
+-The GMDA hullmod has (again) undergone a change in function; hulls now also have a passive vent bonus above 80% flux, and an overload duration increase of 150%.
+	*This should now make it clear that these ships favour high risk-high reward playstyles.
+-GMDA markets now give a good bonus to accessibility, but reduce stability.
+-Added in a 'Bribe' script similar to Luddic Path; openning the comm link when engaged will reveal an option to pay a speeding ticket instead of being attacked; particularly useful for small, early game fleets.
+
+
+0.8.3
+-Added the Sunder GMHQ - Phase Sunder Protoype. Emphasis - PROTOTYPE.
+-Tweaked Spawn code so fleets are a lot less likely to spawn on top of you in hyperspace.
+-The GMDA hullmod now increases sensor profile.
+	-These two should prevent Sudden GMDA Death Syndrome.
+
+-Added new Nexerellin and Gladiator Bounty compatability.
+-Increased the speed of the Hammerhead GMHQ.
+-Lurgi Suppression Beams Tweaked again.
+
+0.8.2a
+-Tweaked code, should help solve the Bludnock engine issue
+-Reduced the impact of the Lurgi Suppression Beam weapons
+
+0.8.2
+-GM Ship speeds tweaked to be slower outside of zero flux and elevated flux
+-GMs ships will now show occassionally show up in Independant fleets
+-Added a modular Suppression Beam - Very low damage output, but freezes enemy vessels, and cripples unshielded ships.
+
+0.8.1
+-Quickly fixed the variant HULLMOD CONFLICT issues.
+-Added Gladiator Bounties.
+
+
+0.8
+-Sprite Tweaks to Falcon and Venture.
+-Added Hammerhead (GMHQ) and Kite (GM).
+-GMDA fleets now tend to be smaller patrols rather than a mix of large and small fleets.
+-Reduced the burn level of all destroyers to 9, increased burn speed of all destroyer-level cargo ships to 9.
+-Fundamentally changed how the GMDA and GMs hullmods work
+	-Increased Zero-Flux speed boost.
+	-Above 75% flux, gain a speed boost.
+	-Burn Speed bonus removed.
+	-Peak Operating Time is now only reduced by a quarter.
+	-Hull and armour penalties made less severe.
+	-Supply cost removed, deployment cost increased.
+	-Cargo and Fuel capacity drawbacks and improved maneuverability remain unchanged.
+
+0.7
+-Sprite Tweaks on Hammerhead, Lashers, Wolves and Wayfarers
+-Falcon (GM) loses two small missiles, now has double medium composite hardpoints at the front. Suffers from Poor Missile Integration, reducing missile ammo and rate of fire by 25%, no Expanded Missile Racks
+-Sunder (GM) added; loses two small missiles and two medium energies, replaced with two medium synergy, suffers from Poor missile Integration (see above)
+-Vigilance (GM) added; loses traditional layout two get two medium synergies, suffers from Poor Missile Integration (See Above)
+-Onslaught (GM) added; reworked weapons layout, fairly fast for an Onslaught, but overall weaker package.
+-Onslaught (GMHQ) added; [REDACTED]
+-Crun Gun sprite touched up, weapon now fires slightly faster and with more flux efficiency
+-Bluebottler tweaked to have more EMP and more flux efficiency, removed PD tag; now an EMP spewing assault annoyance.
+-Chaser Missiles reduced damage from 1500 to 1000, missile AI now actually works.
+
+0.6e
+-Tarsus (GM) had cargo reduced and flux stats drastically cut, but OP increased - is not a much more dedicated missile support destroyer
+-Tarsus (GMs) turned into a semi-competant combat freighter
+-Added the Sagitus (C) and Sagitus (F); the new civ freighters of the GMDA
+-Touched up the sprites of the Wayfarer (GM), Wayfarer (GMs), Condor (GM), Tarsus (GM) and Tarsus (GMs).
+
+0.6d (Silent)
+-Fixed Ilm market
+-Fixed Tarsus (GMs)t
+-Added Version Checker
+
+0.6d
+- Works in 0.8.1a
+- Added Venture (GM)
+- Reworked Condor (GM), Tarsus (GM) and Tarsus (GMs)
+
+0.6c
+-Fixed Hangar Error
+
+0.6b
+-Fixed Variant Problems
+-Figured out I had made one of the missile slots on the hammerhead a turret instead of a hardpoint - missile slots fixed
+-GM condor now refits fighters faster.
+
+0.6
+-Upped OP of Chaser to 7, Single to 3; reduced HP of missile from 200 to 125
+-Crun gun:
+	-Fires slower
+	-Bullets travel faster
+	-Reduced 'base' damage
+	-Increased 'extra' damage applied to fighters and damage type; the ability of the gun to wipe fighters should now be more apparent.
+-Bluebottler gun
+	-Slightly increased EMP damage
+	-Slightly reduced kinetic damage
+-Suppression beam
+	-Flux cost reduced; Broadsword (GM) now pin ships more regularly and effectively.
+-Increased base speed of GM fighters by 50.
+-Tweaked some GMs stats.
+-Added Wayfarer (GM); Effective and flexible gunship.
+-Added Wayfarer (GMs); Well armed civilian ship.
+-Fixed Wolf Variant Issue
+
+
+-GM hullmod; 
+	- Flux dissipation and capacity bonus reduced from 25% to 15%
+	- Armour Reduction increased from 25% to 35%
+	- Deployment Cost increased by 25%
+	- Weapon Damage increased by 20% (Does not apply to fighters)

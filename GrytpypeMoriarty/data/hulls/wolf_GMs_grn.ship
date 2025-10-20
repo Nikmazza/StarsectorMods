@@ -1,0 +1,153 @@
+{
+  "bounds": [
+    -45.5,
+    -7.5,
+    -37,
+    -17.5,
+    -17.5,
+    -23,
+    17.5,
+    -16,
+    47.5,
+    -10,
+    47.5,
+    8.5,
+    20,
+    15,
+    -18,
+    23,
+    -37.5,
+    16.5,
+    -45.5,
+    7.5
+  ],
+  "builtInMods": [
+    "GMDA_engine"
+  ],
+  "builtInWings": [],
+  "center": [
+    23,
+    45.5
+  ],
+  "collisionRadius": 72.5,
+  "engineSlots": [
+    {
+      "angle": 164.845932,
+      "contrailSize": 12.58816,
+      "length": 37.965569,
+      "location": [
+        -43,
+        7
+      ],
+      "style": "MIDLINE",
+      "width": 12.58816
+    },
+    {
+      "angle": -164.845932,
+      "contrailSize": 12.58816,
+      "length": 37.965569,
+      "location": [
+        -43,
+        -10
+      ],
+      "style": "MIDLINE",
+      "width": 12.58816
+    },
+    {
+      "angle": 150.255112,
+      "contrailSize": 8.062253,
+      "length": 20.155645,
+      "location": [
+        -39.5,
+        12.5
+      ],
+      "style": "MIDLINE",
+      "width": 8.062253
+    },
+    {
+      "angle": -150.255112,
+      "contrailSize": 8.062253,
+      "length": 20.155645,
+      "location": [
+        -39.5,
+        -15.5
+      ],
+      "style": "MIDLINE",
+      "width": 8.062253
+    },
+    {
+      "angle": 180,
+      "contrailSize": 13,
+      "length": 54.5,
+      "location": [
+        -45,
+        -1.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 13
+    }
+  ],
+  "height": 94,
+  "hullId": "wolf_GMs_grn",
+  "hullName": "Wolf (GMs)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 65,
+  "spriteName": "graphics/ships/wolf_GMs_green.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0001",
+      "locations": [
+        42.5,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 310,
+      "id": "WS0002",
+      "locations": [
+        0.5,
+        -0.5
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 140,
+      "arc": 230,
+      "id": "WS0005",
+      "locations": [
+        -17.5,
+        10.5
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -140,
+      "arc": 230,
+      "id": "WS0006",
+      "locations": [
+        -17.5,
+        -11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 46
+}

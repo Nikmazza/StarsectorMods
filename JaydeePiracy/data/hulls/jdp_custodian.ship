@@ -22,6 +22,9 @@
         "missile_reload",
         "chassis_storage"
     ],
+    "builtInWeapons": {
+        "WS 007": "jdp_custodian_eyes"
+    },
     "builtInWings": [
         "jdp_keep_wing",
         "jdp_keep_wing",
@@ -171,6 +174,17 @@
             "angle": 180,
             "locations": [
                      -90,       -4
+            ]
+        },
+        {
+            "id": "WS 007",
+            "size": "SMALL",
+            "type": "DECORATIVE",
+            "mount": "HARDPOINT",
+            "arc": 0,
+            "angle": 0,
+            "locations": [
+                   145.5,      -28
             ]
         },
         {

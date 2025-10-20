@@ -13,4 +13,5 @@
 		"WS 016": "orr_nal",
 		"WS 017": "orr_nal"
 	},
+	"builtInMods":["orr_dplslaught"],
 }

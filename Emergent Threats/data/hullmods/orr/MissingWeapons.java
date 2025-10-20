@@ -50,12 +50,14 @@ public class MissingWeapons extends BaseHullMod {
 	private static String getWreckMod(ShipVariantAPI v) {
 		if (v.hasHullMod("orr_aggressor") && v.hasHullMod("fourteenth")) return "orr_wreck_agg_xiv";
 		else if (v.hasHullMod("orr_aggressor")) return "orr_wreck_agg";
+		else if (v.hasHullMod("orr_asmgressor")) return "orr_wreck_agg_asm";
+		else if (v.hasHullMod("orr_asmslaught")) return "orr_wreck_asm";
 		else if (v.hasHullMod("orr_damper_field")) return "orr_wreck_cgr";
-		else if (v.hasHullMod("orr_onslaught") && v.hasHullMod("fourteenth")) return "orr_wreck_xiv";
-		else if (v.hasHullMod("orr_onslaught")) return "orr_wreck_orr";
 		else if (v.hasHullMod("vice_onslaught_hull")) return "orr_wreck_lg";
 		else if (v.hasHullMod("vice_intrepid_hull")) return "orr_wreck_ex";
 		else if (v.hasHullMod("vice_incandescent_remnant")) return "orr_wreck_rem";
+		else if (v.hasHullMod("orr_onslaught") && v.hasHullMod("fourteenth")) return "orr_wreck_xiv";
+		else if (v.hasHullMod("orr_onslaught") || v.hasHullMod("thirteenth")) return "orr_wreck_orr";
 		return "orr_wreck_dpl"; //Phase Lab Onslaught, need to make more specific if other variants get added
 	}
 	

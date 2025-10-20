@@ -1,0 +1,194 @@
+{
+  "bounds": [
+    -43,
+    -12.5,
+    -32,
+    -19.5,
+    -25.5,
+    -17,
+    -14,
+    -20.5,
+    -2,
+    -31.5,
+    7.5,
+    -31,
+    19.5,
+    -24,
+    20.5,
+    -17,
+    35,
+    -11.5,
+    46.5,
+    -10,
+    46.5,
+    10,
+    35,
+    11.5,
+    20.5,
+    17,
+    19.5,
+    24,
+    7.5,
+    31,
+    -2,
+    31.5,
+    -14,
+    20.5,
+    -25.5,
+    17,
+    -32,
+    19.5,
+    -43,
+    12.5
+  ],
+  "builtInWings": [],
+  "center": [
+    32,
+    45.5
+  ],
+  "collisionRadius": 63,
+  "engineSlots": [
+    {
+      "angle": 149.5,
+      "contrailSize": 14.989926,
+      "length": 14.8602,
+      "location": [
+        -43,
+        7.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 14.989926
+    },
+    {
+      "angle": -149.5,
+      "contrailSize": 14.989926,
+      "length": 14.8602,
+      "location": [
+        -43,
+        -7.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 14.989926
+    },
+    {
+      "angle": 180,
+      "contrailSize": 20,
+      "length": 42.5,
+      "location": [
+        -44.5,
+        -0
+      ],
+      "style": "HIGH_TECH",
+      "width": 20
+    },
+    {
+      "angle": 141.5,
+      "contrailSize": 8.946736,
+      "length": 8.030503,
+      "location": [
+        -40,
+        15
+      ],
+      "style": "HIGH_TECH",
+      "width": 8.946736
+    },
+    {
+      "angle": -141.5,
+      "contrailSize": 8.946736,
+      "length": 8.030503,
+      "location": [
+        -40,
+        -15
+      ],
+      "style": "HIGH_TECH",
+      "width": 8.946736
+    }
+  ],
+  "height": 100,
+  "hullId": "wolf_joker4",
+  "hullName": "Wolf (Panda)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 61,
+  "spriteName": "graphics/ships/wolf_joker4.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 90,
+      "arc": 240,
+      "id": "WS0001",
+      "locations": [
+        3,
+        23
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -90,
+      "arc": 240,
+      "id": "WS0002",
+      "locations": [
+        3,
+        -23
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS0005",
+      "locations": [
+        40.5,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 291,
+      "id": "WS0006",
+      "locations": [
+        4.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "LARGE",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 132.5,
+      "arc": 245,
+      "id": "WS0003",
+      "locations": [
+        -18,
+        11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -132.5,
+      "arc": 245,
+      "id": "WS0004",
+      "locations": [
+        -18,
+        -11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 64
+}

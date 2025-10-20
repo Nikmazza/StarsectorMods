@@ -61,6 +61,7 @@ public class IXSurveillanceCenter extends BaseIndustry {
 	}
 	
 	private boolean isInstanceInstalled() {
+		if (market.getIndustry(id) == null) return false;
 		return IX_PLAYER_CORE_ID.equals(market.getIndustry(id).getAICoreId());
 	}
 	
@@ -88,6 +89,7 @@ public class IXSurveillanceCenter extends BaseIndustry {
 		boolean hasIndEvo = Global.getSettings().getModManager().isModEnabled("IndEvo");
 		for (Industry industry : market.getIndustries()) {
 			if (hasIndEvo && industry.getCurrentName().equals("Monastic Order")) return 0f;
+			if (hasIndEvo && industry.getCurrentName().equals("Managed Democracy")) return 0f;
 			if (industry.getId().equals(SPY_PLAYER_ID)) interest += 0;
 			else interest -= (int) industry.getPatherInterest();
 		}

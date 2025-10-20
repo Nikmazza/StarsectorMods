@@ -18,7 +18,8 @@ public class AptitudeSynthesis extends SCBaseAptitudePlugin {
 	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String TW_FAC_ID = "ix_trinity";
 	private static String TT_FAC_ID = "tritachyon";
-
+	private static String ASM_FAC_ID = "asm_relic";
+	
     //The ID of the skill that is always active
     @Override
     public String getOriginSkillId() {
@@ -75,6 +76,7 @@ public class AptitudeSynthesis extends SCBaseAptitudePlugin {
         if (IX_FAC_ID.equals(id)) return isSynthesisEnabled ? Float.MAX_VALUE : 0f;
         else if (TW_FAC_ID.equals(id)) return isSynthesisEnabled ? Float.MAX_VALUE : 0f;
 		else if (TT_FAC_ID.equals(id)) return isSynthesisEnabled ? 2f : 0f;
+		else if (ASM_FAC_ID.equals(id)) return isSynthesisEnabled ? Float.MAX_VALUE : 0f;
 		else if ("vantage_group".equals(id)) return Float.MAX_VALUE; //hvb boss
         return 0f;
     }

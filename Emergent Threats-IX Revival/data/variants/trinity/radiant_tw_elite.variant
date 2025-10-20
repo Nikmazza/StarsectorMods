@@ -5,12 +5,12 @@
     "goalVariant": true,
     "hullId": "radiant_tw",
     "hullMods": [
-        "magazines",
         "targetingunit",
         "tw_modernized_rangefinder",
         "ix_reactive_combat_shields",
         "frontemitter",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "tw_activate_starquake"
     ],
     "permaMods": [],
     "sMods": [],
@@ -56,9 +56,7 @@
         }
     ],
     "wings": [
-        "nimbus_tw_wing_r",
-        "nimbus_tw_wing_r",
-        "nimbus_tw_wing_r",
-        "nimbus_tw_wing_r"
+        "starquake_tw_wing",
+        "starquake_tw_wing"
     ]
 }

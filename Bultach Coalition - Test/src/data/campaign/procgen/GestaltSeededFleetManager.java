@@ -16,12 +16,15 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 import org.lazywizard.lazylib.MathUtils;
 
 import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GestaltSeededFleetManager extends SourceBasedFleetManager {
 
 	protected int minPts;
 	protected int maxPts;
 	protected int totalLost;
+	protected static final float CAPITAL_SHIP_DP_REDUCTION_FACTOR = 0.60f; // Reduce fleet size if a Feregether is present, cuz it makes more ships
 
 	public GestaltSeededFleetManager(SectorEntityToken source, float thresholdLY, int minFleets, int maxFleets, float respawnDelay,
 									 int minPts, int maxPts) {
@@ -40,18 +43,17 @@ public class GestaltSeededFleetManager extends SourceBasedFleetManager {
 	@Override
 	protected CampaignFleetAPI spawnFleet() {
 		SectorEntityToken spawnAtEntity = this.source;
-
 		if (spawnAtEntity == null) {
 			return null;
 		}
 
 		Random random = new Random();
 
-		int combatPoints;
+		int baseCombatPoints;
 		if (this.maxPts <= this.minPts) {
-			combatPoints = this.minPts;
+			baseCombatPoints = this.minPts;
 		} else {
-			combatPoints = this.minPts + random.nextInt(this.maxPts - this.minPts + 1);
+			baseCombatPoints = this.minPts + random.nextInt(this.maxPts - this.minPts + 1);
 		}
 
 		int bonus = totalLost * 2;
@@ -60,13 +62,13 @@ public class GestaltSeededFleetManager extends SourceBasedFleetManager {
 		} else if (this.maxPts <= 0) {
 			bonus = 0;
 		}
-		combatPoints += bonus;
+		baseCombatPoints += bonus;
 
 		String type = FleetTypes.PATROL_SMALL;
-		if (combatPoints > 12) type = FleetTypes.PATROL_MEDIUM;
-		if (combatPoints > 24) type = FleetTypes.PATROL_LARGE;
+		if (baseCombatPoints > 12) type = FleetTypes.PATROL_MEDIUM;
+		if (baseCombatPoints > 24) type = FleetTypes.PATROL_LARGE;
 
-		combatPoints *= 6f;
+		float initialFleetPoints = baseCombatPoints * 6f;
 
 		FleetParamsV3 params = new FleetParamsV3(
 				null,
@@ -74,7 +76,7 @@ public class GestaltSeededFleetManager extends SourceBasedFleetManager {
 				"gestalt",
 				1.5f,
 				type,
-				combatPoints,
+				initialFleetPoints,
 				0f, 0f, 0f, 0f, 0f,
 				0f
 		);
@@ -87,6 +89,40 @@ public class GestaltSeededFleetManager extends SourceBasedFleetManager {
 			return null;
 		}
 
+		List<FleetMemberAPI> capitalsInFleet = new ArrayList<>();
+		List<FleetMemberAPI> escortsInFleet = new ArrayList<>();
+		float currentTotalDP = 0f;
+
+		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+			currentTotalDP += member.getDeploymentPointsCost();
+			if (member.isCapital()) {
+				capitalsInFleet.add(member);
+			} else {
+				escortsInFleet.add(member);
+			}
+		}
+
+		if (!capitalsInFleet.isEmpty()) {
+			float dpOfCapitals = 0f;
+			for (FleetMemberAPI capital : capitalsInFleet) {
+				dpOfCapitals += capital.getDeploymentPointsCost();
+			}
+
+			float targetFleetDP = Math.max(dpOfCapitals, currentTotalDP * CAPITAL_SHIP_DP_REDUCTION_FACTOR);
+
+			escortsInFleet.sort(Comparator.comparingDouble(FleetMemberAPI::getDeploymentPointsCost));
+
+			for (FleetMemberAPI escortToConsiderRemoving : escortsInFleet) {
+				if (currentTotalDP <= targetFleetDP) {
+					break;
+				}
+				if ((currentTotalDP - escortToConsiderRemoving.getDeploymentPointsCost()) >= dpOfCapitals) {
+					fleet.getFleetData().removeFleetMember(escortToConsiderRemoving);
+					currentTotalDP -= escortToConsiderRemoving.getDeploymentPointsCost();
+				}
+			}
+		}
+
 		LocationAPI location = spawnAtEntity.getContainingLocation();
 		if (location != null) {
 			location.addEntity(fleet);
@@ -95,7 +131,7 @@ public class GestaltSeededFleetManager extends SourceBasedFleetManager {
 		} else {
 			return null;
 		}
-		addGestaltInteractionConfig(fleet);
+
 		fleet.removeAbility(Abilities.EMERGENCY_BURN);
 		fleet.removeAbility(Abilities.SENSOR_BURST);
 		fleet.removeAbility(Abilities.GO_DARK);

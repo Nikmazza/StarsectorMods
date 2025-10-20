@@ -29,10 +29,11 @@ Gestalt Vortex,bt_gestalt_vortex,0,,Gestalt,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.
 Gestalt Portal,bt_drone_construction_fx,0,,Gestalt,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.bt_drone_construction_fx,,Spawns afterimages.,graphics/hullmods/low_maintenance.png
 ,,,,,,,,,,,,,,,,,,
 Bio-synth Vessel,bt_murtach_syntharmor,,,Unknown,,,,,TRUE,,0,0,0,0,data.hullmods.bt_murtach_syntharmor,"Though utterly enigmatic, the unique makeup of this vessel allows it a host of unusual, but undeniable benefits.",,graphics/icons/hullsys/temporal_shell.png
-,,,,,,,,,,,,,,,,,,
+Murtach Buff Stuff,bt_murtach_tempbuff,,,Unknown,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.bt_MurtachTempBuffControllerHullmod,Stuff!,,graphics/icons/hullsys/temporal_shell.png
 ,,,,,,,,,,,,,,,,,,
 Bultach shield zaps,bt_shieldArching,0,,Bultach Coalition,defensive,0,,,TRUE,TRUE,0,0,0,0,data.hullmods.bt_shieldArching,,Shield Changer,graphics/hullmods/low_maintenance.png
 Linked Hull,BT_linkedhull,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.BT_LinkedHull,Mirrors certain aspects between the parent and child hulls.,,graphics/hullmods/vast_bulk.png
+Linked Shield Modules,bt_sathar_linkedshields,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.bt_sathar_linkedshields,Shield modules share behavior and flux pool.,,graphics/hullmods/vast_bulk.png
 ,,,,,,,,,,,,,,,,,,
 HULLMOD CONFLICT,IncompatibleHullmodWarning,,,,,,,,TRUE,,0,0,0,0,data.hullmods.IncompatibleHullmodWarning,"%s, the hullmod you tried to install conflicts with this hull or another previously installed hullmod.","%s, the hullmod you tried to install conflicts with this hull or another previously installed hullmod.",graphics/icons/intel/investigation.png
 ,,,,,,,,,,,,,,,,,,
@@ -65,6 +66,9 @@ Brawler Carapace,bt_brawler_armour,,,,,,,,TRUE,,0,0,0,0,data.hullmods.bt_brawler
 The armour overlaps it's weapons and engines, reducing EMP damage by %s. However, due to the unique nature of the armor-- and no guarantee from your engineering team that it's integrity would be retained with modification, %s.",Heavy armour that stops a disproportionate amount of EMP damage.,
 ,,,,,,,,,,,,,,,,,,
 Bultach shields Changer TWO,BT_shieldsChanger_Gestalt,0,,Bultach Coalition,defensive,0,,,TRUE,TRUE,0,0,0,0,data.hullmods.BT_shieldsChanger_Gestalt,,Shield Changer,graphics/hullmods/low_maintenance.png
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+Combat-Core,bt_triumph_combatmodes,,,,,,,,TRUE,,0,0,0,0,data.hullmods.bt_triumph_combatmodes,"This ship can switch between cruise mode to manuever quickly, or battle mode for increased combat capabilities. Switching takes %s before the mode's full effects are reached.",Can swap modes to improve speed or staying power.,graphics/icons/skills/ranged_specialization.png
 ,,,,,,,,,,,,,,,,,,
 DornDeployBuff,bt_dread_discount,0,,Bultach Coalition,defensive,0,,,TRUE,TRUE,0,0,0,0,data.hullmods.bt_dread_discount,,DP discount for the Dorn. You shouldn't see this.,graphics/hullmods/low_maintenance.png
 ,,,,,,,,,,,,,,,,,,

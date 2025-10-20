@@ -103,12 +103,14 @@ public class RemnantSubsystemsUtil {
 	private static List<String> ABOMINATION_LIST = new ArrayList<String>();
 	static {
 		ABOMINATION_LIST.add("Unknown"); //Omega
+		ABOMINATION_LIST.add("II Battlegroup");
 		ABOMINATION_LIST.add("IV Battlegroup");
 		ABOMINATION_LIST.add("VI Battlegroup");
 		ABOMINATION_LIST.add("IX Battlegroup");
 		ABOMINATION_LIST.add("XIII Battlegroup");
 		ABOMINATION_LIST.add("XIV Battlegroup"); //Safeguard
 		ABOMINATION_LIST.add("Shackles Garrison"); //XXVII Battlegroup
+		ABOMINATION_LIST.add("Assimilated Threat"); //Assimilated VI Battlegroup
 		ABOMINATION_LIST.add("Legio Infernalis");
 		ABOMINATION_LIST.add("Nightwatch");
 		ABOMINATION_LIST.add("The Great Houses");

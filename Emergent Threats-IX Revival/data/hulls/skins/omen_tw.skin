@@ -1,0 +1,24 @@
+{
+	"baseHullId":"omen_tw_base",
+	"skinHullId":"omen_tw",
+	"hullName":"Omen (TW)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"omen_tw",
+	"coversColor":[210,230,210,255],
+	"spriteName":"graphics/ships/trinity/omen_tw.png",
+	"descriptionPrefix":"This warship of the Trinity Worlds combines salvaged Tri-Tachyon and transferred 9th Domain Battlegroup technology. The engines of this ship have been enhanced in a crude yet effective manner, in an effort to mimic the more advanced upgrades of the Fleet.",
+	"builtInWeapons": {
+		"WS EWR": "ewar_suite_tw",
+    },
+	"tags":["ix_trinity"],
+	"tech":"Trinity Worlds",
+	"builtInMods":["tw_trinity_retrofit", "tw_point_defense_small", "tw_ewar_suite"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"engineSlotChanges":{
+		"0":{"style": "IX_TRINITY"},
+		"1":{"style": "IX_TRINITY"},
+		"2":{"style": "IX_TRINITY"},
+		"3":{"style": "IX_TRINITY"},
+		"4":{"style": "IX_TRINITY"},
+	},    
+}

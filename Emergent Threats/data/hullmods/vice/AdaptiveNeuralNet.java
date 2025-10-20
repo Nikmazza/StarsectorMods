@@ -1,5 +1,6 @@
 package data.hullmods.vice;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -16,6 +17,7 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 	private static float AI_BONUS = 2f;
 	private float TOTAL_BONUS = 0f; 	//description text only, bonus is set dynamically in method.
 	private static String THIS_MOD = "vice_adaptive_neural_net";
+	private boolean isHumanCaptain = false; //for description text only
 	
 	//Utility variables
 	private RemnantSubsystemsUtil util = new RemnantSubsystemsUtil();
@@ -25,12 +27,23 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 		float bonus = CR_BONUS;
 		String coreId = null;
 		
+		//else checks for RAT interactions where human can captain AI ships through Automation XO or skill
+		if (stats.getFleetMember() != null && stats.getFleetMember().getCaptain() != null 
+				&& !stats.getFleetMember().getCaptain().isAICore()
+				&& !stats.getFleetMember().getCaptain().isDefault()) isHumanCaptain = true;
+		else if (stats.getFleetMember() != null && stats.getFleetMember().getCaptain() != null 
+				&& (stats.getFleetMember().getCaptain().getStats().hasSkill("rat_augmented") 
+					|| stats.getFleetMember().getCaptain().isPlayer())) isHumanCaptain = true;
+		
 		if (stats.getFleetMember() != null) coreId = stats.getFleetMember().getCaptain().getAICoreId();
 		
 		if ((Commodities.GAMMA_CORE).equals(coreId)) bonus = CR_BONUS + AI_BONUS * 1f;
 		else if ((Commodities.BETA_CORE).equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		else if ((Commodities.ALPHA_CORE).equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 		else if ((Commodities.OMEGA_CORE).equals(coreId)) bonus = CR_BONUS + AI_BONUS * 4f;
+		
+		else if (("asm_relic_gamma").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 1f;
+		else if (("asm_relic_beta").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		
 		else if (("tahlan_daemoncore").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		else if (("tahlan_archdaemoncore").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
@@ -55,6 +68,12 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 		else if (("rat_seraph_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 		else if (("rat_neuro_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 		else if (("rat_exo_processor").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
+		else if (("rat_primordial_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 4f;
+
+		else if (("zea_dusk_boss_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 4f;
+		else if (("zea_dawn_boss_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 4f;
+		else if (("zea_elysia_boss_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 4f;
+		else if (("zea_dormant_dusk_boss_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 4f;
 		
 		else if (("volantian_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		
@@ -87,8 +106,11 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
 		if (isForModSpec || ship == null) return;
 		if (!ship.getVariant().hasHullMod(THIS_MOD)) return; //do not show extra text if not installed on hull.
-		String s = (util.isModuleCheck(ship)) ? "Ship module bonus is limited to %s." : "This ship is receiving a CR bonus of %s.";
-		tooltip.addPara(s, 10f, Misc.getHighlightColor(), "" + (int) TOTAL_BONUS + "%");
+		boolean isMMI = Global.getSector().getMemoryWithoutUpdate().is("$xo_mmi_is_active", true);
+		float bonus = isMMI && isHumanCaptain ? 10f : TOTAL_BONUS;
+		String standardString = isMMI && isHumanCaptain ? "This ship is receiving a Synthesis CR bonus of %s." : "This ship is receiving a CR bonus of %s.";
+		String s = (util.isModuleCheck(ship)) ? "Ship module bonus is limited to %s." : standardString;
+		tooltip.addPara(s, 10f, Misc.getHighlightColor(), "" + (int) bonus + "%");
 	}
 	
 	@Override

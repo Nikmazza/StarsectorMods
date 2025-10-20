@@ -5,11 +5,9 @@ import java.util.List;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
-import com.fs.starfarer.api.campaign.CharacterDataAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.ui.CustomPanelAPI;
@@ -17,7 +15,6 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 import lunalib.lunaRefit.BaseRefitButton;
-import lunalib.lunaUI.elements.LunaSpriteElement;
 
 public class SalvageOnslaughtButton extends BaseRefitButton {
 	
@@ -25,8 +22,11 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 	private static String MOD_HULLMOD = "orr_revised_armaments";
 	private static String LG_MOD = "vice_onslaught_hull";
 	private static String AGGRESSOR_MOD = "orr_aggressor";
+	private static String ASMGRESSOR_MOD = "orr_asmgressor";
 	private static String ONSLAUGHT_MOD = "orr_onslaught";
 	private static String CGR_MOD = "orr_damper_field";
+	private static String ASM_MOD = "orr_asmslaught";
+	private static String DPL_MOD = "orr_dplslaught";
 	
 	private static String LEFT_ID = "WS 016";
 	private static String RIGHT_ID = "WS 017";
@@ -46,6 +46,7 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 	static {
 		WEAPON_LIST.add("orr_ana");
 		WEAPON_LIST.add("orr_giga");
+		WEAPON_LIST.add("orr_har");
 		WEAPON_LIST.add("orr_hmc");
 		WEAPON_LIST.add("orr_nal");
 		WEAPON_LIST.add("orr_tac");
@@ -69,10 +70,20 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 	static {
 		BAN_LIST.add("vice_incandescent");
 		BAN_LIST.add("vice_incandescent_default_D");
-		BAN_LIST.add("vice_intrepid_ex");
-		BAN_LIST.add("vice_intrepid_ex_default_D");
+		//BAN_LIST.add("vice_intrepid_ex");
+		//BAN_LIST.add("vice_intrepid_ex_default_D");
 		BAN_LIST.add("vice_onslaught_lg");
 		BAN_LIST.add("vice_onslaught_lg_default_D");
+		BAN_LIST.add("onslaught_xiii");
+		BAN_LIST.add("onslaught_xiii_default_D");
+	}
+	
+	private static List<String> IX_LIST = new ArrayList<String>();
+	static {
+		IX_LIST.add("intrepid_ix");
+		IX_LIST.add("intrepid_ix_default_D");
+		IX_LIST.add("intrepid_tw");
+		IX_LIST.add("intrepid_tw_default_D");
 	}
 	
 	@Override
@@ -114,6 +125,10 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 			tooltip.addSpacer(10f);
 			tooltip.addPara("Insufficient Story Points", 0f, Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor());
 		}
+		else if (isIX(member)) {
+			tooltip.addSpacer(10f);
+			tooltip.addPara("Security interlocks prevent the salvage of built-in weapons.", 0f, Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor());
+		}
 		else if (isBanned(member)) {
 			tooltip.addSpacer(10f);
 			tooltip.addPara("Warning: Due to the complexity of this ship, once its built-in weapons have been removed, they cannot be replaced. The ship will be rendered unusable.", 0f, Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor());
@@ -135,10 +150,20 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 		
 		String deco = variant.getWeaponSpec(left).getWeaponId() + "_deco";
 		//Needs custom method once other Intrepid hulls are included
-		if (variant.hasHullMod(EX_MOD)) deco = "orr_nal_deco";
-		if (variant.hasHullMod(REM_MOD)) deco = "orr_hmc_deco";
-		else if (variant.hasHullMod(LG_MOD)) deco = "orr_giga_deco";
-		else if (member.getHullId().equals("dpl_onslaught_alt") || member.getHullId().equals("orr_onslaught_dpl_tpl")) deco = "orr_tpl_deco";
+		if (!variant.hasHullMod(MOD_HULLMOD)) {
+			if (variant.hasHullMod(EX_MOD)) deco = "orr_nal_deco";
+			else if (variant.hasHullMod(REM_MOD)) deco = "orr_hmc_deco";
+			else if (variant.hasHullMod(LG_MOD)) deco = "orr_giga_deco";
+			else if (variant.hasHullMod(ASM_MOD)) deco = "orr_tac_deco";
+			else if (variant.hasHullMod(ASMGRESSOR_MOD)) deco = "orr_tac_deco";
+			else if (variant.hasHullMod(DPL_MOD)) deco = "orr_tpl_deco";
+			else if (member.getHullId().equals("dpl_onslaught_alt") 
+					|| member.getHullId().equals("dpl_onslaught_alt_default_D")) deco = "orr_tpl_deco";
+		}
+		if (deco.equals("orr_tpl_fast_deco")) deco = "orr_tpl_deco";
+		else if (deco.equals("orr_ana_short_deco")) deco = "orr_ana_deco";
+		else if (deco.equals("orr_har_ex_deco")) deco = "orr_har_deco"; 
+		
 		giveWeapon(deco);
 		variant.getPermaMods().remove(MOD_HULLMOD);
 		variant.getHullMods().remove(MOD_HULLMOD);
@@ -151,6 +176,7 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 	//Makes the button not clickable if mod cannot be fitted
 	@Override
 	public boolean isClickable(FleetMemberAPI member, ShipVariantAPI variant, MarketAPI market) {
+		if (isIX(member)) return false;
 		if (variant.hasHullMod(WRECK_MOD)) return false;
 		if (Global.getSector().getCharacterData().getPerson().getStats().getStoryPoints() < 1) return false;
 		return isOnslaught(variant, member) && market != null && market.hasSpaceport();
@@ -168,13 +194,24 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 		}
 		return false;
 	}
-	
+
+	private static boolean isIX(FleetMemberAPI member) {
+		for (String s : IX_LIST) {
+			String id = member.getHullId();
+			if (id.equals(s)) return true;
+		}
+		return false;
+	}
+
 	private static boolean isOnslaught(ShipVariantAPI variant, FleetMemberAPI member) {
 		if (variant.hasHullMod(WRECK_MOD) 
 					|| variant.hasHullMod(MOD_HULLMOD)
 					|| variant.hasHullMod(AGGRESSOR_MOD) 
+					|| variant.hasHullMod(ASMGRESSOR_MOD) 
 					|| variant.hasHullMod(ONSLAUGHT_MOD)
-					|| variant.hasHullMod(CGR_MOD)) return true;
+					|| variant.hasHullMod(CGR_MOD)
+					|| variant.hasHullMod(ASM_MOD)
+					|| variant.hasHullMod(DPL_MOD)) return true;
 		for (String s : HULL_LIST) {
 			if (s.equals(member.getHullId())) return true;
 		}
@@ -183,7 +220,6 @@ public class SalvageOnslaughtButton extends BaseRefitButton {
 	
 	private static void giveWeapon(String deco) {
 		CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();
-		CharacterDataAPI player = Global.getSector().getCharacterData();
 		cargo.addWeapons(deco, 1);
 	}
 }

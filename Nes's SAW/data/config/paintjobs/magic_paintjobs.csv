@@ -1,7 +1,7 @@
 id,hullIds,name,paintjobFamily,spriteId,unlockedAutomatically,tags,unlockConditions,description
 #Carnelian,,,,,,,,
 nes_carnelian_agent,nes_carnelian,Agent,carnelian_agent,graphics/ships/nes_carnelian_agent.png,true,,,"Shaken, Not Stirred"
-nes_carnelian_redhand,nes_carnelian,Redhand,carnelian_redhand,graphics/ships/nes_carnelian_redhand.png,true,,,We Know
+nes_carnelian_redhand,nes_carnelian,Red Hand,carnelian_redhand,graphics/ships/nes_carnelian_redhand.png,true,,,We Know
 nes_carnelian_reef,nes_carnelian,Reef,carnelian_reef,graphics/ships/nes_carnelian_reef.png,true,,,Coral
 nes_carnelian_toxic,nes_carnelian,Toxic,carnelian_toxic,graphics/ships/nes_carnelian_toxic.png,true,,,Venomous
 nes_carnelian_turquoise,nes_carnelian,Turquoise,carnelian_turquoise,graphics/ships/nes_carnelian_turquoise.png,true,,,Retro
@@ -10,7 +10,7 @@ nes_carnelian_moonbunny,nes_carnelian,Moon Bunny,carnelian_moonbunny,graphics/sh
 ,,,,,,,,
 #Carnelian Wings,,,,,,,,
 nes_drone_carnelian_attacker_agent,nes_drone_carnelian_attacker,Agent,carnelian_agent,graphics/ships/drones/nes_drone_carnelian_attacker_agent.png,true,,,
-nes_drone_carnelian_attacker_redhand,nes_drone_carnelian_attacker,Redhand,carnelian_redhand,graphics/ships/drones/nes_drone_carnelian_attacker_redhand.png,true,,,
+nes_drone_carnelian_attacker_redhand,nes_drone_carnelian_attacker,Red Hand,carnelian_redhand,graphics/ships/drones/nes_drone_carnelian_attacker_redhand.png,true,,,
 nes_drone_carnelian_attacker_reef,nes_drone_carnelian_attacker,Reef,carnelian_reef,graphics/ships/drones/nes_drone_carnelian_attacker_reef.png,true,,,
 nes_drone_carnelian_attacker_toxic,nes_drone_carnelian_attacker,Toxic,carnelian_toxic,graphics/ships/drones/nes_drone_carnelian_attacker_toxic.png,true,,,
 nes_drone_carnelian_attacker_turquoise,nes_drone_carnelian_attacker,Turquoise,carnelian_turquoise,graphics/ships/drones/nes_drone_carnelian_attacker_turquoise.png,true,,,
@@ -60,7 +60,8 @@ nes_hampter_albion,nes_hampter,Albion,,graphics/ships/nes_hampter_albion.png,tru
 sotf_pledge_sparkle,sotf_pledge,Eidolon,,graphics/ships/crossmod/sotf/sotf_pledge_sparkle.png,true,,,{Care for a dance?}
 sotf_vow_sparkle,sotf_vow,Eidolon,,graphics/ships/crossmod/sotf/sotf_vow_sparkle.png,true,,,{La-la-la let's dance!}
 #rat,,,,,,,,
-rat_raphael_neontiger,rat_raphael,Neon Tiger,neon_tiger,graphics/ships/crossmod/rat/rat_raphael_neontiger.png,true,,,{Dance in the abyss}
+rat_raphael_neontiger,rat_raphael,Neon Tiger,neon_tiger,graphics/ships/crossmod/rat/rat_raphael_neontiger.png,true,,,{Dance in the abyss!}
+rat_raphael_moonbunny,rat_raphael,Moon Bunny,moonbunny,graphics/ships/crossmod/rat/rat_raphael_moonbunny.png,true,,,"{Get away, another way to feel~}"
 #seeker,,,,,,,,
 SKR_557_dune,SKR_557,Dune,,graphics/ships/crossmod/seeker/SKR_557_dune.png,true,,,by Nes
 SKR_557_path,SKR_557,Path,,graphics/ships/crossmod/seeker/SKR_557_path.png,true,,,by Nes
@@ -73,6 +74,7 @@ nes_eagle_ivory,eagle,Ivory Bastion,,graphics/ships/ivory/eagle_ivory.png,true,,
 nes_falcon_ivory,falcon,Ivory Bastion,,graphics/ships/ivory/falcon_ivory.png,true,,,by Nes
 nes_gryphon_ivory,gryphon,Ivory Bastion,,graphics/ships/ivory/gryphon_ivory.png,true,,,by Nes
 nes_hammerhead_ivory,hammerhead,Ivory Bastion,,graphics/ships/ivory/hammerhead_ivory.png,true,,,by Nes
+nes_pegasus_ivory,pegasus,Ivory Bastion,,graphics/ships/ivory/pegasus_ivory.png,true,,,by Nes
 nes_heron_ivory,heron,Ivory Bastion,,graphics/ships/ivory/heron_ivory.png,true,,,by Nes
 nes_sunder_ivory,sunder,Ivory Bastion,,graphics/ships/ivory/sunder_ivory.png,true,,,by Nes
 ,,,,,,,,
@@ -90,6 +92,7 @@ nes_heron_moonbunny,heron,Moon Bunny,,graphics/ships/moonbunny/heron_moonbunny.p
 nes_pegasus_moonbunny,pegasus,Moon Bunny,,graphics/ships/moonbunny/pegasus_moonbunny.png,true,,,by Nes
 nes_sunder_moonbunny,sunder,Moon Bunny,,graphics/ships/moonbunny/sunder_moonbunny.png,true,,,by Nes
 nes_vigilance_moonbunny,vigilance,Moon Bunny,,graphics/ships/moonbunny/vigilance_moonbunny.png,true,,,by Nes
+nes_venture_moonbunny,venture,Moon Bunny,,graphics/ships/moonbunny/venture_moonbunny.png,true,,,by Nes
 ,,,,,,,,
 #Automata,,,,,,,,
 nes_paragon_automata,paragon,Automata,,graphics/ships/automata/paragon_automata.png,true,,,by Nes
@@ -116,7 +119,7 @@ nes_omen_ravenguard,omen,Ravenguard,,graphics/ships/ravenguard/omen_ravenguard.p
 nes_wolf_ravenguard,wolf,Ravenguard,,graphics/ships/ravenguard/wolf_base_ravenguard.png,true,,,by Nes
 nes_anubis_ravenguard,anubis,Ravenguard,,graphics/ships/ravenguard/anubis_base_ravenguard.png,true,,,by Nes
 ,,,,,,,,
-#white Fox,,,,,,,,
+#White Fox,,,,,,,,
 nes_paragon_whitefox,paragon,White Fox,,graphics/ships/whitefox/paragon_whitefox.png,true,,,by Nes
 nes_astral_whitefox,astral,White Fox,,graphics/ships/whitefox/astral_whitefox.png,true,,,by Nes
 nes_aurora_whitefox,aurora,White Fox,,graphics/ships/whitefox/aurora_whitefox.png,true,,,by Nes
@@ -128,3 +131,29 @@ nes_hyperion_whitefox,hyperion,White Fox,,graphics/ships/whitefox/hyperion2_whit
 nes_omen_whitefox,omen,White Fox,,graphics/ships/whitefox/omen_whitefox.png,true,,,by Nes
 nes_wolf_whitefox,wolf,White Fox,,graphics/ships/whitefox/wolf_base_whitefox.png,true,,,by Nes
 nes_anubis_whitefox,anubis,White Fox,,graphics/ships/whitefox/anubis_base_whitefox.png,true,,,by Nes
+,,,,,,,,
+#Patchwork,,,,,,,,
+nes_paragon_patchwork,paragon,Patchwork,,graphics/ships/patchwork/paragon_patchwork.png,true,,,by Nes
+nes_astral_patchwork,astral,Patchwork,,graphics/ships/patchwork/astral_patchwork.png,true,,,by Nes
+nes_aurora_patchwork,aurora,Patchwork,,graphics/ships/patchwork/aurora_patchwork.png,true,,,by Nes
+nes_fury_patchwork,fury,Patchwork,,graphics/ships/patchwork/fury_patchwork.png,true,,,by Nes
+nes_shrike_patchwork,shrike,Patchwork,,graphics/ships/patchwork/shrike_base_patchwork.png,true,,,by Nes
+nes_medusa_patchwork,medusa,Patchwork,,graphics/ships/patchwork/medusa_patchwork.png,true,,,by Nes
+nes_scarab_patchwork,scarab,Patchwork,,graphics/ships/patchwork/scarab_patchwork.png,true,,,by Nes
+nes_hyperion_patchwork,hyperion,Patchwork,,graphics/ships/patchwork/hyperion2_patchwork.png,true,,,by Nes
+nes_omen_patchwork,omen,Patchwork,,graphics/ships/patchwork/omen_patchwork.png,true,,,by Nes
+nes_wolf_patchwork,wolf,Patchwork,,graphics/ships/patchwork/wolf_base_patchwork.png,true,,,by Nes
+nes_anubis_patchwork,anubis,Patchwork,,graphics/ships/patchwork/anubis_base_patchwork.png,true,,,by Nes
+,,,,,,,,
+#Coven,,,,,,,,
+nes_paragon_coven,paragon,Covenant,,graphics/ships/coven/paragon_coven.png,true,,,by Nes
+nes_astral_coven,astral,Covenant,,graphics/ships/coven/astral_coven.png,true,,,by Nes
+nes_aurora_coven,aurora,Covenant,,graphics/ships/coven/aurora_coven.png,true,,,by Nes
+nes_fury_coven,fury,Covenant,,graphics/ships/coven/fury_coven.png,true,,,by Nes
+nes_shrike_coven,shrike,Covenant,,graphics/ships/coven/shrike_base_coven.png,true,,,by Nes
+nes_medusa_coven,medusa,Covenant,,graphics/ships/coven/medusa_coven.png,true,,,by Nes
+nes_scarab_coven,scarab,Covenant,,graphics/ships/coven/scarab_coven.png,true,,,by Nes
+nes_hyperion_coven,hyperion,Covenant,,graphics/ships/coven/hyperion2_coven.png,true,,,by Nes
+nes_omen_coven,omen,Covenant,,graphics/ships/coven/omen_coven.png,true,,,by Nes
+nes_wolf_coven,wolf,Covenant,,graphics/ships/coven/wolf_base_coven.png,true,,,by Nes
+nes_anubis_coven,anubis,Covenant,,graphics/ships/coven/anubis_base_coven.png,true,,,by Nes

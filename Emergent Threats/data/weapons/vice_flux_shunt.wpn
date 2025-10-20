@@ -1,5 +1,5 @@
 {
-	"id":"vice_flux_shunt",  # this id must match what's in the spreadsheet
+	"id":"vice_flux_shunt",
 	"specClass":"projectile",
 	"type":"UNIVERSAL",
 	"size":"SMALL",

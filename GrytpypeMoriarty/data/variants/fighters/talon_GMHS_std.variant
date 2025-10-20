@@ -1,0 +1,30 @@
+{
+  "variantId": "talon_GMHS_std",
+  "hullId": "talon_GMHS",
+  "displayName": "Defensive",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "swarmer_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "vulcan_GMDA",
+        "WS0002": "vulcan_GMDA"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

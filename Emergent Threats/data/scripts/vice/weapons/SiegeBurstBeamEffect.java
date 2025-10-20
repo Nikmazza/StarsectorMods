@@ -25,7 +25,7 @@ public class SiegeBurstBeamEffect implements BeamEffectPlugin {
 		CombatEntityAPI target = beam.getDamageTarget();
 
 		if (target instanceof ShipAPI && beam.getBrightness() >= 1f) {
-			boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+			boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 			Vector2f point = beam.getRayEndPrevFrame();
 			WeaponSize size = beam.getWeapon().getSize();
 			float hitSize = size == WeaponSize.LARGE ? 150f : 100f;

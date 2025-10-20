@@ -16,4 +16,7 @@
 	"builtInWeapons": {
 		"WS ARR": "interdictor_iris_ix",
     },
+	"weaponSlotChanges":{
+		"WS ARR":{"mount": "TURRET", "type": "BUILT_IN"},
+	},
 }

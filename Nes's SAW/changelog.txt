@@ -1,3 +1,71 @@
+1.26.SSS
+Volt:
+underperforming in 0.98, bringing it back to speed with a jolt
+-op 165 > 175
+-improved maneuverability
+
+Hermitaur (LP):
+less hullmod clutter and more loadout freedom
+-removed built-in auxiliary thrusters
+-op 90 > 95
+
+Hampter:
+adjusting for 0.98 vanilla destroyer carrier buffs
+-op 90 > 95
+Hampter(P):
+-op 90 > 95
+Hampter (XIV):
+-op 95 > 100
+
+Hampter (Mk.V):
+no longer op starved
+-op 95 > 110
+-unique one-off hull once again
+-reworked spawn conditions, explore remnant systems to claim the ship (applied on new game)
+
+Paintjobs:
+cosmetic skins, available in the refit screen as usual
+
+hightech lineup in vibrant purple
+-added "Covenant" Paragon
+-added "Covenant" Astral
+-added "Covenant" Aurora
+-added "Covenant" Fury
+-added "Covenant" Shrike
+-added "Covenant" Medusa
+-added "Covenant" Scarab
+-added "Covenant" Hyperion
+-added "Covenant" Omen
+-added "Covenant" Wolf
+-added "Covenant" Anubis
+
+-added "Ivory Bastion" Pegasus
+
+-updated "Moon Bunny" Hammerfall
+
+crossmod content with Random Assortment of Things:
+-added "Moon Bunny" Raphael paintjob
+
+1.25.SSS
+Fluorspar:
+-shields and engines match GEMLOCK settings (once again)
+
+Paintjobs:
+-added "Moon Bunny" Venture
+
+Striking yellow paintjobs for the hightech lineup, manage them in the refit screen
+-added "Patchwork" Paragon
+-added "Patchwork" Astral
+-added "Patchwork" Aurora
+-added "Patchwork" Fury
+-added "Patchwork" Shrike
+-added "Patchwork" Medusa
+-added "Patchwork" Scarab
+-added "Patchwork" Hyperion
+-added "Patchwork" Omen
+-added "Patchwork" Wolf
+-added "Patchwork" Anubis
+
 1.24.SSS
 Hammerfall (P):
 Can be oppressive in the very early pirates battles, especially in numbers

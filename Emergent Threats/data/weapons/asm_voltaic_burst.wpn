@@ -1,0 +1,22 @@
+{	
+	"id":"asm_voltaic_burst",
+	"specClass":"projectile",
+	"type":"UNIVERSAL",
+	"size":"SMALL",
+	"turretSprite":"graphics/fx/empty.png",
+	"turretGlowSprite":"graphics/fx/empty.png",
+	"hardpointSprite":"graphics/fx/empty.png",
+	"hardpointGlowSprite":"graphics/fx/empty.png",
+	"glowColor":[0,0,0,0],
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW",
+	#"animationType":"GLOW_AND_FLASH",
+	"autocharge":true,
+	"requiresFullCharge":false, 
+	"projectileSpecId":"asm_voltaic_deco_shot",
+	"noImpactSounds":true,
+}

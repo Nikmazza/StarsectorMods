@@ -1,0 +1,77 @@
+{
+  "hullName": "Broadsword (GMHS)",
+  "hullId": "broadsword_GMHS",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/broadsword_GMHS.png",
+  "style": "MIDLINE",
+  "height": 32,
+  "width": 32,
+  "center": [16, 16],
+  "collisionRadius": 19,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 18,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 82,
+      "angle": 15.5,
+      "locations": [4, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 82,
+      "angle": -15.5,
+      "locations": [4, -9]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [-4.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-14, 6],
+      "length": 7,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-14, -6],
+      "length": 7,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -11.5, -7.5,
+    0, -13,
+    14, -0,
+    0, 13,
+    -11.5, 7.5
+  ]
+}

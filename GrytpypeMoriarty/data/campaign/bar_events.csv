@@ -1,0 +1,2 @@
+bar event id,tags,freq,prob,min dur,max dur,min timeout,max timeout,min accepted timeout,max accepted timeout,plugin
+gmda_columbo_intro_hireme,priority,1000,1,30,40,15,20,10000000000f,10000000000f,data.campaign.intel.missions.GMDA_Colombo_Intro

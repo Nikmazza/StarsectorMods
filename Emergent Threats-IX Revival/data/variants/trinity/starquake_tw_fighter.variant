@@ -1,0 +1,21 @@
+{
+	"displayName":"Heavy Defender Drone",
+	"hullId":"starquake_tw",
+	"variantId":"starquake_tw_fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["no_weapon_flux", "ix_emergency_flux_shunt"], # array of strings
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"cutting_beam_tw_er",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+					"WS 002":"morningstar_fighter_ix",
+		 			"WS 003":"morningstar_fighter_ix",
+		 		   },
+		},
+	],
+}

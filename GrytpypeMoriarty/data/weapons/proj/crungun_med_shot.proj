@@ -1,0 +1,18 @@
+{
+	"id":"crungun_med_shot",
+	"specClass":"projectile",
+    "onHitEffect":"data.scripts.weapons.CrunMedOnHitEffect",	
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":40.0,
+	"hitGlowRadius":38,
+	"width":6.5,
+	"fadeTime":0.20,
+	"fringeColor":[240,220,220,200],
+	"coreColor":[245,245,245,80],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_large_green.png"
+					
+}

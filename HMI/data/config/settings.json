@@ -1,11 +1,44 @@
 {
 
     "graphics":{
-			"blueprint_packages":{
+		"blueprint_packages":{
 			"hmi_package":"graphics/icons/cargo/hmi_pack.png",
 			"hmi_junk_package":"graphics/icons/cargo/hmi_junk_pack.png",
 			"hmi_tech_package":"graphics/icons/cargo/hmi_tech_pack.png",
 			},
+			
+		"fighterSkinsPlayerOnly":{
+			"hmi_scale_LOW_TECH":"graphics/ships/scale.png",
+			"hmi_scale_MIDLINE":"graphics/ships/scale_mid.png",
+			"hmi_scale_HIGH_TECH":"graphics/ships/scale_ht.png",
+			},
+
+		"weaponSkinsPlayerAndNPC":{
+			
+			"burst_ml:LOW_TECH:TURRET":"graphics/weapons/burst_ml_turret_base.png",
+			"burst_ml:LOW_TECH:HARDPOINT":"graphics/weapons/burst_ml_hardpoint_base.png",
+			"burst_ml:MIDLINE:TURRET":"graphics/weapons/burst_ml_turret_base.png",
+			"burst_ml:MIDLINE:HARDPOINT":"graphics/weapons/burst_ml_hardpoint_base.png",
+			"burst_ml:HIGH_TECH:TURRET":"graphics/weapons/burst_ml_ht_turret_base.png",
+			"burst_ml:HIGH_TECH:HARDPOINT":"graphics/weapons/burst_ml_ht_hardpoint_base.png",
+			
+			"mining_gen:LOW_TECH:TURRET":"graphics/weapons/mining_gen_turret_base.png",
+			"mining_gen:LOW_TECH:HARDPOINT":"graphics/weapons/mining_gen_hardpoint_base.png",
+			"mining_gen:MIDLINE:TURRET":"graphics/weapons/mining_gen_turret_base.png",
+			"mining_gen:MIDLINE:HARDPOINT":"graphics/weapons/mining_gen_hardpoint_base.png",
+			"mining_gen:HIGH_TECH:TURRET":"graphics/weapons/mining_gen_ht_turret_base.png",
+			"mining_gen:HIGH_TECH:HARDPOINT":"graphics/weapons/mining_gen_ht_hardpoint_base.png",
+			
+			"hmi_mininglaser_array:LOW_TECH:HARDPOINT":"graphics/weapons/hmi_mining_array_hardpoint.png",
+			"hmi_mininglaser_array:LOW_TECH:TURRET":"graphics/weapons/hmi_mining_array_turret.png",
+			"hmi_mininglaser_array:MIDLINE:HARDPOINT":"graphics/weapons/hmi_mining_array_hardpoint.png",
+			"hmi_mininglaser_array:MIDLINE:TURRET":"graphics/weapons/hmi_mining_array_turret.png",
+			"hmi_mininglaser_array:HIGH_TECH:HARDPOINT":"graphics/weapons/hmi_mining_array_ht_hardpoint.png",
+			"hmi_mininglaser_array:HIGH_TECH:TURRET":"graphics/weapons/hmi_mining_array_ht_turret.png",			
+
+			},
+			
+			
 
 		
         "characters":{

@@ -11,8 +11,7 @@ public class jdp_Ranks {
 	public static String POST_JDP_GAMEMASTER = "jdp_gamemaster";
 	public static String POST_JDP_BLANK = "jdp_blank";
 	public static String POST_JDP_ERROR = "jdp_error";
-
-
+	public static String POST_JDP_XENOBIO = "jdp_xenobio";
 }
 
 

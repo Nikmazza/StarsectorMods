@@ -1,7 +1,7 @@
 {
     "displayName": "Suppression",
-    "fluxCapacitors": 0,
-    "fluxVents": 49,
+    "fluxCapacitors": 2,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "aquilon_tw",
     "hullMods": [
@@ -33,7 +33,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 006": "cte_tw"}
+            "weapons": {"WS 006": "lacerator_tw"}
         },
         {
             "autofire": true,
@@ -46,6 +46,11 @@
                 "WS 009": "plasma_dart_ix",
                 "WS 010": "plasma_dart_ix"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "diffraction_laser_ix"}
         }
     ]
 }

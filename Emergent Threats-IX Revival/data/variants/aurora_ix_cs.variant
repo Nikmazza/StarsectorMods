@@ -1,6 +1,6 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 2,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "aurora_ix",
@@ -12,6 +12,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "aurora_ix_cs",
     "weaponGroups": [
         {

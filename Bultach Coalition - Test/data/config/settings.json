@@ -12,6 +12,9 @@
 		"bt_piercing_behavior":"data.scripts.plugins.bt_piercing_behavior",
 		"bt_gestalt_symbol_sequence":"data.scripts.plugins.bt_gestalt_symbol_sequence",
 		"bt_shipExplosion_Gestalt":"data.scripts.plugins.bt_shipExplosion_Gestalt",
+		"bt_feregether_shipExplosion":"data.scripts.plugins.bt_feregether_shipExplosion",
+		"bt_piloting_murtach_plugin":"data.scripts.plugins.bt_piloting_murtach_plugin",
+		"bt_FrenziedFlamePlugin":"data.scripts.plugins.bt_FrenziedFlamePlugin",
 
 	},
 
@@ -95,12 +98,20 @@
 
 			"bt_recolored_noise":"graphics/fx/bt_recolored_noise.png",
 
+			"bt_murtach_neuralbond":"graphics/fx/murtach_neuralbond/bt_murtach_neuralbond.png",
+			"bt_murtach_uplink_overlay":"graphics/fx/bt_murtach_uplink_overlay.png",
+
+
 			"bultach_ferventcharge_shockwave":"graphics/fx/bultach_ferventcharge_shockwave.png",
 			"bt_vortex_swirl":"graphics/fx/bt_vortex_swirl.png",
 			"ork_convergence_swarm":"graphics/ships/gestalt/ork_convergence_swarm.png",
 			"bt_nothing_lol":"graphics/fx/bt_nothing.png",
 			"bt_convergence_trail":"graphics/fx/bt_convergence_trail.png",
 			"bt_summoning_aura":"graphics/fx/bt_summoning_aura.png",
+
+			"bt_lightray_01":"graphics/fx/light_rays/bt_lightray_01.png",
+			"bt_lightray_02":"graphics/fx/light_rays/bt_lightray_02.png",
+			"bt_lightray_03":"graphics/fx/light_rays/bt_lightray_03.png",
 
 		},
 
@@ -115,6 +126,15 @@
 			"bt_gasgiant_glow2":"graphics/fx/siphon_fx/bt_gasgiant_glow2.png",
 
 		},
+
+		"terrain":{
+			"nebula_hubris":"graphics/terrain/nebula_hubris.png",
+			"nebula_hubris_map":"graphics/terrain/nebula_hubris_map.png",	
+
+			"nebula_bt_home":"graphics/terrain/nebula_bt_home.png",
+			"nebula_bt_home_map":"graphics/terrain/nebula_bt_home_map.png",	
+
+		},
 		"hab_glows":{
 			"bt_miotail_glow":"graphics/planets/bt_miotail_glow.png",	
 		},
@@ -126,7 +146,7 @@
 		},
 		"GESTALT_TECH":{
 			"BT_shield_inner_gestalt":"graphics/fx/shields/bultach_gestalt_256.png",
-			"BT_shield_outer":"graphics/fx/shields/bultach_256ring.png",
+			"BT_shield_outer_gestalt":"graphics/fx/shields/bultach_256ring_gestalt.png",
 		},
 
 		"characters": {

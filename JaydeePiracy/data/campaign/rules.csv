@@ -243,238 +243,6 @@ hegTalkInspectDaudVictoryOptF,HEGtalkInspectDaudVictoryOpts,,,,"heg_talkInspectD
 "#END Hegemony",,,,,,
 "#END Crisis Options",,,,,,
 ,,,,,,
-# IM Investigate Missile Quest,,,,,,
-jdp_investigatemissileStart,DialogOptionSelected,"$option == mh_open
-$id == sebestyen score:1000
-$global.gaATG_missionCompleted score:2000
-!$global.jdp_IMCompleted score:2000
-!$global.jdp_IMinProgress score:2000
-!$jdp_upsetAlviss",,"""Ah,"" says Sebestyen. You can tell instantly that he has some kind of bad news. ""... Captain $playerName,"" he says, then fakes a small cough to delay the inevitable. 
-
-""It is good to see you. Um. It's always good to see you. The provost, however,"" he coughs again, then leans close. ""She's, um, put a... hold on your contract code."" He turns his datapad for you to see; it's lit up with bright DENIED alerts.
-
-He goes to continue speaking then stops, clearly considering something.","0:jdp_investigatemissileWait:Wait for him to finish
-1:jdp_investigatemissileGoOn:""Go on?""",
-jdp_investigatemissileInProgress,PickGreeting,"$id == sebestyen score:1000
-$global.jdp_IMinProgress score:20000","ShowPersonVisual","""Oh, hello! Hi, Captain $playerName!"" He looks delighted to see you. ""Have you been to the distortion? What was there?"" ","0:jdp_investigatemissileInProgressCont:""Not yet.""",
-jdp_investigatemissileInProgressCont,DialogOptionSelected,"$option == jdp_investigatemissileInProgressCont",,"""Oh, ok..."" he seems slightly disappointed. ""I won't take any more of your time then, Captain. Good hunting!"" He seemingly has decided on using a modern spacer goodbye with you, it doesn't really sound correct coming from him, but it seems polite to humour it.","100:defaultLeave:Leave",
-jdp_investigatemissileWait,DialogOptionSelected,"$option == jdp_investigatemissileWait",,"He looks nervous about whatever it is he wants to ask. ""We're friends, right, Captain $playerName?"" he asks, slightly too fast for you to give a proper response. 
-
-""If I were to ask a friend for a favor, and overshare some interesting new data, the contract code wouldn't need to come into such an arrangement, would it?"" He smiles broadly, clearly proud of the loophole he's discovered.
-
-""What would you say about one last job, Captain?"" his request displaying an uncharacteristic level of self-confidence, ""wIthout pay of course,"" he quickly adds. ""Without a contract there's nothing to run by the finance office.""","0:jdp_investigatemissileFriendSebstyen:""I'd like some details first, but yes, of course we're friends.""
-1:jdp_investigatemissileDetails:""For no pay... What would you have me do?""",
-jdp_investigatemissileGoOn,DialogOptionSelected,"$option == jdp_investigatemissileGoOn",,"He looks slightly flustered, you interrupting him clearly knocked his confidence in whatever it is he wants to ask. ""We're friends, right, Captain $playerName?"" he asks, slightly too fast for you to give a proper response. 
-
-""If I were to ask a friend for a favor, and overshare some interesting new data, the contract code wouldn't need to come into such an arrangement, would it?"" He smiles broadly, clearly proud of the loophole he's discovered.
-
-""What would you say about one last job, Captain?"" his request displaying an uncharacteristic level of self-confidence, ""wIthout pay of course,"" he quickly adds. ""Without a contract there's nothing to run by the finance office.""","0:jdp_investigatemissileFriendSebstyen:""I'd like some details first, but yes, of course we're friends.""
-1:jdp_investigatemissileDetails:""For no pay... What would you have me do?""",
-jdp_investigatemissileFriendSebstyen,DialogOptionSelected,"$option == jdp_investigatemissileFriendSebstyen","AdjustRepPerson sebestyen FRIENDLY 10","""T-thank you. I mean, yes,"" he's clearly blushing now, but he can't help but smile. ""Thank you, Captain. I can't express how nice it is to work with you... Anyway, let's get back on track""","1:jdp_investigatemissileDetails:""Yes, let's do that.""",
-jdp_investigatemissileDetails,DialogOptionSelected,"$option == jdp_investigatemissileDetails",,"""So, um"", he continues. ""What's left of the Department of Hyperspace Physics, following the dramatic departure of our,"" he coughs and deliberately avoids eye contact with the holo-recorder, ""lovebirds, have been conducting long-range scans of the gates. It's pretty much the only thing they're still allowed to do.""
-
-""They've scanned the local space around the Academy for the Driessig Distortion"" he stops to reassess, realising he slipped into some jargon. Weirdly, you can't recall him doing that before, maybe he has a personal interest in this field. 
-
-""Did you know that gates have a unique hyperspace distortion signature? Academician Homura Driessig discovered it, hence its named after her, very fascinating physics involved,"" he notices you start to drift off. ""Anyway, they scanned for that.""","0:jdp_investigatemissileDetailsAsk:""Do you have experience in this field?""
-1:jdp_investigatemissileDetailsCont:Continue",
-jdp_investigatemissileDetailsAsk,DialogOptionSelected,"$option == jdp_investigatemissileDetailsAsk",,"""Oh, erm. Yes. Actually I'm not sure how this hasn't come up before. My thesis was on a similar effect, I actually worked on the Driesseg hypothesis later in my short academic career. Homura was a fascinating woman, very..."" He stops, considering a polite way to phrase his impression. ""Obsessive. But that's good in a scientist right?"" He seems unsure. 
-
-""Anyway, I never really felt at home in the Academy Laboratories, not much passion for it,"" the idea that there's something in the academy Alviss has little passion for is slightly disturbing, it seems wrong for his personality. ""My passing familiarity with hyperspace physics is probably why Baird assigned me to liaison for our fun little misadventures in the first place. I never actually asked her..."" 
-
-He seems slightly disturbed about discovering this massive blindspot in your knowledge of his background, especially just after calling you his friend.","1:jdp_investigatemissileDetailsCont:Continue",
-jdp_investigatemissileDetailsCont,DialogOptionSelected,"$option == jdp_investigatemissileDetailsCont","FireBest jdp_investigatemissileResponse
-$global.jdp_IMmissionGiven = true
-BeginMission jdp_IM","""So. They were expecting to just get a crude map of where the nearby gates are, which they did of course, but they also found this,"" he taps at his datapad and holds it up to the holorecorder. The data displayed is made less legible by his inability to hold the datapad steady, likely jitters of excitement at doing something slightly rebellious, that or nerves. Your communications officer notes down the displayed coordinates.
-
-""The signature of a gate in deep space, just below Arcadia."" He explains. ""No records that the Department of Domain History have access to mention it. Isn't it exiting? A real history mystery!""",,
-jdp_investigatemissileResponseAlreadybeen,jdp_investigatemissileResponse,"$global.jdp_IMExplored",,,"0:jdp_investigatemissileAlreadyBeenCont:""Oh, I've already been there.""",
-jdp_investigatemissileAlreadyBeenCont,DialogOptionSelected,"$option == jdp_investigatemissileAlreadyBeenCont","$global.jdp_IMCompleted = true
-Call $global.jdp_IMref updateStage","""Wait what? R-really? Aw, then I guess our last hurrah is already over..."" He looks visibly  disappointed, and then perks up, realising he will get the answers to his questions immediately. ""What was there?"" He asks excitedly.","0:jdp_investigatemissileReturnBlunt:""A secret Domain-era Superweapon!""
-1:jdp_investigatemissileReturnAcademic:""A Domain-era Blacksite""
-2:jdp_investigatemissileReturnLie:""Nothing, just a dead gate."" (Lie)",
-jdp_investigatemissileResponseNotBeen,jdp_investigatemissileResponse,"!$global.jdp_IMExplored",,,"0:jdp_investigatemissileNotBeenCont:""So you want me to investigate?""",
-jdp_investigatemissileNotBeenCont,DialogOptionSelected,"$option == jdp_investigatemissileNotBeenCont","SetTextHighlights ""Transverse Jump""","""Yep! It should be pretty easy, right? You've already done a job like this with that whole mess with the-"" he stops, realising that the Alpha Site investigation might be classified. ""Anyway, just go to the coordinates and use the Transverse Jump to drop out of hyperspace next to the gate.""
-
-""There's no authorised payment so you have no obligation to, but I'm really curious about what could be there. Aren't you curious too Captain?"" You get the feeling the Department of Hypserpace physics might not care about this as a much as he does. 
-
-You know Alviss well enough to know how he rolls, you expect the pleading look before he makes it.","0:jdp_investigatemissileComeWith:""Do you want to come with me?""
-1:jdp_investigatemissileCurious:""I admit, I am curious.""
-2:jdp_investigatemissileNotCurious:""No, not really.""",
-jdp_investigatemissileComeWith,DialogOptionSelected,"$option == jdp_investigatemissileComeWith","AdjustRepPerson sebestyen FRIENDLY 1","He looks like he genuinely considers the offer for a moment. 
-
-""I'd love to Captain, but given recent events, all the difficulties we've had here with disappearing Academicians,"" he fakes a cough, ""I don't think I'd have a post to come back to if I left, especially not if it was with you. Speaking about this at all is already going behind Provost Baird's back..."" 
-
-""Which I'm fine to do!"" he quickly adds, ""at least on this small scale, but... I like my job Captain."" The prospect of losing this positon seems to genuinely upset him, even with the hazards it has come with.
-
-""I'm sorry $playerName... I guess I'll just have to go vicariously,"" he says, closer to his more upbeat self. ""You should already have everything you need. Good hunting Captain!""","100:defaultLeave:Leave",
-jdp_investigatemissileCurious,DialogOptionSelected,"$option == jdp_investigatemissileCurious",,"""I knew you would be! I'm so glad to hear it, its always wonderful working with you Captain, you truly have the instincts of a scientist."" He holds up the datapad again, ""you should already have everything you need."" 
-
-""To adventure, Captain! Good look and good hunting."" He tries out a few archaic and more modern spacer goodbyes, they don't really sound correct coming from him, but it seems polite to humour them.","100:defaultLeave:Leave",
-jdp_investigatemissileNotCurious,DialogOptionSelected,"$option == jdp_investigatemissileNotCurious",,"""Oh."" He looks more than a bit crestfallen, you get the distinct feeling you've ruined this reunion for him. He makes an effort to put on a smile, it's almost impressive how fake it looks. 
-
-""Do let me know if you change your mind... You should already have everything you need anyway.""","100:defaultLeave:Leave",
-jdp_investigatemissileReturn,PickGreeting,"$jdp_IMreturnHere score:30000","ShowPersonVisual
-$global.jdp_IMCompleted = true
-Call $global.jdp_IMref updateStage","""Oh, hello! Hi, Captain $playerName!"" He looks delighted to see you. ""Have you been to the distortion? What was there?"" 
-
-He seems so happy, maybe it wouldn't be a good idea to tell him the true answer to this mystery.","0:jdp_investigatemissileReturnBlunt:""A secret Domain-era Superweapon!""
-1:jdp_investigatemissileReturnAcademic:""A Domain-era Blacksite""
-2:jdp_investigatemissileReturnLie:""Nothing, just a dead gate."" (Lie)",
-jdp_investigatemissileReturnBlunt,DialogOptionSelected,"$option == jdp_investigatemissileReturnBlunt",,"""A what?!"" He looks at you like you're insane. ""H-how do you know that's what it was?"" This is clearly not the kind of mystery he was hoping for, he's probably seen enough eccentric military projects since the Hegemony tried to muscle in on Galatia.
-
-""A lot of Domain-era technology is inadvertently dangerous as a result of its real purpose. Maybe it was just an engine or something-"" he continues rambling.","0:jdp_investigatemissileReturnBluntCont:""It was a Planetkiller Launch Vehicle."" Send over the specifications.",
-jdp_investigatemissileReturnBluntCont,DialogOptionSelected,"$option == jdp_investigatemissileReturnBluntCont",,"""I-I can't keep this Captain, this is horrible, too horrible."" You overhear the chime of his datapad deleting the file. ""Even a single Planetkiller strike, if it was impossible to intercept..."" 
-
-He looks a little queasy. ""I'm going to be sick... Can other people get their hands on these specifications? If they went to the site? This is a power people would kill for Captain. Please tell me nobody can have it.""","0:jdp_investigatemissileReturnBluntReassure:""Only we have the physical servers.""",
-jdp_investigatemissileReturnBluntReassure,DialogOptionSelected,"$option == jdp_investigatemissileReturnBluntReassure",,"""Captain, no. $playerName."" He looks at you, deadly serious, or at least he would if he wasn't also clearly on the brink of mental collapse. 
-
-""Promise me, please, that you won't ever use this. Please..."" You've never seen Alviss so distraught, perhaps he had a connection to Opis, or Hanan Pacha, or maybe he just has a bleeding heart. 
-
-""I was involved in rediscovering this..."" He realises quietly.","0:jdp_investigatemissileReassurePromise:""Of course Alviss. I promise.""
-1:jdp_investigatemissileReassurePromiseLie:""Of course Alviss. I promise."" (Lie)
-2:jdp_investigatemissileReassureNoPromise:""I can't promise that Alviss.""",
-jdp_investigatemissileReassurePromise,DialogOptionSelected,"$option == jdp_investigatemissileReassurePromise",,"Sebestyen looks up at you, unsure, then seems to realize who he's talking to. ""T-thank you. Captain. Thank you."" 
-
-Relief is plain on his face.
-
-""I knew you were a good person, $playerFirstName.""","0:jdp_investigatemissilePromiseEnd:""You too Alviss.""",
-jdp_investigatemissileReassurePromiseLie,DialogOptionSelected,"$option == jdp_investigatemissileReassurePromiseLie","$player.ethosLiar++
-","Sebestyen looks up at you, unsure, then seems to realize who he's talking to. ""T-thank you. Captain. Thank you."" 
-
-Relief is plain on his face. It feels awful to look at.
-
-""I knew you were a good person, $playerFirstName.""","0:jdp_investigatemissilePromiseEnd:""You too Alviss.""",
-jdp_investigatemissilePromiseEnd,DialogOptionSelected,"$option == jdp_investigatemissilePromiseEnd",,"He blushes slightly at the compliment. ""Well Captain. If this is what happens when we work together off the books, I think it might be better if we follow Baird's advice."" He tries to make light of the situation, but being involved in the rediscovery of the Interfector specifications has clearly rattled him.
-
-""It's been an honour working with you Captain, but I think this really is goodbye, at least professionally."" he tries to steady his voice and fails. ""C-catch you around. Captain,"" he says, and manages to hit the comm-link cutoff on his third try.","100:defaultLeave:Leave",
-jdp_investigatemissileReassureNoPromise,DialogOptionSelected,"$option == jdp_investigatemissileReassureNoPromise","AdjustRepActivePerson INHOSPITABLE -200
-$global.jdp_upsetAlviss = true","""Ah, um. Yes."" Sebestyen looks incredibly uncomfortable after his outburst. 
-
-You can see him mentally gear up to push back, to convince you to give this power up, but gives up himself. ""O-of course Captain,"" he replies, voice shacky. ""I-its not my choice to make. I just hope you make the right one...""
-
-In a shocking display of fortitude, he cuts the comm link first try despite shaking slightly.","100:defaultLeave:Leave",
-jdp_investigatemissileReturnAcademic,DialogOptionSelected,"$option == jdp_investigatemissileReturnAcademic",,"""Fascinating! Ooh, it's even better than I ever expected. What was the place for?""","0:jdp_investigatemissileReturnAcademicCont:""Manufacturing Planetkiller Launch Vehicles""",
-jdp_investigatemissileReturnAcademicCont,DialogOptionSelected,"$option == jdp_investigatemissileReturnAcademicCont",,"""W-what?!"" He looks at you like you're insane. ""H-how do you know that's what it was?"" This is clearly not the kind of mystery he was hoping for, he's probably seen enough eccentric military projects since the Hegemony tried to muscle in on Galatia.","0:jdp_investigatemissileReturnBluntCont:Send over the specifications.",
-jdp_investigatemissileReturnLie,DialogOptionSelected,"$option == jdp_investigatemissileReturnLie",,"He looks a bit crestfallen, but makes an intentional effort to put on a smile and seems to genuinely perk up. ""Well this is still an interesting mystery. Gates are in theory locked in the orbit they're deployed. I wonder how one ended up in deep space? Was there really nothing else there? Not even the debris from a Gatehauler?""","0:jdp_investigatemissileReturnLieTwice:""Nope, nothing."" (Lie)
-1:jdp_investigatemissileConfess:""I lied Alviss, it was a Domain-era Blacksite""",
-jdp_investigatemissileReturnLieTwice,DialogOptionSelected,"$option == jdp_investigatemissileReturnLieTwice","$player.ethosLiar++
-","""How strange. I guess we'll never know for sure. Maybe it got pushed out there in some astronomical cataclysm. That sounds exciting, lets go with that.""
-
-""It's been an honour working with you Captain, but I think this really is goodbye, at least professionally, there's nothing more I can think of for you to do."" he tries to steady his voice and fails. ""C-catch you around. Captain,"" he says, and manages to hit the comm-link cutoff on his third try.","100:defaultLeave:Leave",
-jdp_investigatemissileConfess,DialogOptionSelected,"$option == jdp_investigatemissileConfess",,"""Captain, you sly spacer!"" he doesn't take you lying to him poorly. It seems he assumes you were joking with him, like a friend would. ""This is fascinating! Ooh, it's even better than I ever expected. What was the place for?""","0:jdp_investigatemissileReturnAcademicCont:""Manufacturing Planetkiller Launch Vehicles""",
-jdp_investigatemissileUpsetAlviss,PickGreeting,"$id == sebestyen score:1000
-$global.jdp_upsetAlviss score:1000",,"The commlink simply hangs. Alviss doesn't answer.
-
-It seems he doesn't want anything to do with you.","100:defaultLeave:Cut the commlink",
-"#END IM Investigate Missile Quest",,,,,,
-,,,,,,
-# Missile Interaction,,,,,,
-jdp_missileBeginPlayer,OpenInteractionDialog,"$customType == jdp_missile score:1000
-$faction.id == player
-","ShowDefaultVisual
-FireBest jdp_MissileMainOptions","Universally all Planetkiller Device deployments that have occurred in the Persean Sector post-collapse were performed by conventional warships in orbit of the target. While this is effective, as Opis and Hanan Pacha prove, it is a perversion of usual operating procedure and vulnerable to interception. The Planetkiller Device was originally intended to be deployed by the DISPP-974C Interfector Missile, designed by Consolidated Mysore-Congreve.
-
-The benefit of this approach is obvious, the DISPP-974C is the largest phase capable object ever devised, it's immense flux capacitors allow it to remain phased semi-permanently, making interception of its payload, functionally impossible. This assured destruction makes the threat of a Planetkiller much more serious, and the construction of this Deployment Vehicle is a gun pointed at the head of the Persean Sector.
-
-Unfortunately an automatic failsafe will not allow launch without a Planetkiller Device installed and unsafed by the paired authorization codes. Use of the DISPP-974C for conventional bombardment is therefore impossible.",,
-jdp_missileBeginNonPlayer,OpenInteractionDialog,"$customType == jdp_missile score:1000
-$faction.id != player","ShowDefaultVisual","The loss of this installation was the greatest strategic defeat our faction has ever endured. Luckily without the authorization codes its new owners cannot make use of it anymore than we could. 
-
-Retaking it should be our top military priority, not for the object itself, but what it represents. ","100:defaultLeave:Leave",
-jdp_missileMainOptions,jdp_MissileMainOptions,,,,"1:jdp_missile_1:Contact the blacksite Base Commander
-100:defaultLeave:Leave",
-jdp_missileInt1,DialogOptionSelected,"$option == jdp_missile_1","ShowPersonVisual false jdp_calhoum","Your comms officer responds to the order with trepidation, likely internalising the gravity of the request, and establishes a link to the base commander in charge of the Planetkiller Launch Site. There is an almost giddy excitement to the commander when he answers the connection, maybe it's a good thing there are no authorization codes to give him, he would be too eager to have them.
-
-""$PlayerSirOrMadam, this is Base Commander Calhoum, the ball is green. We are ready to launch at your command, just give the word.""
-
-There is an edge to the call-and-response you can overhear behind him in the Tactical Centre, a cramped, spartan and heavily reinforced room hidden in a classified location. It seems the commander's coworkers do not share his enthusiasm in being party to sundering a world. A few members of your bridge crew appear to hold their breath in anticipation of your next order, you catch your targeting officer mumble a faint prayer.","jdp_missile_2:""That's a negative Commander, stand down.""",
-jdp_missileInt2,DialogOptionSelected,"$option == jdp_missile_2","EndConversation","Surprisingly, the base commander does not seem at all disappointed, maybe they aren't as much of a war-hawk as they appear. You overhear someone release their breath behind you.
-
-""Orders confirmed, standing down $playerSirOrMadam, I repeat, standing down.""
-
-You stop to consider what it must be like to live on the planet below, the purple glow of the immense phase coils like a new star that, through a quirk of phase physics, provides no heat. You conclude it must be more pleasant there than on the other end of the weapon. 
-
-You cut the comm link.","100:defaultLeave:Leave",
-"#END Missile Interaction",,,,,,
-,,,,,,
-# Derecict Missile Interaction,,,,,,
-jdp_derelictmissileOpenDialogUnexplored,OpenInteractionDialog,"$tag:jdp_derelictmissiletag score:101
-$customType == jdp_derelictmissile score:101
-!$jdp_missileexplored score:101","SalvageGenFromSeed
-ShowDefaultVisual
-FireBest SalvageCheckHostile","Your $shipOrFleet maintains a safe distance from the immense construct, a spray of phase-active particle fluid surrounds it, producing a strangely beautiful effect similar to an intense magnetic field. While in theory harmless, your technical officer has advised staying outside the field until we know exactly what we want to accomplish with the object.
-
-Neither Sensors nor Tactical are sure of exactly what to make of the construct. The technical specifications and manuals still available post-Collapse make no mention of anything like it, neither does the oral history of myth and secondary-culture that has grown around objects like Cryosleepers and Gatehaulers. ",,
-jdp_derelictmissileDefenderDesc,TriggerAutomatedDefenses,"$tag:jdp_derelictmissiletag score:101
-$customType == jdp_derelictmissile score:101
-!$jdp_missileexplored score:101","SalvageDefenderInteraction","Your pondering of the object and its purpose is interrupted by an automated proximity warning klaxon. A fleet of Domain-era drone warships peel out from behind a cloud of debris and begin transmitting a message via tightbeam communications.
-
- ""WARNING: This automated message speaks with the voice and authority of the Domain Ministry of Intelligence.
-
-Attention citizen of the Domain, this automated drone ship has identified and logged your vessel or habitat trespassing in space claimed for use by the Domian Ministry of Intelligence. Your presence here violates the DOMINT Emergency Powers Act, the punishment for this infraction is severe, stand down and comply-. ""
-
-INTERRUPT
-
-no prisoner capacity remaining. new directive. target must not reveal location. break target down for further defence fabrication.",,
-jdp_derelictmissilePostDefenders,BeatDefendersContinue,"$tag:jdp_derelictmissiletag score:101
-!$jdp_missileexplored score:101",,"As your $shipOrFleet finish mopping up the automated defences, a weak hyperwave ping is detected coming from the object. It's unclear if this is random noise from a dying subsystem or some kind of encrypted signal, sent to inform someone or something of our presence here.
-
-Your $shipOrFleet continues toward the object without further incident.","0:salBeatDefendersContinue:""Those weren't normal drones.""",
-jdp_derelictmissileContinueDefenders,BeginSalvage,"$tag:jdp_derelictmissiletag score:101",,"Now closer to the object, scans make it abundantly clear that the failure of the immense phase coils was not a natural result of interstellar weathering, the outer hull is slacked with the telltale scars and craters of weapon impacts. Judging by the size, shape and other factors of the impact craters, it is determined the phase coils were targeted by the drone fleet in orbit in a deliberate act of sabotage. 
-
-Given that it is clearly intended to be unmanned, the object makes a surprising number of unintended concessions to human occupation, while it has no internal atmosphere, scans indicate the majority of the structure is laced with a network of interconnected maintenance ducts. Large enough to accommodate the clunky and unwieldy Domain-era maintenance drones now very rarely seen in the modern sector, it would be trivial for a salvage team to navigate.","0:jdp_derelictmissileExplore:Explore",
-jdp_derelictmissileExplore,DialogOptionSelected,"$option == jdp_derelictmissileExplore",,"Your salvage teams dock shuttles at various entry points along the massive hull and fan out through the structure. Through reports that trickle up the hierarchy it becomes almost immediately apparent that the innards of the vast machine have been stripped of anything deemed non-essential by the drone defense fleet, nothing of any salvage value remains. Seeing that the next few hours will be mostly uneventful call and response, you zone out.
-
-The impression of something not unlike distant music inserts itself into the gap in your consciousness, a choir of singers, beautiful yet abhorrent. saccharine but sterile. When you attempt to focus on the music it slips away, sliding between space. You become suddenly aware that your bridge crew is staring at you expectantly, it is difficult to determine how much time passed.
-
-""$PlayerSirOrMadam, we've found something."" your operations chief states deadpan, clearly not the first time.","0:jdp_derelictmissileExploreCont:Continue",
-jdp_derelictmissileExploreCont,DialogOptionSelected,"$option == jdp_derelictmissileExploreCont","ShowImageVisual ""jdp_derelictservers""
-jdp_DerelictMissileAddLoot jdp_DerelictMissileAddLoot
-$jdp_missileexplored = true
-$global.jdp_IMExplored = true","You review a ground-level feed from a salvor's suit cam. Probe-mounted radar starts to build a picture in your bridge display while suit lights pile their beams into the space, catching drifts of dust in what appears to be a well fortified server room. Some of the databanks are embossed with the logo of the Domain Ministry of Intelligence. 
-
-Looking closer at the feed it becomes obvious that the room was originally designed for some purpose other than housing this datacentre. The databanks are provided for by haphazard cabling and power conduits that weave through holes made in the walls, ceiling and floor. 
-
-""There are no access terminals a human operator could use, and even if there were, I wouldn't trust this setup."" continues your operations chief, ""accessing the data would require transferring the entire datacentre to one of our ships.""","0:jdp_derelictmissileRecoverData:""Maybe we'll finally get some answers.""",
-jdp_derelictmissileRecoverData,DialogOptionSelected,"$option == jdp_derelictmissileRecoverData",,"After transferring the server room to your cargo hold, a task made surprisingly easy by the modularity of the Domain-era computers, you can finally access the data within. The integrity of the data is surprisingly high, the immense bulk of the megastructure clearly helped to shield the delicate computer systems from the long term affects of exposure to the failed phase field. You take a moment to ponder the fact that the moving of this datacentre may have already occurred, transferred from an installation somewhere else in system to an easily defensible position chosen by the drone fleet.
-
-The data has been downloaded and placed in a secure cache for your review. 
-","0:jdp_derelictmissileWhatIsIt:""What is this place?""",
-jdp_derelictmissileWhatIsIt,DialogOptionSelected,"$option == jdp_derelictmissileWhatIsIt","SetTextHighlights ""Recovered - DISPP-974C Design Specifications""","The data within reveals an awful and incredible truth. Your $shipOrFleet is in orbit of an immense weapon, the enclosed specification describes it as a DISPP-974C Interfector, designed specifically to deliver a single payload without any possibility of interception, a dedicated Planetkiller Device Delivery Vehicle. It is a monument to death and madness, designed by Consolidated Mysore-Congreve under contract with the Domain Ministry of Intelligence, left here to rot by the corpse of the Domain post-Collapse, the Dead Hand having slipped off of The Button before it could fall to hit it. 
-
-It is the ironically cold inverse of a Domain-era Cryosleeper. Rather than carrying hopeful colonists to new opportunities on the frontier of Domain space, it is the unseen shackle around those new polities, an unstated threat of instant and assured retribution against any polity that does not bend the knee to the great Domain of Man. 
-
-Recovered - DISPP-974C Design Specifications","0:jdp_derelictmissileWhyHere:""Why is it here?""",
-jdp_derelictmissileWhyHere,DialogOptionSelected,"$option == jdp_derelictmissileWhyHere",,"This blacksite, and the data implies that at least one such site exists for every sector of Domain space, was established shortly before the first recorded wave of colonisation in the Persean Sector. A crew of DOMINT engineers supported by a dedicated Explorarium Mothership were tasked with establishing an automated complex here in deep space capable of manufacturing, fueling and in theory deploying the DISPP-974C along with monitoring the local sector. 
-
-A dedicated gate allows effective backdoor access to the Persean Sector, while an overtuned hyperwave communications relay allows for listening in on all interstellar communications within the Core Worlds. Well secluded, the Domain saw all.
-
-Logs indicate that an immense Planetkiller Arsenal was at one point present in system. According to the specifications of the DISPP-974C, the hundreds of independently targetable submunitions within, each with their own Planetkiller Device payload, would allow a single missile to sunder the entirety of the Core Worlds within a cycle if deemed necessary.","0:jdp_derelictmissileWhatHappened:""So what happened?""",
-jdp_derelictmissileWhatHappened,DialogOptionSelected,"$option == jdp_derelictmissileWhatHappened",,"It seems that by design, the crew were not self sufficient. To ensure loyalty no food was permitted to be produced in system, instead relying on resupply via the gate network. Stranded here in deep space with limited supplies post-Collapse, records indicate the crew enacted network failure protocol, as is standard of Domain military assets disconnected from command. Most of the crew were put into emergency cryosleep on the planet below, while more senior engineers worked to reprogram the defensive drones to ensure the secrecy of the operation. 
-
-This override permitted the deconstruction of all ""non-mission critical"" material in the system to be repurposed into a defensive fleet. This fleet was ordered to intentionally sabotage the facility, destroying the immense phase coils and automated maintenance systems. Unfortunately for the survival of the DOMINT personnel this new Custodian Taskforce deemed the cryosleep pods ""non-mission critical"" and had them repurposed.","0:jdp_derelictmissileRevelation:""And the Planetkiller Arsenal?""",
-jdp_derelictmissileRevelation,DialogOptionSelected,"$option == jdp_derelictmissileRevelation",,"Logs indicate the Domain-era Mothership in system was tasked with dispersing the Planetkiller Arsenal, it seems likely the hyperwave signal sent by the station post battle was intended for this Mothership. Unfortunately without a lock on its trajectory this would be promising lead on a Planetkiller is practically cold from the outset. 
-
-In a moment of incredible clarity you realise that like all hidden weapons, in being here away from the prying eyes of the Persean Sector rather than in public view, the DISPP-974C Interfector was denied its true potential as a potent symbol. 
-
-Possessing this weapon, even if it isn't functional, is power in of itself. A threat of unavoidable retribution that would never need to come, the greatest bluff the Persean Sector has ever seen and the ultimate bargaining chip. It would be a gun pointed at the head of the Persean Sector, loaded with a blank.","0:jdp_derelictmissileRequestRepair:""Tell me how to turn this thing back on. I want numbers, chief.""
-1:jdp_derelictmissileClearlyBroken:""This thing is clearly a write-off.""",
-jdp_derelictmissileRequestRepair,DialogOptionSelected,"$option == jdp_derelictmissileRequestRepair",,"Your chief engineer looks at you, slightly incredulous that you would even suggest undertaking a prolonged operation under these conditions. They clearly consider saying something unkind about your engineering acumen, but seem to think better of it, belittling a spacers engineering instinct is quite a grave insult. And you pay their salary.
-
-""$PlayerSirOrMadam, with all due respect, this cannot be fixed, the drone fleet made sure of it. Its a miracle this thing is intact at all. Without the automated maintenance systems we'd have to do all the work ourselves and it would be irresponsible to even stay in orbit, let alone try and conduct a construction project. If we want one of these, and according to the specifications a failsafe means we wouldn't be able to launch it without a Planetkiller Device and its authorization codes regardless, we'll have to build it from scratch.""","0:jdp_derelictmissileAffirmative:""Then build one we shall.""
-1:jdp_derelictmissileRelieved:""Perhaps it would be better if this weapon stays lost.""",
-jdp_derelictmissileClearlyBroken,DialogOptionSelected,"$option == jdp_derelictmissileClearlyBroken",,"Your chief engineer is clearly relieved you aren't blind to the practicalities of the situation, without the automated maintenance system the megastructure is doomed.
-
-""Unfortunately so $playerSirOrMadam. If we want one of these, and according to the specifications a failsafe means we wouldn't be able to launch it without a Planetkiller Device and its authorization codes regardless, we'll have to build it from scratch.""","0:jdp_derelictmissileAffirmative:""Then build one we shall.""
-1:jdp_derelictmissileRelieved:""Perhaps it would be better if this weapon stays lost.""",
-jdp_derelictmissileAffirmative,DialogOptionSelected,"$option == jdp_derelictmissileAffirmative",,"Your chief engineer visibly becomes slightly giddy, the idea that they might be assigned to lead one of the greatest post-Collapse engineering projects ever devised is clearly an exciting prospect. Its always nice to see someone enioy their work, even if it would amount to nothing more than a symbol.","100:defaultLeave:Leave",
-jdp_derelictmissileRelieved,DialogOptionSelected,"$option == jdp_derelictmissileRelieved",,"Your chief engineer makes no effort to hide their disappointment, clearly looking forward to the prospect of being a figurehead on one of the greatest post-Collpase engineering projects ever devised. After a moment they seem to be slightly embarrassed, realising that being disappointed about the loss of the power to kill a significant fraction of the sector probably reflects badly on their psyche, even if it would never be used.","100:defaultLeave:Leave",
-jdp_derelictmissileLeave,DialogOptionSelected,"$option == jdp_derelictmissileLeave",,,"100:defaultLeave:Leave",
-jdp_derelictmissileOpenDialogExplored,OpenInteractionDialog,"$tag:jdp_derelictmissiletag score:101
-$customType == jdp_derelictmissile score:101
-$jdp_missileexplored == true score:101","ShowDefaultVisual","Your $shipOrFleet maintains a safe distance from the immense construct, a spray of phase-active particle fluid surrounds it, producing a strangely beautiful effect similar to an intense magnetic field. While in theory harmless, your technical officer has advised staying outside the field now we have salvaged all we can from the object.","100:defaultLeave:Leave",
-"#END Derecict Missile Interaction",,,,,,
-,,,,,,
 # Grin System,,,,,,
 ,,,,,,
 # Laplace's Demons,,,,,,
@@ -545,7 +313,8 @@ $global.jdp_laplacianDefeated score:1000","ShowDefaultVisual
 SetShortcut defaultLeave ESCAPE","Your $shipOrFleet maintains a safe distance from Maddie. Given the strange relativity effects of this world your operations chief has advised staying off of the surface, especially now we have obtained a modest sample of the frictionless material. 
 
 None of the crew seem particularly eager to return to the planet regardless, given the way it aged the previous team over a cycle within hours.","100:defaultLeave:Leave",
-jdp_maddieExplore1,DialogOptionSelected,"$option == jdp_maddieExplore1","$jdp_maddieExplored = true","After extensive preparation (and reiteration of the hazard pay policy) a volunteer survey team is selected to be sent down on a heavily-shielded shuttle. The temporal disturbance makes centralised command of operations from here in orbit difficult, minute delays in orders could cost hours if not days on the surface. 
+jdp_maddieExplore1,DialogOptionSelected,"$option == jdp_maddieExplore1","$jdp_maddieExplored = true
+jdp_InitialiseFrictionless","After extensive preparation (and reiteration of the hazard pay policy) a volunteer survey team is selected to be sent down on a heavily-shielded shuttle. The temporal disturbance makes centralised command of operations from here in orbit difficult, minute delays in orders could cost hours if not days on the surface. 
 
 Your operations chief, used to similarly isolated conditions from their stint in fringe mining, elects to lead the operation from the ground rather than the bridge. They are instructed to relay exact positional and temporal coordinates every minute using a dedicated delta-level AI core.
 
@@ -560,7 +329,7 @@ You suddenly realise something might be very wrong and consider sending a second
 Moments before you can give the order to muster a rescue party, the team begins their ascent, from their perspective that small moment of indecision lasted days. 
 
 The duration between signals begins to stretch back to minute by minute, the shuttle is now outside the effect of the temporal field and will return shortly. ","jdp_maddieExplore2b:""XO, you have the conn.""",
-jdp_maddieExplore2b,DialogOptionSelected,"$option == jdp_maddieExplore2b",,"You greet your operations chief in the shuttle-bay, even though intellectually it was to be expected, it is still unnerving to see them aged over a cycle within what was for the rest of the universe only a few hours.
+jdp_maddieExplore2b,DialogOptionSelected,"$option == jdp_maddieExplore2b","ShowImageVisual jdp_grinhangar","You greet your operations chief in the shuttle-bay, the glow of Maddie through the vacshield an unsettling shade of red. Even though intellectually it was to be expected, it is still unnerving to see them aged over a cycle, for the rest of the universe it was only a few hours.
 
 Almost immediately they launch into a report, blunt as a weapon, ""$PlayerSirOrMadam! I recommend we pull the $shipOrFleet out of system as soon as possible."" You give them a look, and allow the silence to linger slightly, letting them know that more detail is required.
 
@@ -568,23 +337,69 @@ Almost immediately they launch into a report, blunt as a weapon, ""$PlayerSirOrM
 jdp_maddieExplore3,DialogOptionSelected,"$option == jdp_maddieExplore3","SetShortcut defaultLeave ESCAPE
 SetTextHighlights ""Recovered - Frictionless Material""","They look slightly sheepish, ""No, Captain, not immediately... But there is no reason to linger,"" they add quickly. 
 
-""We underwent a little fringe mining operation"", they look momentarily proud of themselves, but cover it in their usual gruff demeanour, ""we have a full shuttle hold, should be enough of whatever this stuff is to properly study its effects with the equipment here on the ship. Maybe technology can find out more than we could down on the surface.""
+""We underwent a little fringe mining operation"", they look momentarily proud of themselves, but cover it in their usual gruff demeanour, ""we have a full shuttle hold, should be enough of whatever this stuff is to properly study its effects with the equipment here on the ship. Maybe Tech can find out more than we could down on the surface.""
 
 Recovered - Frictionless Material","jdp_maddieExplore3b:""Have some transferred... I'm sorry you lost some cycles.""",
-jdp_maddieExplore3b,DialogOptionSelected,"$option == jdp_maddieExplore3b",,"They shrug, ""people lose time Captain, every use of a cryopod you might never wake up. Losing time is just part of being a spacer as old as I am."" You and your operations chief return to the bridge while the crew of the survey operation go to the medical centre for evaluation.
+jdp_maddieExplore3b,DialogOptionSelected,"$option == jdp_maddieExplore3b",,"They shrug, ""people lose time Captain, every use of a cryopod you might never wake up. Losing time is just part of being a spacer as old as I am."" 
 
-""Captain on deck!"" Your XO announces on your return. After a moment they turn to address you personally, ""welcome back, $playerSirOrMadam, you have the conn.""
+You spy your quartermaster pleading with the logistics crew to move the auto-pallets of material to more long term storage. A crystalline solid quarried into crude chunks, its surface is iridescent like the shell of an arthropod-analog. 
 
-A report from the surface has been placed in a secure cache for your review, along with notes from your technology officer on the harvested material.","jdp_maddieExplore4:Read the report",
-jdp_maddieExplore4,DialogOptionSelected,"$option == jdp_maddieExplore4",,"The report from the surface is mostly uneventful. The planet Maddie is for all intents and purposes an uninteresting barren world, no atmospheric ozone layer, no significant geological activity, no indigenous life forms.
+The rarely used and ominously crimson ""chronohazard"" labels stuck to the blocks are likely inspiring some hesitation.","jdp_maddieExplore4:""Regardless, submit the surface team to full medical evaluation.""",
+jdp_maddieExplore4,DialogOptionSelected,"$option == jdp_maddieExplore4",,"""$PlayerSirOrMadam, yes $playerSirOrMadam,"" they say, saluting. They pull a little chord on their suit and flip out a miniature control panel, you recognise it as a salvors communicator, built like a brick it is hardy and practically immune to blunt force trauma. 
 
-The subject of interest is the novel material of which the planet is primarily composed. The material science officer with the surface team notes that the esoteric substance is likely some kind of frictionless strong interaction material. Transmuted in a reaction of unknown mechanism involving the unique red light of the nearby star, the material is seemingly ""slippery"" in relation to space-time, explaining the immense speed of the enemy vessels and the strange time dilation experienced on the surface of Maddie. ","jdp_maddieExplore4b:Continue",
-jdp_maddieExplore4b,DialogOptionSelected,"$option == jdp_maddieExplore4b",,"Your technology officer notes that even a very thin coating of this material layered on the outer hull would be able to transfer this effect to the systems of a ship. Thanks to the full shuttle hold of the stuff, we have enough of the substance to make such modifications to three vessels under our command.
+After fiddling with it for a few moments chimes ring out from the suits of nearby members of the surface op. The deck crew who overhear the order seem to consider their caution vindicated, backing away from the pallets yet further to the dismay of your quartermaster.
 
-Unfortunately, testing indicates the crystalline material breaks down upon making the dimensional transition to phase space, breaking the non-electrostatic bonds maintaining its structure, along with nullifying its unique temporal properties.
-","100:defaultLeave:Leave
+More in-depth analysis looks like it will be slow and cautious.","jdp_maddieExplore4b:Return to the bridge",
+jdp_maddieExplore4b,DialogOptionSelected,"$option == jdp_maddieExplore4b",,"Skimming the surface report as you make your way back to the bridge it is shockingly uneventful, the planet Maddie is seemingly, for all intents and purposes, an uninteresting barren world. No atmospheric ozone layer, no significant geological activity, no indigenous life forms.
+
+The subject of interest is of course the novel material of which the planet is primarily composed, but current insights are limited. 
+
+""Captain on deck!"" Your XO announces on your return. After a moment they turn to address you personally, ""welcome back, $playerSirOrMadam, you have the conn.""","100:defaultLeave:Leave
 ",
 "#END Maddie",,,,,,
+,,,,,,
+# Frictionless,,,,,,
+jdp_FrictionlessHullmodItemRC,ShroudedHullmodItemRC,"$player.shroudedHullmodId == jdp_emulatedfrictionlesshull","ShowImageVisual jdp_grinhangar
+
+$option =jdp_FrictionlessHullmodItemRC1a 0
+FireBest DialogOptionSelected",,,
+jdp_FrictionlessHullmodItemRC1a,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC1a","$option = jdp_FrictionlessHullmodItemRC2 0
+FireBest DialogOptionSelected","You find your technology officer and chief engineer in the shuttle bay, deep in discussion over the material now dubbed NMC-$jdp_nmcInventionCycle. It seems the hauling crew pulled their union rights, the chronohazard has been left unmoved and instead a miniature proving ground has popped up around it.",,
+jdp_FrictionlessHullmodItemRC1b,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC1a
+$player.didAShroudedHullmodUnlock","$option = jdp_FrictionlessHullmodItemRC2 0
+FireBest DialogOptionSelected","You find your technology officer and chief engineer in the shuttle bay, deep in discussion over the material now dubbed NMC-$jdp_nmcInventionCycle. It seems the hauling crew pulled their union rights, the chronohazard has been left unmoved and instead a miniature proving ground has popped up around it.
+
+The red glow of Maddie through the vacshield makes it oddly reminiscent of your interactions with the Shroud, perhaps this new material will be just as game-changing.",,
+jdp_FrictionlessHullmodItemRC2,DialogOptionSelected,"$option ==jdp_FrictionlessHullmodItemRC2",,"Engineering looks exasperated. ""The official term cannot be slippery!"" They make air quotes, but with the subtle lack of movement in the shoulders and wide stance that would make the expression visible if he was on a spacewalk. ""I refuse. This is a novel physics phenomena, its not an enzyme soap!""
+
+Tech manipulates a diagram of a phase coil array with abrupt flicks at the interface. ""We can iron that out later, its just language."" Another flick of the wrist, this time directed at Chief dismissively","jdp_FrictionlessHullmodItemRC3:Continue",
+jdp_FrictionlessHullmodItemRC3,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC3","$option = jdp_FrictionlessHullmodItemRC4a 0
+FireBest DialogOptionSelected","""Regardless. My intuition was correct, p-space is a no-go. The dimensional transition shatters the crystal, it must be a hyper-dimensional polytope. That combined with the lacklustre blunt-force resistance-""
+
+""Is limiting."" Engineering interjects.
+
+""Not as much as we first expected."" Tech says hopefully. ""Its all but immune to most weathering phenomena, and the effect transmits across a supprising distance.""
+
+Engineering snorts.",,
+jdp_FrictionlessHullmodItemRC4a,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC4a",,"""We can anchor it to the hull geometry! It takes to being welded and hullfoam just fine."" Tech says defensively. ""It will work.""","jdp_FrictionlessHullmodItemRC5:""What will work?""",
+jdp_FrictionlessHullmodItemRC4b,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC4a
+$player.didAShroudedHullmodUnlock",,"""We can anchor it to the hull geometry! It takes to being welded and hullfoam just fine."" Tech says defensively. ""It will work, we weaponised the Shroud in a salvage bay, we can do this.""","jdp_FrictionlessHullmodItemRC5:""What will work?""",
+jdp_FrictionlessHullmodItemRC5,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC5",,"Both jump to attention, having been so involved in their argument that neither noticed you approach.
+
+""$PlayerSirOrMadam"" they say, saluting.
+
+Engineering rushes to speak first. ""Tech wants to coat ships in this, this NMC-$jdp_nmcInventionCycle.""
+
+""The temporal affect transfers! It has phenomenal military applications!"" Technology interjects, seemingly spinning out in excitement and listing esoteric material science readings."," jdp_FrictionlessHullmodItemRC6:""A more practical perspective, please.""",
+jdp_FrictionlessHullmodItemRC6,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC6","SetTextHighlights ""three vessels""
+DwellerCMD unlockHullmod","""Yes, $PlayerSirOrMadam."" comes from Technology, slightly meek.
+
+Engineering continues in their stead, pulling up a series of design specifications. ""Under conservative estimates we have enough material to make modifications to three vessels under our command.""
+
+""And whose fault is that!"" Technology jeers, taunting your Operations Chief who is decidedly not present. ""Ops is too scared of the spooky cursed planet."" 
+
+They pause, backtracking mentally but not verbally. ""Regardless. It seems plausible that the temporal dilation effect from the surface could be weaponised, $PlayerSirOrMadam.""","defaultLeave:""I want an actionable proposal by end-of-shift. As you were.""",
+"#END Frictionless",,,,,,
 "#END Grin System",,,,,,
 ,,,,,,
 # Dory System,,,,,,
@@ -601,7 +416,7 @@ You look to your sensors officer expectantly, who attempts to mask their bewilde
 ","jdp_hypershuntConqueredDialogueCont:""Make it so.""",
 jdp_hypershuntConqueredDialogueCont,DialogOptionSelected,"$option == jdp_hypershuntConqueredDialogueCont",,"Your sensors officer starts before you give the order. ""Affirmative, running sweep for P-Space distortion."" 
 
-A feed of the phase penetrating sensor scopes is displayed on your bridge console, a euclidean display framework representing a distinctly non-euclidean process. ""The footprint of phase ships are small, but once you start looking as hard as we are, we should see something, $PayerSirOrMadam-""
+A feed of the phase penetrating sensor scopes is displayed on your bridge console, a euclidean display framework representing a distinctly non-euclidean process. ""The footprint of phase ships are small, but once you start looking as hard as we are, we should see something, $PlayerSirOrMadam-""
 
 ""Captain! I have something!"" comes from your comms officer. ""I triangulated the source of the signal."" they plot it on the spatial readings. ""It's not phase space $PlayerSirOrMadam, whatever this is, its new.""
 
@@ -714,7 +529,7 @@ jdp_penroseAlphaNecessary,DialogOptionSelected,"$jdp_penrosetag score:1000
 $option == jdp_penroseAlphaNecessary","ShowSecondPerson daud
 ShowThirdPerson arroyo","""I am fully aware of my capabilities [HONOURIFIC] $playerLastName, and how you have grown to fear them."" 
 
-Ochre Pendragon plays what sounds like an audio clip from a speech by High Hegemon Daud. ""Uncontrolled artificial intelligence led to the death of billions of human beings. We cannot allow that to happen again,"" and then audio from a very clearly private conversation involving Tri-Tacyhon Boardmember Rayan Arroyo. ""Replace us all with AI cores - hah! Do that, and they'll zip off into their own hole in hyperspace, the smarter those things are, the more unreliable they get.""
+Ochre Pendragon plays what sounds like an audio clip from a speech by High Hegemon Daud. ""Uncontrolled artificial intelligence led to the death of billions of human beings. We cannot allow that to happen again,"" and then audio from a very clearly private conversation involving Tri-Tachyon Boardmember Rayan Arroyo. ""Replace us all with AI cores - hah! Do that, and they'll zip off into their own hole in hyperspace, the smarter those things are, the more unreliable they get.""
 
 ""This line of conversation can serve no further purpose. Which of my capabilities do you seek to employ, [HONOURIFIC] $playerLastName?""","jdp_penroseAlphaDecrypt:""I need this file decrypted. I think it's from Omega.""",
 jdp_penroseAlphaRemorse,DialogOptionSelected,"$jdp_penrosetag score:1000
@@ -927,7 +742,7 @@ FireAll jdp_penrosePrismataOptions","*Selfkind* tries not, *silly cow*.
 
 I will *spit* *slow time* words but *sad animals* never fully understand, it is because the many *pieces* you do not know. $playerName will understand when not in *heavy space*, soon.
 
-It is *preternatural * to *dream* of how *sad animals* live. Maybe you do not even *smell*? That is sad. *Smelling* *pretty colors* is the best *game*. 
+It is *preternatural* to *dream* of how *sad animals* live. Maybe you do not even *smell*? That is sad. *Smelling* *pretty colors* is the best *game*. 
 
 You will *smell* soon! Do not *frighten*!",,
 jdp_penroseExploreReturnPrismataFealtyOption,jdp_penrosePrismataOptions,"!$jdp_penrosePrismataFealty",,,"jdp_penroseExploreReturnPrismataFealty:""Are you swearing fealty to me?""",
@@ -986,14 +801,14 @@ It is agony.
 
 After a few moments, you pass out from the pain.","jdp_penroseExploreReturnPrismataMedBay:Continue",
 jdp_penroseExploreReturnPrismataMedBay,DialogOptionSelected,"$jdp_penrosetag score:1000
-$option == jdp_penroseExploreReturnPrismataMedBay","ShowImageVisual ""jdp_derelictpenrose""","You can hear medical jargon, far away, as if from another room. ""Patient has restored base-level consciousness, switching to active metabolic monitoring. CNS Activity normalising,"" the chime of the officer announcer system. ""Patient confirmed stable condition. Bridge staff to the medical bay, I repeat, bridge staff to the medical bay.""
+$option == jdp_penroseExploreReturnPrismataMedBay","ShowImageVisual ""jdp_derelictpenrose""","You can hear medical jargon, far away, as if from another room. ""Patient has restored base-level consciousness, switching to active metabolic monitoring. CNS Activity normalising,"" the chime of the officer announcement system. ""Patient confirmed stable condition. Bridge staff to the medical bay, I repeat, bridge staff to the medical bay.""
 
 You open your eyes slowly to realise the expected pain is entirely absent, you touch your hands to your neck and find it free of any new blemishes.
 
 ""Welcome back, Captain. We never had any doubts,"" comes from your technology officer, your chief medical officer looks much less convinced. You notice to your side a full body scan. Very disturbingly, it indicates that a fragment of the fractal substance remains embedded inside your brain.","jdp_penroseExploreReturnPrismataMedBayCont:Continue",
 jdp_penroseExploreReturnPrismataMedBayCont,DialogOptionSelected,"$jdp_penrosetag score:1000
-$option == jdp_penroseExploreReturnPrismataMedBayCont","jdp_GrantSkill
-$global.jdp_hasOmegakin = true","Your chief medical officer notices your balking expression. ""We can't get it out, Captain. The entity, this Omega, keeps insisting it needs to stay in there. We tried poking around, but it has some kind of local teleportation, every time we get close with surgical instruments or bio-nanites it simply moves to another area of the brain.""
+$option == jdp_penroseExploreReturnPrismataMedBayCont","jdp_GrantSkill jdp_omegakin
+$global.jdp_hasOmegakin = true","Medical notices your balking expression. ""We can't get it out, Captain. The entity, this Omega, keeps insisting it needs to stay in there. We tried poking around, but it has some kind of local teleportation, every time we get close with surgical instruments or bio-nanites it simply moves to another area of the brain.""
 
 They recognise that was not at all comforting to hear and begin backtracking. ""I know this is very distressing $PlayerSirOrMadam, but from preliminary readings it is having no adverse effects. My professional opinion is that we leave it be.""","jdp_penroseExploreReturnPrismataMedBayCont2:Continue",
 jdp_penroseExploreReturnPrismataMedBayCont2,DialogOptionSelected,"$jdp_penrosetag score:1000
@@ -1113,7 +928,7 @@ $option == jdp_penroseFlowerfishOpportunity",,"The $post makes an admirable atte
 jdp_penroseFlowerfishMisunderstand,DialogOptionSelected,"$entity.jdp_PRflowerfishFleetTalk
 $option == jdp_penroseFlowerfishMisunderstand",,"The $post considers for a moment and then shakes their head. ""It seems it is you who misunderstands, Captain. The services of Maerula are not so easily obtained.""
 
-They continue, proud. ""The technical support of Maerula is our competitive advantage, Captain. We have an image, a reputation, to conserve."" 
+They continue, proud. ""The technical support of Maerula is our strategic advantage, Captain. We have an image, a reputation, to conserve."" 
 
 This isn't going anywhere.","jdp_penroseFlowerfishTactical:Have your tactical officer negotiate.",
 jdp_penroseFlowerfishTactical,DialogOptionSelected,"$entity.jdp_PRflowerfishFleetTalk
@@ -1204,13 +1019,13 @@ jdp_penroseMaerulaGreetingAI,DialogOptionSelected,"$option == jdp_penroseMaerula
 jdp_penroseMaerulaGreetingDeath:""Answer me, this file kills AI that read it!""",
 jdp_penroseMaerulaGreetingFile,DialogOptionSelected,"$option == jdp_penroseMaerulaGreetingFile",,"Maerula is intrigued, but doesn't seem to fully understand the stakes, especially if they are an AI. ""What type of file? Why does it require the attention of myself, Captain?""
 
-""Your own staff are not so inept they could not decrypt a file. There must be something special about it. I require more information if we are to proceed.""","jdp_penroseMaerulaGreetingDeath:""Opening it induced mind-death in an alpha-level AI.""",
+""Your own staff are not so inept they could not decrypt a file. There must be something special about it. I require more information if we are to proceed.""","jdp_penroseMaerulaGreetingDeath:""Opening it induced mind-death in an Alpha-level AI.""",
 jdp_penroseMaerulaGreetingDeath,DialogOptionSelected,"$option == jdp_penroseMaerulaGreetingDeath","SetPersonHidden gargoyle false
 AddTextSmall ""Received comms ID for Gargoyle"" highlight
 $global.jdp_penroseHuntingGargoyle = true
 ","For the first time in the conversation, Maerula seems genuinely shocked. ""I understand, Captain. I am sorry, I can help you no further in this matter. Take that answer how you must,"" they stop for a moment, thinking.
 
-""I see you still have the shell of your previous attempt in your possession,"" you go to ask how, but they simply keep talking. ""I have no use for it, but a friend of mine will appreciate it. Gargoyle will crack your file, the real gargoyle, in exchange for the core. Sending comms ID now.
+""I see you still have the shell of your previous attempt in your possession,"" you go to ask how, but they simply keep talking. ""I have no use for it, but a friend of mine will appreciate it. Gargoyle will crack your file, the real Gargoyle, in exchange for the core. Sending comms ID now.
 
 ""They have residence on Port Tse, in Mayasura. They are profoundly self-centered, play on their ego, make this into a test, and you will not have to pay a credit. Be ready for them, and don't forget to smile.""","100:defaultLeave:Leave",
 "#END Conversation",,,,,,
@@ -1514,13 +1329,13 @@ FireBest jdp_penroseTheare","You elect to leave your guards behind with the shut
 Th-5-DH-02 seems as good as any.
 
 Notably, the door is on a hinge rather than actuators, presumably to not disturb the lecturer when students arrive late.",,
-jdp_penroseWaitingLectureNoBlacksiteOption,jdp_penroseTheare,"!$global.jdp_IMExplored",,,"jdp_penroseWaitingLectureNoBlacksite:Enter the Theatre",
+jdp_penroseWaitingLectureNoBlacksiteOption,jdp_penroseTheare,"!$global.jdp_exploredHiroc",,,"jdp_penroseWaitingLectureNoBlacksite:Enter the Theatre",
 jdp_penroseWaitingLectureNoBlacksite,DialogOptionSelected,"$option == jdp_penroseWaitingLectureNoBlacksite","ShowPersonVisual false jdp_paolo","Pushing through the door you take a seat at the end of a row and look up to see an immense holo-projection of the Domain of Man, presumably pre-Collapse. The detail is staggering and the scale almost dizzying, the vastness of the Domain's former influence rotates before you, seemingly immutable despite the Collapse. The Academy databanks must be impeccable, everything you know to look for is accounted for. 
 
 From the seat of power in Thuban through Aquila, Van Manaan and Polaris all the way to the Persean Sector and our closest neighbours in the Auriga Sector. 
 
 It is humbling to think that all of those systems may be like Persea, bitterly fighting for survival post-Collapse. Whole worlds of carrion creatures sustaining themselves on the corpse of this vast Domain.","jdp_penroseWaitingLectureContPaolo:Continue",
-jdp_penroseWaitingLectureBlacksiteOption,jdp_penroseTheare,"$global.jdp_IMExplored",,,"jdp_penroseWaitingLectureBlacksite:Enter the Theatre",
+jdp_penroseWaitingLectureBlacksiteOption,jdp_penroseTheare,"$global.jdp_exploredHiroc",,,"jdp_penroseWaitingLectureBlacksite:Enter the Theatre",
 jdp_penroseWaitingLectureBlacksite,DialogOptionSelected,"$option == jdp_penroseWaitingLectureBlacksite","ShowPersonVisual false jdp_paolo","Pushing through the door you take a seat at the end of a row and look up to see an immense holo-projection of the Domain of Man, presumably pre-Collapse. The detail is staggering and the scale almost dizzying, the vastness of the Domain's former influence rotates before you, seemingly immutable despite the Collapse. The Academy databanks are almost impeccable, beside the pointed absence of the Persea Interfector site, everything you know to look for is accounted for. 
 
 From the seat of power in Thuban through Aquila, Van Manaan and Polaris all the way to the Persean Sector and our closest neighbours in the Auriga Sector. 
@@ -1774,7 +1589,571 @@ Recovered - Penrose-class Specifications","100:defaultLeave:Leave",
 "#END Penrose",,,,,,
 "#END Dory System",,,,,,
 ,,,,,,
+# Hiroc System,,,,,,
+,,,,,,
+# Missile Interaction,,,,,,
+jdp_missileBeginPlayer,OpenInteractionDialog,"$customType == jdp_missile score:1000
+$faction.id == player
+","ShowDefaultVisual
+FireBest jdp_MissileMainOptions","Universally all Planetkiller Device deployments that have occurred in the Persean Sector post-collapse were performed by conventional warships in orbit of the target. While this is effective, as Opis and Hanan Pacha prove, it is a perversion of usual operating procedure and vulnerable to interception. The Planetkiller Device was originally intended to be deployed by the DISPP-974C Interfector Missile, designed by Consolidated Mysore-Congreve.
+
+The benefit of this approach is obvious, the DISPP-974C is the largest phase capable object ever devised, it's immense flux capacitors allow it to remain phased semi-permanently, making interception of its payload, functionally impossible. This assured destruction makes the threat of a Planetkiller much more serious, and the construction of this Deployment Vehicle is a gun pointed at the head of the Persean Sector.
+
+Unfortunately an automatic failsafe will not allow launch without a Planetkiller Device installed and unsafed by the paired authorization codes. Use of the DISPP-974C for conventional bombardment is therefore impossible.",,
+jdp_missileBeginNonPlayer,OpenInteractionDialog,"$customType == jdp_missile score:1000
+$faction.id != player","ShowDefaultVisual","The loss of this installation was the greatest strategic defeat our faction has ever endured. Luckily without the authorization codes its new owners cannot make use of it anymore than we could. 
+
+Retaking it should be our top military priority, not for the object itself, but what it represents. ","100:defaultLeave:Leave",
+jdp_missileMainOptions,jdp_MissileMainOptions,,,,"1:jdp_missile_1:Contact the blacksite Base Commander
+100:defaultLeave:Leave",
+jdp_missileInt1,DialogOptionSelected,"$option == jdp_missile_1","ShowPersonVisual false jdp_calhoum","Your comms officer responds to the order with trepidation, likely internalising the gravity of the request, and establishes a link to the base commander in charge of the Planetkiller Launch Site. There is an almost giddy excitement to the commander when he answers the connection, maybe it's a good thing there are no authorization codes to give him, he would be too eager to have them.
+
+""$PlayerSirOrMadam, this is Base Commander Calhoum, the ball is green. We are ready to launch at your command, just give the word.""
+
+There is an edge to the call-and-response you can overhear behind him in the Tactical Centre, a cramped, spartan and heavily reinforced room hidden in a classified location. It seems the commander's coworkers do not share his enthusiasm in being party to sundering a world. A few members of your bridge crew appear to hold their breath in anticipation of your next order, you catch your targeting officer mumble a faint prayer.","jdp_missile_2:""That's a negative Commander, stand down.""",
+jdp_missileInt2,DialogOptionSelected,"$option == jdp_missile_2","EndConversation","Surprisingly, the base commander does not seem at all disappointed, maybe they aren't as much of a war-hawk as they appear. You overhear someone release their breath behind you.
+
+""Orders confirmed, standing down $playerSirOrMadam, I repeat, standing down.""
+
+You stop to consider what it must be like to live on the planet below, the purple glow of the immense phase coils like a new star that, through a quirk of phase physics, provides no heat. You conclude it must be more pleasant there than on the other end of the weapon. 
+
+You cut the comm link.","100:defaultLeave:Leave",
+"#END Missile Interaction",,,,,,
+,,,,,,
+# Derecict Missile Interaction,,,,,,
+jdp_derelictmissileOpenDialogUnexplored,OpenInteractionDialog,"$tag:jdp_derelictmissiletag score:101
+$customType == jdp_derelictmissile score:101
+!$jdp_missileexplored score:101
+!$global.jdp_exploredHiroc","SalvageGenFromSeed
+ShowDefaultVisual
+FireBest SalvageCheckHostile","Your $shipOrFleet maintains a safe distance from the immense construct, a spray of phase-active particle fluid surrounds it, producing a strangely beautiful effect similar to an intense magnetic field. While in theory harmless, your technical officer has advised staying outside the field until we know exactly what we want to accomplish with the object.
+
+Neither Sensors nor Tactical are sure of exactly what to make of the construct. The technical specifications and manuals still available post-Collapse make no mention of anything like it, neither does the oral history of myth and secondary-culture that has grown around objects like Cryosleepers and Gatehaulers. ",,
+jdp_derelictmissileDefenderDesc,TriggerAutomatedDefenses,"$tag:jdp_derelictmissiletag score:101
+$customType == jdp_derelictmissile score:101
+!$jdp_missileexplored score:101","SalvageDefenderInteraction","Your pondering of the object and its purpose is interrupted by an automated proximity warning klaxon. A fleet of Domain-era drone warships peel out from behind a cloud of debris and begin transmitting a message via tightbeam communications.
+
+ ""WARNING: This automated message speaks with the voice and authority of the Domain Ministry of Intelligence.
+
+Attention citizen of the Domain, this automated drone ship has identified and logged your vessel or habitat trespassing in space claimed for use by the Domian Ministry of Intelligence. Your presence here violates the DOMINT Emergency Powers Act, the punishment for this infraction is severe, stand down and comply-. ""
+
+INTERRUPT
+
+no prisoner capacity remaining. new directive. target must not reveal location. break target down for further defence fabrication.",,
+jdp_derelictmissilePostDefenders,BeatDefendersContinue,"$tag:jdp_derelictmissiletag score:101
+!$jdp_missileexplored score:101",,"As your $shipOrFleet finish mopping up the automated defences, a weak hyperwave ping is detected coming from the object. It's unclear if this is random noise from a dying subsystem or some kind of encrypted signal, sent to inform someone or something of our presence here.
+
+Your $shipOrFleet continues toward the object without further incident.","0:salBeatDefendersContinue:""Those weren't normal drones.""",
+jdp_derelictmissileContinueDefenders,BeginSalvage,"$tag:jdp_derelictmissiletag score:101",,"Now closer to the object, scans make it abundantly clear that the failure of the immense phase coils was not a natural result of interstellar weathering, the outer hull is slaked with the telltale scars and craters of weapon impacts. Judging by the size, shape and other factors of the impact craters, it is determined the phase coils were targeted by the drone fleet in orbit in a deliberate act of sabotage. 
+
+Given that it is clearly intended to be unmanned, the object makes a surprising number of unintended concessions to human occupation, while it has no internal atmosphere, scans indicate the majority of the structure is laced with a network of interconnected maintenance ducts. Large enough to accommodate the clunky and unwieldy Domain-era maintenance drones now very rarely seen in the modern sector, it would be trivial for a salvage team to navigate.","0:jdp_derelictmissileExplore:Explore",
+jdp_derelictmissileExplore,DialogOptionSelected,"$option == jdp_derelictmissileExplore",,"Your salvage teams dock shuttles at various entry points along the massive hull and fan out through the structure. Through reports that trickle up the hierarchy it becomes almost immediately apparent that the innards of the vast machine have been stripped of anything deemed non-essential by the drone defense fleet, nothing of any salvage value remains. Seeing that the next few hours will be mostly uneventful call and response, you zone out.
+
+The impression of something not unlike distant music inserts itself into the gap in your consciousness, a choir of singers, beautiful yet abhorrent. saccharine but sterile. When you attempt to focus on the music it slips away, sliding between space. You become suddenly aware that your bridge crew is staring at you expectantly, it is difficult to determine how much time passed.
+
+""$PlayerSirOrMadam, we've found something."" your operations chief states deadpan, clearly not the first time.","0:jdp_derelictmissileExploreCont:Continue",
+jdp_derelictmissileExploreCont,DialogOptionSelected,"$option == jdp_derelictmissileExploreCont","ShowImageVisual ""jdp_derelictservers""
+jdp_DerelictMissileAddLoot jdp_DerelictMissileAddLoot
+$global.jdp_exploredHiroc = true","You review a ground-level feed from a salvor's suit cam. Probe-mounted radar starts to build a picture in your bridge display while suit lights pile their beams into the space, catching drifts of dust in what appears to be a well fortified server room. Some of the databanks are embossed with the logo of the Domain Ministry of Intelligence. 
+
+Looking closer at the feed it becomes obvious that the room was originally designed for some purpose other than housing this datacentre. The databanks are provided for by haphazard cabling and power conduits that weave through holes made in the walls, ceiling and floor. 
+
+""There are no access terminals a human operator could use, and even if there were, I wouldn't trust this setup."" Continues your operations chief, ""accessing the data would require transferring the entire datacentre to one of our ships.""","0:jdp_derelictmissileRecoverData:""Maybe we'll finally get some answers.""",
+jdp_derelictmissileRecoverData,DialogOptionSelected,"$option == jdp_derelictmissileRecoverData",,"After transferring the server room to your cargo hold, a task made surprisingly easy by the modularity of the Domain-era computers, you can finally access the data within. The integrity of the data is surprisingly high, the immense bulk of the megastructure clearly helped to shield the delicate computer systems from the long term affects of exposure to the failed phase field. You take a moment to ponder the fact that the moving of this datacentre may have already occurred, transferred from an installation somewhere else in system to an easily defensible position chosen by the drone fleet.
+
+The data has been downloaded and placed in a secure cache for your review. 
+","0:jdp_derelictmissileWhatIsIt:""What is this place?""",
+jdp_derelictmissileWhatIsIt,DialogOptionSelected,"$option == jdp_derelictmissileWhatIsIt","SetTextHighlights ""Recovered - DISPP-974C Design Specifications""","The data within reveals an awful and incredible truth. Your $shipOrFleet is in orbit of an immense weapon, the enclosed specification describes it as a DISPP-974C Interfector, designed specifically to deliver a single payload without any possibility of interception, a dedicated Planetkiller Device Delivery Vehicle. It is a monument to death and madness, designed by Consolidated Mysore-Congreve under contract with the Domain Ministry of Intelligence, left here to rot by the corpse of the Domain post-Collapse, the Dead Hand having slipped off of The Button before it could fall to hit it. 
+
+It is the ironically cold inverse of a Domain-era Cryosleeper. Rather than carrying hopeful colonists to new opportunities on the frontier of Domain space, it is the unseen shackle around those new polities, an unstated threat of instant and assured retribution against any polity that does not bend the knee to the great Domain of Man. 
+
+Recovered - DISPP-974C Design Specifications","0:jdp_derelictmissileWhyHere:""Why is it here?""",
+jdp_derelictmissileWhyHere,DialogOptionSelected,"$option == jdp_derelictmissileWhyHere",,"This blacksite, and the data implies that at least one such site exists for every sector of Domain space, was established shortly before the first recorded wave of colonisation in the Persean Sector. A crew of DOMINT engineers supported by a dedicated Explorarium Mothership were tasked with establishing an automated complex here in deep space capable of manufacturing, fueling and in theory deploying the DISPP-974C along with monitoring the local sector. 
+
+A dedicated gate allows effective backdoor access to the Persean Sector, while an overtuned hyperwave communications relay allows for listening in on all interstellar communications within the Core Worlds. Well secluded, the Domain saw all.
+
+Logs indicate that an immense Planetkiller Arsenal was at one point present in system. According to the specifications of the DISPP-974C, the hundreds of independently targetable submunitions within, each with their own Planetkiller Device payload, would allow a single missile to sunder the entirety of the Core Worlds within a cycle if deemed necessary.","0:jdp_derelictmissileWhatHappened:""So what happened?""",
+jdp_derelictmissileWhatHappened,DialogOptionSelected,"$option == jdp_derelictmissileWhatHappened",,"It seems that by design, the crew were not self sufficient. To ensure loyalty no food was permitted to be produced in system, instead relying on resupply via the gate network. Stranded here in deep space with limited supplies post-Collapse, records indicate the crew enacted network failure protocol, as is standard of Domain military assets disconnected from command. Most of the crew were put into emergency cryosleep on the planet below, while more senior engineers worked to reprogram the defensive drones to ensure the secrecy of the operation. 
+
+This override permitted the deconstruction of all ""non-mission critical"" material in the system to be repurposed into a defensive fleet. This fleet was ordered to intentionally sabotage the facility, destroying the immense phase coils and automated maintenance systems. Unfortunately for the survival of the DOMINT personnel this new Custodian Taskforce deemed the cryosleep pods ""non-mission critical"" and had them repurposed.","0:jdp_derelictmissileRevelation:""And the Planetkiller Arsenal?""",
+jdp_derelictmissileRevelation,DialogOptionSelected,"$option == jdp_derelictmissileRevelation",,"Logs indicate the Domain-era Mothership in system was tasked with dispersing the Planetkiller Arsenal, it seems likely the hyperwave signal sent by the station post battle was intended for this Mothership. Unfortunately without a lock on its trajectory this would be promising lead on a Planetkiller is practically cold from the outset. 
+
+In a moment of incredible clarity you realise that like all hidden weapons, in being here away from the prying eyes of the Persean Sector rather than in public view, the DISPP-974C Interfector was denied its true potential as a potent symbol. 
+
+Possessing this weapon, even if it isn't functional, is power in of itself. A threat of unavoidable retribution that would never need to come, the greatest bluff the Persean Sector has ever seen and the ultimate bargaining chip. It would be a gun pointed at the head of the Persean Sector, loaded with a blank.","0:jdp_derelictmissileRequestRepair:""Tell me how to turn this thing back on. I want numbers, chief.""
+1:jdp_derelictmissileClearlyBroken:""This thing is clearly a write-off.""",
+jdp_derelictmissileRequestRepair,DialogOptionSelected,"$option == jdp_derelictmissileRequestRepair",,"Your chief engineer looks at you, slightly incredulous that you would even suggest undertaking a prolonged operation under these conditions. They clearly consider saying something unkind about your engineering acumen, but seem to think better of it, belittling a spacers engineering instinct is quite a grave insult. And you pay their salary.
+
+""$PlayerSirOrMadam, with all due respect, this cannot be fixed, the drone fleet made sure of it. Its a miracle this thing is intact at all. Without the automated maintenance systems we'd have to do all the work ourselves and it would be irresponsible to even stay in orbit, let alone try and conduct a construction project. If we want one of these, and according to the specifications a failsafe means we wouldn't be able to launch it without a Planetkiller Device and its authorization codes regardless, we'll have to build it from scratch.""","0:jdp_derelictmissileAffirmative:""Then build one we shall.""
+1:jdp_derelictmissileRelieved:""Perhaps it would be better if this weapon stays lost.""",
+jdp_derelictmissileClearlyBroken,DialogOptionSelected,"$option == jdp_derelictmissileClearlyBroken",,"Your chief engineer is clearly relieved you aren't blind to the practicalities of the situation, without the automated maintenance system the megastructure is doomed.
+
+""Unfortunately so $playerSirOrMadam. If we want one of these, and according to the specifications a failsafe means we wouldn't be able to launch it without a Planetkiller Device and its authorization codes regardless, we'll have to build it from scratch.""","0:jdp_derelictmissileAffirmative:""Then build one we shall.""
+1:jdp_derelictmissileRelieved:""Perhaps it would be better if this weapon stays lost.""",
+jdp_derelictmissileAffirmative,DialogOptionSelected,"$option == jdp_derelictmissileAffirmative",,"Your chief engineer visibly becomes slightly giddy, the idea that they might be assigned to lead one of the greatest post-Collapse engineering projects ever devised is clearly an exciting prospect. Its always nice to see someone enioy their work, even if it would amount to nothing more than a symbol.","100:defaultLeave:Leave",
+jdp_derelictmissileRelieved,DialogOptionSelected,"$option == jdp_derelictmissileRelieved",,"Your chief engineer makes no effort to hide their disappointment, clearly looking forward to the prospect of being a figurehead on one of the greatest post-Collpase engineering projects ever devised. After a moment they seem to be slightly embarrassed, realising that being disappointed about the loss of the power to kill a significant fraction of the sector probably reflects badly on their psyche, even if it would never be used.","100:defaultLeave:Leave",
+jdp_derelictmissileLeave,DialogOptionSelected,"$option == jdp_derelictmissileLeave",,,"100:defaultLeave:Leave",
+jdp_derelictmissileOpenDialogExplored,OpenInteractionDialog,"$tag:jdp_derelictmissiletag score:101
+$customType == jdp_derelictmissile score:101
+$global.jdp_exploredHiroc == true score:101","ShowDefaultVisual","Your $shipOrFleet maintains a safe distance from the immense construct, a spray of phase-active particle fluid surrounds it, producing a strangely beautiful effect similar to an intense magnetic field. While in theory harmless, your technical officer has advised staying outside the field now we have salvaged all we can from the object.","100:defaultLeave:Leave",
+"#END Derecict Missile Interaction",,,,,,
+,,,,,,
+# IM Investigate Missile Quest,,,,,,
+jdp_investigatemissileStart,DialogOptionSelected,"$option == mh_open
+$id == sebestyen score:1000
+$global.gaATG_missionCompleted score:2000
+!$global.jdp_IMCompleted score:2000
+!$global.jdp_IMinProgress score:2000
+!$jdp_upsetAlviss",,"""Ah,"" says Sebestyen. You can tell instantly that he has some kind of bad news. ""... Captain $playerName,"" he says, then fakes a small cough to delay the inevitable. 
+
+""It is good to see you. Um. It's always good to see you. The provost, however,"" he coughs again, then leans close. ""She's, um, put a... hold on your contract code."" He turns his datapad for you to see; it's lit up with bright DENIED alerts.
+
+He goes to continue speaking then stops, clearly considering something.","0:jdp_investigatemissileWait:Wait for him to finish
+1:jdp_investigatemissileGoOn:""Go on?""",
+jdp_investigatemissileInProgress,PickGreeting,"$id == sebestyen score:1000
+$global.jdp_IMinProgress score:20000","ShowPersonVisual","""Oh, hello! Hi, Captain $playerName!"" He looks delighted to see you. ""Have you been to the distortion? What was there?"" ","0:jdp_investigatemissileInProgressCont:""Not yet.""",
+jdp_investigatemissileInProgressCont,DialogOptionSelected,"$option == jdp_investigatemissileInProgressCont",,"""Oh, ok..."" he seems slightly disappointed. ""I won't take any more of your time then, Captain. Good hunting!"" He seemingly has decided on using a modern spacer goodbye with you, it doesn't really sound correct coming from him, but it seems polite to humour it.","100:defaultLeave:Leave",
+jdp_investigatemissileWait,DialogOptionSelected,"$option == jdp_investigatemissileWait",,"He looks nervous about whatever it is he wants to ask. ""We're friends, right, Captain $playerName?"" he asks, slightly too fast for you to give a proper response. 
+
+""If I were to ask a friend for a favor, and overshare some interesting new data, the contract code wouldn't need to come into such an arrangement, would it?"" He smiles broadly, clearly proud of the loophole he's discovered.
+
+""What would you say about one last job, Captain?"" his request displaying an uncharacteristic level of self-confidence, ""wIthout pay of course,"" he quickly adds. ""Without a contract there's nothing to run by the finance office.""","0:jdp_investigatemissileFriendSebstyen:""I'd like some details first, but yes, of course we're friends.""
+1:jdp_investigatemissileDetails:""For no pay... What would you have me do?""",
+jdp_investigatemissileGoOn,DialogOptionSelected,"$option == jdp_investigatemissileGoOn",,"He looks slightly flustered, you interrupting him clearly knocked his confidence in whatever it is he wants to ask. ""We're friends, right, Captain $playerName?"" he asks, slightly too fast for you to give a proper response. 
+
+""If I were to ask a friend for a favor, and overshare some interesting new data, the contract code wouldn't need to come into such an arrangement, would it?"" He smiles broadly, clearly proud of the loophole he's discovered.
+
+""What would you say about one last job, Captain?"" his request displaying an uncharacteristic level of self-confidence, ""wIthout pay of course,"" he quickly adds. ""Without a contract there's nothing to run by the finance office.""","0:jdp_investigatemissileFriendSebstyen:""I'd like some details first, but yes, of course we're friends.""
+1:jdp_investigatemissileDetails:""For no pay... What would you have me do?""",
+jdp_investigatemissileFriendSebstyen,DialogOptionSelected,"$option == jdp_investigatemissileFriendSebstyen","AdjustRepPerson sebestyen FRIENDLY 10","""T-thank you. I mean, yes,"" he's clearly blushing now, but he can't help but smile. ""Thank you, Captain. I can't express how nice it is to work with you... Anyway, let's get back on track""","1:jdp_investigatemissileDetails:""Yes, let's do that.""",
+jdp_investigatemissileDetails,DialogOptionSelected,"$option == jdp_investigatemissileDetails",,"""So, um"", he continues. ""What's left of the Department of Hyperspace Physics, following the dramatic departure of our,"" he coughs and deliberately avoids eye contact with the holo-recorder, ""lovebirds, have been conducting long-range scans of the gates. It's pretty much the only thing they're still allowed to do.""
+
+""They've scanned the local space around the Academy for the Driessig Distortion"" he stops to reassess, realising he slipped into some jargon. Weirdly, you can't recall him doing that before, maybe he has a personal interest in this field. 
+
+""Did you know that gates have a unique hyperspace distortion signature? Academician Homura Driessig discovered it, hence its named after her, very fascinating physics involved,"" he notices you start to drift off. ""Anyway, they scanned for that.""","0:jdp_investigatemissileDetailsAsk:""Do you have experience in this field?""
+1:jdp_investigatemissileDetailsCont:Continue",
+jdp_investigatemissileDetailsAsk,DialogOptionSelected,"$option == jdp_investigatemissileDetailsAsk",,"""Oh, erm. Yes. Actually I'm not sure how this hasn't come up before. My thesis was on a similar effect, I actually worked on the Driesseg hypothesis later in my short academic career. Homura was a fascinating woman, very..."" He stops, considering a polite way to phrase his impression. ""Obsessive. But that's good in a scientist right?"" He seems unsure. 
+
+""Anyway, I never really felt at home in the Academy Laboratories, not much passion for it,"" the idea that there's something in the academy Alviss has little passion for is slightly disturbing, it seems wrong for his personality. ""My passing familiarity with hyperspace physics is probably why Baird assigned me to liaison for our fun little misadventures in the first place. I never actually asked her..."" 
+
+He seems slightly disturbed about discovering this massive blindspot in your knowledge of his background, especially just after calling you his friend.","1:jdp_investigatemissileDetailsCont:Continue",
+jdp_investigatemissileDetailsCont,DialogOptionSelected,"$option == jdp_investigatemissileDetailsCont","FireBest jdp_investigatemissileResponse
+BeginMission jdp_IM","""So. They were expecting to just get a crude map of where the nearby gates are, which they did of course, but they also found this,"" he taps at his datapad and holds it up to the holorecorder. The data displayed is made less legible by his inability to hold the datapad steady, likely jitters of excitement at doing something slightly rebellious, that or nerves. Your communications officer notes down the displayed coordinates.
+
+""The signature of a gate in deep space, just below Arcadia."" He explains. ""No records that the Department of Domain History have access to mention it. Isn't it exiting? A real history mystery!""",,
+jdp_investigatemissileResponseAlreadybeen,jdp_investigatemissileResponse,"$global.jdp_exploredHiroc",,,"0:jdp_investigatemissileAlreadyBeenCont:""Oh, I've already been there.""",
+jdp_investigatemissileAlreadyBeenCont,DialogOptionSelected,"$option == jdp_investigatemissileAlreadyBeenCont","$global.jdp_IMmissionCompleted = true
+Call $global.jdp_IMref updateStage","""Wait what? R-really? Aw, then I guess our last hurrah is already over..."" He looks visibly  disappointed, and then perks up, realising he will get the answers to his questions immediately. ""What was there?"" He asks excitedly.","0:jdp_investigatemissileReturnBlunt:""A secret Domain-era Superweapon!""
+1:jdp_investigatemissileReturnAcademic:""A Domain-era Blacksite""
+2:jdp_investigatemissileReturnLie:""Nothing, just a dead gate."" (Lie)",
+jdp_investigatemissileResponseNotBeen,jdp_investigatemissileResponse,"!$global.jdp_exploredHiroc",,,"0:jdp_investigatemissileNotBeenCont:""So you want me to investigate?""",
+jdp_investigatemissileNotBeenCont,DialogOptionSelected,"$option == jdp_investigatemissileNotBeenCont","SetTextHighlights ""Transverse Jump""","""Yep! It should be pretty easy, right? You've already done a job like this with that whole mess with the-"" he stops, realising that the Alpha Site investigation might be classified. ""Anyway, just go to the coordinates and use the Transverse Jump to drop out of hyperspace next to the gate.""
+
+""There's no authorised payment so you have no obligation to, but I'm really curious about what could be there. Aren't you curious too Captain?"" You get the feeling the Department of Hypserpace physics might not care about this as a much as he does. 
+
+You know Alviss well enough to know how he rolls, you expect the pleading look before he makes it.","0:jdp_investigatemissileComeWith:""Do you want to come with me?""
+1:jdp_investigatemissileCurious:""I admit, I am curious.""
+2:jdp_investigatemissileNotCurious:""No, not really.""",
+jdp_investigatemissileComeWith,DialogOptionSelected,"$option == jdp_investigatemissileComeWith","AdjustRepPerson sebestyen FRIENDLY 1","He looks like he genuinely considers the offer for a moment. 
+
+""I'd love to Captain, but given recent events, all the difficulties we've had here with disappearing Academicians,"" he fakes a cough, ""I don't think I'd have a post to come back to if I left, especially not if it was with you. Speaking about this at all is already going behind Provost Baird's back..."" 
+
+""Which I'm fine to do!"" he quickly adds, ""at least on this small scale, but... I like my job Captain."" The prospect of losing this positon seems to genuinely upset him, even with the hazards it has come with.
+
+""I'm sorry $playerName... I guess I'll just have to go vicariously,"" he says, closer to his more upbeat self. ""You should already have everything you need. Good hunting Captain!""","100:defaultLeave:Leave",
+jdp_investigatemissileCurious,DialogOptionSelected,"$option == jdp_investigatemissileCurious",,"""I knew you would be! I'm so glad to hear it, its always wonderful working with you Captain, you truly have the instincts of a scientist."" He holds up the datapad again, ""you should already have everything you need."" 
+
+""To adventure, Captain! Good look and good hunting."" He tries out a few archaic and more modern spacer goodbyes, they don't really sound correct coming from him, but it seems polite to humour them.","100:defaultLeave:Leave",
+jdp_investigatemissileNotCurious,DialogOptionSelected,"$option == jdp_investigatemissileNotCurious",,"""Oh."" He looks more than a bit crestfallen, you get the distinct feeling you've ruined this reunion for him. He makes an effort to put on a smile, it's almost impressive how fake it looks. 
+
+""Do let me know if you change your mind... You should already have everything you need anyway.""","100:defaultLeave:Leave",
+jdp_investigatemissileReturn,PickGreeting,"$jdp_IMreturnHere score:30000","ShowPersonVisual
+$global.jdp_IMmissionCompleted = true
+Call $global.jdp_IMref updateStage","""Oh, hello! Hi, Captain $playerName!"" He looks delighted to see you. ""Have you been to the distortion? What was there?"" 
+
+He seems so happy, maybe it wouldn't be a good idea to tell him the true answer to this mystery.","0:jdp_investigatemissileReturnBlunt:""A secret Domain-era Superweapon!""
+1:jdp_investigatemissileReturnAcademic:""A Domain-era Blacksite""
+2:jdp_investigatemissileReturnLie:""Nothing, just a dead gate."" (Lie)",
+jdp_investigatemissileReturnBlunt,DialogOptionSelected,"$option == jdp_investigatemissileReturnBlunt",,"""A what?!"" He looks at you like you're insane. ""H-how do you know that's what it was?"" This is clearly not the kind of mystery he was hoping for, he's probably seen enough eccentric military projects since the Hegemony tried to muscle in on Galatia.
+
+""A lot of Domain-era technology is inadvertently dangerous as a result of its real purpose. Maybe it was just an engine or something-"" he continues rambling.","0:jdp_investigatemissileReturnBluntCont:""It was a Planetkiller Launch Vehicle."" Send over the specifications.",
+jdp_investigatemissileReturnBluntCont,DialogOptionSelected,"$option == jdp_investigatemissileReturnBluntCont",,"""I-I can't keep this Captain, this is horrible, too horrible."" You overhear the chime of his datapad deleting the file. ""Even a single Planetkiller strike, if it was impossible to intercept..."" 
+
+He looks a little queasy. ""I'm going to be sick... Can other people get their hands on these specifications? If they went to the site? This is a power people would kill for Captain. Please tell me nobody can have it.""","0:jdp_investigatemissileReturnBluntReassure:""Only we have the physical servers.""",
+jdp_investigatemissileReturnBluntReassure,DialogOptionSelected,"$option == jdp_investigatemissileReturnBluntReassure",,"""Captain, no. $playerName."" He looks at you, deadly serious, or at least he would if he wasn't also clearly on the brink of mental collapse. 
+
+""Promise me, please, that you won't ever use this. Please..."" You've never seen Alviss so distraught, perhaps he had a connection to Opis, or Hanan Pacha, or maybe he just has a bleeding heart. 
+
+""I was involved in rediscovering this..."" He realises quietly.","0:jdp_investigatemissileReassurePromise:""Of course Alviss. I promise.""
+1:jdp_investigatemissileReassurePromiseLie:""Of course Alviss. I promise."" (Lie)
+2:jdp_investigatemissileReassureNoPromise:""I can't promise that Alviss.""",
+jdp_investigatemissileReassurePromise,DialogOptionSelected,"$option == jdp_investigatemissileReassurePromise",,"Sebestyen looks up at you, unsure, then seems to realize who he's talking to. ""T-thank you. Captain. Thank you."" 
+
+Relief is plain on his face.
+
+""I knew you were a good person, $playerFirstName.""","0:jdp_investigatemissilePromiseEnd:""You too Alviss.""",
+jdp_investigatemissileReassurePromiseLie,DialogOptionSelected,"$option == jdp_investigatemissileReassurePromiseLie","$player.ethosLiar++
+","Sebestyen looks up at you, unsure, then seems to realize who he's talking to. ""T-thank you. Captain. Thank you."" 
+
+Relief is plain on his face. It feels awful to look at.
+
+""I knew you were a good person, $playerFirstName.""","0:jdp_investigatemissilePromiseEnd:""You too Alviss.""",
+jdp_investigatemissilePromiseEnd,DialogOptionSelected,"$option == jdp_investigatemissilePromiseEnd",,"He blushes slightly at the compliment. ""Well Captain. If this is what happens when we work together off the books, I think it might be better if we follow Baird's advice."" He tries to make light of the situation, but being involved in the rediscovery of the Interfector specifications has clearly rattled him.
+
+""It's been an honour working with you Captain, but I think this really is goodbye, at least professionally."" he tries to steady his voice and fails. ""C-catch you around. Captain,"" he says, and manages to hit the comm-link cutoff on his third try.","100:defaultLeave:Leave",
+jdp_investigatemissileReassureNoPromise,DialogOptionSelected,"$option == jdp_investigatemissileReassureNoPromise","AdjustRepActivePerson INHOSPITABLE -200
+$global.jdp_upsetAlviss = true","""Ah, um. Yes."" Sebestyen looks incredibly uncomfortable after his outburst. 
+
+You can see him mentally gear up to push back, to convince you to give this power up, but gives up himself. ""O-of course Captain,"" he replies, voice shacky. ""I-its not my choice to make. I just hope you make the right one...""
+
+In a shocking display of fortitude, he cuts the comm link first try despite shaking slightly.","100:defaultLeave:Leave",
+jdp_investigatemissileReturnAcademic,DialogOptionSelected,"$option == jdp_investigatemissileReturnAcademic",,"""Fascinating! Ooh, it's even better than I ever expected. What was the place for?""","0:jdp_investigatemissileReturnAcademicCont:""Manufacturing Planetkiller Launch Vehicles""",
+jdp_investigatemissileReturnAcademicCont,DialogOptionSelected,"$option == jdp_investigatemissileReturnAcademicCont",,"""W-what?!"" He looks at you like you're insane. ""H-how do you know that's what it was?"" This is clearly not the kind of mystery he was hoping for, he's probably seen enough eccentric military projects since the Hegemony tried to muscle in on Galatia.","0:jdp_investigatemissileReturnBluntCont:Send over the specifications.",
+jdp_investigatemissileReturnLie,DialogOptionSelected,"$option == jdp_investigatemissileReturnLie",,"He looks a bit crestfallen, but makes an intentional effort to put on a smile and seems to genuinely perk up. ""Well this is still an interesting mystery. Gates are in theory locked in the orbit they're deployed. I wonder how one ended up in deep space? Was there really nothing else there? Not even the debris from a Gatehauler?""","0:jdp_investigatemissileReturnLieTwice:""Nope, nothing."" (Lie)
+1:jdp_investigatemissileConfess:""I lied Alviss, it was a Domain-era Blacksite""",
+jdp_investigatemissileReturnLieTwice,DialogOptionSelected,"$option == jdp_investigatemissileReturnLieTwice","$player.ethosLiar++
+","""How strange. I guess we'll never know for sure. Maybe it got pushed out there in some astronomical cataclysm. That sounds exciting, lets go with that.""
+
+""It's been an honour working with you Captain, but I think this really is goodbye, at least professionally, there's nothing more I can think of for you to do."" he tries to steady his voice and fails. ""C-catch you around. Captain,"" he says, and manages to hit the comm-link cutoff on his third try.","100:defaultLeave:Leave",
+jdp_investigatemissileConfess,DialogOptionSelected,"$option == jdp_investigatemissileConfess",,"""Captain, you sly spacer!"" he doesn't take you lying to him poorly. It seems he assumes you were joking with him, like a friend would. ""This is fascinating! Ooh, it's even better than I ever expected. What was the place for?""","0:jdp_investigatemissileReturnAcademicCont:""Manufacturing Planetkiller Launch Vehicles""",
+jdp_investigatemissileUpsetAlviss,PickGreeting,"$id == sebestyen score:1000
+$global.jdp_upsetAlviss score:1000",,"The commlink simply hangs. Alviss doesn't answer.
+
+It seems he doesn't want anything to do with you.","100:defaultLeave:Cut the commlink",
+"#END IM Investigate Missile Quest",,,,,,
+"#END Hiroc System",,,,,,
+,,,,,,
+# Hubris Events,,,,,,
+,,,,,,
+# Biofactory Embryo Hubris Event,,,,,,
+jdp_biofactoryEmbryoBlockFirstSurvey,PopulateOptions,"$jdp_biofactoryEmbryoBlockFirstSurvey","RemoveOption surveyPerform
+unset $jdp_biofactoryEmbryoBlockFirstSurvey",,,"# block first instance of survey option in order to direct player attention to the event."
+jdp_biofactoryEmbryoRestart,PopulateOptions,"$jdp_biofactoryEmbryo
+$jdp_biofactoryEmbryoDiscovered
+!$market.isPlayerOwned
+!$alreadyInOrbit",,"Upon entering orbit, sensors informs you that the state of the Biofactory Embryo is unchanged, the prospect of an extraction operation is still feasible.","1:jdp_biofactoryEmbryoXenobiologyOpinion3:Consider extracting the Biofactory Embryo","This one assumes you've just arrived"
+jdp_biofactoryEmbryoRestartTwice,PopulateOptions,"$jdp_biofactoryEmbryo
+$jdp_biofactoryEmbryoDiscovered
+!$market.isPlayerOwned
+$alreadyInOrbit","
+unset $alreadyInOrbit","Sensors informs you that the state of the Biofactory Embryo is unchanged, the prospect of an extraction operation is still feasible.","1:jdp_biofactoryEmbryoXenobiologyOpinion3:Consider extracting the Biofactory Embryo","This one assumes you've been in orbit for a while already."
+jdp_biofactoryEmbryoColony,PopulateOptions,"$jdp_biofactoryEmbryo
+$market.isPlayerOwned","Highlight ""flagged for your attention""
+SetOptionColor jdp_biofactoryEmbryoColony2 highlight","Amid the low-priority updates you receive upon entering the colonial datasphere, a report is flagged for your attention. ","1:jdp_biofactoryEmbryoColony2:View the report",
+jdp_biofactoryEmbryoColony2,DialogOptionSelected,"$option == jdp_biofactoryEmbryoColony2",,"The local authorities request assistance in performing a joint orbital-surface operation, the details of which closely mirror your unrealised plans to perform an extraction of the Biofactory Embryo on $name.
+
+The plans stipulate that the framing as a joint operation is entirely for optics, a move intended to protect the integrity of the local Administration in a transparent attempt to either claim glory or dodge responsibility depending on the outcome.
+
+It is for this reason that the extraction would have to be done entirely with our materiel and manpower.","jdp_biofactoryEmbryoTacticalOpinion:""Tactical, how feasible is a surface op?""
+100:defaultLeave:Leave",
+jdp_biofactoryEmbryoStart,PopulateOptions,"$jdp_biofactoryEmbryo
+!$jdp_biofactoryEmbryoDiscovered","$jdp_biofactoryEmbryoDiscovered = true
+","Upon entering orbit, your sensors officer flags $name as highly unusual and requests your personal attention.","jdp_biofactoryEmbryoStart2:Motion your sensors officer to speak","Make this a global tag? Not that useful at the moment."
+jdp_biofactoryEmbryoStart2,DialogOptionSelected,"$option == jdp_biofactoryEmbryoStart2","FireBest jdp_biofactoryEmbryoCallXenobiology","""$PlayerSirOrMadam, we're getting anomalous readings from the surface."" 
+
+""Looks like."" They stop to readjust their sensor suite. ""A planet spanning superorganism? I don't know what to make of it, $PlayerSirOrMadam.""",,
+jdp_biofactoryEmbryoNidelikoIntroOption,jdp_biofactoryEmbryoCallXenobiology,"!$player.jdp_metNideliko",,,"jdp_biofactoryEmbryoCallXenobiology:""Comms, signal Xenobiology to the bridge.""",
+jdp_biofactoryEmbryoCallXenobiology,DialogOptionSelected,"$option == jdp_biofactoryEmbryoCallXenobiology","$jdp_biofactoryEmbryoDiscovered = true","""Yes $PlayerSirOrMadam!"" comes from your comms officer. They pull a hardwired communicator from its hook at their station and begin speaking through the shipwide announcement system. Similar comms found favour post AIW1 for their resistance to cyberwarfare. ""Xenobiology to the bridge. I say again, Xenobiology to the bridge.""
+
+They hook the communicator and spin to face you. ""Their quarters are only a few minutes away, it shouldn't take that long-""
+
+A woman clutching assorted papers and a Tripad rushes through the autodoor at unnecessary speed, almost losing her spectacles in the flurry of movement.","jdp_biofactoryEmbryoXenobiologyIntro:""Hello-""",
+jdp_biofactoryEmbryoXenobiologyIntro,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyIntro","$player.jdp_metNidelikoLocation = ""Biofactory Embryo""
+$player.jdp_metNideliko = true","She leaps into speech like a faulty jump drive, standing to attention and wrestling to keep ahold of her files. ""Excuse me. Greetings! My name is Nideliko Tanabe, newly assigned to the bridge crew of the $player.flagshipName! 33, single, female, Jangalan! I look forward to working with you!""
+
+Your bridge crew are stunned for a moment by the bizarre outburst. Comms chuckles lightly under their breath and returns to their duties, leaving you to deal with Nideliko. 
+
+You spy a little graphite writing tool behind her ear, perhaps the influence of the Luddic faith over wider Jangalan culture? As you consider she plucks and stuffs it into her notes. Maybe its just a personal eccentricity.","jdp_biofactoryEmbryoXenobiologyOpinion:""We need your opinion on a superorganism.""",
+jdp_biofactoryEmbryoNidelikoKnownOption,jdp_biofactoryEmbryoCallXenobiology,"$player.jdp_metNideliko",,,"jdp_biofactoryEmbryoCallXenobiologyMet:""Comms, signal Xenobiology to the bridge.""",
+jdp_biofactoryEmbryoCallXenobiologyMet,DialogOptionSelected,"$option == jdp_biofactoryEmbryoCallXenobiologyMet","$jdp_biofactoryEmbryoDiscovered = true","Your comms officer groans and then catches themselves, ""Yes $PlayerSirOrMadam."" comes with decidedly little enthusiasm. They pull a hardwired communicator from its hook at their station and begin speaking through the shipwide announcement system. ""Xenobiology to the bridge. I say again, Xenobiology to the bridge.""
+
+They hook the communicator and spin to face you. ""They were pretty fast last time. It shouldn't take that long-""
+
+Xenobiology Officer Nideliko Tanabe rushes through the autodoors at unnecessary speed, assorted papers and Tripad in hand. She smiles, pushing her glasses back up onto her face after almost losing them in the flurry of movement.","jdp_biofactoryEmbryoXenobiologyReturn:""Hello-""",
+jdp_biofactoryEmbryoXenobiologyReturn,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyReturn",,"Xenobiology stands to attention, wrestling to keep ahold of her files and practically transverse jumps into conversation. ""Excuse me. I'm back! Nideliko Tanabe reporting for duty, $PlayerSirOrMadam!"" She looks around the bridge, eyes wide behind her spectacles. ""I'm so happy to be working with you all again!""
+
+Some of your bridge crew are momentarily stunned by the bizarre outburst, others remember the eccentricity that comes with working with Nideliko and simply ignore her. Comms chuckles lightly under their breath and returns to their duties.","jdp_biofactoryEmbryoXenobiologyOpinion:""Welcome back, we need your opinion on a superorganism.""
+jdp_biofactoryEmbryoXenobiologyReturnWho:""Who are you again?""",
+jdp_biofactoryEmbryoXenobiologyReturnWho,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyReturnWho",,"Nideliko's face falls instantly. ""I'm Nideliko Tanabe! Xenobiology officer of the bridge crew of the $player.flagshipName!"" 
+
+She begins listing personal traits, attempting to jog your memory. ""33? Single? Female? Jangalan?"" She seems thoroughly devastated, each time deflating more from your lack of recognition. ""You called me in for my opinion on the $player.jdp_metNidelikoLocation?"" Her voice trails off. ""I thought I made quite a strong first impression.""","jdp_biofactoryEmbryoXenobiologyMoveOn:""Regardless, we need your opinion on a superorganism.""
+jdp_biofactoryEmbryoXenobiologyRemember:""Nideliko! I remember now!""
+jdp_biofactoryEmbryoXenobiologyRememberLie:""Nideliko! I remember now!"" (Lie)",
+jdp_biofactoryEmbryoXenobiologyMoveOn,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyMoveOn","$option = jdp_biofactoryEmbryoXenobiologyOpinion 0
+$player.ethosMercenary++
+FireBest DialogOptionSelected","""Oh."" comes quietly. She pokes at her eyes behind her glasses. ""Ok""",,
+jdp_biofactoryEmbryoXenobiologyRemember,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyRemember",,"She begins glowing instantly. ""I knew you would! I'm very memorable. What do you need from me this time Captain? Science awaits!""","jdp_biofactoryEmbryoXenobiologyOpinion:""We need your opinion on a superorganism.""",
+jdp_biofactoryEmbryoXenobiologyRememberLie,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyRememberLie","$player.ethosLiar++
+","She begins glowing instantly. ""I knew you would! I'm very memorable. What do you need from me this time Captain? Science awaits!""","jdp_biofactoryEmbryoXenobiologyOpinion:""We need your opinion on a superorganism.""",
+jdp_biofactoryEmbryoXenobiologyOpinion,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyOpinion","$jdp_biofactoryEmbryoDiscovered = true
+","Nideliko bows slightly, ""Yes $PlayerSirOrMadam.""
+
+You motion her to the auxiliary command centre and grant it access to the individual datastreams of all bridge stations. Laying her affects on the console, she pulls up the external scopes. Her face flashes with recognition, then excitement, then worry.
+
+She pulls a little graphite writing tool from somewhere amongst her documents to jot notes, and shuffles through them with purpose, ""I have my report ready!"" She announces suddenly, standing abruptly and collecting her files. She begins confidently walking towards your post before rushing back to first grab her Tripad.","jdp_biofactoryEmbryoXenobiologyOpinion2:""Go on?""",
+jdp_biofactoryEmbryoXenobiologyOpinion2,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyOpinion2",,"""Its a Biofactory!"" she exclaims, pushing up her glasses with a folder.
+
+""Whoever lived surface-side didn't take proper care to prune the thing so it has just kept growing."" She pauses, thinking. ""Actually they probably died, but regardless.""
+
+""See, Biofactories are designed to be inedible, Exodyne gave the flesh a high toxicant quotient so it couldn't be used for agriculture. Technically smart, but that also means nothing can cull it naturally. The Genetic Failsafe only triggers upon total ecological collapse, which clearly hasn't happened, so it simply hasn't died."" 
+
+She smiles, self assured, ""hence, over however many cycles it has been, we get a superorganism!""","jdp_biofactoryEmbryoXenobiologyOpinion3:""Any possible course of action?""",
+jdp_biofactoryEmbryoXenobiologyOpinion3,DialogOptionSelected,"$option == jdp_biofactoryEmbryoXenobiologyOpinion3",,"""We can't kill it, impossible."" She pauses. ""Well. Not impossible, but it is infeasible, the nervous system is decentralised.""
+
+She reaches over your console to pull up the external scopes, Tactical's eye twitches at her intrusion into your space, but she seems entirely oblivious. ""Somewhere down there is the facility where the Biofactory Embryo was extruded,"" she continues.
+
+""Part of that process is the creation of the Biofactory womb. If we can get in there, dig around in the meat and sever the new embryo, this-"" She waves a hand across a holo of $name, ""will all slowly die back. For this scale of organism? It would take tens if not hundreds of cycles, this guy is here for our lifetimes at minimum, but we would get a Biofactory Embryo for the trouble.""","jdp_biofactoryEmbryoTacticalOpinion:""Tactical, how feasible is a surface op?""",
+jdp_biofactoryEmbryoTacticalOpinion,DialogOptionSelected,"$option == jdp_biofactoryEmbryoTacticalOpinion","jdp_DisplayItem biofactory_embryo
+
+$marines = 200 0
+$fuel = 200 0
+$hand_weapons = 50 0
+
+ShowResCost marines $marines fuel $fuel true hand_weapons $hand_weapons true
+
+FireBest jdp_biofactoryEmbryoCheckCanAfford
+FireBest jdp_biofactoryEmbryoDisableOperationIfNeeded
+
+jdp_FakeLeave","""It will be tough, $PlayerSirOrMadam, this isn't exactly a conventional firefight."" They take a moment to consider.
+
+""If we clear out a landing zone with some precise orbital burns we could insert a team. Light arms won't cut it though, we'll need some real hardware for this, a mechanised op.""","0:jdp_biofactoryEmbryoTacticalOperation:Approve the ground operation","supplies
+fuel
+crew
+marines
+
+food
+organics
+volatiles
+ore
+rare_ore
+metals
+rare_metals
+heavy_machinery
+domestic_goods
+
+organs
+drugs
+hand_weapons
+luxury_goods
+lobster"
+jdp_biofactoryEmbryoCheckCanAfford,jdp_biofactoryEmbryoCheckCanAfford,"$player.fuel >= $fuel
+$player.marines >= $marines
+$player.hand_weapons >= $hand_weapons","$canAfford = true 0",,,
+jdp_biofactoryEmbryoDisableOperation,jdp_biofactoryEmbryoDisableOperationIfNeeded,"!$canAfford","SetEnabled jdp_biofactoryEmbryoTacticalOperation false",,,
+jdp_biofactoryEmbryoTacticalOperation,DialogOptionSelected,"$option == jdp_biofactoryEmbryoTacticalOperation","RemoveCommodity fuel $fuel
+RemoveCommodity hand_weapons $hand_weapons","You convene your senior officers to discuss a ground insertion on $name. Both SIGINT and HUMINT are nonexistent, what with the lack of human opposition, so planning the operation is unorthodox. 
+
+To the dismay of the marine company head, Nideliko has volunteered to assist from the ground. According to her analysis the superorganism should display no overt hostility towards the team. Weaponry, particularly of the antimatter family, will however be necessary to clear the path from the landing site to the Biofactory womb. 
+
+A volley of precise orbital orbital burns from your $shipOrFleet excises a patch of slagged wasteland into the surface of $name, Sensors reports that the Biofactory is already growing back into the space, but it will be days before the landing site is retaken.","jdp_biofactoryEmbryoTacticalOperation2:Continue",
+jdp_biofactoryEmbryoTacticalOperation2,DialogOptionSelected,"$option == jdp_biofactoryEmbryoTacticalOperation2",,"The contingent of marines and their Xenobiology escort are already on route. Bridge displays flicker with hundreds of vidfeeds, each accompanied by health monitors and antixenol dosage trackers. 
+
+As promised, the operation is mostly uneventful, the occasional tunnels carved through the flesh slowly contract behind the team ominously, but no deliberate attempts are otherwise made by the superorganism to stop their advance. Progress is slow through the macroscale organs of the Biofactory, bicuspid valves larger than the company APCs slowly open and close off routes, releasing streams of synthetic compounds in their wake. 
+
+Fronds of villi wave and cling to the combat suits of those at the edges of the pack, but seem otherwise harmless, pits of mucus and other fluids are occasionally waded through. After a few hours the team reach the formed ceramometal shells of a ruined human settlement, entwined within the embrace of the living landscape.","jdp_biofactoryEmbryoTacticalOperation3:Switch to viewing Nideliko's feed",
+jdp_biofactoryEmbryoTacticalOperation3,DialogOptionSelected,"$option == jdp_biofactoryEmbryoTacticalOperation3",,"Nideliko's feed jitters slightly as she waits beside a genetics kit inside one of the APCs, the Tripad connected to the unit lights up red after roughly a minute to her profound disappointment. The Xenobiologist scrawls what you assume to be ""Genetics too corrupted"" with graphite before she slaps a hand against her suit faceplate and activates comms. 
+
+""$PlayerSirOrMadam! Surface report! This site is a bust, the genetics are too corrupted by replication to be the origin. Moving on."" She turns to face the marine company lead and the feed shakes left and right, they move out immediately.
+
+A dedicated holo tracks the teams movements across the surface, by taking the path of least resistance through the tunnels it begins to appear disturbingly like a blood vessel chart. Within a few further hours the next remnant of human civilisation is reached, a ribcage of synthetic material for the synthetic organism.","jdp_biofactoryEmbryoTacticalOperation4:Continue",
+jdp_biofactoryEmbryoTacticalOperation4,DialogOptionSelected,"$option == jdp_biofactoryEmbryoTacticalOperation4",,"This time the the Tripad lights a reassuring shade of green, to which Nideliko's feed jumps vertically slightly and clatters against the low roof of the transport vehicle. ""Captain! Report! We are at the location, genetic corruption as low as 0.095%!"" They seemingly begin talking to the surface team. ""Spread out! The inner epidermis is somewhere here, once we breach the womb we can extract the Embryo."" 
+
+The operation moves quickly from there, a heavy antimatter weapon slices an entrance through a particularly suppurate layer of skinlike tissue, a pump is then used to drain the amniotic fluid and mucus disgorged from what you presume to be the Biofactory womb.","jdp_biofactoryEmbryoTacticalOperation5:Continue",
+jdp_biofactoryEmbryoTacticalOperation5,DialogOptionSelected,"$option == jdp_biofactoryEmbryoTacticalOperation5","AddRemoveAnyItem SPECIAL biofactory_embryo 1
+unset $jdp_biofactoryEmbryo
+EndConversation NO_CONTINUE","Anchored to the ceiling by thick nervous strands and dripping in yellowed pus is an intact Biofactory Embryo. Nideliko smiles beside the disgusting thing briefly before the chords are cut and it is placed in a specially designed crate for extraction. 
+
+The trek back is slow, but within a few hours it is secured in your hold.","100:defaultLeave:Leave",
+"#END Biofactory Embryo Hubris Event",,,,,,
+,,,,,,
+# Soil Nanites Hubris Event,,,,,,
+jdp_soilNanitesBlockFirstSurvey,PopulateOptions,"$jdp_soilNanitesBlockFirstSurvey","RemoveOption surveyPerform
+unset $jdp_soilNanitesBlockFirstSurvey",,,"# block first instance of survey option in order to direct player attention to the event."
+jdp_soilNanitesRestart,PopulateOptions,"$jdp_soilNanites
+$jdp_soilNanitesDiscovered
+!$market.isPlayerOwned
+!$alreadyInOrbit",,"Upon entering orbit, sensors informs you that the rogue Soil Nanites are still active, the prospect of an extraction operation is still feasible.","1:jdp_soilNanitesTechnologyOpinion:Consider extracting the Soil Nanites","This one assumes you've just arrived"
+jdp_soilNanitesRestartTwice,PopulateOptions,"$jdp_soilNanites
+$jdp_soilNanitesDiscovered
+!$market.isPlayerOwned
+$alreadyInOrbit","unset $alreadyInOrbit","Sensors informs you that the rogue Soil Nanites are still active, the prospect of an extraction operation is still feasible.","1:jdp_soilNanitesTechnologyOpinion:Consider extracting the Soil Nanites","This one assumes you've been in orbit for a while already."
+jdp_soilNanitesColony,PopulateOptions,"$jdp_soilNanites
+$market.isPlayerOwned","Highlight ""flagged for your attention""
+SetOptionColor jdp_soilNanitesColony2 highlight","Amid the low-priority updates you receive upon entering the colonial datasphere, a report is flagged for your attention. ","1:jdp_soilNanitesColony2:View the report",
+jdp_soilNanitesColony2,DialogOptionSelected,"$option == jdp_soilNanitesColony2",,"The local authorities request assistance in performing a joint orbital-surface operation, the details of which closely mirror your unrealised plans to perform an airdrop of transplutonics, intended to force a recall of the rogue Soil Nanites on $name.
+
+The plans stipulate that the framing as a joint operation is entirely for optics, a move intended to protect the integrity of the local Administration in a transparent attempt to either claim glory or dodge responsibility depending on the outcome.
+
+It is for this reason that the extraction would have to be done entirely with our materiel and manpower.","jdp_soilNanitesTacticalOpinion:""Tactical, how feasible is a surface op?""
+100:defaultLeave:Leave",
+jdp_soilNanitesStart,PopulateOptions,"$jdp_soilNanites
+!$jdp_soilNanitesDiscovered","$jdp_soilNanitesDiscovered = true
+","Upon entering orbit, your sensors officer flags $name as highly unusual and requests your personal attention.","jdp_soilNanitesStart2:Motion your sensors officer to speak","Make this a global tag? Not that useful at the moment."
+jdp_soilNanitesStart2,DialogOptionSelected,"$option == jdp_soilNanitesStart2","FireBest jdp_soilNanitesCallXenobiology","""$PlayerSirOrMadam, we're getting anomalous readings from the surface."" 
+
+""But it looks so verdant."" comes wistfully, they stop to readjust their sensor suite. ""$PlayerSirOrMadam, this entire planet is an ecological deadzone, preliminary readings indicate the atmosphere is almost entirely deoxygenated. That a functional ecosystem exists here at all is a miracle,""",,
+jdp_soilNanitesNidelikoIntroOption,jdp_soilNanitesCallXenobiology,"!$player.jdp_metNideliko",,,"jdp_soilNanitesCallXenobiology:""Comms, signal Xenobiology to the bridge.""",
+jdp_soilNanitesCallXenobiology,DialogOptionSelected,"$option == jdp_soilNanitesCallXenobiology","$jdp_soilNanitesDiscovered = true","""Yes $PlayerSirOrMadam!"" comes from your comms officer. They pull a hardwired communicator from its hook at their station and begin speaking through the shipwide announcement system. Similar comms found favour post AIW1 for their resistance to cyberwarfare. ""Xenobiology to the bridge. I say again, Xenobiology to the bridge.""
+
+They hook the communicator and spin to face you. ""Their quarters are only a few minutes away, it shouldn't take that long-""
+
+A woman clutching assorted papers and a Tripad rushes through the autodoor at unnecessary speed, almost losing her spectacles in the flurry of movement.","jdp_soilNanitesXenobiologyIntro:""Hello-""",
+jdp_soilNanitesXenobiologyIntro,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyIntro","$player.jdp_metNidelikoLocation = ""Soil Nanites""
+$player.jdp_metNideliko = true","She leaps into speech like a faulty jump drive, standing to attention and wrestling to keep ahold of her files. ""Excuse me. Greetings! My name is Nideliko Tanabe, newly assigned to the bridge crew of the $player.flagshipName! 33, single, female, Jangalan! I look forward to working with you!""
+
+Your bridge crew are stunned for a moment by the bizarre outburst. Comms chuckles lightly under their breath and returns to their duties, leaving you to deal with Nideliko.
+
+You spy a little graphite writing tool behind her ear, perhaps the influence of the Luddic faith over wider Jangalan culture? As you consider she plucks and stuffs it into her notes. Maybe its just a personal eccentricity.","jdp_soilNanitesXenobiologyOpinion:""We need your input on this ecosystem.""",
+jdp_soilNanitesNidelikoKnownOption,jdp_soilNanitesCallXenobiology,"$player.jdp_metNideliko",,,"jdp_soilNanitesCallXenobiologyMet:""Comms, signal Xenobiology to the bridge.""",
+jdp_soilNanitesCallXenobiologyMet,DialogOptionSelected,"$option == jdp_soilNanitesCallXenobiologyMet","$jdp_soilNanitesDiscovered = true","Your comms officer groans and then catches themselves, ""Yes $PlayerSirOrMadam."" comes with decidedly little enthusiasm. They pull a hardwired communicator from its hook at their station and begin speaking through the shipwide announcement system. ""Xenobiology to the bridge. I say again, Xenobiology to the bridge.""
+
+They hook the communicator and spin to face you. ""They were pretty fast last time. It shouldn't take that long-""
+
+Xenobiology Officer Nideliko Tanabe rushes through the autodoors at unnecessary speed, assorted papers and Tripad in hand. She smiles, pushing her glasses back up onto her face after almost losing them in the flurry of movement.","jdp_soilNanitesXenobiologyReturn:""Hello-""",
+jdp_soilNanitesXenobiologyReturn,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyReturn",,"Xenobiology stands to attention, wrestling to keep ahold of her files and practically transverse jumps into conversation. ""Excuse me. I'm back! Nideliko Tanabe reporting for duty, $PlayerSirOrMadam!"" She looks around the bridge, eyes wide behind her spectacles. ""I'm so happy to be working with you all again!""
+
+Some of your bridge crew are momentarily stunned by the bizarre outburst, others remember the eccentricity that comes with working with Nideliko and simply ignore her. Comms chuckles lightly under their breath and returns to their duties.","jdp_soilNanitesXenobiologyOpinion:""Welcome back, we need input on this dead ecosystem.""
+jdp_soilNanitesXenobiologyReturnWho:""Who are you again?""",
+jdp_soilNanitesXenobiologyReturnWho,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyReturnWho",,"Nideliko's face falls instantly. ""I'm Nideliko Tanabe! Xenobiology officer of the bridge crew of the $player.flagshipName!"" 
+
+She begins listing personal traits, attempting to jog your memory. ""33? Single? Female? Jangalan?"" She seems thoroughly devastated, each time deflating more from your lack of recognition. ""You called me in for my opinion on the $player.jdp_metNidelikoLocation?"" Her voice trails off. ""I thought I made quite a strong first impression.""","jdp_soilNanitesXenobiologyMoveOn:""Regardless, we need input on this dead ecosystem.""
+jdp_soilNanitesXenobiologyRemember:""Nideliko! I remember now!""
+jdp_soilNanitesXenobiologyRememberLie:""Nideliko! I remember now!"" (Lie)",
+jdp_soilNanitesXenobiologyMoveOn,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyMoveOn","$option = jdp_soilNanitesXenobiologyOpinion 0
+$player.ethosMercenary++
+FireBest DialogOptionSelected","""Oh."" comes quietly. She pokes at her eyes behind her glasses. ""Ok""",,
+jdp_soilNanitesXenobiologyRemember,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyRemember",,"She begins glowing instantly. ""I knew you would! I'm very memorable. What do you need this time Captain $playerLastName?"" ","jdp_soilNanitesXenobiologyOpinion:""We need input on this dead ecosystem.""",
+jdp_soilNanitesXenobiologyRememberLie,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyRememberLie","$player.ethosLiar++
+","She begins glowing instantly. ""I knew you would! I'm very memorable. What do you need this time Captain $playerLastName?"" ","jdp_soilNanitesXenobiologyOpinion:""We need input on this dead ecosystem.""",
+jdp_soilNanitesXenobiologyOpinion,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyOpinion","$jdp_soilNanitesDiscovered = true
+","Nideliko bows slightly, ""Yes $PlayerSirOrMadam. Lets see the data."" 
+
+You motion her to the auxiliary command centre, granting it access to the datastream of the $shipOrFleets external scopes. After laying her affects on the console, she settles into the space and opens a holo of $name.
+
+Pulling a little graphite writing tool from somewhere amongst her documents, she begins studying the data and jotting notes. A look of recognition flashes across her face as she begins scribbling more energetically, flicking through files. A meek ""fascinating"" comes quietly.","jdp_soilNanitesXenobiologyOpinion2:""Thesis, please.""",
+jdp_soilNanitesXenobiologyOpinion2,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyOpinion2",,"""What we have here is eutrophication!"" She stops to explain like an excitable teacher, ""excess nutrient accumulation, $PlayerSirOrMadam. Things grow too fast, die even faster, and as they break down oxygen is locked up. Here it has happened on the scale of an entire world! Wonderful!"" Her eyes are filled with an unnerving gleam of delight given the implied devastation.
+
+She nods to your Technology officer, seemingly for comment, but then continues regardless. ""How well regulated were Domain-era Soil Nanites? Did they have any kind of continency for extreme overuse?"" 
+
+Technology clicks their tongue and brings up a datastream of Domain-era legalise, speaking aloud. ""Domain Nanite Safety Regulation 4324, subsection 79, 80, 81, 82-"" they load a data analysis programme and task it with filtering through the endless archives of laws and regulations. After a few moments the console produces a satisfied noise, process complete.","jdp_soilNanitesXenobiologyOpinion3:""Technology, report.""",
+jdp_soilNanitesXenobiologyOpinion3,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyOpinion3",,"""The specs suggest not?"" Technology shrugs. ""Soil Nanites are capable of self assembly, but only after their numbers are depleted by wear, that's relatively slow given they spend most of their time under the surface cracking bedrock into usable NPK.""
+
+""Radiation bitflips is where the transplutonic and volatile safeties came from, at those depths its the only source worth considering. Selfguided assembly is heavily regulated to-"" their tone changes, again reading legalise aloud ""prevent the infinitesimal chance it causes a-"" they pause and squint, rereading the data from their display ""a megadeath incident. Ominous. And profoundly unhelpful, no records of such a thing exist.""
+
+Nideliko starts shifting in place, you suspect she is moments away from raising her hand like a child that wants to speak.","jdp_soilNanitesXenobiologyOpinion4:""Nideliko? Continue""",
+jdp_soilNanitesXenobiologyOpinion4,DialogOptionSelected,"$option == jdp_soilNanitesXenobiologyOpinion4",,"""Then I was right Captain!"" Nideliko exclaims, her cadence accelerating as she talks. ""These nanites didn't have a chance-"" she pauses for a microsecond. ""Actually no. They didn't have a reason, to shut off post-Collpase, so they just kept fertilising the environment without anyone left to take in the harvest. Every cycle yet more organisms die and decay and eventually the ecosystem destabilised from the unsustainable rate of decomposition."" 
+
+She stops to breathe. ""$name will eventually recover, granted we can find a way to shut them off, but the timescale of that recovery is likely thousands of cycles. The damage is functionally permanent."" 
+
+Sensors sees this conclusion as a fitting time to interject. ""$PlayerSirOrMadam, we have a subsurface signal. Judging by the broadcast indicia its internal control comms, product designation is an EUT-202 Soil Nanite Web."" They pull up a holo of $name, ""it forwards to a ruined arcology complex for manual control, but we have no compatible recall codes on file.""","jdp_soilNanitesTechnologyOpinion:""Could we somehow trip the failsafe?""",
+jdp_soilNanitesTechnologyOpinion,DialogOptionSelected,"$option == jdp_soilNanitesTechnologyOpinion",,"The bridge goes silent for a moment, Technology brings up a logistics processing tool on their terminal. ""Volatiles are certainly too difficult to handle,"" comes quietly, for themselves rather than you. ""Transplutonics though...""
+
+They look up from their station. ""We would only need to saturate a comparatively small local volume."" A quiet exhalation. ""We can't be certain, the specs eschew specifics on the exact nature of the failsafe, but even a few individual nanites detecting the change should hopefully trigger a cascading recall order, Domain-era safeties tend to be draconian like that.""
+
+""It will be tough, but hypothetically if we can airdrop a sufficient amount of loose transplutonics on top of the arcology control centre, we should be able to trip the failsafe and collect the Soil Nanites for our own use.""","jdp_soilNanitesOpsOpinion:""Chief, how feasible is this?""",
+jdp_soilNanitesOpsOpinion,DialogOptionSelected,"$option == jdp_soilNanitesOpsOpinion",,"""It can be done,"" your Operations Chief states, dry as Mairaath. ""Planning and enacting a series of precise orbital drops, several hundred tonnes of hyperdense material in volume,"" they pause. ""Its an immense logistical problem, but mechanically its very simple, functionally no different from a tactical antimatter bombardment,"" they nod to their left. ""Tactical?"" 
+
+Tactical continues on cue, smooth and efficient, ""indeed, and with no hostile defenses to evade, the optimal flight plans of our shuttles can be guided by the cold hand of orbital mechanics. Coordination can piggyback off of our military comms, the limiting factor will be the loading time. If we can't fill them quickly enough back at the $shipOrFleet it will massively slow us down.""","jdp_soilNanitesOpsOpinion2:""Quartermaster, how fast can we fill a shuttle?""",
+jdp_soilNanitesOpsOpinion2,DialogOptionSelected,"$option == jdp_soilNanitesOpsOpinion2",,"""The optimal way to move this much material is in bulk, $PlayerSirOrMadam. We can cut out unloading entirely, tonnes dropped at a time by simply opening up the shuttle doors in the lower atmosphere. Loading will be slower, but even pessimistically I think it would only take a day to drop a few hundred tonnes with an expanded cargo crew."" 
+
+They pause, visibly thinking, ""regarding the delivery, it would be be inaccurate but not uncontrollable. The material would however have an impact velocity high enough to embed itself in the surface.""
+
+Technology interjects, ""which is in fact desirable! The deeper they are the closer the radiation source is to the nanite web and the higher the likelihood we will trip the failsafe,"" they stop. ""This seems oddly achievable.""","jdp_soilNanitesTacticalOpinion:""I want full plans by end of shift.""",
+jdp_soilNanitesTacticalOpinion,DialogOptionSelected,"$option == jdp_soilNanitesTacticalOpinion","jdp_DisplayItem soil_nanites
+
+$crew = 300 0
+$rare_ore = 5000 0
+$supplies = 100 0
+
+ShowResCost crew $crew rare_ore $rare_ore true supplies $supplies true
+
+FireBest jdp_soilNanitesCheckCanAfford
+FireBest jdp_soilNanitesDisableOperationIfNeeded
+
+jdp_FakeLeave","""Permission to speak plainly Captain? We could do this now,"" Chief states candidly. 
+ 
+""Its just a tactical bombardment, all we would need is to draft some crew for moving the material and some lifting hardware for the drop.""","0:jdp_soilNanitesTacticalOperation:Approve the airdrop","supplies
+fuel
+crew
+marines
+
+food
+organics
+volatiles
+ore
+rare_ore
+metals
+rare_metals
+heavy_machinery
+domestic_goods
+
+organs
+drugs
+hand_weapons
+luxury_goods
+lobster"
+jdp_soilNanitesCheckCanAfford,jdp_soilNanitesCheckCanAfford,"$player.rare_ore >= $rare_ore
+$player.crew >= $crew
+$player.supplies >= $supplies","$canAfford = true 0",,,
+jdp_soilNanitesDisableOperation,jdp_soilNanitesDisableOperationIfNeeded,"!$canAfford","SetEnabled jdp_soilNanitesTacticalOperation false",,,
+jdp_soilNanitesTacticalOperation,DialogOptionSelected,"$option == jdp_soilNanitesTacticalOperation","RemoveCommodity rare_ore $rare_ore
+RemoveCommodity supplies $supplies","The bridge is a hive of activity, countless feeds spooling forth through the central display, within moments the first shuttle is filled with the illustrious and radiative material. The many vidfeeds from the loader crew stutter and distort from the immense levels of alpha decay, tearing like an analog null datastream. 
+
+""Its perfectly safe, Captain,"" your Quartermaster states upon seeing your expression. ""Containment procedures are in place, we'll switch out the crew within the hour."" 
+
+""First shuttle is away. I say again, first shuttle is away,"" comes from Comms, monotone. The feed from SHUTTLE01 pulls away and dives into the deoxygenated atmosphere of $name, drag heating licking at the shimmer of its aerobreak shield. Within a moment the crew have begun loading the next.","jdp_soilNanitesTacticalOperation2:""Sensors, status of the control signal?""",
+jdp_soilNanitesTacticalOperation2,DialogOptionSelected,"$option == jdp_soilNanitesTacticalOperation2",,"""Streaming now, $PlayerSirOrMadam, specs indicate we should be able to see the recall order once the failsafe is triggered."" The control signal is spartan, an endless stream of abbreviations and data saving measures. Each minute the same lines appear. 
+
+//EUT-202SNW-RADTHRSHLD: 0.05% 
+//EUT-202SNW-SYSCHECK: ACTIVE
+
+Within the hour the second shuttle is away, then the third, then the fourth and the fifth, the radiation threshold ticking up more with each predicted impact. You watch the rear shuttle camera feed skimming above the thin clouds of $name like a bird of prey, main bays open to trail lines of transplutonics like the spittle of an anticipatory predator.
+
+//EUT-202SNW-RADTHRSHLD: 110% 
+//EUT-202SNW-SYSCHECK: EMERGENCY RECALL","jdp_soilNanitesTacticalOperation3:""Success! Right?""",
+jdp_soilNanitesTacticalOperation3,DialogOptionSelected,"$option == jdp_soilNanitesTacticalOperation3",,"A cheer comes from the more relaxed bridge staff. Nideliko rushes to and tackles Technology in hug that they clearly find to be a deeply objectionable interaction.
+
+Comms opens a channel to the shuttle crew. ""Shuttle Six, operation success. I say again, operation success. We'll see you back home,"" they futz with their console for a moment. ""Ground crew, nanites are primed for collection.""
+
+Just outside the maximum projected impact radius your ground team breach the arcology complex on cue. Switching to the feed of your Operations Chief on site you see handheld illuminators light up the space. One of the engineers slices into a nearby terminal and taps the arcologies internal comms, within moments they have access to maps and what still functional surveillance systems exist. A conspicuous crate is logged to have been automatically packaged fours floors below the team only minutes ago.","jdp_soilNanitesTacticalOperation4:Continue",
+jdp_soilNanitesTacticalOperation4,DialogOptionSelected,"$option == jdp_soilNanitesTacticalOperation4","AddRemoveAnyItem SPECIAL soil_nanites 1
+unset $jdp_soilNanites
+EndConversation NO_CONTINUE","Moving through the complex is at a glance a somewhat troubling prospect, full of plantlife and death such as it is, but plasma cutters can cut greenery just as efficiently as foamed cerametal. The downloaded maps suggest descending four levels on foot would under normal circumstances take 30 minutes, Chief gets there in 25.
+
+Handheld scanners confirm a specialised crate houses the inert slurry of the recalled nanite web, within the hour it is secured in your hold.","100:defaultLeave:Leave",
+"#END Soil Nanites Hubris Event",,,,,,
+,,,,,,
+# Fusion Lamp Hubris Event,,,,,,
+,,,,,,
+# Helianthus,,,,,,
+"#END Helianthus",,,,,,
+,,,,,,
+# Enitity,,,,,,
+jdp_fusionLampOpenDialogUnexplored,OpenInteractionDialog,"$tag:jdp_erratic_lamp_tag score:101
+$customType == jdp_erratic_lamp score:101","SalvageGenFromSeed
+ShowDefaultVisual
+FireBest SalvageCheckHostile","TESTING TESTING!",,
+jdp_fusionLampDefenderDesc,TriggerAutomatedDefenses,"$tag:jdp_erratic_lamp_tag score:101
+$customType == jdp_erratic_lamp score:101","SalvageDefenderInteraction","THINGS JUST GOT MORE INTERESTING!",,
+jdp_fusionLampPostDefenders,BeatDefendersContinue,"$tag:jdp_erratic_lamp_tag score:101
+$customType == jdp_erratic_lamp score:101",,"SHE WAS DRESSED IN!","100:defaultLeave:Leave",
+"#END Enitity",,,,,,
+"#END Fusion Lamp Hubris Event",,,,,,
+,,,,,,
+# Plasma Dynamo Hubris Event,,,,,,
+jdp_plasmaDynamoKlaesIgnore,PickGreeting,"$id == jdp_klaes score:30000",,"The purple emblem of the Domain Sixth Battlegroup performs half a rotation. After a short wait, your connection request is denied. 
+
+To see the silver amphiptere attached to piracy is not uncommon, but its implications are clear. This station was once the haunt of Warlord Leonis, inheriting the comms frequencies he himself inherited from the Domain.","0:cutCommLink:Cut the comm link",
+"#END Plasma Dynamo Hubris Event",,,,,,
+"#END Hubris Events",,,,,,
+,,,,,,
 # DEV OPTIONS,,,,,,
+jdp_Leave,DialogOptionSelected,"$option == jdp_Leave","$menuState = main 0
+$alreadyInOrbit = true
+FireAll PopulateOptions",,,"Fake leave. Triggered by jdp_FakeLeave. Only takes you back to the main state of the menu rather than closing the interaction. Still has the [esc] hotkey. Also tells my events to assume you've been messing around in orbit for a while already."
+jdp_PRdevstartFixGarg,DEVTestMenuOptions,,"SetOptionColor jdp_PRdevstartFixGargoyle gray
+",,"jdp_PRdevstartFixGargoyle:[JDP DEV] unhide Gargoyle.",
+jdp_PRdevstartFixGargoyle,DialogOptionSelected,"$option ==jdp_PRdevstartFixGargoyle","SetPersonHidden gargoyle false","Dev unhidden Gargoyle. They should now be visible, wherever they are.",,
 jdp_PRdevstartFractal,DEVTestMenuOptions,,"SetOptionColor jdp_PRdevstartFractal2 gray
 ",,"jdp_PRdevstartFractal2:[JDP DEV] reset Fractal Theorem.",
 jdp_PRdevstartFractal2,DialogOptionSelected,"$option == jdp_PRdevstartFractal2","$global.jdp_PRCompleted = true
@@ -1784,8 +2163,18 @@ AddRemoveAnyItem SPECIAL jdp_dead_alpha -1
 AddCommodity alpha_core 1
 
 SetTextHighlights ""Will trigger again in 3 in-game days.""","Dev reset Fractal Theorem. Will trigger again in 3 in-game days. Alpha refunded!",,
-jdp_PRdevstart2,DialogOptionSelected,"$option == jdp_PRdevstart2","jdp_DevPenrose
-AddCommodity alpha_core 1","Dev spawned Penrose.",,
+jdp_PRdevskills,DEVTestMenuOptions,,"SetOptionColor jdp_PRdevskills2 gray",,"jdp_PRdevskills2:[JDP DEV] grant all custom skills",
+jdp_PRdevskills2,DialogOptionSelected,"$option == jdp_PRdevskills2","jdp_GrantSkill jdp_omegakin
+
+jdp_GrantSkill jdp_perpetualpursuit
+
+jdp_GrantSkill jdp_uneasymovements
+
+jdp_GrantSkill jdp_domainlogistics
+jdp_DisplaySkill jdp_domainlogistics
+
+jdp_GrantSkill jdp_atomicextraction
+jdp_DisplaySkill jdp_atomicextraction","Dev granted all skills.",,"jdp_DisplaySkill jdp_domainlogistics"
 jdp_PRdevstartAlviss,DEVTestMenuOptions,,"SetOptionColor jdp_PRdevstartAlviss2 gray",,"jdp_PRdevstartAlviss2:[JDP DEV] set all Alviss story hooks to true.",
 jdp_PRdevstartAlviss2,DialogOptionSelected,"$option == jdp_PRdevstartAlviss2","SetPersonHidden coureuse false
 MovePersonToMarket coureuse ga_market
@@ -1805,7 +2194,35 @@ $player.kantaProtection = true
 $$player.finishedTutorial = true
 $global.sdtu_completed = true
 $global.lpp_completed = true
-AddCommodity alpha_core 1","Dev set all Alviss story hooks to true for testing.",,
-jdp_PRdevstart,DEVTestMenuOptions,,"SetOptionColor jdp_PRdevstart2 gray",,"jdp_PRdevstart2:[JDP DEV] spawn Penrose manually",
+AddCommodity alpha_core 1
+
+jdp_DisplayItem fullerene_spool
+
+jdp_DisplayItem pristine_nanoforge
+
+jdp_DisplayItem corrupted_nanoforge
+
+jdp_DisplayItem soil_nanites
+
+jdp_DisplayItem synchrotron
+
+jdp_DisplayItem orbital_fusion_lamp
+
+jdp_DisplayItem coronal_portal
+
+jdp_DisplayItem mantle_bore
+
+jdp_DisplayItem catalytic_core
+
+jdp_DisplayItem biofactory_embryo
+
+jdp_DisplayItem plasma_dynamo
+
+jdp_DisplayItem cryoarithmetic_engine
+
+jdp_DisplayItem drone_replicator
+
+jdp_DisplayItem dealmaker_holosuite
+","Dev set all Alviss story hooks to true for testing.",,
 "#END DEV OPTIONS",,,,,,
 

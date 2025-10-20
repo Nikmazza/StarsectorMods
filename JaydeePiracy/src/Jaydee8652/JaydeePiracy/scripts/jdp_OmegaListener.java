@@ -33,7 +33,7 @@ public class jdp_OmegaListener implements FleetEventListener {
 						if (entity.hasTag(Entities.CORONAL_TAP)) {
 							if ((!Global.getSector().getMemoryWithoutUpdate().contains("$jdp_conquered_hypershunt")) && (Global.getSector().getMemoryWithoutUpdate().getBoolean("$nex_randomSector") == false)) {
 
-								log.info("JDP LOG: The Penorse has been generated");
+								log.info("JDP_LOG: The Penorse has been generated");
 
 								Global.getSector().getMemoryWithoutUpdate().set("$jdp_conquered_hypershunt", true);
 								SectorEntityToken hrvoje = Global.getSector().getEntityById("jdp_hrvoje");
@@ -44,7 +44,7 @@ public class jdp_OmegaListener implements FleetEventListener {
 									public void doAction() {
 										CampaignFleetAPI player = Global.getSector().getPlayerFleet();
 										if (player == null) return;
-										log.info("JDP LOG: The Penrose Quest has fired");
+										log.info("JDP_LOG: The Penrose Quest has fired");
 										Global.getSector().getCampaignUI().showInteractionDialog(new RuleBasedInteractionDialogPluginImpl("jdp_hypershuntConquered"), player);
 									}
 								});

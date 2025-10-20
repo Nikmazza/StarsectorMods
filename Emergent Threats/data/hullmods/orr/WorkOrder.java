@@ -37,8 +37,14 @@ public class WorkOrder extends BaseHullMod {
 	private boolean isValidShip(ShipVariantAPI variant) {
 		//aggressor/xiv
 		if (variant.hasHullMod("orr_aggressor")) return true;
+		//aggressor asm (T)
+		else if (variant.hasHullMod("orr_asmgressor")) return true;
+		//Incursion (EX)
+		else if (variant.hasHullMod("vice_intrepid_hull")) return true;
 		//onslaught/xiv
 		else if (variant.hasHullMod("orr_onslaught")) return true;
+		//onslaught asm (T)
+		else if (variant.hasHullMod("orr_asmslaught")) return true;
 		//onslaught cgr
 		else if (variant.hasHullMod("orr_damper_field")) return true;
 		//onslaught dpl original

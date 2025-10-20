@@ -1,0 +1,27 @@
+{
+    "playableFaction":false,
+    "pirateFaction":FALSE,
+    "corvusCompatible":true,
+    "noHomeworld":true,
+    "showIntelEvenIfDead":false,
+    "noRandomizeRelations":true,
+    "spawnPatrols":true,
+
+    "baseFleetCostMultiplier":1.0,
+
+    "rebelFleetSuffix":"Over Zealous Enforcers",
+
+    "startRelationships":{ "independant":0.5, "pirates":-0.5 },
+    "morality":"good",
+    
+    "alignments":{
+        "corporate":0.5,
+        "diplomatic":-1,
+    },
+    
+    "freeMarket":true,
+    
+    "vengeanceLevelNames":["Investigation", "Execution"],
+    "vengeanceFleetNames":["Pursuit Operation", "SWAT Fleet"],
+    "vengeanceFleetNamesSingle":["a Pursuit Operation", "a SWAT Fleet"],
+}

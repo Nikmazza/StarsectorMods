@@ -1,17 +1,18 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 0,
-    "fluxVents": 17,
+    "fluxVents": 19,
     "goalVariant": true,
     "hullId": "mandrake_ix",
     "hullMods": [
-        "hardenedshieldemitter",
         "targetingunit",
+        "ix_reactive_combat_shields",
         "frontemitter",
         "stabilizedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "mandrake_ix_cs",
     "weaponGroups": [
         {
@@ -27,8 +28,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "orthrus_s_ix",
-                "WS 006": "orthrus_s_ix"
+                "WS 005": "spatial_charge_launcher_ix",
+                "WS 006": "spatial_charge_launcher_ix"
             }
         },
         {

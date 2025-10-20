@@ -9,12 +9,14 @@ import com.fs.starfarer.api.impl.campaign.DModManager
 import com.fs.starfarer.api.impl.campaign.ids.Tags
 import com.fs.starfarer.api.loading.VariantSource
 import com.fs.starfarer.api.util.Misc
+import second_in_command.SCModPlugin
 import second_in_command.SCUtils
 import second_in_command.misc.SCSettings
 import second_in_command.scripts.AutomatedShipsManager
 import second_in_command.skills.PlayerLevelEffects
 
 class SCControllerHullmod : BaseHullMod() {
+
 
     companion object {
         fun ensureAddedControllerToFleet() {
@@ -151,6 +153,17 @@ class SCControllerHullmod : BaseHullMod() {
 
 
     override fun advanceInCombat(ship: ShipAPI?, amount: Float) {
+
+       /* println()
+        for (ship in Global.getCombatEngine().ships) {
+            if (ship.owner == 0) continue
+            if (ship.isFighter) continue
+            var data = ship.fleetMember.fleetData
+            println("${ship.fleetMember}_"+data)
+            println(data?.fleet)
+            println()
+        }*/
+
         var member = ship?.fleetMember ?: return
         var fleet = member.fleetData?.fleet ?: return
 

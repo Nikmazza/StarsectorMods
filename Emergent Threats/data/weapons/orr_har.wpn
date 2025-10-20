@@ -1,0 +1,29 @@
+{
+	"id":"orr_har",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"turretSprite":"graphics/orr/weapons/har_turret_base.png",
+	"turretGunSprite":"graphics/orr/weapons/har_turret_recoil.png",
+	"hardpointSprite":"graphics/orr/weapons/har_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/orr/weapons/har_hardpoint_recoil.png",	
+	"visualRecoil":4, #0.00001,  # the gun sprites are only used if this is non-0
+	"renderHints":["RENDER_BARREL_BELOW"],
+	"turretOffsets":[35, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[40, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # LINKED or ALTERNATING.  whether barrels fire at the same time or alternate.
+	"animationType":"NONE",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":75.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":15,
+					   "particleSizeMin":12.0,
+					   "particleSizeRange":22.0,
+					   "particleDuration":0.67,
+					   "particleCount":60,
+					   "particleColor":[255,100,65,125]},
+					   #"particleColor":[255,195,100,75]},
+	"projectileSpecId":"orr_har_shot",  # projectile that will be fired
+	"fireSoundTwo":"heavy_adjudicator_fire",
+	"stopPreviousFireSound":true,	
+}

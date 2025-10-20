@@ -85,6 +85,10 @@ public class IXReputationListener extends BaseCampaignEventListener {
 				giveRadiantTW();
 				sector.getPlayerMemoryWithoutUpdate().set("$receivedShipTW", false);
 			}
+			if (sector.getPlayerMemoryWithoutUpdate().is("$receivedAuroraTW", true)) {
+				giveAuroraTW();
+				sector.getPlayerMemoryWithoutUpdate().set("$receivedAuroraTW", false);
+			}
 		}
 		
 		//Give skill and shuttle for turning in pk to IX/Trinity Worlds, AI core handled by rules.csv
@@ -111,7 +115,14 @@ public class IXReputationListener extends BaseCampaignEventListener {
 	private void giveRadiantTW() {
 		ShipVariantAPI v = Global.getSettings().getVariant("radiant_tw_heavy_2");
 		FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
-		member.setShipName(NameListUtil.TWC_Kupala);
+		member.setShipName(NameListUtil.TWC_Balor);
+		Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);
+	}
+	
+	private void giveAuroraTW() {
+		ShipVariantAPI v = Global.getSettings().getVariant("aurora_tw_elite");
+		FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
+		member.setShipName(NameListUtil.TWC_Morrigan);
 		Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);
 	}
 	

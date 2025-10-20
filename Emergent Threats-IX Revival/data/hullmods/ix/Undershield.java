@@ -7,10 +7,10 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class Undershield extends BaseHullMod {
 	
 	//display texts only
-	private static String STOCK_MOD_ID = "ix_undershield_stock";
-	private static String FLEET_MOD_ID = "ix_undershield_fleet";
 	private static int DEGREES_FLEET = 360;
 	private static int DEGREES_STOCK = 160;
+	private static int SHIELD_TOTAL = 2000;
+	private static int SHIELD_COOLDOWN = 20;
 	private boolean isNinth = false;
 	
 	//actual bonus
@@ -24,6 +24,7 @@ public class Undershield extends BaseHullMod {
 			isNinth = true;
 			if (stats.getVariant().getModuleVariant("WS 010") != null) {
 				stats.getVariant().getModuleVariant("WS 010").addMod(id);
+				stats.getVariant().getModuleVariant("WS 010").getHullMods().remove("ix_limited_undershield");
 			} 
 		}
 		//else shield module
@@ -35,6 +36,7 @@ public class Undershield extends BaseHullMod {
 			isNinth = false;
 			if (stats.getVariant().getModuleVariant("WS 010") != null) {
 				stats.getVariant().getModuleVariant("WS 010").getHullMods().remove(id);
+				stats.getVariant().getModuleVariant("WS 010").addMod("ix_limited_undershield");
 			}
 		}
 	}	
@@ -42,6 +44,8 @@ public class Undershield extends BaseHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		int degrees = isNinth ? DEGREES_FLEET : DEGREES_STOCK;
 		if (index == 0) return "" + degrees;
+		if (index == 1) return "" + SHIELD_TOTAL;
+		if (index == 2) return "" + SHIELD_COOLDOWN;
 		return null;
 	}
 }

@@ -19,7 +19,7 @@ public class IonStreamerEffect implements BeamEffectPlugin {
 		if (applied) return;
 		CombatEntityAPI target = beam.getDamageTarget();
 		if (target instanceof ShipAPI && beam.getBrightness() >= 1f) {
-			boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+			boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 			if (Math.random() < pierceChance) applyEMP(target, engine, beam, hitShield);
 			applied = true; //each beam only makes apply check once even if it did not generate EMP arc
 		}

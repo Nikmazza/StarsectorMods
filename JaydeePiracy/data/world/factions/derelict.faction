@@ -1,12 +1,10 @@
 {
     "hullFrequency":{
         "hulls":{
-            "jdp_embrasure":0.01,
         },
     },
     "knownShips":{
         "hulls":[
-            "jdp_embrasure",
         ],
     },
 },

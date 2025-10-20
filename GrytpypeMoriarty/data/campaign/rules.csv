@@ -1,0 +1,238 @@
+id,trigger,conditions,script,text,options,notes
+#greetingGMDATOffNormal,OpenCommLink,"$faction.id == gmda_pursuit
+!$isHostile
+!$player.transponderOn score:100
+$entity.relativeStrength >= 0
+GMDANormalTalk",,"""This is the Grytpype-Moriarty Defense Authority! Cease movement, realign engines to configuration Delta-2, and turn on your transponder! Failure to comply will result in your immediate arrest!""","turnOnTransponder:Turn your transponder on
+cutCommLink:Cut the comm link",
+#greetingGMDATOffWeaker,OpenCommLink,"$faction.id == gmda_pursuit
+!$isHostile
+!$player.transponderOn score:100
+$entity.relativeStrength < 0
+GMDANormalTalk",,"""This is the Grytpype-Moriarty Defense Authority! Please downpower your engines and turn on your transponder - this is a routine traffic stop.""","turnOnTransponder:Turn your transponder on
+cutCommLink:Cut the comm link",
+greetingGMDATurnOnTTicket,DialogOptionSelected,"$faction.id == gmda_pursuit score:100
+RepIsAtWorst $faction.id INHOSPITABLE
+!$GMDA_extortionPaid
+!$GMDA_extortionAskedFor
+$option == turnOnTransponder","ActivateAbility $player.fleetId transponder
+UpdateMemory
+MakeOtherFleetPreventDisengage GMDAExtortion true
+MakeOtherFleetAggressive GMDAExtortion true
+GMDAPickContributionMethod
+FireBest OpenCommLink",You issue an order to activate the transponder and re-open the comm link.,,
+greetingGMDATurnOnTExtortion,DialogOptionSelected,"$faction.id == gmda_pursuit score:100
+RepIsAtBest $faction.id HOSTILE
+!$GMDA_extortionPaid
+!$GMDA_extortionAskedFor
+$relativeStrength >= 0
+$option == turnOnTransponder","ActivateAbility $player.fleetId transponder
+UpdateMemory
+MakeOtherFleetPreventDisengage GMDAExtortion true
+MakeOtherFleetAggressive GMDAExtortion true
+GMDAPickExtortionMethod
+FireBest OpenCommLink",You issue an order to activate the transponder and re-open the comm link.,,
+greetingGMDAFriendly,OpenCommLink,"$faction.id == gmda
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+AddText ""Upon establishment of the comm link, a communications officer from the GMDA fleet acknowledges your identification, before giving a short but informative report on pirate and luddic path movements in the area. They sign off with the standard officious farewell, before the comm link closes.""
+FireAll PopulateOptions",,cutCommLink:Cut the comm link,
+greetingGMDAHostileWeaker,OpenCommLink,"$faction.id == gmda
+$entity.isHostile
+$entity.relativeStrength < 0
+",$ignorePlayerCommRequests = true 1,"The GMDA $personRank appears on the viewscreen, face grim. ""So, this is the way it is, taken out by criminals and miscreants,"" $heOrShe says defiantly, ""But I will not go quietly into the night! I will not disappear without a trace! I WILL DEFEAT YOU, CRIMINAL SCUM!"". 
+
+The heroic moment is ruined when an aide politely notifies the $personRank from off-screen 'Your personal escape pod is ready'. The comms link is quickly shut off after that.",cutCommLink:Cut the comm link,
+greetingGMDAHostileWeakerDefiant,OpenCommLink,"$faction.id == gmda
+$entity.isHostile
+$entity.relativeStrength < 0
+$entity.weakerThanPlayerButHolding
+",$ignorePlayerCommRequests = true 1,"The comm link opens, but all you can hear is the sound of flatulence, before the comm link is quickly closed, leaving behind the awkward static of empty space.",cutCommLink:Cut the comm link,
+greetingGMDANeutral,OpenCommLink,"$faction.id == gmda
+$faction.neutralToPlayer
+",,"Once the comms link is established, a pompous junior officer confirms the identity of your fleet, warns you off any illegal activities, sends you several citation alerts about your vessels violations of the Space Transport Rules (which you promptly ignore), before signing off with a terse ""Watch yourself Captain. The GMDA does not tolerate criminal behaviour.""",,
+,,,,,,
+GMDAContributionCheck,BeginFleetEncounter,"$faction.id == gmda_pursuit score:100
+RepIsAtWorst $faction.id INHOSPITABLE
+!$GMDA_extortionPaid
+!$GMDA_extortionAskedFor
+!$ignorePlayerCommRequests","MakeOtherFleetPreventDisengage GMDAExtortion true
+MakeOtherFleetAggressive GMDAExtortion true
+$GMDA_extortionAskedFor = true 7
+GMDAPickExtortionMethod
+AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor
+$hailing = true 0",,,
+GMDAExtortionCheck,BeginFleetEncounter,"$faction.id == gmda_pursuit score:100
+RepIsAtBest $faction.id HOSTILE
+!$GMDA_extortionPaid
+!$GMDA_extortionAskedFor
+$relativeStrength >= 0
+!$ignorePlayerCommRequests","MakeOtherFleetPreventDisengage GMDAExtortion true
+MakeOtherFleetAggressive GMDAExtortion true
+$GMDA_extortionAskedFor = true 7
+GMDAPickExtortionMethod
+AddText ""You're being hailed by the $faction $otherShipOrFleet."" $faction.baseColor
+$hailing = true 0",,,
+,,,,,,
+GMDAExtortionTithe,OpenCommLink,"$entity.GMDA_extortionMethod == GMDAtithe score:100
+RepIsAtBest $faction.id HOSTILE
+!$GMDA_extortionPaid
+GMDATitheCalc","SetTextHighlights $GMDA_tithe_string
+$entity.ignorePlayerCommRequests = true 1","The $personRank gazes at you cooly through the viewscreen. ""Citizen"",  $heOrShe says, ""You have been caught driving recklessly and dangerously well above the burn-level speed limit. You can either pay the $GMDA_tithe_string credit fine, or we'll have to impound your ships...""
+
+The $personRank places a pair of sunglasses on $hisOrHer face.
+
+""...with EXTREME prejudice,"" $heOrShe finishes, grinning madly.
+OR
+The $personRank  adjusts a thick pair of glasses on their face. They peer at you intensely for an awkward moment, before $heOrShe yells triumphantly.
+
+""We got 'im!"" $heOrShe crows, ""The most dangerous criminal in the Sector, worth 1,000,000 credits - the Red Bladder of Dhuzak! The most fiercest, most devious of scum and villainy!""
+
+They then fiddle with the thick rims of the glasses, ""Although, my eyesight isn't what it used to be - maybe you're NOT the Red Bladder. Oh dear, oh dear, oh dear. Whelp! Maybe if you would offer me a consideration, of $GMDA_tithe_string credits, then maybe I could be quite mistaken. And if not...Well, even if I'm wrong, there's one less of you filthy miscreants runnning around my sector!"" $heOrShe finishes ambiguously.
+OR
+""We have it on good authority that a ship with a similar description to yours was involved in a theft"" cooly says $personRank, pointing $hisOrHer finger at the screen with a sly smile, ""I demand that you peacefully return the $GMDA_tithe_string credits you stole.""
+
+The $personRank leans forward menacingly, ""The alternative is, of course, your annhiliation. What's your choice?""
+OR
+The scrawny, pimply face of $personRank takes up an comfortable amount of the view screen, giving you an exception view of $hisOrHer nose hairs as their breath fogs the screen. 
+
+""You have been caught speeding in excess of the speed limit! You are required to pay a fine of $GMDA_tithe_string credits, or we will destroy you, take your cargo and crew, and continue our great mission to protect and serve!""
+OR
+""ALRIGHT CRIMINAL SCUM!""
+
+The voice that emits from the speakers is ear-splittingly loud, matching perfectly with the sharp, furious face of the $personRank on the viewscreen.
+
+""YOU'RE GOING TO PAY YOUR DEBT TO SOCIETY! AND THAT DEBT, IS $GMDA_tithe_string CREDITS!"" $heOrShe loudly informs you, your crew, your cargo, and possibly numerous Volturnian Lobster in their pens on Volturn because good grief their voice is loud, ""IF YOU DON'T PAY YOUR DEBT IN CREDITS, THEN YOU WILL PAY FOR IT IN YOUR BLOOOOOOOD!""","payGMDATithe:Pay the fine of $GMDA_tithe_string credits
+GMDARefuse:Disregard the Constabulary",
+GMDAContributionTithe,OpenCommLink,"$entity.GMDA_extortionMethod == GMDAtithe score:100
+RepIsAtWorst $faction.id INHOSPITABLE
+!$GMDA_extortionPaid
+GMDATitheCalc",SetTextHighlights $GMDA_tithe_string,"The $personRank appears on-screen with a fake smile plastered on their face. ""Citizen!"",  $heOrShe happily chirps, ""Congratulations! You're the 67,923rd person pulled over in this district today! And for that, you've won a fabulous prize!""
+
+The $personRank regards something off screen, and adopts a suitably sadand equally false visage.
+
+""Unfortunately, in order to acquire such a fabulous prize, you'll have to pay hacker insurance against it,"" $heOrShe says, ""A trifling amount of $GMDA_tithe_string credits will cover the protection - a pitiful amount in the face of the vast riches that you've won! What do you say to that!""
+OR
+The $personRank rattles a tin at you from the viewscreen, the loud rattling ringing in your ears.
+
+""Greetings Citizen!"" $heOrShe cheerfully says, ""We're currently running a lottery for a mysterious prize recently acquired by the Authority. Now, I could do the cruel thing and offer you a single ticket in the draw, and you would have an infinitesmal chance of winning. Or, you could buy all the tickets in the lottery, which would come to...the relatively small amount of  $GMDA_tithe_string credits.""
+
+They rattle the tin annoyingly, loudly, continously, ""But what is that against a fabulous prize! Won't you enter the lottery?""
+OR
+""We have it on good authority that a ship with a similar description to yours was involved in a theft"" says $personRank casually, gesturing their hand at the screen with a sly smile, ""Of course I know someone as respectable as you couldn't possibly be responsible. However, the suspcion is still there - you know how those fools down at internal affairs are. Never fear!"" $heOrShe states, ""I can clear this all up for a small consideration of $GMDA_tithe_string credits.""
+
+The $personRank leans forward menacingly, ""The alternative is...well. You are a respectable person, i guess. What's your choice?""
+OR
+The bored face of the $personRank looks at you from the screen. They sigh, their eyes red-rimmed from fatigue or hangover, slumped down in their chair, regarding you from the bottom of the viewscreen.
+
+""Yoy know the drill, give me $GMDA_tithe_string credits, I'll spread your name around the Authority as a pretty cool dude, whatever.""
+OR
+""ALRIGHT HONOURED MEMBER OF SOCIETY!""
+
+The voice that emits from the speakers is ear-splittingly loud, matching perfectly with the sharp, furious face of the $personRank on the viewscreen.
+
+""AS YOU KNOW, FREEDOM ISN'T FREE. YOU'RE GOING TO PAY YOUR DEBT TO SOCIETY! AND THAT DEBT, IS $GMDA_tithe_string CREDITS!"" $heOrShe loudly informs you, your crew, your cargo, and possibly all Alpha level AI in the outer reaches of the sector because good grief their voice is loud, ""IF YOU DON'T PAY YOUR DEBT IN CREDITS, THEN, THEN, FREEDOM becomes free?"" they finish, confused.","payGMDATithe:Contribute $GMDA_tithe_string credits
+GMDARefuse:Refuse to get Scammed by this Rube.",
+,,,,,,
+GMDATicketPay,DialogOptionSelected,$option == payGMDATithe,"AddText ""Lost $GMDA_tithe_string credits"" textEnemyColor
+SubCredits $GMDA_tithe
+GMDA_AdjustRepCustom $faction.id $GMDA_repImpact null null HOSTILE null null
+AddText ""\""The GMDA Acknowledges Payment of Fine. For additional enquiries, please enquire at our offices on Ilm and Agreus!\"""" textNeutralColor
+AddText ""The $personFaction $personRank smiles and ends the connection.""
+FireAll GMDAPayCommon
+MakeOtherFleetPreventDisengage GMDAExtortion false
+MakeOtherFleetAggressive GMDAExtortion false
+MakeOtherFleetNonHostile GMDAExtortion true 7",,,
+,,,,,cutCommLink:Cut the comm link,
+GMDAExtortionNoneVengeful,OpenCommLink,"$entity.GMDA_extortionMethod == none score:100
+$faction.id == gmda_pursuit score:100
+RepIsAtBest ""gmda"" VENGEFUL score:100
+!$GMDA_extortionPaid","MakeOtherFleetPreventDisengage GMDAExtortion true
+MakeOtherFleetAggressive GMDAExtortion true
+$entity.ignorePlayerCommRequests = true 1","""Stop right there, criminal scum! You're wanted for excessive speeding and dangerous driving!"" The $personRank snorts, ""But luckily for you, you're not worth the fuel to chase after. Bugger off, and don't let me catch you around here again!""",cutCommLink:Cut the comm link,
+GMDAExtortionNoneHostile,OpenCommLink,"$entity.GMDA_extortionMethod == none score:100
+$faction.id == gmda_pursuit score:100
+RepIsAtBest ""gmda"" HOSTILE
+!$GMDA_extortionPaid","MakeOtherFleetPreventDisengage GMDAExtortion false
+MakeOtherFleetAggressive GMDAExtortion false
+MakeOtherFleetNonHostile GMDAExtortion true 7
+$entity.ignorePlayerCommRequests = true 0","""Stop right there, criminal! You're wanted for speeding!"" The $personRank snorts, ""But luckily for you, you're not worth my time. Get lost, and don't let me catch you around here again!""",cutCommLink:Cut the comm link,
+GMDAExtortionNoneFriendly,OpenCommLink,"$entity.GMDA_extortionMethod == none score:100
+$faction.id == gmda_pursuit score:100
+RepIsAtWorst ""gmda"" INHOSPITABLE
+!$GMDA_extortionPaid","MakeOtherFleetPreventDisengage GMDAExtortion false
+MakeOtherFleetAggressive GMDAExtortion false
+MakeOtherFleetNonHostile GMDAExtortion true 7
+$entity.ignorePlayerCommRequests = true 0","""Stop right there Citizen! It appears you are in violation of…oh. Oh dear - it appears your fleet is not big enough to justifiably belong to a REAL faction, is it? Most likely you're an independent doing some side jobs, eh? Look, I'll let you off, but I seriously suggest you ditch the commision, otherwise this exchange would've gone in a very different direction.""",cutCommLink:Cut the comm link,
+GMDACommFallback,OpenCommLink,$faction.id == gmda_pursuit,"ShowDefaultVisual
+EndConversation","You try to open a comm link, but there is no response.",,
+,,,,,,
+GMDAPayCommon,GMDAPayCommon,,"$GMDA_extortionPaid = true 30
+MakeOtherFleetNonHostile GMDA_extortion true 30
+MakeHostileWhileTOff tOff false
+MakeOtherFleetPreventDisengage GMDAExtortion false
+MakeOtherFleetAggressive GMDAExtortion false
+ShowDefaultVisual
+EndConversation",,,
+,,,,,,
+GMDARefuseContribution,DialogOptionSelected,$option == GMDARefuse,"$entity.ignorePlayerCommRequests = true 1
+GMDA_AdjustRepCustom $faction.id $GMDA_repNegImpact HOSTILE null null null null
+FireBest GMDARefuseResponse",,cutCommLink:Cut the comm link,
+GMDARefuseNasty,GMDARefuseResponse,"RepIsAtBest ""gmda_pursuit"" INHOSPITABLE","MakeOtherFleetPreventDisengage GMDAExtortion true
+MakeOtherFleetAggressive GMDAExtortion true
+AddText ""\""DO NOT RESIST.\"""" textNeutralColor
+AddText ""The connection is cut before you have a chance to respond.""
+ShowDefaultVisual
+EndConversation",,cutCommLink:Cut the comm link,
+GMDARefuseNice,GMDARefuseResponse,"RepIsAtWorst ""gmda_pursuit"" SUSPICIOUS","AddText ""\""It is disappointing to hear that, $playerName. Maybe next time?\"""" textNeutralColor
+AddText ""The $personFaction $personRank casually cuts the connection.""
+ShowDefaultVisual
+EndConversation",,,
+,,,,,,
+#Gordon - Columbo Intro courtesy of Techpriest…,,,,,,
+gmda_Columbo_hiremeBlurbBar,gmda_Columbo_hireme_blurbBar,,,"A man is leaning against the bar in a ratty old trenchcoat, looking lost. He surreptitously yet obviously looks about, nervously scratching his chin. As he turns away from you, you notice  GMDA faded almost to invisibility on the back of his trenchcoat.",,
+gmda_Columbo_hiremeOfferOptionBar,gmda_Columbo_hireme_optionBar,,,,gmda_Columbo_hireme_startBar:Talk to the obviously lost man in the trenchcoat.,
+gmda_Columbo_hiremeOfferTextBar,DialogOptionSelected,"$option == gmda_Columbo_hireme_startBar
+",$missionId = gmda_hireme,"The man turns as you approach, and pauses his nervous scratching as you sit next to him. He stares at you thoughtfully in silence, and you notice that one of his eyes is pointing in the wrong direction. Suddenly he points at you.
+
+""...You're not Captain Alex Pucey, are you?"" he asks in a creaky voice strangled by excessive smoking.","gmda_hireme_ColumboBanter1:""No?""
+gmda_hireme_ColumboBanter2:""Yes.""",
+,,,,,,
+gmda_Columbo_hiremeBanter1,DialogOptionSelected,"$option == gmda_hireme_ColumboBanter1
+",,"The man leans back, looking at you with his good eye.
+
+""No $sirOrMaam, you're not,"" he says, ""And I don't think Captain Pucey is going to show up at all really,"" He taps the bar, smirking, ""Gee, he sure did play me. I really did think they'd show up.""
+
+He sighs, bringing his arms up in admission of defeat, ""Hey, what can you do?"" he smiles.","gmda_hireme_ColumboBanter1A:""Quite a bit actually.""",
+gmda_Columbo_hiremeBanter2A,DialogOptionSelected,"$option == gmda_hireme_ColumboBanter2A
+",,"The man narrows his eyes, his good eye rapidly travelling over your body. For the briefest moment gone is the nervousness and uncertainty, before his expression softens and he clears his throat.
+
+""No $sirOrMaam you are not Captain Alex Pucey,"" he says smiling politely, before pointing at your head, ""You're too tall! And you're far too classy to look like a depraved thug $sirOrMaam. One that, well not to say too much $sirOrMaam, but I don't think Captain Alex Pucey even exists!""
+
+He sighs, bringing his arms up in admission of defeat, ""Hey, what can you do?"" he smiles.","gmda_hireme_ColumboBanter1A:""Quite a bit actually.""",
+gmda_Columbo_hiremeBanter1A,DialogOptionSelected,"$option == gmda_hireme_ColumboBanter1A
+",,"""So can I $sirOrMaam,"" he says, waving his hand, ""I'll get some of the boys down at the station to deal with it, you don't have to worry about a thing.""","gmda_hireme_ColumboBanter1B:""What would I need to worry about?""",
+gmda_Columbo_hiremeBanter1B,DialogOptionSelected,"$option == gmda_hireme_ColumboBanter1B
+",,"""Oh sorry, nothing $sirOrMaam,"" he says, placatingly waving at you, ""I mean, I just wasn't expecting to actually talk to a real space captain $sirOrMaam today. I usually deal with things on the ground so to speak. My wife, she gets real space sick, y'know? Doesn't matter if the grav plates are just right - to her, they're too strong or too weak. And when you hit even the smallest amount of turbulence...""
+
+The man grimaces, head shaking.","gmda_hireme_ColumboBanter1C:""…it's a mess?""",
+gmda_Columbo_hiremeBanter1C,DialogOptionSelected,"$option == gmda_hireme_ColumboBanter1C
+",,"""Yes $sirOrMaam, an absolute mess.""
+
+He notices your attention flagging, and he lightly smacks himself on the head.
+
+""Oh I'm so sorry $sirOrMaam,"" he says, ""I'll get right to the point. Spacers, they don't like people like me. Boots too stuck on the ground. And bein' in here, these folks are treating me like I'm radioactive or somethin'. But you, you didn't. You look like a classy sort of $guyOrGal who doesn't care about that - when they see an opportunity, they go for it.""","gmda_hireme_ColumboBanter1D:""And?""",
+gmda_Columbo_hiremeBanter1D,DialogOptionSelected,"$option == gmda_hireme_ColumboBanter1D
+",,"""Well I was just warning you that I didn't need you're help on this case,"" he says, ""This is just a simple case of murder, nothing fancy. But I really could use your help on other cases, $sirOrMaam. I can't go to space, it'll make my wife worry if I can't take her, and if I do?""
+
+He breathes out dramatically.","gmda_hireme_ColumboBanter3:""So what do you need?""",
+gmda_Columbo_hiremeBarLookOption,DialogOptionSelected,$option == gmda_hireme_ColumboBanter3,,"""I need someone to go out and bring some ...strange folks to justice,"" says the man, cautiously, before he looks at you and slaps himself on the head again, ""Oh sorry, how rude of me - I'm detective James Gordon of the Grytpype and Moriarty Defense Authority. No joke, I'm a real police officer.""
+
+He reaches into the lefthand side of his trenchcoat, and searches about for a moment, before looking confused and searching the other side of his jacket. He pulls out a bag which he places on the bar (""Sorry, my lunch""), before finally pulling out a glowing GMDA badge and showing you his credentials.
+
+""I used to have a team work for me, but we've had some, ah, differences of opinion, and we had to part way,"" he says, putting the badge away in his pocket, ""But these weirdos, they're still out there, killing people. And they're killing people in the strangest ships, damn strange ships $sirOrMaam. So, I'd like to have someone do that for me and the Grytpype and Moriarty Defense Authority. You interested in doing that? There's also a bit of money in it for you, of course.""","contact_acceptBar:""That sounds good.""
+contact_declineBar:""No (Decline).""",
+gmda_Columbo_hiremePostAccept,ContactPostAccept,$missionId == gmda_hireme,"ShowPersonVisual
+AddPotentialContact
+Call $gmda_hireme_ref repSuccess","""That's terrific!"" he says, shaking your hand, ""Thank you very much. I don't have all the specs on me right now, but if you contact me at my office I'll hook you up with something good.""
+
+He gives you his contact details before departing.",,

@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * Spawns particles from a weapon in different firing states, as determined by the user.
  *
- * This specific one is for the Gigaton Lance, and has some custom features added
+ * This specific one is for the Gigaton Lance, and has been FUCKED UP BY NOOF RAAGHJHH
  *
  * @author Nicke535
  */
@@ -255,19 +255,25 @@ public class bt_doombeam_muzzleflash implements EveryFrameWeaponEffectPlugin {
         //Don't run while paused, or without a weapon
         if (weapon == null || amount <= 0f) {return;}
 
-        //Saves handy variables used later
         float chargeLevel = weapon.getChargeLevel();
         String sequenceState = "READY";
-        if (chargeLevel > 0 && (!weapon.isBeam() || weapon.isFiring())) {
-            if (chargeLevel >= 1f) {
-                sequenceState = "FIRING";
-            } else if (!hasFiredThisCharge) {
-                sequenceState = "CHARGEUP";
-            } else {
-                sequenceState = "CHARGEDOWN";
+
+        // Read state from our main behavior script
+        Object customObj = weapon.getCustom();
+        if (customObj instanceof Map) {
+            Map<String, Object> customData = (Map<String, Object>) customObj;
+            Object stateObj = customData.get("DOOMBEAM_STATE");
+            if (stateObj != null) {
+                String stateFromFile = stateObj.toString();
+                if (stateFromFile.equals("FIRING")) {
+                    sequenceState = "FIRING";
+                    if (chargeLevel < 1f) {
+                        sequenceState = "CHARGEUP";
+                    }
+                } else if (stateFromFile.equals("COOLDOWN")) {
+                    sequenceState = "COOLDOWN";
+                }
             }
-        } else if (weapon.getCooldownRemaining() > 0) {
-            sequenceState = "COOLDOWN";
         }
 
         //Adjustment for burst beams, since they are a pain

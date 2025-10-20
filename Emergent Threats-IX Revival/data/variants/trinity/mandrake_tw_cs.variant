@@ -1,0 +1,41 @@
+{
+    "displayName": "Close Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 18,
+    "goalVariant": true,
+    "hullId": "mandrake_tw",
+    "hullMods": [
+        "advancedoptics",
+        "tw_drone_control_node",
+        "ix_reactive_combat_shields",
+        "frontemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "mandrake_tw_cs",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "lacerator_tw"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "orthrus_s_ix",
+                "WS 006": "orthrus_s_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "morningstar_ciws_ix",
+                "WS 003": "morningstar_ciws_ix",
+                "WS 004": "morningstar_ciws_ix"
+            }
+        }
+    ],
+    "wings": ["nimbus_tw_wing_s"]
+}

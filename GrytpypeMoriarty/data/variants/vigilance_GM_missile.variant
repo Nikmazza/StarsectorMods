@@ -1,0 +1,33 @@
+{
+  "variantId": "vigilance_GM_missile",
+  "hullId": "vigilance_GM",
+  "displayName": "Missile",
+  "goalVariant": true,
+  "fluxCapacitors": 10,
+  "fluxVents": 7,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "eccm",
+    "pointdefenseai"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "taclaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "breachpod",
+        "WS0002": "breachpod"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

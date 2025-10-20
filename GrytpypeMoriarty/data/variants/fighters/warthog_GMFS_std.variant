@@ -1,0 +1,30 @@
+{
+  "variantId": "warthog_GMFS_std",
+  "hullId": "warthog_GMFS",
+  "displayName": "Fire Fighting",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "gmda_flamethrower_ftr"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "gmda_flaregun",
+        "WS0002": "gmda_flaregun"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

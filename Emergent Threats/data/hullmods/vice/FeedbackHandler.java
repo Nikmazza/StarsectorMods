@@ -18,6 +18,11 @@ public class FeedbackHandler extends BaseHullMod {
 		ShipVariantAPI var = stats.getVariant();
 		List<String> weaponSlots = var.getNonBuiltInWeaponSlots();
 		
+		/**
+		if ((var.hasHullMod("ix_intrepid_sbe") || var.hasHullMod("ix_radiant_sbe")) 
+					&& !var.hasHullMod("ix_advanced_ecm_suite")) feedbackCount++;
+		**/
+		
 		for (String slot : weaponSlots) {
 			if (var.getWeaponSpec(slot).hasTag("feedback_weapon")) feedbackCount++;
 		}

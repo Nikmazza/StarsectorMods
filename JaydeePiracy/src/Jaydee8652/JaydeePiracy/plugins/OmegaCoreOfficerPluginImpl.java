@@ -46,7 +46,6 @@ public class OmegaCoreOfficerPluginImpl extends BaseAICoreOfficerPluginImpl {//A
 			person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);
 			person.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 2);
 			person.getStats().setSkillLevel(Skills.POINT_DEFENSE, 2);
-		//	person.getStats().setSkillLevel(jdp_Skills.JDP_WEIRDSLAYER, 2);//For Neon!
 			person.getStats().setSkillLevel(jdp_Skills.JDP_OMEGA_ECM, 2);//Uses my copy of the skill which has a description and icon
 		}
 		points = JDP_OMEGA_POINTS;
@@ -58,7 +57,6 @@ public class OmegaCoreOfficerPluginImpl extends BaseAICoreOfficerPluginImpl {//A
 		person.getMemoryWithoutUpdate().set(AUTOMATED_POINTS_MULT, mult);
 		
 		person.setPersonality(Personalities.RECKLESS);
-		//person.setRankId(Ranks.SPACE_CAPTAIN);
 		person.setRankId(jdp_Ranks.JDP_DANCER);
 
 		person.setPostId(null);

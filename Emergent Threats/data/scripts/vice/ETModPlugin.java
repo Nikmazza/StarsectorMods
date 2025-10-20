@@ -15,10 +15,13 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.util.Misc;
 
+import data.scripts.vice.RelicSystemCreation;
 import data.scripts.vice.listeners.BountyListener;
 import data.scripts.vice.listeners.EnemyEncounterListener;
 import data.scripts.vice.listeners.ETReputationListener;
@@ -30,6 +33,7 @@ import data.scripts.vice.luna.SignalMaskerInstallButton;
 import data.scripts.vice.luna.SignalMaskerRemoveButton;
 import data.scripts.vice.XOCampaignPlugin;
 
+import data.scripts.orr.luna.CopyOldslaughtButton;
 import data.scripts.orr.luna.InstallOnslaughtButton;
 import data.scripts.orr.luna.SalvageOnslaughtButton;
 
@@ -40,9 +44,20 @@ public class ETModPlugin extends BaseModPlugin {
 	@Override
 	public void onGameLoad(boolean newGame) {
 		SectorAPI sector = Global.getSector();
+		
+		//backwards compatability for v1.0.9 games that did not spawn the system
+		//generate(sector);
+		
 		sector.registerPlugin(synthesisCorePlugin);
 		sector.getFaction("sindrian_diktat").getKnownFighters().remove("talon_wing");
 		sector.getFaction("lions_guard").getKnownFighters().remove("talon_wing");
+		sector.getFaction("threat").getKnownWeapons().remove("asm_flechette");
+		sector.getFaction("threat").getKnownWeapons().remove("asm_voltaic_multipulser");
+		
+		if (sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_remnant_knows_ships", true)) {
+			Global.getSector().getFaction("remnant").addKnownShip("vice_chevalier_rem", false);
+			Global.getSector().getFaction("remnant").addKnownShip("vice_hemlock_rem", false);
+		}
 		
 		FactionAPI diamond_nexus = sector.getFaction("diamond_nexus");
 		diamond_nexus.setRelationship("remnant", RepLevel.NEUTRAL);
@@ -62,35 +77,16 @@ public class ETModPlugin extends BaseModPlugin {
 		person.setPortraitSprite(Global.getSettings().getSpriteName("portraits", "vice_taylor_sheasby"));
 		if (!people.containsPerson(person)) people.addPerson(person);
 		
-		//backwards compatability, if player is continuing a pre v0.9.5 game
+		//remove after v1.1.2
 		if (!sector.getMemoryWithoutUpdate().is("$bounty_listener_set", true)) {
-			if (sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_succeeded", true)
-				|| sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_failed", true)) return;
-			else {
-				sector.getListenerManager().addListener(new BountyListener());
-				sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
-			}
+			sector.getListenerManager().addListener(new BountyListener());
+			sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
 		}
 		
 		PruneBantengMarketListener pListener = new PruneBantengMarketListener();
 		for (MarketAPI market : sector.getEconomy().getMarketsCopy()) {
 			pListener.pruneMarket(market);
 		}
-		
-		//remove after v1.0.4, normally handled by BountyListener but here for people who did mission already
-		//gives remnant Mayfly ship designs if player sided with kato but remnant does not yet know designs
-		if (sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_gave_item", true)
-				&& !sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_remnant_knows_ships", true)) {
-			sector.getFaction("remnant").addKnownShip("vice_chevalier_rem", false);
-			sector.getFaction("remnant").addKnownShip("vice_hemlock_rem", false);
-			sector.getMemoryWithoutUpdate().set("$vice_project_mayfly_remnant_knows_ships", true);
-		}
-		
-		//obselete
-		//sector.getMemoryWithoutUpdate().set("$mission_picker_tri_tachyon", true);
-		//sector.getMemoryWithoutUpdate().set("$mission_picker_cabal", true);
-		//sector.getMemoryWithoutUpdate().set("$mission_picker_tri_tachyon_expired", false);
-		//sector.getMemoryWithoutUpdate().set("$mission_picker_cabal_expired", false);
 	}
 	
 	@Override
@@ -122,14 +118,15 @@ public class ETModPlugin extends BaseModPlugin {
 	@Override
     public void onNewGame() {
 		SectorAPI sector = Global.getSector();
+		generate(sector);
 		sector.registerPlugin(synthesisCorePlugin);
 		setRelationships(sector);
 		sector.getMemoryWithoutUpdate().set("$give_diktat_hullmods", true);
 		sector.getListenerManager().addListener(new EnemyEncounterListener());
 		sector.getListenerManager().addListener(new ETReputationListener());
 		sector.getListenerManager().addListener(new PruneBantengMarketListener());
-		//sector.getListenerManager().addListener(new BountyListener());
-		//sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
+		sector.getListenerManager().addListener(new BountyListener());
+		sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
 		sector.getFaction("sindrian_diktat").getKnownFighters().remove("talon_wing");
 		sector.getFaction("lions_guard").getKnownFighters().remove("talon_wing");
 	}
@@ -159,6 +156,13 @@ public class ETModPlugin extends BaseModPlugin {
 	}
 	
 	@Override
+	public void generate(SectorAPI sector) {
+		//if (sector.getMemoryWithoutUpdate().is("$asm_circumfix_is_spawned", true)) return;
+		RelicSystemCreation.generate(sector);
+		//sector.getMemoryWithoutUpdate().set("$asm_circumfix_is_spawned", true);
+	}
+	
+	@Override
 	public void onApplicationLoad() {
 		/**
 		if (Global.getSettings().getModManager().isModEnabled("vice_orr")) {
@@ -170,6 +174,9 @@ public class ETModPlugin extends BaseModPlugin {
 		LunaRefitManager.addRefitButton(new RemoveMissionDeployHullmod());
 		LunaRefitManager.addRefitButton(new SignalMaskerInstallButton());
 		LunaRefitManager.addRefitButton(new SignalMaskerRemoveButton());
+		
+		//ORR
+		LunaRefitManager.addRefitButton(new CopyOldslaughtButton());
 		LunaRefitManager.addRefitButton(new InstallOnslaughtButton());
 		LunaRefitManager.addRefitButton(new SalvageOnslaughtButton());
 	}

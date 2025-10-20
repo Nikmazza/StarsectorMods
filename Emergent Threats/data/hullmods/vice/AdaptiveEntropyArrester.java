@@ -10,7 +10,7 @@ import data.scripts.vice.util.RemnantSubsystemsUtil;
 public class AdaptiveEntropyArrester extends BaseHullMod {
 
 	private static float HEAL_HULL_AMOUNT = 1f; //1% hull per second
-	private static float HEAL_HULL_CAP = 150f; //max hull heal per second
+	private static float HEAL_HULL_CAP = 100f; //max hull heal per second
 	private static float REPAIR_BONUS = 50f;
 	private static String CONFLICT_MOD = "autorepair";
 	private static String CONFLICT_MOD_2 = "vice_field_repair_nanites";

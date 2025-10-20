@@ -6,6 +6,12 @@
 	"statsScript":"data.scripts.shipsystems.bt_pather_tele_test",
 
 	#"runScriptWhileIdle":true,
+
+	"phaseHighlight":"_glow1",
+	"phaseDiffuse":"_glow2",
+
+	"effectColor1":[255,175,255,255],
+	"effectColor2":[255,0,255,150],
 	
 	"jitterColor":[202,114,255,244],
 	#"jitterColor":[255,100,255,150],

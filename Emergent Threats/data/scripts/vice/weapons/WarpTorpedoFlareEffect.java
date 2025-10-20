@@ -21,6 +21,5 @@ public class WarpTorpedoFlareEffect implements OnFireEffectPlugin {
 		Vector2f velocity = proj.getVelocity();
 		float speed = (float) Math.sqrt(velocity.lengthSquared());
 		ShapedExplosionUtil.spawnShapedExplosion(loc, angle, speed, FLARE_COLOR, "warptorp");
-		
 	}
 }

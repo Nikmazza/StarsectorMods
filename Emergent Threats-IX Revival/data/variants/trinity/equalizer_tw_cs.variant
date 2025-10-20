@@ -36,8 +36,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 014": "thundermark_ix",
-                "WS 015": "thundermark_ix"
+                "WS 014": "cte_tw",
+                "WS 015": "cte_tw"
             }
         },
         {

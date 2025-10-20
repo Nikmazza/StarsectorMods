@@ -1,0 +1,218 @@
+{
+  "bounds": [
+    -42,
+    -6.5,
+    -22.5,
+    -25.5,
+    1,
+    -34.5,
+    39.5,
+    -9,
+    39.5,
+    8.5,
+    1,
+    34.5,
+    -22.5,
+    25.5,
+    -42,
+    6.5
+  ],
+  "builtInMods": [
+    "GMDA_engine"
+  ],
+  "builtInWings": [],
+  "center": [
+    34,
+    41.5
+  ],
+  "collisionRadius": 63.031738,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 25,
+      "location": [
+        -39,
+        12
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": -180,
+      "contrailSize": 6,
+      "length": 25,
+      "location": [
+        -39,
+        -12
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": 165.96376,
+      "contrailSize": 11.641712,
+      "length": 15.886084,
+      "location": [
+        -27.5,
+        19
+      ],
+      "style": "LOW_TECH",
+      "width": 11.641712
+    },
+    {
+      "angle": -165.96376,
+      "contrailSize": 11.641712,
+      "length": 15.886084,
+      "location": [
+        -27.5,
+        -19
+      ],
+      "style": "LOW_TECH",
+      "width": 11.641712
+    },
+    {
+      "angle": 143.841812,
+      "contrailSize": 7.235466,
+      "length": 25.557033,
+      "location": [
+        -18,
+        29.5
+      ],
+      "style": "MIDLINE",
+      "width": 7.235466
+    },
+    {
+      "angle": -143.841812,
+      "contrailSize": 7.235466,
+      "length": 25.557033,
+      "location": [
+        -18,
+        -29.5
+      ],
+      "style": "MIDLINE",
+      "width": 7.235466
+    },
+    {
+      "angle": 180,
+      "contrailSize": 14,
+      "length": 46,
+      "location": [
+        -41,
+        5
+      ],
+      "style": "HIGH_TECH",
+      "width": 14
+    },
+    {
+      "angle": -180,
+      "contrailSize": 14,
+      "length": 46,
+      "location": [
+        -41,
+        -5
+      ],
+      "style": "HIGH_TECH",
+      "width": 14
+    }
+  ],
+  "height": 82,
+  "hullId": "lasher_GMs",
+  "hullName": "Lasher (GMs)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 55.760651,
+  "spriteName": "graphics/ships/lasher_GMs.png",
+  "style": "MIDLINE",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 230,
+      "id": "WS0001",
+      "locations": [
+        14.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 105,
+      "arc": 250,
+      "id": "WS0002",
+      "locations": [
+        2.5,
+        10
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -105,
+      "arc": 250,
+      "id": "WS0003",
+      "locations": [
+        2.5,
+        -10
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0004",
+      "locations": [
+        22,
+        17
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0005",
+      "locations": [
+        22,
+        -17
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0006",
+      "locations": [
+        10,
+        27
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0007",
+      "locations": [
+        10,
+        -27
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 68
+}

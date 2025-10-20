@@ -12,7 +12,7 @@
   "shieldRadius": 1,
   "viewOffset": 0,
   "builtInWings": [],
-  "builtInMods": ["never_detaches", "vastbulk"],
+  "builtInMods": ["never_detaches", "vastbulk", "vice_hide_module_hulk"],
   "weaponSlots": [
       {
       "id": "SYSTEM 1",

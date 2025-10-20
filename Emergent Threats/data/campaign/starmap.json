@@ -1,0 +1,6 @@
+{
+	"starSystemLocations":{
+		#"asm_circumfix":[1000, 0], #testing
+		"asm_circumfix":[-68000, 27000],
+	}
+}

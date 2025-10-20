@@ -1,7 +1,7 @@
 {
     "displayName": "Assault",
     "fluxCapacitors": 0,
-    "fluxVents": 42,
+    "fluxVents": 48,
     "goalVariant": true,
     "hullId": "orr_aggressor_orr_tpc",
     "hullMods": [
@@ -35,25 +35,29 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 010": "multineedler"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "chaingun"}
+            "weapons": {"WS 010": "devastator"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "heavymg",
-                "WS 005": "heavymg",
+                "WS 004": "arbalest",
+                "WS 005": "arbalest",
+                "WS 018": "arbalest",
+                "WS 019": "arbalest"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 002": "vulcan",
+                "WS 003": "vulcan",
                 "WS 006": "vulcan",
                 "WS 007": "vulcan",
                 "WS 008": "flak",
-                "WS 009": "flak",
-                "WS 018": "flak",
-                "WS 019": "flak"
+                "WS 009": "flak"
             }
         }
     ]

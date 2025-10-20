@@ -1,0 +1,226 @@
+{
+  "hullName": "Carker (GM)",
+  "hullId": "condor_GM",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/condor_GM.png",
+  "style": "MIDLINE",
+  "height": 196,
+  "width": 116,
+  "center": [58, 96.5],
+  "collisionRadius": 116.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 109.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMDA_engine"
+  ],
+  "builtInWeapons": {
+    "WS0007": "blinker_pol_blue",
+    "WS0008": "blinker_pol_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": -45,
+      "locations": [82, -24]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 45,
+      "locations": [83.5, 24]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 280,
+      "angle": -47,
+      "locations": [0.5, -45]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 280,
+      "angle": 47,
+      "locations": [0.5, 45]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": 123,
+      "locations": [-38.5, 45]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -123,
+      "locations": [-39.5, -45]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [82.5, 16]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [82.5, -15]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        12, 10,
+        28, 10,
+        19.5, 10
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        11.5, -8.5,
+        19, -8,
+        28.5, -8
+      ]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        11.5, 0,
+        38, 11,
+        38, -7.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-95.5, -20.5],
+      "length": 35,
+      "width": 26,
+      "angle": -180,
+      "contrailSize": 26,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-95.5, 21.5],
+      "length": 35,
+      "width": 26,
+      "angle": 180,
+      "contrailSize": 26,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-89.5, 4],
+      "length": 14,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-89.5, -3],
+      "length": 14,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-63, 43],
+      "length": 24,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-63, -42],
+      "length": 24,
+      "width": 19,
+      "angle": -180,
+      "contrailSize": 19,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-59, 50.5],
+      "length": 10,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-59, -49.5],
+      "length": 10,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -89, -4.5,
+    -96, -12,
+    -96, -25,
+    -92, -31.5,
+    -65, -35.5,
+    -58, -56.5,
+    6, -56,
+    34, -47.5,
+    80.5, -43.5,
+    95, -26,
+    89.5, -15.5,
+    62.5, -11.5,
+    62.5, 12.5,
+    89.5, 16.5,
+    95, 27,
+    80.5, 44.5,
+    34, 48.5,
+    7, 56,
+    -59, 56.5,
+    -65, 36.5,
+    -92, 32.5,
+    -96, 26,
+    -96, 13,
+    -89, 5.5
+  ]
+}

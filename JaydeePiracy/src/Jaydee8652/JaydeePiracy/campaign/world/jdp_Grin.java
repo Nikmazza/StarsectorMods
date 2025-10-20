@@ -35,9 +35,6 @@ import Jaydee8652.JaydeePiracy.utils.jdp_Conditions;
 import org.lwjgl.util.vector.Vector2f;
 import Jaydee8652.JaydeePiracy.utils.jdp_Factions;
 
-
-import static com.fs.starfarer.api.impl.campaign.world.TTBlackSite.createZigguratCaptain;
-
 public class jdp_Grin {
 	public static String NOT_RANDOM_MISSION_TARGET = "$not_random_mission_target";
 
@@ -173,6 +170,9 @@ public class jdp_Grin {
 
 		//Jump points
 		system.autogenerateHyperspaceJumpPoints(true, true);
+
+		//Randomise
+		//placeInSector(system, true, false, "TEST");
 
 		//Add Demon Fleet
 		addFleet(maddie);

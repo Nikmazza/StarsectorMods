@@ -48,7 +48,7 @@
 	"startShipsCarrierSmall":[["maquech_tw_drone", "maquech_tw_drone", "iris_tw_escort"]],
 	"startShipsTradeSmall":[["buffalo_tw_standard", "flourish_tw_attack"]],
 	"startShipsTradeLarge":[["banteng_tw_standard", "iris_tw_escort", "brawler_tw_attack"]],
-    "startShipsSuper":[["candor_tw_assault"], ["tigershark_tw_artillery"]],
+    "startShipsSuper":[["aurora_tw_elite"]],
 	
     "startSpecialItems":[
         

@@ -19,7 +19,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "vice_deadeye_plasma"}
+            "weapons": {"WS 001": "vice_fandance_seeker"}
         },
         {
             "autofire": true,

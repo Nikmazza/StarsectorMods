@@ -1,0 +1,42 @@
+{
+    "displayName": "Drone",
+    "fluxCapacitors": 0,
+    "fluxVents": 12,
+    "goalVariant": true,
+    "hullId": "asm_enforcer",
+    "hullMods": [
+        "vice_field_repair_nanites",
+        "fragment_swarm",
+        "secondary_fabricator",
+        "vice_adaptive_trajectory_analyzer"
+    ],
+    "permaMods": ["asm_amorphous_alloy"],
+    "sMods": [],
+    "variantId": "asm_enforcer_drone",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavy_mass_driver",
+                "WS 002": "heavy_mass_driver",
+                "WS 003": "asm_fermion_decoupler",
+                "WS 004": "asm_fermion_decoupler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "voltaic_discharge",
+                "WS 006": "voltaic_discharge",
+                "WS 007": "kinetic_fragments"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "devouring_swarm"}
+        }
+    ]
+}

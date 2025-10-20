@@ -1,9 +1,12 @@
 {
 	tips:[
 		"[Emergent Threats] If the updated Remnant encounters are too hard, you can make adjustments in Lunalib settings.",
-		"[Emergent Threats] This mod increases the difficulty of Remnant Mess (HMI) encounters, and can also increase the difficulty of Abyssal (RAT) encounters. You can modify these changes with Lunalib settings.",
-		"[Emergent Threats] A sequential chain of bounty missions await you at the bar once you have reached Level 8, starting with a pirate treasure hunt.",
+		"[Emergent Threats] This mod increases the difficulty of Remnant Mess (HMI) encounters, and can also increase the difficulty of Abyssal (RAT) encounters. You can modify these changes in Lunalib settings.",
+		"[Emergent Threats] A sequential chain of bounty missions await you on the bounty board once you have reached Level 8, starting with a pirate treasure hunt.",
 		"[Emergent Threats] This mod makes changes to the core game Lux and Flash drones, Kinetic Blaster, and the sound of the Autopulse Laser. See the undo and restore readme.txt file for a way to revert any of these changes.",
-		"[Emergent Threats] The appearance of Experimental (EX) ships can be changed to more resemble other light blue high-tech hulls by using the Standard Plating hullmod",
+		"[Emergent Threats] The appearance of Experimental (EX) ships can be changed to more resemble other light blue high-tech hulls by using the Standard Plating hullmod.",
+		"[Emergent Threats] The Circumfix system holds a dangerous enemy, waiting to be unleashed once more.",
+		"[Emergent Threats] Infected Threat ships regenerate hull over time, but will slow their fragment attacks after an extended initial wave. Sometimes it may be better to weather the storm before pressing the attack, rather than rush in and be surrounded.",
+		"[Emergent Threats] Infected Threat fleets scale with the player's fleet, with a certain minimum and randomness factor. If the summoned enemy fleet is too powerful, try stashing ships that are not being used before summoning the enemy again.",
 	],
 }

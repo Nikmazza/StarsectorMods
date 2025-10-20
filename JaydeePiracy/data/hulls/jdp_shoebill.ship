@@ -17,7 +17,7 @@
     "shieldRadius": 294,
     "viewOffset": 0,
     "builtInMods": [
-        "stealth_minefield_lt",
+        "jdp_minefield",
         "nav_relay",
         "repair_gantry",
         "jdp_maintenancenanitetanks",

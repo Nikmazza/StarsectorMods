@@ -1,0 +1,25 @@
+{
+  "variantId": "mudskipper_GMHS_std",
+  "hullId": "mudskipper_GMHS",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 4,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "efficiency_overhaul",
+    "expanded_deck_crew"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "crungun"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

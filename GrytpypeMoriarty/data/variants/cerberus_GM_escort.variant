@@ -1,0 +1,33 @@
+{
+  "variantId": "cerberus_GM_escort",
+  "hullId": "cerberus_GM",
+  "displayName": "Escort",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 10,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "insulatedengine",
+    "blast_doors"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "bluebottle",
+        "WS0004": "bluebottle"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

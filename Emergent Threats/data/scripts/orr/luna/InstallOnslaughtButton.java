@@ -13,30 +13,31 @@ import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-import com.fs.starfarer.api.fleet.FleetMemberType;
-
 import lunalib.lunaRefit.BaseRefitButton;
-import lunalib.lunaUI.elements.LunaSpriteElement;
 
 public class InstallOnslaughtButton extends BaseRefitButton {
 	
+	private static String SKIN_MOD = "ML_skinSwap";
 	private static String WRECK_MOD = "orr_missing_weapons";
 	private static String MOD_HULLMOD = "orr_revised_armaments";
 	private static String LG_MOD = "vice_onslaught_hull";
 	private static String AGGRESSOR_MOD = "orr_aggressor";
+	private static String ASMGRESSOR_MOD = "orr_asmgressor";
 	private static String ONSLAUGHT_MOD = "orr_onslaught";
 	private static String CGR_MOD = "orr_damper_field";
+	private static String ASM_MOD = "orr_asmslaught";
+	private static String DPL_MOD = "orr_dplslaught";
 	
 	private static String IX_MOD = "ix_ninth";
 	private static String TW_MOD = "tw_trinity_retrofit";
 	private static String LEFT_IX_ID = "WS CB1";
 	private static String RIGHT_IX_ID = "WS CB2";
 
-	private static String EX_MOD = "vice_intrepid_hull";
 	private static String REM_MOD = "vice_incandescent_remnant";
+	private static String EX_MOD = "vice_intrepid_hull";
 	private static String LEFT_HT_ID = "WS 020";
 	private static String RIGHT_HT_ID = "WS 021";
-
+	
 	private static String LEFT_ID = "WS 016";
 	private static String RIGHT_ID = "WS 017";
 	private static String DECO_SLOT = "WS 025";
@@ -45,28 +46,37 @@ public class InstallOnslaughtButton extends BaseRefitButton {
 	static {
 		HULL_LIST.add("vice_incandescent");
 		HULL_LIST.add("vice_incandescent_default_D");
-		HULL_LIST.add("vice_intrepid_ex");
-		HULL_LIST.add("vice_intrepid_ex_default_D");
 		HULL_LIST.add("vice_onslaught_lg");
 		HULL_LIST.add("vice_onslaught_lg_default_D");
 		HULL_LIST.add("dpl_onslaught_alt");
 		HULL_LIST.add("dpl_onslaught_alt_default_D");
+		HULL_LIST.add("intrepid_ix");
+		HULL_LIST.add("intrepid_ix_default_D");
+		HULL_LIST.add("intrepid_tw");
+		HULL_LIST.add("intrepid_tw_default_D");
 	}
 	
 	private static List<String> BAN_LIST = new ArrayList<String>();
 	static {
 		BAN_LIST.add("vice_incandescent");
 		BAN_LIST.add("vice_incandescent_default_D");
-		BAN_LIST.add("vice_intrepid_ex");
-		BAN_LIST.add("vice_intrepid_ex_default_D");
+		//BAN_LIST.add("vice_intrepid_ex");
+		//BAN_LIST.add("vice_intrepid_ex_default_D");
 		BAN_LIST.add("vice_onslaught_lg");
 		BAN_LIST.add("vice_onslaught_lg_default_D");
+		BAN_LIST.add("onslaught_xiii");
+		BAN_LIST.add("onslaught_xiii_default_D");
+		BAN_LIST.add("intrepid_ix");
+		BAN_LIST.add("intrepid_ix_default_D");
+		BAN_LIST.add("intrepid_tw");
+		BAN_LIST.add("intrepid_tw_default_D");
 	}
 	
 	private static List<String> WEAPON_LIST = new ArrayList<String>();
 	static {
 		WEAPON_LIST.add("orr_ana");
 		WEAPON_LIST.add("orr_giga");
+		WEAPON_LIST.add("orr_har");
 		WEAPON_LIST.add("orr_hmc");
 		WEAPON_LIST.add("orr_nal");
 		WEAPON_LIST.add("orr_tac");
@@ -78,6 +88,7 @@ public class InstallOnslaughtButton extends BaseRefitButton {
 	static {
 		SUFFIX_LIST.add("_ana");
 		SUFFIX_LIST.add("_giga");
+		SUFFIX_LIST.add("_har");
 		SUFFIX_LIST.add("_hmc");
 		SUFFIX_LIST.add("_nal");
 		SUFFIX_LIST.add("_tac");
@@ -89,6 +100,7 @@ public class InstallOnslaughtButton extends BaseRefitButton {
 	static {
 		WO_HULLMOD_LIST.add("orr_wo_anathema");
 		WO_HULLMOD_LIST.add("orr_wo_giga");
+		WO_HULLMOD_LIST.add("orr_wo_har");
 		WO_HULLMOD_LIST.add("orr_wo_hmc");
 		WO_HULLMOD_LIST.add("orr_wo_nal");
 		WO_HULLMOD_LIST.add("orr_wo_tac");
@@ -156,18 +168,22 @@ public class InstallOnslaughtButton extends BaseRefitButton {
 	}
 	
 	private static String getPrefix(ShipVariantAPI v) {
-		if (v.hasHullMod("orr_aggressor") && v.hasHullMod("fourteenth")) return "orr_aggressor_xiv";
-		else if (v.hasHullMod("orr_aggressor")) return "orr_aggressor_orr";
+		if (v.hasHullMod(AGGRESSOR_MOD) && v.hasHullMod("fourteenth")) return "orr_aggressor_xiv";
+		else if (v.hasHullMod(AGGRESSOR_MOD)) return "orr_aggressor_orr";
+		else if (v.hasHullMod(ASMGRESSOR_MOD)) return "orr_aggressor_asm";
 		
-		else if (v.hasHullMod("orr_damper_field")) return "orr_onslaught_cgr";
+		else if (v.hasHullMod(EX_MOD)) return "orr_intrepid_exg";
 		
-		else if (v.hasHullMod("orr_onslaught") && v.hasHullMod("fourteenth")) return "orr_onslaught_xiv";
-		else if (v.hasHullMod("orr_onslaught")) return "orr_onslaught_orr";
+		else if (v.hasHullMod(CGR_MOD)) return "orr_onslaught_cgr";
+		else if (v.hasHullMod(ASM_MOD)) return "orr_onslaught_asm";
 		
-		//else if (v.hasHullMod("vice_incandescent_remnant")) return null;
-		//else if (v.hasHullMod("vice_onslaught_hull")) return null;
+		else if (v.hasHullMod(ONSLAUGHT_MOD) && v.hasHullMod("fourteenth")) return "orr_onslaught_xiv";
+		else if (v.hasHullMod(ONSLAUGHT_MOD)) return "orr_onslaught_orr";
+		
+		else if (v.hasHullMod(DPL_MOD)) return "orr_onslaught_dpl";
+		//else if (v.hasHullMod("vice_incandescent_remnant")) orr_incandescent_rem;
 				
-		return "orr_onslaught_dpl"; //Phase Lab Onslaught, need to make more specific if other variants get added
+		return "orr_onslaught_orr";
 	}
 	
 	private static String getSuffix(String weaponId) {
@@ -179,6 +195,9 @@ public class InstallOnslaughtButton extends BaseRefitButton {
 	
 	@Override
 	public void onClick(FleetMemberAPI member, ShipVariantAPI variant, InputEventAPI event, MarketAPI market) {
+		variant.getPermaMods().remove(SKIN_MOD);
+		variant.getHullMods().remove(SKIN_MOD);
+		
 		String wo = getWorkOrder(variant);
 		String weaponId = getWeaponFromWorkOrder(wo);
 		String decoId = weaponId + "_deco";	
@@ -248,8 +267,12 @@ public class InstallOnslaughtButton extends BaseRefitButton {
 		if (variant.hasHullMod(WRECK_MOD) 
 					|| variant.hasHullMod(MOD_HULLMOD)
 					|| variant.hasHullMod(AGGRESSOR_MOD) 
+					|| variant.hasHullMod(ASMGRESSOR_MOD) 
 					|| variant.hasHullMod(ONSLAUGHT_MOD)
-					|| variant.hasHullMod(CGR_MOD)) return true;
+					|| variant.hasHullMod(CGR_MOD)
+					|| variant.hasHullMod(ASM_MOD)
+					|| variant.hasHullMod(DPL_MOD)
+					|| variant.hasHullMod(EX_MOD)) return true;
 		for (String s : HULL_LIST) {
 			if (s.equals(member.getHullId())) return true;
 		}

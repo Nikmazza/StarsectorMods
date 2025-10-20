@@ -11,11 +11,12 @@
 	"ordnancePoints":300,
 	"baseValueMult":1.5,
 	"spriteName":"graphics/ships/ix/radiant_ix.png",
-	"tags":["no_autofit", "ix_core_guard"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"tags":["no_autofit", "ix_core_guard", "codex_unlockable"],
 	"tech":"IX Battlegroup",
-	"builtInMods":["ix_converted_hull", "ix_ninth"],
+	"builtInMods":["ix_converted_hull", "ix_ninth", "ix_radiant_sbe_handler"],
 	"builtInWeapons": {
-        "WS SBE": "sbe_ix",
+        #"WS SBE": "sbe_ix",
 		"WS DIF": "diffraction_laser_ix",
     },
 }

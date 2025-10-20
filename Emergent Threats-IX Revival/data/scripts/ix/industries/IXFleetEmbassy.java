@@ -70,22 +70,23 @@ public class IXFleetEmbassy extends BaseIndustry implements RouteFleetSpawner, F
 	private static String SPY_CENTER_ID = "ix_surveillance_center";
 
 	private boolean isInstanceInstalled() {
+		if (market.getIndustry(id) == null) return false;
 		return IX_PLAYER_CORE_ID.equals(market.getIndustry(id).getAICoreId());
 	}
 
 	@Override
 	public boolean isHidden() {
-		//for handling TW structures only
-		FactionAPI ix = Global.getSector().getFaction(IX_FAC_ID);
-		if (this.id.equals(ACADEMY_ID) || this.id.equals(EMBASSY_ID)) {
-			if (!TW_FAC_ID.equals(market.getFactionId())) return true; //appears only under Trinity Worlds rule
-			if (ix.getRelationship(TW_FAC_ID) <= -0.25) return true; //appears only when IX is friendly to TW
-		}
 		return false;
 	}
 	
 	@Override
 	public boolean isFunctional() {
+		//for handling TW structures only
+		FactionAPI ix = Global.getSector().getFaction(IX_FAC_ID);
+		if (this.id.equals(ACADEMY_ID) || this.id.equals(EMBASSY_ID)) {
+			if (!TW_FAC_ID.equals(market.getFactionId())) return false; //appears only under Trinity Worlds rule
+			if (ix.getRelationship(TW_FAC_ID) <= -0.25) return false; //appears only when IX is friendly to TW
+		}
 		if (isDisrupted()) return false;
 		if (isBuilding() || isUpgrading()) return false;
 		return (!isHidden());

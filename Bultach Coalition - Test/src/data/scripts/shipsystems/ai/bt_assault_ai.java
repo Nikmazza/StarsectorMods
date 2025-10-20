@@ -7,6 +7,8 @@ import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.combat.ShipAIConfig;
+
+import static com.fs.starfarer.api.impl.campaign.ids.Personalities.AGGRESSIVE;
 import static com.fs.starfarer.api.impl.campaign.ids.Personalities.RECKLESS;
 
 public class bt_assault_ai implements ShipSystemAIScript {
@@ -75,7 +77,7 @@ public class bt_assault_ai implements ShipSystemAIScript {
 	private void activateSystem() {
 		ship.useSystem();
 		// Become based when active
-		savedConfig.personalityOverride = ship.getShipAI().getConfig().personalityOverride = RECKLESS;
+		savedConfig.personalityOverride = ship.getShipAI().getConfig().personalityOverride = AGGRESSIVE;
 	}
 
 

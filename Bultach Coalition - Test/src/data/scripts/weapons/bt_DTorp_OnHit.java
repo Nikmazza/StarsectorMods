@@ -28,7 +28,7 @@ public class bt_DTorp_OnHit implements OnHitEffectPlugin {
     static final int NUM_PARTICLES = 50;
 
     static final DamagingExplosionSpec explosion = new DamagingExplosionSpec(0.05f,
-            850,
+            600,
             350f,
             0,
             0f,

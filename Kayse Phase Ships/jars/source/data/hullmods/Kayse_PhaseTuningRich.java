@@ -34,7 +34,7 @@ public class Kayse_PhaseTuningRich extends BaseHullMod {
 
 	@Override
 	public boolean isApplicableToShip(ShipAPI ship) {
-                if (! ship.getVariant().hasHullMod("phasefield"))
+                if (ship.getHullSpec().getDefenseType() != ShieldAPI.ShieldType.PHASE)
                         return false;
 		if (ship.getVariant().hasHullMod("kayse_phasetuninglean") || ship.getVariant().hasHullMod("phasecoilinstability") || ship.getVariant().hasHullMod("ex_phase_coils"))
 			return false;
@@ -43,8 +43,8 @@ public class Kayse_PhaseTuningRich extends BaseHullMod {
 
 	@Override
 	public String getUnapplicableReason(ShipAPI ship) {
-                if (! ship.getVariant().hasHullMod("phasefield"))
-                        return "Requires Phase Coils and Phase Field";
+                if (ship.getHullSpec().getDefenseType() != ShieldAPI.ShieldType.PHASE)
+                        return "Requires Phase";
 		if (ship.getVariant().hasHullMod("kayse_phasetuninglean") || ship.getVariant().hasHullMod("phasecoilinstability") || ship.getVariant().hasHullMod("ex_phase_coils"))
 			return "Incompatible with other Phase Coil modules";
 		return super.getUnapplicableReason(ship);

@@ -8,7 +8,8 @@
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "targetingunit"
+    "targetingunit",
+    "magazines"
   ],
   "weaponGroups": [
     {
@@ -23,31 +24,31 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0013": "guardian"
+        "WS0009": "harpoonpod",
+        "WS0012": "harpoonpod"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ionbeam",
-        "WS0002": "ionbeam"
+        "WS0013": "squall"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0009": "salamanderpod",
         "WS0010": "heatseeker",
-        "WS0011": "heatseeker",
-        "WS0012": "salamanderpod"
+        "WS0011": "heatseeker"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
+        "WS0001": "heavyburst",
+        "WS0002": "heavyburst",
         "WS0003": "heavyburst",
         "WS0004": "heavyburst",
         "WS0005": "pdlaser",
@@ -64,6 +65,7 @@
   ],
   "modules": [],
   "wings": [
-    "wasp_wing"
+    "wasp_wing",
+    "longbow_wing"
   ]
 }

@@ -1,0 +1,64 @@
+{
+  "hullName": "Sabrina Borer",
+  "hullId": "drone_GM_Borer",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/borer_GM.png",
+  "style": "HIGH_TECH",
+  "height": 20,
+  "width": 20,
+  "center": [10, 10],
+  "collisionRadius": 19,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 15.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "terminator_core",
+    "GMDA_Ftr"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 70,
+      "angle": 2,
+      "locations": [2.5, 5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 70,
+      "angle": -2,
+      "locations": [2.5, -5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [1, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-6, -0],
+      "length": 12,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "CUSTOM",
+      "styleId": "GreenFlare"
+    }
+  ],
+  "bounds": [
+    -7.5, -9,
+    8, -8.5,
+    8, 8.5,
+    -7.5, 9
+  ]
+}

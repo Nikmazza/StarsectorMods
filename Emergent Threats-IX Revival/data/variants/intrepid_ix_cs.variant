@@ -6,12 +6,16 @@
     "hullId": "intrepid_ix",
     "hullMods": [
         "extendedshieldemitter",
+        "ix_dedicated_ewar_suite",
+        "ix_ecm_discount_20",
+        "fluxdistributor",
         "targetingunit",
         "ix_reactive_combat_shields",
         "stabilizedshieldemitter"
     ],
-    "permaMods": [],
+    "permaMods": ["ix_dedicated_ewar_suite"],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "intrepid_ix_cs",
     "weaponGroups": [
         {
@@ -20,7 +24,7 @@
             "weapons": {
                 "WS CB1": "cutting_beam_ix",
                 "WS CB2": "cutting_beam_ix",
-                "WS DEM": "sbe_ix"
+                "WS DIF": "diffraction_laser_ix"
             }
         },
         {
@@ -55,20 +59,15 @@
             "weapons": {
                 "WS 001": "plasma_dart_ix",
                 "WS 002": "plasma_dart_ix",
+                "WS 003": "lightbringer_ciws_ix",
+                "WS 004": "lightbringer_ciws_ix",
                 "WS 010": "plasma_dart_ix",
                 "WS 011": "plasma_dart_ix",
                 "WS 012": "plasma_dart_ix",
-                "WS 013": "plasma_dart_ix"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 003": "lightbringer_ciws_ix",
-                "WS 004": "lightbringer_ciws_ix",
+                "WS 013": "plasma_dart_ix",
                 "WS 014": "morningstar_ciws_ix",
-                "WS 015": "morningstar_ciws_ix"
+                "WS 015": "morningstar_ciws_ix",
+                "WS DEM": "ewar_suite_ix"
             }
         }
     ]

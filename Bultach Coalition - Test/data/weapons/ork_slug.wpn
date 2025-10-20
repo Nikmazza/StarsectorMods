@@ -1,23 +1,15 @@
 {
   "id": "ork_slug",
   "specClass": "projectile",
-  "projectileSpecId": "screwshields_gauss_shot_small",
+  "projectileSpecId": "bt_seilch_charge",
   "type": "BALLISTIC",
   "size": "SMALL",
   "everyFrameEffect": "data.scripts.weapons.bt_antishield_everyframe_small",
   "turretSprite": "graphics/weapons/ork_slug_turret_base.png",
-  "turretGlowSprite": "graphics/weapons/ork_slug_turret_glow.png",
   "turretGunSprite": "graphics/weapons/ork_slug_turret_recoil.png",
   "hardpointSprite": "graphics/weapons/ork_slug_hardpoint_base.png",
-  "hardpointGlowSprite": "graphics/weapons/ork_slug_hardpoint_glow.png",
   "hardpointGunSprite": "graphics/weapons/ork_slug_hardpoint_recoil.png",
-  "glowColor": [
-    255,
-    140,
-    80,
-    155
-  ],
-  "visualRecoil": 4,
+  "visualRecoil": 5,
   "renderHints": [
     "RENDER_BARREL_BELOW"
   ],
@@ -39,17 +31,17 @@
   "animationType": "GLOW_AND_FLASH",
   "muzzleFlashSpec": {
     "length": 20,
-    "spread": 0,
+    "spread": 8,
     "particleSizeMin": 2,
     "particleSizeRange": 8,
     "particleDuration": 0.4,
     "particleCount": 10,
     "particleColor": [
-      255,
-      100,
-      100,
-      255
+     165,
+      225,
+      185,
+      175
     ]
   },
-  "fireSoundTwo": "slug_fire"
+  "fireSoundTwo": "bt_seilch_charge_launch_small"
 }

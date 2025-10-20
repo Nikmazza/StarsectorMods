@@ -1,3 +1,123 @@
+Version 3.2.2
+Save Compatible
+
+- Potentialy fixed an issue that prevented loading a save.
+
+
+
+Version 3.2.1
+Save Compatible
+
+- The expedition hub will no longer bring in hulls, to avoid messing with the nanoforge buff. 
+- Slightly increased how much heavy machinery is recovered from ruins by the expedition hub.
+- Potentialy fixed an issue that caused the which mod feature to stop working during some sessions.
+
+
+
+Version 3.2.0
+Save Compatible with 3.0.0+
+
+-> Moved the Sector Procedual Generation Configurations in to a seperate mod.
+-> Increased the brightness of abyssal storms.
+-> Fixed the Exotech Background giving a bugged AI Core.
+
+The Procedual Generation Configs have been moved to a seperate mod, mainly for the reason that their the most painful piece to update across game versions and that without it, RAT may in many cases work without any other change, likewise i would prefer to not spoil myself on new content within each game update when updating the mod. The new mod will no longer be maintained by myself, and is free to adopt by anyone that wants to once a new game version releases.
+The new mod is called "ProcGenConfigs".
+
+
+
+Version 3.1.9
+Save Compatible with 3.0.0+
+
+-> The Exoship can now be set to warp towards the Abyssal Depths
+-> The Sariels Shipsystem now makes the Sariel behave more aggresively while active.
+-> Reduced the Sariels Shipsystem speed increase from 20 to 15.
+-> Reduced the "Seraphs Grace" Hullmods in-abyss speed boost from 15 to 10.
+
+
+
+Version 3.1.8
+Save Compatible with 3.0.0+
+
+-> Fixed some issues related to the rare title screens.
+
+
+
+Version 3.1.7
+Save Compatible with 3.0.0+
+
+-> Fixed the "Raphael-class" being counted as an automated ship.
+
+
+
+Version 3.1.6
+Save Compatible with 3.0.0+
+
+-> The "Apheidas-class" can no longer equip shrouded or fragment hullmods.
+-> Fixed a rare crash when hovering over RAT's AI Cores in cargo.
+
+
+
+Version 3.1.5
+Somewhat Save Compatible with 3.0.0+
+Issue: Abyssal Ships on existing saves may no longer be recoverable.
+
+-> Reworked the "Abyssal Crew Conversion" Alteration.
+--> It now works on all automated ships.
+--> Cores can be integrated again to provide their signature skill and activate the "Abyssal Adaptability" hullmods effect.
+--> It now keeps the ship as "Automated", applying the AI Points penalty, but also being effected by automation skills.
+--> Humans count as a 2x multiplier for points, integrating a core increases it to 3x.
+--> If you can't use Automated Ships, it instead provides +70% combat readiness (Bringing the ship to 40%).
+
+-> The "Abyssal Adaptability" hullmow now has an effect for the Boss core, which showns in the tooltip after its been acquired once.
+-> Nerfed the "Mending" skill from complete immunity to a 60% reduction in d-mod chance, to adjust for "Engineerings" capstones.
+-> Fixed a bug that sometimes made abyssal ships with AI cores gain the shipsystem cooldown penalty.
+
+
+
+Version 3.1.4
+Save Compatible with 3.0.0+
+
+-> Fixed an issue where you could acquire a bugged version of the Neuro Core.
+-> Updated the Abyssal XO to work with Second-in-Commands automated points config.
+--> Make sure to update both RAT and SiC if you use both.
+
+
+
+Version 3.1.3
+Save Compatible with 3.0.0+
+
+-> Fixed an issue that made you unable to load a save that got made right after activating the catalyst.
+
+
+
+Version 3.1.2
+Save Compatible with 3.0.0+
+
+-> Fixed the Exoship Remains fight giving a bugged exo-processor.
+
+
+
+Version 3.1.1
+Save Compatible with 3.0.0+
+
+-> Fixed a crash that could occur when looking at tooltips
+
+
+
+Version 3.1.0
+Save Compatible with 3.0.0+
+
+-> Added an option to increase the size of the abyssal depths by 150%.
+-> The Artifacts Widget now pulses visualy when you have an artifact and never used the system before.
+-> The "Boost Redirector" alteration now only decreases the zero flux boost by 50% instead of 80%.
+-> Made the description of the "Boost Redirector" alteration less confusing.
+-> RAT AI Cores can now be given to factions like other AI cores.
+--> Slightly reduces the value of most RAT AI cores to adjust for this.
+-> Fixed an issue that made it possible to dupe RAT AI Cores.
+
+
+
 Version 3.0.9
 Save Compatible with 3.0.0+
 

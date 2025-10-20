@@ -3,7 +3,7 @@
   "hullId": "ork_ifrinn",
   "displayName": "Standard",
   "goalVariant": false,
-  "fluxCapacitors": 8,
+  "fluxCapacitors": 6,
   "fluxVents": 10,
   "quality": 1,
   "permaMods": [],
@@ -17,15 +17,15 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0001": "ork_diuraidh",
-        "WS0002": "ork_diuraidh"
+        "WS0003": "ork_clangtorp_medium"
       }
     },
     {
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0003": "ork_swarmer_medium"
+        "WS0001": "ork_diuraidh",
+        "WS0002": "ork_diuraidh"
       }
     }
   ],

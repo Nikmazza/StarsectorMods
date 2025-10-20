@@ -3,14 +3,15 @@
   "hullId": "nes_voltaire",
   "displayName": "Strike",
   "goalVariant": true,
-  "fluxCapacitors": 14,
+  "fluxCapacitors": 9,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
-    "targetingunit",
     "fluxbreakers",
-    "magazines"
+    "magazines",
+    "unstable_injector",
+    "hardenedshieldemitter"
   ],
   "weaponGroups": [
     {

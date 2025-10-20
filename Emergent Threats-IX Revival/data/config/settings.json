@@ -29,7 +29,7 @@
 			"ix_vertex_illus":"graphics/illustrations/ix_vertex_illus.png",
 			"ix_rusalka_illus":"graphics/illustrations/ix_rusalka_illus.png",
 			"ix_scorn_illus":"graphics/illustrations/ix_scorn_illus.png",
-			
+			"ix_warning_illus":"graphics/illustrations/ix_warning_illus.png",
 			"tw_falais_illus":"graphics/illustrations/tw_falais_illus.png",
 			"tw_gorias_illus":"graphics/illustrations/tw_gorias_illus.png",
 			"tw_murias_illus":"graphics/illustrations/tw_murias_illus.png",
@@ -38,7 +38,10 @@
 			"tw_station3_illus":"graphics/illustrations/tw_station3_illus.png",
 		},
 		"ix_ships":{
+			"intrepid_ix_no_sbe":"graphics/ships/ix/intrepid_ix_ecm.png",
 			"odyssey_ix_no_bay":"graphics/ships/ix/odyssey_ix_no_bay.png",
+			"radiant_ix_no_sbe":"graphics/ships/ix/radiant_ix_ecm.png",
+			"radiant_hvb_no_sbe":"graphics/ships/ix/hvb/radiant_ix_hvb_ecm.png",
 		},
 		"portraits":{
 			"ix_panopticon_core":"graphics/portraits/ix_panopticon_core.png",

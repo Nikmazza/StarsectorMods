@@ -1,0 +1,17 @@
+{
+	"id":"asm_voltaic_multipulser_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"onFireEffect":"data.scripts.asm.weapons.VoltaicMultipulserEffect",
+	"onHitEffect":"data.scripts.asm.weapons.VoltaicMultipulserEffect",
+	"length":10.0,
+	"width":8.0,
+	"fadeTime":0.05,
+	"coreColor":[255,225,170,0],
+	"fringeColor":[255,225,170,0],
+	"textureScrollSpeed":0.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/fx/empty.png"
+}

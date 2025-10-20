@@ -171,7 +171,7 @@ public class ork_Dakka_Den {
         SectorEntityToken nebulaTiles = Misc.addNebulaFromPNG("data/campaign/terrain/nebula_rionnagmor.png",
                 0, 0, // Center of nebula
                 system, // Location to add to
-                "terrain", "nebula_amber", // Texture to use, uses xxx_map for map
+                "terrain", "nebula_bt_home", // Texture to use, uses xxx_map for map
                 4, 4, Terrain.NEBULA, StarAge.OLD);
 
         nebulaTiles.getLocation().set(0, 0);

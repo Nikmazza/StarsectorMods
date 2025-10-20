@@ -5,20 +5,24 @@ import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+// this should work properly now, but is a bit scuffed
 public class BT_Sathar_Swapper extends BaseHullMod {
 
     public static final String WEAPON_SLOT = "WS0001";
     public static final String WEAPON_SLOT_2 = "WS0002";
     public static final String WEAPON_PREFIX = "ork_sathar_";
+    public static final String HULLMOD_PREFIX = "bt_sathar_mode_";
+    public static final String TAG_PREFIX = "bt_sathar_tag_";
 
-    // points to the next weapon/hullmod suffix
     public static final Map<String, String> LOADOUT_CYCLE = new HashMap<>();
-
     static {
         LOADOUT_CYCLE.put("siege_laser", "gigashotgun");
         LOADOUT_CYCLE.put("gigashotgun", "emp_nuke");
@@ -26,57 +30,76 @@ public class BT_Sathar_Swapper extends BaseHullMod {
         LOADOUT_CYCLE.put("doom_laser", "siege_laser");
     }
 
-    // Array for random weapon selection
     public static final String[] WEAPON_POOL = { "siege_laser", "gigashotgun", "emp_nuke", "doom_laser" };
+    private static final Random rand = new Random();
 
     @Override
     public void applyEffectsBeforeShipCreation(ShipAPI.HullSize hullSize, MutableShipStatsAPI stats, String id) {
-
-        if (stats.getEntity() == null)
+        if (stats.getEntity() == null) {
             return;
-
-        // trigger a weapon switch if none of the selector hullmods are present
-        boolean switchLoadout = true;
-        for (String hullmod : LOADOUT_CYCLE.values()) {
-            if (stats.getVariant().getHullMods().contains("bt_sathar_mode_" + hullmod)) {
-                switchLoadout = false;
-                break;
-            }
         }
 
-        if (switchLoadout) {
-            // Randomly choose a new weapon from the pool
-            String newWeapon = getRandomWeapon();
+        ShipVariantAPI variant = stats.getVariant();
+        String currentMode = findCurrentModeFromHullmods(variant);
 
-            // Add corresponding hullmod to match the new weapon
-            stats.getVariant().addMod("bt_sathar_mode_" + newWeapon);
+        if (currentMode != null) {
+            updateTags(variant, currentMode);
+            return;
+        }
 
-            // Clear slots and assign the new weapon
-            stats.getVariant().clearSlot(WEAPON_SLOT);
-            stats.getVariant().clearSlot(WEAPON_SLOT_2);
-            stats.getVariant().addWeapon(WEAPON_SLOT, WEAPON_PREFIX + newWeapon);
-            stats.getVariant().addWeapon(WEAPON_SLOT_2, WEAPON_PREFIX + newWeapon);
+        String lastMode = findCurrentModeFromTags(variant);
+        String newMode;
 
-        } else if (stats.getVariant().getWeaponId(WEAPON_SLOT) == null) {
-            // If no weapon is assigned, choose a random weapon
-            String newWeapon = getRandomWeapon();
+        if (lastMode != null && LOADOUT_CYCLE.containsKey(lastMode)) {
+            newMode = LOADOUT_CYCLE.get(lastMode);
+        } else {
+            newMode = WEAPON_POOL[rand.nextInt(WEAPON_POOL.length)];
+        }
 
-            // Assign random weapon
-            stats.getVariant().addWeapon(WEAPON_SLOT, WEAPON_PREFIX + newWeapon);
-            stats.getVariant().addWeapon(WEAPON_SLOT_2, WEAPON_PREFIX + newWeapon);
+        if (newMode != null) {
+            updateTags(variant, newMode);
+            variant.addMod(HULLMOD_PREFIX + newMode);
+            variant.clearSlot(WEAPON_SLOT);
+            variant.clearSlot(WEAPON_SLOT_2);
+            variant.addWeapon(WEAPON_SLOT, WEAPON_PREFIX + newMode);
+            variant.addWeapon(WEAPON_SLOT_2, WEAPON_PREFIX + newMode);
         }
     }
 
-    // Method to randomly select a weapon from the pool
-    private String getRandomWeapon() {
-        Random rand = new Random();
-        return WEAPON_POOL[rand.nextInt(WEAPON_POOL.length)];
+    private void updateTags(ShipVariantAPI variant, String newMode) {
+        List<String> toRemove = new ArrayList<>();
+        for (String tag : variant.getTags()) {
+            if (tag.startsWith(TAG_PREFIX)) {
+                toRemove.add(tag);
+            }
+        }
+        for (String tag : toRemove) {
+            variant.removeTag(tag);
+        }
+        variant.addTag(TAG_PREFIX + newMode);
+    }
+
+    private String findCurrentModeFromTags(ShipVariantAPI variant) {
+        for (String tag : variant.getTags()) {
+            if (tag.startsWith(TAG_PREFIX)) {
+                return tag.replace(TAG_PREFIX, "");
+            }
+        }
+        return null;
+    }
+
+    private String findCurrentModeFromHullmods(ShipVariantAPI variant) {
+        for (String mode : LOADOUT_CYCLE.keySet()) {
+            if (variant.hasHullMod(HULLMOD_PREFIX + mode)) {
+                return mode;
+            }
+        }
+        return null;
     }
 
     @Override
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
         if (ship.getOriginalOwner() < 0) {
-            // Undo fix for weapons put in cargo
             if (Global.getSector() != null &&
                     Global.getSector().getPlayerFleet() != null &&
                     Global.getSector().getPlayerFleet().getCargo() != null &&

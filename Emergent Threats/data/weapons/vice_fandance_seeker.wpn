@@ -1,0 +1,20 @@
+{
+  "id": "vice_fandance_seeker",
+  "specClass": "projectile",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "turretSprite": "graphics/vice/weapons/fandance_turret_base.png",
+  "turretGlowSprite":"graphics/vice/weapons/fandance_turret_glow.png",
+  "hardpointSprite": "graphics/vice/weapons/fandance_hardpoint_base.png",
+  "hardpointGlowSprite":"graphics/vice/weapons/fandance_hardpoint_glow.png",
+  "glowColor": [5,135,175,255],
+  "turretOffsets": [6,0, 6,0, 6,0],
+  "turretAngleOffsets": [-20, 0, 20],
+  "hardpointOffsets": [10,0, 10,0, 10,0],
+  "hardpointAngleOffsets": [-20, 0, 20],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW",
+  "autocharge": true,
+  "projectileSpecId": "vice_fandance_shot",
+  "fireSoundTwo": "vice_fandance_fire"
+}

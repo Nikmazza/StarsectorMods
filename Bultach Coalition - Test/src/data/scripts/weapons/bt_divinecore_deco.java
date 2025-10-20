@@ -10,11 +10,32 @@ import org.magiclib.util.MagicRender;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 public class bt_divinecore_deco implements EveryFrameWeaponEffectPlugin, OnFireEffectPlugin {
 
     private final List<DamagingProjectileAPI> projectiles = new ArrayList<>();
+    private boolean empSlotsInitialized = false;
+    private final List<WeaponAPI> targetSystemWeapons = new ArrayList<>();
+    private final Random arcRandom = new Random();
+
+    private static final Set<String> TARGET_SLOT_IDS = new HashSet<>(Arrays.asList(
+            "WS0016", "WS0024", "WS0010", "WS0025", "WS0026", "WS0029", "WS0030", "WS0031",
+            "WS0032", "WS0033", "WS0034", "WS0035", "WS0036", "WS0037", "WS0038", "WS0039",
+            "WS0040", "WS0041", "WS0042", "WS0043"
+    ));
+
+    private float empIntervalTimer = 0f;
+    private static final float BASE_EMP_AVERAGE_INTERVAL = 2.5f;
+    private static final float SYSTEM_ACTIVE_EMP_AVERAGE_INTERVAL = 0.6f;
+
+    private static final float EMP_ARC_THICKNESS = 10f;
+    private static final Color EMP_ARC_FRINGE_COLOR = new Color(255, 210, 180, 175);
+    private static final Color EMP_ARC_CORE_COLOR = new Color(255, 255, 230, 200);
 
     @Override
     public void advance(float amount, CombatEngineAPI engine, WeaponAPI weapon) {
@@ -69,6 +90,44 @@ public class bt_divinecore_deco implements EveryFrameWeaponEffectPlugin, OnFireE
                     0.08f * i,
                     0.0f,
                     0.4f - i / 8f
+            );
+        }
+
+        ShipAPI ship = weapon.getShip();
+        if (ship == null) return;
+
+        if (!empSlotsInitialized) {
+            for (WeaponAPI w : ship.getAllWeapons()) {
+                if (TARGET_SLOT_IDS.contains(w.getSlot().getId())) {
+                    if (w != weapon) {
+                        targetSystemWeapons.add(w);
+                    }
+                }
+            }
+            empSlotsInitialized = true;
+        }
+
+        if (targetSystemWeapons.isEmpty()) {
+            return;
+        }
+
+        empIntervalTimer -= amount;
+        if (empIntervalTimer <= 0f) {
+            float currentInterval = BASE_EMP_AVERAGE_INTERVAL;
+            if (ship.getSystem() != null && ship.getSystem().isActive()) {
+                currentInterval = SYSTEM_ACTIVE_EMP_AVERAGE_INTERVAL;
+            }
+            empIntervalTimer = currentInterval * (0.75f + arcRandom.nextFloat() * 0.5f);
+
+            WeaponAPI targetWeapon = targetSystemWeapons.get(arcRandom.nextInt(targetSystemWeapons.size()));
+            engine.spawnEmpArcVisual(
+                    weapon.getLocation(),
+                    ship,
+                    targetWeapon.getLocation(),
+                    ship,
+                    EMP_ARC_THICKNESS,
+                    EMP_ARC_FRINGE_COLOR,
+                    EMP_ARC_CORE_COLOR
             );
         }
     }

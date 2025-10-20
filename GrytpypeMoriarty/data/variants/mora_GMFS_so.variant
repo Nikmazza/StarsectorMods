@@ -1,0 +1,55 @@
+{
+  "variantId": "mora_GMFS_so",
+  "hullId": "mora_GMFS",
+  "displayName": "Labour Securing",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 7,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "annihilator",
+        "WS0001": "annihilator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "gmda_flamethrower",
+        "WS 004": "gmda_flamethrower"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 005": "lightmg",
+        "WS 007": "lightmg",
+        "WS 012": "lightmg",
+        "WS 013": "lightmg"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 008": "lightmg",
+        "WS 011": "lightmg",
+        "WS 014": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "talon_GM_wing",
+    "talon_GM_wing"
+  ]
+}

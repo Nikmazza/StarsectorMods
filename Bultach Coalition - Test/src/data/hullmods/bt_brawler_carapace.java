@@ -32,7 +32,7 @@ public class bt_brawler_carapace extends BaseHullMod {
 		BLOCKED_HULLMODS.add("shield_shunt");
         BLOCKED_HULLMODS.add("swp_shieldbypass");
     }
-	
+
 	private float check=0;
     private String id, ERROR="IncompatibleHullmodWarning";
 

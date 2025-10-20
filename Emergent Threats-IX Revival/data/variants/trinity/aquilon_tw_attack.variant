@@ -11,10 +11,10 @@
         "frontemitter",
         "stabilizedshieldemitter",
         "ix_dawnstar_controller",
-        "ix_aquilon_sr",
-        "ix_aquilon_sr_handler",
         "ix_dawnstar_electron",
-        "ix_dawnstar_electron_handler"
+        "ix_dawnstar_electron_handler",
+        "ix_aquilon_ss",
+        "ix_aquilon_ss_handler"
     ],
     "permaMods": [],
     "sMods": [],
@@ -55,6 +55,11 @@
                 "WS 009": "plasma_dart_ix",
                 "WS 010": "plasma_dart_ix"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "diffraction_laser_ix"}
         }
     ],
     "wings": ["nimbus_tw_wing_l"]

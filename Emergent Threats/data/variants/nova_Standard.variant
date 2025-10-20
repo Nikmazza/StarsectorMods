@@ -1,7 +1,7 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 19,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 44,
     "goalVariant": true,
     "hullId": "nova",
     "hullMods": [
@@ -9,7 +9,7 @@
         "hardenedshieldemitter",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_pulse_resonator"
+        "vice_adaptive_drone_bay"
     ],
     "permaMods": [],
     "sMods": [],
@@ -53,5 +53,6 @@
                 "WS 013": "pdburst"
             }
         }
-    ]
+    ],
+    "wings": ["vice_starquake_wing"]
 }

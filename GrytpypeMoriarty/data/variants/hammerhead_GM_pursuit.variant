@@ -1,0 +1,49 @@
+{
+  "variantId": "hammerhead_GM_pursuit",
+  "hullId": "hammerhead_GM",
+  "displayName": "Pursuit",
+  "goalVariant": true,
+  "fluxCapacitors": 17,
+  "fluxVents": 16,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "bluebottle_med",
+        "WS0008": "bluebottle_med"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "chaser",
+        "WS0006": "chaser"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "bluebottle",
+        "WS0002": "bluebottle"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "vulcan",
+        "WS0004": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

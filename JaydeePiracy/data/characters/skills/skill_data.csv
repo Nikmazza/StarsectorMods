@@ -2,7 +2,18 @@ id,name,order,tier,reqPoints,reqPointsPerExtraSkill,description,author,combat of
 #Skills,,,,,,,,,,,,
 jdp_omega_ecm,Q-Space ECM Suite,1,0,,,"*Dangerous* is not the way! *Selfkind* are happy *fun* days all the time. *Silly cow* is so strange *Selfkind* think. Next *silly cow* are *dissolving* and no more word making in *slow time*. Then *happy days* are here again.
 ",*Selfkind*,TRUE,FALSE,FALSE,"npc_only, codex_unlockable",graphics/icons/skills/jdp_EW.png
-jdp_omegakin,Omegakin,1,0,,,"""They that sat on Mammon’s pale horse was Caelus, blinded to the change in themselves; and they went forth conquering, and to conquer, in promise that they who overcomes shall not be hurt by the false death.""","The Book of Ludd, Visions 7:19",TRUE,FALSE,FALSE,"player_only, codex_unlockable",graphics/icons/skills/jdp_omegakin.png
+jdp_omegakin,Omegakin,1,0,,,"""They that sat on Mammon’s pale horse was Caelus, blinded to the change in themselves; and they went forth conquering, and to conquer, in promise that they who overcomes shall not be hurt by the false death.""","The Book of Ludd, Visions 7:19",TRUE,FALSE,FALSE,"npc_only, player_only, codex_unlockable",graphics/icons/skills/jdp_omegakin.png
+jdp_uneasymovements,Uneasy Movements,1,0,,,"Its- Its horrible! Whoever invented this, they're a monster.","Proving Grounds Transcript, Undisclosed Location",TRUE,FALSE,FALSE,"npc_only, player_only, codex_unlockable",graphics/icons/skills/flowerfish/jdp_flowerfishUneasyMovements.png
+jdp_perpetualpursuit,Perpetual Pursuit,1,0,,,"It is so quiet, right before a battle is set into motion. A lot can be accomplished in that interstitial space.",Flowerfish First Wasabi,TRUE,FALSE,FALSE,"npc_only, player_only, codex_unlockable",graphics/icons/skills/flowerfish/jdp_flowerfishPerpetualPursuit.png
+jdp_domainlogistics,Domain Tech-Mortician,10001,0,,,"To most successfully pick a corpse, you must know the deceased. Personally, intimately, in the way that you also know their secrets.",Trinity Mortsafe of the Mairaath Prospecting Fellows,FALSE,FALSE,TRUE,"npc_only, player_only, codex_unlockable",graphics/icons/skills/jdp_domainlogistics.png
+jdp_atomicextraction,Atomic Geoprocessing,10001,0,,,"Recall the rosy picture sold last time E.U.T.C came to make us rich and famous. It was not this new Atomic Geoengineering then, but the Accelerators. What is the legacy of those days but a dessicated world, and how will they steal again?","Audio archive, second wave of the Campaign for Aquilan Unity",FALSE,FALSE,TRUE,"npc_only, player_only, codex_unlockable",graphics/icons/skills/jdp_atomicextraction.png
+,,,,,,,,,,,,
+#Utility,,,,,,,,,,,,
+jdp_inactive,Inactive Skill,100000,1,0,,"""It is a uniquely horrible feeling, to realise that something which once came naturally now does not come at all.""",Luddic Proverb,TRUE,FALSE,FALSE,"npc_only, ai_core_only",graphics/icons/skills/jdp_inactive.png
+jdp_hullmodapplicator,Hullmod Applicator,100000,1,0,,"YOU SHOULDN'T SEE ME, I EXIST FOR BEHIND THE CURTAIN WEIRDNESS
+
+Please contact Jaydee8652 with details.",,,,,"npc_only, dummy",graphics/icons/skills/jdp_inactive.png
 ,,,,,,,,,,,,
 #Aptitudes,,,,,,,,,,,,
 jdp_aptitude_unique,,1,,,,,,,,,npc_only,
+jdp_aptitude_playerflowerfish,,1,,,,,,,,,npc_only,

@@ -1,0 +1,183 @@
+{
+  "hullName": "Mudskipper (GMHS)",
+  "hullId": "mudskipper_GMHS",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/mudskipper_GMHS.png",
+  "style": "MIDLINE",
+  "height": 84,
+  "width": 64,
+  "center": [32, 42],
+  "collisionRadius": 60,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 54.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade",
+    "GMHS_sml",
+	"GMHS_unbroken",
+    "recovery_shuttles"
+  ],
+  "builtInWings": [
+    "talon_GMHS_wing"
+  ],
+  "builtInWeapons": {
+    "WS0011": "blinker_pol_blue",
+    "WS0012": "blinker_pol_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-13, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [23.5, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 90,
+      "locations": [28, 25]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": -90,
+      "locations": [28, -25]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 90,
+      "locations": [25, 25]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": -90,
+      "locations": [25, -25]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 90,
+      "locations": [22, 25]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": -90,
+      "locations": [22, -25]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": 90,
+      "locations": [19, 25]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 10,
+      "angle": -90,
+      "locations": [19, -25]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [3, 11]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": -0,
+      "locations": [3, -11]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-39, -0],
+      "length": 24.5,
+      "width": 21,
+      "angle": 180,
+      "contrailSize": 21,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-38.5, 22.5],
+      "length": 5.5,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-38.5, -22.5],
+      "length": 5.5,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -39.5, -9,
+    -32, -13.5,
+    -41, -28,
+    -13, -30,
+    1.5, -23,
+    11.5, -23.5,
+    30, -28.5,
+    37, -9.5,
+    41, -5,
+    41, 5,
+    37, 9.5,
+    30, 28.5,
+    11.5, 23.5,
+    1.5, 23,
+    -13, 30,
+    -41, 28,
+    -32, 13.5,
+    -39.5, 9
+  ]
+}

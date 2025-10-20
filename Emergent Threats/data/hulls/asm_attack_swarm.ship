@@ -1,0 +1,73 @@
+{
+  "hullName": "Fragment",
+  "hullId": "asm_attack_swarm",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/asm/ships/swarm_asm.png",
+  "style": "THREAT",
+  "height": 30,
+  "width": 30,
+  "center": [0, 0],
+  "collisionRadius": 30,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 30,
+  "viewOffset": 0,
+  "builtInMods": [
+    "threat_hullmod",
+    "fragment_swarm",
+	"asm_sprite_hider"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, 1]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, 1]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, 1]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, 1]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, 1]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    15, 15,
+    -15, 15,
+    -15, -15,
+    15, -15
+  ]
+}

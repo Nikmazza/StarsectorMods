@@ -1,0 +1,42 @@
+{
+  "variantId": "condor_GM_pursuit",
+  "hullId": "condor_GM",
+  "displayName": "Pursuit",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 4,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "bluebottle",
+        "WS0002": "bluebottle"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "crungun",
+        "WS0004": "crungun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "vulcan",
+        "WS0006": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_GM_wing",
+    "broadsword_GM_wing"
+  ]
+}

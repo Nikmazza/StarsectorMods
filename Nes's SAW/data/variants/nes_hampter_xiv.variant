@@ -3,7 +3,7 @@
   "hullId": "nes_hampter_xiv",
   "displayName": "Elite",
   "goalVariant": true,
-  "fluxCapacitors": 4,
+  "fluxCapacitors": 9,
   "fluxVents": 20,
   "quality": 1,
   "permaMods": [],

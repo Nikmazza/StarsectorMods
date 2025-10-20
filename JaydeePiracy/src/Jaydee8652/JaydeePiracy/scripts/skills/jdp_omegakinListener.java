@@ -34,7 +34,6 @@ class jdp_omegakinListener implements DamageDealtModifier {
 		if (weapon == null) return null;
 		if (!weapon.getSpec().hasTag("omega")) return null;
 
-
 		String id = "jdp_omegakin_damagemod";
 		damage.getModifier().modifyPercent(id, DAMAGE_BONUS_PERCENT);
 

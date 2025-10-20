@@ -1,0 +1,156 @@
+{
+  "hullName": "Lasher (GMHQ)",
+  "hullId": "lasher_GMHQ",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/lasher/lasher_GMHQ_new.png",
+  "style": "HIGH_TECH",
+  "height": 91,
+  "width": 76,
+  "center": [38, 48.5],
+  "collisionRadius": 62,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 56.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMHQ",
+    "phasefield",
+    "ballistic_rangefinder"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [26.5, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [22, 20]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [22, -20]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [11.5, 30]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [11.5, -30]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 237,
+      "angle": 115,
+      "locations": [-8.5, 18]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 237,
+      "angle": -115,
+      "locations": [-8.5, -18]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-26.5, 27],
+      "length": 8,
+      "width": 13,
+      "angle": 153.5,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-26, -27],
+      "length": 8,
+      "width": 13,
+      "angle": -153.5,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32.5, 20],
+      "length": 17.133495,
+      "width": 15.961619,
+      "angle": 167.5,
+      "contrailSize": 15.961619,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-32.5, -19],
+      "length": 17.133495,
+      "width": 15.961619,
+      "angle": -167.5,
+      "contrailSize": 15.961619,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-47, 4.5],
+      "length": 17.133495,
+      "width": 15.961619,
+      "angle": 180,
+      "contrailSize": 15.961619,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-47, -5.5],
+      "length": 17.133495,
+      "width": 15.961619,
+      "angle": -180,
+      "contrailSize": 15.961619,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -47, -9.5,
+    -34, -15.5,
+    -19.5, -37.5,
+    14.5, -37.5,
+    15.5, -27,
+    26.5, -27,
+    28, -16.5,
+    37, -15.5,
+    42.5, -10,
+    34.5, -7.5,
+    34.5, 6.5,
+    42.5, 9,
+    37, 14.5,
+    28, 15.5,
+    26.5, 26,
+    15.5, 26,
+    14.5, 36.5,
+    -19.5, 36.5,
+    -34, 14.5,
+    -47, 8.5
+  ]
+}

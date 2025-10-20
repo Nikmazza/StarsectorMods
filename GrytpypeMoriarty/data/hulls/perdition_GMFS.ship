@@ -1,0 +1,67 @@
+{
+  "hullName": "Perdition (GMFS)",
+  "hullId": "perdition_GMFS",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/perdition_GMFS.png",
+  "style": "LOW_TECH",
+  "height": 30,
+  "width": 36,
+  "center": [18, 15],
+  "collisionRadius": 23.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 22.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 33,
+      "angle": 5,
+      "locations": [0.5, 10]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 33,
+      "angle": -5,
+      "locations": [0.5, -10]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [0.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13.5, 4.5],
+      "length": 6,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-13.5, -4.5],
+      "length": 6,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -10.5, -19,
+    14.5, -7,
+    14.5, 7,
+    -10.5, 19
+  ]
+}

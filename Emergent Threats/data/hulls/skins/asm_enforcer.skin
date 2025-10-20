@@ -1,0 +1,15 @@
+{
+	"baseHullId":"asm_enforcer_base",
+	"skinHullId":"asm_enforcer",
+	"hullName": "Enforcer (T)",
+	"incompatibleWithBaseHull":true, # for the autofit dialog
+	"descriptionId":"asm_enforcer",
+	"descriptionPrefix":"Subject identified: Enforcer-class destroyer. MINEX frontier automation package detected. Unknown modifications detected. Querying database... \"The admiral famously contended that such drone vessels should not be thought of as permanent fleet assets, but rather as expendable munitions. Indeed, during the Second Olympus Pacification, fifty seven percent of insurgent losses were attributed to engagements against- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING",
+	"tags":["no_dealer", "codex_unlockable", "asm_threat", "no_autofit", "auto_rec"], #threat tag added by Amorphous Armor hullmod
+	"addHints":["UNBOARDABLE"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"builtInWings": ["asm_swarm_wing"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+}

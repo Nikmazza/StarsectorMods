@@ -1,0 +1,15 @@
+{
+	"baseHullId":"asm_firetail_base",
+	"skinHullId":"asm_firetail",
+	"hullName": "Firetail (T)",
+	"incompatibleWithBaseHull":true, # for the autofit dialog
+	"descriptionId":"asm_firetail",
+	"descriptionPrefix":"Subject identified: Firetail-class frigate. MINEX frontier automation package detected. Unknown modifications detected. Querying database... \"The swarming attack on the evacuating dreadnought took the life of the Samrajni, along with her entire royal household, bringing to a swift close a rebellion that had spanned over six cycles and caused an estimated- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING",
+	"tags":["no_dealer", "codex_unlockable", "asm_threat", "no_autofit", "auto_rec"], #threat tag added by Amorphous Armor hullmod
+	"addHints":["UNBOARDABLE"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"builtInWings": ["asm_swarm_wing"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+}

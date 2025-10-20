@@ -1,6 +1,6 @@
 {
     "displayName": "Artillery",
-    "fluxCapacitors": 13,
+    "fluxCapacitors": 5,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "equalizer_tw",
@@ -20,8 +20,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "abolisher_tw",
-                "WS 002": "abolisher_tw",
+                "WS 001": "arrester_tw",
+                "WS 002": "arrester_tw",
                 "WS 003": "abolisher_tw",
                 "WS 004": "abolisher_tw"
             }
@@ -30,8 +30,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 014": "cte_tw",
-                "WS 015": "cte_tw"
+                "WS 014": "thundermark_ix",
+                "WS 015": "thundermark_ix"
             }
         },
         {

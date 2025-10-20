@@ -1,0 +1,207 @@
+{
+  "bounds": [
+    -47.5,
+    -7.5,
+    -42,
+    -16.5,
+    -26.5,
+    -15.5,
+    -14.5,
+    -23.5,
+    7,
+    -24.5,
+    10.5,
+    -16.5,
+    45.5,
+    -10.5,
+    45.5,
+    11,
+    10.5,
+    16.5,
+    5.5,
+    27,
+    -12,
+    24.5,
+    -26,
+    16,
+    -41,
+    18.5,
+    -47.5,
+    7.5
+  ],
+  "builtInMods": [
+    "GMDA_engine"
+  ],
+  "builtInWings": [],
+  "center": [
+    26,
+    47.5
+  ],
+  "collisionRadius": 80.276085,
+  "engineSlots": [
+    {
+      "angle": 164.845932,
+      "contrailSize": 12.58816,
+      "length": 37.965569,
+      "location": [
+        -46,
+        9
+      ],
+      "style": "MIDLINE",
+      "width": 12.58816
+    },
+    {
+      "angle": -164.845932,
+      "contrailSize": 12.58816,
+      "length": 37.965569,
+      "location": [
+        -45.5,
+        -9.5
+      ],
+      "style": "MIDLINE",
+      "width": 12.58816
+    },
+    {
+      "angle": 150.255112,
+      "contrailSize": 8.062253,
+      "length": 20.155645,
+      "location": [
+        -42.5,
+        15
+      ],
+      "style": "MIDLINE",
+      "width": 8.062253
+    },
+    {
+      "angle": -150.255112,
+      "contrailSize": 8.062253,
+      "length": 20.155645,
+      "location": [
+        -42,
+        -15
+      ],
+      "style": "MIDLINE",
+      "width": 8.062253
+    },
+    {
+      "angle": 180,
+      "contrailSize": 13,
+      "length": 54.5,
+      "location": [
+        -47.5,
+        0
+      ],
+      "style": "HIGH_TECH",
+      "width": 13
+    },
+    {
+      "angle": 180,
+      "contrailSize": 10,
+      "length": 31,
+      "location": [
+        -15,
+        20
+      ],
+      "style": "HIGH_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 10,
+      "length": 31,
+      "location": [
+        -15,
+        -20
+      ],
+      "style": "HIGH_TECH",
+      "width": 10
+    }
+  ],
+  "height": 94,
+  "hullId": "wolf_GMs_red",
+  "hullName": "Wolf (GMs)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 72.520683,
+  "spriteName": "graphics/ships/wolf_GMs_red.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0001",
+      "locations": [
+        41,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 180,
+      "id": "WS0002",
+      "locations": [
+        3.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0003",
+      "locations": [
+        7,
+        19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0004",
+      "locations": [
+        7,
+        -19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 130,
+      "arc": 180,
+      "id": "WS0005",
+      "locations": [
+        -19.5,
+        11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -130,
+      "arc": 180,
+      "id": "WS0006",
+      "locations": [
+        -19.5,
+        -11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 52
+}

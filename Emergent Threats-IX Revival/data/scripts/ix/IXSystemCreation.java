@@ -319,7 +319,7 @@ public class IXSystemCreation {
 					4600,                 
 					180);
 		jeff.addTag(Tags.NEUTRINO_LOW);
-		jeff.setCustomDescriptionId("ix_scarab_wreck");
+		jeff.setCustomDescriptionId("hg_scarab_wreck");
 		jeff.setSensorProfile(25f);
 		
 		//autogenerate jump points

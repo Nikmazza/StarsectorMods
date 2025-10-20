@@ -1,6 +1,6 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 5,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "intrepid_tw",
@@ -43,7 +43,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 016": "cte_tw"}
+            "weapons": {"WS 016": "lacerator_tw"}
         },
         {
             "autofire": true,

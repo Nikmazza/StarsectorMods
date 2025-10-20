@@ -1,0 +1,28 @@
+{
+    "displayName": "Locus",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "remnant_hangar1",
+    "hullMods": [
+        "advancedoptics",
+        "armoredweapons",
+        "expanded_deck_crew",
+        "fluxcoil",
+        "fluxdistributor",
+        "solar_shielding",
+        "turretgyros",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "remnant_hangar1_Locus",
+    "weaponGroups": [
+    ],
+    "wings": [
+        "flash_wing",
+        "flash_wing",
+        "flash_wing",
+    ],
+    "modules": [],
+}

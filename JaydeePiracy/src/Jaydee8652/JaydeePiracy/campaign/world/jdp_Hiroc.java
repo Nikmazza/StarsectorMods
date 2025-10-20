@@ -58,8 +58,10 @@ import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.Mag
 import com.fs.starfarer.api.loading.VariantSource;
 import com.fs.starfarer.api.util.Misc;
 import Jaydee8652.JaydeePiracy.utils.jdp_Conditions;
+import org.magiclib.util.MagicCampaign;
 
 
+import static Jaydee8652.JaydeePiracy.scripts.jdp_StarSystemGenerator.shuffleLocation;
 import static com.fs.starfarer.api.impl.campaign.world.GateHaulerLocation.ABYSS_AMBIENT_LIGHT_COLOR;
 
 public class jdp_Hiroc {
@@ -69,7 +71,7 @@ public class jdp_Hiroc {
 
 
 	public void generate(SectorAPI sector) {
-		StarSystemAPI system = sector.createStarSystem("jdp_Unknown Location");
+		StarSystemAPI system = sector.createStarSystem("Unknown Location (Hiroc)");
 		system.setOptionalUniqueId("jdp_Hiroc");
 		system.setName("Unknown Location"); // to get rid of "Star System" at the end of the name
 		system.setType(StarSystemType.DEEP_SPACE);
@@ -138,6 +140,7 @@ public class jdp_Hiroc {
 		blacksite_relay.setCustomDescriptionId("jdp_blacksite_relay");
 		blacksite_relay.getMemoryWithoutUpdate().set(NOT_RANDOM_MISSION_TARGET, true);
 		blacksite_relay.setInteractionImage("illustrations", "jdp_comm_relay");
+		blacksite_relay.getMemoryWithoutUpdate().set(MemFlags.OBJECTIVE_NON_FUNCTIONAL, true);
 
 		//Gate
 		SectorEntityToken blacksite_gate = system.addCustomEntity("blacksite_gate", // unique id
@@ -211,6 +214,8 @@ public class jdp_Hiroc {
 						new Color(200, 80, 130, 255),
 						new Color(75, 0, 160, 255), 
 						new Color(127, 0, 255, 255)));
+
+
 		field.setCircularOrbit(derelict_missile, 0, 0, 75);
 
 		system.generateAnchorIfNeeded();
@@ -219,6 +224,12 @@ public class jdp_Hiroc {
 		well.addTag(Tags.NO_ENTITY_TOOLTIP);
 		well.setColorOverride(new Color(125, 50, 255));
 		hyper.addEntity(well);
+
+		shuffleLocation(system, false, -6000f, 0f, -16000f, -20000f);
+
+		MagicCampaign.hyperspaceCleanup(system);
+		system.updateAllOrbits();
+
 		well.autoUpdateHyperLocationBasedOnInSystemEntityAtRadius(convair, 0);
 		Global.getSector().getMemoryWithoutUpdate().set(JDP_NASCENT_WELL_KEY, well);
 	}

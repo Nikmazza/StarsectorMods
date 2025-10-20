@@ -1,0 +1,65 @@
+{
+  "variantId": "atlas_GM_cs",
+  "hullId": "atlas_GM",
+  "displayName": "Close Support",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 35,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "adaptiveshields"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "gauss"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "hurricane"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "heavyblaster",
+        "WS0003": "heavymauler",
+        "WS0014": "heavymauler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "lightdualmg",
+        "WS0007": "vulcan",
+        "WS0008": "lightdualmg",
+        "WS0009": "vulcan",
+        "WS0010": "lightdualmg",
+        "WS0011": "vulcan",
+        "WS0012": "lightdualmg",
+        "WS0013": "vulcan",
+        "WS0015": "dualflak",
+        "WS0016": "vulcan",
+        "WS0017": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

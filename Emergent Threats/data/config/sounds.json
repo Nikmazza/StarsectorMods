@@ -1,4 +1,16 @@
 {
+	"asm_fermion_decoupler_loop":[
+		{"file": "sounds/weapons/vice_fermion_decoupler_loop.ogg", "pitch": 1, "volume": 0.25}
+	],
+	"asm_flechette_fire":[
+		{"file": "sounds/weapons/asm_flechette_fire.ogg", "pitch": 1, "volume": 0.3},
+	],
+	"asm_swarm_activate":[
+		{"file": "sounds/systems/asm_swarm_activate.ogg", "pitch": 0.5, "volume": 1}
+	],
+	"asm_voltaic_multipulser_fire":[
+		{"file": "sounds/weapons/asm_voltaic_multipulser_fire.ogg", "pitch": 0.5, "volume": 0.6}
+	],
 	"orr_anathema_fire":[
 		{"file": "sounds/weapons/orr_anathema_fire.ogg", "pitch": 1, "volume": 0.4},
 	],
@@ -22,6 +34,9 @@
 	],
 	"vice_electrolaser_pulse":[
 		{"file": "sounds/weapons/vice_electrolaser_pulse.ogg", "pitch": 1, "volume": 0.8}
+	],
+	"vice_fandance_fire":[
+		{"file": "sounds/weapons/vice_fandance_fire.ogg", "pitch": 1, "volume": 1}
 	],
 	"vice_fermion_decoupler_loop":[
 		{"file": "sounds/weapons/vice_fermion_decoupler_loop.ogg", "pitch": 1, "volume": 0.4}

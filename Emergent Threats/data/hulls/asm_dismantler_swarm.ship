@@ -1,0 +1,50 @@
+{
+  "hullName": "Fragment",
+  "hullId": "asm_dismantler_swarm",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/asm/ships/swarm_asm.png",
+  "style": "THREAT",
+  "height": 30,
+  "width": 30,
+  "center": [0, 0],
+  "collisionRadius": 30,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 30,
+  "viewOffset": 0,
+  "builtInMods": [
+    "threat_hullmod",
+    "fragment_swarm",
+	"asm_dismantler_effects"
+  ],
+  "builtInWeapons": {
+    "WS 001": "asm_fermion_decoupler_fighter",
+	"WS 002": "voltaic_discharge",
+  },
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, 1]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [1, 1]
+    },
+  ],
+  "engineSlots": [],
+  "bounds": [
+    15, 15,
+    -15, 15,
+    -15, -15,
+    15, -15
+  ]
+}

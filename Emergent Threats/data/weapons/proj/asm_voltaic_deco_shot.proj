@@ -1,0 +1,17 @@
+{
+	"id":"asm_voltaic_deco_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"onFireEffect":"data.scripts.asm.weapons.VoltaicBurstOnFire",
+	"collisionClass":"NONE",
+	"collisionClassByFighter":"NONE",
+	"length":0,
+	"hitGlowRadius":0,
+	"width":0,
+	"fadeTime":0,
+	"fringeColor":[0,0,0,0],
+	"coreColor":[0,0,0,0],
+	"textureScrollSpeed":0,
+	"pixelsPerTexel":0,
+	"bulletSprite":"graphics/fx/empty.png"
+}

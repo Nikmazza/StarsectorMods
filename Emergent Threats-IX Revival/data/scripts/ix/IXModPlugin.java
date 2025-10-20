@@ -39,6 +39,8 @@ import data.scripts.ix.listeners.IXReputationListener;
 import data.scripts.ix.listeners.IXReputationResetListener;
 import data.scripts.ix.listeners.PruneHaulerMarketListener;
 import data.scripts.ix.listeners.UpgradeFuelProdListener;
+import data.scripts.ix.luna.AntimatterStabilizerInstallButton;
+import data.scripts.ix.luna.AntimatterStabilizerRemoveButton;
 import data.scripts.ix.luna.BiochipSotFButton;
 import data.scripts.ix.luna.NanoReplicatorButton;
 import data.scripts.ix.luna.PanopticCommandRefitButton;
@@ -46,6 +48,7 @@ import data.scripts.ix.luna.PanopticStrategicRefitButton;
 import data.scripts.ix.luna.PanopticTacticalRefitButton;
 import data.scripts.ix.luna.SalvagePanopticonCoreButton;
 import data.scripts.ix.util.NameListUtil;
+import data.scripts.sbe.luna.RemoveSBEButton;
 
 import exerelin.campaign.AllianceManager;
 import exerelin.campaign.alliances.Alliance;
@@ -64,6 +67,7 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 		SectorAPI sector = Global.getSector();
         generate(sector);
 		sector.getMemoryWithoutUpdate().set("$give_IX_hullmods", true);
+		sector.getMemoryWithoutUpdate().set("$ix_battlegroup_is_active", true);
         sector.getFaction(IX_FAC_ID).setShowInIntelTab(true);
 		
 		if (LunaSettings.getBoolean("EmergentThreats_IX_Revival", "ix_trinity_enabled")) {
@@ -213,6 +217,9 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 		SectorAPI sector = Global.getSector();
 		sector.registerPlugin(pCorePlugin);
 		
+		//should remove a few versions after v1.1.6 and leave only new game version
+		sector.getMemoryWithoutUpdate().set("$ix_battlegroup_is_active", true);
+		
 		FactionAPI ix_battlegroup = Global.getSector().getFaction(IX_FAC_ID);
 		FactionAPI ix_honor_guard = Global.getSector().getFaction("ix_core");
 		FactionAPI ix_marzanna = Global.getSector().getFaction(MZ_FAC_ID);
@@ -298,11 +305,14 @@ public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin 
 	
 	@Override
 	public void onApplicationLoad() {
+		LunaRefitManager.addRefitButton(new AntimatterStabilizerInstallButton());
+		LunaRefitManager.addRefitButton(new AntimatterStabilizerRemoveButton());
 		LunaRefitManager.addRefitButton(new BiochipSotFButton());
 		LunaRefitManager.addRefitButton(new NanoReplicatorButton());
 		LunaRefitManager.addRefitButton(new PanopticCommandRefitButton());
 		LunaRefitManager.addRefitButton(new PanopticStrategicRefitButton());
 		LunaRefitManager.addRefitButton(new PanopticTacticalRefitButton());
 		LunaRefitManager.addRefitButton(new SalvagePanopticonCoreButton());
+		LunaRefitManager.addRefitButton(new RemoveSBEButton());
 	}
 }

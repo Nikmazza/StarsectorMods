@@ -1,0 +1,293 @@
+{
+    "hullName": "Remnant Locus",
+    "hullId": "jdp_coordination_centre",
+    "hullSize": "CAPITAL_SHIP",
+    "style": "HIGH_TECH",
+    "spriteName": "graphics/ships/jdp_coordination_centre/jdp_coordination_centre_base.png",
+    "height": 506,
+    "width": 828,
+    "center": [
+        414, 253
+    ],
+    "collisionRadius": 475,
+    "coversColor": "",
+    "shieldCenter": [
+        0, 0
+    ],
+    "shieldRadius": 500,
+    "viewOffset": 0,
+    "builtInMods": [
+        "vastbulk",
+        "axialrotation",
+        "supercomputer",
+        "shared_flux_sink",
+        "jdp_cryoarithmeticheatsink"
+    ],
+    "builtInWings": [],
+    "builtInModules": null,
+    "weaponSlots": [
+        {
+            "id": "WS 007",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "renderOrderMod": 5,
+            "arc": 8,
+            "angle": 236.5,
+            "locations": [
+                   -10.5,   -405.5
+            ]
+        },
+        {
+            "id": "WS 016",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "renderOrderMod": 5,
+            "arc": 8,
+            "angle": 123.5,
+            "locations": [
+                   -10.5,    405.5
+            ]
+        },
+        {
+            "id": "WS 032",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 180,
+            "locations": [
+                    -300,      0.5
+            ]
+        },
+        {
+            "id": "WS 033",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 48,
+            "locations": [
+                     123,    389.5
+            ]
+        },
+        {
+            "id": "WS 034",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 312,
+            "locations": [
+                     185,     -249
+            ]
+        },
+        {
+            "id": "WS 036",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 45,
+            "locations": [
+                   187.5,      247
+            ]
+        },
+        {
+            "id": "WS 037",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 312,
+            "locations": [
+                     123,   -389.5
+            ]
+        },
+        {
+            "id": "WS 039",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 360,
+            "locations": [
+                     201,    128.5
+            ]
+        },
+        {
+            "id": "WS 040",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 0,
+            "angle": 0,
+            "locations": [
+                     201,   -128.5
+            ]
+        },
+        {
+            "id": "WS 000",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 141,
+            "locations": [
+                    -191,    124.5
+            ]
+        },
+        {
+            "id": "WS 001",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 219,
+            "locations": [
+                    -191,   -124.5
+            ]
+        },
+        {
+            "id": "WS 002",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 133,
+            "locations": [
+                    -113,      217
+            ]
+        },
+        {
+            "id": "WS 003",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 227,
+            "locations": [
+                    -113,     -217
+            ]
+        },
+        {
+            "id": "WS 004",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 207.5,
+            "locations": [
+                   -61.5,   -317.5
+            ]
+        },
+        {
+            "id": "WS 005",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 152.5,
+            "locations": [
+                   -61.5,    317.5
+            ]
+        },
+        {
+            "id": "WS 010",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 0,
+            "locations": [
+                     165,        0
+            ]
+        },
+        {
+            "id": "WS 008",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 8,
+            "angle": 0,
+            "locations": [
+                     280,        0
+            ]
+        }
+    ],
+    "engineSlots": [],
+    "bounds": [
+              71,       30,
+             109,     29.5,
+             128,     52.5,
+             175,       62,
+             179,       99,
+        
+             252,      107,
+             252,      149,
+           182.5,    155.5,
+             185,      204,
+             219,      256,
+        
+           197.5,      276,
+           149.5,      267,
+             116,      315,
+           139.5,      400,
+           115.5,    417.5,
+        
+              70,    369.5,
+              32,      389,
+             -25,    384.5,
+           -32.5,    312.5,
+             -93,      348,
+        
+          -110.5,    324.5,
+           -79.5,    268.5,
+           -73.5,    228.5,
+          -134.5,      224,
+          -153.5,      148,
+        
+            -211,      166,
+          -225.5,      138,
+            -185,       93,
+            -251,       35,
+            -251,      -35,
+        
+            -185,      -93,
+          -225.5,     -138,
+            -211,     -166,
+          -153.5,     -148,
+          -134.5,     -224,
+        
+           -73.5,   -228.5,
+           -79.5,   -268.5,
+          -110.5,   -324.5,
+             -93,     -348,
+           -32.5,   -312.5,
+        
+             -25,   -384.5,
+              32,     -389,
+              70,   -369.5,
+           115.5,   -417.5,
+           139.5,     -400,
+        
+             116,     -315,
+           149.5,     -267,
+           197.5,     -276,
+             219,     -256,
+             185,     -204,
+        
+           182.5,   -155.5,
+             252,     -149,
+             252,     -107,
+             179,      -99,
+             175,      -62,
+        
+             128,    -52.5,
+             109,    -29.5,
+              71,      -30,
+              56,        0
+    # 59 points total.
+    ]
+}

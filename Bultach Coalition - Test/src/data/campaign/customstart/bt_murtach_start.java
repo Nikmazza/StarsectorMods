@@ -26,7 +26,7 @@ public class bt_murtach_start extends CustomStart {
     protected List<String> ships = new ArrayList<>(
             Arrays.asList(
                     new String[]{
-                            "ork_murtach_standard",}
+                            "ork_murtach_CDL-01",}
             )
     );
 

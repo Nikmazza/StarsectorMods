@@ -3,6 +3,7 @@ package data.scripts;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.FullName;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.SectorThemeGenerator;
 import data.campaign.NES_DerelictSpawnScript;
 
 public class NES_ModPlugin extends BaseModPlugin {
@@ -19,7 +20,7 @@ public class NES_ModPlugin extends BaseModPlugin {
 
     //spawning teaser derelicts
     @Override
-    public void onNewGameAfterTimePass() {
-        NES_DerelictSpawnScript.spawnNESDerelicts(Global.getSector());
+    public void onApplicationLoad() {
+        SectorThemeGenerator.generators.add(new NES_DerelictSpawnScript());
     }
 }

@@ -1,0 +1,59 @@
+{
+  "variantId": "mora_GMFS_attack",
+  "hullId": "mora_GMFS",
+  "displayName": "Fire Starting",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 4,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "sabot",
+        "WS0001": "sabot"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "gmda_phlog",
+        "WS 004": "gmda_phlog"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 005": "gmda_flaregun",
+        "WS 007": "gmda_flaregun",
+        "WS 008": "gmda_flaregun",
+        "WS 011": "gmda_flaregun",
+        "WS 012": "gmda_flaregun",
+        "WS 013": "gmda_flaregun",
+        "WS 014": "gmda_flaregun"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "thunder_GM_wing",
+    "piranha_GM_wing"
+  ]
+}

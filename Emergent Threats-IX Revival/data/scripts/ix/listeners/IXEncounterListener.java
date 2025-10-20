@@ -31,6 +31,9 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 	private static String TACTICAL_MOD_ID = "ix_panoptic_tactical";
 
 	private static String IX_FAC_ID = "ix_battlegroup";
+	private static String IX_HG_ID = "ix_core";
+	private static String IX_ALLY_1_ID = "ix_trinity";
+	private static String IX_ALLY_2_ID = "ix_marzanna";
 	private static String IX_MOD_ID = "ix_ninth";
 	private static String IX_ELITE_MOD_ID = "ix_smod_handler";
 	private static String IX_BOSS_MOD_ID = "ix_hvb_handler";
@@ -125,14 +128,20 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 		}
 		boolean isFirstRename = true;
 
-		//add dawnstar reactor
+		//setting type to add same dawnstar reactor to all station modules
 		Random rand = new Random();
 		int type = rand.nextInt(3);
 		List<FleetMemberAPI> fleetList = fleet.getMembersWithFightersCopy();
+		SectorEntityToken carrier = (SectorEntityToken) fleet;
+		String fleetFacId = fleet.getFlagship().getFleetCommander().getFaction().getId();
+		String item = "ix_antimatter_stabilizer";
+		//remove Antimatter Stabilizers from loot list before considering stations
+		if (BaseSalvageSpecial.getCombinedExtraSalvage(carrier).getCommodityQuantity(item) > 0f) {
+			BaseSalvageSpecial.clearExtraSalvage(carrier);
+		}
+		boolean gaveItem = false;
 		for (FleetMemberAPI member : fleetList) {
 			ShipVariantAPI var = member.getVariant();
-			
-			//check station modules, adds the same reactor type to all modules
 			if (var.isStation()) {
 				for (String slot : var.getModuleSlots()) {
 					if (var.getModuleVariant(slot) != null) {
@@ -141,31 +150,24 @@ public class IXEncounterListener extends BaseCampaignEventListener {
 					}
 				}
 				//add Antimatter Stabilizer to IX stations
-				if (member.getFleetCommander().getFaction().getId().equals(IX_FAC_ID)) {
-					String item = "ix_antimatter_stabilizer";
-					CargoAPI cargo = Global.getFactory().createCargo(true);
-					SectorEntityToken carrier = (SectorEntityToken) fleet;
+				boolean isIXFleet = member.getCaptain() != null && member.getCaptain().getFaction().getId().equals(IX_FAC_ID); 
+				if (isIXFleet && !gaveItem) {
 					if (BaseSalvageSpecial.getCombinedExtraSalvage(carrier).getCommodityQuantity(item) < 1f) {
+						CargoAPI cargo = Global.getFactory().createCargo(true);
 						cargo.addCommodity(item, 1f);
 						BaseSalvageSpecial.addExtraSalvage(carrier, cargo);
-					}
-					else if (BaseSalvageSpecial.getCombinedExtraSalvage(carrier).getCommodityQuantity(item) > 1f) {
-						BaseSalvageSpecial.clearExtraSalvage(carrier);
-						cargo.addCommodity(item, 1f);
-						BaseSalvageSpecial.addExtraSalvage(carrier, cargo);
+						gaveItem = true;
 					}
 				}
 			}
-
 			//add random Dawnstar Reactor to CPB equipped ships without a reactor 
-			else equipDawnstarToVariant(var, -1);
+			equipDawnstarToVariant(var, -1);
 			
 			//add special loot to HVB mission
 			if (var.hasHullMod(IX_BOSS_MOD_ID)) {
 				if (HullSize.CAPITAL_SHIP.equals(var.getHullSize()) 
 						&& !Global.getSector().getMemoryWithoutUpdate().getBoolean("$ix_biochip_looted")) {
 					CargoAPI cargo = Global.getFactory().createCargo(true);
-					SectorEntityToken carrier = (SectorEntityToken) fleet;
 					if (Global.getSettings().getModManager().isModEnabled("aotd_vok")) {
 						cargo.addSpecial(new SpecialItemData("special_ship_bp", "radiant_ix:$ix_aqq_radiant"), 1);
 					}

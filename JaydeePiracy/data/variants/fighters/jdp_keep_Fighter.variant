@@ -1,24 +1,26 @@
 {
-	"quality":1,
-	"displayName":"Fighter",
-	"hullId":"jdp_keep",
-	"variantId":"jdp_keep_Fighter",
-	"fluxVents":0,
-	"fluxCapacitors":0,
-	"mods":[], # array of strings
-	
-	# mode is either LINKED or ALTERNATING
-	# slot ids (WS ***) must match what's in the .ship file
-	"weaponGroups":[
-		{"mode":"ALTERNATING",
-		 "weapons":{
-		 			"WS 001":"jdp_heavyneedler",
-		 		   },
-		},
-		{"mode":"ALTERNATING",
-		 "weapons":{
-		 			"WS 000":"chaingun",
-		 		   },
-		},
-	],
+    "displayName": "Fighter",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "jdp_keep",
+    "hullMods": [],
+    "quality": 1.0,
+    "variantId": "jdp_keep_Fighter",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "annihilator"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "chaingun"
+            }
+        }
+    ]
 }

@@ -1,0 +1,247 @@
+{
+  "hullName": "Aggressor",
+  "hullId": "asm_aggressor_base",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/asm/ships/aggressor_asm_tac.png",
+  "style": "THREAT",
+  "height": 356,
+  "width": 230,
+  "center": [115, 176],
+  "collisionRadius": 210,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 210,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "asm_threat_compromised",
+    "asm_amorphous_alloy",
+    "unstable_injector",
+    "orr_asmgressor"
+  ],
+  "builtInWeapons": {
+    "WS 016": "orr_tac",
+    "WS 017": "orr_tac"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [138, 0]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -20,
+      "locations": [101, -12]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 20,
+      "locations": [101, 12]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 60,
+      "locations": [46, 17]
+    },
+    {
+      "id": "WS 005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -60,
+      "locations": [46, -17]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-59, 22]
+    },
+    {
+      "id": "WS 009",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-59, -22]
+    },
+    {
+      "id": "WS 011",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 30,
+      "locations": [-58, 65]
+    },
+    {
+      "id": "WS 012",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 20,
+      "locations": [-41, 40]
+    },
+    {
+      "id": "WS 013",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -20,
+      "locations": [-41, -40]
+    },
+    {
+      "id": "WS 014",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -30,
+      "locations": [-58, -65]
+    },
+    {
+      "id": "WS 016",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [8, 66]
+    },
+    {
+      "id": "WS 017",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [8, -66]
+    },
+    {
+      "id": "WS 018",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [77, 0]
+    },
+    {
+      "id": "WS 025",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0, 0]
+    },
+    {
+      "id": "SYS 001",
+      "size": "MEDIUM",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [116, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-162, 11],
+      "length": 100,
+      "width": 30,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "THREAT"
+    },
+    {
+      "location": [-162, -11],
+      "length": 100,
+      "width": 30,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "THREAT"
+    },
+    {
+      "location": [-152, 40],
+      "length": 64,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "THREAT"
+    },
+    {
+      "location": [-152, -40],
+      "length": 64,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "THREAT"
+    },
+    {
+      "location": [-131, 70],
+      "length": 64,
+      "width": 20,
+      "angle": 160,
+      "contrailSize": 20,
+      "style": "THREAT"
+    },
+    {
+      "location": [-131, -70],
+      "length": 64,
+      "width": 20,
+      "angle": -160,
+      "contrailSize": 20,
+      "style": "THREAT"
+    }
+  ],
+  "bounds": [
+    -120, 100,
+    -75, 113,
+    20, 77,
+    20, 51,
+    44, 38,
+    173, 10,
+    173, -10,
+    44, -38,
+    20, -51,
+    20, -77,
+    -75, -113,
+    -120, -100,
+    -128, -64,
+    -149, -68,
+    -173, -54,
+    -152, -44,
+    -152, -19,
+    -162, -16,
+    -162, 16,
+    -152, 19,
+    -152, 44,
+    -173, 54,
+    -149, 68,
+    -128, 64
+  ]
+}

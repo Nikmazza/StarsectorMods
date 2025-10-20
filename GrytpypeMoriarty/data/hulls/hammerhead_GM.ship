@@ -1,0 +1,202 @@
+{
+  "hullName": "Hammerhead (GM)",
+  "hullId": "hammerhead_GM",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/hammerhead_GM.png",
+  "style": "MIDLINE",
+  "height": 120,
+  "width": 98,
+  "center": [49, 59],
+  "collisionRadius": 91.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 87.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMDA",
+    "GMDA_engine"
+  ],
+  "builtInWeapons": {
+    "WS0009": "blinker_pol_blue",
+    "WS0010": "blinker_pol_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 50,
+      "locations": [16, 11]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": -50,
+      "locations": [16, -11]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 120,
+      "locations": [-11, 38]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": -120,
+      "locations": [-11, -38]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [52.5, 10]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [52.5, -10]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [44, 31]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [44, -31]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [31.5, 31.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [31.5, -29.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-46.5, 1.5],
+      "length": 23.606943,
+      "width": 10.336768,
+      "angle": 180,
+      "contrailSize": 10.336768,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-48.5, -35],
+      "length": 23.606943,
+      "width": 10.336768,
+      "angle": 180,
+      "contrailSize": 10.336768,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-48.5, 39],
+      "length": 23.606943,
+      "width": 10.336768,
+      "angle": -180,
+      "contrailSize": 10.336768,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-57, -24.5],
+      "length": 35.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-57, 28.5],
+      "length": 35.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-56.5, -13],
+      "length": 48,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-56.5, 17],
+      "length": 48,
+      "width": 22,
+      "angle": -180,
+      "contrailSize": 22,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -45.5, -6,
+    -55.5, -10,
+    -56.5, -30.5,
+    -50, -33,
+    -49, -40,
+    -41.5, -45,
+    -18.5, -48.5,
+    0.5, -48,
+    30.5, -40.5,
+    51, -41,
+    51.5, -21,
+    58.5, -15.5,
+    58.5, -5.5,
+    48, -3.5,
+    48, 3.5,
+    58.5, 5.5,
+    58.5, 15.5,
+    51.5, 21,
+    51, 41,
+    30.5, 40.5,
+    0.5, 48,
+    -18.5, 48.5,
+    -41.5, 45,
+    -49, 40,
+    -50, 33,
+    -56.5, 30.5,
+    -55.5, 10,
+    -45.5, 6
+  ]
+}

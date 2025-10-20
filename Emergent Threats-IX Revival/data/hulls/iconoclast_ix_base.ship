@@ -11,16 +11,24 @@
   "shieldCenter": [0, 0],
   "shieldRadius": 87,
   "viewOffset": 0,
-  "builtInMods": [],
   "weaponSlots": [
     {
       "id": "WS ARR",
       "size": "LARGE",
-      "type": "BUILT_IN",
+      "type": "DECORATIVE",
       "mount": "HIDDEN",
       "arc": 60,
       "angle": 0,
       "locations": [39, 0]
+    },
+    {
+      "id": "WS 000",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [29, 0]
     },
     {
       "id": "WS 001",
@@ -39,6 +47,42 @@
       "arc": 360,
       "angle": -0,
       "locations": [2, -17]
+    },
+    {
+      "id": "SYS 001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 140,
+      "locations": [-44, 44]
+    },
+    {
+      "id": "SYS 002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -140,
+      "locations": [-44, -44]
+    },
+    {
+      "id": "SYS 003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 110,
+      "locations": [-31, 50]
+    },
+    {
+      "id": "SYS 004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -110,
+      "locations": [-31, -50]
     },
     {
       "id": "LB 1",

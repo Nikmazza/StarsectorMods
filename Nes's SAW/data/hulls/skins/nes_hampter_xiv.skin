@@ -7,7 +7,7 @@
 	"tags":["XIV_bp","hist1t"],
 	"tech":"XIV Battlegroup",
 	"fleetPoints":14,
-	"ordnancePoints":95,
+	"ordnancePoints":100,
 	"baseValueMult":1.75,
 	"spriteName":"graphics/ships/nes_hampter_xiv.png",
 	"systemId":"damper",

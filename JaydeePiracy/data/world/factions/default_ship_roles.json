@@ -22,6 +22,7 @@
 		"jdp_florencia_Pursuit":1,
 		"jdp_florencia_hegemony_Auxilary":1,
 		"jdp_drover_lg_Lion":5,
+		"jdp_hummingbird_Standard":5,
 	},
 	"combatMedium":{
 		"jdp_meridian_Burst":3,
@@ -32,13 +33,13 @@
 		"jdp_lupara_Mining":3,
 		"jdp_cinquedea_Plasma":3,
 		"jdp_grendel_lp_Hammer":1,
+		"jdp_phaeton2_Assault":5,
+		"jdp_falcon_vi_Phoenix":1,
 	},
 	"combatLarge":{
 		"jdp_shoebill_Standard":1,
 		"jdp_atlas_Standard":3,
 		"jdp_cydonia_Standard":1,
-		"jdp_embrasure_Needle":1,#combatCapital for Derelicts is reserved for Guardians
-		"jdp_embrasure_Hellbore":1,#combatCapital for Derelicts is reserved for Guardians
 	},
 	"combatCapital":{
 		"jdp_supremator_Lion":5,
@@ -53,8 +54,9 @@
 		"jdp_atlas_Standard":3,
 		"jdp_penrose_Omega":1,
 		"jdp_thunderer_Tachyon":1,
+		"jdp_pegasus_vi_Fenicem":1,
 	},
-	
+
 	
 	# hybrid ships with good combat and cargo capacity
 	"combatFreighterSmall":{

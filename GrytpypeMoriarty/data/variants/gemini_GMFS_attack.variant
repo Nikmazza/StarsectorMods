@@ -1,0 +1,35 @@
+{
+  "variantId": "gemini_GMFS_attack",
+  "hullId": "gemini_GMFS",
+  "displayName": "Fire Starting",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 7,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "sabotpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "gmda_flamethrower",
+        "WS0002": "gmda_flamethrower"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "piranha_GM_wing"
+  ]
+}

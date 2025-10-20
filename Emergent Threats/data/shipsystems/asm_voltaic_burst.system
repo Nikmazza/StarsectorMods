@@ -1,0 +1,10 @@
+{
+	"id":"asm_voltaic_burst",
+	"type":"WEAPON",
+	"aiType":"CANISTER_FLAK",
+	
+	"weaponDataId":"asm_voltaic_burst",
+	
+	"useSound":"energy_lash_fire",	
+	"outOfUsesSound":"gun_out_of_ammo",
+}

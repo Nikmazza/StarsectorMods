@@ -1,0 +1,87 @@
+{
+    "displayName": "Drone",
+    "fluxCapacitors": 2,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "asm_onslaught_tac",
+    "hullMods": [
+        "asm_relic_discount_20",
+        "ballistic_rangefinder",
+        "magazines",
+        "vice_field_repair_nanites",
+        "targetingunit",
+        "fragment_swarm",
+        "fragment_coordinator",
+        "secondary_fabricator",
+        "vice_adaptive_trajectory_analyzer"
+    ],
+    "permaMods": ["asm_amorphous_alloy"],
+    "sMods": [],
+    "variantId": "asm_onslaught_drone",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "orr_tac",
+                "WS 017": "orr_tac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "kinetic_fragments",
+                "WS 004": "kinetic_fragments",
+                "WS 005": "kinetic_fragments",
+                "WS 006": "kinetic_fragments",
+                "WS 010": "devouring_swarm",
+                "WS 011": "devouring_swarm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 019": "neoferric_quadcoil",
+                "WS 021": "heavy_mass_driver",
+                "WS 022": "heavy_mass_driver",
+                "WS 023": "heavy_mass_driver",
+                "WS 024": "heavy_mass_driver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "voidblaster",
+                "WS 008": "voltaic_cannon",
+                "WS 009": "voltaic_cannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "asm_fermion_decoupler",
+                "WS 003": "asm_fermion_decoupler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "asm_flechette",
+                "WS 020": "asm_flechette"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "voltaic_discharge",
+                "WS 015": "voltaic_discharge"
+            }
+        }
+    ]
+}

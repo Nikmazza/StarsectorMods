@@ -181,7 +181,7 @@ public class LordAI implements EveryFrameScript {
                     priority = LordAction.FEAST.priority;
                 } else {
                     // weight of staying at feast
-                    if (!currFeast.getOriginator().equals(lord)) {
+                    if (currFeast.getOriginator() == null || !currFeast.getOriginator().equals(lord)) {
                         feastWeight = 20;
                         priority = LordAction.FEAST.priority;
                     } else if (Utils.getDaysSince(currFeast.getStart()) < FEAST_MAX_DURATION) {
@@ -555,7 +555,7 @@ public class LordAI implements EveryFrameScript {
                             RelationController.modifyLoyalty(lord, 3);
                         }
                     }
-                    if (!currFeast.getOriginator().equals(lord)) {
+                    if (!lord.equals(currFeast.getOriginator())) {
                         if (!currFeast.getPastParticipants().contains(lord)) {
                             lord.setFeastInteracted(false);
                             currFeast.getPastParticipants().add(lord);
@@ -570,7 +570,7 @@ public class LordAI implements EveryFrameScript {
                     // if this lord is the feast holder and ends the feast, update feast controller
                     if (lord.getCurrAction() != LordAction.FEAST) {
                         LordEvent currFeast = EventController.getCurrentFeast(lord.getFaction());
-                        if (currFeast.getOriginator().equals(lord)) {
+                        if (lord.equals(currFeast.getOriginator())) {
                             EventController.endFeast(currFeast);
                         } else {
                             currFeast.getParticipants().remove(lord);

@@ -88,12 +88,12 @@
 		],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "ork_project_bp", "lowtech_bp", "midline_bp", "missile_bp", "pirates", "luddic_church"],
+		"tags":["base_bp", "ork_project_bp", "hegemony", "lowtech_bp", "midline_bp", "missile_bp", "pirates", "luddic_church"],
 		"weapons":[
 		],
 	},
 	"priorityWeapons":{
-		"tags":[ork_project_bp],
+		"tags":[ork_project_bp,],
 		"weapons":[
 			"ork_big_shotgun",
 			"ork_shotgun",
@@ -105,6 +105,8 @@
 			"ork_layzah",
 			"ork_bolta",
 			"mark9",
+			"chaingun",
+			"heavymg",
 			"ork_plasma_shotgun_medium",
 			"ork_plasma_shotgun",
 			"devastator",
@@ -114,6 +116,11 @@
 			"ork_noshield_medium",
 			"ork_noshield_small",
 			"ork_emp_torpedo",
+			"ork_emp_torpedo_medium",
+			"ork_emp_torpedo_single",
+			"ork_dem_medium",
+			"ork_dem_large",
+			"ork_dem_small",
 			"ork_mirean_large",
 			"ork_mirean_small",
 			"ork_mirean_med",
@@ -183,7 +190,7 @@
 		"combatFreighterProbability":0.05,     				# instead of some portion of the freighters in a fleet
 		"combatFreighterCombatUseFraction":0.05,  				# as part of the normal combat lineup
 		"combatFreighterCombatUseFractionWhenPriority":0.05,   # as part of normal combat lineup, when marked as priority ship
-		"autofitRandomizeProbability":0.1,
+		"autofitRandomizeProbability":0.05,
 
 		"commanderSkillsShuffleProbability":1f,
 		"commanderSkills":[
@@ -255,6 +262,7 @@
 	},	
 	"custom":{
 		"engageWhenEvenStrength":true,
+		"offersCommissions":true,
 		"engagesInHostilities":true,
 		"exemptFromFoodShortages":false,
 		"willTradeWhenHostile":false,

@@ -68,6 +68,12 @@
 			{"file":"sounds/weapons/es_projector_ix_hit_07.ogg","pitch":1,"volume":1.5},
 		],
 	},
+	"ewar_ix_spinup":[
+		{"file": "sounds/weapons/ewar_ix_spinup.ogg", "pitch": 1, "volume": 1}
+	],
+	"ewar_ix_fire":[
+		{"file": "sounds/weapons/cte_tw_pulse.ogg", "pitch": 0.5, "volume": 1}
+	],
 	"flux_shunt_ix_activate":[
 		{"file": "sounds/systems/flux_shunt_ix_activate.ogg", "pitch": 1, "volume": 1}
 	],
@@ -85,6 +91,9 @@
 	],
 	"interdictor_ix_fire":[
 		{"file": "sounds/weapons/interdictor_ix_fire.ogg", "pitch": 1, "volume": 1}
+	],
+	"lacerator_tw_loop":[
+		{"file": "sounds/weapons/lacerator_tw_loop.ogg", "pitch": 1, "volume": 1}
 	],
 	"morningstar_ix_fire":[
 		{"file": "sounds/weapons/morningstar_ix_fire.ogg", "pitch": 1, "volume": 1}

@@ -1,0 +1,16 @@
+{
+	"hullFrequency":{
+		"tags":{
+			"asm_threat":0,
+		},
+	},
+
+	"variantOverrides":{
+		"asm_dominator_drone":0,
+		"asm_enforcer_drone":0,
+		"asm_firetail_drone":0,
+		"asm_legion_drone":0,
+		"asm_mora_drone":0,
+		"asm_onslaught_drone":0,
+	},
+}

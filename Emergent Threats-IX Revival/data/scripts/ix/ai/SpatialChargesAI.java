@@ -21,7 +21,7 @@ public class SpatialChargesAI implements ShipSystemAIScript {
 	private ShipAPI ship;
 	private WeaponAPI weapon;
 	private static float RANGE = 1500f;
-	private static String AIM_GUIDE = "diffraction_laser_ix";
+	private static String AIM_GUIDE = "aquilon_targeting_ix";
 	
 	@Override
 	public void init(ShipAPI ship, ShipSystemAPI system, ShipwideAIFlags flags, CombatEngineAPI engine) {
@@ -39,7 +39,7 @@ public class SpatialChargesAI implements ShipSystemAIScript {
 		if (ship.getSystem().getState() == SystemState.IDLE) {
 			CombatEntityAPI enemy = DistanceUtil.getNearestEnemy(ship, RANGE);
 			if (enemy != null && weapon != null) {
-				if (weapon.distanceFromArc(enemy.getLocation()) <= 0) ship.useSystem();
+				if (weapon.distanceFromArc(enemy.getLocation()) <= 0f) ship.useSystem();
 			}
 			return;
 		}

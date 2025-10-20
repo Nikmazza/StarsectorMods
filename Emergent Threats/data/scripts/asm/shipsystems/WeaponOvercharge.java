@@ -1,0 +1,32 @@
+package data.scripts.asm.shipsystems;
+
+import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
+
+public class WeaponOvercharge extends BaseShipSystemScript {
+
+	public static float ROF_BONUS = 1f;
+	public static float FLUX_REDUCTION = 50f;
+	
+	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
+		float mult = 1f + ROF_BONUS * effectLevel;
+		stats.getBallisticRoFMult().modifyMult(id, mult);
+		stats.getEnergyRoFMult().modifyMult(id, mult);
+		stats.getBallisticWeaponFluxCostMod().modifyMult(id, 1f - (FLUX_REDUCTION * 0.01f));
+		stats.getEnergyWeaponFluxCostMod().modifyMult(id, 1f - (FLUX_REDUCTION * 0.01f));
+	}
+	public void unapply(MutableShipStatsAPI stats, String id) {
+		stats.getBallisticRoFMult().unmodify(id);
+		stats.getEnergyRoFMult().unmodify(id);
+		stats.getBallisticWeaponFluxCostMod().unmodify(id);
+		stats.getEnergyWeaponFluxCostMod().unmodify(id);
+	}
+	
+	public StatusData getStatusData(int index, State state, float effectLevel) {
+		float mult = 1f + ROF_BONUS * effectLevel;
+		float bonusPercent = (int) ((mult - 1f) * 100f);
+		if (index == 0) return new StatusData("ballistic/energy rate of fire +" + (int) bonusPercent + "%", false);
+		if (index == 1) return new StatusData("ballistic/energy flux use -" + (int) FLUX_REDUCTION + "%", false);
+		return null;
+	}
+}

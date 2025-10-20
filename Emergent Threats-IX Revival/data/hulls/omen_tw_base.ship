@@ -1,0 +1,125 @@
+{
+  "hullName": "Omen",
+  "hullId": "omen_tw_base",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/trinity/omen_tw.png",
+  "style": "HIGH_TECH",
+  "height": 67,
+  "width": 66,
+  "center": [33, 35],
+  "collisionRadius": 64,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 53,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": -90,
+      "locations": [-18, -15]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 90,
+      "locations": [-10, 21]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [17, 17]
+    },
+    {
+      "id": "WS EWR",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 360,
+      "angle": 0,
+      "locations": [6, -23]
+    },
+    {
+      "id": "SYS 001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 120,
+      "locations": [-10, 32]
+    },
+    {
+      "id": "SYS 002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -120,
+      "locations": [-10, -29]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-33, 16],
+      "length": 40,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 50,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-33, 9],
+      "length": 40,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 50,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-33, -14],
+      "length": 41,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-34, 1],
+      "length": 38,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-34, -4],
+      "length": 38,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    27, 9,
+    27, 25,
+    -13, 29,
+    -29, 18,
+    -30, -13,
+    -9, -28,
+    20, -27,
+    31, -17,
+    11, -10,
+    16, 0,
+    12, 9
+  ]
+}

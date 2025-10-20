@@ -5,6 +5,7 @@ Dimensional Teleporter,A_S-F_dimensionalteleporter,,,,,,0.15,,,,0.3,,0.3,4.9,,,,
 Amita Drive,A_S-F_amitaDrive,,,,,,,,,,1,6,1.5,12.5,,,,,,,,,,,,"offensive, codex_require_related",graphics/icons/hullsys/high_energy_focus.png
 Ballistic Overdrive,A_S-F_rangdaSys,200,,,,,,,,,5,,3,5,TRUE,,,TRUE,,,,,,,,"offensive, codex_require_related",graphics/icons/hullsys/ammo_feeder.png
 Resonance Motivator,A_S-F_ResonanceMotivator,,,,,,,,3,0.04,0.25,4,0.25,,,,,,,,,,,,,"offensive, codex_require_related",graphics/icons/hullsys/high_energy_focus.png
+Sniper Sight,A_S-F_istinaSys,1,,,,,,,,,1,,1,5,TRUE,,,,,,,,,,,"offensive, codex_require_related",graphics/icons/hullsys/lidar_barrage.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # Bounty/One-off Ships,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -35,6 +36,7 @@ Adaptive Burst,A_S-F_AdaptiveBurst,1,,,,,,,,,0.5,3,2,8,,,,,,,,,,,,"offensive, co
 Temporal Burn,A_S-F_temporalBurn,1,,,,,,,,,1.5,4,1,8,TRUE,,,,TRUE,,TRUE,TRUE,TRUE,,,"movement, codex_require_related",graphics/icons/hullsys/plasma_burn.png
 Unhinge Chronoflow,A_S-F_unhingeChronoflow,1,,,,,0.2,,,,4,12,3,14,,,,,,,,,,FALSE,,"offensive, codex_require_related",graphics/icons/hullsys/temporal_shell.png
 Ammon Drones,A_S-F_ammon_deploy,,,,,,0.15,,2,0.08,0,0.1,0,2.5,,,,,,,,,,,,"offensive, codex_require_related",graphics/icons/hullsys/drone_pd_high.png
+Designate Target,A_S-F_designate,,,,,,0.125,,2,0.0625,0.5,,0.5,3,,,,,,,,,,,,"offensive, codex_require_related",graphics/icons/hullsys/A_S-F_designate.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # Standard Ships,,,,,,,,,,,,,,,,,,,,,,,,,,,

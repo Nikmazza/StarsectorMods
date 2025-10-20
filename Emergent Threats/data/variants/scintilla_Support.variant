@@ -1,13 +1,10 @@
 {
     "displayName": "Support",
     "fluxCapacitors": 0,
-    "fluxVents": 3,
+    "fluxVents": 2,
     "goalVariant": true,
     "hullId": "scintilla",
-    "hullMods": [
-        "hardenedshieldemitter",
-        "vice_adaptive_emitter_diodes"
-    ],
+    "hullMods": ["vice_adaptive_emitter_diodes"],
     "permaMods": [],
     "sMods": [],
     "variantId": "scintilla_Support",
@@ -16,7 +13,7 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 006": "annihilatorpod",
+                "WS 006": "atropos",
                 "WS 007": "vice_ionstreamer",
                 "WS 008": "vice_ionstreamer"
             }
@@ -31,8 +28,7 @@
         }
     ],
     "wings": [
-        "vice_nimbus_wing",
-        "vice_nimbus_wing",
-        ""
+        "vice_starquake_wing",
+        "vice_starquake_wing"
     ]
 }

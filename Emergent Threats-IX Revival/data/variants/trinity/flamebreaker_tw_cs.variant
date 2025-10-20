@@ -1,10 +1,11 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 4,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 25,
     "goalVariant": true,
     "hullId": "flamebreaker_tw",
     "hullMods": [
+        "advancedoptics",
         "targetingunit",
         "frontemitter",
         "stabilizedshieldemitter"
@@ -16,12 +17,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 002": "thundermark_ix"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 014": "stormwall_tw"}
+            "weapons": {"WS 002": "lacerator_tw"}
         },
         {
             "autofire": true,
@@ -29,24 +25,27 @@
             "weapons": {
                 "WS 009": "spatial_charge_launcher_ix",
                 "WS 010": "spatial_charge_launcher_ix",
-                "WS 011": "spatial_charge_launcher_ix"
+                "WS 011": "spatial_charge_launcher_ix",
+                "WS 014": "stormwall_tw"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "cutting_beam_tw"}
+            "weapons": {
+                "WS 003": "cutting_beam_tw",
+                "WS 004": "cutting_beam_tw"
+            }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "lightbringer_ciws_ix",
-                "WS 004": "lightbringer_ciws_ix",
+                "WS 001": "lightbringer_ciws_ix",
                 "WS 005": "morningstar_ciws_ix",
                 "WS 008": "morningstar_ciws_ix",
-                "WS 012": "plasma_dart_ix",
-                "WS 013": "plasma_dart_ix"
+                "WS 012": "morningstar_ciws_ix",
+                "WS 013": "morningstar_ciws_ix"
             }
         }
     ]

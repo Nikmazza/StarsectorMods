@@ -3,6 +3,7 @@ package Jaydee8652.JaydeePiracy.hullmods;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
@@ -13,7 +14,6 @@ public class jdp_frictionlesshull extends BaseHullMod {
 	private static final float PEAK_MULT = 0.5f;
 	public static float TIMEFLOW_BONUS = 200f;
 	public static float CORONA_EFFECT_MULT = 0f;
-
 
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		//That's good!
@@ -27,7 +27,41 @@ public class jdp_frictionlesshull extends BaseHullMod {
 		stats.getSuppliesPerMonth().modifyMult(id, SUPPLY_USE_MULT);
 		stats.getPeakCRDuration().modifyMult(id, PEAK_MULT);
 	}
-	
+
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		for (ShipAPI module : ship.getChildModulesCopy()) {
+			//That's good!
+			module.getMutableStats().getTimeMult().modifyPercent(id , TIMEFLOW_BONUS);
+			float mult = CORONA_EFFECT_MULT;
+			module.getMutableStats().getDynamic().getStat(Stats.CORONA_EFFECT_MULT).modifyMult(id, mult);
+
+			//That's bad!
+			module.getMutableStats().getEffectiveArmorBonus().modifyMult(id, ARMOR_MULT);
+			module.getMutableStats().getMinArmorFraction().modifyMult(id, ARMOR_MULT);
+			module.getMutableStats().getSuppliesPerMonth().modifyMult(id, SUPPLY_USE_MULT);
+			module.getMutableStats().getPeakCRDuration().modifyMult(id, PEAK_MULT);
+		}
+	}
+
+	public void advanceInCombat(ShipAPI ship, float amount) {
+		boolean player = false;
+		boolean modified = false;
+		String id = "jdp_frictionlesshull_" + ship.getId();
+
+		player = ship == Global.getCombatEngine().getPlayerShip();
+
+
+		if (player && modified) {
+			Global.getCombatEngine().getTimeMult().modifyPercent(id, 100f / (100f + (Float) TIMEFLOW_BONUS));
+
+			modified = true;
+		} else {
+			Global.getCombatEngine().getTimeMult().unmodify(id);
+			modified = false;
+		}
+	}
+
+
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int) TIMEFLOW_BONUS + "%";
 		if (index == 1) return "" + (int) Math.round((1f - CORONA_EFFECT_MULT) * 100f) + "%";

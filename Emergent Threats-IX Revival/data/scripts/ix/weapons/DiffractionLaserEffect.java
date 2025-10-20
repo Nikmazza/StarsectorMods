@@ -31,7 +31,7 @@ public class DiffractionLaserEffect implements BeamEffectPlugin {
 			
 			// beam tick, apply damage modifier effect if needed
 			if (dur > 0) {
-				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 				if (hitShield) {
 					ShipAPI ship = (ShipAPI) target;
 					if (!ship.hasListenerOfClass(DiffractionBeamDamageTakenMod.class)) {

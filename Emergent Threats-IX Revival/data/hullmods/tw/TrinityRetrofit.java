@@ -58,9 +58,13 @@ public class TrinityRetrofit extends BaseHullMod {
 	private static String DRONE_NODE_HULLMOD = "tw_drone_control_node";
 	private static String PENALTY_HULLMOD = "tw_equipment_error";
 	
+	//Aurora (TW)
+	private static String AURORA_MOD = "tw_undershield_aurora";
+	
 	//Equalizer (TW) supercruise
 	private static float ZERO_FLUX_LEVEL = 10f;
-	private static String EQUALIZER_HULLMOD = "tw_energy_weapon_integration";
+	private static int BURN_LEVEL_BONUS = 1;
+	private static String EQUALIZER_HULLMOD = "tw_archaic_weapon_integration";
 	
 	//Glycon (TW) DP reduction
 	private static float DP_REDUCTION = 2f;
@@ -72,7 +76,7 @@ public class TrinityRetrofit extends BaseHullMod {
 	private static String IONOS_TW_ID = "ionos_tw";
 	private static String IONOS_TW_D_ID = "ionos_tw_default_D";
 	
-	//Maquech data
+	//Maquech/Iconoclast/Aurora data
 	private static String MAQUECH_HULLMOD = "tw_enhanced_control_node";
 	private static String MAQUECH_WING = "nimbus_tw_wing_c";
 	
@@ -84,17 +88,19 @@ public class TrinityRetrofit extends BaseHullMod {
 	//Radiant data 
 	private static String RADIANT_HULLMOD = "ix_converted_hull";
 	private static String RADIANT_WING = "nimbus_tw_wing_r";
+	private static String STARQUAKE_WING = "starquake_tw_wing";
 	private static String GRAV_HULLMOD = "vice_adaptive_gravity_drive";
 	private static String GRAV_HULLMOD_DISPLAY = "Adaptive Gravity Drive";
 	private static String FTR_HULLMOD = "vice_adaptive_flight_command";
 	private static String FTR_HULLMOD_DISPLAY = "Adaptive Flight Command";
+	private static String STARQUAKE_HULLMOD = "tw_activate_starquake";
 	
 	//Shrike (TW) DP increase
 	private static float DP_INCREASE = 2f;
 	private static String SHRIKE_TW_ID = "shrike_tw";
 	private static String SHRIKE_TW_D_ID = "shrike_tw_default_D";
 	
-	@Override	
+	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getMaxSpeed().modifyFlat(id, (Float) speedBoost.get(hullSize));
 		stats.getBallisticWeaponRangeBonus().modifyMult(id, RANGE_MULT);
@@ -102,19 +108,43 @@ public class TrinityRetrofit extends BaseHullMod {
 		stats.getCombatWeaponRepairTimeMult().modifyMult(id, 1f + REPAIR_PENALTY * 0.01f);
 		
 		ShipVariantAPI variant = stats.getVariant();
-		//adds Nimbus bay and squad of appropriate size when drone control node is present
-		if (variant.hasHullMod(RADIANT_HULLMOD) && variant.hasHullMod(MAQUECH_HULLMOD)) {
-			if (variant.getWingId(0) == null) variant.setWingId(0, RADIANT_WING);
-			if (variant.getWingId(1) == null) variant.setWingId(1, RADIANT_WING);
-			
+		
+		//adds Nimbus bay and squad of appropriate size when drone control node is present on ship
+		if (variant.hasHullMod(RADIANT_HULLMOD) && variant.hasHullMod(STARQUAKE_HULLMOD)) {
+			String wing0 = variant.getWingId(0);
+			String wing1 = variant.getWingId(1);
+			String wing2 = variant.getWingId(2);
+			String wing3 = variant.getWingId(3);
+			if (wing0 == null || wing0.equals(RADIANT_WING)) variant.setWingId(0, STARQUAKE_WING);
+			if (wing1 == null || wing1.equals(RADIANT_WING)) variant.setWingId(1, STARQUAKE_WING);
+			if (wing2 != null && wing2.equals(RADIANT_WING)) variant.setWingId(2, null);
+			if (wing3 != null && wing3.equals(RADIANT_WING)) variant.setWingId(3, null);
+			stats.getNumFighterBays().setBaseValue(2f);
+		}
+		else if (variant.hasHullMod(RADIANT_HULLMOD) && variant.hasHullMod(MAQUECH_HULLMOD)) {
+			String wing0 = variant.getWingId(0);
+			String wing1 = variant.getWingId(1);
+			String wing2 = variant.getWingId(2);
+			String wing3 = variant.getWingId(3);			
+			if (wing0 == null || wing0.equals(STARQUAKE_WING)) variant.setWingId(0, RADIANT_WING);
+			if (wing1 == null || wing1.equals(STARQUAKE_WING)) variant.setWingId(0, RADIANT_WING);
 			if (variant.hasHullMod(FTR_HULLMOD)) {
-				variant.setWingId(2, null);
-				variant.setWingId(3, null);
+				if (wing2 != null && (wing2.equals(RADIANT_WING) || wing2.equals(STARQUAKE_WING))) {
+					variant.setWingId(2, null);
+				}
+				if (wing3 != null && (wing2.equals(RADIANT_WING) || wing2.equals(STARQUAKE_WING))) {
+					variant.setWingId(3, null);
+				}
 			}
 			else {
 				if (variant.getWingId(2) == null) variant.setWingId(2, RADIANT_WING);
 				if (variant.getWingId(3) == null) variant.setWingId(3, RADIANT_WING);
 			}
+		}
+		//Aurora (TW) gives 3 nimbus wings, same as radiant wings
+		else if (variant.hasHullMod(AURORA_MOD) && variant.hasHullMod(MAQUECH_HULLMOD)) {
+			if (variant.getWingId(0) == null) variant.setWingId(0, RADIANT_WING);
+			if (variant.getWingId(1) == null) variant.setWingId(1, RADIANT_WING);
 		}
 		else if (variant.hasHullMod(MAQUECH_HULLMOD)) {
 			if (variant.getWingId(0) == null) variant.setWingId(0, MAQUECH_WING);
@@ -144,7 +174,10 @@ public class TrinityRetrofit extends BaseHullMod {
 		boolean isGlycon = shipId.equals(GLYCON_TW_ID) || shipId.equals(GLYCON_TW_D_ID);
 		boolean isShrike = shipId.equals(SHRIKE_TW_ID) || shipId.equals(SHRIKE_TW_D_ID);
 		boolean isIonos = shipId.equals(IONOS_TW_ID) || shipId.equals(IONOS_TW_D_ID);
-		if (isEqualizer) stats.getZeroFluxMinimumFluxLevel().modifyFlat(id, ZERO_FLUX_LEVEL * 0.01f);
+		if (isEqualizer) {
+			stats.getZeroFluxMinimumFluxLevel().modifyFlat(id, ZERO_FLUX_LEVEL * 0.01f);
+			stats.getMaxBurnLevel().modifyFlat(id, BURN_LEVEL_BONUS);
+		}
 		else if (isGlycon) stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(id, -DP_REDUCTION);
 		else if (isShrike) stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(id, DP_INCREASE);
 		else if (isIonos) {
@@ -195,16 +228,35 @@ public class TrinityRetrofit extends BaseHullMod {
 	
 	//check if equipment has gone over fitting availability
 	private int getRemainingOP(MutableShipStatsAPI stats) {
-		int fullOP = 45;
-		if (stats.getVariant().hasHullMod(RADIANT_HULLMOD)) fullOP = 320;
-		int unusedOP = 0;
+		int shipBaseOp = getShipOP(stats.getVariant());
+		float shipActualOp = shipBaseOp;
+		if (Global.getSector() != null && Global.getSector().getPlayerStats() != null) {
+			shipActualOp = Global.getSector().getPlayerStats().getShipOrdnancePointBonus().computeEffective(shipBaseOp);
+		}
+		int usedOp = getUsedOP(stats.getVariant());
+		return ((int) shipActualOp) - usedOp;
+	}
+	
+	private int getShipOP(ShipVariantAPI variant) {
+		int points = 0;
 		try {
-			unusedOP = fullOP - stats.getVariant().computeOPCost(Global.getSector().getCharacterData().getPerson().getFleetCommanderStats()); 
+			points = variant.getHullSpec().getOrdnancePoints(Global.getSector().getCharacterData().getPerson().getFleetCommanderStats()); 
 		}
 		catch (Exception e) {
-			unusedOP = fullOP - stats.getVariant().computeOPCost(Global.getFactory().createPerson().getFleetCommanderStats());
+			points = variant.getHullSpec().getOrdnancePoints(Global.getFactory().createPerson().getFleetCommanderStats());
 		}
-		return unusedOP;
+		return points;
+	}
+	
+	private int getUsedOP(ShipVariantAPI variant) {
+		int points = 0;
+		try {
+			points = variant.computeOPCost(Global.getSector().getCharacterData().getPerson().getFleetCommanderStats()); 
+		}
+		catch (Exception e) {
+			points = variant.computeOPCost(Global.getFactory().createPerson().getFleetCommanderStats());
+		}
+		return points;
 	}
 	
 	@Override
@@ -249,8 +301,8 @@ public class TrinityRetrofit extends BaseHullMod {
 		boolean isShrike = shipId.equals(SHRIKE_TW_ID) || shipId.equals(SHRIKE_TW_D_ID);
 		String header = "Special Modifier:";
 		if (isEqualizer) {
-			String s = "%s The engines can engage a supercruise mode that grants the 0-flux speed bonus when the ship is below %s flux.";
-			tooltip.addPara(s, 10f, Misc.getHighlightColor(), header, "" + (int) ZERO_FLUX_LEVEL + "%");
+			String s = "%s The engines can engage a supercruise mode that grants the 0-flux speed bonus when the ship is below %s flux. Also grants %s burn speed.";
+			tooltip.addPara(s, 10f, Misc.getHighlightColor(), header, "" + (int) ZERO_FLUX_LEVEL + "%" , "+" + BURN_LEVEL_BONUS);
 		}
 		else if (isGlycon) {
 			String s = "%s Due to a lack of advanced missile nanoforge components onboard, the ship deployment cost is reduced by %s.";
@@ -265,6 +317,10 @@ public class TrinityRetrofit extends BaseHullMod {
 			tooltip.addPara(s, 10f, Misc.getHighlightColor(), header, FTR_HULLMOD_DISPLAY, GRAV_HULLMOD_DISPLAY);
 		}
 		else if (isShrike) {
+			String s = "%s The increased complexity from the built-in hullmod and weapons aboard this ship has increased its deployment cost by %s.";
+			tooltip.addPara(s, 10f, Misc.getHighlightColor(), header, "" + (int) DP_INCREASE);
+		}
+		else if (isEqualizer) {
 			String s = "%s The increased complexity from the built-in hullmod and weapons aboard this ship has increased its deployment cost by %s.";
 			tooltip.addPara(s, 10f, Misc.getHighlightColor(), header, "" + (int) DP_INCREASE);
 		}

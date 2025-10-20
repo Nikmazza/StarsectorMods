@@ -19,8 +19,7 @@
     "builtInMods": [
         "delicate",
         "jdp_stubcore",
-        "jdp_restrictedmagazines",
-        "neural_interface"
+        "jdp_restrictedmagazines"
     ],
     "builtInWings": [],
     "builtInModules": null,

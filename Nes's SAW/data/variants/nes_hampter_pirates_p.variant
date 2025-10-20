@@ -1,6 +1,6 @@
 {
     "displayName": "Pirate",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 11,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "nes_hampter_pirates",

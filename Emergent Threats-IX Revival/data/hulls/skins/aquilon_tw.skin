@@ -7,9 +7,9 @@
 	"coversColor":[210,230,210,255],
 	"spriteName":"graphics/ships/trinity/aquilon_tw.png",
 	"descriptionPrefix":"This warship of the Trinity Worlds combines salvaged Tri-Tachyon and transferred 9th Domain Battlegroup technology. The engines of this ship have been enhanced in a crude yet effective manner, in an effort to mimic the more advanced upgrades of the Fleet.",
-	"removeBuiltInWeapons":["diffraction_laser_ix"],
+	#"removeBuiltInWeapons":["diffraction_laser_ix"],
     "weaponSlotChanges":{
-		"WS 000":{"type": "DECORATIVE"},
+		#"WS 000":{"type": "DECORATIVE"},
 		"WS 001":{"type": "MISSILE"},
 	},
 	"tags":["ix_trinity"],

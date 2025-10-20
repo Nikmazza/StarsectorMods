@@ -1,0 +1,255 @@
+{
+  "bounds": [
+    -30,
+    -9.5,
+    -12.5,
+    -33.5,
+    13,
+    -33,
+    43.5,
+    -9.5,
+    43.5,
+    10,
+    12,
+    33,
+    -12.5,
+    33.5,
+    -30,
+    9.5
+  ],
+  "builtInMods": [
+    "GMDA_engine"
+  ],
+  "builtInWings": [],
+  "center": [
+    34,
+    32
+  ],
+  "collisionRadius": 66,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 10,
+      "length": 50,
+      "location": [
+        -32.5,
+        0
+      ],
+      "style": "CUSTOM",
+      "styleId": "GreenFlare",
+      "width": 10
+    },
+    {
+      "angle": 180,
+      "contrailSize": 2,
+      "length": 43,
+      "location": [
+        -29,
+        6
+      ],
+      "style": "HIGH_TECH",
+      "width": 2
+    },
+    {
+      "angle": -180,
+      "contrailSize": 2,
+      "length": 43,
+      "location": [
+        -29,
+        -6
+      ],
+      "style": "HIGH_TECH",
+      "styleId": "GreenFlare",
+      "width": 2
+    },
+    {
+      "angle": 180,
+      "contrailSize": 6,
+      "length": 25,
+      "location": [
+        -26.5,
+        12
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": -180,
+      "contrailSize": 6,
+      "length": 25,
+      "location": [
+        -26.5,
+        -12
+      ],
+      "style": "MIDLINE",
+      "width": 6
+    },
+    {
+      "angle": 180,
+      "contrailSize": 5,
+      "length": 20,
+      "location": [
+        -24.5,
+        16.5
+      ],
+      "style": "LOW_TECH",
+      "width": 5
+    },
+    {
+      "angle": -180,
+      "contrailSize": 5,
+      "length": 20,
+      "location": [
+        -24.5,
+        -16.5
+      ],
+      "style": "LOW_TECH",
+      "width": 5
+    },
+    {
+      "angle": 180,
+      "contrailSize": 4,
+      "length": 16,
+      "location": [
+        -22.5,
+        19
+      ],
+      "style": "LOW_TECH",
+      "width": 4
+    },
+    {
+      "angle": -180,
+      "contrailSize": 4,
+      "length": 16,
+      "location": [
+        -22.5,
+        -19
+      ],
+      "style": "LOW_TECH",
+      "width": 4
+    },
+    {
+      "angle": 143.841812,
+      "contrailSize": 7.235466,
+      "length": 25.557033,
+      "location": [
+        -14.5,
+        28.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "GreenFlare",
+      "width": 7.235466
+    },
+    {
+      "angle": -143.841812,
+      "contrailSize": 7.235466,
+      "length": 25.557033,
+      "location": [
+        -14.5,
+        -28.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "GreenFlare",
+      "width": 7.235466
+    }
+  ],
+  "height": 76,
+  "hullId": "lasher_GMs_gay",
+  "hullName": "Lasher (GMs)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    3.5,
+    0
+  ],
+  "shieldRadius": 52.5,
+  "spriteName": "graphics/ships/lasher_GMs_yellow.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 230,
+      "id": "WS0001",
+      "locations": [
+        21,
+        0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 105,
+      "arc": 250,
+      "id": "WS0002",
+      "locations": [
+        6,
+        10
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": -105,
+      "arc": 250,
+      "id": "WS0003",
+      "locations": [
+        6,
+        -10
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0004",
+      "locations": [
+        26,
+        17
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0005",
+      "locations": [
+        26,
+        -17
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "BALLISTIC"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0006",
+      "locations": [
+        14,
+        27
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0007",
+      "locations": [
+        14,
+        -27
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    }
+  ],
+  "width": 68
+}

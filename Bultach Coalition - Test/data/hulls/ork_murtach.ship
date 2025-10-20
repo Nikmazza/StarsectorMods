@@ -3,7 +3,7 @@
   "hullId": "ork_murtach",
   "hullSize": "CRUISER",
   "spriteName": "graphics/ships/ork_murtach.png",
-  "style": "GESTALT",
+  "style": "BIO_GESTALT",
   "height": 356,
   "width": 220,
   "center": [110, 181],
@@ -13,7 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "ork_redfasta",
-    "BT_shieldsChanger",
+    "bt_murtach_tempbuff",
     "bt_murtach_syntharmor",
     "delicate",
     "bt_stolen_blastdampeners",
@@ -153,7 +153,7 @@
       "angle": 168.5,
       "contrailSize": 36.507366,
       "style": "CUSTOM",
-      "styleId": "GESTALT"
+      "styleId": "BIO_GESTALT"
     },
     {
       "location": [-91.5, -58.5],
@@ -162,7 +162,7 @@
       "angle": -168.5,
       "contrailSize": 36.507366,
       "style": "CUSTOM",
-      "styleId": "GESTALT"
+      "styleId": "BIO_GESTALT"
     },
     {
       "location": [-7.5, 73],
@@ -171,7 +171,7 @@
       "angle": 90,
       "contrailSize": 5,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [-7.5, -73],
@@ -180,7 +180,7 @@
       "angle": -90,
       "contrailSize": 5,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [-32.5, 79.5],
@@ -189,7 +189,7 @@
       "angle": 90,
       "contrailSize": 5,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [-32.5, -79.5],
@@ -198,7 +198,7 @@
       "angle": -90,
       "contrailSize": 5,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [95, 40],
@@ -207,7 +207,7 @@
       "angle": 122.5,
       "contrailSize": 4.467833,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [95, -40],
@@ -216,7 +216,7 @@
       "angle": -122.5,
       "contrailSize": 4.467833,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [89, 37.5],
@@ -225,7 +225,7 @@
       "angle": 122.5,
       "contrailSize": 4.848809,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [89, -37.5],
@@ -234,7 +234,7 @@
       "angle": -122.5,
       "contrailSize": 4.848809,
       "style": "CUSTOM",
-      "styleId": "Vectored BT_ENGINE"
+      "styleId": "Vectored BIO_GESTALT"
     },
     {
       "location": [-90.5, 58.5],
@@ -243,7 +243,7 @@
       "angle": 168.5,
       "contrailSize": 22.653061,
       "style": "CUSTOM",
-      "styleId": "GESTALT"
+      "styleId": "BIO_GESTALT"
     },
     {
       "location": [-90.5, -58.5],
@@ -252,7 +252,7 @@
       "angle": -168.5,
       "contrailSize": 22.653061,
       "style": "CUSTOM",
-      "styleId": "GESTALT"
+      "styleId": "BIO_GESTALT"
     }
   ],
   "bounds": [

@@ -1,0 +1,34 @@
+{
+  "variantId": "nebula_GMHS_attack",
+  "hullId": "nebula_GMHS",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 4,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "militarized_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "harpoon",
+        "WS 002": "harpoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "lightmg",
+        "WS 004": "lightmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

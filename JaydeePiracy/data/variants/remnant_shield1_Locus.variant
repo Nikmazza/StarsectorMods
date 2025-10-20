@@ -1,0 +1,11 @@
+{
+    "displayName": "Locus",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "remnant_shield1",
+    "hullMods": [],
+    "quality": 0.5,
+    "variantId": "remnant_shield1_Locus",
+    "weaponGroups": [
+    ]
+}

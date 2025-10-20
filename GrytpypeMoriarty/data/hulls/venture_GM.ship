@@ -1,0 +1,253 @@
+{
+  "hullName": "Venture (GM)",
+  "hullId": "venture_GM",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/GM_Venture.png",
+  "style": "MIDLINE",
+  "height": 187,
+  "width": 202,
+  "center": [101, 79.5],
+  "collisionRadius": 138,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 131.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMHQ",
+    "operations_center"
+  ],
+  "builtInWeapons": {
+    "WS0012": "blinker_pol_blue",
+    "WS0013": "blinker_pol_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [13.5, 36]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [13.5, -36]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -37, 11.5,
+        -38, 3.5,
+        -34.5, 18.5,
+        -33.5, 26.5
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -37, -12,
+        -38, -4.5,
+        -34.5, -20,
+        -34, -29.5
+      ]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [75, 25]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [75, -25]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [58, 29]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [58, -29]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 164,
+      "angle": 39.5,
+      "locations": [44.5, 57]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 164,
+      "angle": -39.5,
+      "locations": [44.5, -57]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": 91.5,
+      "locations": [4.5, 78.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": -91.5,
+      "locations": [4.5, -78.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 247,
+      "angle": 0,
+      "locations": [42, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-73.5, 77.5],
+      "length": 51,
+      "width": 38,
+      "angle": 180,
+      "contrailSize": 38,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-73.5, -79.5],
+      "length": 51,
+      "width": 38,
+      "angle": -180,
+      "contrailSize": 38,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-77.5, 62.5],
+      "length": 24,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-77.5, -64.5],
+      "length": 24,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78, 54.5],
+      "length": 15.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78, -56.5],
+      "length": 15.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -52, -20,
+    -47.5, -23.5,
+    -47, -38,
+    -26.5, -38,
+    -26.5, -43,
+    -41, -53,
+    -78.5, -52.5,
+    -78.5, -68,
+    -73.5, -69,
+    -74.5, -85,
+    -68, -94,
+    -34, -96,
+    -31.5, -91.5,
+    -17.5, -93,
+    -9.5, -102,
+    4.5, -101,
+    36, -87,
+    65.5, -63,
+    68.5, -57,
+    61.5, -43,
+    53, -44,
+    52.5, -36,
+    92, -29.5,
+    107.5, -17,
+    102.5, -11.5,
+    102.5, 9.5,
+    107.5, 15,
+    92, 27.5,
+    52.5, 34,
+    53, 42,
+    61.5, 41,
+    68.5, 55,
+    65.5, 61,
+    36, 85,
+    4.5, 99,
+    -9.5, 100,
+    -17.5, 91,
+    -31.5, 89.5,
+    -34, 94,
+    -68, 92,
+    -74.5, 83,
+    -73.5, 67,
+    -78.5, 66,
+    -78.5, 50.5,
+    -41, 51,
+    -26.5, 41,
+    -26.5, 36,
+    -47, 36,
+    -47.5, 21.5,
+    -52, 18
+  ]
+}

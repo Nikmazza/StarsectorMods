@@ -1,0 +1,21 @@
+{
+	"displayName":"Heavy Defender Drone",
+	"hullId":"vice_starquake",
+	"variantId":"vice_starquake_fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["no_weapon_flux"], # array of strings
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"vice_lrburstpd",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+					"WS 002":"vice_lrpdlaser_fighter",
+		 			"WS 003":"vice_lrpdlaser_fighter",
+		 		   },
+		},
+	],
+}

@@ -1,0 +1,294 @@
+{
+  "hullName": "Aurora",
+  "hullId": "aurora_tw",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/trinity/aurora_tw.png",
+  "style": "HIGH_TECH",
+  "coversColor": "210,230,210,255",
+  "height": 280,
+  "width": 130,
+  "center": [69, 131],
+  "collisionRadius": 210,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 210,
+  "viewOffset": 0,
+  "builtInMods": [
+    "tw_trinity_retrofit",
+    "tw_enhanced_control_node",
+    "tw_undershield_aurora"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 180,
+      "locations": [-102, -11]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 90,
+      "locations": [-48, 32]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 45,
+      "locations": [54, 32]
+    },
+    {
+      "id": "WS 004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": 0,
+      "locations": [108, -16]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -80,
+      "locations": [68, -38]
+    },
+    {
+      "id": "WS 006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 159,
+      "angle": 240,
+      "locations": [-36, -21]
+    },
+    {
+      "id": "WS 007",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 80,
+      "locations": [27, 38]
+    },
+    {
+      "id": "WS 008",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -60,
+      "locations": [37, -34]
+    },
+    {
+      "id": "WS 009",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [95, 16]
+    },
+    {
+      "id": "WS 011",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [56, 57]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [89, 34]
+    },
+    {
+      "id": "WS 013",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [90, -43]
+    },
+    {
+      "id": "WS 014",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [133, -11]
+    },
+    {
+      "id": "WS 010",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0, 0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 270,
+      "locations": [
+        9, -25,
+        -13, -22
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-123, 26],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-125, -24],
+      "length": 64,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-124, 20],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-125, 15],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-124, 0],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-125, -6],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-123, -15],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-123, -19],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-119, 39],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-120, 34],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-120, -31],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-119, -37],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [8, 55],
+      "length": 24,
+      "width": 8,
+      "angle": 160,
+      "contrailSize": 128,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [3, -47],
+      "length": 24,
+      "width": 8,
+      "angle": 190,
+      "contrailSize": 128,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-125, 7],
+      "length": 48,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "IX_TRINITY"
+    }
+  ],
+  "bounds": [
+    -114, 59,
+    -4, 37,
+    15, 61,
+    46, 67,
+    132, -17,
+    78, -50,
+    8, -50,
+    7, -31,
+    -113, -53,
+    -122, 0
+  ]
+}

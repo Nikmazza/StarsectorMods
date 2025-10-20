@@ -13,6 +13,8 @@
 		
 		"vice_howler_ex_assault":4,
 		"vice_howler_ex_strike":4,
+		
+		"asm_firetail_drone":5,	
 	},
 	"combatMedium":{
 		"vice_effulgent_assault":2,
@@ -21,11 +23,15 @@
 		"vice_effulgent_elite":0, # kept for backwards compatibility
 		"vice_fulgent_overclocked":2,
 		"vice_preceptor_standard":5,# makes ship show up despite Diktat anti-carrier doctrine
+		"vice_stonefish_seeker":3,
+		"vice_stonefish_saturation":3,
 		
 		"vice_iris_ex_escort":5,
 		"vice_mandrake_ex_assault":3,
 		"vice_mandrake_ex_overdriven":2,
 		"vice_mandrake_ex_strike":3,
+		
+		"asm_enforcer_drone":5,
 	},
 	
 	"combatLarge":{
@@ -53,6 +59,10 @@
 		
 		"vice_chevalier_r_assault":3, # project mayfly is not known to remnant unless mission was failed
 		"vice_chevalier_r_strike":3, # project mayfly is not known to remnant unless mission was failed
+		
+		"asm_dominator_drone":5,
+		"asm_mora_drone":5,
+		"asm_subordinator_drone":3,
 	},
 	
 	"combatCapital":{
@@ -83,6 +93,10 @@
 		
 		"onslaught_cgr_relic":1,
 		"onslaught_cgr_sanctified":1,
+		
+		"asm_aggressor_drone":1,
+		"asm_onslaught_drone":7,
+		"asm_legion_drone":2,
 	},
 	
 	"carrierSmall":{
@@ -95,7 +109,7 @@
 	"carrierMedium":{
 		"vice_unifier_elite":5,			# for Nex random picker
 		"vice_unifier_standard":5,		# for Nex random picker
-		"vice_colossus_p_bandit":5
+		"vice_colossus_p_bandit":5,
 	},
 	
 	"carrierLarge":{

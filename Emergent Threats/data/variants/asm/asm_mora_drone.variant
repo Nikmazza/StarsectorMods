@@ -1,0 +1,59 @@
+{
+    "displayName": "Drone",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "goalVariant": true,
+    "hullId": "asm_mora",
+    "hullMods": [
+        "asm_relic_discount_10",
+        "vice_field_repair_nanites",
+        "targetingunit",
+        "fragment_swarm",
+        "secondary_fabricator",
+        "vice_adaptive_trajectory_analyzer"
+    ],
+    "permaMods": ["asm_amorphous_alloy"],
+    "sMods": [],
+    "variantId": "asm_mora_drone",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "asm_fermion_decoupler",
+                "WS 004": "asm_fermion_decoupler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "swarm_launcher",
+                "WS 008": "devouring_swarm",
+                "WS 011": "devouring_swarm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "neutron_torpedo",
+                "WS 013": "neutron_torpedo"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 018": "asm_flechette"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "voltaic_cannon",
+                "WS 007": "voltaic_cannon"
+            }
+        }
+    ],
+    "wings": []
+}

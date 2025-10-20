@@ -1,0 +1,30 @@
+{
+    "displayName": "Locus",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "jdp_coordination_centre",
+    "hullMods": [],
+    "quality": 0.5,
+    "variantId": "jdp_coordination_centre_Locus",
+    "weaponGroups": [],
+    "modules": {
+        "WS 039": "remnant_hangar1_Locus",
+        "WS 040": "remnant_hangar1_Locus",
+        "WS 034": "remnant_shield2_Locus",
+        "WS 002": "remnant_shield2_Locus",
+        "WS 036": "remnant_shield2_Locus",
+        "WS 003": "remnant_shield2_Locus",
+        "WS 001": "remnant_weapon_platform2_Locus",
+        "WS 032": "jdp_remnant_bulwark_Locus",
+        "WS 004": "jdp_remnant_sidepod_left_Locus",
+        "WS 005": "jdp_remnant_sidepod_right_Locus",
+        "WS 000": "remnant_weapon_platform2_Locus",
+        "WS 008": "remnant_armour3_Standard",
+        "WS 010": "remnant_weapon_platform1_Locus",
+        "WS 033": "jdp_remnant_bulwark_Locus",
+        "WS 037": "jdp_remnant_bulwark_Locus",
+        "WS 016": "jdp_remnant_hangar_right_Locus",
+        "WS 007": "jdp_remnant_hangar_left_Locus"
+    }
+}

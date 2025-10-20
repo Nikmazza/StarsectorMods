@@ -13,4 +13,5 @@
 		"WS 016": "orr_tac",
 		"WS 017": "orr_tac"
 	},
+	"builtInMods":["orr_dplslaught"],
 }

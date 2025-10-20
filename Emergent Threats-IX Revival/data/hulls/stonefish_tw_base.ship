@@ -1,0 +1,128 @@
+{
+  "hullName": "Stonefish",
+  "hullId": "stonefish_tw_base",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/trinity/stonefish_tw.png",
+  "style": "HIGH_TECH",
+  "height": 128,
+  "width": 114,
+  "center": [57, 63],
+  "collisionRadius": 95,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 95,
+  "viewOffset": 0,
+  "builtInMods": ["tw_seeker_lens"],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [38, 0]
+    },
+    {
+      "id": "WS 002",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 67,
+      "locations": [23, 39]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -67,
+      "locations": [23, -39]
+    },
+    {
+      "id": "WS 011",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [4, 14]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 180,
+      "locations": [-48, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-61, 25],
+      "length": 32,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60, 15],
+      "length": 18,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60, 8],
+      "length": 18,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60, -8],
+      "length": 18,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-60, -15],
+      "length": 18,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-61, -25],
+      "length": 32,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -6, -50,
+    -44, -44,
+    -60, -29,
+    -55, -6,
+    -55, 6,
+    -60, 29,
+    -44, 44,
+    -6, 50,
+    24, 46,
+    63, 27,
+    55, 15,
+    55, -15,
+    63, -27,
+    24, -46
+  ]
+}

@@ -1,0 +1,27 @@
+{
+    "displayName": "Locus",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "jdp_remnant_bulwark",
+    "hullMods": [
+        "advancedoptics",
+        "armoredweapons",
+        "blast_doors",
+        "eccm",
+        "fluxcoil",
+        "fluxdistributor",
+        "magazines",
+        "reinforcedhull",
+        "solar_shielding",
+        "turretgyros",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "jdp_remnant_bulwark_Locus",
+    "weaponGroups": [
+    ],
+    "wings": [],
+    "modules": [],
+}

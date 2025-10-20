@@ -1,14 +1,12 @@
 {
     "displayName": "Standoff",
     "fluxCapacitors": 0,
-    "fluxVents": 0,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "jdp_meridian",
     "hullMods": [
-        "frontemitter",
+        "advancedoptics",
         "hardenedshieldemitter",
-        "safetyoverrides",
-        "stabilizedshieldemitter",
         "targetingunit",
     ],
     "permaMods": [],
@@ -34,36 +32,38 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 008": "ionpulser",
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 005": "irpulse",
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 004": "irpulse",
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 003": "irpulse",
-                "WS 010": "phasecl",
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
                 "WS 006": "sabotpod",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "taclaser",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "taclaser",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "taclaser",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "hveldriver",
+                "WS 012": "ionbeam",
+                "WS 013": "sabot",
+                "WS 010": "sabot",
             }
         },
     ],

@@ -84,15 +84,7 @@ public class IXMarzannaBase extends BaseIndustry implements RouteFleetSpawner, F
 	
 	@Override
 	public boolean isHidden() {
-		if (this.id.equals(FCOMM_ID) && (market.hasIndustry(Industries.PATROLHQ) 
-				|| market.hasIndustry(Industries.MILITARYBASE) 
-				|| market.hasIndustry(Industries.HIGHCOMMAND))) return true;
-		if (this.id.equals(TRIBUTE_ID)) {
-			if (TW_FAC_ID.equals(market.getFactionId())) return true;			
-			else return (market.getFaction().getRelationship(TW_FAC_ID) < 0.25f);
-		}
-		else return (market.hasIndustry(Industries.MILITARYBASE) 
-				|| market.hasIndustry(Industries.HIGHCOMMAND));
+		return false;
 	}	
 	
 	@Override
@@ -208,7 +200,7 @@ public class IXMarzannaBase extends BaseIndustry implements RouteFleetSpawner, F
 				bonus = 0.05f;
 			}
 			
-			if (ALPHA_ID.equals(market.getIndustry(id).getAICoreId())) {
+			if (market.getIndustry(id) != null && ALPHA_ID.equals(market.getIndustry(id).getAICoreId())) {
 				bonus += BASIC_TRIBUTE_BONUS;
 				medium++;
 			}

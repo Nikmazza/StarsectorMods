@@ -1,0 +1,22 @@
+{
+  "id": "ewar_suite_tw",
+  "specClass":"beam",
+  "type": "UNIVERSAL",
+  "size": "MEDIUM",
+  "beamEffect":"data.scripts.sbe.EWAROnFire",
+  "turretSprite": "graphics/weapons/trinity/ewar_deco_tw.png",
+  "hardpointSprite":"graphics/fx/empty.png",
+  "hardpointGlowSprite":"graphics/weapons/trinity/ewar_glow_tw.png",
+  "turretOffsets": [0, 0],
+  "turretAngleOffsets": [0],
+  "hardpointOffsets": [0, 0],
+  "hardpointAngleOffsets": [0],
+  "fringeColor": [0,0,0,0],
+  "coreColor": [0,0,0,0],
+  "glowColor": [100,100,255,255],
+  "width":1.0,
+  "textureType":ROUGH,
+  "textureScrollSpeed":1.0,
+  "pixelsPerTexel":1.0,
+  "fireSoundOne":"ewar_ix_spinup", #cte_tw_pulse
+}

@@ -7,7 +7,7 @@
     "height": 390,
     "width": 200,
     "center": [
-        102, 197
+        100, 197
     ],
     "collisionRadius": 330,
     "coversColor": "",
@@ -105,7 +105,7 @@
             "arc": 160,
             "angle": 80,
             "locations": [
-                   -95.5,       78
+                     -95,       78
             ]
         },
         {
@@ -127,7 +127,7 @@
             "arc": 135,
             "angle": 320,
             "locations": [
-                  -131.5,      -49
+                    -131,      -49
             ]
         },
         {
@@ -193,18 +193,7 @@
             "arc": 165,
             "angle": 0,
             "locations": [
-                   142.5,        0
-            ]
-        },
-        {
-            "id": "WS 009",
-            "size": "SMALL",
-            "type": "BALLISTIC",
-            "mount": "TURRET",
-            "arc": 0,
-            "angle": 0,
-            "locations": [
-                   142.5,        0
+                     143,        0
             ]
         }
     ],

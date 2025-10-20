@@ -1,0 +1,56 @@
+{
+  "hullName": "Piranha (GM)",
+  "hullId": "piranha_GM",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/piranha_GM.png",
+  "style": "LOW_TECH",
+  "height": 34,
+  "width": 32,
+  "center": [16, 17],
+  "collisionRadius": 24,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 23,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMDA_Ftr"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [7, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-14, 7.5],
+      "length": 5.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-14, -7.5],
+      "length": 5.5,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -15, -7.5,
+    1.5, -16,
+    17, -8.5,
+    8, -0,
+    17, 8.5,
+    1.5, 16,
+    -15, 7.5,
+    -7, -0.5
+  ]
+}

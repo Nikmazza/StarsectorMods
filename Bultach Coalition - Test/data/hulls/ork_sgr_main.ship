@@ -9,7 +9,7 @@
   "center": [183, 362.5],
   "collisionRadius": 437.5,
   "shieldCenter": [0, -0],
-  "shieldRadius": 421,
+  "shieldRadius": 399,
   "viewOffset": 0,
   "builtInMods": [
     "bt_shieldArching",
@@ -19,7 +19,7 @@
     "bt_variable_sathar_mode",
     "BT_antiNuke",
     "bt_sathar_core",
-    "BT_shieldsChanger",
+    "BT_shieldsChanger"
   ],
   "builtInWeapons": {
     "WS0011": "ork_blinker_red",
@@ -51,7 +51,7 @@
       "size": "LARGE",
       "type": "BUILT_IN",
       "mount": "TURRET",
-      "arc": 200,
+      "arc": 160,
       "angle": 75,
       "locations": [-50, 80]
     },
@@ -132,7 +132,7 @@
       "size": "LARGE",
       "type": "BUILT_IN",
       "mount": "TURRET",
-      "arc": 200,
+      "arc": 160,
       "angle": -75,
       "locations": [-50, -80]
     },

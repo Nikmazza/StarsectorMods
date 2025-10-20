@@ -7,7 +7,9 @@ public class NameListUtil {
 	public static String HGS_Vanquisher = "HGS Vanquisher";
 	public static String HGS_Vindicator = "HGS Vindicator";
 	public static String HGS_Judicator = "HGS Judicator";
-	public static String TWC_Kupala = "TWC Kupala";
+	public static String TWC_Balor = "TWC Balor";
+	public static String TWC_Morrigan = "TWC Morrigan";
+	
 	public static String ISS_Kupala = "ISS Kupala";
 	public static String Marzanna_Station = "Marzanna Station";
 	public static String Overseer_Station = "Overseer Station";

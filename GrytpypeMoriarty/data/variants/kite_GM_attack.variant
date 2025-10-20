@@ -1,0 +1,29 @@
+{
+  "variantId": "kite_GM_attack",
+  "hullId": "kite_GM",
+  "displayName": "Attack",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 9,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightdualac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "annihilator"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

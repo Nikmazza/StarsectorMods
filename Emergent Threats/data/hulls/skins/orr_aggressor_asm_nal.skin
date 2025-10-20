@@ -1,0 +1,20 @@
+{
+	"baseHullId":"asm_aggressor_base",
+	"skinHullId":"orr_aggressor_asm_nal",
+	"hullName": "Aggressor (T)",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
+	"tech":"Threat Infected",
+	"descriptionId":"asm_aggressor",
+	"descriptionPrefix":"Subject identified: Aggressor-class battlecruiser. MINEX frontier automation package detected. Unknown modifications detected. Querying database... \"The Future Warship Modernization Program exemplified the massive inefficiencies that had gripped the Domain Armada procurement arm. What began as a modest effort to update a dated yet reliable design would end with only a handful of retrofitted ships undergoing- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING",
+	"tags":["no_dealer", "hide_in_codex", "no_autofit", "orr_nal", "auto_rec"], #threat tag added by Amorphous Armor
+	"spriteName":"graphics/orr/ships/aggressor_asm_nal.png",
+	"addHints":["HIDE_IN_CODEX"],
+	"builtInWings": ["asm_swarm_wing"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"builtInWeapons":{
+		"WS 016": "orr_nal",
+		"WS 017": "orr_nal"
+	},
+}

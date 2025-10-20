@@ -1,2 +1,5 @@
 name,id,demand class,base price,export value,price variability,utility,origin,tags,stack size,cargo space,icon,sound id,sound id drop,order,economyTier,econUnitOrigUnused,econUnit,baseRaidDanger,eU * base value,iconWidthMult,plugin,desc
-Command Subroutine,xo_synthesis_core,ai_cores,,,0,0,,"nonecon, ai_core, no_loss_from_combat, no_drop",1000,1,graphics/icons/cargo/ai_core_gamma.png,ai_core_pickup,ui_gamma_core_drop,38,,,,MEDIUM,,1,,
+Command Subroutine,xo_synthesis_core,ai_cores,,,0,0,,"nonecon, ai_core, no_loss_from_combat, no_drop, hide_in_codex",1000,1,graphics/icons/cargo/ai_core_gamma.png,ai_core_pickup,ui_gamma_core_drop,38,,,,MEDIUM,,1,,
+Infector Fragment,asm_relic_delta,ai_cores,,,0,1,,"nonecon, ai_core, no_loss_from_combat, codex_unlockable",1000,1,graphics/asm/icons/asm_relic_delta.png,ai_core_pickup,ui_cargo_special_industrial_drop,37,,,,LOW,,1,,
+Infected Gamma Core,asm_relic_gamma,ai_cores,,,0,5,,"nonecon, ai_core, no_loss_from_combat, codex_unlockable",1000,1,graphics/asm/icons/asm_relic_gamma.png,ai_core_pickup,ui_gamma_core_drop,38,,,,LOW,,1,,
+Infected Beta Core,asm_relic_beta,ai_cores,,,0,20,,"nonecon, ai_core, no_loss_from_combat, codex_unlockable",1000,1,graphics/asm/icons/asm_relic_beta.png,ai_core_pickup,ui_beta_core_drop,39,,,,MEDIUM,,1,,

@@ -49,7 +49,7 @@ public class Gestalt_Hubris {
                 "bt_divine_star", // id in planets.json
                 340f,        // radius (in pixels at default zoom)
                 1450f, // corona radius, from star edge
-                0f, // solar wind burn level
+                -1f, // solar wind burn level
                 2f, // flare probability
                 -25f); // cr loss mult
 
@@ -322,7 +322,7 @@ public class Gestalt_Hubris {
         SectorEntityToken nebulaTiles = Misc.addNebulaFromPNG("data/campaign/terrain/nebula_solid.png",
                 0, 0, // Center of nebula
                 system, // Location to add to
-                "terrain", "nebula_amber", // Texture to use, uses xxx_map for map
+                "terrain", "nebula_hubris", // Texture to use, uses xxx_map for map
                 4, 4, Terrain.NEBULA, StarAge.OLD);
 
         nebulaTiles.getLocation().set(0, 0);

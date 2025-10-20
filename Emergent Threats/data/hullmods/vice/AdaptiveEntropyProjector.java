@@ -10,6 +10,8 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
+import com.fs.starfarer.api.combat.EmpArcEntityAPI;
+import com.fs.starfarer.api.combat.EmpArcEntityAPI.EmpArcParams;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
@@ -193,8 +195,16 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 			shipLoc = MathUtils.getPoint(ship.getLocation(), 26f, ship.getFacing() - 180f);
 		}
 		
-		CombatEngineAPI engine = Global.getCombatEngine();
-		engine.spawnEmpArc(ship,
+		EmpArcParams params = new EmpArcParams();
+		params.segmentLengthMult = 8f;
+		params.zigZagReductionFactor = 0.15f;
+		params.fadeOutDist = 500f;
+		params.minFadeOutMult = 2f;
+		params.flickerRateMult = 0.7f;
+		
+		CombatEngineAPI engine = Global.getCombatEngine();		
+		EmpArcEntityAPI arc = (EmpArcEntityAPI) engine.spawnEmpArc(
+						ship,
 						shipLoc,
 						ship,
 						target,
@@ -203,10 +213,14 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 						emp, // emp damage
 						range + 500f, // extra range due to ship geometry
 						"system_emp_emitter_impact", // sound
-						26f, // thickness
+						100f, // thickness
 						color, // fringe
-						Color.white // core color
+						Color.white, // core color
+						params
 						);
+		
+		arc.setCoreWidthOverride(50f);
+		arc.setSingleFlickerMode(true);
 		
 		float odds = EXTRA_EFFECT_ODDS;
 		if (isSpacetimeAnalyticsActive(ship)) odds = 100f;
@@ -214,7 +228,8 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 		if (!isDegraded(ship) && Math.random() <= odds * 0.01f) {
 			ShipAPI chain = DistanceUtil.getNearestNotAbyssal(target, range, "friends");
 			if (chain != null) {
-				engine.spawnEmpArc(target,
+				EmpArcEntityAPI arc2 = (EmpArcEntityAPI) engine.spawnEmpArc(
+						target,
 						target.getLocation(),
 						target,
 						chain,
@@ -223,10 +238,13 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 						emp, // emp damage
 						range + 500f, // extra range due to ship geometry
 						"system_emp_emitter_impact", // sound
-						26f, // thickness
+						100f, // thickness
 						color, // fringe
-						Color.white // core color
+						Color.white, // core color
+						params
 						);
+				arc2.setCoreWidthOverride(50f);
+				arc2.setSingleFlickerMode(true);
 			}
 		}
 	}
@@ -241,7 +259,8 @@ public class AdaptiveEntropyProjector extends BaseHullMod {
 			shipLoc = MathUtils.getPoint(ship.getLocation(), 26f, ship.getFacing() - 180f);
 		}
 		
-		engine.spawnEmpArcPierceShields(ship,
+		engine.spawnEmpArcPierceShields(
+						ship,
 						shipLoc,
 						ship,
 						target,

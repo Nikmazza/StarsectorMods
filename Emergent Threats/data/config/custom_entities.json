@@ -1,0 +1,23 @@
+{
+	"asm_relic_station":{
+		"defaultName":"Circumfix Station",
+		"defaultRadius":40,
+		"customDescriptionId":"asm_relic_station",
+		"interactionImage":"graphics/asm/illustrations/circumfix_station.jpg",
+		"icon":"graphics/icons/station0.png",
+		"iconWidth":26,
+		"iconHeight":26,
+		"sprite":"graphics/stations/station_side05.png",
+		"spriteWidth":80,
+		"spriteHeight":80,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station", "asm_circumfix_station"],
+		"layers":[STATIONS],
+	},
+}

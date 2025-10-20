@@ -1,0 +1,128 @@
+{
+  "hullName": "Starquake",
+  "hullId": "starquake_tw",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/trinity/starquake_tw.png",
+  "style": "HIGH_TECH",
+  "height": 50,
+  "width": 60,
+  "center": [30, 25],
+  "collisionRadius": 40,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 40,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+	"ix_emergency_flux_shunt"
+  ],
+  "builtInWeapons": {"WS AIM": "aquilon_targeting_ix"},
+  "weaponSlots": [
+    {
+      "id": "WS AIM",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "HARDPOINT",
+      "arc": 60,
+      "angle": 0,
+      "locations": [14, 0]
+    },
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [14, 0]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [3, 11]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [3, -11]
+    },
+    {
+      "id": "SYS 001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [12, -20]
+    },
+    {
+      "id": "SYS 002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [12, 20]
+    },
+    {
+      "id": "SYS 003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [14, 10]
+    },
+    {
+      "id": "SYS 004",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [14, -10]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-25, 8],
+      "length": 19,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-25, -8],
+      "length": 19,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "IX_TRINITY"
+    },
+    {
+      "location": [-23, 0],
+      "length": 19,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "IX_TRINITY"
+    }
+  ],
+  "bounds": [
+    -23, -9,
+    8, -30,
+    19, -4,
+    11, -0,
+    19, 4,
+    8, 30,
+    -23, 9
+  ]
+}

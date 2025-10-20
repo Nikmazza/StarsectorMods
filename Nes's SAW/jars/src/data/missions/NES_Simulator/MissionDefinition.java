@@ -40,7 +40,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.addToFleet(FleetSide.PLAYER, "nes_fluorspar_blaster", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "nes_carnelian_dem", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "nes_hampter_standard", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_hampter_xiv", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "nes_hermitaur_standard", FleetMemberType.SHIP, false);
+		api.addToFleet(FleetSide.PLAYER, "nes_hermitaur_path", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "nes_hammerfall_standard", FleetMemberType.SHIP, false);
 		
 		// Set up the enemy fleet.

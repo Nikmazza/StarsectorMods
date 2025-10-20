@@ -1,0 +1,67 @@
+{
+  "hullName": "Talon (GMFS)",
+  "hullId": "talon_GMHS",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/talon_GMHS.png",
+  "style": "LOW_TECH",
+  "height": 24,
+  "width": 24,
+  "center": [12, 12],
+  "collisionRadius": 18.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 17,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [3.5, 5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -0,
+      "locations": [3.5, -5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 21,
+      "angle": 0,
+      "locations": [-1.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-10, 3.5],
+      "length": 5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-10, -3.5],
+      "length": 5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -8.5, -9.5,
+    9, -7.5,
+    9, 7.5,
+    -8.5, 9.5
+  ]
+}

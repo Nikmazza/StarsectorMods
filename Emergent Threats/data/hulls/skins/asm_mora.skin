@@ -1,0 +1,16 @@
+{
+	"baseHullId":"asm_mora_base",
+	"skinHullId":"asm_mora",
+	"hullName": "Mora (T)",
+	"incompatibleWithBaseHull":true, # for the autofit dialog
+	"systemId":"asm_dismantler_swarm",
+	"descriptionId":"asm_mora",
+	"descriptionPrefix":"Subject identified: Mora-class carrier. MINEX frontier automation package detected. Unknown modifications detected. Querying database... \"Despite staggering casualty rates among the fighter corps, the transition to fully automated drone strike craft wings remained a thorny issue for many traditionalist commanders. Notably, only one battleg- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING",
+	"tags":["no_dealer", "codex_unlockable", "asm_threat", "no_autofit", "auto_rec"], #threat tag added by Amorphous Armor hullmod
+	"addHints":["UNBOARDABLE"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"builtInWings": ["asm_swarm_wing", "asm_swarm_wing"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+}

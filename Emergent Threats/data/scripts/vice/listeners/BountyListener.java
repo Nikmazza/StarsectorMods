@@ -63,10 +63,11 @@ public class BountyListener extends BaseCampaignEventListener {
 				}
 				mem.set("$vice_project_mayfly_gave_item", true);
 				
+				//needs to be reset every load game
 				Global.getSector().getFaction("remnant").addKnownShip("vice_chevalier_rem", false);
 				Global.getSector().getFaction("remnant").addKnownShip("vice_hemlock_rem", false);
 				mem.set("$vice_project_mayfly_remnant_knows_ships", true);
-
+				
 				//not yet implemented, final version will be item that leads to dialog at Danu
 				//Global.getSector().getCampaignUI().addMessage(NameListUtil.INVITATION_POEM, Misc.getStoryBrightColor());
 			}

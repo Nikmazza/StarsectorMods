@@ -1,0 +1,158 @@
+{
+  "hullName": "Cerberus (GM)",
+  "hullId": "cerberus_GM",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/cerberus_GM.png",
+  "style": "LOW_TECH",
+  "height": 105,
+  "width": 90,
+  "center": [45, 52.5],
+  "collisionRadius": 73.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 72,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMDA_engine",
+    "repair_gantry"
+  ],
+  "builtInWings": [
+    "drone_GM_borer_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [
+        26, -17,
+        20, -18,
+        31.5, -16
+      ]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [43.5, 27]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 206,
+      "angle": 90,
+      "locations": [-15.5, 22]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 206,
+      "angle": -90,
+      "locations": [-15.5, -22]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-50, 32],
+      "length": 20.5,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-50, -32],
+      "length": 20.5,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-49, 25.5],
+      "length": 12.5,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-49, -25.5],
+      "length": 12.5,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, 42.5],
+      "length": 6.247655,
+      "width": 6.99051,
+      "angle": 132,
+      "contrailSize": 6.99051,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-39, -42.5],
+      "length": 6.247655,
+      "width": 6.99051,
+      "angle": -132,
+      "contrailSize": 6.99051,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-32.5, 43],
+      "length": 4.949748,
+      "width": 4.242641,
+      "angle": 135,
+      "contrailSize": 4.242641,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-32.5, -43],
+      "length": 4.949748,
+      "width": 4.242641,
+      "angle": -135,
+      "contrailSize": 4.242641,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -39, -7,
+    -43, -8,
+    -44, -17,
+    -49.5, -23,
+    -50, -37.5,
+    -42, -44,
+    -13, -42,
+    -1.5, -29,
+    20, -31,
+    32, -29.5,
+    42, -22,
+    43.5, -13,
+    50.5, -9,
+    50.5, 9,
+    38.5, 20.5,
+    49, 22,
+    48, 34,
+    22, 33.5,
+    17, 27,
+    -1.5, 29,
+    -13, 42,
+    -42, 44,
+    -50, 37.5,
+    -49.5, 23,
+    -44, 17,
+    -43, 8,
+    -39, 7
+  ]
+}

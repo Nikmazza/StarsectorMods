@@ -70,7 +70,7 @@ class SeaOfTranquility() : BaseAbyssBiome() {
        /* var fleet = spawnFleet(entrance)
         fleet.setLocation(fleet.location.x + 500f, fleet.location.y + 500f)*/
 
-        var photosphereNum = MathUtils.getRandomNumberInRange(13, 16)
+        var photosphereNum = (MathUtils.getRandomNumberInRange(13, 16) * manager.scaleMult).toInt()
 
         for (i in 0 until photosphereNum) {
 
@@ -296,7 +296,7 @@ class SeaOfTranquility() : BaseAbyssBiome() {
 
         //Populate locations without anything major near them.
         //Fabricators, Transmitters, Droneships, Abyssal Wrecks
-        var picks = MathUtils.getRandomNumberInRange(7, 10)
+        var picks = (MathUtils.getRandomNumberInRange(7, 10) * manager.scaleMult).toInt()
         for (i in 0 until picks) {
             var pick = pickAndClaimCellIncludingBorder() ?: continue //Populate Border regions too
             var loc = pick.getRandomLocationInCell()
@@ -480,6 +480,7 @@ class SeaOfTranquility() : BaseAbyssBiome() {
 
         //Set up fake system
         var iconSystem = Global.getSector().createStarSystem("Abyssal Depths")
+        data.iconSystem = iconSystem
         iconSystem.addTag(Tags.THEME_HIDDEN)
         iconSystem.addTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)
         //iconSystem.initNonStarCenter()

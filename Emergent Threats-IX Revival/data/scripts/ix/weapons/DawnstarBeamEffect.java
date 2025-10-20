@@ -183,7 +183,7 @@ public class DawnstarBeamEffect implements BeamEffectPlugin {
 				if (!(target instanceof ShipAPI)) return;
 				if (PULSE_COUNT == PULSE_PER_EFFECT_BURST) {
 					PULSE_COUNT = 0;
-					boolean isShieldHit = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+					boolean isShieldHit = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 					applyOnHitEffect(engine, (ShipAPI) target, end, beam, isShieldHit);
 				}
 			}

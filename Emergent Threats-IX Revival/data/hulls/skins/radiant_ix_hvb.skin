@@ -13,9 +13,9 @@
 	"spriteName":"graphics/ships/ix/hvb/radiant_ix_hvb.png",
 	"tags":["no_autofit", "hide_in_codex"],
 	"tech":"IX Battlegroup",
-	"builtInMods":["automated", "ix_ninth"],
+	"builtInMods":["automated", "ix_ninth", "ix_radiant_sbe_handler"],
 	"builtInWeapons": {
-        "WS SBE": "sbe_ix",
+        #"WS SBE": "sbe_ix",
 		"WS DIF": "diffraction_laser_ix",
     },
 }

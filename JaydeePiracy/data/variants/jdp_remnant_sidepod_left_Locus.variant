@@ -1,0 +1,26 @@
+{
+    "displayName": "Locus",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "jdp_remnant_sidepod_left",
+    "hullMods": [
+        "advancedoptics",
+        "armoredweapons",
+        "blast_doors",
+        "eccm",
+        "fluxbreakers",
+        "fluxcoil",
+        "fluxdistributor",
+        "reinforcedhull",
+        "solar_shielding",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "jdp_remnant_sidepod_left_Locus",
+    "weaponGroups": [
+    ],
+    "wings": [],
+    "modules": [],
+}

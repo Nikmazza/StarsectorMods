@@ -28,7 +28,7 @@ public class HeavyMaserHitEffect implements BeamEffectPlugin {
 			
 			if (fireInterval.intervalElapsed()) {
 				ShipAPI ship = (ShipAPI) target;
-				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 				if (!hitShield) {
 					Vector2f point = beam.getRayEndPrevFrame();
 					float dam = 0f;

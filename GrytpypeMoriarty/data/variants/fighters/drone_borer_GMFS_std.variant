@@ -1,0 +1,29 @@
+{
+  "variantId": "drone_borer_GMFS_std",
+  "hullId": "drone_borer_GMFS",
+  "displayName": "Fire Fight",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "gmda_flaregun_ftr"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "gmda_hose"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

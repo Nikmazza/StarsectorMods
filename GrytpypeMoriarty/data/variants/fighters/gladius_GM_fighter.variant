@@ -1,0 +1,30 @@
+{
+  "variantId": "gladius_GM_fighter",
+  "hullId": "gladius_GM",
+  "displayName": "Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "ioncannon_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "crungun_fighter",
+        "WS0004": "crungun_fighter"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

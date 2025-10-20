@@ -36,7 +36,7 @@ public class bt_pd_arching implements OnHitEffectPlugin {
         ShipAPI source = projectile.getSource();
         if (source == null) return;
 
-        Global.getSoundPlayer().playSound("bt_gestalt_arc_quiet", 1, 0.2f, point, target.getVelocity());
+        Global.getSoundPlayer().playSound("bt_gestalt_arc_quiet", 1.5f, 0.1f, point, target.getVelocity());
 
         if (MagicRender.screenCheck(1, point)) {
             engine.addSmoothParticle(

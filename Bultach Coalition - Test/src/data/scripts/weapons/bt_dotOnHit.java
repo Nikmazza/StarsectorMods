@@ -50,7 +50,7 @@ public class bt_dotOnHit implements OnHitEffectPlugin {
                         hitLoc = new Vector2f(hitLoc.x + target.getLocation().x, hitLoc.y + target.getLocation().y);
                     }
                     if (damageTimer.intervalElapsed()) {
-                        engine.applyDamage(target, hitLoc, totalDamage * fractionPerSecond * damageTimer.getIntervalDuration(), DamageType.ENERGY, 0, true, true, projectile.getSource());
+                        engine.applyDamage(target, hitLoc, totalDamage * fractionPerSecond * damageTimer.getIntervalDuration(), DamageType.HIGH_EXPLOSIVE, 0, true, true, projectile.getSource());
                     }
                     if (FXTimer.intervalElapsed()) {
                         engine.addSwirlyNebulaParticle(hitLoc, target.getVelocity(), MathUtils.getRandomNumberInRange(10, 30), MathUtils.getRandomNumberInRange(1, 2), MathUtils.getRandomNumberInRange(0.8f, 1.2f), MathUtils.getRandomNumberInRange(0.3f, 0.7f), MathUtils.getRandomNumberInRange(0.4f, 0.6f), new Color(MathUtils.getRandomNumberInRange(200, 255), MathUtils.getRandomNumberInRange(100, 160), MathUtils.getRandomNumberInRange(0, 60), MathUtils.getRandomNumberInRange(100, 200)), true);

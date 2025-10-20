@@ -1,0 +1,1 @@
+Voltaic Burst system effect is handled by VoltaicBurstOnFire in weapons

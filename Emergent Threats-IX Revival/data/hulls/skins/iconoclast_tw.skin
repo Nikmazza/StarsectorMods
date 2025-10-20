@@ -1,0 +1,30 @@
+{
+	"baseHullId":"iconoclast_ix_base",
+	"skinHullId":"iconoclast_tw",
+	"hullName":"Iconoclast (TW)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"iconoclast_tw",
+	"coversColor":[210,230,210,255],
+	"spriteName":"graphics/ships/trinity/iconoclast_tw.png",
+	"descriptionPrefix":"This warship of the Trinity Worlds combines salvaged Tri-Tachyon and transferred 9th Domain Battlegroup technology. The engines of this ship have been enhanced in a crude yet effective manner, in an effort to mimic the more advanced upgrades of the Fleet.",
+	"fleetPoints":11,
+	"ordnancePoints":70,
+	"baseValueMult":1.2,
+	"systemId":"ix_flux_shunt",
+	"tags":["ix_trinity"],
+	"tech":"Trinity Worlds",
+	"builtInMods":["tw_enhanced_control_node", "tw_trinity_retrofit", "ix_dawnstar_lacerator"],
+	"builtInWeapons": {
+		"WS 000": "lacerator_tw",
+    },
+	"removeHints":["HIDE_IN_CODEX"],
+	"engineSlotChanges":{
+		"0":{"style": "IX_TRINITY"},
+		"1":{"style": "IX_TRINITY"},
+		"2":{"style": "IX_TRINITY"},
+		"3":{"style": "IX_TRINITY"},
+	}, 
+	"weaponSlotChanges":{
+		"WS 000":{"mount": "TURRET", "type": "BUILT_IN"},
+	},
+}

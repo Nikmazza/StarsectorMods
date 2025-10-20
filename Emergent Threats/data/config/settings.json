@@ -1,9 +1,16 @@
 {
+	
+	"drop_prob_officer_xo_synthesis_core":0,
+	"drop_prob_officer_asm_relic_beta":0.1,
+	"drop_prob_officer_asm_relic_gamma":0.2,
+	"drop_prob_officer_asm_relic_delta":0.4,
+	
 	"designTypeColors":{
         "Sindrian Diktat":[180,0,120,255],
 		"Light of Ludd":[180,255,95,255],
 		"Project Mayfly":[220,185,55,255],
-		"[Classified]":[170,100,200,255],
+		"Threat Infected":[130,155,145,255],
+		"Pre-Collapse Relic":[130,155,145,255],
 	},
 	
 	"graphics":{
@@ -19,6 +26,10 @@
 			"orr_tac_hit_ring":"graphics/orr/fx/orr_tac_hit_ring.png",
 		},
 		"vice_ships":{
+			"invisible":"graphics/fx/empty.png";
+			
+			"brilliant_carrier":"graphics/vice/ships/hidden/brilliant_carrier.png",
+			
 			"resplendent_adaptive_flight_command":"graphics/vice/ships/hidden/resplendent_adaptive_flight_command.png",
 			"resplendent_adaptive_gravity_drive":"graphics/vice/ships/hidden/resplendent_adaptive_gravity_drive.png",
 			"resplendent_base":"graphics/vice/ships/hidden/resplendent.png",
@@ -44,8 +55,19 @@
 		},
 		"portraits":{
 			"xo_command_subroutine":"graphics/vice/portraits/xo_command_subroutine.png",
+			"asm_relic_beta":"graphics/asm/portraits/asm_relic_beta.png",
+			"asm_relic_gamma":"graphics/asm/portraits/asm_relic_gamma.png",
+			"asm_relic_delta":"graphics/asm/portraits/asm_relic_delta.png",
+			"asm_victor_smythe":"graphics/portraits/portrait_mercenary03.png",
 			"vice_taylor_sheasby":"graphics/portraits/portrait_league09.png"
 		},
+		"illustrations":{
+			"asm_circumfix_station":"graphics/asm/illustrations/circumfix_station.jpg",
+			"asm_circumfix_wreck":"graphics/asm/illustrations/circumfix_wreck.jpg",
+		},
 	},
+	
+	"ruleCommandPackages":[
+		#"data.scripts.vice.rules",
+	],
 }
-

@@ -17,11 +17,8 @@ public class FleetJumpStats extends BaseShipSystemScript {
 	
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		ShipAPI ship = null;
-		if (stats.getEntity() instanceof ShipAPI) {
-			ship = (ShipAPI) stats.getEntity();
-		} else {
-			return;
-		}		
+		if (stats.getEntity() instanceof ShipAPI) ship = (ShipAPI) stats.getEntity();
+		else return;
 		
 		if (effectLevel > 0) {
 			float jitterLevel = effectLevel;
@@ -33,9 +30,8 @@ public class FleetJumpStats extends BaseShipSystemScript {
 				fighters = getFighters(ship);
 				Global.getCombatEngine().getCustomData().put(fightersKey, fighters);
 				firstTime = true;
-			} else {
-				fighters = (List<ShipAPI>) Global.getCombatEngine().getCustomData().get(fightersKey);
-			}
+			} 
+			else fighters = (List<ShipAPI>) Global.getCombatEngine().getCustomData().get(fightersKey);
 			if (fighters == null) { // shouldn't be possible, but still
 				fighters = new ArrayList<ShipAPI>();
 			}

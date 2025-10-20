@@ -8,9 +8,9 @@
 	"hardpointSprite":"graphics/fx/empty.png",
 	"hardpointGlowSprite":"graphics/fx/empty.png",
 	"glowColor":[0,0,0,0],
-	"turretOffsets":[10, 0],
+	"turretOffsets":[0, 0],
 	"turretAngleOffsets":[0],
-	"hardpointOffsets":[15, 0],
+	"hardpointOffsets":[0, 0],
 	"hardpointAngleOffsets":[0],
 	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
 	#"animationType":"GLOW",

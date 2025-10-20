@@ -1,6 +1,7 @@
 package data.scripts;
 
 import com.fs.starfarer.api.BaseModPlugin;
+import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.Global;
@@ -11,6 +12,7 @@ import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.bt_CampaignPluginImpl;
 import com.fs.starfarer.api.impl.campaign.bt_DerelictSpawner;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BoostIndustryInstallableItemEffect;
@@ -22,8 +24,11 @@ import com.fs.starfarer.api.impl.campaign.bt_GestaltCore;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import data.scripts.ai.bt_doombeam_autofire;
+import data.scripts.ai.bt_patherlaser_autofire;
 import data.scripts.world.ork_Gen;
 import data.scripts.fleets.bt_PersonalFleetAdmiral1;
+import data.scripts.utils.bt_relationship_util;
 import exerelin.campaign.SectorManager;
 
 import java.util.Arrays;
@@ -32,9 +37,29 @@ import java.util.Objects;
 
 public class ork_ModPlugin extends BaseModPlugin {
 
+    private static final String BULTACH_HATER_ID = "orks";
+    private static final String CORPORTATE_SCUM_ID = "tritachyon";
+    public final String DOOMBEAM = "ork_sathar_doom_laser";
+    public final String PATHERBEAM = "ork_pather_laser";
+
+
+
     @Override
-    public
-    void onNewGame() {
+    public PluginPick<AutofireAIPlugin> pickWeaponAutofireAI(WeaponAPI weapon) {
+        switch (weapon.getId()) {
+            case DOOMBEAM:
+                return new PluginPick<AutofireAIPlugin>(new bt_doombeam_autofire(weapon), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case PATHERBEAM:
+                return new PluginPick<AutofireAIPlugin>(new bt_patherlaser_autofire(weapon), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            default:
+        }
+        return null;
+    }
+
+
+
+    @Override
+    public void onNewGame() {
         SectorAPI sector = Global.getSector();
 
         boolean haveNexerelin = Global.getSettings().getModManager().isModEnabled("nexerelin");
@@ -43,8 +68,7 @@ public class ork_ModPlugin extends BaseModPlugin {
         }
     }
 
-    public static
-    void OrkLoveSettings() {
+    public static void OrkLoveSettings() {
         FactionAPI orks = Global.getSector().getFaction("orks");
 
         for (FactionAPI faction : Global.getSector().getAllFactions()) {
@@ -102,8 +126,7 @@ public class ork_ModPlugin extends BaseModPlugin {
         }
     }
 
-    private
-    void setGestaltHostileToAllFactions() {
+    private void setGestaltHostileToAllFactions() {
         FactionAPI gestalt = Global.getSector().getFaction("gestalt");
         if (gestalt == null) return;
 
@@ -114,8 +137,7 @@ public class ork_ModPlugin extends BaseModPlugin {
     }
 
     @Override
-    public
-    void onNewGameAfterEconomyLoad() {
+    public void onNewGameAfterEconomyLoad() {
         OrkLoveSettings();
         setGestaltHostileToAllFactions();
 
@@ -132,8 +154,7 @@ public class ork_ModPlugin extends BaseModPlugin {
     }
 
     @Override
-    public
-    void onApplicationLoad() throws Exception {
+    public void onApplicationLoad() throws Exception {
         super.onApplicationLoad();
 
         final String BT_RESTORED_NANO = "bt_repaired_c_nanoforge";
@@ -149,27 +170,21 @@ public class ork_ModPlugin extends BaseModPlugin {
                 ) {
                     public
                     void apply(Industry industry) {
-
                         if (industry.getMarket() != null && industry.getMarket().getStats() != null) {
                             industry.getMarket().getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD)
                                     .modifyFlat(MODIFIER_ID, QUALITY_BONUS, "Repaired Nanoforge");
                         }
-
                     }
-
                     public
                     void unapply(Industry industry) {
-
                         if (industry.getMarket() != null && industry.getMarket().getStats() != null) {
                             industry.getMarket().getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD)
                                     .unmodifyFlat(MODIFIER_ID);
                         }
                     }
-
                     protected
                     void addItemDescriptionImpl(Industry industry, TooltipMakerAPI tooltip, SpecialItemData data,
                                                 InstallableIndustryItemPlugin.InstallableItemDescriptionMode mode, String pre, float pad) {
-
                         tooltip.addPara(pre + "A Corrupted Nanoforge that has been heavily modified in attempts to restore it. " +
                                         "Increases ship and weapon production quality by %s. " +
                                         "Increases demand for input resources by %s units. Does not increase unit output.",
@@ -181,26 +196,58 @@ public class ork_ModPlugin extends BaseModPlugin {
                         tooltip.addPara("On habitable worlds, causes pollution which becomes permanent.", Misc.getNegativeHighlightColor(), pad);
                     }
                 }
-
         );
     }
 
     @Override
     public void onGameLoad(boolean newGame) {
         super.onGameLoad(newGame);
-//add my fucking cores
         try {
             SectorAPI sector = Global.getSector();
             bt_CampaignPluginImpl plugin = new bt_CampaignPluginImpl();
             sector.registerPlugin(plugin);
-            Global.getLogger(ork_ModPlugin.class).info("Registered/Re-registered bt_CampaignPluginImpl plugin with ID: " + plugin.getId());
         } catch (Throwable t) {
-            Global.getLogger(ork_ModPlugin.class).error("Failed to register bt_CampaignPluginImpl plugin.", t);
+        }
+        setupReputationLock();
+    }
+
+    @Override
+    public PluginPick<ShipAIPlugin> pickShipAI(FleetMemberAPI member, ShipAPI ship) {
+        String hullId = ship.getHullSpec().getBaseHullId();
+
+        if ("sgr_engine_left".equals(hullId) || "sgr_engine_right".equals(hullId)) {
+            return new PluginPick<ShipAIPlugin>(new data.scripts.ai.bt_sathar_module_AI(ship), CampaignPlugin.PickPriority.MOD_SPECIFIC);
         }
 
+        return null;
     }
+
+    private void setupReputationLock() {
+        float maxReputation = -1.0f;
+
+        FactionAPI faction1 = Global.getSector().getFaction(BULTACH_HATER_ID);
+        FactionAPI faction2 = Global.getSector().getFaction(CORPORTATE_SCUM_ID);
+        if (faction1 != null && faction2 != null) {
+            if (faction1.getRelationship(faction2.getId()) > maxReputation) {
+                faction1.setRelationship(faction2.getId(), maxReputation);
+            }
+        }
+
+        boolean alreadyRunning = false;
+        for (EveryFrameScript existingScript : Global.getSector().getScripts()) {
+            if (existingScript instanceof bt_relationship_util) {
+                alreadyRunning = true;
+                break;
+            }
+        }
+
+        if (!alreadyRunning) {
+            Global.getSector().addScript(new bt_relationship_util(maxReputation));
+        }
+    }
+
     public void onNewGameAfterTimePass(){
         bt_DerelictSpawner.spawnDerelicts();
-
     }
+
 }

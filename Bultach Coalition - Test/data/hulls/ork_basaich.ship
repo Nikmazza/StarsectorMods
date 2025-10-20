@@ -55,7 +55,7 @@
     {
       "id": "WS0005",
       "size": "LARGE",
-      "type": "UNIVERSAL",
+      "type": "ENERGY",
       "mount": "HARDPOINT",
       "arc": 6,
       "angle": 0,

@@ -9,9 +9,7 @@ import java.util.Map;
 
 //Made for NEON! Go download NSP!
 public class jdp_weirdslayer {
-	public static Map<HullSize, Float> BONUS = new HashMap<HullSize, Float>();
 	public static float DAMAGE_BONUS_PERCENT = 25f;
-
 
 	public static class Level1 implements ShipSkillEffect {
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {

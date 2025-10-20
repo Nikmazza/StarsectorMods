@@ -2,8 +2,8 @@ package data.campaign.procgen;
 
 import java.util.Random;
 
+import com.fs.starfarer.campaign.ai.CampaignFleetAI;
 import org.lwjgl.util.vector.Vector2f;
-
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -17,26 +17,20 @@ public class GestaltAssignmentAI implements EveryFrameScript {
 	protected StarSystemAPI homeSystem;
 	protected CampaignFleetAPI fleet;
 	protected SectorEntityToken source;
-	
-	
-	public
-	GestaltAssignmentAI(CampaignFleetAPI fleet, StarSystemAPI homeSystem, SectorEntityToken source) {
+
+	public GestaltAssignmentAI(CampaignFleetAPI fleet, StarSystemAPI homeSystem, SectorEntityToken source) {
 		this.fleet = fleet;
 		this.homeSystem = homeSystem;
 		this.source = source;
-		
 		giveInitialAssignments();
 	}
-	
+
 	protected void giveInitialAssignments() {
 		boolean playerInSameLocation = fleet.getContainingLocation() == Global.getSector().getCurrentLocation();
-		
-		// launch from source if player is in-system, or sometimes
 		if (playerInSameLocation && (float) Math.random() < 0.1f && source != null) {
 			fleet.setLocation(source.getLocation().x, source.getLocation().y);
-			fleet.addAssignment(FleetAssignment.ORBIT_AGGRESSIVE, source, 3f + (float) Math.random() * 2f);
+			fleet.addAssignment(FleetAssignment.ORBIT_AGGRESSIVE, source, 3f + (float) Math.random() * 2f, "Whispers in the Void");
 		} else {
-			// start at random location
 			SectorEntityToken target = GestaltSeededFleetManager.pickEntityToGuard(new Random(), homeSystem, fleet);
 			if (target != null) {
 				Vector2f loc = Misc.getPointAtRadius(target.getLocation(), target.getRadius() + 100f);
@@ -48,9 +42,10 @@ public class GestaltAssignmentAI implements EveryFrameScript {
 			pickNext();
 		}
 	}
-	
+
 	protected void pickNext() {
 		boolean standDown = source != null && (float) Math.random() < 0.2f;
+
 		if (!standDown) {
 			SectorEntityToken target = GestaltSeededFleetManager.pickEntityToGuard(new Random(), homeSystem, fleet);
 			if (target != null) {
@@ -58,25 +53,36 @@ public class GestaltAssignmentAI implements EveryFrameScript {
 				float dist = Misc.getDistance(fleet.getLocation(), target.getLocation());
 				float seconds = dist / speed;
 				float days = seconds / Global.getSector().getClock().getSecondsPerDay();
-				days += 5f + 5f * (float) Math.random();
-				fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, target, days, "Waiting");
+				days += 15f + 5f * (float) Math.random();
+				fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, target, days, "Tending the Veil");
 				return;
 			} else {
-				float days = 5f + 5f * (float) Math.random();
-				fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, null, days, "Waiting");
+				if (source != null) {
+					standDown = true;
+				} else {
+					float days = 15f + 5f * (float) Math.random();
+					fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, null, days, "Listening");
+					return;
+				}
 			}
 		}
-		
+
 		if (source != null) {
-			float dist = Misc.getDistance(fleet.getLocation(), source.getLocation());
-			if (dist > 1000) {
-				fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, source, 3f, "returning");
-			} else {
-				fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, source, 3f + (float) Math.random() * 2f, "...");
-				fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, source, 5f);
+			CampaignFleetAI.FleetAssignmentData currentAssignment = (CampaignFleetAI.FleetAssignmentData) fleet.getCurrentAssignment();
+			if (currentAssignment != null && currentAssignment.getTarget() == source) {
+				FleetAssignment assignmentType = currentAssignment.getAssignment();
+				if (assignmentType == FleetAssignment.GO_TO_LOCATION ||
+						assignmentType == FleetAssignment.ORBIT_PASSIVE ||
+						assignmentType == FleetAssignment.GO_TO_LOCATION_AND_DESPAWN) {
+					return;
+				}
 			}
+
+			fleet.clearAssignments();
+			fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, source, 30f, "Returning");
+			fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, source, 2f + (float) Math.random() * 2f, "Slipping from the Void");
+			fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, source, 10f, "Becoming Naught");
 		}
-		
 	}
 
 	public void advance(float amount) {
@@ -85,8 +91,6 @@ public class GestaltAssignmentAI implements EveryFrameScript {
 		}
 	}
 
-	
-	
 	public boolean isDone() {
 		return false;
 	}
@@ -94,17 +98,5 @@ public class GestaltAssignmentAI implements EveryFrameScript {
 	public boolean runWhilePaused() {
 		return false;
 	}
-	
-	
-
 }
-
-
-
-
-
-
-
-
-
 

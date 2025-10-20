@@ -16,8 +16,8 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0002": "ork_diuraidh",
-        "WS0003": "ork_diuraidh"
+        "WS0002": "ork_fuadian_med",
+        "WS0003": "ork_fuadian_med"
       }
     },
     {
@@ -31,8 +31,8 @@
       "autofire": false,
       "mode": "LINKED",
       "weapons": {
-        "WS0008": "ork_swarmer_medium",
-        "WS0009": "ork_swarmer_medium"
+        "WS0008": "ork_clangtorp_medium",
+        "WS0009": "ork_clangtorp_medium"
       }
     },
     {

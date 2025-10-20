@@ -1,0 +1,23 @@
+{
+	"baseHullId":"scarab",
+	"skinHullId":"scarab_hg",
+	"hullName":"Scarab (HG)",
+	"incompatibleWithBaseHull":true,
+	"descriptionId":"scarab",
+	"coversColor":[120,130,120,255],
+	"descriptionPrefix":"This ship appears at first glance to be a Scarab-class frigate modified by the 9th Domain Battlegroup. However, unlike the more common variant in use by the Fleet, its Causality Anchor is a late Expansion Epoch original rather than the more typical Immanence Engine in use by the Fleet. Every newly uncovered detail about this ship makes its origins an ever more perplexing mystery.",
+	"fleetPoints":9,
+	"ordnancePoints":58,
+	"baseValueMult":4,
+	#"systemId":"ix_immanence_engine_frigate",
+	"spriteName":"graphics/ships/ix/easter_egg/scarab_hg.png",
+	"addHints":["HIDE_IN_CODEX"],
+	"tags":[],
+	"tech":"IX Battlegroup",
+	"builtInMods":["ix_ninth", "ix_missile_nanoforge", "ix_temporal_shell"],
+    "weaponSlotChanges":{
+		"WS 002":{"type": "MISSILE", "arc": 5,},
+		"WS 003":{"type": "MISSILE", "arc": 5,},
+		},
+	},
+}

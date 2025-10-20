@@ -1,0 +1,25 @@
+{
+  "variantId": "mudskipper_GMHS_attack",
+  "hullId": "mudskipper_GMHS",
+  "displayName": "Militarized",
+  "goalVariant": true,
+  "fluxCapacitors": 1,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "militarized_subsystems",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "sabot"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

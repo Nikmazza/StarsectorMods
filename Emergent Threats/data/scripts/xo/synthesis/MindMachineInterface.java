@@ -49,5 +49,11 @@ public class MindMachineInterface extends SCBaseSkillPlugin {
 			player.addHullMod("vice_adaptive_thruster_control");
 			Global.getSector().getMemoryWithoutUpdate().set("$gave_MMI_hullmods", true);
 		}
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_mmi_is_active", true);
+	}
+	
+	@Override
+	public void onDeactivation(SCData data) {
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_mmi_is_active", false);
 	}
 }

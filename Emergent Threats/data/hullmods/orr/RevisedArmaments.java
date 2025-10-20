@@ -39,6 +39,7 @@ public class RevisedArmaments extends BaseHullMod {
 		ShipVariantAPI variant = ship.getVariant();
 		if (!variant.getHullSpec().hasTag("orr_nal")) return;
 		if (variant.hasHullMod("high_scatter_amp")
+				|| variant.hasHullMod("vice_intrepid_hull")
 				|| variant.hasHullMod("vice_adaptive_emitter_diodes")
 				|| variant.hasHullMod("vice_attuned_emitter_diodes")) return;
 		ship.addListener(new NALHardFlux(ship));

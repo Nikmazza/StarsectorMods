@@ -46,7 +46,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [152, 0]
+      "locations": [148, 0]
     },
     {
       "id": "WS DIF",
@@ -55,7 +55,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [136, 0]
+      "locations": [140, 0]
     },
     {
       "id": "WS 004",

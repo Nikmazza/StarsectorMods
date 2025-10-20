@@ -1,0 +1,39 @@
+{
+    "displayName": "Seeker",
+    "fluxCapacitors": 2,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "vice_stonefish",
+    "hullMods": [
+        "eccm",
+        "pointdefenseai",
+        "targetingunit",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_stonefish_seeker",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "vice_deadeye_plasma"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "harpoonpod",
+                "WS 003": "harpoonpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "heavyburst",
+                "WS 012": "pdburst"
+            }
+        }
+    ]
+}

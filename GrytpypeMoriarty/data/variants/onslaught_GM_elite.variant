@@ -1,0 +1,67 @@
+{
+  "displayName": "Elite",
+  "fluxCapacitors": 20,
+  "fluxVents": 43,
+  "goalVariant": true,
+  "hullId": "onslaught_GM",
+  "hullMods": [
+    "turretgyros",
+    "stabilizedshieldemitter"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "onslaught_GM_elite",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "tachyonlance",
+        "WS0002": "tachyonlance"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0005": "typhoon",
+        "WS0006": "typhoon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "mjolnir",
+        "WS0004": "mjolnir"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0015": "lightneedler",
+        "WS0016": "lightneedler"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0009": "flak",
+        "WS0010": "flak",
+        "WS0011": "vulcan",
+        "WS0012": "vulcan",
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0017": "crungun",
+        "WS0018": "crungun",
+        "WS0019": "lightdualmg",
+        "WS0020": "lightdualmg",
+        "WS0021": "flak",
+        "WS0022": "vulcan"
+      }
+    }
+  ],
+  "wings": []
+}

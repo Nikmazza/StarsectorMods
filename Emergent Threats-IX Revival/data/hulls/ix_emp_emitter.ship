@@ -13,7 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "never_detaches",
-    "vastbulk"
+    "vastbulk",
+	"ix_hide_module_hulk"
   ],
   "weaponSlots": [
     {

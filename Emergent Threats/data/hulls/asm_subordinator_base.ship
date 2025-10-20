@@ -1,0 +1,239 @@
+{
+  "hullName": "Subordinator",
+  "hullId": "asm_subordinator_base",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/asm/ships/subordinator_asm.png",
+  "style": "THREAT",
+  "height": 236,
+  "width": 192,
+  "center": [96, 117],
+  "collisionRadius": 180,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 170,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "asm_threat_compromised",
+    "asm_amorphous_alloy",
+    "asm_munitions_regulator"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [97, 0]
+    },
+    {
+      "id": "WS 002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 260,
+      "angle": 5,
+      "locations": [70, 0]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 45,
+      "locations": [43, 35]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -45,
+      "locations": [43, -35]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 60,
+      "locations": [15, 48]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -60,
+      "locations": [15, -48]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [101, 27]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [101, -27]
+    },
+    {
+      "id": "WS 009",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-61, 80]
+    },
+    {
+      "id": "WS 010",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-61, -80]
+    },
+    {
+      "id": "WS 011",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-86, 17]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-86, -17]
+    },
+    {
+      "id": "SYS 001",
+      "size": "MEDIUM",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [18, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-83, 77],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-83, -77],
+      "length": 32,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-88, 56],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-88, -56],
+      "length": 64,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-103, 24],
+      "length": 24,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-103, -24],
+      "length": 24,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-114, -0],
+      "length": 60,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "THREAT"
+    },
+    {
+      "location": [-112, 8],
+      "length": 28,
+      "width": 11,
+      "angle": 180,
+      "contrailSize": 11,
+      "style": "THREAT"
+    },
+    {
+      "location": [-112, -8],
+      "length": 28,
+      "width": 11,
+      "angle": -180,
+      "contrailSize": 11,
+      "style": "THREAT"
+    }
+  ],
+  "bounds": [
+    112.5, -15,
+    104, -19,
+    97, -35,
+    55.5, -61,
+    17, -69,
+    -12, -54,
+    -22, -85,
+    -47, -85,
+    -60.5, -93,
+    -80, -83,
+    -88, -43,
+    -113, -10,
+    -113, 10,
+    -88, 43,
+    -80, 83,
+    -60.5, 93,
+    -47, 85,
+    -22, 85,
+    -12, 54,
+    17, 69,
+    55.5, 61,
+    97, 35,
+    104, 19,
+    112.5, 15
+  ]
+}

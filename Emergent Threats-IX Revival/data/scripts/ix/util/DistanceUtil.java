@@ -112,11 +112,56 @@ public class DistanceUtil {
         return result;
     }
 	
+	public static MissileAPI getNearestMissile(CombatEntityAPI ship, float range, boolean isEnemyOnly) {
+		if (!isEnemyOnly) return getNearestMissile(ship, range);
+		List<MissileAPI> missiles = getAllMissilesInRange(ship, range);		
+		MissileAPI result = null;
+		for (MissileAPI m : missiles) {
+			if (m.getSourceAPI().getOwner() != ship.getOwner() 
+					&& getDistance(ship, m) < getDistance(ship, result)) result = m;
+		}
+        return result;
+    }
+	
+	public static CombatEntityAPI getNearestEnemyMissileOrShip(CombatEntityAPI ship, float range) {
+		CombatEntityAPI a = (CombatEntityAPI) getNearestMissile(ship, range, true);
+		CombatEntityAPI b = (CombatEntityAPI) getNearestEnemy(ship, range, true);
+		if (a == null && b == null) return null;
+		else if (a != null && b == null) return a;
+		else if (a == null && b != null) return b;
+		else if (getDistance(ship, a) < getDistance(ship, b)) return a;
+		else return b;
+    }
+	
+	//includes hostile missiles and fighters
+	public static List<CombatEntityAPI> getAllEnemiesNearPoint(Vector2f p, float range, ShipAPI source) {
+		List<CombatEntityAPI> enemies = new ArrayList<CombatEntityAPI>();
+		List<MissileAPI> missiles = Global.getCombatEngine().getMissiles();
+		for (MissileAPI m : missiles) {
+			if (getDistance(p, m) < range && m.getSourceAPI().getOwner() != source.getOwner()) enemies.add(m);
+		}
+		List<ShipAPI> ships = Global.getCombatEngine().getShips();
+		for (ShipAPI s : ships) {
+			if (getDistance(p, s) < range && s.getOwner() != source.getOwner()) enemies.add(s);
+		}
+		return enemies;
+	}
+	
 	public static List<MissileAPI> getAllMissilesInRange(CombatEntityAPI e, float range) {
 		List<MissileAPI> missileList = new ArrayList<MissileAPI>();
 		List<MissileAPI> missiles = Global.getCombatEngine().getMissiles();
 		for (MissileAPI m : missiles) {
 			if (getDistance(e, m) < range) missileList.add(m);
+		}
+		missileList.remove(e);
+		return missileList;
+	}
+	
+	public static List<MissileAPI> getAllMissilesInRange(CombatEntityAPI e, float range, boolean isEnemyOnly) {
+		List<MissileAPI> missileList = new ArrayList<MissileAPI>();
+		List<MissileAPI> missiles = Global.getCombatEngine().getMissiles();
+		for (MissileAPI m : missiles) {
+			if (getDistance(e, m) < range && m.getSourceAPI().getOwner() != e.getOwner()) missileList.add(m);
 		}
 		missileList.remove(e);
 		return missileList;

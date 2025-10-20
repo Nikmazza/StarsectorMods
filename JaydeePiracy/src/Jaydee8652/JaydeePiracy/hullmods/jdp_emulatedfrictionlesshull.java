@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 import Jaydee8652.JaydeePiracy.utils.JaydeePiracyIDs;
 
+import static Jaydee8652.JaydeePiracy.utils.rulecmd.jdp_InitialiseFrictionless.getYear;
+
 public class jdp_emulatedfrictionlesshull extends BaseHullMod {
 
 	public static float ARMOR_MULT = 0.6f;
@@ -43,15 +45,48 @@ public class jdp_emulatedfrictionlesshull extends BaseHullMod {
 		stats.getPeakCRDuration().modifyMult(id, PEAK_MULT);
 	}
 
+	public void advanceInCombat(ShipAPI ship, float amount) {
+		boolean player = false;
+		boolean modified = false;
+		String id = "jdp_emulatedfrictionlesshull_" + ship.getId();
+
+		player = ship == Global.getCombatEngine().getPlayerShip();
+
+		if (player) {
+			Global.getCombatEngine().getTimeMult().modifyPercent(id, 100f / (100f + (Float) TIME.get(ship.getHullSize())));
+			modified = true;
+		} else {
+			Global.getCombatEngine().getTimeMult().unmodify(id);
+			modified = false;
+		}
+	}
+
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		for (ShipAPI module : ship.getChildModulesCopy()) {
+			//That's good!
+			module.getMutableStats().getTimeMult().modifyPercent(id, (Float) TIME.get(module.getHullSize()));
+			float mult = CORONA_EFFECT_MULT;
+			module.getMutableStats().getDynamic().getStat(Stats.CORONA_EFFECT_MULT).modifyMult(id, mult);
+
+			//That's bad!
+			module.getMutableStats().getEffectiveArmorBonus().modifyMult(id, ARMOR_MULT);
+			module.getMutableStats().getMinArmorFraction().modifyMult(id, ARMOR_MULT);
+			module.getMutableStats().getSuppliesPerMonth().modifyMult(id, SUPPLY_USE_MULT);
+			module.getMutableStats().getPeakCRDuration().modifyMult(id, PEAK_MULT);
+		}
+	}
+
+
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + ((Float) TIME.get(HullSize.FRIGATE)).intValue() + "%";
-		if (index == 1) return "" + ((Float) TIME.get(HullSize.DESTROYER)).intValue() + "%";
-		if (index == 2) return "" + ((Float) TIME.get(HullSize.CRUISER)).intValue() + "%";
-		if (index == 3) return "" + ((Float) TIME.get(HullSize.CAPITAL_SHIP)).intValue() + "%";
-		if (index == 4) return "" + (int) Math.round((1f - CORONA_EFFECT_MULT) * 100f) + "%";
-		if (index == 5) return "" + (int) Math.round(ARMOR_MULT * 100f) + "%";
-		if (index == 6) return "" + (int)((SUPPLY_USE_MULT - 1f) * 100f) + "%";
-		if (index == 7) return "2";
+		if (index == 0) return "Frictionless NMC-" + getYear();
+		if (index == 1) return "" + ((Float) TIME.get(HullSize.FRIGATE)).intValue() + "%";
+		if (index == 2) return "" + ((Float) TIME.get(HullSize.DESTROYER)).intValue() + "%";
+		if (index == 3) return "" + ((Float) TIME.get(HullSize.CRUISER)).intValue() + "%";
+		if (index == 4) return "" + ((Float) TIME.get(HullSize.CAPITAL_SHIP)).intValue() + "%";
+		if (index == 5) return "" + (int) Math.round((1f - CORONA_EFFECT_MULT) * 100f) + "%";
+		if (index == 6) return "" + (int) Math.round(ARMOR_MULT * 100f) + "%";
+		if (index == 7) return "" + (int)((SUPPLY_USE_MULT - 1f) * 100f) + "%";
+		if (index == 8) return "2";
 		return null;
 	}
 

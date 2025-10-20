@@ -115,9 +115,13 @@ public class EventController extends BaseIntelPlugin {
     public static void addRaid(LordEvent raid) {
         getInstance().raids.add(raid);
         FactionAPI targetFaction = raid.getTarget().getFaction();
-        if (raid.getOriginator() != null && (targetFaction.equals(Utils.getRecruitmentFaction())
-                || targetFaction.equals(Global.getSector().getPlayerFaction()))) {
-            Global.getSector().getIntelManager().addIntel(new HostileEventIntelPlugin(raid));
+        FactionAPI playerFaction = Global.getSector().getPlayerFaction();
+        Lord originator = raid.getOriginator();
+        if (originator != null)
+            if (targetFaction.equals(Utils.getRecruitmentFaction())
+                    || targetFaction.equals(playerFaction)
+                    || originator.getFaction().equals(Utils.getRecruitmentFaction())) {
+                Global.getSector().getIntelManager().addIntel(new HostileEventIntelPlugin(raid));
         }
         LordAI.triggerPreemptingEvent(raid);
     }
@@ -436,7 +440,7 @@ public class EventController extends BaseIntelPlugin {
                 case FEAST:
                     LordEvent feast = EventController.getCurrentFeast(lord.getFaction());
                     if (feast != null) {
-                        if (feast.getOriginator().equals(lord)) {
+                        if (lord != null && (feast.getOriginator() == null || feast.getOriginator().equals(lord))) {
                             EventController.endFeast(feast);
                         } else {
                             feast.getParticipants().remove(lord);

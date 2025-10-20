@@ -7,9 +7,11 @@
 		"fighterChipIconColor":[105,100,255,255],
 		"weaponDisabledExplosionColor":[105,100,255,255],
 		"shieldRingColor":[255,255,255,255],
-		"shieldInnerColor":[115,115,255,75],
+		#"shieldInnerColor":[115,115,255,75], #vanilla shield
+		"shieldInnerColor":[115,255,200,75], #crystal green shield
 		"fluxVentCoreColor":[255,255,255,255],
-		"fluxVentFringeColor":[90,255,180,255],
+		#"fluxVentFringeColor":[90,255,180,255], #crystal green vent
+		"fluxVentFringeColor":[125,0,155,255],	#vanilla vent
 		"engineLoopSet":"engine_loop", 					# id of entry in sounds.json
 		"engineAccelerateSet":"engine_accelerate",		# id of entry in sounds.json
 		"empLoopSet":"emp_loop",						# id of entry in sounds.json

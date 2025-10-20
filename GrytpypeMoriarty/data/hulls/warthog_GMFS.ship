@@ -1,0 +1,66 @@
+{
+  "hullName": "Warthog (GMFS)",
+  "hullId": "warthog_GMFS",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/warthog_GMFS.png",
+  "style": "LOW_TECH",
+  "height": 28,
+  "width": 32,
+  "center": [16, 14],
+  "collisionRadius": 22,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 20,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 19,
+      "angle": 0,
+      "locations": [4, 9.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 19,
+      "angle": -0,
+      "locations": [4, -9.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [11.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11.5, 9.5],
+      "length": 8,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-11.5, -9.5],
+      "length": 8,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -10.5, -14.5,
+    14.5, -0,
+    -10.5, 14.5
+  ]
+}

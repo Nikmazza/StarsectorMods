@@ -1,0 +1,57 @@
+{
+    "displayName": "Drone",
+    "fluxCapacitors": 0,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "asm_subordinator",
+    "hullMods": [
+        "vice_field_repair_nanites",
+        "targetingunit",
+        "fragment_swarm",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "asm_subordinator_drone",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "asm_voltaic_multipulser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "voidblaster",
+                "WS 005": "voltaic_cannon",
+                "WS 006": "voltaic_cannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "asm_fermion_decoupler",
+                "WS 004": "asm_fermion_decoupler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "neutron_torpedo",
+                "WS 008": "neutron_torpedo"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "voltaic_discharge",
+                "WS 010": "voltaic_discharge",
+                "WS 011": "devouring_swarm",
+                "WS 012": "devouring_swarm"
+            }
+        }
+    ]
+}

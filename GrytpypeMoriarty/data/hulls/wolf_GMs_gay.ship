@@ -1,0 +1,186 @@
+{
+  "bounds": [
+    -47,
+    -4.5,
+    -39.5,
+    -18.5,
+    -24.5,
+    -17,
+    7,
+    -24.5,
+    10.5,
+    -16.5,
+    45.5,
+    -11,
+    45.5,
+    11,
+    10.5,
+    16.5,
+    7,
+    24.5,
+    -24.5,
+    17,
+    -39.5,
+    18.5,
+    -47,
+    4.5
+  ],
+  "builtInMods": [
+    "GMDA_engine"
+  ],
+  "builtInWings": [],
+  "center": [
+    26,
+    47.5
+  ],
+  "collisionRadius": 82.84021,
+  "engineSlots": [
+    {
+      "angle": 164.845932,
+      "contrailSize": 9.913678,
+      "length": 25.689097,
+      "location": [
+        -45,
+        8.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "PurpleFlare",
+      "width": 9.913678
+    },
+    {
+      "angle": -164.845932,
+      "contrailSize": 9.913678,
+      "length": 25.689097,
+      "location": [
+        -45,
+        -8.5
+      ],
+      "style": "CUSTOM",
+      "styleId": "PurpleFlare",
+      "width": 9.913678
+    },
+    {
+      "angle": 150.255112,
+      "contrailSize": 6.325768,
+      "length": 15.628377,
+      "location": [
+        -41.5,
+        14
+      ],
+      "style": "CUSTOM",
+      "styleId": "PinkFlare",
+      "width": 6.325768
+    },
+    {
+      "angle": -150.255112,
+      "contrailSize": 6.325768,
+      "length": 15.628377,
+      "location": [
+        -41.5,
+        -14
+      ],
+      "style": "CUSTOM",
+      "styleId": "PinkFlare",
+      "width": 6.325768
+    },
+    {
+      "angle": 180,
+      "contrailSize": 13,
+      "length": 54.5,
+      "location": [
+        -47,
+        -0
+      ],
+      "style": "CUSTOM",
+      "styleId": "PinkFlare",
+      "width": 13
+    }
+  ],
+  "height": 94,
+  "hullId": "wolf_GMs_gay",
+  "hullName": "Wolf (GMs)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 72.520683,
+  "spriteName": "graphics/ships/wolf_GMs_purple.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS0001",
+      "locations": [
+        40.5,
+        0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 330,
+      "id": "WS0002",
+      "locations": [
+        3,
+        0
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0003",
+      "locations": [
+        6.5,
+        19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0004",
+      "locations": [
+        7,
+        -19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 130,
+      "arc": 270,
+      "id": "WS0005",
+      "locations": [
+        -19.5,
+        11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -130,
+      "arc": 270,
+      "id": "WS0006",
+      "locations": [
+        -19,
+        -11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 52
+}

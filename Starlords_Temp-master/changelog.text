@@ -1,3 +1,33 @@
+V0.3.54:
+    fixes:
+        (hopefully)fixed a crash involving a lord not exsisting, but still suporting a proposal
+        (hopefully) fixed a crash when a starlord tried to defect well holding a feif of a none combatable type. (plz dont ask)
+        fixed a crash were a lord would die well hosting a feast and take the sector with them.
+V0.3.53:
+    fixes:
+        (hopefully) fixed a crash when a lord dies and is that target of a proposal? hopefully?
+V0.3.52:
+    fixes:
+        (hopefully) fixed a crash on game load related to a starlord not be accessible from the relation controler
+V0.3.51:
+    fixes:
+        fixed a crash that could prevent you from loading your save if a lord died well hosting a feast.
+        and if I didn't just DM me I will get this eventually or so help me!
+V0.3.50:
+    fixes:
+        fixed a crash that could prevent you from loading your save if a lord died well hosting a feast.
+V0.3.49:
+    fixes:
+        (hopefully) fixed a issue were the game would crash on freeing a prisoner
+    (thanks Aleksandros for the following):
+        AddLordFief Command can now resolve markets based on name in addition to ids
+        Campaign is now finished if campaign leader is defeated. Previously, participant lords would just have their AI broken and leader would be stuck in an endless loop of respawn -> attack
+        Added Setting for "Minimum Stability to Prevent Fief Defection". set this to prevent fiefs from defecting if their stability is greater or equal than set value
+        Added Intel Plugin for allied lords participating and starting raids
+        Added Extra Player Council weight in calculation of next proposal to be voted
+        Added possibility to configure Alignments for lords in lords.json:
+V0.3.48:
+    (hopefully) fixed a crash related to a lords capture not existing for some reason?
 V0.3.47:
     fixes:
         fixed a fuel related, null containing location crash

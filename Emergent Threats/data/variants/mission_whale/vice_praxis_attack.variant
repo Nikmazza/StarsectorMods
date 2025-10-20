@@ -1,7 +1,7 @@
 {
     "displayName": "Pirate",
     "fluxCapacitors": 0,
-    "fluxVents": 29,
+    "fluxVents": 14,
     "goalVariant": true,
     "hullId": "vice_praxis",
     "hullMods": [
@@ -9,7 +9,8 @@
         "magazines",
         "missleracks",
         "targetingunit",
-        "vice_adaptive_reactor_chamber"
+        "vice_feedback_handler",
+        "vice_adaptive_pulse_resonator"
     ],
     "permaMods": [
         "armoredweapons",
@@ -47,5 +48,5 @@
             "weapons": {"WS 002": "vice_phased_electrolaser"}
         }
     ],
-    "wings": ["lux_wing"]
+    "wings": ["vice_starquake_wing"]
 }

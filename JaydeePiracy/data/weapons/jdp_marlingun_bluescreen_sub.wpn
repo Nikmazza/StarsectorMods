@@ -1,0 +1,19 @@
+{
+	"id":"jdp_marlingun_bluescreen_sub",
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"displayArcRadius":750,
+	"turretSprite":"",
+	"hardpointSprite":"",
+	"renderBelowAllWeapons":"true",
+	"visualRecoil":8.0,  # the gun sprites are only used if this is non-0
+	"turretOffsets":[44, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[60, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"LINKED",
+	"animationType":"NONE",
+	"autocharge":true,
+	"projectileSpecId":"jdp_bluescreen_shot_sub",
+}

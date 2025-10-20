@@ -11,8 +11,6 @@ public class jdp_BanisherStats extends BaseShipSystemScript {
 
 	public static float SPEED_BONUS = 125f;
 	public static float TURN_BONUS = 20f;
-	public static float DAMAGE_BONUS = 100f;
-	public static float DAMAGE_MALICE = 75f;
 	public static float WEAPON_TURN_BONUS = 40f;
 
 
@@ -32,12 +30,6 @@ public class jdp_BanisherStats extends BaseShipSystemScript {
 			stats.getMaxTurnRate().modifyFlat(id, 10f);
 			stats.getMaxTurnRate().modifyPercent(id, 100f);
 
-			stats.getDamageToFighters().modifyPercent(id, DAMAGE_BONUS);
-			stats.getDamageToDestroyers().modifyPercent(id, DAMAGE_BONUS);
-
-			stats.getDamageToCruisers().modifyMult(id, 1f - DAMAGE_MALICE * 0.01f);
-			stats.getDamageToCapital().modifyMult(id, 1f - DAMAGE_MALICE * 0.01f);
-
 			stats.getWeaponTurnRateBonus().modifyPercent(id, WEAPON_TURN_BONUS);
 		}
 		
@@ -54,11 +46,6 @@ public class jdp_BanisherStats extends BaseShipSystemScript {
 		stats.getTurnAcceleration().unmodify(id);
 		stats.getAcceleration().unmodify(id);
 		stats.getDeceleration().unmodify(id);
-
-		stats.getDamageToFighters().unmodify(id);
-		stats.getDamageToDestroyers().unmodify(id);
-		stats.getDamageToCruisers().unmodify(id);
-		stats.getDamageToCapital().unmodify(id);
 	}
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
@@ -66,11 +53,8 @@ public class jdp_BanisherStats extends BaseShipSystemScript {
 			return new StatusData("+" + (int)SPEED_BONUS + " top speed", false);
 		}
 		if (index == 1) {
-			return new StatusData("200% damage to ships smaller than cruisers", false);
-		}		
-		if (index == 0) {
-			return new StatusData("25% damage to ships larger than destroyers", true);
-		}		
+			return new StatusData("+" + (int)WEAPON_TURN_BONUS + " weapon turn rate", false);
+		}
 		return null;
 	}
 }

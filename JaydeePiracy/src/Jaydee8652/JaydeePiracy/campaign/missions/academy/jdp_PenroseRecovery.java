@@ -145,7 +145,7 @@ public class jdp_PenroseRecovery extends GABaseMission {
 		endTrigger();
 
 		beginStageTrigger(Stage.COMPLETED);
-		triggerSetGlobalMemoryValue("$jdp_IMCompleted", true);
+		triggerSetGlobalMemoryValuePermanent("$jdp_PRmissionCompleted", true);
 		endTrigger();
 		
 		return true;

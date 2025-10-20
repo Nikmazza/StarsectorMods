@@ -1,5 +1,3 @@
-// By Nicke535
-// Spawns particles from a weapon in different firing states, as determined by the user.
 package data.scripts.weapons;
 
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -8,6 +6,7 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
+import org.magiclib.util.MagicLensFlare;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -17,167 +16,129 @@ import java.util.Map;
 
 public class bt_patherlaser_everyframe implements EveryFrameWeaponEffectPlugin {
 
-    /*
-
-        HOW TO USE:
-        USED_IDS specifies which IDs to use for the rest of the script; any ID is valid EXCEPT the unique ID "default". Each ID should only be used once on the same weapon
-        The script will spawn one particle "system" for each ID in this list, with the specific attributes of that ID.
-
-        All the different Maps<> specify the attributes of each of the particle "systems"; they MUST have something defined as "default", and can have specific fields for specific IDs
-        in the USED_IDS list; any field not filled in for a specific ID will revert to "default" instead.
-
-    */
     private static final List<String> USED_IDS = new ArrayList<>();
     static {
         USED_IDS.add("SMOKE_ID");
     }
 
-    //The amount of particles spawned immediately when the weapon reaches full charge level
-    //  -For projectile weapons, this is when the projectile is actually fired
-    //  -For beam weapons, this is when the beam has reached maximum brightness
     private static final Map<String, Integer> ON_SHOT_PARTICLE_COUNT = new HashMap<>();
     static {
         ON_SHOT_PARTICLE_COUNT.put("default", 0);
     }
-
-    //How many particles are spawned each second the weapon is firing, on average
     private static final Map<String, Float> PARTICLES_PER_SECOND = new HashMap<>();
     static {
         PARTICLES_PER_SECOND.put("default", 130f);
+        PARTICLES_PER_SECOND.put("SMOKE_ID", 15f);
     }
-
-    //Does the PARTICLES_PER_SECOND field get multiplied by the weapon's current chargeLevel?
     private static final Map<String, Boolean> AFFECTED_BY_CHARGELEVEL = new HashMap<>();
     static {
         AFFECTED_BY_CHARGELEVEL.put("default", true);
     }
-
-    //When are the particles spawned (only used for PARTICLES_PER_SECOND)? Valid values are "CHARGEUP", "FIRING", "CHARGEDOWN", "READY" (not on cooldown or firing) and "COOLDOWN".
-    //  Multiple of these values can be combined via "-" inbetween; "CHARGEUP-CHARGEDOWN" is for example valid
     private static final Map<String, String> PARTICLE_SPAWN_MOMENT = new HashMap<>();
     static {
         PARTICLE_SPAWN_MOMENT.put("default", "CHARGEUP-FIRING-CHARGEDOWN");
     }
-
-    //If this is set to true, the particles spawn with regard to *barrel*, not *center*. Only works for ALTERNATING barrel types on weapons: for LINKED barrels you
-    //  should instead set up their coordinates manually with PARTICLE_SPAWN_POINT_TURRET and PARTICLE_SPAWN_POINT_HARDPOINT
     private static final Map<String, Boolean> SPAWN_POINT_ANCHOR_ALTERNATION = new HashMap<>();
     static {
         SPAWN_POINT_ANCHOR_ALTERNATION.put("default", true);
     }
-
-    //The position the particles are spawned (or at least where their arc originates when using offsets) compared to their weapon's center [or shot offset, see
-    //SPAWN_POINT_ANCHOR_ALTERNATION above], if the weapon is a turret (or HIDDEN)
     private static final Map<String, Vector2f> PARTICLE_SPAWN_POINT_TURRET = new HashMap<>();
     static {
         PARTICLE_SPAWN_POINT_TURRET.put("default", new Vector2f(0f, 0f));
     }
-
-    //The position the particles are spawned (or at least where their arc originates when using offsets) compared to their weapon's center [or shot offset, see
-    //SPAWN_POINT_ANCHOR_ALTERNATION above], if the weapon is a hardpoint
     private static final Map<String, Vector2f> PARTICLE_SPAWN_POINT_HARDPOINT = new HashMap<>();
     static {
         PARTICLE_SPAWN_POINT_HARDPOINT.put("default", new Vector2f(0f, 0f));
     }
-
-    //Which kind of particle is spawned (valid values are "SMOOTH", "BRIGHT" and "SMOKE")
     private static final Map<String, String> PARTICLE_TYPE = new HashMap<>();
     static {
         PARTICLE_TYPE.put("default", "SMOKE");
+        PARTICLE_TYPE.put("SMOKE_ID", "SMOKE");
     }
-
-    //What color does the particles have?
     private static final Map<String, Color> PARTICLE_COLOR = new HashMap<>();
     static {
         PARTICLE_COLOR.put("default", new Color(255, 136, 136, 225));
+        PARTICLE_COLOR.put("SMOKE_ID", new Color(100, 100, 100, 150));
     }
-
-    //What's the smallest size the particles can have?
     private static final Map<String, Float> PARTICLE_SIZE_MIN = new HashMap<>();
     static {
         PARTICLE_SIZE_MIN.put("default", 14f);
+        PARTICLE_SIZE_MIN.put("SMOKE_ID", 5f);
     }
-
-    //What's the largest size the particles can have?
     private static final Map<String, Float> PARTICLE_SIZE_MAX = new HashMap<>();
     static {
         PARTICLE_SIZE_MAX.put("default", 26f);
+        PARTICLE_SIZE_MAX.put("SMOKE_ID", 10f);
     }
-
-    //What's the lowest velocity a particle can spawn with (can be negative)?
     private static final Map<String, Float> PARTICLE_VELOCITY_MIN = new HashMap<>();
     static {
         PARTICLE_VELOCITY_MIN.put("default", 0.1f);
     }
-
-    //What's the highest velocity a particle can spawn with (can be negative)?
     private static final Map<String, Float> PARTICLE_VELOCITY_MAX = new HashMap<>();
     static {
         PARTICLE_VELOCITY_MAX.put("default", 60f);
     }
-
-    //The shortest duration a particle will last before completely fading away
     private static final Map<String, Float> PARTICLE_DURATION_MIN = new HashMap<>();
     static {
         PARTICLE_DURATION_MIN.put("default", 0.45f);
+        PARTICLE_DURATION_MIN.put("SMOKE_ID", 1.0f);
     }
-
-    //The longest duration a particle will last before completely fading away
     private static final Map<String, Float> PARTICLE_DURATION_MAX = new HashMap<>();
     static {
         PARTICLE_DURATION_MAX.put("default", 0.65f);
+        PARTICLE_DURATION_MAX.put("SMOKE_ID", 2.5f);
     }
-
-    //The shortest along their velocity vector any individual particle is allowed to spawn (can be negative to spawn behind their origin point)
     private static final Map<String, Float> PARTICLE_OFFSET_MIN = new HashMap<>();
     static {
         PARTICLE_OFFSET_MIN.put("default", -4f);
     }
-
-    //The furthest along their velocity vector any individual particle is allowed to spawn (can be negative to spawn behind their origin point)
     private static final Map<String, Float> PARTICLE_OFFSET_MAX = new HashMap<>();
     static {
         PARTICLE_OFFSET_MAX.put("default", 4f);
     }
-
-    //The width of the "arc" the particles spawn in; affects both offset and velocity. 360f = full circle, 0f = straight line
     private static final Map<String, Float> PARTICLE_ARC = new HashMap<>();
     static {
         PARTICLE_ARC.put("default", 360f);
+        PARTICLE_ARC.put("SMOKE_ID", 20f);
     }
-
-    //The offset of the "arc" the particles spawn in, compared to the weapon's forward facing.
-    //  For example: 90f = the center of the arc is 90 degrees clockwise around the weapon, 0f = the same arc center as the weapon's facing.
     private static final Map<String, Float> PARTICLE_ARC_FACING = new HashMap<>();
     static {
         PARTICLE_ARC_FACING.put("default", 0f);
     }
-
-    //How far away from the screen's edge the particles are allowed to spawn. Lower values mean better performance, but
-    //too low values will cause pop-in of particles. Generally, the longer the particle's lifetime, the higher this
-    //value should be
     private static final Map<String, Float> PARTICLE_SCREENSPACE_CULL_DISTANCE = new HashMap<>();
     static {
         PARTICLE_SCREENSPACE_CULL_DISTANCE.put("default", 450f);
     }
 
+    private static final boolean S_LENS_FLARE_ENABLED = true;
+    private static final Color S_LENS_FLARE_COLOR_CORE = new Color(255, 160, 160, 180);
+    private static final Color S_LENS_FLARE_COLOR_FRINGE = new Color(255, 22, 84, 130);
+    private static final float S_LENS_FLARE_SIZE = 10f;
+    private static final float S_LENS_FLARE_BRIGHTNESS = 200f;
+    private static final float S_LENS_FLARE_INTERVAL_MIN = 0.15f;
+    private static final float S_LENS_FLARE_INTERVAL_MAX = 0.25f;
+    private static final boolean S_LENS_FLARE_ONLY_WHILE_FIRING_FOR_INTERVAL = true;
+    private static final boolean S_LENS_FLARE_SPAWN_ON_SHOT = true;
 
-    //-----------------------------------------------------------You don't need to touch stuff beyond this point!------------------------------------------------------------
-
-
-    //These ones are used in-script, so don't touch them!
     private boolean hasFiredThisCharge = false;
     private int currentBarrel = 0;
     private boolean shouldOffsetBarrelExtra = false;
+    private com.fs.starfarer.api.util.IntervalUtil s_flareInterval;
 
-    //Instantiator
-    public bt_patherlaser_everyframe() {}
+    public bt_patherlaser_everyframe() {
+        s_flareInterval = new com.fs.starfarer.api.util.IntervalUtil(S_LENS_FLARE_INTERVAL_MIN, S_LENS_FLARE_INTERVAL_MAX);
+    }
+
+    private <T> T getter(Map<String, T> map, String id, T defaultValue) {
+        if (map.containsKey(id)) {
+            return map.get(id);
+        }
+        return map.getOrDefault("default", defaultValue);
+    }
 
     public void advance(float amount, CombatEngineAPI engine, WeaponAPI weapon) {
-        //Don't run while paused, or without a weapon
         if (weapon == null || amount <= 0f) {return;}
 
-        //Saves handy variables used later
         float chargeLevel = weapon.getChargeLevel();
         String sequenceState = "READY";
         if (chargeLevel > 0 && (!weapon.isBeam() || weapon.isFiring())) {
@@ -192,190 +153,197 @@ public class bt_patherlaser_everyframe implements EveryFrameWeaponEffectPlugin {
             sequenceState = "COOLDOWN";
         }
 
-        //Adjustment for burst beams, since they are a pain
         if (weapon.isBurstBeam() && sequenceState.contains("CHARGEDOWN")) {
             chargeLevel = Math.max(0f, Math.min(Math.abs(weapon.getCooldownRemaining()-weapon.getCooldown()) / weapon.getSpec().getDerivedStats().getBurstFireDuration(), 1f));
         }
 
-        //The sequenceStates "CHARGEDOWN" and "COOLDOWN" counts its barrel as 1 earlier than usual, due to code limitations
         shouldOffsetBarrelExtra = sequenceState.contains("CHARGEDOWN") || sequenceState.contains("COOLDOWN");
 
-        //We go through each of our particle systems and handle their particle spawning
         for (String ID : USED_IDS) {
-            //Screenspace check: simplified but should do the trick 99% of the time
-            float screenspaceCullingDistance = PARTICLE_SCREENSPACE_CULL_DISTANCE.get("default");
-            if (PARTICLE_SCREENSPACE_CULL_DISTANCE.keySet().contains(ID)) { screenspaceCullingDistance = PARTICLE_SCREENSPACE_CULL_DISTANCE.get(ID); }
+            float screenspaceCullingDistance = getter(PARTICLE_SCREENSPACE_CULL_DISTANCE, ID, 450f);
             if (!engine.getViewport().isNearViewport(weapon.getLocation(), screenspaceCullingDistance)) {continue;}
-            //Store all the values used for this check, and use default values if we don't have specific values for our ID specified
-            //Note that particle count, specifically, is not declared here and is only used in more local if-cases
-            boolean affectedByChargeLevel = AFFECTED_BY_CHARGELEVEL.get("default");
-            if (AFFECTED_BY_CHARGELEVEL.keySet().contains(ID)) { affectedByChargeLevel = AFFECTED_BY_CHARGELEVEL.get(ID); }
 
-            String particleSpawnMoment = PARTICLE_SPAWN_MOMENT.get("default");
-            if (PARTICLE_SPAWN_MOMENT.keySet().contains(ID)) { particleSpawnMoment = PARTICLE_SPAWN_MOMENT.get(ID); }
-
-            boolean spawnPointAnchorAlternation = SPAWN_POINT_ANCHOR_ALTERNATION.get("default");
-            if (SPAWN_POINT_ANCHOR_ALTERNATION.keySet().contains(ID)) { spawnPointAnchorAlternation = SPAWN_POINT_ANCHOR_ALTERNATION.get(ID); }
-
-            //Here, we only store one value, depending on if we're a hardpoint or not
-            Vector2f particleSpawnPoint = PARTICLE_SPAWN_POINT_TURRET.get("default");
+            boolean p_affectedByChargeLevel = getter(AFFECTED_BY_CHARGELEVEL, ID, true);
+            String p_particleSpawnMoment = getter(PARTICLE_SPAWN_MOMENT, ID, "CHARGEUP-FIRING-CHARGEDOWN");
+            boolean p_spawnPointAnchorAlternation = getter(SPAWN_POINT_ANCHOR_ALTERNATION, ID, true);
+            Vector2f p_baseSpawnPointOffset = getter(PARTICLE_SPAWN_POINT_TURRET, ID, new Vector2f(0f,0f));
             if (weapon.getSlot().isHardpoint()) {
-                particleSpawnPoint = PARTICLE_SPAWN_POINT_HARDPOINT.get("default");
-                if (PARTICLE_SPAWN_POINT_HARDPOINT.keySet().contains(ID)) { particleSpawnPoint = PARTICLE_SPAWN_POINT_HARDPOINT.get(ID); }
-            } else {
-                if (PARTICLE_SPAWN_POINT_TURRET.keySet().contains(ID)) { particleSpawnPoint = PARTICLE_SPAWN_POINT_TURRET.get(ID); }
+                p_baseSpawnPointOffset = getter(PARTICLE_SPAWN_POINT_HARDPOINT, ID, new Vector2f(0f,0f));
+            }
+            String p_particleType = getter(PARTICLE_TYPE, ID, "SMOKE");
+            Color p_particleColor = getter(PARTICLE_COLOR, ID, new Color(255, 136, 136, 225));
+            float p_particleSizeMin = getter(PARTICLE_SIZE_MIN, ID, 14f);
+            float p_particleSizeMax = getter(PARTICLE_SIZE_MAX, ID, 26f);
+            float p_particleVelocityMin = getter(PARTICLE_VELOCITY_MIN, ID, 0.1f);
+            float p_particleVelocityMax = getter(PARTICLE_VELOCITY_MAX, ID, 60f);
+            float p_particleDurationMin = getter(PARTICLE_DURATION_MIN, ID, 0.45f);
+            float p_particleDurationMax = getter(PARTICLE_DURATION_MAX, ID, 0.65f);
+            float p_particleOffsetMin = getter(PARTICLE_OFFSET_MIN, ID, -4f);
+            float p_particleOffsetMax = getter(PARTICLE_OFFSET_MAX, ID, 4f);
+            float p_particleArc = getter(PARTICLE_ARC, ID, 360f);
+            float p_particleArcFacing = getter(PARTICLE_ARC_FACING, ID, 0f);
+
+            Vector2f effectiveMuzzleLocation = new Vector2f(p_baseSpawnPointOffset.y, p_baseSpawnPointOffset.x);
+            float effectiveMuzzleAngle = p_particleArcFacing;
+            int barrelIdx = currentBarrel;
+
+            if (shouldOffsetBarrelExtra && barrelIdx > 0) {
+                barrelIdx--;
+            } else if (shouldOffsetBarrelExtra && barrelIdx <= 0) {
+                int barrelCount = weapon.getSpec().getTurretAngleOffsets().size();
+                if (weapon.getSlot().isHardpoint()) barrelCount = weapon.getSpec().getHardpointAngleOffsets().size();
+                else if (weapon.getSlot().isHidden()) barrelCount = weapon.getSpec().getHiddenAngleOffsets().size();
+                if (barrelCount > 0) barrelIdx = barrelCount - 1; else barrelIdx = 0;
             }
 
-            String particleType = PARTICLE_TYPE.get("default");
-            if (PARTICLE_TYPE.keySet().contains(ID)) { particleType = PARTICLE_TYPE.get(ID); }
+            if (p_spawnPointAnchorAlternation) {
+                List<Vector2f> fireOffsets = weapon.getSpec().getTurretFireOffsets();
+                List<Float> angleOffsets = weapon.getSpec().getTurretAngleOffsets();
+                if (weapon.getSlot().isHardpoint()) {
+                    fireOffsets = weapon.getSpec().getHardpointFireOffsets();
+                    angleOffsets = weapon.getSpec().getHardpointAngleOffsets();
+                } else if (weapon.getSlot().isHidden()) {
+                    fireOffsets = weapon.getSpec().getHiddenFireOffsets();
+                    angleOffsets = weapon.getSpec().getHiddenAngleOffsets();
+                }
 
-            Color particleColor = PARTICLE_COLOR.get("default");
-            if (PARTICLE_COLOR.keySet().contains(ID)) { particleColor = PARTICLE_COLOR.get(ID); }
-
-            float particleSizeMin = PARTICLE_SIZE_MIN.get("default");
-            if (PARTICLE_SIZE_MIN.keySet().contains(ID)) { particleSizeMin = PARTICLE_SIZE_MIN.get(ID); }
-            float particleSizeMax = PARTICLE_SIZE_MAX.get("default");
-            if (PARTICLE_SIZE_MAX.keySet().contains(ID)) { particleSizeMax = PARTICLE_SIZE_MAX.get(ID); }
-
-            float particleVelocityMin = PARTICLE_VELOCITY_MIN.get("default");
-            if (PARTICLE_VELOCITY_MIN.keySet().contains(ID)) { particleVelocityMin = PARTICLE_VELOCITY_MIN.get(ID); }
-            float particleVelocityMax = PARTICLE_VELOCITY_MAX.get("default");
-            if (PARTICLE_VELOCITY_MAX.keySet().contains(ID)) { particleVelocityMax = PARTICLE_VELOCITY_MAX.get(ID); }
-
-            float particleDurationMin = PARTICLE_DURATION_MIN.get("default");
-            if (PARTICLE_DURATION_MIN.keySet().contains(ID)) { particleDurationMin = PARTICLE_DURATION_MIN.get(ID); }
-            float particleDurationMax = PARTICLE_DURATION_MAX.get("default");
-            if (PARTICLE_DURATION_MAX.keySet().contains(ID)) { particleDurationMax = PARTICLE_DURATION_MAX.get(ID); }
-
-            float particleOffsetMin = PARTICLE_OFFSET_MIN.get("default");
-            if (PARTICLE_OFFSET_MIN.keySet().contains(ID)) { particleOffsetMin = PARTICLE_OFFSET_MIN.get(ID); }
-            float particleOffsetMax = PARTICLE_OFFSET_MAX.get("default");
-            if (PARTICLE_OFFSET_MAX.keySet().contains(ID)) { particleOffsetMax = PARTICLE_OFFSET_MAX.get(ID); }
-
-            float particleArc = PARTICLE_ARC.get("default");
-            if (PARTICLE_ARC.keySet().contains(ID)) { particleArc = PARTICLE_ARC.get(ID); }
-            float particleArcFacing = PARTICLE_ARC_FACING.get("default");
-            if (PARTICLE_ARC_FACING.keySet().contains(ID)) { particleArcFacing = PARTICLE_ARC_FACING.get(ID); }
-            //---------------------------------------END OF DECLARATIONS-----------------------------------------
-
-            //First, spawn "on full firing" particles, since those ignore sequence state
-            if (chargeLevel >= 1f && !hasFiredThisCharge) {
-                //Count spawned particles: only trigger if the spawned particles are more than 0
-                float particleCount = ON_SHOT_PARTICLE_COUNT.get("default");
-                if (ON_SHOT_PARTICLE_COUNT.keySet().contains(ID)) { particleCount = ON_SHOT_PARTICLE_COUNT.get(ID); }
-
-                if (particleCount > 0) {
-                    spawnParticles(engine, weapon, particleCount, particleType, spawnPointAnchorAlternation, particleSpawnPoint, particleColor, particleSizeMin, particleSizeMax, particleVelocityMin, particleVelocityMax,
-                            particleDurationMin, particleDurationMax, particleOffsetMin, particleOffsetMax, particleArc, particleArcFacing);
+                if (fireOffsets != null && barrelIdx >= 0 && barrelIdx < fireOffsets.size()) {
+                    effectiveMuzzleLocation.x += fireOffsets.get(barrelIdx).x;
+                    effectiveMuzzleLocation.y += fireOffsets.get(barrelIdx).y;
+                }
+                if (angleOffsets != null && barrelIdx >= 0 && barrelIdx < angleOffsets.size()) {
+                    effectiveMuzzleAngle += angleOffsets.get(barrelIdx);
                 }
             }
+            effectiveMuzzleAngle += weapon.getCurrAngle();
+            effectiveMuzzleLocation = VectorUtils.rotate(effectiveMuzzleLocation, weapon.getCurrAngle(), new Vector2f(0f, 0f));
+            effectiveMuzzleLocation.x += weapon.getLocation().x;
+            effectiveMuzzleLocation.y += weapon.getLocation().y;
 
-            //Then, we check if we should spawn particles over duration; only spawn if our spawn moment is in the declaration
-            if (particleSpawnMoment.contains(sequenceState)) {
-                //Get how many particles should be spawned this frame
-                float particleCount = PARTICLES_PER_SECOND.get("default");
-                if (PARTICLES_PER_SECOND.keySet().contains(ID)) { particleCount = PARTICLES_PER_SECOND.get(ID); }
-                particleCount *= amount;
-                if (affectedByChargeLevel && (sequenceState.contains("CHARGEUP") || sequenceState.contains("CHARGEDOWN"))) { particleCount *= chargeLevel; }
-                if (affectedByChargeLevel && sequenceState.contains("COOLDOWN")) { particleCount *= (weapon.getCooldownRemaining()/weapon.getCooldown()); }
+            if (chargeLevel >= 1f && !hasFiredThisCharge) {
+                float p_onShotCount = getter(ON_SHOT_PARTICLE_COUNT, ID, 0);
+                if (p_onShotCount > 0) {
+                    spawnParticles(engine, weapon, p_onShotCount, p_particleType, effectiveMuzzleLocation, effectiveMuzzleAngle, p_particleColor, p_particleSizeMin, p_particleSizeMax, p_particleVelocityMin, p_particleVelocityMax,
+                            p_particleDurationMin, p_particleDurationMax, p_particleOffsetMin, p_particleOffsetMax, p_particleArc);
+                }
+            }
+            if (p_particleSpawnMoment.contains(sequenceState)) {
+                float p_particlesThisFrame = getter(PARTICLES_PER_SECOND, ID, 0f);
+                p_particlesThisFrame *= amount;
+                if (p_affectedByChargeLevel && (sequenceState.contains("CHARGEUP") || sequenceState.contains("CHARGEDOWN"))) { p_particlesThisFrame *= chargeLevel; }
+                if (p_affectedByChargeLevel && sequenceState.contains("COOLDOWN")) { p_particlesThisFrame *= (weapon.getCooldownRemaining()/weapon.getCooldown()); }
 
-                //Then, if the particle count is greater than 0, we actually spawn the particles
-                if (particleCount > 0f) {
-                    spawnParticles(engine, weapon, particleCount, particleType, spawnPointAnchorAlternation, particleSpawnPoint, particleColor, particleSizeMin, particleSizeMax,
-                            particleVelocityMin, particleVelocityMax, particleDurationMin, particleDurationMax, particleOffsetMin, particleOffsetMax,
-                            particleArc, particleArcFacing);
+                if (p_particlesThisFrame > 0f) {
+                    spawnParticles(engine, weapon, p_particlesThisFrame, p_particleType, effectiveMuzzleLocation, effectiveMuzzleAngle, p_particleColor, p_particleSizeMin, p_particleSizeMax,
+                            p_particleVelocityMin, p_particleVelocityMax, p_particleDurationMin, p_particleDurationMax, p_particleOffsetMin, p_particleOffsetMax,
+                            p_particleArc);
                 }
             }
         }
 
-        //If this was our "reached full charge" frame, register that
+        if (S_LENS_FLARE_ENABLED) {
+            Vector2f flareSpawnLocation = new Vector2f();
+            float baseWeaponAngle = weapon.getCurrAngle();
+
+            List<Vector2f> fireOffsetsList = weapon.getSpec().getTurretFireOffsets();
+            List<Float> angleOffsetsList = weapon.getSpec().getTurretAngleOffsets();
+
+            if (weapon.getSlot().isHardpoint()) {
+                fireOffsetsList = weapon.getSpec().getHardpointFireOffsets();
+                angleOffsetsList = weapon.getSpec().getHardpointAngleOffsets();
+            } else if (weapon.getSlot().isHidden()) {
+                fireOffsetsList = weapon.getSpec().getHiddenFireOffsets();
+                angleOffsetsList = weapon.getSpec().getHiddenAngleOffsets();
+            }
+
+            Vector2f barrelSpecificOffset = new Vector2f();
+            float barrelSpecificAngleOffset = 0f;
+            int actualBarrelIndex = currentBarrel;
+
+            if (shouldOffsetBarrelExtra) {
+                if (actualBarrelIndex > 0) {
+                    actualBarrelIndex--;
+                } else if (angleOffsetsList != null && !angleOffsetsList.isEmpty()) {
+                    actualBarrelIndex = angleOffsetsList.size() - 1;
+                } else {
+                    actualBarrelIndex = 0;
+                }
+            }
+
+            if (fireOffsetsList != null && actualBarrelIndex >= 0 && actualBarrelIndex < fireOffsetsList.size()) {
+                barrelSpecificOffset.set(fireOffsetsList.get(actualBarrelIndex));
+            }
+            if (angleOffsetsList != null && actualBarrelIndex >= 0 && actualBarrelIndex < angleOffsetsList.size()) {
+                barrelSpecificAngleOffset = angleOffsetsList.get(actualBarrelIndex);
+            }
+
+            flareSpawnLocation.set(barrelSpecificOffset);
+            flareSpawnLocation = VectorUtils.rotate(flareSpawnLocation, baseWeaponAngle, new Vector2f(0f,0f));
+            flareSpawnLocation.translate(weapon.getLocation().x, weapon.getLocation().y);
+
+            float parallelFlareAngle = baseWeaponAngle + barrelSpecificAngleOffset;
+            float perpendicularFlareAngle = parallelFlareAngle + 90f;
+
+            if (S_LENS_FLARE_SPAWN_ON_SHOT) {
+                if (chargeLevel >= 1f && !hasFiredThisCharge) {
+                    MagicLensFlare.createSharpFlare(engine, weapon.getShip(), flareSpawnLocation, S_LENS_FLARE_SIZE, S_LENS_FLARE_BRIGHTNESS, perpendicularFlareAngle, S_LENS_FLARE_COLOR_CORE, S_LENS_FLARE_COLOR_FRINGE);
+                }
+            }
+
+            if (S_LENS_FLARE_INTERVAL_MIN > 0f || S_LENS_FLARE_INTERVAL_MAX > 0f) {
+                boolean canSpawnIntervalFlare = true;
+                if (S_LENS_FLARE_ONLY_WHILE_FIRING_FOR_INTERVAL) {
+                    canSpawnIntervalFlare = sequenceState.equals("CHARGEUP") || sequenceState.equals("FIRING") || sequenceState.equals("CHARGEDOWN");
+                }
+                if (canSpawnIntervalFlare) {
+                    s_flareInterval.advance(amount);
+                    if (s_flareInterval.intervalElapsed()) {
+                        MagicLensFlare.createSharpFlare(engine, weapon.getShip(), flareSpawnLocation, S_LENS_FLARE_SIZE, S_LENS_FLARE_BRIGHTNESS, perpendicularFlareAngle, S_LENS_FLARE_COLOR_CORE, S_LENS_FLARE_COLOR_FRINGE);
+                    }
+                }
+            }
+        }
+
         if (chargeLevel >= 1f && !hasFiredThisCharge) {
             hasFiredThisCharge = true;
         }
 
-        //Increase our current barrel if we have <= 0 chargeLevel OR have ceased firing for now, if we alternate, and have fired at least once since we last increased it
-        //Also make sure the barrels "loop around", and reset our hasFired variable
-        if (hasFiredThisCharge && (chargeLevel <= 0f || !weapon.isFiring())) {
+        if (hasFiredThisCharge && (chargeLevel <= 0f || (!weapon.isBeam() && !weapon.isFiring()))) {
             hasFiredThisCharge = false;
             currentBarrel++;
-
-            //We can *technically* have different barrel counts for hardpoints, hiddens and turrets, so take that into account
-            int barrelCount = weapon.getSpec().getTurretAngleOffsets().size();
+            int barrelCount = 1;
+            List<Float> relevantAngleOffsets = weapon.getSpec().getTurretAngleOffsets();
             if (weapon.getSlot().isHardpoint()) {
-                barrelCount = weapon.getSpec().getHardpointAngleOffsets().size();
+                relevantAngleOffsets = weapon.getSpec().getHardpointAngleOffsets();
             } else if (weapon.getSlot().isHidden()) {
-                barrelCount = weapon.getSpec().getHiddenAngleOffsets().size();
+                relevantAngleOffsets = weapon.getSpec().getHiddenAngleOffsets();
             }
-
+            if (relevantAngleOffsets != null && !relevantAngleOffsets.isEmpty()) {
+                barrelCount = relevantAngleOffsets.size();
+            }
             if (currentBarrel >= barrelCount) {
                 currentBarrel = 0;
             }
         }
     }
 
-
-    //Shorthand function for actually spawning the particles
-    private void spawnParticles (CombatEngineAPI engine, WeaponAPI weapon, float count, String type, boolean anchorAlternation, Vector2f spawnPoint, Color color, float sizeMin, float sizeMax,
+    private void spawnParticles (CombatEngineAPI engine, WeaponAPI weapon, float count, String type, Vector2f muzzleLocation, float muzzleFacing, Color color, float sizeMin, float sizeMax,
                                  float velocityMin, float velocityMax, float durationMin, float durationMax,
-                                 float offsetMin, float offsetMax, float arc, float arcFacing) {
-        //First, ensure we take barrel position into account if we use Anchor Alternation (note that the spawn location is actually rotated 90 degrees wrong, so we invert their x and y values)
-        Vector2f trueCenterLocation = new Vector2f(spawnPoint.y, spawnPoint.x);
-        float trueArcFacing = arcFacing;
-        int trueCurrentBarrel = currentBarrel;
-        if (currentBarrel > 0 && shouldOffsetBarrelExtra) { trueCurrentBarrel -= 1; }
-        if (anchorAlternation) {
-            if (weapon.getSlot().isHardpoint()) {
-                if (currentBarrel <= 0 && shouldOffsetBarrelExtra) { trueCurrentBarrel = weapon.getSpec().getHardpointAngleOffsets().size()-1; }
-                trueCenterLocation.x += weapon.getSpec().getHardpointFireOffsets().get(currentBarrel).x;
-                trueCenterLocation.y += weapon.getSpec().getHardpointFireOffsets().get(currentBarrel).y;
-                trueArcFacing += weapon.getSpec().getHardpointAngleOffsets().get(currentBarrel);
-            } else if (weapon.getSlot().isTurret()) {
-                if (currentBarrel <= 0 && shouldOffsetBarrelExtra) { trueCurrentBarrel = weapon.getSpec().getTurretAngleOffsets().size()-1; }
-                trueCenterLocation.x += weapon.getSpec().getTurretFireOffsets().get(currentBarrel).x;
-                trueCenterLocation.y += weapon.getSpec().getTurretFireOffsets().get(currentBarrel).y;
-                trueArcFacing += weapon.getSpec().getTurretAngleOffsets().get(currentBarrel);
-            } else {
-                if (currentBarrel <= 0 && shouldOffsetBarrelExtra) { trueCurrentBarrel = weapon.getSpec().getHiddenAngleOffsets().size()-1; }
-                trueCenterLocation.x += weapon.getSpec().getHiddenFireOffsets().get(currentBarrel).x;
-                trueCenterLocation.y += weapon.getSpec().getHiddenFireOffsets().get(currentBarrel).y;
-                trueArcFacing += weapon.getSpec().getHiddenAngleOffsets().get(currentBarrel);
-            }
-        }
-
-        //Then, we offset the true position and facing with our weapon's position and facing, while also rotating the position depending on facing
-        trueArcFacing += weapon.getCurrAngle();
-        trueCenterLocation = VectorUtils.rotate(trueCenterLocation, weapon.getCurrAngle(), new Vector2f(0f, 0f));
-        trueCenterLocation.x += weapon.getLocation().x;
-        trueCenterLocation.y += weapon.getLocation().y;
-
-        //Then, we can finally start spawning particles
+                                 float offsetMin, float offsetMax, float arcSpread) {
         float counter = count;
         while (Math.random() < counter) {
-            //Ticks down the counter
             counter--;
-
-            //Gets a velocity for the particle
-            float arcPoint = MathUtils.getRandomNumberInRange(trueArcFacing-(arc/2f), trueArcFacing+(arc/2f));
-            Vector2f velocity = MathUtils.getPointOnCircumference(weapon.getShip().getVelocity(), MathUtils.getRandomNumberInRange(velocityMin, velocityMax),
-                    arcPoint);
-
-            //Gets a spawn location in the cone, depending on our offsetMin/Max
-            Vector2f spawnLocation = MathUtils.getPointOnCircumference(trueCenterLocation, MathUtils.getRandomNumberInRange(offsetMin, offsetMax),
-                    arcPoint);
-
-            //Gets our duration
+            float arcPoint = MathUtils.getRandomNumberInRange(muzzleFacing - (arcSpread / 2f), muzzleFacing + (arcSpread / 2f));
+            Vector2f velocity = MathUtils.getPointOnCircumference(weapon.getShip().getVelocity(), MathUtils.getRandomNumberInRange(velocityMin, velocityMax), arcPoint);
+            Vector2f spawnLocation = MathUtils.getPointOnCircumference(muzzleLocation, MathUtils.getRandomNumberInRange(offsetMin, offsetMax), arcPoint);
             float duration = MathUtils.getRandomNumberInRange(durationMin, durationMax);
-
-            //Gets our size
             float size = MathUtils.getRandomNumberInRange(sizeMin, sizeMax);
 
-            //Finally, determine type of particle to actually spawn and spawns it
             switch (type) {
                 case "SMOOTH":
                     engine.addSmoothParticle(spawnLocation, velocity, size, 1f, duration, color);
                     break;
                 case "SMOKE":
-//                    engine.addSmokeParticle(spawnLocation, velocity, size, 1f, duration, color);
                     engine.addNebulaParticle(spawnLocation,velocity,size,1.3f,0.1f,0.3f,duration,color);
                     break;
                 default:

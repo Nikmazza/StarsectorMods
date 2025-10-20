@@ -1,0 +1,18 @@
+{
+    "displayName": "Custom",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "jdp_moulting",
+    "hullMods": [],
+    "quality": 0.0,
+    "variantId": "jdp_moulting_custom",
+    "weaponGroups": [],
+    "modules": {
+        "SEGMENT1": "shrouded_tendril_Roiling",
+        "SEGMENT2": "shrouded_tendril_Roiling",
+        "SEGMENT3": "shrouded_tendril_Roiling",
+        "SEGMENT4": "shrouded_tendril_Roiling",
+        "SEGMENT5": "shrouded_tendril_Roiling"
+    }
+}

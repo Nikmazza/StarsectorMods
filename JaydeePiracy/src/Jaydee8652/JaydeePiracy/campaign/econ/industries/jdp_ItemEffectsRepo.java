@@ -16,7 +16,7 @@ import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin;
 import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin.InstallableItemDescriptionMode;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.MarketConditionSpecAPI;
-import Jaydee8652.JaydeePiracy.campaign.jdp_MissileEntityPlugin;
+import Jaydee8652.JaydeePiracy.campaign.entities.jdp_MissileEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.FusionLampEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.econ.impl.*;

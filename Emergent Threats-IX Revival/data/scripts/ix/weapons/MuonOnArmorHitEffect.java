@@ -21,7 +21,7 @@ public class MuonOnArmorHitEffect implements BeamEffectPlugin {
 		CombatEntityAPI target = beam.getDamageTarget();
 		WeaponSize size = beam.getWeapon().getSize();
 		if (target instanceof ShipAPI && beam.getBrightness() >= 1f) {
-			boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+			boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 			if ((!hitShield) && (size != WeaponSize.SMALL || Math.random() < empChance)) {
 				applyEMP(target, engine, beam);
 				if (size != WeaponSize.SMALL) applyEMP(target, engine, beam);

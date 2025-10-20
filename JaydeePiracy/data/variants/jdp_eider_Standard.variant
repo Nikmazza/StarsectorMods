@@ -1,13 +1,15 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 28,
+    "fluxCapacitors": 29,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "jdp_eider",
     "hullMods": [
-        "fluxdistributor",
+        "autorepair",
+        "auxiliarythrusters",
+        "frontemitter",
         "hardenedshieldemitter",
-        "stabilizedshieldemitter",
+        "targetingunit",
     ],
     "permaMods": [],
     "sMods": [],
@@ -16,55 +18,60 @@
     "weaponGroups": [
         {
             "autofire": false,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
-                "WS 012": "squall",
+                "WS 026": "hydra",
+                "WS 012": "hydra",
             }
         },
         {
             "autofire": false,
-            "mode": "LINKED",
+            "mode": "ALTERNATING",
             "weapons": {
-                "WS 026": "dragon",
-                "WS 025": "dragon",
+                "WS 018": "gorgonpod",
+                "WS 016": "gorgonpod",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "hil",
-                "WS 005": "hil",
+                "WS 006": "hephag",
+                "WS 011": "hephag",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 011": "multineedler",
-                "WS 006": "multineedler",
+                "WS 005": "autopulse",
+                "WS 003": "autopulse",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 014": "gravitonbeam",
-                "WS 013": "gravitonbeam",
+                "WS 024": "railgun",
+                "WS 022": "railgun",
+                "WS 023": "railgun",
+                "WS 020": "railgun",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 015": "dualflak",
-                "WS 016": "dragon",
+                "WS 019": "pdburst",
+                "WS 002": "pdburst",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 017": "dualflak",
-                "WS 018": "dragon",
-                "WS 020": "vulcan",
-                "WS 024": "vulcan",
-                "WS 023": "vulcan",
-                "WS 022": "vulcan",
+                "WS 015": "dualflak",
             }
         },
     ],

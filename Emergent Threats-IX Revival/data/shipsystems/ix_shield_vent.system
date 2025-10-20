@@ -1,0 +1,11 @@
+{
+	"id":"ix_shield_vent",
+	"type":"WEAPON",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.ix.ai.ShieldVentAI",
+	"statsScript":"data.scripts.ix.shipsystems.ShieldVent",
+	"weaponDataId":"flux_shunt_tw",
+	"useSound":"flux_shunt_ix_activate",
+	"aiHints":{
+	}
+}

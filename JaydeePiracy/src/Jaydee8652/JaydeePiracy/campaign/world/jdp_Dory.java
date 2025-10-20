@@ -2,7 +2,9 @@ package Jaydee8652.JaydeePiracy.campaign.world;
 
 import java.awt.Color;
 
+import Jaydee8652.JaydeePiracy.campaign.entities.jdp_ColonyFlicker;
 import Jaydee8652.JaydeePiracy.scripts.jdp_DemonLeashAssignmentAI;
+import Jaydee8652.JaydeePiracy.utils.jdp_Conditions;
 import Jaydee8652.JaydeePiracy.utils.jdp_Factions;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
@@ -17,6 +19,7 @@ import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.ids.*;
+import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
@@ -29,7 +32,10 @@ import com.fs.starfarer.api.loading.VariantSource;
 import com.fs.starfarer.api.util.Misc;
 import org.lwjgl.util.vector.Vector2f;
 import Jaydee8652.JaydeePiracy.utils.jdp_Ranks;
+import org.magiclib.util.MagicCampaign;
 
+import static Jaydee8652.JaydeePiracy.scripts.jdp_StarSystemGenerator.randomiseNames;
+import static Jaydee8652.JaydeePiracy.scripts.jdp_StarSystemGenerator.shuffleLocation;
 
 
 public class jdp_Dory {
@@ -158,7 +164,7 @@ public class jdp_Dory {
 
 		//Asteroid Belt
 		system.addRingBand(jdp_dorystar, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3100, 70f, null, null);
-		system.addAsteroidBelt(jdp_dorystar, 150, 3100, 128, 60, 80, Terrain.ASTEROID_BELT, "The Ciltetl");
+		system.addAsteroidBelt(jdp_dorystar, 150, 3100, 128, 60, 80, Terrain.ASTEROID_BELT, "The Scattering");
 
 		//Hrvoje
 		PlanetAPI hrvoje = system.addPlanet("jdp_hrvoje", jdp_dorystar, "Hrvoje", "terran-eccentric", 60, 180, 4200, 300);
@@ -171,7 +177,6 @@ public class jdp_Dory {
 		hrvoje.getMarket().getMemoryWithoutUpdate().set(NOT_RANDOM_MISSION_TARGET, true);
 		system.addRingBand(hrvoje, "misc", "rings_dust0", 256f, 3, Color.white, 256f, 500, 33f, Terrain.RING, null);
 		hrvoje.getMemoryWithoutUpdate().set("$jdp_hrvojetag", true);
-
 
 		//Jump Point
 		JumpPointAPI hrvoje_jump_point = Global.getFactory().createJumpPoint("jdp_hrvoje_jump_point", "Hrvoje Inner System Jump-point");
@@ -218,6 +223,11 @@ public class jdp_Dory {
 
 		system.autogenerateHyperspaceJumpPoints(true, false);
 
+		shuffleLocation(system, false, 72000f, 78000f, 42000f, 48000f);
+
+		MagicCampaign.hyperspaceCleanup(system);
+		system.updateAllOrbits();
+
 		//Add Penrose Fleet TESTING ONLY
 		//addPenroseFleet(hrvoje);
 	}
@@ -226,7 +236,9 @@ public class jdp_Dory {
 	public static void addPenroseFleet(SectorEntityToken hrvoje) {
 		CampaignFleetAPI fleet = FleetFactoryV3.createEmptyFleet(Factions.OMEGA, FleetTypes.PATROL_LARGE, null);
 		fleet.setName("Hyperwave Inducing *Game*");
-		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_HOSTILE, false);
+		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_NON_HOSTILE, true);
+		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, true);
+		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_OTHER_FLEETS, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, false);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_NO_REP_IMPACT, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_LOW_REP_IMPACT, true);

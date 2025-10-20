@@ -2,7 +2,6 @@
     "displayName": "Heavy",
     "fluxCapacitors": 0,
     "fluxVents": 47,
-    "goalVariant": false,
     "hullId": "radiant_tw",
     "hullMods": [
         "advancedoptics",
@@ -10,7 +9,8 @@
         "tw_modernized_rangefinder",
         "ix_reactive_combat_shields",
         "frontemitter",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "tw_activate_starquake"
     ],
     "permaMods": [],
     "sMods": [],
@@ -21,8 +21,8 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 005": "cutting_beam_tw",
-                "WS 006": "muon_autolance_ix",
-                "WS 007": "muon_autolance_ix",
+                "WS 006": "cutting_beam_tw",
+                "WS 007": "cutting_beam_tw",
                 "WS 008": "cutting_beam_tw"
             }
         },
@@ -50,9 +50,7 @@
         }
     ],
     "wings": [
-        "nimbus_tw_wing_r",
-        "nimbus_tw_wing_r",
-        "nimbus_tw_wing_r",
-        "nimbus_tw_wing_r"
+        "starquake_tw_wing",
+        "starquake_tw_wing"
     ]
 }

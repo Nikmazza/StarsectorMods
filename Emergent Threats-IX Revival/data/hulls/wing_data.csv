@@ -10,3 +10,4 @@ nimbus_tw_wing_r,nimbus_tw_drone,"auto_fighter, fighter6, fighter, no_drop, no_d
 nimbus_tw_wing_s,nimbus_tw_drone,"auto_fighter, fighter6, fighter, no_drop, no_drop_salvage, no_sell, restricted, hide_in_codex",3,,5,0,V,4000,1200,,1,FIGHTER,Combat Drone,12,0,,,,,,,,,,,,,19.5
 nimbus_tw_wing_m,nimbus_tw_drone,"auto_fighter, fighter6, fighter, no_drop, no_drop_salvage, no_sell, restricted, hide_in_codex",3,,6,0,V,4000,1200,,2,FIGHTER,Combat Drone,12,0,,,,,,,,,,,,,19.5
 nimbus_tw_wing_l,nimbus_tw_drone,"auto_fighter, fighter6, fighter, no_drop, no_drop_salvage, no_sell, restricted, hide_in_codex",3,,7,0,V,4000,1200,,3,FIGHTER,Combat Drone,12,0,,,,,,,,,,,,,19.5
+starquake_tw_wing,starquake_tw_fighter,"stay_in_front_of_ship, auto_fighter, support6, fighter, no_drop, no_drop_salvage, no_sell, restricted",3,,8,25,BOX,0,800,,1,FIGHTER,Defender Drone,30,0,,,,,,,,,,,,,19.9

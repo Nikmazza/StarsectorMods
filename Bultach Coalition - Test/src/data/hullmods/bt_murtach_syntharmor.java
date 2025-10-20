@@ -9,8 +9,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ArmorGridAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
-
 import org.lazywizard.lazylib.MathUtils;
+import org.magiclib.util.MagicUI;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,14 +20,14 @@ public class bt_murtach_syntharmor extends BaseHullMod {
 
     public static final float SUBSYSTEM_HEALTH_BONUS = 100f;
     public static final float EMP_TAKEN_MULT = 0.65f;
-    public static final float BEAM_DAMAGE_TAKEN_MULT = 0.30f;
+    public static final float BEAM_DAMAGE_TAKEN_MULT = 0.70f;
     public static final float WEAPON_REPAIR_RATE_BONUS_PERCENT = 25f;
     private static final float WEAPON_REPAIR_TIME_MULT = 1f / (1f + WEAPON_REPAIR_RATE_BONUS_PERCENT / 100f);
     public static final float HULL_REPAIR_PER_SECOND = 125f;
     public static final float ARMOR_REPAIR_FRACTION_OF_TOTAL_MAX_PER_SECOND = 0.01f;
 
-    public static final float MAX_HULL_REPAIR_CAP_PERCENTAGE = 1.5f;
-    public static final float MAX_ARMOR_REPAIR_CAP_PERCENTAGE = 0.75f;
+    public static final float MAX_HULL_REPAIR_CAP_PERCENTAGE = 1f;
+    public static final float MAX_ARMOR_REPAIR_CAP_PERCENTAGE = 1f;
 
     private static final float REPAIR_INTERVAL = 0.2f;
     private float repairIntervalTimer = 0f;
@@ -51,6 +51,13 @@ public class bt_murtach_syntharmor extends BaseHullMod {
         BLOCKED_HULLMODS.add("frontconversion");
         BLOCKED_HULLMODS.add("omnishield");
         BLOCKED_HULLMODS.add("safetyoverrides");
+        BLOCKED_HULLMODS.add("fragment_swarm");
+        BLOCKED_HULLMODS.add("secondary_fabricator");
+        BLOCKED_HULLMODS.add("fragment_coordinator");
+        BLOCKED_HULLMODS.add("shrouded_mantle");
+        BLOCKED_HULLMODS.add("shrouded_thunderhead");
+        BLOCKED_HULLMODS.add("phase_anchor");
+        BLOCKED_HULLMODS.add("shrouded_lens");
     }
 
     @Override
@@ -66,29 +73,25 @@ public class bt_murtach_syntharmor extends BaseHullMod {
     public void advanceInCombat(ShipAPI ship, float amount) {
         CombatEngineAPI engine = Global.getCombatEngine();
 
-        if (engine == null || engine.isPaused() || ship == null || !ship.isAlive() || ship.isHulk()) {
+        if (engine == null || ship == null || !ship.isAlive()) {
             return;
         }
 
-        boolean inPlay = engine.isEntityInPlay(ship);
-        boolean combatOver = engine.isCombatOver();
-
-        if (combatOver || !inPlay) {
-            ship.getCustomData().remove(COMBAT_INIT_KEY);
+        if (engine.isPaused() || engine.isCombatOver()){
             return;
         }
 
         if (!ship.getCustomData().containsKey(COMBAT_INIT_KEY)) {
-            ship.getCustomData().put(COMBAT_INIT_KEY, Boolean.TRUE);
-            ship.getCustomData().put(HULL_REPAIRED_KEY, Float.valueOf(0f));
-            ship.getCustomData().put(ARMOR_REPAIRED_KEY, Float.valueOf(0f));
+            ship.getCustomData().put(COMBAT_INIT_KEY, true);
+            ship.getCustomData().put(HULL_REPAIRED_KEY, 0f);
+            ship.getCustomData().put(ARMOR_REPAIRED_KEY, 0f);
         }
 
         Float hullRepairedFloat = (Float) ship.getCustomData().get(HULL_REPAIRED_KEY);
-        float hullRepairedThisCombat = (hullRepairedFloat != null) ? hullRepairedFloat.floatValue() : 0f;
+        float hullRepairedThisCombat = (hullRepairedFloat != null) ? hullRepairedFloat : 0f;
 
         Float armorRepairedFloat = (Float) ship.getCustomData().get(ARMOR_REPAIRED_KEY);
-        float armorRepairedThisCombat = (armorRepairedFloat != null) ? armorRepairedFloat.floatValue() : 0f;
+        float armorRepairedThisCombat = (armorRepairedFloat != null) ? armorRepairedFloat : 0f;
 
         repairIntervalTimer += amount;
         if (repairIntervalTimer >= REPAIR_INTERVAL) {
@@ -105,7 +108,7 @@ public class bt_murtach_syntharmor extends BaseHullMod {
                 if (actualHullRepair > 0) {
                     ship.setHitpoints(ship.getHitpoints() + actualHullRepair);
                     hullRepairedThisCombat += actualHullRepair;
-                    ship.getCustomData().put(HULL_REPAIRED_KEY, Float.valueOf(hullRepairedThisCombat));
+                    ship.getCustomData().put(HULL_REPAIRED_KEY, hullRepairedThisCombat);
                 }
             }
 
@@ -131,7 +134,6 @@ public class bt_murtach_syntharmor extends BaseHullMod {
                     float currentCellArmor = armorGrid.getArmorValue(x, y);
                     if (currentCellArmor < maxArmorInCell) {
                         float maxPossibleRepairForCell = maxArmorInCell - currentCellArmor;
-
                         float budgetPerCellAttempt = actualTotalArmorToDistributeThisInterval / Math.max(1, (cellsToAttemptRepair - i));
                         float repairAmountForCell = Math.min(budgetPerCellAttempt, maxArmorInCell * 0.05f);
                         repairAmountForCell = Math.min(repairAmountForCell, maxPossibleRepairForCell);
@@ -145,9 +147,28 @@ public class bt_murtach_syntharmor extends BaseHullMod {
                 }
                 if (armorActuallyRepairedThisPass > 0) {
                     armorRepairedThisCombat += armorActuallyRepairedThisPass;
-                    ship.getCustomData().put(ARMOR_REPAIRED_KEY, Float.valueOf(armorRepairedThisCombat));
+                    ship.getCustomData().put(ARMOR_REPAIRED_KEY, armorRepairedThisCombat);
                 }
             }
+        }
+
+        if (ship == engine.getPlayerShip() && !engine.isCombatOver()) {
+            ArmorGridAPI armorGrid = ship.getArmorGrid();
+            float totalMaxArmor = armorGrid.getMaxArmorInCell() * armorGrid.getGrid().length * armorGrid.getGrid()[0].length;
+            float maxArmorCap = totalMaxArmor * MAX_ARMOR_REPAIR_CAP_PERCENTAGE;
+            float armorReserveFill = (maxArmorCap > 0) ? 1f - (armorRepairedThisCombat / maxArmorCap) : 0f;
+            int armorReservePercent = (int) (armorReserveFill * 100f);
+
+            MagicUI.drawInterfaceStatusBar(
+                    ship,
+                    "syntharmor_armor_bar",
+                    armorReserveFill,
+                    new Color(51, 255, 68, 200),
+                    null,
+                    0f,
+                    "RG-CAP",
+                    armorReservePercent
+            );
         }
     }
 
@@ -168,7 +189,6 @@ public class bt_murtach_syntharmor extends BaseHullMod {
     private static final Color NEGATIVE_COLOR = Misc.getNegativeHighlightColor();
     private static final Color GRAY_COLOR = new Color(255, 210, 0, 255);
     private static final Color QUOTE_COLOR = new Color(190, 89, 255, 255);
-
 
     @Override
     public String getDescriptionParam(int index, HullSize hullSize) {
@@ -210,10 +230,9 @@ public class bt_murtach_syntharmor extends BaseHullMod {
                 pad, POSITIVE_COLOR, repairPercentStr);
 
         String hullCapStr = String.format("%d%%", (int)(MAX_HULL_REPAIR_CAP_PERCENTAGE * 100f));
-        String armorCapStr = String.format("%d%%", (int)(MAX_ARMOR_REPAIR_CAP_PERCENTAGE * 100f));
-        tooltip.addPara("Total hull integrity regenerated is capped at %s of maximum hull per engagement.", opad, GRAY_COLOR, hullCapStr);
-        tooltip.addPara("Total armor plating restored is capped at %s of total maximum armor per engagement.", pad, GRAY_COLOR, armorCapStr);
-
+        String armorCapStr = String.format("%d%%", (int)(MAX_ARMOR_REPAIR_CAP_PERCENTAGE * 10f));
+        tooltip.addPara("Total armor and hull integrity regenerated is capped at %s of maximum values per engagement.", opad, GRAY_COLOR, hullCapStr);
+        tooltip.addPara("The armor capacity can be refreshed %s through perfectly timing system exit.", pad, GRAY_COLOR, armorCapStr);
 
         tooltip.addSectionHeading("System Limitations", Misc.getBasePlayerColor(), Misc.getDarkPlayerColor(), com.fs.starfarer.api.ui.Alignment.MID, opad);
         tooltip.addPara("The integrated bio-mechanical systems and unique phase technology are fundamentally incompatible with all forms of shield generation technology. Any shield emitters or converters will be actively disabled.", pad, NEGATIVE_COLOR);
@@ -222,7 +241,7 @@ public class bt_murtach_syntharmor extends BaseHullMod {
 
         String playerName = Global.getSector().getPlayerPerson().getNameString();
         if (playerName == null || playerName.isEmpty()) {
-            playerName = "Pilot"; // Fallback name
+            playerName = "Pilot";
         }
 
         String personalizedQuote = String.format("\"As much as I care for your judgement, %s, I suspect you too would find an unending heart attack unenjoyable.\"", playerName);

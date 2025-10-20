@@ -1,5 +1,100 @@
 id,trigger,conditions,script,text,options,notes
-# TT Special Acquisitions free stuff,,,,,,
+# Assimilated Threat,,,,,,
+asmThreatCommLink,OpenCommLink,"$isPerson
+$faction.id == asm_relic","$ignorePlayerCommRequests = false 0
+MakeOtherFleetHostile true
+MakeOtherFleetAggressive true","You encounter a fleet of unmarked warships. At first glance, they appear to be older low-tech Domain Armada hulls that have been converted for automation. But closer observation reveals each ship is surrounded by a thick cloud of smaller automatons, the manifestations of a forgotten threat from the Domain's earliest history.","asmThreatCommLink1:Continue
+cutCommLink:Cut the comm link",
+greetingDefaultTOffNormal,OpenCommLink,"!$player.transponderOn
+$isPerson
+$faction.id == asm_relic","$ignorePlayerCommRequests = false 0
+MakeOtherFleetHostile true
+MakeOtherFleetAggressive true","???? PARALLAX ???? DEFICIANT
+
+*** ALICIT SYNCHRONY ***
+
+ETYMON PROACT: CONCATENATE
+
+Despite your fleet running with transponders off, the swarm of opposing ships have taken notice of you. The EM spectrum suddenly flares, filled with intrusion patters older than living memory. These digital hexes of a lost age are ineffective against your modern ship systems, yet are no less unsettling.","asmCommLinkMistake:""Who are you? What do you want?""
+cutCommLink:Cut the comm link",
+asmThreatCommLink1Sel,DialogOptionSelected,$option == asmThreatCommLink1,,"???? PARALLAX ???? DEFICIANT
+
+*** ALICIT SYNCHRONY ***
+
+ETYMON PROACT: CONCATENATE
+
+A digital screech is hurled across the void, and soundly rejected by your ship's cyberwarfare suite. Access points patched long ago remain undefiled in the face of the incoming assault. You quickly realize these mysterious ships should not exist. Their baseline designs are old, but not so ancient as to leave them vulnerable to such crude intrusion efforts. Yet each and every one of them has been hijacked and thoroughly compromised by parasitic replicator drones. Someone, or something, has deliberately converted these ships into suitable hosts for the rogue fabricator swarm.","asmCommLinkMistake:""Who are you? What do you want?""
+cutCommLink:Cut the comm link",
+asmCommLinkMistakeSel,DialogOptionSelected,$option == asmCommLinkMistake,$global.asm_is_at_circumfix = false,"There is the slightest pause before the writhing mass accelerates toward your ship.
+
+???? RECONDITE
+
+*** ABSTRUCT ***
+
+INTERDICTORATE PROACT: UNFABRICATE",cutCommLink:Cut the comm link,
+,,,,,,
+asmStationInteract,OpenInteractionDialog,"$tag:asm_circumfix_station
+!$global.circumfix_station_is_assessed
+!$global.circumfix_station_is_opened
+!$global.circumfix_station_is_dead","ShowDefaultVisual
+$global.asm_is_at_circumfix = true","You fleet approaches the wreckage of a vast Domain Armada military logistics hub. Such facilities were capable of servicing entire naval flotillas, and once formed the locus of Domain efforts to stabilize and maintain control of key frontier sectors. However, they are typically located in the core worlds of each sector, and your databanks have no records of this particular station that straddles the edge of the hyperspace abyss.
+
+A cursory scan indicates the superstructure has sustained heavy damage, but not of a type that is normally seen in combat. Beneath a tangled mass of empty ship gantries, the station's surface is covered in unusual hull breaches that more resemble mandible bite marks than typical anti-ship weapon impacts. 
+
+Sending forth salvage teams to explore the interior may shed light on what happened here, but something about this place stirs a deep sense of dread within you. Whatever its secrets, you feel it in your bones that it should not be disturbed.","asmStationInteractAssess:Consult your ops chief
+asmStationInteractSalvage:Deploy the salvage teams
+asmStationInteractDestroy:Destroy the station and sift through the remains
+defaultLeave:Leave",
+asmStationInteractReturn,OpenInteractionDialog,"$tag:asm_circumfix_station
+$global.circumfix_station_is_assessed
+!$global.circumfix_station_is_opened
+!$global.circumfix_station_is_dead",ShowDefaultVisual,"You fleet returns to the abandoned military outpost. One section worth salvaging remains intact. A feeling of unease lingers on the bridge, and several members of the crew cast furtive glances your way, waiting to see what you will do.
+
+Such a find may be of great interest to Tri-Tachyon Special Acquisitions located on Eochu Bres, assuming you can gain access to their director.","asmStationInteractSalvage:Deploy the salvage teams
+asmStationInteractDestroy:Destroy the station and sift through the remains
+defaultLeave:Leave.",
+asmStationInteractOpened,OpenInteractionDialog,"$tag:asm_circumfix_station
+$global.circumfix_station_is_opened",ShowImageVisual asm_circumfix_wreck,"You fleet returns to the location of the abandoned military outpost. A twisted mass of wreckage barely held together by its own gravity outlines the skeleton of a once mighty fortress. Sifting through the debris, you find tantalizing clues pointing to the presence of the 6th Domain Battlegroup, predecessors of the 14th who went on to form the Hegemony. But did they create this threat, or were they trying to put an end to it? The wreckage stubbornly refuse to yield an answer.
+
+Following your first engagement with the Infected ships, your salvage teams uncovered a set of old Domain-era signal protocols that were still embedded in the compromised systems. Broadcasting the signal in deep hyperspace may be enough to lure another fleet to your location, although there is no telling just how many drones will show up at a time.
+
+As for these ruins, there is nothing more left for you here.",defaultLeave:Leave,
+asmStationInteractDead,OpenInteractionDialog,"$tag:asm_circumfix_station
+$global.circumfix_station_is_dead",ShowImageVisual asm_circumfix_wreck,You fleet returns to the location of the abandoned military outpost. A twisted mass of wreckage barely held together by its own gravity outlines the skeleton of a once mighty fortress. There is nothing left for you here.,defaultLeave:Leave,
+asmStationInteractDeadTTLooted,OpenInteractionDialog,"$tag:asm_circumfix_station
+$global.circumfix_station_is_dead_tt",ShowImageVisual asm_circumfix_wreck,"You fleet returns to the location of the abandoned military outpost. A twisted mass of wreckage barely held together by its own gravity outlines the skeleton of a once mighty fortress.
+
+Another fleet has been here since you last visited this location. A thinning debris field surrounding the station wreckage displays the signs of a recent battle, and the shattered fragments of an Astral-class supercarrier are still pinging on scanners. However, both the station and the surrounding debris field have been picked clean of anything of value. There is nothing left for you here.",defaultLeave:Leave,
+asmStationInteractAssessSel,DialogOptionSelected,"$option == asmStationInteractAssess
+!$global.circumfix_station_is_assessed",$global.circumfix_station_is_assessed = true,"""I don't like the look of these broken ship gantries,"" says the ops chief, pointing at a holographic display of the station. ""Seems like there was quite the fleet docked here once upon a time, and they all tried to get away in a hurry, with zero regard for safe undocking procedures. That's what I'd call a clue. As for the station itself, scans are showing the whole structure was hollowed out by... something. There's an intact section, here. But if whatever caused this mess is still inside that pocket, I'm not sure it's a good idea to open it up.""
+
+A vast internal docking bay is highlighted on the station hologram, uniquely undisturbed and tantalizingly close. You could make a grab for it yourself, but such a find may also be of great interest to Tri-Tachyon Special Acquisitions on Eochu Bres, assuming you can gain access to their director.
+
+The normally unflappable ops chief turns to you with a look of concern. ""It's your call, captain. Shall we go in for a look?""","asmStationInteractSalvage:Deploy the salvage teams
+asmStationInteractDestroy:Destroy the station and sift through the remains
+defaultLeave:Leave",
+asmStationInteractDestroySel,DialogOptionSelected,$option == asmStationInteractDestroy,"$global.circumfix_station_is_dead = true
+AddRemoveAnyItem WEAPONS asm_fermion_decoupler 2
+AddRemoveAnyItem WEAPONS asm_flechette 2
+AddRemoveAnyItem WEAPONS asm_voltaic_multipulser 1
+AddRemoveAnyItem WEAPONS orr_tac_deco 1","The crew is surprised by your order, but is quick to obey it. Soon, you are watching plumes of plasma and molten steel dance across your holographic display. Several secondary explosions rock the station, completing the demolition.
+
+The salvage teams are grateful for your decision, and if they are disappointed in their meager finds, they hide it well. Several weapons of unknown provenance are found among the wreckage, the most notable of which being embedded inside the almost fully intact forward section of a heavily modified Onslaught-class battleship. The built-in energy weapons are extracted with great care, and now await installation on a compatible battleship.
+
+Whatever other secrets the station may have held are well and truly lost. But you remain alive, and so does your crew.",defaultLeave:Leave,
+asmStationInteractSalvageSel,DialogOptionSelected,$option == asmStationInteractSalvage,"$global.circumfix_station_is_opened = true
+ShowImageVisual salvor_explore_hull","Your ops chief begins to monitor several displays at once as the teams make their way inside the hangar. A wealth of scanned data is passed to your flagship. Soon an enterprising salvor even manages to activate an old backup generator and turn on the lights. There, on a grainy camera feed, you spot the unmistakable outline of a Legion-class battlecarrier. 
+
+But something is wrong with the ship. The hull is twisted and strange, covered in a thick layer of machinery resembling cancerous growths. And then the growths begin to move.",asmStationInteractSalvage1:Continue,
+asmStationInteractSalvage1Sel,DialogOptionSelected,$option == asmStationInteractSalvage1,"AddAbility asm_lure_fleet
+ActivateAbility $player.fleetId asm_lure_fleet
+UpdateMemory","""Get out of there!"" Your ops chief barks. ""Drop everything and get back to the shuttle, right now!""
+
+Even as the order is obeyed, every camera feed is blinded by a brilliant flash. An arc of voltaic lightning tears through the hangar, causing a cloud of smaller automatons to leap off the Legion and towards the glowing gash in the hull. They feast upon rivulets of molten metal, while their bodies begin to twist and grow.
+
+The footage is cut short as the salvors make a hasty escape, their shuttle returning in record time. While your fleet moves to a safer distance, you watch the station tear itself apart like an overripe melon, spilling forth a throng of murderous machines.",defaultLeave:Prepare for battle,
+,,,,,,
+# TT Special Acquisitions,,,,,,
 ZGRstartPitchEndRequestFuel2,DialogOptionSelected,$option == zgr_pitchRequestFuel,"$global.vice_give_tt_banteng = true
 AdjustRepActivePerson 1
 AddTextSmall ""Received Banteng (TT) long-haul freighter"" good
@@ -18,6 +113,144 @@ $gotSupplies = true 0
 FireAll ZGRdealWrapOpts","""Can't let you starve on the road to glory, can we."" She speaks without turning, although you detect a facsimile of amusement in her voice. You're gouging her, but she stands to make so much money, she simply does not care.
 
 An incoming message from your surprised ops chief informs you that a Tri-Tachyon freighter loaded with supplies has just offered to join your fleet.",,
+ZGRaskQuestionsThreatInfected,PopulateOptions,"$id == glamor_rotanev score:1000
+$player.encounteredThreat
+$global.circumfix_station_is_opened
+!$global.circumfix_asked_about_threat
+!$global.circumfix_threat_question_resolved",,,"zgr_askAboutInfected:""I discovered an abandoned Domain military outpost crawling with Threat infected ships.""",
+ZGRaskQuestionsThreatInfectedRepeat,PopulateOptions,"$id == glamor_rotanev score:1000
+$player.encounteredThreat
+$global.circumfix_station_is_opened
+$global.circumfix_asked_about_threat
+!$global.circumfix_threat_question_resolved",,,"zgr_askAboutInfectedRepeat:""Let us discuss the matter of Threat infected warships.""",
+zgr_askAboutInfectedSel,DialogOptionSelected,$option == zgr_askAboutInfected,,"""Have you now?"" Director Glamor-Rotanev regards you with eerie calm, blinking once for effect.
+
+""Care to share your findings?""","zgr_askAboutInfectedTransmit:Transmit scans of the infected ships.
+zgr_askAboutInfectedDecline:""No.""",
+zgr_askAboutInfectedRepeatSel,DialogOptionSelected,$option == zgr_askAboutInfectedRepeat,,"""Well?"" She asks, her expression unchanged. ""Care to share your findings?""","zgr_askAboutInfectedTransmit:Transmit scans of the infected ships.
+zgr_askAboutInfectedDecline:""No.""",
+zgr_askAboutInfectedDeclineSel,DialogOptionSelected,$option == zgr_askAboutInfectedDecline,$global.circumfix_asked_about_threat = true,"""Then you are wasting my time,"" Glamor-Rotanev says curtly. ""Call me again when you have something more substantial to offer.""
+
+Before you can say another word, the line goes dead.",cutCommLink:Cut the comm link,
+zgr_askAboutInfectedTransmitSel,DialogOptionSelected,$option == zgr_askAboutInfectedTransmit,AddCredits 250000,"""Interesting,"" says the Director, blinking several times in rapid succession as you send the combat footage and debris scans involving the mysterious warships. ""No questions this time?""
+
+Your console chimes with the notice of a large credit deposit into your personal account. Glamor-Rotanev has paid you a handsome sum for the data, without being prompted.","zgr_askAboutInfectedExplain:""Since you brought it up, what are they?""
+zgr_askAboutInfectedDontCare:""No questions. My fleet can kill them just fine.""",
+zgr_askAboutInfectedDontCareSel,DialogOptionSelected,$option == zgr_askAboutInfectedDontCare,$global.circumfix_threat_question_resolved = true,"""Then I have work to do. Contact me again when you have more technology samples for study.""","zgr_askAboutInfectedAISalvaged:""I salvaged several corrupted AI cores as well. Are they worth anything to you?""
+cutCommLink:Cut the comm link",
+zgr_askAboutInfectedAISalvagedSel,DialogOptionSelected,$option == zgr_askAboutInfectedAISalvaged,,"""Yes, one of each type will suffice. You will be paid half a million credits.""","zgr_askAboutInfectedAIWeaponize:""Does Tri-Tachyon plan to weaponize this technology?""",
+zgr_askAboutInfectedExplainSel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain,$global.circumfix_threat_question_resolved = true,"""That is an annoyingly vague question,"" she says, although her tone does not sound more annoyed than usual.
+
+""To summarize, you uncovered early Expansion-Era Domain Armada warships that have been retrofitted with Explorarium automation suites, along with additional changes that have altered the hulls to be ideal breeding grounds for Threat fragments. The latter revisions are crude, but interesting.""","zgr_askAboutInfectedExplain2:""Revisions? So the Threat do not normally infect starships?""",
+zgr_askAboutInfectedExplain2Sel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain2,,"""No.""","zgr_askAboutInfectedExplain3:""Elaborate.""",
+zgr_askAboutInfectedExplain3Sel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain3,,"Glamor-Rotanev's eyes blink rapidly again. She does not appear to be looking at you.
+
+""The Threat are devourers, not infectants. They do not hijack a host body during standard operations, but rather seek to break it down for raw materials to use in their self replication process. The parasitism you witnessed requires extensive and deliberate engineering efforts to achieve. Furthermore, while the Threat have exhibited a limited capacity for incorporating foreign technology, what passes for design patters among their kind bear no resemblance to the retrofitting present on these so called infected ships.""
+
+Her lips form a thin smile. She has given you the information. It is your responsibility to make sense of it.","zgr_askAboutInfectedExplain4:""So if this is not a 'natural' result of Threat exposure, who did this?""",
+zgr_askAboutInfectedExplain4Sel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain4,,"""Based on the logistics requirements for such a project, and on the scale of infected swarms you have encountered, my working hypothesis is the 6th Domain Battlegroup, or at least an element of it. Relevant archival data may resolve this one way or the other.""
+
+She pauses for just a moment.
+
+""And before you ask. No, I have no idea for what purpose.""","zgr_askAboutInfectedExplain5:""The ships I encountered were commanded by corrupted AI cores.""",
+zgr_askAboutInfectedExplain5Sel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain5,,"""That is not a question.""
+
+Her eyes narrow, then relax. An oddly artificial gesture.
+
+""Very well. I will speculate. As with their ships, the cores were likewise re-engineered specifically as Threat hosts. While they appear to marginally improve ship performance during skirmish level encounters, their increased processing power compared to the base strain has not led to the emergence of any novel behaviors worthy of note.""
+
+There is another pause.
+
+""I will take a sampling of the different core types. One each will suffice, for half a million credits total.""","zgr_askAboutInfectedAIWeaponize:""Does Tri-Tachyon plan to weaponize this technology?""",
+zgr_askAboutInfectedAIWeaponizeSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIWeaponize
+PlayerHasCargo asm_relic_delta
+PlayerHasCargo asm_relic_gamma
+PlayerHasCargo asm_relic_beta",,"""Obviously,"" she says with a hint of derision.","zgr_askAboutInfectedAIGive:""Here you go.""
+zgr_askAboutInfectedAIMaybe:""I'll think about it.""
+zgr_askAboutInfectedAITurnDown:""Then no.""",
+zgr_askAboutInfectedAIDontHaveDSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIWeaponize
+!PlayerHasCargo asm_relic_delta",,"""Obviously,"" she says with a hint of derision.","zgr_askAboutInfectedAIDontHave:""I don't have the cores with me right now.""
+zgr_askAboutInfectedAIMaybe:""I'll think about it.""
+zgr_askAboutInfectedAITurnDown:""Then no.""",
+zgr_askAboutInfectedAIDontHaveGSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIWeaponize
+!PlayerHasCargo asm_relic_gamma",,"""Obviously,"" she says with a hint of derision.","zgr_askAboutInfectedAIDontHave:""I don't have the cores with me right now.""
+zgr_askAboutInfectedAIMaybe:""I'll think about it.""
+zgr_askAboutInfectedAITurnDown:""Then no.""",
+zgr_askAboutInfectedAIDontHaveBSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIWeaponize
+!PlayerHasCargo asm_relic_beta",,"""Obviously,"" she says with a hint of derision.","zgr_askAboutInfectedAIDontHave:""I don't have the cores with me right now.""
+zgr_askAboutInfectedAIMaybe:""I'll think about it.""
+zgr_askAboutInfectedAITurnDown:""Then no.""",
+zgr_askAboutInfectedAIDontHaveSel,DialogOptionSelected,$option == zgr_askAboutInfectedAIDontHave,"$global.circumfix_threat_question_resolved = true
+$global.circumfix_threat_AI_offered = true","""Speak to me again when you do,"" she says.
+
+Your screen flickers, and her face is replaced by a spinning Tri-Tachyon logo.",cutCommLink:Cut the comm link,
+zgr_askAboutInfectedAISale,PopulateOptions,"$id == glamor_rotanev score:1000
+$global.circumfix_threat_AI_offered
+!$global.circumfix_threat_AI_resolved
+PlayerHasCargo asm_relic_delta
+PlayerHasCargo asm_relic_gamma
+PlayerHasCargo asm_relic_beta",,,"zgr_askAboutInfectedAIGive:""I have the infected cores you were after.""",
+zgr_askAboutInfectedAITurnDownSel,DialogOptionSelected,$option == zgr_askAboutInfectedAITurnDown,"$global.circumfix_threat_question_resolved = true
+$global.circumfix_threat_AI_resolved = true","""Very well. We have nothing more to discuss.""
+
+Your screen flickers, and her face is replaced by a spinning Tri-Tachyon logo.",cutCommLink:Cut the comm link,
+zgr_askAboutInfectedAIMaybeSel,DialogOptionSelected,$option == zgr_askAboutInfectedAIMaybe,"$global.circumfix_threat_question_resolved = true
+$global.circumfix_threat_AI_offered = true","""Speak to me again when you're done thinking,"" she says.
+
+Your screen flickers, and her face is replaced by a spinning Tri-Tachyon logo.",cutCommLink:Cut the comm link,
+zgr_askAboutInfectedAIGiveSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIGive
+PlayerHasCargo asm_relic_delta
+PlayerHasCargo asm_relic_gamma
+PlayerHasCargo asm_relic_beta
+!$global.ix_battlegroup_is_active
+!$global.trinity_worlds_is_active","$global.circumfix_threat_question_resolved = true
+$global.circumfix_threat_AI_resolved = true
+$global.circumfix_threat_gave_tech_tt = true
+RemoveCommodity asm_relic_delta 1
+RemoveCommodity asm_relic_gamma 1
+RemoveCommodity asm_relic_beta 1
+AddCredits 500000
+AdjustRepActivePerson 5","You enter a command to package the cores for secure delivery. 
+
+""Thank you, captain,"" Glamor-Rotanev says, not sounding particularly thankful. ""My presence is needed to analyze these samples in detail.""
+
+Your screen flickers, and her face is replaced by a spinning Tri-Tachyon logo. Beneath it is a notification of a large credit transfer to your personal account.",cutCommLink:Cut the comm link,
+zgr_askAboutInfectedStationOffer,PopulateOptions,"$id == glamor_rotanev score:1000
+$player.encounteredThreat
+$global.circumfix_station_is_assessed
+!$global.circumfix_station_is_opened
+!$global.circumfix_station_is_dead
+!$global.circumfix_station_is_dead_tt
+!$global.circumfix_station_offered_tt",,,"zgr_askAboutInfectedStation:""I found an old Domain Armada starbase gutted by Threat fragments, mostly.""",
+zgr_askAboutInfectedStationOfferNoThreat,PopulateOptions,"$id == glamor_rotanev score:1000
+!$player.encounteredThreat
+$global.circumfix_station_is_assessed
+!$global.circumfix_station_is_opened
+!$global.circumfix_station_is_dead
+!$global.circumfix_station_is_dead_tt
+!$global.circumfix_station_offered_tt",,,"zgr_askAboutInfectedStation:""I found an old Domain Armada starbase gutted by replicator drones, mostly.""",
+zgr_askAboutInfectedStationOfferRepeat,PopulateOptions,"$id == glamor_rotanev score:1000
+$global.circumfix_station_offered_tt
+!$global.circumfix_station_is_opened
+!$global.circumfix_station_is_dead
+!$global.circumfix_station_is_dead_tt",,,"zgr_askAboutInfectedStationSell:""I'm ready to sell the location of the starbase we discussed earlier.""",
+zgr_askAboutInfectedStationSel,DialogOptionSelected,$option == zgr_askAboutInfectedStation,,"""Mostly?"" Director Glamor-Rotanev regards you with eerie calm, blinking once for effect.
+
+""Go on.""","zgr_askAboutInfectedStation2:""A main hangar large enough to house a squadron of warships remains unopened.""",
+zgr_askAboutInfectedStation2Sel,DialogOptionSelected,$option == zgr_askAboutInfectedStation2,,"""Three million credits for the station's location and full salvage rights,"" she responds without hesitation. ""First and final offer.""","zgr_askAboutInfectedStationSell:""Done.""
+zgr_askAboutInfectedStationMaybe:""I'll think about it.""",
+zgr_askAboutInfectedStationSellSel,DialogOptionSelected,"$option == zgr_askAboutInfectedStationSell
+!$global.ix_battlegroup_is_active
+!$global.trinity_worlds_is_active","$global.circumfix_station_offered_tt = true
+$global.circumfix_station_is_dead_tt = true
+AddCredits 3000000
+AdjustRepActivePerson 10
+$global.circumfix_threat_gave_tech_tt = true","""Thank you, captain. I have an expedition to plan.""
+
+The director shuts down her comms before you can reply. Her face is replaced by a spinning Tri-Tachyon logo, while beneath it is a notification for a vast credit transfer to your personal account.",cutCommLink:Cut the comm link,
+zgr_askAboutInfectedStationMaybeSel,DialogOptionSelected,$option == zgr_askAboutInfectedStationMaybe,$global.circumfix_station_offered_tt = true,"""Speak to me again when you're done thinking,"" she says.
+
+Your screen flickers, and her face is replaced by a spinning Tri-Tachyon logo.",cutCommLink:Cut the comm link,
 ,,,,,,
 # Project Mayfly intel aftermath,,,,,,
 relLevelLeagueMayflySucceeded,RelLevelMoreDescription,"$global.vice_project_mayfly_succeeded
@@ -167,8 +400,7 @@ cutCommLink:Cut the comm link",opening convo if FIS officer was dismissed
 mission_project_mayfly_repeat_loopSel,DialogOptionSelected,$option == mission_project_mayfly_repeat_loop,ShowPersonVisual,"A fleet of Persean League warships appear on your sensors orbiting a lonely ice giant. Most of the ships are arrayed in a typical defensive formation, but in its heart lies a shackled beast, a squadron of automated cruisers giving off reactor readings that are off the charts. Some distance away, a small research station is making its final descent into the atmosphere of the nearby ice giant.","mission_project_mayfly_parley:Contact Rabasi Kato despite the warning from the FIS
 cutCommLink:Cut the comm link",loopback convo if FIS officer was dismissed
 mission_project_mayfly_fisSel,DialogOptionSelected,$option == mission_project_mayfly_fis,"$global.vice_mayfly_spoke_to_fis = true
-ShowPersonVisual false vice_taylor_sheasby
-","""This is Agent Sheasby of the Fleet Intelligence Service. You are interfering with a Persean League internal security matter. Depart the area immediately, and do not approach the planet of Skoll for the next hour. This is your first and only warning.""
+ShowPersonVisual false vice_taylor_sheasby","""This is Agent Sheasby of the Fleet Intelligence Service. You are interfering with a Persean League internal security matter. Depart the area immediately, and do not approach the planet of Skoll for the next hour. This is your first and only warning.""
 
 Your scans indicate Rabasi Kato's AI augmented fleet is almost done with scuttling the Project Mayfly research station. Her fleet could depart at any moment, and if you make any significant delays, you may never see it again.","mission_project_mayfly_fis_hostile:""Or you'll do what? Talk me to death?""
 mission_project_mayfly_fis_askForBribe:""Make me a good enough offer, and I'll forget I ever saw anything.""

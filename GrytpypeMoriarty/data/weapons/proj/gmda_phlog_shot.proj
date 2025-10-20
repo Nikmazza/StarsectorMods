@@ -1,0 +1,32 @@
+{
+	"id":"gmda_phlog_shot",
+	"specClass":"missile",
+	"missileType":"ROCKET",
+	"onHitEffect":"data.scripts.weapons.GMDAPhlogEffect",
+	#"sprite":"graphics/missiles/rift_torpedo.png",
+	"sprite":"",
+	"size":[20,20],	
+	"center":[10,10],
+	"collisionRadius":30,
+	"collisionClass":"NONE",
+	"explosionColor":[255,93,0,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":250, # purely visual
+	"renderTargetIndicator":false, # no target diamond in combat view, not targeted by flares
+	"noCollisionWhileFading":true,
+	"useHitGlowWhenDealingDamage":false, # ? look at this
+	"useHitGlowWhenDestroyed":true, # instead of the default explosion
+	"dudProbabilityOnFlameout":0,
+	"fizzleOnReachingWeaponRange":true,					 
+	"armingTime":0,
+	"flameoutTime":0.5, # total time from flameout to full fadeout
+	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
+	"fadeTime":0.5, # fadeout duration			
+	"glowColor":[255,93,0,127],
+	#"glowRadius":125,
+	"glowRadius":20,
+	"engineSpec":{"turnAcc":500,
+				  "turnRate":100,
+				  "acc":300,
+				  "dec":300},
+}
+			

@@ -7,8 +7,11 @@ import java.util.Random;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BaseCampaignEventListener;
+import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
@@ -16,6 +19,7 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.util.Misc;
 
@@ -117,6 +121,7 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 		}
 		
 		List<FleetMemberAPI> fleetList = fleet.getMembersWithFightersCopy();
+		boolean isInfectedFleet = false;
 		for (FleetMemberAPI member : fleetList) {
 			//adaptive tactical core check to see if ship has no captain.
 			//doing it here since it can't easily be done with ShipVariantAPI
@@ -151,6 +156,7 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 				String vriMod = null;
 				String synthesisMod = null;
 				if (maker.equals("Abyssal") || maker.equals("Seraph")) isAbyssalFleet = true;
+				if (maker.equals("Infected Threat")) isInfectedFleet = true;
 				for (String mod : var.getHullMods()) {
 					//if ship has adaptive mod or setting is not Challenging, do not add new mod
 					if (mod.startsWith("vice_adaptive") || !remnantDifficulty.equals("Challenging")) addNone = true;
@@ -192,6 +198,17 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 				if (addNone) continue;
 				var.addMod(modPicker(var, isWithoutCaptain));
 			}
+		}
+		
+		//add Fragment Swarm hullmod and a Swarm Fabricator to loot for first Threat Infected encounter
+		boolean isFirstEncounter = Global.getSector().getMemoryWithoutUpdate().is("$asm_fought_infected", false);
+		if (isInfectedFleet && isFirstEncounter) {			
+			CargoAPI cargo = Global.getFactory().createCargo(true);
+			cargo.addHullmods("fragment_swarm", 1);
+			cargo.addSpecial(new SpecialItemData("fragment_fabricator", ""), 1);
+			SectorEntityToken carrier = (SectorEntityToken) fleet;
+			BaseSalvageSpecial.addExtraSalvage(carrier, cargo);
+			Global.getSector().getMemoryWithoutUpdate().set("$asm_fought_infected", true);
 		}
 	}
 	

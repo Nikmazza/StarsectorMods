@@ -29,5 +29,14 @@ public class jdp_modularship extends BaseHullMod {
 					"jdp_modularship"
 			);
 		}
+
+		if(stats.getVariant().getHullMods().contains("escort_package")){
+			//if someone tries to install escort_package, remove it
+			MagicIncompatibleHullmods.removeHullmodWithWarning(
+					stats.getVariant(),
+					"escort_package",
+					"jdp_modularship"
+			);
+		}
 	}
 }

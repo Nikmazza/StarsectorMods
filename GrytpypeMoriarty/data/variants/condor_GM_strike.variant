@@ -1,0 +1,38 @@
+{
+  "variantId": "condor_GM_strike",
+  "hullId": "condor_GM",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 15,
+  "fluxVents": 5,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [
+    "hardened_subsystems"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "lightac",
+        "WS0002": "lightac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "lightmg",
+        "WS0004": "lightmg",
+        "WS0005": "lightdualmg",
+        "WS0006": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "thunder_GM_wing",
+    "thunder_GM_wing"
+  ]
+}

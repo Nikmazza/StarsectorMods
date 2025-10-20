@@ -28,7 +28,7 @@ public class AdaptiveGravityDrive extends BaseHullMod {
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		//valid ships have their own hullmods handle system swap
 		if (!isValidShip(ship)) ship.getVariant().addPermaMod(HANDLER_MOD); 
-		if (ship.getHullSpec().getHullId().equals("vice_resplendent") && !ship.getVariant().hasHullMod(GRAPHICS_OVERRIDE_MOD)) {
+		if ((ship.getHullSpec().getHullId().equals("vice_resplendent") || ship.getHullSpec().getHullId().equals("vice_resplendent_default_d")) && !ship.getVariant().hasHullMod(GRAPHICS_OVERRIDE_MOD)) {
 			float x = ship.getSpriteAPI().getCenterX();
 			float y = ship.getSpriteAPI().getCenterY();
 			float alpha = ship.getSpriteAPI().getAlphaMult();

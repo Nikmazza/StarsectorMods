@@ -187,7 +187,7 @@ public class Kayse_SuperiorArmorRepair extends BaseHullMod {
 
     @Override
     public boolean isApplicableToShip(ShipAPI ship) {
-        if (! ship.getVariant().hasHullMod("phasefield"))
+        if (ship.getHullSpec().getDefenseType() != ShieldAPI.ShieldType.PHASE)
             return false;
         if (ship.getVariant().hasHullMod("kayse_armorrepair"))
             return false;
@@ -196,8 +196,8 @@ public class Kayse_SuperiorArmorRepair extends BaseHullMod {
 
     @Override
     public String getUnapplicableReason(ShipAPI ship) {
-        if (! ship.getVariant().hasHullMod("phasefield"))
-            return "Requires Phase Field";
+        if (ship.getHullSpec().getDefenseType() != ShieldAPI.ShieldType.PHASE)
+            return "Requires Phase";
         if (ship.getVariant().hasHullMod("kayse_armorrepair"))
             return "Cannot install two armor repair systems";
         return super.getUnapplicableReason(ship);

@@ -19,7 +19,7 @@ public class MuonAutolanceEffect implements BeamEffectPlugin {
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {
 		CombatEntityAPI target = beam.getDamageTarget();
 		if (target instanceof ShipAPI && beam.getBrightness() >= 1f) {
-			if (target.getShield() != null && target.getShield().isWithinArc(beam.getTo())) return;
+			if (target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame())) return;
 			float dur = beam.getDamage().getDpsDuration();
 			if (!wasZero) dur = 0;
 			wasZero = beam.getDamage().getDpsDuration() <= 0;

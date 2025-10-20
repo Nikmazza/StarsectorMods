@@ -30,7 +30,7 @@ public class FermionDecouplerEffect implements BeamEffectPlugin {
 			
 			if (fireInterval.intervalElapsed()) {
 				ShipAPI ship = (ShipAPI) target;
-				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 				if (!hitShield && ship.isAlive()) {
 					Vector2f point = beam.getRayEndPrevFrame();
 					float newHP = target.getHitpoints() - STRUCTURE_LOSS;

@@ -1,0 +1,18 @@
+{
+	"id":"blubottle_med_shot",
+	"specClass":"projectile",
+	"onHitEffect":"data.scripts.weapons.BluebottlerMedOnHitEffect",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":30.0,
+	"width":8.5,
+	"fadeTime":0.20,
+	#"fringeColor":[255,255,100,255],
+	#"coreColor":[255,255,200,150],
+	"fringeColor":[100,165,255,200],
+	"coreColor":[198,255,255,80],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_large_green.png"
+}

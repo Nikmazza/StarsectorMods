@@ -1,13 +1,12 @@
 {
 	"id":"ix_missile_reload",
-	"type":"FAST_RELOAD",
-	"aiType":"FAST_RELOAD",
-	#"aiType":"CUSTOM",
-	#"aiScript":"data.shipsystems.scripts.ai.FastMissileRacksAI",
+	"type":"AMMO_RELOAD",
+	"aiType":"AMMO_RELOAD",
 	
 	"weaponTypes":[MISSILE],
 	"minFractionToReload":0.5,
+	"reloadBaseAmmoAmountOnly":true,
 	
-	"useSound":"system_fast_missile_racks",
+	"useSound":"system_forgevats",
 	"outOfUsesSound":"gun_out_of_ammo",
 }

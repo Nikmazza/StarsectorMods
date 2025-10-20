@@ -1,0 +1,69 @@
+{
+    "displayName": "Drone",
+    "fluxCapacitors": 0,
+    "fluxVents": 26,
+    "goalVariant": true,
+    "hullId": "asm_dominator",
+    "hullMods": [
+        "asm_relic_discount_10",
+        "ballistic_rangefinder",
+        "vice_field_repair_nanites",
+        "targetingunit",
+        "fragment_swarm",
+        "fragment_coordinator",
+        "secondary_fabricator",
+        "vice_adaptive_trajectory_analyzer",
+    ],
+    "permaMods": ["asm_amorphous_alloy"],
+    "sMods": [],
+    "variantId": "asm_dominator_drone",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "neoferric_quadcoil",
+                "WS 019": "neoferric_quadcoil"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "devouring_swarm",
+                "WS 004": "devouring_swarm",
+                "WS 005": "kinetic_fragments",
+                "WS 006": "kinetic_fragments"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "asm_fermion_decoupler",
+                "WS 010": "asm_fermion_decoupler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "light_mass_driver",
+                "WS 002": "light_mass_driver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 020": "asm_flechette"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "voltaic_discharge",
+                "WS 008": "voltaic_discharge"
+            }
+        }
+    ]
+}

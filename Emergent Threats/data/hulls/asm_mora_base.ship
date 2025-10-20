@@ -1,0 +1,204 @@
+{
+  "hullName": "Mora",
+  "hullId": "asm_mora_base",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/asm/ships/mora_asm.png",
+  "style": "THREAT",
+  "height": 190,
+  "width": 220,
+  "center": [111, 88],
+  "collisionRadius": 150,
+  "shieldCenter": [1, 1],
+  "shieldRadius": 140,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "asm_threat_compromised",
+	"asm_relic_integration",
+    "asm_amorphous_alloy",
+	"asm_relic_carrier"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 002",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [50, 81]
+    },
+    {
+      "id": "WS 003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 40,
+      "locations": [28, 80]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -50,
+      "locations": [20, -80]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 20,
+      "locations": [50, 44]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -20,
+      "locations": [68, -42]
+    },
+    {
+      "id": "WS 008",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [1, -103]
+    },
+    {
+      "id": "WS 011",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [1, 103]
+    },
+    {
+      "id": "WS 012",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [53, -68]
+    },
+    {
+      "id": "WS 013",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [49, 64]
+    },
+    {
+      "id": "WS 018",
+      "size": "LARGE",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-40, 2]
+    },
+    {
+      "id": "SYS 001",
+      "size": "MEDIUM",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [27, 50]
+    },
+    {
+      "id": "WS 015",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 300,
+      "angle": 0,
+      "locations": [
+        43, 2,
+        56, 15,
+        55, -10
+      ]
+    },
+    {
+      "id": "WS 016",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 300,
+      "angle": 0,
+      "locations": [
+        33, 14,
+        27, -6
+      ]
+    },
+  ],
+  "engineSlots": [
+    {
+      "location": [-62, 77],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-63, 66],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-63, -64],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    },
+    {
+      "location": [-63, -75],
+      "length": 64,
+      "width": 32,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "THREAT"
+    }
+  ],
+  "bounds": [
+    50, 87,
+    59, 36,
+    72, 33,
+    96, -17,
+    95, -38,
+    50, -66,
+    24, -101,
+    -22, -102,
+    -57, -81,
+    -54, -55,
+    -35, -48,
+    -80, -32,
+    -59, -25,
+    -57, 25,
+    -81, 34,
+    -44, 43,
+    -34, 54,
+    -57, 59,
+    -58, 88,
+    -20, 104,
+    23, 105
+  ]
+}

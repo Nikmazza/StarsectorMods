@@ -40,10 +40,10 @@ class AbyssalSeraphsGrace : BaseHullMod() {
             stats!!.variant.removeTag(Tags.SHIP_LIMITED_TOOLTIP)
         }*/
 
-        var conversions = listOf("rat_abyssal_conversion", "rat_chronos_conversion", "rat_cosmos_conversion", "rat_seraph_conversion", "rat_primordial_conversion")
+       /* var conversions = listOf("rat_abyssal_conversion", "rat_chronos_conversion", "rat_cosmos_conversion", "rat_seraph_conversion", "rat_primordial_conversion")
         if (conversions.none { stats!!.variant.hullMods.contains(it) } && !stats!!.variant.hasHullMod(HullMods.AUTOMATED)) {
             stats!!.variant.addPermaMod(HullMods.AUTOMATED)
-        }
+        }*/
 
         var isInAbyss = isInAbyss()
 
@@ -51,7 +51,7 @@ class AbyssalSeraphsGrace : BaseHullMod() {
 
 
         if (isInAbyss) {
-            stats!!.maxSpeed.modifyFlat(id, 15f)
+            stats!!.maxSpeed.modifyFlat(id, 10f)
             stats!!.armorBonus.modifyFlat(id, 100f)
             stats!!.fluxDissipation.modifyFlat(id, 100f)
             stats!!.fluxCapacity.modifyFlat(id, 500f)
@@ -115,7 +115,7 @@ class AbyssalSeraphsGrace : BaseHullMod() {
         tooltip.addRow(
             Alignment.MID, Misc.getTextColor(), "Max Speed",
             Alignment.MID, sectorColor, "+0",
-            Alignment.MID, abyssColor, "+15",
+            Alignment.MID, abyssColor, "+10",
             )
 
         tooltip.addRow(

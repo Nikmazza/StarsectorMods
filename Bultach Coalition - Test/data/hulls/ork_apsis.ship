@@ -139,7 +139,7 @@
     {
       "id": "WS0013",
       "size": "LARGE",
-      "type": "ENERGY",
+      "type": "SYNERGY",
       "mount": "TURRET",
       "arc": 170,
       "angle": 0,

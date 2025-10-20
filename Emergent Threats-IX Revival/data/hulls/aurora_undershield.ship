@@ -1,0 +1,49 @@
+{
+  "hullName": "Undershield",
+  "hullId": "aurora_undershield",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/fx/empty.png",
+  "style": "IX_FLOURISHSHIELD",
+  "height": 4,
+  "width": 4,
+  "center": [32, 32],
+  "collisionRadius": 180,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 180,
+  "viewOffset": 0,
+  "builtInMods": [
+    "advancedshieldemitter",
+    "vastbulk",
+	"never_detaches",
+    "ix_microfluxshunt",
+    "ix_noventing",
+	"ix_hide_module_hulk"
+  ],
+  "weaponSlots": [
+    {
+      "id": "SYS 001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 120,
+      "locations": [-58, 51]
+    },
+    {
+      "id": "SYS 002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -120,
+      "locations": [-58, -49]
+    },
+  ],
+  "engineSlots": [],
+  "bounds": [
+    -13, -0,
+    0, 27,
+    13, -0,
+    0, -27
+  ]
+}

@@ -18,6 +18,7 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 	private static int STANDARD_FIGHTER_BAYS_TO_COUNT_AS_CARRIER = 2;
 	
 	private static String ADAPTIVE_DRONE_BAY = "vice_adaptive_drone_bay";
+	private static String TW_STARQUAKE_MOD = "tw_activate_starquake";
 	private static String GRAPHICS_OVERRIDE_MOD = "vice_converted_bridge";
 	private static String NEW_SPRITE = "resplendent_adaptive_flight_command";
 	
@@ -41,7 +42,7 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(id);
-		if (ship.getHullSpec().getHullId().equals("vice_resplendent") && !ship.getVariant().hasHullMod(GRAPHICS_OVERRIDE_MOD)) {
+		if ((ship.getHullSpec().getHullId().equals("vice_resplendent") || ship.getHullSpec().getHullId().equals("vice_resplendent_default_d")) && !ship.getVariant().hasHullMod(GRAPHICS_OVERRIDE_MOD)) {
 			float x = ship.getSpriteAPI().getCenterX();
 			float y = ship.getSpriteAPI().getCenterY();
 			float alpha = ship.getSpriteAPI().getAlphaMult();
@@ -102,11 +103,13 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
 		if (util.hasDriveField(ship)) return false;
+		if (ship.getVariant().hasHullMod(TW_STARQUAKE_MOD)) return false;
 		if (ship.getVariant().hasHullMod(ADAPTIVE_DRONE_BAY)) return false;
 		return (util.isApplicable(ship) && util.isOnlyRemnantMod(ship) && isCarrier(ship) && baysToDeleteAreEmpty(ship));
 	}
 
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(TW_STARQUAKE_MOD)) return "Flight deck modifications already present";
 		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
 		if (ship.getVariant().hasHullMod(ADAPTIVE_DRONE_BAY)) return "Ship does not have standard fighter bays";
 		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");

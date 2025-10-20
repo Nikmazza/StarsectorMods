@@ -3,13 +3,14 @@
   "hullId": "nes_voltaire",
   "displayName": "Standard",
   "goalVariant": true,
-  "fluxCapacitors": 18,
+  "fluxCapacitors": 13,
   "fluxVents": 30,
   "quality": 1,
   "permaMods": [],
   "hullMods": [
     "targetingunit",
-    "stabilizedshieldemitter"
+    "blast_doors",
+    "fluxdistributor"
   ],
   "weaponGroups": [
     {

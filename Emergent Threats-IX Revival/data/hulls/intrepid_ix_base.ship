@@ -218,7 +218,7 @@
       "mount": "HARDPOINT",
       "arc": 0,
       "angle": 0,
-      "locations": [160, 0]
+      "locations": [150, 0]
     },
     {
       "id": "WS DIF",

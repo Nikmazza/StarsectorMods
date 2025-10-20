@@ -1,0 +1,65 @@
+{
+  "variantId": "atlas_GM_std",
+  "hullId": "atlas_GM",
+  "displayName": "Strike",
+  "goalVariant": true,
+  "fluxCapacitors": 32,
+  "fluxVents": 31,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "missleracks",
+    "blast_doors"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "hammerrack",
+        "WS0005": "hammerrack"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "bluebottle_med"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "railgun",
+        "WS0007": "railgun"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0008": "lightmg",
+        "WS0009": "lightmg",
+        "WS0010": "lightmg",
+        "WS0011": "lightmg",
+        "WS0012": "vulcan",
+        "WS0013": "vulcan",
+        "WS0016": "vulcan",
+        "WS0017": "vulcan"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0002": "devastator",
+        "WS0003": "dualflak",
+        "WS0014": "flak",
+        "WS0015": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

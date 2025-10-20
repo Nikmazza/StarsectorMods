@@ -17,9 +17,9 @@ import java.util.Random;
 public class HMI_BlackPhase extends BaseHullMod {
 
 	private static final float TIME_FLOW_BOOST = 1.5f;
-    private static final float ARMOR_REPAIR_MULTIPLIER = 2000.0f;
-    private static final float HULL_REPAIR = 2000.0f;
-    private static final float CR_DEGRADE = 1.05f;
+    private static final float ARMOR_REPAIR_MULTIPLIER = 4000.0f;
+    private static final float HULL_REPAIR = 4000.0f;
+    private static final float CR_DEGRADE = 0.85f;
 
     private final IntervalUtil interval = new IntervalUtil(0.033f, 0.033f);
 
@@ -80,8 +80,8 @@ public class HMI_BlackPhase extends BaseHullMod {
 
                 if (interval.intervalElapsed()) {
                     ship.setHitpoints(Math.min(ship.getHitpoints() + interval.getIntervalDuration() * (1f - effect_level) * HULL_REPAIR, ship.getMaxHitpoints()));
-                    ship.getMutableStats().getCRLossPerSecondPercent().modifyFlat(id, CR_DEGRADE);
-                    ship.getMutableStats().getPeakCRDuration().modifyFlat(id, -CR_DEGRADE);
+                    ship.getMutableStats().getCRLossPerSecondPercent().modifyMult(id, CR_DEGRADE);
+                    ship.getMutableStats().getPeakCRDuration().modifyMult(id, 1f + CR_DEGRADE);
                 }
 
             }

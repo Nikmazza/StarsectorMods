@@ -1,0 +1,100 @@
+{
+    "hullName": "Remnant Weapon Platform",
+    "hullId": "jdp_remnant_sidepod_left",
+    "hullSize": "FRIGATE",
+    "style": "HIGH_TECH",
+    "spriteName": "graphics/ships/jdp_coordination_centre/jdp_remnant_sidepod_left.png",
+    "height": 132,
+    "width": 125,
+    "center": [
+        62.5, 66
+    ],
+    "collisionRadius": 80,
+    "coversColor": "",
+    "shieldCenter": [
+        0, 0
+    ],
+    "shieldRadius": 80,
+    "viewOffset": 0,
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "builtInWings": [],
+    "builtInModules": null,
+    "weaponSlots": [
+        {
+            "id": "WS 001",
+            "size": "LARGE",
+            "type": "ENERGY",
+            "mount": "TURRET",
+            "arc": 150,
+            "angle": 0,
+            "locations": [
+                      -5,      0.5
+            ]
+        },
+        {
+            "id": "WS 002",
+            "size": "MEDIUM",
+            "type": "ENERGY",
+            "mount": "TURRET",
+            "arc": 170,
+            "angle": 354,
+            "locations": [
+                      13,     43.5
+            ]
+        },
+        {
+            "id": "WS 003",
+            "size": "LARGE",
+            "type": "MISSILE",
+            "mount": "HARDPOINT",
+            "arc": 5,
+            "angle": 0,
+            "locations": [
+                    49.5,     27.5
+            ]
+        },
+        {
+            "id": "WS 004",
+            "size": "SMALL",
+            "type": "ENERGY",
+            "mount": "TURRET",
+            "arc": 210,
+            "angle": 314,
+            "locations": [
+                      35,    -31.5
+            ]
+        },
+        {
+            "id": "WS 005",
+            "size": "MEDIUM",
+            "type": "ENERGY",
+            "mount": "TURRET",
+            "arc": 150,
+            "angle": 346,
+            "locations": [
+                       8,    -34.5
+            ]
+        }
+    ],
+    "engineSlots": [],
+    "bounds": [
+           -64.5,      4.5,
+           -37.5,       46,
+             -19,       47,
+               6,     61.5,
+              21,       63,
+        
+              30,     48.5,
+            63.5,       43,
+            54.5,      -21,
+              50,      -47,
+              18,      -62,
+        
+           -14.5,      -43,
+             -17,      -30
+    # 12 points total.
+    ]
+}

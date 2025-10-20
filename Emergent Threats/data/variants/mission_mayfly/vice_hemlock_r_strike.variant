@@ -6,7 +6,8 @@
     "hullId": "vice_hemlock_rem",
     "hullMods": [
         "vice_feedback_handler",
-        "defensive_targeting_array"
+        "defensive_targeting_array",
+        "vice_adaptive_thruster_control"
     ],
     "permaMods": [],
     "sMods": [],

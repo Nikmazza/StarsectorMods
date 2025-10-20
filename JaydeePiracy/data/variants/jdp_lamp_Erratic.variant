@@ -1,0 +1,18 @@
+{
+    "displayName": "Erratic",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "jdp_lamp",
+    "hullMods": [],
+    "permaMods": [
+        "rat_controller",
+        "sc_skill_controller",
+    ],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "jdp_lamp_Erratic",
+    "weaponGroups": [],
+    "wings": [],
+    "modules": [],
+}

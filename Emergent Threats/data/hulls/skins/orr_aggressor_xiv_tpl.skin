@@ -17,7 +17,7 @@
 	"removeBuiltInWeapons":[], 		# weapon slot ids
 	"builtInMods":["fourteenth"],
 	"builtInWeapons": {
-		"WS 016": "orr_tpc",
-		"WS 017": "orr_tpc"
+		"WS 016": "orr_tpl",
+		"WS 017": "orr_tpl"
 	},
 }

@@ -23,7 +23,7 @@
       "mount": "HIDDEN",
       "arc": 360,
       "angle": 0,
-      "locations": [0, 11]
+      "locations": [2, 11]
     },
     {
       "id": "WS 001",
@@ -32,7 +32,7 @@
       "mount": "HIDDEN",
       "arc": 360,
       "angle": 0,
-      "locations": [0, -11]
+      "locations": [2, -11]
     },
     {
       "id": "WS 002",
@@ -42,7 +42,7 @@
       "arc": 90,
       "angle": 0,
       "locations": [6, 0]
-    },
+    }
   ],
   "engineSlots": [
     {

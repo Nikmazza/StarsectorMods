@@ -300,15 +300,15 @@ public class ConvergenceShipConstructionScript extends BaseEveryFrameCombatPlugi
         float emmitAngle = VectorUtils.getAngle(from, to) + MathUtils.getRandomNumberInRange(-15f, 15f);
         Vector2f point = new Vector2f(from);
         float angle = emmitAngle;
-        float waveAmplitude = MathUtils.getRandomNumberInRange(-20f, 20f);
+        float waveAmplitude = MathUtils.getRandomNumberInRange(-40f, 40f);
         float waveFrequency = MathUtils.getRandomNumberInRange(8f, 13f);
         float arcMultiplier = MathUtils.getRandomNumberInRange(-0.5f, 0.5f);
         float distance = MathUtils.getDistance(from, to);
         float sizeMultiplier = 1f;
-        if (targetShip.getHullSize() == HullSize.DESTROYER) sizeMultiplier = 1.1f;
-        else if (targetShip.getHullSize() == HullSize.CRUISER) sizeMultiplier = 1.25f;
-        else if (targetShip.getHullSize() == HullSize.CAPITAL_SHIP) sizeMultiplier = 1.4f;
-        int segments = (int)((35 + (int)(Math.random() * 10)) * sizeMultiplier);
+        if (targetShip.getHullSize() == HullSize.DESTROYER) sizeMultiplier = 1.35f;
+        else if (targetShip.getHullSize() == HullSize.CRUISER) sizeMultiplier = 1.65f;
+        else if (targetShip.getHullSize() == HullSize.CAPITAL_SHIP) sizeMultiplier = 2.25f;
+        int segments = (int)((45 + (int)(Math.random() * 10)) * sizeMultiplier);
         float timeSinceConstructionStart = elapsed - constructionDelay;
         float tentacleLifetimeFactor = (constructionFadeInTime - timeSinceConstructionStart) / constructionFadeInTime;
         float baseTentacleLifetime = Math.max(1.5f, tentacleLifetimeFactor * (constructionFadeInTime * 0.6f) + 2.0f);
@@ -333,12 +333,12 @@ public class ConvergenceShipConstructionScript extends BaseEveryFrameCombatPlugi
             Color trailColor = new Color(DIVINE_GOLD_TENTACLE_HIGHLIGHT.getRed(), DIVINE_GOLD_TENTACLE_HIGHLIGHT.getGreen(), DIVINE_GOLD_TENTACLE_HIGHLIGHT.getBlue(), alpha);
             Color endTrailColor = new Color(DIVINE_GOLD_TENTACLE_FADE.getRed(), DIVINE_GOLD_TENTACLE_FADE.getGreen(), DIVINE_GOLD_TENTACLE_FADE.getBlue(), Math.max(40, alpha/3));
             MagicTrailPlugin.addTrailMemberAdvanced(
-                    originShip, id, Global.getSettings().getSprite("fx", "Trail_Fuzzy"), point, 0f, 0f,
+                    originShip, id, Global.getSettings().getSprite("fx", "bt_convergence_trail"), point, 0f, 0f,
                     angle + waveOffsetSine * waveAmplitude * arcIntensity, 0f, 0f,
-                    (MathUtils.getRandomNumberInRange(12f, 28f) + (18f * arcMultiplier * arcIntensity) * (0.6f + overallProgress * 0.4f)) * sizeMultiplier,
+                    (MathUtils.getRandomNumberInRange(26f, 40f) + (18f * arcMultiplier * arcIntensity) * (0.6f + overallProgress * 0.4f)) * sizeMultiplier,
                     (MathUtils.getRandomNumberInRange(2f, 8f)) * sizeMultiplier,
                     trailColor, endTrailColor,
-                    0.7f + (0.2f * arcIntensity) - (normalizedProgressSegment * 0.25f),
+                    0.6f + (0.2f * arcIntensity) - (normalizedProgressSegment * 0.25f),
                     fadeInSegment, fullOpacitySegment, fadeOutParameter, true, 256f, -80f - (float)Math.random() * 80f,
                     new Vector2f(), null, null, 1f
             );

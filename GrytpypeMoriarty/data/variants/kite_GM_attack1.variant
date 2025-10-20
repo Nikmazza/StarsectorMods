@@ -1,0 +1,29 @@
+{
+  "variantId": "kite_GM_attack1",
+  "hullId": "kite_GM",
+  "displayName": "Attack",
+  "goalVariant": false,
+  "fluxCapacitors": 7,
+  "fluxVents": 7,
+  "quality": 0,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 002": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "lightneedler"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

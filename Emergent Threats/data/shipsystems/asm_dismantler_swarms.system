@@ -1,0 +1,21 @@
+{
+	"id":"asm_dismantler_swarms",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"canUseWhileRightClickSystemOn":true,
+	
+	"jitterColor":[200,200,150,150],
+	"jitterCopies":5,
+	"jitterRange":25,
+	"jitterRangeRadiusFraction":0,
+	
+	"statsScript":"data.scripts.asm.shipsystems.DismantlerSwarms",
+	
+	"useSound":"asm_swarm_activate",
+	"outOfUsesSound":"gun_out_of_ammo",
+}
+
+
+
+

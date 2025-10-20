@@ -1,0 +1,233 @@
+{
+  "hullName": "Gemini (GMFS)",
+  "hullId": "gemini_GMFS",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/gemini_GMFS.png",
+  "style": "MIDLINE",
+  "height": 160,
+  "width": 140,
+  "center": [70, 80],
+  "collisionRadius": 101,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 99.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "repair_gantry",
+	"GMFS_unbroken",
+    "GMFS_med"
+  ],
+  "builtInWings": [
+    "warthog_GMFS_wing"
+  ],
+  "builtInWeapons": {
+    "WS0006": "spin_blue",
+    "WS0007": "spin_red",
+    "WS0008": "blinker_pol_blue",
+    "WS0009": "blinker_pol_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 89,
+      "locations": [-38, 45]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": -89,
+      "locations": [-38, -45]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [46, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 180,
+      "locations": [
+        -5.5, 25.5,
+        -6, 21.5,
+        -6, 31
+      ]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": -180,
+      "locations": [
+        -5.5, -25.5,
+        -6, -21,
+        -6, -30
+      ]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 13,
+      "angle": 89,
+      "locations": [-41.5, 12]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 13,
+      "angle": -89,
+      "locations": [-41.5, -12]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 13,
+      "angle": 40.5,
+      "locations": [49, 28]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 13,
+      "angle": -40.5,
+      "locations": [49, -28]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-78.5, 14],
+      "length": 10,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-78.5, -14],
+      "length": 10,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-78.5, 17.5],
+      "length": 19,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-78.5, -17.5],
+      "length": 19,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-78.5, 21],
+      "length": 10,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-78.5, -21],
+      "length": 10,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-77.5, 25.5],
+      "length": 5.5,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-77.5, -25.5],
+      "length": 5.5,
+      "width": 7,
+      "angle": -180,
+      "contrailSize": 7,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-77.5, 30.5],
+      "length": 5,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-77.5, -30.5],
+      "length": 5,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -64, -7,
+    -78.5, -8.5,
+    -79, -35,
+    -63, -42.5,
+    -50.5, -67.5,
+    -22.5, -67,
+    -9.5, -60,
+    -21, -23.5,
+    -12, -14,
+    -12, -33,
+    10, -53.5,
+    48.5, -55,
+    76.5, -28.5,
+    76, -9.5,
+    55, -7,
+    55, 7,
+    76, 9.5,
+    76.5, 28.5,
+    48.5, 55,
+    10, 53.5,
+    -12, 33,
+    -12, 14,
+    -21, 23.5,
+    -9.5, 60,
+    -22.5, 67,
+    -50.5, 67.5,
+    -63, 42.5,
+    -79, 35,
+    -78.5, 8.5,
+    -64, 7
+  ]
+}

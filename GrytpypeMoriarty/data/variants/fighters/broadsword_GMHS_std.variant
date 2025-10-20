@@ -1,0 +1,37 @@
+{
+  "variantId": "broadsword_GMHS_std",
+  "hullId": "broadsword_GMHS",
+  "displayName": "Defensive",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0003": "crungun_fighter"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "swarmer_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "lightmg_GMDA",
+        "WS0002": "lightmg_GMDA"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

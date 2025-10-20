@@ -1,0 +1,86 @@
+{
+  "hullName": "Gladius (GMHS)",
+  "hullId": "gladius_GMHS",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/gladius_GMHS.png",
+  "style": "MIDLINE",
+  "height": 34,
+  "width": 40,
+  "center": [20, 17],
+  "collisionRadius": 26,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 24.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 0,
+      "locations": [2.5, -0]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 130,
+      "angle": -42.5,
+      "locations": [6.5, -10.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 130,
+      "angle": 42.5,
+      "locations": [6.5, 10.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 45,
+      "locations": [-4.5, 5.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": -45,
+      "locations": [-4.5, -5.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15.5, 9],
+      "length": 6.5,
+      "width": 8,
+      "angle": 167.5,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-15.5, -9],
+      "length": 6.5,
+      "width": 8,
+      "angle": -167.5,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -17.5, -10.5,
+    5, -18.5,
+    16, -0,
+    5, 18.5,
+    -17.5, 10.5
+  ]
+}

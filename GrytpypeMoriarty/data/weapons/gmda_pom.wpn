@@ -1,0 +1,49 @@
+{
+  "id": "gmda_pom",
+  "specClass": "projectile",
+  "everyFrameEffect":"data.scripts.weapons.GMDAPomsomEffect",
+  "projectileSpecId": "gmda_phlog_shot",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/gmda_pomsom_turret_base.png",
+  "turretGlowSprite": "graphics/weapons/gmda_pomsom_turret_glow.png",
+  "hardpointSprite": "graphics/weapons/gmda_pomsom_hardpoint_base.png",
+  "hardpointGlowSprite": "graphics/weapons/gmda_pomsom_hardpoint_glow.png",
+  "glowColor": [
+  255,93,0,255
+  ],
+  "turretOffsets": [
+    21,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    27.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 23,
+    "spread": 5,
+    "particleSizeMin": 10,
+    "particleSizeRange": 12,
+    "particleDuration": 0.12,
+    "particleCount": 12,
+    "particleColor": [
+      255,
+      100,
+      100,
+      255
+    ]
+  },
+  "noImpactSounds": true,
+  "unaffectedByProjectileSpeedBonuses": true,
+  "fireSoundTwo": "realitydisruptor_emp_impact"
+}

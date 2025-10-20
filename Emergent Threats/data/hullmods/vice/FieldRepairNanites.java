@@ -9,9 +9,9 @@ import com.fs.starfarer.api.util.Misc;
 public class FieldRepairNanites extends BaseHullMod {
 	
 	private static float HEAL_HULL_AMOUNT = 1f; //1% hull per second
-	private static float HEAL_HULL_CAP = 125f; //max hull heal per second
-	private static float HEAL_HULL_CAP_SMOD = 175f; //max hull heal with s-mod
-	private static float CREW_CASUALTIES = 15;
+	private static float HEAL_HULL_CAP = 100f; //max hull heal per second
+	private static float HEAL_HULL_CAP_SMOD = 125f; //max hull heal with s-mod
+	private static float CREW_CASUALTIES = 35;
 	private static String CONFLICT_MOD = "vice_adaptive_entropy_arrester";
 	private static String CONFLICT_MOD_2 = "ix_entropy_arrester";
 	private static String THIS_MOD = "vice_field_repair_nanites";

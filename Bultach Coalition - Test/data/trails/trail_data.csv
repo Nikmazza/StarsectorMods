@@ -20,9 +20,9 @@ bigplasma_shot_glow3,bigplasma_shot,base_trail_smooth,14,0.15,0.6,0.3,50,10,"[21
 bigplasma_shot_glow4,bigplasma_shot,base_trail_smooth,14,0.1,0.7,0.3,20,2,"[255,255,255]","[214,146,255]",0.8,300,300,30,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,FALSE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
-bigcannot_shot_trail1,bigcannon_shot,base_trail_heavySmoke,6,0.1,0.3,0.45,20,10,"[202,202,202]","[50,50,50]",0.6,300,500,0,1,0,TRUE,FALSE,FALSE,80,10,0,0,0,0,FALSE,TRUE
-bigcannot_shot_trail2,bigcannon_shot,base_trail_smooth,25,0,0,0.5,20,15,"[255,160,30]","[204,50,50]",1,300,5,30,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
-bigcannot_shot_trail2,bigcannon_shot,Trail_Doublehelix,6,0.1,0.4,0.45,35,25,"[150,150,150]","[50,50,50]",0.9,500,20,0,1,0,TRUE,FALSE,FALSE,30,10,0,0,0,0,FALSE,TRUE
+bigcannot_shot_trail1,bt_morangne_shot,base_trail_heavySmoke,6,0.1,0.3,0.45,10,2,"[202,202,202]","[50,50,50]",0.6,300,500,0,1,0,TRUE,FALSE,FALSE,80,10,0,0,0,0,FALSE,TRUE
+bigcannot_shot_trail2,bt_morangne_shot,base_trail_smooth,25,0,0,0.5,10,4,"[255,160,30]","[204,50,50]",1,300,5,30,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
+bigcannot_shot_trail2,bt_morangne_shot,Trail_Doublehelix,6,0.1,0.4,0.45,20,5,"[150,150,150]","[50,50,50]",0.9,500,20,0,1,0,TRUE,FALSE,FALSE,30,10,0,0,0,0,FALSE,TRUE
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 smallbore_shot_trail1,smallbore_shot,base_trail_smoke,4,0.1,0.25,0.30,8,6,"[150,150,150]","[50,50,50]",0.4,300,500,0,1,1,TRUE,FALSE,FALSE,80,10,0,0,0,0,FALSE,TRUE
 smallbore_shot_trail2,smallbore_shot,base_trail_smooth,10,0,0,0.3,7.5,5,"[255,160,30]","[204,50,50]",1,300,5,30,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
@@ -111,6 +111,9 @@ trails_bt_scrapshot_2,bt_scrapshot_shot,Trail_Smooth,0,0,0,0.35,6,1,"[225,225,22
 trails_bt_scrapshot_big_1,bt_scrapshot_shot_big,base_trail_smoke,5,0,0.04,0.05,5,1.5,"[255,245,220]","[255,245,220]",1,200,300,10,2,1,TRUE,FALSE,TRUE,100,20,0,0,0,0,TRUE,false
 trails_bt_scrapshot_big_2,bt_scrapshot_shot_big,Trail_Smooth,0,0,0,0.35,10,1.5,"[155,155,155]","[155,155,155]",0.65,200,300,5,3,1,TRUE,FALSE,FALSE,100,20,0,0,5,50,TRUE,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
+slige_trail1,bt_slige_howitzer_shot,Trail_Clean,5,0,0.3,0.6,9,0,"[253,200,255]","[235,205,255]",1,50,0,0,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,FALSE
+slige_trail2,bt_slige_howitzer_shot,Trail_Clean,5,0,0.3,0.6,25,0,"[253,200,255]","[60,140,255]",1,50,0,0,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,FALSE,FALSE
+slige_trail3,bt_slige_howitzer_shot,Trail_Doublehelix,8,0,0.2,0.9,35,5,"[198,31,204]","[0,255,235]",0.5,2000,-1000,0,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #gestalt?,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,

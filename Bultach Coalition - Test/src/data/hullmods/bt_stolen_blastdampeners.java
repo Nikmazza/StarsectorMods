@@ -11,8 +11,8 @@ import java.util.*;
 
 public class bt_stolen_blastdampeners extends BaseHullMod {
 
-    public static final float RESISTANCE = 0.9f;
-    public static final float RESIST_TIME = 0.1f; //in seconds
+    public static final float RESISTANCE = 0.10f;
+    public static final float RESIST_TIME = 0.15f; //in seconds
 
 
     private Set<ShipAPI> nearbyShips = new HashSet<>();

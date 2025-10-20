@@ -8,7 +8,8 @@ import com.fs.starfarer.api.util.Misc;
 
 public class ShapedExplosionUtil {
 
-	//for Hellfire SDEM (large), Balefire Emitter (small), deadeye plasma seeker (deadeye)
+	//for Hellfire SDEM (large), Balefire Emitter (small), deadeye plasma seeker (deadeye), warp drone (warptorp)
+	//Heavy Adjudicator main (har), Heavy Adjudicator side small (hars)
 	public static void spawnShapedExplosion(Vector2f loc, float angle, float shipSpeed, Color pc, boolean isSmall) {
 		String type = isSmall ? "small" : "large";
 		spawnShapedExplosion(loc, angle, shipSpeed, pc, type);
@@ -39,6 +40,35 @@ public class ShapedExplosionUtil {
 			
 				arc = 30f;
 				scatter = 50f;
+			}
+			
+			else if (type.equals("har")) { 
+				numParticles = 100;
+				minSize = 10f;
+				maxSize = 15f;
+				
+				minDur = 0.4f;
+				maxDur = 0.7f;
+			
+				arc = 30f;
+				scatter = 20f;
+				minVel = 0f;
+				maxVel = 350f;
+			}
+			
+			else if (type.equals("hars")) {
+				//50f shipSpeed is used not for actual ship speed but extra misfire mechanics
+				numParticles = 50 + Math.round(shipSpeed * 3f);
+				minSize = 10f;
+				maxSize = 15f;
+				
+				minDur = 0.4f + shipSpeed * 0.02f;
+				maxDur = 0.7f + shipSpeed * 0.02f;
+			
+				arc = 120f;
+				scatter = 20f;
+				minVel = 20f;
+				maxVel = 80f + shipSpeed * 2;
 			}
 			
 			else if (type.equals("deadeye")) {

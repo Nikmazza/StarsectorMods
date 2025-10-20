@@ -456,7 +456,8 @@ public class jdp_PlanetkillerSilo extends BaseIndustry implements MarketImmigrat
 		if (!Global.getSector().getPlayerFaction().knowsIndustry(getId())) {
 			return false;
 		}
-		return market.getPlanetEntity() != null;
+		//return market.getPlanetEntity() != null;
+		return true;
 	}
 	public boolean showWhenUnavailable() {
 		return Global.getSector().getPlayerFaction().knowsIndustry(getId());
@@ -505,7 +506,9 @@ public class jdp_PlanetkillerSilo extends BaseIndustry implements MarketImmigrat
 
 			//Tag for dialogue
 			Global.getSector().getMemoryWithoutUpdate().set("$jdp_has_interfector", true);
-			
+			Global.getSector().getMemoryWithoutUpdate().set("$jdp_upsetAlviss", true);
+
+
 			Iterator var1 = Misc.getFactionMarkets(this.market.getFactionId()).iterator();
 			//In theory unnecessary, just making sure
 			while (true) {
@@ -547,6 +550,8 @@ public class jdp_PlanetkillerSilo extends BaseIndustry implements MarketImmigrat
 
 		//Tag for dialogue
 		Global.getSector().getMemoryWithoutUpdate().set("$jdp_has_interfector", false);
+		Global.getSector().getMemoryWithoutUpdate().set("$jdp_upsetAlviss", false);
+
 
 		//Non-local effects
 		this.clearEffects();

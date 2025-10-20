@@ -156,6 +156,8 @@ public class IXReputationResetListener extends BaseCampaignEventListener {
 		float ixRep = ix.getRelationship(embassyFacId);
 		float twRep = tw.getRelationship(embassyFacId);
 		
+		if (isIXPermaHateActive() == true) return; //runs -100 rep script inside method and blocks below changes
+		
 		//adds 10 IX/TW/commission rep to embassy faction if rep is below 35 (welcoming) 
 		if (ixRep < 0.35f && ixRep >= 0.25f) ix.setRelationship(embassyFacId, 0.35f);
 		if (ixRep < 0.25f) ix.setRelationship(embassyFacId, ixRep += 0.10f);
@@ -186,15 +188,33 @@ public class IXReputationResetListener extends BaseCampaignEventListener {
 		syncMarzannaToIx();
 	}
 	
+	private boolean isIXPermaHateActive() {
+		SectorAPI sector = Global.getSector();
+		boolean isHated = sector.getMemoryWithoutUpdate().is("$ix_hates_player_forever", true);
+		if (isHated) {
+			FactionAPI ix = sector.getFaction(IX_FAC_ID);
+			FactionAPI tw = sector.getFaction(TW_FAC_ID);
+			FactionAPI mz = sector.getFaction(MZ_FAC_ID);
+			if (ix != null) ix.getRelToPlayer().setRel(-1f);
+			if (tw != null) tw.getRelToPlayer().setRel(-1f);
+			if (mz != null) mz.getRelToPlayer().setRel(-1f);
+		}
+		return isHated;
+	}
+	
 	@Override
 	public void reportPlayerOpenedMarket(MarketAPI market) {
 		lockReputationToHostileForAll();
+		boolean isHated = isIXPermaHateActive(); //runs -100 rep script inside method if true
 	}
 	
 	@Override
 	public void reportPlayerReputationChange(String faction, float delta) {
 		//do not run during initial setup
 		if (Global.getSector().getPlayerMemoryWithoutUpdate().is("$reputationIsSetIX", false)) return;
-		else lockReputationToHostileForAll();
+		else {
+			lockReputationToHostileForAll();
+			boolean isHated = isIXPermaHateActive(); //runs -100 rep script inside method if true
+		}
 	}
 }

@@ -1,5 +1,7 @@
 package data.hullmods.vice;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -19,6 +21,11 @@ public class AdaptiveDroneBay extends BaseHullMod {
 	private static String MIMESIS = "vice_mimesis";
 	private static String MIMESIS_D = "vice_mimesis_default_D";
 	private static String ERROR_MOD_ID = "vice_drone_bay_malfunction";
+	
+	//brilliant sprite switching
+	private static String BRILLIANT = "brilliant";
+	private static String BRILLIANT_D = "brilliant_default_D";
+	private static String NEW_SPRITE = "brilliant_carrier";
 	
 	//Utility variables
 	private RemnantSubsystemsUtil util = new RemnantSubsystemsUtil();
@@ -46,6 +53,18 @@ public class AdaptiveDroneBay extends BaseHullMod {
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		if (!isApplicableToShip(ship) && ship.getOwner() == 0) ship.getVariant().getHullMods().remove(id);
+		if (ship.getHullSpec().getHullId().equals(BRILLIANT) || ship.getHullSpec().getHullId().equals(BRILLIANT_D)) {
+			float x = ship.getSpriteAPI().getCenterX();
+			float y = ship.getSpriteAPI().getCenterY();
+			float alpha = ship.getSpriteAPI().getAlphaMult();
+			float angle = ship.getSpriteAPI().getAngle();
+			Color color = ship.getSpriteAPI().getColor();
+			ship.setSprite("vice_ships", NEW_SPRITE);
+			ship.getSpriteAPI().setCenter(x, y);
+			ship.getSpriteAPI().setAlphaMult(alpha);
+			ship.getSpriteAPI().setAngle(angle);
+			ship.getSpriteAPI().setColor(color);	
+		}
 	}
 	
 	private boolean isPhaseShip(ShipAPI ship) {

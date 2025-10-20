@@ -45,6 +45,15 @@
       "locations": [-27, -0]
     },
     {
+      "id": "WS0012",
+      "size": "MEDIUM",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [102, -14]
+    },
+    {
       "id": "WS0010",
       "size": "MEDIUM",
       "type": "MISSILE",

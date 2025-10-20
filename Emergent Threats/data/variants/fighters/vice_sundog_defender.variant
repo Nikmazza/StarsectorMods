@@ -8,8 +8,8 @@
 	"weaponGroups":[
 		{"mode":"LINKED",
 		 "weapons":{
-		 			"WS 000":"lrpdlaser",
-					"WS 001":"lrpdlaser",
+		 			"WS 000":"vice_lrpdlaser_fighter",
+					"WS 001":"vice_lrpdlaser_fighter",
 		 		   },
 		},
 		{"mode":"LINKED",

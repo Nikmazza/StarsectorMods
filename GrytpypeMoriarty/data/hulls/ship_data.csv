@@ -1,0 +1,81 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sabrina Borer,drone_GM_Borer,,GMDA Series,,,150,25,200,,100,,,250,400,400,185,300,5,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,
+Talon (GM),talon_GM,,GMDA Series,flarelauncher_fighter,,215,25,400,,100,0,,400,400,300,150,300,10,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,
+Broadsword (GM),broadsword_GM,,GMDA Series,,,425,85,500,,150,0,,200,400,350,90,180,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,2000
+Thunder (GM),thunder_GM,,GMDA Series,,,225,55,850,,100,0,,300,600,500,150,300,30,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,2001
+Gladius (GM),gladius_GM,,GMDA Series,flarelauncher_fighter,,500,55,200,,50,0,,300,400,300,150,300,40,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,2002
+Piranha (GM),piranha_GM,,GMDA Series,,,400,75,200,,100,0,,175,200,200,40,120,30,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,105
+Extinguisher Drone (GMFS),drone_borer_GMFS,,GMFS Series,,,200,25,200,,100,,,100,200,200,180,360,5,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,1.5
+Warthog (GMFS),warthog_GMFS,,GMFS Series,flarelauncher_fighter,,750,200,200,,100,0,,130,180,150,100,200,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,110
+Perdition (GMFS),perdition_GMFS,,GMFS Series,flarelauncher_fighter,,600,150,400,,100,0,,85,120,150,100,200,40,NONE,,0,0,0,,,4,4,,,,,,,,,,,,,,,,,,,,,,0,,,,110
+Talon (GMHS),talon_GMHS,,GMHS Series,flarelauncher_single,,400,75,400,,100,0,,325,400,300,150,300,10,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,100
+Broadsword (GMHS),broadsword_GMHS,,GMHS Series,flarelauncher_single,,750,150,400,,100,0,,200,400,350,90,180,30,NONE,,0,0,0,,,3,3,,,,,,,,,,,,,,,,,,,,,,0,,,,104
+Gladius (GMHS),gladius_GMHS,,GMHS Series,flarelauncher_single,,1000,200,400,,100,0,,300,400,300,150,300,40,NONE,,0,0,0,,,4,4,,,,,,,,,,,,,,,,,,,,,,0,,,,109
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Kite (GM),kite_GM,Scout Vessel,GMDA Series,emp_gmda,4,950,165,1600,1000,85,25,,120,150,75,45,85,120,FRONT,,120,0.4,0.6,,,15,30,30,15,1,15,10,5000,5,20,180,0.25,4,4,,,,,,,,gmda_base_bp,,0.75,2,2,,313.5
+Rushcutter (GM),vigilance_GM,Gunship,GMDA Series,shiftjets,6,2500,800,2000,1625,160,50,,130,120,100,45,90,120,FRONT,,90,0.6,1,,,20,25,40,25,1,25,10,13000,8,10,240,0.25,6,6,,,,,,,,gmda_base_bp,,0.5,2,2,,208.5
+Cerberus (GM),cerberus_GM,Escort Frigate,GMDA Series,shiftjets,5,2500,400,1250,1875,150,40,1,110,100,75,60,120,300,NONE,,0,0,0,,,40,50,40,20,1,20,10,10000,8,10,240,0.25,4,4,,,,,,,CARRIER,gmda_base_bp,,0.3,2,2,,213.5
+Gremlin (GMHQ),gremlin_GM,Phase Frigate,GMDA Series,highenergyfocus,6,1000,300,1200,2000,160,35,,90,120,90,45,90,200,PHASE,phasecloak,90,,,0.06,0.06,10,15,5,10,1,10,9,28000,10,20,180,0.25,6,6,,,,,,,,gmda_base_bp,,0.5,2,2,,228
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wolf (GM),wolf_GM,Frigate,GMDA Series,displacer_GMDA,6,1600,165,2950,1875,185,55,,125,130,100,60,120,200,FRONT,,120,0.4,0.8,,,20,30,50,20,1,20,10,15000,10,20,180,0.25,6,6,,,,,,,,gmda_bp,,0.5,2,2,,314.5
+Wolf (GMHQ),wolf_GMHQ,Hunter Frigate,GMDA High Quality Series,highenergyfocus,8,1750,185,3250,1875,200,60,1,140,140,100,60,120,200,FRONT,,270,0.4,0.8,,,25,30,50,20,1,20,10,18000,10,20,180,0.25,8,8,,,,,,,HIDE_IN_CODEX,rare_bp, ,0.5,2,2,,314.5
+Lasher (GM),lasher_GM,Frigate,GMDA Series,ammofeed,7,1750,300,2600,1750,160,55,,125,110,90,60,90,200,FRONT,,180,0.4,1,,,35,50,40,25,1,25,10,11000,8,10,240,0.25,7,7,,,,,,,,gmda_bp,,0.4,2,2,,204.5
+Lasher (GMHQ),lasher_GMHQ,Phase Frigate,GMDA High Quality Series,ammofeed,8,1850,285,3000,1750,205,60,,135,120,100,60,90,200,PHASE,phasecloak,90,,,0.05,0.06,40,50,40,25,1,25,10,15000,8,10,240,0.25,8,8,,,,,,,"HIDE_IN_CODEX, PHASE",rare_bp,,0.4,2,2,,204.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mudskipper (GMHS),mudskipper_GMHS,Patient Transport,GMHS Series,flarelauncher_active,4,1000,150,900,938,85,18,1,90,80,50,45,60,200,OMNI,,90,0.5,1.2,,,30,100,50,40,1,40,9,10000,5,20,180,0.25,3,3,35,70,,,50,100,"CIVILIAN, LINER",gmhs_bp,,0.5,2,2,,218
+Shepherd (GMFS),shepherd_GMFS,Repair Frigate,GMFS Series,maneuveringjets,4,1200,200,1500,1250,100,23,1,90,120,70,90,180,200,OMNI,,90,0.5,1.2,,,15,30,20,40,1,40,9,12000,8,20,240,0.25,3,3,,,,,,,CARRIER,gmfs_bp,,0.5,2,2,,216
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Carker (GM),condor_GM,Light Carrier,GMDA Series,shiftjets,12,5500,500,2800,1833,120,70,2,30,25,20,18,10,400,OMNI,,120,0.4,1,,,140,150,40,30,2,15,8,54000,5,10,360,0.25,12,12,,,,,,,CARRIER,gmda_base_bp,,0.5,2,3,,302.5
+Jutter (GM),tarsus_GM,Missile Barge,GMDA Series,forgevats,14,4850,665,2000,2083,125,65,,40,35,25,25,15,400,OMNI,,120,0.66,1,,,60,80,100,80,2,40,8,35000,5,20,420,0.25,12,12,,,,,,,,gmda_base_bp,,0.5,2,3,,306.5
+Mule (GM),mule_GM,Armoured Freighter,GMDA Series,fastmissileracks,12,5750,1000,5250,2500,265,85,,75,55,35,25,20,500,FRONT,,270,0.4,1,,,75,85,200,80,2,40,9,48000,8,10,420,0.25,12,12,,,,,,,,gmda_base_bp,,0.5,2,3,,310
+Buffalo (GM),buffalo2_GM,Destroyer,GMDA Series,flarelauncher,7,2500,100,2250,1667,100,70,,100,80,40,25,30,300,NONE,,0,0,0,,,40,40,20,30,2,15,9,19000,5,10,120,0.25,6,6,,,,,,,,gmda_base_bp,,0.6,2,3,,308
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sunder (GM),sunder_GM,Destroyer,GMDA Series,shiftjets,14,4000,250,9750,8333,615,105,,70,70,55,30,30,350,FRONT,,120,0.4,0.8,,,60,70,80,50,2,25,9,55000,5,15,300,0.25,14,14,,,,,,,,gmda_bp,,0.5,2,3,,301.5
+Sunder (GMHQ),sunder_GMHQ,Phase Destroyer,GMDA High Quality Series,highenergyfocus,16,4500,450,8000,8333,485,60,,78,90,65,40,30,350,PHASE,phase_sunder,90,,,0.05,0.06,60,60,20,20,2,10,9,72500,5,15,300,0.25,16,16,,,,,,,"HIDE_IN_CODEX, PHASE",rare_bp,0.5,0.5,2,3,,301.5
+Hammerhead (GM),hammerhead_GM,Destroyer,GMDA Series,ammofeed,14,6000,500,5800,4167,275,95,,80,60,40,30,60,400,FRONT,,270,0.4,0.8,,,75,100,100,60,2,30,9,52000,5,12,360,0.25,14,14,,,,,,,,gmda_bp,,0.5,2,3,,300.5
+Hammerhead (GMHQ),hammerhead_GMHQ,Phase Destroyer,GMDA High Quality Series,ammofeed,16,6200,585,5000,4167,250,85,,80,50,35,28,57,500,PHASE,phasecloak,90,,,0.03,0.04,80,80,25,24,2,12,9,72000,5,12,360,0.25,16,16,,,,,,,HIDE_IN_CODEX,rare_bp,0.5,0.5,2,3,,300.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Nebula (GMHS),nebula_GMHS,Medical Vessel,GMHS Series,flarelauncher_active,6,3000,175,1500,1700,85,40,1,55,35,20,20,12,450,FRONT,,150,0.5,1,,,60,400,60,80,2,40,8,40000,4,20,240,0.25,10,10,,,,,100,200,"CIVILIAN, LINER",gmhs_bp,,,2,3,,313
+Gemini (GMFS),gemini_GMFS,Repair Destroyer,GMFS Series,reservewing,10,4500,250,2700,2833,170,75,2,50,35,15,25,20,400,OMNI,,150,0.4,0.8,,,80,120,80,70,2,35,9,52000,4,8,360,0.25,12,12,28,125,,,,,,gmfs_bp,,0.6,2,3,,305
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Colossus (GM),colossus3_GM,Carrier,GMDA Series,fastmissileracks,20,8000,600,3250,3600,180,75,3,50,30,15,20,20,1400,FRONT,,220,0.5,1,,,140,160,100,60,4,15,7,60000,3,20,480,0.25,18,22,,,,,,,CARRIER,gmda_base_bp,,0.6,2,3,,411.2
+Venture (GM),venture_GM_armour,Armoured Cruiser,GMDA Series,fastmissileracks,24,12500,2800,6000,6000,280,155,2,40,15,10,12,6,1850,OMNI,,120,0.5,1.2,,,250,280,100,60,3,20,7,80000,5,10,540,0.25,20,20,,,,,,,,gmda_base_bp,,0.4,2,3,,402
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Starliner (GMHS),starliner_GMHS,Hospital Vessel,GMHS Series,flarelauncher_active,10,5500,225,2500,2500,125,90,2,45,20,10,10,10,900,FRONT,,150,0.5,1,,,100,1500,300,60,3,20,7,100000,5,10,480,0.25,16,16,,,,,150,500,"CIVILIAN, LINER",gmhs_bp,,0.6,2,3,,409
+Mora (GMFS),mora_GMFS,Repair Cruiser,GMFS Series,fastmissileracks,15,10000,1250,4000,4000,200,115,3,45,20,10,10,10,2000,OMNI,,150,0.4,1,,,250,300,80,60,4,15,8,125000,4,12,420,0.25,24,24,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT",gmfs_bp,,0.4,2,3,,410
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Venture (GMHQ),venture_GM,Cruiser,GMDA High Quality Series,fastmissileracks,24,12000,1250,10000,6000,550,180,2,40,30,25,18,18,1850,OMNI,,360,0.4,0.9,,,250,300,225,60,3,20,7,150000,5,10,540,0.25,32,32,,,,,,,CARRIER,gmda_bp,,0.4,2,3,,402
+Falcon (GM),falcon_GM,Light Cruiser,GMDA Series,shiftjets,16,6000,600,7700,7000,365,125,,68,50,30,20,25,650,FRONT,,270,0.4,0.7,,,100,180,150,100,3,33,9,96000,4,12,480,0.25,22,22,,,,,,,,gmda_bp,,0.5,2,3,,2009
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Atlas (GM),atlas_GM,Battlecruiser,GMDA Series,maneuveringjets,18,9000,500,10000,8750,450,260,,45,20,15,6,4,2500,FRONT,,90,0.4,1.2,,,250,300,200,400,10,40,7,180000,2,20,720,0.25,24,24,,,,,,,,gmda_base_bp,,0.7,2,4,,502.5
+Onslaught (GM),onslaught_GM,Battlecruiser,GMDA High Quality Series,shiftjets,26,14000,1200,18000,15000,600,290,,60,20,20,12,15,3000,FRONT,,90,0.4,1,,,500,650,100,100,15,7,7,700000,3,12,720,0.25,45,45,,,,,,,,rare_bp,,0.5,2,4,,500.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+###Gladiator,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wolf (Beholder),wolf_joker1,Mod Frigate,Gladiator Mod,highenergyfocus,6,1500,150,3500,1875,250,65,,150,130,100,60,120,200,OMNI,,270,0.4,0.8,,,15,30,50,40,1,40,10,50000,10,30,180,0.25,10,10,,,,,,,HIDE_IN_CODEX,,,0.5,2,2,,505.5
+Wolf (Rook),wolf_joker2,Mod Frigate,Gladiator Mod,ammojets,6,1850,175,2250,1875,150,65,,190,150,150,70,160,150,OMNI,,90,0.4,0.8,,,15,30,25,35,1,40,10,50000,10,20,180,0.25,10,10,,,,,,,HIDE_IN_CODEX,,,0.7,2,2,,502.5
+Wolf (Bishop),wolf_joker3,Mod Frigate,Gladiator Mod,ammojets,6,1500,150,2250,1875,150,65,,225,165,165,90,160,150,OMNI,,90,0.4,0.8,,,15,30,25,35,1,40,10,50000,10,20,180,0.25,10,10,,,,,,,HIDE_IN_CODEX,,,0.7,2,2,,503.5
+Wolf (Panda),wolf_joker4,Mod Frigate,Gladiator Mod,displacer,6,2200,285,2250,1875,150,65,,150,110,90,50,120,200,OMNI,,180,0.4,0.8,,,15,30,50,40,1,40,10,50000,10,20,180,0.25,16,16,,,,,,,HIDE_IN_CODEX,,,0.3,2,2,,504.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hammerhead (Joker),hammerhead_joker,Mod Destroyer,Gladiator Mod,ammojets,12,6000,650,5000,4167,285,125,,90,60,40,30,60,400,FRONT,,320,0.4,0.8,,,50,100,100,60,2,30,9,150000,5,12,360,0.25,22,22,,,,,,,HIDE_IN_CODEX,,,0.5,2,3,,506.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+###HVB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Onslaught (GMHQ),onslaught_GMHQ,Prototype Battlecruiser,GMDA Prototype,highenergyfocus,30,15000,1400,18000,15000,585,190,,10,5,5,5,5,3000,PHASE,phasearray,,,,0.03,0.07,650,700,100,150,15,10,7,800000,1,16,720,0.5,55,55,,,,,,,"HIDE_IN_CODEX, PHASE",,0.25,0.5,2,4,,501.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+///FOR LEGACY PURPOSES///,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wolf (GMs Red),wolf_GMs_red,Frigate,GM Stock Series,maneuveringjets,5,1250,100,2250,1875,150,40,,170,170,170,120,180,150,OMNI,,60,0.4,0.8,,,15,30,25,15,1,15,10,13000,10,20,180,0.25,5,5,,,,,,,HIDE_IN_CODEX,,0.5,0.7,2,2,,316.5
+Wolf (GMs Green),wolf_GMs_grn,Frigate,GM Stock Series,highenergyfocus,5,1700,200,2000,1875,125,60,,120,110,90,50,120,200,OMNI,,90,0.4,0.8,,,15,30,50,20,1,20,10,15000,10,20,180,0.25,10,7.5,,,,,,,HIDE_IN_CODEX,,0.5,0.3,2,2,,317.5
+Wolf (GMs Blue),wolf_GMs_blu,Frigate,GM Stock Series,displacer_degraded,5,1500,150,2750,1875,185,45,,120,130,100,60,120,200,OMNI,,90,0.4,0.6,,,15,30,50,20,1,20,10,13000,10,30,180,0.25,5,5,,,,,,,HIDE_IN_CODEX,,0.5,0.5,2,2,,318.5
+Wolf (GMs Purple),wolf_GMs_gay,Frigate,GM High Quality Stock Series,displacer,5,1750,210,2900,1875,170,65,,144,135,105,65,120,200,OMNI,,120,0.4,1,,,15,30,50,20,1,20,10,20000,10,25,180,0.25,8,8,,,,,,,HIDE_IN_CODEX,,0.25,0.7,2,2,,319.5
+Lasher (GMs Red),lasher_GMs_red,Frigate,GM Stock Series,maneuveringjets,5,1500,185,2100,1750,140,45,,185,185,185,120,180,150,FRONT,,90,0.4,1,,,25,50,20,25,1,25,10,8800,8,10,240,0.25,4,4,,,,,,,HIDE_IN_CODEX,,0.5,0.7,2,2,,206.5
+Lasher (GMs Green),lasher_GMs_grn,Frigate,GM Stock Series,ammofeed,5,1750,325,2400,1750,150,65,,105,110,90,60,90,225,FRONT,,180,0.4,1,,,25,50,40,25,1,25,10,9800,8,10,240,0.25,8,6,,,,,,,HIDE_IN_CODEX,,0.5,0.4,2,2,,207.5
+Lasher (GMs Blue),lasher_GMs_blu,Frigate,GM Stock Series,highenergyfocus,5,1750,300,2600,1750,185,45,,105,110,90,60,90,200,FRONT,,180,0.4,0.6,,,25,50,40,25,1,25,10,9800,8,20,240,0.25,4,4,,,,,,,HIDE_IN_CODEX,,0.5,0.4,2,2,,208.5
+Lasher (GMs Gold),lasher_GMs_gay,Frigate,GM High Quality Stock Series,ammojets,5,2125,345,2700,1750,185,65,,125,130,130,70,110,200,FRONT,,220,0.4,0.8,,,25,50,40,25,1,25,10,20000,8,20,240,0.25,8,8,,,,,,,HIDE_IN_CODEX,,0.25,0.7,2,2,,209.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wolf (GMs),wolf_GMs,Frigate,GM Stock Series,displacer_degraded,4,1100,100,2250,1875,150,40,,120,130,100,60,120,180,OMNI,,90,0.4,0.9,,,15,30,50,20,1,20,10,9000,10,20,180,0.25,2.5,2.5,,,,,,,,,,0.5,2,2,,315.5
+Lasher (GMs),lasher_GMs,Frigate,GM Stock Series,ammofeed,4,1300,185,1900,1750,120,40, ,105,110,90,60,90,200,FRONT,,180,0.4,1.2,,,25,50,40,25,1,25,10,7000,8,10,240,0.25,3,3,,,,,,,,,,0.4,2,2,,205.5

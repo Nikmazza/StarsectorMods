@@ -46,7 +46,7 @@ public class DistanceUtil {
 		List<ShipAPI> enemies = getAllShipsInRange(ship, range, "enemies");
 		ShipAPI result = null;
 		for (ShipAPI e : enemies) {
-			if (!e.isDrone() && !e.isFighter() && !e.isHulk() && !e.isPhased()) {
+			if (!e.isDrone() && !e.isFighter()) {
 				if (result == null) result = e;
 				else if (getDistance(ship, e) < getDistance(ship, result)) result = e;
 			}
@@ -58,10 +58,30 @@ public class DistanceUtil {
 		List<ShipAPI> enemies = getAllShipsInRange(ship, range, "enemies");
 		ShipAPI result = null;
 		for (ShipAPI e : enemies) {
-			if (!e.isHulk() && !e.isPhased()) {
+			if (result == null) result = e;
+			else if (getDistance(ship, e) < getDistance(ship, result)) result = e;
+		}
+        return result;
+	}
+
+	public static ShipAPI getNearestFriend(CombatEntityAPI ship, float range) {
+		List<ShipAPI> enemies = getAllShipsInRange(ship, range, "friends");
+		ShipAPI result = null;
+		for (ShipAPI e : enemies) {
+			if (!e.isDrone() && !e.isFighter()) {
 				if (result == null) result = e;
 				else if (getDistance(ship, e) < getDistance(ship, result)) result = e;
 			}
+		}
+        return result;
+    }
+
+	public static ShipAPI getNearestFriend(CombatEntityAPI ship, float range, boolean isTargetingFighters) {
+		List<ShipAPI> enemies = getAllShipsInRange(ship, range, "friends");
+		ShipAPI result = null;
+		for (ShipAPI e : enemies) {
+			if (result == null) result = e;
+			else if (getDistance(ship, e) < getDistance(ship, result)) result = e;
 		}
         return result;
 	}
@@ -94,7 +114,6 @@ public class DistanceUtil {
 	
 	public static MissileAPI getNearestMissile(CombatEntityAPI ship, float range, boolean isEnemyOnly) {
 		List<MissileAPI> missiles = getAllMissilesInRange(ship, range);		
-		missiles.remove(ship);
 		MissileAPI result = null;
 		for (MissileAPI m : missiles) {
 			if (m.getSourceAPI().getOwner() != ship.getOwner() 
@@ -132,7 +151,7 @@ public class DistanceUtil {
 		
 		List<MissileAPI> missiles = Global.getCombatEngine().getMissiles();
 		for (MissileAPI m : missiles) {
-			if (getDistance(point, m.getLocation()) < range && source.getOwner() != m.getOwner()) {
+			if (getDistance(point, m.getLocation()) < range && source.getOwner() != m.getSourceAPI().getOwner()) {
 				enemies.add((CombatEntityAPI) m);
 			}
 		}
@@ -140,7 +159,7 @@ public class DistanceUtil {
 		List<ShipAPI> ships = Global.getCombatEngine().getShips();
 		for (ShipAPI s : ships) {
 			if (getDistance(point, s.getLocation()) < range && source.getOwner() != s.getOwner()) {
-				enemies.add((CombatEntityAPI) s);
+				if (!s.isHulk()) enemies.add((CombatEntityAPI) s);
 			}
 		}
 		

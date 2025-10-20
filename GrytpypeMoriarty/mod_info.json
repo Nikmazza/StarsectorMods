@@ -1,0 +1,22 @@
+{
+  "id":"GMDA",
+	"name":"Grytpype and Moriarty's Defense Authority",
+	"author": "King Alfonzo",
+	"version":"0.9.9h",
+	"description":"Brings a Robin Hood-like police force to make independent planets more interesting to stick around.",
+    "gameVersion": "0.98a-RC7",
+    "dependencies": [
+        {
+            "id": "lw_lazylib",
+            "name": "LazyLib",
+            #"version": "2.6"
+        },
+        {
+            "id": "MagicLib",
+            "name": "MagicLib",
+            #"version": "2.6"
+        },
+    ],
+	"jars":["jars/GrytpypeMoriarty.jar"],
+	"modPlugin":"data.scripts.GMDAModPlugin",
+}

@@ -1,0 +1,11 @@
+{
+	"gmda_columbo":{
+		"name":"James Gordon",
+		"color":"mountCompositeColor", #I'm experimenting with colors.. in setting.json
+		"putFirst":true,
+		"sort":10,
+	},
+}
+
+
+

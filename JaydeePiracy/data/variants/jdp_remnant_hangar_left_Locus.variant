@@ -1,0 +1,25 @@
+
+{
+    "displayName": "Locus",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "jdp_remnant_hangar_left",
+    "hullMods": [
+        "advancedoptics",
+        "expanded_deck_crew",
+        "fluxcoil",
+        "fluxdistributor",
+        "solar_shielding",
+        "turretgyros",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "jdp_remnant_hangar_left_Locus",
+    "weaponGroups": [
+    ],
+    "wings": [
+    ],
+    "modules": [],
+}

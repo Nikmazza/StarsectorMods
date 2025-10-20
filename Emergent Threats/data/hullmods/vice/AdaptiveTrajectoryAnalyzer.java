@@ -12,9 +12,10 @@ import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class AdaptiveTrajectoryAnalyzer extends BaseHullMod {
 	
+	private static float RANGE_BONUS_BALLISTIC = 10f;
 	private static float RANGE_BONUS_COMPOSITE = 50f;
-	private static float RANGE_BONUS_MISSILE = 25f;
 	private static String THIS_MOD = "magellan_trajectory_analyzer";
+	private static String ASM_MOD = "asm_threat_compromised";
 	private static String CONFLICT_MOD = "tw_modernized_rangefinder";
 	private static String CONFLICT_MOD_2 = "magellan_trajectory_analyzer";
 	private static String ARCHAIC = "archaic_c";
@@ -24,7 +25,7 @@ public class AdaptiveTrajectoryAnalyzer extends BaseHullMod {
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getMissileWeaponRangeBonus().modifyPercent(id, RANGE_BONUS_MISSILE);
+		stats.getBallisticWeaponRangeBonus().modifyPercent(id, RANGE_BONUS_BALLISTIC);
 	}
 
 	@Override
@@ -51,14 +52,21 @@ public class AdaptiveTrajectoryAnalyzer extends BaseHullMod {
 	
 	@Override
     public boolean isApplicableToShip(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(ASM_MOD) 
+					&& !ship.getVariant().hasHullMod(CONFLICT_MOD) 
+					&& !ship.getVariant().hasHullMod(CONFLICT_MOD_2)) return true;
 		if (util.hasDriveField(ship)) return false;
 		if (!util.isApplicable(ship) || !util.isOnlyRemnantMod(ship)) return false;
+
 		return !ship.getVariant().hasHullMod(CONFLICT_MOD) && !ship.getVariant().hasHullMod(CONFLICT_MOD_2);
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(ASM_MOD) 
+					&& !ship.getVariant().hasHullMod(CONFLICT_MOD) 
+					&& !ship.getVariant().hasHullMod(CONFLICT_MOD_2)) return null;
 		if (util.hasDriveField(ship)) return util.getIncompatibleCauseString("drivefield");
-		if (!util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");
+		if (!ship.getVariant().hasHullMod(ASM_MOD) && !util.isApplicable(ship)) return util.getIncompatibleCauseString("manufacturer");
 		if (!util.isOnlyRemnantMod(ship)) return util.getIncompatibleCauseString("modcount");
 		if (ship.getVariant().hasHullMod(CONFLICT_MOD) || ship.getVariant().hasHullMod(CONFLICT_MOD_2)) return "Comparable system already present";
 		return null;
@@ -67,7 +75,8 @@ public class AdaptiveTrajectoryAnalyzer extends BaseHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "archaic";
 		if (index == 1) return "" + (int) RANGE_BONUS_COMPOSITE + "%";
-		if (index == 2) return "" + (int) RANGE_BONUS_MISSILE + "%";
+		if (index == 2) return "" + (int) RANGE_BONUS_BALLISTIC + "%";
+		if (index == 3) return "threat infected";
 		return null;
 	}
 }

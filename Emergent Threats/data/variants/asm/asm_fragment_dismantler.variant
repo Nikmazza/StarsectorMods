@@ -1,0 +1,23 @@
+{
+    "displayName": "Volatile Dismantler Swarm",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": false,
+    "hullId": "asm_dismantler_swarm",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "asm_fragment_dismantler",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "asm_fermion_decoupler_fighter"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "voltaic_discharge"}
+        },
+    ]
+}

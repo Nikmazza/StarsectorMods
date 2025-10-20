@@ -16,7 +16,7 @@
 		"renderCircleIndicator":true,
 		"tags":["has_interaction_dialog", "neutrino_high", "jdp_missiletag"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
-		"pluginClass":"Jaydee8652.JaydeePiracy.campaign.jdp_MissileEntityPlugin",
+		"pluginClass":"Jaydee8652.JaydeePiracy.campaign.entities.jdp_MissileEntityPlugin",
 	},
 	"jdp_derelictmissile":{
 		"defaultName":"Domain-era Derelict", # used if name=null in addCustomEntity()
@@ -60,6 +60,174 @@
 		"tags":["has_interaction_dialog", "salvageable", "neutrino", "not_random_mission_target"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
+	"jdp_skyhook_anchor":{
+		"defaultName":"Domain-era Skyhook Anchor", # used if name=null in addCustomEntity()
+		"defaultRadius":50, # used if radius<0 in addCustomEntity()
+		"nameInText":"Skyhook Anchor",
+		"shortName":"Skyhook",
+		"customDescriptionId":"jdp_skyhook_anchor",
+		"interactionImage":"graphics/illustrations/jdp_station1.png",
+		"icon":"graphics/icons/campaign/jdp_skyhook_anchor_icon.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/jdp_skyhook_anchor.png",
+		"spriteWidth":80,
+		"spriteHeight":80,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino", "not_random_mission_target"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+
+	"jdp_suppression_ship":{
+		"defaultName":"Domain-era Suppression Ship", # used if name=null in addCustomEntity()
+		"nameInText":"Domain-era Suppression Ship",
+		"shortName":"Suppression Ship",
+		"aOrAn":"a",
+		"isOrAre":"is",
+		"defaultRadius":67, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"jdp_suppression_ship",
+		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
+		"icon":"graphics/icons/campaign/jdp_suppression_ship_icon.png",
+		"iconWidth":16,
+		"iconHeight":16,
+		"sprite":"graphics/stations/jdp_supression_ship.png",
+		"spriteWidth":110,
+		"spriteHeight":110,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "not_random_mission_target"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true,
+	},
+	"jdp_erratic_lamp":{
+		"defaultName":"Erratic Fusion Lamp", # used if name=null in addCustomEntity()
+		"defaultRadius":40, # used if radius<0 in addCustomEntity()
+		"detectionRange":3000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":500,
+		#"icon":"graphics/icons/warning_beacon.png",
+		#"iconColor":[255,165,100,255],
+		#"iconWidth":24,
+		#"iconHeight":24,
+		#"spriteWidth":64,
+		#"spriteHeight":64,
+		"showInCampaign":true,
+		"showIconOnMap":false,
+		"scaleIconWithZoom":true,
+		"customDescriptionId":"jdp_erratic_lamp",
+		"renderCircleIndicator":false,
+		"interactionImage":"graphics/illustrations/fusion_lamp.jpg",
+		"tags":["has_interaction_dialog", "neutrino_high", "not_random_mission_target"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"Jaydee8652.JaydeePiracy.campaign.entities.jdp_FusionLampEntityPlugin",
+	},
+	"jdp_shantygate":{
+		"defaultName":"Orbital Complex", # used if name=null in addCustomEntity()
+		"nameInText":"inactive gate",
+		"aOrAn":"an",
+		"defaultRadius":125, # used if radius<0 in addCustomEntity()
+		#"icon":"graphics/icons/campaign/jdp_gatehome_icon.png",
+		"icon":"graphics/icons/gate0.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/jdp_shantygate.png",
+		"spriteWidth":200,
+		"spriteHeight":200,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":true,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"nameColor":[70,200,255,255],
+		"nameShadowColor":[0,0,0,255],
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true,
+		"customDescriptionId":"jdp_gatehome",
+		"interactionImage":"graphics/illustrations/jdp_gatehome.png",
+		"tags":["has_interaction_dialog", "neutrino", "not_random_mission_target", "station"],
+		"layers":[STATIONS, BELOW_STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	"jdp_meshugatron":{
+		"defaultName":"Domain-era Meshugatron", # used if name=null in addCustomEntity()
+		"defaultRadius":50, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"orbital_station_default",
+		"interactionImage":"graphics/illustrations/orbital.jpg",
+		"icon":"graphics/icons/campaign/jdp_meshugatron_icon.png",
+		"iconWidth":20,
+		"iconHeight":20,
+		"sprite":"graphics/stations/jdp_meshugatron.png",
+		"spriteWidth":80,
+		"spriteHeight":80,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["station"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+	"jdp_probe":{
+		"defaultName":"Probe", # used if name=null in addCustomEntity()
+		"nameInText":"probe",
+		"shortName":"probe",
+		"aOrAn":"a",
+		"isOrAre":"is",
+		"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":500,		
+		"defaultRadius":25, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"generic_probe",
+		"interactionImage":"graphics/illustrations/generic_probe.jpg",
+		"icon":"graphics/icons/generic_probe_icon.png",
+		"iconWidth":16,
+		"iconHeight":16,
+		"sprite":"graphics/stations/jdp_probe.png",
+		"spriteWidth":36,
+		"spriteHeight":36,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog", "neutrino"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true,
+		"pluginClass":"Jaydee8652.JaydeePiracy.campaign.entities.jdp_ProbeEntityPlugin",
+	},
+	"jdp_orbital_mines":{
+		"defaultName":"Stealth Mine", # used if name=null in addCustomEntity()
+		"defaultRadius":0, # used if radius<0 in addCustomEntity()
+		"sheet":"graphics/stations/jdp_minimines.png",
+		"sheetCellSize":32,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":false,
+		"showNameOnMap":false,
+		"interactable":false,
+		"tags":["orbital_junk"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+	},
+
 }
 
 

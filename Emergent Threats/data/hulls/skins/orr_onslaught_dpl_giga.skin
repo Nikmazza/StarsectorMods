@@ -13,4 +13,5 @@
 		"WS 016": "orr_giga",
 		"WS 017": "orr_giga"
 	},
+	"builtInMods":["orr_dplslaught"],
 }

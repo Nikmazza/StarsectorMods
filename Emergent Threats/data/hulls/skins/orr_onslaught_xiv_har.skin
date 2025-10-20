@@ -1,0 +1,23 @@
+{
+	"baseHullId":"onslaught",
+	"skinHullId":"orr_onslaught_xiv_har",
+	"hullName":"Onslaught (XIV)",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
+	"descriptionId":"onslaught",
+	"descriptionPrefix":"Built to the specifications of the 14th Domain Battlegroup which founded the Hegemony, this vessel is a prime example of the Domain Navy's 'decisive battle' doctrine, particularly exhibited by a series of radical structural modifications performed using pre-Collapse industrial technology.",
+	"tags":["no_dealer", "orr_har", "hide_in_codex"],
+	"tech":"XIV Battlegroup",
+	"fleetPoints":35,
+	"ordnancePoints":370,
+	"baseValueMult":1.75,
+	"spriteName":"graphics/orr/ships/onslaught_xiv_tpc.png",
+	"addHints":["HIDE_IN_CODEX"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"builtInMods":["fourteenth"],
+	"builtInWeapons":{
+		"WS 016": "orr_har",
+		"WS 017": "orr_har"
+	},
+}

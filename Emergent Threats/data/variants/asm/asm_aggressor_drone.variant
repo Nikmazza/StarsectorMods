@@ -1,0 +1,61 @@
+{
+    "displayName": "Drone",
+    "fluxCapacitors": 0,
+    "fluxVents": 45,
+    "goalVariant": true,
+    "hullId": "asm_aggressor_tac",
+    "hullMods": [
+        "magazines",
+        "vice_field_repair_nanites",
+        "targetingunit",
+        "fragment_swarm",
+        "vice_adaptive_trajectory_analyzer"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "asm_aggressor_drone",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "kinetic_fragments",
+                "WS 009": "kinetic_fragments",
+                "WS 016": "orr_tac",
+                "WS 017": "orr_tac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "heavy_mass_driver",
+                "WS 012": "heavy_mass_driver",
+                "WS 013": "heavy_mass_driver",
+                "WS 014": "heavy_mass_driver",
+                "WS 018": "asm_voltaic_multipulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "voidblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "asm_fermion_decoupler",
+                "WS 005": "asm_fermion_decoupler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "voltaic_discharge",
+                "WS 003": "voltaic_discharge"
+            }
+        }
+    ]
+}

@@ -1,0 +1,177 @@
+{
+  "hullName": "Wolf (GM)",
+  "hullId": "wolf_GM",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/wolf_GM_new.png",
+  "style": "HIGH_TECH",
+  "height": 96,
+  "width": 60,
+  "center": [30, 50],
+  "collisionRadius": 76.741447,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 64.484497,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMDA"
+  ],
+  "builtInWeapons": {
+    "WS0007": "blinker_pol_blue",
+    "WS0008": "blinker_pol_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 169,
+      "angle": 102.5,
+      "locations": [-22.5, 11]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 169,
+      "angle": -102.5,
+      "locations": [-22.5, -11]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [3.5, 20]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [3.5, -20]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 221,
+      "angle": 0,
+      "locations": [1, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [36.5, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [3.5, 9.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [3.5, -9.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-48.5, 0.5],
+      "length": 54,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47.5, 9],
+      "length": 22.719936,
+      "width": 10.402777,
+      "angle": 157.5,
+      "contrailSize": 10.402777,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47.5, -9],
+      "length": 22.719936,
+      "width": 10.402777,
+      "angle": -157.5,
+      "contrailSize": 10.402777,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-43.5, 14.5],
+      "length": 11.185041,
+      "width": 6.969891,
+      "angle": 157.5,
+      "contrailSize": 6.969891,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-43.5, -14.5],
+      "length": 11.185041,
+      "width": 6.969891,
+      "angle": -157.5,
+      "contrailSize": 6.969891,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-34.5, 20.5],
+      "length": 4.774943,
+      "width": 11.260537,
+      "angle": 168,
+      "contrailSize": 11.260537,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-34.5, -20.5],
+      "length": 4.774943,
+      "width": 11.260537,
+      "angle": -168,
+      "contrailSize": 11.260537,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -48.5, -5.5,
+    -42.5, -17.5,
+    -37.5, -15.5,
+    -34, -25.5,
+    -13, -22,
+    -0.5, -30,
+    9, -29,
+    10, -20.5,
+    21.5, -18,
+    39, -17.5,
+    46, -9,
+    46, 9,
+    39, 17.5,
+    21.5, 18,
+    10, 20.5,
+    9, 29,
+    -0.5, 30,
+    -13, 22,
+    -34, 25.5,
+    -37.5, 15.5,
+    -42.5, 17.5,
+    -48.5, 5.5
+  ]
+}

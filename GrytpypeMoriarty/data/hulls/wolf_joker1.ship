@@ -1,0 +1,193 @@
+{
+  "bounds": [
+    -40,
+    -7,
+    -33,
+    -19.5,
+    -21,
+    -16,
+    -9,
+    -18.5,
+    -5.5,
+    -32,
+    20.5,
+    -32.5,
+    22,
+    -15,
+    30.5,
+    -13.5,
+    42,
+    -6,
+    42,
+    6,
+    30.5,
+    13.5,
+    22,
+    15,
+    20.5,
+    32.5,
+    -5.5,
+    32,
+    -9,
+    18.5,
+    -21,
+    16,
+    -33,
+    19.5,
+    -40,
+    7
+  ],
+  "builtInWeapons": {
+    "WS0006": "ionbeam"
+  },
+  "builtInWings": [],
+  "center": [
+    34,
+    41.5
+  ],
+  "collisionRadius": 64.5,
+  "engineSlots": [
+    {
+      "angle": 153.5,
+      "contrailSize": 8.525994,
+      "length": 12.740755,
+      "location": [
+        -34.5,
+        14
+      ],
+      "style": "LOW_TECH",
+      "width": 8.525994
+    },
+    {
+      "angle": -153.5,
+      "contrailSize": 8.525994,
+      "length": 12.740755,
+      "location": [
+        -34.5,
+        -14
+      ],
+      "style": "LOW_TECH",
+      "width": 8.525994
+    },
+    {
+      "angle": 171,
+      "contrailSize": 15,
+      "length": 14.5,
+      "location": [
+        -38,
+        7.5
+      ],
+      "style": "LOW_TECH",
+      "width": 15
+    },
+    {
+      "angle": -171,
+      "contrailSize": 15,
+      "length": 14.5,
+      "location": [
+        -38,
+        -7.5
+      ],
+      "style": "LOW_TECH",
+      "width": 15
+    },
+    {
+      "angle": 180,
+      "contrailSize": 14,
+      "length": 43,
+      "location": [
+        -39.5,
+        0.5
+      ],
+      "style": "LOW_TECH",
+      "width": 14
+    }
+  ],
+  "height": 94,
+  "hullId": "wolf_joker1",
+  "hullName": "Wolf (Beholder)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 60,
+  "spriteName": "graphics/ships/wolf_joker1.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS0001",
+      "locations": [
+        14.5,
+        22
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS0002",
+      "locations": [
+        14.5,
+        -22
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 1,
+      "arc": 137,
+      "id": "WS0005",
+      "locations": [
+        10,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS0006",
+      "locations": [
+        34,
+        -0
+      ],
+      "mount": "HIDDEN",
+      "size": "MEDIUM",
+      "type": "BUILT_IN"
+    },
+    {
+      "angle": 123.5,
+      "arc": 237,
+      "id": "WS0003",
+      "locations": [
+        -12.5,
+        11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -123.5,
+      "arc": 237,
+      "id": "WS0004",
+      "locations": [
+        -12.5,
+        -11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 68
+}

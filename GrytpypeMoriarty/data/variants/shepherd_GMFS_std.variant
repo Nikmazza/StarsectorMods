@@ -1,0 +1,32 @@
+{
+  "variantId": "shepherd_GMFS_std",
+  "hullId": "shepherd_GMFS",
+  "displayName": "Fire Fighting",
+  "goalVariant": true,
+  "fluxCapacitors": 6,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "efficiency_overhaul",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 008": "gmda_hose"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 007": "gmda_flaregun"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

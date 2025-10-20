@@ -13,4 +13,5 @@
 		"WS 016": "orr_tpl_fast",
 		"WS 017": "orr_tpl_fast"
 	},
+	"builtInMods":["orr_dplslaught"],
 }

@@ -17,11 +17,67 @@
     "shieldRadius": 700,
     "viewOffset": 0,
     "builtInMods": [
-        "dweller_hullmod"
+        "dweller_hullmod",
+        "jdp_anfractuousbeing"
     ],
     "builtInWings": [],
     "builtInModules": null,
     "weaponSlots": [
+        {
+            "id": "SEGMENT1",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 90,
+            "angle": 0,
+            "locations": [
+                    -233,        0
+            ]
+        },
+        {
+            "id": "SEGMENT2",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 90,
+            "angle": 0,
+            "locations": [
+                    -455,        0
+            ]
+        },
+        {
+            "id": "SEGMENT3",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 90,
+            "angle": 0,
+            "locations": [
+                    -677,        0
+            ]
+        },
+        {
+            "id": "SEGMENT4",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 90,
+            "angle": 0,
+            "locations": [
+                    -899,        0
+            ]
+        },
+        {
+            "id": "SEGMENT5",
+            "size": "LARGE",
+            "type": "STATION_MODULE",
+            "mount": "HARDPOINT",
+            "arc": 90,
+            "angle": 0,
+            "locations": [
+                   -1121,        0
+            ]
+        },
         {
             "id": "WS 000",
             "size": "LARGE",

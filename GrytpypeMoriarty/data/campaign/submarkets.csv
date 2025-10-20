@@ -1,0 +1,2 @@
+id,name,faction,desc,script,icon,order
+gmda_market,GMDA Showroom,gmda,"While the front looks like a normal showroom, just about everyone knows it's a front for the GMDA to sell off weapons and ships they have acquired during patrols, as well as a place to legally access the Grytpype and Moriarty Stock Range. Costs an entry fee, and has no tariffs.",data.scripts.campaign.submarkets.GMDA_MarketPlugin,,800.05

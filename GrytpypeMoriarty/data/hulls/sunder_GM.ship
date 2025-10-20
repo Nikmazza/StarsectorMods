@@ -1,0 +1,209 @@
+{
+  "hullName": "Sunder (GM)",
+  "hullId": "sunder_GM",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/sunder_GM.png",
+  "style": "MIDLINE",
+  "height": 183,
+  "width": 94,
+  "center": [47, 91.5],
+  "collisionRadius": 123.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 114,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMDA",
+    "PoorMissileIntegration",
+    "GMDA_engine"
+  ],
+  "builtInWeapons": {
+    "WS0009": "blinker_pol_blue",
+    "WS0010": "blinker_pol_red"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [33.5, 30]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [33.5, -30]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": 47.5,
+      "locations": [9.5, 17.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": -47.5,
+      "locations": [9.5, -17.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 90,
+      "locations": [-64.5, 30]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-64.5, -30]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 180,
+      "locations": [-59, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [30.5, -0]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 180,
+      "locations": [35, 42]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -180,
+      "locations": [35, -42]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-87, 33],
+      "length": 25,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-87, -33],
+      "length": 25,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-89.5, 17],
+      "length": 36,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 18,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-89.5, -17],
+      "length": 36,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 18,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78.5, 7.5],
+      "length": 21.5,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-78.5, -7.5],
+      "length": 21.5,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-83, 39],
+      "length": 10.765625,
+      "width": 9.022486,
+      "angle": 156,
+      "contrailSize": 9.022486,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-83, -39],
+      "length": 10.765625,
+      "width": 9.022486,
+      "angle": -156,
+      "contrailSize": 9.022486,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    41, -3.5,
+    89.5, -5,
+    85.5, -23,
+    42, -24.5,
+    40.5, -46.5,
+    9.5, -47,
+    -24.5, -26.5,
+    -35, -33.5,
+    -47, -33,
+    -57, -42.5,
+    -85.5, -40,
+    -90.5, -11.5,
+    -76, -3.5,
+    -76, 3.5,
+    -90.5, 11.5,
+    -85.5, 40,
+    -57, 42.5,
+    -47, 33,
+    -35, 33.5,
+    -24.5, 26.5,
+    9.5, 47,
+    40.5, 46.5,
+    42, 24.5,
+    85.5, 23,
+    89.5, 5,
+    41, 3.5
+  ]
+}

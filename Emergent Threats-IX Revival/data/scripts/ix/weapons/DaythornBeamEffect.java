@@ -26,10 +26,12 @@ public class DaythornBeamEffect implements BeamEffectPlugin {
 	private static String PROTON_HULLMOD = "ix_dawnstar_proton";
 	private static String NEUTRON_HULLMOD = "ix_dawnstar_neutron";
 	private static String ELECTRON_HULLMOD = "ix_dawnstar_electron";
+	private static String LACERATOR_HULLMOD = "ix_dawnstar_lacerator";
 	
 	private boolean IS_PROTON = false;
 	private boolean IS_NEUTRON = false;
 	private boolean IS_ELECTRON = false;
+	private boolean IS_LACERATOR = false;
 	
 	//private static float PROTON_DAMAGE = 50f;
 	private static float PROTON_DAMAGE = 20f;
@@ -43,6 +45,8 @@ public class DaythornBeamEffect implements BeamEffectPlugin {
 	private static Color PROTON_COLOR = Color.RED.darker();
 	private static Color NEUTRON_COLOR = Color.MAGENTA.darker();
 	private static Color ELECTRON_COLOR = Color.BLUE;
+	private static Color LACERATOR_COLOR = new Color (150,255,100,120);
+	private static Color LACERATOR_CORE = new Color (200,255,150,170);
 	private static Color DEFAULT_COLOR = new Color (255,140,0,255);
 	private Color FRINGE_COLOR = DEFAULT_COLOR;
 
@@ -64,12 +68,17 @@ public class DaythornBeamEffect implements BeamEffectPlugin {
 				FRINGE_COLOR = ELECTRON_COLOR;
 				IS_ELECTRON = true;
 			}
+			else if (variant.hasHullMod(LACERATOR_HULLMOD)) {
+				FRINGE_COLOR = LACERATOR_COLOR;
+				beam.setCoreColor(LACERATOR_CORE);
+				IS_LACERATOR = true;
+			}
 			beam.setFringeColor(FRINGE_COLOR);
 			beam.getWeapon().ensureClonedSpec();
 			runOnce = true;
 		}
 		
-		if (beam.getFringeColor().equals(DEFAULT_COLOR)) return;
+		if (beam.getFringeColor().equals(DEFAULT_COLOR) || IS_LACERATOR) return;
 		
 		if (beam.getBrightness() == 1) {
 			Vector2f start = beam.getFrom();
@@ -82,9 +91,8 @@ public class DaythornBeamEffect implements BeamEffectPlugin {
 				CombatEntityAPI target = beam.getDamageTarget();
 				boolean first = beam.getWeapon().getBeams().indexOf(beam) == 0;
 				if (target instanceof ShipAPI && first) {
-					boolean isShieldHit = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+					boolean isShieldHit = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 					applyOnHitEffect(engine, (ShipAPI) target, end, beam, isShieldHit);	
-					
 				}
 				timer.setElapsed(0);
 			}

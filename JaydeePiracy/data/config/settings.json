@@ -1,13 +1,23 @@
 {
+	"plugins":{
+		"jdp_CombatRenderer":"Jaydee8652.JaydeePiracy.utils.jdp_CombatRenderer",
+		"jdp_flowerfishPerpetualPursuitScript":"Jaydee8652.JaydeePiracy.scripts.skills.flowerfish.scripts.jdp_flowerfishPerpetualPursuitScript",
+	},  
 	"ruleCommandPackages":[
-        "data.scripts.rulescmd",
+        "Jaydee8652.JaydeePiracy.utils.rulecmd",
     ],
 	"designTypeColors":{
 		"Consolidated Mysore-Congreve":[155,155,155,255],
 		"Aquamesh Biogenics":[24,24,119,255],
-		"Flowerfish Mercenary Network":[187,36,55,255],
+		"Flowerfish Network":[187,36,55,255],
+		"Novel Technology":[70,36,115,255],
+		"VI Battlegroup":[130,104,149,255],
+
 	},
 	"graphics":{
+		"misc":{
+		  "jdp_lunaSettingsIcon":"graphics/icons/jdp_icon.png"
+	  	},
 		"campaignEntities":{
 			"jdp_missile":"graphics/stations/jdp_missile.png",
 			"jdp_missile_glow":"graphics/stations/jdp_missile_glow.png",
@@ -15,8 +25,10 @@
 		"glows":{
             "jdp_laplacian_glow1":"graphics/ships/jdp_laplacian_glow1.png",
             "jdp_laplacian_glow2":"graphics/ships/jdp_laplacian_glow2.png",
+			"jdp_lampstar":"graphics/planets/star_yellow-orange.jpg",
         },
 		"illustrations":{
+			"jdp_grinhangar":"graphics/illustrations/jdp_grinhangar.png",
 			"jdp_station1":"graphics/illustrations/jdp_station1.png",
 			"jdp_station2":"graphics/illustrations/jdp_station2.png",
 			"jdp_station3":"graphics/illustrations/jdp_station3.png",
@@ -26,7 +38,10 @@
 			"jdp_derelictmissile":"graphics/illustrations/jdp_derelictmissile.png",
 			"jdp_derelictservers":"graphics/illustrations/jdp_derelictservers.png",
 			"jdp_derelictpenrose":"graphics/illustrations/jdp_derelictpenrose.png",
-
+			"jdp_gatehome":"graphics/illustrations/jdp_gatehome.png",
+		},
+		"ui":{
+			"jdp_icon_abstractcausality":"graphics/warroom/jdp_icon_abstractcausality.png",
 		},
 		"characters":{
 			"jdp_calhoum":"graphics/portraits/jdp_calhoum.png",
@@ -41,6 +56,13 @@
 			"jdp_maerula":"graphics/portraits/jdp_maerula.png",
 			"jdp_wasabi":"graphics/portraits/jdp_wasabi.png",
 			"jdp_kabayaki":"graphics/portraits/jdp_kabayaki.png",
+			"jdp_dzintra":"graphics/portraits/jdp_dzintra.png",
+			"jdp_agyala_civ":"graphics/portraits/jdp_agyala_civ.png",
+			"jdp_agyala_domain":"graphics/portraits/jdp_agyala_domain.png",
+			"jdp_klaes":"graphics/portraits/jdp_klaes.png",
+		},
+		"hab_glows":{
+			"jdp_lightning":"graphics/planets/jdp_lightning.png",
 		},
 	}
 }

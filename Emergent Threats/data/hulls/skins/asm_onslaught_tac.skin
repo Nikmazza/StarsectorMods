@@ -1,0 +1,19 @@
+{
+	"baseHullId":"asm_onslaught_base",
+	"skinHullId":"asm_onslaught_tac",
+	"hullName": "Onslaught (T)",
+	"incompatibleWithBaseHull":true, # for the autofit dialog
+	"descriptionId":"asm_onslaught",
+	"descriptionPrefix":"Subject identified: Onslaught-class battleship. MINEX frontier automation package detected. Unknown modifications detected. Querying database... \"While the use of an automated stay-behind force to monitor the transition period was not unprecedented, the materiel activated by the battlegroup for the task, including heavy warship assets, drew consid- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING",
+	"tags":["no_dealer", "codex_unlockable", "asm_threat", "no_autofit", "orr_tac", "auto_rec"], #threat tag added by Amorphous Armor
+	"addHints":["UNBOARDABLE"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"builtInWings": ["asm_swarm_wing"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"builtInWeapons":{
+		"WS 016": "orr_tac",
+		"WS 017": "orr_tac"
+	},
+}

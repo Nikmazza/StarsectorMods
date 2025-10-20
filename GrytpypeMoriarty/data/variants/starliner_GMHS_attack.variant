@@ -1,0 +1,41 @@
+{
+  "variantId": "starliner_GMHS_attack",
+  "hullId": "starliner_GMHS",
+  "displayName": "Militarized",
+  "goalVariant": true,
+  "fluxCapacitors": 30,
+  "fluxVents": 3,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "militarized_subsystems",
+    "missleracks"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0017": "sabotpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0013": "reaper",
+        "WS0014": "reaper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0015": "vulcan",
+        "WS0016": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

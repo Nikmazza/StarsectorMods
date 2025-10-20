@@ -4,6 +4,22 @@ public class jdp_Conditions {
 	public static final String JDP_PKINSPIRE = "jdp_PKInspire";
 	public static final String JDP_PKINSPIRE_ALPHA = "jdp_PKInspireAlpha";
 	public static final String JDP_CRYOSANCTUM = "jdp_failedCryosanctum";
+
 	public static final String JDP_VOLTURNIANLOBSTERPENS = "jdp_volturnianLobsterPens";
+
+	public static final String JDP_QUARRYLAKES = "jdp_quarryLakes";
+	public static final String JDP_ENCROACHINGBIOFACTORY = "jdp_encroachingBiofactory";
+	public static final String JDP_LOGISTICSCOMPLEX = "jdp_logisticsComplex";
+	public static final String JDP_EUTROPHICATEDBIOSPHERE = "jdp_eutrophicatedBiosphere";
+	public static final String JDP_REBELARSENAL = "jdp_rebelArsenal";
+	public static final String JDP_GLASSEDWORLD = "jdp_glassedWorld";
+	public static final String JDP_METASTATICSENSORIUM = "jdp_metastaticSensorium";
+	public static final String JDP_DOMAINMESHUGATRON = "jdp_domainMeshugatron";
+
+	public static final String JDP_ANCIENTCANDI = "jdp_ancientCandi";
+	public static final String JDP_SUBSHEETECOSYSTEM = "jdp_subsheetEcosystem";
+
+	public static final String JDP_HUBRISMARKER = "jdp_hubrisMarker";
+
 
 }

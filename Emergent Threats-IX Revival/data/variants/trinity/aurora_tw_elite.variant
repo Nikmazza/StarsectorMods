@@ -1,0 +1,61 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 0,
+    "fluxVents": 19,
+    "goalVariant": true,
+    "hullId": "aurora_tw",
+    "hullMods": [
+        "ix_dawnstar_controller",
+        "advancedoptics",
+        "targetingunit",
+        "frontemitter",
+        "stabilizedshieldemitter",
+        "ix_dawnstar_electron",
+        "ix_dawnstar_electron_handler"
+    ],
+    "modules": [{"WS 010": "aurora_tw_undershield"}],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "aurora_tw_elite",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "dawnstar_lcpb_ix",
+                "WS 008": "dawnstar_lcpb_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "spatial_charge_launcher_ix",
+                "WS 012": "spatial_charge_launcher_ix",
+                "WS 013": "spatial_charge_launcher_ix",
+                "WS 014": "spatial_charge_launcher_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "starfall_rocket_ix"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "morningstar_ciws_ix",
+                "WS 002": "morningstar_ciws_ix",
+                "WS 003": "morningstar_ciws_ix",
+                "WS 004": "morningstar_ciws_ix",
+                "WS 005": "morningstar_ciws_ix",
+                "WS 006": "morningstar_ciws_ix"
+            }
+        }
+    ],
+    "wings": [
+        "nimbus_tw_wing_r",
+        "nimbus_tw_wing_r"
+    ]
+}

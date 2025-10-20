@@ -1,0 +1,226 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+	
+			"lasher_GM_standard":5,
+			"lasher_GM_pursuit":2,
+			"lasher_GM_assault":5,
+			
+			"kite_GM_support":5,
+			"kite_GM_strafe":2,
+			"kite_GM_swarm":2,
+			
+			"wolf_GM_strike":5,
+			"wolf_GM_close_support":2,
+			"wolf_GM_standard":2,
+
+			"vigilance_GM_cs":1,
+			"vigilance_GM_strike":2,
+			"vigilance_GM_attack":2,	
+
+			"buffalo2_GM_support":5,	
+			
+			"cerberus_GM_std":5,
+	},
+	"combatSmall":{
+	
+			"lasher_GM_standard":10,
+			"lasher_GM_pursuit":2,
+			"lasher_GM_assault":5,
+			"lasher_GM_elite":1,
+			"lasher_GM_escort":6,
+			"lasher_GM_emp":2,
+			
+			"wolf_GM_strike":5,
+			"wolf_GM_pursuit":5,
+			"wolf_GM_pursuit2":5,
+			"wolf_GM_close_support":7,
+			"wolf_GM_standard":10,
+			"wolf_GM_elite":2,
+			
+			"wolf_GMHQ_standard":4,
+			"wolf_GMHQ_elite":1,			
+			
+			"kite_GM_support":2,
+			"kite_GM_attack":2,
+			"kite_GM_attack1":1,			
+			"kite_GM_pursuit":1,	
+			"kite_GM_cs":1,
+			"kite_GM_strafe":2,
+			"kite_GM_swarm":2,
+			
+			"vigilance_GM_missile":5,
+			"vigilance_GM_cs":5,
+			"vigilance_Standard":8,		
+			"vigilance_GM_ionstrike":2,
+			"vigilance_GM_strike":2,
+			"vigilance_GM_attack":2,
+	},
+	"combatMedium":{
+			"hammerhead_GM_standard":10,
+			"hammerhead_GM_elite":1,
+			"hammerhead_GM_close_support":6,
+			"hammerhead_GM_assault":4,
+			
+			"sunder_GM_cs":4,
+			"sunder_GM_elite":1,
+			"sunder_GM_standard":10,
+			"sunder_GM_standard2":8,
+			"sunder_GM_strike":2,
+			
+			"buffalo2_GM_support":5,
+			"buffalo2_GM_strike":2,
+			"buffalo2_GM_cs":2,
+			
+			"tarsus_GM_standard":4,
+			"tarsus_GM_strike":4,
+			"tarsus_GM_pursuit":2,
+			"tarsus_GM_attack":2,
+
+			"mule_GM_std":4,
+			"mule_GM_cs":4,
+			"mule_GM_attack":2,
+			"mule_GM_strike":2,			
+	},
+	"combatLarge":{
+			"falcon_GM_assault":2,
+			"falcon_GM_close_support":2,
+			"falcon_GM_annhiliator":5,
+			"falcon_GM_standard":10,
+			"falcon_GM_elite":1,
+			"falcon_GM_strike":5,
+
+			"venture_GM_armour_support":4,
+			"venture_GM_armour_strike":1,
+			"venture_GM_armour_std":5,
+
+			"venture_GM_attack":3,
+			"venture_GM_escort":1,
+			"venture_GM_hq":3,
+			"venture_GM_cs":3,			
+			
+			
+	},
+	"combatCapital":{
+		
+		"atlas_GM_std":4,
+		"atlas_GM_attack":2,
+		"atlas_GM_cs":1,		
+		
+		"onslaught_GM_attack":4,
+		"onslaught_GM_cs":2,
+		"onslaught_GM_elite":1,
+	},
+	
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+		"cerberus_GM_std":7,
+		"cerberus_GM_escort":3,
+		"shepherd_GMFS_std":5,
+		"shepherd_GMFS_attack":1,		
+	},
+	"combatFreighterMedium":{
+			"gemini_GMFS_std":4,
+			"gemini_GMFS_attack":2,	
+	},
+	"combatFreighterLarge":{
+			"mora_GMFS_std":7,
+	},
+	
+	"civilianRandom":{
+		"kite_GM_support":2,	
+		"cerberus_GM_std":5,
+		"shepherd_GMFS_std":5,	
+	},
+
+	# carriers
+	"carrierSmall":{
+		"cerberus_GM_std":5,
+		"cerberus_GM_escort":5,
+
+		"mudskipper_GMHS_std":2,
+		"mudskipper_GMHS_attack":1,	
+		
+		"shepherd_GMFS_std":2,
+		"shepherd_GMFS_attack":1,
+	},
+	"carrierMedium":{
+		"condor_GM_brawler":2,
+		"condor_GM_strike":2,
+		"condor_GM_pursuit":4,
+		"condor_GM_pd":2,
+		
+		"colossus3_GM_std":7,
+		"colossus3_GM_pd":2,
+		"colossus3_GM_strike":2,
+		"colossus3_GM_missile":1,
+		
+		"nebula_GMHS_std":2,
+		"nebula_GMHS_attack":1,
+		
+		"gemini_GMFS_std":7,
+		"gemini_GMFS_attack":3,		
+		
+	},
+	"carrierLarge":{
+		"venture_GM_attack":5,
+		"venture_GM_escort":2,
+		"venture_GM_hq":8,
+		"venture_GM_cs":5,
+
+		"starliner_GMHS_std":2,
+		"starliner_GMHS_attack":1,
+
+		"mora_GMFS_std":5,
+		"mora_GMFS_attack":4,
+		"mora_GMFS_so":1,
+	},
+
+	# phase ships
+	"phaseSmall":{
+		"lasher_GMHQ_cs":3,
+		"lasher_GMHQ_attack":7,
+		"gremlin_GM_std":7,
+		"gremlin_GM_strike":3,
+		"wolf_GMHQ_standard":7,
+		"wolf_GM_pursuit":3,		
+	},
+	"phaseMedium":{
+		"hammerhead_GMHQ_cs":2,
+		"hammerhead_GMHQ_attack":3,
+		"sunder_GMHQ_standard":4,
+		"sunder_GMHQ_elite":1,
+	},
+
+	# freighters and such
+
+
+	"personnelSmall":{
+		"mudskipper_GMHS_std":8,
+		"mudskipper_GMHS_attack":2,
+	},
+	"personnelMedium":{
+		"nebula_GMHS_std":8,
+		"nebula_GMHS_attack":2,
+	},
+	"personnelLarge":{
+		"starliner_GMHS_std":4,
+		"starliner_GMHS_attack":2,
+	},
+	
+	"linerSmall":{
+		"mudskipper_GMHS_std":2,
+		"mudskipper_GMHS_attack":1,
+	},
+	"linerMedium":{
+		"nebula_GMHS_std":2,
+		"nebula_GMHS_attack":1,
+	},
+	"linerLarge":{
+		"starliner_GMHS_std":2,
+		"starliner_GMHS_attack":1,
+	},
+	
+}

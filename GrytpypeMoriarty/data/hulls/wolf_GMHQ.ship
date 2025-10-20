@@ -1,0 +1,169 @@
+{
+  "hullName": "Wolf (GMHQ)",
+  "hullId": "wolf_GMHQ",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/wolf_GMHQ_new.png",
+  "style": "HIGH_TECH",
+  "height": 98,
+  "width": 60,
+  "center": [30, 47],
+  "collisionRadius": 72.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 65,
+  "viewOffset": 0,
+  "builtInMods": [
+    "GMHQ"
+  ],
+  "builtInWings": [
+    "terminator_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [42.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [3, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [7, 20]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [7, -20]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 169,
+      "angle": 113,
+      "locations": [-19, 11]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 169,
+      "angle": -113,
+      "locations": [-19, -11]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-21.5, 4]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-43, -0.5],
+      "length": 24,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-46.5, 7],
+      "length": 10,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-46.5, -7],
+      "length": 10,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-42.5, 12],
+      "length": 8,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-42.5, -12],
+      "length": 8,
+      "width": 9,
+      "angle": -180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31.5, 20.5],
+      "length": 8.854914,
+      "width": 12.262221,
+      "angle": 170,
+      "contrailSize": 12.262221,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-31.5, -20.5],
+      "length": 8.854914,
+      "width": 12.262221,
+      "angle": -170,
+      "contrailSize": 12.262221,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -43.5, -3,
+    -46, -7.5,
+    -39, -17,
+    -33.5, -16,
+    -29, -26.5,
+    -7, -22.5,
+    3, -30,
+    13, -27.5,
+    13, -19.5,
+    27.5, -16,
+    45.5, -16.5,
+    51, -8,
+    51, 8,
+    45.5, 16.5,
+    27.5, 16,
+    13, 19.5,
+    13, 27.5,
+    3, 30,
+    -7, 22.5,
+    -29, 26.5,
+    -33.5, 16,
+    -39, 17,
+    -46, 7.5,
+    -43.5, 3
+  ]
+}

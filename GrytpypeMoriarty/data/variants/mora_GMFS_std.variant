@@ -1,0 +1,56 @@
+{
+  "variantId": "mora_GMFS_std",
+  "hullId": "mora_GMFS",
+  "displayName": "Fire Fighting",
+  "goalVariant": true,
+  "fluxCapacitors": 0,
+  "fluxVents": 14,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "efficiency_overhaul",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 002": "breach",
+        "WS0001": "breach"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 003": "gmda_hydrant",
+        "WS 004": "gmda_hydrant"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 005": "gmda_hose",
+        "WS 007": "gmda_hose",
+        "WS 012": "gmda_hose",
+        "WS 013": "gmda_hose"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS 008": "gmda_flaregun",
+        "WS 011": "gmda_flaregun",
+        "WS 014": "gmda_flaregun"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_GM_wing",
+    "gladius_GM_wing"
+  ]
+}

@@ -16,7 +16,7 @@ public class jdp_subcore extends BaseHullMod {
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return Math.round(AUTOFIRE_AIM) + " standard unit";
-        if (index == 1) return "1 grid unit";
+		if (index == 1) return "" + (int)Math.round(VISION_BONUS);
         return null;
     }
 }

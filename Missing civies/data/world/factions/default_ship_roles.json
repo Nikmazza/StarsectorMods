@@ -1,0 +1,17 @@
+{
+
+	"combatMedium":{
+		"missp_nyx_Standard":4,
+		"missp_nyx_Flak":3,
+		"missp_nyx_Elite":3,
+	},
+	"combatLarge":{
+		"missp_gamble_Standard":7,
+	},
+	"carrierSmall":{
+		"missp_buffalomkiii_Standard":6,
+	},
+	"carrierMedium":{
+		"missp_starliner_training_carrier_Standard":6,
+	},
+}

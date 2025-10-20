@@ -57,7 +57,7 @@ public class CTEOnHit implements OnFireEffectPlugin, OnHitEffectPlugin {
 				2.5f, //brightness
 				1.0f, //duration
 				CORE_COLOR);
-				
+		
 		float angle = weapon.getCurrAngle() - 180f;
 		Vector2f loc = MathUtils.getPointOnCircumference(weapon.getLocation(), 18f, angle);
 		Vector2f shipVelocity = weapon.getShip().getVelocity();
@@ -123,7 +123,7 @@ public class CTEOnHit implements OnFireEffectPlugin, OnHitEffectPlugin {
 					weaponLoc, 
 					thisShip, 
 					point, 
-					null,
+					target,
 					20f, 
 					EMP_PURPLE,
 					CORE_COLOR
@@ -132,7 +132,7 @@ public class CTEOnHit implements OnFireEffectPlugin, OnHitEffectPlugin {
 					weaponLoc, 
 					thisShip, 
 					point, 
-					null,
+					target,
 					20f, 
 					EMP_PURPLE,
 					CORE_COLOR

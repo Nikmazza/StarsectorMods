@@ -1,0 +1,28 @@
+{
+	"id":"jdp_marlingun",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/jdp_marlingun_body.png",
+	"turretGunSprite":"graphics/weapons/jdp_marlingun_barrel.png",
+	"hardpointSprite":"graphics/weapons/jdp_marlingun_body.png",
+	"hardpointGunSprite":"graphics/weapons/jdp_marlingun_barrel.png",	
+	"visualRecoil":8.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[44, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[60, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"LINKED", #ALTERNATING or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",
+	"muzzleFlashSpec":{"length":34.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":10.0,
+					   "particleSizeMin":18.0,
+					   "particleSizeRange":24.0,
+					   "particleDuration":0.12,
+					   "particleCount":12,
+					   "particleColor":[255,185,215,215]},
+	"projectileSpecId":"jdp_marlingun_shot",  # projectile that will be fired
+    "everyFrameEffect":"Jaydee8652.JaydeePiracy.scripts.weapons.jdp_MarlingunEveryframe",
+	"fireSoundTwo":"gauss_cannon_fire",
+}

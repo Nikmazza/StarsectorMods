@@ -34,15 +34,15 @@ public class Kayse_PhaseCarrier extends BaseHullMod {
 
     @Override
     public boolean isApplicableToShip(ShipAPI ship) {
-        if (! ship.getVariant().hasHullMod("phasefield"))
+        if (ship.getHullSpec().getDefenseType() != ShieldAPI.ShieldType.PHASE)
             return false;
         return super.isApplicableToShip(ship);
     }
 
     @Override
     public String getUnapplicableReason(ShipAPI ship) {
-        if (! ship.getVariant().hasHullMod("phasefield"))
-            return "Requires Phase Field";
+        if (ship.getHullSpec().getDefenseType() != ShieldAPI.ShieldType.PHASE)
+            return "Requires Phase";
         return super.getUnapplicableReason(ship);
     }
 

@@ -37,13 +37,17 @@ public class CompactAutomationHandler extends BaseHullMod {
 		}
 		
 		//workaround for unofficial new game plus/second in command SO and balans editions incompatability
-		if (Global.getSettings().getModManager().isModEnabled("ungp")) return;
-		if (Global.getSettings().getModManager().isModEnabled("second_in_command_addon")) return;
-		if (Global.getSettings().getModManager().isModEnabled("balans_skills_SiC")) return;
+		//if (Global.getSettings().getModManager().isModEnabled("ungp")) return;
+		//if (Global.getSettings().getModManager().isModEnabled("second_in_command_addon")) return;
+		//if (Global.getSettings().getModManager().isModEnabled("balans_skills_SiC")) return;
 		
-		int shipOp = getShipOP(stats.getVariant());
+		int shipBaseOp = getShipOP(stats.getVariant());
+		float shipActualOp = shipBaseOp;
+		if (Global.getSector() != null && Global.getSector().getPlayerStats() != null) {
+			shipActualOp = Global.getSector().getPlayerStats().getShipOrdnancePointBonus().computeEffective(shipBaseOp);
+		}
 		int usedOp = getUsedOP(stats.getVariant());
-		int op = shipOp - usedOp;
+		float op = shipActualOp - usedOp;
 		
 		//add error mod if over the OP limit
 		if (op < 0 && !stats.getVariant().hasHullMod(ERROR_MOD_ID) && !stats.getVariant().hasHullMod(ERROR_MOD_TW)) {

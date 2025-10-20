@@ -13,4 +13,5 @@
 		"WS 016": "orr_hmc",
 		"WS 017": "orr_hmc"
 	},
+	"builtInMods":["orr_dplslaught"],
 }

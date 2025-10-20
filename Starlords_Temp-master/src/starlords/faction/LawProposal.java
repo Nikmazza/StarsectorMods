@@ -90,12 +90,15 @@ public class LawProposal {
     public int getTotalSupport() {
         int ctr = 0;
         for (String lordStr : supporters) {
-            ctr += PoliticsController.getPoliticalWeight(LordController.getLordOrPlayerById(lordStr));
+            Lord lord = LordController.getLordOrPlayerById(lordStr);
+            if (lord == null) continue;
+            ctr += PoliticsController.getPoliticalWeight(lord);
         }
         if (playerSupports) {
             if (!faction.equals(Global.getSector().getPlayerFaction())) {
                 ctr += PoliticsController.getPoliticalWeight(LordController.getPlayerLord());
             } else  {
+                ctr += PoliticsController.PLAYER_EXTRA_COUNCIL_WEIGHT;
                 ctr *= PoliticsController.getLiegeMultiplier(Global.getSector().getPlayerFaction());
             }
         }

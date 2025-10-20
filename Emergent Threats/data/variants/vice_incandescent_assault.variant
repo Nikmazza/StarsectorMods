@@ -1,16 +1,16 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 20,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 45,
     "goalVariant": true,
     "hullId": "vice_incandescent",
     "hullMods": [
         "fluxdistributor",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_phase_coils",
         "vice_module_handler",
-        "vice_feedback_handler"
+        "vice_feedback_handler",
+        "vice_adaptive_drone_bay"
     ],
     "permaMods": ["vice_module_handler"],
     "sMods": [],
@@ -67,5 +67,6 @@
                 "WS 017": "guardian"
             }
         }
-    ]
+    ],
+    "wings": ["vice_starquake_wing"]
 }

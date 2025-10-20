@@ -1,0 +1,13 @@
+{
+  "faction":"gmda",
+  "firstname":"Neddy",
+  "lastname":"Seagoon",
+  "gender":"M",
+  "officerlevel":-1,
+  "mainShip":"tarsus_GMs_elite",
+  "ships":["condor_GM_1","4","condor_GM_2","4","tarsus_GM_1","4","tarsus_GMs_standard","2","tarsus_GMs_escort","2"],
+  "reward":85000,
+  "description":"A crazed man, who joined the Society to earn his way to fame and fortune. Also a despicable embarrasment. Please kill him as soon as possible.",
+  "dialog":"Ha ha HA HA HAHAHAHA! You foolish fool! You cannot even begin to FATHOM the DEPTHS of your eventual FAILURE! HAHAHA- *coughing is heard off viewscreen*.",
+  "avatar":"graphics/portraits/portrait_neddy.png",
+}

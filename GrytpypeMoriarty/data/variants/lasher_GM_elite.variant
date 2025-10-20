@@ -1,0 +1,48 @@
+{
+  "displayName": "Elite",
+  "fluxCapacitors": 2,
+  "fluxVents": 5,
+  "goalVariant": true,
+  "hullId": "lasher_GM",
+  "hullMods": [
+    "blast_doors",
+    "insulatedengine"
+  ],
+  "permaMods": [],
+  "quality": 0,
+  "variantId": "lasher_GM_elite",
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "lightneedler",
+        "WS0003": "lightneedler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0006": "atropos",
+        "WS0007": "atropos"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0004": "lightag",
+        "WS0005": "lightag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "vulcan"
+      }
+    }
+  ],
+  "wings": []
+}

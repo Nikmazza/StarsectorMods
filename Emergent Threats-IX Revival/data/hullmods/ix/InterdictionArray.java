@@ -18,7 +18,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class InterdictionArray extends BaseHullMod {
  
-	private static String NEW_SYSTEM = "Interdictor Array"; //text only, switch done by HANDLER_HULLMOD
+	private static String NEW_SYSTEM = "Interdictor Array";
+	private static String INTERDICTOR_SYS_ID = "ix_interdictor";
 	private static int RANGE = 2000; //text only, range set in InterdictorPulseAI, InterdictorPulseTargeting
 	private static int KINETIC_DAMAGE = 2000; //text only, damage set in weapons.csv
 	private static int BURN_BONUS = 1;
@@ -31,6 +32,7 @@ public class InterdictionArray extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getMaxBurnLevel().modifyFlat(id, BURN_BONUS);
 		if (stats.getVariant().hasHullMod("fed_energymod")) stats.getEnergyAmmoBonus().modifyMult(id, 1.1765f);
+		stats.getVariant().getHullSpec().setShipSystemId(INTERDICTOR_SYS_ID);
 	}
 	
 	public static class ParagonIXData {

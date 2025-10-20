@@ -1,12 +1,11 @@
 {
     "displayName": "Advanced",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 4,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_resplendent",
     "hullMods": [
         "turretgyros",
-        "hardenedshieldemitter",
         "stabilizedshieldemitter",
         "vice_unified_targeting_core",
         "vice_adaptive_emitter_diodes"
@@ -60,7 +59,7 @@
         "vice_sundog_wing",
         "vice_sundog_wing",
         "vice_sundog_wing",
-        "vice_sundog_wing",
-        "vice_sundog_wing"
+        "vice_starquake_wing",
+        "vice_starquake_wing"
     ]
 }

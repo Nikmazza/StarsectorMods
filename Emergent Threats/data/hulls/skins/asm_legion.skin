@@ -1,0 +1,16 @@
+{
+	"baseHullId":"asm_legion_base",
+	"skinHullId":"asm_legion",
+	"hullName": "Legion (T)",
+	"incompatibleWithBaseHull":true, # for the autofit dialog
+	"systemId":"asm_dismantler_swarms",
+	"descriptionId":"asm_legion",
+	"descriptionPrefix":"Subject identified: Legion-class battlecarrier. MINEX frontier automation package detected. Unknown modifications detected. Querying database... \"The existence of so called 'dark fabs' have remained a popular conspiracy theory among the grav starved fringe groups of the galactic infosphere. However, a careful examination of over thirty thousand nonstandard nano-fabricators confiscated by Domain authorities within the last decacycle have all shown a common lineage to- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING",
+	"tags":["no_dealer", "codex_unlockable", "asm_threat", "no_autofit", "auto_rec", "threat_fabricator"], #threat tag added by Amorphous Armor hullmod, try "threat_fabricator" tag for reclamation effect
+	"addHints":["UNBOARDABLE"],
+	"removeHints":["HIDE_IN_CODEX"],
+	"builtInWings": ["asm_swarm_wing", "asm_swarm_wing", "asm_swarm_wing", "asm_swarm_wing"],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+}

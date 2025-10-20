@@ -1,0 +1,40 @@
+{
+    "displayName": "Luxury",
+    "fluxCapacitors": 13,
+    "fluxVents": 20,
+    "goalVariant": false,
+    "hullId": "nes_fluorspar_d",
+    "hullMods": [
+        "fluxbreakers",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "nes_fluorspar_d_Luxury",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "chaingun",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "railgun",
+                "WS0004": "railgun",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "dualflak",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

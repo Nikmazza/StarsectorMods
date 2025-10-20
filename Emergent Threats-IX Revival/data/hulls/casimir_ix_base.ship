@@ -7,9 +7,9 @@
   "height": 112,
   "width": 112,
   "center": [56, 51],
-  "collisionRadius": 66,
-  "shieldCenter": [0, -0],
-  "shieldRadius": 66,
+  "collisionRadius": 74,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 74,
   "viewOffset": 0,
   "weaponSlots": [
     {
@@ -37,7 +37,7 @@
       "mount": "TURRET",
       "arc": 135,
       "angle": -180,
-      "locations": [-19, -0]
+      "locations": [-19, 0]
     },
     {
       "id": "WS 004",
@@ -56,6 +56,33 @@
       "arc": 5,
       "angle": -0,
       "locations": [-5, -35]
+    },
+    {
+      "id": "SYS 001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [58, 0]
+    },
+    {
+      "id": "SYS 002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -135,
+      "locations": [-30, -28]
+    },
+    {
+      "id": "SYS 003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 135,
+      "locations": [-30, 28]
     }
   ],
   "engineSlots": [
@@ -76,7 +103,7 @@
       "style": "HIGH_TECH"
     },
     {
-      "location": [-42, -0],
+      "location": [-42, 0],
       "length": 50,
       "width": 16,
       "angle": 180,

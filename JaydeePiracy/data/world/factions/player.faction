@@ -1,6 +1,12 @@
 {
 	"id":"player",
 
+    "ranks":{
+		"posts":{
+			"jdp_xenobio":{"name":"Xenobiology Officer"},
+		},
+	},
+
 	"flags":[
 		{
 			"logo":"graphics/factions/jdp_pirate_flag.png",
@@ -47,4 +53,5 @@
 			"crest":"graphics/factions/jdp_mercenary_crest.png"
 		},
 	],
+
 }

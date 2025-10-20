@@ -37,8 +37,6 @@ public class jdp_InvestigateMissile extends GABaseMission { //implements ShipRec
 		RETURN_TO_ACADEMY,
 		COMPLETED,
 	}
-	
-	public static String MISSILE_EXPLORED = "$jdp_IMExplored";
 
 	protected PersonAPI sebestyen;
 	protected NascentGravityWellAPI well;
@@ -46,11 +44,12 @@ public class jdp_InvestigateMissile extends GABaseMission { //implements ShipRec
 	
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
-		// if already accepted by the player, abort
+		// If already accepted by the player, abort
 		if (!setGlobalReference("$jdp_IMref", "$jdp_IMinProgress")) {
 			return false;
 		}
 
+		//Protected things
 		sebestyen = getImportantPerson(People.SEBESTYEN);
 		if (sebestyen == null) return false;
 
@@ -58,19 +57,28 @@ public class jdp_InvestigateMissile extends GABaseMission { //implements ShipRec
 		if (well == null || !well.isAlive()) return false;
 
 		missileSite = (StarSystemAPI) well.getTarget().getContainingLocation();
-		SectorEntityToken interfector = (SectorEntityToken) Global.getSector().getEntityById("derelict_missile");
-
 		requireSystemIs(missileSite);
+
+		SectorEntityToken interfector = (SectorEntityToken) Global.getSector().getEntityById("derelict_missile");
 		requireEntityMemoryFlags("$derelict_missile");
 
+		//Start and end
 		setStartingStage(Stage.GO_TO_NASCENT_WELL);
 		addSuccessStages(Stage.COMPLETED);
 		
 		setStoryMission();
 
+		//Set stages-
+
+		//Go to well
 		setStageOnEnteredLocation(Stage.INVESTIGATE_SITE, missileSite);
-		setStageOnGlobalFlag(Stage.RETURN_TO_ACADEMY, MISSILE_EXPLORED);
-		setStageOnGlobalFlag(Stage.COMPLETED, "$jdp_IMCompleted");
+
+		//Return with data
+		setStageOnGlobalFlag(Stage.RETURN_TO_ACADEMY, "$jdp_exploredHiroc");
+
+		setStageOnGlobalFlag(Stage.COMPLETED, "$jdp_IMmissionCompleted");
+
+
 
 		//Make Blacksite Well Important
 		makeImportant(well, null, Stage.GO_TO_NASCENT_WELL);
@@ -82,10 +90,10 @@ public class jdp_InvestigateMissile extends GABaseMission { //implements ShipRec
 		makeImportant(sebestyen, "$jdp_IMreturnHere", Stage.RETURN_TO_ACADEMY);
 
 		beginStageTrigger(Stage.COMPLETED);
-		triggerSetGlobalMemoryValue("$jdp_IMCompleted", true);
-		triggerSetGlobalMemoryValue(MISSILE_EXPLORED, true);
+		triggerSetGlobalMemoryValuePermanent("$jdp_IMmissionCompleted", true);
+		triggerSetGlobalMemoryValuePermanent("$jdp_exploredHiroc", true);
 		endTrigger();
-		
+
 		return true;
 	}
 
@@ -104,7 +112,7 @@ public class jdp_InvestigateMissile extends GABaseMission { //implements ShipRec
 		} else if (currentStage == Stage.INVESTIGATE_SITE) {
 			info.addPara("Investigate the Domain-era megastructure in system", opad);
 		} else if (currentStage == Stage.RETURN_TO_ACADEMY) {
-			info.addPara("Return to the Galatia Academy with the scan data and report your findings to " +
+			info.addPara("Return to the Galatia Academy with the data and report your findings to " +
 					 getPerson().getNameString() + ".", opad);
 		}
 	}

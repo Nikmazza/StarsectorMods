@@ -1,15 +1,15 @@
 {
     "displayName": "Anomalous",
-    "fluxCapacitors": 6,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 34,
     "goalVariant": true,
     "hullId": "vice_lampetia",
     "hullMods": [
         "vice_advanced_terminator_core",
         "vice_feedback_handler",
-        "targetingunit",
         "vice_modular_bolt_coherer",
         "vice_attuned_emitter_diodes",
+        "vice_unified_targeting_core",
         "vice_adaptive_gravity_drive"
     ],
     "modules": [{"SM 1": "vice_lampetia_secondary_drone_bay"}],
@@ -55,7 +55,7 @@
         }
     ],
     "wings": [
-        "vice_sundog_wing",
-        "vice_sundog_wing"
+        "vice_starquake_wing",
+        "vice_starquake_wing"
     ]
 }

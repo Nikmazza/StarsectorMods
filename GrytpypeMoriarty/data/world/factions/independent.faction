@@ -1,0 +1,17 @@
+{
+    "hullFrequency":{
+        "hulls":{
+			"kite_GM":1,
+			"wolf_GM":0.2,
+			"lasher_GM":0.2,
+        },
+    },
+	
+    "knownShips":{
+        "hulls":[
+			"kite_GM",
+			"wolf_GM",
+			"lasher_GM",
+        ],
+    },	
+},	

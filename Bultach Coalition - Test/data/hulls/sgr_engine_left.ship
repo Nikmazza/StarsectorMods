@@ -13,9 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "reduced_explosion",
-    "bt_shieldArching",
     "BT_linkedhull",
     "always_detaches",
+    "bt_sathar_linkedshields",
     "BT_shieldsChanger",
     "BT_antiNuke"
   ],

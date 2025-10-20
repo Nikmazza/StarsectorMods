@@ -45,7 +45,7 @@ public class jdp_standofftargetingcore extends BaseHullMod {
 		if (index == 0) return Math.round(AUTOFIRE_AIM) + " standard unit";
         if (index == 1) return Math.round(RANGE_BONUS) + "%";
 		if (index == 2) return Math.round(RANGE_BONUS-PD_MINUS) + "%";
-		if (index == 3) return "1 grid unit";
+		if (index == 3) return "" + (int)Math.round(VISION_BONUS);
         return null;
     }
 }

@@ -108,6 +108,12 @@ Being commissioned by any other faction aside from the pirates or Trinity Worlds
 relLevelVengefulIX,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == ix_battlegroup",FireAll RelLevelMoreDescription,"You are a known threat to the 9th Domain Battlegroup, and have your own file at Fleet Command HQ. The Panopticon is even now plotting the most efficient way to eliminate you. It's rumored any captain who defeats you will earn a promotion to the Honor Guard.",,
 ,,,,,,
+relLevelHatedByIXForever,RelLevelMoreDescription,"$faction.id == ix_battlegroup
+$global.ix_hates_player_forever",,Your sale of rogue AI technology to the Tri-Tachyon Corporation has earned you the permanent ire of the IX Battlegroup.,,
+relLevelVengefulTW,RelationshipLevelDesc,"$faction.id == ix_trinity
+$faction.rel == VENGEFUL
+$global.ix_hates_player_forever",,"Your decision to trade in forbidden rogue AI technology has earned you the permanent ire of the IX Battlegroup, and their allies among the Trinity Worlds have likewise followed suit. There will be no negotiations after what you have done. Only the eternal enmity of the Fleet awaits you in the void.",,
+,,,,,,
 flavorTextMarketIX,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == ix_battlegroup
 $market.mc:ix_monitored == true","AddText ""The vast port concourse is filled with well maintained ships bearing the distinct black, white, and green livery of the 9th Domain Battlegroup. Loader drones accompanied by neatly dressed dock workers move containers of cargo to their destinations with orderly purpose. Given the state of constant and omnipresent AI directed surveillance imposed by Fleet Command, armed guards here are rarely visible, but never far away."" marketFlavorTextColor",,,
@@ -166,6 +172,58 @@ $market.mc:ix_monitored_player == true
 $player.transponderOn == false","AddText ""Your shuttle flies fast and low to avoid sensors constantly on the lookout for unauthorized landing craft, and eventually finds a quiet spot to set down. Disruptions to the local Panopticon node have allowed a small but thriving black market to spring up. Human greed has found fertile soil, and now you stand to profit."" marketFlavorTextColor",,,
 ,,,,,,
 bar_descIXBattlegroup,BarPrintDesc,$faction.id == ix_battlegroup,ShowImageVisual space_bar,"You enter the prefab bar filled with off duty military personnel enjoying their downtime. A group of augmented marines excitedly discuss the prospect of their next deployment, while several junior officers in the upper lounge watch reports of the Fleet's latest engagements with rapt attention. There's even a pirate captain and crew nursing drinks at their own table, looking decidedly out of place in their well worn spacer garb.",,
+,,,,,,
+# TT Special Acquisitions Crossover,,,,,,
+zgr_askAboutInfectedStationSellIXMadSel,DialogOptionSelected,"$option == zgr_askAboutInfectedStationSell
+$global.ix_battlegroup_is_active","$global.circumfix_station_offered_tt = true
+$global.circumfix_station_is_dead_tt = true
+AddCredits 3000000
+AdjustRepActivePerson 10
+$global.circumfix_threat_gave_tech_tt = true","""Thank you, captain. I have an expedition to plan.""
+
+The director shuts down her comms before you can reply. Her face is replaced by a spinning Tri-Tachyon logo, while beneath it is a notification for a vast credit transfer to your personal account.",zgr_askAboutInfectedAIAngeredIX:Continue,
+zgr_askAboutInfectedAIGiveIXMadSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIGive
+PlayerHasCargo asm_relic_delta
+PlayerHasCargo asm_relic_gamma
+PlayerHasCargo asm_relic_beta
+$global.ix_battlegroup_is_active","$global.circumfix_threat_question_resolved = true
+$global.circumfix_threat_AI_resolved = true
+$global.circumfix_threat_gave_tech_tt = true
+RemoveCommodity asm_relic_delta 1
+RemoveCommodity asm_relic_gamma 1
+RemoveCommodity asm_relic_beta 1
+AddCredits 500000
+AdjustRepActivePerson 5","You enter a command to package the cores for secure delivery. 
+
+""Thank you, captain,"" Glamor-Rotanev says, not sounding particularly thankful. ""My presence is needed to analyze these samples in detail.""
+
+Your screen flickers, and her face is replaced by a spinning Tri-Tachyon logo. Beneath it is a notification of a large credit transfer to your personal account.",zgr_askAboutInfectedAIAngeredIX:Continue,
+zgr_askAboutInfectedAIAngeredIXSel,DialogOptionSelected,$option == zgr_askAboutInfectedAIAngeredIX,HideVisual,"As you watch the logo spin, an incoming call from your ship's engineering department lights up on your console.
+
+You tap to accept. Nothing happens. 
+
+You try again. Still nothing.",zgr_askAboutInfectedAIAngeredIX1:Call engineering,
+zgr_askAboutInfectedAIAngeredIX1Sel,DialogOptionSelected,$option == zgr_askAboutInfectedAIAngeredIX1,,"Your chief engineer appears on screen with an expectant look.
+
+""Yes, captain? What can I do for you.""
+
+The expression you see makes it abundantly clear nobody from engineering tried to call you.","zgr_askAboutInfectedAIAngeredIX2:""Never mind. Just had a comms glitch. As you were.""",
+zgr_askAboutInfectedAIAngeredIX2Sel,DialogOptionSelected,$option == zgr_askAboutInfectedAIAngeredIX2,ShowImageVisual ix_warning_illus,"You run a full diagnostic of your console, but find no cause for the strange comms glitch. A moment later, your ship detects a hyperwave transmission announcing the IX Battlegroup has just placed an active bounty on your head. It seems that your recent dealings with the Tri-Tachyon Corporation has been noted, and deemed to be against the interests of the Fleet.",zgr_askAboutInfectedAIAngeredIX3:Continue,
+zgr_askAboutInfectedAIAngeredIX2CommIXSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIAngeredIX2
+$player.fcm_faction == ix_battlegroup","ShowImageVisual ix_warning_illus
+Commission resign","You run a full diagnostic of your console, but find no cause for the strange comms glitch. A moment later, your ship detects a hyperwave transmission announcing the IX Battlegroup has just placed an active bounty on your head. It seems that your recent dealings with the Tri-Tachyon Corporation has been noted, and deemed to be against the interests of the Fleet.
+
+Your commission with the IX Battlegroup has also been unceremoniously rescinded.",zgr_askAboutInfectedAIAngeredIX3:Continue,
+zgr_askAboutInfectedAIAngeredIX2CommTWSel,DialogOptionSelected,"$option == zgr_askAboutInfectedAIAngeredIX2
+$player.fcm_faction == ix_trinity","ShowImageVisual ix_warning_illus
+Commission resign","You run a full diagnostic of your console, but find no cause for the strange comms glitch. A moment later, your ship detects a hyperwave transmission announcing the IX Battlegroup has just placed an active bounty on your head. It seems that your recent dealings with the Tri-Tachyon Corporation has been noted, and deemed to be against the interests of the Fleet.
+
+Your commission with the Trinity Worlds has also been unceremoniously rescinded.",zgr_askAboutInfectedAIAngeredIX3:Continue,
+zgr_askAboutInfectedAIAngeredIX3Sel,DialogOptionSelected,$option == zgr_askAboutInfectedAIAngeredIX3,"AdjustRep ix_battlegroup -200
+AdjustRep ix_trinity -200
+$global.ix_hates_player_forever = true","For the crime of distributing rogue AI technology, any hope of finding common ground with the IX Battlegroup has just been permanently dashed. But life carries on, and you have good company among the many, many enemies of the Fleet.
+
+You never do manage track down the strange comms glitch.",cutCommLink:Done,
 ,,,,,,
 # Install antimatter stabilizer for fuel industry,,,,,,
 colony_improveFuelProd,PopulateOptions,"$isPerson
@@ -413,6 +471,7 @@ pk_turnInTWSel,DialogOptionSelected,$option == pk_turnInTW,,"$PersonRank $person
 ""Ah, that is very generous of you,"" $heOrShe says. ""Unfortunately, our colony is not exactly swimming in money, so I can only authorize 250,000 credits in exchange for delivery of the weapon. Or was there something else you were after?""","pk_turnInTWmoney:""I'm happy to take the credits.""
 pk_turnInTWadmin:""Your administrators are famous for their efficiency. Might I receive the same training?""
 pk_turnInTWship:""I've noticed unusual ships patrolling Danu on occasion, I'm sure you know the ones.""
+pk_turnInTWaurora:""I've heard rumors the Trinity Worlds have recently completed a prototype cruiser.""
 pk_turnInTWnm:""Never mind, I've reconsidered.""",
 pk_turnInTWnmSel,DialogOptionSelected,$option == pk_turnInTWnm,,"""That's just fine with me,"" $personLastName sighs in audible relief. ""Why don't we pretend this conversation never happened. Sorry to be abrupt, captain, but I'm being called away to a meeting. Good day.""
 
@@ -450,6 +509,26 @@ $player.turnedInPlanetkiller = true
 AddPotentialContact
 $player.ethosRuthless++
 $receivedAPlanetkillerFromPlayer","As promised, a pristine drone battlecarrier soon arrives to join your fleet. The courier shuttle accompanying it quietly retrieves the planetkiller, likely to be stashed away in some hidden arsenal. No one would be crazy enough to use such a weapon when tensions are already running so high. At least that's what you tell yourself.",cutCommLink:Attend to other business,
+pk_turnInTWauroraSel,DialogOptionSelected,$option == pk_turnInTWaurora,,"$PersonRank $personLastName shakes $hisOrHer head. ""As much as I'd like to close this deal, I can't just start handing over classified technology. The fact that you knew about this at all is troubling. Perhaps we could...""
+
+$personLastName suddenly turns, distracted. ""I'm sorry, captain. I need to take this."" Then $heOrShe is gone.",pk_turnInTWaurora2:Continue,
+pk_turnInTWaurora2Sel,DialogOptionSelected,$option == pk_turnInTWaurora2,,"Left with no other options, you move on to other business. Unexpectedly, $PersonRank $personLastName reaches out to you again an hour later.
+
+""I just received authorization,"" $heOrShe says, sounding breathless. ""I've never... anyway. Your ship will be arriving before the end of the day, and will be joined by a courier to retrieve the weapon. That is all. $personLastName out.""
+
+After the line is abruptly cut for the second time in a day, your facial analysis software confirms your suspicions. $personLastName was terrified. But of what, you can only guess.",pk_turnInTWaurora3:Continue,
+pk_turnInTWaurora3Sel,DialogOptionSelected,$option == pk_turnInTWaurora3,"AddTextSmall ""Received Aurora (TW) class flight deck cruiser"" good
+SetTextHighlights ""Radiant (TW) class flight deck cruiser""
+$player.receivedAuroraTW = true
+AdjustRep ix_trinity 25
+AdjustRepActivePerson 25
+AdjustRep ix_comsec -10
+AddRemoveAnyItem SPECIAL planetkiller -1
+$global.gavePKtoTW = true
+$player.turnedInPlanetkiller = true
+AddPotentialContact
+$player.ethosRuthless++
+$receivedAPlanetkillerFromPlayer","As promised, a heavily modified Aurora-class cruiser soon arrives to join your fleet. The courier shuttle accompanying it quietly retrieves the planetkiller, likely to be stashed away in some hidden arsenal. No one would be crazy enough to use such a weapon when tensions are already running so high. At least that's what you tell yourself.",cutCommLink:Attend to other business,
 pk_turnInTWadminSel,DialogOptionSelected,"$option == pk_turnInTWadmin
 !$global.can_build_embassy",,"""I see,"" $PersonRank $personLastName nods. ""I have to warn you, our candidates are put through flash memory imprinting and receive interface cybernetics to get them up to speed. The procedure is not... very intrusive, and recovery should be quick for someone in good health. Do you wish to proceed?""","pk_turnInTWadminAccept:""Yes, I look forward to it.""
 pk_turnInTWadminBackedOut:""On second thought, maybe not.""",

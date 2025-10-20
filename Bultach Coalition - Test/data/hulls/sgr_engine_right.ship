@@ -14,8 +14,8 @@
   "builtInMods": [
     "reduced_explosion",
     "BT_linkedhull",
-    "bt_shieldArching",
     "always_detaches",
+    "bt_sathar_linkedshields",
     "BT_shieldsChanger",
     "BT_antiNuke"
   ],

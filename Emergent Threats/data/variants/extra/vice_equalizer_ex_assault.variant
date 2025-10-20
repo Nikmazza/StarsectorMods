@@ -38,8 +38,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "vice_deadeye_plasma",
-                "WS 006": "vice_deadeye_plasma"
+                "WS 005": "vice_fandance_seeker",
+                "WS 006": "vice_fandance_seeker"
             }
         },
         {

@@ -16,9 +16,29 @@
     "vastbulk",
 	"never_detaches",
     "ix_microfluxshunt",
-    "ix_noventing"
+    "ix_noventing",
+	"ix_hide_module_hulk"
   ],
-  "weaponSlots": [],
+  "weaponSlots": [
+    {
+      "id": "SYS 001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 130,
+      "locations": [-21, 27]
+    },
+    {
+      "id": "SYS 002",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -130,
+      "locations": [-21, -27]
+    }
+  ],
   "engineSlots": [],
   "bounds": [
     -13, -0,

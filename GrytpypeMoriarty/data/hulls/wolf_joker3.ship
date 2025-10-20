@@ -1,0 +1,215 @@
+{
+  "bounds": [
+    -47,
+    -12.5,
+    -40,
+    -23,
+    -15.5,
+    -19,
+    -13,
+    -25.5,
+    8,
+    -25,
+    10.5,
+    -16.5,
+    45.5,
+    -10.5,
+    45.5,
+    11,
+    10.5,
+    16.5,
+    8,
+    25,
+    -13,
+    25.5,
+    -15.5,
+    19,
+    -40,
+    23,
+    -47,
+    12.5
+  ],
+  "builtInWings": [],
+  "center": [
+    26,
+    47.5
+  ],
+  "collisionRadius": 80.276085,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 10,
+      "length": 31,
+      "location": [
+        -15,
+        20
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": -180,
+      "contrailSize": 10,
+      "length": 31,
+      "location": [
+        -15,
+        -20
+      ],
+      "style": "LOW_TECH",
+      "width": 10
+    },
+    {
+      "angle": 150.255112,
+      "contrailSize": 7.566116,
+      "length": 12.527509,
+      "location": [
+        -40.5,
+        20.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 7.566116
+    },
+    {
+      "angle": -150.255112,
+      "contrailSize": 7.566116,
+      "length": 12.527509,
+      "location": [
+        -40.5,
+        -20.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 7.566116
+    },
+    {
+      "angle": 178.5,
+      "contrailSize": 19.715067,
+      "length": 43.773041,
+      "location": [
+        -46.5,
+        5
+      ],
+      "style": "LOW_TECH",
+      "width": 19.715067
+    },
+    {
+      "angle": -178.5,
+      "contrailSize": 19.715067,
+      "length": 43.773041,
+      "location": [
+        -46.5,
+        -5
+      ],
+      "style": "LOW_TECH",
+      "width": 19.715067
+    },
+    {
+      "angle": 164.5,
+      "contrailSize": 12.162496,
+      "length": 13.620515,
+      "location": [
+        -45.5,
+        14.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 12.162496
+    },
+    {
+      "angle": -164.5,
+      "contrailSize": 12.162496,
+      "length": 13.620515,
+      "location": [
+        -45.5,
+        -14.5
+      ],
+      "style": "HIGH_TECH",
+      "width": 12.162496
+    }
+  ],
+  "height": 95,
+  "hullId": "wolf_joker3",
+  "hullName": "Wolf (Bishop)",
+  "hullSize": "FRIGATE",
+  "shieldCenter": [
+    0,
+    -0
+  ],
+  "shieldRadius": 72.520683,
+  "spriteName": "graphics/ships/wolf_joker3.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0001",
+      "locations": [
+        41,
+        -0
+      ],
+      "mount": "HARDPOINT",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 180,
+      "id": "WS0002",
+      "locations": [
+        3.5,
+        -0
+      ],
+      "mount": "TURRET",
+      "size": "MEDIUM",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0003",
+      "locations": [
+        7,
+        19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 0,
+      "arc": 5,
+      "id": "WS0004",
+      "locations": [
+        7,
+        -19
+      ],
+      "mount": "HARDPOINT",
+      "size": "SMALL",
+      "type": "MISSILE"
+    },
+    {
+      "angle": 130,
+      "arc": 180,
+      "id": "WS0005",
+      "locations": [
+        -19.5,
+        11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    },
+    {
+      "angle": -130,
+      "arc": 180,
+      "id": "WS0006",
+      "locations": [
+        -19.5,
+        -11
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "ENERGY"
+    }
+  ],
+  "width": 52
+}

@@ -46,7 +46,7 @@ public class ThundermarkOnHit implements OnFireEffectPlugin, OnHitEffectPlugin {
 				0.15f, //duration
 				CORE_COLOR);
 				
-		if ((weapon.getBurstFireTimeRemaining() > 0.6f)) {
+		if (weapon.getBurstFireTimeRemaining() > 0.6f) {
 			float angle = weapon.getCurrAngle() - 180f;
 			Vector2f loc = MathUtils.getPointOnCircumference(weapon.getLocation(), 7f, angle);
 			Vector2f shipVelocity = weapon.getShip().getVelocity();

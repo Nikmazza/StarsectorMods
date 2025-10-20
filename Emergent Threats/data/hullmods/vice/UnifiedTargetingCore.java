@@ -15,6 +15,8 @@ public class UnifiedTargetingCore extends BaseHullMod {
 	private static String DTC = "dedicated_targeting_core";
 	private static String ITU = "targetingunit";
 	private static String CTC = "tahlan_centraltargeting";
+	private static String ATC = "advancedcore";
+	private static String DFC = "distributed_fire_control";
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		float bonus = hullSize == HullSize.CAPITAL_SHIP ? RANGE_BONUS_L : RANGE_BONUS_S;
@@ -40,8 +42,8 @@ public class UnifiedTargetingCore extends BaseHullMod {
 				!m.contains(DTC) && 
 				!m.contains(ITU) && 
 				!m.contains(CTC) && 
-				!m.contains("advancedcore") && 
-				!m.contains("distributed_fire_control"));
+				!m.contains(ATC) && 
+				!m.contains(DFC));
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
@@ -52,8 +54,8 @@ public class UnifiedTargetingCore extends BaseHullMod {
 		if (m.contains(DTC)) return "Incompatible with Dedicated Targeting Core";
 		if (m.contains(ITU)) return "Incompatible with Integrated Targeting Unit";
 		if (m.contains(CTC)) return "Incompatible with Centralized Targeting Core";
-		if (m.contains("advancedcore")) return "Incompatible with Advanced Targeting Core";
-		if (m.contains("distributed_fire_control")) return "Incompatible with Distributed Fire Control";
+		if (m.contains(ATC)) return "Incompatible with Advanced Targeting Core";
+		if (m.contains(DFC)) return "Incompatible with Distributed Fire Control";
 		
 		return null;
 	}

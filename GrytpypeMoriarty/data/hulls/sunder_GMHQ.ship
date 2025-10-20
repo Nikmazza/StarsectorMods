@@ -1,0 +1,155 @@
+{
+  "bounds": [
+    -79.5,
+    -2.5,
+    -86.5,
+    -3.5,
+    -86.5,
+    -17.5,
+    -73,
+    -30.5,
+    -37,
+    -26.5,
+    -31.5,
+    -33,
+    5,
+    -38.5,
+    33.5,
+    -34.5,
+    62.5,
+    -25,
+    88.5,
+    -6.5,
+    39.5,
+    -6.5,
+    39.5,
+    6.5,
+    88.5,
+    6.5,
+    62.5,
+    25,
+    33.5,
+    34.5,
+    5,
+    38.5,
+    -31.5,
+    33,
+    -37,
+    26.5,
+    -73,
+    30.5,
+    -86.5,
+    17.5,
+    -86.5,
+    3.5,
+    -79.5,
+    2.5
+  ],
+  "builtInMods": [
+    "GMHQ",
+    "phasefield"
+  ],
+  "builtInWings": [],
+  "center": [
+    39,
+    88
+  ],
+  "collisionRadius": 96.5,
+  "engineSlots": [
+    {
+      "angle": 180,
+      "contrailSize": 21,
+      "length": 36,
+      "location": [
+        -86.5,
+        10
+      ],
+      "style": "HIGH_TECH",
+      "width": 21
+    },
+    {
+      "angle": -180,
+      "contrailSize": 21,
+      "length": 36,
+      "location": [
+        -86.5,
+        -10
+      ],
+      "style": "HIGH_TECH",
+      "width": 21
+    },
+    {
+      "angle": 180,
+      "contrailSize": 12,
+      "length": 16.5,
+      "location": [
+        -80,
+        23
+      ],
+      "style": "HIGH_TECH",
+      "width": 12
+    },
+    {
+      "angle": -180,
+      "contrailSize": 12,
+      "length": 16.5,
+      "location": [
+        -80,
+        -23
+      ],
+      "style": "HIGH_TECH",
+      "width": 12
+    }
+  ],
+  "height": 176,
+  "hullId": "sunder_GMHQ",
+  "hullName": "Sunder (GMHQ)",
+  "hullSize": "DESTROYER",
+  "shieldCenter": [
+    0,
+    0
+  ],
+  "shieldRadius": 94,
+  "spriteName": "graphics/ships/sunder/sunder_GMHQ.png",
+  "style": "HIGH_TECH",
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "angle": 0,
+      "arc": 10,
+      "id": "WS0001",
+      "locations": [
+        24.5,
+        0
+      ],
+      "mount": "HARDPOINT",
+      "size": "LARGE",
+      "type": "ENERGY"
+    },
+    {
+      "angle": 38,
+      "arc": 120,
+      "id": "WS0002",
+      "locations": [
+        7,
+        19
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    },
+    {
+      "angle": -38,
+      "arc": 120,
+      "id": "WS0003",
+      "locations": [
+        7,
+        -19
+      ],
+      "mount": "TURRET",
+      "size": "SMALL",
+      "type": "HYBRID"
+    }
+  ],
+  "width": 78
+}

@@ -90,8 +90,8 @@ public class HMI_modPlugin extends BaseModPlugin {
 
 
     @Override
-    public void onNewGame() {
-        SectorThemeGenerator.generators.add(new HMIThemeGenerator());
+    public void onApplicationLoad() {
+            SectorThemeGenerator.generators.add(new HMIThemeGenerator());
     }
 
     @Override

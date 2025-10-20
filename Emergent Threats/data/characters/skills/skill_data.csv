@@ -1,2 +1,3 @@
 id,name,order,tier,description,author,combat officer,admiral,admin,tags,icon
 vice_ai_commander,AI Fleet Commander,10000,0,"Before him stood the soulless multitudes, and their swords did burn with the fires of damnation.","The Book of Ludd, Visions 8:13",TRUE,,,deprecated,graphics/vice/icons/ai_commander.png
+asm_devouring_swarm,Devouring Swarm,10000,0,INTERDICTORATE PROACT: UNFABRICATE,Threat,TRUE,,,deprecated,graphics/asm/icons/devouring_swarm.png

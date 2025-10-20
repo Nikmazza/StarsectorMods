@@ -16,6 +16,7 @@ public class ModernizedRangefinder extends BaseHullMod {
 	private static float RANGE_BONUS_CTC = 80f;
 	private static float RANGE_BONUS_BEST = 100f;
 	private static float RANGE_BONUS_FLAT = 200f;
+	private static float DFC_BONUS_FLAT = 800f;
 	private static String THIS_MOD = "tw_modernized_rangefinder";
 	private static String CONFLICT_MOD = "magellan_trajectory_analyzer";
 	private static String CONFLICT_MOD_2 = "vice_adaptive_trajectory_analyzer";
@@ -25,7 +26,10 @@ public class ModernizedRangefinder extends BaseHullMod {
 	private static String CTC_MOD_ID = "tahlan_centraltargeting";
 	private static String ATC_MOD_ID = "advancedcore";
 	private static String ARCHAIC = "archaic_c";
-
+	private static String DFC = "distributed_fire_control";
+	private static String DFC_NAME = "Distributed Fire Control";
+	
+	
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		ship.addListener(new CompositeRangeModifier());
@@ -50,11 +54,12 @@ public class ModernizedRangefinder extends BaseHullMod {
 		
 		public float getWeaponRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {
 			float bonus = 0f;
-			if (!ship.getVariant().getSMods().contains(THIS_MOD)) return bonus;
-			if (weapon.getType() == WeaponType.COMPOSITE || weapon.getType() == WeaponType.MISSILE) {
-				 return RANGE_BONUS_FLAT;
-			}
-			return 0f;
+			boolean isDFC = ship.getVariant().hasHullMod(DFC);
+			boolean isSMOD = ship.getVariant().getSMods().contains(THIS_MOD);
+			if (isSMOD && (weapon.getType() == WeaponType.MISSILE 
+							|| weapon.getType() == WeaponType.COMPOSITE)) bonus = RANGE_BONUS_FLAT;
+			if (isDFC && weapon.getSpec().hasTag(ARCHAIC)) bonus += DFC_BONUS_FLAT;
+			return bonus;
 		}
 		
 		public float getWeaponRangeMultMod(ShipAPI ship, WeaponAPI weapon) {
@@ -80,6 +85,9 @@ public class ModernizedRangefinder extends BaseHullMod {
 		if (index == 2) return "" + (int) RANGE_BONUS_BASE + "%";
 		if (index == 3) return "" + (int) RANGE_BONUS_GOOD + "%";
 		if (index == 4) return "" + (int) RANGE_BONUS_BEST + "%";
+		if (index == 5) return "archaic";
+		if (index == 6) return "" + (int) DFC_BONUS_FLAT;
+		if (index == 7) return DFC_NAME;
 		return null;
 	}
 	

@@ -61,9 +61,7 @@ import static data.scripts.world.systems.HMI_mansa.addMessRemnantStationInteract
 
 public class HMIThemeGenerator extends BaseThemeGenerator {
 
-	public String getThemeId() {
-		return Themes.MISC;
-	}
+	public String getThemeId() {return Themes.MISC;}
 
 	@Override
 	public float getWeight() {
@@ -99,6 +97,7 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 
 
 	private static Float random_var = null;
+
 
 
 	public static class MessStationFIDConfig implements FleetInteractionDialogPluginImpl.FIDConfigGen {
@@ -189,6 +188,7 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 
 	@Override
 	public void generateForSector(ThemeGenContext context, float allowedUnusedFraction) {
+
 
 		addBlackLuddSystem(context);
 		addMysteryBlacksiteSystem(context);
@@ -916,7 +916,7 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 
 				if (system.hasPulsar()) continue;
 				if (system.hasBlackHole()) continue;
-				if (!system.hasTag(Tags.THEME_DERELICT)) continue;
+				if (system.hasTag(Tags.THEME_DERELICT)) continue;
 
 				boolean misc = system.hasTag(Tags.THEME_MISC_SKIP) || system.hasTag(Tags.THEME_MISC);
 				if (system.hasTag(Tags.THEME_DERELICT)) misc = false;
@@ -1046,14 +1046,6 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 
 
 
-
-
-
-
-
-
-
-
 	protected void addSeele(ThemeGenContext context) {
 		if (DEBUG) System.out.println("Looking for Seele system");
 
@@ -1063,21 +1055,9 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 		for (Constellation c : context.constellations) {
 			for (StarSystemAPI system : c.getSystems()) {
 				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				if (system.hasTag(Tags.THEME_UNSAFE)) continue;
 
-				if (system.hasPulsar()) continue;
 				if (system.hasBlackHole()) continue;
-				if (!system.hasTag(Tags.THEME_DERELICT)) continue;
-
-				boolean misc = system.hasTag(Tags.THEME_MISC_SKIP) || system.hasTag(Tags.THEME_MISC);
-				if (system.hasTag(Tags.THEME_DERELICT)) misc = false;
-
-				boolean nonLargeDerelict = system.hasTag(Tags.THEME_DERELICT) &&
-						!system.hasTag(Tags.THEME_DERELICT_MOTHERSHIP) &&
-						!system.hasTag(Tags.THEME_DERELICT_CRYOSLEEPER);
-				boolean unsafe = system.hasTag(Tags.THEME_UNSAFE);
-				if (unsafe || !(misc || nonLargeDerelict)) {
-					continue;
-				}
 
 				Vector2f loc = system.getLocation();
 				float minRadius = 40000f;
@@ -1086,16 +1066,11 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 				}
 
 				int count = 0;
-//				for (SectorEntityToken curr : system.getAllEntities()) {
-//					if (curr.getId().equals("station_research") || curr.getId().equals("station_research_remnant"))
-//					count++;
-//				}
+
 				for (PlanetAPI curr : system.getPlanets()) {
 					if (curr.isStar()) continue;
 					if (curr.isMoon()) continue;
-					if (curr.isGasGiant()) continue;
 					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
-					if (curr.getCircularOrbitRadius() < 6000) continue;
 					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
 					count++;
 				}
@@ -1139,7 +1114,6 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 		if (DEBUG) System.out.println("Adding Seele to [" + system.getName() + "] at [" + system.getLocation() + "]");
 		setUpseeleSystem(system);
 
-
 		if (DEBUG) System.out.println("Finished adding SEELE system\n\n\n\n\n");
 	}
 
@@ -1175,7 +1149,6 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 			if (curr.isStar()) continue;
 			if (curr.isMoon()) continue;
 			if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
-			if (curr.getCircularOrbitRadius() < 6000) continue;
 			hmi_seele_planet1 = curr;
 			break;
 		}
@@ -1240,18 +1213,9 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 
 				if (system.hasPulsar()) continue;
 				if (system.hasBlackHole()) continue;
-				if (!system.hasTag(Tags.THEME_DERELICT)) continue;
 
-				boolean misc = system.hasTag(Tags.THEME_MISC_SKIP) || system.hasTag(Tags.THEME_MISC);
-				if (system.hasTag(Tags.THEME_DERELICT)) misc = false;
+				if (system.hasTag(Tags.THEME_UNSAFE)) continue;
 
-				boolean nonLargeDerelict = system.hasTag(Tags.THEME_DERELICT) &&
-						!system.hasTag(Tags.THEME_DERELICT_MOTHERSHIP) &&
-						!system.hasTag(Tags.THEME_DERELICT_CRYOSLEEPER);
-				boolean unsafe = system.hasTag(Tags.THEME_UNSAFE);
-				if (unsafe || !(misc || nonLargeDerelict)) {
-					continue;
-				}
 
 				Vector2f loc = system.getLocation();
 				float minRadius = 40000f;
@@ -1269,7 +1233,6 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 					if (curr.isMoon()) continue;
 					if (curr.isGasGiant()) continue;
 					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
-					if (curr.getCircularOrbitRadius() < 6000) continue;
 					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
 					count++;
 				}
@@ -1318,6 +1281,7 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 	}
 
 	protected void setUpMansaSystem(StarSystemAPI system) {
+
 		system.addTag(Tags.THEME_SPECIAL);
 		system.addTag("HMIMANSA_SYSTEM_KEY");
 		system.addTag(Tags.THEME_UNSAFE);
@@ -1352,7 +1316,6 @@ public class HMIThemeGenerator extends BaseThemeGenerator {
 			if (curr.isStar()) continue;
 			if (curr.isMoon()) continue;
 			if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
-			if (curr.getCircularOrbitRadius() < 6000) continue;
 			mansa2 = curr;
 			break;
 		}

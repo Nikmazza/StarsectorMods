@@ -1,0 +1,13 @@
+{
+    "faction":"gmda",
+    "firstname":"The",
+    "lastname":"Joker",
+    "gender":"M",
+    "officerlevel":-1,
+    "mainShip":"hammerhead_joker_1",
+    "ships":["wolf_joker1_1","2","wolf_joker2_1","2","wolf_joker3_1","2","wolf_joker4_1","2"],
+    "reward":110000,
+    "description":"A rising contender in the Gladiator Society, this one's in it for the money, the gasoline...and the CHAOS.",
+    "dialog":"You wanna know, how I got these scars?",
+    "avatar":"graphics/portraits/portrait_joker.png",
+}

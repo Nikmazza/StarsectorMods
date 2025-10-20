@@ -1,0 +1,28 @@
+{
+    "displayName": "Locus",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "remnant_weapon_platform2",
+    "hullMods": [
+        "advancedoptics",
+        "armoredweapons",
+        "autorepair",
+        "blast_doors",
+        "fluxbreakers",
+        "fluxcoil",
+        "fluxdistributor",
+        "magazines",
+        "reinforcedhull",
+        "solar_shielding",
+        "turretgyros",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "remnant_weapon_platform2_Locus",
+    "weaponGroups": [
+    ],
+    "wings": [],
+    "modules": [],
+}

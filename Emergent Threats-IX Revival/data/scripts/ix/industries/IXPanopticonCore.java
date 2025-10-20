@@ -107,6 +107,7 @@ public class IXPanopticonCore extends BaseIndustry {
 		if (panopticonIsActiveCheck()) {
 			for (Industry industry : market.getIndustries()) {
 				if (hasIndEvo && industry.getCurrentName().equals("Monastic Order")) return 0f;
+				if (hasIndEvo && industry.getCurrentName().equals("Managed Democracy")) return 0f;
 				if (industry.getId().equals(CORE)) interest -= (int) DEFAULT_PATHER_INTEREST;
 				else if (industry.getId().equals(NODE)
 							|| industry.getId().equals(PLAYER_CORE)

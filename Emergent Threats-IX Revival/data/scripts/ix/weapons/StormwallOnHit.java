@@ -22,8 +22,8 @@ public class StormwallOnHit implements OnHitEffectPlugin {
 		4,		//thickness
         300,	//length
         0,		//angle
-        new Color(50,50,255),	//fringe
-        new Color(100,100,255)	//core
+        new Color(0,100,255,175),	//fringe
+        new Color(200,200,255,175)	//core
         );
 	}
 }
