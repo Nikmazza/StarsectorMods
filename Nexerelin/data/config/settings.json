@@ -36,10 +36,11 @@
 	
 	"nex_keepSModsForRecoveredShips":true,	# note: only affects enemy ships, friendly ships already keep their mods
 	
-	"nex_enableMiningFleets":"true",
-	
+	"nex_enableMiningFleets":true,
 	"nex_enableMiningHarass":true,	# raiders bother a mining player
 	"nex_miningHarassThreshold": 11,
+	
+	"nex_useStartingCarePackage":true,
 	
 	"nex_conquestMissionIntervalRateMult":0.05,
 	"nex_disruptMissionIntervalRateMult":0.125,
@@ -91,6 +92,8 @@
 	"nex_brawlMode_minMult":1.5,
 	"nex_brawlMode_maxMult":3,
 	"nex_brawlMode_randomFactionGearChance":0,	# 0.6
+	
+	"nex_sectorDefenderMode":false,	# invasions can only be launched by or against hostile-to-all factions
 	
 	"nex_officerBaseEscapeChance":0.5,	# modified by crew loss mult
 	"nex_officerSurviveChance":0.75,	# modified by crew loss mult; survive chance is the base value only if officer does not escape and ship is disabled rather than destroyed

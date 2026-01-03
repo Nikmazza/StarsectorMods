@@ -2,9 +2,13 @@ id,trigger,conditions,script,text,options,notes
 #RULESET_NAME Nexerelin,,,,,,
 ,,,,,,
 # NGC options,,,,,,
-ExerelinOnNewGameCreationStart,BeginNewGameCreation,!$doesFakeVariableExist score:999,"$isInIntro = true 0
+ExerelinOnNewGameCreationStart,BeginNewGameCreation,!$doesFakeVariableExist score:999,"FireBest ExerelinNGCIntroPicker
+NGCGetExerelinDefaults",,,override SS+ NGC
+,,,,,,
+ExerelinNGCSkipIntro,ExerelinNGCIntroPicker,,FireAll ExerelinNGCStep1,,,
+ExerelinNGCDoIntro,ExerelinNGCIntroPicker,Nex_NGCIntroPicker false,"$isInIntro = true 0
 $introPage = 1.0 0
-FireAll ExerelinNGCIntroPage",,,override SS+ NGC
+FireAll ExerelinNGCIntroPage",,,
 ,,,,,,
 ExerelinNGCIntroNextPage,NewGameOptionSelected,$option==exerelinNGCIntroNextPage,"$introPage++
 FireAll ExerelinNGCIntroPage",,,
@@ -12,7 +16,8 @@ ExerelinNGCIntroPrevPage,NewGameOptionSelected,$option==exerelinNGCIntroPrevPage
 FireAll ExerelinNGCIntroPage",,,
 ,,,,,,
 ExerelinNGCIntro1,ExerelinNGCIntroPage,"$introPage == 1.0
-$isInIntro","SetShortcut exerelinNGCIntroNextPage RETURN
+$isInIntro","Nex_NGCIntroPicker true
+SetShortcut exerelinNGCIntroNextPage RETURN
 SetShortcut exerelinNGCIntroEnd ESCAPE",">>> GREETINGS, STARFARER <<<
 
 Welcome to the Nexerelin mod for Starsector!
@@ -39,8 +44,7 @@ ExerelinNGCIntroDevStart,ExerelinNGCIntroPage,$global.isDevMode,,,"99:nex_NGCDev
 100:nex_NGCDevStartFast:>> (dev) quick start no time pass",
 ,,,,,,
 ,,,,,,
-ExerelinNewGameOptionsEnter,ExerelinNGCStep1,,"NGCGetExerelinDefaults
-FireAll ExerelinNGCOptions",Configure the Sector?,,"make sure this runs once per new game, so that Exerelin sector generation data is set up properly"
+ExerelinNewGameOptionsEnter,ExerelinNGCStep1,,FireAll ExerelinNGCOptions,Configure the Sector?,,"make sure this runs once per new game, so that Exerelin sector generation data is set up properly"
 ExerelinNewGameOptionsBackToMain,NewGameOptionSelected,$option==exerelinNGCOptionsBack,"Nex_VisualCustomPanel clear
 FireAll ExerelinNGCOptions",,,
 ExerelinNewGameOptionsPopulate,ExerelinNGCOptions,,SetShortcut exerelinNGCOptionsDone RETURN,,"exerelinNGCOptionsDone:Proceed
@@ -192,7 +196,7 @@ nex_NGCFinalize,ExerelinNGCStep4,,"AddText ""Starting experience and assets?""
 Nex_NGCStartResources createOptions
 SetShortcut nex_NGCStartBack ESCAPE",,"nex_NGCStartEnsign:Ensign (20,000 credits, level 1)
 nex_NGCStartLieutenant:Lieutenant (75,000 credits, level 3, one officer)
-nex_NGCStartCommander:Commander (250,000 credits, level 6, two officers)
+nex_NGCStartCommander:Commander (250,000 credits, level 6, two officers, one operative)
 nex_NGCCustomResourcesStart:Custom...",
 nex_NGCFinalizeSuper,ExerelinNGCStep4,$option == nex_NGCFleetSuper,"AddText ""Starting experience and assets?""
 Nex_NGCStartResources createOptions
@@ -231,6 +235,7 @@ nex_NGCStartCommander,NewGameOptionSelected,$option == nex_NGCStartCommander,"NG
 NGCAddCharacterPoints 1
 Nex_NGCAddLevel 6
 NGCSetNumStartingOfficers 2
+NGCSetNumStartingOfficers 1 true
 FireBest NewGameBackgroundSelection",,,
 nex_NGCStartAgent,NewGameOptionSelected,$option == nex_NGCStartAgent,"NGCAddCredits 20000
 NGCAddCharacterPoints 1
@@ -1495,8 +1500,8 @@ nex_outpostOptionNearbyHostile,PopulateOptions,"$nex_canMine
 HostileFleetNearbyAndAware","SetEnabled nex_outpostPreview false
 SetTooltip nex_outpostPreview ""A nearby hostile fleet is tracking your movements, making construction of an outpost impossible.""",,,
 nex_outpostOptionAbyss,PopulateOptions,"$nex_canMine
-$abyssalDepth > 0","SetEnabled nex_outpostPreview false
-SetTooltip nex_outpostPreview ""Cannot be built in the abyss.""",,,
+$player.locTag:temporary_location score:100","SetEnabled nex_outpostPreview false
+SetTooltip nex_outpostPreview ""This location will be unlikely to be found again in the future and an outpost here would be lost.""",,,
 nex_outpostPreview,DialogOptionSelected,$option == nex_outpostPreview,"Nex_PlayerOutpost buildInfo
 FireAll Nex_OutpostOption","You can build an automated outpost here. It will automatically stock supplies and fuel for you to take, and can be used as storage.",,
 nex_outpostBuildOption,Nex_OutpostOption,,"SetEnabled nex_outpostBuildStart true
@@ -1626,6 +1631,17 @@ ShowDefaultVisual
 EndConversation","""So be it.""
 
 The $faction fleet shuts down comms and powers up combat systems.",,
+,,,,,,
+nex_startingCarePackage_start,OpenInteractionDialog,$nex_startingCarePackage score:1100,"Highlight ""Open to receive your bounty aplenty""
+ShowDefaultVisual
+CargoPods printDesc
+Nex_AddOptionConfirmation nex_startingCarePackage_destroy ""The care package will be permanently lost. Proceed?"" ""Yes"" ""No""","The pods transmit a low-power looping signal: ""Open to receive your bounty aplenty""","nex_startingCarePackage_select:Select starting bonus items
+nex_startingCarePackage_viewPlanet:View starting market (if applicable)
+nex_startingCarePackage_destroy:Destroy the pods
+defaultLeave:Leave",
+nex_startingCarePackage_select,DialogOptionSelected,$option == nex_startingCarePackage_select,Nex_NGCarePackage select,,,
+nex_startingCarePackage_viewPlanet,DialogOptionSelected,$option == nex_startingCarePackage_viewPlanet,Nex_NGCarePackage viewPlanet,,,
+nex_startingCarePackage_destroy,DialogOptionSelected,$option == nex_startingCarePackage_destroy,Nex_NGCarePackage destroy,,,
 #END bla,,,,,,
 ,,,,,,
 # Vanilla overrides,,,,,,
@@ -1674,6 +1690,15 @@ tut_janContactReport3,DialogOptionSelected,$option == tutReport3,"AddAbility exe
 SetShortcut cutCommLinkPolite ""ESCAPE""","""Finally, you could take a commission with the Hegemony - due to the Galatia business, your standing is high enough that such a request would be accepted.
 
 You'll be expected to fight our enemies, though, so it's quite a commitment. If I were you, I'd hold off on it until you've got a more solid fleet behind you.""","cutCommLinkPolite:""Thanks, I'll think about it.""",
+,,,,,,
+sdtuSafehouseEndInterrupt,DialogOptionSelected,"$option == sdtu_safehouseEnd
+RepLTE sindrian_diktat INHOSPITABLE
+!$nex_sdtu_alreadyAttemptedRepFix","AdjustRep sindrian_diktat SUSPICIOUS 100
+$nex_sdtu_alreadyAttemptedRepFix = true 1","""Ah,"" Macario raises a finger. ""Just one thing, captain.""
+
+""You've been very, very bad,"" he wags his finger, scolding you. ""I'll arrange matters to allow you to operate in Diktat space. But you must promise to behave. You'll behave?"" 
+
+He doesn't wait for an answer, ""Good.""",sdtu_safehouseEnd:Continue,
 #END Vanilla overrides,,,,,,
 ,,,,,,
 # Vanilla not-quite-overrides,,,,,,
@@ -1794,6 +1819,14 @@ Nex_Alliance isPlayerAlliedWith persean score:3",FireBest JoinLeagueOptions,"""Y
 nex_rh_handleAlliance,DialogOptionSelected,"$option == rh_acceptMembership
 $player.isInAlliance score:5","Nex_Alliance leave
 FireBest DialogOptionSelected",,,
+nex_ZGRfirstVisitOption,PopulateOptions,"$hasMarket
+$market.nex_zgrLocation
+$menuState == main
+$global.firstGlamorRotanevVisitInvite
+!$player.didZGRfirstMeeting",FireBest ZGRfirstVisitOptionCheck,,2:ZGR_visitOptDirect:Take a shuttle to visit Director of Special Acquisitions Glamor-Rotanev,
+nex_ZGRfirstVisitOptionCheck,ZGRfirstVisitOptionCheck,"$faction.isHostile
+$player.transponderOn","SetEnabled ZGR_visitOptDirect false
+SetTooltip ZGR_visitOptDirect ""You have been flagged as a hostile by Tri-Tachyon automated defenses and would be gunned down upon approach.""",,,
 ,,,,,,
 #END Vanilla not-quite-overrides,,,,,,
 ,,,,,,
@@ -5008,21 +5041,27 @@ nex_configSF_create,DialogOptionSelected,$option == nex_configSF_createFinish,Ne
 nex_configSF_abortCreate,DialogOptionSelected,$option == nex_configSF_abortCreate,Nex_SpecialForcesConfig cancel,,,
 nex_commandSF_main,DialogOptionSelected,$option == nex_commandSF_main,"$nex_sf_menuType = ""command"" 0
 Nex_SpecialForcesCommands main",,,
-nex_commandSF_mainOpts,Nex_CommandSFOptions,,SetShortcut nex_commandSF_leave ESCAPE,,"nex_commandSF_patrol:Patrol system
-nex_commandSF_orbit:Orbit location
-nex_commandSF_follow:Follow player
-nex_commandSF_wait:Wait at player location
-nex_commandSF_joinRaid:Participate in raid
-nex_commandSF_autoAssign:Auto-assign
-nex_sf_reviveShipStart:Revive dead ships
-nex_commandSF_leave:Leave",
-nex_commandSF_mainOptsNoRevive,Nex_CommandSFOptions,!Nex_SpecialForcesConfig canRevive,"SetEnabled nex_sf_reviveShipStart false
-SetTooltip nex_sf_reviveShipStart $nex_psf_noReviveReason",,,
+nex_commandSF_mainOpts,Nex_CommandSFOptions,Nex_SpecialForcesCommands updateData,"SetTooltip nex_commandSF_goAndDespawn ""The fleet will go to a designated market and place all its ships in storage. Officers will be returned to player fleet.""
+SetShortcut nex_commandSF_leave ESCAPE",,"1:nex_commandSF_patrol:Patrol system
+2:nex_commandSF_orbit:Orbit location
+3:nex_commandSF_follow:Follow player
+4:nex_commandSF_wait:Wait at player location
+5:nex_commandSF_joinRaid:Participate in raid
+6:nex_commandSF_goAndDespawn:Go to location and despawn
+7:nex_commandSF_autoAssign:Auto-assign
+9:nex_commandSF_leave:Leave",
+nex_commandSF_mainOptsRevive,Nex_CommandSFOptions,"Nex_SpecialForcesConfig canRevive
+$nex_sf_numDeadShips > 0",,,8:nex_sf_reviveShipStart:Revive dead ships,
+nex_commandSF_mainOptsReviveRemote,Nex_CommandSFOptions,"!Nex_SpecialForcesConfig canRevive
+$nex_sf_numDeadShips > 0","SetTooltip nex_commandSF_goAndRevive ""The fleet will go to a designated market and revive all its lost ships there. This will cost $nex_sf_reviveCostStr, which will be billed on arrival.""
+SetTooltipHighlights nex_commandSF_goAndRevive $nex_sf_reviveCostStr",,8:nex_commandSF_goAndRevive:Go to location and revive dead ships,
 nex_commandSF_patrol,DialogOptionSelected,$option == nex_commandSF_patrol,Nex_SpecialForcesCommands patrol,,,
 nex_commandSF_orbit,DialogOptionSelected,$option == nex_commandSF_orbit,Nex_SpecialForcesCommands orbit,,,
 nex_commandSF_follow,DialogOptionSelected,$option == nex_commandSF_follow,Nex_SpecialForcesCommands follow,,,
 nex_commandSF_joinRaid,DialogOptionSelected,$option == nex_commandSF_joinRaid,Nex_SpecialForcesCommands joinRaid,,nex_commandSF_main:Go back,
 nex_commandSF_wait,DialogOptionSelected,$option == nex_commandSF_wait,Nex_SpecialForcesCommands wait_player,,,
+nex_commandSF_goAndDespawn,DialogOptionSelected,$option == nex_commandSF_goAndDespawn,Nex_SpecialForcesCommands disbandAtLocation,,,
+nex_commandSF_goAndRevive,DialogOptionSelected,$option == nex_commandSF_goAndRevive,Nex_SpecialForcesCommands rebuildAtLocation,,,
 nex_commandSF_autoAssign,DialogOptionSelected,$option == nex_commandSF_autoAssign,"Nex_SpecialForcesCommands autoAssign
 #Nex_SpecialForcesCommands main",,,
 nex_commandSF_leave,DialogOptionSelected,$option == nex_commandSF_leave,"unset $nex_psf_task

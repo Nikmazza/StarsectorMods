@@ -891,14 +891,19 @@
 		"intelCeasefireTitle":"Ceasefire Offer",
 		"intelPeaceTreatyTitle":"Peace Treaty Offer",
 		"intelAllianceTitle":"Alliance Offer",
+		"intelReturnMarketTitle":"Request Market: %s",
 		"intelCeasefireDesc":"$TheFaction $isOrAre offering a $ceasefireOrPeaceTreaty to end the ongoing hostilities. In the absence of further overt hostile actions, this will run for at least $days days and until further diplomatic events occur.",
 		"intelAllianceDescInvite":"$TheFaction has offered us an invitation to their alliance, the $alliance.",
 		"intelAllianceDescJoin":"$TheFaction has requested to join our alliance, the $alliance.",
 		"intelAllianceDescNew":"$TheFaction has invited us to form a new alliance.",
 		"intelAllianceDescMerge":"$TheFaction has invited us to merge your two alliances, $alliance and $otherAlliance.",
+		"intelReturnMarketDesc":"$TheFaction has requested that we return control of $market, originally owned by them.",
+		"intelReturnMarketDesc2":"Acceptance will give us a size-based reputation gain (in addition to that from a normal transfer). The credit reward is equal to the shutdown value of the structures and industries $onOrAt $market, plus its six-month income, plus a bonus based on its size and stability.",
+		"intelReturnMarketDesc3":"Current gain: %s credits, %s reputation",
 		"intelCeasefireDescTime":"You have $timeLeft $days to accept or reject the offer.",
 		"intelCeasefireDescResult":"You have $acceptedOrRejected the offer.",
 		"intelCeasefireConfirm":"Confirm?",
+		"intelReturnMarketCredits":"Received %s",
 		"dialogCeasefireTitle":"|| Priority Notification ||",
 		"dialogCeasefireText":"You have received a $ceasefireOrPeaceTreaty offer from $theFaction. A response is required in $timeLeft $days.",
 		"dialogCeasefireText2":"You can disable this popup in the %s settings file.",
@@ -1146,6 +1151,7 @@
 		"buildingBase":"constructing base",
 		"following":"following $target",
 		"holding":"holding",
+		"disbandingAt":"disbanding at $target",
 		
 		"idle":"idle",
 
@@ -1259,6 +1265,10 @@
 		"intelPredictionBombard":"The invasion force is likely to resort to tactical bombardment.",
 		"intelBrawl":"$TheTargetFaction will likely deploy a large defense force to meet the invasion.",
 		"intelCounterInvasionStrength":"The force is carrying an estimated %s marines.",
+		"intelDefFleetRequested":"You have requested a defense fleet to counter this invasion.",
+		
+		"intelButtonRequestDef":"Quick-request defense fleet (%s/%s)",
+		"intelButtonRequestDefConfirm":"This will request a defense fleet of size %s to match the attacker, costing %s. You have %s fleet request points and %s.",
 		
 		"intelStealPenalty":"The operation was pre-empted by player forces of $thePlayerFaction. $TheFaction has lodged an official protest over your meddling intervention.",
 		"intelStealBulletReason":"Target stolen",
@@ -1786,6 +1796,9 @@
 		
 		"remnant_friendlyActivityCauseName":"Friendly with Remnants",
 		"remnant_friendlyActivityCauseTooltip":"Your association with the Remnants via %s leads to them grudgingly accepting your status as an uninvited neighbour.",
+		
+		"generic_allianceCauseName":"Have alliance",
+		"generic_allianceCauseTooltip":"As you are allied with this faction, they will not take hostile activity against you.",
 	},
 	
 	"exerelin_landmarks":{
@@ -1957,6 +1970,8 @@
 		"gainedXP":"gained $xp XP",
 		"recruitedOfficer":"recruited $numOfficers officer",
 		"recruitedOfficers":"recruited $numOfficers officers",
+		"recruitedOperative":"recruited $numOfficers operative",
+		"recruitedOperatives":"recruited $numOfficers operatives",
 
 		"populatedSystemsTitle":"Populated systems",
 		"populatedSystemsTooltip":"This is a target number of systems. Actual populated system count may be more or less than this.",
@@ -1968,6 +1983,8 @@
 		"maxMarketsTitle":"Maximum inhabited planets + stations per system",
 		"randomColoniesTitle":"Extra colonies at start",
 		"randomColoniesTooltip":"Follows the same selection rules as midgame colony expeditions.",
+		"randomColoniesMaxSize":"Maximum colony size",
+		"randomColoniesMaxSizeTooltip":"Maximum size of generated colonies. Minimum size is 3.",
 		"randomizeFactionsTooltip":"Every faction has a 50% chance to be enabled (except independents, which will not be toggled from their current setting).",
 		
 		"infoCustomPanel":"Mouse over option titles for more information",
@@ -2050,6 +2067,7 @@
 		"startingLevelTitle":"Starting level",
 		"startingCreditsTitle":"Starting credits (000)",
 		"startingOfficersTitle":"Starting officers",
+		"startingOperativesTitle":"Starting operatives",
 		
 		"customFleetButton":"Custom",
 		"customFleetHeader":"Custom fleet",
@@ -2197,7 +2215,6 @@
 		"dialog_officerLevels":"Officer levels: [%s]",
 		"dialog_lesserShips":"The company includes %s other ships of lesser significance.",
 		"dialog_shipsAfterHiring":"Ships after hiring: %s/%s",
-		"dialog_debtIncurred":"Incurred %s debt",
 		"dialog_removedFromStorage":"Lost %s from storage",
 		
 		"reportNode_name":"Mercenary contract: %s",
@@ -2425,6 +2442,10 @@
 		"intelBulletLiberated":"Liberated by $faction",
 		"intelBulletMutualAnnihilation":"Fall into anarchy",
 		"intelBulletExpired":"Ended in ceasefire",
+
+		"intelButtonRequestSuppr":"Request suppression fleet",
+		"intelButtonRequestSupprConfirm":"This will request a suppression fleet from a random location to help subdue the rebellion, costing %s. You have %s.",
+		"intelButtonRequestSuppr_tooltipNoSource":"No source market found to send the fleet from.",
 		
 		"intelTag":"Rebellions",
 		
@@ -2535,6 +2556,7 @@
 		
 		"intelBulletArrived":"Arrived at %s",
 		"intelBulletDestroyed":"Fleet destroyed",
+		"intelBulletRebuild":"Revived dead ships for %s",
 		
 		"intelDesc1":"The $faction special task group $fleetName is present in the Sector.",
 		"intelDesc1NoName":"A $faction special task group is present in the Sector.",
@@ -2976,6 +2998,7 @@
 		
 		"creditsAvailable":"You have %s credits available.",
 		"resourcesNeeded":"resources needed (available)",
+		"debtIncurred":"incurred %s debt",
 		
 		"alreadyKnown":"known",
 
@@ -3059,6 +3082,8 @@
 		"cydoniaName2":"Cydonia",
 		"arroyoName1":"Rayan",
 		"arroyoName2":"Arroyo",
+		"zgrName1":"Zunya",
+		"zgrName2":"Glamor-Rotanev",
 		
 		# used in random sector
 		"marketKantasDen":"Kanta's Den",
@@ -3100,6 +3125,8 @@
 		"tooltip_diplomacyEventFilterLevel":"0 = no filter, 1 = popup only events affecting player/commissioner faction, 2 = filter out all events. War/peace events are always shown.",
 		"name_agentEventFilterLevel":"Operative event filter level",
 		"tooltip_agentEventFilterLevel":"Works more or less the same way as the diplomacy filter.",
+		"name_ngcShowIntro":"Always show intro on new game",
+		"tooltip_ngcShowIntro":"Shows the intro text about this mod in the new game dialog. Normally it will only be shown once .",
 		
 		"name_enableHostileFleetEvents":"Enable hostile fleet events",
 		"tooltip_enableHostileFleetEvents":"If false, should disable all invasions, raids, etc. from this mod. Vanilla events such as pirate raids and colony crises will be unaffected.",
@@ -3214,6 +3241,8 @@
 		"tooltip_colonyExpeditionInterval":"Base interval at which colony expeditions are launched, modified by factors such as the number of existing colonies. Each participating faction has a chance to be selected in each expedition round.",
 		"name_colonyExpeditionsOnlyAfterPlayerColony":"Colony expeditions only after player colony",
 		"tooltip_colonyExpeditionsOnlyAfterPlayerColony":"Disables NPC colony expedition until after the player faction setup screen (faction name, flag, etc.) has been seen at least once.",
+		"name_colonyExpeditionsOnlyAfterGalatia":"Colony expeditions only after Galatia",
+		"tooltip_colonyExpeditionsOnlyAfterGalatia":"Disables NPC colony expedition until after the player completes the quest \"At The Gates\".",
 		"name_specialForcesPointMult":"Special task group point mult",
 		"tooltip_specialForcesPointMult":"Controls the rate at which NPC special task groups spawn and are replaced.",
 		"name_specialForcesSizeMult":"Special task group size mult",
@@ -3239,6 +3268,8 @@
 		"tooltip_officerDeaths":"Player officers may be killed or go MIA in combat.",
 		"name_rebellionMult":"Rebellion generation mult",
 		"tooltip_rebellionMult":"Modifies the rate at which rebellions break out due to low stability.",
+		"name_allowSmugglersForPlayerRebellions":"Allow rebellion smugglers on player markets",
+		"tooltip_allowSmugglersForPlayerRebellions":"If enabled, rebellions on player markets can receive supplies from smugglers by event (these smugglers can be intercepted to weaken the rebellion).",
 		
 		"name_skipStoryDefault":"Default \"skip story\" option",
 		"tooltip_skipStoryDefault":"Default setting for the \"skip story\" toggle in new game setup dialog.",
@@ -3250,6 +3281,8 @@
 		
 		"name_buyShipBasePriceMult":"NPC buy ship price mult",
 		"tooltip_buyShipBasePriceMult":"For bar and contact missions where an NPC offers to buy one of your ships.",
+		"name_buyShipRefundFullSP":"NPC buy ship: refund full SP",
+		"tooltip_buyShipRefundFullSP":"True: Give one SP for each player-installed S-mod on the ship. False: Give the same bonus XP that would be refunded by scuttling the ship, with 100%% BXP converted to 1 SP.",
 		
 		"name_allowNPCColonyGrowth":"Allow NPC colony growth",
 		"tooltip_allowNPCColonyGrowth":"If false, NPC colonies will not upsize on reaching 100%% growth progress."
