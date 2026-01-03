@@ -15,7 +15,7 @@ MakeOtherFleetAggressive true","???? PARALLAX ???? DEFICIANT
 
 ETYMON PROACT: CONCATENATE
 
-Despite your fleet running with transponders off, the swarm of opposing ships have taken notice of you. The EM spectrum suddenly flares, filled with intrusion patters older than living memory. These digital hexes of a lost age are ineffective against your modern ship systems, yet are no less unsettling.","asmCommLinkMistake:""Who are you? What do you want?""
+Despite your fleet running with transponders off, the swarm of opposing ships have taken notice of you. The EM spectrum suddenly flares, filled with intrusion patterns older than living memory. These digital hexes of a lost age are ineffective against your modern ship systems, yet are no less unsettling.","asmCommLinkMistake:""Who are you? What do you want?""
 cutCommLink:Cut the comm link",
 asmThreatCommLink1Sel,DialogOptionSelected,$option == asmThreatCommLink1,,"???? PARALLAX ???? DEFICIANT
 
@@ -95,19 +95,19 @@ Even as the order is obeyed, every camera feed is blinded by a brilliant flash. 
 The footage is cut short as the salvors make a hasty escape, their shuttle returning in record time. While your fleet moves to a safer distance, you watch the station tear itself apart like an overripe melon, spilling forth a throng of murderous machines.",defaultLeave:Prepare for battle,
 ,,,,,,
 # TT Special Acquisitions,,,,,,
-ZGRstartPitchEndRequestFuel2,DialogOptionSelected,$option == zgr_pitchRequestFuel,"$global.vice_give_tt_banteng = true
+ZGRstartPitchEndRequestFuel2,DialogOptionSelected,$option == zgr_pitchRequestFuel,"$global.vice_give_tt_atlas = true
 AdjustRepActivePerson 1
-AddTextSmall ""Received Banteng (TT) long-haul freighter"" good
-SetTextHighlights ""Received Banteng (TT) long-haul freighter""
-AddCommodity fuel 800
+AddTextSmall ""Received Atlas (TT) long-haul freighter"" good
+SetTextHighlights ""Received Atlas (TT) long-haul freighter""
+AddCommodity fuel 600
 $gotFuel = true 0
 FireAll ZGRdealWrapOpts","""Can't have you stranded with a hold full of treasure, can we."" She speaks without turning, although you detect a facsimile of amusement in her voice. You're gouging her, but she stands to make so much money, she simply does not care.
 
 An incoming message from your surprised ops chief informs you that a fuel laden Tri-Tachyon freighter has just offered to join your fleet.",,
-ZGRstartPitchEndRequestSup2,DialogOptionSelected,$option == zgr_pitchRequestSupplies,"$global.vice_give_tt_banteng = true
+ZGRstartPitchEndRequestSup2,DialogOptionSelected,$option == zgr_pitchRequestSupplies,"$global.vice_give_tt_atlas = true
 AdjustRepActivePerson 1
-AddTextSmall ""Received Banteng (TT) long-haul freighter"" good
-SetTextHighlights ""Received Banteng (TT) long-haul freighter""
+AddTextSmall ""Received Atlas (TT) long-haul freighter"" good
+SetTextHighlights ""Received Atlas (TT) long-haul freighter""
 AddCommodity supplies 800
 $gotSupplies = true 0
 FireAll ZGRdealWrapOpts","""Can't let you starve on the road to glory, can we."" She speaks without turning, although you detect a facsimile of amusement in her voice. You're gouging her, but she stands to make so much money, she simply does not care.
@@ -139,7 +139,7 @@ zgr_askAboutInfectedDontCare:""No questions. My fleet can kill them just fine.""
 zgr_askAboutInfectedDontCareSel,DialogOptionSelected,$option == zgr_askAboutInfectedDontCare,$global.circumfix_threat_question_resolved = true,"""Then I have work to do. Contact me again when you have more technology samples for study.""","zgr_askAboutInfectedAISalvaged:""I salvaged several corrupted AI cores as well. Are they worth anything to you?""
 cutCommLink:Cut the comm link",
 zgr_askAboutInfectedAISalvagedSel,DialogOptionSelected,$option == zgr_askAboutInfectedAISalvaged,,"""Yes, one of each type will suffice. You will be paid half a million credits.""","zgr_askAboutInfectedAIWeaponize:""Does Tri-Tachyon plan to weaponize this technology?""",
-zgr_askAboutInfectedExplainSel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain,$global.circumfix_threat_question_resolved = true,"""That is an annoyingly vague question,"" she says, although her tone does not sound more annoyed than usual.
+zgr_askAboutInfectedExplainSel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain,$global.circumfix_threat_question_resolved = true,"""That is an annoyingly vague question,"" she says, although her tone does not sound any more annoyed than usual.
 
 ""To summarize, you uncovered early Expansion-Era Domain Armada warships that have been retrofitted with Explorarium automation suites, along with additional changes that have altered the hulls to be ideal breeding grounds for Threat fragments. The latter revisions are crude, but interesting.""","zgr_askAboutInfectedExplain2:""Revisions? So the Threat do not normally infect starships?""",
 zgr_askAboutInfectedExplain2Sel,DialogOptionSelected,$option == zgr_askAboutInfectedExplain2,,"""No.""","zgr_askAboutInfectedExplain3:""Elaborate.""",
@@ -421,7 +421,9 @@ DespawnEntity","Despite your words, Agent Sheasby is far from pleased. You suspe
 mission_project_mayfly_fis_bribeDeclineSel,DialogOptionSelected,$option == mission_project_mayfly_fis_bribeDecline,AdjustRep persean -10,Agent Sheasby does not bother with giving you a response. The line goes ominously silent.,mission_project_mayfly_repeat_loop:Consider the Project Mayfly fleet,
 mission_project_mayfly_battleSel,DialogOptionSelected,$option == mission_project_mayfly_battle,"MakeOtherFleetHostile true
 MakeOtherFleetAggressive true
-$entity.ignorePlayerCommRequests = true","$PersonRank $personLastName chuckles to herself. ""Israfil said I would face you in combat and be victorious, but I know the godminds are not beyond lying. Let's see what fate has in store for us.""
+SetTextHighlights ""Israfil""
+$entity.ignorePlayerCommRequests = true
+$global.vice_mayfly_knowsIsrafil = true","$PersonRank $personLastName chuckles to herself. ""Israfil said I would face you in combat and be victorious, but I know the godminds are not beyond lying. Let's see what fate has in store for us.""
 
 $personLastName's ships, human and AI alike, raise shields and begin their approach.",cutCommLink:Cut the comm link,
 mission_project_mayfly_parleySel,DialogOptionSelected,$option == mission_project_mayfly_parley,"$global.vice_mayfly_spoke_to_fis = true
@@ -436,7 +438,8 @@ mission_project_mayfly_pawn:""You don't know me. I'm nobody's pawn.""
 mission_project_mayfly_battle:""No, I think not. I'd rather just kill you.""",
 mission_project_mayfly_pawnSel,DialogOptionSelected,$option == mission_project_mayfly_pawn,,"""Yet here you are,"" $personLastName spreads her hands.","mission_project_mayfly_parley3:""Start making sense. Who is this person telling you that we'd meet?""
 mission_project_mayfly_battle:""I'm going to kill you now, not because Brother Johan told me to, but because I want to.""",
-mission_project_mayfly_parley3Sel,DialogOptionSelected,$option == mission_project_mayfly_parley3,"SetTextHighlights ""Israfil""","""Israfil, the Four Winged Glory, the Herald of the End.""
+mission_project_mayfly_parley3Sel,DialogOptionSelected,$option == mission_project_mayfly_parley3,"SetTextHighlights ""Israfil""
+$global.vice_mayfly_knowsIsrafil = true","""Israfil, the Four Winged Glory, the Herald of the End.""
 
 Rabasi Kato closes her eyes and takes a deep breath. Your psych profiling software shows she is in a state of extreme stress, but the indicators of delusional thinking and religious mania are surprisingly low, despite her odd choice of words.
 

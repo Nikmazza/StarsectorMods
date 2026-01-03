@@ -1,3 +1,9 @@
+0.1.2
+Added the Hellfire Mortar, a bad idea.  Medium slot Hellbore with bad everything.
+Added the Onager Cannon, a medium frag ballistic.  
+Reworked the Javelin's sprite slightly.
+Lowered the base value of several ships and weapons.  Now they should be able to be purchased at reasonable cost.  Ship restoration should also not require 8 figures anymore.
+Added the Solace Plasma Bomber.
 0.1.1
 Now requires Magiclib and Lazylib.  
 Added the Flash HVM, a very maneuverable short-medium range missile.  Comes in small, medium, and large versions.

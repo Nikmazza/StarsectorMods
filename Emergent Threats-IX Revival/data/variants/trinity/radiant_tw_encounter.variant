@@ -1,0 +1,66 @@
+{
+    "displayName": "Heavy",
+    "fluxCapacitors": 0,
+    "fluxVents": 48,
+    "hullId": "radiant_tw",
+    "hullMods": [
+        "targetingunit",
+        "tw_modernized_rangefinder",
+        "ix_reactive_combat_shields",
+        "frontemitter",
+        "stabilizedshieldemitter",
+        "tw_activate_starquake",
+        "ix_dawnstar_controller",
+        "ix_dawnstar_neutron",
+        "ix_dawnstar_neutron_handler"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "radiant_tw_encounter",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "dawnstar_lcpb_ix",
+                "WS 006": "dawnstar_lcpb_ix",
+                "WS 007": "dawnstar_lcpb_ix",
+                "WS 008": "dawnstar_lcpb_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "stormwall_tw",
+                "WS 004": "stormwall_tw"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "plasma_dart_ix",
+                "WS 016": "plasma_dart_ix"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "morningstar_ciws_ix",
+                "WS 010": "morningstar_ciws_ix",
+                "WS 012": "morningstar_ciws_ix",
+                "WS 013": "morningstar_ciws_ix",
+                "WS 014": "morningstar_ciws_ix",
+                "WS 015": "morningstar_ciws_ix",
+                "WS 017": "morningstar_ciws_ix",
+                "WS 018": "morningstar_ciws_ix"
+            }
+        }
+    ],
+    "wings": [
+        "starquake_tw_wing",
+        "starquake_tw_wing"
+    ]
+}

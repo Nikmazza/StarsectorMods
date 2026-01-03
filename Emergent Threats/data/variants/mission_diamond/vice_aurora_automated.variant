@@ -4,9 +4,10 @@
     "fluxVents": 24,
     "hullId": "vice_aurora_ai",
     "hullMods": [
-        "ecm",
+        "magazines",
         "hardenedshieldemitter",
         "targetingunit",
+        "vice_modular_seeker_lens",
         "stabilizedshieldemitter",
         "vice_adaptive_emitter_diodes"
     ],
@@ -20,19 +21,17 @@
             "weapons": {
                 "WS 003": "vice_ionstreamer",
                 "WS 005": "vice_ionstreamer",
-                "WS 006": "breachpod",
-                "WS 009": "breachpod"
+                "WS 009": "breachpod",
+                "WS 010": "breach",
+                "WS 011": "breach",
+                "WS 012": "breach",
+                "WS 013": "breach"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 010": "atropos",
-                "WS 011": "atropos",
-                "WS 012": "atropos",
-                "WS 013": "atropos"
-            }
+            "weapons": {"WS 006": "vice_deluge_repeater"}
         },
         {
             "autofire": true,

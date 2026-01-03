@@ -3,7 +3,7 @@
   "hullId": "banteng_ix_base",
   "hullSize": "CRUISER",
   "spriteName": "graphics/ships/ix/banteng_ix.png",
-  "style": "MIDLINE",
+  "style": "HIGH_TECH",
   "height": 276,
   "width": 130,
   "center": [65, 138],

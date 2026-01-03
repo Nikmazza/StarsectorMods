@@ -1,0 +1,20 @@
+{
+  "id": "vice_deluge_repeater",
+  "specClass": "projectile",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "turretSprite": 			"graphics/vice/weapons/deluge_repeater_turret_base.png",
+  #"turretGlowSprite": 		"graphics/vice/weapons/deluge_repeater_turret_glow.png",
+  "hardpointSprite": 		"graphics/vice/weapons/deluge_repeater_hardpoint_base.png",
+  #"hardpointGlowSprite": 	"graphics/vice/weapons/deluge_repeater_hardpoint_glow.png",
+  "glowColor": [255,230,60,255],
+  "turretOffsets": [1, 0],
+  "turretAngleOffsets": [0],
+  "hardpointOffsets": [4, 0],
+  "hardpointAngleOffsets": [0],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW",
+  "autocharge": true,
+  "projectileSpecId": "vice_deluge_shot",
+  "fireSoundTwo": "vice_deluge_fire"
+}

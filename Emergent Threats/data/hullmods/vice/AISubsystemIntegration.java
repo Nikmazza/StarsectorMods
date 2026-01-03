@@ -2,6 +2,7 @@ package data.hullmods.vice;
 
 import java.util.LinkedHashSet;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.impl.hullmods.BaseLogisticsHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -10,6 +11,8 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 import data.scripts.vice.util.RemnantSubsystemsUtil;
 
@@ -48,7 +51,14 @@ public class AISubsystemIntegration extends BaseLogisticsHullMod {
 			if (spec == null) continue;
 			if (spec.getVariant().getHullSpec().getMinCrew() != 0) isAllValidDrones = false;
 		}
-		if (stats.getVariant().hasHullMod("SKR_remote")) isAllValidDrones = true;
+		if (stats.getVariant().hasHullMod("SKR_remote")
+			|| stats.getVariant().hasHullMod("rat_autonomous_bays")) isAllValidDrones = true;
+		if (Global.getSector().getMemoryWithoutUpdate().is("$xo_drone_tactics_is_active", true)) {
+			if (stats.getVariant().hasHullMod("vice_abomination_interface")) isAllValidDrones = true;
+			for (String mod : variant.getSMods()) {
+				if (mod.equals("vice_ai_subsystem_integration")) isAllValidDrones = true;
+			}
+		}
 		if (!isAllValidDrones) stats.getVariant().getHullMods().add(ERROR_MOD_ID);
 		else stats.getVariant().getHullMods().remove(ERROR_MOD_ID);
 	}
@@ -77,9 +87,56 @@ public class AISubsystemIntegration extends BaseLogisticsHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return ADAPTIVE_SUBSYSTEMS;
 		if (index == 1) return "" + (int) NO_MIN_CREW_BONUS;
-		if (index == 2) return FIGHTER_AUTOMATION;
-		if (index == 3) return "";
 		
 		return null;
+	}
+	
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		boolean isIntegrationBuiltIn = false;
+		if (ship != null) {
+			for (String mod : ship.getVariant().getSMods()) {
+				if (mod.equals("vice_ai_subsystem_integration")) isIntegrationBuiltIn = true;
+			}
+			boolean hasIntegration = false;
+			boolean hasIntegrationBuiltIn = true;
+			for (String mod : ship.getVariant().getHullMods()) {
+				if (mod.equals("vice_ai_subsystem_integration")) hasIntegration = true;
+			}
+			if (hasIntegration) {
+				for (String mod : ship.getVariant().getNonBuiltInHullmods()) {
+					if (mod.equals("vice_ai_subsystem_integration")) hasIntegrationBuiltIn = false;
+				}	
+			}
+			if (hasIntegration && hasIntegrationBuiltIn) isIntegrationBuiltIn = true;
+		}
+		String v = isIntegrationBuiltIn ? "active" : "inactive";
+		String s = "This hullmod must be built into the ship to function, and may be incompatible with certain advanced and esoteric ship designs. The hullmod is currently %s.";
+		
+		String s3 = "%s exective officer grants %s combat readiness.";
+		String syn = "Synthesis";
+		String synBonus = "5%";
+		
+		if (Global.getSector().getMemoryWithoutUpdate().is("$xo_drone_tactics_is_active", true)) {
+			boolean hasFlightCommand = (ship != null) && (ship.getVariant().hasHullMod("vice_adaptive_flight_command"));
+			String s2 = hasFlightCommand ? 
+						"%s exective officer skill automates all strike craft, eliminating pilot casualties and grants each squadron the %s damage bonus.": 
+						"%s exective officer skill automates all strike craft, eliminating pilot casualties and grants each squadron a %s damage bonus.";
+			String v2 = hasFlightCommand ? "20% (Adaptive Flight Command)" : "10%";
+			if (isIntegrationBuiltIn) tooltip.addPara(s, 10f, Misc.getHighlightColor(), v);
+			else tooltip.addPara(s, 10f, Misc.getNegativeHighlightColor(), v);
+			if (Global.getSector().getMemoryWithoutUpdate().is("$xo_synthesis_is_active", true)) {
+				tooltip.addPara(s3, 10f, Misc.getPositiveHighlightColor(), syn, synBonus);
+			}
+			tooltip.addPara(s2, 10f, Misc.getPositiveHighlightColor(), "Drone Tactics", v2);
+		}
+		else {
+			tooltip.addPara("%s are automated by remote control modules in place of human pilots, but standard fighter bays are rendered no longer compatible with crewed fighters.", 10f, Misc.getHighlightColor(),FIGHTER_AUTOMATION);
+			if (isIntegrationBuiltIn) tooltip.addPara(s, 10f, Misc.getHighlightColor(), v);
+			else tooltip.addPara(s, 10f, Misc.getNegativeHighlightColor(), v);
+			if (Global.getSector().getMemoryWithoutUpdate().is("$xo_synthesis_is_active", true)) {
+				tooltip.addPara(s3, 10f, Misc.getPositiveHighlightColor(), syn, synBonus);
+			}
+		}
 	}
 }

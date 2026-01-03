@@ -1,0 +1,46 @@
+{
+  "id": "rwc_flak",
+  "specClass": "projectile",
+  "projectileSpecId": "hephag_shot",
+  "type": "BALLISTIC",
+  "size": "MEDIUM",
+  "turretSprite": "graphics/weapons/rwc_flak_turret.png",
+  "turretGunSprite": "graphics/weapons/rwc_flak_turret_gun.png",
+  "hardpointSprite": "graphics/weapons/rwc_flak_hardpoint.png",
+  "hardpointGunSprite": "graphics/weapons/rwc_flak_hardpoint_gun.png",
+  "visualRecoil": 7,
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "turretOffsets": [
+    22.5,
+    4,
+    22.5,
+    -4
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    29,
+    4,
+    29,
+    -4
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType":"MUZZLE_FLASH",
+  "muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":30.0,
+					   "particleSizeMin":16.0,
+					   "particleSizeRange":18.0,
+					   "particleDuration":0.3,
+					   "particleCount":46,
+					   "particleColor":[255,155,75,225]},
+
+	"fireSoundTwo":"flak_fire",
+}

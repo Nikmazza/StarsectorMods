@@ -5,4 +5,7 @@
 	"rwc_positron_fire":[
 		{"file": "sounds/weapons/rwc_positron_fire.ogg", "pitch": 1, "volume": .6}
 	],
+	"rwc_pulser_fire":[
+		{"file": "sounds/weapons/rwc_pulser_fire.ogg", "pitch": 1, "volume": 1}
+	],
 }

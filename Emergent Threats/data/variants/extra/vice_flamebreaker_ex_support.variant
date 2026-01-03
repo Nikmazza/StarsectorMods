@@ -1,0 +1,53 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 14,
+    "goalVariant": true,
+    "hullId": "vice_flamebreaker_ex",
+    "hullMods": [
+        "magazines",
+        "hardenedshieldemitter",
+        "targetingunit",
+        "vice_modular_seeker_lens",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_flamebreaker_ex_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vice_fandance_seeker",
+                "WS 003": "vice_deluge_repeater",
+                "WS 004": "vice_deluge_repeater",
+                "WS 009": "breach",
+                "WS 010": "breach",
+                "WS 011": "breach"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 014": "locust"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "vice_ionstreamer",
+                "WS 013": "vice_ionstreamer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyburst",
+                "WS 005": "pdburst",
+                "WS 008": "pdburst"
+            }
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "displayName": "Modular",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "vice_atlas_tt",
+    "hullMods": [
+        "augmentedengines",
+        "hiressensors",
+        "vice_atlas_cargo_handler",
+        "vice_atlas_cargo_module"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_atlas_tt_modular",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "pdlaser",
+            "WS 002": "pdlaser",
+            "WS 003": "lrpdlaser"
+        }
+    }]
+}

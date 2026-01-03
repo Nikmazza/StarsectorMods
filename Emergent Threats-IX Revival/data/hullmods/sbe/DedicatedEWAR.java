@@ -17,18 +17,17 @@ public class DedicatedEWAR extends BaseHullMod {
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_FLAT).modifyFlat(id, ECM_BONUS);
+		boolean isApply = false;
 		//stats.getVariant().getHullMods().remove("ecm"); //done in BattleshipSBEHandler
 		
 		//for avoiding concurrent modification crashes, apply discount hullmod to player ships only
 		if (stats.getFleetMember() != null && Global.getSector().getPlayerFleet() != null) {
 			List<FleetMemberAPI> fleetList = Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy();
 			for (FleetMemberAPI member : fleetList) {
-				if (member.getVariant().getHullVariantId() == stats.getVariant().getHullVariantId()) {
-					return;
-				}
+				if (member.getVariant().getHullVariantId() == stats.getVariant().getHullVariantId()) isApply = true;
 			}
 		}
-		stats.getVariant().getHullMods().add(DISCOUNT_MOD);
+		if (isApply) stats.getVariant().getHullMods().add(DISCOUNT_MOD);
 	}
 	
 	//add EWAR attack
@@ -39,6 +38,7 @@ public class DedicatedEWAR extends BaseHullMod {
 		if (index == 2) return "" + (int) ECM_BONUS + "%";
 		if (index == 3) return "1000";
 		if (index == 4) return "5";
+		if (index == 5) return "20";
 		return null;
 	}
 }

@@ -1,0 +1,18 @@
+{
+	"ranks":{
+		"ranks":{
+			"TTambassadorrank":{"name":"Tri-Tachyon Ambassador"},
+		},
+		"posts":{
+			"TTambassadorpost":{"name":"Ambassador"},
+		},
+	},
+	"knownWeapons":{
+#		"tags":["tritachyon"],
+		"weapons":[
+			"de_tacsuperlaser",
+			"de_scatter",
+		],
+	},
+},
+

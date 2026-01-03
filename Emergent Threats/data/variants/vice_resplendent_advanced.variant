@@ -1,6 +1,6 @@
 {
     "displayName": "Advanced",
-    "fluxCapacitors": 4,
+    "fluxCapacitors": 0,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_resplendent",
@@ -44,10 +44,16 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 009": "lrpdlaser",
+                "WS 009": "vice_ionstreamer",
+                "WS 012": "vice_ionstreamer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 010": "lrpdlaser",
                 "WS 011": "lrpdlaser",
-                "WS 012": "lrpdlaser",
                 "WS 013": "lrpdlaser",
                 "WS 014": "lrpdlaser",
                 "WS 015": "lrpdlaser"

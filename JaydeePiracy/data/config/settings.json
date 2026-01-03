@@ -42,6 +42,12 @@
 		},
 		"ui":{
 			"jdp_icon_abstractcausality":"graphics/warroom/jdp_icon_abstractcausality.png",
+			"jdp_icon_ballistic":"graphics/warroom/jdp_icon_ballistic.png",
+			"jdp_icon_energy":"graphics/warroom/jdp_icon_energy.png",
+			"jdp_icon_shield":"graphics/warroom/jdp_icon_shield.png",
+			"jdp_icon_armor":"graphics/warroom/jdp_icon_armor.png",
+			"jdp_icon_link":"graphics/warroom/jdp_icon_link.png",
+			"jdp_icon_relay":"graphics/warroom/jdp_icon_relay.png",
 		},
 		"characters":{
 			"jdp_calhoum":"graphics/portraits/jdp_calhoum.png",

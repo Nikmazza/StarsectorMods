@@ -9,9 +9,8 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipSystemAIScript;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipwideAIFlags;
-import com.fs.starfarer.api.util.IntervalUtil;
 
-//use when ship flux is over 80%
+//use when ship flux is over 80% of module max
 public class ShieldVentAI implements ShipSystemAIScript {
     
 	private CombatEngineAPI engine;

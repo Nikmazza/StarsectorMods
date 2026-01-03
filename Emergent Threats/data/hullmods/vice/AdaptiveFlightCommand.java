@@ -2,11 +2,14 @@ package data.hullmods.vice;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 import data.scripts.vice.util.RemnantSubsystemsUtil;
 
@@ -52,7 +55,7 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 			ship.getSpriteAPI().setCenter(x, y);
 			ship.getSpriteAPI().setAlphaMult(alpha);
 			ship.getSpriteAPI().setAngle(angle);
-			ship.getSpriteAPI().setColor(color);	
+			ship.getSpriteAPI().setColor(color);
 		}
 	}
 	
@@ -124,5 +127,15 @@ public class AdaptiveFlightCommand extends BaseHullMod {
 		if (index == 1) return "" + (int) FIGHTER_SPEED_BONUS + "%";
 		if (index == 2) return "" + (int) FIGHTER_REPLACEMENT_BONUS + "%";
 		return null;
+	}
+	
+	//bonus added in Drone Tactics method
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (!Global.getSector().getMemoryWithoutUpdate().is("$xo_drone_tactics_is_active", true)) return;
+		String s = "%s executive officer skill grants a %s damage bonus to all drone squadrons when hullmod is equipped.";
+		String skill = "Drone Tactics";
+		String bonus = "20%";
+		tooltip.addPara(s, 10f, Misc.getPositiveHighlightColor(), skill, bonus);
 	}
 }

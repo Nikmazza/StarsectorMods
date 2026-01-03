@@ -22,99 +22,51 @@
         "neural_interface",
         "eccm"
     ],
-    "builtInWeapons": {
-        "WS 007": "jdp_marlingun",
-        "WS 002": "jdp_marlin_deco"
-    },
     "builtInWings": [],
     "builtInModules": null,
     "weaponSlots": [
         {
-            "id": "WS 003",
+            "id": "JDP_Radiator 001",
             "size": "SMALL",
-            "type": "MISSILE",
-            "mount": "HARDPOINT",
-            "arc": 5,
-            "angle": 0,
-            "locations": [
-                   -57.5,       77
-            ]
-        },
-        {
-            "id": "WS 004",
-            "size": "SMALL",
-            "type": "MISSILE",
-            "mount": "HARDPOINT",
-            "arc": 5,
-            "angle": 0,
-            "locations": [
-                   -28.5,       61
-            ]
-        },
-        {
-            "id": "WS 005",
-            "size": "SMALL",
-            "type": "MISSILE",
-            "mount": "HARDPOINT",
-            "arc": 5,
-            "angle": 0,
-            "locations": [
-                   -57.5,      -77
-            ]
-        },
-        {
-            "id": "WS 006",
-            "size": "SMALL",
-            "type": "MISSILE",
-            "mount": "HARDPOINT",
-            "arc": 5,
-            "angle": 0,
-            "locations": [
-                   -28.5,      -61
-            ]
-        },
-        {
-            "id": "WS 000",
-            "size": "SMALL",
-            "type": "ENERGY",
+            "type": "STATION_MODULE",
             "mount": "TURRET",
-            "arc": 225,
-            "angle": 228.5,
+            "arc": 30,
+            "angle": 180,
             "locations": [
-                  -108.5,      -33
+                    56.5,      -33
             ]
         },
         {
-            "id": "WS 001",
+            "id": "JDP_Radiator 002",
             "size": "SMALL",
-            "type": "ENERGY",
+            "type": "STATION_MODULE",
             "mount": "TURRET",
-            "arc": 225,
-            "angle": 131.5,
+            "arc": 60,
+            "angle": 180,
             "locations": [
-                  -108.5,       33
+                    56.5,      -33
             ]
         },
         {
-            "id": "WS 002",
+            "id": "JDP_Radiator 003",
             "size": "SMALL",
-            "type": "DECORATIVE",
+            "type": "STATION_MODULE",
             "mount": "TURRET",
-            "arc": 0,
-            "angle": 0,
+            "arc": 120,
+            "angle": 180,
             "locations": [
-                     -47,        0
+                    56.5,      -33
             ]
         },
         {
-            "id": "WS 007",
-            "size": "MEDIUM",
-            "type": "BUILT_IN",
-            "mount": "HARDPOINT",
-            "arc": 5,
-            "angle": 0,
+            "id": "JDP_Radiator 004",
+            "size": "SMALL",
+            "type": "STATION_MODULE",
+            "mount": "TURRET",
+            "arc": 90,
+            "angle": 180,
             "locations": [
-                    25.5,       22
+                    56.5,      -33
             ]
         }
     ],

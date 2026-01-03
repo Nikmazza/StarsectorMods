@@ -39,6 +39,8 @@ public class MissionDeploy extends BaseHullMod {
 			}
 		}
 		
+		if (!apply) return;
+		
 		if (stats.getVariant().hasHullMod("vice_experimental_hull_hvb") 
 				&& stats.getFleetMember() != null && stats.getFleetMember().getOwner() != 0
 				&& !ALPHA_ID.equals(stats.getFleetMember().getCaptain().getAICoreId())) {
@@ -92,6 +94,7 @@ public class MissionDeploy extends BaseHullMod {
 		else if (isPirate) stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyPercent(id, -HALF_COST);
 		else if (apply) stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(id, -DISCOUNT_L);
 		
+		//do not use, causes crashes, use (!apply) return; and lunalib manual removal instead
 		//if (!apply) stats.getVariant().getHullMods().remove(id);
 	}
 }

@@ -1,15 +1,15 @@
 {
     "displayName": "Automated",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 2,
     "fluxVents": 20,
     "hullId": "vice_medusa_ai",
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",
-        "ecm",
-        "stabilizedshieldemitter",
-        "vice_adaptive_temporal_shell",
-        "vice_module_handler"
+        "vice_module_handler",
+        "fluxdistributor",
+        "vice_laser_collimator",
+        "stabilizedshieldemitter"
     ],
     "permaMods": [
         "hardenedshieldemitter",
@@ -26,24 +26,24 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 008": "lightneedler",
-                "WS 009": "lightneedler"
+                "WS 006": "vice_lrburstpd",
+                "WS 007": "vice_lrburstpd"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 006": "gravitonbeam",
-                "WS 007": "gravitonbeam"
+                "WS 008": "vice_fragbomb",
+                "WS 009": "vice_fragbomb"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "ioncannon",
-                "WS 003": "ioncannon"
+                "WS 002": "vice_ionstreamer",
+                "WS 003": "vice_ionstreamer"
             }
         },
         {
@@ -51,8 +51,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "pdlaser",
-                "WS 004": "pdlaser",
-                "WS 005": "pdlaser"
+                "WS 004": "pdlaser"
             }
         }
     ]

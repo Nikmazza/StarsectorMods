@@ -1,5 +1,8 @@
 {
     "startShipsCarrierLarge":[
 	  ["vice_odyssey_tt_attack", "brawler_tritachyon_Standard", "brawler_tritachyon_Standard"]
-    ]
+    ],
+	"startShipsSuper":[
+	  ["vice_mutilator_startship", "buffalo_tritachyon_Standard"]
+	],
 }

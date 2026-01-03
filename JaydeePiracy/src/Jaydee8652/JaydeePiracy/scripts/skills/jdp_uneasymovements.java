@@ -1,6 +1,5 @@
 package Jaydee8652.JaydeePiracy.scripts.skills;
 
-import Jaydee8652.JaydeePiracy.scripts.skills.flowerfish.jdp_flowerfishUneasyMovements;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;

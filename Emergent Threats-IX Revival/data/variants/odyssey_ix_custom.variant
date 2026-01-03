@@ -1,7 +1,7 @@
 {
     "displayName": "Honor Guard",
     "fluxCapacitors": 0,
-    "fluxVents": 45,
+    "fluxVents": 46,
     "goalVariant": true,
     "hullId": "odyssey_ix",
     "hullMods": [
@@ -21,6 +21,7 @@
         "ix_smod_handler"
     ],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "odyssey_ix_custom",
     "weaponGroups": [
         {

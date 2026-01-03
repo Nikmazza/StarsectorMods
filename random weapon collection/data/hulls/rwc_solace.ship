@@ -1,0 +1,58 @@
+{
+  "hullName": "Solace Plasma Bomber",
+  "hullId": "rwc_solace",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/rwc_solace.png",
+  "style": "HIGH_TECH",
+  "height": 35,
+  "width": 40,
+  "center": [20, 17.5],
+  "collisionRadius": 25,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 22,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [6, 9]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -0,
+      "locations": [6, -9]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-17, 2.5],
+      "length": 19.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-17, -2.5],
+      "length": 19.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -7, 19,
+    17, -0,
+    -7, -19,
+    -17, -0.5
+  ]
+}

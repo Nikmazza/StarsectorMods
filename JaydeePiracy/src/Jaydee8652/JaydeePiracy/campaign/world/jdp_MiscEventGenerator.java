@@ -96,16 +96,11 @@ public class jdp_MiscEventGenerator extends BaseThemeGenerator {
 
 		//If it already exists, don't.
 		if (!Global.getSector().getMemoryWithoutUpdate().contains("$jdp_madokaBuffaloKey")) {
-			Iterator<StarSystemAPI> stariter = Global.getSector().getStarSystems().iterator();
-			ArrayList<StarSystemAPI> validstars = new ArrayList<StarSystemAPI>();
-			while (stariter.hasNext()) {
-				StarSystemAPI star = stariter.next();
-				if (star.isProcgen()) {
-					validstars.add(star);
-				}
-			}
-			Collections.shuffle(validstars);
-			StarSystemAPI targetstar = validstars.get(0);
+			List<StarSystemAPI> validStars = new ArrayList<>(Global.getSector().getStarSystems().stream().filter(s -> s.isProcgen() && !s.getPlanets().isEmpty()).toList());
+
+			Collections.shuffle(validStars);
+			StarSystemAPI targetstar = validStars.get(0);
+
 			Global.getSector().getMemoryWithoutUpdate().set("$jdp_madokaBuffaloKey", targetstar);
 
 			SectorEntityToken entity = targetstar.getPlanets().get(0);
@@ -172,6 +167,10 @@ public class jdp_MiscEventGenerator extends BaseThemeGenerator {
 					if (curr.hasCondition(Conditions.HABITABLE)) continue;
 
 					PlanetGenDataSpec spec = (PlanetGenDataSpec) Global.getSettings().getSpec(PlanetGenDataSpec.class, curr.getSpec().getPlanetType(), true);
+					if (spec == null) {
+						Global.getLogger(this.getClass()).warn("JDP_RETROGEN_EVENTS: 		[WARNING] " + source + " encountered missing PlanetGenDataSpec on [" + curr.getName() + "] [" + curr.getId() + "] in [" + curr.getStarSystem().getNameWithLowercaseType() + "] [" + curr.getStarSystem().getId() + "] for type [" + curr.getSpec().getPlanetType() + "]");
+						continue;
+					}
 
 					float w = 1f;
 					if (spec.getCategory().equals("cat_frozen")) {w *= 50f;}
@@ -842,12 +841,9 @@ public class jdp_MiscEventGenerator extends BaseThemeGenerator {
 				planet.getMarket().addCondition(Conditions.POLLUTION);
 				planet.getMarket().addCondition(Conditions.EXTREME_TECTONIC_ACTIVITY);
 				planet.getMarket().addCondition(Conditions.RUINS_SCATTERED);
-				planet.getMarket().addCondition(Conditions.TOXIC_ATMOSPHERE);
-				planet.getMarket().addCondition(Conditions.ORE_SPARSE);
-				planet.getMarket().addCondition(Conditions.RARE_ORE_SPARSE);
+				planet.getMarket().addCondition(Conditions.THIN_ATMOSPHERE);
 				planet.getMarket().addCondition(jdp_Conditions.JDP_QUARRYLAKES);
 				planet.getMarket().addCondition(jdp_Conditions.JDP_HUBRISMARKER);
-
 
 				long seed = StarSystemGenerator.random.nextLong();
 				planet.addTag(NOT_RANDOM_MISSION_TARGET);
@@ -1853,9 +1849,10 @@ public class jdp_MiscEventGenerator extends BaseThemeGenerator {
 
 		if (system.getAge() == null) {
 			log.info("JDP_RETROGEN_EVENTS: 		Failed to generate system, null age");
-			//Try again?
-			//system = gen.generateSystem(systemType, StarType);
+			system.setAge(system.getConstellation().getAge());
 		}
+
+
 
 		populateSystem(BaseThemeGenerator.computeSystemData(system));
 		

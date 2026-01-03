@@ -13,7 +13,6 @@ import com.fs.starfarer.api.util.Misc;
 
 public class SeekerLens extends BaseHullMod {
 
-	private static float ENERGY_BOLT_SPEED_BONUS = 100f;
 	private static float ENERGY_WEAPON_ROF_BONUS = 25f;
 	private static float ENERGY_WEAPON_FLUX_REDUCTION  = 25f;
 	private static float SEEKER_FLAT_RANGE_BONUS = 800f;
@@ -23,7 +22,6 @@ public class SeekerLens extends BaseHullMod {
 		WeaponSpecAPI spec = stats.getVariant().getWeaponSpec("WS 001");
 		if (spec != null && spec.hasTag(SEEKER_TAG)) {
 			stats.getEnergyRoFMult().modifyMult(id, 1f + ENERGY_WEAPON_ROF_BONUS * 0.01f);
-			//stats.getEnergyProjectileSpeedMult().modifyMult(id, 1f + ENERGY_BOLT_SPEED_BONUS * 0.01f);
 			stats.getEnergyWeaponFluxCostMod().modifyMult(id, 1f - ENERGY_WEAPON_FLUX_REDUCTION * 0.01f);
 		}
 	}
@@ -53,6 +51,7 @@ public class SeekerLens extends BaseHullMod {
 	
 	@Override
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (ship == null) return;
 		boolean isSeeker = false;
 		WeaponSpecAPI spec = ship.getVariant().getWeaponSpec("WS 001");
 		if (spec != null && spec.hasTag(SEEKER_TAG)) isSeeker = true;

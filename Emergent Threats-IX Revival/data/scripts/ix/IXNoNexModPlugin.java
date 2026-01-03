@@ -13,13 +13,18 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CharacterDataAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorGeneratorPlugin;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.FullName;
+import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
@@ -46,14 +51,16 @@ import data.scripts.ix.luna.NanoReplicatorButton;
 import data.scripts.ix.luna.PanopticCommandRefitButton;
 import data.scripts.ix.luna.PanopticStrategicRefitButton;
 import data.scripts.ix.luna.PanopticTacticalRefitButton;
+import data.scripts.ix.luna.PanopticWatcherRefitButton;
 import data.scripts.ix.luna.SalvagePanopticonCoreButton;
 import data.scripts.ix.util.NameListUtil;
 import data.scripts.sbe.luna.RemoveSBEButton;
+import data.scripts.util.MagicCampaign;
 
 //import exerelin.campaign.AllianceManager;
 //import exerelin.campaign.alliances.Alliance;
 
-public class IXNoNexModPlugin extends BaseModPlugin implements SectorGeneratorPlugin {
+public class IXModPlugin extends BaseModPlugin implements SectorGeneratorPlugin {
 
 	private static String IX_SKILL_ID = "ix_sword_of_the_fleet";
 	private static String IX_ADMIN_SKILL_ID = "ix_ai_assisted_command";
@@ -80,7 +87,6 @@ public class IXNoNexModPlugin extends BaseModPlugin implements SectorGeneratorPl
 			sector.getFaction(TW_FAC_ID).setShowInIntelTab(false);
 			Global.getSector().getMemoryWithoutUpdate().is("$trinity_worlds_is_active", false);
 		}
-		
 		
 		sector.getPlayerMemoryWithoutUpdate().set("$reputationIsSetIX", false);
 		sector.registerPlugin(pCorePlugin);
@@ -174,6 +180,33 @@ public class IXNoNexModPlugin extends BaseModPlugin implements SectorGeneratorPl
 			MutableCharacterStatsAPI stats = Global.getSector().getPlayerPerson().getStats();
 			if (!stats.hasSkill(IX_SKILL_ID)) stats.setSkillLevel(IX_SKILL_ID, 2f);
 		}
+		
+		//to prevent independent players from getting instantly killed by IX Battlegroup if spawning in system
+		if (!isIX && !isTrinity && !commissionID.equals("pirates")) {
+			StarSystemAPI system = Global.getSector().getPlayerFleet().getStarSystem();
+			if (system == null) return;
+			if (system.getBaseName().equals("Zorya") || system.getBaseName().equals("Danu")) {
+				Global.getSector().getPlayerFleet().setLocation(0, -15000);
+				Global.getSector().getPlayerFleet().setMoveDestination(0, -15000);
+				Global.getSector().getPlayerFleet().setTransponderOn(false);
+				if (!Global.getSettings().getModManager().isModEnabled("EmergentThreats_Vice")) return;
+				//generate special derelict
+				SectorEntityToken laertes = MagicCampaign.createDerelict(
+					"vice_mutilator_startship",
+					ShipRecoverySpecial.ShipCondition.PRISTINE,
+					true,
+					200,
+					true,
+					system.getStar(),
+					270,
+					14980,
+					1000000);	
+				laertes.addTag(Tags.NEUTRINO_LOW);
+				laertes.setName(NameListUtil.Mysterious_Derelict);
+				laertes.setCustomDescriptionId("vice_laertes_wreck");
+				laertes.setSensorProfile(25f);
+			}
+		}
 		Global.getSector().getMemoryWithoutUpdate().set("$give_IX_hullmods", false);
 	}
 	
@@ -217,8 +250,9 @@ public class IXNoNexModPlugin extends BaseModPlugin implements SectorGeneratorPl
 		SectorAPI sector = Global.getSector();
 		sector.registerPlugin(pCorePlugin);
 		
-		//should remove a few versions after v1.1.6 and leave only new game version
-		sector.getMemoryWithoutUpdate().set("$ix_battlegroup_is_active", true);
+		//testing
+		//sector.getMemoryWithoutUpdate().set("$vice_mayfly_knowsIsrafil", true);
+		//sector.getMemoryWithoutUpdate().set("$gavePKtoIX", true);
 		
 		FactionAPI ix_battlegroup = Global.getSector().getFaction(IX_FAC_ID);
 		FactionAPI ix_honor_guard = Global.getSector().getFaction("ix_core");
@@ -254,6 +288,13 @@ public class IXNoNexModPlugin extends BaseModPlugin implements SectorGeneratorPl
 			else if (m.hasIndustry(solitonId)) m.removeIndustry(solitonId, null, false);
 		}
 		
+		updateColonyItemsForIndustries("cryoarithmetic_engine", "ix_fleet_command");
+		updateColonyItemsForIndustries("synchrotron", "ix_fuel_production");
+		
+		makeTrinityKnowTanker();
+		generateImportantPeople();
+		
+		/**
 		//one time switchover of High Command structure to new Fleet Command HQ on Vertex Station
 		if (sector.getMemoryWithoutUpdate().is("$ix_vertex_updated", true)) return;
 		if (sector.getStarSystem("Zorya") != null 
@@ -277,11 +318,35 @@ public class IXNoNexModPlugin extends BaseModPlugin implements SectorGeneratorPl
 			}
 		}
 		sector.getMemoryWithoutUpdate().set("$ix_vertex_updated", true);
-		
-		updateColonyItemsForIndustries("cryoarithmetic_engine", "ix_fleet_command");
-		updateColonyItemsForIndustries("synchrotron", "ix_fuel_production");
-		
-		makeTrinityKnowTanker();
+		**/
+	}
+	
+	private void generateImportantPeople() {
+		ImportantPeopleAPI people = Global.getSector().getImportantPeople();
+		PersonAPI person = Global.getFactory().createPerson();
+		person = Global.getFactory().createPerson();
+		person.setId("tw_asm_core");
+		person.setFaction("ix_battlegroup");
+		person.setGender(FullName.Gender.MALE);
+		person.setRankId("tw_asm_watcher");
+		person.setPostId("tw_asm_AI");
+		person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Panopticon");
+		person.getName().setLast("Core");
+		person.setPortraitSprite(Global.getSettings().getSpriteName("portraits", "ix_panopticon_core"));
+		if (!people.containsPerson(person)) people.addPerson(person);
+			
+		person = Global.getFactory().createPerson();
+		person.setId("ix_watcher_greg");
+		person.setFaction("ix_battlegroup");
+		person.setGender(FullName.Gender.MALE);
+		person.setRankId("tw_asm_watcher");
+		person.setPostId("tw_asm_AI");
+		person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Gregory");
+		person.getName().setLast("Wakefield");
+		person.setPortraitSprite(Global.getSettings().getSpriteName("portraits", "ix_panopticon_greg"));
+		if (!people.containsPerson(person)) people.addPerson(person);
 	}
 	
 	private void makeTrinityKnowTanker() {
@@ -312,6 +377,7 @@ public class IXNoNexModPlugin extends BaseModPlugin implements SectorGeneratorPl
 		LunaRefitManager.addRefitButton(new PanopticCommandRefitButton());
 		LunaRefitManager.addRefitButton(new PanopticStrategicRefitButton());
 		LunaRefitManager.addRefitButton(new PanopticTacticalRefitButton());
+		LunaRefitManager.addRefitButton(new PanopticWatcherRefitButton());
 		LunaRefitManager.addRefitButton(new SalvagePanopticonCoreButton());
 		LunaRefitManager.addRefitButton(new RemoveSBEButton());
 	}

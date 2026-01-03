@@ -66,17 +66,18 @@ object SA_TTBlackSiteTwo {
                 Misc.setAbandonedStationMarket("SA_moteStationMarket", station)
                 val market = station.market
                 market.factionId = Factions.MERCENARY
-                market.addIndustry(Industries.STARFORTRESS_HIGH)
-                market.getIndustry(Industries.STARFORTRESS_HIGH)?.finishBuildingOrUpgrading()
-                market.getIndustry(Industries.STARFORTRESS_HIGH)?.isImproved = true
+                market.addIndustry(Industries.STARFORTRESS_MID)
+                market.getIndustry(Industries.STARFORTRESS_MID)?.finishBuildingOrUpgrading()
+                market.getIndustry(Industries.STARFORTRESS_MID)?.isImproved = true
                 //market.getIndustry(Industries.STARFORTRESS_HIGH)?.aiCoreId = Commodities.ALPHA_CORE
 
                 market.addStationAugment("SA_moteSink", false)?.builtInMode = BuiltInMode.NORMAL
                 market.addStationAugment("SA_bubbleShield", false)?.builtInMode = BuiltInMode.NORMAL
-                market.addStationAugment("SA_ECCMPackage", false)?.builtInMode = BuiltInMode.NORMAL
+                market.addStationAugment("SA_regenerativeDrones", false)?.builtInMode = BuiltInMode.NORMAL
                 market.addStationAugment("SA_ECMPackage", false)?.builtInMode = BuiltInMode.NORMAL
-                market.addStationAugment("SA_heavyArmor", false)?.builtInMode = BuiltInMode.NORMAL
+                market.addStationAugment("SA_droneAAF", false)?.builtInMode = BuiltInMode.NORMAL
                 market.addStationAugment("SA_fighterTimeflow", false)?.builtInMode = BuiltInMode.NORMAL
+                //market.addStationAugment("SA_axialOverclocking", false)?.builtInMode = BuiltInMode.NORMAL
 
                 market.memoryWithoutUpdate?.set(SA_ids.SA_noAugmentAutofit, true)
 

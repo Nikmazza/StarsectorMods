@@ -118,11 +118,29 @@ object stationAugmentStore {
 
             val id = row.getString("id")
             if (id.startsWith("#") || id.isEmpty()) continue
+            val name = row.getString("name")
+
+            var reqModIds = HashSet<String>()
+            val reqModData = row.optString("req_mod_ids")
+            if (reqModData.isNotEmpty()) {
+                reqModIds = reqModData.split(Regex("(, *)")).toHashSet()
+                var skip = false
+                for (id in reqModIds) {
+                    if (!Global.getSettings().modManager.isModEnabled(id)) {
+                        SA_debugUtils.log.info("augment $name missing mod $id, skipping")
+                        skip = true
+                        break
+                    }
+                }
+                if (skip) {
+                    continue
+                }
+            }
+
             val knowledgeTags = row.getString("knowledge_tags").split(Regex("(, *)")).toMutableSet()
-            val usageTags = row.getString("usage_tags").split(Regex("(, *)")).toMutableSet()
+            val usageTags = row.getString("usage_tags").split(Regex("(, *)")).filter { !it.isEmpty() }.toMutableSet()
             val codexTags = row.getString("codex_tags").split(Regex("(, *)")).toMutableSet()
             val manufacturer = row.getString("manufac")
-            val name = row.getString("name")
             val pluginPath = row.getString("plugin")
             val dropWeight = row.getDouble("drop_weight").toFloat()
             val sellWeight = row.getDouble("sell_weight").toFloat()
@@ -168,7 +186,8 @@ object stationAugmentStore {
                 reqItemId,
                 autofitPlugin,
                 nameColor,
-                modId
+                modId,
+                reqModIds
             )
             allAugments[id] = spec
         }

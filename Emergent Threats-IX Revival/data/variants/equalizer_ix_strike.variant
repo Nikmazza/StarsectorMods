@@ -1,7 +1,7 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 0,
-    "fluxVents": 49,
+    "fluxCapacitors": 1,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "equalizer_ix",
     "hullMods": [
@@ -12,6 +12,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "equalizer_ix_strike",
     "weaponGroups": [
         {

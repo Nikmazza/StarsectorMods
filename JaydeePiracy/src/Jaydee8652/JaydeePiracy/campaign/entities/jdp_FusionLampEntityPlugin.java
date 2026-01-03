@@ -21,8 +21,6 @@ public class jdp_FusionLampEntityPlugin extends BaseCustomEntityPlugin {
 	public static Color GLOW_COLOR = new Color(255,165,100,255);
 	public static Color LIGHT_COLOR = new Color(255,165,100,255);
 
-	public static String VOLATILES_SHORTAGE_KEY = "$core_volatilesShortage";
-
 	public static String GLOW_COLOR_KEY = "$core_lampGlowColor";
 	public static String LIGHT_COLOR_KEY = "$core_lampLightColor";
 	public static float GLOW_FREQUENCY = 0.5f; // on/off cycles per second

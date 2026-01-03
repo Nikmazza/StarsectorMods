@@ -1,12 +1,12 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 1,
-    "fluxVents": 20,
+    "fluxCapacitors": 0,
+    "fluxVents": 19,
     "goalVariant": true,
     "hullId": "vice_effulgent",
     "hullMods": [
-        "eccm",
         "missleracks",
+        "hardenedshieldemitter",
         "vice_adaptive_reactor_chamber"
     ],
     "permaMods": [],

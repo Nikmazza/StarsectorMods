@@ -80,9 +80,24 @@ public class AdaptiveNeuralNet extends BaseHullMod {
 		else if (("ix_panopticon_core").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 2f;
 		else if (("ix_panopticon_instance").equals(coreId)) bonus = CR_BONUS + AI_BONUS * 3f;
 		
-		if (util.isModuleCheck(stats)) bonus = CR_BONUS + AI_BONUS * 0f;
+		boolean isModule = false;
+		if (util.isModuleCheck(stats)) {
+			bonus = CR_BONUS + AI_BONUS * 0f;
+			isModule = true;
+		}
+		
+		//generic bonus based on level for cores not in list
+		if (!isModule && coreId != null && bonus == CR_BONUS) {
+			int coreLevel = stats.getFleetMember().getCaptain().getStats().getLevel();
+			if (coreLevel <= 1) bonus = CR_BONUS;
+			else if (coreLevel <= 4) bonus = CR_BONUS + AI_BONUS;
+			else if (coreLevel <= 6) bonus = CR_BONUS + AI_BONUS * 2f;
+			else if (coreLevel <= 8) bonus = CR_BONUS + AI_BONUS * 3f;
+			else if (coreLevel >= 9) bonus = CR_BONUS + AI_BONUS * 4f;
+		}
 		
 		TOTAL_BONUS = bonus;
+		
 		stats.getMaxCombatReadiness().modifyFlat(id, bonus * 0.01f, "Adaptive neural net");
 		
 		util.applyShipwideHullMod(stats.getVariant(), id, true);

@@ -20,7 +20,7 @@ public class jdp_eutrophicatedBiosphere extends BaseMarketConditionPlugin {
 	public void apply(String id) {
 		super.apply(id);
 
-		market.getHazard().modifyFlat(id, HAZARD/100, condition.getName());
+		market.getHazard().modifyFlat(id, (HAZARD / 100f), condition.getName());
 
 		Industry farming = null;
 

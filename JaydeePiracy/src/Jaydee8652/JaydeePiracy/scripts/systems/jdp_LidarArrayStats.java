@@ -72,7 +72,6 @@ public class jdp_LidarArrayStats extends BaseShipSystemScript {
 				w.setSuspendAutomaticTurning(true);
 				LidarDishData data = new LidarDishData();
 				data.turnDir = Math.signum(turnDir);
-				data.turnRate = 0.5f;
 				data.turnRate = 0.1f;
 				data.w = w;
 				data.angle = 0f;
@@ -92,8 +91,7 @@ public class jdp_LidarArrayStats extends BaseShipSystemScript {
 		if (active) {
 			turnRateMult = 20f;
 		}
-		//turnRateMult = 0.1f;
-		//boolean first = true;
+
 		for (LidarDishData data : dishData) {
 			float arc = data.w.getArc();
 			float useTurnDir = data.turnDir;
@@ -124,10 +122,6 @@ public class jdp_LidarArrayStats extends BaseShipSystemScript {
 			float facing = data.angle + data.w.getArcFacing() + data.w.getShip().getFacing();
 			data.w.setFacing(facing);
 			data.w.updateBeamFromPoints();
-//			if (first) {
-//				System.out.println("Facing: " + facing);
-//				first = false;
-//			}
 		}
 	}
 	
@@ -148,9 +142,7 @@ public class jdp_LidarArrayStats extends BaseShipSystemScript {
 		}
 		
 		init(ship);
-		
-		//lidarFacingOffset += am
-		
+
 		boolean active = state == State.IN || state == State.ACTIVE || state == State.OUT;
 		
 		rotateLidarDishes(active, effectLevel);
@@ -202,26 +194,14 @@ public class jdp_LidarArrayStats extends BaseShipSystemScript {
 		}
 		lidarRange += 100f;
 		stats.getBeamWeaponRangeBonus().modifyFlat("lidararray", lidarRange);
-//		for (WeaponAPI w : ship.getAllWeapons()) {
-//			if (w.isDecorative() && w.getSpec().hasTag(Tags.LIDAR)) {
-//				if (state == State.IN) {
-//					w.setForceFireOneFrame(true);
-//				}
-//			}
-//		}
-		
+
 		// always wait a quarter of a second before starting to fire the targeting lasers
 		// this is the worst-case turn time required for the dishes to face front
 		// doing this to keep the timing of the lidar ping sounds consistent relative
 		// to when the windup sound plays
 		float fireThreshold = 0.25f / 3.25f;
 		fireThreshold += 0.02f; // making sure there's only 4 lidar pings; lines up with the timing of the lidardish weapon
-		//fireThreshold = 0f;
 		for (LidarDishData data : dishData) {
-			boolean skip = data.phase % 1f > 1f / data.count;
-			//skip = data.phase % 1f > 0.67f;
-			skip = false;
-			if (skip) continue;
 			if (data.w.isDecorative() && data.w.getSpec().hasTag(Tags.LIDAR)) {
 				if (state == State.IN && Math.abs(data.angle) < 5f && effectLevel >= fireThreshold) {
 					data.w.setForceFireOneFrame(true);
@@ -254,9 +234,7 @@ public class jdp_LidarArrayStats extends BaseShipSystemScript {
 	protected void unmodify(String id, MutableShipStatsAPI stats) {
 		stats.getBallisticWeaponRangeBonus().modifyPercent(id, PASSIVE_RANGE_BONUS);
 		stats.getEnergyWeaponRangeBonus().modifyPercent(id, PASSIVE_RANGE_BONUS);
-//		stats.getBallisticWeaponRangeBonus().unmodifyPercent(id);
-//		stats.getEnergyWeaponRangeBonus().unmodifyPercent(id);
-		
+
 		stats.getBallisticRoFMult().unmodifyMult(id);
 		stats.getEnergyRoFMult().unmodifyMult(id);
 		stats.getMaxRecoilMult().unmodifyMult(id);
@@ -265,7 +243,9 @@ public class jdp_LidarArrayStats extends BaseShipSystemScript {
 		
 		stats.getBallisticProjectileSpeedMult().unmodifyPercent(id);
 		stats.getEnergyProjectileSpeedMult().unmodifyPercent(id);
-		
+
+		stats.getBeamWeaponRangeBonus().unmodify("lidararray");
+
 		playedWindup = false;
 	}
 	

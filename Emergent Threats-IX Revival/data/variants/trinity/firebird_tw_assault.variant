@@ -1,12 +1,13 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 19,
+    "fluxCapacitors": 0,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "firebird_tw",
     "hullMods": [
         "tw_drone_control_node",
         "targetingunit",
+        "tw_modernized_rangefinder",
         "stabilizedshieldemitter"
     ],
     "modules": [{"SM 1": "ix_active_flare_module"}],
@@ -26,8 +27,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "spatial_charge_launcher_ix",
-                "WS 002": "spatial_charge_launcher_ix"
+                "WS 001": "stormwall_salvo_tw",
+                "WS 002": "stormwall_salvo_tw"
             }
         },
         {

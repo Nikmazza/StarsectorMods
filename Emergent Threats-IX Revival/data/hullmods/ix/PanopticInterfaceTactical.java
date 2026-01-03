@@ -29,6 +29,7 @@ public class PanopticInterfaceTactical extends BaseHullMod {
 	public static float RANGE_BONUS = 200f;
 		
 	private static String SKILL_ID = "ix_sword_of_the_fleet";
+	private static String SKILL_NAME = "Sword of the Fleet";
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -154,11 +155,12 @@ public class PanopticInterfaceTactical extends BaseHullMod {
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) PanopticInterfaceUtil.PENALTY_FRIGATE;
-		if (index == 1) return "" + (int) PanopticInterfaceUtil.PENALTY_DESTROYER;
-		if (index == 2) return "" + (int) PanopticInterfaceUtil.PENALTY_CRUISER;
-		if (index == 3) return "" + (int) PanopticInterfaceUtil.PENALTY_CAPITAL + "%";
-		if (index == 4) return "" + (int) PanopticInterfaceUtil.CR_PENALTY_MAX + "%";
+		if (index == 0) return SKILL_NAME;
+		if (index == 1) return "" + (int) PanopticInterfaceUtil.PENALTY_FRIGATE;
+		if (index == 2) return "" + (int) PanopticInterfaceUtil.PENALTY_DESTROYER;
+		if (index == 3) return "" + (int) PanopticInterfaceUtil.PENALTY_CRUISER;
+		if (index == 4) return "" + (int) PanopticInterfaceUtil.PENALTY_CAPITAL + "%";
+		if (index == 5) return "" + (int) PanopticInterfaceUtil.CR_PENALTY_MAX + "%";
 		return null;
 	}
 }

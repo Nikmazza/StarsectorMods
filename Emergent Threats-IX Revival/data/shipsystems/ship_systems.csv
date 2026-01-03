@@ -3,16 +3,17 @@ Active Flare Salvo,ix_flare_launcher,,,,,,,,,,,,,10,,,,,,,,,,,,,graphics/icons/h
 Combat Flux Shunt,ix_flux_shunt,,,,,,,,,,,0.01,3,12,,,,,TRUE,,,,,,,,graphics/icons/tactical/venting_flux2.png
 Immanence Engine,ix_immanence_engine,1,,,,,0.25,,,,4,10,2,20,,,,,,,,,,,,,graphics/icons/hullsys/temporal_shell.png
 Immanence Engine,ix_immanence_engine_frigate,1,,,,,0.25,,,,4,10,2,10,,,,,,,,,,,,,graphics/icons/hullsys/temporal_shell.png
-Interdictor Array,ix_interdictor,,,,2000,,,,,,1,1,0.5,20,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
+Interdictor Array,ix_interdictor,,,,2000,,,,,,1,1,0.5,15,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
 Missile Reload,ix_missile_reload,,,,,,0.5,,,,1,0,0,60,,,,,,,,,,,,,graphics/icons/hullsys/missile_racks.png
 Plasma Jets,ix_plasmajets,,,,,,,,,,1,4,2,5,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
 Point Defense Drones,ix_drone_pd,,,,,,,,20,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
 Pulse Accelerator,ix_pulse_accelerator,,,,,,,,,,1,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
 Rapid Assembly,ix_rapid_assembly,,,,,,0.4,,,,0.5,,0.1,90,,,,,,,,,,,,,graphics/icons/hullsys/reserve_deployment.png
-Shield Vent,ix_shield_vent,,,,,,,,,,0.1,0.1,0.1,40,,,,,,,,,TRUE,,,hide_in_codex,graphics/icons/tactical/venting_flux2.png
 Shield Vent,ix_shield_vent_flourish,,,,,,,,,,0.1,0.1,0.1,20,,,,,,,,,TRUE,,,hide_in_codex,graphics/icons/tactical/venting_flux2.png
+Shield Vent,ix_shield_vent_iris,,,,,,,,,,0.1,0.1,0.1,30,,,,,,,,,TRUE,,,hide_in_codex,graphics/icons/tactical/venting_flux2.png
+Shield Vent,ix_shield_vent_aurora,,,,,,,,,,0.1,0.1,0.1,40,,,,,,,,,TRUE,,,hide_in_codex,graphics/icons/tactical/venting_flux2.png
 Spatial Charges,ix_spatial_charges,,,,,,,,,,,,,10,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 Starfall Rocket Swarm,ix_starfall_rockets,,,,,,,,,,,,,10,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 Stormwall Salvo,ix_stormwall_salvo,,,,,,,,,,,,,10,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 Terminus Relay,ix_terminus_relay,,,,600,,,,,,0,0.001,0,10,,,,,,,,,,,,,graphics/icons/hullsys/energy_lash.png
-Ultracapacitors,ix_capacitors,1,,,,,,,,,0.25,10,0.25,15,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Ultracapacitors,ix_capacitors,1,,,,,,,,,0.25,10,0.25,15,,,,,,,,,,,,hide_in_codex,graphics/icons/hullsys/high_energy_focus.png

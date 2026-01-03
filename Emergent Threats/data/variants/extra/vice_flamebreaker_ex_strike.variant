@@ -1,12 +1,12 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 8,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "vice_flamebreaker_ex",
     "hullMods": [
-        "advancedoptics",
         "targetingunit",
+        "vice_laser_collimator",
         "stabilizedshieldemitter"
     ],
     "permaMods": [],
@@ -18,8 +18,6 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 002": "vice_siege_burst",
-                "WS 003": "gravitonbeam",
-                "WS 004": "gravitonbeam",
                 "WS 012": "vice_ionstreamer",
                 "WS 013": "vice_ionstreamer"
             }
@@ -28,6 +26,14 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS 014": "squall"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "vice_twin_tactical_laser",
+                "WS 004": "vice_twin_tactical_laser"
+            }
         },
         {
             "autofire": true,

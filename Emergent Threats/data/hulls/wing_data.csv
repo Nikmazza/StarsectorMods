@@ -2,8 +2,8 @@ id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,att
 flash_wing,vice_flash_bomber,"auto_fighter, no_sell, bomber5, bomber, remnant, merc",3,,5,12,V,4000,1000,300,4,BOMBER,Strike Drone,18,8000,,,,,,,,,,,,,21
 lux_wing,vice_lux_fighter,"auto_fighter, no_sell, fighter5, fighter, remnant, merc",3,,6,10,V,6000,500,900,3,FIGHTER,Fighter Drone,15,6000,,,,,,,,,,,,,23
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-asm_swarm_wing,asm_fragment_attack,"no_drop, no_sell, no_drop_salvage, fighter5, fighter, asm_threat, restricted, hide_in_codex",0,,0,0,BOX,100000,700,,1,FIGHTER,Fragment,12,0,,,,,,,,,,,,,30
-asm_dismantler_wing,asm_fragment_dismantler,"no_drop, no_sell, no_drop_salvage, fighter5, fighter, asm_threat, restricted, hide_in_codex",0,,0,0,BOX,100000,700,,1,FIGHTER,Fragment,12,0,,,,,,,,,,,,,30
+asm_swarm_wing,asm_fragment_attack,"auto_fighter, no_drop, no_sell, no_drop_salvage, fighter5, fighter, asm_threat, restricted, hide_in_codex",0,,8,0,BOX,100000,700,,1,FIGHTER,Fragment,12,0,,,,,,,,,,,,,30
+asm_dismantler_wing,asm_fragment_dismantler,"auto_fighter, no_drop, no_sell, no_drop_salvage, asm_threat, restricted, hide_in_codex",0,,0,0,BOX,100000,700,,1,FIGHTER,Fragment,12,0,,,,,,,,,,,,,30
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 vice_bolo_p_wing,vice_bolo_pirate,"support3, fighter, pirates, pirate_bp",2,,7,10,BOX,0,500,,2,SUPPORT,Support,10,8000,,,,,,,,,,,,,
 vice_disruptor_drone_wing,vice_emp_disruptor_drone,"stay_in_front_of_ship, fighter, no_drop, no_drop_salvage, no_sell, high, restricted, vice_emp",3,,7,20,BOX,4000,1000,700,1,FIGHTER,Disruptor Drone,20,10000,,,,,,,,,,,,,19.2

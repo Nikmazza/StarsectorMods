@@ -2,6 +2,7 @@
 	"id":"vice_plasma_projectile", #fighter plasma catapult
 	"specClass":"missile",	
 	"missileType":"PHASE_CHARGE",
+	"onFireEffect":"data.scripts.vice.weapons.PlasmaCasterOnFire",
 	"sprite":"graphics/missiles/phase_charge_base.png",
 	"glowSprite":"graphics/missiles/phase_charge_glow.png",
 	"glowColor":[190,60,255,255],

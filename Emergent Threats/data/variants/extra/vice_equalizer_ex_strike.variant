@@ -1,13 +1,15 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 27,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 47,
     "goalVariant": true,
     "hullId": "vice_equalizer_ex",
     "hullMods": [
         "hardenedshieldemitter",
         "pointdefenseai",
         "targetingunit",
+        "vice_laser_collimator",
+        "vice_modular_seeker_lens",
         "frontemitter",
         "stabilizedshieldemitter"
     ],

@@ -26,8 +26,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "starfall_rocket_ix",
-                "WS 003": "starfall_rocket_ix"
+                "WS 002": "stormwall_salvo_tw",
+                "WS 003": "stormwall_salvo_tw"
             }
         },
         {

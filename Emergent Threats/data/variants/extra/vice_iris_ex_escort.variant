@@ -9,6 +9,7 @@
         "pointdefenseai",
         "targetingunit"
     ],
+    "modules": [{"SM 1": "vice_active_flare_module"}],
     "permaMods": [],
     "sMods": [],
     "variantId": "vice_iris_ex_escort",

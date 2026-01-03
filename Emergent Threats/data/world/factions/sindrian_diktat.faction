@@ -17,6 +17,12 @@
 		"sunder_LG_Assault":0,
 		"vice_unifier_elite":0,
 		"vice_exhortation_elite":0,
+		
+		
+		"vice_torchbearer_e_attack":0,
+		"vice_torchbearer_e_escort":0,
+		"vice_torchbearer_lg_elite":0,
+		"vice_torchbearer_lg_standard":4,
 	},
 	"hullFrequency":{
 		"tags":{

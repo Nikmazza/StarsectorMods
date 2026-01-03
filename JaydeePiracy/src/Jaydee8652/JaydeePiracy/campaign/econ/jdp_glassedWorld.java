@@ -29,7 +29,7 @@ public class jdp_glassedWorld extends BaseMarketConditionPlugin {
 
 	public void apply(String id) {
 		super.apply(id);
-		market.getHazard().modifyFlat(id, HAZARD/100, condition.getName());
+		market.getHazard().modifyFlat(id, (HAZARD / 100f), condition.getName());
 		market.getStats().getDynamic().getMod(Stats.MAX_INDUSTRIES).modifyFlat(id, MAX_INDUSTRIES);
 
 		List<Industry> industries = market.getIndustries();

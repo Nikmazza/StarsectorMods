@@ -1,13 +1,14 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 10,
-    "fluxVents": 15,
+    "fluxCapacitors": 0,
+    "fluxVents": 45,
     "goalVariant": true,
     "hullId": "vice_odyssey_tt",
     "hullMods": [
-        "advancedoptics",
-        "missleracks",
-        "targetingunit"
+        "vice_advanced_terminator_core",
+        "hardenedshieldemitter",
+        "targetingunit",
+        "vice_modular_seeker_lens"
     ],
     "modules": [{"SM 1": "vice_odyssey_secondary_drone_bay"}],
     "permaMods": [],
@@ -18,19 +19,23 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "gravitonbeam",
                 "WS 005": "gravitonbeam",
-                "WS 006": "ionbeam"
+                "WS 006": "gravitonbeam"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "hurricane",
-                "WS 002": "hurricane",
-                "WS 003": "hurricane"
+                "WS 001": "vice_deadeye_plasma",
+                "WS 002": "vice_fandance_seeker",
+                "WS 003": "vice_fandance_seeker"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "ionbeam"}
         },
         {
             "autofire": true,
@@ -43,14 +48,12 @@
                 "WS 011": "pdlaser",
                 "WS 012": "pdlaser",
                 "WS 013": "pdlaser",
-                "WS 014": "pdlaser",
-                "WS 015": "pdlaser",
-                "WS 016": "pdlaser"
+                "WS 014": "pdlaser"
             }
         }
     ],
     "wings": [
-        "trident_wing",
-        "trident_wing"
+        "dagger_wing",
+        "dagger_wing"
     ]
 }

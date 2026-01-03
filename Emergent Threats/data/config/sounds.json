@@ -32,11 +32,14 @@
 	"vice_deadeye_plasma_fire":[
 		{"file": "sounds/weapons/vice_deadeye_plasma_fire.ogg", "pitch": 1, "volume": 1}
 	],
+	"vice_deluge_fire":[
+		{"file": "sounds/weapons/vice_deluge_fire.ogg", "pitch": 1, "volume": 1}
+	],
 	"vice_electrolaser_pulse":[
 		{"file": "sounds/weapons/vice_electrolaser_pulse.ogg", "pitch": 1, "volume": 0.8}
 	],
 	"vice_fandance_fire":[
-		{"file": "sounds/weapons/vice_fandance_fire.ogg", "pitch": 1, "volume": 1}
+		{"file": "sounds/weapons/vice_fandance_fire.ogg", "pitch": 1, "volume": 0.8}
 	],
 	"vice_fermion_decoupler_loop":[
 		{"file": "sounds/weapons/vice_fermion_decoupler_loop.ogg", "pitch": 1, "volume": 0.4}

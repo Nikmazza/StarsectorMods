@@ -12,11 +12,11 @@
 	"fpMod":2,
 	"spriteName":"graphics/vice/ships/hidden/effulgent.png",
 	"removeWeaponSlots":["WS 000", "WS 002"],
-	"builtInMods":["vice_effulgent_remnant"],
+	"removeBuiltInMods":["coherer"],
+	"builtInMods":["vice_effulgent_remnant", "eccm"],
     "weaponSlotChanges":{
-	   "WS 001":{
-			"size": "LARGE",
-			"type": "MISSILE",
-		},
+	   "WS 001":{"size": "LARGE", "type": "MISSILE"},
+	   "WS 003":{"type": "MISSILE"},
+	   "WS 004":{"type": "MISSILE"},
     },
 }

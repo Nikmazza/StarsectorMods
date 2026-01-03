@@ -1,7 +1,7 @@
 {
-    "displayName": "Elite",
+    "displayName": "Prototype",
     "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxVents": 18,
     "goalVariant": true,
     "hullId": "aurora_tw",
     "hullMods": [
@@ -39,7 +39,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 009": "starfall_rocket_ix"}
+            "weapons": {"WS 009": "stormwall_salvo_tw"}
         },
         {
             "autofire": true,

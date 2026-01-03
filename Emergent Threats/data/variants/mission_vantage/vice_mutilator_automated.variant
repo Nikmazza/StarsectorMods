@@ -2,7 +2,7 @@
     "displayName": "Automated",
     "fluxCapacitors": 8,
     "fluxVents": 8,
-    "goalVariant": true,
+    "goalVariant": false,
     "hullId": "vice_mutilator",
     "hullMods": [
         "heavyarmor",

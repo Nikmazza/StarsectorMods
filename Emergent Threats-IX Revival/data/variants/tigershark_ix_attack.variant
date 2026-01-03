@@ -1,7 +1,7 @@
 {
     "displayName": "Attack",
     "fluxCapacitors": 0,
-    "fluxVents": 27,
+    "fluxVents": 28,
     "goalVariant": true,
     "hullId": "tigershark_ix",
     "hullMods": [
@@ -14,6 +14,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "tigershark_ix_attack",
     "weaponGroups": [
         {

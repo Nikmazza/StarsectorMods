@@ -1,9 +1,9 @@
 {
 	"combatSmallForSmallFleet":{ 
-		"rwc_viper_Standard": 5,
+		"rwc_viper_Standard": 10,
 	},
 	"combatSmall":{ 
-		"rwc_viper_Standard": 5,
+		"rwc_viper_Standard": 9,
 		"rwc_viking_Strike": 1,
 	},
 	"combatMedium":{
@@ -23,11 +23,12 @@
 	# capital
 	"combatCapital":{
 		"test_conqueror_Standard": 5,
+		"test_conqueror_Balanced": 5,
 		"onslaught_beam_Standard":2,
 		"onslaught_beam_Outdated":2,
 		"onslaught_beam_Elite":2,
-		"rwc_triumphant_Standard":5,
-		"rwc_barrage_Standard":1,
+		"rwc_triumphant_Standard":10,
+		"rwc_barrage_Standard":3,
 		"rwc_hrunting_Prototype":10,
 	},
 	# carriers

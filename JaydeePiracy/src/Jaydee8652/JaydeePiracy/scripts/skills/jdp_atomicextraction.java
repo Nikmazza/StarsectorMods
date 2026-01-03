@@ -1,5 +1,6 @@
 package Jaydee8652.JaydeePiracy.scripts.skills;
 
+import Jaydee8652.JaydeePiracy.JaydeePiracyPlugin;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -12,6 +13,7 @@ import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.DelayedActionScript;
 import com.fs.starfarer.api.util.Misc;
+import org.apache.log4j.Logger;
 import org.codehaus.janino.Java;
 
 import java.awt.*;
@@ -19,10 +21,9 @@ import java.util.*;
 import java.util.List;
 import java.util.concurrent.locks.Condition;
 
-import static Jaydee8652.JaydeePiracy.scripts.skills.flowerfish.jdp_flowerfishWithTheNetwork.*;
-import static Jaydee8652.JaydeePiracy.scripts.skills.flowerfish.jdp_flowerfishWithTheNetwork.PROJ_BONUS;
-
 public class jdp_atomicextraction {
+	private static final Logger log = Global.getLogger(JaydeePiracyPlugin.class);
+
 	public static Map<String, String> resourceDepletionMap = new HashMap<>();
 	static {
 		resourceDepletionMap.put(Conditions.ORE_SPARSE, null);
@@ -56,6 +57,7 @@ public class jdp_atomicextraction {
 		public void apply(MarketAPI market, String id, float level) {
 			if (!market.getAdmin().hasTag("jdp_atomicextraction")) market.getAdmin().addTag("jdp_atomicextraction");
 
+
 			Industry mining = null;
 
 			for (Industry ind : market.getIndustries()) {
@@ -65,6 +67,7 @@ public class jdp_atomicextraction {
 			}
 
 			if ((mining != null) && (mining.isFunctional() && market.getPlanetEntity() != null && !market.getPlanetEntity().isGasGiant())) {
+
 				mining.getDemand(Commodities.FUEL).getQuantity().modifyFlat(id, market.getSize());
 
 				mining.getSupply(Commodities.RARE_ORE).getQuantity().modifyMult(id, 2f);
@@ -100,7 +103,12 @@ public class jdp_atomicextraction {
 					});
 				}
 			} else if ((mining != null) && (!mining.isFunctional())) {
-				mining.getDemand(Commodities.FUEL).getQuantity().unmodify(id);
+				if (mining.getDemand(Commodities.FUEL) != null) {
+					mining.getDemand(Commodities.FUEL).getQuantity().unmodify(id);
+				} else {
+					log.warn("JDP_DEBUG: Atomic Extraction encountered a null fuel demand on [" + market.getName() + " " + market.getId() + "] in ["  + market.getPrimaryEntity().getContainingLocation().getId() + " " + market.getPrimaryEntity().getContainingLocation().getId() + "]");
+					log.warn("JDP_DEBUG: Admin has the following skills [" + market.getAdmin().getStats().getSkillsCopy().toString() + "]");
+				}
 
 				mining.getSupply(Commodities.RARE_ORE).getQuantity().unmodify(id);
 				mining.getSupply(Commodities.ORE).getQuantity().unmodify(id);
@@ -119,7 +127,12 @@ public class jdp_atomicextraction {
 			}
 
 			if ((mining != null)) {
-				mining.getDemand(Commodities.FUEL).getQuantity().unmodify(id);
+				if (mining.getDemand(Commodities.FUEL) != null) {
+					mining.getDemand(Commodities.FUEL).getQuantity().unmodify(id);
+				} else {
+					log.warn("JDP_DEBUG: Atomic Extraction encountered a null fuel demand on [" + market.getName() + " " + market.getId() + "] in ["  + market.getPrimaryEntity().getContainingLocation().getId() + " " + market.getPrimaryEntity().getContainingLocation().getId() + "]");
+					log.warn("JDP_DEBUG: Admin has the following skills [" + market.getAdmin().getStats().getSkillsCopy().toString() + "]");
+				}
 
 				mining.getSupply(Commodities.RARE_ORE).getQuantity().unmodify(id);
 				mining.getSupply(Commodities.ORE).getQuantity().unmodify(id);

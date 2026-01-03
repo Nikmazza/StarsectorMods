@@ -1,10 +1,10 @@
 {
     "displayName": "Automated",
     "fluxCapacitors": 0,
-    "fluxVents": 24,
+    "fluxVents": 29,
     "hullId": "vice_astral_ai",
     "hullMods": [
-        "hardenedshieldemitter",
+        "magazines",
         "stabilizedshieldemitter",
         "vice_adaptive_flight_command"
     ],
@@ -16,11 +16,9 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 013": "gravitonbeam",
                 "WS 014": "gravitonbeam",
                 "WS 015": "gravitonbeam",
-                "WS 023": "gravitonbeam",
-                "WS 024": "gravitonbeam"
+                "WS 023": "gravitonbeam"
             }
         },
         {
@@ -29,6 +27,14 @@
             "weapons": {
                 "WS 011": "hurricane",
                 "WS 012": "hurricane"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "vice_deluge_repeater",
+                "WS 024": "vice_deluge_repeater"
             }
         },
         {

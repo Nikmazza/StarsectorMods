@@ -17,8 +17,8 @@ public class jdp_RadarSpinner implements EveryFrameWeaponEffectPlugin {
 		if (!weapon.getShip().isAlive()) return;
 
         if(runOnce){
-            turn_rate = weapon.getSpec().getBaseValue();
-            runOnce =   false;
+            turn_rate = weapon.getSpec().getTurnRate();
+            runOnce = false;
         }
 
         angle = MathUtils.clampAngle(angle+turn_rate*amount);

@@ -442,8 +442,8 @@ public class jdp_StarSystemGenerator extends StarSystemGenerator {
 		addSystemwideNebula();
 		system.addTag("$jdp_postgenSystem");
 
-		placeInSector(system);
-
+		if (placeInSector(system)) return system;
+		log.warn("JDP_RETROGEN_EVENTS:  	A system failed to be placed");
 		return system;
 	}
 
@@ -2114,7 +2114,7 @@ public class jdp_StarSystemGenerator extends StarSystemGenerator {
 			float lowerBoundY = minY - 500;
 			float upperBoundY = maxY + 500;
 
-			for (int i = 0; i < 15000; i++) {
+			for (int i = 0; i < 150000; i++) {
 				Vector2f point = new Vector2f(
 						Math.round((Math.random() * (upperBoundX - lowerBoundX)) + lowerBoundX),
 						Math.round((Math.random() * (upperBoundY - lowerBoundY)) + lowerBoundY)

@@ -45,6 +45,7 @@
 		},
 		"portraits":{
 			"ix_panopticon_core":"graphics/portraits/ix_panopticon_core.png",
+			"ix_panopticon_greg":"graphics/portraits/characters/historian02.png",
 			"ix_panopticon_instance":"graphics/portraits/ix_panopticon_instance.png",
 		},
 		"stations":{

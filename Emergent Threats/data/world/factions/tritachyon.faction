@@ -38,6 +38,7 @@
 			"vice_ex_bp":0.35,
 		},
 		"hulls":{
+			"atlas":0,
 			"odyssey":0,
 			"vice_odyssey_tt":1,
 			"vice_equalizer_ex":0.35,

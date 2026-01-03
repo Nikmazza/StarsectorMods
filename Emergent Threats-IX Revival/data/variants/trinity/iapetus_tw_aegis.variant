@@ -1,7 +1,7 @@
 {
     "displayName": "Aegis",
     "fluxCapacitors": 0,
-    "fluxVents": 45,
+    "fluxVents": 47,
     "goalVariant": true,
     "hullId": "iapetus_tw",
     "hullMods": [

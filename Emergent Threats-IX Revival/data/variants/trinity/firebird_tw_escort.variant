@@ -1,16 +1,17 @@
 {
     "displayName": "Escort",
-    "fluxCapacitors": 3,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 22,
     "goalVariant": true,
     "hullId": "firebird_tw",
     "hullMods": [
         "ix_dawnstar_controller",
         "advancedoptics",
         "targetingunit",
+        "tw_modernized_rangefinder",
         "stabilizedshieldemitter",
-        "ix_dawnstar_neutron",
-        "ix_dawnstar_neutron_handler"
+        "ix_dawnstar_electron",
+        "ix_dawnstar_electron_handler"
     ],
     "modules": [{"SM 1": "ix_active_flare_module"}],
     "permaMods": [],
@@ -31,8 +32,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "orthrus_m_ix",
-                "WS 002": "orthrus_m_ix"
+                "WS 001": "stormwall_salvo_tw",
+                "WS 002": "stormwall_salvo_tw"
             }
         },
         {

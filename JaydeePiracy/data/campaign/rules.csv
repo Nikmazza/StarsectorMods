@@ -281,7 +281,7 @@ A comms link from your chief engineer appears on your datapad. Likely ready to d
 jdp_demonExploreDescriptionContinueNoOmega,DialogOptionSelected,"$option == jdp_demonExploreDescriptionContinueNoOmega",,"""$PlayerSirOrMadam, this ship is unlike anything we've ever seen."" They deliver the news strangely, knowing your chief engineer you would expect them to be more excited. ""The hull is made of an entirely novel material, what exactly it is I'm not yet sure, but initial readings indicate it has fascinating properties."" They stop, thinking. 
 
 ""But there's something else, Captain. If I may speak plainly. This ship is strange."" They clear their throat and look at you, deadly serious, ""There is an AI housing onboard, but its hollowed out, a perfect sphere appears to have been removed from the centre to extract the core. If this ship was designed for an AI, it makes an odd number of concessions to human habitation, too many for it to make sense. Something happened to this ship, I don't think whatever was flying it against us is the same entity that built it."" ","jdp_demonExploreDescriptionContinue2:Continue",
-jdp_demonExploreDescriptionContinue2,DialogOptionSelected,"$option == jdp_demonExploreDescriptionContinue2","SalvageSpecialInteraction","The chief engineer clears their throat again, then continues ""Anyway. I think I can get the maintenance systems working, I don't know who built this ship, or why, but it should be fit to fly. If you want my professional opinion, we should investigate the planet in system too,"" they look to the side, likely checking a map of the system, ""Maddie."" 
+jdp_demonExploreDescriptionContinue2,DialogOptionSelected,"$option == jdp_demonExploreDescriptionContinue2","SalvageSpecialInteraction","Your chief engineer clears their throat again, then continues ""Anyway. I think I can get the maintenance systems working, I don't know who built this ship, or why, but it should be fit to fly. If you want my professional opinion, we should investigate the planet in system too,"" they look to the side, likely checking a map of the system, ""Maddie."" 
 
 ""Regardless, should we proceed with recovery?""",,
 jdp_demonCommsOpen,OpenCommLink,"$entity.jdp_demon score:1000","EndConversation","The connection request hangs for some time before an immense wave of holo-noise floods through the main display, generating thousands of error codes. 
@@ -372,7 +372,7 @@ FireBest DialogOptionSelected","You find your technology officer and chief engin
 The red glow of Maddie through the vacshield makes it oddly reminiscent of your interactions with the Shroud, perhaps this new material will be just as game-changing.",,
 jdp_FrictionlessHullmodItemRC2,DialogOptionSelected,"$option ==jdp_FrictionlessHullmodItemRC2",,"Engineering looks exasperated. ""The official term cannot be slippery!"" They make air quotes, but with the subtle lack of movement in the shoulders and wide stance that would make the expression visible if he was on a spacewalk. ""I refuse. This is a novel physics phenomena, its not an enzyme soap!""
 
-Tech manipulates a diagram of a phase coil array with abrupt flicks at the interface. ""We can iron that out later, its just language."" Another flick of the wrist, this time directed at Chief dismissively","jdp_FrictionlessHullmodItemRC3:Continue",
+Tech manipulates a diagram of a phase coil array with abrupt flicks at the interface. ""We can iron that out later, its just language."" Another flick of the wrist, this time directed at Chief dismissively.","jdp_FrictionlessHullmodItemRC3:Continue",
 jdp_FrictionlessHullmodItemRC3,DialogOptionSelected,"$option == jdp_FrictionlessHullmodItemRC3","$option = jdp_FrictionlessHullmodItemRC4a 0
 FireBest DialogOptionSelected","""Regardless. My intuition was correct, p-space is a no-go. The dimensional transition shatters the crystal, it must be a hyper-dimensional polytope. That combined with the lacklustre blunt-force resistance-""
 
@@ -452,7 +452,8 @@ jdp_penroseEncounterDesc,BeginFleetEncounter,"$jdp_penrose score:1000
 !$global.jdp_penroseHasData ","SetTextHighlights ""It may be prudent to establish a colony on the planet below, solely to supply a permanent weapons emplacement which could assist us in the coming battle.""
 
 ShowImageVisual ""jdp_derelictpenrose""
-$global.jdp_penroseFound = true","The immense vessel, its strange beauty almost serene, hangs in the void before you. Its prismatic hull refracts the light of the nearby star, baffling your sensors. A kaleidoscope of colours within and without the visual spectrum dances across your scopes. 
+$global.jdp_penroseFound = true
+Call $global.jdp_PRref updateStage","The immense vessel, its strange beauty almost serene, hangs in the void before you. Its prismatic hull refracts the light of the nearby star, baffling your sensors. A kaleidoscope of colours within and without the visual spectrum dances across your scopes. 
 
 The ship simply waits there, allowing you to initiate out of some kind of alien courtesy. 
 
@@ -467,7 +468,8 @@ Pleasant *combinations*! We have been *anticipating* about you. *Selfkind* hope 
 Now is time to *dance*, do not forget to *enjoy the sauce*!. 
 
 (MESSAGE ENDS)",,
-jdp_penroseAfterDefeating,jdp_AfterPenroseDefeat,,"$global.jdp_penroseDefeated = true","Following the destruction of the final shard, the immense vessel is in theory neutralised, your bridge crew are clearly unconvinced however, visibly on edge. The battle stations claxon is still ringing throughout the ship as your sensors officer makes their report.
+jdp_penroseAfterDefeating,jdp_AfterPenroseDefeat,,"$global.jdp_penroseDefeated = true
+Call $global.jdp_PRref updateStage","Following the destruction of the final shard, the immense vessel is in theory neutralised, your bridge crew are clearly unconvinced however, visibly on edge. The battle stations claxon is still ringing throughout the ship as your sensors officer makes their report.
 
 Unnervingly, the fractal slag of the destroyed vessels appears to be congealing and reforming into a single mass, within moments the many disparate pieces have already coalesced into the rough equivalent of a derelict. 
 
@@ -479,6 +481,7 @@ jdp_penroseExplore,CheckSalvageSpecial,"$salvageSpecialData != null
 $customType == wreck
 $jdp_penrosetag score:1000
 
+!$jdp_penroseCommlink
 !$jdp_penroseTriedAlpha
 !$global.jdp_penroseHasData 
 ",,"With the disabling of the Penrose, your salvage teams are able to move in on the vessel, their shuttles like ticks compared to the immense derelict. Long range scans cannot penetrate the crystalline hull and are almost entirely reflected.
@@ -492,6 +495,7 @@ A barrage of audio and visual static pours out of your datapad, the horrible whi
 
 It is considered extremely poor etiquette among spacers to not flag a warning on commlink requests being used to transfer files. You see your weapons officer wince slightly at the noise, or perhaps the faux pas, out of the corner of your vision.","jdp_penroseExploreCutComm:""Have the comm-link write to a secure datacore.""",
 jdp_penroseExploreCutComm,DialogOptionSelected,"$option == jdp_penroseExploreCutComm","ShowImageVisual ""jdp_derelictpenrose""
+$jdp_penroseCommlink = true
 FireAll jdp_penroseDecryptOptions
 ","""Affirmative Captain!"" your comms officer reports, ""writing data to isolated datacore. Cutting link in 3... 2... 1... Confirmed data received, cutting commlink."" The stream of incessant noise stops.
 
@@ -500,14 +504,18 @@ They continue, ""that transmission was of extradimensional origin, $PlayerSirOrM
 ""Encrypted,"" your technology officer interjects, cutting them off. ""Pretty heavily too, this is the toughest cypher I've personally ever seen. I don't think we'll be able to crack it without AI assistance, at least alpha-level if we want it done within the next 20 cycles.""",,
 jdp_penroseFindAlphaOption,jdp_penroseDecryptOptions,"$jdp_penrosetag score:1000
 !$jdp_penroseTriedAlpha
+
+
 !PlayerHasCargo alpha_core",,,"jdp_penroseFindAlphaOptionCont:""Seems like we need to secure an Alpha Core""",
-jdp_penroseFindAlphaOptionCont,DialogOptionSelected,"$option == jdp_penroseFindAlphaOptionCont","$global.jdp_penroseNoAlpha = true","Your technology officer smiles, ""I'm sure I don't need to remind you that this is highly illegal."" 
+jdp_penroseFindAlphaOptionCont,DialogOptionSelected,"$option == jdp_penroseFindAlphaOptionCont","$global.jdp_penroseNoAlpha = true
+Call $global.jdp_PRref updateStage","Your technology officer smiles, ""I'm sure I don't need to remind you that this is highly illegal."" 
 
 They stop to consider the minutia of the crime, ""technically its only a violation of the Treaty of Crom Cruach if we invent the offending technology. And are doing it for Tri-Tachyon."" 
 
 They continue, ""but I'm sure the Hegemony would pull up every Domain-era law on the books to expand the terms to include us if they ever find out what we are doing here.""","100:defaultLeave:""What could they possibly do to stop us now?""",
 jdp_penroseAlphaOption,jdp_penroseDecryptOptions,"$jdp_penrosetag score:1000
 !$jdp_penroseTriedAlpha
+
 PlayerHasCargo alpha_core",,,"jdp_penroseAlphaOptionCont:""Open a secured comm-link to an Alpha Core in storage""
 100:defaultLeave:Leave",
 jdp_penroseAlphaOptionCont,DialogOptionSelected,"$option == jdp_penroseAlphaOptionCont","ShowPersonVisual false jdp_pendragon
@@ -635,7 +643,8 @@ $option == jdp_penroseAlphaDeadOminous","FireAll jdp_penroseHackerOptions","Your
 jdp_penroseHackerGargoyleOption,jdp_penroseHackerOptions,"$jdp_penrosetag score:1000
 $global.gaKA_missionCompleted",,,"jdp_penroseHackerGargoyle:""We need Gargoyle.""",
 jdp_penroseHackerGargoyle,DialogOptionSelected,"$jdp_penrosetag score:1000
-$option == jdp_penroseHackerGargoyle","$global.jdp_penroseHuntingGargoyle = true","Your technology officer winces, they had likely hoped to never interact with Gargoyle again. They notice your expression. ""Their 'pranks' make my job very difficult, Captain,"" comes slowly.
+$option == jdp_penroseHackerGargoyle","$global.jdp_penroseHuntingGargoyle = true
+Call $global.jdp_PRref updateStage","Your technology officer winces, they had likely hoped to never interact with Gargoyle again. They notice your expression. ""Their 'pranks' make my job very difficult, Captain,"" comes slowly.
 
 ""The comms ID of the real Gargoyle is a resource some would kill for!"" Your comms officer interjects. ""Judging by our last conversation we're already in if we play it right. Stroke their ego and make it into a way to demonstrate their skills? We might not even have to pay them.""","100:defaultLeave:""Gargoyle it is then.""",
 jdp_penroseHackerHumanOption,jdp_penroseHackerOptions,"$jdp_penrosetag score:1000
@@ -653,7 +662,8 @@ You recognise the name, but otherwise don't follow. Tactical notices the confusi
 
 ""They never showed their face to anyone, but they're good. Maybe enough to do this, if not they have connections in the hacker crowd.""","jdp_penroseHackerHumanCont2:""How do we find them?""",
 jdp_penroseHackerHumanCont2,DialogOptionSelected,"$jdp_penrosetag score:1000
-$option == jdp_penroseHackerHumanCont2","$global.jdp_penroseHuntingMaerula = true","""We don't. At least not directly, $PlayerSirOrMadam, Maerula will have changed comms ID by now-"" they speed up at your expression. 
+$option == jdp_penroseHackerHumanCont2","$global.jdp_penroseHuntingMaerula = true
+Call $global.jdp_PRref updateStage","""We don't. At least not directly, $PlayerSirOrMadam, Maerula will have changed comms ID by now-"" they speed up at your expression. 
 
 ""I still have a connection with some old colleagues, Captain. If we wave my old codename around they might just let us talk to Maerula. I know its slim, but it's probably the best lead we have. Unforunately.""
 
@@ -842,9 +852,12 @@ jdp_penroseExploreReturnAlpha,CheckSalvageSpecial,"$salvageSpecialData != null
 $customType == wreck
 $jdp_penrosetag score:1000
 
+$jdp_penroseCommlink
+
 !$global.jdp_penroseHasData 
 !$jdp_penroseTriedAlpha
 !$global.jdp_hasOmegakin
+
 PlayerHasCargo alpha_core
 ","ShowImageVisual ""jdp_derelictpenrose""
 SetTextHighlights ""Now with an alpha-level AI Core in our possession, we can begin to decrypt the file received  via extradimensional commlink.""","Your $shipOrFleet returns to a stable orbit near the derelict of the Penrose-class Tesseron, ready to continue salvage operations. Now with an alpha-level AI Core in our possession, we can begin to decrypt the file received  via extradimensional commlink.","jdp_penroseAlphaOptionCont:""Open a secured comm-link to an Alpha Core in storage""
@@ -885,6 +898,8 @@ FireAll PopulateOptions","After connecting to the local network, you enter the c
 After another moment, a heavily modulated voice speaks. ""Hello, $playerName. We have no further business to attend to, unless you have need of my flowers? I extend you the courtesy of initiating the conversation. Continue."" ",,
 ,,,,,,
 # Galatia Quest Acknowledgement,,,,,,
+,,,,,,
+# Doing KA post FT,,,,,,
 jdp_gaKAGargoyleGreeting,PickGreeting,"$id == gargoyle
 $gaKA_contact score:1000
 $global.jdp_foundGargoylePR score:1000","ShowPersonVisual","After connecting to the local network, you enter the comms ID for Gargoyle then pause at the prompt to initiate the call. You look over to your comms officer and they nod, ready to act. You've played this game before, and won.
@@ -897,6 +912,9 @@ jdp_gaKAGargoyleGreeting1,DialogOptionSelected,"$option == jdp_gaKAGargoyleGreet
 ""Welcome back, $playername. Now, tell me, why did Rayan give you my comm ID? More presents, bribes, begging? Did he finally get in trouble with that junta of puppeteering vampires he desperately wishes were his friends? On the run from the law and needs a rep wipe?""
 
 A thoughtful pause. ""I was hoping you'd be happier to see me again, Captain. Don't forget to smile for Mae!""","gaKA_gargoyleCont2:""I have a job for you. I know you're the best.""",
+"#END Doing KA post FT",,,,,,
+,,,,,,
+# Arroyo Encounter,,,,,,
 jdp_ArroyoKnowsGargoyleOption,GAKAArroyoHub1,"$global.jdp_foundGargoylePR
 !$jdp_knowsGargoyleRemark","SetOptionColor jdp_ArroyoKnowsGargoyle highlight",,"0:jdp_ArroyoKnowsGargoyle:""Oh, I've done business with them before too.""",
 jdp_ArroyoKnowsGargoyle,DialogOptionSelected,"$option == jdp_ArroyoKnowsGargoyle","AddStoryPoints 1","Arroyo looks at you, incredulous, its as if his brain takes a moment to reboot like a faulty drone-shuttle. ""Well then, Captain. I."" he stalls. ""I can't believe you.""
@@ -914,6 +932,156 @@ AddPotentialContact
 AdjustRepActivePerson INHOSPITABLE -5","""I'm done talking to you, this wasn't a pleasure, it was utterly miserable. If you ever have more credits than you know what to do with or have a truly, truly exceptional business opportunity, well I hope for both our sakes that I will have calmed down enough to make a proper judgement on it. Take my cryptokeys now so I never have to see you in person again."" 
 
 He taps his datapad and offers it testily, you perform the mundane ritual which will ensure that anyone who wants to crack your mutual comms will, at least, have to put some effort into the task.","gaKA_arroyoLeave1:Continue",
+"#END Arroyo Encounter",,,,,,
+,,,,,,
+# Doing KA and FT simultaeously,,,,,,
+,,,,,,
+# First meeting,,,,,,
+jdp_penroseMixedGargoyleGreeting,PickGreeting,"$id == gargoyle
+$jdp_PRreturnHere score:30000
+$gaKA_contact score:30000","ShowPersonVisual
+$global.jdp_foundGargoylePR = true","After connecting to the local network, you enter the comms ID for Gargoyle then pause at the prompt to initiate the call. You look over to your comms officer and they nod, ready to act.
+
+As soon as you execute the command, the electronic warfare console lights up like fleet action in a nebula. Comms wrangles the infosec systems with cool efficiency, coordinating active response with nav, sensors, and engineering stations. 
+
+After perhaps half a minute the storm breaks, the alarms quiet, and your primary display resolves from a mesmerizing fractal battleground to a heavily augmented face grinning impishly.","jdp_penroseMixedGargoyleGreetingCont:Continue",
+jdp_penroseMixedGargoyleGreetingCont,DialogOptionSelected,"$option == jdp_penroseMixedGargoyleGreetingCont","$global.jdp_gargoyleMixed = true","""You were ready for me!"" Gargoyle says too sweetly to be true before turning to an imagined audience, ""The rocket jockey put together enough brains to deal with my little 'hello'!"" Gargoyle bounces back and applauds, ""Well done!""
+
+""So you know who I am,"" a short chuckle. ""Better than most at this rate! Here at the commendation of not one, but two of my closest friends. It's nice to know I'm appreciated but tell me, why did Maerula and Arroyo give you my comms ID? You must want something different from each I hope, comms IDs work more than once you know! You don't need to collect them!""
+
+A thoughtful pause. ""Do you always make that face when you meet new people? Come on, smile for me! Mae would appreciate it! Arroyo wouldn't but who cares about him. Lets talk about Mae first, she's more fun.""","jdp_penroseMixedGargoyleCont:""I have something interesting for you, Maerula said-""",
+jdp_penroseMixedGargoyleCont,DialogOptionSelected,"$option == jdp_penroseMixedGargoyleCont",,"The hacker interrupts. ""Oh really now? How bold of you, Captain $playerFirstName, to presume to know what I would find interesting."" The Hacker lounges in their chair carelessly.
+
+""Still, despite the insolence you have shown me I am intrigued, but who is this really for?"" they stop to think. 
+
+""This isn't for Mae, she would just talk directly, behind her little butterfly mask of course. Arroyo sent you here for something else, Zunya doesn't talk at all anymore..."" They smile, impish and proud.  ""It's for you, isn't it Captain? This is a personal project! What is it? Tell me!""","jdp_penroseMaerulaGargoyleCont2:""I want this file decrypted.""",
+jdp_penroseMixedGargoyleEnd,jdp_penroseMaerulaGargoyleEnd,"$global.jdp_gargoyleMixed","SetPersonHidden gargoyle true
+SetTextHighlights ""Recovered - Penrose-class Specifications""
+$global.jdp_penroseHasData = true
+Call $global.jdp_PRref updateStage
+
+$global.jdp_gargoyleMixed","They crouch down to pick up the datacore, tossing it to you underarm. ""Well, Captain $playerFirstName, I suspect you have a new quest,"" Gargoyle's arms cross with a satisfied look, ""I think I'll be seeing you on the Holo-feeds when people find out about this project, so go have fun!""
+
+Recovered - Penrose-class Specifications
+
+Their face drops accompanied by a disappointed sound. ""Oh, right. I can't play with my new toy yet, Arroyo sent you here for something too."" 
+
+They produce a popping sound with their lips. ""So, what did the corpo want? More presents, bribes, begging? Did he finally get in trouble with that junta of puppeteering vampires he desperately wishes were his friends? On the run from the law and needs a rep wipe?""","jdp_gaKAGargoyleCanYou:""Can you hack into the datavault of a Hegemony Ministry?""",
+jdp_gaKAGargoyleCanYou,DialogOptionSelected,"$option == jdp_gaKAGargoyleCanYou",,"""I love it!"" Gargoyle shouts, sitting up. ""A glorious scheme, practically neon-black! Which one? All of them at once? Hmm,"" visor and cybermods start flickering with activity.","jdp_gaKAgargoyleExplain:""Hold on- just one, actually."" (explain the mission)",
+jdp_gaKAgargoyleExplain,DialogOptionSelected,"$option == jdp_gaKAgargoyleExplain",,"You explain to Gargoyle the scope of the mission, and the target - the Kallichore Archive, the personal data store of former Provost Tomas Kallichore which the Hegemony Ministry of Technology Standards seized from the Galatia Academy in the wake of some kind of hyperspace experiment that went wrong. 
+
+You also explain, in diplomatic terms which avoid the implication of an employer-employee relationship, that Rayan Arroyo will be providing funding for the operation.","jdp_gaKAgargoyleCont4:Continue",
+jdp_gaKAgargoyleCont4,DialogOptionSelected,"$option == jdp_gaKAgargoyleCont4",,"As you talk, Gargoyle begins moving around the room slowly, trailing cables and gesturing at the air around them, intention betraying the presence of panels and notes in their neural interface. The hacker leaps from idea to idea, rejecting and accepting contingencies several steps ahead - or adjacent, perhaps - from whatever you are actually saying. The chaotic motions are somewhat distracting, and you find yourself slowly backing away to avoid a hand to the face.","jdp_gaKAgargoyleCont5:""How long will you need this time?""",
+jdp_gaKAgargoyleCont5,DialogOptionSelected,"$option == jdp_gaKAgargoyleCont5",,"The Hacker ignores you. ""That might be tough. I'm going to need to pass some credits along to a couple friends for some special tricks. Hmm. Do we go all out? Rayan is buying snacks... I think we do. Yes.""
+
+""Here's how it's gonna happen- I've got a friend who will make you a little package. It should be ready by the time you get to Nova Maxios, in the Magec system, do you know it? You pick that up then do your fancy flying and whatever else it takes to install it in the Hegemony comms relay in the Aztlan system.""
+
+""Installation should be easy, any tech-monkey working for you should be able to figure out which end goes where.""","jdp_gaKAgargoyleCont6:Continue",
+jdp_gaKAgargoyleCont6,DialogOptionSelected,"$option == jdp_gaKAgargoyleCont6",,"""The real trick comes after: gotta break the Hegemony crypto. That'll be yours truly who's got a little trick I've been saving from a couple cycles ago for just the right moment."" Gargoyle holds cable-trailing arms up in a premature display of triumph. ""It will be glorious!""
+
+""Right, so. After you install the hack device on the comm relay, come back here and you can thank me personally when I hand you a copy of the decrypted data. And friend-Rayan has my list of demands,"" they reach behind them and tap at a terminal, ""Now.""","jdp_gaKAgargoyleCont7:Continue",
+jdp_gaKAgargoyleCont7,DialogOptionSelected,"$option == jdp_gaKAgargoyleCont7",,"Another button tap, and there's a ping on your datapad as Gargoyle sends you the address of a small holding facility near the main port-ring of Nova Maxios, as well as the number of a particular storage unit. ""It'll be there,"" Gargoyle says with a smile that seems to imply you're not in on a joke.
+
+""Now I have a lot to do before this is ready, so go along! COMSEC is going to completely blow its top when we pull this off, ha-ha!""
+
+Gargoyle turns to another display, attention focused, cyber augments flickering at an increasing rate. Their tone shifts slightly. ""Now get out of my house! I have other stuff to do to make this work you. Bye bye, busy now.""","jdp_gaKAgargoyleCont8:Leave",
+jdp_gaKAgargoyleCont8,DialogOptionSelected,"$option == jdp_gaKAgargoyleCont8","ShowDefaultVisual
+$global.gaKA_getHackHardware = true
+Call $global.gaKA_ref updateStage",,"cutCommLinkNoText:Continue",
+"#END First meeting",,,,,,
+,,,,,,
+# Wanting to talk during the setup to Atzlan,,,,,,
+jdp_GAKAGargoyleGreeting_GET_HACK_HARDWARE,PickGreeting,"$id == gargoyle
+Call $global.gaKA_ref updateData
+$jdp_PRreturnHere score:30000
+$gaKA_stage == GET_HACK_HARDWARE score:30000","ShowPersonVisual
+$global.jdp_gargoyleHack = true","You enter the ID, hand hovering over a glowing 'confirm' sigil. Your comms officer nods, ready to respond to whatever surprises Gargoyle thinks would be amusing to send through the link this time.
+
+The display resolves from a mesmerizing fractal battleground to a familiar face grinning impishly at you. ""Oh $playerFirstName, are you having trouble finding Nova Maxios? Let me help, I'll send you a copy of Baby's First Star Chart."" 
+
+Your TriPad chimes softly.
+
+""Go on, read it. Find 'M is for Magec'. You can figure it out! I believe in you."" Gargoyle turns away and waves their hand dismissively.","jdp_penroseSetupGargoyleCont:""Actually. I have something interesting for you, Maerula said-""",
+jdp_GAKAGargoyleGreeting_INSTALL_HACK,PickGreeting,"$id == gargoyle
+Call $global.gaKA_ref updateData
+$jdp_PRreturnHere score:30000
+$gaKA_stage == INSTALL_HACK score:30000","ShowPersonVisual
+$global.jdp_gargoyleInstall = true","You enter the ID, hand hovering over a glowing 'confirm' sigil. Your comms officer nods, ready to respond to whatever surprises Gargoyle thinks would be amusing to send through the link this time.
+
+The display resolves without incident to a familiar face grinning impishly. ""Ah, Captain $playerFirstName! You must have forgotten my simple instructions.""
+
+Gargoyle counts off fingers, ""Step one, collect the device. You did that, hurray! Step two, install it on the Aztlan Relay in - pay attention now, maybe get your scowly comms officer to take a memo - in the Aztlan system. Step three, come back to me for your precious data archive.""  
+
+Gargoyle turns away and waves their hand dismissively.","jdp_penroseSetupGargoyleCont:""Actually. I have something interesting for you, Maerula said-""",
+jdp_penroseSetupGargoyleCont,DialogOptionSelected,"$option == jdp_penroseSetupGargoyleCont",,"The hacker interrupts. ""Oh really now? How bold of you, Captain $playerFirstName, to presume to know what I would find interesting."" The Hacker lounges in their chair carelessly.
+
+""Still, despite the insolence you have shown me I am intrigued, but who is this really for?"" they stop to think. 
+
+""This isn't for Mae, she would just talk directly, behind her little butterfly mask of course. We're already doing that thing Arroyo sent you here for, Zunya doesn't talk at all anymore..."" They smile, impish and proud.  ""It's for you, isn't it Captain? This is a personal project! What is it? Tell me!""","jdp_penroseMaerulaGargoyleCont2:""I want this file decrypted.""",
+jdp_penroseHackGargoyleEnd,jdp_penroseMaerulaGargoyleEnd,"!$global.jdp_gargoyleMixed
+$global.jdp_gargoyleHack","
+SetTextHighlights ""Recovered - Penrose-class Specifications""
+$global.jdp_penroseHasData = true
+Call $global.jdp_PRref updateStage","They crouch down to pick up the datacore, tossing it to you underarm. ""Well, Captain $playerFirstName, I suspect you have a new quest,"" Gargoyle's arms cross with a satisfied look, ""I think I'll be seeing you on the Holo-feeds when people find out about this project, so go have fun!""
+
+Their tone shifts slightly. ""Now get out of my house! I have a new toy to play with! Oh, and you have a task for me to get on with. You remember where Magec is right? So get on with it!""
+
+Recovered - Penrose-class Specifications","100:defaultLeave:Leave",
+jdp_penroseInstallGargoyleEnd,jdp_penroseMaerulaGargoyleEnd,"!$global.jdp_gargoyleMixed
+$global.jdp_gargoyleInstall","
+SetTextHighlights ""Recovered - Penrose-class Specifications""
+$global.jdp_penroseHasData = true
+Call $global.jdp_PRref updateStage
+","They crouch down to pick up the datacore, tossing it to you underarm. ""Well, Captain $playerFirstName, I suspect you have a new quest,"" Gargoyle's arms cross with a satisfied look, ""I think I'll be seeing you on the Holo-feeds when people find out about this project, so go have fun!""
+
+Their tone shifts slightly. ""Now get out of my house! I have a new toy to play with! Oh, and you have a task for me to get on with. You remember where Atzlan is right? So get on with it!""
+
+Recovered - Penrose-class Specifications","100:defaultLeave:Leave",
+"#END Wanting to talk during the setup to Atzlan",,,,,,
+,,,,,,
+# Wanting to talk while retrieving archive,,,,,,
+jdp_gaKAGargoyle2Greeting,PickGreeting,"$id == gargoyle
+$jdp_PRreturnHere score:30000
+$gaKA_contactRetrieve score:30000","ShowPersonVisual
+FireAll jdp_GAKAGargoyleHub","You enter the comms ID for Gargoyle and nod to your comms officer who stands ready for whatever surprises Gargoyle thinks would be amusing to send through comms.
+
+The display instantly resolves into a familiar face with an unfamiliar expression: fear.
+
+""Captain, you need to take me on your ship and get me out of here. They know where I am. I've really done it this time, it's incredible."" Gargoyle lets out a nervous laugh, ""The greatest data heist since the Second AI War!"" 
+
+The hacker seems to realize the gravity of this statement, ""I think- they are pretty, very, extremely, entirely unhappy this time. It's not safe. Take me to ... to the Galatia Academy? Anahita can hide me, right? After all I've done, she has to.""",,
+jdp_gaKAGargoyle2WhoIsAfterYou,jdp_GAKAGargoyleHub,"!$askedWho",,,"jdp_gaKAgargoyleWhoIsAfterYou:""Wait, who is after you?""",
+jdp_gaKAGargoyle2DoYouHaveArchive,jdp_GAKAGargoyleHub,"!$askedDoYouHave",,,"jdp_gaKAgargoyleDoYouHave:""Do you have the Kallichore Archive?""",
+gaKAGargoyle2SomethingElse,jdp_GAKAGargoyleHub,"!$askedWhatIf",,,"jdp_gaKAsomethingElse:""Actually, I wanted to talk about something else, Maerula said-""",
+jdp_gaKAGargoyle2OrderAShuttle,jdp_GAKAGargoyleHub,,,,"jdp_gaKAgargoyleOrderShuttle:Order a shuttle to pick up Gargoyle",
+jdp_gaKAgargoyleWhoIsAfterYou,DialogOptionSelected,"$option == jdp_gaKAgargoyleWhoIsAfterYou","$askedWho = true 0
+FireAll jdp_GAKAGargoyleHub","""Just- I- Everyone!""
+
+""Let me count my new friends,"" Gargoyle starts ticking off fingers, ""The Hegemony for starters, whoever COMSEC thinks to send. I expect an official expedition will cause a diplomatic incident, so probably shadowy gun-fun goons will sneak in to try to murder me. Next, Tri-Tachyon, at least once they're tipped off by the Hegemony's blundering response. And the Pathers, can't forget them. The Hegemony leaks like a sieve to all the little Luddies and they're going to simply love everything about this.""
+
+""Let me summarize for you, my good captain: within, oh, two or three shifts, this place will be in the crossfire of an interfactional criticality event and every second spacer buying noodles on the concourse is going to be an assassin or spy.""",,
+jdp_gaKAgargoyleDoYouHave,DialogOptionSelected,"$option == jdp_gaKAgargoyleDoYouHave","$askedDoYouHave = true 0
+FireAll jdp_GAKAGargoyleHub","""There's no time for that! But-"" Gargoyle smirks at you, ""I see what you're trying. Don't worry, I've got it locked up nice and secure, encrypted with my own special juice, and backed up off-site. It'd take an Alpha Core to break it out, and that'd take time. If you knew where to look. And you don't."" 
+
+""Professor Anahita won't have that kind of time if I spill everything you've done together to the big bad Hegemony. So where's my shuttle?""",,
+jdp_gaKAsomethingElse,DialogOptionSelected,"$option == jdp_gaKAsomethingElse","$askedWhatIf = true 0
+FireAll jdp_GAKAGargoyleHub","Gargoyle laughs, and laughs, and then goes cold. ""I underestimated you Captain $playerName, you're much funnier than I thought. I saw the ping from Mae, don't worry.""
+
+The hacker smiles without warmth, ""I like Mae, but I don't value her friendship enough for this favour to be the last thing I do before a MuniSec goon blows out my neurals. If you get me out of here, We'll talk. Good?"" They don't wait for a response. ""Good. Lets leave.""",,
+jdp_gaKAgargoyleOrderShuttle,DialogOptionSelected,"$option == jdp_gaKAgargoyleOrderShuttle","$global.gaKA_returnToAcademy = true
+Call $global.gaKA_ref updateStage","Gargoyle nods, ""That's the way, captain. I'll collect my toys.""
+
+Your shuttle gets in and out without any suspicious inquiries from traffic control; they're not wise to what's going on yet. Probably. 
+
+You order Gargoyle confined to quarters well away from the bridge, and for your comms officer to keep an eye out for anything suspicious.
+
+""Captain,"" your tactical officer calls for your attention, ""Hegemony fleet incoming.""
+
+Time to go.","jdp_gaKAgargoyleOrderShuttle2:Continue",
+jdp_gaKAgargoyleOrderShuttle2,DialogOptionSelected,"$option == jdp_gaKAgargoyleOrderShuttle2","EndConversation NO_CONTINUE
+#DismissDialog",,,
+"#END Wanting to talk while retrieving archive",,,,,,
+"#END Doing KA and FT simultaeously",,,,,,
 "#END Galatia Quest Acknowledgement",,,,,,
 ,,,,,,
 # Flowerfish Fleet,,,,,,
@@ -947,7 +1115,8 @@ jdp_penroseFlowerfishTacticalCont2,DialogOptionSelected,"$entity.jdp_PRflowerfis
 $option == jdp_penroseFlowerfishTacticalCont2","SetPersonHidden jdp_maerula false
 AddTextSmall ""Received comms ID for Maerula"" highlight
 
-$global.jdp_PRmaerulaComm = true","The $post sort of verbally tumbles slightly at the question and then picks themselves up. ""Maki! You didn't even need to ask! Anything for my old First! Here,"" they look down and transfer Maerula's comms ID.
+$global.jdp_PRmaerulaComm = true
+Call $global.jdp_PRref updateStage","The $post sort of verbally tumbles slightly at the question and then picks themselves up. ""Maki! You didn't even need to ask! Anything for my old First! Here,"" they look down and transfer Maerula's comms ID.
 
 Tactical motions for you take over the conversation again. It's hard to tell whether they actually enjoyed the reunion or were simply playing the character of 'Maki' to get what they wanted. You hope it was the latter, the Flowerfish representative, and their overall culture, unnerves you. ","jdp_penroseFlowerfishTacticalName:""Thank you, $personName.""
 jdp_penroseFlowerfishTacticalCodename:""Thank you, Okonomi.""","Call $global.jdp_PRref updateStage
@@ -1023,7 +1192,7 @@ jdp_penroseMaerulaGreetingFile,DialogOptionSelected,"$option == jdp_penroseMaeru
 jdp_penroseMaerulaGreetingDeath,DialogOptionSelected,"$option == jdp_penroseMaerulaGreetingDeath","SetPersonHidden gargoyle false
 AddTextSmall ""Received comms ID for Gargoyle"" highlight
 $global.jdp_penroseHuntingGargoyle = true
-","For the first time in the conversation, Maerula seems genuinely shocked. ""I understand, Captain. I am sorry, I can help you no further in this matter. Take that answer how you must,"" they stop for a moment, thinking.
+Call $global.jdp_PRref updateStage","For the first time in the conversation, Maerula seems genuinely shocked. ""I understand, Captain. I am sorry, I can help you no further in this matter. Take that answer how you must,"" they stop for a moment, thinking.
 
 ""I see you still have the shell of your previous attempt in your possession,"" you go to ask how, but they simply keep talking. ""I have no use for it, but a friend of mine will appreciate it. Gargoyle will crack your file, the real Gargoyle, in exchange for the core. Sending comms ID now.
 
@@ -1212,9 +1381,11 @@ The architecture is strange and unnatural, the walls jagged and harsh, but at le
 jdp_penroseMaerulaGargoyleReturnPenroseCont2,DialogOptionSelected,"$option == jdp_penroseMaerulaGargoyleReturnPenroseCont2",,"Gargoyle looks smug, ""weren't coached on this huh? Well, Captain, let me elucidate. I cracked into a Tachie data-vault a few cycles ago, very easy, I don't think they even knew it was there,"" Gargoyle rolls their head back, ""it was very dull. But useful!"" 
 
 ""Found lots of very interesting diagrams on their drone fleet in there, and what I saw makes me very interested in this little guy,"" the hacker points to a holographic object behind them, ""that, my dear Captain, is an AI Core Cradlle. If whatever Omega is has a soul, it lives in that room.""","jdp_penroseMaerulaGargoyleReturnPenroseCont3:Continue",
-jdp_penroseMaerulaGargoyleReturnPenroseCont3,DialogOptionSelected,"$option == jdp_penroseMaerulaGargoyleReturnPenroseCont3","SetPersonHidden gargoyle true
+jdp_penroseMaerulaGargoyleReturnPenroseCont3,DialogOptionSelected,"$option == jdp_penroseMaerulaGargoyleReturnPenroseCont3","FireBest jdp_penroseMaerulaGargoyleEnd",,,
+jdp_penroseMaerulaGargoyleEnd,jdp_penroseMaerulaGargoyleEnd,"!$global.jdp_gargoyleMixed","SetPersonHidden gargoyle true
 SetTextHighlights ""Recovered - Penrose-class Specifications""
-$global.jdp_penroseHasData = true","They crouch down to pick up the datacore, tossing it to you underarm. ""Well, Captain $playerFirstName, I suspect you have a new quest,"" Gargoyle's arms cross with a satisfied look, ""I think I'll be seeing you on the Holo-feeds when people find out about this project, so go have fun!""
+$global.jdp_penroseHasData = true
+Call $global.jdp_PRref updateStage","They crouch down to pick up the datacore, tossing it to you underarm. ""Well, Captain $playerFirstName, I suspect you have a new quest,"" Gargoyle's arms cross with a satisfied look, ""I think I'll be seeing you on the Holo-feeds when people find out about this project, so go have fun!""
 
 Their tone shifts slightly. ""Now get out of my house! I have a new toy to play with! Oh, and you aren't keeping this comms ID. Bring a sponsor next time!""
 
@@ -1580,7 +1751,8 @@ jdp_penroseGargoyleReturnPenroseCont2,DialogOptionSelected,"$option == jdp_penro
 
 ""Found lots of very interesting diagrams on their drone fleet in there, and what I saw makes me very interested in this little guy,"" the hacker points to a holographic object behind them, ""that, my dear Captain, is an AI Core Cradlle. If whatever Omega is has a soul, it lives in that room.""","jdp_penroseGargoyleReturnPenroseCont3:Continue",
 jdp_penroseGargoyleReturnPenroseCont3,DialogOptionSelected,"$option == jdp_penroseGargoyleReturnPenroseCont3","SetTextHighlights ""Recovered - Penrose-class Specifications""
-$global.jdp_penroseHasData = true","They crouch down to pick up the datacore, tossing it to you underarm. ""Well, Captain $playerFirstName, I suspect you have a new quest,"" Gargoyle's arms cross with a satisfied look, ""I think I'll be seeing you on the Holo-feeds when people find out about this project, so go have fun!""
+$global.jdp_penroseHasData = true
+Call $global.jdp_PRref updateStage","They crouch down to pick up the datacore, tossing it to you underarm. ""Well, Captain $playerFirstName, I suspect you have a new quest,"" Gargoyle's arms cross with a satisfied look, ""I think I'll be seeing you on the Holo-feeds when people find out about this project, so go have fun!""
 
 Their tone shifts slightly. ""Now get out of my office! I have a new toy to play with!""
 
@@ -1702,7 +1874,7 @@ $global.jdp_exploredHiroc == true score:101","ShowDefaultVisual","Your $shipOrFl
 jdp_investigatemissileStart,DialogOptionSelected,"$option == mh_open
 $id == sebestyen score:1000
 $global.gaATG_missionCompleted score:2000
-!$global.jdp_IMCompleted score:2000
+!$global.jdp_IMmissionCompleted score:2000
 !$global.jdp_IMinProgress score:2000
 !$jdp_upsetAlviss",,"""Ah,"" says Sebestyen. You can tell instantly that he has some kind of bad news. ""... Captain $playerName,"" he says, then fakes a small cough to delay the inevitable. 
 
@@ -1827,6 +1999,9 @@ It seems he doesn't want anything to do with you.","100:defaultLeave:Cut the com
 ,,,,,,
 # Biofactory Embryo Hubris Event,,,,,,
 jdp_biofactoryEmbryoBlockFirstSurvey,PopulateOptions,"$jdp_biofactoryEmbryoBlockFirstSurvey","RemoveOption surveyPerform
+RemoveOption salExplore
+RemoveOption nex_outpostPreview
+RemoveOption nex_miningPreview
 unset $jdp_biofactoryEmbryoBlockFirstSurvey",,,"# block first instance of survey option in order to direct player attention to the event."
 jdp_biofactoryEmbryoRestart,PopulateOptions,"$jdp_biofactoryEmbryo
 $jdp_biofactoryEmbryoDiscovered
@@ -1968,6 +2143,9 @@ The trek back is slow, but within a few hours it is secured in your hold.","100:
 ,,,,,,
 # Soil Nanites Hubris Event,,,,,,
 jdp_soilNanitesBlockFirstSurvey,PopulateOptions,"$jdp_soilNanitesBlockFirstSurvey","RemoveOption surveyPerform
+RemoveOption salExplore
+RemoveOption nex_outpostPreview
+RemoveOption nex_miningPreview
 unset $jdp_soilNanitesBlockFirstSurvey",,,"# block first instance of survey option in order to direct player attention to the event."
 jdp_soilNanitesRestart,PopulateOptions,"$jdp_soilNanites
 $jdp_soilNanitesDiscovered
@@ -2070,9 +2248,9 @@ ShowResCost crew $crew rare_ore $rare_ore true supplies $supplies true
 FireBest jdp_soilNanitesCheckCanAfford
 FireBest jdp_soilNanitesDisableOperationIfNeeded
 
-jdp_FakeLeave","""Permission to speak plainly Captain? We could do this now,"" Chief states candidly. 
+jdp_FakeLeave","""Permission to speak plainly Captain? We could do this now."" Chief states candidly. 
  
-""Its just a tactical bombardment, all we would need is to draft some crew for moving the material and some lifting hardware for the drop.""","0:jdp_soilNanitesTacticalOperation:Approve the airdrop","supplies
+""It's just a tactical bombardment, all we would need is to draft some crew for moving the material and some lifting hardware for the drop.""","0:jdp_soilNanitesTacticalOperation:Approve the airdrop","supplies
 fuel
 crew
 marines
@@ -2132,13 +2310,164 @@ Handheld scanners confirm a specialised crate houses the inert slurry of the rec
 jdp_fusionLampOpenDialogUnexplored,OpenInteractionDialog,"$tag:jdp_erratic_lamp_tag score:101
 $customType == jdp_erratic_lamp score:101","SalvageGenFromSeed
 ShowDefaultVisual
-FireBest SalvageCheckHostile","TESTING TESTING!",,
+FireBest SalvageCheckHostile
+","Hi! I'm currently in testing.",,
 jdp_fusionLampDefenderDesc,TriggerAutomatedDefenses,"$tag:jdp_erratic_lamp_tag score:101
-$customType == jdp_erratic_lamp score:101","SalvageDefenderInteraction","THINGS JUST GOT MORE INTERESTING!",,
+$customType == jdp_erratic_lamp score:101","SalvageDefenderInteraction
+
+AddRemoveAnyItem WEAPONS jdp_icebreaker 1","Take this hacking gun, nothing else can damage the lamp. If you can maintain the connection for 10s, you win. The way the combat ends is still jank, but it should provide a feel for the mechanics.",,
 jdp_fusionLampPostDefenders,BeatDefendersContinue,"$tag:jdp_erratic_lamp_tag score:101
-$customType == jdp_erratic_lamp score:101",,"SHE WAS DRESSED IN!","100:defaultLeave:Leave",
+$customType == jdp_erratic_lamp score:101",,"Wow.","100:defaultLeave:Leave",
 "#END Enitity",,,,,,
 "#END Fusion Lamp Hubris Event",,,,,,
+,,,,,,
+# Mantle Bore Hubris Event,,,,,,
+jdp_mantleBoreBlockFirstSurvey,PopulateOptions,"$jdp_mantleBoreBlockFirstSurvey","RemoveOption surveyPerform
+RemoveOption salExplore
+RemoveOption nex_outpostPreview
+RemoveOption nex_miningPreview
+unset $jdp_mantleBoreBlockFirstSurvey",,,"# block first instance of survey option in order to direct player attention to the event."
+jdp_mantleBoreRestart,PopulateOptions,"$jdp_mantleBore
+$jdp_mantleBoreDiscovered
+!$market.isPlayerOwned
+!$alreadyInOrbit",,"Upon entering orbit, sensors informs you that the state of the Biofactory Embryo is unchanged, the prospect of an extraction operation is still feasible.","1:jdp_mantleBoreXenobiologyOpinion3:Consider extracting the Biofactory Embryo","This one assumes you've just arrived"
+jdp_mantleBoreRestartTwice,PopulateOptions,"$jdp_mantleBore
+$jdp_mantleBoreDiscovered
+!$market.isPlayerOwned
+$alreadyInOrbit","
+unset $alreadyInOrbit","Sensors informs you that the state of the Biofactory Embryo is unchanged, the prospect of an extraction operation is still feasible.","1:jdp_mantleBoreXenobiologyOpinion3:Consider extracting the Biofactory Embryo","This one assumes you've been in orbit for a while already."
+jdp_mantleBoreColony,PopulateOptions,"$jdp_mantleBore
+$market.isPlayerOwned","Highlight ""flagged for your attention""
+SetOptionColor jdp_mantleBoreColony2 highlight","Amid the low-priority updates you receive upon entering the colonial datasphere, a report is flagged for your attention. ","1:jdp_mantleBoreColony2:View the report",
+jdp_mantleBoreColony2,DialogOptionSelected,"$option == jdp_mantleBoreColony2",,"The local authorities request assistance in performing a joint orbital-surface operation, the details of which closely mirror your unrealised plans to perform an extraction of the Biofactory Embryo on $name.
+
+The plans stipulate that the framing as a joint operation is entirely for optics, a move intended to protect the integrity of the local Administration in a transparent attempt to either claim glory or dodge responsibility depending on the outcome.
+
+It is for this reason that the extraction would have to be done entirely with our materiel and manpower.","jdp_mantleBoreTacticalOpinion:""Tactical, how feasible is a surface op?""
+100:defaultLeave:Leave",
+jdp_mantleBoreStart,PopulateOptions,"$jdp_mantleBore
+!$jdp_mantleBoreDiscovered","$jdp_mantleBoreDiscovered = true
+","Upon entering orbit, your sensors officer flags $name as highly unusual and requests your personal attention.","jdp_mantleBoreStart2:Motion your sensors officer to speak","Make this a global tag? Not that useful at the moment."
+jdp_mantleBoreStart2,DialogOptionSelected,"$option == jdp_mantleBoreStart2","FireBest jdp_mantleBoreCallXenobiology","""$PlayerSirOrMadam, we're getting a signal from the local volume. Faint, but definitely artificial."" 
+
+They pull a headset over their ears and flick a switch to begin streaming the signal. When questioned previously sensors insisted that artificial signals were easier to hear than see, an explanation that proved contentious with your technology officer.
+
+""Angle suggests its backscatter from a microsat. Comms between surface installations seems plausible. Composition is highly ordered, we have some geodetic coordinates encoded."" 
+
+They look puzzled for a moment. ""Negative vertical datum, $PlayerSirOrMadam. Something deep beneath the surface? There's other data here I can't parse.""","jdp_mantleBoreCallXenobiology:""Tech, crack that signal. Sensors, get us a closer look.""",
+jdp_mantleBoreCallXenobiology,DialogOptionSelected,"$option == jdp_mantleBoreCallXenobiology","$jdp_mantleBoreDiscovered = true","""Yes $PlayerSirOrMadam!"" comes simultaneously. Technology pulls up a data analysis tool and begins trawling through a visualisation of the signal, bright, flowing and arcane. ""I can't believe the human ear would be unable to decode complex encryption"" comes smugly.
+
+Sensors, the very image of cool-headed professionalism, pulls their headphones off with aggression and ignores the comment. ""This was no fringe mining operation, Captain."" They mark extensive bands of magrail on a holo of $name. ""There's hundreds of dead mass drivers along the equator. This place once experienced shipping traffic to rival Kazeron, and these craters, sprectra indicates the fluid is saturated with heavy metals.""
+
+Technology interjects, excitable. ""The coordinates are moving, $PlayerSirOrMadam! Vertical datum constant, longitude steadily increasing."" 
+
+Sensors fiddles with their interface and streams the $shipOrFleets external to your bridge display. Grainy at first, the feed crystallises into an unremarkable patch of oxide sand. ","jdp_mantleBoreXenobiologyIntro:""Are these the coordinates?""",
+jdp_mantleBoreXenobiologyIntro,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyIntro",,"""Indeed. I didn't really expect to see anything, it's underground,"" they pause and look towards you. As they speak, the sand moves. ""But I'm still disappointed.""
+
+Vibration patterns shift across the grains, waveforms indicative of movement beneath the surface, they notice your expression and look back. ""Disregard Captain! Tectonic activity detected, deploying seismography probe."" 
+
+The probe, a standard surveyors tool, takes a few moment to reach the surface. You see it impact through the scopes, a spec of ultravisibility yellow amongst the muted landscape. A moment later it begins streaming data.","jdp_mantleBoreXenobiologyOpinion:""We need your opinion on a superorganism.""",
+jdp_mantleBoreNidelikoKnownOption,jdp_mantleBoreCallXenobiology,"$player.jdp_metNideliko",,,"jdp_mantleBoreCallXenobiologyMet:""Comms, signal Xenobiology to the bridge.""",
+jdp_mantleBoreCallXenobiologyMet,DialogOptionSelected,"$option == jdp_mantleBoreCallXenobiologyMet","$jdp_mantleBoreDiscovered = true","Your comms officer groans and then catches themselves, ""Yes $PlayerSirOrMadam."" comes with decidedly little enthusiasm. They pull a hardwired communicator from its hook at their station and begin speaking through the shipwide announcement system. ""Xenobiology to the bridge. I say again, Xenobiology to the bridge.""
+
+They hook the communicator and spin to face you. ""They were pretty fast last time. It shouldn't take that long-""
+
+Xenobiology Officer Nideliko Tanabe rushes through the autodoors at unnecessary speed, assorted papers and Tripad in hand. She smiles, pushing her glasses back up onto her face after almost losing them in the flurry of movement.","jdp_mantleBoreXenobiologyReturn:""Hello-""",
+jdp_mantleBoreXenobiologyReturn,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyReturn",,"Xenobiology stands to attention, wrestling to keep ahold of her files and practically transverse jumps into conversation. ""Excuse me. I'm back! Nideliko Tanabe reporting for duty, $PlayerSirOrMadam!"" She looks around the bridge, eyes wide behind her spectacles. ""I'm so happy to be working with you all again!""
+
+Some of your bridge crew are momentarily stunned by the bizarre outburst, others remember the eccentricity that comes with working with Nideliko and simply ignore her. Comms chuckles lightly under their breath and returns to their duties.","jdp_mantleBoreXenobiologyOpinion:""Welcome back, we need your opinion on a superorganism.""
+jdp_mantleBoreXenobiologyReturnWho:""Who are you again?""",
+jdp_mantleBoreXenobiologyReturnWho,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyReturnWho",,"Nideliko's face falls instantly. ""I'm Nideliko Tanabe! Xenobiology officer of the bridge crew of the $player.flagshipName!"" 
+
+She begins listing personal traits, attempting to jog your memory. ""33? Single? Female? Jangalan?"" She seems thoroughly devastated, each time deflating more from your lack of recognition. ""You called me in for my opinion on the $player.jdp_metNidelikoLocation?"" Her voice trails off. ""I thought I made quite a strong first impression.""","jdp_mantleBoreXenobiologyMoveOn:""Regardless, we need your opinion on a superorganism.""
+jdp_mantleBoreXenobiologyRemember:""Nideliko! I remember now!""
+jdp_mantleBoreXenobiologyRememberLie:""Nideliko! I remember now!"" (Lie)",
+jdp_mantleBoreXenobiologyMoveOn,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyMoveOn","$option = jdp_mantleBoreXenobiologyOpinion 0
+$player.ethosMercenary++
+FireBest DialogOptionSelected","""Oh."" comes quietly. She pokes at her eyes behind her glasses. ""Ok""",,
+jdp_mantleBoreXenobiologyRemember,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyRemember",,"She begins glowing instantly. ""I knew you would! I'm very memorable. What do you need from me this time Captain? Science awaits!""","jdp_mantleBoreXenobiologyOpinion:""We need your opinion on a superorganism.""",
+jdp_mantleBoreXenobiologyRememberLie,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyRememberLie","$player.ethosLiar++
+","She begins glowing instantly. ""I knew you would! I'm very memorable. What do you need from me this time Captain? Science awaits!""","jdp_mantleBoreXenobiologyOpinion:""We need your opinion on a superorganism.""",
+jdp_mantleBoreXenobiologyOpinion,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyOpinion","$jdp_mantleBoreDiscovered = true
+","Nideliko bows slightly, ""Yes $PlayerSirOrMadam.""
+
+You motion her to the auxiliary command centre and grant it access to the individual datastreams of all bridge stations. Laying her affects on the console, she pulls up the external scopes. Her face flashes with recognition, then excitement, then worry.
+
+She pulls a little graphite writing tool from somewhere amongst her documents to jot notes, and shuffles through them with purpose, ""I have my report ready!"" She announces suddenly, standing abruptly and collecting her files. She begins confidently walking towards your post before rushing back to first grab her Tripad.","jdp_mantleBoreXenobiologyOpinion2:""Go on?""",
+jdp_mantleBoreXenobiologyOpinion2,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyOpinion2",,"""Its a Biofactory!"" she exclaims, pushing up her glasses with a folder.
+
+""Whoever lived surface-side didn't take proper care to prune the thing so it has just kept growing."" She pauses, thinking. ""Actually they probably died, but regardless.""
+
+""See, Biofactories are designed to be inedible, Exodyne gave the flesh a high toxicant quotient so it couldn't be used for agriculture. Technically smart, but that also means nothing can cull it naturally. The Genetic Failsafe only triggers upon total ecological collapse, which clearly hasn't happened, so it simply hasn't died."" 
+
+She smiles, self assured, ""hence, over however many cycles it has been, we get a superorganism!""","jdp_mantleBoreXenobiologyOpinion3:""Any possible course of action?""",
+jdp_mantleBoreXenobiologyOpinion3,DialogOptionSelected,"$option == jdp_mantleBoreXenobiologyOpinion3",,"""We can't kill it, impossible."" She pauses. ""Well. Not impossible, but it is infeasible, the nervous system is decentralised.""
+
+She reaches over your console to pull up the external scopes, Tactical's eye twitches at her intrusion into your space, but she seems entirely oblivious. ""Somewhere down there is the facility where the Biofactory Embryo was extruded,"" she continues.
+
+""Part of that process is the creation of the Biofactory womb. If we can get in there, dig around in the meat and sever the new embryo, this-"" She waves a hand across a holo of $name, ""will all slowly die back. For this scale of organism? It would take tens if not hundreds of cycles, this guy is here for our lifetimes at minimum, but we would get a Biofactory Embryo for the trouble.""","jdp_mantleBoreTacticalOpinion:""Tactical, how feasible is a surface op?""",
+jdp_mantleBoreTacticalOpinion,DialogOptionSelected,"$option == jdp_mantleBoreTacticalOpinion","jdp_DisplayItem biofactory_embryo
+
+$marines = 200 0
+$fuel = 200 0
+$hand_weapons = 50 0
+
+ShowResCost marines $marines fuel $fuel true hand_weapons $hand_weapons true
+
+FireBest jdp_mantleBoreCheckCanAfford
+FireBest jdp_mantleBoreDisableOperationIfNeeded
+
+jdp_FakeLeave","""It will be tough, $PlayerSirOrMadam, this isn't exactly a conventional firefight."" They take a moment to consider.
+
+""If we clear out a landing zone with some precise orbital burns we could insert a team. Light arms won't cut it though, we'll need some real hardware for this, a mechanised op.""","0:jdp_mantleBoreTacticalOperation:Approve the ground operation","supplies
+fuel
+crew
+marines
+
+food
+organics
+volatiles
+ore
+rare_ore
+metals
+rare_metals
+heavy_machinery
+domestic_goods
+
+organs
+drugs
+hand_weapons
+luxury_goods
+lobster"
+jdp_mantleBoreCheckCanAfford,jdp_mantleBoreCheckCanAfford,"$player.fuel >= $fuel
+$player.marines >= $marines
+$player.hand_weapons >= $hand_weapons","$canAfford = true 0",,,
+jdp_mantleBoreDisableOperation,jdp_mantleBoreDisableOperationIfNeeded,"!$canAfford","SetEnabled jdp_mantleBoreTacticalOperation false",,,
+jdp_mantleBoreTacticalOperation,DialogOptionSelected,"$option == jdp_mantleBoreTacticalOperation","RemoveCommodity fuel $fuel
+RemoveCommodity hand_weapons $hand_weapons","You convene your senior officers to discuss a ground insertion on $name. Both SIGINT and HUMINT are nonexistent, what with the lack of human opposition, so planning the operation is unorthodox. 
+
+To the dismay of the marine company head, Nideliko has volunteered to assist from the ground. According to her analysis the superorganism should display no overt hostility towards the team. Weaponry, particularly of the antimatter family, will however be necessary to clear the path from the landing site to the Biofactory womb. 
+
+A volley of precise orbital orbital burns from your $shipOrFleet excises a patch of slagged wasteland into the surface of $name, Sensors reports that the Biofactory is already growing back into the space, but it will be days before the landing site is retaken.","jdp_mantleBoreTacticalOperation2:Continue",
+jdp_mantleBoreTacticalOperation2,DialogOptionSelected,"$option == jdp_mantleBoreTacticalOperation2",,"The contingent of marines and their Xenobiology escort are already on route. Bridge displays flicker with hundreds of vidfeeds, each accompanied by health monitors and antixenol dosage trackers. 
+
+As promised, the operation is mostly uneventful, the occasional tunnels carved through the flesh slowly contract behind the team ominously, but no deliberate attempts are otherwise made by the superorganism to stop their advance. Progress is slow through the macroscale organs of the Biofactory, bicuspid valves larger than the company APCs slowly open and close off routes, releasing streams of synthetic compounds in their wake. 
+
+Fronds of villi wave and cling to the combat suits of those at the edges of the pack, but seem otherwise harmless, pits of mucus and other fluids are occasionally waded through. After a few hours the team reach the formed ceramometal shells of a ruined human settlement, entwined within the embrace of the living landscape.","jdp_mantleBoreTacticalOperation3:Switch to viewing Nideliko's feed",
+jdp_mantleBoreTacticalOperation3,DialogOptionSelected,"$option == jdp_mantleBoreTacticalOperation3",,"Nideliko's feed jitters slightly as she waits beside a genetics kit inside one of the APCs, the Tripad connected to the unit lights up red after roughly a minute to her profound disappointment. The Xenobiologist scrawls what you assume to be ""Genetics too corrupted"" with graphite before she slaps a hand against her suit faceplate and activates comms. 
+
+""$PlayerSirOrMadam! Surface report! This site is a bust, the genetics are too corrupted by replication to be the origin. Moving on."" She turns to face the marine company lead and the feed shakes left and right, they move out immediately.
+
+A dedicated holo tracks the teams movements across the surface, by taking the path of least resistance through the tunnels it begins to appear disturbingly like a blood vessel chart. Within a few further hours the next remnant of human civilisation is reached, a ribcage of synthetic material for the synthetic organism.","jdp_mantleBoreTacticalOperation4:Continue",
+jdp_mantleBoreTacticalOperation4,DialogOptionSelected,"$option == jdp_mantleBoreTacticalOperation4",,"This time the the Tripad lights a reassuring shade of green, to which Nideliko's feed jumps vertically slightly and clatters against the low roof of the transport vehicle. ""Captain! Report! We are at the location, genetic corruption as low as 0.095%!"" They seemingly begin talking to the surface team. ""Spread out! The inner epidermis is somewhere here, once we breach the womb we can extract the Embryo."" 
+
+The operation moves quickly from there, a heavy antimatter weapon slices an entrance through a particularly suppurate layer of skinlike tissue, a pump is then used to drain the amniotic fluid and mucus disgorged from what you presume to be the Biofactory womb.","jdp_mantleBoreTacticalOperation5:Continue",
+jdp_mantleBoreTacticalOperation5,DialogOptionSelected,"$option == jdp_mantleBoreTacticalOperation5","AddRemoveAnyItem SPECIAL biofactory_embryo 1
+unset $jdp_mantleBore
+EndConversation NO_CONTINUE","Anchored to the ceiling by thick nervous strands and dripping in yellowed pus is an intact Biofactory Embryo. Nideliko smiles beside the disgusting thing briefly before the chords are cut and it is placed in a specially designed crate for extraction. 
+
+The trek back is slow, but within a few hours it is secured in your hold.","100:defaultLeave:Leave",
+"#END Mantle Bore Hubris Event",,,,,,
 ,,,,,,
 # Plasma Dynamo Hubris Event,,,,,,
 jdp_plasmaDynamoKlaesIgnore,PickGreeting,"$id == jdp_klaes score:30000",,"The purple emblem of the Domain Sixth Battlegroup performs half a rotation. After a short wait, your connection request is denied. 

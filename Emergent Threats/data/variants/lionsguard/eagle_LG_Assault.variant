@@ -1,7 +1,7 @@
 {
     "displayName": "Elite",
     "fluxCapacitors": 0,
-    "fluxVents": 20,
+    "fluxVents": 16,
     "goalVariant": true,
     "hullId": "eagle_LG",
     "hullMods": [
@@ -23,8 +23,8 @@
             }
         },
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
                 "WS 001": "reaper",
                 "WS 002": "reaper"
@@ -47,7 +47,7 @@
                 "WS 004": "pdlaser",
                 "WS 010": "pdlaser",
                 "WS 012": "pdlaser",
-                "WS 013": "vulcan"
+                "WS 013": "flak"
             }
         }
     ]

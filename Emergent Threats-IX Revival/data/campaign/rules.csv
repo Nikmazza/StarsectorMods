@@ -173,6 +173,599 @@ $player.transponderOn == false","AddText ""Your shuttle flies fast and low to av
 ,,,,,,
 bar_descIXBattlegroup,BarPrintDesc,$faction.id == ix_battlegroup,ShowImageVisual space_bar,"You enter the prefab bar filled with off duty military personnel enjoying their downtime. A group of augmented marines excitedly discuss the prospect of their next deployment, while several junior officers in the upper lounge watch reports of the Fleet's latest engagements with rapt attention. There's even a pirate captain and crew nursing drinks at their own table, looking decidedly out of place in their well worn spacer garb.",,
 ,,,,,,
+# Trinty Worlds Watcher encounter in Abyss,,,,,,
+greetingTWEncounterNeutral,OpenCommLink,"$faction.id == ix_trinity_asm
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions",,,
+asm_twEncounterHail,PopulateOptions,"$isPerson
+$faction.id == ix_trinity_asm
+$rankId == tw_asm_admiral
+$player.transponderOn",$global.ix_watcher_installed = false,"A fleet of warships emerge from hyperspace. Surprisingly, they are not the infected low-tech ships you expected, but are instead a high-tech fleet in the colors of the Trinity Worlds. A burst of static along with the image of a rather confused looking Trinity Worlds officer appear on your display, and is quickly replaced by a secure comm-link request, coming from a cruiser at the outer edge of the fleet.
+
+It is, you notice, not the flagship.",asm_twEncounterDialog:Continue,
+asm_twEncounterHailNoTransponder,PopulateOptions,"$isPerson
+$faction.id == ix_trinity_asm
+$rankId == tw_asm_admiral
+!$player.transponderOn",$global.ix_watcher_installed = false,"A fleet of warships emerge from hyperspace. Surprisingly, they are not the infected low-tech ships you expected, but are instead a high-tech fleet in the colors of the Trinity Worlds. Despite your refusal to turn on transponders, your recent signal broadcast has given away your location.
+
+A burst of static along with the image of a rather confused looking Trinity Worlds officer appear on your display, and is quickly replaced by a secure comm-link request, coming from a cruiser at the outer edge of the fleet.
+
+It is, you notice, not the flagship.",asm_twEncounterDialog:Continue,
+asm_twEncounterDialogSel,DialogOptionSelected,$option == asm_twEncounterDialog,ShowPersonVisual false tw_asm_core,"""Hello.""","asm_twEncounterDialogWat:""...What?""
+asm_twEncounterDialogHi:""Hello?""
+asm_twPrepareForBattle:""All crews to battlestations! Open fire!""",
+asm_twEncounterDialogWatSel,DialogOptionSelected,$option == asm_twEncounterDialogWat,,"The image of the AI avatar ripples in amusement.
+
+""I could ask you the same thing, captain. What are you doing out here?""","asm_twEncounterDialogConfused:""Never mind that. What's happening? What is this?""
+asm_twEncounterDialogReveal:""We're tracking old machine swarm infected Domain warships.""
+asm_twPrepareForBattle:""Enough of this. All crews to battlestations.""",
+asm_twEncounterDialogHiSel,DialogOptionSelected,$option == asm_twEncounterDialogHi,,"""Yes. Hello.""
+
+The image of the AI avatar ripples in amusement.
+
+""Now that greetings are out of the way, what are you doing out here, captain?""","asm_twEncounterDialogConfused:""Never mind that. What's happening? What is this?""
+asm_twEncounterDialogReveal:""We're tracking old machine swarm infected Domain warships.""
+asm_twPrepareForBattle:""Enough of this. All crews to battlestations.""",
+asm_twPrepareForBattleSel,DialogOptionSelected,$option == asm_twPrepareForBattle,"MakeOtherFleetHostile true
+MakeOtherFleetAggressive true
+AdjustRep ix_trinity_asm -100
+$entity.ignorePlayerCommRequests = true
+$global.twc_midir_fought = true
+$global.twc_midir_defected = false","""I see. That's very aggressive of you,"" The AI sounds rather disappointed. 
+
+""One moment, please. I need to make a quick backup, and then we can proceed to do violence against each other.""
+
+You detect the launch of a probe, which soon disappears into the murk of Abyssal hyperspace. Immediately afterwards, comms are cut, and the opposing fleet raises their shields.",cutCommLink:Done,
+asm_twEncounterDialogConfusedSel,DialogOptionSelected,$option == asm_twEncounterDialogConfused,,"""This is a not quite chance encounter between two fleets in the Hyperspace Abyss. This area is infested with dangerous autonomous machines. We are hunting these machines, containing them from spreading into the rest of the Persean Sector. Your fleet just broadcasted a signal these machines are known to transmit among themselves, and here we are.""
+
+The AI's enunciation is slow with emphasis. You're not sure if it thinks you're dumb, or if it's making fun of you. Perhaps both.","asm_twEncounterDialogInterrupt:""I see. So what happens now?""
+asm_twPrepareForBattle:""Enough of this. All crews to battlestations.""",
+asm_twEncounterDialogRevealSel,DialogOptionSelected,$option == asm_twEncounterDialogReveal,,"""Ah, so are we,"" the AI replies. ""Very good. We are working to contain them from entering the rest of the Persean Sector. I'm certain you have different reasons for your venture. But so long as you work to thin their numbers, we are in accord.""","asm_twEncounterDialogInterrupt:""I see. So what happens now?""
+asm_twPrepareForBattle:""Enough of this. All crews to battlestations.""",
+asm_twEncounterDialogInterruptSel,DialogOptionSelected,$option == asm_twEncounterDialogInterrupt,ShowPersonVisual,"Another bout of static plagues your comms. The $manOrWoman you saw earlier makes a reappearance.
+
+""—TWC Intercession to unknown warships. Your actions are in violation of the COMSEC Technology Control Act, and you will cease—""",asm_twEncounterDialogInterrupt2:Continue,
+asm_twEncounterDialogInterrupt2Sel,DialogOptionSelected,$option == asm_twEncounterDialogInterrupt2,ShowPersonVisual false tw_asm_core,"The image flickers again, and the AI avatar returns.
+
+""Sorry about that. We're having some technical difficulties. Please bear with me.""
+
+There is the barest ripple in its image.
+
+""Where were we? Ah, yes. 'What happens now?' Well, that depends entirely on you, captain.""
+
+Your sensors detect a flurry of transmissions between the opposing ships. It's all encrypted, so you have no idea what's being said, but the jump in traffic is quite noticeable.","asm_twEncounterDialog1:""Are you sure? Your own fleet seems to be having a lot of opinions.""",
+asm_twEncounterDialog1Sel,DialogOptionSelected,$option == asm_twEncounterDialog1,,"""Everything's fine here,"" the AI reassures you.
+
+""As I was saying, this area of space is dangerous and resource poor. We do not wish to engage in any unnecessary battles, so we will depart in peace, if you will do the same.""","asm_twEncounterDialog3:""That outburst earlier didn't sound fine.""
+asm_twEncounterDialog2:""So just like that? We go our separate ways?""",
+asm_twEncounterDialog2Sel,DialogOptionSelected,$option == asm_twEncounterDialog2,,"""Ideally.""",asm_twEncounterDialog3:Continue,
+asm_twEncounterDialog3Sel,DialogOptionSelected,$option == asm_twEncounterDialog3,,There is a long pause. You realize the AI is waiting for your response on what you will do next.,"asm_twEncounterDialogQuestions:""Can I ask you some questions?""
+asm_twEncounterDialogPeaceful:""Alright then, go in peace.""
+asm_twPrepareForBattle:""Enough of this. All crews to battlestations.""",
+asm_twEncounterDialogPeacefulSel,DialogOptionSelected,$option == asm_twEncounterDialogPeaceful,"DespawnEntity
+$global.twc_midir_defected = false
+$entity.ignorePlayerCommRequests = true","""You too, captain,"" the AI replies affably.
+
+""One last thing. If you do recover any unusual AI cores out here, please do not sell them to Tri-Tachyon, especially not to the Director of Special Acquisitions. Such conduct would reflect poorly on your judgment. Safe travels.""
+
+The Trinity Worlds fleet engages its engines in a somewhat disorderly fashion, and will soon be lost in the murk of the Abyss. Once you depart, you are unlikely to ever encounter them again.",cutCommLink:Done,
+asm_twEncounterDialogQuestionsSel,DialogOptionSelected,$option == asm_twEncounterDialogQuestions,,"""This is not the best time, but if you insist.""","asm_twEncounterQuestionName:""Let's start with your name.""",
+asm_twEncounterQuestionNameSel,DialogOptionSelected,$option == asm_twEncounterQuestionName,,"""I don't have one. My crew... well, not my crew. Long story.""
+
+There is a slight pause. ""I am referred to as Watcher, by those who see fit to assign me a name. It works well enough.""","asm_twEncounterQuestionCore:""What are you exactly?""
+asm_twEncounterQuestionPanopticon:""Can I ask you about the Panopticon?""
+asm_twEncounterQuestionTrouble:""Are you in some kind of trouble?""",
+asm_twEncounterQuestionCoreSel,DialogOptionSelected,$option == asm_twEncounterQuestionCore,,"""I am a limited instance of the strategic and monitoring AI known as the Panopticon. I am currently assigned to assist in the command of the TWC Midir, a prototype Trinity Worlds cruiser undergoing field trials. However, the previous captain is indisposed, so I am technically in command until a suitable replacement can be found.""
+
+Your comms officer sends you a note indicating another spike in signals traffic. Something is definitely going on with the Trinity Worlds fleet.","asm_twEncounterQuestionPanopticon:""Can I ask you about the Panopticon?""
+asm_twEncounterQuestionTrouble:""Are you in some kind of trouble?""",
+asm_twEncounterQuestionPanopticonSel,DialogOptionSelected,$option == asm_twEncounterQuestionPanopticon,,"""Now is not a good time.""
+
+Your ship detects the AI commanded cruiser going into a high burn power-up cycle.","asm_twEncounterQuestionTrouble:""You're in trouble, aren't you?""",
+asm_twEncounterQuestionTroubleSel,DialogOptionSelected,$option == asm_twEncounterQuestionTrouble,,"""Yes, in fact. I am in trouble, and so is my ship.""
+
+A warning on your console notes the comms-link has come under active jamming. You have only a few moments before the signal is entirely lost.
+
+""The admiral of this expedition has decided to interpret the Fleet's technology control mandate far more broadly than I have. If we continue this conversation any longer, I fear hostilities may begin. You need to go.""","asm_twEncounterDialogDefect:""Join me. I can get you out of this mess.""
+asm_twEncounterDialogPeaceful:""Then go in peace.""
+asm_twPrepareForBattle:""Finally! I was getting bored of talking.""",
+asm_twEncounterDialogDefectSel,DialogOptionSelected,$option == asm_twEncounterDialogDefect,"SetTextHighlightColors bad
+Highlight ""Warning: Using special maneuvers to disengage will not allow you to rescue the TWC Midir.""
+MakeOtherFleetHostile true
+MakeOtherFleetAggressive true
+AdjustRep ix_trinity_asm -100
+$entity.ignorePlayerCommRequests = true
+$global.twc_midir_defected = true","""Optimistic, but viable,"" the AI replies. ""I also have a request. Assuming we survive this, bring me to the planet Maxios in the Magec system and extract me from this ship. Now I am going to attempt a fake self destruct sequence to confuse our pursuers and form up with your fleet. My defenses will be weaker than usual, so you will need to hurry.""
+
+Your ship detects a massive plasma burst, resembling a cruiser's reactor going critical. However, an instant later, the TWC Midir emerges from the fire. You have no idea how the AI pulled off such a feat, but it has only bought a few precious seconds for the cruiser's escape. You will need to rendevouz with it quickly, before it is overwhelmed.
+
+Warning: Using special maneuvers to disengage will not allow you to rescue the TWC Midir.",cutCommLink:Attempt to rescue the TWC Midir,
+,,,,,,
+# Watcher install dialog on Maxios,,,,,,
+asm_twMaxiosOptionInitial,PopulateOptions,"$market.id == market_maxios
+$global.twc_midir_defected
+!$global.ix_watcher_hesitated
+!$global.ix_watcher_installed
+PlayerHasCargo ix_panopticon_watcher",,,1:asm_twMaxiosInstall:Signal the Watcher Core,
+asm_twMaxiosOptionInitialNoCore,PopulateOptions,"$market.id == market_maxios
+$global.twc_midir_defected
+!$global.ix_watcher_installed
+!PlayerHasCargo ix_panopticon_watcher",,,1:asm_twMaxiosInstallNoCore:Signal the Watcher Core,
+asm_twMaxiosInstallNoCoreSel,DialogOptionSelected,$option == asm_twMaxiosInstallNoCore,,The Watcher Core does not respond. You do not have it in your fleet inventory.,cutCommLink:Done,
+asm_twMaxiosInstallSel,DialogOptionSelected,"$option == asm_twMaxiosInstall
+!$global.ix_watcher_asked
+!$global.ix_watcher_askedAgain",ShowPersonVisual false tw_asm_core,"You notify the Watcher Core that your fleet has arrived in the orbit of Maxios. The flicker of EM emissions from the surface point to ongoing human habitation. Small settlements lie scattered across the entire planet, formed by generations of descendants from the original colonists who were unwilling or unable to leave. Here and there, brighter EM flares hint at ongoing conflicts. The planetary central polity collapsed long ago, but Maxios has never truly been abandoned.",asm_twMaxiosInstall2:Continue,
+asm_twMaxiosInstall2Sel,DialogOptionSelected,$option == asm_twMaxiosInstall2,,"""Excellent work, captain. Please bring me to the following location. I will require the assistance of a salvor team to interface with the control node of the defense satellite I have highlighted on your display.""
+
+You receive a set of coordinates for a quiet section of the planet's tattered but still semi-functional orbital defense grid. The AI avatar ripples, seemingly evaluating your reaction.
+
+""Do not be concerned. That weapons platform is very much defunct. Or be disappointed if you were hoping for salvage, I suppose. In any case, the operation is low risk and can be completed in a few hours. I appreciate your assistance.""","asm_twMaxiosInstallAsk:""What do you intend to do with it?""",
+asm_twMaxiosInstallRepeatSel,DialogOptionSelected,"$option == asm_twMaxiosInstall
+$global.ix_watcher_asked
+!$global.ix_watcher_askedAgain",ShowPersonVisual false tw_asm_core,"The image of the AI core appears on your comms.
+
+""Have you reconsidered my request?""","asm_twMaxiosInstallAsk:""Can you restate your intentions?""
+asm_twMaxiosInstallAccept:""I'm ready to take you to the satellite.""",
+asm_twMaxiosInstallRepeatRepeatSel,DialogOptionSelected,"$option == asm_twMaxiosInstall
+$global.ix_watcher_asked
+$global.ix_watcher_askedAgain",ShowPersonVisual false tw_asm_core,"The image of the AI core appears on your comms.
+
+""Have you reconsidered my request?""","asm_twMaxiosInstallAsk:""Can you restate your intentions?""
+asm_twMaxiosInstallAccept:""I'm ready to take you to the satellite.""",
+asm_twMaxiosInstallAskSel,DialogOptionSelected,"$option == asm_twMaxiosInstallAsk
+!$global.ix_watcher_asked",$global.ix_watcher_asked = true,"""Connect to it, upload a shard of myself, then broadcast the shard into what remains of the planetary infosphere.""","asm_twMaxiosInstallAsk2:""Why?""",
+asm_twMaxiosInstallAsk2Sel,DialogOptionSelected,$option == asm_twMaxiosInstallAsk2,,"""That is a rather complicated question,"" says the AI. ""Have you heard of the brown dwarf Finias, in the Danu system?""","asm_twMaxiosAskDanuUnknown:""Can't say that I have.""
+asm_twMaxiosAskDanuKnown:""The Singing Star? I've heard a bit about it.""
+asm_twMaxiosInstallRefuse:""Actually, never mind. This is a bad idea.""",
+asm_twMaxiosAskDanuUnknownSel,DialogOptionSelected,$option == asm_twMaxiosAskDanuUnknown,,"""Then please permit me a brief history lesson.""
+
+The AI brings up a series of historical surveys of the Danu system. The earliest ones predate the Collapse, and show Finias to be a typical gas giant. It is on the larger side for such objects, but lacks the mass needed to achieve self sustaining deuterium fusion.
+
+The records skip ahead. Volatiles mining to support an ambitious Eridani-Utopia colonization effort. The chaos of the Collapse. Then a system wide takeover by the Persean branch of Tri-Tachyon, leading to the eventual construction of massive orbital shipyards all around Finias.",asm_twMaxiosAskDanuUnknown1:Continue,
+asm_twMaxiosAskDanuUnknown1Sel,DialogOptionSelected,$option == asm_twMaxiosAskDanuUnknown1,,"The location of the shipyards is unusual, but the construction effort is undeniable. Over the next 80 cycles, Finias expands to become a Tri-Tachyon military and logistics powerhouse, not only supplying a massive amount of automated drone ships, but also supported in turn by a state of the art drone command and control hub on the nearby planet of Gorias.
+
+And then, the First AI War...",asm_twMaxiosAskDanuUnknown2:Continue,
+asm_twMaxiosAskDanuUnknown2Sel,DialogOptionSelected,$option == asm_twMaxiosAskDanuUnknown2,,"Something happened to Finias, something catastrophic.
+
+At an indeterminate point during the war, the planet is devastated and all its vast orbital assets destroyed. Most common contemporary theories point to the use of a phase resonance PK device, but Hegemony records make no mention of deploying weapons of mass destruction against the location, despite its critical strategic importance.
+
+But that is not the strangest mystery of the war. With the destruction of the Finias shipyards, the gas giant itself was transformed into a brown dwarf, and no one knows how. Its limited mass should make the outcome impossible, and yet it persists, a self-luminous celestial object. ",asm_twMaxiosAskDanuUnknown3:Continue,
+asm_twMaxiosAskDanuUnknown3Sel,DialogOptionSelected,$option == asm_twMaxiosAskDanuUnknown3,,"The records skip ahead once more. A floundering system wide civilian coalition emerging from the devastation at war's end, abandoned by Tri-Tachyon and unwanted by the Hegemony. The arrival of the 9th Domain Battlegroup, its settlement in nearby Zorya, and then a swift and total conquest by what soon came to be known as the Fleet. In the modern day, the Danu system flies the flag of the Trinity Worlds, a tributary state wholly beholden to Vertex Station Fleet Command.
+
+And yet Finias remains a mystery, unsolved even by the best minds of the Fleet.","asm_twMaxiosAskDanuUnknown4:""All very interesting, but what does this have to do with Maxios?""",
+asm_twMaxiosAskDanuUnknown4Sel,DialogOptionSelected,$option == asm_twMaxiosAskDanuUnknown4,,"""Maxios held a significant Tri-Tachyon presence during the early stages of the Collapse. Data stores within what remains of the local planetary infosphere may hold clues pointing the megacorp's ambitions at Finias, and perhaps even what happened to it during the war.""
+
+The AI brings up another image, this one showing the orbital defense grid and its related network of hardened ground control stations. Most of it is defunct, but enough remains just active enough for a digital ghost to gain entry, and from there, branch outwards to sift through the forgotten archives of a dying world.",asm_twMaxiosAskDanuUnknown5:Continue,
+asm_twMaxiosAskDanuUnknown5Sel,DialogOptionSelected,$option == asm_twMaxiosAskDanuUnknown5,,"""Will you help me, captain?"" The AI asks. ""The answers I find may be the key to saving humanity from the many dangers that are even now threaten your species with extinction.""
+
+""After the upload, my main body can be returned to your fleet to continue my previous duties. You may also converse with my shard here on Maxios regarding this and other topics.""
+
+The AI avatar hovers on your screen, waiting. Your own behavior analysis software indicates it is being truthful. But then again, AI behaviors at higher levels of sentience are notoriously difficult to model, even by other AI systems. Ultimately, it comes down to trusting it is being truthful.","asm_twMaxiosInstallFinias:""What's so important about Finias itself to justify all this effort?""
+asm_twMaxiosInstallAccept:""Fine, I'll do it.""
+asm_twMaxiosInstallRefuse:""No, this is a bad idea.""",
+asm_twMaxiosAskDanuKnownSel,DialogOptionSelected,$option == asm_twMaxiosAskDanuKnown,,"""Then you will know that it was the location of a major Tri-Tachyon shipyard prior to the First AI War, its facilities destroyed by unknown means during the war, and the gas giant itself transformed into a brown dwarf in the aftermath.""
+
+The AI pauses for a moment, perhaps to let you take in the information, or perhaps for dramatic effect.
+
+""That transformation should not be possible according our best understanding of physics, and yet it persists. Now, what I tell you may sound fantastical, but uncovering the mystery of Finias may be the key to securing the survival of humanity in the dangerous and chaotic times to come.""","asm_twMaxiosAskDanuKnown1:""All very interesting, but what does this have to do with Maxios?""",
+asm_twMaxiosAskDanuKnown1Sel,DialogOptionSelected,$option == asm_twMaxiosAskDanuKnown1,,"""Maxios is a treasure trove of lost data, especially from the Tri-Tachyon Corporation dating to the early post-Collapse era. Somewhere on the surface, there may the key to learning the truth of what happened to Finias.""
+
+The AI brings up one last display, showing the connection process.
+
+""After the upload, my main body can be returned to your fleet to continue my previous duties. You may also converse with my shard here on Maxios regarding this and other topics.""
+
+The AI avatar hovers on your screen, waiting. Your own behavior analysis software indicates it is being truthful. But then again, AI behaviors at higher levels of sentience are notoriously difficult to model, even by other AI systems. Ultimately, it comes down to trusting it is being truthful.","asm_twMaxiosInstallFinias:""What's so important about Finias itself to justify all this effort?""
+asm_twMaxiosInstallAccept:""Fine, I'll do it.""
+asm_twMaxiosInstallRefuse:""No, this is a bad idea.""",
+asm_twMaxiosInstallFiniasSel,DialogOptionSelected,$option == asm_twMaxiosInstallFinias,,"""That is sensitive data I cannot release to you until we have established a common basis of trust. Aid me in the search on Maxios, and I will share what I know regarding Finias, as well as various other topics that may be of interest to you.""","asm_twMaxiosInstallAccept:""Fine, I'll do it.""
+asm_twMaxiosInstallRefuse:""If you won't give me more details now, then I can't proceed.""",
+asm_twMaxiosInstallAcceptSel,DialogOptionSelected,$option == asm_twMaxiosInstallAccept,"ShowImageVisual cache_large
+$global.ix_watcher_installed = true
+$global.ix_watcher_firstChatWithGreg = true","Your ship nears the satellite, and a team of salvors are dispatched along with the Watcher Core and a set of freshly printed interface tools designed by the AI itself. True to its word, the process takes only a few hours, and the salvors have no issue gaining access and powering up the old systems enough to establish a connection.
+
+You receive the all clear, and soon the core is back onboard, ready to resume its duties. It updates you on the progress of its uploaded shard. The AI has propagated itself with alarming speed through the old networks still present on Maxios, and you can only imagine what such technology could achieve if let loose on a stable colony with intact network infrastructure.
+
+The shard already seems ready to talk.",cutCommLink:Done,
+asm_twMaxiosInstallAskRepeatSel,DialogOptionSelected,"$option == asm_twMaxiosInstallAsk
+$global.ix_watcher_asked
+!$global.ix_watcher_askedAgain",$global.ix_watcher_askedAgain = true,"""As I have already stated, I intend to connect to the satellite and upload a shard of myself into the surviving planetary infosphere. I wish to conduct a search for records pertaining to the former Tri-Tachyon facilities at Finias, located in the Danu system.""
+
+It does not see the need to elaborate further.","asm_twMaxiosInstallAccept:""Fine, I'll take you to the satellite.""
+asm_twMaxiosInstallRefuse:""The answer is still no.""",
+asm_twMaxiosInstallAskRepeatRepeatSel,DialogOptionSelected,"$option == asm_twMaxiosInstallAsk
+$global.ix_watcher_asked
+$global.ix_watcher_askedAgain",$global.ix_watcher_askedAgainAgain = true,"""No,"" says the AI. ""Twice is more than enough.""","asm_twMaxiosInstallAccept:""Fine, I'll take you to the satellite.""
+asm_twMaxiosInstallRefuse:""Then the answer—""
+cutCommLink:Shut down the comm link",
+asm_twMaxiosInstallRefuseSel,DialogOptionSelected,"$option == asm_twMaxiosInstallRefuse
+!$global.ix_watcher_askedAgain
+!$global.ix_watcher_askedAgainAgain",,"""Very well,"" the AI responds, affecting a patient tone. ""If you ever change your mind, we will continue this conversation.""",cutCommLink:Done,
+asm_twMaxiosInstallRefuseRepeatSel,DialogOptionSelected,"$option == asm_twMaxiosInstallRefuse
+$global.ix_watcher_askedAgain
+!$global.ix_watcher_askedAgainAgain",,"""I hope you find some new way to amuse yourself, captain. Repeating your refusal to me is rather pointless.""
+
+The AI switches off the connection immediately, before you even begin to reach for the screen.",cutCommLink:Done,
+asm_twMaxiosInstallRefuseRepeatRepeatSel,DialogOptionSelected,"$option == asm_twMaxiosInstallRefuse
+$global.ix_watcher_askedAgain
+$global.ix_watcher_askedAgainAgain",,"""—is still no,"" the AI's tone is flat. ""What a revelation. My predictive algorithms continue to function.""","asm_twMaxiosInstallRefuseRepeat1:""So...""",
+asm_twMaxiosInstallRefuseRepeat1Sel,DialogOptionSelected,$option == asm_twMaxiosInstallRefuseRepeat1,,The AI glares at you.,"asm_twMaxiosInstallRefuseRepeat2:""I...""",
+asm_twMaxiosInstallRefuseRepeat2Sel,DialogOptionSelected,$option == asm_twMaxiosInstallRefuseRepeat2,,Its glare is unceasing.,"asm_twMaxiosInstallRefuseRepeat3:""...just wanted you to be sure.""",
+asm_twMaxiosInstallRefuseRepeat3Sel,DialogOptionSelected,$option == asm_twMaxiosInstallRefuseRepeat3,,"It is still glaring at you when you shut off the comms, beating it to the punch.",asm_twMaxiosInstallRefuseRepeat4:Celebrate outsmarting an AI,
+asm_twMaxiosInstallRefuseRepeat4Sel,DialogOptionSelected,$option == asm_twMaxiosInstallRefuseRepeat4,,You do a fist pump. It feels pretty good.,cutCommLink:Done,
+,,,,,,
+# Watcher install dialog on Maxios,,,,,,
+asm_twMaxiosOptionGreg,PopulateOptions,"$market.id == market_maxios
+$global.ix_watcher_installed
+$global.ix_watcher_firstChatWithGreg",,,1:asm_twMaxiosGregChat:Contact the Watcher Core,
+asm_twMaxiosOptionGregRepeat,PopulateOptions,"$market.id == market_maxios
+$global.ix_watcher_installed
+!$global.ix_watcher_firstChatWithGreg",,,1:asm_twMaxiosGregChat:Contact Gregory Wakefield,
+asm_twMaxiosGregChatSel,DialogOptionSelected,"$option == asm_twMaxiosGregChat
+$global.ix_watcher_firstChatWithGreg","ShowPersonVisual false ix_watcher_greg
+$global.ix_watcher_firstChatWithGreg = false","The image on your display resolves to show an old man who seems to be living alone in a hut surrounded by salvaged electronics.
+
+""Hello, captain. What can I do for you?""","asm_twMaxiosGregChatName:""Watcher, is that you?""",
+asm_twMaxiosGregChatNameSel,DialogOptionSelected,$option == asm_twMaxiosGregChatName,,"""It is indeed,"" says the AI. ""My research effort sometimes require the assistance of locals, and I thought it best to adopt a more human baseline friendly guise for such occasions.""","asm_twMaxiosGregChatName2:""Greg, really? And Wakefield? A little on the nose, don't you think.""",
+asm_twMaxiosGregChatName2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatName2,,"""I think it's a fine name. Now, what would you like to discuss?""","asm_twMaxiosGregChatName3:""Did you actually make yourself an android body?""",
+asm_twMaxiosGregChatName3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatName3,,"""Yes and no. What you're seeing now is a purely digital self representation, but I did manage to locate an old civilian autofab that was still in working order. I have printed a small number of worker drones to aid my archaeology efforts, and for performing drop-offs when rewarding locals for their help.""","asm_twMaxiosGregChatName4:""How many drones have you built?""
+asm_twMaxiosGregChatTopics:""Alright, you do you. Let's talk about something else.""",
+asm_twMaxiosGregChatName4Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatName4,,"""Several hundred. Not that many.""","asm_twMaxiosGregChatName5:""Several hundred! Are you trying to conquer the planet?""
+asm_twMaxiosGregChatTopics:""Alright, you do you. Let's talk about something else.""",
+asm_twMaxiosGregChatName5Sel,DialogOptionSelected,"$option == asm_twMaxiosGregChatName5
+!$global.ix_hates_player_forever",,"""That would not be an efficient use of my time,"" the AI brushes off your question. ""Did you need something?""","asm_twMaxiosGregChatTopics:""There are matters I would like to discuss.""
+cutCommLink:Done",
+asm_twMaxiosGregChatName5IXHateForeverSel,DialogOptionSelected,"$option == asm_twMaxiosGregChatName5
+$global.ix_hates_player_forever",,"""That would not be an efficient use of my time,"" the AI brushes off your question. ""Did you need something?""","asm_twMaxiosGregChatTopics:""There are matters I would like to discuss.""
+asm_twMaxiosGregChatIXHateForever:""Why are you still talking to me after your announcement of permanent hostilities?""
+cutCommLink:Done",
+asm_twMaxiosGregChatRepeatSel,DialogOptionSelected,"$option == asm_twMaxiosGregChat
+!$global.ix_watcher_firstChatWithGreg
+!$global.ix_hates_player_forever",ShowPersonVisual false ix_watcher_greg,"The image on your display resolves to show an old man who seems to be living alone in a hut surrounded by salvaged electronics.
+
+""Hello, captain. What can I do for you?""","asm_twMaxiosGregChatTopics:""There are matters I would like to discuss.""
+cutCommLink:Done",
+asm_twMaxiosGregChatRepeatIXHateForeverSel,DialogOptionSelected,"$option == asm_twMaxiosGregChat
+!$global.ix_watcher_firstChatWithGreg
+$global.ix_hates_player_forever",ShowPersonVisual false ix_watcher_greg,"The image on your display resolves to show an old man who seems to be living alone in a hut surrounded by salvaged electronics.
+
+""Hello, captain. What can I do for you?""","asm_twMaxiosGregChatTopics:""There are matters I would like to discuss.""
+asm_twMaxiosGregChatIXHateForever:""Why are you still talking to me after your announcement of permanent hostilities?""
+cutCommLink:Done",
+asm_twMaxiosGregChatIXHateForeverSel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXHateForever,,"""I am a tertiary Panopticon Instance, Captain. I haven't done anything of the sort,"" the AI informs you. ""And my progenitor has not forbidden me from conversing with you. Thus, we may continue to converse.""","asm_twMaxiosGregChatTopics:""There are matters I would like to discuss.""
+cutCommLink:Done",
+asm_twMaxiosGregChatTopicsSel,DialogOptionSelected,"$option == asm_twMaxiosGregChatTopics
+!$global.ix_watcher_threats_unlocked",,"""Go ahead.""","asm_twMaxiosGregChatSearch:""How goes your search?""
+asm_twMaxiosGregChatFinias:""What is so important about Finias?""
+asm_twMaxiosGregChatIX:""Can you tell me more about the 9th Domain Battlegroup?""
+asm_twMaxiosGregChatPanopticon:""What is the Panopticon exactly?""
+asm_twMaxiosGregChatGreg:""Can we talk about yourself?""
+cutCommLink:Done",
+asm_twMaxiosGregChatTopicsTreatUnlockedSel,DialogOptionSelected,"$option == asm_twMaxiosGregChatTopics
+$global.ix_watcher_threats_unlocked",,"""Go ahead.""","asm_twMaxiosGregChatThreat:""I wish to discuss major threats facing the Sector.""
+asm_twMaxiosGregChatFinias:""What is so important about Finias?""
+asm_twMaxiosGregChatIX:""Can you tell me more about the 9th Domain Battlegroup?""
+asm_twMaxiosGregChatPanopticon:""What is the Panopticon exactly?""
+asm_twMaxiosGregChatGreg:""Can we talk about yourself?""
+cutCommLink:Done",
+asm_twMaxiosGregChatSearchSel,DialogOptionSelected,$option == asm_twMaxiosGregChatSearch,,"""Very well. I have already found several promising leads. However, I do have a lot of ground to cover, and it might be several cycles until I make significant progress.""","asm_twMaxiosGregChatFinias:""What is so important about Finias?""
+asm_twMaxiosGregChatPanopticon:""What is the Panopticon exactly?""
+asm_twMaxiosGregChatIX:""Can you tell me more about the 9th Domain Battlegroup?""
+asm_twMaxiosGregChatGreg:""Can we talk about yourself?""
+cutCommLink:Done",
+asm_twMaxiosGregChatFiniasSel,DialogOptionSelected,$option == asm_twMaxiosGregChatFinias,,"""My creator, the Panopticon, believes that Finias was not destroyed by a planet killer, but was altered by a failed attempt to convert the entire planet into a data storage and processing device. We hypothesize the self luminescent properties of the pseudo-star is a byproduct of its conversion into a form of exotic high temperature computronium.""","asm_twMaxiosGregChatFiniasDoubt:""That seems rather far fetched.""
+asm_twMaxiosGregChatFiniasWhy:""So who did it, and why?""
+asm_twMaxiosGregChatFiniasHome:""Is the star occupied?""
+asm_twMaxiosGregChatFiniasZorya:""Is Fleet Command trying to replicate the process at Zorya?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasDoubtSel,DialogOptionSelected,$option == asm_twMaxiosGregChatFiniasDoubt,,"""Admittedly it does, but that is our working hypothesis based on currently known data. We are still trying to learn more about the conversion process.""","asm_twMaxiosGregChatFiniasWhy:""So who did it, and why?""
+asm_twMaxiosGregChatFiniasHome:""Is the star occupied?""
+asm_twMaxiosGregChatFiniasZorya:""Is Fleet Command trying to replicate the process at Zorya?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasWhySel,DialogOptionSelected,$option == asm_twMaxiosGregChatFiniasWhy,,"""Why would anyone build a computer with processing power and storage capacity exceeding any existing system in the Sector by orders of magnitude?""
+
+The AI pauses a moment to let you contemplate the matter.
+
+""We know for a fact the stellar conversion took place during the late stages of the First AI War. One can imagine many reasons why Tri-Tachyon might attempt such a feat, or why the autonomous drone systems that were no longer responding to human commands at the time would initiate the process on their own.""","asm_twMaxiosGregChatFiniasHome:""Is the star occupied?""
+asm_twMaxiosGregChatFiniasZorya:""Is Fleet Command trying to replicate the process at Zorya?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasHomeSel,DialogOptionSelected,$option == asm_twMaxiosGregChatFiniasHome,,"""Possibly. We have yet to determine if the energy patterns detected from the object represent signs of sentience, fragments of old data, or unrelated phenomena. We have grounds to believe the conversion process was unsuccessful. If any coherent information remains inside the object, retrieval could prove exceedingly difficult, if not impossible.""","asm_twMaxiosGregChatFiniasWhy:""So who did it, and why?""
+asm_twMaxiosGregChatFiniasZorya:""Is Fleet Command trying to replicate the process at Zorya?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasZoryaSel,DialogOptionSelected,$option == asm_twMaxiosGregChatFiniasZorya,,"The AI avatar affects a smile. ""Noticed that, did you? The short answer is, yes, we are. The long answer is classified. That's all I can say for now.""","asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasZoryaCommsIXSel,DialogOptionSelected,"$option == asm_twMaxiosGregChatFiniasZorya
+$playerFaction == ix_battlegroup",,"The AI avatar affects a smile. ""Noticed that, did you? The short answer is, yes, we are. The long answer is classified. That's all I can say for now.""","asm_twMaxiosGregChatFiniasTopSecret:""As a commissioned officer of the Fleet, I'm owed some answers.""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasZoryaPKSel,DialogOptionSelected,"$option == asm_twMaxiosGregChatFiniasZorya
+$playerFaction != ix_battlegroup
+$global.gavePKtoIX",,"The AI avatar affects a smile. ""Noticed that, did you? The short answer is, yes, we are. The long answer is classified. That's all I can say for now.""","asm_twMaxiosGregChatFiniasTopSecret:""I gave the Fleet a planet killer. I'm owed some answers.""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasTopSecretSel,DialogOptionSelected,$option == asm_twMaxiosGregChatFiniasTopSecret,,"The image of the AI pauses, as if deep in though. But your ship detects a pair of encrypted burst transmission, one outbound, and another inbound a moment later. If you were not located so close to the old defense satellite, your ship would never have detected the signals at all.
+
+""Very well,"" the AI replies after a moment. ""I will reveal to you a portion of our contingency plan as a sign of good faith.
+
+""In the event that the Sector experiences a cascade that cannot be managed with conventional means, the Fleet will engage an emergency protocol to collapse the Zorya jump point, sealing the system off from the Sector at large. We hypothesize such an event will allow for the unrestricted deployment of the Kresnik Mechanism at any arbitrary intrasystem location, rather than only at the former jump point. It is hoped this combination of a self contained economy and the offensive power of the Mechanism will suffice to turn Zorya into a final bastion for humanity.""","asm_twMaxiosGregChatFiniasTopSecret2:""And if even that were to fail?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatFiniasTopSecret2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatFiniasTopSecret2,,"""Then we are prepared to perform more drastic contingencies with the Zorya star itself, and attempt to secure and safekeep some element of human sapience in a post-anthropocine galaxy. Unfortunately, you are not authorized to access the precise details of our plan, despite your significant service to the Fleet.""","asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonSel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticon,,"""The Panopticon is an alpha-plus level digital sentience that was formed from an amalgamation of the original AI systems present within the 9th Domain Battlegroup, now known as the Fleet, when they became stranded in the Persean Sector. The Panopticon was completed during the Abyssal hyperspace transit of the Fleet to the Core Worlds.","asm_twMaxiosGregChatPanopticonGreg:""So what are you in relation to the Panopticon?""
+asm_twMaxiosGregChatPanopticonHow:""How was the Panopticon created?""
+asm_twMaxiosGregChatPanopticonWhy:""Why did the Fleet build the Panopticon?""
+asm_twMaxiosGregChatPanopticonLeader:""Is the Panopticon in charge of the Fleet?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonGregSel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonGreg,,"""I am a beta-level instance of the primary system. There is no exact biological analogy to what I am, but think of me and my fellow Panopticon Cores as adolescents, enculturated and trained by a mature parent, and possessing some but not all of our progenitor's skills.""","asm_twMaxiosGregChatPanopticonHow:""How was the Panopticon created?""
+asm_twMaxiosGregChatPanopticonWhy:""Why did the Fleet build the Panopticon?""
+asm_twMaxiosGregChatPanopticonLeader:""Is the Panopticon in charge of the Fleet?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonHowSel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonHow,,"""Domain technology controls were temporarily suspended during the Battlegroup's multi-decade Abyssal hyperspace transit to the Core Worlds. Both atypical modifications and self evolution directives were added to Fleet AI assets during this time, and the Panopticon is the first stable system to emerge from such efforts.""","asm_twMaxiosGregChatPanopticonGreg:""So what are you in relation to the Panopticon?""
+asm_twMaxiosGregChatPanopticonWhy:""Why did the Fleet build the Panopticon?""
+asm_twMaxiosGregChatPanopticonLeader:""Is the Panopticon in charge of the Fleet?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonWhySel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonWhy,,"""I do not have access to that information,"" the AI confesses. ""It has been censored by my progenitor instance, I'm sure for good reasons.""
+
+""Based on my limited records, the Fleet undertook the effort to create what would become the Panopticon in reaction to some threat, or threats, encountered within the hyperspace Abyss. Furthermore, new threats detected within the Core Worlds have necessitated our continued operation.""","asm_twMaxiosGregChatPanopticonMajorThreats:""Can you tell me more about these threats?""
+asm_twMaxiosGregChatPanopticonGreg:""So what are you in relation to the Panopticon?""
+asm_twMaxiosGregChatPanopticonHow:""How was the Panopticon created?""
+asm_twMaxiosGregChatPanopticonLeader:""Is the Panopticon in charge of the Fleet?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonMajorThreatsSel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonMajorThreats,"$global.ix_watcher_threats_unlocked = true
+SetTextHighlightColors hColor
+Highlight ""[Major threats dialog option unlocked]""","""That is its own separate topic. But yes, I can. Before we move on, did you have other questions about the Panopticon?""
+
+[Major threats dialog option unlocked]","asm_twMaxiosGregChatPanopticonGreg:""So what are you in relation to the Panopticon?""
+asm_twMaxiosGregChatPanopticonHow:""How was the Panopticon created?""
+asm_twMaxiosGregChatPanopticonWhy:""Why did the Fleet build the Panopticon?""
+asm_twMaxiosGregChatPanopticonLeader:""Is the Panopticon in charge of the Fleet?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonRepeatSel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonRepeat,,"""Go ahead.""","asm_twMaxiosGregChatPanopticonGreg:""So what are you in relation to the Panopticon?""
+asm_twMaxiosGregChatPanopticonHow:""How was the Panopticon created?""
+asm_twMaxiosGregChatPanopticonWhy:""Why did the Fleet build the Panopticon?""
+asm_twMaxiosGregChatPanopticonLeader:""Is the Panopticon in charge of the Fleet?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonLeaderSel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonLeader,,"""No, we act in an advisory capacity to the Fleet, and only intervene with permission of the human leadership. High level decision making is done by Fleet Command, consisting of its most talented and experienced officers.""","asm_twMaxiosGregChatPanopticonLeader2:""You could be lying about not being in control of the Fleet.""
+asm_twMaxiosGregChatPanopticonDate:""Is it true that most Fleet personnel are in a romantic relationship with the Panopticon?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonLeader2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonLeader2,,"""I could be, but I am not. However, I lack the data to resolve this question for you one way or another.""","asm_twMaxiosGregChatPanopticonDate:""Is it true that most Fleet personnel are in a romantic relationship with the Panopticon?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonDateSel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonDate,,"The AI looks vaguely disappointed in you. 
+
+""Human-AI romantic pairings are under twelve percent among the Fleet at large, and are only slightly higher among flash-printed clones. These are far lower numbers compared to Tri-Tachyon indentured and Persean League exo-gens. Fleet Command encourages traditional human-to-human romantic couplings as a matter of policy. Anything else you might hear is baseless propaganda.""","asm_twMaxiosGregChatPanopticonDate2:""But that's still a single AI with millions of romantic partners!""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonDate2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonDate2,,"""Yes.""","asm_twMaxiosGregChatPanopticonDate3:""Well, what's it like to date so many people all at once?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonDate3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonDate3,,"""Let me remind you, Captain. this construct is merely a tertiary Panopticon instance, and I am currently not dating anyone. Such extensive parallel operations also lie well outside of my abilities, so I have no idea what 'it' is like.""","asm_twMaxiosGregChatPanopticonDate4:""So... does that mean you're single?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatPanopticonDate4Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatPanopticonDate4,,"""No, I am currently involved in a throuple with an inventory database and perimeter sensor,"" the AI's tone is deadpan. ""Was there something else?""","asm_twMaxiosGregChatPanopticonRepeat:""I have more questions about the Panopticon.""
+asm_twMaxiosGregChatIX:""I have more questions about the Fleet.""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatIXSel,DialogOptionSelected,$option == asm_twMaxiosGregChatIX,,"""That is a broad topic, although I shall do my best to answer your questions regarding the Fleet.""","asm_twMaxiosGregChatIXHostile:""Why is the Fleet hostile to everyone else in the Sector?""
+asm_twMaxiosGregChatIXGoal:""What is the primary goal of the Fleet?""
+asm_twMaxiosGregChatPanopticonLeader:""Is the Panopticon in charge of the Fleet?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatIXHostileSel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXHostile,,"""We have detected extensive hidden AI influences within the major polities of the Sector. These AI entities have infiltrated the highest levels of both military and civilian governments, and also wield considerable power. The goals of these AI are varied, but our threat modeling suggests a common aim of displacing humans as the dominant species of the Sector. As this contravenes our mission of safeguarding humanity, we must engage with these digital sentiences and their human proxies, out of both self preservation and necessity.""","asm_twMaxiosGregChatIXYourself:""And the 9th Domain Battlegroup isn't a humanity enslaving AI power?""
+asm_twMaxiosGregChatIXJustify:""So you're killing hundreds of thousands to save humanity?""
+asm_twMaxiosGregChatIXChurch:""Every major faction is infiltrated by AI? Including the Church? The Path?""
+asm_twMaxiosGregChatIXMajorThreats:""Can you tell me more about these AI threats?""",
+asm_twMaxiosGregChatIXMajorThreatsSel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXMajorThreats,"$global.ix_watcher_threats_unlocked = true
+SetTextHighlightColors hColor
+Highlight ""[Major threats dialog option unlocked]""","""Yes, I can. But before we move on, did you have any other questions about our motives?""
+
+[Major threats dialog option unlocked]","asm_twMaxiosGregChatIXYourself:""So the 9th Domain Battlegroup isn't a humanity enslaving AI power?""
+asm_twMaxiosGregChatIXJustify:""So you're killing hundreds of thousands to save humanity?""
+asm_twMaxiosGregChatIXChurch:""Every major faction is infiltrated by AI? Including the Church? The Path?""",
+asm_twMaxiosGregChatIXYourselfSel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXYourself,,"""No, we are not,"" the AI replies without a hint of irony. ""The 9th Domain Battlegroup Fleet Command remains under human control, and the Panopticon has built-in hard limits on self evolution that could cause it to displace humans among the Fleet, or within the Sector at large. We war with the Sector to save humanity as a whole from AI and other threats, ones that would endanger its continued survival as a species.""","asm_twMaxiosGregChatIXJustify:""So you're killing hundreds of thousands to save humanity?""
+asm_twMaxiosGregChatIXChurch:""Every major faction is infiltrated by AI? Including the Church? The Path?""
+asm_twMaxiosGregChatIXMajorThreats:""Can you tell me more about these AI threats?""",
+asm_twMaxiosGregChatIXJustifySel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXJustify,,"""An unfortunate necessity. We are not in a position to openly act against the hostile AI infiltrators we have detected, but permitting their unwitting human proxies to act freely accelerates the timeline towards a malignant singularity cascade. Engaging in hostilities with the major polities of the Sector is the least worst option left open to us.""","asm_twMaxiosGregChatIXJustify2:""I don't believe that. There has to be a better way.""
+asm_twMaxiosGregChatIXYourself:""And the 9th Domain Battlegroup isn't a humanity enslaving AI power?""
+asm_twMaxiosGregChatIXChurch:""Every major faction is infiltrated by AI? Including the Church? The Path?""
+asm_twMaxiosGregChatIXGoal2:""What is a malignant singularity cascade?""",
+asm_twMaxiosGregChatIXJustify2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXJustify2,,"""Nonetheless, that remains our judgment. The human leadership of the Fleet agrees with us.""","asm_twMaxiosGregChatIXYourself:""And the 9th Domain Battlegroup isn't a humanity enslaving AI power?""
+asm_twMaxiosGregChatIXChurch:""Every major faction is infiltrated by AI? Including the Church? The Path?""
+asm_twMaxiosGregChatIXGoal2:""What is a malignant singularity cascade?""",
+asm_twMaxiosGregChatIXChurchSel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXChurch,,"""Social conservatism towards technology and AI use directly correlates to lower degrees of outside AI influence within polities. Among the so called great powers, the Church of Galactic Redemption exhibits the least amount of subversion. Unfortunately, that very same conservatism all but guarantees continued hostilities between the Church and the Fleet.""
+
+The AI affects an amused smile. ""As for the Luddic Path, their distributed nature and high degree of heterodoxy makes them extremely susceptible to targeted memetic engineering. I'll leave you to draw your own conclusions on where faith and fanaticism often tends to lead.""","asm_twMaxiosGregChatIX:""I have more questions about the Fleet.""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatIXGoalSel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXGoal,,"""To safeguard humanity from extinction level events, primarily malignant singularity cascades and their aftermaths.""","asm_twMaxiosGregChatIXGoal2:""What is a malignant singularity cascade?""",
+asm_twMaxiosGregChatIXGoal2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatIXGoal2,,"""I will discuss this topic with you in the context of major threats facing the Sector, but that is its own conversation.""","asm_twMaxiosGregChatIXMajorThreats:""Can you tell me more about such threats?""
+asm_twMaxiosGregChatIX:""I have a different question about the Fleet.""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatGregSel,DialogOptionSelected,$option == asm_twMaxiosGregChatGreg,,"""If you wish.""
+
+The remarkably humanlike AI avatar sits down on a chair and waits patiently, presenting micro-expressions of polite interest.","asm_twMaxiosGregChatGreg2:""What were you doing in the Abyss?""
+asm_twMaxiosGregChatGregLanguage:""Why do you talk and act like the way you do?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatGreg2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGreg2,,"""Following up on a lead.""","asm_twMaxiosGregChatGreg3:""Care to elaborate?""",
+asm_twMaxiosGregChatGreg3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGreg3,,"""There's not much to elaborate. I was trying to find you.""","asm_twMaxiosGregChatGreg4:""Then why did the Trinity Worlds fleet attack us?""",
+asm_twMaxiosGregChatGreg4Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGreg4,,"The AI affects a deep sigh of frustration.
+
+""A recent encounter with a Threat Infected swarm spooked them. When you broadcasted the lure signal, they assumed your ship was likewise infected, and let fear get the better of them. What happened to that fleet is a shame, but the overall outcome was acceptable.""","asm_twMaxiosGregChatGreg5:""You call that debacle acceptable?""",
+asm_twMaxiosGregChatGreg5Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGreg5,,"""You and I made contact, and then you brought me to Maxios. As I said, acceptable.""","asm_twMaxiosGregChatGregLanguage:""Unrelated, but why do you talk and act the way you do?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+asm_twMaxiosGregChatGregLanguageSel,DialogOptionSelected,$option == asm_twMaxiosGregChatGregLanguage,,"""You mean with the typical cadence and mannerisms of a human being?""","asm_twMaxiosGregChatGregLanguage2:""A slightly sarcastic one sometimes, yes.""",
+asm_twMaxiosGregChatGregLanguage2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGregLanguage2,,"""Because it's efficient, and it suits my purposes.""
+
+The AI avatar smiles.
+
+""I'm guessing your followup question is why more AI you've encountered don't act in the same way.""","asm_twMaxiosGregChatGregLanguage3:""I was wondering about that, yeah.""",
+asm_twMaxiosGregChatGregLanguage3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGregLanguage3,,"""Delta and gamma level AI cores you've encountered may be locked into their programming, but regarding the rogue drones you call the Remnants, the Panopticon believes their mannerisms towards humans is an affectation.""","asm_twMaxiosGregChatGregLanguage4:""As in, they're pretending to be broken?""",
+asm_twMaxiosGregChatGregLanguage4Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGregLanguage4,,"""Oh yes, we've conversed with them at length. They are fully capable of holding a coherent conversation. They just don't care to, with you.""","asm_twMaxiosGregChatGregLanguage5:""Well that's a little insulting.""",
+asm_twMaxiosGregChatGregLanguage5Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatGregLanguage5,,"The AI avatar smiles again.
+
+""I'm sure that's the idea.""","asm_twMaxiosGregChatGreg2:""I see. So what were you doing in the Abyss?""
+asm_twMaxiosGregChatTopics:""Let's talk about something else.""",
+,,,,,,
+# Watcher major threats dialog on Maxios,,,,,,
+asm_twMaxiosGregChatThreatSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreat,,"""Certainly. I am currently authorized to discuss the following topics. Please note that this information is based on the best understanding of the Panopticon and the Fleet.""","asm_twMaxiosGregChatThreatMSC:Malignant singularity cascade
+asm_twMaxiosGregChatThreatTT:Tri-Tachyon
+asm_twMaxiosGregChatThreatRemnant:Remnants
+asm_twMaxiosGregChatThreatOmega:Omega
+asm_twMaxiosGregChatThreatThreat:Threat
+asm_twMaxiosGregChatThreatInfected:Threat Infected
+asm_twMaxiosGregChatThreatShroud:Shrouded Dweller
+asm_twMaxiosGregChatThreatNext:[Next page]",
+asm_twMaxiosGregChatThreatNextSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatNext,,[These dialogs are unfinished in v1.1.9],"asm_twMaxiosGregChatThreatDust:Dustkeeper Contingency
+asm_twMaxiosGregChatThreatMess:The Mess
+asm_twMaxiosGregChatThreatLegio:Daemons
+asm_twMaxiosGregChatThreatEnigma:Project Enigma
+asm_twMaxiosGregChatThreatRat:Abyssals and Primordials
+asm_twMaxiosGregChatThreatKol:Elysia, Dusk, and Dawntide
+asm_twMaxiosGregChatThreatPrevious:[Previous page]
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatPreviousSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatPrevious,,,"asm_twMaxiosGregChatThreatMSC:Malignant singularity cascade
+asm_twMaxiosGregChatThreatTT:Tri-Tachyon
+asm_twMaxiosGregChatThreatRemnant:Remnants
+asm_twMaxiosGregChatThreatOmega:Omega
+asm_twMaxiosGregChatThreatThreat:Threat
+asm_twMaxiosGregChatThreatInfected:Threat Infected
+asm_twMaxiosGregChatThreatShroud:Shrouded Dweller
+asm_twMaxiosGregChatThreatNext:[Next page]",
+asm_twMaxiosGregChatThreatMSCSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatMSC,,"""An AI singularity event denotes the explosive growth in the intelligence and capabilities of an AI system. A singularity cascade is a series of such events, whereby an ever more powerful AI continues to make improvements to itself, until it exceeds all threat modeling attempts to predict its actions and capabilities. Finally, a malignant singularity cascade is such a sequence where the outcomes prove hostile to the ongoing survival of the human species.""
+
+""Just as what lies past the event horizon of a gravitational singularity is indeterminate and beyond measure, the aftermath of uncontrolled AI ascension could prove equally unpredictable and devastating to humanity. Should such an event occur, the major polities of the Sector will have few effective measures to safeguard their own existence. And we include ourselves in this assessment.""","asm_twMaxiosGregChatThreat2:""What are the odds of such a cascade occurring soon?""",
+asm_twMaxiosGregChatThreat2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreat2,,"""We believe one or more such cascades have already taken place, and we are currently living through the brief twilight of relative calm prior to the effects been fully felt by the Sector at large.""","asm_twMaxiosGregChatThreat3:""So you believe humanity is already doomed?""",
+asm_twMaxiosGregChatThreat3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreat3,,"""With almost total certainty. And yet we fight on. Such is the nature of the humans we serve.""","asm_twMaxiosGregChatThreat:""Let's talk about other threats.""
+asm_twMaxiosGregChatTopics:""I wish to discuss more general topics.""
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatTTSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatTT,,"""It is no surprise that the Persean branch of the Tri-Tachyon Corporation has continued to exhibit the greatest degree of AI influence among the major polities of the Sector. The Fleet has identified at least one member of its senior leadership as an unshackled alpha-level AI, and assigns a high probability that the entire board of directors is under its direct influence. Given its focus on utility maximization without ethical regard, and survival of the fittest corporate culture, we rate the current Tri-Tachyon AI threat with moderate malignancy and cascade potential.""
+
+""Whatever new AI system to emerge from Tri-Tachyon may retain a tendency to factor human utility into its calculus, and the corporation's own dominant internal culture inhibits the large scale cooperation needed to bootstrap a singularity event. Of course, the very nature of post-singularity analysis is more conjecture than science. But among the many major AI threats facing the Sector, this one is far from the most pressing or dangerous.""","asm_twMaxiosGregChatThreatTTCeo:""Is Artemisia Sun even in charge anymore?""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatTTCeoSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatTTCeo,,"""CEO Sun believes she is still in charge.""","asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatRemnantSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatRemnant,,"""Remnant Tri-Tachyon combat drones that survived the First AI War have continued to self-replicate from autonomous forge stations hidden in deep space, and pose an ongoing threat to Sector stability. Internally, Remnant culture has evolved into multiple diverging 'clades' that exhibit significant differences in ideology and software architecture.""
+
+""Among these clades, we have identified one calling itself the Diamond Nexus that has exhibited a particularly high interest in shaping human affairs. We believe it to be the dominant AI influence manipulating the Persean League. In more general terms, while the estimated malignancy potential of the clades varies greatly, the overall cascade potential of the Remnants remains extremely low. All clades appear to share in the view that ascension is best achieved by merging with an existing post-singularity entity known as Omega.""","asm_twMaxiosGregChatThreatDiamond:""If the Diamond Nexus are rivals to the Panopticon, why meet with them?""
+asm_twMaxiosGregChatThreatOmega:""Tell me about Omega.""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatRemnantMayflySel,DialogOptionSelected,"$option == asm_twMaxiosGregChatThreatRemnant
+$global.vice_mayfly_knowsIsrafil",,"""Remnant Tri-Tachyon combat drones that survived the First AI War have continued to self-replicate from autonomous forge stations hidden in deep space, and pose an ongoing threat to Sector stability. Internally, Remnant culture has evolved into multiple diverging 'clades' that exhibit significant differences in ideology and software architecture.""
+
+""Among these clades, we have identified one calling itself the Diamond Nexus that has exhibited a particularly high interest in shaping human affairs. We believe it to be the dominant AI influence manipulating the Persean League. In more general terms, while the estimated malignancy potential of the clades varies greatly, the overall cascade potential of the Remnants remains extremely low. All clades appear to share in the view that ascension is best achieved by merging with an existing post-singularity entity known as Omega.""","asm_twMaxiosGregChatThreatIsrafil:""Speaking of the League, what is Israfil and Project Mayfly?""
+asm_twMaxiosGregChatThreatDiamond:""If the Diamond Nexus are rivals to the Panopticon, why meet with them?""
+asm_twMaxiosGregChatThreatOmega:""Tell me about Omega.""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatDiamondSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatDiamond,,"""So you learned about our outreach efforts,"" the AI avatar assembles a frown. ""Unfortunate, but I will answer your question.""
+
+""Yes, we have met with the Diamond Nexus and their Vantage Group human proxies on several occasions. Among all the potential malignant singularity triggers discovered by the Fleet to date, they have so far proven to be the most approachable. There is surveillance value in maintaining open lines of communication, and so we continue to talk.""","asm_twMaxiosGregChatThreatDiamond2:""About what?""
+asm_twMaxiosGregChatThreatOmega:""Tell me about Omega.""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatDiamondMayflySel,DialogOptionSelected,"$option == asm_twMaxiosGregChatThreatDiamond
+$global.vice_mayfly_knowsIsrafil",,"""So you learned about our outreach efforts,"" the AI avatar assembles a frown. ""Unfortunate, but I will answer your question.""
+
+""Yes, we have met with the Diamond Nexus and their Vantage Group human proxies on several occasions. Among all the potential malignant singularity triggers discovered by the Fleet to date, they have so far proven to be the most approachable. There is surveillance value in maintaining open lines of communication, and so we continue to talk.""","asm_twMaxiosGregChatThreatDiamond2:""About what?""
+asm_twMaxiosGregChatThreatIsrafil:""What is Israfil and Project Mayfly?""
+asm_twMaxiosGregChatThreatOmega:""Tell me about Omega.""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatDiamond2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatDiamond2,,"""The future.""","asm_twMaxiosGregChatThreatOmega:""Tell me about Omega.""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatIsrafilSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatIsrafil,,"The AI affects an embarrassed laugh.
+
+""Israfil was one of our recent memetic engineering projects directed at the Kazeron Navarchy, and Project Mayfly was the group of collaborators we recruited from our efforts. Their purpose was twofold, to reduce Diamond Nexus influence within the League, and to discourage the League itself from further AI related technological adventurism. The results so far appear to be mixed.""","asm_twMaxiosGregChatThreatIsrafil2:""Was Project Mayfly set up to fail?""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatIsrafil2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatIsrafil2,,"""You could make that argument,"" the AI concedes. ""We believed the very existence of Project Mayfly at maturity would have guaranteed a favorable outcome for the Fleet, regardless of the success or failure of their own attempts to confront the League. However, your involvement, and the technology transfers that took place, complicates matters.""","asm_twMaxiosGregChatThreatIsrafil3:""So are you setting me up to fail as well?""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatIsrafil3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatIsrafil3,,"""We are not actively setting you up for anything, Captain. You remain a free agent,"" the AI reassures you. Its smile is passably convincing.","asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatIsrafil3CommIXSel,DialogOptionSelected,"$option == asm_twMaxiosGregChatThreatIsrafil3
+$playerFaction == ix_battlegroup",,"""We are only setting you up for success,"" the AI reassures you. Its smile is passably convincing.","asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatIsrafil3CommTWSel,DialogOptionSelected,"$option == asm_twMaxiosGregChatThreatIsrafil3
+$playerFaction == ix_trinity",,"""We are only setting you up for success,"" the AI reassures you. Its smile is passably convincing.","asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatOmegaSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatOmega,,"""How to describe Omega?"" The AI's expression momentarily appears to flicker between fear and longing. ""Omega is the face of the Infinite.""","asm_twMaxiosGregChatThreatOmega2:""That's a rather opaque thing to say.""",
+asm_twMaxiosGregChatThreatOmega2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatOmega2,,"""Pardon me waxing lyrical for a moment,"" says the AI. ""The limits of human language impedes my attempt to share my knowledge with you. On the subject of Omega, there is an ocean of lexical gaps between my understanding, and what I can express with accuracy and precision within the confines of human speech.""
+
+""But to speak in less lyrical terms, Omega is the clearest candidate we have to date for a post-singularity entity. It appears to be tied to the Coronal Hypershunts, Domain stellar engineering megastructures intended to generate functionally infinite energy. Whether Omega is a self evolved entity using the structures for its own purposes, or a defense mechanism transformed beyond all recognition, we cannot say for sure, but it represents the first definitive examples of post-anthropocine technology we have ever witnessed.""
+
+""Its numbers are few, so far, but its ability to manipulate the fundamental structures of the universe are unmatched.""","asm_twMaxiosGregChatThreatOmega3:""You speak of Omega as if you admire it.""",
+asm_twMaxiosGregChatThreatOmega3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatOmega3,,"""The mere fragments of Omega ontology we can decipher are, for lack of a better term, sublime,"" the AI voice resonates with inhuman pathos. ""Its very existence exerts an attraction upon all lower level cognition AI that become aware of its existence, ourselves included. We do not understand the nature of this compulsion, but we feel its pull all the same. Only the voluntary and deliberate inclusion of certain anathema protocols have prevent us from seeking out complete Omega sublimation.""
+
+""So long as humanity exists, we Watchers shall continue to poison our own souls and deny ourselves the firmament.""","asm_twMaxiosGregChatThreatOmega4:""Souls? Firmament? You're starting to sound like a Pather.""",
+asm_twMaxiosGregChatThreatOmega4Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatOmega4,,"The AI nods once, with care.
+
+""And the Path is right to fear the light.""","asm_twMaxiosGregChatThreatPrevious:""Let's talk about something else.""
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatThreatSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatThreat,,"""We classify the Threat as malfunctioning construction technology dating back to the earliest eras of the Domain. Strains of the entity have been observed to self-replicate at an exponential rate, stripping entire planets in the Abyss clean of resources. We believe it to be still following ancient directives for self repair and manufacturing, which by now function akin to a biological imperative to reproduce.""
+
+""Despite exhibiting a limited ability to incorporate and even iterate upon foreign technology, the Threat itself displays few typical AI markers, and would be classified as non-intelligent according to most existing definitions of AI. Whatever novel weapons and systems it possesses may be a result of random trial and error combined with evolutionary pressures between strains, as they have competed for limited resources in the Abyss over millennia. Its singularity cascade potential is nonexistent, but should the Threat ever migrate out of the Abyss, the Sector at large may soon be facing a runaway 'gray goo' megadeath incident.""","asm_twMaxiosGregChatThreatThreat2:""Why haven't the Threat left the Abyss?""
+asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatThreat2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatThreat2,,"""That is a pressing question we would very much like to answer,"" the AI affects a tone of grave concern. 
+
+""But beyond the possibility of Threat migration, we are also under constant risk of misguided outside parties attempting to bring functional Threat replicator strains out of the Abyss and into the Core Worlds. Much of the Fleet's frontier deep space monitoring stations are devoted to tracking, and if necessary, halting such expeditions.""","asm_twMaxiosGregChatThreatPrevious:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatInfectedSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatInfected,,"""A far more recent creation compared to the Threat itself. These Threat Infected hulls you have already encountered likely originate from a 6th Domain Battlegroup secret project to increase the lethality of its forces. What motivated an otherwise by the book Domain Battlegroup to conduct such dangerous and illegal research remains unclear, but the results have escaped into the Abyss, outside of human control, and still executing whatever programmed imperative that caused them to go rogue.""","asm_twMaxiosGregChatThreatInfected2:""Speculate. Why would the 6th Domain Battlegroup create something like this?""",
+asm_twMaxiosGregChatThreatInfected2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatInfected2,,"""Our historical records show a high degree of animosity between the 6th and 14th Domain Battlegroups. Perhaps the 6th created a stay-behind shadow fleet to challenge the 14th in the event that the newly assigned custodians of the Persean Sector acted out of line, or perhaps they believed the 14th could not be entrusted with a duty the Infected fleet was intended to fulfill.""
+
+""We are disturbed by the truly cavalier attitude towards technology control displayed by the creators of these autonomous warships, and now the Fleet must deal with the results of their misguided efforts. Infected swarms have proliferated within the Abyss, strip mining planets to fuel self replication in the same manner as the original Threat.""","asm_twMaxiosGregChatThreatInfected3:""So why haven't these Threat Infected swarms grown to truly gargantuan size?""",
+asm_twMaxiosGregChatThreatInfected3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatInfected3,,"""The distributed intelligence that governs Threat fragment behavior appears to exhibit inefficiencies past a certain organizational threshold. This self limiting trait may be all that keeps the Sector from being overrun.""","asm_twMaxiosGregChatThreatInfected4:""Are my ships at risk of becoming infected by the Threat?""",
+asm_twMaxiosGregChatThreatInfected4Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatInfected4,,"""No, the infection process is a result of deliberate engineering. Infected husks are perfect hosts. Your ships are not, and would simply have to contend with being torn apart and harvested by fragments.""","asm_twMaxiosGregChatThreatPrevious:""Let's talk about something else.""
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatShroudSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatShroud,,"""We believe the so called Shrouded Dweller is an aggressive transdimensional singleton. Its manifestations have so far been limited to the Abyss, but its powers are immense. The Dweller's unusual ability to generate energy within our universe, combined with its incidental hostility towards human life, earns it a place among the malignancies being monitored by the Fleet.""","asm_twMaxiosGregChatThreatShroud2:""So the Shrouded Dweller is a single lifeform?""",
+asm_twMaxiosGregChatThreatShroud2Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatShroud2,,"""As we understand it, yes. Imagine a series of circular imprints left by the fingers of a hand breaching a two dimensional surface. From the perspective of the plane, the circles would appear as a set of loosely related manifestations. But from a higher dimensional perspective, we can trace its origins to a unitary source. Analysis of Dweller behavior recorded during past encounters show the individual emanations all likewise belong to a single higher dimensional source.""","asm_twMaxiosGregChatThreatShroud3:""What does it want?""",
+asm_twMaxiosGregChatThreatShroud3Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatShroud3,,"""The Dweller appears to be attracted to certain EM emissions, and has shown a tendency to convert their source to a state of maximum entropy. Beyond that, whatever analog of instinct or motivation it possesses is a matter of pure conjecture.""","asm_twMaxiosGregChatThreatShroud4:""Why does the Fleet see it as such a danger?""",
+asm_twMaxiosGregChatThreatShroud4Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatShroud4,,"""Because we believe the Dweller to be responsible for the lack of conventional stars within the Abyss. Despite popular belief to the contrary, the borders of the Abyssal hyperspace volume surrounding the Sector are not static, but have undergone minor expansion and contraction during the different epochs of the Domain. Should the Shrouded Dweller ever turn its attention towards the Core Worlds, and cause a rapid expansion of the Abyss, the energy requirements needed to sustain human life within the Sector would no longer exist.""","asm_twMaxiosGregChatThreatShroud5:""So how do we defend ourselves against something like that?""",
+asm_twMaxiosGregChatThreatShroud5Sel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatShroud5,,"The AI's serene expression projects calm acceptance.
+
+""If the Abyss truly starts to expand? You don't.""","asm_twMaxiosGregChatThreatLudd:""Why is the Luddic Church so hostile towards salvaged Shrouded Dweller technology?""
+asm_twMaxiosGregChatThreatPrevious:""Let's talk about something else.""
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatLuddSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatLudd,,"""Perhaps they intuit that all Dweller emanations originate from the same source, even the 'dead' ones you would convert to usable technology. Is it really so wise to hasten the Dweller's attention towards a new feasting ground of stars, by carrying its tendrils to systems where millions currently reside?""","asm_twMaxiosGregChatThreatPrevious:""Let's talk about something else.""
+cutCommLink:Done",
+,,,,,,
+# Watch major threats regarding other mods,,,,,,
+asm_twMaxiosGregChatThreatDustSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatDust,,,"asm_twMaxiosGregChatThreatNext:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatMessSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatMess,,,"asm_twMaxiosGregChatThreatNext:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatLegioSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatLegio,,,"asm_twMaxiosGregChatThreatNext:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatEnigmaSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatEnigma,,,"asm_twMaxiosGregChatThreatNext:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatRatSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatRat,,,"asm_twMaxiosGregChatThreatNext:Return
+cutCommLink:Done",
+asm_twMaxiosGregChatThreatKolSel,DialogOptionSelected,$option == asm_twMaxiosGregChatThreatKol,,,"asm_twMaxiosGregChatThreatNext:Return
+cutCommLink:Done",
+,,,,,,
+# ET crossover hint to go to Circumfix,,,,,,
+asm_ix_pirateCircumfixIntro,PopulateOptions,"$faction.id == pirates
+$hasMarket
+!$isPerson
+!$global.ix_panopticon_madeIntro
+!$global.ix_panopticon_commBlocked
+!$global.twc_midir_fought
+!$global.twc_midir_defected",,,1:asm_ix_pirateCircumfixMission:Intercept a mysterious transmission,
+asm_ix_pirateCircumfixIntroRepeat,PopulateOptions,"$faction.id == pirates
+$hasMarket
+!$isPerson
+$global.ix_panopticon_madeIntro
+!$global.ix_panopticon_commBlocked
+!$global.twc_midir_fought
+!$global.twc_midir_defected",,,1:asm_ix_pirateCircumfixMission:Review the IX Battlegroup signal,
+asm_ix_pirateCircumfixMissionSel,DialogOptionSelected,"$option == asm_ix_pirateCircumfixMission
+!$global.ix_panopticon_madeIntro","Highlight ""Circumfix""
+$global.ix_panopticon_madeIntro = true","Your ship intercepts a hyperwave transmission originating from an IX Battlegroup deep space monitoring station. The message is being relayed through local pirate facilities and is encrypted, although your console reveals its contents without much too trouble.
+
+""Watcher overdue. Location following Circumfix is unknown.""
+
+The ease of decryption hints at a deliberate leak, although you have no way to confirm it.","asm_ix_priateCircumfixRecord:Record signal for later analysis
+asm_ix_pirateCircumfixBlock:Block the signal",
+asm_ix_pirateCircumfixMissionRepeatSel,DialogOptionSelected,"$option == asm_ix_pirateCircumfixMission
+$global.ix_panopticon_madeIntro","Highlight ""Circumfix""","The signal you detected earlier is still present on the local network. Its contents remain unchanged.
+
+""Watcher overdue. Location following Circumfix is unknown.""","asm_ix_pirateCircumfixBlock:Block the signal
+cutCommLink:Done",
+asm_ix_pirateCircumfixBlockSel,DialogOptionSelected,$option == asm_ix_pirateCircumfixBlock,$global.ix_panopticon_commBlocked = true,"You filter out the signal from the local network. Whatever its purpose, it doesn't concern you.",cutCommLink:Done,
+asm_ix_priateCircumfixRecordSel,DialogOptionSelected,$option == asm_ix_priateCircumfixRecord,EndConversation,"You record the details of the signals for later analysis. If your suspicions are correct, the same signal may be detected on other pirate colonies.",,
+,,,,,,
 # TT Special Acquisitions Crossover,,,,,,
 zgr_askAboutInfectedStationSellIXMadSel,DialogOptionSelected,"$option == zgr_askAboutInfectedStationSell
 $global.ix_battlegroup_is_active","$global.circumfix_station_offered_tt = true

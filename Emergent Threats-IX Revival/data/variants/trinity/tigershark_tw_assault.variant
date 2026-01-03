@@ -1,6 +1,6 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 3,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "tigershark_tw",

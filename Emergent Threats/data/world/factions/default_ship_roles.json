@@ -22,9 +22,14 @@
 		"vice_effulgent_suppression":2,
 		"vice_effulgent_elite":0, # kept for backwards compatibility
 		"vice_fulgent_overclocked":2,
-		"vice_preceptor_standard":5,# makes ship show up despite Diktat anti-carrier doctrine
+		"vice_preceptor_standard":2,	# makes ship show up despite Diktat anti-carrier doctrine
 		"vice_stonefish_seeker":3,
 		"vice_stonefish_saturation":3,
+		
+		"vice_torchbearer_e_attack":4,	# makes ship show up despite Diktat anti-carrier doctrine
+		"vice_torchbearer_e_escort":4,	# makes ship show up despite Diktat anti-carrier doctrine
+		"vice_torchbearer_lg_elite":4,	# makes ship show up despite Diktat anti-carrier doctrine
+		"vice_torchbearer_lg_standard":4,	# makes ship show up despite Diktat anti-carrier doctrine
 		
 		"vice_iris_ex_escort":5,
 		"vice_mandrake_ex_assault":3,
@@ -53,6 +58,7 @@
 		"vice_bellicose_ex_strike":5,
 		"vice_flamebreaker_ex_assault":5,
 		"vice_flamebreaker_ex_strike":5,
+		"vice_flamebreaker_ex_support":3,
 		"vice_tigershark_ex_assault":3,
 		"vice_tigershark_ex_ballistic":2,
 		"vice_tigershark_ex_strike":3,
@@ -103,7 +109,12 @@
 		"vice_maquech_standard":4,
 		"vice_maquech_long_range":3,
 		"vice_scintilla_torpedo":5,
-		"vice_preceptor_standard":5, # for Nex random picker
+		"vice_preceptor_standard":2, # for Nex random picker
+		
+		"vice_torchbearer_e_attack":4,
+		"vice_torchbearer_e_escort":4,
+		"vice_torchbearer_lg_elite":4,
+		"vice_torchbearer_lg_standard":4,
 	},
 	
 	"carrierMedium":{
@@ -131,6 +142,10 @@
 		"vice_hemlock_r_strike":3, # project mayfly is not known to remnant unless mission was failed
 		"vice_hemlock_r_support":3, # project mayfly is not known to remnant unless mission was failed
 	},
+	"freighterLarge":{
+		"vice_atlas_tt_modular":10,
+		"vice_atlas_tt_long_haul":10,
+	},
 	"freighterMedium":{
 		"vice_banteng_standard":10,
 		"vice_banteng_sd_standard":10,
@@ -141,6 +156,9 @@
 		"buffalo_hegemony_Converted":10,
 		"buffalo_luddic_church_Converted":10,
 		"buffalo_tritachyon_Converted":10,
+	},
+	"personnelLarge":{
+		"vice_atlas_tt_expedition":10,
 	},
 	"personnelMedium":{
 		"vice_banteng_converted":10,

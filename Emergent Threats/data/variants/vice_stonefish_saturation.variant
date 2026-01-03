@@ -1,12 +1,11 @@
 {
     "displayName": "Saturation",
-    "fluxCapacitors": 2,
+    "fluxCapacitors": 3,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "vice_stonefish",
     "hullMods": [
         "eccm",
-        "pointdefenseai",
         "targetingunit",
         "stabilizedshieldemitter"
     ],
@@ -17,7 +16,10 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "vice_fandance_seeker"}
+            "weapons": {
+                "WS 001": "vice_fandance_seeker",
+                "WS 011": "vice_deluge_repeater"
+            }
         },
         {
             "autofire": true,
@@ -30,10 +32,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 011": "heavyburst",
-                "WS 012": "pdburst"
-            }
+            "weapons": {"WS 012": "pdburst"}
         }
     ]
 }

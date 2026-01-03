@@ -15,3 +15,4 @@ N1MH, for allowing use of sprites from Aegis Protectorate
 -used to make the Eagle II sprite
 NEON, for the sprite of the phase capital & its engine pods
 starficz, for allowing use of the vector engine code from KOL
+ultra_43084, for the sprite used for the Solace bomber

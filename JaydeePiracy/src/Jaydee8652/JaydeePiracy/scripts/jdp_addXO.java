@@ -8,7 +8,9 @@ import com.fs.starfarer.api.campaign.listeners.EconomyTickListener;
 import java.util.HashMap;
 import java.util.Random;
 
+import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.ui.G;
 
 public class jdp_addXO implements EconomyTickListener {
     String prev;
@@ -28,7 +30,7 @@ public class jdp_addXO implements EconomyTickListener {
         prev = null;
 
         // Make a random Flowerfish
-        PersonAPI person = market.getFaction().createRandomPerson(); // Random gender
+        PersonAPI person = market.getFaction().createRandomPerson(FullName.Gender.FEMALE); // Random gender
         person.setFaction(jdp_Factions.JDP_FLOWERFISH);
         person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "jdp_wasabi"));
         person.getMemoryWithoutUpdate().set("$sc_officer_aptitude","jdp_flowerfish");

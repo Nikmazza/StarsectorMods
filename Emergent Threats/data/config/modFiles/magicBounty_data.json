@@ -199,7 +199,7 @@
 		
 		#BOUNTY DESCRIPTION
 		"job_name": "To Hunt a White Whale",
-		"job_description": "You catch wind of the Azure Fire returning from its latest raid. This infamous pirate battleship leads an armada of rogues and misfits specialized in ambushing other tech-miners on the edges of the sector. Many prospectors have already met a grisly end at their hands. \nWhile the leader of the scoundrels tends to change often, the armada of \"Polite Collectors\" as they call themselves has remained a cohesive group for decades, posing a constant threat to explorers. They rarely make an appearance anywhere near the core worlds, but the need to sell their stolen goods and gain resupply has brought them to the pirate port of ==$location== in the ==$system system==, where they are expected to stay for a time. If you are feeling daring, this would be a great opportunity to raid the raiders, and take their their booty for yourself.",
+		"job_description": "You catch wind of the Azure Fire returning from its latest raid. This infamous pirate battleship leads an armada of rogues and misfits specialized in ambushing other tech-miners on the edges of the sector. Many prospectors have already met a grisly end at their hands. \nWhile the leader of the scoundrels tends to change often, the armada of \"Polite Collectors\" as they call themselves has remained a cohesive group for decades, posing a constant threat to explorers. They rarely make an appearance anywhere near the core worlds, but the need to sell their stolen goods and gain resupply has brought them to the pirate port of ==$location== in the ==$system system==, where they are expected to stay for a time. If you are feeling daring, this would be a great opportunity to raid the raiders, and take their booty for yourself.",
 		
 		"job_comm_reply": "Among an unusually well maintained pirate fleet, a single ship stands out. The unmistakable Azure Fire takes the lead in closing the distance with you. The image of a self satisfied pirate queen soon appears on your screen. Her eyes wide with naked greed, she is all but salivating at the though of raiding your fleet for any signs of advanced technology.\n\n\"What a pretty ship you have there. Do be a dear and power down for boarding, before we start to shoot. Or don't. We could use the practice.\"\n\nThe message cuts out amidst the sadistic cheers of her bridge crew. However, despite all its extensive upgrades, the Azure Fire is still build upon a commercial freighter. Flanking the ship should be enough to bring it down in short order, if you can get its escorts off your back.",
 		
@@ -710,6 +710,7 @@
 			"eagle_LG_Assault": 3,
 			"falcon_LG_CS": 4,
 			"sunder_LG_Assault": 4,
+			"vice_torchbearer_lg_elite": 3,
 			"brawler_LG_Elite": 5,
 			"centurion_LG_Assault": 3,
 			

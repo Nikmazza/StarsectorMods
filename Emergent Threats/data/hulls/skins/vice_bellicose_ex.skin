@@ -4,7 +4,7 @@
 	"hullName":"Bellicose (EX)",
 	"tech":"Experimental",
 	"descriptionId":"vice_ex_all",
-	"descriptionPrefix":"A conventionally crewed precursor to the Brilliant-class droneship. The Bellicose was envisioned as a fast pursuit cruiser that could nonetheless quickly bring heavy firepower to the front lines. However, sales to corporate security fleets fell sharply once its fully automated successor went to market, and the ship remained all but unknown to the Persean Sector prior to the rediscovery of its blueprint by the Tri-Tachyon corporation.",
+	"descriptionPrefix":"A conventionally crewed precursor to the Brilliant-class droneship. The Bellicose was envisioned as a fast pursuit cruiser that could nonetheless quickly bring heavy firepower to the front lines, and was equipped with an experimental cruiser sized p-space displacement device. However, this early prototype never saw mass production, and was quickly overshadowed by its simplified fully automated successor once the Brilliant went to market.",
 	"tags":["rare_bp", "hist3t", "merc", "ind", "tritachyon", "vice_ex_bp"],
 	"removeHints":["HIDE_IN_CODEX"],
 	"builtInMods":["vice_experimental_hull", "vice_subsystem_interface"],

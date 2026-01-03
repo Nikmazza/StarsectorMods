@@ -8,6 +8,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
+import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
@@ -52,6 +53,11 @@ public class LureInfectedFleetAbility extends BaseDurationAbility { //implements
 	private static String ASM_FACTION_ID = "asm_relic";
 	private static String ASM_LEGION_ID = "asm_legion";
 	private static String ASM_LEGION_VAR_ID = "asm_legion_drone";
+	
+	private static String TW_FACTION_ID = "ix_trinity_asm";
+	private static String TW_AURORA_VAR_ID = "aurora_tw_encounter";
+	private static String TW_RADIANT_VAR_ID = "radiant_tw_encounter";
+	
 	private static String DELTA_RELIC_ID = "asm_relic_delta";
 	private static String GAMMA_RELIC_ID = "asm_relic_gamma";
 	private static String BETA_RELIC_ID = "asm_relic_beta";
@@ -100,9 +106,20 @@ public class LureInfectedFleetAbility extends BaseDurationAbility { //implements
 			public void doAction() {
 				CampaignFleetAPI fleet = getFleet();
 				if (fleet == null) return;
-				
-				//create fleet
-				createInfectedFleet(fleet);
+				//special TW encounter always spawns on second use, odds increase can be tweaked if player should wait more
+				if (Global.getSector().getMemoryWithoutUpdate().is("$asm_trinity_met", false)) {
+					Float odds = (Float) Global.getSector().getMemoryWithoutUpdate().get("$asm_trinity_odds");
+					if (Math.random() < odds) {	
+						Global.getSector().getMemoryWithoutUpdate().set("$asm_trinity_met", true);
+						createTrinityFleet(fleet);
+					}
+					else {
+						odds += 1f;
+						Global.getSector().getMemoryWithoutUpdate().set("$asm_trinity_odds", odds);
+						createInfectedFleet(fleet);
+					}
+				}
+				else createInfectedFleet(fleet);
 			}
 		});
 	}
@@ -171,17 +188,89 @@ public class LureInfectedFleetAbility extends BaseDurationAbility { //implements
 		float x = fleet.isInHyperspace() ? fleet.getLocationInHyperspace().getX() : fleet.getLocation().getX();
 		float y = fleet.isInHyperspace() ? fleet.getLocationInHyperspace().getY() : fleet.getLocation().getY();
 		
-		if (fleet.isInHyperspace()) {
-			enemyFleet.setLocation(x, y);
-			enemyFleet.addAssignment(FleetAssignment.INTERCEPT, fleet, 30f);
-		}
+		if (fleet.isInHyperspace()) enemyFleet.setLocation(x, y);
 		else {
 			SectorEntityToken token = fleet.getContainingLocation().createToken(x, y);
 			JumpDestination dest = new JumpDestination(token, null);
 			Global.getSector().doHyperspaceTransition(enemyFleet, null, dest, 0f);
 		}
-		
 		enemyFleet.updateFleetView();
+		enemyFleet.addAssignment(FleetAssignment.INTERCEPT, fleet, 30f);
+	}
+	
+	private void createTrinityFleet(CampaignFleetAPI fleet) {
+		if (!Global.getSettings().getModManager().isModEnabled("EmergentThreats_IX_Revival")) {
+			createInfectedFleet(fleet);
+			return;
+		}
+		
+		//Global.getSector().getFaction(TW_FACTION_ID).setRelationship("player", RepLevel.HOSTILE);
+		
+		float points = fleet.getFleetPoints(); 
+		points *= 1.5f;
+		if (points < MIN_FLEET_POINTS - 40f) points = MIN_FLEET_POINTS - 40f;
+		
+		FleetParamsV3 params = new FleetParamsV3(
+				fleet.getLocationInHyperspace(), //locInHyper
+				TW_FACTION_ID,// factionId
+				null, //Float qualityOverride, new Float(1f)
+				FleetTypes.PATROL_LARGE, //String fleetType
+				points, //float combatPts
+				points * 0.2f, //float freighterPts
+				0f, //float tankerPts
+				0f, //float transportPts
+				0f, //float linerPts
+				0f, //float utilityPts
+				1f //float qualityMod
+		);
+				
+		CampaignFleetAPI enemyFleet = FleetFactoryV3.createFleet(params);
+		enemyFleet.inflateIfNeeded();
+		enemyFleet.getMemoryWithoutUpdate().set("$ignorePlayerCommRequests", false);
+		FleetMemberAPI ship = Global.getFactory().createFleetMember(FleetMemberType.SHIP, TW_AURORA_VAR_ID);
+		FleetMemberAPI ship2 = Global.getFactory().createFleetMember(FleetMemberType.SHIP, TW_RADIANT_VAR_ID);
+		enemyFleet.getFleetData().addFleetMember(ship);
+		enemyFleet.getFleetData().addFleetMember(ship2);
+		ship2.setFlagship(true);		
+		FleetMemberAPI oldFlagShip = enemyFleet.getFlagship();
+		oldFlagShip.setFlagship(false);
+		enemyFleet.getFleetData().removeFleetMember(oldFlagShip);		
+		ship.getRepairTracker().setCR(0.81f);
+		ship2.getRepairTracker().setCR(0.91f);
+		//ship.getVariant().addTag(Tags.UNRECOVERABLE); 	done in hullmod
+		ship.setShipName(NameListUtil.TWC_MIDIR);
+		enemyFleet.getCommander().setRankId("tw_asm_admiral");	
+		
+		ship2.getVariant().addTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
+		ship2.setShipName(NameListUtil.TWC_INTERCESSION);
+		
+		enemyFleet.getFleetData().addFleetMember("stonefish_tw_strike");
+		enemyFleet.getFleetData().addFleetMember("stonefish_tw_strike");
+		enemyFleet.getFleetData().addFleetMember("iconoclast_tw_attack");
+		enemyFleet.getFleetData().addFleetMember("iconoclast_tw_attack");
+		enemyFleet.getFleetData().addFleetMember("howler_tw_escort");
+		enemyFleet.getFleetData().addFleetMember("howler_tw_escort");
+		enemyFleet.getFleetData().addFleetMember("omen_tw_pd");
+		enemyFleet.getFleetData().addFleetMember("omen_tw_pd");
+		enemyFleet.getFleetData().addFleetMember("omen_tw_pd");
+		
+		for (FleetMemberAPI m : enemyFleet.getMembersWithFightersCopy()) {
+			if (m.getRepairTracker().getCR() <= 0.6f) m.getRepairTracker().setCR(0.8f);
+		}
+
+		enemyFleet.getFleetData().sort();
+		Global.getSector().getHyperspace().addEntity(enemyFleet);
+		float x = fleet.isInHyperspace() ? fleet.getLocationInHyperspace().getX() : fleet.getLocation().getX();
+		float y = fleet.isInHyperspace() ? fleet.getLocationInHyperspace().getY() : fleet.getLocation().getY();
+		
+		if (fleet.isInHyperspace()) enemyFleet.setLocation(x, y);
+		else {
+			SectorEntityToken token = fleet.getContainingLocation().createToken(x, y);
+			JumpDestination dest = new JumpDestination(token, null);
+			Global.getSector().doHyperspaceTransition(enemyFleet, null, dest, 0f);
+		}
+		enemyFleet.updateFleetView();
+		enemyFleet.addAssignment(FleetAssignment.INTERCEPT, fleet, 30f);
 	}
 	
 	public boolean isUsable() {
@@ -193,6 +282,13 @@ public class LureInfectedFleetAbility extends BaseDurationAbility { //implements
 		if (isFirstTime) return true;
 		boolean isValidLocation = Misc.getAbyssalDepthOfPlayer() >= MIN_ABYSSAL_DEPTH 
 				|| (fleet.getStarSystem() != null && fleet.getStarSystem().hasTag(Tags.SYSTEM_ABYSSAL));
+		//No populated systems
+		if (fleet.getStarSystem() != null) {
+			StarSystemAPI system = fleet.getStarSystem();
+			for (PlanetAPI planet : system.getPlanets()) {
+				if (planet.getMarket() != null && planet.getMarket().getSize() >= 3) isValidLocation = false;
+			}
+		}
 		return isValidLocation;
 	}
 	
@@ -225,7 +321,7 @@ public class LureInfectedFleetAbility extends BaseDurationAbility { //implements
 		
 		tooltip.addPara("Broadcast a Domain Armada recall signal into the deep abyss to lure a nearby Threat Infected fleet to your current location. The fleet will be hostile and attempt to attack you immediately. Usable once every 30 days.", pad, highlight, "Threat Infected", "30");
 		
-		if (!Global.CODEX_TOOLTIP_MODE) tooltip.addPara("Can only be used within abyssal hyperspace and inside abyssal systems.", bad, pad);
+		if (!Global.CODEX_TOOLTIP_MODE) tooltip.addPara("Can only be used within abyssal hyperspace and inside unpopulated abyssal systems.", bad, pad);
 		
 		//addIncompatibleToTooltip(tooltip, expanded);
 	}

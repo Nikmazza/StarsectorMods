@@ -1,0 +1,30 @@
+{
+	"baseHullId":"vice_torchbearer_base",
+	"skinHullId":"vice_torchbearer_e",
+	"descriptionId":"vice_torchbearer_e",
+	"hullName":"Torchbearer (E)",
+	"ordnancePoints":85,
+	"hullDesignation":"Light Carrier",
+	"descriptionPrefix":"The Torchbearer is a nimble light carrier that can keep up in fleet maneuvers with the fast moving cruisers favored by the Sindrian Diktat. Developed after the Collapse, the project served as an important stepping stone in the Diktat's grand ambitions to rapidly adopt carrier based strike craft into its military doctrine.",
+	"tags":["sindrian_diktat", "merc", "ind", "rare_bp", "hist1t", "no_autofit"],
+	"tech":"Midline",
+	"fighterBays":2,
+	"spriteName":"graphics/vice/ships/torchbearer.png",
+	"baseValueMult":1,
+	"removeWeaponSlots":[], 			# ids
+	"removeEngineSlots":[], 			# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 			# hullmod ids
+	"removeBuiltInWeapons":[], 			# weapon slot ids
+	#"systemId":"vice_lightofsindria",
+	#"maxSpeed":75,
+	#"shieldEfficiency":0.6,
+	"builtInMods":[],
+	"addHints":["CARRIER", "COMBAT"],
+	removeHints:["HIDE_IN_CODEX"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+	},
+	"engineSlotChanges":{
+	},
+}

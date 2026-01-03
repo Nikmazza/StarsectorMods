@@ -14,6 +14,7 @@ public class PanopticInterfaceUtil {
 	private static String PANOPTIC_MOD_T = "ix_panoptic_tactical";
 	private static String PANOPTIC_MOD_C = "ix_panoptic_command";
 	private static String PANOPTIC_MOD_A = "ix_panoptic_automated";
+	private static String PANOPTIC_MOD_W = "ix_panoptic_watcher";
 	
 	private static String CONFLICT_MOD_0 = "automated";
 	private static String CONFLICT_MOD_1 = "specialsphmod_alpha_core_module_extension";
@@ -44,6 +45,11 @@ public class PanopticInterfaceUtil {
 	
 	public static boolean hasPanopticAuto(ShipVariantAPI variant) {
 		return variant.hasHullMod(PANOPTIC_MOD_A);
+	}
+	
+	//unused
+	public static boolean hasPanopticWatcher(ShipVariantAPI variant) {
+		return variant.hasHullMod(PANOPTIC_MOD_W);
 	}
 	
 	public static float getReadinessPenalty(FleetMemberAPI member, HullSize hullSize) {

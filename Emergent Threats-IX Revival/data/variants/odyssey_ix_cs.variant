@@ -1,7 +1,7 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 0,
-    "fluxVents": 48,
+    "fluxVents": 49,
     "goalVariant": true,
     "hullId": "odyssey_ix",
     "hullMods": [
@@ -15,6 +15,7 @@
     "modules": [{"SM 1": "odyssey_drone_bay_ix"}],
     "permaMods": ["hiressensors"],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "odyssey_ix_cs",
     "weaponGroups": [
         {

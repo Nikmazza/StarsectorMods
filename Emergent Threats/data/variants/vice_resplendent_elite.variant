@@ -1,17 +1,18 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 5,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 49,
     "goalVariant": true,
     "hullId": "vice_resplendent",
     "hullMods": [
-        "fluxdistributor",
         "hardenedshieldemitter",
+        "vice_module_handler",
+        "targetingunit",
+        "vice_modular_seeker_lens",
         "stabilizedshieldemitter",
-        "vice_unified_targeting_core",
-        "vice_adaptive_pulse_resonator"
+        "vice_adaptive_temporal_shell"
     ],
-    "permaMods": [],
+    "permaMods": ["vice_module_handler"],
     "sMods": [],
     "variantId": "vice_resplendent_elite",
     "weaponGroups": [
@@ -19,16 +20,16 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "tachyonlance",
-                "WS 002": "tachyonlance"
+                "WS 001": "vice_fandance_seeker",
+                "WS 002": "vice_fandance_seeker"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "vice_warp_torpedo_pod",
-                "WS 008": "vice_warp_torpedo_pod"
+                "WS 007": "vice_deluge_repeater",
+                "WS 008": "vice_deluge_repeater"
             }
         },
         {
@@ -45,12 +46,13 @@
             "weapons": {
                 "WS 003": "heavyburst",
                 "WS 004": "heavyburst",
-                "WS 009": "lrpdlaser",
+                "WS 009": "vice_ionstreamer",
                 "WS 010": "lrpdlaser",
                 "WS 011": "lrpdlaser",
-                "WS 012": "lrpdlaser",
+                "WS 012": "vice_ionstreamer",
                 "WS 013": "lrpdlaser",
-                "WS 014": "lrpdlaser"
+                "WS 014": "lrpdlaser",
+                "WS 015": "lrpdlaser"
             }
         }
     ],

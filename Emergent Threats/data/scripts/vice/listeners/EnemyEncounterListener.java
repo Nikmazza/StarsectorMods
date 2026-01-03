@@ -44,6 +44,8 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 		if (dialog.getInteractionTarget().getMarket() != null) {
 			market = dialog.getInteractionTarget().getMarket();
 			CampaignFleetAPI stationFleet = Misc.getStationFleet(market);
+			//need to pull in nearby fleets during station assault since dialog is not typical combat dialog
+			//CampaignFleetAPI stationFleet = Misc.getStationFleet(market).getBattle().getNonPlayerCombined();
 			if (stationFleet != null) {
 				if (isSynthesisFleetChecker(stationFleet)) equipSubsystemsToFleet(stationFleet, true);
 				else equipSubsystemsToFleet(stationFleet);
@@ -194,7 +196,9 @@ public class EnemyEncounterListener extends BaseCampaignEventListener {
 					var.removeMod(vriMod);
 					addNone = true;
 				}
-
+				//do not add adaptive mod to stations otherwise they always gain phase coils
+				if (var.hasHullMod("supercomputer") || var.hasHullMod("vastbulk")) addNone = true;
+				
 				if (addNone) continue;
 				var.addMod(modPicker(var, isWithoutCaptain));
 			}

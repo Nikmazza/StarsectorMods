@@ -21,12 +21,13 @@ public class InterdictionArray extends BaseHullMod {
 	private static String NEW_SYSTEM = "Interdictor Array";
 	private static String INTERDICTOR_SYS_ID = "ix_interdictor";
 	private static int RANGE = 2000; //text only, range set in InterdictorPulseAI, InterdictorPulseTargeting
-	private static int KINETIC_DAMAGE = 2000; //text only, damage set in weapons.csv
+	private static int KINETIC_DAMAGE = 3000; //text only, damage set in weapons.csv
 	private static int BURN_BONUS = 1;
 	
 	private static float INTERVAL = 0.2f; //seconds between each decorative EMP arc
 	private static int BOLTS = 2;
 	public static String DATA_KEY = "paragon_ix_data_key";
+	private static String FLAMEOUT = "flameout";
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -82,7 +83,8 @@ public class InterdictionArray extends BaseHullMod {
 		if (index == 0) return NEW_SYSTEM;
 		if (index == 1) return "" + RANGE;
 		if (index == 2) return "" + KINETIC_DAMAGE;
-		if (index == 3) return "" + BURN_BONUS;
+		if (index == 3) return FLAMEOUT;
+		if (index == 4) return "" + BURN_BONUS;
 		return null;
 	}
 }

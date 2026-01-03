@@ -1,6 +1,6 @@
 {
     "displayName": "Missile",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 4,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "tigershark_ix",
@@ -15,6 +15,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "tigershark_ix_missile",
     "weaponGroups": [
         {

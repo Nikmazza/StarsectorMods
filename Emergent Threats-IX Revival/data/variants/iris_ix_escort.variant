@@ -9,6 +9,7 @@
         "targetingunit",
         "stabilizedshieldemitter"
     ],
+    "modules": [{"SM 1": "ix_active_flare_module"}],
     "permaMods": [],
     "sMods": [],
     "variantId": "iris_ix_escort",

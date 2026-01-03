@@ -6,6 +6,7 @@ import lunalib.lunaSettings.LunaSettings
 import lunalib.lunaSettings.LunaSettingsListener
 import second_in_command.SCUtils
 import second_in_command.misc.backgrounds.AssociatesBackground
+import second_in_command.ui.SCSkillMenuPanel
 
 class SCSettings : LunaSettingsListener {
 
@@ -49,8 +50,7 @@ class SCSettings : LunaSettingsListener {
         )
 
 
-        var enable4thSlot = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enable4thSlot")!!
-        var additionalLevel = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enableAdditionalLevel")!!
+
         var xpGainMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_officerXPMult")!!
 
 
@@ -76,7 +76,6 @@ class SCSettings : LunaSettingsListener {
         var progressionSlot1Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot1")
         var progressionSlot2Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot2")
         var progressionSlot3Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot3")
-        var progressionSlot4Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot4")
 
 
 
@@ -91,6 +90,22 @@ class SCSettings : LunaSettingsListener {
         @JvmStatic
         var autoPointsMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_autoPointsMult")!!
 
+
+
+
+        //Experimental
+        //var enable4thSlot = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enable4thSlot")!!
+        //var progressionSlot4Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot4")
+        var playerOfficerSlots = LunaSettings.getInt(SCUtils.MOD_ID, "sc_xoSlotsForPlayer")!!
+        var progressionModeLevelCurvePast3Slots = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelPast3")!!
+        var enableCompactLayout = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_compactLayout")!!
+        var additionalLevel = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enableAdditionalLevel")!!
+        var additionalSlotForNPCFleets = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_4thSlotForNPCFleets")!!
+        var disableCategoryRestrictions = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_disableCategoryRestrictions")!!
+
+
+
+
         //Misc
         var highConstrastIcons = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_highContrast")
         var unrestrictedAssociates = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_unrestrictedAssociates")
@@ -100,6 +115,8 @@ class SCSettings : LunaSettingsListener {
         var spawnWithTransverse = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_provideTransverse")!!
         var spawnWithNeutrino = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_provideNeutrino")!!
         var spawnWithRemoteSurvey = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_provideRemote")!!
+
+
 
     }
 
@@ -116,14 +133,6 @@ class SCSettings : LunaSettingsListener {
     fun applySettings() {
         xpGainMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_officerXPMult")!!
 
-        enable4thSlot = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enable4thSlot")!!
-        if (Global.getCurrentState() == GameState.CAMPAIGN) {
-            if (Global.getSettings().modManager.isModEnabled("nexerelin")) {
-                AssociatesBackground.fillMissingSlot()
-            }
-            SCUtils.getPlayerData().remove4thOfficer()
-        }
-        additionalLevel = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enableAdditionalLevel")!!
         progressionMode = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_progressionMode")!!
 
         startBarEventEnabled = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_startEvent")!!
@@ -145,7 +154,6 @@ class SCSettings : LunaSettingsListener {
         progressionSlot1Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot1")
         progressionSlot2Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot2")
         progressionSlot3Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot3")
-        progressionSlot4Level = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelSlot4")
 
         playerXPMult = LunaSettings.getFloat(SCUtils.MOD_ID, "sc_playerXPMult")!!
         Global.getSettings().setFloat("xpGainMult", playerXPMult)
@@ -164,6 +172,22 @@ class SCSettings : LunaSettingsListener {
         spawnWithTransverse = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_provideTransverse")!!
         spawnWithNeutrino = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_provideNeutrino")!!
         spawnWithRemoteSurvey = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_provideRemote")!!
+
+        //Experimental
+        playerOfficerSlots = LunaSettings.getInt(SCUtils.MOD_ID, "sc_xoSlotsForPlayer")!!
+        progressionModeLevelCurvePast3Slots = LunaSettings.getInt(SCUtils.MOD_ID, "sc_progressionLevelPast3")!!
+        enableCompactLayout = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_compactLayout")!!
+        additionalLevel = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_enableAdditionalLevel")!!
+        additionalSlotForNPCFleets = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_4thSlotForNPCFleets")!!
+        disableCategoryRestrictions = LunaSettings.getBoolean(SCUtils.MOD_ID, "sc_disableCategoryRestrictions")!!
+        if (Global.getCurrentState() == GameState.CAMPAIGN) {
+            if (Global.getSettings().modManager.isModEnabled("nexerelin")) {
+                AssociatesBackground.fillMissingSlot()
+            }
+            SCUtils.getPlayerData().disableSlotsOverTheLimit()
+        }
+
+        SCSkillMenuPanel.lastAptitudeScrollerY = 0f
     }
 
 

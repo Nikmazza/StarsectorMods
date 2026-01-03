@@ -4,18 +4,14 @@
   "hullSize": "FRIGATE",
   "spriteName": "graphics/fx/empty.png",
   "style": "HIGH_TECH",
-  "height": 4,
-  "width": 4,
-  "center": [2, 2],
+  "height": 1,
+  "width": 1,
+  "center": [0, 0],
   "collisionRadius": 1,
   "shieldCenter": [0, 0],
   "shieldRadius": 1,
   "viewOffset": 0,
-  "builtInMods": [
-    "never_detaches",
-    "vastbulk",
-	"ix_hide_module_hulk"
-  ],
+  "builtInMods": ["never_detaches", "vastbulk", "ix_hide_module_hulk"],
   "weaponSlots": [
     {
       "id": "SYS 001",
@@ -23,8 +19,8 @@
       "type": "SYSTEM",
       "mount": "HIDDEN",
       "arc": 5,
-      "angle": -30,
-      "locations": [0, -20]
+      "angle": 30,
+      "locations": [0, 20]
     },
     {
       "id": "SYS 002",
@@ -32,11 +28,10 @@
       "type": "SYSTEM",
       "mount": "HIDDEN",
       "arc": 5,
-      "angle": 30,
-      "locations": [0, 20]
-    }
+      "angle": -30,
+      "locations": [0, -20]
+    },
   ],
-  "engineSlots": [],
   "bounds": [
     1, -1,
     1, 1,

@@ -125,5 +125,13 @@ public class BountyListener extends BaseCampaignEventListener {
 			person.getRelToPlayer().setRel(0f);
 			mem.set("$vice_give_tt_banteng", false);
 		}
+		if (mem.is("$vice_give_tt_atlas", true)) {
+			ShipVariantAPI v = Global.getSettings().getVariant("vice_atlas_tt_long_haul");
+			FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, v);
+			member.setShipName(NameListUtil.TTS_CONTANGO);
+			Global.getSector().getPlayerFleet().getFleetData().addFleetMember(member);
+			person.getRelToPlayer().setRel(0f);
+			mem.set("$vice_give_tt_atlas", false);
+		}
 	}
 }

@@ -23,6 +23,7 @@ public class IXReputationListener extends BaseCampaignEventListener {
 	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String MZ_FAC_ID = "ix_marzanna";
 	private static String TW_FAC_ID = "ix_trinity";
+	private static String MISSION_FAC_ID = "ix_comsec";
 	private static String IX_ADMIN_SKILL_ID = "ix_ai_assisted_command";
 	
 	public IXReputationListener() {
@@ -67,8 +68,8 @@ public class IXReputationListener extends BaseCampaignEventListener {
 	public void reportPlayerReputationChange(String faction, float delta) {
 		SectorAPI sector = Global.getSector();
 		
-		//Give ship for turning in pk to IX Battlegroup
-		if (faction.equals(IX_FAC_ID)) {
+		//Give ship for turning in pk to IX/TW, mission fac is "Hegemony COMSEC"
+		if (faction.equals(MISSION_FAC_ID)) {
 			if (sector.getPlayerMemoryWithoutUpdate().is("$receivedHyperionIX", true)) {
 				giveHyperionIX();
 				sector.getPlayerMemoryWithoutUpdate().set("$receivedHyperionIX", false);
@@ -77,10 +78,6 @@ public class IXReputationListener extends BaseCampaignEventListener {
 				giveRadiantIX();
 				sector.getPlayerMemoryWithoutUpdate().set("$receivedRadiantIX", false);
 			}
-		}
-		
-		//Give ship for turning in pk to Trinity Worlds
-		if (faction.equals(TW_FAC_ID)) {
 			if (sector.getPlayerMemoryWithoutUpdate().is("$receivedShipTW", true)) {
 				giveRadiantTW();
 				sector.getPlayerMemoryWithoutUpdate().set("$receivedShipTW", false);
@@ -89,12 +86,10 @@ public class IXReputationListener extends BaseCampaignEventListener {
 				giveAuroraTW();
 				sector.getPlayerMemoryWithoutUpdate().set("$receivedAuroraTW", false);
 			}
-		}
-		
-		//Give skill and shuttle for turning in pk to IX/Trinity Worlds, AI core handled by rules.csv
-		if (sector.getPlayerMemoryWithoutUpdate().is("$receivedAdminTraining", true)) {
-			giveSkillAndShuttle();
-			sector.getPlayerMemoryWithoutUpdate().set("$receivedAdminTraining", false);
+			if (sector.getPlayerMemoryWithoutUpdate().is("$receivedAdminTraining", true)) {
+				giveSkillAndShuttle();
+				sector.getPlayerMemoryWithoutUpdate().set("$receivedAdminTraining", false);
+			}
 		}
 	}
 	

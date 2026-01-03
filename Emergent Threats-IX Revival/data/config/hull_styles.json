@@ -18,8 +18,8 @@
 		"fluxLoopSet":"flux_loop",						# id of entry in sounds.json
 		"ventFluxSet":"vent_flux",						# id of entry in sounds.json
 		"shieldBurnoutSet":"shield_burnout",			# id of entry in sounds.json
-		"shieldLowerSet":"shield_lower",				# id of entry in sounds.json
-		"shieldRaiseSet":"shield_raise",				# id of entry in sounds.json
+		"shieldLowerSet":"sound_none",					# id of entry in sounds.json
+		"shieldRaiseSet":"sound_none",					# id of entry in sounds.json
 		"explosionShipSet":"explosion_ship",			# id of entry in sounds.json
 		"damageDecalSheet":"graphics/damage/damage_decal_sheet_base.png",
 		"damageDecalGlowSheet":"graphics/damage/damage_decal_sheet_glow.png",

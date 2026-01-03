@@ -1,14 +1,15 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 5,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "vice_candor_emp",
     "hullMods": [
         "vice_module_handler",
         "hardenedshieldemitter",
+        "vice_laser_collimator",
         "stabilizedshieldemitter",
-        "vice_adaptive_emitter_diodes"
+        "vice_adaptive_phase_coils"
     ],
     "modules": [{"SM 1": "vice_emp_module"}],
     "permaMods": ["vice_module_handler"],
@@ -19,8 +20,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "gravitonbeam",
-                "WS 002": "gravitonbeam"
+                "WS 001": "vice_twin_tactical_laser",
+                "WS 002": "vice_twin_tactical_laser"
             }
         },
         {

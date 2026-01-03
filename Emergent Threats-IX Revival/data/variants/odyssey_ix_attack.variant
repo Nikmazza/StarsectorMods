@@ -1,6 +1,6 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 9,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "odyssey_ix",
@@ -17,6 +17,7 @@
     "modules": [{"SM 1": "odyssey_drone_bay_ix"}],
     "permaMods": ["hiressensors"],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "odyssey_ix_attack",
     "weaponGroups": [
         {

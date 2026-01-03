@@ -28,5 +28,27 @@
 		"glowAlternateColor":[255,50, 90,255],
 		"engineColor":[255,50, 50,255],
 	},	
+	"JDP_KALAFINAN":{			
+		"engineColor":[85,155,255,255],
+		"contrailParticleSizeMult":2,
+		"contrailParticleDuration":3,
+		"contrailParticleFinalSizeMult":2.5,
+		"contrailMaxSpeedMult":0.5,
+		"contrailAngularVelocityMult":0.5,
+		"contrailColor":[85,155,255,25],
+		"contrailCampaignColor":[85,155,255,75],
+		"type":"GLOW" # GLOW or SMOKE
+	},
+	"JDP_RCS_KALAFINAN":{			
+		"engineColor":[85,155,255,255],
+		"contrailParticleSizeMult":2,
+		"contrailParticleDuration":3,
+		"contrailParticleFinalSizeMult":2.5,
+		"contrailMaxSpeedMult":0.5,
+		"contrailAngularVelocityMult":0.5,
+		"contrailColor":[85,155,255,25],
+		"contrailCampaignColor":[85,155,255,75],
+		"type":"GLOW" # GLOW or SMOKE
+	},
 }
 

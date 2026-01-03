@@ -127,7 +127,7 @@ public class TrinityRetrofit extends BaseHullMod {
 			String wing2 = variant.getWingId(2);
 			String wing3 = variant.getWingId(3);			
 			if (wing0 == null || wing0.equals(STARQUAKE_WING)) variant.setWingId(0, RADIANT_WING);
-			if (wing1 == null || wing1.equals(STARQUAKE_WING)) variant.setWingId(0, RADIANT_WING);
+			if (wing1 == null || wing1.equals(STARQUAKE_WING)) variant.setWingId(1, RADIANT_WING);
 			if (variant.hasHullMod(FTR_HULLMOD)) {
 				if (wing2 != null && (wing2.equals(RADIANT_WING) || wing2.equals(STARQUAKE_WING))) {
 					variant.setWingId(2, null);

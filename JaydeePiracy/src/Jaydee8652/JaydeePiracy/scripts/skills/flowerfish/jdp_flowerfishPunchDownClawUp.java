@@ -43,12 +43,11 @@ public class jdp_flowerfishPunchDownClawUp extends SCBaseSkillPlugin {
 
     @Override
     public void addTooltip(SCData scData, TooltipMakerAPI tooltip) {
-        tooltip.addPara("Increases damage to other ships by " + BONUS_PER_SIZE + "%% per difference in size class.", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-        tooltip.addPara("*This bonus is doubled for destroyers and cruisers", 0f, Misc.getGrayColor(), Misc.getHighlightColor());
-
+        tooltip.addPara("Increases damage to other ships by " + BONUS_PER_SIZE + "%% per difference in size class", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+        tooltip.addPara("   - This bonus is doubled for destroyers and cruisers", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "destroyers", "cruisers");
         tooltip.addSpacer(10f);
 
-
+/*
         //float modW = 100f;
         float nameW = (tooltip.getWidthSoFar() -20f) / 5;
         tooltip.beginTable(Misc.getBasePlayerColor(), Misc.getDarkPlayerColor(), Misc.getBrightPlayerColor(),
@@ -61,12 +60,12 @@ public class jdp_flowerfishPunchDownClawUp extends SCBaseSkillPlugin {
         tooltip.addRow(Misc.getTextColor(), "Captial", Misc.getHighlightColor(), "7.5%", Misc.getHighlightColor(), "5%", Misc.getHighlightColor(), "2.5%", Misc.getGrayColor(), "-");
         tooltip.addTable("", 0, 10f);
         tooltip.addSpacer(20f);
+*/
 
 
 
-
-        tooltip.addPara("\"We are a paradox, to exist at the top of the foodchain, and the bottom, and every rung in between.\"", 0f, Misc.getTextColor(), Misc.getHighlightColor());
-        tooltip.addPara("  -Someone I guess who cares for now", 0f, jdp_AptitudeFlowerfish.JDP_FLOWERFISH_COLOUR, Misc.getHighlightColor());
+        tooltip.addPara("\"It is as a paradox, existing at the top of the food chain, and the bottom, and every rung in between.\"", 0f, Misc.getTextColor(), Misc.getHighlightColor());
+        tooltip.addPara("  -Wiltschi, N. The Jangala Question, Xenoflora 17(3) 201", 0f, jdp_AptitudeFlowerfish.JDP_FLOWERFISH_COLOUR, Misc.getHighlightColor());
         tooltip.addSpacer(10f);
     }
 

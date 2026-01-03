@@ -1,7 +1,7 @@
 {
     "displayName": "Beam",
     "fluxCapacitors": 0,
-    "fluxVents": 17,
+    "fluxVents": 18,
     "goalVariant": true,
     "hullId": "shrike_tw",
     "hullMods": [

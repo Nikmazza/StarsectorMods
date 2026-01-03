@@ -1,13 +1,13 @@
 {
     "displayName": "Beam",
     "fluxCapacitors": 0,
-    "fluxVents": 45,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_aquilon",
     "hullMods": [
-        "advancedoptics",
         "eccm",
         "targetingunit",
+        "vice_laser_collimator",
         "stabilizedshieldemitter",
         "vice_aquilon_fl_handler",
         "vice_aquilon_fl"

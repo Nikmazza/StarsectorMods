@@ -1,0 +1,26 @@
+{
+	"id":"stormwall_aurora",
+	"specClass":"projectile",
+	"type":"COMPOSITE",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/trinity/stormwall_salvo_turret.png",
+	"hardpointSprite":"graphics/weapons/trinity/stormwall_salvo_hardpoint.png",
+	"turretOffsets":[14, -6, 14, 0, 14, 6,],
+	"turretAngleOffsets":[0, 0, 0],
+	"hardpointOffsets":[16, -6, 16, 0, 16, 6,],
+	"hardpointAngleOffsets":[0, 0, 0],
+	"glowColor": [0,100,255,255],
+	"barrelMode":"LINKED",
+	"animationType":"MUZZLE_FLASH",
+	"muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":7.0,
+					   "particleSizeRange":9.0,
+					   "particleDuration":0.15,
+					   "particleCount":10,
+					   "particleColor":[100,150,200,175]},
+	"autocharge": true,
+	"requiresFullCharge":true,
+	"projectileSpecId": "stormwall_tw_shot",
+	"fireSoundTwo": "spearwall_tw_fire"
+}

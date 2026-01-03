@@ -11,32 +11,31 @@
   "shieldCenter": [0, 0],
   "shieldRadius": 1,
   "viewOffset": 0,
-  "builtInWings": [],
   "builtInMods": ["never_detaches", "vastbulk", "vice_hide_module_hulk"],
   "weaponSlots": [
-      {
+    {
       "id": "SYSTEM 1",
-      "size": "MEDIUM",
+      "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
-      "arc": 90,
+      "arc": 5,
       "angle": 30,
-      "locations": [0,0]
+      "locations": [0, 0]
     },
 	{
       "id": "SYSTEM 2",
-      "size": "MEDIUM",
+      "size": "SMALL",
       "type": "SYSTEM",
       "mount": "HIDDEN",
-      "arc": 90,
+      "arc": 5,
       "angle": -30,
-      "locations": [0,0]
+      "locations": [0, 0]
     },
   ],
   "bounds": [
-    1, 1,
     1, -1,
+    1, 1,
     -1, 1,
-    -1, -1,
+    -1, -1
   ]
 }

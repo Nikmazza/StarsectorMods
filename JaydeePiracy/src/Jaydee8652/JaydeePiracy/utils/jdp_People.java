@@ -166,7 +166,7 @@ public class jdp_People {
 		} else
 			log.info("JDP_RETROGEN_PEOPLE: Paolo Casiraghi already exists. No action taken");
 
-		//Agyala Therein-Drouin - Domain Logistics Officer
+		//Agyala Tsimnova - Domain Logistics Officer
 		PersonAPI jdp_agyala_person = Global.getFactory().createPerson();
 		jdp_agyala_person.setId(JDP_AGYALA);
 		jdp_agyala_person.setFaction(Factions.PLAYER);
@@ -174,14 +174,14 @@ public class jdp_People {
 		jdp_agyala_person.setRankId(Ranks.SPACE_ENSIGN);
 		jdp_agyala_person.setPostId(jdp_Ranks.POST_JDP_XENOBIO);
 		jdp_agyala_person.getName().setFirst("Agyala");
-		jdp_agyala_person.getName().setLast("Therein-Drouin");
+		jdp_agyala_person.getName().setLast("Tsimnova");
 		jdp_agyala_person.setImportance(PersonImportance.HIGH);
 		jdp_agyala_person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "jdp_agyala_domain"));
 		if (!ip.containsPerson(jdp_agyala_person)) {
-			log.info("JDP_RETROGEN_PEOPLE: Agyala Therein-Drouin did not exist. Has been generated retroactively");
+			log.info("JDP_RETROGEN_PEOPLE: Agyala Tsimnova did not exist. Has been generated retroactively");
 			ip.addPerson(jdp_agyala_person);
 		} else
-			log.info("JDP_RETROGEN_PEOPLE: Agyala Therein-Drouin already exists. No action taken");
+			log.info("JDP_RETROGEN_PEOPLE: Agyala Tsimnova already exists. No action taken");
 
 		//Ailmar
 		market = Global.getSector().getEconomy().getMarket("ailmar");

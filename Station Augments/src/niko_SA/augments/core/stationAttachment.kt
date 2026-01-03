@@ -29,6 +29,7 @@ import niko_SA.MarketUtils.getUsedAugmentBudget
 import niko_SA.MarketUtils.removeStationAugment
 import niko_SA.SA_mathUtils.trimHangingZero
 import niko_SA.SA_settings
+import niko_SA.SA_settings.ALLOW_FP_RATIO_VIEWING
 import niko_SA.SA_settings.ALLOW_MODIFY_OF_ALL_STATIONS
 import niko_SA.codex.CodexData.getAugmentEntryId
 import org.magiclib.kotlin.getStorageCargo
@@ -89,7 +90,8 @@ abstract class stationAttachment() : BaseCampaignEventListener(false), CoreAutor
         @JvmStatic
         val tagToExtraAugmentBudget = hashMapOf(
             Pair(Industries.BATTLESTATION, 10f),
-            Pair(Industries.STARFORTRESS, 20f)
+            Pair(Industries.STARFORTRESS, 20f),
+            Pair("starcitadel", 10f), // aotd
         )
 
         fun removeRequiredItem(itemId: String, dockedAt: MarketAPI?) {
@@ -245,7 +247,7 @@ abstract class stationAttachment() : BaseCampaignEventListener(false), CoreAutor
             return "Requires ${getNeededStationTypeText()}"
         }
         if (considerAP && (station.getRemainingAugmentBudget() < getAugmentCost())) return "Not enough augment points to install"
-        if (incompatibleAugments.isNotEmpty() && market?.getStationAugments()?.any { existingAugment -> existingAugment != this && (incompatibleAugments.contains(existingAugment.id) || existingAugment.incompatibleAugments.contains(id)) } == true ) {
+        if (market?.getStationAugments()?.any { existingAugment -> existingAugment != this && (incompatibleAugments.contains(existingAugment.id) || existingAugment.incompatibleAugments.contains(id)) } == true ) {
             return "Incompatible with existing augments"
         }
         return null
@@ -307,7 +309,7 @@ abstract class stationAttachment() : BaseCampaignEventListener(false), CoreAutor
             )
             if (orbitalStation.isImproved) {
                 tooltip.addPara(
-                    "The ${orbitalStation.currentName} has been improved, increasing it's AP by %s.",
+                    "The ${orbitalStation.currentName} has been improved, increasing its AP by %s.",
                     5f,
                     Misc.getStoryOptionColor(),
                     "${STATION_IMPROVED_AP_BONUS.trimHangingZero()}"
@@ -335,6 +337,16 @@ abstract class stationAttachment() : BaseCampaignEventListener(false), CoreAutor
                 if (remainingAugmentBudget < getAugmentCost()) Misc.getNegativeHighlightColor() else Misc.getHighlightColor()
             para.setHighlightColors(Misc.getHighlightColor(), augmentBudgetColor, Misc.getStoryOptionColor())
             builtInMode.createDesc(tooltip)
+        }
+
+        if (ALLOW_FP_RATIO_VIEWING) {
+            tooltip.addPara(
+                "The augment currently has a AP-to-FP autoresolve ratio of %s. Note this does not always tell the whole story - some augments manually " +
+                        "apply their FP changes.",
+                5f,
+                Misc.getHighlightColor(),
+                "${apToMemberStrengthMult}x"
+            )
         }
 
         if (!gettingDescFromBlueprint) {

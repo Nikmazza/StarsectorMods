@@ -30,9 +30,12 @@ import java.lang.management.MemoryUsage;
 import java.util.*;
 import java.util.List;
 
+import static Jaydee8652.JaydeePiracy.scripts.jdp_StolenUtils.*;
+import static com.fs.starfarer.api.util.Misc.IS_MERCENARY;
+
 
 public class jdp_flowerfishFirstSecondThird extends SCBaseSkillPlugin {
-    public static float EFFECT_RANGE = 1700f;
+    public static int EFFECT_RANGE = 1700;
     public static Object STATUS_KEY = new Object();
 
 
@@ -43,7 +46,7 @@ public class jdp_flowerfishFirstSecondThird extends SCBaseSkillPlugin {
 
     @Override
     public void addTooltip(SCData scData, TooltipMakerAPI tooltipMakerAPI) {
-        tooltipMakerAPI.addPara("The non-elite versions of mercenary officers elite skills can be inherited by nearby ships.", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+        tooltipMakerAPI.addPara("The non-elite versions of player and mercenary officer elite skills are applied to allied ships within " + EFFECT_RANGE +  " units", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
         tooltipMakerAPI.addPara("*Automated ships cannot inherit skills", 0f, Misc.getGrayColor(), Misc.getHighlightColor());
         tooltipMakerAPI.addSpacer(10f);
 
@@ -58,8 +61,8 @@ public class jdp_flowerfishFirstSecondThird extends SCBaseSkillPlugin {
         //Not if the ship is dead
         if (!ship.isAlive()) return;
         if (amount <= 0f) return;
-
-        if (jdp_AptitudeFlowerfish.isHumanOfficer(ship)) {
+        
+        if (jdp_AptitudeFlowerfish.isHumanOfficer(ship) && (ship.getCaptain().isPlayer()) || Misc.isMercenary(ship.getCaptain())) {
             CombatEngineAPI engine = Global.getCombatEngine();
 
             for (ShipAPI other : engine.getShips()) {
@@ -106,7 +109,7 @@ public class jdp_flowerfishFirstSecondThird extends SCBaseSkillPlugin {
 
         String icon = Global.getSettings().getSpriteName("ui", "icon_tactical_escort_package");
 
-        if (ship.getCaptain().isPlayer()) {
+        if (playerShip(ship)) {
             if (tags.isEmpty()) {
                 Global.getCombatEngine().maintainStatusForPlayerShip(STATUS_KEY, icon, "First Second Third", "no connection", true);
             } else {

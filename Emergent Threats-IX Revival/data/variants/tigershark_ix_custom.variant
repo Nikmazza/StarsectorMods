@@ -1,7 +1,7 @@
 {
     "displayName": "Honor Guard",
     "fluxCapacitors": 0,
-    "fluxVents": 4,
+    "fluxVents": 5,
     "goalVariant": true,
     "hullId": "tigershark_ix",
     "hullMods": [
@@ -16,6 +16,7 @@
     ],
     "permaMods": ["ix_smod_handler"],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "tigershark_ix_custom",
     "weaponGroups": [
         {

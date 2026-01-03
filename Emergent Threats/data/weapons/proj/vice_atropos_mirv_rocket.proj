@@ -40,7 +40,7 @@
 					"minTimeToSplit":0.5,
 					"canSplitEarly":true,
 					"splitSound":"hurricane_mirv_split",
-					"numShots":2,
+					"numShots":3,
 					"damage":1000,
 					"impact":40,
 					"emp":0,

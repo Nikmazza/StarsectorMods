@@ -1,7 +1,7 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 8,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 48,
     "goalVariant": true,
     "hullId": "vice_intrepid_ex",
     "hullMods": [
@@ -51,8 +51,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyburst",
-                "WS 002": "heavyburst",
+                "WS 001": "vice_deluge_repeater",
+                "WS 002": "vice_deluge_repeater",
                 "WS 010": "pdburst",
                 "WS 011": "pdburst",
                 "WS 012": "pdburst",

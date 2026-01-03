@@ -28,7 +28,7 @@ public class UnwaveringConviction extends SCBaseSkillPlugin {
 		tooltip.addPara("  -Quotations from the Supreme Executor", 0f, Misc.getTextColor(), Misc.getHighlightColor());
 		tooltip.addSpacer(10f);
 		tooltip.addPara("+10%% energy weapon rate of fire", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		tooltip.addPara("bonus is doubled when flux is over 50%%", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addPara("Bonus is doubled when flux is over 50%%", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 	}
 	
 	@Override

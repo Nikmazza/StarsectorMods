@@ -1,7 +1,7 @@
 {
     "displayName": "Strike",
     "fluxCapacitors": 0,
-    "fluxVents": 28,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "flamebreaker_ix",
     "hullMods": [
@@ -13,6 +13,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "flamebreaker_ix_strike",
     "weaponGroups": [
         {

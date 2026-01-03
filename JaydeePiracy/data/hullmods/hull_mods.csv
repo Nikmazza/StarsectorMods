@@ -72,6 +72,10 @@ SHIELD MIRRORING",,,graphics/hullmods/jdp_mirrorshield.png
 Erroneous Ordinance,jdp_erroneousordinance,,,,"dmod, codex_require_related",,,,TRUE,,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_erroneousordinance,"Excess missile feedstocks, explosive magazines and ammunition stores have been installed on this ship in profoundly shortsighted locations. Crowding out the ships corridors and maintenance ducts, these prove immensely hazardous to repair crews and loaders, especially considering they are prone to cooking-off during combat.
 
 Crew casualties in combat are increased by %s and repair rate for disabled weapons and engines is reduced by %s. The death explosion damage and range of this ship is increased by a factor of %s.",,,graphics/hullmods/jdp_erroneousordinance.png
+Throughdeck Bays,jdp_throughdeck,,,,"no_drop, no_sell, codex_unlockable",,,,TRUE,,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_throughdeck,"The flightdeck of this ship passes through the hull uninterrupted, reducing overall capacity but streamlining combat operations. Fighter refit time is reduced by %s.
+
+Extra fighter capacity can be brought online if this efficiency is sacrificed, allowing the installation of a %s despite the ship already having fighter bays, increasing the number of operational fighter bays to %s at the cost of nullifying the refit bonus.",,,graphics/hullmods/jdp_throughdeck.png
+Fusion Burn,jdp_fusionburn,,,,"no_drop, no_sell, codex_unlockable",,,,TRUE,,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_fusionburn,This structure constantly flares intense radiative heat.,,,graphics/hullmods/jdp_fusionburn.png
 ,,,,,,,,,,,,,,,,,,,
 #Hidden,,,,,,,,,,,,,,,,,,,
 True Demon,jdp_truedemon,0,,,,,,,TRUE,TRUE,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_truedemon,"Provides benefits to the Laplcians during the boss fight. 
@@ -79,7 +83,7 @@ True Demon,jdp_truedemon,0,,,,,,,TRUE,TRUE,0,0,0,0,Jaydee8652.JaydeePiracy.hullm
 %s
 %s",,,graphics/icons/intel/investigation.png
 Modular Ship,jdp_modularship,0,,,,,,,TRUE,TRUE,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_modularship,"Prevents installing shields, escort package etc.",,,graphics/icons/intel/investigation.png
-Linkedengines,jdp_linkedengines,,,,,,,,TRUE,TRUE,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_linkedengines,Links module engines to the hub engine controller.,,,graphics/icons/intel/investigation.png
+Linked Engines,jdp_linkedengines,,,,,,,,TRUE,TRUE,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_linkedengines,Links module engines to the hub engine controller.,,,graphics/icons/intel/investigation.png
 Cryoarithmetic Heatsink,jdp_cryoarithmeticheatsink,0,,,,,,,TRUE,TRUE,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_cryoarithmeticheatsink,Protects the Remnant Locus from stellar phenomena.,,,graphics/icons/intel/investigation.png
 Mercenary Relay Helper,jdp_mercenaryrelayhelper,0,,,,,,,TRUE,TRUE,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_mercenaryrelayhelper,Manages installing Relay Drones into the ship.,,,graphics/icons/intel/investigation.png
 ,,,,,,,,,,,,,,,,,,,
@@ -93,7 +97,12 @@ Prone to shattering unpredictably when impacted, the effective armor strength fo
 Increasing the amount of subjective time experienced by the ship gives greater opportunity for issues and defects to arise, increasing maintenance by %s.
 
 Working under temporally enhanced conditions is an immense strain on both equipment and crew, reducing the peak performance time by a factor of %s.",,,graphics/hullmods/jdp_emulatedfrictionlesshull.png
-Mercenary Relay,jdp_mercenaryrelay,,,Flowerfish Network,"no_drop, no_sell, codex_unlockable, no_build_in",,,,,,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_mercenaryrelay,"Extensively modifies the ship to support a Flowerfish Mercenary Relay, increasing combat vision range by %s su.",,,graphics/hullmods/jdp_mercenaryrelay.png
+Mercenary Relay,jdp_mercenaryrelay,,,Flowerfish Network,"no_drop, no_sell, codex_unlockable, no_build_in",,,,,,0,0,10,0,Jaydee8652.JaydeePiracy.hullmods.jdp_mercenaryrelay,"Extensively modifies the ship to support a Flowerfish Mercenary Relay, increasing combat vision range by %s su.",,,graphics/hullmods/jdp_mercenaryrelay.png
+Occluded Capacitors,jdp_occludedcapacitors,,,Flowerfish Network,"no_drop, no_sell, codex_unlockable, no_build_in",,,,TRUE,,0,0,0,0,Jaydee8652.JaydeePiracy.hullmods.jdp_occludedcapacitors,"Disabling safety protocols increases the ship's top speed in combat by %s/%s/%s (depending on ship size, with a corresponding increase in acceleration) and allows the zero-flux engine boost to take effect regardless of flux level. The flux dissipation rate, including that of additional vents, is increased by a factor of %s.
+
+Reduces the peak performance time by a factor of %s, prevents the use of active venting, and drastically reduces weapon ranges past %s units.
+
+Can not be installed on civilian or capital ships.",,,graphics/hullmods/jdp_occludedcapacitors.png
 Slat Armor,jdp_slatarmor,,,,"no_drop, no_sell, codex_unlockable",,,,TRUE,,5,10,15,25,Jaydee8652.JaydeePiracy.hullmods.jdp_slatarmor,"While at the time a revolutionary development, this slat armor package is less effective than modern ""spaced"" armor designs, reducing the effective armor strength for the damage reduction calculation to %s of its actual value. 
 
 The cage like structure occasionally causes explosive pre-detonation, effectively reducing High Explosive damage by %s.",,,graphics/hullmods/jdp_slatarmor.png

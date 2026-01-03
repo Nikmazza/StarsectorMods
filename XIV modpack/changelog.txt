@@ -36,3 +36,6 @@ changes:
 
 hotfix 2.1.1:
 -fixed missing Endless mk1 XIV small weapon slot
+
+hotfix 2.1.2:
+-fixed multiple ships "built in erratic fuel ejector". Investigation of responsible officials is complete. thanks to citizen overdramaticpan on forums for bringing the issue to our attention.

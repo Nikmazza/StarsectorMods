@@ -8,5 +8,6 @@
 		"[Emergent Threats] The Circumfix system holds a dangerous enemy, waiting to be unleashed once more.",
 		"[Emergent Threats] Infected Threat ships regenerate hull over time, but will slow their fragment attacks after an extended initial wave. Sometimes it may be better to weather the storm before pressing the attack, rather than rush in and be surrounded.",
 		"[Emergent Threats] Infected Threat fleets scale with the player's fleet, with a certain minimum and randomness factor. If the summoned enemy fleet is too powerful, try stashing ships that are not being used before summoning the enemy again.",
+		"[Emergent Threats/IX Revival] Completing the Trinity Worlds encounter in the Abyss following Circumfix will introduce you to a new IX Battlegroup NPC who has much to say.",
 	],
 }

@@ -7,8 +7,8 @@
     "hullMods": [
         "missleracks",
         "hardenedshieldemitter",
+        "targetingunit",
         "stabilizedshieldemitter",
-        "vice_unified_targeting_core",
         "vice_adaptive_flight_command"
     ],
     "permaMods": [],
@@ -58,9 +58,6 @@
     "wings": [
         "vice_helia_wing",
         "vice_helia_wing",
-        "vice_helia_wing",
-        "",
-        "",
-        ""
+        "vice_helia_wing"
     ]
 }

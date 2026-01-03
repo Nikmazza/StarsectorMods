@@ -1,6 +1,6 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 1,
+    "fluxCapacitors": 3,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "medusa_ix",
@@ -11,6 +11,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "medusa_ix_cs",
     "weaponGroups": [
         {

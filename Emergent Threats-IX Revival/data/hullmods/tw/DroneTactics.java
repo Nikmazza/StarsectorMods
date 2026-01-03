@@ -17,8 +17,9 @@ public class DroneTactics extends BaseHullMod {
 	private static String TW_MOD = "tw_drone_control_node";
 	private static String TW_MOD_2 = "tw_enhanced_control_node";
 	
-	private static String NIMBUS_PREF = "nimbus_tw_";
+	private static String NIMBUS_PREF = "nimbus_tw";
 	private static String NIMBUS_REM = "vice_nimbus_wing";
+	private static String STARQUAKE = "starquake_tw";
 	
 	private static boolean IS_ACTIVE = false;
 	
@@ -38,7 +39,7 @@ public class DroneTactics extends BaseHullMod {
     }
 	
 	private boolean isValidDrone(String id) {
-		return (id.equals(NIMBUS_REM) || id.startsWith(NIMBUS_PREF));
+		return (id.equals(NIMBUS_REM) || id.startsWith(NIMBUS_PREF) || id.startsWith(STARQUAKE));
 	}
 	
     @Override

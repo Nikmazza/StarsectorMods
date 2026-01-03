@@ -1,12 +1,13 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 2,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 39,
     "goalVariant": true,
     "hullId": "vice_intrepid_ex",
     "hullMods": [
-        "hardenedshieldemitter",
+        "magazines",
         "targetingunit",
+        "vice_laser_collimator",
         "stabilizedshieldemitter"
     ],
     "permaMods": [],
@@ -36,17 +37,7 @@
                 "WS 005": "annihilatorpod",
                 "WS 006": "annihilatorpod",
                 "WS 007": "annihilatorpod",
-                "WS 008": "annihilatorpod"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 003": "gravitonbeam",
-                "WS 004": "gravitonbeam",
-                "WS 012": "vice_ionstreamer",
-                "WS 013": "vice_ionstreamer",
+                "WS 008": "annihilatorpod",
                 "WS 017": "vice_siege_burst"
             }
         },
@@ -54,8 +45,24 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyburst",
-                "WS 002": "heavyburst",
+                "WS 003": "vice_twin_tactical_laser",
+                "WS 004": "vice_twin_tactical_laser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "vice_ionstreamer",
+                "WS 013": "vice_ionstreamer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vice_deluge_repeater",
+                "WS 002": "vice_deluge_repeater",
                 "WS 009": "heavyburst",
                 "WS 010": "pdburst",
                 "WS 011": "pdburst",

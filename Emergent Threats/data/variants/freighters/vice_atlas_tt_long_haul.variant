@@ -1,0 +1,25 @@
+{
+    "displayName": "Long Haul",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "goalVariant": true,
+    "hullId": "vice_atlas_tt",
+    "hullMods": [
+        "auxiliary_fuel_tanks",
+        "expanded_cargo_holds",
+        "vice_atlas_fuel_handler",
+        "vice_atlas_fuel_scoop"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_atlas_tt_long_haul",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "lrpdlaser",
+            "WS 002": "lrpdlaser",
+            "WS 003": "pdburst"
+        }
+    }]
+}

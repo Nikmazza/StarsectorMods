@@ -1,6 +1,6 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 11,
     "fluxVents": 50,
     "hullId": "odyssey_ix",
     "hullMods": [
@@ -28,6 +28,7 @@
         "ix_reactive_combat_shields",
         "ix_terminus_relay"
     ],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "odyssey_ix_honor",
     "weaponGroups": [
         {

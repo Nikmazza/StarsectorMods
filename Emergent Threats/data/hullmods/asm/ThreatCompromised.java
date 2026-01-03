@@ -104,7 +104,6 @@ public class ThreatCompromised extends BaseHullMod {
 			stats.getSuppliesPerMonth().modifyFlat(id, dp);
 		}
 		
-		
 		boolean makeDelta = false;
 		boolean makeGamma = false;
 		boolean makeBeta = false;
@@ -165,7 +164,7 @@ public class ThreatCompromised extends BaseHullMod {
 		CombatEngineAPI engine = Global.getCombatEngine();
 		if (!engine.hasPluginOfClass(ThreatCombatStrategyForBothSidesPlugin.class)) {
 			engine.addPlugin(new ThreatCombatStrategyForBothSidesPlugin());
-		}
+		} 
 	}
 	
 	@Override
@@ -200,6 +199,16 @@ public class ThreatCompromised extends BaseHullMod {
 				ship.setCustomData(key, 0f);
 			}
 		}
+		
+		String key2 = "asm_checkRetreatKey";
+		if (!ship.getCustomData().containsKey(key2)) {
+			boolean runOnce = true;
+			ship.setCustomData(key2, runOnce);
+			if (ship.getFleetMember() != null && ship.getFleetMember().getOwner() == 1) {
+				CombatEngineAPI engine = Global.getCombatEngine();
+				engine.getContext().aiRetreatAllowed = false;
+			}
+		}		
 	}
 	
 	@Override

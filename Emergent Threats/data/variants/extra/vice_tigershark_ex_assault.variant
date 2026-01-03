@@ -1,13 +1,14 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 9,
+    "fluxCapacitors": 0,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "vice_tigershark_ex",
     "hullMods": [
-        "missleracks",
+        "magazines",
         "hardenedshieldemitter",
         "targetingunit",
+        "vice_modular_seeker_lens",
         "stabilizedshieldemitter"
     ],
     "permaMods": [],
@@ -18,22 +19,20 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "flak",
-                "WS 002": "flak"
+                "WS 001": "vice_deluge_repeater",
+                "WS 002": "vice_deluge_repeater",
+                "WS 004": "vice_fandance_seeker"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "hurricane"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 003": "heavyblaster",
+                "WS 003": "heavyburst",
                 "WS 005": "pdlaser",
                 "WS 006": "pdlaser",
+                "WS 007": "pdlaser",
+                "WS 008": "pdlaser",
                 "WS 009": "pdlaser"
             }
         }

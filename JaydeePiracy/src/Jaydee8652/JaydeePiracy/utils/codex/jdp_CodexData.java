@@ -18,6 +18,9 @@ public class jdp_CodexData {
         createReciprocalLink(getCommodityEntryId(Commodities.MARINES), getHullmodEntryId("jdp_supportfighter"));
         createReciprocalLink(getFighterEntryId("jdp_manjusaka_wing"), getHullmodEntryId("jdp_supportfighter"));
 
+        //Hullmods
+        createReciprocalLink(getFighterEntryId("jdp_relay"), getHullmodEntryId("jdp_mercenaryrelay"));
+
         //Skills
         createReciprocalLink(getSkillEntryId("jdp_omega_ecm"), getCommodityEntryId("jdp_omega_core"));
         createReciprocalLink(getSkillEntryId("jdp_omegakin"), getShipEntryId("jdp_penrose"));

@@ -88,7 +88,7 @@ public class VoltaicMultipulserEffect implements OnFireEffectPlugin, OnHitEffect
 		if (!ship.getVariant().hasHullMod("fragment_swarm")) return;
 		ShipAPI next = DistanceUtil.getNearestFriend(t, CHAIN_RANGE, true); //nearest friend of enemy target
 		
-		if (next != null) {
+		if (next != null && next != ship) {
 			params.minFadeOutMult = 2f;
 			
 			EmpArcEntityAPI arc2 = (EmpArcEntityAPI) engine.spawnEmpArc(

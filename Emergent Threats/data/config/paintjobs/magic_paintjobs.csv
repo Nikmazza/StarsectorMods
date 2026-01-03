@@ -7,7 +7,7 @@ vice_howler_standard,vice_howler_base,Standard Plating,,graphics/vice/ships/ex/c
 vice_hyperion_standard,vice_hyperion_base,Standard Plating,,graphics/vice/ships/ex/classic/hyperion_ex.png,true,,,High-tech ceramic armor
 vice_intrepid_standard,vice_intrepid_base,Standard Plating,,graphics/vice/ships/ex/classic/intrepid_ex.png,true,,,High-tech ceramic armor
 ,,,,,,,,
-vice_iris_standard,vice_iris_base,Standard Plating,,graphics/vice/ships/ex/classic/iris_ex.png,true,,,High-tech ceramic armor
+vice_iris_standard,vice_iris_ex,Standard Plating,,graphics/vice/ships/ex/classic/iris_ex.png,true,,,High-tech ceramic armor
 vice_mandrake_standard,vice_mandrake_base,Standard Plating,,graphics/vice/ships/ex/classic/mandrake_ex.png,true,,,High-tech ceramic armor
 vice_tigershark_standard,vice_tigershark_base,Standard Plating,,graphics/vice/ships/ex/classic/tigershark_ex.png,true,,,High-tech ceramic armor
 ,,,,,,,,

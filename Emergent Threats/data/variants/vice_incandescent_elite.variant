@@ -1,16 +1,17 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 4,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 49,
     "goalVariant": true,
     "hullId": "vice_incandescent",
     "hullMods": [
         "vice_module_handler",
-        "hardenedshieldemitter",
+        "vice_feedback_handler",
+        "vice_adaptive_reactor_chamber",
+        "magazines",
         "targetingunit",
-        "stabilizedshieldemitter",
-        "vice_adaptive_temporal_shell",
-        "vice_feedback_handler"
+        "vice_modular_seeker_lens",
+        "stabilizedshieldemitter"
     ],
     "permaMods": ["vice_module_handler"],
     "sMods": [],
@@ -31,34 +32,36 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 017": "hil",
-                "WS 018": "vice_deadeye_plasma",
-                "WS 019": "vice_deadeye_plasma"
-            }
+            "weapons": {"WS 017": "vice_deadeye_plasma"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "gravitonbeam",
-                "WS 004": "gravitonbeam",
-                "WS 009": "vice_phased_electrolaser"
+                "WS 001": "vice_deluge_repeater",
+                "WS 002": "vice_deluge_repeater",
+                "WS 003": "vice_deluge_repeater",
+                "WS 004": "vice_deluge_repeater",
+                "WS 018": "vice_fandance_seeker",
+                "WS 019": "vice_fandance_seeker"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS 009": "vice_phased_electrolaser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 001": "heavyburst",
-                "WS 002": "heavyburst",
-                "WS 010": "pdburst",
-                "WS 011": "pdburst",
-                "WS 012": "pdburst",
-                "WS 013": "pdburst",
+                "WS 010": "pdlaser",
+                "WS 011": "pdlaser",
+                "WS 012": "pdlaser",
+                "WS 013": "pdlaser",
                 "WS 014": "pdlaser",
                 "WS 015": "pdlaser",
-                "WS 016": "pdburst"
+                "WS 016": "pdlaser"
             }
         }
     ]

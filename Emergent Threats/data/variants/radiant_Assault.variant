@@ -1,16 +1,21 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 2,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "radiant",
     "hullMods": [
-        "eccm",
+        "magazines",
         "targetingunit",
         "stabilizedshieldemitter",
-        "vice_adaptive_pulse_resonator"
+        "vice_gravity_drive_handler",
+        "vice_adaptive_phase_coils",
+        "vice_module_handler"
     ],
-    "permaMods": [],
+    "permaMods": [
+        "vice_gravity_drive_handler",
+        "vice_module_handler"
+    ],
     "sMods": [],
     "variantId": "radiant_Assault",
     "weaponGroups": [
@@ -19,9 +24,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "vice_fandance_seeker",
-                "WS 001": "vice_fandance_seeker",
-                "WS 006": "pulselaser",
-                "WS 007": "pulselaser"
+                "WS 001": "vice_fandance_seeker"
             }
         },
         {
@@ -36,18 +39,20 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "gravitonbeam",
-                "WS 008": "gravitonbeam"
+                "WS 005": "vice_deluge_repeater",
+                "WS 006": "vice_deluge_repeater",
+                "WS 007": "vice_deluge_repeater",
+                "WS 008": "vice_deluge_repeater"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 012": "ioncannon",
-                "WS 013": "ioncannon",
-                "WS 014": "ioncannon",
-                "WS 015": "ioncannon"
+                "WS 012": "vice_ionstreamer",
+                "WS 013": "vice_ionstreamer",
+                "WS 014": "vice_ionstreamer",
+                "WS 015": "vice_ionstreamer"
             }
         },
         {

@@ -17,6 +17,12 @@ rwc_flash,WEAPON,"High agility missile with a somewhat short range and a small w
 rwc_flash_m,WEAPON,"Multiple launcher for a high agility missile with a somewhat short range and a small warhead.   Great against smaller targets, like destroyers and frigates.",,,,
 rwc_flash_l,WEAPON,Rapid launcher system for high velocity missiles.  Has impressive damage output but individual missiles are relatively weak.,,,,
 rwc_dragonslayer,WEAPON,Massive twin-barrel cannon built into the Hrunting prototype.  Deals incredible damage against unshielded targets.,,,,
+rwc_hellbore_s,WEAPON,"A cut-down Hellbore cannon, often used by pirates.  Sacrifices range, accuracy, and flux efficiency for devastating impact.
+
+Gives even frigates a punch rivaling the mighty cannons mounted by capitals, but lacks any form of recoil dampening and has an enormously long reload cycle.  Very effective for intimidating freighter captains or smashing patrol ships, but a liability at best against proper combatants.  ",,,,
+rwc_pulser,WEAPON,"Based on the Autopulse Laser, but uses the gain medium from a High Intensity Laser for increased armor penetration at the cost of ability to pressure shields.",,,,
+rwc_plasma,WEAPON,"Pre-charged plasma blaster.  Decent impact, but can't be reloaded in flight.",,,,
+rwc_flak,WEAPON,"A medium-caliber cannon firing standard HE-Fragmentation shells.  Effective against light craft, but struggles against modern shields and armor.",,,,
 ,,,,,,
 onslaught_beam,SHIP,A modified Onslaught-class battleship.  No hulls were known to have been produced.,,,,
 test_egret,SHIP,"Large carrier based off of the successful Heron-class.  Carries a powerful strike wing, but few weapons even for a carrier.   ",,,,
@@ -34,7 +40,7 @@ rwc_hurricane,SHIP,"Fast high-tech destroyer, equipped with the same Terminator 
 rwc_triumphant,SHIP,A broadside focused battleship with a system that boosts turn rate and firepower.  ,,,,
 rwc_hrunting,SHIP,"ERROR // Hull does not match any known design.  
 
-A combination of a massive shaped block of armor and enormous integrated artillery, this vessel appears more as an unholy amalgam from the monomaniacal imagination of a deranged Domain military procurement official than a real, functioning starship. And yet it exists, with every Tri-Pad imagining analysis triggering some sort of hardcoded COMSEC blockade.
+A combination of a massive shaped block of armor and enormous integrated artillery, this vessel appears more as an unholy amalgam from the monomaniacal imagination of a deranged Domain military procurement official than a real, functioning starship. And yet it exists, with every Tri-Pad imaging analysis triggering some sort of hardcoded COMSEC blockade.
 
 
 Analysis of on-board databanks has yielded a few historical clues: this is indeed a phase battleship, as unbelievable as it might seem, similar in design age with the ill-fated Grendel project.  Code-named Hrunting, the project was an attempt to push phase technology - then limited to the Domain Armada - to its absolute limits.  Orion Shipyards was selected, after the resounding success of their Onslaught-class battleship design. Unsurprisingly, inefficiencies in the design, operation and refitting led to absurd cost overruns, numerous accidents and  several project reshuffles. The project was on verge of shutdown when both the hull and existing design team were ""recruited"" by a black ops Domain Armada unit. All records hence were wiped, with what remains only indicating a rushed combat refitting that saw the Hrunting equipped with its modular weaponry, before departing from pages of history forever.  Elements of the design, however, have appeared in other more successful projects unrelated to phase technology.
@@ -42,6 +48,7 @@ Analysis of on-board databanks has yielded a few historical clues: this is indee
 But these answers yield more questions. What sort of threat would push Domain towards mobilizing such an absurd project? And more importantly, how such a vessel found its way to the Persean Sector, without any visible signs of battle damage, or more importantly, any signs of use? 
 
 Where did it go? And what did it see? ",,,,
+rwc_solace,SHIP,"The Solace Plasma Bomber is a high-tech strike craft with a nasty punch, but short attack range.  Not effective alone due to limited ammunition and no defensive weaponry. ",,,,
 ,,,,,,
 rwc_plasmajets2,SHIP_SYSTEM,"Provides a brief but extreme boost to top speed, along with a slight maneuverability boost.",Movement,"Provides a brief but extreme boost to top speed, along with a slight maneuverability boost.",,
 rwc_dynamic_stabilizer,SHIP_SYSTEM,"Reroutes excess drive energy to boost weapon fire rate with a corresponding flux cost reduction.  Also increases turn rate, but not max speed.",Offensive,"Boosts weapon fire rate with a corresponding flux cost reduction.  Also increases turn rate, but not max speed.",,

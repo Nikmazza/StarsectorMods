@@ -1,5 +1,5 @@
 {
-	"baseHullId":"vice_banteng",
+	"baseHullId":"vice_banteng_base",
 	"skinHullId":"vice_banteng_tt",
 	"hullName":"Banteng (TT)",
 	"incompatibleWithBaseHull":false,
@@ -10,6 +10,7 @@
 	"tags":["rare_bp", "tritachyon", "hightech_bp"],
 	"tech":"Tri-Tachyon",
 	"builtInMods":[],
+	"removeHints":["HIDE_IN_CODEX"],
     "engineSlotChanges":{
 		"0":{"style":"HIGH_TECH"},
 		"1":{"style":"HIGH_TECH"},

@@ -19,6 +19,7 @@ public class PanopticCommandRefitButton extends BaseRefitButton {
 	private static String MOD_ID_1 = "ix_panoptic_strategic";
 	private static String MOD_ID_2 = "ix_panoptic_tactical";
 	private static String MOD_ID_3 = "ix_panoptic_automated";
+	private static String MOD_ID_4 = "ix_panoptic_watcher";
 	
 	private static String CONFLICT_MOD_1 = "specialsphmod_alpha_core_module_extension";
 	private static String CONFLICT_MOD_2 = "specialsphmod_beta_core_module_extension";
@@ -104,7 +105,8 @@ public class PanopticCommandRefitButton extends BaseRefitButton {
 		return (variant.hasHullMod(MOD_ID) 
 					|| variant.hasHullMod(MOD_ID_1) 
 					|| variant.hasHullMod(MOD_ID_2) 
-					|| variant.hasHullMod(MOD_ID_3));
+					|| variant.hasHullMod(MOD_ID_3)
+					|| variant.hasHullMod(MOD_ID_4));
 	}
 	
 	private boolean hasConflictMod(ShipVariantAPI variant) {

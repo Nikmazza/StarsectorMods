@@ -1,19 +1,20 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 1,
-    "fluxVents": 50,
+    "fluxCapacitors": 0,
+    "fluxVents": 48,
     "goalVariant": true,
     "hullId": "paragon_ix_elite",
     "hullMods": [
         "advancedoptics",
         "eccm",
-        "hardenedshieldemitter",
         "ix_smod_handler",
         "targetingunit",
+        "ix_reactive_combat_shields",
         "stabilizedshieldemitter"
     ],
     "permaMods": ["ix_smod_handler"],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "paragon_ix_custom",
     "weaponGroups": [
         {
@@ -58,8 +59,8 @@
             "weapons": {
                 "WS 005": "morningstar_ciws_ix",
                 "WS 006": "morningstar_ciws_ix",
-                "WS 009": "morningstar_ciws_ix",
-                "WS 010": "morningstar_ciws_ix",
+                "WS 009": "lightbringer_ciws_ix",
+                "WS 010": "lightbringer_ciws_ix",
                 "WS 011": "morningstar_ciws_ix",
                 "WS 013": "morningstar_ciws_ix",
                 "WS 016": "morningstar_ciws_ix",

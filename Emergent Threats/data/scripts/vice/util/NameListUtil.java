@@ -7,7 +7,11 @@ public class NameListUtil {
 	public static String PLS_LIBERATOR = "PLS Liberator";
 	public static String PLS_PRIDE_OF_KAZERON = "PLS Pride of Kazeron";
 	public static String TTS_CONTANGO = "TTS Contango";
+	public static String TTS_LAERTES = "TTS Laertes";
 	public static String ASM_INFESTED_HUSK = "Infected Husk";
+	public static String TWC_INTERCESSION = "TWC Intercession";
+	public static String TWC_MIDIR = "TWC Midir";
+	public static String SENSOR_SHADOW = "Sensor Shadow";
 	public static String FLS_CREDIT_PAYMENT_SMALL = "Received 100,000 credits";
 	public static String FLS_CREDIT_PAYMENT_LARGE = "Received 500,000 credits";
 	public static String KATO_BIOCHIP = "Received Cerebral Biochip";

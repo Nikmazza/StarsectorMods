@@ -1,6 +1,6 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 2,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "intrepid_ix",

@@ -1,0 +1,120 @@
+{
+  "hullName": "Torchbearer",
+  "hullId": "vice_torchbearer_base",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/vice/ships/torchbearer.png",
+  "style": "MIDLINE",
+  "coversColor": "255,255,255,255",
+  "height": 156,
+  "width": 122,
+  "center": [61, 71],
+  "collisionRadius": 106,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 106,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [29, -16]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": 90,
+      "locations": [-9, 48]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 225,
+      "angle": -90,
+      "locations": [-9, -48]
+    },
+    {
+      "id": "WS 004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [-1, 24]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [66, 0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 180,
+      "locations": [
+        -36, 8,
+        -36, -8,
+        -47, 8,
+        -47, -8
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-57, 39],
+      "length": 48,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-57, -39],
+      "length": 48,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    66, -6,
+    77, -10,
+    22, -27,
+    4, -41,
+    1, -54,
+    -12, -58,
+    -20, -47,
+    -55, -45,
+    -55, -33,
+    -68, -24,
+    -68, -16,
+    -58, -12,
+    -58, 12,
+    -68, 16,
+    -68, 24,
+    -55, 33,
+    -55, 45,
+    -20, 47,
+    -12, 58,
+    1, 54,
+    4, 41,
+    22, 27,
+    77, 10,
+    66, 6
+  ]
+}

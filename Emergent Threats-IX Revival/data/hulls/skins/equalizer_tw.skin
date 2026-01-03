@@ -11,7 +11,7 @@
 	"systemId":"ix_capacitors",
 	"tags":["no_autofit", "ix_trinity"],
 	"tech":"Trinity Worlds",
-	"removeHints":["HIDE_IN_CODEX"],
+	"removeHints":["CARRIER", "COMBAT", "NO_AUTO_ESCORT", "HIDE_IN_CODEX"],
 	"fighterBays":0,
 	"builtInMods":["tw_archaic_weapon_integration", "tw_trinity_retrofit", "tw_modernized_rangefinder"],
     "weaponSlotChanges":{

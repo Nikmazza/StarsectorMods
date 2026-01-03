@@ -29,12 +29,11 @@ public class jdp_flowerfishOurStrategicAdvantage extends SCBaseSkillPlugin {
 
     @Override
     public void addTooltip(SCData scData, TooltipMakerAPI tooltipMakerAPI) {
-        tooltipMakerAPI.addPara("Combat objectives are captured 2x faster and from 300 units further away", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-        tooltipMakerAPI.addPara("Each captured combat objective increases this bonus by 1 and 100 units respectively", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-        //tooltipMakerAPI.addPara("*Only applies to ships piloted by human officers", 0f, Misc.getGrayColor(), Misc.getHighlightColor());
+        tooltipMakerAPI.addPara("Combat objectives are captured 2x faster and can be captured from 300 units further away", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+        tooltipMakerAPI.addPara("   - Each captured combat objective increases this bonus by 1 and 100 units respectively", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "1", "100");
         tooltipMakerAPI.addSpacer(10f);
 
-        tooltipMakerAPI.addPara("\"The expertise of Maerula is our strategic advantage, and we intend to use it.\"", 0f, Misc.getTextColor(), Misc.getHighlightColor());
+        tooltipMakerAPI.addPara("\"The expertise of Maerula is our strategic advantage.\"", 0f, Misc.getTextColor(), Misc.getHighlightColor());
         tooltipMakerAPI.addPara("  -Flowerfish First Okonomi", 0f, jdp_AptitudeFlowerfish.JDP_FLOWERFISH_COLOUR, Misc.getHighlightColor());
         tooltipMakerAPI.addSpacer(10f);
     }

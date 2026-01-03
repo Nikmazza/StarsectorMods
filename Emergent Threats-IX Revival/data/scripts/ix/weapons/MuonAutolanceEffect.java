@@ -27,7 +27,7 @@ public class MuonAutolanceEffect implements BeamEffectPlugin {
 			
 			if (fireInterval.intervalElapsed()) {
 				Vector2f point = beam.getRayEndPrevFrame();
-				float emp = beam.getDamage().getFluxComponent() * 0.5f;
+				float emp = beam.getDamage().getFluxComponent() * 1f;
 				float dam = beam.getDamage().getDamage() * 0.5f;
 				engine.spawnEmpArc(beam.getSource(), point, beam.getDamageTarget(), beam.getDamageTarget(),DamageType.ENERGY, dam, emp, 100000f, "tachyon_lance_emp_impact", beam.getWidth(), beam.getFringeColor(), beam.getCoreColor());
 			}

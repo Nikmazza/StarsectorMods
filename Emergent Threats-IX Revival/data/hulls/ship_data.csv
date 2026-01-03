@@ -12,7 +12,6 @@ Hyperion,hyperion_ix_base,Advanced Gunship,High Tech,phaseteleporter,15,2500,250
 Iconoclast,iconoclast_ix_base,Light Carrier,High Tech,microburn,10,2500,350,5500,,300,55,2,55,40,40,30,60,250,FRONT,,360,0.4,0.6,,,25,35,30,40,2,20,9,45000,5,15,300,0.15,12,12,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT, HIDE_IN_CODEX",no_dealer,,0.4,2,2,,1339.1
 Intrepid,intrepid_ix_base,Battleship,High Tech,microburn,30,17000,1500,22000,,1250,340,,35,12,12,6,6,3500,FRONT,,180,0.24,0.8,,,400,1000,300,300,10,30,7,500000,4,20,720,0.25,50,50,,,,,,,HIDE_IN_CODEX,no_dealer,,0.6,2,4,,509.1
 Ionos,ionos_tw_base,Battlecruiser,High Tech,displacer_degraded,26,10000,1000,20000,,1000,260,,55,35,20,22,40,1600,OMNI,,220,0.5,0.8,,,450,500,150,300,15,20,8,575000,3,15,600,0.25,40,40,,,,,,,HIDE_IN_CODEX,no_dealer,,0.5,2,3,,401.2
-Iris,iris_ix_base,Destroyer,High Tech,flarelauncher_active,10,2500,350,5500,,300,60,,55,40,40,30,60,250,FRONT,,360,0.4,0.6,,,25,35,30,40,2,20,9,45000,5,15,300,0.15,10,10,,,,,,,HIDE_IN_CODEX,no_dealer,,0.4,2,2,,1339.9
 Mandrake,mandrake_ix_base,Destroyer,High Tech,displacer,9,3000,200,6000,,500,95,,100,80,60,35,60,300,OMNI,,180,0.4,0.8,,,35,50,50,40,2,20,9,55000,5,15,300,0.25,11,11,,,,,,,HIDE_IN_CODEX,no_dealer,,0.6,2,3,,301.9
 Maquech,maquech_ix_base,Escort Carrier,High Tech,ix_drone_pd,9,3500,175,2400,,100,45,2,45,25,20,15,7,400,OMNI,,150,0.4,0.8,,,75,120,150,40,2,20,9,35000,5,10,360,0.25,9,9,,,,,,,"HIDE_IN_CODEX, CARRIER",no_dealer,,0.6,2,3,,304.1
 Omen,omen_tw_base,Frigate,High Tech,ix_flux_shunt,7,750,125,2500,,200,45,,155,220,175,120,360,120,OMNI,,360,0.3,0.6,,,12,25,30,20,1,20,10,40000,10,20,180,0.25,7,7,,,,,,,HIDE_IN_CODEX,no_dealer,,0.5,2,2,,205.1
@@ -26,7 +25,7 @@ Iapetus,iapetus_tw_base,Tanker Battleship,Trinity Worlds,ix_capacitors,28,20000,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Ships,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Aurora (TW),aurora_tw,Flight Deck Cruiser,Trinity Worlds,plasmajets,17,8000,800,11000,,800,175,2,80,50,25,25,25,1800,OMNI,,180,0.5,0.6,,,75,200,150,90,3,30,8,240000,4,20,420,0.25,30,30,,,,,,,,"no_sell, no_dealer, no_autofit, codex_unlockable",,0.6,2,3,,405.1
-,aurora_undershield,Undershield,,ix_shield_vent,0,10,10,10000,,100,0,,0,0,0,0,0,1,FRONT,,360,0,1,,,0,0,0,0,0,0,,0,,0,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, module_unselectable, module_no_status_bar",,0,,,,220.2
+,aurora_undershield,Undershield,,ix_shield_vent_aurora,0,10,10,10000,,100,0,,0,0,0,0,0,1,FRONT,,360,0,1,,,0,0,0,0,0,0,,0,,0,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, module_unselectable, module_no_status_bar",,0,,,,220.2
 Candor (IX),candor_ix,Advanced Gunship,IX Battlegroup,microburn,11,2000,450,5000,,400,58,,120,180,120,60,120,280,FRONT,,300,0.5,0.6,,,15,30,20,20,1,20,10,70000,8,30,240,0.25,10,10,,,,,,,SHIP_WITH_MODULES,"ixbattlegroup, no_autofit",,0.5,2,2,,207.2
 ,ix_emp_emitter,Emitter,High Tech,emp,0,10,10,5000,,600,0,0,0,0,0,0,0,1,NONE,,0,0,0,,,0,0,0,0,0,0,,0,,0,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, module_unselectable, module_no_status_bar",,0,,,,207.3
 Firebird (A),firebird_ix,Fast Cruiser,IX Auxiliary,microburn,14,7000,1000,9000,,800,160,,70,60,50,25,25,1000,FRONT,,270,0.4,0.7,,,80,160,150,100,3,33,9,150000,4,15,420,0.25,25,25,,,,,,,SHIP_WITH_MODULES,"no_autofit, ix_auxiliary",,0.5,2,3,,400.1
@@ -35,7 +34,10 @@ Firebird (TW),firebird_tw,Fast Cruiser,Trinity Worlds,microburn,14,7000,1000,900
 Flourish,flourish_stock,Frigate,High Tech,plasmajets,6,1500,250,2100,,160,60,,150,135,110,75,100,180,OMNI,,160,0.5,0.6,,,25,50,30,20,1,20,10,20000,8,15,240,0.25,6,6,,,,,,,SHIP_WITH_MODULES,"hightech_bp, rare_bp, merc, ind, tritachyon",,0.4,2,2,,220.1
 Flourish (IX),flourish_ix,Frigate,IX Battlegroup,plasmajets,7,1500,250,2100,,160,63,,150,135,110,75,100,180,OMNI,,160,0.5,0.6,,,25,50,30,20,1,20,10,30000,8,15,240,0.25,6,6,,,,,,,SHIP_WITH_MODULES,ixbattlegroup,,0.4,2,2,,220.1
 Flourish (TW),flourish_tw,Frigate,Trinity Worlds,plasmajets,6,1500,250,2100,,160,60,,150,135,110,75,100,180,OMNI,,160,0.5,0.6,,,25,50,30,20,1,20,10,20000,8,15,240,0.25,6,6,,,,,,,SHIP_WITH_MODULES,ix_trinity,,0.4,2,2,,220.1
-,flourish_undershield,Undershield,,ix_shield_vent_flourish,0,10,10,2400,,100,0,,0,0,0,0,0,1,FRONT,,160,0,1,,,0,0,0,0,0,0,,0,,0,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, module_unselectable, module_no_status_bar",,0,,,,220.2
+,flourish_undershield,Undershield,,ix_shield_vent_flourish,0,10,10,2500,,100,0,,0,0,0,0,0,1,FRONT,,160,0,1,,,0,0,0,0,0,0,,0,,0,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, module_unselectable, module_no_status_bar",,0,,,,220.2
+Iris,iris_ix,Destroyer,High Tech,ix_flux_shunt,11,2500,350,5500,,300,65,,55,40,40,30,60,250,FRONT,,360,0.4,0.6,,,25,35,30,40,2,20,9,60000,5,15,300,0.15,10,10,,,,,,,SHIP_WITH_MODULES,"ixbattlegroup, no_autofit",,0.4,2,2,,1339.9
+Iris,iris_tw,Destroyer,High Tech,ix_flux_shunt,10,2500,350,5500,,300,60,,55,40,40,30,60,250,FRONT,,360,0.4,0.6,,,25,35,30,40,2,20,9,45000,5,15,300,0.15,10,10,,,,,,,SHIP_WITH_MODULES,"ix_trinity, no_autofit",,0.4,2,2,,1339.9
+,iris_undershield,Undershield,,ix_shield_vent_iris,0,10,10,5000,,100,0,,0,0,0,0,0,1,FRONT,,360,0,1,,,0,0,0,0,0,0,,0,,0,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","no_autofit, module_unselectable, module_no_status_bar",,0,,,,220.2
 Odyssey (IX),odyssey_ix,Battlecruiser,IX Battlegroup,microburn,30,10000,1000,15000,,1000,290,,70,50,40,8,12,2500,OMNI,,180,0.25,1.0,,,400,800,400,450,8,56,8,500000,4,20,600,0.25,45,45,,,,,,,SHIP_WITH_MODULES,"ixbattlegroup, ix_core_bp, no_autofit",,0.6,2,4,,505.1
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Fighters,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

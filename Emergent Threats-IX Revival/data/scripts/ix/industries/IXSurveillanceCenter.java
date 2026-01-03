@@ -18,10 +18,12 @@ import com.fs.starfarer.api.util.Misc;
 public class IXSurveillanceCenter extends BaseIndustry {
 
 	private static int STABILITY_BONUS = 2;
+	private static int STABILITY_BONUS_CORE = 3;
 	private static String IX_FAC_ID = "ix_battlegroup";
 	private static String HG_FAC_ID = "ix_core";
 	private static String TW_FAC_ID = "ix_trinity";
-	private static String IX_PLAYER_CORE_ID = "ix_panopticon_instance";
+	private static String IX_PLAYER_CORE_ID = "ix_panopticon_core";
+	private static String IX_PLAYER_INSTANCE_ID = "ix_panopticon_instance";
 	private static String MONITORED_VERTEX = "ix_monitored";
 	private static String MONITORED_PLAYER = "ix_monitored_player";
 	private static String ACADEMY_ID = "tw_cloudburst_academy";
@@ -62,6 +64,11 @@ public class IXSurveillanceCenter extends BaseIndustry {
 	
 	private boolean isInstanceInstalled() {
 		if (market.getIndustry(id) == null) return false;
+		return IX_PLAYER_INSTANCE_ID.equals(market.getIndustry(id).getAICoreId());
+	}
+
+	private boolean isPanCoreInstalled() {
+		if (market.getIndustry(id) == null) return false;
 		return IX_PLAYER_CORE_ID.equals(market.getIndustry(id).getAICoreId());
 	}
 	
@@ -74,7 +81,7 @@ public class IXSurveillanceCenter extends BaseIndustry {
 		}
 		else return false;
 	}
-
+	
 	@Override
 	public float getPatherInterest() {
 		if (market.hasIndustry("BOGGLED_CHAMELEON")	
@@ -104,18 +111,20 @@ public class IXSurveillanceCenter extends BaseIndustry {
 	public void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
 		if (mode != IndustryTooltipMode.NORMAL || isFunctional()) {
 			float opad = 10f;
+			int bonus = isPanCoreInstalled() ? STABILITY_BONUS_CORE: STABILITY_BONUS;
 			if (isInstanceInstalled()) tooltip.addPara("Projecting %s across system", opad, Misc.getHighlightColor(), "Panopticon Monitoring");
 			else {
 				tooltip.addPara("Eliminates Pather cells", opad);
-				tooltip.addPara("Stability bonus: %s", opad, Misc.getHighlightColor(), "+" + STABILITY_BONUS);
-				tooltip.addPara("Can install a %s", opad, Misc.getHighlightColor(), "Panopticon Instance");
+				tooltip.addPara("Stability bonus: %s", opad, Misc.getHighlightColor(), "+" + bonus);
+				tooltip.addPara("Can install a %s or %s", opad, Misc.getHighlightColor(), "Panopticon Core", "Panopticon Instance");
 			}
 		}
 	}
 	
 	@Override
 	protected int getBaseStabilityMod() {
-		if (!market.hasCondition(MONITORED_PLAYER) && !market.hasCondition(MONITORED_VERTEX)) return STABILITY_BONUS;
+		int bonus = isPanCoreInstalled() ? STABILITY_BONUS_CORE: STABILITY_BONUS;
+		if (!market.hasCondition(MONITORED_PLAYER) && !market.hasCondition(MONITORED_VERTEX)) return bonus;
 		else return 0;
 	}
 	
@@ -143,9 +152,10 @@ public class IXSurveillanceCenter extends BaseIndustry {
 		boolean alpha = aiCoreId.equals(Commodities.ALPHA_CORE); 
 		boolean beta = aiCoreId.equals(Commodities.BETA_CORE); 
 		boolean gamma = aiCoreId.equals(Commodities.GAMMA_CORE);
-		boolean instance = aiCoreId.equals(IX_PLAYER_CORE_ID); 
+		boolean core = aiCoreId.equals(IX_PLAYER_CORE_ID);
+		boolean instance = aiCoreId.equals(IX_PLAYER_INSTANCE_ID); 
 		if (alpha || instance) applyAlphaCoreModifiers();
-		else if (beta) applyBetaCoreModifiers();
+		else if (beta || core) applyBetaCoreModifiers();
 		else if (gamma) applyGammaCoreModifiers();
 	}
 	
@@ -156,16 +166,23 @@ public class IXSurveillanceCenter extends BaseIndustry {
 	}
 	
 	@Override
+	protected void applyBetaCoreModifiers() {
+		String coreId = isPanCoreInstalled() ? "Panopticon core" : "Beta core";
+		demandReduction.modifyFlat(getModId(0), DEMAND_REDUCTION, coreId);
+	}
+	
+	@Override
 	protected void updateAICoreToSupplyAndDemandModifiers() {
 		if (aiCoreId == null) return;
 		
 		boolean alpha = aiCoreId.equals(Commodities.ALPHA_CORE); 
 		boolean beta = aiCoreId.equals(Commodities.BETA_CORE); 
 		boolean gamma = aiCoreId.equals(Commodities.GAMMA_CORE);
-		boolean instance = aiCoreId.equals(IX_PLAYER_CORE_ID);
+		boolean core = aiCoreId.equals(IX_PLAYER_CORE_ID);
+		boolean instance = aiCoreId.equals(IX_PLAYER_INSTANCE_ID);
 		
 		if (alpha || instance) applyAlphaCoreSupplyAndDemandModifiers();
-		else if (beta) applyBetaCoreSupplyAndDemandModifiers();
+		else if (beta || core) applyBetaCoreSupplyAndDemandModifiers();
 		else if (gamma) applyGammaCoreSupplyAndDemandModifiers();
 	}
 	
@@ -186,13 +203,46 @@ public class IXSurveillanceCenter extends BaseIndustry {
 		boolean alpha = coreId.equals(Commodities.ALPHA_CORE); 
 		boolean beta = coreId.equals(Commodities.BETA_CORE); 
 		boolean gamma = coreId.equals(Commodities.GAMMA_CORE);
-		boolean instance = coreId.equals(IX_PLAYER_CORE_ID);
+		boolean core = coreId.equals(IX_PLAYER_CORE_ID);
+		boolean instance = coreId.equals(IX_PLAYER_INSTANCE_ID);
 		
 		if (alpha) addAlphaCoreDescription(tooltip, mode);
 		else if (beta) addBetaCoreDescription(tooltip, mode);
 		else if (gamma)	addGammaCoreDescription(tooltip, mode);
+		else if (core) addPanopticonCoreDescription(tooltip, mode);
 		else if (instance) addInstanceDescription(tooltip, mode);
 		else addUnknownCoreDescription(coreId, tooltip, mode);
+	}
+	
+	protected void addPanopticonCoreDescription(TooltipMakerAPI tooltip, AICoreDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		String pre = "Panopticon Core currently assigned. ";
+		if (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+			pre = "Panopticon Core. ";
+		}
+		
+		String monitor = "Panopticon Monitoring";
+		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+			CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(aiCoreId);
+			TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);
+			text.addPara(pre + "Reduces upkeep cost by %s, demand by %s unit. " +
+					"Stability bonus improved to %s if colony is not under active %s", 0f, highlight,
+					"" + (int)((1f - UPKEEP_MULT) * 100f) + "%",
+					"" + DEMAND_REDUCTION,
+					"" + STABILITY_BONUS_CORE,
+					monitor);
+			tooltip.addImageWithText(opad);
+			return;
+		}
+		
+		tooltip.addPara(pre + "Reduces upkeep cost by %s, demand by %s unit. " +
+				"Stability bonus improved to %s if colony is not under active %s", opad, highlight,
+				"" + (int)((1f - UPKEEP_MULT) * 100f) + "%",
+				"" + DEMAND_REDUCTION,
+				"" + STABILITY_BONUS_CORE,
+				monitor);
 	}
 	
 	protected void addInstanceDescription(TooltipMakerAPI tooltip, AICoreDescriptionMode mode) {

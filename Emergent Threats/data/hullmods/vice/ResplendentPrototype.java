@@ -4,6 +4,7 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 
 public class ResplendentPrototype extends BaseHullMod {
 	
@@ -40,13 +41,28 @@ public class ResplendentPrototype extends BaseHullMod {
 		
 		stats.getMaxCrewMod().modifyMult(id, 1f -MAX_CREW_MULT);
 		
-		if (stats.getVariant().getNonBuiltInHullmods().contains(GRAV_HULLMOD)) {
-			stats.getVariant().getHullSpec().setShipSystemId(GRAV_SYSTEM);
+		ShipVariantAPI variant = stats.getVariant();
+		
+		if (variant.getNonBuiltInHullmods().contains(GRAV_HULLMOD)) {
+			variant.getHullSpec().setShipSystemId(GRAV_SYSTEM);
 		}
-		else if (stats.getVariant().getNonBuiltInHullmods().contains(AFC_HULLMOD)) {
-			stats.getVariant().getHullSpec().setShipSystemId(AFC_SYSTEM);
+		else if (variant.getNonBuiltInHullmods().contains(AFC_HULLMOD)) {
+			variant.getHullSpec().setShipSystemId(AFC_SYSTEM);
 		}
-		else stats.getVariant().getHullSpec().setShipSystemId(BASE_SYSTEM);
+		else variant.getHullSpec().setShipSystemId(BASE_SYSTEM);
+		
+		if (variant.getModuleVariant("SM 1") == null || variant.getModuleVariant("SM 2") == null) return;
+		ShipVariantAPI module1 = variant.getModuleVariant("SM 1");
+		ShipVariantAPI module2 = variant.getModuleVariant("SM 2");
+		
+		if (variant.hasHullMod("defensive_targeting_array")) {
+			module1.addMod("defensive_targeting_array");
+			module2.addMod("defensive_targeting_array");
+		}
+		else {
+			module1.removeMod("defensive_targeting_array");
+			module2.removeMod("defensive_targeting_array");
+		}
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {

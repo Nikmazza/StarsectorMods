@@ -151,6 +151,24 @@ jdp_lamp,SHIP,"A minituarized, variable-output fusion reactor capable of providi
 Valued customer, excessive radiative output has been detected from this Fabrique Orbitale Plasma Dynamo (tm), likely due to operator error. 
 
 If available, please consult your Fabrique Orbitale Orbital Fusion Lamp Non-AI Classified Expert System Manual Agent (tm) or the local administrator for guidance. We apologize for any inconvenience caused.",,,,
+jdp_conduit,SHIP,"Affectionately referred to as a ‘Pocket Astral’ by some and decidedly less so as an ‘overcomplicated flying tube’ by others, the Conduit is a capable but often maligned high-tech carrier developed and subsequently abandoned by the Tri-Tachyon Corporation.
+
+Despite the respectable weapons profile and strike potential of its fighter wing, the Conduit found its way to market to a resounding shrug. Expensive and hard to maintain, lacking in significant upsides when compared against its contemporaries and ill-suited to fit within Tri-Tachyon doctrine, the Conduit program was discontinued shortly before the Collapse and all existing hulls sold to private military contractors. 
+
+Experimental and in some ways innovative, the unique characteristic of the Conduit is its throughdeck. As phrased in many an internal Tri-Tachyon adholo, this revolutionary new approach to flightdeck operations allows for unrivalled efficiency during fighter rearming. Independent mercenary captains uninvited to Tri-Tachyon procurement meetings often find the space sacrificed for this efficiency to be more than it is worth. 
+
+Critics and defenders alike both suggest that the new approach was an unfortunately poor fit for a vessel of its size, demanding roughly 80% of the ships volume for middling returns. Larger carriers would in theory benefit far more from the increased efficiency and the novel approach was predicted to become mainstream within a design cycle. This prediction never came to pass as the Collapse stunted most design programs.",,,,
+jdp_tripathia,SHIP,"IDENTIFICATION ERROR: Target matches no known class of ship in the Domain registry or historical reference. Submit data for temporary entry? Processing…
+
+Hull of unknown design discovered in low Kalafina orbit, markings and logs indicate this design was employed by the Kalafina Larme, naval arm of a local insurgency. Clearly divergent from common design practices, this hull employs many technologies considered antiquated by modern standards, but also many innovations clearly lost to history. (ENGINEERING Off. NOTE: It’s a miracle weapons fit in the mounts.)
+
+The Tripathia is surprisingly mobile for a vessel of its size, possessing numerous highly powered fusion vector thrusters for manoeuvring and an entire redundant main drive array built into the bow.
+
+Displaying an unusually low reliance on grav plating, the decks of the Tripathia are arranged vertically (TECHNOLOGY Off. NOTE: like the floors of an arcology!) to simulate gravity through thrust from the triply redundant main drives. ENGINEERING Off. NOTE: Only suitable during sustained burns, necessitates spinning up the main centrifuge hab when in stationary orbit or combat.
+
+An unfortunate flaw is revealed by studying the demise of the Acrisius, analysis indicates a single ultra-kinetic slug succeeded in penetrating all 65 decks during the ships final engagement, venting the entire ship of atmosphere and dooming the crew to a slow, agonising death in the cold embrace of the vacuum (TECHNOLOGY Off. NOTE: This is a report not a holo-drama take all this out).
+
+The interior is unerringly opulent, implying a level of pride in military service from the Kalafinan sub-culture unseen even among the Hegemony. Logs indicate numerous shibboleths and military rituals were performed daily, recovered uniforms prioritise style over practicality. A truly bizarre feature is a large pillar of arboreal matter placed at the centre of the CIC, internal surveillance footage indicates the Captain of the vessel lead from this post, standing beside it for hours at a time.",,,,
 ,,,,,,
 //Systems,,,,,,
 jdp_banisher,SHIP_SYSTEM,"Provides a brief but extreme boost to top speed, manoeuvrability and the turn rate of turrets.",Movement/Offensive,Provides a brief but extreme boost to top speed and maneuverability. Increases turn rate of turrets.,,
@@ -170,6 +188,7 @@ jdp_phaseorion,SHIP_SYSTEM,"Deploys a shaped antimatter charge behind the ship. 
 jdp_dualorion,SHIP_SYSTEM,"A late iteration and more flexible dual orion device system, can independently deploy shaped antimatter charges from each side to aid in mobility. The explosions apply force to the twin angled pusher-plates, which absorb the shock and spread the resulting acceleration over a timeframe where it can be handled by the ship's inertial compensators. The ship can be briefly accelerated forward with an activation of both devices simultaneously, or used independently to aid in turning.",Movement,"Explodes shaped antimatter charges behind the ship, propelling it forwards or to the side at extreme speeds.",,
 jdp_loaderoverdrive,SHIP_SYSTEM,"Disables all safeties on the ships ballistic autoloaders, allowing the feed mechanism to rapidly insert new ammunition at an increasing rate as it spins up beyond normal limits. This technique is highly dangerous and is prone to causing jams – or worse – within the feed mechanism, as rate of fire increases so too does the risk of non-critical weapon malfunction.",Offensive,Provides a flux cost reduction and an increasing boost to the rate of fire of all ballistic weapons at the cost of an increasing risk of malfunction.,,Increases ballistic weapon rate of fire by an increasing uncapped amount. The risk of weapon malfunction also increases at a slower scaling.
 jdp_unstableburn,SHIP_SYSTEM,"Temporarily engages an unstable primary burn on the system travel drive of the ship, causing the antimatter injectors to emit bouts of flame. Provides a massive speed boost for a fixed time at the expense of being able to use shields. The unbalanced nature of the ship causes it to list slightly during the burn.",Movement,Provides a massive speed boost and causes the engines to release bouts of flame at the expense of being unable to turn or use shields. The unbalanced nature of the ship causes it to list slightly during the burn.,,The ship's top speed is increased by {{200}}. Antimatter injectors deal high DPS and cause a damage over time effect on direct hull hit.
+jdp_pdmissile,SHIP_SYSTEM,Launches four interceptor torpedoes that will seek and destroy incoming missiles.,Defensive,Launches four interceptor torpedoes that will seek and destroy incoming missiles.,,
 ,,,,,,
 //Items,,,,,,
 jdp_omega_core,RESOURCE,"The ultimate prize, a shape that breaks the mind to perceive, the physical form of an Omega-level AI core. From our short-lived and garbled conversations with the intelligence stored within, it is but a *finger* of its influence, and likely is not even physically in this dimension.
@@ -199,6 +218,11 @@ The Salamander missile is a specialized weapon with two design considerations. T
 
 The second is a special warhead design which, instead of attempting to destroy the target with kinetic or explosive force, generates targeted electromagnetic fields of high magnitude. When such a field is created in the proximity of unshielded engines and hull components, it will quickly knock out all their electronics, rendering them useless until repaired.",,,,
 jdp_tyrantseye,WEAPON,"""My pleasure, Captain. Tyrant's Eye, activate! Opening field. Confinement ring stable. Acknowledged command. Sing my cherubim, and rend reality before us...""", - Unknown crewmember of the TTS Tyrant,,,
+jdp_icebreaker,WEAPON,"More a force multiplier than a direct weapon, the Icebreaker fires a spool of info-wire capable of forcibly interfacing with enemy systems. Once a connection is established, a dedicated sub-gamma AI core can leverage this cyberwarfare vector to effectively dismantle targeting and engine control systems.
+
+The official corporate line regading the Icebreaker is that it is a maintenance tool, capable of interfacing with and forcibly disabling malfunctioning machinery. This is unconvincing, especially given its efficacy in combat, but no investigation into corporate militarisation was launched pre-Collpase. 
+
+That Fabrique Orbitale of all corporate entities was capable of manufacturing a weapon this sophisticated is as puzzling as it is unnerving.",,,,
 ,,,,,,
 //Wings,,,,,,
 jdp_trident,SHIP,"Equipped with an ultra advanced Dragonfire DEM, dual Gazer DEM SRM and a top-notch shield generator, this retrofit of the Trident, ubiquitous within the Persean League, is perhaps the most feared of all bombers. Its effectiveness is somewhat limited by its low top speed, demanding logistical profile and single squadron size.",,,,
@@ -206,6 +230,10 @@ jdp_pup,SHIP,"The upper limit of internal parasite craft, the Pup is less a figh
 jdp_vertex,SHIP,"A retrofit of a standard surveying drone for combat, the Vertex is limited in its effectiveness and only really useful as a screen for more important vessels. The signature EMP Arc emitter derived from overcharged instruments is in theory powerful, but the limited range makes it unlikely to hit targets. ",,,,
 jdp_keep,SHIP,"Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of officially incorporated volume. An uncommon sight, the Keep is a large parasite craft assigned to the Explorarium, bringing balanced heavy weapons support in a relatively small and durable package.",,,,
 jdp_barbican,SHIP,"Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of officially incorporated volume. An uncommon sight, the Barbican is a bomber assigned to the Explorarium, supporting the lumbering automated fleet by disabling the engines of enemy vessels who would otherwise outmanoeuvre them with ease.",,,,
+jdp_relay,SHIP,"Functionally a self-contained spy-satellite and communications repeater, this sophisticated drone can be clandestinely launched from shuttle bays and linger undetected for cycles. Now knowing to look, sensors has already logged hundreds of silent orbits around points of strategic interest to the Flowerfish Network. 
+
+The combat applications of sharing targeting data are readily apparent, but hardwired transmitter access to a powerful targeting core is a golden balance between computational power and size usually only found on cruisers.
+",,,,
 ,,,,,,
 //Entities,,,,,,
 jdp_missile,CUSTOM,"A reconstructed Domain-Era DISPP-974C Interfector, an Intrasector Phase-Capable Planetkiller Launch Vehicle. 
@@ -243,7 +271,7 @@ jdp_erratic_lamp,CUSTOM,"A Domain-era orbital fusion lamp, capable of providing 
 
 Valued customer, excessive radiative output has been detected from this Fabrique Orbitale Plasma Dynamo (tm), likely due to operator error. 
 
-If available, please consult your Fabrique Orbitale Orbital Fusion Lamp Non-AI Classified Expert System Manual Agent (tm) or for the local administrator guidance. We apologize for any inconvenience caused.",,,,
+If available, please consult your Fabrique Orbitale Orbital Fusion Lamp Non-AI Classified Expert System Manual Agent (tm) or the local administrator for guidance. We apologize for any inconvenience caused.",,,,
 ,,,,,,
 //Planets,,,,,,
 jdp_red_pulsar,PLANET,"This is a star that lived, died in nova, and now lives again, bleeding intense nuclear fire. The unnerving red colouration is yet to be conclusively explained by modern astrophysics and so superstition and speculation abounds.",,,,

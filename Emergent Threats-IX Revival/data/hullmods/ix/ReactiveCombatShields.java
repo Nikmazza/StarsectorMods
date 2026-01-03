@@ -19,11 +19,16 @@ public class ReactiveCombatShields extends BaseHullMod {
 	private static float EMP_RESIST = 50f;
 	private static float FLUX_THRESHOLD = 60f;
 	private static float FLUX_THRESHOLD_SMOD = 50f;
+	private static float INTERDICTOR_THRESHOLD_BONUS = 10f;
+	
 	private static float SHIELD_EFFICIENCY_THRESHOLD = 0.6f;
 	private static Color SHIELD_INNER_COLOR_ACTIVE = new Color(100,225,100,75);
 	private static Color SHIELD_INNER_LOW_TECH = new Color(255,125,125,75);
 	private static Color SHIELD_INNER_HIGH_TECH = new Color(125,125,255,75);
 	
+	private static String INTERDICTOR_IX_MOD = "ix_interdiction_array";
+	private static String INTERDICTOR_EX_MOD = "vice_interdiction_array";
+	private static String INTERDICTOR = "Interdictor Array";
 	private static String EQUALIZER_MOD = "ix_entropy_arrestor";
 	private static String CONFLICT_MOD = "hardenedshieldemitter";
 	private static String THIS_MOD = "ix_reactive_combat_shields";
@@ -43,8 +48,11 @@ public class ReactiveCombatShields extends BaseHullMod {
     public void advanceInCombat(ShipAPI ship, float amount) {
         if (!ship.isAlive() || ship.getShield() == null) return;
 		float threshold = isSMod(ship.getMutableStats()) ? FLUX_THRESHOLD_SMOD : FLUX_THRESHOLD;
-		boolean isActive = ship.getMutableStats().getShieldDamageTakenMult().getMultStatMod(THIS_MOD) != null; 
-		if (!isActive && (getShieldEfficiency(ship) <= SHIELD_EFFICIENCY_THRESHOLD)) return;
+		if (isInterdictor(ship)) threshold -= INTERDICTOR_THRESHOLD_BONUS;
+		boolean isActive = ship.getMutableStats().getShieldDamageTakenMult().getMultStatMod(THIS_MOD) != null;
+		float eLimit = SHIELD_EFFICIENCY_THRESHOLD;
+		if (isInterdictor(ship)) eLimit = 0.0f;
+		if (!isActive && (getShieldEfficiency(ship) <= eLimit)) return;
 		else if (ship.getFluxLevel() >= threshold * 0.01f) {
 			float damageReduction = isSynthesisActive(ship) ? DAMAGE_REDUCTION_SYNTHESIS : DAMAGE_REDUCTION;
 			ship.getShield().setInnerColor(SHIELD_INNER_COLOR_ACTIVE);
@@ -63,6 +71,7 @@ public class ReactiveCombatShields extends BaseHullMod {
 	@Override
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
 		if (ship == null || ship.getShield() == null) return;
+		if (isInterdictor(ship)) return;
 		float e = getShieldEfficiency(ship);
 		if (e <= SHIELD_EFFICIENCY_THRESHOLD) {
 			//if second decimal onward of shieldEfficiency is 0 (ie 0.6000...), display only 1 decimal
@@ -70,6 +79,10 @@ public class ReactiveCombatShields extends BaseHullMod {
 			String s = "Warning: " + shieldEfficiency + " shield efficiency exceeds activation limit.";
 			tooltip.addPara("%s", 10f, Misc.getNegativeHighlightColor(), s);
 		}
+	}
+	
+	private boolean isInterdictor(ShipAPI ship) {
+		return ship.getVariant().hasHullMod(INTERDICTOR_IX_MOD) || ship.getVariant().hasHullMod(INTERDICTOR_EX_MOD);
 	}
 	
 	//player fleet uses memflag checker, NPC fleets use hullmod checker which is always removed in player fleets
@@ -96,6 +109,7 @@ public class ReactiveCombatShields extends BaseHullMod {
     public boolean isApplicableToShip(ShipAPI ship) {
 		if (ship.getShield() == null) return false;
 		if (ship.getVariant().getHullMods().contains(EQUALIZER_MOD)) return false;
+		if (ship.getVariant().hasHullMod(INTERDICTOR_IX_MOD) || ship.getVariant().hasHullMod(INTERDICTOR_EX_MOD)) return true;
 		return (!ship.getVariant().getHullMods().contains(CONFLICT_MOD));
 	}
 	
@@ -113,6 +127,8 @@ public class ReactiveCombatShields extends BaseHullMod {
 		if (index == 0) return s;
 		if (index == 1) return "" + (int) FLUX_THRESHOLD + "%";
 		if (index == 2) return "" + SHIELD_EFFICIENCY_THRESHOLD;
+		if (index == 3) return INTERDICTOR;
+		if (index == 4) return "" + (int) INTERDICTOR_THRESHOLD_BONUS + "%";
 		return null;
 	}
 	

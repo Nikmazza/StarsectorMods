@@ -19,6 +19,10 @@ object SA_settings {
     lateinit var currentVersion: String
 
     @JvmStatic
+    var SOTF_enabled = false
+    @JvmStatic
+    var ASAS_enabled = false
+    @JvmStatic
     var MCTE_enabled = false
     @JvmStatic
     var AITweaksEnabled = false
@@ -37,11 +41,14 @@ object SA_settings {
     var ALLOW_MODIFY_OF_ALL_STATIONS = false
     @JvmStatic
     var BASE_STATION_AUGMENT_BUDGET = 20f
+    @JvmStatic
+    var ALLOW_FP_RATIO_VIEWING = false
 
     fun loadSettings() {
         ALLOW_MODIFY_OF_ALL_STATIONS = LunaSettings.getBoolean(modId, "SA_allowAlwaysModifyAugments")!!
         BASE_STATION_AUGMENT_BUDGET = LunaSettings.getFloat(modId, "SA_baseStationAugmentBudget")!!
         AUTOFIT_ENABLED = LunaSettings.getBoolean(modId, "SA_autofitEnabled")!!
+        ALLOW_FP_RATIO_VIEWING = LunaSettings.getBoolean(modId, "SA_allowFPRatioViewing")!!
     }
 
     fun applyPredefinedAugments() {
@@ -71,7 +78,6 @@ object SA_settings {
                 augment.considerReqItem = false
                 market.addStationAugment(augment)
                 augment.considerReqItem = true
-                market.memoryWithoutUpdate[SA_ids.SA_noAugmentAutofit] = true
             }
         }
         IS_APPLYING_PREDEFINED_AUGMENTS = false

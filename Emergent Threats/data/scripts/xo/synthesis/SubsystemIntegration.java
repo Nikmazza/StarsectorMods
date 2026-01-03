@@ -1,17 +1,23 @@
 package data.scripts.xo.synthesis;
 
+import java.util.Collection;
+import java.util.List;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CharacterDataAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import second_in_command.SCData;
 import second_in_command.specs.SCBaseSkillPlugin;
 
-import data.scripts.vice.listeners.EnemyEncounterListener;
 import data.scripts.vice.util.RemnantSubsystemsUtil;
 
 public class SubsystemIntegration extends SCBaseSkillPlugin {
@@ -56,5 +62,33 @@ public class SubsystemIntegration extends SCBaseSkillPlugin {
 	@Override
 	public void onDeactivation(SCData data) {
 		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_synthesis_is_active", false);
+		
+		//delete invalid adaptive hullmods after Synthesis officer is removed
+		if (Global.getSector() == null || Global.getSector().getPlayerFleet() == null) return;
+		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
+		List<FleetMemberAPI> fleetList = fleet.getMembersWithFightersCopy();
+		List<MarketAPI> marketList = Global.getSector().getEconomy().getMarketsCopy();
+		for (MarketAPI market : marketList) {
+			if (market.getSubmarket(Submarkets.SUBMARKET_STORAGE) != null) {
+				CargoAPI storage = market.getSubmarket(Submarkets.SUBMARKET_STORAGE).getCargo();
+				List<FleetMemberAPI> storageList = storage.getMothballedShips().getMembersListCopy();
+				if (!storageList.isEmpty()) {
+					for (FleetMemberAPI ship : storageList) fleetList.add(ship);
+				}
+			}
+		}
+		
+		for (FleetMemberAPI member : fleetList) {
+			String modToDelete = null;
+			Collection<String> modList = member.getVariant().getNonBuiltInHullmods();
+			for (String mod : modList) {
+				if (mod.startsWith("vice_adaptive") && !util.isApplicable(member.getVariant())) {
+					if (mod.equals("vice_adaptive_entropy_projector_abyssal")) continue;
+					modToDelete = mod;
+				}
+			}
+			if (modToDelete != null) member.getVariant().removeMod(modToDelete);
+		}
+		// **/
 	}
 }

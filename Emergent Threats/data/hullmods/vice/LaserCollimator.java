@@ -17,10 +17,10 @@ public class LaserCollimator extends BaseHullMod {
 
 	private static Map mag = new HashMap();
 	static {
-		mag.put(HullSize.FRIGATE, 40f);
-		mag.put(HullSize.DESTROYER, 80f);
-		mag.put(HullSize.CRUISER, 120f);
-		mag.put(HullSize.CAPITAL_SHIP, 200f);
+		mag.put(HullSize.FRIGATE, 30f);
+		mag.put(HullSize.DESTROYER, 60f);
+		mag.put(HullSize.CRUISER, 90f);
+		mag.put(HullSize.CAPITAL_SHIP, 150f);
 	}
 	
 	public static Map sMag = new HashMap();
@@ -34,9 +34,14 @@ public class LaserCollimator extends BaseHullMod {
 	private static String WEAPON_S_NAME = "Tactical Lasers";
 	private static String WEAPON_M_NAME = "Twin Tactical Lasers";
 	private static String WEAPON_L_NAME = "High Intensity Lasers";
+	private static String WEAPON_TB_NAME = "Tactical Burst Lasers";
+	private static String WEAPON_SB_NAME = "Siege Burst Lasers";
+	
 	private static String WEAPON_S_ID = "taclaser";
 	private static String WEAPON_M_ID = "vice_twin_tactical_laser";
 	private static String WEAPON_L_ID = "hil";
+	private static String WEAPON_TB_ID = "vice_lrburstpd";
+	private static String WEAPON_SB_ID = "vice_siege_burst";
 	
 	private static String CONFLICT_MOD_1 = "advancedoptics";
 	private static String CONFLICT_MOD_2 = "high_scatter_amp";
@@ -74,7 +79,9 @@ public class LaserCollimator extends BaseHullMod {
 				String weaponId = beam.getWeapon().getSpec().getWeaponId();
 				if (weaponId.equals(WEAPON_S_ID) 
 						|| weaponId.equals(WEAPON_M_ID) 
-						|| weaponId.equals(WEAPON_L_ID)) damage.setForceHardFlux(true);
+						|| weaponId.equals(WEAPON_L_ID)
+						|| weaponId.equals(WEAPON_TB_ID)
+						|| weaponId.equals(WEAPON_SB_ID)) damage.setForceHardFlux(true);
 			}
 			return null;
 		}
@@ -98,21 +105,25 @@ public class LaserCollimator extends BaseHullMod {
 	}	
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
+		String s = "" + ((Float) mag.get(HullSize.FRIGATE)).intValue() 
+					+ "/" + ((Float) mag.get(HullSize.DESTROYER)).intValue()
+					+ "/" + ((Float) mag.get(HullSize.CRUISER)).intValue()
+					+ "/" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();
 		if (index == 0) return WEAPON_S_NAME;
 		if (index == 1) return WEAPON_M_NAME;
 		if (index == 2) return WEAPON_L_NAME;
-		if (index == 3) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue();
-		if (index == 4) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue();
-		if (index == 5) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue();
-		if (index == 6) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();
+		if (index == 3) return WEAPON_TB_NAME;
+		if (index == 4) return WEAPON_SB_NAME;
+		if (index == 5) return s;
 		return null;
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + ((Float) sMag.get(HullSize.FRIGATE)).intValue();
-		if (index == 1) return "" + ((Float) sMag.get(HullSize.DESTROYER)).intValue();
-		if (index == 2) return "" + ((Float) sMag.get(HullSize.CRUISER)).intValue();
-		if (index == 3) return "" + ((Float) sMag.get(HullSize.CAPITAL_SHIP)).intValue();
+		String s = "" + ((Float) sMag.get(HullSize.FRIGATE)).intValue() 
+					+ "/" + ((Float) sMag.get(HullSize.DESTROYER)).intValue()
+					+ "/" + ((Float) sMag.get(HullSize.CRUISER)).intValue()
+					+ "/" + ((Float) sMag.get(HullSize.CAPITAL_SHIP)).intValue();
+		if (index == 0) return s;
 		return null;
 	}
 }

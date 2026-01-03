@@ -22,7 +22,7 @@ public void apply(String id) {
 	super.apply(id);
 	DEMAND = market.getSize();
 
-	market.getHazard().modifyFlat(id, HAZARD / 100, condition.getName());
+	market.getHazard().modifyFlat(id, (HAZARD / 100f), condition.getName());
 
 	Industry military = null;
 	Industry population = null;

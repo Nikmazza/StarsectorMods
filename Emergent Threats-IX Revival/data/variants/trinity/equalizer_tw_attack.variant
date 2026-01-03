@@ -1,16 +1,16 @@
 {
     "displayName": "Artillery",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 13,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "equalizer_tw",
     "hullMods": [
-        "tw_equalizer_discount_60",
         "tw_drone_control_node",
         "targetingunit",
         "ix_reactive_combat_shields",
         "frontemitter",
-        "stabilizedshieldemitter"
+        "stabilizedshieldemitter",
+        "tw_equalizer_discount_60"
     ],
     "permaMods": [],
     "sMods": [],
@@ -20,10 +20,10 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "arrester_tw",
-                "WS 002": "arrester_tw",
-                "WS 003": "abolisher_tw",
-                "WS 004": "abolisher_tw"
+                "WS 001": "stormwall_tw",
+                "WS 002": "stormwall_tw",
+                "WS 003": "arrester_tw",
+                "WS 004": "arrester_tw"
             }
         },
         {

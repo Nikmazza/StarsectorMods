@@ -7,24 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="GitHub-Actions-Starsector" level="project" />
-    <orderEntry type="library" exported="" name="starfarer.api" level="project" />
-    <orderEntry type="library" exported="" name="MagicLib1" level="project" />
     <orderEntry type="library" exported="" name="LazyLib-Kotlin" level="project" />
-    <orderEntry type="library" exported="" name="LazyLib" level="project" />
     <orderEntry type="library" exported="" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" exported="" name="LazyLib" level="project" />
+    <orderEntry type="library" exported="" name="SecondInCommand" level="project" />
+    <orderEntry type="library" exported="" name="LunaLib" level="project" />
     <orderEntry type="library" exported="" name="AodCapitals" level="project" />
     <orderEntry type="library" exported="" name="MagicLib-Kotlin" level="project" />
-    <orderEntry type="library" exported="" name="LunaLib" level="project" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Second-in-Command-1.6.7/jars/SecondInCommand.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="SecondInCommand" level="project" />
+    <orderEntry type="library" exported="" name="JaydeePiracy" level="project" />
+    <orderEntry type="library" exported="" name="MagicLib1" level="project" />
+    <orderEntry type="library" exported="" name="starfarer.api" level="project" />
   </component>
 </module>

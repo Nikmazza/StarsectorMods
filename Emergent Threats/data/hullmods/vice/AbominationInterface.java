@@ -14,6 +14,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 import data.scripts.vice.util.RemnantSubsystemsUtil;
 
@@ -99,5 +101,21 @@ public class AbominationInterface extends BaseHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + ADAPTIVE_SUBSYSTEMS;
 		return null;
+	}
+	
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (Global.getSector().getMemoryWithoutUpdate().is("$xo_synthesis_is_active", true)) {
+			String s3 = "%s exective officer grants %s combat readiness.";
+			tooltip.addPara(s3, 10f, Misc.getPositiveHighlightColor(), "Synthesis", "5%");
+		}
+		if (Global.getSector().getMemoryWithoutUpdate().is("$xo_drone_tactics_is_active", true)) {
+			boolean hasFlightCommand = (ship != null) && (ship.getVariant().hasHullMod("vice_adaptive_flight_command"));
+			String s = hasFlightCommand ? 
+						"%s exective officer skill grants each squadron the %s damage bonus.": 
+						"%s exective officer skill grants each squadron a %s damage bonus.";
+			String b = hasFlightCommand ? "20% (Adaptive Flight Command)" : "10%";
+			tooltip.addPara(s, 10f, Misc.getPositiveHighlightColor(), "Drone Tactics", b);
+		}
 	}
 }

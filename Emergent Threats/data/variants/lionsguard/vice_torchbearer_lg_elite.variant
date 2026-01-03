@@ -1,0 +1,39 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "vice_torchbearer_lg",
+    "hullMods": [
+        "targetingunit",
+        "vice_modular_bolt_coherer"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vice_torchbearer_lg_elite",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "kineticblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "ioncannon"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vulcan",
+                "WS 003": "vulcan",
+                "WS 005": "vice_fragbomb"
+            }
+        }
+    ],
+    "wings": [
+        "vice_estoc_wing",
+        "vice_estoc_wing"
+    ]
+}

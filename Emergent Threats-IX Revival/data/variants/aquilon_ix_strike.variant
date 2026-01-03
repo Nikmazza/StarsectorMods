@@ -1,6 +1,6 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 5,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "aquilon_ix",
@@ -15,6 +15,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "aquilon_ix_strike",
     "weaponGroups": [
         {

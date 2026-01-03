@@ -1,0 +1,9 @@
+{
+	"knownWeapons":{
+#		"tags":["ind", "independent"],
+		"weapons":[
+			"de_tacsuperlaser",
+			"de_scatter",
+		],
+	},
+},	

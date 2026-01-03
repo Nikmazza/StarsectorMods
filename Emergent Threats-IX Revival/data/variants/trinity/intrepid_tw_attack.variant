@@ -1,6 +1,6 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 7,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "intrepid_tw",
@@ -8,7 +8,6 @@
         "ix_dawnstar_controller",
         "tw_drone_control_node",
         "extendedshieldemitter",
-        "fluxdistributor",
         "targetingunit",
         "tw_modernized_rangefinder",
         "ix_reactive_combat_shields",
@@ -32,12 +31,12 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "spatial_charge_launcher_ix",
-                "WS 006": "spatial_charge_launcher_ix",
-                "WS 007": "spatial_charge_launcher_ix",
-                "WS 008": "spatial_charge_launcher_ix",
-                "WS 017": "stormwall_tw",
-                "WS 018": "stormwall_tw"
+                "WS 005": "stormwall_salvo_tw",
+                "WS 006": "stormwall_salvo_tw",
+                "WS 007": "stormwall_salvo_tw",
+                "WS 008": "stormwall_salvo_tw",
+                "WS 017": "spearwall_tw",
+                "WS 018": "spearwall_tw"
             }
         },
         {

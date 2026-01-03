@@ -1,7 +1,7 @@
 {
     "displayName": "Honor Guard",
-    "fluxCapacitors": 10,
-    "fluxVents": 18,
+    "fluxCapacitors": 14,
+    "fluxVents": 15,
     "hullId": "tigershark_ix",
     "hullMods": [
         "hardenedshieldemitter",
@@ -25,6 +25,7 @@
         "stabilizedshieldemitter",
         "eccm"
     ],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "tigershark_ix_honor",
     "weaponGroups": [
         {

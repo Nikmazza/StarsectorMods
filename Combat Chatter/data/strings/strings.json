@@ -14,7 +14,9 @@
 		
 		"fleetIntroMessage":"-- CAUTION --",
 		"fleetIntroBracketStart":"\\\\ ",
-		"fleetIntroBracketEnd":" \\\\"
+		"fleetIntroBracketEnd":" \\\\",
+		
+		"refitButton":"Set chatter character"
 	},
 	
 	"chatter_lunaSettings":{
@@ -41,6 +43,8 @@
 		"tooltip_boxPortraitSizeMult":"",
 		"name_boxFontSize":"Chatter box font size",
 		"tooltip_boxFontSize":"It may be desirable to also change the font specified in this mod's settings.json file.",
+		"name_floaterFontSize":"Floating text font size",
+		"name_tooltipFontSize":"",
 		"name_fleetIntro":"Fleet intro",
 		"tooltip_fleetIntro":"Intro splash for some fleet types at the start of battles.",
 		
@@ -52,5 +56,8 @@
 		"tooltip_personalityChanceScaling":"Make characters with only 1-2 allowed personalities have higher chance to be picked.",
 		"name_genderChanceScaling":"Gender chance scaling",
 		"tooltip_genderChanceScaling":"Makes gender-specific characters more likely to be picked.",
+
+		"name_disallowedTags":"Disallowed tags",
+		"tooltip_disallowedTags":"Any characters with any of the category tags in this list will not be picked ingame.\nTags of interest may include: \"othermedia\" (all configs taken from another game, film, etc.); \"meme\".\nSpecify as a comma-separated list without quotes."
 	}
 }

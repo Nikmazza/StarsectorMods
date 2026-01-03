@@ -1,0 +1,28 @@
+{
+	"baseHullId":"vice_atlas_base",
+	"skinHullId":"vice_atlas_tt",
+	"hullName":"Atlas (TT)",
+	"descriptionId":"atlas",  # optional
+	"descriptionPrefix":"An upgraded Atlas-class Superfreighter widely used by Tri-Tachyon. Its highly modular interior construction allows the ship to be rapidly reconfigured for a variety of roles. This upgrade notably increases the freighter's construction cost and logistics requirements, but has done little to challenge the opinion of Tri-Tachyon leadership that more efficiencies have been gained rather than lost from its use.",
+	"tags":["rare_bp", "tritachyon", "hightech_bp"],
+	"tech":"Tri-Tachyon",
+	"baseValueMult":1.6,
+	"fleetPoints":10,
+	"spriteName":"graphics/vice/ships/atlas_tt.png",
+	"builtInMods":["vice_atlas_controller"],
+	"removeHints":["HIDE_IN_CODEX"],
+    "weaponSlotChanges":{
+	   "WS 001":{"type":"ENERGY"},
+	   "WS 002":{"type":"ENERGY"},
+	   "WS 003":{"type":"ENERGY"},
+    },
+    "engineSlotChanges":{
+		"0":{"style":"HIGH_TECH"},
+		"1":{"style":"HIGH_TECH"},
+		"2":{"style":"HIGH_TECH"},
+		"3":{"style":"HIGH_TECH"},
+		"4":{"style":"HIGH_TECH"},
+		"5":{"style":"HIGH_TECH"},
+		"6":{"style":"HIGH_TECH"},
+	},
+}

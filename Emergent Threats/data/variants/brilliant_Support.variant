@@ -6,8 +6,8 @@
     "hullId": "brilliant",
     "hullMods": [
         "advancedoptics",
-        "targetingunit",
         "stabilizedshieldemitter",
+        "vice_unified_targeting_core",
         "vice_adaptive_drone_bay"
     ],
     "permaMods": [],

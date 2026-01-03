@@ -1,0 +1,235 @@
+{
+  "hullName": "Atlas",
+  "hullId": "vice_atlas_base",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/atlas/atlas.png",
+  "style": "MIDLINE",
+  "height": 400,
+  "width": 200,
+  "center": [99, 108],
+  "collisionRadius": 330,
+  "shieldCenter": [84, 0],
+  "shieldRadius": 230,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade"
+  ],
+  "builtInWeapons": {
+    "LIGHT 001": "blinker_red",
+    "LIGHT 002": "blinker_green",
+    "LIGHT 003": "blinker_red",
+    "LIGHT 004": "blinker_green",
+    "LIGHT 005": "blinker_red",
+    "LIGHT 006": "blinker_green"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 100,
+      "locations": [-27, 78]
+    },
+    {
+      "id": "WS 002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 260,
+      "locations": [-27, -78]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 0,
+      "locations": [241, 0]
+    },
+    {
+      "id": "WS 005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [265, 0]
+    },
+    {
+      "id": "WS 006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 140,
+      "locations": [-88, 54]
+    },
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 220,
+      "locations": [-88, -54]
+    },
+    {
+      "id": "LIGHT 001",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [277.5, 8.5]
+    },
+    {
+      "id": "LIGHT 002",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [277.5, -8.5]
+    },
+    {
+      "id": "LIGHT 003",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [259.5, 44.5]
+    },
+    {
+      "id": "LIGHT 004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [259.5, -44.5]
+    },
+    {
+      "id": "LIGHT 005",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [249.5, 59.5]
+    },
+    {
+      "id": "LIGHT 006",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [249.5, -59.5]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        51, 0,
+        60, 0
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-99, 44],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-101, 33],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-104, 17],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-104, 0],
+      "length": 96,
+      "width": 24,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-104, -17],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-101, -32],
+      "length": 48,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-99, -44],
+      "length": 32,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 64,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    271, 10,
+    249, 59,
+    221, 64,
+    218, 70,
+    23, 71,
+    16, 61,
+    -14, 73,
+    -18, 89,
+    -39, 85,
+    -42, 60,
+    -57, 53,
+    -81, 58,
+    -99, 37,
+    -103, 0,
+    -100, -37,
+    -82, -57,
+    -58, -52,
+    -43, -60,
+    -40, -83,
+    -18, -88,
+    -14, -69,
+    18, -60,
+    22, -70,
+    219, -71,
+    222, -62,
+    249, -58,
+    271, -7,
+    265, 1
+  ]
+}

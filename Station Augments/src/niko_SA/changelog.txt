@@ -1,3 +1,92 @@
+2.4.0c
+Finally puts the bug where augments wouldnt apply in combat to rest
+
+2.4.0a
+Another hotfix for a crash
+
+2.4.0a
+Hotfix for usage tag crash
+
+2.4.0
+SAVE COMPATIBLE - SOME AUGMENTS ARE DEPRECATED
+
+Update for station refitting
+    Deprecated a number of augments
+    Refitted stations around the core worlds due to this
+
+Manually fitted stations now spend whatever leftover OP they have in autofit
+More factions know augments
+The hidden boss now has different, more effective augments
+
+Nerfed bubble shield - weaker, stays down for longer
+New augment
+    Mining station
+        Using nex's mining mechanics
+        Increases ore production based on nearby asteroids and dust fields
+New shrouded augment
+    Shrouded Beacon
+        Attracts shrouded dweller ships
+        Spawns near hostile ships
+        Has a small chance to be hostile to the summoner
+New SOTF augments
+    Warmind Refit: Converts the station's AI core into a warmind
+        Better skills, cyberwarfare
+        Do NOT piss off the contingency while this guy is in charge of your station
+    Aftermarket Defense Platforms
+        Deploys weapon platforms around the station
+
+Codex refactored, now save-persistant
+
+2.3.2
+
+Augments can now require mods
+    Allows for a mod to define augments for *other* mods
+
+Shield shunt will no longer crash the game, even if off windows
+    Limited funcitonality, though
+
+
+
+2.3.1a
+
+Fixes a sanctified station crash
+
+2.3.1
+
+(Nex) Prism freeport now sells a lot of augments in the high tech shop
+    Also sells merc blueprints
+    Great place to find rare bps
+
+AOTD Star citadels have +10 extra AP
+
+Augments now only spawn via a whitelist of submarkets
+
+New augments
+
+    Sanctified Station
+        10 AP
+
+        Known by LP and LC
+
+        -10% flux capacity
+
+        If luddic majority active...
+            -40% upkeep
+            -1/-2 crew/supply demand
+            +1 to all supply (hydroponics synergy)
+            +15% station CR
+
+            Spawns small defense fleets that orbit the station
+                1 per size above 2
+                3 = 1 fleet, 4 = 2...
+                Uses LC doctrine and ships, but the market's quality
+                Will only ever engage in combat if the station is engaged
+
+Mote station is now midline
+    High tech stations suck to fight tbqh
+
+New lunsasettings option to enable viewing of AP to FP ratio in an augment's desc
+
 2.3.0
 PARTIALLY SAVE COMPATIBLE = PREGENERATED AUGMENTS WILL NOT UPDATE
 

@@ -1,0 +1,28 @@
+{
+	"id":"rwc_plasma",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/rwc_plasma_turret.png",
+	"turretGlowSprite":"",
+	"hardpointSprite":"",
+	"hardpointGlowSprite":"graphics/weapons/rwc_plasma_hardpoint_glow.png",
+	"glowColor":[255,100,150,255],
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":-14.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":5.0,
+					   "particleDuration":0.15,
+					   "particleCount":10,
+					   "particleColor":[255,100,150,255]},
+	"interruptibleBurst":false,
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"rwc_plasma_shot",  # projectile that will be fired
+	"fireSoundTwo":"plasma_cannon_fire",
+}

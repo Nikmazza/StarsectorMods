@@ -42,6 +42,8 @@ public class OdysseyMilspec extends BaseHullMod {
 			module.setWingId(0, "vice_wasp_wing");
 			module.addMod("vice_system_inhibitor");
 		}
+		if (variant.hasHullMod("defensive_targeting_array")) module.addMod("defensive_targeting_array");
+		else module.removeMod("defensive_targeting_array");
 	}
 	
 	@Override

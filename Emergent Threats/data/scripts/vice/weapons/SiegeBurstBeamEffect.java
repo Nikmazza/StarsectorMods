@@ -16,7 +16,7 @@ import com.fs.starfarer.api.util.Misc;
 public class SiegeBurstBeamEffect implements BeamEffectPlugin {
 
 	private static float LARGE_BONUS_DAMAGE = 50f;
-	private static float MEDIUM_BONUS_DAMAGE = 15f;
+	private static float MEDIUM_BONUS_DAMAGE = 25f;
 	private boolean applied = false;
 	
 	public void advance(float amount, CombatEngineAPI engine, BeamAPI beam) {

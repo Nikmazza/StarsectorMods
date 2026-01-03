@@ -56,7 +56,7 @@
         ],
     },
     "knownShips":{
-        "tags":[],
+        "tags":[lowtech_bp, "XIV_bp", "hegemony"],
         "hulls":["rwc_hrunting",
         ],
     },

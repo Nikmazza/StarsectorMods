@@ -30,11 +30,13 @@ public class DroneTactics extends SCBaseSkillPlugin {
     public void addTooltip(SCData data, TooltipMakerAPI tooltip) {
         tooltip.addPara("+10%% damage dealt, or +20%% when Adaptive Flight Command is enabled", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addPara("25%% reduction to drone replacement time when Adaptive Drone Bay is enabled", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
-		tooltip.addPara("Bonuses apply to all wings on ships with Autonomous Bays (RAT) or Drone Conversion (SEEKER) hullmod", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
+		tooltip.addSpacer(10f);
+		tooltip.addPara("AI Subsystem Integration converts equipped strike craft to drones. The Abomination Interface, Autonomous Bays (RAT), and Drone Conversion (SEEKER) hullmods also grants all drone bonuses to equipped strike craft", 0f, Misc.getHighlightColor(), Misc.getHighlightColor());
 		tooltip.addSpacer(10f);
 		tooltip.addPara("Acquire the Drone Bay and Flight Command adaptive hullmods", 0f, Misc.getTextColor(), Misc.getHighlightColor(), "Drone Bay", "Flight Command");
     }
-
+	
+	//technically the refit time bonus applies to all fighters and not just drones, but can't be bothered to fix
     @Override
     public void applyEffectsBeforeShipCreation(SCData data, MutableShipStatsAPI stats, ShipVariantAPI variant, ShipAPI.HullSize hullSize, String id) {
 		if (stats.getVariant().hasHullMod(ADB_MOD_ID)) {
@@ -44,15 +46,24 @@ public class DroneTactics extends SCBaseSkillPlugin {
 
 	@Override
 	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
-		float bonus = DAM_BONUS;
-		boolean isAlwaysValid = ship.getVariant().hasHullMod("SKR_remote") || ship.getVariant().hasHullMod("rat_autonomous_bays");
-		if (ship.getVariant().hasHullMod(AFC_MOD_ID)) bonus = AFC_BONUS;
+		float bonus = ship.getVariant().hasHullMod(AFC_MOD_ID) ? AFC_BONUS : DAM_BONUS;		
+		boolean isAlwaysValid = isValid(ship.getVariant());
 		if (isAlwaysValid || fighter.getHullSpec().getMinCrew() == 0) {
 			MutableShipStatsAPI stats = fighter.getMutableStats();
 			stats.getBallisticWeaponDamageMult().modifyPercent(id, bonus);
 			stats.getEnergyWeaponDamageMult().modifyPercent(id, bonus);
 			stats.getMissileWeaponDamageMult().modifyPercent(id, bonus);
 		}
+	}
+	
+	private boolean isValid(ShipVariantAPI variant) {
+		boolean isAlwaysValid = variant.hasHullMod("vice_abomination_interface") 
+							|| variant.hasHullMod("SKR_remote") 
+							|| variant.hasHullMod("rat_autonomous_bays");
+		for (String mod : variant.getSMods()) {
+			if (mod.equals("vice_ai_subsystem_integration")) isAlwaysValid = true;
+		}
+		return isAlwaysValid;
 	}
 	
 	@Override
@@ -63,5 +74,11 @@ public class DroneTactics extends SCBaseSkillPlugin {
 			player.addHullMod("vice_adaptive_flight_command");
 			Global.getSector().getMemoryWithoutUpdate().set("$gave_DT_hullmods", true);
 		}
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_drone_tactics_is_active", true);
+	}
+	
+	@Override
+	public void onDeactivation(SCData data) {
+		if (data.isPlayer()) Global.getSector().getMemoryWithoutUpdate().set("$xo_drone_tactics_is_active", false);
 	}
 }

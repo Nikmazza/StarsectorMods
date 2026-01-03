@@ -1,13 +1,13 @@
 {
     "displayName": "Suppression",
     "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxVents": 15,
     "goalVariant": true,
     "hullId": "vice_effulgent",
     "hullMods": [
-        "eccm",
-        "hardenedshieldemitter",
         "vice_module_handler",
+        "ecm",
+        "hardenedshieldemitter",
         "vice_adaptive_trajectory_analyzer"
     ],
     "permaMods": ["vice_module_handler"],

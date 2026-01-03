@@ -1,12 +1,11 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 12,
+    "fluxCapacitors": 20,
     "fluxVents": 0,
-    "goalVariant": true,
+    "goalVariant": false,
     "hullId": "vice_effulgent",
     "hullMods": [
         "vice_module_handler",
-        "eccm",
         "missleracks",
         "vice_adaptive_temporal_shell"
     ],

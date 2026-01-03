@@ -14,12 +14,13 @@ import lunalib.lunaRefit.BaseRefitButton;
 
 public class SalvagePanopticonCoreButton extends BaseRefitButton {
 
-	private static float SUCCESS_ODDS = 1f;
 	private static String CORE_ID = "ix_panopticon_core";	
+	private static String WATCHER_ID = "ix_panopticon_watcher";	
 	private static String MOD_ID_0 = "ix_panoptic_automated";
 	private static String MOD_ID_1 = "ix_panoptic_tactical";
 	private static String MOD_ID_2 = "ix_panoptic_strategic";
 	private static String MOD_ID_3 = "ix_panoptic_command";
+	private static String MOD_ID_4 = "ix_panoptic_watcher";
 	
 	@Override
 	public String getButtonName(FleetMemberAPI member, ShipVariantAPI variant) {
@@ -71,22 +72,28 @@ public class SalvagePanopticonCoreButton extends BaseRefitButton {
 
 	@Override
 	public void onClick(FleetMemberAPI member, ShipVariantAPI variant, InputEventAPI event, MarketAPI market) {
-		variant.getPermaMods().remove(MOD_ID_0);
-		variant.getPermaMods().remove(MOD_ID_1);
-		variant.getPermaMods().remove(MOD_ID_2);
-		variant.getPermaMods().remove(MOD_ID_3);
-		variant.getHullMods().remove(MOD_ID_0);
-		variant.getHullMods().remove(MOD_ID_1);
-		variant.getHullMods().remove(MOD_ID_2);
-		variant.getHullMods().remove(MOD_ID_3);
+		if (variant.hasHullMod(MOD_ID_4)) {
+			variant.getPermaMods().remove(MOD_ID_4);
+			variant.getHullMods().remove(MOD_ID_4);
+			addWatcher();
+		}
+		else {
+			variant.getPermaMods().remove(MOD_ID_0);
+			variant.getPermaMods().remove(MOD_ID_1);
+			variant.getPermaMods().remove(MOD_ID_2);
+			variant.getPermaMods().remove(MOD_ID_3);
+			variant.getHullMods().remove(MOD_ID_0);
+			variant.getHullMods().remove(MOD_ID_1);
+			variant.getHullMods().remove(MOD_ID_2);
+			variant.getHullMods().remove(MOD_ID_3);
+			addCore();
+		}
 		if (isCaptainPCore(member)) member.setCaptain(Global.getFactory().createPerson());
-		if (Math.random() <= SUCCESS_ODDS) addCore();
-		else addJunk();
 		refreshVariant();
 		refreshButtonList();
 	}
 
-	//Makes the button not clickable if mod cannot be fitted
+	//Makes the button not clickable if mod cannot be fitted, prevent 3 and 4 from erasing human captain
 	@Override
 	public boolean isClickable(FleetMemberAPI member, ShipVariantAPI variant, MarketAPI market) {
 		if (variant.hasHullMod(MOD_ID_0) && !isCaptainPCore(member)) return false;
@@ -101,9 +108,10 @@ public class SalvagePanopticonCoreButton extends BaseRefitButton {
 	
 	private boolean hasInterface(ShipVariantAPI variant) {
 		return (variant.hasHullMod(MOD_ID_0) 
-				|| variant.hasHullMod(MOD_ID_1) 
-				|| variant.hasHullMod(MOD_ID_2) 
-				|| variant.hasHullMod(MOD_ID_3));
+					|| variant.hasHullMod(MOD_ID_1) 
+					|| variant.hasHullMod(MOD_ID_2) 
+					|| variant.hasHullMod(MOD_ID_3)
+					|| variant.hasHullMod(MOD_ID_4));
 	}
 	
 	private boolean isCaptainPCore(FleetMemberAPI member) {
@@ -117,11 +125,11 @@ public class SalvagePanopticonCoreButton extends BaseRefitButton {
 	
 	private void addCore() {
 		CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();
-		cargo.addCommodity("ix_panopticon_core", 1);
+		cargo.addCommodity(CORE_ID, 1);
 	}
 	
-	private void addJunk() {
+	private void addWatcher() {
 		CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();
-		cargo.addCommodity("ix_broken_core", 1);
+		cargo.addCommodity(WATCHER_ID, 1);
 	}
 }

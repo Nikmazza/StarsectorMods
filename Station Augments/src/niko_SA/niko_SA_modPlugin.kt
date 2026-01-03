@@ -33,6 +33,16 @@ class niko_SA_modPlugin: BaseModPlugin() {
     override fun onApplicationLoad() {
         super.onApplicationLoad()
 
+        SA_settings.SOTF_enabled = Global.getSettings().modManager.isModEnabled("secretsofthefrontier")
+        SA_settings.ASAS_enabled = Global.getSettings().modManager.isModEnabled("arthrships")
+        SA_settings.MCTE_enabled = Global.getSettings().modManager.isModEnabled("niko_moreCombatTerrainEffects")
+        SA_settings.AITweaksEnabled = Global.getSettings().modManager.isModEnabled("aitweaks")
+        SA_settings.AOTDVaultsEnabled = Global.getSettings().modManager.isModEnabled("aotd_vok")
+        if (SA_settings.AOTDVaultsEnabled) {
+            SA_settings.AOTDVaultsVersion = Global.getSettings().modManager.getModSpec("aotd_vok").version
+        }
+        SA_settings.graphicsLibEnabled = Global.getSettings().modManager.isModEnabled("shaderLib")
+
         loadSettings()
         LunaSettings.addSettingsListener(settingsChangedListener())
 
@@ -43,13 +53,6 @@ class niko_SA_modPlugin: BaseModPlugin() {
     override fun onGameLoad(newGame: Boolean) {
         super.onGameLoad(newGame)
 
-        SA_settings.MCTE_enabled = Global.getSettings().modManager.isModEnabled("niko_moreCombatTerrainEffects")
-        SA_settings.AITweaksEnabled = Global.getSettings().modManager.isModEnabled("aitweaks")
-        SA_settings.AOTDVaultsEnabled = Global.getSettings().modManager.isModEnabled("aotd_vok")
-        if (SA_settings.AOTDVaultsEnabled) {
-            SA_settings.AOTDVaultsVersion = Global.getSettings().modManager.getModSpec("aotd_vok").version
-        }
-        SA_settings.graphicsLibEnabled = Global.getSettings().modManager.isModEnabled("shaderLib")
         Global.getSector().addTransientListener(SA_stationAugmentDropper())
         Global.getSector().addTransientListener(SA_threatLootListener())
         Global.getSector().listenerManager.addListener(SA_lootListener(), true)

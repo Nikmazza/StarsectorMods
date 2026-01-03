@@ -7,13 +7,14 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class PanopticInterfaceCommandHandler extends BaseHullMod {
 	
-	private static String COMMAND_MOD_ID = "ix_panoptic_command";
 	private static String COMMAND_CORE_ID = "ix_command_core";
+	private static String COMMAND_MOD_ID = "ix_panoptic_command";
+	private static String WATCHER_MOD_ID = "ix_panoptic_watcher";
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		
-		if (!stats.getVariant().hasHullMod(COMMAND_MOD_ID) 
+		if ((!stats.getVariant().hasHullMod(COMMAND_MOD_ID) && !stats.getVariant().hasHullMod(WATCHER_MOD_ID)) 
 					&& stats.getFleetMember() != null 
 					&& COMMAND_CORE_ID.equals(stats.getFleetMember().getCaptain().getAICoreId())) {
 			stats.getFleetMember().setCaptain(Global.getFactory().createPerson());

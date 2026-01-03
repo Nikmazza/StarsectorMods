@@ -17,6 +17,7 @@ public class PanopticInterfaceCommand extends BaseHullMod {
 	
 	private static String COMMAND_CORE_ID = "ix_command_core";
 	private static String HANDLER_MOD_ID = "ix_panoptic_command_handler";
+	private static String WATCHER_MOD_ID = "ix_panoptic_watcher";
 	
 	private static String SKILL_NAME_1 = "Field Modulation";
 	private static String SKILL_NAME_2 = "Gunnery Implant";
@@ -50,8 +51,9 @@ public class PanopticInterfaceCommand extends BaseHullMod {
 		//CR penalty applied before null check
 		if (stats.getFleetMember() == null || stats.getFleetMember().getOwner() != 0) return;
 		float crPenalty = PanopticInterfaceUtil.getReadinessPenalty(stats.getFleetMember(), hullSize);
-		stats.getMaxCombatReadiness().modifyFlat(id, -crPenalty * 0.01f, "Panoptic Interface");
-		
+		if (!stats.getVariant().hasHullMod(WATCHER_MOD_ID)) {
+			stats.getMaxCombatReadiness().modifyFlat(id, -crPenalty * 0.01f, "Panoptic Interface");
+		}		
 		if (stats.getFleetMember().getCaptain() == null 
 				|| !stats.getFleetMember().getCaptain().isDefault()) return;
 		if (PanopticInterfaceUtil.hasConflictMod(stats.getVariant())) return;
@@ -94,6 +96,14 @@ public class PanopticInterfaceCommand extends BaseHullMod {
 		String s = "";
 		float crPenalty = 0f;
 		if (PanopticInterfaceUtil.hasConflictMod(ship.getVariant())) s = "Warning: Incompatible AI system present. Interface is inactive.";
+		else if (ship.getVariant().hasHullMod(WATCHER_MOD_ID)) {
+			if (Global.getSector().getMemoryWithoutUpdate().is("$twc_midir_defected", true) 
+						&& !Global.getSector().getMemoryWithoutUpdate().is("$ix_watcher_installed", true)) {
+				s = "This core has expressed an interest in being extracted and taken to the planet Maxios in the Magec system.";
+				tooltip.addPara(s, Misc.getHighlightColor(), 10f);
+			}
+			return;
+		}
 		else if (Global.getSector() != null) {
 			crPenalty = PanopticInterfaceUtil.getReadinessPenalty(ship.getFleetMember(), hullSize);
 			int fleetCount = PanopticInterfaceUtil.getPanopticShipCount(ship.getFleetMember());

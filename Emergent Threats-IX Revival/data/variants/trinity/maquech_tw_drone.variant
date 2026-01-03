@@ -1,7 +1,7 @@
 {
     "displayName": "Drone",
     "fluxCapacitors": 0,
-    "fluxVents": 10,
+    "fluxVents": 11,
     "goalVariant": true,
     "hullId": "maquech_tw",
     "hullMods": [],

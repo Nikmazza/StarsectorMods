@@ -19,7 +19,7 @@ public class InterdictionArray extends BaseHullMod {
  
 	private static String NEW_SYSTEM = "Interdictor Array"; //text only, switch done by HANDLER_HULLMOD
 	private static int RANGE = 2000; //text only, range set in InterdictorPulseAI, InterdictorPulseTargeting
-	private static int KINETIC_DAMAGE = 2000; //text only, damage set in weapons.csv
+	private static int KINETIC_DAMAGE = 3000; //text only, damage set in weapons.csv
 	private static int SMOD_BURN_BONUS = 1;
 	
 	private static float INTERVAL = 0.2f; //seconds between each decorative EMP arc
@@ -34,6 +34,7 @@ public class InterdictionArray extends BaseHullMod {
 	private static String SYSTEM_INTERDICTOR = "vice_interdictor";
 	private static String SYSTEM_FORTRESS = "fortressshield";
 	private static String SYSTEM_ZEUS = "swp_boss_zeusshield";
+	private static String FLAMEOUT = "flameout";
 	
 	//actual system swap handled by HANDLER_HULLMOD
 	@Override
@@ -120,6 +121,7 @@ public class InterdictionArray extends BaseHullMod {
 		if (index == 0) return NEW_SYSTEM;
 		if (index == 1) return "" + RANGE;
 		if (index == 2) return "" + KINETIC_DAMAGE;
+		if (index == 3) return FLAMEOUT;
 		return null;
 	}
 }

@@ -17,6 +17,7 @@
     "tw_enhanced_control_node",
     "tw_undershield_aurora"
   ],
+  "builtInWeapons": {},
   "weaponSlots": [
     {
       "id": "WS 001",

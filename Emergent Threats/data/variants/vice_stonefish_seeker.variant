@@ -17,14 +17,10 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "vice_deadeye_plasma"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
             "weapons": {
-                "WS 002": "harpoonpod",
-                "WS 003": "harpoonpod"
+                "WS 001": "vice_deadeye_plasma",
+                "WS 002": "breachpod",
+                "WS 003": "breachpod"
             }
         },
         {

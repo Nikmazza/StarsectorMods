@@ -1,18 +1,20 @@
 {
     "displayName": "Aberrant",
-    "fluxCapacitors": 4,
+    "fluxCapacitors": 7,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_lampetia",
     "hullMods": [
+        "vice_feedback_handler",
         "vice_advanced_terminator_core",
+        "vice_module_handler",
         "magazines",
         "targetingunit",
-        "vice_adaptive_gravity_drive",
-        "vice_feedback_handler"
+        "vice_modular_seeker_lens",
+        "vice_adaptive_gravity_drive"
     ],
     "modules": [{"SM 1": "vice_lampetia_secondary_drone_bay"}],
-    "permaMods": [],
+    "permaMods": ["vice_module_handler"],
     "sMods": [],
     "variantId": "vice_lampetia_aberrant",
     "weaponGroups": [
@@ -20,45 +22,41 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "locust",
-                "WS 003": "locust"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "cyclone"}
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 004": "ionpulser",
-                "WS 005": "ionpulser",
-                "WS 006": "vice_phased_electrolaser"
+                "WS 001": "vice_deadeye_plasma",
+                "WS 002": "vice_fandance_seeker",
+                "WS 003": "vice_fandance_seeker"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "pdlaser",
-                "WS 008": "pdlaser",
-                "WS 009": "pdlaser",
-                "WS 010": "pdlaser",
-                "WS 011": "pdlaser",
-                "WS 012": "pdlaser",
-                "WS 013": "pdlaser",
-                "WS 014": "pdlaser",
-                "WS 015": "pdlaser",
-                "WS 016": "pdlaser",
-                "WS 017": "pdlaser",
-                "WS 018": "pdlaser"
+                "WS 005": "vice_deluge_repeater",
+                "WS 006": "vice_deluge_repeater"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "vice_phased_electrolaser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "lrpdlaser",
+                "WS 008": "lrpdlaser",
+                "WS 009": "lrpdlaser",
+                "WS 010": "lrpdlaser",
+                "WS 011": "lrpdlaser",
+                "WS 012": "lrpdlaser",
+                "WS 013": "lrpdlaser",
+                "WS 014": "lrpdlaser"
             }
         }
     ],
     "wings": [
-        "vice_helia_wing",
-        "vice_helia_wing"
+        "flash_wing",
+        "flash_wing"
     ]
 }

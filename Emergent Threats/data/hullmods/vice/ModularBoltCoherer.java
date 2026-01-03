@@ -5,6 +5,8 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.combat.listeners.WeaponBaseRangeModifier;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -27,7 +29,37 @@ public class ModularBoltCoherer extends BaseHullMod {
 		if (isSMod(stats)) stats.getEnergyWeaponFluxCostMod().modifyMult(id, 1f - FLUX_COST_BONUS * 0.01f);
 		if (!stats.getVariant().hasHullMod(NEGATE_MOD))	stats.getCrewLossMult().modifyPercent(id, CASUALTY_PENALTY);
 	}
+
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		ship.addListener(new MBCBeamFix(ship, isEnergyFocusMAsteryActive()));
+	}
 	
+	//fixes non-energy beam weapons getting their ranges reduced by this hullmod
+	public static class MBCBeamFix implements WeaponBaseRangeModifier {
+		public ShipAPI ship;
+		public boolean isEnergyFocusMAsteryActive;
+		public MBCBeamFix(ShipAPI ship, boolean isEnergyFocusMAsteryActive) {
+			this.ship = ship;
+			this.isEnergyFocusMAsteryActive = isEnergyFocusMAsteryActive;
+		}
+		public float getWeaponBaseRangePercentMod(ShipAPI ship, WeaponAPI weapon) {
+			return 0;
+		}
+		public float getWeaponBaseRangeMultMod(ShipAPI ship, WeaponAPI weapon) {
+			return 1f;
+		}
+		public float getWeaponBaseRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {
+			float bonus = 0;
+			if (weapon.getSpec() == null) return 0f;
+			if (weapon.getSpec().isBeam() && weapon.getSpec().getType() != WeaponAPI.WeaponType.ENERGY) {
+				bonus = PULSE_RANGE_BONUS;
+				if (isEnergyFocusMAsteryActive) bonus = PULSE_RANGE_BONUS_XO;
+			}
+			return bonus;
+		}
+	}
+
 	@Override
 	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
 		return true;

@@ -1,6 +1,5 @@
 package Jaydee8652.JaydeePiracy.hullmods;
 
-import Jaydee8652.JaydeePiracy.scripts.skills.flowerfish.jdp_flowerfishUneasyMovements;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.CollisionClass;

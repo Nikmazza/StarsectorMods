@@ -28,6 +28,8 @@
 		"vice_ships":{
 			"invisible":"graphics/fx/empty.png";
 			
+			"atlas_tt_bay":"graphics/vice/ships/atlas_tt_bay.png",
+			
 			"brilliant_carrier":"graphics/vice/ships/hidden/brilliant_carrier.png",
 			
 			"resplendent_adaptive_flight_command":"graphics/vice/ships/hidden/resplendent_adaptive_flight_command.png",

@@ -1,14 +1,13 @@
 {
     "displayName": "Anomalous",
     "fluxCapacitors": 0,
-    "fluxVents": 34,
+    "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_lampetia",
     "hullMods": [
         "vice_advanced_terminator_core",
         "vice_feedback_handler",
-        "vice_modular_bolt_coherer",
-        "vice_attuned_emitter_diodes",
+        "vice_laser_collimator",
         "vice_unified_targeting_core",
         "vice_adaptive_gravity_drive"
     ],
@@ -20,7 +19,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 001": "vice_heavy_maser"}
+            "weapons": {"WS 001": "vice_siege_burst"}
         },
         {
             "autofire": true,
@@ -34,8 +33,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 004": "gravitonbeam",
-                "WS 005": "gravitonbeam"
+                "WS 004": "vice_twin_tactical_laser",
+                "WS 005": "vice_twin_tactical_laser"
             }
         },
         {

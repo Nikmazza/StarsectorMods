@@ -1,7 +1,7 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 0,
-    "fluxVents": 25,
+    "fluxVents": 26,
     "goalVariant": true,
     "hullId": "flamebreaker_tw",
     "hullMods": [

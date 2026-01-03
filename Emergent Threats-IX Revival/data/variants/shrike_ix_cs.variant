@@ -1,7 +1,7 @@
 {
     "displayName": "Close Support",
     "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "shrike_ix",
     "hullMods": [
@@ -12,6 +12,7 @@
     ],
     "permaMods": [],
     "sMods": [],
+    "tags": ["variant_always_retain_smods_on_salvage"],
     "variantId": "shrike_ix_cs",
     "weaponGroups": [
         {

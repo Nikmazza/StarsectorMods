@@ -1,0 +1,17 @@
+{
+	"id":"rwc_pulse_shot",
+	"specClass":"projectile",
+	#"spawnType":"BEAM",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":50.0,
+	"width":20.0,
+	"hitGlowRadius":50,
+	"fadeTime":0.25,
+	"fringeColor":[25,75,155,255],
+	"coreColor":[215,225,255,255],
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":5.0
+}

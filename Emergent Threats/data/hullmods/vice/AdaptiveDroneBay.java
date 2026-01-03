@@ -2,12 +2,15 @@ package data.hullmods.vice;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 import data.scripts.vice.util.RemnantSubsystemsUtil;
 
@@ -45,7 +48,14 @@ public class AdaptiveDroneBay extends BaseHullMod {
 			if (spec == null) continue;
 			if (spec.getVariant().getHullSpec().getMinCrew() != 0) isAllValidDrones = false;
 		}
-		if (stats.getVariant().hasHullMod("SKR_remote")) isAllValidDrones = true;
+		if (stats.getVariant().hasHullMod("SKR_remote") 
+			|| stats.getVariant().hasHullMod("rat_autonomous_bays")) isAllValidDrones = true;
+		if (Global.getSector().getMemoryWithoutUpdate().is("$xo_drone_tactics_is_active", true)) {
+			if (stats.getVariant().hasHullMod("vice_abomination_interface")) isAllValidDrones = true;
+			for (String mod : stats.getVariant().getSMods()) {
+				if (mod.equals("vice_ai_subsystem_integration")) isAllValidDrones = true;
+			}
+		}
 		if (!isAllValidDrones) stats.getVariant().getHullMods().add(ERROR_MOD_ID);
 		else stats.getVariant().getHullMods().remove(ERROR_MOD_ID);
 	}
@@ -110,5 +120,16 @@ public class AdaptiveDroneBay extends BaseHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return DRONE_BAY;
 		return null;
+	}
+	
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (ship == null) return;
+		if (!Global.getSector().getMemoryWithoutUpdate().is("$xo_drone_tactics_is_active", true)) return;
+		if (ship.getVariant().hasHullMod("automated") && ship.getVariant().hasHullMod("vice_adaptive_drone_bay")) return;
+		String s = "%s executive officer skill allows the use of standard strike craft while this ship is also equipped with Abomination Interface or active AI Subsystem Integration. ";
+		if (!ship.getVariant().hasHullMod("vice_adaptive_drone_bay")) s = "Only applies if ship does not have Automated hullmod: " + s;		
+		String skill = "Drone Tactics";
+		tooltip.addPara(s, 10f, Misc.getPositiveHighlightColor(), skill);
 	}
 }

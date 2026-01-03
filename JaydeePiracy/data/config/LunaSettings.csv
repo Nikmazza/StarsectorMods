@@ -44,8 +44,8 @@ jdp_campaignMadoka,PMMM Buffalo,Boolean,TRUE,,Toggles the generation of the PMMM
 ,,,,,,,,
 jdp_experimentalMidSave,Description,Text,"[Enabling these settings mid save will generate them retroactively, but disabling them will not cause them to be removed from existing saves.]",,,,,Experimental
 jdp_experimentalHeader,JaydeePiracy Campaign Header,Header,Experimental Settings,,,,,Experimental
-jdp_experimentalDisclaimer,Description,Text,"These settings are for experiemntal features, enable them at your own discretion.",,,,,Experimental
-jdp_experimentalFlowerfish,Flowerfish XO,Boolean,FALSE,,Toggles the spawning of the Flowerfish XO for Second in Command. When enabled this officer can be found monthly on Ailmar in Westernesse. Currently poorly balanced and buggy.,,,Experimental
+jdp_experimentalDisclaimer,Description,Text,"These settings are for experimental features, enable them at your own discretion.",,,,,Experimental
+jdp_experimentalFlowerfish,Flowerfish XO,Boolean,TRUE,,When enabled the Flowerfish XO for Second in Command can be found monthly on Ailmar in Westernesse.,,,Campaign
 ,,,,,,,,
 jdp_experimentalIndividualDesc,Description,Text,Events here have incomplete writing and mechanics. [SHOULD NOT BE ENABLED] unless you are testing something.,,,,,Experimental
 jdp_campaignBore,Autonomous Mantle Bore,Boolean,FALSE,,Individually toggles the event for the Autonomous Mantle Bore. [NOT YET IMPLEMENTED],,,Experimental

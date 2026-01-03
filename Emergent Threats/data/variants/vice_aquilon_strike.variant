@@ -30,8 +30,8 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "cyclone",
-                "WS 002": "breachpod",
-                "WS 003": "breachpod"
+                "WS 002": "sabotpod",
+                "WS 003": "sabotpod"
             }
         },
         {

@@ -1,6 +1,6 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 34,
+    "fluxCapacitors": 24,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "vice_equalizer_ex",
@@ -8,6 +8,7 @@
         "fluxdistributor",
         "hardenedshieldemitter",
         "targetingunit",
+        "vice_modular_seeker_lens",
         "frontemitter",
         "stabilizedshieldemitter"
     ],

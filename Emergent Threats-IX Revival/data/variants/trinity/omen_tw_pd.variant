@@ -1,7 +1,7 @@
 {
     "displayName": "Escort",
     "fluxCapacitors": 0,
-    "fluxVents": 9,
+    "fluxVents": 8,
     "goalVariant": true,
     "hullId": "omen_tw",
     "hullMods": [
@@ -16,7 +16,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 003": "starfall_rocket_ix"}
+            "weapons": {"WS 003": "stormwall_salvo_tw"}
         },
         {
             "autofire": true,

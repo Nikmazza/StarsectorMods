@@ -45,14 +45,19 @@ public class ETModPlugin extends BaseModPlugin {
 	public void onGameLoad(boolean newGame) {
 		SectorAPI sector = Global.getSector();
 		
-		//backwards compatability for v1.0.9 games that did not spawn the system
-		//generate(sector);
+		//remove after v1.2.0
+		if (!sector.getMemoryWithoutUpdate().is("$asm_trinity_set", true)) {
+			sector.getMemoryWithoutUpdate().set("$asm_trinity_set", true);
+			sector.getMemoryWithoutUpdate().set("$asm_trinity_met", false);
+			sector.getMemoryWithoutUpdate().set("$asm_trinity_odds", 0f);
+		}		
 		
 		sector.registerPlugin(synthesisCorePlugin);
 		sector.getFaction("sindrian_diktat").getKnownFighters().remove("talon_wing");
 		sector.getFaction("lions_guard").getKnownFighters().remove("talon_wing");
 		sector.getFaction("threat").getKnownWeapons().remove("asm_flechette");
 		sector.getFaction("threat").getKnownWeapons().remove("asm_voltaic_multipulser");
+		sector.getFaction("tritachyon").getKnownShips().remove("atlas");
 		
 		if (sector.getMemoryWithoutUpdate().is("$vice_project_mayfly_remnant_knows_ships", true)) {
 			Global.getSector().getFaction("remnant").addKnownShip("vice_chevalier_rem", false);
@@ -76,12 +81,6 @@ public class ETModPlugin extends BaseModPlugin {
 		person.getName().setLast("Sheasby");
 		person.setPortraitSprite(Global.getSettings().getSpriteName("portraits", "vice_taylor_sheasby"));
 		if (!people.containsPerson(person)) people.addPerson(person);
-		
-		//remove after v1.1.2
-		if (!sector.getMemoryWithoutUpdate().is("$bounty_listener_set", true)) {
-			sector.getListenerManager().addListener(new BountyListener());
-			sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
-		}
 		
 		PruneBantengMarketListener pListener = new PruneBantengMarketListener();
 		for (MarketAPI market : sector.getEconomy().getMarketsCopy()) {
@@ -129,6 +128,10 @@ public class ETModPlugin extends BaseModPlugin {
 		sector.getMemoryWithoutUpdate().set("$bounty_listener_set", true);
 		sector.getFaction("sindrian_diktat").getKnownFighters().remove("talon_wing");
 		sector.getFaction("lions_guard").getKnownFighters().remove("talon_wing");
+		
+		sector.getMemoryWithoutUpdate().set("$asm_trinity_set", true); //remove after v1.2.0
+		sector.getMemoryWithoutUpdate().set("$asm_trinity_met", false);
+		sector.getMemoryWithoutUpdate().set("$asm_trinity_odds", 0f);
 	}
 	
 	private static void setRelationships(SectorAPI sector) {

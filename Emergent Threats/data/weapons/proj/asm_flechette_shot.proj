@@ -7,10 +7,11 @@
 	"onHitEffect":"data.scripts.asm.weapons.VoltaicFlechetteOnHit",
 	"size":[8,4],	
 	"center":[4,2],
-	"collisionRadius":10,
+	"collisionRadius":30,
 	"collisionClass":"MISSILE_FF",
-	"explosionColor":[200,200,150,180],
-	"explosionRadius":25, # purely visual
+	#"explosionColor":[200,200,150,180],
+	"explosionColor":[0,0,0,0],
+	"explosionRadius":30, # purely visual
 	"fizzleOnReachingWeaponRange":true,
 	"dudProbabilityOnFlameout":0,
 	"useHitGlowWhenDestroyed":true,
@@ -18,6 +19,20 @@
 	"armingTime":0,
 	"noEngineGlowTime":0.1, # time spent without the engine glow being rendered
 	"fadeTime":0.1, # fadeout duration
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":30,
+					"explosionSpec":{"duration":0.1f,
+									 "radius":60,
+									 "coreRadius":30,
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":0,
+									 "particleCount":0,
+									 "particleColor":[200,200,150,175],
+									 "sound":"voltaic_discharge_fire"},
+					},
 	"engineSpec":{"turnAcc":0,
 				  "turnRate":0,
 				  "acc":2000,
@@ -37,9 +52,9 @@
 						"contrailAngularVelocityMult":0.5f,
 						"contrailSpawnDistMult":0f, # how far away from engine it starts
 						"contrailColor":[200,200,150,50],
-						"glowSizeMult":1.0,
+						"glowSizeMult":2.0,
 						"glowAlternateColor":[125,100,0,255],
-						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
 					},
 				    "width":4.0,
 				    "length":10.0,

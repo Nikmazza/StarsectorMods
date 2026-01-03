@@ -71,6 +71,7 @@
 	},
 	"carrierMedium":{
 		"jdp_gretchen_Standard":3,
+		"jdp_conduit_Standard":1,
 		"heron_DEM":3,
 	},
 	"carrierLarge":{

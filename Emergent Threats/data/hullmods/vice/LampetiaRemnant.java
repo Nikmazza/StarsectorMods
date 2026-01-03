@@ -29,11 +29,12 @@ public class LampetiaRemnant extends BaseHullMod {
 		stats.getSuppliesToRecover().modifyMult(id, 1f + CR_INCREASE * 0.01f);
 		stats.getSuppliesPerMonth().modifyMult(id, 1f + CR_INCREASE * 0.01f);
 		
-		if (stats.getVariant().getModuleVariant("SM 1") == null) return;
-		ShipVariantAPI module = stats.getVariant().getModuleVariant("SM 1");
-		if (stats.getVariant().hasHullMod("vice_advanced_terminator_core")) {
+		ShipVariantAPI variant = stats.getVariant();
+		if (variant.getModuleVariant("SM 1") == null) return;
+		ShipVariantAPI module = variant.getModuleVariant("SM 1");
+		if (variant.hasHullMod("vice_advanced_terminator_core")) {
 			module.removeMod("vice_system_inhibitor");
-			if (stats.getVariant().getSMods().contains("vice_advanced_terminator_core")) {
+			if (variant.getSMods().contains("vice_advanced_terminator_core")) {
 				module.setWingId(0, "vice_terminator_triple_wing");
 			}
 			else module.setWingId(0, "terminator_wing");
@@ -43,10 +44,13 @@ public class LampetiaRemnant extends BaseHullMod {
 			module.addMod("vice_system_inhibitor");
 		}
 		
-		stats.getVariant().getHullSpec().setShipSystemId(BASE_SYSTEM);
-		if (stats.getVariant().getNonBuiltInHullmods().contains(GRAV_HULLMOD)) {
-			stats.getVariant().getHullSpec().setShipSystemId(GRAV_SYSTEM);
+		variant.getHullSpec().setShipSystemId(BASE_SYSTEM);
+		if (variant.getNonBuiltInHullmods().contains(GRAV_HULLMOD)) {
+			variant.getHullSpec().setShipSystemId(GRAV_SYSTEM);
 		}
+		
+		if (variant.hasHullMod("defensive_targeting_array")) module.addMod("defensive_targeting_array");
+		else module.removeMod("defensive_targeting_array");
 	}
 	
 	@Override

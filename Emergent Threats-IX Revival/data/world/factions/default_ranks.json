@@ -1,0 +1,10 @@
+{
+	# unique ranks can be used by rules.csv for initiating custom dialog with bounty fleets
+	"ranks":{
+		"tw_asm_watcher":{"name":"Watcher"},
+		"tw_asm_admiral":{"name":"Admiral"},
+	},
+	"posts":{
+		"tw_asm_AI":{"name":"Artificial Intelligence"},
+	},
+}

@@ -53,6 +53,7 @@ public class SeekerLens extends BaseHullMod {
 	
 	@Override
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		if (ship == null) return;
 		boolean isSeeker = false;
 		WeaponSpecAPI spec = ship.getVariant().getWeaponSpec("WS 001");
 		if (spec != null && spec.hasTag(SEEKER_TAG)) isSeeker = true;

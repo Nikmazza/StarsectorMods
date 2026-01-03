@@ -22,4 +22,9 @@
 		"encounter_hostile":"music_none",
 		"encounter_friendly":"music_none",
 	},
+	"custom":{
+		"engageWhenEvenStrength":true,
+		"postsNoBounties":true,
+		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+	},	
 },

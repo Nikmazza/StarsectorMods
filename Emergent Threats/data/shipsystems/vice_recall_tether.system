@@ -1,0 +1,17 @@
+{
+	"id":"vice_recall_tether",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.scripts.vice.ai.RecallTetherAI",
+		
+	"statsScript":"data.scripts.vice.shipsystems.RecallTetherStats",
+	
+	"weaponGlowColor":[100,165,255,0],
+	"weaponTypes":[ENERGY],
+	
+	"engineGlowColor":[100,165,255,125],
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

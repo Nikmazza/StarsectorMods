@@ -5,8 +5,8 @@
     "goalVariant": true,
     "hullId": "vice_mandrake_ex",
     "hullMods": [
-        "hardenedshieldemitter",
         "targetingunit",
+        "vice_laser_collimator",
         "stabilizedshieldemitter"
     ],
     "permaMods": [],
@@ -22,8 +22,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "swarmer",
-                "WS 006": "swarmer"
+                "WS 005": "harpoon",
+                "WS 006": "harpoon"
             }
         },
         {

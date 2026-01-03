@@ -1,0 +1,33 @@
+{
+	"baseHullId":"vice_torchbearer_base",
+	"skinHullId":"vice_torchbearer_lg",
+	"descriptionId":"vice_torchbearer_lg",
+	"hullName":"Torchbearer",
+	"ordnancePoints":79,
+	"hullDesignation":"Light Carrier",
+	"descriptionPrefix":"The Torchbearer is a nimble light carrier that can keep up in fleet maneuvers with the fast moving cruisers favored by the Sindrian Diktat. Developed after the Collapse, the project served as an important stepping stone in the Diktat's grand ambitions to rapidly adopt carrier based strike craft into its military doctrine.",
+	"tags":["LG_bp", "no_autofit"],
+	"tech":"Lion's Guard",
+	"fighterBays":2,
+	"spriteName":"graphics/vice/ships/torchbearer_lg.png",
+	"baseValueMult":1.25,
+	"removeWeaponSlots":[], 			# ids
+	"removeEngineSlots":[], 			# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 			# hullmod ids
+	"removeBuiltInWeapons":[], 			# weapon slot ids
+	#"systemId":"vice_lightofsindria",
+	#"maxSpeed":75,
+	#"shieldEfficiency":0.6,
+	"builtInMods":["solar_shielding", "andrada_mods", "vice_fleet_override"],
+	"addHints":["CARRIER", "COMBAT"],
+	removeHints:["HIDE_IN_CODEX"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+		"WS 001":{"type": "HYBRID"},
+		"WS 002":{"type": "HYBRID"},
+		"WS 003":{"type": "HYBRID"},
+	},
+	"engineSlotChanges":{
+	},
+}

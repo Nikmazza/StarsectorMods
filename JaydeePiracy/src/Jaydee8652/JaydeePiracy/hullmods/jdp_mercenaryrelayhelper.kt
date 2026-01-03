@@ -1,16 +1,18 @@
 package Jaydee8652.JaydeePiracy.hullmods;
 
+import Jaydee8652.JaydeePiracy.utils.ReflectionUtils
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.BaseHullMod
 import com.fs.starfarer.api.combat.MutableShipStatsAPI
 import com.fs.starfarer.api.combat.ShipAPI
-import Jaydee8652.JaydeePiracy.utils.ReflectionUtils
 import com.fs.starfarer.api.combat.ShipHullSpecAPI
 
 //Made with help from @combustiblemon
 //Thanks!
 
 class jdp_mercenaryrelayhelper: BaseHullMod() {
+    val RELAY_DRONE_NAME: String = "jdp_relay"
+
     override fun applyEffectsBeforeShipCreation(hullSize: ShipAPI.HullSize?, stats: MutableShipStatsAPI?, id: String?) {
         if (stats?.variant == null) {
             return
@@ -20,8 +22,10 @@ class jdp_mercenaryrelayhelper: BaseHullMod() {
 
         // If there is no hullmod, unapply
         // If there is no fleet, then there is no commander, so they cannot have the skill, unapply
-        // If there is a fleet, but they don't have the skill, unapply
+        // If there is a fleet, but there is no commander, they cannot have the skill, unapply
+        // If they don't have the skill, unapply
         if (!variant.hasHullMod("jdp_mercenaryrelay") || stats.fleetMember == null || stats.fleetMember.fleetCommander == null || !stats.fleetMember.fleetCommander.hasTag("jdp_flowerfishWithTheNetwork")) {
+
             if (variant.hullSpec.tags.contains("jdp_mercenaryrelayhelper")) {
                 val hullId = variant.hullSpec.hullId
 
@@ -34,7 +38,7 @@ class jdp_mercenaryrelayhelper: BaseHullMod() {
                     variant.refreshBuiltInWings()
 
                     for (wing in oldWings) {
-                        variant.wings.add(wing)
+                        if (wing != RELAY_DRONE_NAME) variant.wings.add(wing)
                     }
                 }
             }
@@ -53,6 +57,7 @@ class jdp_mercenaryrelayhelper: BaseHullMod() {
         newSpec.addTag("jdp_mercenaryrelayhelper")
 
         val intFields = ReflectionUtils.getFieldsOfType(newSpec, newSpec.fighterBays.javaClass)
+
         val newFighterBayNumber = newSpec.fighterBays + 1
 
         for (field in intFields) {
@@ -71,7 +76,7 @@ class jdp_mercenaryrelayhelper: BaseHullMod() {
             }
         }
 
-        newSpec.builtInWings.add("jdp_relay")
+        newSpec.builtInWings.add(RELAY_DRONE_NAME)
 
         val oldWings = variant.nonBuiltInWings.toList()
         variant.wings.clear()
@@ -81,7 +86,7 @@ class jdp_mercenaryrelayhelper: BaseHullMod() {
         variant.refreshBuiltInWings()
 
         for (wing in oldWings) {
-            variant.wings.add(wing)
+            if (wing != RELAY_DRONE_NAME) variant.wings.add(wing)
         }
     }
 }
